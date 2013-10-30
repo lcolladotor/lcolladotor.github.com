@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Make it easy for your visitors to suscribe with a burnt RSS feed
+title: The end of fellgernon.tumblr.com
 tags:
 - Blog
 categories:
