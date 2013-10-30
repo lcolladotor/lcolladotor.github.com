@@ -19,9 +19,19 @@ layout: default
         {'service': 'twitter', 'id': 'fellgernon'},
         {'service': 'rss', 'id': 'http://feeds.feedburner.com/FellgernonBit'}
       ]
-    },  
-    'whatsnext' : {},  
-    'recommended' : {} 
+    }   
   });
 </script>
 <!-- AddThis Smart Layers END -->
+
+var addthis_share = {
+	// ... other options
+	url_transforms : {
+		shorten: {
+			twitter: 'bitly'
+		}
+	}, 
+	shorteners : {
+		bitly : {}
+	}
+}
