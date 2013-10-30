@@ -6,4 +6,4 @@ tags:
 - Social
 - Cultural
 ---
-<a href="http://24.media.tumblr.com/f55efedc3ca5189bcc1600941f7ef56c/tumblr_mi58wrDjuB1qgn8kjo1_500.png"></a>
+<img src="http://24.media.tumblr.com/f55efedc3ca5189bcc1600941f7ef56c/tumblr_mi58wrDjuB1qgn8kjo1_500.png">
