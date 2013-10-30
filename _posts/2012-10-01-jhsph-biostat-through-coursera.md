@@ -3,8 +3,11 @@ layout: post
 title: JHSPH-Biostat through Coursera
 tags:
 - Coursera
-- R
+- rstats
 - Biostatistics
+categories:
+- JHU Biostat
+- Web
 ---
 <p>Have you heard of online education? If you are in the US or Mexico I&#8217;m sure that you have seen some ads about online universities. Well, that&#8217;s not the type of education I&#8217;m talking about. I&#8217;m talking about free high-quality education. </p>
 <p>For some years, the top option has been the <strong>O</strong>pen <strong>C</strong>ourse<strong>w</strong>are (OCW) organized under the <a href="http://www.ocwconsortium.org/">Open Courseware Consortium</a> (OCWC). Back in 2009 I was pushed my undergrad (LCG-UNAM) to design and teach OCW-compliant courses. I even taught a <a href="http://www.lcg.unam.mx/~lcollado/B/index_en.html">course on R/Bioconductor</a> and thought of it as a pilot OCW course. The first seven classes were video recorded. But that project hit a wall because many of the biology professors used slides that heavily relied on copyrighted material. For OCW courses you have to own the copyright of the material that you use (or get permission), so just the idea of having to re-do all the diagrams and figures was overwhelming. This hasn&#8217;t stopped some big universities like <a href="http://ocw.mit.edu/index.htm">MIT from publishing OCW-compliant courses</a>.</p>

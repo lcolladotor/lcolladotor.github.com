@@ -5,6 +5,8 @@ tags:
 - ggplot2
 - rstats
 - tutorial
+categories:
+- rstats
 ---
 <a href="http://www.ceb-institute.org/bbs/wp-content/uploads/2011/09/handout_ggplot2.pdf">ggplot Tutorial</a><br/><p>I liked the <a href="http://www.ceb-institute.org/bbs/wp-content/uploads/2011/09/handout_ggplot2.pdf">following ggplot2 tutorial</a> which is featured in Gabriela de Queiroz&#8217;s blog called <a href="http://unbiasedestimator.tumblr.com/">unbiasedestimator</a>. The tutorial looks very neatly presented and I&#8217;m sure that it will be very helpful to anyone just getting started with ggplot2 before they jump into <a href="http://ggplot2.org/book/">ggplot2: Elegant Graphics for Data Analysis</a> by Hadley Wickham or <a href="http://shop.oreilly.com/product/0636920023135.do">R Graphics Cookbook</a> by Winston Chang.</p>
 <p><span>The tutorial is very nicely formatted with code in bold highlighting  parts that change something in the plot. Overall, the tutorial explains how to sue qplot() although it does have a longer example using ggplot() to make survival curves.</span></p>

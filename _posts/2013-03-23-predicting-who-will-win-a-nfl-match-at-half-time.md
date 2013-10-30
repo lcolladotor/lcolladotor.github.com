@@ -7,7 +7,9 @@ tags:
 - Adv_NFL_Stats
 - rstats
 - Prediction
-- R
+categories:
+- rstats
+- JHU Biostat
 ---
 <p>It was great to have a little break, <em>Spring break</em>, although the weather didn&#8217;t feel like spring at all! During the early part of the break I worked on my final project for Jeff Leek&#8217;s data analysis class, which we call 140.753 here. Continuing <a href="http://fellgernon.tumblr.com/tagged/jhsph753#.UU44Y1vF2c4">my previous posts on the topic</a>, this time I&#8217;ll share the results of my final project.</p>
 <p>At the beginning of the course, we had to submit a project plan (more like a proposal) and <a href="https://github.com/lcolladotor/lcollado753/blob/master/hw/projectplan/lcollado_projectplan.pdf">in mine</a> I announced my interest to look into some sports data. At the time I included a few links to Brian Burke&#8217;s Advanced NFL Stats site (<span class="showtooltip" title="(2013). Advanced NFL Stats.   http://www.advancednflstats.com/ [Online. last-accessed:  2013-03-23 23:28:38].  http://www.advancednflstats.com/."><a href="http://www.advancednflstats.com/">Burke</a></span>). At the time I didn&#8217;t know that Burke&#8217;s site described in detail a lot of the information I would end up using.</p>

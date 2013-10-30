@@ -5,6 +5,8 @@ title: ! 'me: Bad rm, don''t delete stuff I didn''t want to delete! (rm: well, I
 tags:
 - UNIX
 - Computing
+categories:
+- Computing
 ---
 <p>When Sandy was in town at some point I started doing some of my research work, but I shouldn&#8217;t have. I basically did a silly mistake and erased files that take a long time to compute.</p>
 <p>Prior to being here, I had an alias in my bash profile like this:</p>

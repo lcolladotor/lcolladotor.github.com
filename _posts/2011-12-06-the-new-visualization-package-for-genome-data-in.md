@@ -2,9 +2,11 @@
 layout: post
 title: ! 'The new visualization package for genome data in Bioconductor: ggbio'
 tags:
-- R
+- rstats
 - Bioconductor
 - Visualization
+categories:
+- rstats
 ---
 <p>It&#8217;s been a while since I&#8217;ve been waiting for the release of a visualization package in Bioconductor. Back in 2008 I was really impressed by the power of<a href="http://www.bioconductor.org/packages/release/bioc/html/GenomeGraphs.html"> GenomeGraphs</a> and I have used it in multiple occasions. Yet from both the <a href="http://www-huber.embl.de/biocdeveleurope2010/">Bioconductor Developer Meeting in Heidelberg 2010</a> and <a href="https://secure.bioconductor.org/BioC2011/">BioC2011</a> I&#8217;ve been waiting for the release of the visualization tools developed by Michael Lawrence and Tengfei Yin at Genentech. </p>
 <p>So, after a long hiatus where I didn&#8217;t browse the <a href="http://www.bioconductor.org/packages/release/BiocViews.html">biocviews</a> in Bioconductor, I found out that Lawrence and Yin released <a href="http://www.bioconductor.org/packages/release/bioc/html/ggbio.html">ggbio</a> and <a href="http://www.bioconductor.org/packages/release/bioc/html/biovizBase.html">biovizBase</a> (it&#8217;s more of an infrastructure package for ggbio) . I haven&#8217;t really had the time to play around with them, but it&#8217;s definitely worth exploring both of their vignette files: <a href="http://www.bioconductor.org/packages/release/bioc/vignettes/ggbio/inst/doc/intro.pdf">ggbio</a>, <a href="http://www.bioconductor.org/packages/release/bioc/vignettes/biovizBase/inst/doc/intro.pdf">biovizBase</a>. I also think that they&#8217;ll fit very well in Bioconductor because quite a few of their examples involved the gamma of objects the BioC team has released for high-throughput sequencing (HTS) data. Meaning that they work well with objects from IRanges and GenomicRanges. Also, some of the examples use BAM files which are common nowadays in any HTS analysis pipeline. As a plus, ggbio uses<a href="http://cran.r-project.org/web/packages/ggplot2/index.html"> ggplot2</a>, which definitely makes clear nice plots.</p>

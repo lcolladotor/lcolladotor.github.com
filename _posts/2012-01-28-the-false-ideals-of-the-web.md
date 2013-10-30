@@ -4,6 +4,8 @@ title: The False Ideals of the Web
 tags:
 - SOPA
 - Internet
+categories:
+- Web
 ---
 <a href="http://www.nytimes.com/2012/01/19/opinion/sopa-boycotts-and-the-false-ideals-of-the-web.html">The False Ideals of the Web</a><br/><p>This is a very interesting blog post as it portrays a different view in the whole Internet companies vs Copyright holders fight. It&#8217;s worthwhile reading as you&#8217;ll learn some basic facts which are not frequently shared. For example, it sounds obvious that Facebook is trying to create a new Internet that Google can&#8217;t access. Yet this is not something you hear often, or at least I didn&#8217;t.</p>
 <p>I&#8217;m not sure if I agree with the statement that:</p>

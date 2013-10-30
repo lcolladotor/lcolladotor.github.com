@@ -4,6 +4,8 @@ title: Genome of Controversial Arsenic Bacterium Sequenced
 tags:
 - Science
 - Controversy
+categories:
+- Science
 ---
 <p>That was the headline of a recent post in <a href="http://news.sciencemag.org/scienceinsider/2011/12/genome-of-controversial-arsenic.html?rss=1">ScienceInsider</a>. If you don&#8217;t know, GFAJ-1 is the name of a bacteria that cause controversy in the microbial research world around a year ago. The eye of the hurricane is the claim that GFAJ-1 is able to substitute phosphorus by arsenic. Phosphorus is one of the four main elements needed for life and it had never crossed our minds that arsenic could sustain life by replacing phosphorus. It&#8217;s the kind of story line you would expect from a sci-fi movie set in a distance galaxy.</p>
 <ul><li><a href="http://dl.dropbox.com/u/38063564/GFAJ1_JamesLim.avi">Click to watch a short video of GFAJ-1</a></li>

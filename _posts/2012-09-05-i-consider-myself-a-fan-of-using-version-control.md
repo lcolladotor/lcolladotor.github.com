@@ -5,6 +5,8 @@ tags:
 - Version control
 - Mercurial
 - Git
+categories:
+- Computing
 ---
 <iframe width="400" height="225" src="http://www.youtube.com/embed/4fsSyLkBdB4?rel0" frameborder="0" ></iframe><br/><p>I consider myself a fan of using version control for bioinformatics/biostatistics (or any text based, like code) project. Yet my knowledge of version control systems is quite limited. I&#8217;ve used Mercurial for some time, but I haven&#8217;t ventured much beyond the basic commands and some GUIs for merging.</p>
 <p>I don&#8217;t recall how it all went, but I remember reading that <a href="http://subversion.apache.org/">Subversion</a> (SVN) was much better than <a href="http://www.nongnu.org/cvs/">CVS</a>. Also, the <a href="http://www.bioconductor.org/">Bioconductor project</a> uses SVN. Before that I really learnt how to use SVN, someone from the Bioconductor devel list pointed me to <a href="http://git-scm.com/">Git</a>/<a href="http://mercurial.selenic.com/">Mercurial</a>. Around the same time I read &#8220;<a href="http://www.ncbi.nlm.nih.gov/pubmed/19649301">A quick guide to organizing computational biology projects</a>" by William Noble, which further convinced me to start using a version control system. I "educated" (a tiny bit) myself on the topic with Wikipedia&#8217;s entries on <a href="http://en.wikipedia.org/wiki/Revision_control">revision control</a> and <a href="http://en.wikipedia.org/wiki/Distributed_revision_control">distributed revision control</a>.</p>

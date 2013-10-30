@@ -6,6 +6,8 @@ tags:
 - knitr
 - pdf
 - html
+categories:
+- Web
 ---
 <p>I got a question today on how to add a video to a beamer pdf presentation. Well, I had never done it, but I got curious enough to google around for a bit and here is the end product.</p>
 <p>One way of doing it is using the <a href="http://www.ctan.org/pkg/media9">media9</a> tex package. For this to work you need to have the latest version of texlive (or miktex). Then, it&#8217;s quite straight forward to include the video. The issue is that you have to open the pdf with Acrobat Reader 10+ (9 something works. I think that it&#8217;s 9.4.1+ but well, the point is that you need an updated version). You will also need a live web connection to actually show the video. An alternative (if you have the video file) is to convert it to swf and embed it. </p>

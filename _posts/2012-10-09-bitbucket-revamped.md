@@ -5,6 +5,8 @@ tags:
 - Bitbucket
 - Git
 - Mercurial
+categories:
+- Computing
 ---
 <p>Bitbucket announced their new &#8220;look&#8221; today. The goal is to make it more team friendly but I guess that they also wanted to make it look fresh.</p>
 <p>For example, the overview page now has a quick summary:</p>

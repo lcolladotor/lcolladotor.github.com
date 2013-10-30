@@ -4,6 +4,9 @@ title: And so begins English Composition I
 tags:
 - Coursera
 - courseraengcomp
+categories:
+- rstats
+- Misc
 ---
 <p>This week started the English Composition I: Achieving Expertise course (<span class="showtooltip" title="(2013). Coursera.  https://www.coursera.org/ [Online.  last-accessed: 2013-03-21 03:47:13].   https://www.coursera.org/course/composition."><a href="https://www.coursera.org/course/composition">Comer, 2013</a></span>) that I have been looking forward to.</p>
 <p>I am not sure yet how long I will last, but I hope to enjoy it as much as I can. Plus, it should help me with my posting and other writing areas. While I last in the course, I plan to publish my writings in the blog too. So you will hopefully see me be more active here.</p>

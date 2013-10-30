@@ -4,8 +4,11 @@ title: Why aren't all of our graphs interactive?
 tags:
 - Graphics
 - Interactive
-- R
+- rstats
 - Talk
+categories:
+- JHU Biostat
+- Ideas
 ---
 <p>During the last pre-happy hour seminar, <a href="http://www.biostat.wisc.edu/~kbroman/">Karl Broman</a> talked about <a href="http://www.biostat.wisc.edu/~kbroman/presentations/DynamicGraphs/">Why aren&#8217;t all of our graphs interactive?</a> I didn&#8217;t know, but a few years ago Karl worked in the department and clearly promoted beer-drinking and is <em>the heart of the department. </em>I&#8217;m a fan of our pre-happy hour seminars since you have a get to listen to good/fun talks over a beer or two.</p>
 <p>But I&#8217;m also a fan of reproducible research and useful graphics. I do most of this by using <a href="http://www.statistik.lmu.de/~leisch/Sweave/">Sweave</a> (for reproducibility) in LaTeX documents and with the R packages <a href="http://cran.r-project.org/web/packages/lattice/index.html">lattice</a>, <a href="http://cran.r-project.org/web/packages/car/index.html">car</a>, and <a href="http://cran.r-project.org/web/packages/plotrix/index.html">plotrix</a>, and some <a href="http://ggplot2.org/">ggplot2</a> (I should use it more). </p>

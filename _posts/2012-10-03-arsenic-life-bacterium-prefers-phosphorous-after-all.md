@@ -3,6 +3,8 @@ layout: post
 title: ‘Arsenic-life’ bacterium prefers phosphorous after all
 tags:
 - Science
+categories:
+- Science
 ---
 <p><a href="http://www.nature.com/news/arsenic-life-bacterium-prefers-phosphorous-after-all-1.11520">‘Arsenic-life’ bacterium prefers phosphorous after all</a> by Daniel Cressey summarizes a recent paper where it&#8217;s shown that GFAJ-1 will use phosphorous over arsenate even when phosphorous is very rare in relation to arsenic. </p>
 <p>GFAJ-1 is the <em>weird bug</em> I talked about in <a href="http://fellgernon.tumblr.com/post/14131921454/genome-of-controversial-arsenic-bacterium-sequenced#.UGyfQfl26lo">Genome of Controversial Arsenic Bacterium Sequenced</a> at the end of 2011. The whole story is interesting from the point of view of reproducible research. Obviously, the whole idea of DNA with arsenate instead of phosphorous was a huge bomb that attracted lots of attention. However now:</p>

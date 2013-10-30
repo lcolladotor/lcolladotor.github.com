@@ -3,11 +3,12 @@ layout: post
 title: Using plyr and doMC for quick and easy apply-family functions
 tags:
 - rstats
-- R
 - plyr
 - parallel
 - knitr
 - cluster
+categories:
+- rstats
 ---
 <p>A few weeks back I dedicated a short amount of time to actually read what <code>plyr</code> (<span class="showtooltip" title="Wickham H (2011). The Split-Apply-Combine Strategy for Data
 Analysis. _Journal of Statistical Software_, *40*(1), pp. 1-29.

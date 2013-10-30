@@ -4,6 +4,8 @@ title: Re-purposing Fellgernon Bit
 tags:
 - Blog
 - Personal
+categories:
+- Misc
 ---
 <p>I have decided that it&#8217;s in my best interests to separate my academic posts from my personal ones. Thus, I have moved the posts I considered to be personal to my new blog, <a href="http://fellger.tumblr.com/">Fellger Byte</a>. I like the name since it goes along with <a href="http://fellgernon.tumblr.com/">Fellgernon Bit</a>, plus it involves mostly cooking posts.</p>
 <p>Fellgernon Bit will continue to have it&#8217;s posts linked on twitter and on the <a href="https://www.facebook.com/FellgernonBit">Fellgernon Bit facebook page</a>. By the way, I&#8217;m considering turning off my auto-post to facebook from twitter option. Yet I think that most of my friends find the new posts through my personal facebook and not the Fellgernon Bit fb page.</p>

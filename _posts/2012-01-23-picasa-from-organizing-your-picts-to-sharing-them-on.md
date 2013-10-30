@@ -5,6 +5,8 @@ tags:
 - Blog
 - Picasa
 - Photos
+categories:
+- Web
 ---
 <p>I don&#8217;t think I&#8217;ve talked about how much I like using <a href="http://picasa.google.com/">Picasa</a>. The desktop application is great! When you set it up, it quickly finds all your pictures in your computer. Then it becomes easy to organize them into folders by using drag-and-drop with the zoomable previews. But the best part comes when you start using it with <a href="https://picasaweb.google.com">Picasa Web Albums</a>. </p>
 <p>You can sign into your Google account from Picasa and start uploading your pictures to the web. Note that it comes with 1 free GB of storage, which is not much. You can pay 5 bucks to upgrade it to 21&#160;GB for a year, but either way you&#8217;ll have to think how you want to upload your pictures. Picasa allows you to upload smaller versions of your pictures in different sizes up to 2048 pixels, which in my opinion is more than you&#8217;ll need for regular pictures. Sure, if you plan on printing a poster or something big, you&#8217;ll want to upload the original size pictures. In my case, as I don&#8217;t have that many pictures I decided to upload the original size ones. Plus, it&#8217;s great to have your pictures backed up on the Google servers &#8220;cloud&#8221;. To upload your pictures I highly recommend using the &#8220;Tools &gt; Batch Upload&#8221; tool, though you can also upload them folder by folder.</p>

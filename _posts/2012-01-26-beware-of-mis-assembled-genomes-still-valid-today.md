@@ -5,6 +5,8 @@ tags:
 - De novo assembly
 - Genomics
 - Paper comments
+categories:
+- Paper comments
 ---
 <p>I&#8217;ve been recently impressed by Steven Salzberg talk as <a href="http://fellgernon.tumblr.com/post/16468048496/extensive-comments-and-review-about-the-recent-bake-off#.TyAz0OPOzIw">you might have noticed</a>, and browing <a href="http://bioinformatics.igm.jhmi.edu/salzberg/">his home page</a> I stumbled upon his opinion piece (also by James Yorke): <a href="http://cbcb.umd.edu/papers/Mis-assembledGenomesReprint.pdf">Beware of mis-assembled genomes</a>.</p>
 <p>It&#8217;s a short note published in 2005, but damn, can anyone deny that it fits perfectly for today&#8217;s state of the art in the de <em>novo</em> genome assembly field? I bet no one will. For instance, it&#8217;s a solid statement to say:</p>

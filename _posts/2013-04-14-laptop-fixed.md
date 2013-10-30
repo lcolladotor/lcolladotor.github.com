@@ -7,6 +7,8 @@ tags:
 - Freeze
 - RAM
 - help
+categories:
+- Computing
 ---
 <p>I just want to thank everyone that gave me ideas of what to try and whom to ask for solving the issue I was having with my laptop.</p>
 <p>For future reference and to complement my <a href="http://fellgernon.tumblr.com/post/47680956215/need-some-help-fixing-my-mac#.UWs_gSvF0b0">previous post</a>, here&#8217;s a list of other things I tried.</p>

@@ -3,10 +3,13 @@ layout: post
 title: ! 'Introduction to R and Biostatistics (2012 version): presentation'
 tags:
 - LCG
-- R
+- rstats
 - knitr
 - Biostatistics
 - Talk
+categories:
+- UNAM
+- rstats
 ---
 <p>To follow my <a href="http://fellgernon.tumblr.com/post/34677935591/introducing-r-and-biostatistics-to-first-year-lcg#.UKFlW-Oe918">Introducing R and Biostatistics to first year LCG students (2012 version)</a> post,  you can now find the presentation online from my site either in <a href="http://www.biostat.jhsph.edu/~lcollado/lcg/introR2012/intro_R_Biostat_LCG_2012_slides.html">presentation format</a>, in a <a href="http://www.biostat.jhsph.edu/~lcollado/lcg/introR2012/intro_R_Biostat_LCG_2012.html">single webpage format</a>, or the <a href="http://www.biostat.jhsph.edu/~lcollado/lcg/introR2012/intro_R_Biostat_LCG_2012.Rmd">raw Rmd file</a>. To prove the point that publishing to <a href="http://rpubs.com/">RPubs</a> is super easy, you can also find the <a href="http://rpubs.com/lcollado/2618">single webpage format over there</a>. I also like how you can comment and share in RPubs.</p>
 <p>One of the challenges of giving a presentation to first year students is finding the balance between introducing them to cool things you are doing in your work and actually giving a talk that they can follow. I thought about this and ended dropping anything related to my work.</p>

@@ -7,6 +7,8 @@ tags:
 - Freeze
 - RAM
 - help
+categories:
+- Computing
 ---
 <p>2 days ago I was writing some R code for <a href="https://twitter.com/search?q=%23jhsph753&amp;src=typd">#jhsph753</a> in an Rmd file. I was careless and didn&#8217;t realize that one computation would be very RAM intensive until I was running <a href="https://twitter.com/search?q=%23knitr&amp;src=typd">#knitr</a> (as a &#8216;silent&#8217; process from <a href="https://github.com/textmate/textmate">TextMate2</a>). My computer started swapping and became unresponsive, without being able to force quit. So I did a hard restart: aka, I shut it down by holding the power button.</p>
 <p>The problem is that since that happened, my MacBook Pro Early 2011 <span>version</span><span> with a 2.7Ghz i7 procession freezes every 40-80 min. It&#8217;s the <a href="http://mmlweb.rutgers.edu/music127/basic/crash_freeze.htm">bad kind of freeze</a> because the mouse becomes unresponsive and all the usual force quit hotkeys don&#8217;t work. </span></p>

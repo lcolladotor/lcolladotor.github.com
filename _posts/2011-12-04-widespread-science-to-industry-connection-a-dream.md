@@ -4,6 +4,8 @@ title: ! 'Widespread science to industry connection: a dream?'
 tags:
 - Science
 - Industry
+categories:
+- Science
 ---
 <p>I recently read the <a href="http://www.nature.com/news/scientists-meet-capitalists-1.9512">Scientists, meet capitalists</a> commentary by Eugenie Samuel Reich where he talks about a new attempt at bridging science with industry. I do think that we, as scientists in general, don&#8217;t receive training on how to make this connection. Back when I represented my undergrad class, I did once propose a course where we would learn:</p>
 <ul><li>the basics of applying the scientific results and getting together the elements that would make it easier for others (specialized in transferring technology) to complete the chain of events. I think that some love doing basic research, but if you can just the overall job easier without major time consumption, more people would do it. I don&#8217;t know the answer on how to teach this, but a panorama shot would have been useful.</li>

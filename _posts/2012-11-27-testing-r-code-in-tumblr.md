@@ -2,8 +2,10 @@
 layout: post
 title: Testing R code in Tumblr
 tags:
-- R
+- rstats
 - knitr
+categories:
+- rstats
 ---
 <p>Using <a href="http://jeffreyhorner.tumblr.com/post/25943954723/blog-with-r-markdown-and-tumblr-part-ii">Jeffrey Horner&#8217;s guide</a> to include R code in Tumblr posts.</p>
 <h1>Title</h1>

@@ -3,6 +3,8 @@ layout: post
 title: ! 'Super basic Illustrator: event invitation'
 tags:
 - Illustrator
+categories:
+- Web
 ---
 <p><a href="http://www.biostat.jhsph.edu/people/student/mejia.shtml">Amanda</a> and I are organizing a cultural student mixer for students in our department. One of the things we needed to do was invite everyone to attend. I like using computers, but graphic design is not something that I&#8217;m too excited about, but I still wanted to try something out.</p>
 <p>My goal was to show an image of a bowling lane where the Earth (as the ball) knocks down &#8220;statistical pins&#8221;. We recently covered least squares in our class, so I felt that the analogy of &#8220;minimizing our cultural differences&#8221; fit perfectly. </p>

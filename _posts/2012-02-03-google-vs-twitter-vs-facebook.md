@@ -3,6 +3,8 @@ layout: post
 title: Google vs Twitter vs Facebook
 tags:
 - Privacy
+categories:
+- Web
 ---
 <p>Building upon my previous post on <a href="http://fellgernon.tumblr.com/post/16639421588/the-false-ideals-of-the-web#.TyjN0ePOzIw">The False Ideals of the Web</a>, I&#8217;ve picked up a few links related to the continuous struggle between Google, Twitter and Facebook. Plus, they all have to deal with privacy issues and compiling with government policies.</p>
 <p><a href="http://www.bbc.co.uk/news/technology-16511794">Twitter unhappy about Google&#8217;s social search changes</a> reflects the power struggle between Google and Twitter. But it&#8217;s still mostly about Google vs Facebook than Google vs Twitter as Google&#8217;s main competitor is Facebook, Twitter just gets affected on the side. At least that&#8217;s my impression. </p>

@@ -5,6 +5,8 @@ tags:
 - Guatemala
 - Statistics
 - Overlap
+categories:
+- Misc
 ---
 <a href="http://simplystatistics.tumblr.com/post/18550426982/a-cool-profile-of-a-human-rights-statistician">Simply Statistics: A cool profile of a human rights statistician</a><br/><p><a class="tumblr_blog" href="http://simplystatistics.tumblr.com/post/18550426982/a-cool-profile-of-a-human-rights-statistician">simplystatistics</a>:</p>
 > <p>Via <a href="http://aldaily.com/" target="_blank">AL Daily</a>, this dude <a href="http://www.foreignpolicy.com/articles/2012/02/27/the_body_counter?page=full" target="_blank">collects data and analyzes it</a> to put war criminals away. The idea of using statistics to quantify mass testimony is interesting.</p>

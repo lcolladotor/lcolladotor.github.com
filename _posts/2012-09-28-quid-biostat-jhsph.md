@@ -6,6 +6,8 @@ tags:
 - Network
 - Quid
 - Talk
+categories:
+- JHU Biostat
 ---
 <p>Just like most scientific departments, we have a seminar (weekly over here) where very bright people come to us to talk about their work. Being a Biostatistics department, we mostly get faculty from other Biostatistics departments from universities to talk to us. This week was quite different. Amy Heineike from <strong><a href="http://quid.com/">Quid</a></strong> gave us a talk describing their product, which fits perfectly in what is now called &#8220;data science&#8221;. You can see Amy at the end of the table in the picture below.</p>
 <p><img alt="Amy is the one at the end of the table." height="168" src="http://quid.com/img/life/team.jpg" width="299"/></p>

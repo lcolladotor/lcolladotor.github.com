@@ -6,6 +6,9 @@ tags:
 - Blog
 - ! '@simplystats'
 - jhsph753
+categories:
+- JHU Biostat
+- rstats
 ---
 <p>Recently we had to analyze the data of the number of visits per day to <a href="http://simplystatistics.org/">SimplyStatistics.org</a>. There were two goals:</p>
 <ol><li>Estimate the fraction of visitors retained after a spike in the number of visitors</li>

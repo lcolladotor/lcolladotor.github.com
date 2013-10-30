@@ -4,6 +4,10 @@ title: Commenting scientific papers
 tags:
 - Paper comments
 - LCG
+categories:
+- Paper comments
+- Ideas
+- UNAM
 ---
 <p>I&#8217;ve been thinking about commenting papers in blog posts. I did a <a href="http://fellgernon.tumblr.com/tagged/Paper%20comments#.UT534NHF0W8">few some long time ago</a>, but now I&#8217;m thinking of doing this activity more systematically. There are several reasons why I&#8217;m thinking of doing this, say for 1 paper a week. It has the obvious advantage of forcing me to read a paper in depth per week. At the same time, I want to learn more from others. See what I like in other papers and maybe avoid some mistakes. There are two main lines of papers that I would be posting about. Anything that is somewhat close to my research (genomics, RNA-seq, biostatistics, bioconductor, visualization) and anything done by my undergrad peers from <a href="http://www.lcg.unam.mx/">LCG-UNAM</a>. I don&#8217;t think that there is a compilation of papers from LCG students despite many of us doing research all over the globe —Mexico, US, Canada, Denmark, France, England, Germany, Switzerland, Austria, Australia to name a few countries. Maybe compiling a list of papers with contributions from LCG students is a task for <a href="http://masciencia.org/">Más Ciencia por México</a> which seeks to promote science in Mexico. But I would be happy to learn what others are doing and in a way keep in touch academically. </p>
 <p>Another reason in favor is that blogging helps me practice my English. And writing helps me organize my ideas.</p>

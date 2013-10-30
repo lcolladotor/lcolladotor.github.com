@@ -3,8 +3,9 @@ layout: post
 title: Reading an R file from GitHub
 tags:
 - rstats
-- R
 - github
+categories:
+- rstats
 ---
 <p>Lets say that I want to read in <a href="https://github.com/lcolladotor/ballgownR-devel/blob/master/ballgownR/R/infoGene.R">this R file</a> from GitHub into R.</p>
 <p>The first thing you have to do is locate the raw file. You can do so by clicking on the <strong>Raw</strong> button in GitHub. In this case it&#8217;s <a href="https://raw.github.com/lcolladotor/ballgownR-devel/master/ballgownR/R/infoGene.R"><a href="https://raw.github.com/lcolladotor/ballgownR-devel/master/ballgownR/R/infoGene.R">https://raw.github.com/lcolladotor/ballgownR-devel/master/ballgownR/R/infoGene.R</a></a></p>

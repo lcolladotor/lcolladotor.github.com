@@ -4,6 +4,8 @@ title: What does it take to be a good leader?
 tags:
 - Leader
 - Feedback
+categories:
+- Ideas
 ---
 <h2>Leader: scientific or project</h2>
 <p>In my mind before trying to answer this question I have to define <strong>leader</strong>. Right now I have two —possibly conflicting— leaders in mind. One is a scientific leader in the sense of a leader in a specific scientific discipline. The other is a leader who can organize and lead projects, either scientific ones (across labs for example) or what I want to call revolutionary projects. With such a grandiose name I am trying to cover the type of projects that can help change a country. However, in reality this second type of leader is closer to administrative roles in leading academic institutions, like the chair of a department.</p>

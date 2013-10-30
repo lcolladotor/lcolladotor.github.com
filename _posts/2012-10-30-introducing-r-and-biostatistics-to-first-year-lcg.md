@@ -4,8 +4,11 @@ title: Introducing R and Biostatistics to first year LCG students (2012 version)
 tags:
 - Biostatistics
 - LCG
-- R
+- rstats
 - Talk
+categories:
+- UNAM
+- rstats
 ---
 <p>On Friday November 9th I&#8217;ll be giving a talk to the first year students from the Undergraduate Program on Genomic Sciences (LCG in Spanish) during their &#8220;Seminar 1: Introduction to Bioinformatics&#8221; course. It&#8217;s just like I did a year ago as I documented in my post <a href="http://fellgernon.tumblr.com/post/13739343319/introducing-biostatistics-to-first-year-lcg-students#.UJBq6Wl25FQ">Introducing Biostatistics to first year LCG students</a>.</p>
 <p>Well, this time I&#8217;ll change things a bit. I&#8217;m allowed to require the students to read 2-3 papers before my talk to introduce them to my field. I&#8217;ll do so, but in a more peculiar way by requiring them to listen in to a few videos I selected. So, without further ado here are the three required &#8220;papers&#8221;:</p>

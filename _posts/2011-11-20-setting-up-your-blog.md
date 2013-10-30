@@ -3,6 +3,8 @@ layout: post
 title: Setting up your blog
 tags:
 - Blog
+categories:
+- Web
 ---
 <p>Now that I&#8217;ve spent time re-doing Fellgernon Bit, I thought it&#8217;d be a good time my experience on setting up a socially-connected blog.</p>
 <p>First of all, you need to choose a blog platform. There are some around like Blogger and WordPress that are widely used and were some of the first platforms. In my case though, I really like how easy http://www.tumblr.com/ is to use. </p>

@@ -6,6 +6,8 @@ tags:
 - dataanalysis
 - contest
 - rstats
+categories:
+- rstats
 ---
 <h1>Description</h1>
 <p>The useR2013 conference is organizing a data analysis contest, check the <a href="http://www.edii.uclm.es/%7EuseR-2013/docs/announce.pdf">rules here</a>.</p>

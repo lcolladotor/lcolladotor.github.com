@@ -2,10 +2,13 @@
 layout: post
 title: Sharing my work for "Advanced Methods III"
 tags:
-- R
+- rstats
 - Git
 - Biostatistics
 - jhsph753
+categories:
+- JHU Biostat
+- rstats
 ---
 <p>This semester I&#8217;m taking the live version of the Data Analysis class by Jeff Leek. His more <a href="https://class.coursera.org/dataanalysis-001/class/index">popular version of the course is available through Coursera</a>. </p>
 <p>One of the things that Jeff promotes is reproducibility and sharing code. I share that tendency and thus created a Git repository for my homework and code for the class: <a href="http://bit.ly/12vSk7d">lcollado753</a>. I&#8217;m hosting it with GitHub to try it out since I started with Mercurial via Bitbucket. </p>

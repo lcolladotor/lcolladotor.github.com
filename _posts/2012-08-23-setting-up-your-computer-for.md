@@ -5,10 +5,13 @@ title: Setting up your computer for bioinformatics/biostatistics and a compedium
 tags:
 - Bioconductor
 - LaTeX
-- R
+- rstats
 - Resources
 - Software
 - Computing
+categories:
+- Computing
+- JHU Biostat
 ---
 <p>Jumping on the train set by <a href="http://www.biostat.jhsph.edu/~hiparker/">Hilary Parker</a> &#8220;<a href="http://hilaryparker.com/2012/08/16/the-setup-part-1/">The Setup (Part 1)</a>" and <a href="http://biostat.jhsph.edu/~afrazee/">Alyssa Frazee</a> &#8220;<a href="http://alyssafrazee.wordpress.com/">my software/hardware setup</a>&#8221;, I&#8217;m going to share my setup and hopefully add something new. They both did a great job already, so make sure you read their posts!</p>
 <p>I have some experience with all three main OS: Windows, Linux and Mac. That being said, I know some of the basic stuff for each but I surely use Google very frequently to get help. I used to have a dual Windows / Linux (Ubuntu) set up but now I have a Windows laptop/desktop (it&#8217;s a monster :P) at home and I&#8217;m happy working with my Mac. </p>

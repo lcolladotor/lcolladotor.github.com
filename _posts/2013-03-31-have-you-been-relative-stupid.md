@@ -6,6 +6,9 @@ tags:
 - relative
 - stupid
 - academia
+categories:
+- Science
+- Ideas
 ---
 <p>I enjoyed reading &#8220;<a href="http://jcs.biologists.org/content/121/11/1771.full">The importance of stupidity in scientific research</a>" by Martin A. Schwartz which I learned existed through <a href="https://twitter.com/hmason">@hmason</a> and <a href="https://twitter.com/simplystats">@simplystats</a>. </p>
 <p>I found the point of how it&#8217;s normal to feel stupid in academia and specially in Ph.D. programs to be illuminating. But Schwartz clarifies that there are other kinds of stupid:</p>

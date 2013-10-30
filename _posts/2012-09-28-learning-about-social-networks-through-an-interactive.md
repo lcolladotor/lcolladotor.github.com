@@ -7,6 +7,9 @@ tags:
 - Industry
 - Network
 - Talk
+categories:
+- Science
+- Ideas
 ---
 <p>During this week&#8217;s <a href="http://www.biostat.jhsph.edu/~zhwu/2012journal.html">journal club meeting</a> Hilary Parker (<a href="http://www.biostat.jhsph.edu/~hiparker/">homepage</a>, <a href="http://hilaryparker.com/">blog</a>) led the session on &#8220;Identifying influential and susceptible members of social networks&#8221;. Were there some speakers or why did she &#8220;lead the session&#8221;? By this I mean that Hilary tried a very different (and interesting) format this time. Instead of giving a talk, not a formal one like at seminars, she prepared a short presentation (publicly available <a href="https://docs.google.com/presentation/d/1wlZvL8z_8bOau2ZQkvxLtOuFwEVoTeOrJeQ9dO7vATs/edit#slide=id.p">here</a>) that begins showing a 20 minute video. This video is by the author of the paper where he presents the key points of his research at another conference. The goal of this format was to get us to speed and hopefully provoke enough discussion to make the meeting highly interactive. Plus the author does a great job in his presentation.</p>
 <p>Now, given that it&#8217;s a biostat journal club, Hilary included some slides to explain the general Cox Proportional Hazard model before showing some of details used in the paper in question. </p>

@@ -8,6 +8,10 @@ tags:
 - Touch
 - ENAR2014
 - México
+categories:
+- Ideas
+- UNAM
+- Science
 ---
 <p>The following text is an email I sent to several of my friends from the <a href="http://www.lcg.unam.mx/about">LCG undergraduate program </a>I studied. There I talk about keeping in touch, I invite them to <a href="http://www.enar.org/meetings.cfm">ENAR 2014</a>, and also talk about some philosophical questions regarding our future. </p>
 <p>I&#8217;m posting it here because I don&#8217;t mind sharing these thoughts and because I don&#8217;t have the current email addresses of many former LCG students.<br/><br/>Enjoy</p>

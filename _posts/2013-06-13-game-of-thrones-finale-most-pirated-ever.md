@@ -3,6 +3,8 @@ layout: post
 title: ! 'Game of Thrones finale most pirated ever '
 tags:
 - Piracy
+categories:
+- Fun
 ---
 <p>I was rather entertained by <a href="http://www.bbc.co.uk/newsbeat/22853888">Game of Thrones finale most pirated ever on BitTorrents</a> written by Del Crookes. With that title, I thought that the news was going to have a strong anti-piracy tone. Don&#8217;t get me wrong, this point of view is covered in the story with quotes from the actor of Jamie Lanister such as:</p>
 

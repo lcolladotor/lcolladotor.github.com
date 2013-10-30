@@ -4,6 +4,8 @@ title: ! 'Simply Statistics: Characteristics of my favorite statistics talks'
 tags:
 - Science
 - Statistics
+categories:
+- Ideas
 ---
 <a href="http://simplystatistics.tumblr.com/post/18792698723/characteristics-of-my-favorite-statistics-talks">Simply Statistics: Characteristics of my favorite statistics talks</a><br/><p><a class="tumblr_blog" href="http://simplystatistics.tumblr.com/post/18792698723/characteristics-of-my-favorite-statistics-talks">simplystatistics</a>:</p>
 

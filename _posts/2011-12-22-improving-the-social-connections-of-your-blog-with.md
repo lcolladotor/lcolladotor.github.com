@@ -3,6 +3,8 @@ layout: post
 title: Improving the social connections of your blog with Fellgernon Bit examples
 tags:
 - Blog
+categories:
+- Web
 ---
 <p>It&#8217;s been a few days since I last wrote a post, mainly due to finals week but also because of the beginning of vacations. Anyhow, as you might have noticed, I&#8217;ve been playing around with widgets and improving <a href="http://fellgernon.tumblr.com">Fellgernon Bit</a>'s social connectivity. I'm satisfied with how it looks now though I might need to work on faster load times.</p>
 

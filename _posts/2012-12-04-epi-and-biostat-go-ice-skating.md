@@ -5,6 +5,8 @@ tags:
 - Epi
 - Skating
 - Biostat
+categories:
+- JHU Biostat
 ---
 <p>In preparation for our Spring kickball match, Epi and Biostat went ice skating this past weekend. A large chunk of us then continued to mingle at a local bar ^^. Enjoy the pictures!</p>
 <table style="width:auto;" align="center"><tr><td><a href="https://picasaweb.google.com/lh/photo/Z_tlLsvO9uWrWGgHSk7tD3bmpVK2D7mV7eSgeSa6r2E?feat=embedwebsite"><img src="https://lh4.googleusercontent.com/-tLyWLWBXY9Q/UL4JMwwKNxI/AAAAAAAAfK4/eJN5AENyoRA/s400/IMG_0271.JPG" height="299" width="400"/></a></td></tr><tr><td style="font-family:arial,sans-serif; font-size:11px; text-align:right">From <a href="https://picasaweb.google.com/109750712877885290236/EpiBiostatIceSkating?authuser=0&amp;feat=embedwebsite">EpiBiostatIceSkating</a></td></tr></table>

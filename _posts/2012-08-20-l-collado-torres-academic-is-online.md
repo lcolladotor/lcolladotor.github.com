@@ -3,9 +3,11 @@ layout: post
 title: L. Collado Torres (academic) is online!
 tags:
 - Bioconductor
-- R
+- rstats
 - Website
 - Academia
+categories:
+- JHU Biostat
 ---
 <p>Hello!</p>
 <p>I&#8217;m very happy to announce that I have completed my personal academic website at <a href="http://www.biostat.jhsph.edu/~lcollado/index.html#.UDKHKtCe5Ls"><a href="http://www.biostat.jhsph.edu/~lcollado/">http://www.biostat.jhsph.edu/~lcollado/</a></a> I had uploaded a first version last week, but over the weekend I completed it. I finally uploaded the slides for many of the courses that I taught over the years in Mexico. These were mostly R/Bioconductor courses and the slides sometimes are in Spanish and other times in English. I added country flags to make it clear for the visitors what they&#8217;ll find. There certainly were more slides to share than what I had thought! You&#8217;ll find them under the <a href="http://www.biostat.jhsph.edu/~lcollado/teaching.html#.UDKI0tCe5Ls">Teaching tab</a> which will direct you to the course-specific sites such as the <a href="http://www.biostat.jhsph.edu/~lcollado/PDCB-HTS.html#.UDKI_NCe5Ls">High-Throughput Sequencing Analysis with Bioconductor</a> PDCB course. </p>

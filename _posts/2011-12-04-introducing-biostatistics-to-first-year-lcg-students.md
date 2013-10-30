@@ -4,8 +4,11 @@ title: Introducing Biostatistics to first year LCG students
 tags:
 - Bioconductor
 - LCG
-- R
+- rstats
 - Talk
+categories:
+- rstats
+- UNAM
 ---
 <p>Around two weeks ago I gave a talk via skype to the first year students from the <a href="http://www.lcg.unam.mx/about">Undergraduate Program on Genomic Sciences</a> (LCG in Spanish) from the National Autonomous University of Mexico (UNAM in Spanish). The talk was under the context of the <em>Introduction to Bioinformatics Seminar Series</em> whose goal is to familiarize the new students with the bioinformatics world. It used to be a course heavy on exploring database websites, some basic theory, and lots of new concepts and algorithm names. Like, what is BLAST? This year, the course involved several talks from former students (like myself) on their experience and current job (most of us are in graduate school).</p>
 <p>In my case, I was invited to talk about Biostatistics and R as I was one of the first LCG students to learn and teach R to other students (including PhD students ^^): <a href="http://www.lcg.unam.mx/~lcollado/R/">12 hour intro to R and Bioconductor</a>, <a href="http://www.lcg.unam.mx/~lcollado/E/">R in an intro to statistics course</a>, a <a href="http://www.lcg.unam.mx/~lcollado/B/">full course on Bioconductor</a>. </p>

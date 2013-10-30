@@ -4,6 +4,8 @@ title: Join and participate in Biostats Social today!
 tags:
 - Biostats
 - Social
+categories:
+- JHU Biostat
 ---
 <p>¡Hello everyone!</p>
 <p>I hope you had a great time this weekend, at the retreat or elsewhere. Now that the department is hyped up with plenty of new ideas and things to do for the self-study and beyond, I think that it&#8217;s a great time to remind everyone about <a href="http://tinyurl.com/biostats-social">Biostats Social</a>.</p>

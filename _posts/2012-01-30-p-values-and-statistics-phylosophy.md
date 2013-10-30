@@ -6,6 +6,9 @@ tags:
 - Phylosophy
 - Statistics
 - P-value
+categories:
+- Paper comments
+- Ideas
 ---
 <p>I&#8217;m in the process of catching up with all the posts from <a href="http://simplystatistics.tumblr.com">SimplyStatistics</a> that I didn&#8217;t read during the break. Doing so I found a very interesting post on p-values (more below)</p>
 <p><a class="tumblr_blog" href="http://simplystatistics.tumblr.com/post/15402808730/p-values-and-hypothesis-testing-get-a-bad-rap-but-we">simplystatistics</a>:</p>
