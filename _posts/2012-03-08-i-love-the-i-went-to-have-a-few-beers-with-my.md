@@ -1,6 +1,6 @@
 ---
 layout: post
-title: ''
+title: 'PhD Comics about beers!'
 tags:
 - PhD Comics
 ---

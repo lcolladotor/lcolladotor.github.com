@@ -1,6 +1,6 @@
 ---
 layout: post
-title: ''
+title: 'Slow motion video on wet-dog shake'
 tags:
 - Science
 ---

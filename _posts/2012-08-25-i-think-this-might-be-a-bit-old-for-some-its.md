@@ -1,6 +1,6 @@
 ---
 layout: post
-title: ''
+title: 'Super high res picture'
 tags:
 - Photos
 - Future

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: ''
+title: 'Version control: need to learn Git'
 tags:
 - Version control
 - Mercurial
