@@ -16,7 +16,7 @@ author :
   email : lcollado@jhsph.edu
   github : lcolladotor
   twitter : fellgernon
-  feedburner : feedname
+  feedburner : FellgernonBit
 
 # The production_url is only used when full-domain names are needed
 # such as sitemap.txt 
@@ -29,7 +29,7 @@ author :
 production_url : http://lcolladotor.github.io
 
 # Pagination (added this line)
-paginate: 3
+paginate: 2
 
 # All Jekyll-Bootstrap specific configurations are namespaced into this hash
 #
@@ -86,7 +86,7 @@ JB :
   comments :
     provider : disqus
     disqus :
-      short_name : jekyllbootstrap
+      short_name : fellgernonbit
     livefyre :
       site_id : 123
     intensedebate :
@@ -104,7 +104,7 @@ JB :
   analytics :
     provider : google 
     google : 
-        tracking_id : 'UA-123-12'
+        tracking_id : 'UA-45299226-1'
     getclicky :
       site_id : 
     mixpanel :
