@@ -1,0 +1,36 @@
+---
+layout: page
+title: Fellgernon Bit
+tagline: blog
+---
+
+{% for post in paginator.posts %}
+   <!-- here add you post markup -->
+   <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
+   <p class="author">
+    <span class="date">{{post.date | date: "%Y-%m-%d"}}</span>
+  </p>
+  <div class="content">
+    {{ post.content }}
+  </div>
+{% endfor %}
+
+<!-- Pagination links -->
+<div class="pagination pagination-centered">
+  <ul>
+  {% if paginator.previous_page %}
+    {% if paginator.previous_page == 1 %}
+      <li class="prev"><a href="/" title="Previous page">Prev</a></li>
+    {% else %}
+      <li class="prev"><a href="/page{{paginator.previous_page}}" title="Previous page">Prev</a></li>
+    {% endif %}
+  {% else %}
+    <li class="prev disabled"><a>Prev</a></li>
+  {% endif %}
+  {% if paginator.next_page %}
+    <li class="next"><a href="/page{{paginator.next_page}}" title="Next page">Next</a></li>
+  {% else %}
+    <li class="next disabled"><a>Next</a>
+  {% endif %}
+  </ul>
+</div>
