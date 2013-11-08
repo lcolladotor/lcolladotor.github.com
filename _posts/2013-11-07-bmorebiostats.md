@@ -13,7 +13,7 @@ categories:
 
 
 
-In recent weeks, I have met with a group of students [@jhubiostats](https://twitter.com/jhubiostat) interested in blogging about their research, tutorials, pieces of R code, among plenty of other subjects. Within this group we had the idea to aggregate our blogs so it would be easier for others to follow us and to easily promote our own blogs to a much larger audience. Basically, do what [R-bloggers](http://www.r-bloggers.com/) does but focused on blogs from students at Johns Hopkins Biostatistics. Ideally, once a student publishes a new post, our site would pick it up and promote it.
+In recent weeks, I have met with a group of students [@jhubiostat](https://twitter.com/jhubiostat) interested in blogging about their research, tutorials, pieces of R code, among plenty of other subjects. Within this group we had the idea to aggregate our blogs so it would be easier for others to follow us and to easily promote our own blogs to a much larger audience. Basically, do what [R-bloggers](http://www.r-bloggers.com/) does but focused on blogs from students at Johns Hopkins Biostatistics. Ideally, once a student publishes a new post, our site would pick it up and promote it.
 
 A quick search revealed that making such a site was technically possible via several [WordPress](http://wordpress.org/) plugins available. We initally tried doing so via a wordpress.com account and quickly noticed that we needed a self-hosted wordpress account. 
 
@@ -74,7 +74,7 @@ Note that we do not see much of a problem with the fact that [bmorebiostats.com]
 
 We are very excited that we have implemented the aggregator of student blogs from Johns Hopkins Biostatistics. We believe that it will be helpful to others including prosprective students. Now that the aggregator is practically finished, we can now move unto writing exciting posts! 
 
-If you are a student [@jhubiostats](https://twitter.com/jhubiostat) --or a former student-- and you have a Biostatistics blog that you want to add to [bmorebiostats.com](http://bmorebiostat.com/), let us know! If you are a current student [@jhubiostats](https://twitter.com/jhubiostat) and need help getting started, contact us!
+If you are a student [@jhubiostat](https://twitter.com/jhubiostat) --or a former student-- and you have a Biostatistics blog that you want to add to [bmorebiostats.com](http://bmorebiostat.com/), let us know! If you are a current student [@jhubiostat](https://twitter.com/jhubiostat) and need help getting started, contact us!
 
 Be sure to follow us! Here is a hint why:
 
