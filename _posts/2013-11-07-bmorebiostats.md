@@ -63,18 +63,18 @@ The full current workflow is illustrated below:
 
 As a group we are now thinking of dropping the paper.li route. Well, the only option we might use is the weekly one. One strong argument in favor of dropping the paper.li route is that one site avoids any dilution given by having two. Furthermore, we do not want to be seen as spammers although some shameless self-promotion is not so bad either (something I learnt from [@hspter](https://twitter.com/hspter)).
 
-I guess that I am the only one still in favor of weekly summaries and using the feature of embeding the paper in a website (like [here](http://www.biostat.jhsph.edu/~lcollado/BmoreBiostats.html#.UnxMX5TF2Qn)). To minimize the dilution, all the paper.li links point to [bmorebiostats.com](http://bmorebiostat.com/). You can also argue that there might be some interested only on the weekly summaries. Aka, we are just giving others options! 
+I guess that I am the only one still in favor of weekly summaries and using the feature of embeding the paper in a website (like [here](http://www.biostat.jhsph.edu/~lcollado/BmoreBiostats.html#.UnxMX5TF2Qn)). To minimize the dilution, all the paper.li links point to [bmorebiostat.com](http://bmorebiostat.com/). You can also argue that there might be some interested only on the weekly summaries. Aka, we are just giving others options! 
 
-Maybe I am just reluctant to delete the [BmoreBiostats paper](bit.ly/BmoreBiostats) so soon after I finally completed it. However, some of the work involved is not going down the drain since the social media accounts needed for the paper are now being used by [bmorebiostats.com](http://bmorebiostat.com/).
+Maybe I am just reluctant to delete the [BmoreBiostats paper](bit.ly/BmoreBiostats) so soon after I finally completed it. However, some of the work involved is not going down the drain since the social media accounts needed for the paper are now being used by [bmorebiostat.com](http://bmorebiostat.com/).
 
-Note that we do not see much of a problem with the fact that [bmorebiostats.com](http://bmorebiostat.com/) involves monthly fees as we are hoping to get some department support (cross fingers!). 
+Note that we do not see much of a problem with the fact that [bmorebiostat.com](http://bmorebiostat.com/) involves monthly fees as we are hoping to get some department support (cross fingers!). 
 
 
 ### Going forward
 
 We are very excited that we have implemented the aggregator of student blogs from Johns Hopkins Biostatistics. We believe that it will be helpful to others including prosprective students. Now that the aggregator is practically finished, we can now move unto writing exciting posts! 
 
-If you are a student [@jhubiostat](https://twitter.com/jhubiostat) --or a former student-- and you have a Biostatistics blog that you want to add to [bmorebiostats.com](http://bmorebiostat.com/), let us know! If you are a current student [@jhubiostat](https://twitter.com/jhubiostat) and need help getting started, contact us!
+If you are a student [@jhubiostat](https://twitter.com/jhubiostat) --or a former student-- and you have a Biostatistics blog that you want to add to [bmorebiostat.com](http://bmorebiostat.com/), let us know! If you are a current student [@jhubiostat](https://twitter.com/jhubiostat) and need help getting started, contact us!
 
 Be sure to follow us! Here is a hint why:
 
