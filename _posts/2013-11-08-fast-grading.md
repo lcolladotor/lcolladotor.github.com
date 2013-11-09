@@ -10,7 +10,9 @@ categories:
 
 For the past year and a half [I have been a teaching assistant](http://www.biostat.jhsph.edu/~lcollado/teaching.html#.Un2BnJTF2Ql) (TA) for the Statistical Methods in Public Health I to IV (140.621 to 140.624) courses. As part of being a TA for these courses, we have to grade between 30 and 50 homeworks every two weeks or so: four problem sets per eight week terms. For example, I now have to grade 37 homeworks:
 
-<a href="http://lcolladotor.github.io/figs/2013-11-08-fast-grading/list-to-grade.png"><IMG  class="displayed" src="http://lcolladotor.github.io/figs/2013-11-08-fast-grading/list-to-grade.png" alt="HWs to grade" style="width: 400px;"/></a>
+<center>
+<a href="http://lcolladotor.github.io/figs/2013-11-08-fast-grading/list-to-grade.png"><img src="http://lcolladotor.github.io/figs/2013-11-08-fast-grading/list-to-grade.png" alt="HWs to grade" style="width: 400px;"/></a>
+</center>
 
 These courses have been polished over time and the instructors do a great job organizing the TA group. For every problem set that we have to grade, we are given a full answer key that is later published in the course site so all the students can access it. As TAs we also receive general grading comments from the instructor; typically a two page document describing the key points that we should expect the students to be able to answer. 
 
@@ -56,15 +58,21 @@ An anonymous student (I tried to choose examples that are not identifiable) wrot
 
 The image below shows the state at which I am copying the comment.
 
-<a href="http://lcolladotor.github.io/figs/2013-11-08-fast-grading/goodjob1.png"><IMG  class="displayed" src="http://lcolladotor.github.io/figs/2013-11-08-fast-grading/goodjob1.png" alt="Good job 1" style="width: 500px;"/></a>
+<center>
+<a href="http://lcolladotor.github.io/figs/2013-11-08-fast-grading/goodjob1.png"><img src="http://lcolladotor.github.io/figs/2013-11-08-fast-grading/goodjob1.png" alt="Good job 1" style="width: 500px;"/></a>
+</center>
 
 Moving on, I later found another student that has the correct answer presented in a different format. If "Good job!" is the most recent comment on my clipboard, I can simply paste it. If it is not, then I can use [Alfred v2](http://www.alfredapp.com/) to show me my recent "copies" and select "Good job!" from the list. In this case it is under `cmd + 2`; you can also use the arrows and the return key, or the mouse. Although note that [Alfred v2](http://www.alfredapp.com/) is designed in such a way that you only have to use the keyboard to gain efficiency.
 
-<a href="http://lcolladotor.github.io/figs/2013-11-08-fast-grading/goodjob2.png"><IMG  class="displayed" src="http://lcolladotor.github.io/figs/2013-11-08-fast-grading/goodjob2.png" alt="Good job 2" style="width: 500px;"/></a>
+<center>
+<a href="http://lcolladotor.github.io/figs/2013-11-08-fast-grading/goodjob2.png"><img src="http://lcolladotor.github.io/figs/2013-11-08-fast-grading/goodjob2.png" alt="Good job 2" style="width: 500px;"/></a>
+</center>
 
 The end result is a green checkmark with the "Good job!" comment pasted into it. The next time I use `cmd + v` (the regular paste shortcut in Mac), "Good job!" will be pasted. So you only really need to invoke [Alfred v2](http://www.alfredapp.com/) when you want to change comments.
 
-<a href="http://lcolladotor.github.io/figs/2013-11-08-fast-grading/goodjob3.png"><IMG  class="displayed" src="http://lcolladotor.github.io/figs/2013-11-08-fast-grading/goodjob3.png" alt="Good job 3" style="width: 500px;"/></a>
+<center>
+<a href="http://lcolladotor.github.io/figs/2013-11-08-fast-grading/goodjob3.png"><img src="http://lcolladotor.github.io/figs/2013-11-08-fast-grading/goodjob3.png" alt="Good job 3" style="width: 500px;"/></a>
+</center>
 
 #### Detailed comments: where the strategy pays off!
 
@@ -72,26 +80,35 @@ You obviously do not all this setup just for pasting "Good job!" everywhere. How
 
 In this example, I first find a plot that looks very similar to what the students were asked to do. It has a couple of mistakes. First, the age-gender group categories are not labeled in the plot, which makes it impossible to know which group is which unless you know how _agegen_ is coded. Given that it is the first time students were asked to make such a detailed plot, I can expect other students to make the same mistake. So I copy that comment and add it to my clipboard history as shown below.
 
-<a href="http://lcolladotor.github.io/figs/2013-11-08-fast-grading/ci1.png"><IMG  class="displayed" src="http://lcolladotor.github.io/figs/2013-11-08-fast-grading/ci1.png" alt="CI 1" style="width: 500px;"/></a>
+<center>
+<a href="http://lcolladotor.github.io/figs/2013-11-08-fast-grading/ci1.png"><img src="http://lcolladotor.github.io/figs/2013-11-08-fast-grading/ci1.png" alt="CI 1" style="width: 500px;"/></a>
+</center>
 
 This particular plot has another problem in that the confidence bands look much smaller than expected. The estimates per se look comparable to the expected plot, so I suspect that the student either used the wrong standard errors or forgot to multiply them by 1.96. So I copy this comment separately and add it to my clipboard history. Maybe other students made the same mistake, maybe they did not. 
 
-<a href="http://lcolladotor.github.io/figs/2013-11-08-fast-grading/ci2.png"><IMG  class="displayed" src="http://lcolladotor.github.io/figs/2013-11-08-fast-grading/ci2.png" alt="CI 2" style="width: 500px;"/></a>
+<center>
+<a href="http://lcolladotor.github.io/figs/2013-11-08-fast-grading/ci2.png"><img src="http://lcolladotor.github.io/figs/2013-11-08-fast-grading/ci2.png" alt="CI 2" style="width: 500px;"/></a>
+</center>
 
 Having copied both comments separately, I am now ready for cases where they forget to label the X axis, use the wrong confidence bands, or make both mistakes together.
 
 Later on, I find another homework that has labels on the X axis. So instead of typing my comment, I simply invoke [Alfred v2](http://www.alfredapp.com/) and search the appropriate comment as shown below.
 
-<a href="http://lcolladotor.github.io/figs/2013-11-08-fast-grading/ci3.png"><IMG  class="displayed" src="http://lcolladotor.github.io/figs/2013-11-08-fast-grading/ci3.png" alt="CI 3" style="width: 500px;"/></a>
+<center>
+<a href="http://lcolladotor.github.io/figs/2013-11-08-fast-grading/ci3.png"><img src="http://lcolladotor.github.io/figs/2013-11-08-fast-grading/ci3.png" alt="CI 3" style="width: 500px;"/></a>
+</center>
 
 If my comment list is getting long, using [Alfred v2](http://www.alfredapp.com/) I can easily search my clipboard history by typing keywords. In this particular case, I know that my comment had something to do with the "axis", so typing it in I quickly find the comment I want to use.
 
-<a href="http://lcolladotor.github.io/figs/2013-11-08-fast-grading/ci4.png"><IMG  class="displayed" src="http://lcolladotor.github.io/figs/2013-11-08-fast-grading/ci4.png" alt="CI 4" style="width: 500px;"/></a>
+<center>
+<a href="http://lcolladotor.github.io/figs/2013-11-08-fast-grading/ci4.png"><img src="http://lcolladotor.github.io/figs/2013-11-08-fast-grading/ci4.png" alt="CI 4" style="width: 500px;"/></a>
+</center>
 
 And voila! The comment is pasted!
 
-<a href="http://lcolladotor.github.io/figs/2013-11-08-fast-grading/ci5.png"><IMG  class="displayed" src="http://lcolladotor.github.io/figs/2013-11-08-fast-grading/ci5.png" alt="CI 5" style="width: 500px;"/></a>
-
+<center>
+<a href="http://lcolladotor.github.io/figs/2013-11-08-fast-grading/ci5.png"><img src="http://lcolladotor.github.io/figs/2013-11-08-fast-grading/ci5.png" alt="CI 5" style="width: 500px;"/></a>
+</center>
 
 ### Alternatives
 
