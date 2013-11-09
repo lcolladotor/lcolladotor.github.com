@@ -5,6 +5,7 @@ tags:
 - Blog
 categories:
 - Web
+- rstats
 ---
 {% include JB/setup %}
 
