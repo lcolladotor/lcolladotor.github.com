@@ -59,7 +59,7 @@ Currently, [BmoreBiostats](bit.ly/BmoreBiostat) is set up in a way that only the
 
 The full current workflow is illustrated below:
 
-<img src="http://lcolladotor.github.io/figs/2013-11-07-bmorebiostats/BmoreBiostats-schema.png" alt="Workflow" style="width: 900px;"/>
+<a href="http://lcolladotor.github.io/figs/2013-11-07-bmorebiostats/BmoreBiostats-schema.png"><IMG  class="displayed" src="http://lcolladotor.github.io/figs/2013-11-07-bmorebiostats/BmoreBiostats-schema.png" alt="Workflow" style="width: 900px;"/></a>
 
 As a group we are now thinking of dropping the paper.li route. Well, the only option we might use is the weekly one. One strong argument in favor of dropping the paper.li route is that one site avoids any dilution given by having two. Furthermore, we do not want to be seen as spammers although some shameless self-promotion is not so bad either (something I learnt from [@hspter](https://twitter.com/hspter)).
 
