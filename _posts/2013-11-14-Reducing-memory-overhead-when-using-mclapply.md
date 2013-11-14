@@ -151,7 +151,7 @@ identical(res1b, res3)
 
 ## Computation time comparison
 
-Computation time wise, approaches 2 and 3 do not seem very different. Approach 1b seems a tiny bit faster.
+Computation time wise, approaches 2 and 3 do not seem very different. Approach 1b seems a tiny bit faster. [Edit: the order of the best approach might change slightly if you re-run this code]
 
 
 {% highlight r %}
@@ -166,13 +166,13 @@ micro
 {% highlight text %}
 ## Unit: milliseconds
 ##                                                     expr   min    lq
-##            mclapply(dataSplit1b, rowMeans, mc.cores = 2) 20.29 23.77
-##  mclapply(index, applyMyFun, env = my.env, mc.cores = 2) 19.41 23.14
-##               mclapply(index, applyMyFun2, mc.cores = 2) 25.63 27.87
+##            mclapply(dataSplit1b, rowMeans, mc.cores = 2) 19.44 23.33
+##  mclapply(index, applyMyFun, env = my.env, mc.cores = 2) 19.38 23.14
+##               mclapply(index, applyMyFun2, mc.cores = 2) 24.53 28.14
 ##  median    uq   max neval
-##   26.33 29.74 57.55   100
-##   25.27 32.44 54.12   100
-##   29.51 34.88 60.71   100
+##   25.61 30.20 77.44   100
+##   25.98 34.83 55.44   100
+##   31.16 35.99 72.23   100
 {% endhighlight %}
 
 
@@ -194,6 +194,10 @@ Re-doing the previous test but using 20 cores lead to very similar wall clock co
 Using 20 cores with previously created data files (either the split data for approaches 1b and 2, or the chunk files for approach 3) has a very different memory footprint. Approach 1b used in average 6.0744G RAM, approach 2 used 4.2647G RAM
 , and approach 3 used 2.6545G RAM. 
 
+### Edit
+
+Ryan from (<span class="showtooltip" title="(2013). ' [Bioc-devel] Trying to reduce the memory overhead when using mclapply .' ."><a href="https://stat.ethz.ch/pipermail/bioc-devel/2013-November/004930.html">Ryan 2013</a></span>) contributed a fourth approach which used 6.794G RAM when starting from scratch with 20 cores. This approach definitely beats the other ones under the condition of starting from scratch. Note that just creating the `data` object uses 558.938M RAM: multiplied by 20 it would be around 10.92G RAM. 
+
 ## Conclusions
 
 Using 2 or 20 cores, approach 2 beat by a very small margin approaches 3 and 1b in terms of memory usage. However, all approaches failed in terms of not having the memory blow up as you increase the number of cores when starting from scratch. 
@@ -213,6 +217,8 @@ Citations made with `knitcitations` (<span class="showtooltip" title="Boettiger 
 -  lockedoff,   (2012) Using mclapply, foreach, or something else in [r] to operate on an object in parallel?.  *Using mclapply, foreach, or something else in [r] to operate on an object in parallel? - Stack Overflow*  [http://stackoverflow.com/questions/11036702/using-mclapply-foreach-or-something-else-in-r-to-operate-on-an-object-in-par](http://stackoverflow.com/questions/11036702/using-mclapply-foreach-or-something-else-in-r-to-operate-on-an-object-in-par)
 -   [R-sig-hpc] mclapply: rm intermediate objects and returning	memory
    .  [https://mailman.stat.ethz.ch/pipermail/r-sig-hpc/2012-October/001534.html](https://mailman.stat.ethz.ch/pipermail/r-sig-hpc/2012-October/001534.html)
+-   [Bioc-devel] Trying to reduce the memory overhead when using mclapply
+   .  [https://stat.ethz.ch/pipermail/bioc-devel/2013-November/004930.html](https://stat.ethz.ch/pipermail/bioc-devel/2013-November/004930.html)
 - Carl Boettiger,   (2013) knitcitations: Citations for knitr markdown files.  [http://CRAN.R-project.org/package=knitcitations](http://CRAN.R-project.org/package=knitcitations)
 
 
@@ -237,18 +243,18 @@ sessionInfo()
 ## [8] base     
 ## 
 ## other attached packages:
-## [1] microbenchmark_1.3-0 knitrBootstrap_0.9.0 ggplot2_0.9.3.1     
-## [4] knitcitations_0.4-7  bibtex_0.3-6         knitr_1.5           
+## [1] ggplot2_0.9.3.1      microbenchmark_1.3-0 knitcitations_0.4-7 
+## [4] bibtex_0.3-6         knitr_1.5           
 ## 
 ## loaded via a namespace (and not attached):
 ##  [1] codetools_0.2-8    colorspace_1.2-4   dichromat_2.0-0   
 ##  [4] digest_0.6.3       evaluate_0.5.1     formatR_0.10      
 ##  [7] grid_3.0.2         gtable_0.1.2       httr_0.2          
-## [10] labeling_0.2       markdown_0.6.3     MASS_7.3-29       
-## [13] munsell_0.4.2      plyr_1.8           proto_0.3-10      
-## [16] RColorBrewer_1.0-5 RCurl_1.95-4.1     reshape2_1.2.2    
-## [19] scales_0.2.3       stringr_0.6.2      tools_3.0.2       
-## [22] XML_3.95-0.2       xtable_1.7-1
+## [10] labeling_0.2       MASS_7.3-29        munsell_0.4.2     
+## [13] plyr_1.8           proto_0.3-10       RColorBrewer_1.0-5
+## [16] RCurl_1.95-4.1     reshape2_1.2.2     scales_0.2.3      
+## [19] stringr_0.6.2      tools_3.0.2        XML_3.95-0.2      
+## [22] xtable_1.7-1
 {% endhighlight %}
 
 
