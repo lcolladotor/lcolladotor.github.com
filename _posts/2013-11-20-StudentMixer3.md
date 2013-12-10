@@ -4,7 +4,7 @@ title: Third Student Cultural Mixer
 tags:
 - Biostatistics
 categories:
-- jhubiostat
+- jhu biostat
 ---
 {% include JB/setup %}
 
