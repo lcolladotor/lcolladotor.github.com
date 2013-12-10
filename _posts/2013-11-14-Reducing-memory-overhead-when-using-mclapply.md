@@ -68,7 +68,7 @@ This gets the job done, but because my real `dataSplit` is much larger in memory
 
 ### Best way to pre-split?
 
-If I know that if I am using $n$ number of cores (in this example $n=2$) and the data set has $m$ rows, then one option for approach #1 is to split the data into $n$ chunks each of size $m / n$ (rounding if needed).
+If I know that if I am using \\( n \\) number of cores (in this example \\( n=2 \\) ) and the data set has \\( m \\) rows, then one option for approach #1 is to split the data into \\( n \\) chunks each of size \\( m / n \\) (rounding if needed).
 
 
 {% highlight r %}
@@ -80,7 +80,7 @@ res1b <- mclapply(dataSplit1b, rowMeans, mc.cores = 2)
 {% endhighlight %}
 
 
-The memory needed is then in part determined by the chunksize (1000 vs 5000 shown above). One excellent suggestion (via Ben) is to reduce the memory load using this approach is to just smaller chunks. However, the runtime of the function I want to apply (`rowMeans` in the example) is not very sensible to the chunksize used, thus using very small chunks is not ideal as it increases computation time. Finding the sweet point is tricky, but using chunksizes of $m / (2n)$ could certainly help memory wise without majorly affecting computation time.
+The memory needed is then in part determined by the chunksize (1000 vs 5000 shown above). One excellent suggestion (via Ben) is to reduce the memory load using this approach is to just smaller chunks. However, the runtime of the function I want to apply (`rowMeans` in the example) is not very sensible to the chunksize used, thus using very small chunks is not ideal as it increases computation time. Finding the sweet point is tricky, but using chunksizes of \\(m / (2n) \\) could certainly help memory wise without majorly affecting computation time.
 
 ## Approach 2
 
@@ -166,13 +166,13 @@ micro
 {% highlight text %}
 ## Unit: milliseconds
 ##                                                     expr   min    lq
-##            mclapply(dataSplit1b, rowMeans, mc.cores = 2) 19.44 23.33
-##  mclapply(index, applyMyFun, env = my.env, mc.cores = 2) 19.38 23.14
-##               mclapply(index, applyMyFun2, mc.cores = 2) 24.53 28.14
+##            mclapply(dataSplit1b, rowMeans, mc.cores = 2) 17.43 19.97
+##  mclapply(index, applyMyFun, env = my.env, mc.cores = 2) 17.05 19.20
+##               mclapply(index, applyMyFun2, mc.cores = 2) 17.19 23.11
 ##  median    uq   max neval
-##   25.61 30.20 77.44   100
-##   25.98 34.83 55.44   100
-##   31.16 35.99 72.23   100
+##   21.41 26.00 65.53   100
+##   20.60 23.92 43.67   100
+##   24.56 28.39 46.99   100
 {% endhighlight %}
 
 
@@ -182,7 +182,7 @@ library("ggplot2")
 autoplot(micro)
 {% endhighlight %}
 
-![center](/figs/2013-11-14-Reducing-memory-overhead-when-using-mclapply/compTime.png) 
+![center](http://lcolladotor.github.io/figs/2013-11-14-Reducing-memory-overhead-when-using-mclapply/compTime.png) 
 
 
 ## Memory wise comparison
@@ -243,12 +243,12 @@ sessionInfo()
 ## [8] base     
 ## 
 ## other attached packages:
-## [1] ggplot2_0.9.3.1      microbenchmark_1.3-0 knitcitations_0.4-7 
+## [1] microbenchmark_1.3-0 ggplot2_0.9.3.1      knitcitations_0.4-7 
 ## [4] bibtex_0.3-6         knitr_1.5           
 ## 
 ## loaded via a namespace (and not attached):
 ##  [1] codetools_0.2-8    colorspace_1.2-4   dichromat_2.0-0   
-##  [4] digest_0.6.3       evaluate_0.5.1     formatR_0.10      
+##  [4] digest_0.6.4       evaluate_0.5.1     formatR_0.10      
 ##  [7] grid_3.0.2         gtable_0.1.2       httr_0.2          
 ## [10] labeling_0.2       MASS_7.3-29        munsell_0.4.2     
 ## [13] plyr_1.8           proto_0.3-10       RColorBrewer_1.0-5

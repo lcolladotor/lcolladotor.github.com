@@ -49,7 +49,8 @@ Before doing anything, I first had to install [Jekyll](http://jekyllrb.com/). To
 To install [Jekyll](http://jekyllrb.com/), I needed to have [Ruby](https://www.ruby-lang.org/en/downloads/) and [RubyGems](http://rubygems.org/pages/download). Since I use [MacPorts](http://www.macports.org/) these are the steps I used:
 
 
-```{bash}
+
+{% highlight bash %}
 ## Update MacPorts, can take a while!!
 sudo port selfupdate
 sudo port upgrade outdated
@@ -70,13 +71,16 @@ sudo ln -s ruby1.9 ruby
 ruby --version 
 ## This is mine:
 ## ruby 1.9.3p448 (2013-06-27 revision 41675) [x86_64-darwin12]
-```
+{% endhighlight %}
+
 
 With Ruby in place, I could then install jekyll.
 
-```{bash}
+
+{% highlight bash %}
 sudo gem install jekyll
-```
+{% endhighlight %}
+
 
 Note that you can also do this after initializing the blog.
 
@@ -88,23 +92,27 @@ First, I created the `lcolladotor.github.com` repository on GitHub. As my GitHub
 
 Once the repository was created, I added the Jekyll-Bootstrap files.
 
-```{bash}
+
+{% highlight bash %}
 ## Initialize repo with Jekyll-Bootstrap files
 git clone https://github.com/plusjade/jekyll-bootstrap.git lcolladotor.github.com
 cd lcolladotor.github.com/
 git remote set-url origin git@github.com:lcolladotor/lcolladotor.github.com.git
 git push -u origin master
-```
+{% endhighlight %}
+
 
 
 ### Change theme to Twitter-2.0
 
 Jekyll-Bootstrap includes several themes (<span class="showtooltip" title="(2013). 'Using Themes | ruhoh universal static blog generator.' ."><a href="http://jekyllbootstrap.com/usage/jekyll-theming.html">JB Themes</a></span>) which you check on their [theme explorer](http://themes.jekyllbootstrap.com/). I think that [J. Fisher's blog](http://jfisher-usgs.github.io/) looks good with Twitter-2.0 and decided to follow his lead. Furthermore, he has customized a few things (check [his blog's history](https://github.com/jfisher-usgs/jfisher-usgs.github.com/commits/master)) which I just plan on using.
 
-```{bash}
+
+{% highlight bash %}
 ## Install Twitter-2.0 theme
 rake theme:install git="https://github.com/gdagley/theme-twitter-2.0"
-```
+{% endhighlight %}
+
 
 ### Code highlighting
 
@@ -114,12 +122,14 @@ The default Jekyll highlighting setup uses [pygments](http://pygments.org/). I a
 
 So I installed Pygments.
 
-```{bash}
+
+{% highlight bash %}
 ## Install Pygments, assuming you have Python installed
 curl -O http://python-distribute.org/distribute_setup.py
 sudo python distribute_setup.py
 sudo easy_install Pygments
-```
+{% endhighlight %}
+
 
 Note that (<span class="showtooltip" title="Fisher JC (2012). 'Jekyll Build on Windows.' ."><a href="http://jfisher-usgs.github.io/lessons/2012/05/30/jekyll-build-on-windows/">Fisher, 2012b</a></span>) details some other steps. I basically copied his [syntax.css](https://github.com/jfisher-usgs/jfisher-usgs.github.com/blob/master/assets/themes/twitter-2.0/css/syntax.css) file and saved it as `/assets/themes/twitter-2.0/css/syntax.css` 
 
@@ -138,7 +148,8 @@ Next I had to import my posts from Tumblr. Jekyll has a varied set of tools that
 
 The Tumblr importer allows you to either import them into HTML format or Markdown format. I first tried Markdown, but ran into some problems. So I decided to import them into HTML format, and rename them to Markdown. 
 
-```{bash}
+
+{% highlight bash %}
 ## Install importing tools
 sudo gem install jekyll-import --pre
 
@@ -155,7 +166,8 @@ for i in *html; do echo $i; filename=$(basename "$i"); filename2="${filename%.*}
 
 ## Move the posts to _posts
 mv ~/tmp/_posts/tumblr/*md ~/WhereYouHaveYourLocalGitRepoCopy/lcollado.github.com/_posts/
-```
+{% endhighlight %}
+
 
 I then had to do some manual edits on the posts, specially for code chunks. For example, [this post](https://raw.github.com/lcolladotor/lcolladotor.github.com/master/_posts/2013-05-09-reading-an-r-file-from-github.md) has R chunks which I had to surround by:
 
@@ -167,13 +179,15 @@ To complete the posts, I made sure the YAML front matter was correct and defined
 
 Once you have the posts, you can use Jekyll to view your blog locally. 
 
-```{bash}
+
+{% highlight bash %}
 ## Go to your directory
 ~/WhereYouHaveYourLocalGitRepoCopy/lcollado.github.com/
 
 ## Generate the static view of your blog
 jekyll serve
-```
+{% endhighlight %}
+
 
 In my case, `jekyll serve` prompted a couple of errors which I had to go to the posts and edit. For example, some HTML tag that I opened but didn't close. Stuff like that.
 
@@ -192,14 +206,16 @@ As for math, I am currently using the rdiscount flavor of Markdown and loading t
 
 To use rdiscount locally, I also had to install it. I have also tried out kramdown.
 
-```{bash}
+
+{% highlight bash %}
 ## Markdown flavors
 sudo gem install rdiscount
 sudo gem install kramdown
 
 ## I don't remember why I also installed this:
 sudo gem install nokogiri
-```
+{% endhighlight %}
+
 
 I then customized the index and added other pages:
 
@@ -321,7 +337,7 @@ sessionInfo()
 ## [1] knitcitations_0.4-7 bibtex_0.3-6        knitr_1.5          
 ## 
 ## loaded via a namespace (and not attached):
-##  [1] codetools_0.2-8 digest_0.6.3    evaluate_0.5.1  formatR_0.10   
+##  [1] codetools_0.2-8 digest_0.6.4    evaluate_0.5.1  formatR_0.10   
 ##  [5] httr_0.2        RCurl_1.95-4.1  stringr_0.6.2   tools_3.0.2    
 ##  [9] XML_3.95-0.2    xtable_1.7-1
 {% endhighlight %}
