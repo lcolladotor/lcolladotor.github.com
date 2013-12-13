@@ -82,6 +82,44 @@ pdir
 {% endhighlight %}
 
 
+## Using ssh config
+
+This section was added after Kasper Hansen's comment.
+
+You can edit the ~.ssh/config file (check [how to set it up](http://www.howtogeek.com/75007/stupid-geek-tricks-use-your-ssh-config-file-to-create-aliases-for-hosts/), [explained differently](http://nerderati.com/2011/03/simplify-your-life-with-an-ssh-config-file/) and the [manual](http://linux.die.net/man/5/ssh_config)) to make things even better. This is how mine looks like:
+
+
+{% highlight bash %}
+Host enigma
+	User username
+    Hostname enigma2.etc.edu
+	ForwardX11 yes
+{% endhighlight %}
+
+
+I like the ssh `-X` (or `-Y`) option so I can later view plots in X11 when running `R`. That is why the __ForwardX11__ option is present.
+
+Then you can use the following command to ssh into the cluster.
+
+
+{% highlight bash %}
+ssh enigma
+{% endhighlight %}
+
+
+Or if you prefer, simplify the bash alias to:
+
+
+{% highlight bash %}
+## In local .bashrc file
+alias enigma="ssh enigma"
+{% endhighlight %}
+
+
+The sections below have been edited to assume that you are configured the __enigma__ host shortcut in your ~.ssh/config file.
+
+## Needed a new strategy
+
 The previous strategy works and I had been very comfortable with it. However, at times you might forget to request a node from the cluster to do your work interactively. This is specially true for me when I only plan on using a few `git` commands. But when many users forget this, it becomes a problem and our cluster manager had to send us a reminder:
 
 	*ALWAYS* work on a cluster node rather than on enigma2.
@@ -129,7 +167,7 @@ Then googling I found how to __ssh__ and change directory in one command (<span 
 
 
 {% highlight bash %}
-ssh -t username@enigma2.etc.edu 'cd /very/complicated/path/to/projectDir/; bash'
+ssh -t enigma 'cd /very/complicated/path/to/projectDir/; bash'
 {% endhighlight %}
 
 
@@ -138,7 +176,7 @@ The problem I soon encountered was that I couldn't __qrsh__ right after because 
 
 
 {% highlight bash %}
-ssh -t username@enigma2.etc.edu 'cd /very/complicated/path/to/projectDir/; bash -l'
+ssh -t enigma 'cd /very/complicated/path/to/projectDir/; bash -l'
 {% endhighlight %}
 
 
@@ -149,7 +187,7 @@ With our cluster administrator's help, I was finally able to find how to do all 
 
 {% highlight bash %}
 ## Requires the code by Sam Younkin to work (or the version I modified)
-ssh -t username@enigma2.etc.edu 'cd /very/complicated/path/to/projectDir/; source /etc/profile; echo "cd $PWD" > ~/.bash_pwd; history -w; qrsh'
+ssh -t enigma 'cd /very/complicated/path/to/projectDir/; source /etc/profile; echo "cd $PWD" > ~/.bash_pwd; history -w; qrsh'
 {% endhighlight %}
 
 
@@ -168,11 +206,11 @@ Finally, I created the `qr` alias in my local machine. This alias:
 ## In local .bashrc file
 
 # qrsh
-alias qr="ssh -Y -t username@enigma2.etc.edu 'cd /very/complicated/path/to/projectDir/; source /etc/profile; echo \"cd \$PWD\" > ~/.bash_pwd; qrsh'"
+alias qr="ssh -t enigma 'cd /very/complicated/path/to/projectDir/; source /etc/profile; echo \"cd \$PWD\" > ~/.bash_pwd; qrsh'"
 {% endhighlight %}
 
 
-Note the use of the backslash to delay the execution of `$PWD`. I want it to be executed on the cluster, not on my local machine. Also, I like the ssh `-Y` option so I can later view plots in X11 when running `R`.
+Note the use of the backslash to delay the execution of `$PWD`. I want it to be executed on the cluster, not on my local machine. 
 
 ## Glory!
 
@@ -186,6 +224,31 @@ Plus I also have the cluster `qr` alias for doing what [Samuel Younkin](https://
 If you have suggestions on how to improve this, let me know!
 
 
+### Extra aliases
+
+The following two aliases take your local current directory basename and use it for accessing /very/complicated/path/to/projectDir/__basename__. This is useful if you use an organization similar to mine:
+
+* Projects dir
+	* Project 1 dir
+	* Project 2 dir
+	
+The full paths are different in my computer and in the cluster, but once you are in  /very/complicated/path/to/projectDir/
+it is all the same on both locations.
+
+The first one runs __qrsh__ while the second one doesn't request a node for interactive work. 
+
+
+{% highlight bash %}
+## In local .bashrc file
+
+## qrsh-basename
+alias qs='LEODIR=`basename $PWD`; ssh -t enigma "cd /very/complicated/path/to/projectDir/$LEODIR/; source /etc/profile; echo \"cd \$PWD\" > ~/.bash_pwd; history -w; qrsh"'
+## basename, but no qrsh
+alias qq='LEODIR=`basename $PWD`; ssh -t enigma "cd /very/complicated/path/to/projectDir/$LEODIR/; source /etc/profile; echo \"cd \$PWD\" > ~/.bash_pwd; history -w; bash"'
+{% endhighlight %}
+
+
+
 ### References
 
 Citations made with `knitcitations` (<span class="showtooltip" title="Boettiger C (2013). knitcitations: Citations for knitr markdown files. R package version 0.4-7."><a href="http://CRAN.R-project.org/package=knitcitations">Boettiger, 2013</a></span>).
@@ -197,8 +260,11 @@ Citations made with `knitcitations` (<span class="showtooltip" title="Boettiger 
 - Carl Boettiger,   (2013) knitcitations: Citations for knitr markdown files.  [http://CRAN.R-project.org/package=knitcitations](http://CRAN.R-project.org/package=knitcitations)
 
 
+
 ### Recap
 
 If you got lost, these are the basic modifications you need to make to your local and cluster `.bashrc` files.
 
 <script src="https://gist.github.com/lcolladotor/7897221.js"></script>
+
+Check the history of this post [here](https://github.com/lcolladotor/lcolladotor.github.com/commits/master/_posts/2013-12-11-quick-cluster-login-to-interactive-session.md).
