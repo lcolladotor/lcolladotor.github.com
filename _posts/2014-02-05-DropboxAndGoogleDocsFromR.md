@@ -258,4 +258,4 @@ sessionInfo()
 ## [5] XML_3.95-0.2   xtable_1.7-1
 {% endhighlight %}
 
-
+Check other topics on [#rstats](https://twitter.com/search?q=%23rstats).
