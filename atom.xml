@@ -15,7 +15,7 @@ title : Atom Feed
    <email>{{ site.author.email }}</email>
  </author>
 
- {% for post in site.posts %}
+ {% for post in site.posts limit:20 %}
  <entry>
    <title>{{ post.title }}</title>
    <link href="{{ site.production_url }}{{ post.url }}"/>
