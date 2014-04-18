@@ -14,7 +14,8 @@ tagline: Browse posts by topic
 
 
 {% for tag in site.tags %} 
-  <h2 id="{{ tag[0] }}-ref">{{ tag[0] }}</h2>
+  <div class="anchor" id="{{ tag[0] }}-ref"></div>
+  <h2>{{ tag[0] }}</h2>
   <ul>
     {% assign pages_list = tag[1] %}  
     {% include JB/pages_list %}
