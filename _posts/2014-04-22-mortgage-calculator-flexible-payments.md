@@ -60,11 +60,16 @@ Next, the information is shown in more detail as an interactive data table (<spa
 
 Finally, you can download the amortization table in CSV format for your records.
 
+
+PS You can also access the app via shinyapps at this [url](https://lcolladotor.shinyapps.io/mortgage2/). It is the first time I've deployed an app there as I wanted to test shinyapps out.
+
 ## Conclusions
 
 The experience of coding the [shiny app](http://glimmer.rstudio.com/lcolladotor/mortgage/) (<span class="showtooltip" title="(2014). 'Simple Mortgage Calculator.' ."><a href="http://glimmer.rstudio.com/lcolladotor/mortgage/">Simple Mortage Calculator</a></span>) was interesting as I did learn a couple of new things. The same was true for figuring out the calculations for the more flexible options.
 
 Finally, but not least, the shiny app was useful for my use case and was informative for comparing different loan options. Hopefully it will be useful for other users!
+
+
 
 
 
