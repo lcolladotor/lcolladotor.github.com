@@ -49,7 +49,7 @@ The option to begin the loan now but accept the first payment much later is ther
 
 Going back to the app, I tried explaining all the inputs as much as possible. The output is relatively straight forward. 
 
-First, there is a line with focus D3 interactive plot (<span class="showtooltip" title="Partners N (2014). 'Line Chart With View Finder - NVD3.' ."><a href="http://nvd3.org//examples/lineWithFocus.html">Line Chart with View Finder</a></span>) which shows the principal (the amount you owe) over months as well as how much you've payed already. The bottom panel allows you to zoom into a specific time range as shown below.
+First, there is a line with focus D3 interactive plot (<span class="showtooltip" title="Partners N (2014). 'Line Chart With View Finder - NVD3.' ."><a href="http://nvd3.org//examples/lineWithFocus.html">Line Chart with View Finder</a></span>) which shows the principal (the amount you owe) over months as well as how much you've paid already. The bottom panel allows you to zoom into a specific time range as shown below.
 
 <center>
 <a href="http://lcolladotor.github.io/figs/2014-04-22-mortgage-calculator-flexible-payments/lineWithFocus.png"><img src="http://lcolladotor.github.io/figs/2014-04-22-mortgage-calculator-flexible-payments/lineWithFocus.png" alt="Workflow" style="width: 775px;"/></a>
