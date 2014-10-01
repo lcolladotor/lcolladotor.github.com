@@ -9,17 +9,20 @@ layout: default
 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4ef23e545d41b87c"></script>
 <script type="text/javascript">
   addthis.layers({
-    'theme' : 'dark',
+    'theme' : 'transparent',
     'share' : {
       'position' : 'left',
-      'numPreferredServices' : 5
+      'numPreferredServices' : 5,
+      'desktop' : false,
+      'mobile' : true
     }, 
     'follow' : {
       'services' : [
         {'service': 'twitter', 'id': 'fellgernon'},
         {'service': 'rss', 'id': 'http://feeds.feedburner.com/FellgernonBit'}
       ],
-	  'offset' : {'top':'50px'}
+	  'offset' : {'top':'50px'},
+      'title' : 'Follow'
     }   
   });
 </script>
