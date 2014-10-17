@@ -23,6 +23,13 @@ Briefly, Bioconductor <a id='cite-bioc'></a>(<a href='http://genomebiology.com/2
 
 Obviously, you need to know the basics about `R` in order to use Bioconductor.
 
+
+<center>
+<a href="http://www.bioconductor.org"><img src="http://www.bioconductor.org/images/logo_bioconductor.gif" alt="BioconductorLogo" style="width: 260px;"/></a>
+</center>
+
+
+
 ## Getting started
 
 [bioconductor.org](http://www.bioconductor.org/) has a section in it's front page titled _get started with Bioconductor_. There you will find links that explain how to install it or to explore the available packages. 
