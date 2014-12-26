@@ -9,14 +9,14 @@ markdown: rdiscount
 # Themes are encouraged to use these universal variables 
 # so be sure to set them if your theme uses them.
 #
-title : Fellgernon Bit
+title : Things that make me go hmm
 tagline: blog
 author :
-  name : Collado Torres
-  email : lcollado@jhu.edu
-  github : lcolladotor
-  twitter : fellgernon
-  feedburner : FellgernonBit
+  name : John Gavin
+  email : ttmmghmm+github.io@gmail.com
+  github : ttmmghmm
+  twitter : ttmmghmm
+  feedburner : _config.yml
 
 # The production_url is only used when full-domain names are needed
 # such as sitemap.txt 
@@ -26,7 +26,7 @@ author :
 # Else if you are pushing to username.github.io, replace with your username.
 # Finally if you are pushing to a GitHub project page, include the project name at the end.
 #
-production_url : http://lcolladotor.github.io
+production_url : http://ttmmghmm.github.io
 
 # Pagination (added this line)
 paginate: 2
@@ -86,16 +86,16 @@ JB :
   comments :
     provider : disqus
     disqus :
-      short_name : fellgernonbit
-    livefyre :
-      site_id : 123
-    intensedebate :
-      account : 123abc
-    facebook :
-      appid : 123
-      num_posts: 5
-      width: 580
-      colorscheme: light
+      short_name : ttmmghmm
+  #  livefyre :
+  #    site_id : 123
+  #  intensedebate :
+  #    account : 123abc
+  #  facebook :
+  #    appid : 123
+  #    num_posts: 5
+  #    width: 580
+  #    colorscheme: light
    
   # Settings for analytics helper
   # Set 'provider' to the analytics provider you want to use.
@@ -104,14 +104,14 @@ JB :
   analytics :
     provider : google 
     google : 
-        tracking_id : 'UA-45299226-1'
-    getclicky :
-      site_id : 
-    mixpanel :
-        token : '_MIXPANEL_TOKEN_'
-    piwik :
-        baseURL : 'myserver.tld/piwik' # Piwik installation address (without protocol)
-        idsite : '1'                   # the id of the site on Piwik
+        tracking_id : 'UA-57998178-1'
+    # getclicky :
+    #  site_id : 
+    #mixpanel :
+    #    token : '_MIXPANEL_TOKEN_'
+    #piwik :
+    #    baseURL : 'myserver.tld/piwik' # Piwik installation address (without protocol)
+    #    idsite : '1'                   # the id of the site on Piwik
 
   # Settings for sharing helper. 
   # Sharing is for things like tweet, plusone, like, reddit buttons etc.
