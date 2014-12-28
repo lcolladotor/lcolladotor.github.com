@@ -3,7 +3,9 @@
 permalink: /:year/:month/:day/:title 
 
 exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
-pygments: true
+# Configuration file: /Users/jbg/git/github/ttmmghmm.github.com/_config.yml
+# Deprecation: The 'pygments' configuration option has been renamed to 'highlighter'. Please update your config file accordingly. The allowed values are 'rouge', 'pygments' or null.
+highlighter: pygments
 markdown: rdiscount
 
 # Themes are encouraged to use these universal variables 
