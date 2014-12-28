@@ -12,11 +12,11 @@ markdown: rdiscount
 title : Things that make me go hmm
 tagline: blog
 author :
-  name : John Gavin
-  email : ttmmghmm+github.io@gmail.com
+  name : ttmmghmm
+  email : ttmmghmm+github@gmail.com
   github : ttmmghmm
   twitter : ttmmghmm
-  feedburner : _config.yml
+  feedburner : ttmmghmm
 
 # The production_url is only used when full-domain names are needed
 # such as sitemap.txt 
@@ -87,15 +87,15 @@ JB :
     provider : disqus
     disqus :
       short_name : ttmmghmm
-  #  livefyre :
-  #    site_id : 123
-  #  intensedebate :
-  #    account : 123abc
-  #  facebook :
-  #    appid : 123
-  #    num_posts: 5
-  #    width: 580
-  #    colorscheme: light
+    livefyre :
+      site_id : 123
+    intensedebate :
+      account : 123abc
+    facebook :
+      appid : 123
+      num_posts: 5
+      width: 580
+      colorscheme: light
    
   # Settings for analytics helper
   # Set 'provider' to the analytics provider you want to use.
@@ -105,13 +105,13 @@ JB :
     provider : google 
     google : 
         tracking_id : 'UA-57998178-1'
-    # getclicky :
-    #  site_id : 
-    #mixpanel :
-    #    token : '_MIXPANEL_TOKEN_'
-    #piwik :
-    #    baseURL : 'myserver.tld/piwik' # Piwik installation address (without protocol)
-    #    idsite : '1'                   # the id of the site on Piwik
+    getclicky :
+      site_id : 
+    mixpanel :
+        token : '_MIXPANEL_TOKEN_'
+    piwik :
+        baseURL : 'myserver.tld/piwik' # Piwik installation address (without protocol)
+        idsite : '1'                   # the id of the site on Piwik
 
   # Settings for sharing helper. 
   # Sharing is for things like tweet, plusone, like, reddit buttons etc.
