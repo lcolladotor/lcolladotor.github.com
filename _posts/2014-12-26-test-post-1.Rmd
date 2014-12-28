@@ -1,7 +1,8 @@
 ---
 title: "test post 1"
 author: "ttmmghmm"
-date: "12/26/2014"
+# Invalid date '12/26/2014': Post '_posts/2014-12-26-test-post-1.Rmd' does not have a valid date in the YAML front matter.
+date: "2014-12-26"
 output:
   html_document:
     keep_md: yes
