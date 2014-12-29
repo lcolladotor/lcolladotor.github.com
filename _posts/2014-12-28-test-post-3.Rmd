@@ -1,6 +1,9 @@
 ---
+# fn <- "2014-12-28-test-post-3.Rmd"
+# library(knitr) ; knit(fn)  # produces the md file
+# pandoc(fn, format = "docx") # prodces the .docx file
 title: "Test post 3"
-layout: post
+date: "2014 December"
 tags:
 - R
 - summary
@@ -8,11 +11,23 @@ tags:
 - sessionInfo
 categories:
 - rstats
+# published = false => Jekyll will not process the file
+published: false 
 output:
   html_document:
-    keep_md: no
+# rmarkdown::render(fn) # produces table of contents and united theme
+# render(fn, pdf_document()) # library(rmarkdown) ; # knit2html() 
+    toc: true
+    theme: united
+  keep_md: true
+# output: ioslides_presentation
+layout: post
 author: "ttmmghmm"
 ---
+
+*(this report was produced on: `r as.character(Sys.Date())`)*  
+
+
 
 This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
 
