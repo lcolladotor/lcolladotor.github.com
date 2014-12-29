@@ -15,7 +15,7 @@ categories:
 published: false 
 output:
 #  html_document:
-  html_fragment:
+  html_fragment: # http://rmarkdown.rstudio.com/html_fragment_format.html
 # html_fragment - no title or author -  excl standard header content . HTML within larger web sites (e.g. blogs).
 # rmarkdown::render(fn) # produces table of contents and united theme
 # render(fn, pdf_document()) # library(rmarkdown) ; # knit2html() 
@@ -24,6 +24,7 @@ output:
     number_sections: true
   keep_md: true
 # output: ioslides_presentation
+fontsize: 12pt
 layout: post
 author: "ttmmghmm"
 ---
