@@ -1,0 +1,58 @@
+---
+title: "knitr_session"
+author: "Marianne Corvellec"
+date: '2014-11-14'
+output: html_document
+---
+
+(View source here: https://gist.github.com/mkcor/1ca67262c74c590bd6e9)
+
+```{r}
+# install.packages("devtools")  # so we can install from GitHub
+# devtools::install_github("ropensci/plotly")  # plotly is part of rOpenSci
+ 
+library(plotly)
+```
+
+This is an R Markdown document. Markdown is a simple formatting syntax for
+authoring documents. For more details on using R Markdown see
+<http://rmarkdown.rstudio.com>.
+
+You can embed an R code chunk like this:
+
+```{r}
+summary(cars)
+```
+
+You can also embed plots, for example:
+
+```{r}
+library(plotly)
+gg <- ggplot(cars) + geom_point(aes(speed, dist))
+gg
+```
+```{r}
+py <- plotly(username="r_user_guide", key="mw5isa4yqp")  # open plotly connection
+ 
+gg <- ggplot(cars) + geom_point(aes(speed, dist))
+ 
+```
+
+
+```{r, plotly=TRUE}
+py <- plotly()
+py$ggplotly(gg, session="knitr", kwargs=list(filename="cars_knitr",
+                                             fileopt="overwrite"))
+# py$ggplotly(gg)
+
+```
+
+You can embed a static plot using Markdown syntax:
+![cars_plot](https://plot.ly/~marianne2/167.png)
+
+Notice that we simply appended a supported extension (.png) to the URL where the
+plotly plot lives.
+
+You can also use HTML syntax to embed iframes:
+<iframe scrolling='no' seamless='seamless' style='border:none'
+src='https://plot.ly/~MattSundquist/2509' width='800' height='500'></iframe>
