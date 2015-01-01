@@ -3,7 +3,7 @@
 # library(knitr) ; knit(fn)  # produces the md file
 # pandoc(fn, format = "docx") # prodces the .docx file
 # render("2014-12-28-test-post-3.Rmd", pdf_document()) # library(rmarkdown) ; # knit2html() 
-title: "some title goes here"
+title: "bootstrap web page style"
 date: "2015 January"
 # permalink: If you need your processed blog post URLs to be something other than the default /year/month/day/title.html then you can set this variable and it will be used as the final URL.
 tags:
@@ -19,37 +19,36 @@ published: false
 # output: ioslides_presentation
 output:
   knitrBootstrap::bootstrap_document:
-    title: "Test file"
+    title: "where does this appear?  - bootstrap web page style"
     theme: cyborg # slate
     highlight: sunburst
     theme.chooser: TRUE
     highlight.chooser: TRUE
-  html_document:
-    toc: true
-    theme: united
-    html_document:
+  #html_document:
+  #  toc: true
+  #  theme: united
   # http://rmarkdown.rstudio.com/html_fragment_format.html
   # html_fragment - no title or author -  excl std hdr content . HTML within larger web sites (e.g. blogs).
-  html_fragment: 
-    toc: true
+  #html_fragment: 
+  #  toc: true
     # united zenburn
     # theme: united # maybe theme is for html_document: only
-    number_sections: true
-    keep_md: false
+  #  number_sections: true
+  #  keep_md: false
   # rmarkdown::render(fn) # produces table of contents and united theme
   # render(fn, pdf_document()) # library(rmarkdown) ; # knit2html() 
-  pdf_document:
-    toc: true
-    theme: united # maybe theme is for html_document: only
-    highlight: zenburn
-fontsize: 8pt
+  #pdf_document:
+  #  toc: true
+  #  theme: united # maybe theme is for html_document: only
+  #  highlight: zenburn
+fontsize: 18pt
 layout: post
 author: "ttmmghmm"
 ---
 
 <!--
 %\VignetteEngine{knitr::rmarkdown}
-%\VignetteIndexEntry{Introduction to dots}
+%\VignetteIndexEntry{bootstrap format}
 -->
 
 Introduction to `dots`
