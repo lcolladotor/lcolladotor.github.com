@@ -12,7 +12,7 @@ tags:
 categories:
 - rstats
 # published = false => Jekyll will not process the file
-published: false 
+published: true 
 output:
 #  html_document:
   html_fragment: # http://rmarkdown.rstudio.com/html_fragment_format.html
