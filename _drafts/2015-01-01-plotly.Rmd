@@ -26,24 +26,22 @@ summary(cars)
 
 You can also embed plots, for example:
 
-```{r}
+```{r gg plot}
 library(plotly)
 gg <- ggplot(cars) + geom_point(aes(speed, dist))
 gg
 ```
 ```{r}
 py <- plotly(username="r_user_guide", key="mw5isa4yqp")  # open plotly connection
- 
 gg <- ggplot(cars) + geom_point(aes(speed, dist))
- 
+
 ```
 
 
 ```{r, plotly=TRUE}
-py <- plotly()
-py$ggplotly(gg, session="knitr", kwargs=list(filename="cars_knitr",
-                                             fileopt="overwrite"))
-# py$ggplotly(gg)
+#py <- plotly()
+#py$ggplotly(gg, session="knitr", kwargs=list(filename="cars_knitr",
+#                                             fileopt="overwrite"))
 
 ```
 
