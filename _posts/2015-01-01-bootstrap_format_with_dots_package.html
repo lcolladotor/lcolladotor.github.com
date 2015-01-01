@@ -5,7 +5,7 @@
   <meta http-equiv="Content-Style-Type" content="text/css" />
   <meta name="generator" content="pandoc" />
   <meta name="author" content="ttmmghmm" />
-  <title>some title goes here</title>
+  <title>bootstrap web page style</title>
   <style type="text/css">code{white-space: pre;}</style>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
@@ -863,12 +863,12 @@
 </head>
 <body>
 <div id="header">
-<h1 class="title">some title goes here</h1>
+<h1 class="title">bootstrap web page style</h1>
 <h2 class="author">ttmmghmm</h2>
 <h3 class="date">2015 January</h3>
 </div>
 <title >
-Test file
+where does this appear? - bootstrap web page style
 </title>
 <div id="wrap">
 <div class="container">
@@ -876,7 +876,7 @@ Test file
 <div class="contents col-xs-12 col-md-10">
 <!--
 %\VignetteEngine{knitr::rmarkdown}
-%\VignetteIndexEntry{Introduction to dots}
+%\VignetteIndexEntry{bootstrap format}
 -->
 
 <h1>Introduction to <code>dots</code></h1>
@@ -942,7 +942,7 @@ myFun(1:10)</code></pre><button class="output R toggle btn btn-xs btn-success">
 </button><pre style=""><code class="source r">## Experienced user wants to print status reports
 myFun(1:10, verbose = TRUE)</code></pre><button class="message R toggle btn btn-xs btn-info">
 <span class="glyphicon glyphicon-chevron-down"></span> R message
-</button><pre style=""><code class="message r">## 2015-01-01 23:42:03 myFun: performing analysis
+</button><pre style=""><code class="message r">## 2015-01-01 23:49:10 myFun: performing analysis
 </code></pre><button class="output R toggle btn btn-xs btn-success">
 <span class="glyphicon glyphicon-chevron-down"></span> R output
 </button><pre style=""><code class="output r">##  [1]  1  2  3  4  5  6  7  8  9 10
@@ -1043,7 +1043,7 @@ funkyPlot <- function(x, y, ...) {
 ## funkyPlot() doesn't work
 tryCatch(funkyPlot(1:10, 10:1, verbose = TRUE, xlab = 'Data (units)'), warning = function(w) { print(w) })</code></pre><button class="message R toggle btn btn-xs btn-info">
 <span class="glyphicon glyphicon-chevron-down"></span> R message
-</button><pre style=""><code class="message r">## 2015-01-01 23:42:03 funkyPlot: getting ready to roll
+</button><pre style=""><code class="message r">## 2015-01-01 23:49:11 funkyPlot: getting ready to roll
 </code></pre>
 <div class="row">
 <div class="col-md-offset-3 col-md-6">
@@ -1072,7 +1072,7 @@ funkyPlot2 <- function(x, y, ...) {
 ## Works now =)
 funkyPlot2(1:10, 10:1, verbose = TRUE, xlab = 'Data (units)')</code></pre><button class="message R toggle btn btn-xs btn-info">
 <span class="glyphicon glyphicon-chevron-down"></span> R message
-</button><pre style=""><code class="message r">## 2015-01-01 23:42:03 funkyPlot: getting ready to roll
+</button><pre style=""><code class="message r">## 2015-01-01 23:49:11 funkyPlot: getting ready to roll
 </code></pre>
 <div class="row">
 <div class="col-md-offset-3 col-md-6">
@@ -1107,7 +1107,7 @@ funkyPlot3 <- function(x, y, ...) {
 ## Works with more graphical parameters
 funkyPlot3(1:10, 10:1, verbose = TRUE, xlab = 'Data (units)', ylab = 'Success', main = 'Complicated example')</code></pre><button class="message R toggle btn btn-xs btn-info">
 <span class="glyphicon glyphicon-chevron-down"></span> R message
-</button><pre style=""><code class="message r">## 2015-01-01 23:42:03 funkyPlot: getting ready to roll
+</button><pre style=""><code class="message r">## 2015-01-01 23:49:11 funkyPlot: getting ready to roll
 </code></pre>
 <div class="row">
 <div class="col-md-offset-3 col-md-6">
@@ -1225,14 +1225,14 @@ knit('dots.Rmd', tangle = TRUE)</code></pre>
 <div class="row">
 <button class="output R toggle btn btn-xs btn-success">
 <span class="glyphicon glyphicon-chevron-down"></span> R output
-</button><pre style=""><code class="output r">## [1] "2015-01-01 23:42:03 UTC"
+</button><pre style=""><code class="output r">## [1] "2015-01-01 23:49:11 UTC"
 </code></pre>
 </div>
 <h2>Wallclock time spent generating the vignette.</h2>
 <div class="row">
 <button class="output R toggle btn btn-xs btn-success">
 <span class="glyphicon glyphicon-chevron-down"></span> R output
-</button><pre style=""><code class="output r">## Time difference of 2.298 secs
+</button><pre style=""><code class="output r">## Time difference of 2.319 secs
 </code></pre>
 </div>
 </div>
