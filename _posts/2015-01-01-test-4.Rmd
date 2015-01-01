@@ -1,8 +1,35 @@
 ---
+# fn <- "2014-12-28-test-post-3.Rmd"
+# library(knitr) ; knit(fn)  # produces the md file
+# pandoc(fn, format = "docx") # prodces the .docx file
+# render("2014-12-28-test-post-3.Rmd", pdf_document()) # library(rmarkdown) ; # knit2html() 
 title: "blah blah"
+date: "2014 December"
+# permalink: If you need your processed blog post URLs to be something other than the default /year/month/day/title.html then you can set this variable and it will be used as the final URL.
+tags:
+- R
+- summary
+- plot
+- sessionInfo
+categories:
+- rstats
+# published = false => Jekyll will not process the file, See also keep_md: true
+published: false 
+# output: ioslides_presentation
+output:
+  #  html_document:
+  html_fragment: # http://rmarkdown.rstudio.com/html_fragment_format.html
+  # html_fragment - no title or author -  excl standard header content . HTML within larger web sites (e.g. blogs).
+  # rmarkdown::render(fn) # produces table of contents and united theme
+  # render(fn, pdf_document()) # library(rmarkdown) ; # knit2html() 
+    toc: true
+    # theme: united
+    number_sections: true
+  #  See also published = false
+  keep_md: true
+fontsize: 12pt
+layout: post
 author: "ttmmghmm"
-date: "1/1/2015"
-output: html_document
 ---
 
 This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
