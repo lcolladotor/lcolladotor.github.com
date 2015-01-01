@@ -1,3 +1,42 @@
+---
+# fn <- "2014-12-28-test-post-3.Rmd"
+# library(knitr) ; knit(fn)  # produces the md file
+# pandoc(fn, format = "docx") # prodces the .docx file
+# render("2014-12-28-test-post-3.Rmd", pdf_document()) # library(rmarkdown) ; # knit2html() 
+title: "some title goes here"
+date: "2014 December"
+# permalink: If you need your processed blog post URLs to be something other than the default /year/month/day/title.html then you can set this variable and it will be used as the final URL.
+tags:
+- R
+- dots
+- plot
+- sessionInfo
+categories:
+- rstats
+# published = false => Jekyll will not process the file. Else Rmd file appears as a blog with html file i.e. 2 posts.
+published: false 
+# output: ioslides_presentation
+output:
+  #  html_document:
+  # http://rmarkdown.rstudio.com/html_fragment_format.html
+  # html_fragment - no title or author -  excl std hdr content . HTML within larger web sites (e.g. blogs).
+  html_fragment: 
+    toc: true
+    # united zenburn
+    # theme: united # maybe theme is for html_document: only
+    number_sections: true
+    keep_md: false
+  # rmarkdown::render(fn) # produces table of contents and united theme
+  # render(fn, pdf_document()) # library(rmarkdown) ; # knit2html() 
+  pdf_document:
+    toc: true
+    theme: united # maybe theme is for html_document: only
+    highlight: zenburn
+fontsize: 8pt
+layout: post
+author: "ttmmghmm"
+---
+
 <!--
 %\VignetteEngine{knitr::rmarkdown}
 %\VignetteIndexEntry{Introduction to dots}
@@ -302,3 +341,6 @@ Citations made with `knitcitations` `r citep(bib[['knitcitations']])`.
 bibliography()
 ```
 
+```{r boilerplate sessionInfo}
+sessionInfo()
+```
