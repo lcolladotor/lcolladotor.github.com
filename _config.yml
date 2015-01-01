@@ -30,6 +30,10 @@ author :
 #
 production_url : http://ttmmghmm.github.io
 
+# https://help.github.com/articles/sitemaps-for-github-pages/
+gems:
+  - jekyll-sitemap
+
 # Pagination (added this line)
 paginate: 2
 
