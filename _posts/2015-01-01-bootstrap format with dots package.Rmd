@@ -236,7 +236,7 @@ If you have a small number of advanced arguments you want users to be able to us
 
 If you knew for certain that the other functions inside yours only use a small number of arguments passed through `...` (`verbose` in our example), you can eliminate them from `...` yourself and pass them to `formalCallUse`.
 
-```{r 'funkyPlot3'}
+```{r 'funkyPlot3', results='hide'}
 ## If we knew for sure that we only want to exclude 'verbose' from ... before
 ## calling plot() we can do so this way.
 funkyPlot3 <- function(x, y, ...) {

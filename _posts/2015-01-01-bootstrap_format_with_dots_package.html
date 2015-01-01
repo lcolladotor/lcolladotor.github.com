@@ -942,7 +942,7 @@ myFun(1:10)</code></pre><button class="output R toggle btn btn-xs btn-success">
 </button><pre style=""><code class="source r">## Experienced user wants to print status reports
 myFun(1:10, verbose = TRUE)</code></pre><button class="message R toggle btn btn-xs btn-info">
 <span class="glyphicon glyphicon-chevron-down"></span> R message
-</button><pre style=""><code class="message r">## 2015-01-01 23:38:36 myFun: performing analysis
+</button><pre style=""><code class="message r">## 2015-01-01 23:42:03 myFun: performing analysis
 </code></pre><button class="output R toggle btn btn-xs btn-success">
 <span class="glyphicon glyphicon-chevron-down"></span> R output
 </button><pre style=""><code class="output r">##  [1]  1  2  3  4  5  6  7  8  9 10
@@ -1043,7 +1043,7 @@ funkyPlot <- function(x, y, ...) {
 ## funkyPlot() doesn't work
 tryCatch(funkyPlot(1:10, 10:1, verbose = TRUE, xlab = 'Data (units)'), warning = function(w) { print(w) })</code></pre><button class="message R toggle btn btn-xs btn-info">
 <span class="glyphicon glyphicon-chevron-down"></span> R message
-</button><pre style=""><code class="message r">## 2015-01-01 23:38:37 funkyPlot: getting ready to roll
+</button><pre style=""><code class="message r">## 2015-01-01 23:42:03 funkyPlot: getting ready to roll
 </code></pre>
 <div class="row">
 <div class="col-md-offset-3 col-md-6">
@@ -1072,7 +1072,7 @@ funkyPlot2 <- function(x, y, ...) {
 ## Works now =)
 funkyPlot2(1:10, 10:1, verbose = TRUE, xlab = 'Data (units)')</code></pre><button class="message R toggle btn btn-xs btn-info">
 <span class="glyphicon glyphicon-chevron-down"></span> R message
-</button><pre style=""><code class="message r">## 2015-01-01 23:38:37 funkyPlot: getting ready to roll
+</button><pre style=""><code class="message r">## 2015-01-01 23:42:03 funkyPlot: getting ready to roll
 </code></pre>
 <div class="row">
 <div class="col-md-offset-3 col-md-6">
@@ -1107,17 +1107,13 @@ funkyPlot3 <- function(x, y, ...) {
 ## Works with more graphical parameters
 funkyPlot3(1:10, 10:1, verbose = TRUE, xlab = 'Data (units)', ylab = 'Success', main = 'Complicated example')</code></pre><button class="message R toggle btn btn-xs btn-info">
 <span class="glyphicon glyphicon-chevron-down"></span> R message
-</button><pre style=""><code class="message r">## 2015-01-01 23:38:37 funkyPlot: getting ready to roll
+</button><pre style=""><code class="message r">## 2015-01-01 23:42:03 funkyPlot: getting ready to roll
 </code></pre>
 <div class="row">
 <div class="col-md-offset-3 col-md-6">
 <a href="#" class="thumbnail"><img src="data:image/png;base64,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" /> </a>
 </div>
 </div>
-<button class="output R toggle btn btn-xs btn-success">
-<span class="glyphicon glyphicon-chevron-down"></span> R output
-</button><pre style=""><code class="output r">## NULL
-</code></pre>
 </div>
 <p>So for these very complicated use cases, <code>formalCallUse</code> can help you when you either want to make sure you are supplying a small set of arguments or if you have a small set you want to exclude.</p>
 <p>Cases where there are many arguments to either exclude or supply are nasty either way.</p>
@@ -1229,14 +1225,14 @@ knit('dots.Rmd', tangle = TRUE)</code></pre>
 <div class="row">
 <button class="output R toggle btn btn-xs btn-success">
 <span class="glyphicon glyphicon-chevron-down"></span> R output
-</button><pre style=""><code class="output r">## [1] "2015-01-01 23:38:37 UTC"
+</button><pre style=""><code class="output r">## [1] "2015-01-01 23:42:03 UTC"
 </code></pre>
 </div>
 <h2>Wallclock time spent generating the vignette.</h2>
 <div class="row">
 <button class="output R toggle btn btn-xs btn-success">
 <span class="glyphicon glyphicon-chevron-down"></span> R output
-</button><pre style=""><code class="output r">## Time difference of 2.42 secs
+</button><pre style=""><code class="output r">## Time difference of 2.298 secs
 </code></pre>
 </div>
 </div>
