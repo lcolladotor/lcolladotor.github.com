@@ -24,7 +24,7 @@ output:
     toc: true
     # theme: united
     number_sections: true
-    keep_md: true
+    keep_md: false
   # rmarkdown::render(fn) # produces table of contents and united theme
   # render(fn, pdf_document()) # library(rmarkdown) ; # knit2html() 
 fontsize: 12pt
