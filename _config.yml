@@ -1,12 +1,14 @@
 # This is the default format. 
 # For more see: http://jekyllrb.com/docs/permalinks/
 permalink: /:year/:month/:day/:title 
+# permalink: /blog/:categories/:year/:month/:day/:title.html
 
-exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
+exclude: ["Rmd", ".DS_Store", "README.md", "Rakefile", "changelog.md", ".rvmrc", ".rbenv-version"]
 # Configuration file: /Users/jbg/git/github/ttmmghmm.github.com/_config.yml
 # Deprecation: The 'pygments' configuration option has been renamed to 'highlighter'. Please update your config file accordingly. The allowed values are 'rouge', 'pygments' or null.
 highlighter: pygments
 markdown: rdiscount
+# markdown: redcarpet
 
 # Themes are encouraged to use these universal variables 
 # so be sure to set them if your theme uses them.
@@ -19,6 +21,9 @@ author :
   github : ttmmghmm
   twitter : ttmmghmm
   feedburner : ttmmghmm
+# author: ttmmghmm
+description: My personal website and blog about data analysis, applied statistics, R
+excerpt_separator: <!--more-->
 
 # The production_url is only used when full-domain names are needed
 # such as sitemap.txt 
