@@ -3,8 +3,8 @@
 # library(knitr) ; knit(fn)  # produces the md file
 # pandoc(fn, format = "docx") # prodces the .docx file
 # render("2014-12-28-test-post-3.Rmd", pdf_document()) # library(rmarkdown) ; # knit2html() 
-title: "bootstrap web page style"
-date: "2015 January"
+#title: "bootstrap web page style"
+#date: "2015 January"
 # permalink: If you need your processed blog post URLs to be something other than the default /year/month/day/title.html then you can set this variable and it will be used as the final URL.
 tags:
 - R
@@ -41,9 +41,9 @@ output:
   #  toc: true
   #  theme: united # maybe theme is for html_document: only
   #  highlight: zenburn
-fontsize: 18pt
-layout: post
-author: "ttmmghmm"
+#fontsize: 18pt
+#layout: post
+#author: "ttmmghmm"
 ---
 
 <!--
