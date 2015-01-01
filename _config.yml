@@ -3,6 +3,9 @@
 permalink: /:year/:month/:day/:title 
 # permalink: /blog/:categories/:year/:month/:day/:title.html
 
+# https://help.github.com/articles/page-build-failed-file-is-not-properly-utf-8-encoded/
+encoding: UTF-8
+
 # TODO: how to exclude all *.RMD files?
 exclude: ["Rmd", ".DS_Store", "README.md", "Rakefile", "changelog.md", ".rvmrc", ".rbenv-version"]
 # Configuration file: /Users/jbg/git/github/ttmmghmm.github.com/_config.yml
