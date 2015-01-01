@@ -18,15 +18,15 @@ published: false
 # output: ioslides_presentation
 output:
   #  html_document:
-  html_fragment: # http://rmarkdown.rstudio.com/html_fragment_format.html
-  # html_fragment - no title or author -  excl standard header content . HTML within larger web sites (e.g. blogs).
-  # rmarkdown::render(fn) # produces table of contents and united theme
-  # render(fn, pdf_document()) # library(rmarkdown) ; # knit2html() 
+  # http://rmarkdown.rstudio.com/html_fragment_format.html
+  # html_fragment - no title or author -  excl std hdr content . HTML within larger web sites (e.g. blogs).
+  html_fragment: 
     toc: true
     # theme: united
     number_sections: true
-  #  See also published = false
-  keep_md: true
+    keep_md: true
+  # rmarkdown::render(fn) # produces table of contents and united theme
+  # render(fn, pdf_document()) # library(rmarkdown) ; # knit2html() 
 fontsize: 12pt
 layout: post
 author: "ttmmghmm"
