@@ -1,0 +1,1419 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <meta name="author" content="ttmmghmm" />
+  <title>some title goes here</title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- jQuery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+  
+  <!-- bootstrap -->
+  <!--<link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet"  id="style">-->
+  <script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+  
+  <!-- highlight.js -->
+  <!--<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/7.3/styles/default.min.css" rel="stylesheet" id="code-style">-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/7.3/highlight.min.js"></script>
+  <script>
+  hljs.LANGUAGES.r=function(a){var b="([a-zA-Z]|\\.[a-zA-Z.])[a-zA-Z0-9._]*";return{c:[a.HCM,{b:b,l:b,k:{keyword:"function if in break next repeat else for return switch while try tryCatch|10 stop warning require library attach detach source setMethod setGeneric setGroupGeneric setClass ...|10",literal:"NULL NA TRUE FALSE T F Inf NaN NA_integer_|10 NA_real_|10 NA_character_|10 NA_complex_|10"},r:0},{cN:"number",b:"0[xX][0-9a-fA-F]+[Li]?\\b",r:0},{cN:"number",b:"\\d+(?:[eE][+\\-]?\\d*)?L\\b",r:0},{cN:"number",b:"\\d+\\.(?!\\d)(?:i\\b)?",r:0},{cN:"number",b:"\\d+(?:\\.\\d*)?(?:[eE][+\\-]?\\d*)?i?\\b",r:0},{cN:"number",b:"\\.\\d+(?:[eE][+\\-]?\\d*)?i?\\b",r:0},{b:"`",e:"`",r:0},{cN:"string",b:'"',e:'"',c:[a.BE],r:0},{cN:"string",b:"'",e:"'",c:[a.BE],r:0}]}}(hljs); </script>
+  <!--<script type="text/javascript", src="https://yandex.st/highlightjs/7.3/languages/r.min.js"></script>-->
+  
+  <!-- Manific Popup -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/0.8.9/jquery.magnific-popup.min.js"></script>
+  
+  <script type="text/javascript"
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  <script defer="defer">
+  // Function to generate the dynamic table of contents
+  jQuery.fn.generate_TOC = function () {
+    var base = $(this[0]);
+  
+    var selectors = ['h1', 'h2', 'h3', 'h4'];
+  
+    var last_ptr = [{}, {}, {}, {}];
+  
+    var anchors = {};
+  
+    generate_anchor = function (text) {
+      var test = text.replace(/\W/g, '_');
+  
+      while(test in anchors){
+        //if no suffix, add one
+        if(test.match(/_\d+$/) === null){
+          test = test + "_2";
+        }
+        //else generate unique id for duplicates by adding one to the suffix
+        else {
+          test = test.replace(/_(\d+)$/, function(match, number){ var num=+number+1; return("_" + num) });
+        }
+      }
+      anchors[test]=1;
+      return(test);
+    }
+  
+    $(selectors.join(',')).filter(function(index) { return $(this).parent().attr("id") != 'header'; }).each(function () {
+  
+      var heading = $(this);
+      var idx = selectors.indexOf(heading.prop('tagName').toLowerCase());
+      var itr = 0;
+  
+      while (itr <= idx) {
+        if (jQuery.isEmptyObject(last_ptr[itr])) {
+          last_ptr[itr] = $('<ul>').addClass('nav');
+          if (itr === 0) {
+            base.append(last_ptr[itr])
+          } else {
+            if(last_ptr[itr-1].children('li').length === 0){
+              last_ptr[itr-1].append(last_ptr[itr]);
+            }
+            else {
+              last_ptr[itr - 1].children('li').last().append(last_ptr[itr]);
+            }
+          }
+        }
+        itr++;
+      }
+      var anchor = generate_anchor(heading.text());
+      heading.attr('id', anchor);
+      var a = $('<a>')
+      .text(heading.text())
+      .attr('href', '#' + anchor);
+  
+    var li = $('<li>')
+      .append(a);
+  
+    last_ptr[idx].append(li);
+    for (i = idx + 1; i < last_ptr.length; i++) {
+      last_ptr[i] = {};
+    }
+    });
+  }
+  /* run scripts when document is ready */
+  $(function() {
+    "use strict";
+  
+    var $window = $(window);
+    var $body = $(document.body);
+  
+    /* size of thumbnails */
+  
+    var hidden_types = ['source']
+    var output_types = ['output', 'message', 'warning', 'error']
+  
+    /* style tables */
+    $('table').addClass('table table-striped table-bordered table-hover table-condensed');
+  
+    $('pre code').each(function(i, e) {
+      hljs.highlightBlock(e);
+    });
+  
+    /* Magnific Popup */
+    $(".thumbnail").each(function(){
+      $(this).magnificPopup({
+        disableOn: 768,
+        closeOnContentClick: true,
+  
+        type: 'image',
+        items: {
+          src: $(this).find('img').attr('src'),
+        }
+      });
+    });
+  
+    function toggle_block(obj, show) {
+      var span = obj.find('span');
+      if(show === true){
+        span.removeClass('glyphicon-chevron-up').addClass('glyphicon-chevron-down');
+        obj.next('pre').slideDown();
+      }
+      else {
+        span.removeClass('glyphicon-chevron-down').addClass('glyphicon-chevron-up');
+        obj.next('pre').slideUp();
+      }
+    }
+  
+    function toggle_thumbnails(imgs, show){
+      if(show === true){
+        imgs.parents().show()
+        imgs.slideDown();
+      }
+      else {
+        imgs.slideUp(400, function(){ $(this).parent().hide(); });
+      }
+    }
+  
+    function global_toggle(obj){
+      var type = obj.attr('type');
+      var show = !obj.parent('li').hasClass('active');
+      if(show === true){
+        obj.parent('li').addClass('active');
+      }
+      else{
+        obj.parent('li').removeClass('active');
+      }
+      if(type == 'figure'){
+        toggle_thumbnails($('.thumbnail img'), show);
+      }
+      else {
+        $('.toggle.' + type).each(function() { toggle_block($(this), show); });
+      }
+    }
+  
+    /* onclick toggle next code block */
+    $('.toggle').click(function() {
+      var span = $(this).find('span');
+      toggle_block($(this), !span.hasClass('glyphicon-chevron-down'));
+      return false
+    })
+  
+    // global toggles
+    $('.toggle-global').click(function(){
+      var type = $(this).attr('type');
+      if(type === 'all-source'){
+          $('li a.source').each(function() {
+            global_toggle($(this));
+          });
+        }
+      else if(type === 'all-output'){
+        $.each(output_types, function(i, val){
+          console.log(val);
+          global_toggle($('li a.' + val));
+        });
+      }
+      else {
+        console.log($(this));
+        global_toggle($(this));
+      }
+      return false;
+    });
+    /* table of contents */
+    if($(['h1', 'h2', 'h3', 'h4'].join(',')).length > 0){
+      $('body > #wrap > .container > .row').append('<div class="col-md-2"><div id="toc" class="well sidebar sidenav affix hidden-print"/></div>');
+      $('#toc').generate_TOC();
+    }
+  
+    $.each(hidden_types, function(i, type) {
+      $('li[type=' + type + ']').each(function(){ global_toggle($(this)); });
+    });
+  
+    /* remove paragraphs with no content */
+    $('p:empty').remove();
+  
+    $body.scrollspy({
+      target: '.sidebar',
+    });
+  
+    /* theme switch */
+    $('.theme-switch').click(function(){
+      var css = $('link[title=' + $(this).attr('title') + ']');
+      $('#theme[rel=stylesheet]').attr('href', css.attr('href'));
+      $('.theme-switch').closest('li').removeClass('active');
+      $(this).closest('li').addClass('active');
+      return false;
+    });
+    /* code style switch */ //TODO use same function for both of these?
+    $('.highlight-switch').click(function(){
+      var css = $('link[title="' + $(this).attr('title') + '"]');
+      $('#highlight[rel=stylesheet]').attr('href', css.attr('href'));
+      $('.highlight-switch').closest('li').removeClass('active');
+      $(this).closest('li').addClass('active');
+      return false;
+    });
+  
+    //TODO refresh on show/hide
+    $window.on('load', function () {
+      $body.scrollspy('refresh');
+    })
+  
+  });
+  
+  </script>
+  <style>
+  /* Knitr_bootstrap styles */
+  #header {
+    display: none !important;
+    visibility: hidden !important;
+  }
+  #wrap .container-fluid {
+    padding: 0;
+    overflow: hidden;
+  }
+  .toggle{
+    text-transform: capitalize;
+  }
+  
+  .toggle-global{
+    text-transform: capitalize;
+  }
+  
+  /* Sticky footer styles */
+  * {
+    margin:0;
+  }
+  html,
+  body {
+      height: 100%;
+      padding:0 !important;
+      /* The html and body elements cannot have any padding or margin. */
+      /*overflow-x: hidden;*/
+  }
+  
+  /* Wrapper for page content to push down footer */
+  #wrap {
+      min-height: 100%;
+      height: auto !important;
+      height: 100%;
+      /* Negative indent footer by it's height */
+      margin: 0 auto -120px;
+  }
+  
+  /* Set the fixed height of the footer here */
+  #push,
+  #footer {
+      height: 120px;
+  }
+  
+  #footer {
+    text-align: center;
+  }
+  
+  /* Top level subheader elements.  These are the first nested items underneath a header element. */
+  .header li {
+    font-size: 20px;
+  }
+  
+  /* Makes the font smaller for all subheader elements. */
+  .sub-header li {
+      font-size: 12px;
+  }
+  
+  button.thumbnails {
+    margin-left:0px;
+  }
+  
+  /*
+   * Side navigation
+   *
+   * Scrollspy and affixed enhanced navigation to highlight sections and secondary
+   * sections of docs content.
+   */
+  
+  /* By default it's not affixed in mobile views, so undo that */
+  .sidebar.affix {
+    position: static;
+  }
+  
+  /* First level of nav */
+  .sidenav {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding-top:    10px;
+    padding-bottom: 10px;
+    border-radius: 5px;
+  }
+  
+  /* All levels of nav */
+  .sidebar .nav > li > a {
+    display: block;
+    padding: 5px 20px;
+  }
+  .sidebar .nav > li > a:hover,
+  .sidebar .nav > li > a:focus {
+    text-decoration: none;
+    border-right: 1px solid;
+  }
+  .sidebar .nav > .active > a,
+  .sidebar .nav > .active:hover > a,
+  .sidebar .nav > .active:focus > a {
+    font-weight: bold;
+    background-color: transparent;
+    border-right: 1px solid;
+  }
+  
+  /* Nav: second level (shown on .active) */
+  .sidebar .nav .nav {
+    display: none; /* Hide by default, but at >768px, show it */
+    margin-bottom: 8px;
+  }
+  .sidebar .nav .nav > li > a {
+    padding-top:    3px;
+    padding-bottom: 3px;
+    padding-left: 30px;
+    font-size: 90%;
+  }
+  
+  .sidebar .nav .nav .nav > li > a {
+    padding-left: 40px;
+  }
+  .sidebar .nav .nav .nav .nav > li > a {
+    padding-left: 50px;
+  }
+  
+  /* Show and affix the side nav when space allows it */
+  @media screen and (min-width: 992px) {
+    .sidebar .nav > .active > ul {
+      display: block;
+    }
+    /* Widen the fixed sidebar */
+    .sidebar.affix,
+    .sidebar.affix-bottom {
+      width: 213px;
+    }
+    .sidebar.affix-top,
+    .sidebar.affix {
+      position: fixed; /* Undo the static from mobile first approach */
+      top: 30px;
+    }
+    .sidebar.affix-bottom {
+      position: absolute; /* Undo the static from mobile first approach */
+    }
+    .sidebar.affix-bottom .sidenav,
+    .sidebar.affix .sidenav {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    /* Widen the fixed sidebar again */
+    .sidebar.affix-bottom,
+    .sidebar.affix {
+      width: 263px;
+    }
+  }
+  
+  #toc {
+    padding: 10px 0px;
+    margin:0;
+    border:0;
+  }
+  
+  
+  .panel pre {
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+  button + pre {
+    margin: 0;
+    padding: 0;
+  }
+  pre code {
+    border-radius: 0;
+  }
+  /* Magnific Popup CSS */
+  .mfp-bg {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1042;
+    overflow: hidden;
+    position: fixed;
+    background: #0b0b0b;
+    opacity: 0.8;
+    filter: alpha(opacity=80); }
+  
+  .mfp-wrap {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1043;
+    position: fixed;
+    outline: none !important;
+    -webkit-backface-visibility: hidden; }
+  
+  .mfp-container {
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    padding: 0 8px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+  
+  .mfp-container:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle; }
+  
+  .mfp-align-top .mfp-container:before {
+    display: none; }
+  
+  .mfp-content {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 auto;
+    text-align: left;
+    z-index: 1045; }
+  
+  .mfp-inline-holder .mfp-content,
+  .mfp-ajax-holder .mfp-content {
+    width: 100%;
+    cursor: auto; }
+  
+  .mfp-ajax-cur {
+    cursor: progress; }
+  
+  .mfp-zoom-out-cur,
+  .mfp-zoom-out-cur .mfp-image-holder .mfp-close {
+    cursor: -moz-zoom-out;
+    cursor: -webkit-zoom-out;
+    cursor: zoom-out; }
+  
+  .mfp-zoom {
+    cursor: pointer;
+    cursor: -webkit-zoom-in;
+    cursor: -moz-zoom-in;
+    cursor: zoom-in; }
+  
+  .mfp-auto-cursor .mfp-content {
+    cursor: auto; }
+  
+  .mfp-close,
+  .mfp-arrow,
+  .mfp-preloader,
+  .mfp-counter {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none; }
+  
+  .mfp-loading.mfp-figure {
+    display: none; }
+  
+  .mfp-hide {
+    display: none !important; }
+  
+  .mfp-preloader {
+    color: #cccccc;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    text-align: center;
+    margin-top: -0.8em;
+    left: 8px;
+    right: 8px;
+    z-index: 1044; }
+  
+  .mfp-preloader a {
+    color: #cccccc; }
+  
+  .mfp-preloader a:hover {
+    color: white; }
+  
+  .mfp-s-ready .mfp-preloader {
+    display: none; }
+  
+  .mfp-s-error .mfp-content {
+    display: none; }
+  
+  button.mfp-close,
+  button.mfp-arrow {
+    overflow: visible;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    -webkit-appearance: none;
+    display: block;
+    padding: 0;
+    z-index: 1046;
+    -webkit-box-shadow: none;
+    box-shadow: none; }
+  
+  button::-moz-focus-inner {
+    padding: 0;
+    border: 0; }
+  
+  .mfp-close {
+    width: 44px;
+    height: 44px;
+    line-height: 44px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    text-decoration: none;
+    text-align: center;
+    opacity: 0.65;
+    padding: 0 0 18px 10px;
+    color: white;
+    font-style: normal;
+    font-size: 28px;
+    font-family: Arial, Baskerville, monospace; }
+    .mfp-close:hover, .mfp-close:focus {
+      opacity: 1; }
+    .mfp-close:active {
+      top: 1px; }
+  
+  .mfp-close-btn-in .mfp-close {
+    color: #333333; }
+  
+  .mfp-image-holder .mfp-close,
+  .mfp-iframe-holder .mfp-close {
+    color: white;
+    right: -6px;
+    text-align: right;
+    padding-right: 6px;
+    width: 100%; }
+  
+  .mfp-counter {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #cccccc;
+    font-size: 12px;
+    line-height: 18px; }
+  
+  .mfp-arrow {
+    position: absolute;
+    opacity: 0.65;
+    margin: 0;
+    top: 50%;
+    margin-top: -55px;
+    padding: 0;
+    width: 90px;
+    height: 110px;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+  
+  .mfp-arrow:active {
+    margin-top: -54px; }
+  
+  .mfp-arrow:hover,
+  .mfp-arrow:focus {
+    opacity: 1; }
+  
+  .mfp-arrow:before, .mfp-arrow:after,
+  .mfp-arrow .mfp-b,
+  .mfp-arrow .mfp-a {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin-top: 35px;
+    margin-left: 35px;
+    border: medium inset transparent; }
+  .mfp-arrow:after,
+  .mfp-arrow .mfp-a {
+    border-top-width: 13px;
+    border-bottom-width: 13px;
+    top: 8px; }
+  .mfp-arrow:before,
+  .mfp-arrow .mfp-b {
+    border-top-width: 21px;
+    border-bottom-width: 21px; }
+  
+  .mfp-arrow-left {
+    left: 0; }
+    .mfp-arrow-left:after,
+    .mfp-arrow-left .mfp-a {
+      border-right: 17px solid white;
+      margin-left: 31px; }
+    .mfp-arrow-left:before,
+    .mfp-arrow-left .mfp-b {
+      margin-left: 25px;
+      border-right: 27px solid #3f3f3f; }
+  
+  .mfp-arrow-right {
+    right: 0; }
+    .mfp-arrow-right:after,
+    .mfp-arrow-right .mfp-a {
+      border-left: 17px solid white;
+      margin-left: 39px; }
+    .mfp-arrow-right:before,
+    .mfp-arrow-right .mfp-b {
+      border-left: 27px solid #3f3f3f; }
+  
+  .mfp-iframe-holder {
+    padding-top: 40px;
+    padding-bottom: 40px; }
+  
+  .mfp-iframe-holder .mfp-content {
+    line-height: 0;
+    width: 100%;
+    max-width: 900px; }
+  
+  .mfp-iframe-scaler {
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    padding-top: 56.25%; }
+  
+  .mfp-iframe-scaler iframe {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+    background: black; }
+  
+  .mfp-iframe-holder .mfp-close {
+    top: -40px; }
+  
+  /* Main image in popup */
+  img.mfp-img {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    line-height: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 40px 0 40px;
+    margin: 0 auto; }
+  
+  /* The shadow behind the image */
+  .mfp-figure:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 40px;
+    bottom: 40px;
+    display: block;
+    right: 0;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+    background: #444444; }
+  
+  .mfp-figure {
+    line-height: 0; }
+  
+  .mfp-bottom-bar {
+    margin-top: -36px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    cursor: auto; }
+  
+  .mfp-title {
+    text-align: left;
+    line-height: 18px;
+    color: #f3f3f3;
+    word-wrap: break-word;
+    padding-right: 36px; }
+  
+  .mfp-figure small {
+    color: #bdbdbd;
+    display: block;
+    font-size: 12px;
+    line-height: 14px; }
+  
+  .mfp-image-holder .mfp-content {
+    max-width: 100%; }
+  
+  .mfp-gallery .mfp-image-holder .mfp-figure {
+    cursor: pointer; }
+  
+  @media screen and (max-width: 800px) and (orientation: landscape), screen and (max-height: 300px) {
+    /**
+     * Remove all paddings around the image on small screen
+     */
+    .mfp-img-mobile .mfp-image-holder {
+      padding-left: 0;
+      padding-right: 0; }
+  
+    .mfp-img-mobile img.mfp-img {
+      padding: 0; }
+  
+    /* The shadow behind the image */
+    .mfp-img-mobile .mfp-figure:after {
+      top: 0;
+      bottom: 0; }
+  
+    .mfp-img-mobile .mfp-bottom-bar {
+      background: rgba(0, 0, 0, 0.6);
+      bottom: 0;
+      margin: 0;
+      top: auto;
+      padding: 3px 5px;
+      position: fixed;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box; }
+  
+    .mfp-img-mobile .mfp-bottom-bar:empty {
+      padding: 0; }
+  
+    .mfp-img-mobile .mfp-counter {
+      right: 5px;
+      top: 3px; }
+  
+    .mfp-img-mobile .mfp-close {
+      top: 0;
+      right: 0;
+      width: 35px;
+      height: 35px;
+      line-height: 35px;
+      background: rgba(0, 0, 0, 0.6);
+      position: fixed;
+      text-align: center;
+      padding: 0; }
+  
+    .mfp-img-mobile .mfp-figure small {
+      display: inline;
+      margin-left: 5px; } }
+  @media all and (max-width: 900px) {
+    .mfp-arrow {
+      -webkit-transform: scale(0.75);
+      transform: scale(0.75); }
+  
+    .mfp-arrow-left {
+      -webkit-transform-origin: 0;
+      transform-origin: 0; }
+  
+    .mfp-arrow-right {
+      -webkit-transform-origin: 100%;
+      transform-origin: 100%; }
+  
+    .mfp-container {
+      padding-left: 6px;
+      padding-right: 6px; } }
+  .mfp-ie7 .mfp-img {
+    padding: 0; }
+  .mfp-ie7 .mfp-bottom-bar {
+    width: 600px;
+    left: 50%;
+    margin-left: -300px;
+    margin-top: 5px;
+    padding-bottom: 5px; }
+  .mfp-ie7 .mfp-container {
+    padding: 0; }
+  .mfp-ie7 .mfp-content {
+    padding-top: 44px; }
+  .mfp-ie7 .mfp-close {
+    top: 0;
+    right: 0;
+    padding-top: 0; }
+  
+  //Magnific overrides
+  .mfp-image img{
+    background: white;
+  }
+  .mfp-figure:after {
+    background: white;
+  }
+  
+  /*
+   * Off Canvas navbar toggle right
+   * --------------------------------------------------
+   */
+  
+  @media screen and (max-width: 768px) {
+    .row-offcanvas .collapsing {
+    -webkit-transition: none 0;
+      -moz-transition: none 0;
+      transition: none 0;
+    }
+   .row-offcanvas .navbar {
+    position: absolute;
+    z-index: 2;
+      right:0;
+      height:100%;
+      width:55px;
+      border:0;
+      background-color:transparent;
+    }
+    .row-offcanvas .navbar-toggle {
+      margin-right: 5px;
+      margin-left: 5px;
+    }
+    .row-offcanvas {
+      position: relative;
+    }
+    .row-offcanvas-right.active .navbar {
+    position: absolute;
+    z-index: 2;
+      right: -28.4%;
+      width:40%;
+      background-color:#eee;
+      border:0 solid #ddd;
+      border-left-width:1px;
+    }
+    .row-offcanvas-right.active {
+      left: -30%;
+    }
+    .row-offcanvas-right.active .navbar-collapse {
+      position: relative;
+      width: 100%;
+    }
+    .row-offcanvas .content {
+    /*width:calc(100% - 60px);*/
+    }
+  }
+  </style>
+</head>
+<body>
+<div id="header">
+<h1 class="title">some title goes here</h1>
+<h2 class="author">ttmmghmm</h2>
+<h3 class="date">2015 January</h3>
+</div>
+<title >
+Test file
+</title>
+<div id="wrap">
+<div class="container">
+<div class="row row-offcanvas row-offcanvas-right">
+<div class="contents col-xs-12 col-md-10">
+<!--
+%\VignetteEngine{knitr::rmarkdown}
+%\VignetteIndexEntry{Introduction to dots}
+-->
+
+<h1>Introduction to <code>dots</code></h1>
+<p>If you wish, you can view this vignette online <a href="http://lcolladotor.github.io/dots/">here</a>.</p>
+<h1>Overview</h1>
+<p><code>dots</code> <a id='cite-dots'></a>(<a href='https://github.com/lcolladotor/dots'>Collado-Torres, 2014</a>) is a simple package that helps you simplify your function definitions by using the <code>...</code> arguments. This reduces the complexity a new user of your package will face when reading its documentation. At the same time, <code>dots</code> allows you to define advanced arguments which you can then define inside your functions. Experienced users will be able to use them thus controlling those fine parameters most users do not need.</p>
+<h2>dots()</h2>
+<p>The main function in this package is <code>dots()</code>. It will look inside <code>...</code> to see if <code>name</code> has been used. If it has, it will return its value. Otherwise, it returns a default <code>value</code>.</p>
+<div class="row">
+<button class="source R toggle btn btn-xs btn-primary">
+<span class="glyphicon glyphicon-chevron-down"></span> R source
+</button><pre style=""><code class="source r">## Load the library
+library('dots')</code></pre>
+</div>
+<div class="row">
+<button class="source R toggle btn btn-xs btn-primary">
+<span class="glyphicon glyphicon-chevron-down"></span> R source
+</button><pre style=""><code class="source r">## Explore code
+## Alias: advanced...()
+dots</code></pre><button class="output R toggle btn btn-xs btn-success">
+<span class="glyphicon glyphicon-chevron-up"></span> R output
+</button><pre style="display:none"><code class="output r">## function (name, value, ...) 
+## {
+##     args <- list(...)
+##     if (!name %in% names(args)) {
+##         return(value)
+##     }
+##     else {
+##         return(args[[name]])
+##     }
+## }
+## <environment: namespace:dots>
+</code></pre>
+</div>
+<p>The idea of this fairly simple function is to use it inside your functions to define advanced arguments and give them default values.</p>
+<p>The following example defines <code>myFun()</code> which needs the argument <code>x</code> to work. Inside <code>myFun()</code>, <code>dots()</code> is used to define the advanced argument <code>verbose</code> which the developer of <code>myFun()</code> thinks users will rarely want to use. This developer still wants to give users the flexibility to control this argument but doesn't want to confuse the majority of its users with a huge argument list.</p>
+<div class="row">
+<button class="source R toggle btn btn-xs btn-primary">
+<span class="glyphicon glyphicon-chevron-down"></span> R source
+</button><pre style=""><code class="source r">myFun <- function(x, ...) {
+    ## In all the cases, the user has to specify 'x' for this function to work
+    
+    ## However, only a few users will want to make the function print status
+    ## reports (controlled by the 'verbose' argument)
+    
+    #' @param verbose Controls whether to print status reports or not.
+    #' Use value from global 'verbose' option if available. Otherwise, use 
+    #' \code{FALSE}
+    verbose <- dots('verbose', getOption('verbose', FALSE), ...)
+    if(verbose)
+        message(paste(Sys.time(), 'myFun: performing analysis'))
+    
+    ## In this case, it's just a simple example, so lets return the identify value
+    return(identity(x))
+}
+
+## Lets use it now
+myFun(1:10)</code></pre><button class="output R toggle btn btn-xs btn-success">
+<span class="glyphicon glyphicon-chevron-down"></span> R output
+</button><pre style=""><code class="output r">##  [1]  1  2  3  4  5  6  7  8  9 10
+</code></pre><button class="source R toggle btn btn-xs btn-primary">
+<span class="glyphicon glyphicon-chevron-down"></span> R source
+</button><pre style=""><code class="source r">## Experienced user wants to print status reports
+myFun(1:10, verbose = TRUE)</code></pre><button class="message R toggle btn btn-xs btn-info">
+<span class="glyphicon glyphicon-chevron-down"></span> R message
+</button><pre style=""><code class="message r">## 2015-01-01 23:38:36 myFun: performing analysis
+</code></pre><button class="output R toggle btn btn-xs btn-success">
+<span class="glyphicon glyphicon-chevron-down"></span> R output
+</button><pre style=""><code class="output r">##  [1]  1  2  3  4  5  6  7  8  9 10
+</code></pre>
+</div>
+<p>Ok, this is an example and there are really only two arguments but in practice things can get complicated fast. As a developer, soon you might find yourself with functions that have 10 or more arguments and need to cut the list down to promote friendliness and usability of your code.</p>
+<p>Note that if you are using the same advanced argument inside several functions, you might want to consider using the function <code>getOption()</code>. It's useful for users who want to set global options and don't want to specify them for every single function call.</p>
+<p>We highly recommend documenting any advanced arguments using <a href="http://cran.r-project.org/web/packages/roxygen2/index.html">roxygen2</a> tags inside the source code so experienced users can understand the code. We also recommend explaining these advanced arguments in your package vignette at the section targeting advanced users.</p>
+<p>That is, we expect experienced users to be able to dig into either the source code and/or find the appropriate docs section. As a package developer you have to give them a place to find such documentation.</p>
+<h2>formal_call()</h2>
+<p>Once you start using the <code>...</code> argument, you will soon find use cases where you are using <code>...</code> for several functions, but then some of them might complain when <code>...</code> contains an argument they don't use. In such scenarios you will want to run the function using some key arguments, remaining arguments from <code>...</code> that the function was defined to use, and drop the unwanted arguments in <code>...</code>.</p>
+<p>That's where <code>formal_call()</code> comes into play.</p>
+<div class="row">
+<button class="source R toggle btn btn-xs btn-primary">
+<span class="glyphicon glyphicon-chevron-down"></span> R source
+</button><pre style=""><code class="source r">## Explore source
+## Alias: formalCall()
+formal_call</code></pre><button class="output R toggle btn btn-xs btn-success">
+<span class="glyphicon glyphicon-chevron-up"></span> R output
+</button><pre style="display:none"><code class="output r">## function (fun, ...) 
+## {
+##     formal <- formalArgs(fun)
+##     args <- list(...)
+##     use <- dots("formalCallUse", NULL, ...)
+##     if (!is.null(use)) {
+##         stopifnot(is.list(use))
+##         stopifnot(!is.null(names(use)))
+##         args <- args[!names(args) %in% names(use)]
+##         input <- use
+##     }
+##     else {
+##         input <- NULL
+##     }
+##     input <- c(input, args[names(args) %in% formal])
+##     result <- do.call(fun, input)
+##     return(result)
+## }
+## <environment: namespace:dots>
+</code></pre>
+</div>
+<h3>Basic example</h3>
+<p>The following example shows how you can use <code>formal_call()</code> inside your functions. First, lets try a simple function that will return the identity of the maximum value of a vector <code>x</code>.</p>
+<div class="row">
+<button class="source R toggle btn btn-xs btn-primary">
+<span class="glyphicon glyphicon-chevron-down"></span> R source
+</button><pre style=""><code class="source r">myFunBroken <- function(x, ...) {
+    identity(max(x, ...), ...)
+}
+
+## Test without using ...
+myFunBroken(1:10)</code></pre><button class="output R toggle btn btn-xs btn-success">
+<span class="glyphicon glyphicon-chevron-down"></span> R output
+</button><pre style=""><code class="output r">## [1] 10
+</code></pre>
+</div>
+<p>That worked because we are not using the <code>...</code> argument. However, as is the code will break when using <code>...</code> because <code>identity()</code> does not have have other arguments defined.</p>
+<div class="row">
+<button class="source R toggle btn btn-xs btn-primary">
+<span class="glyphicon glyphicon-chevron-down"></span> R source
+</button><pre style=""><code class="source r">## Breaks when you use ...
+myFunBroken(1:10, 11:20)</code></pre>
+</div>
+<p>We can fix the broken code by using <code>formal_call()</code> as shown below.</p>
+<div class="row">
+<button class="source R toggle btn btn-xs btn-primary">
+<span class="glyphicon glyphicon-chevron-down"></span> R source
+</button><pre style=""><code class="source r">## Fix code using formal_call()
+myFunFixed <- function(x, ...) {
+    formal_call(identity, x = max(x, ...), ...)
+}
+
+## Check that we are getting the same value as before
+identical(myFunBroken(1:10), myFunFixed(1:10))</code></pre><button class="output R toggle btn btn-xs btn-success">
+<span class="glyphicon glyphicon-chevron-down"></span> R output
+</button><pre style=""><code class="output r">## [1] TRUE
+</code></pre><button class="source R toggle btn btn-xs btn-primary">
+<span class="glyphicon glyphicon-chevron-down"></span> R source
+</button><pre style=""><code class="source r">## Doesn't break when you use ...
+myFunFixed(1:10, 11:20)</code></pre><button class="output R toggle btn btn-xs btn-success">
+<span class="glyphicon glyphicon-chevron-down"></span> R output
+</button><pre style=""><code class="output r">## [1] 20
+</code></pre>
+</div>
+<p>In this particular example, you could dodge the problem by using <code>identity(x)</code> instead of <code>identity(x, ...)</code>. However, the illustrative use of <code>formal_call()</code> remains and there are more complicated cases where you will need to use it.</p>
+<h3>Complex example</h3>
+<p>In the following example we want a function that does things with <code>...</code> (in this case, it defines the <code>verbose</code> argument) and then pass it to <code>plot()</code>. Simply using <code>dots()</code> is not enough as <code>plot()</code> will complain that <code>verbose</code> is not a graphical parameter.</p>
+<div class="row">
+<button class="source R toggle btn btn-xs btn-primary">
+<span class="glyphicon glyphicon-chevron-down"></span> R source
+</button><pre style=""><code class="source r">## A more complicated example
+funkyPlot <- function(x, y, ...) {
+    verbose <- dots('verbose', getOption('verbose', FALSE), ...)
+    if(verbose)
+        message(paste(Sys.time(), 'funkyPlot: getting ready to roll'))
+    plot(x, y, ...)
+}
+
+## funkyPlot() doesn't work
+tryCatch(funkyPlot(1:10, 10:1, verbose = TRUE, xlab = 'Data (units)'), warning = function(w) { print(w) })</code></pre><button class="message R toggle btn btn-xs btn-info">
+<span class="glyphicon glyphicon-chevron-down"></span> R message
+</button><pre style=""><code class="message r">## 2015-01-01 23:38:37 funkyPlot: getting ready to roll
+</code></pre>
+<div class="row">
+<div class="col-md-offset-3 col-md-6">
+<a href="#" class="thumbnail"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAfgAAAH4CAMAAACR9g9NAAAAA1BMVEX///+nxBvIAAAACXBIWXMAAAsSAAALEgHS3X78AAABDUlEQVR4nO3BMQEAAADCoPVPbQwfoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOBv4mUAASET0xEAAAAASUVORK5CYII=" /> </a>
+</div>
+</div>
+<button class="output R toggle btn btn-xs btn-success">
+<span class="glyphicon glyphicon-chevron-down"></span> R output
+</button><pre style=""><code class="output r">## <simpleWarning in plot.window(...): "verbose" is not a graphical parameter>
+</code></pre>
+</div>
+<p>There are many graphical parameters, but they are not part of the formal definition of <code>plot()</code>. We can solve this by using the advanced argument <code>formalCallUse</code> which specifies arguments we still want to use even if they are not part of the formal definition.</p>
+<p>Below we do so only for the <code>xlab</code> graphical parameter.</p>
+<div class="row">
+<button class="source R toggle btn btn-xs btn-primary">
+<span class="glyphicon glyphicon-chevron-down"></span> R source
+</button><pre style=""><code class="source r">## Use 'xlab'
+funkyPlot2 <- function(x, y, ...) {
+    verbose <- dots('verbose', getOption('verbose', FALSE), ...)
+    if(verbose)
+        message(paste(Sys.time(), 'funkyPlot: getting ready to roll'))
+    xlab <- dots('xlab', '', ...)
+    formal_call(plot, x = x, y = y, ..., formalCallUse = list(xlab = xlab))
+}
+
+## Works now =)
+funkyPlot2(1:10, 10:1, verbose = TRUE, xlab = 'Data (units)')</code></pre><button class="message R toggle btn btn-xs btn-info">
+<span class="glyphicon glyphicon-chevron-down"></span> R message
+</button><pre style=""><code class="message r">## 2015-01-01 23:38:37 funkyPlot: getting ready to roll
+</code></pre>
+<div class="row">
+<div class="col-md-offset-3 col-md-6">
+<a href="#" class="thumbnail"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAfgAAAH4CAMAAACR9g9NAAAC01BMVEUAAAABAQEDAwMEBAQFBQUGBgYHBwcICAgJCQkKCgoLCwsMDAwNDQ0ODg4PDw8QEBARERESEhITExMUFBQVFRUWFhYYGBgZGRkaGhobGxscHBwdHR0fHx8gICAhISEiIiIjIyMkJCQlJSUmJiYnJycoKCgpKSkqKiorKyssLCwtLS0uLi4vLy8xMTEzMzM0NDQ1NTU2NjY3Nzc5OTk6Ojo7Ozs8PDw9PT0+Pj4/Pz9AQEBBQUFCQkJDQ0NERERFRUVHR0dISEhJSUlKSkpLS0tMTExNTU1OTk5PT09QUFBRUVFSUlJTU1NUVFRVVVVWVlZXV1dYWFhZWVlaWlpbW1tcXFxdXV1eXl5fX19gYGBhYWFiYmJjY2NkZGRlZWVmZmZnZ2doaGhpaWlqampra2tsbGxubm5vb29wcHBxcXFycnJzc3N0dHR1dXV2dnZ3d3d4eHh5eXl6enp7e3t8fHx9fX1+fn6AgICBgYGCgoKDg4OEhISFhYWGhoaHh4eJiYmKioqLi4uMjIyNjY2Ojo6Pj4+QkJCRkZGSkpKTk5OUlJSVlZWWlpaXl5eYmJiZmZmampqbm5ucnJydnZ2goKChoaGioqKjo6OlpaWmpqanp6eoqKipqamqqqqrq6usrKytra2vr6+wsLCxsbGysrKzs7O0tLS1tbW2tra3t7e4uLi5ubm6urq7u7u8vLy9vb2+vr6/v7/AwMDBwcHCwsLDw8PExMTFxcXGxsbHx8fIyMjJycnLy8vMzMzNzc3Ozs7Pz8/Q0NDR0dHS0tLT09PU1NTV1dXW1tbX19fY2NjZ2dna2trb29vc3Nzd3d3e3t7f39/g4ODh4eHi4uLj4+Pk5OTl5eXm5ubn5+fo6Ojp6enq6urr6+vs7Ozt7e3u7u7v7+/w8PDx8fHy8vLz8/P09PT19fX29vb39/f4+Pj5+fn6+vr7+/v8/Pz9/f3+/v7///+4sN6OAAAACXBIWXMAAAsSAAALEgHS3X78AAAP3klEQVR4nO3diXtU1R3G8amKNQlLCBYV7IJJDZXFheySUJcgUUCKC2ChURbbsmTSAlWLLLEgFqqCghWFKAhqkWhAQbSgFWIMQWukSoIYQ0jIZJvM+RM6GbbJxIRzl5N7Mu/7eex9ksvM757p95nMHbwZXYIguZxeADmD4UExPCiGB8XwoBgeFMODYnhQDA+K4UExPCiGB8XwoBgeFMODYnhQDA+K4UExPCiGB8XwoBgeFMODYnhQDA+K4UExPCiGB8XwoBgeFMODYnhQDA+K4UExPCiGB8XwoBgeFMODYnhQDA+K4UExPCiGB8XwoBgeFMODYnhQDA+K4UExPCiGB8XwoBgeFMODYnhQDA/KQvjvNpHGXmlSFX7jPc+SvhK/UBZ+tfn7knJTGR4Tw4NieFAMD4rhQTE8KOvhq3Jje0bEzj0Zup/htWY9fOasEk9dqXtM6H6G15r18H0aW7e+AaH7Q8If2V1pZF2kmPXwt8865Kk/7M4M3d8mvC977IL0p4wujtSx4TU+JzYyYtDs6tD9bcKvf9y/GVdkcHGkjoKz+oLsgBEPhB7m5adNTCM1FISv2h8wcVzQvnkf+jerNpqYRmqoex//hwlB3xRllIsDie1eDsgxXRRe7B2TOvlL88PIbtbDx7lOC93fNjxpxnp47w3bfnA/w2vNhh/1Kwp/cDfDa62rXuNJMwwPiuFBMTwohgfF8KAYHhTDg2J4UAwPiuFBMTwohgfF8KAYHhTDg2J4UAwPiuFBMTwohgfF8KAYHhTDg2J4UAwPiuFBMTwoHcP7vOaPSpL0C3/qd6kjJ3xr/rgkRb/wM/KF2JNl/rgkRb/waa2bzFrzByYZmoYfXWP+wCRDv/DZ24TY3+5zMslm+oWvuT/9lqxy88clKfqFF6KpwfxRSZKO4akLMDwohgfF8KAYHhTDg2J4UAwPiuFBMTwohgfF8KAYHhTDg2J4UAwPiuFBMTwohgfF8KAYHhTDg2J4UFLh69ePHdCjX8oSQ//9d4bXmkz4DYPnbf70VNmO5Sl5HvnJDK81mfBr6s5859tRLD+Z4bXG13hQRsJfZGgyw2uN4UExPCiGByUT3nWWocldEL5qzsjR7yg/Sniyfla/a2D8vvSoxEOh+9WH945603f8jkLVhwlP1sMPyV/ryql8JuncjlP/DXhgvNW1XchHv/dvyieoPkx4sh4+sqnKVS4aep3b8a/sgOtGWV3bhWxf4t80KT9MeLLnGe+uWJQUul/9j/rjI71C5C9UfZjwJBU+rrOTu10D4veNjExw4DVevHjzY9mZBv71AZ0nFd57wzbjk7vi7Vzl2wfVHyQ8yf2oX1FofDLfx2uN/5IGFMODYnhQDA+K4UEZCL/T1dPI38IyvNb4jAfF8KB4IQYohgfF8KAYHlS3vuaOzONZPSiGByUVvjQhZkazqOWP+jAiFT7pieMP5jJ8WJEK39sjvMNKGT6cSIWP/0CIHcnVDB9GpMJvjpomhDuO4cOI3Fn9kZ1C+PYsMjSZ4bXGt3OgGB4Uw4NieFC85g4Un/GgGB4UL8QAxfCgUMJX/+3hdc1OL0InIOErR7x04MnRLU4vQyMg19z99TX/ZuF2p5ehEZCz+slf+TevPuX0MjQCEn7py/7NXH4K5nlS4bdfGf/+9ZFJJYYmaxW+NmVV4cKJPqeXoRGp8L98deuPFh97MtHQZK3Ci4b1j7zO7kGkwvdqOemqE75oQ5P1Ck8h5J7xb/tqhdg53NBkhteaVPg3+77hPzWKftfQZIbXmtxZfUujEGWNxiYzvNZA3s5RKIYHxfCgGB4Ur7kDxWc8KIYHBXIhBoVieFAMD4rhQYFcc0eheFYPSj78boOTGV5r8uGNPvkZXmtS4SP4Gh92pMIXDc/nMz7MyP2or86a08TwYUXyNb5lcSrDhxXpk7vC+QYnM7zW+D4eFMODYnhQDA+K19yB4jMeFMOD4oUY7dS+vvl7p9egnvXw30zdf+CmyLTPQ/d31/DFiUtXpOx0ehXKWQ8/Ym7NsPnlj6SG7u+u4W87IsRJYx/+0R1ZD9/PI/qUi/re53a8Nj7gmnQblueAtNbN+ONOL0M169fcPXTfAXdO+eJR53Y0VQVMv9vGZXah1Oazm7Bm/ay+OW9Y34uvmFIRur+7/qhfM/VY1YI/O70K5fh2rp0td9+5Lvw//FQq/IP1xyZE959+0tDkbhseg1R4V+3oyeWVD08xNJnhtSYZPvJ7IRovNzSZ4bUmF/6b4Z8IUTzI0GSG15pU+IS+UTeL9y9fbWgyw2tN7qzeV/Ef8dF7xj4LluG1xrdzoBgeFMODYnhQvOYOFJ/xoBgeFK+5A8XwoBgeFMOD4ufcgeJZPSiGByUVvqNflukUw2tNKnxHvyzTKYbXmlT4dr8sI4PhtSYVvt0vy8hgeK1Jhe/ol2U6xfBa41k9KIYHxfCgGB4Uw4PiNXeg+Iy3wvd1ndNLMIvhLdg1YlL6TK/TqzCHF2KYV51UI8TKFU4vwxyGN++dx/wbz61OL8Mchjdvb+tHJJ3IcnoZ5jC8efVJJaLpoY1OL8McXnNnwRdjU1PWOL0Ik3hWD0ruM3DcJj7okeG1Jhd+YfpnhiczvNYkP+7s4I2zjF1qyfCakwwvGh8fmPioockMrzXZ8EJ4d9xjaDLDa00+vFEMrzW+nQPF8KAYHhTDg2J4ULzmDhSf8aAYHhQvxADF8KAYHhTDg+I1d6B4Vg+K4UFJhd81MH5felTiIUOTGV5rUuGH5K915VQ+k2RoMsNrTSp8ZFOVq1w09DI0meG1Jv2Md1cs4jM+jMi9xg+I3zcyMoGv8WGEZ/WgGB4Uw4NieFAMD8qma+52t9/F8MHezEjLKnJ6EcFsesb/wO0YPsi/M6tFWdJ3Ti8jiPXwEaH/zra8IOCuu6yuLYzM/si/eXaD08sIYv1CjKLh+W1vt9sdcP0tlhcXPrJL/ZsNzzq9jCA2XIFTnTWniT/qO7cpVwhvZqnTywhix6VXLYtTGf4C/pQxPfGfTi8imD3X3BXOb7+P4ds4Wdzg9BLa4DV3oPgXOKAYHpRU+JrZV/fon/qqsckMrzWp8NPcVbNW7rppjaHJDK81qfBXNohjg8TRaw1NZnitSYXv3yiqeopq/keFw4hU+Hv+ctKd2Tj5DkOTGV5rUuG/vT0q7ch3D1QamszwWuPbOVAMD4rhQTE8KH7OHSg+40ExPCh++BEohgfF8KAYHhSvuQPFs3pQDA9KKnxVbmzPiNi5Jw1NZnitSYXPnFXiqSt1jzE0meG1JhW+T2Pr1jfA0GSG15pU+NtnHfLUH3ZnGprM8FqTe43PiY2MGDS72tBkhtcaz+pBMTwohgfF8Np5a9LEjT7lR5EKH8e/q+866+778uicR5QfRiq894ZtxiczvDkpTf5Nslf1YeR+1K8oND6Z4c1Ja93c/a3qw/A1Xje3HBWiNkH5YWTCr/Wc+c5XUCw/meHN+STh72vS3lJ+GJnwW9NythTXlRUsT1nm6fTWbTC8SSc2bahQfxS5k7sXs668JCZ5saG/s2V4rfE1HpRs+AZvnbHrMBheb5Lh86O//zTK2MdeMbzWJMNfs1uI939haDLDa00yfIzXf4oXY2gyw2tNMvyd7soqNz/8KIxIhj9+b0yfccbeXTK81vh2DhTDg2J4UAwPiuFBMTwohgfF8KAYHhTDg2J4UAwPiuFBMTwohgfF8KAYHhTDg2J4UAwPiuFBMTwohgfF8N3ZB8tfOGXyrtbDlybEzGgWte1uyfDKLfzttn+MMPkhCtbDJz1x/MFchnfAV1n+zZ6Z5u5sPXxvj/AOKw0K/0pGwE9vNbcikvXGMv+mZaS5O1sPH/+BEDuSq9vdcuNqcysiWSWT/ZviKebubD385qhpQrjjGL7r3b/k0NuJh8zd14az+iM7hfDtWRS6m+GVa3khe8H/TN5X3ds5htcaw4NieFAMD4rhQTE8KIYHxfCgGB4Uw4NieFAMD4rhQTE8KIYHxfCgGB4Uw4NieFAMD4rhQTE8KIYHxfCgGB4Uw4NieFAMD4rhQTE8KIYHxfAgjuyubPM9w0PwZY9dkP5U8B6Gh7D+cf9mXFHQHoaHEMj88tOhezrG8OFh3of+zaqNQXsYHkJRRrk4kFgdtIfhMewdkzr5y+AdDA+K4UExPCiGB8XwoBgeFMODYnhQDA+K4UGpC799aIZJ10X1VeDHKoZGRCsY2kvJ4+/T9v/kuKOqwpu3ZbmKqWkqht73tYKhOjx+hu8cw9tJhwcuieHtpMMDl8TwdtLhgUtieDvp8MAlMbydtq1UMTVDxdBJnb8pMkeHx+9I+GaPiqk13WaoDo/fkfDkPIYHxfCgGB4Uw4NieFAMD4rhQTE8KCfCbxncO7nU/rFFEbaPbJ7eL+Eb26fuGho19F1bJ3rjWrdVmdGjq2Tv4kD4I1F7PXkJto+tHm7/Y8m7t27uVNunDtjUtHGgnQOfvDHw0N0zG2bmyt7HgfA7pwlxPMbuqb6sfPsfy7BPRM1+26fGr6167lo7BxZuCzz02BJREit7H2de470PzbB75JI5Ch5LX3f08IO2T93ncrn22Tsy8NAjPcLT09A9ulrBMHezzSMLU5sUPJaLc8rn32T71JE55fPS7R0ZeOgR9aJO+jzHgfC+XAWndvNdrXbbPPWKclERafNM/zOzQlRG2TsykHHQYXH4GkP36Fp74k7U1tYqGGz/Y5myuOHRVNunjlhUuzzR3pGBh/7HXF/uXEP36FqLAk9OBYPtn1mR0Tvlc9unliREJZTYOzLw0E/cdtXo6gvdss09CA/Dg2J4UAwPiuFBMTwohgfF8KAYHhTDg2J4UAwPiuFBMTwohgfF8KAYHhTDg2J4UAwPCiq866KLLkt4r6M/3bo29Obnv1yzQdGSHIMVXoiaTZd/fO77Nr/V4E0L/RAy9/lb1A1uULy2roYWXohV49t+f9aLOR3do9W89aoW5RC88GU/F+K1ob3754kxrqFnvmqVteX0Dfz/c700pO+K1q9ab/F8/5iVQmwe6+TCFcALX3+pEEPyvB/3CHx/5iu/q4rPh1/qe+ey018J0edgaYYQRQOcXLgCeOHLfiZEy4fPTzqd9cxXfpfUnQ9fc7a6/587Mjc1C3Gqh5MLVwAvfOtr/NiJW4+eznrmK7+YstNnf67z/QP/+Lb/xv+ML+vn4LpVQAtfk996Vt/rU9/zrmbhajr7lV9ygRCXFvqWtg3fJK4u/SxaiB3Jzi7ddljhz76PX9Vv8LJfTxK3DTz7ld/i5ULkRf9qXZvw/lus7vuT54RYvsTZpdsOKnynTiT7Ov5DX4r0r6F2Ewx/zrKCjv+sIK/r1tE1GP4cT3HHf1as5D8t4CSGB8XwoBgeFMODYnhQDA+K4UExPCiGB8XwoBgeFMODYnhQDA+K4UExPKj/A9Qm/SL4gHskAAAAAElFTkSuQmCC" /> </a>
+</div>
+</div>
+<button class="output R toggle btn btn-xs btn-success">
+<span class="glyphicon glyphicon-chevron-down"></span> R output
+</button><pre style=""><code class="output r">## NULL
+</code></pre>
+</div>
+<p>If you have a small number of advanced arguments you want users to be able to use, this approach will work. But in the case of <code>plot()</code> there are tons of graphical parameters that we want users to be able to use.</p>
+<p>If you knew for certain that the other functions inside yours only use a small number of arguments passed through <code>...</code> (<code>verbose</code> in our example), you can eliminate them from <code>...</code> yourself and pass them to <code>formalCallUse</code>.</p>
+<div class="row">
+<button class="source R toggle btn btn-xs btn-primary">
+<span class="glyphicon glyphicon-chevron-down"></span> R source
+</button><pre style=""><code class="source r">## If we knew for sure that we only want to exclude 'verbose' from ... before
+## calling plot() we can do so this way.
+funkyPlot3 <- function(x, y, ...) {
+    verbose <- dots('verbose', getOption('verbose', FALSE), ...)
+    if(verbose)
+        message(paste(Sys.time(), 'funkyPlot: getting ready to roll'))
+    
+    ## Drop 'verbose' from ...
+    use <- list(...)
+    use <- use[!names(use) == 'verbose']
+    
+    ## Call plot. Note that we are not passing ... anymore.
+    formal_call(plot, x = x, y = y, formalCallUse = use)
+}
+
+## Works with more graphical parameters
+funkyPlot3(1:10, 10:1, verbose = TRUE, xlab = 'Data (units)', ylab = 'Success', main = 'Complicated example')</code></pre><button class="message R toggle btn btn-xs btn-info">
+<span class="glyphicon glyphicon-chevron-down"></span> R message
+</button><pre style=""><code class="message r">## 2015-01-01 23:38:37 funkyPlot: getting ready to roll
+</code></pre>
+<div class="row">
+<div class="col-md-offset-3 col-md-6">
+<a href="#" class="thumbnail"><img src="data:image/png;base64,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" /> </a>
+</div>
+</div>
+<button class="output R toggle btn btn-xs btn-success">
+<span class="glyphicon glyphicon-chevron-down"></span> R output
+</button><pre style=""><code class="output r">## NULL
+</code></pre>
+</div>
+<p>So for these very complicated use cases, <code>formalCallUse</code> can help you when you either want to make sure you are supplying a small set of arguments or if you have a small set you want to exclude.</p>
+<p>Cases where there are many arguments to either exclude or supply are nasty either way.</p>
+<h1>Learn more</h1>
+<p>If you want to check other examples using <code>dots()</code>, check the functions <code>last()</code> and <code>recursive_last()</code>.</p>
+<p>You can also see how these functions are used in packages such as <code>derfinder</code>: <a href="http://www.bioconductor.org/packages/release/bioc/html/derfinder.html">Biconductor page</a>, <a href="https://github.com/lcolladotor/derfinder">GitHub code</a>.</p>
+<h1>Bibliography</h1>
+<p>This vignette was generated using <code>knitrBootstrap</code> <a id='cite-knitrBootstrap'></a>(<a href='https://github.com/jimhester/'>Hester, 2014</a>) with <code>knitr</code> <a id='cite-knitr'></a>(<a href='http://www.crcpress.com/product/isbn/9781466561595'>Xie, 2014</a>) and <code>rmarkdown</code> <a id='cite-rmarkdown'></a>(<a href='http://rmarkdown.rstudio.com'>Allaire, McPherson, Xie, Wickham, et al., 2014</a>) running behind the scenes.</p>
+<p>Citations made with <code>knitcitations</code> <a id='cite-knitcitations'></a>(<a href='http://CRAN.R-project.org/package=knitcitations'>Boettiger, 2014</a>).</p>
+<div class="row">
+<p>
+<a id='bib-rmarkdown'></a><a href="#cite-rmarkdown">[1]</a><cite> J. Allaire, J. McPherson, Y. Xie, H. Wickham, et al. <EM>rmarkdown: Dynamic Documents for R</EM>. R package version 0.4.2. 2014. URL: <a href="http://rmarkdown.rstudio.com">http://rmarkdown.rstudio.com</a>.</cite>
+</p>
+
+<p>
+<a id='bib-knitcitations'></a><a href="#cite-knitcitations">[2]</a><cite> C. Boettiger. <EM>knitcitations: Citations for knitr markdown files</EM>. R package version 1.0.5. 2014. URL: <a href="http://CRAN.R-project.org/package=knitcitations">http://CRAN.R-project.org/package=knitcitations</a>.</cite>
+</p>
+
+<p>
+<a id='bib-dots'></a><a href="#cite-dots">[3]</a><cite> L. Collado-Torres. <EM>dots: Simplifying function calls</EM>. R package version 1.0.0. 2014. URL: <a href="https://github.com/lcolladotor/dots">https://github.com/lcolladotor/dots</a>.</cite>
+</p>
+
+<p>
+<a id='bib-knitrBootstrap'></a><a href="#cite-knitrBootstrap">[4]</a><cite> J. Hester. <EM>knitrBootstrap: Knitr Bootstrap framework.</EM> R package version 1.0.0. 2014. URL: <a href="https://github.com/jimhester/">https://github.com/jimhester/</a>.</cite>
+</p>
+
+<p>
+<a id='bib-knitr'></a><a href="#cite-knitr">[5]</a><cite> Y. Xie. “knitr: A Comprehensive Tool for Reproducible Research in R”. In: <EM>Implementing Reproducible Computational Research</EM>. Ed. by V. Stodden, F. Leisch and R. D. Peng. ISBN 978-1466561595. Chapman and Hall/CRC, 2014. URL: <a href="http://www.crcpress.com/product/isbn/9781466561595">http://www.crcpress.com/product/isbn/9781466561595</a>.</cite>
+</p>
+</div>
+<h1>Reproducibility</h1>
+<p>Code for creating the vignette</p>
+<div class="row">
+<button class="source R toggle btn btn-xs btn-primary">
+<span class="glyphicon glyphicon-chevron-up"></span> R source
+</button><pre style="display:none"><code class="source r">## Create the vignette
+library('knitrBootstrap') 
+
+knitrBootstrapFlag <- packageVersion('knitrBootstrap') < '1.0.0'
+if(knitrBootstrapFlag) {
+    ## CRAN version
+    library('knitrBootstrap')
+    docName <- '2014-12-29-dotsPkgCopy-2.Rmd'
+    system.time(knit_bootstrap(docName, chooser=c('boot', 'code'), show_code = TRUE))
+    unlink('dots.md')
+} else {
+    ## GitHub version
+    library('rmarkdown')
+    system.time(render(docName))
+}
+unlink('dotsRef.bib')
+## Note: if you prefer the knitr version use:
+# library('rmarkdown')
+# system.time(render(docName, 'html_document'))
+
+## Extract the R code
+library('knitr')
+knit('dots.Rmd', tangle = TRUE)</code></pre>
+</div>
+<h2><code>R</code> session information.</h2>
+<div class="row">
+<button class="message R toggle btn btn-xs btn-info">
+<span class="glyphicon glyphicon-chevron-up"></span> R message
+</button><pre style="display:none"><code class="message r">## Session info-----------------------------------------------------------------------------
+</code></pre><button class="output R toggle btn btn-xs btn-success">
+<span class="glyphicon glyphicon-chevron-down"></span> R output
+</button><pre style=""><code class="output r">##  setting  value                       
+##  version  R version 3.1.2 (2014-10-31)
+##  system   x86_64, linux-gnu           
+##  ui       X11                         
+##  language (EN)                        
+##  collate  C                           
+##  tz       <NA>
+</code></pre><button class="message R toggle btn btn-xs btn-info">
+<span class="glyphicon glyphicon-chevron-up"></span> R message
+</button><pre style="display:none"><code class="message r">## Packages---------------------------------------------------------------------------------
+</code></pre><button class="output R toggle btn btn-xs btn-success">
+<span class="glyphicon glyphicon-chevron-down"></span> R output
+</button><pre style=""><code class="output r">##  package        * version  date       source                                   
+##  RCurl            1.95.4.5 2014-12-20 CRAN (R 3.1.2)                           
+##  RJSONIO          1.3.0    2014-07-28 CRAN (R 3.1.2)                           
+##  Rcpp             0.11.3   2014-09-29 CRAN (R 3.1.2)                           
+##  RefManageR       0.8.40   2014-10-29 CRAN (R 3.1.2)                           
+##  XML              3.98.1.1 2013-06-20 CRAN (R 3.1.2)                           
+##  bibtex           0.4.0    2014-12-31 CRAN (R 3.1.2)                           
+##  bitops           1.0.6    2013-08-17 CRAN (R 3.1.2)                           
+##  devtools       * 1.6.1    2014-10-07 CRAN (R 3.1.2)                           
+##  digest           0.6.8    2014-12-31 CRAN (R 3.1.2)                           
+##  dots           * 1.0.0    2014-12-29 Github (lcolladotor/dots@a933540)        
+##  evaluate         0.5.5    2014-04-29 CRAN (R 3.1.2)                           
+##  formatR          1.0      2014-08-25 CRAN (R 3.1.2)                           
+##  htmltools        0.2.6    2014-09-08 CRAN (R 3.1.2)                           
+##  httr             0.6.1    2015-01-01 CRAN (R 3.1.2)                           
+##  knitcitations  * 1.0.5    2014-11-26 CRAN (R 3.1.2)                           
+##  knitr            1.8.13   2015-01-01 local                                    
+##  knitrBootstrap   1.0.0    2015-01-01 Github (jimhester/knitrBootstrap@76c41f0)
+##  lubridate        1.3.3    2013-12-31 CRAN (R 3.1.2)                           
+##  markdown         0.7.4    2014-08-24 CRAN (R 3.1.2)                           
+##  memoise          0.2.1    2014-04-22 CRAN (R 3.1.2)                           
+##  mime             0.2      2014-09-26 CRAN (R 3.1.2)                           
+##  plyr             1.8.1    2014-02-26 CRAN (R 3.1.2)                           
+##  rmarkdown        0.4.2    2015-01-01 Github (rstudio/rmarkdown@ddeb876)       
+##  rstudioapi       0.2      2014-12-31 CRAN (R 3.1.2)                           
+##  stringr          0.6.2    2012-12-06 CRAN (R 3.1.2)                           
+##  yaml             2.1.13   2014-06-12 CRAN (R 3.1.2)
+</code></pre>
+</div>
+<h2>Date the vignette was generated.</h2>
+<div class="row">
+<button class="output R toggle btn btn-xs btn-success">
+<span class="glyphicon glyphicon-chevron-down"></span> R output
+</button><pre style=""><code class="output r">## [1] "2015-01-01 23:38:37 UTC"
+</code></pre>
+</div>
+<h2>Wallclock time spent generating the vignette.</h2>
+<div class="row">
+<button class="output R toggle btn btn-xs btn-success">
+<span class="glyphicon glyphicon-chevron-down"></span> R output
+</button><pre style=""><code class="output r">## Time difference of 2.42 secs
+</code></pre>
+</div>
+</div>
+</div>
+<div class="navbar navbar-fixed-bottom navbar-inverse">
+<div class="container">
+<div class="navbar-header">
+<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+<span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+</button>
+</div>
+<div id="bottom-navbar" class="navbar-collapse collapse navbar-responsive-collapse">
+<ul class="nav navbar-nav navbar-right"><li class="nav"><p class="navbar-text">
+Toggle
+</p></li>
+<li class="dropup">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown">Code <b class="caret"></b></a>
+<ul class="dropdown-menu"><li class="dropdown-header">
+Languages
+</li>
+<li class="active">
+<a href="#" class="toggle-global source R" type="source.R">R</a>
+</li>
+<li >
+<a href="#" type="all-source" class="toggle-global">All</a>
+</li></ul></li>
+<li class="dropup">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown">Output <b class="caret"></b></a>
+<ul class="dropdown-menu"><li class="dropdown-header">
+Type
+</li>
+<li class="active">
+<a href="#" class="toggle-global output" type="output">output</a>
+</li>
+<li class="active">
+<a href="#" class="toggle-global message" type="message">message</a>
+</li>
+<li >
+<a href="#" type="all-output" class="toggle-global">All</a>
+</li></ul></li>
+<li class="active">
+<a href="#" type="figure" class="toggle-global">Figures</a>
+</li></ul>
+<ul class="nav navbar-nav navbar-left"><li class="dropup">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown">Bootstrap theme <b class="caret"></b></a>
+<ul class="dropdown-menu"><li >
+<a class="theme-switch" title="Default" href="#">Default</a>
+</li>
+<li >
+<a class="theme-switch" title="Amelia" href="#">Amelia</a>
+</li>
+<li >
+<a class="theme-switch" title="Cerulean" href="#">Cerulean</a>
+</li>
+<li >
+<a class="theme-switch" title="Cosmo" href="#">Cosmo</a>
+</li>
+<li class="active">
+<a class="theme-switch" title="Cyborg" href="#">Cyborg</a>
+</li>
+<li >
+<a class="theme-switch" title="Journal" href="#">Journal</a>
+</li>
+<li >
+<a class="theme-switch" title="Flatly" href="#">Flatly</a>
+</li>
+<li >
+<a class="theme-switch" title="Readable" href="#">Readable</a>
+</li>
+<li >
+<a class="theme-switch" title="Simplex" href="#">Simplex</a>
+</li>
+<li >
+<a class="theme-switch" title="Slate" href="#">Slate</a>
+</li>
+<li >
+<a class="theme-switch" title="Spacelab" href="#">Spacelab</a>
+</li>
+<li >
+<a class="theme-switch" title="United" href="#">United</a>
+</li></ul></li></ul>
+<ul class="nav navbar-nav navbar-left"><li class="dropup">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown">Code highlighting <b class="caret"></b></a>
+<ul class="dropdown-menu"><li >
+<a class="highlight-switch" title="HighlightJs" href="#">HighlightJs</a>
+</li>
+<li >
+<a class="highlight-switch" title="Dark" href="#">Dark</a>
+</li>
+<li >
+<a class="highlight-switch" title="Far" href="#">Far</a>
+</li>
+<li >
+<a class="highlight-switch" title="Idea" href="#">Idea</a>
+</li>
+<li class="active">
+<a class="highlight-switch" title="Sunburst" href="#">Sunburst</a>
+</li>
+<li >
+<a class="highlight-switch" title="Zenburn" href="#">Zenburn</a>
+</li>
+<li >
+<a class="highlight-switch" title="Visual Studio" href="#">Visual Studio</a>
+</li>
+<li >
+<a class="highlight-switch" title="Ascetic" href="#">Ascetic</a>
+</li>
+<li >
+<a class="highlight-switch" title="Magula" href="#">Magula</a>
+</li>
+<li >
+<a class="highlight-switch" title="Github" href="#">Github</a>
+</li>
+<li >
+<a class="highlight-switch" title="Google Code" href="#">Google Code</a>
+</li>
+<li >
+<a class="highlight-switch" title="Brown Paper" href="#">Brown Paper</a>
+</li>
+<li >
+<a class="highlight-switch" title="School Book" href="#">School Book</a>
+</li>
+<li >
+<a class="highlight-switch" title="IR Black" href="#">IR Black</a>
+</li>
+<li >
+<a class="highlight-switch" title="Solarized - Dark" href="#">Solarized - Dark</a>
+</li>
+<li >
+<a class="highlight-switch" title="Solarized - Light" href="#">Solarized - Light</a>
+</li>
+<li >
+<a class="highlight-switch" title="Arta" href="#">Arta</a>
+</li>
+<li >
+<a class="highlight-switch" title="Monokai" href="#">Monokai</a>
+</li>
+<li >
+<a class="highlight-switch" title="Xcode" href="#">Xcode</a>
+</li>
+<li >
+<a class="highlight-switch" title="Pojoaque" href="#">Pojoaque</a>
+</li>
+<li >
+<a class="highlight-switch" title="Rainbow" href="#">Rainbow</a>
+</li>
+<li >
+<a class="highlight-switch" title="Tomorrow" href="#">Tomorrow</a>
+</li>
+<li >
+<a class="highlight-switch" title="Tomorrow Night" href="#">Tomorrow Night</a>
+</li>
+<li >
+<a class="highlight-switch" title="Tomorrow Night Bright" href="#">Tomorrow Night Bright</a>
+</li>
+<li >
+<a class="highlight-switch" title="Tomorrow Night Blue" href="#">Tomorrow Night Blue</a>
+</li>
+<li >
+<a class="highlight-switch" title="Tomorrow Night Eighties" href="#">Tomorrow Night Eighties</a>
+</li></ul></li></ul>
+</div>
+</div>
+</div>
+<link rel="alternate stylesheet" type="text/css" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" title="Default" media="screen"></link> <link rel="alternate stylesheet" type="text/css" href="https://netdna.bootstrapcdn.com/bootswatch/3.0.0/amelia/bootstrap.min.css" title="Amelia" media="screen"></link> <link rel="alternate stylesheet" type="text/css" href="https://netdna.bootstrapcdn.com/bootswatch/3.0.0/cerulean/bootstrap.min.css" title="Cerulean" media="screen"></link> <link rel="alternate stylesheet" type="text/css" href="https://netdna.bootstrapcdn.com/bootswatch/3.0.0/cosmo/bootstrap.min.css" title="Cosmo" media="screen"></link> <link rel="alternate stylesheet" type="text/css" href="https://netdna.bootstrapcdn.com/bootswatch/3.0.0/cyborg/bootstrap.min.css" title="Cyborg" media="screen"></link> <link rel="alternate stylesheet" type="text/css" href="https://netdna.bootstrapcdn.com/bootswatch/3.0.0/journal/bootstrap.min.css" title="Journal" media="screen"></link> <link rel="alternate stylesheet" type="text/css" href="https://netdna.bootstrapcdn.com/bootswatch/3.0.0/flatly/bootstrap.min.css" title="Flatly" media="screen"></link> <link rel="alternate stylesheet" type="text/css" href="https://netdna.bootstrapcdn.com/bootswatch/3.0.0/readable/bootstrap.min.css" title="Readable" media="screen"></link> <link rel="alternate stylesheet" type="text/css" href="https://netdna.bootstrapcdn.com/bootswatch/3.0.0/simplex/bootstrap.min.css" title="Simplex" media="screen"></link> <link rel="alternate stylesheet" type="text/css" href="https://netdna.bootstrapcdn.com/bootswatch/3.0.0/slate/bootstrap.min.css" title="Slate" media="screen"></link> <link rel="alternate stylesheet" type="text/css" href="https://netdna.bootstrapcdn.com/bootswatch/3.0.0/spacelab/bootstrap.min.css" title="Spacelab" media="screen"></link> <link rel="alternate stylesheet" type="text/css" href="https://netdna.bootstrapcdn.com/bootswatch/3.0.0/united/bootstrap.min.css" title="United" media="screen"></link><link rel="alternate stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/7.3/styles/default.min.css" title="HighlightJs" media="screen"></link> <link rel="alternate stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/7.3/styles/dark.min.css" title="Dark" media="screen"></link> <link rel="alternate stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/7.3/styles/far.min.css" title="Far" media="screen"></link> <link rel="alternate stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/7.3/styles/idea.min.css" title="Idea" media="screen"></link> <link rel="alternate stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/7.3/styles/sunburst.min.css" title="Sunburst" media="screen"></link> <link rel="alternate stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/7.3/styles/zenburn.min.css" title="Zenburn" media="screen"></link> <link rel="alternate stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/7.3/styles/vs.min.css" title="Visual Studio" media="screen"></link> <link rel="alternate stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/7.3/styles/ascetic.min.css" title="Ascetic" media="screen"></link> <link rel="alternate stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/7.3/styles/magula.min.css" title="Magula" media="screen"></link> <link rel="alternate stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/7.3/styles/github.min.css" title="Github" media="screen"></link> <link rel="alternate stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/7.3/styles/googlecode.min.css" title="Google Code" media="screen"></link> <link rel="alternate stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/7.3/styles/brown_paper.min.css" title="Brown Paper" media="screen"></link> <link rel="alternate stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/7.3/styles/school_book.min.css" title="School Book" media="screen"></link> <link rel="alternate stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/7.3/styles/ir_black.min.css" title="IR Black" media="screen"></link> <link rel="alternate stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/7.3/styles/solarized_dark.min.css" title="Solarized - Dark" media="screen"></link> <link rel="alternate stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/7.3/styles/solarized_light.min.css" title="Solarized - Light" media="screen"></link> <link rel="alternate stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/7.3/styles/arta.min.css" title="Arta" media="screen"></link> <link rel="alternate stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/7.3/styles/monokai.min.css" title="Monokai" media="screen"></link> <link rel="alternate stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/7.3/styles/xcode.min.css" title="Xcode" media="screen"></link> <link rel="alternate stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/7.3/styles/pojoaque.min.css" title="Pojoaque" media="screen"></link> <link rel="alternate stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/7.3/styles/rainbow.min.css" title="Rainbow" media="screen"></link> <link rel="alternate stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/7.3/styles/tomorrow.min.css" title="Tomorrow" media="screen"></link> <link rel="alternate stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/7.3/styles/tomorrow-night.min.css" title="Tomorrow Night" media="screen"></link> <link rel="alternate stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/7.3/styles/tomorrow-night-bright.min.css" title="Tomorrow Night Bright" media="screen"></link> <link rel="alternate stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/7.3/styles/tomorrow-night-blue.min.css" title="Tomorrow Night Blue" media="screen"></link> <link rel="alternate stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/7.3/styles/tomorrow-night-eighties.min.css" title="Tomorrow Night Eighties" media="screen"></link>
+</div>
+<div id="push">
+
+</div>
+<div id="footer">
+<div class="container">
+<p class="text-muted" id="credit">
+Styled with <a href="https://github.com/jimhester/knitrBootstrap">knitrBootstrap</a>
+</p>
+</div>
+</div>
+<link rel="stylesheet" id="theme" href="https://netdna.bootstrapcdn.com/bootswatch/3.0.0/cyborg/bootstrap.min.css" media="screen"></link><link rel="stylesheet" id="highlight" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/7.3/styles/sunburst.min.css" media="screen"></link>
+</div>
+</body>
+</html>

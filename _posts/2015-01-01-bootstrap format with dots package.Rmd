@@ -1,11 +1,50 @@
 ---
+# fn <- "2014-12-28-test-post-3.Rmd"
+# library(knitr) ; knit(fn)  # produces the md file
+# pandoc(fn, format = "docx") # prodces the .docx file
+# render("2014-12-28-test-post-3.Rmd", pdf_document()) # library(rmarkdown) ; # knit2html() 
+title: "some title goes here"
+date: "2015 January"
+# permalink: If you need your processed blog post URLs to be something other than the default /year/month/day/title.html then you can set this variable and it will be used as the final URL.
+tags:
+- R
+- dots
+- plot
+- sessionInfo
+categories:
+- reproducibility
+- rstats
+# published = false => Jekyll will not process the file. Else Rmd file appears as a blog with html file i.e. 2 posts.
+published: false 
+# output: ioslides_presentation
 output:
   knitrBootstrap::bootstrap_document:
+    title: "Test file"
+    theme: cyborg # slate
+    highlight: sunburst
     theme.chooser: TRUE
     highlight.chooser: TRUE
   html_document:
     toc: true
     theme: united
+    html_document:
+  # http://rmarkdown.rstudio.com/html_fragment_format.html
+  # html_fragment - no title or author -  excl std hdr content . HTML within larger web sites (e.g. blogs).
+  html_fragment: 
+    toc: true
+    # united zenburn
+    # theme: united # maybe theme is for html_document: only
+    number_sections: true
+    keep_md: false
+  # rmarkdown::render(fn) # produces table of contents and united theme
+  # render(fn, pdf_document()) # library(rmarkdown) ; # knit2html() 
+  pdf_document:
+    toc: true
+    theme: united # maybe theme is for html_document: only
+    highlight: zenburn
+fontsize: 8pt
+layout: post
+author: "ttmmghmm"
 ---
 
 <!--
@@ -229,6 +268,19 @@ You can also see how these functions are used in packages such as `derfinder`: [
 
 
 
+
+# Bibliography
+
+This vignette was generated using `knitrBootstrap` `r citep(bib[['knitrBootstrap']])`
+with `knitr` `r citep(bib[['knitr']])` and `rmarkdown` `r citep(bib[['rmarkdown']])` running behind the scenes.
+
+Citations made with `knitcitations` `r citep(bib[['knitcitations']])`.
+
+```{r vignetteBiblio, results='asis', echo=FALSE}
+## Print bibliography
+bibliography()
+```
+
 # Reproducibility
 
 Code for creating the vignette
@@ -241,39 +293,25 @@ knitrBootstrapFlag <- packageVersion('knitrBootstrap') < '1.0.0'
 if(knitrBootstrapFlag) {
     ## CRAN version
     library('knitrBootstrap')
-    system.time(knit_bootstrap('2014-12-29-dotsPkgCopy-2.Rmd', chooser=c('boot', 'code'), show_code = TRUE))
+    docName <- '2014-12-29-dotsPkgCopy-2.Rmd'
+    system.time(knit_bootstrap(docName, chooser=c('boot', 'code'), show_code = TRUE))
     unlink('dots.md')
 } else {
     ## GitHub version
     library('rmarkdown')
-    system.time(render('dots.Rmd'))
+    system.time(render(docName))
 }
 unlink('dotsRef.bib')
 ## Note: if you prefer the knitr version use:
 # library('rmarkdown')
-# system.time(render('dots.Rmd', 'html_document'))
+# system.time(render(docName, 'html_document'))
 
 ## Extract the R code
 library('knitr')
 knit('dots.Rmd', tangle = TRUE)
 ```
 
-Date the vignette was generated.
-
-```{r reproducibility1, echo=FALSE, bootstrap.show.code=FALSE}
-## Date the vignette was generated
-Sys.time()
-```
-
-Wallclock time spent generating the vignette.
-
-```{r reproducibility2, echo=FALSE, bootstrap.show.code=FALSE}
-## Processing time in seconds
-totalTime <- diff(c(startTime, Sys.time()))
-round(totalTime, digits=3)
-```
-
-`R` session information.
+## `R` session information.
 
 ```{r reproducibility3, echo=FALSE, bootstrap.show.code=FALSE, bootstrap.show.message=FALSE}
 ## Session info
@@ -282,14 +320,16 @@ options(width = 90)
 session_info()
 ```
 
-# Bibliography
+## Date the vignette was generated.
 
-This vignette was generated using `knitrBootstrap` `r citep(bib[['knitrBootstrap']])`
-with `knitr` `r citep(bib[['knitr']])` and `rmarkdown` `r citep(bib[['rmarkdown']])` running behind the scenes.
+```{r reproducibility1, echo=FALSE, bootstrap.show.code=FALSE}
+## Date the vignette was generated
+Sys.time()
+```
 
-Citations made with `knitcitations` `r citep(bib[['knitcitations']])`.
-
-```{r vignetteBiblio, results='asis', echo=FALSE}
-## Print bibliography
-bibliography()
+## Wallclock time spent generating the vignette.
+```{r reproducibility2, echo=FALSE, bootstrap.show.code=FALSE}
+## Processing time in seconds
+totalTime <- diff(c(startTime, Sys.time()))
+round(totalTime, digits=3)
 ```
