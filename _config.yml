@@ -3,6 +3,7 @@
 permalink: /:year/:month/:day/:title 
 # permalink: /blog/:categories/:year/:month/:day/:title.html
 
+# TODO: how to exclude all *.RMD files?
 exclude: ["Rmd", ".DS_Store", "README.md", "Rakefile", "changelog.md", ".rvmrc", ".rbenv-version"]
 # Configuration file: /Users/jbg/git/github/ttmmghmm.github.com/_config.yml
 # Deprecation: The 'pygments' configuration option has been renamed to 'highlighter'. Please update your config file accordingly. The allowed values are 'rouge', 'pygments' or null.
@@ -22,7 +23,7 @@ author :
   twitter : ttmmghmm
   feedburner : ttmmghmm
 # author: ttmmghmm
-description: My personal website and blog about data analysis, applied statistics, R
+description: A website and blog about data analysis, applied statistics and R.
 excerpt_separator: <!--more-->
 
 # The production_url is only used when full-domain names are needed
