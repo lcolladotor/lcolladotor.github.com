@@ -13,7 +13,7 @@ tags:
 - sessionInfo
 categories:
 - rstats
-# published = false => Jekyll will not process the file, See also keep_md: true
+# published = false => Jekyll will not process the file. Else Rmd file appears as a blog with html file i.e. 2 posts.
 published: false 
 # output: ioslides_presentation
 output:
