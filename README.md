@@ -1,5 +1,4 @@
-# Things that make me go hmm code
-[![Build Status](https://travis-ci.org/ttmmghmm/ttmmghmm.github.com.svg?branch=master)](https://travis-ci.org/ttmmghmm/ttmmghmm.github.com)
+# Things that make me go hmm code [![Build Status](https://travis-ci.org/ttmmghmm/ttmmghmm.github.com.svg?branch=master)](https://travis-ci.org/ttmmghmm/ttmmghmm.github.com)
 
 Powered via [Jekyll-Bootstrap](http://jekyllbootstrap.com) and cloned from <lcolladotor/lcolladotor.github.com>
 * 0.3.0 - stable and versioned using [semantic versioning](http://semver.org/).
