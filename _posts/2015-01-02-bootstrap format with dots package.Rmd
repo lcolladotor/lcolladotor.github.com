@@ -292,7 +292,7 @@ knitrBootstrapFlag <- packageVersion('knitrBootstrap') < '1.0.0'
 if(knitrBootstrapFlag) {
     ## CRAN version
     library('knitrBootstrap')
-    docName <- '2014-12-29-dotsPkgCopy-2.Rmd'
+    docName <- '2015-01-02-bootstrap format with dots package.Rmd'
     system.time(knit_bootstrap(docName, chooser=c('boot', 'code'), show_code = TRUE))
     unlink('dots.md')
 } else {
