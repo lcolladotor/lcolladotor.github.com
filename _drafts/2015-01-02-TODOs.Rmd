@@ -24,12 +24,16 @@ output: html_document
 
 ```{r child = '../_posts/boiler_plate_bibliography_start.Rmd'}
 ```
+
+# APIs
+## public
+http://opendata.stackexchange.com/questions/1677/a-web-api-users-guide-for-free-and-open-data?newsletter=1&nlcode=386863%7c20e3
   
 # Wikipedia
 * Tags: text mining
 * Packages: tm
 
-## Graph
+## Graph and web crawling
 * http://semanticweb.cs.vu.nl/R/wikipedia_graph/wikipedia_graph.html
 * Tags: [text mining, graphs, wikipedia, crawl, Simple Wikipedia, Wikipedia,
   analytical metrics]
