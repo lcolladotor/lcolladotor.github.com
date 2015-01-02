@@ -936,7 +936,7 @@ myFun(1:10)</code></pre><button class="output R toggle btn btn-xs btn-success">
 </button><pre style=""><code class="source r">## Experienced user wants to print status reports
 myFun(1:10, verbose = TRUE)</code></pre><button class="message R toggle btn btn-xs btn-info">
 <span class="glyphicon glyphicon-chevron-down"></span> R message
-</button><pre style=""><code class="message r">## 2015-01-02 00:01:21 myFun: performing analysis
+</button><pre style=""><code class="message r">## 2015-01-02 00:33:24 myFun: performing analysis
 </code></pre><button class="output R toggle btn btn-xs btn-success">
 <span class="glyphicon glyphicon-chevron-down"></span> R output
 </button><pre style=""><code class="output r">##  [1]  1  2  3  4  5  6  7  8  9 10
@@ -1037,7 +1037,7 @@ funkyPlot <- function(x, y, ...) {
 ## funkyPlot() doesn't work
 tryCatch(funkyPlot(1:10, 10:1, verbose = TRUE, xlab = 'Data (units)'), warning = function(w) { print(w) })</code></pre><button class="message R toggle btn btn-xs btn-info">
 <span class="glyphicon glyphicon-chevron-down"></span> R message
-</button><pre style=""><code class="message r">## 2015-01-02 00:01:21 funkyPlot: getting ready to roll
+</button><pre style=""><code class="message r">## 2015-01-02 00:33:24 funkyPlot: getting ready to roll
 </code></pre>
 <div class="row">
 <div class="col-md-offset-3 col-md-6">
@@ -1066,7 +1066,7 @@ funkyPlot2 <- function(x, y, ...) {
 ## Works now =)
 funkyPlot2(1:10, 10:1, verbose = TRUE, xlab = 'Data (units)')</code></pre><button class="message R toggle btn btn-xs btn-info">
 <span class="glyphicon glyphicon-chevron-down"></span> R message
-</button><pre style=""><code class="message r">## 2015-01-02 00:01:21 funkyPlot: getting ready to roll
+</button><pre style=""><code class="message r">## 2015-01-02 00:33:24 funkyPlot: getting ready to roll
 </code></pre>
 <div class="row">
 <div class="col-md-offset-3 col-md-6">
@@ -1101,7 +1101,7 @@ funkyPlot3 <- function(x, y, ...) {
 ## Works with more graphical parameters
 funkyPlot3(1:10, 10:1, verbose = TRUE, xlab = 'Data (units)', ylab = 'Success', main = 'Complicated example')</code></pre><button class="message R toggle btn btn-xs btn-info">
 <span class="glyphicon glyphicon-chevron-down"></span> R message
-</button><pre style=""><code class="message r">## 2015-01-02 00:01:21 funkyPlot: getting ready to roll
+</button><pre style=""><code class="message r">## 2015-01-02 00:33:24 funkyPlot: getting ready to roll
 </code></pre>
 <div class="row">
 <div class="col-md-offset-3 col-md-6">
@@ -1215,20 +1215,7 @@ knit('dots.Rmd', tangle = TRUE)</code></pre>
 ##  yaml             2.1.13   2014-06-12 CRAN (R 3.1.2)
 </code></pre>
 </div>
-<h2>Date the vignette was generated.</h2>
-<div class="row">
-<button class="output R toggle btn btn-xs btn-success">
-<span class="glyphicon glyphicon-chevron-down"></span> R output
-</button><pre style=""><code class="output r">## [1] "2015-01-02 00:01:21 UTC"
-</code></pre>
-</div>
-<h2>Wallclock time spent generating the vignette.</h2>
-<div class="row">
-<button class="output R toggle btn btn-xs btn-success">
-<span class="glyphicon glyphicon-chevron-down"></span> R output
-</button><pre style=""><code class="output r">## Time difference of 2.273 secs
-</code></pre>
-</div>
+Generated in 2.7 seconds at 2015-01-02 00:33:24 <!-- Date the vignette was generated -->
 </div>
 </div>
 <div class="navbar navbar-fixed-bottom navbar-inverse">
@@ -1284,7 +1271,7 @@ Type
 <li >
 <a class="theme-switch" title="Cosmo" href="#">Cosmo</a>
 </li>
-<li class="active">
+<li >
 <a class="theme-switch" title="Cyborg" href="#">Cyborg</a>
 </li>
 <li >
@@ -1299,7 +1286,7 @@ Type
 <li >
 <a class="theme-switch" title="Simplex" href="#">Simplex</a>
 </li>
-<li >
+<li class="active">
 <a class="theme-switch" title="Slate" href="#">Slate</a>
 </li>
 <li >
@@ -1403,7 +1390,7 @@ Styled with <a href="https://github.com/jimhester/knitrBootstrap">knitrBootstrap
 </p>
 </div>
 </div>
-<link rel="stylesheet" id="theme" href="https://netdna.bootstrapcdn.com/bootswatch/3.0.0/cyborg/bootstrap.min.css" media="screen"></link><link rel="stylesheet" id="highlight" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/7.3/styles/sunburst.min.css" media="screen"></link>
+<link rel="stylesheet" id="theme" href="https://netdna.bootstrapcdn.com/bootswatch/3.0.0/slate/bootstrap.min.css" media="screen"></link><link rel="stylesheet" id="highlight" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/7.3/styles/sunburst.min.css" media="screen"></link>
 </div>
 </body>
 </html>
