@@ -3,19 +3,19 @@
 # library(knitr) ; knit(fn)  # produces the md file
 # pandoc(fn, format = "docx") # prodces the .docx file
 # render("2014-12-28-test-post-3.Rmd", pdf_document()) # library(rmarkdown) ; # knit2html() 
-#title: "bootstrap web page style"
+title: "bootstrap web page style"
 #date: "2015 January"
 # permalink: If you need your processed blog post URLs to be something other than the default /year/month/day/title.html then you can set this variable and it will be used as the final URL.
-tags:
-- R
-- dots
-- plot
-- sessionInfo
-categories:
-- reproducibility
-- rstats
+tags : [ python, jekyll, R, R-Bloggers, Jekyll, github ]
+#tags:
+#- R
+#- dots
+#- plot
+#- sessionInfo
+categories: [reproducibility, rstats]
 # published = false => Jekyll will not process the file. Else Rmd file appears as a blog with html file i.e. 2 posts.
-published: false 
+published: true
+status: publish
 # output: ioslides_presentation
 output:
   knitrBootstrap::bootstrap_document:
@@ -37,20 +37,159 @@ output:
   #  keep_md: false
   # rmarkdown::render(fn) # produces table of contents and united theme
   # render(fn, pdf_document()) # library(rmarkdown) ; # knit2html() 
-  #pdf_document:
-  #  toc: true
-  #  theme: united # maybe theme is for html_document: only
-  #  highlight: zenburn
-#classoption: landscape
-#fontsize: 18pt
-#layout: post
-#author: "ttmmghmm"
+  pdf_document:
+    toc: true
+    theme: united # maybe theme is for html_document: only
+    highlight: zenburn
+classoption: landscape
+fontsize: 18pt
+author: "ttmmghmm"
+layout: post
+type: post # ??
+language: R # ~~~ R
+# http://vitobotta.com/how-to-migrate-from-wordpress-to-jekyll/
+paginate: 3 # it lets you choose how many posts to show per page (Jekyll supports pagination);
 ---
 
 <!--
 %\VignetteEngine{knitr::rmarkdown}
 %\VignetteIndexEntry{bootstrap format}
 -->
+
+hello world
+
+```{r, echo=TRUE}
+plot(1:10)
+```
+
+Variables
+=====
+# http://vitobotta.com/how-to-migrate-from-wordpress-to-jekyll/
+{% capture post_url %}{{ page.url | prepend:'http://vitobotta.com' | append:'/' }}{% endcapture %}
+{% capture encoded_post_url %}{{ post_url | urlencode }}{% endcapture %}
+{% assign post_title = page.title  %}
+{% capture encoded_post_title %}{{ post_title | urlencode }}{% endcapture %}
+{% capture encoded_post_image_url %}{{ page.image | prepend:'http://vitobotta.com/images/posts/featured/' | urlencode }}{% endcapture %}
+
+
+
+<div class="prev_next post_nav">
+    {% if page.previous.url %}
+    <p class="previous">
+        «&nbsp;<a href="{{ page.previous.url }}/" rel="previous" title="{{ page.previous.title }}">{{ page.previous.title | truncatewords: 15 }}</a>
+    </p>
+    {% endif %}
+    {% if page.next.url %}
+    <p class="next">
+        <a href="{{ page.next.url }}/" rel="next" title="{{ page.next.title }}">{{ page.next.title | truncatewords: 15 }}</a>&nbsp;»
+    </p>
+    {% endif %}
+</div>
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+    <body>
+      <h1>{{ title }}</h1>
+      <p>{{ content }}</p>
+    </body>
+</html>
+ 
+<!DOCTYPE html>
+<html lang="en">
+  {% include head.html %}
+    <body>
+      <h3>{{ post.title }}</h3>
+      ...
+    </body>
+</html>
+
+
+<html>
+<ul class="entries">
+  {% for post in site.posts %}
+ 
+  <li>
+    <a href="{{ post.url }}">
+      <img src="{{ post.image }}" />
+      <h3>{{ post.title }}</h3>
+    </a>
+  </li>
+ 
+  {% endfor %}
+</ul>
+<html>
+
+
+ 
+x = ('a', 1, False)
+~~~
+
+
+{% assign name = 'freestyle' %}
+
+{% for t in collections.tags %}{% if t == name %}
+  <p>Freestyle!</p>
+{% endif %}{% endfor %}
+
+
+Comment is the simplest tag. It just swallows content.
+
+We made 1 million dollars {% comment %} in losses {% endcomment %} this year
+Raw
+
+Raw temporarily disables tag processing. This is useful for generating content (eg, Mustache, Handlebars) which uses conflicting syntax.
+
+{% raw %}
+  In Handlebars, {{ this }} will be HTML-escaped, but {{{ that }}} will not.
+{% endraw %}
+
+
+Hello {{ 'tobi' | upcase }}
+Hello tobi has {{ 'tobi' | size }} letters!
+Hello {{ '*tobi*' | textilize | upcase }}
+Hello {{ 'now' | date: "%Y %h" }}
+
+Hello {{name}}
+Hello {{user.name}}
+Hello {{ 'tobi' }}
+
+
+page.url
+
+<p>As you're not actually displaying post excerpt in post page, it's {{ page.content | remove: page.excerpt | markdownify }}. If you want to display excerpt it's : {{ page.content | markdownify }}
+
+
+I don't know why but page.content return mardown and not html, so the filter | markdownify to transform markdown to html.
+<!--break-->
+{{ site.time | date_to_xmlschema }}
+<!--break-->
+{% gist parkr/931c1c8d465a04042403 jekyll-private-gist.markdown %}
+<!--break-->
+[Name of Link]({% post_url 2014-12-29-dotsPkgCopy %})
+<!--break-->
+[site.categories.CATEGORY]({% site.categories.CATEGORY %})
+<p>
+ {{% site.categories.CATEGORY %}}
+<p>site.time {{ site.time | date_to_xmlschema | markdownify }}
+<p>{{ site.time | markdownify  | date_to_xmlschema }}
+<p>site.production_url{{ site.production_url | markdownify}}{{ site.rss_path| markdownify }}
+        <title>{{ site.title| markdownify }}</title>
+
+
+{% for post in paginator.posts %}
+   <!-- here add you post markup -->
+   <h1><a href="{{ post.url | markdownify }}">{{ post.title| markdownify }}</a></h1>
+   <p class="author">
+    <span class="date">{{post.date | markdownify| date: "%Y-%m-%d"}}</span>
+  </p>
+  <div class="content">
+    {{ post.content| markdownify }}
+  </div>
+  <div class="content-space"></div>
+{% endfor %}
 
 Introduction to `dots`
 ==================
@@ -59,6 +198,8 @@ If you wish, you can view this vignette online [here](http://lcolladotor.github.
 
 
 ```{r vignetteSetup, echo=FALSE, message=FALSE, warning = FALSE}
+library(knitr)
+opts_chunk$set(fig.width = 5, fig.height = 5, warning = FALSE, echo = TRUE, cache = FALSE, message = TRUE)
 ## Track time spent on making the vignette
 startTime <- Sys.time()
 
@@ -281,9 +422,12 @@ Citations made with `knitcitations` `r citep(bib[['knitcitations']])`.
 bibliography()
 ```
 
+\newpage
+\pagebreak
 # Reproducibility
+This vignette was produced via:
 
-Code for creating the vignette
+## Code for creating the vignette
 
 ```{r createVignette, eval=FALSE, bootstrap.show.code=FALSE}
 ## Create the vignette
@@ -308,7 +452,24 @@ unlink('dotsRef.bib')
 
 ## Extract the R code
 library('knitr')
-knit('dots.Rmd', tangle = TRUE)
+knit(docName, tangle = TRUE)
+
+KnitPost <- function(input, base.url = "/") {
+    require(knitr)
+    opts_knit$set(base.url = base.url)
+    fig.path <- paste0("figs/", sub(".Rmd$", "", basename(input)), "/")
+    opts_chunk$set(fig.path = fig.path)
+    opts_chunk$set(fig.cap = "center")
+    render_jekyll()
+    knit(input, envir = parent.frame())
+}
+KnitPost("2012-07-03-knitr-jekyll.Rmd")
+
+```
+
+## YAML setup
+```{r, echo=TRUE}
+str(rmarkdown::metadata) # https://github.com/rstudio/rmarkdown/issues/260
 ```
 
 ## `R` session information.
