@@ -1060,7 +1060,7 @@ myFun(1:10)</code></pre><button class="output R toggle btn btn-xs btn-success">
 </button><pre style=""><code class="source r">## Experienced user wants to print status reports
 myFun(1:10, verbose = TRUE)</code></pre><button class="message R toggle btn btn-xs btn-info">
 <span class="glyphicon glyphicon-chevron-down"></span> R message
-</button><pre style=""><code class="message r">## 2015-01-02 18:28:17 myFun: performing analysis
+</button><pre style=""><code class="message r">## 2015-01-02 21:41:51 myFun: performing analysis
 </code></pre><button class="output R toggle btn btn-xs btn-success">
 <span class="glyphicon glyphicon-chevron-down"></span> R output
 </button><pre style=""><code class="output r">##  [1]  1  2  3  4  5  6  7  8  9 10
@@ -1161,7 +1161,7 @@ funkyPlot <- function(x, y, ...) {
 ## funkyPlot() doesn't work
 tryCatch(funkyPlot(1:10, 10:1, verbose = TRUE, xlab = 'Data (units)'), warning = function(w) { print(w) })</code></pre><button class="message R toggle btn btn-xs btn-info">
 <span class="glyphicon glyphicon-chevron-down"></span> R message
-</button><pre style=""><code class="message r">## 2015-01-02 18:28:18 funkyPlot: getting ready to roll
+</button><pre style=""><code class="message r">## 2015-01-02 21:41:51 funkyPlot: getting ready to roll
 </code></pre>
 <div class="row">
 <div class="col-md-offset-3 col-md-6">
@@ -1190,7 +1190,7 @@ funkyPlot2 <- function(x, y, ...) {
 ## Works now =)
 funkyPlot2(1:10, 10:1, verbose = TRUE, xlab = 'Data (units)')</code></pre><button class="message R toggle btn btn-xs btn-info">
 <span class="glyphicon glyphicon-chevron-down"></span> R message
-</button><pre style=""><code class="message r">## 2015-01-02 18:28:18 funkyPlot: getting ready to roll
+</button><pre style=""><code class="message r">## 2015-01-02 21:41:51 funkyPlot: getting ready to roll
 </code></pre>
 <div class="row">
 <div class="col-md-offset-3 col-md-6">
@@ -1225,7 +1225,7 @@ funkyPlot3 <- function(x, y, ...) {
 ## Works with more graphical parameters
 funkyPlot3(1:10, 10:1, verbose = TRUE, xlab = 'Data (units)', ylab = 'Success', main = 'Complicated example')</code></pre><button class="message R toggle btn btn-xs btn-info">
 <span class="glyphicon glyphicon-chevron-down"></span> R message
-</button><pre style=""><code class="message r">## 2015-01-02 18:28:18 funkyPlot: getting ready to roll
+</button><pre style=""><code class="message r">## 2015-01-02 21:41:51 funkyPlot: getting ready to roll
 </code></pre>
 <div class="row">
 <div class="col-md-offset-3 col-md-6">
@@ -1274,6 +1274,8 @@ knitrBootstrapFlag <- packageVersion('knitrBootstrap') < '1.0.0'
 if(knitrBootstrapFlag) {
     ## CRAN version
     library('knitrBootstrap')
+    print(rmarkdown::metadata$title)
+    # TODO: stopifnot(file.exists(paste0(rmarkdown::metadata$title, ".Rmd")))
     docName <- '2015-01-02-bootstrap format with dots package.Rmd'
     system.time(knit_bootstrap(docName, chooser=c('boot', 'code'), show_code = TRUE))
     unlink('dots.md')
@@ -1308,7 +1310,7 @@ KnitPost("2012-07-03-knitr-jekyll.Rmd")</code></pre>
 <span class="glyphicon glyphicon-chevron-down"></span> R source
 </button><pre style=""><code class="source r">str(rmarkdown::metadata) # https://github.com/rstudio/rmarkdown/issues/260</code></pre><button class="output R toggle btn btn-xs btn-success">
 <span class="glyphicon glyphicon-chevron-down"></span> R output
-</button><pre style=""><code class="output r">## List of 13
+</button><pre style=""><code class="output r">## List of 11
 ##  $ title      : chr "bootstrap web page style"
 ##  $ tags       : chr [1:6] "python" "jekyll" "R" "R-Bloggers" ...
 ##  $ categories : chr [1:2] "reproducibility" "rstats"
@@ -1327,10 +1329,8 @@ KnitPost("2012-07-03-knitr-jekyll.Rmd")</code></pre>
 ##   .. ..$ theme    : chr "united"
 ##   .. ..$ highlight: chr "zenburn"
 ##  $ classoption: chr "landscape"
-##  $ fontsize   : chr "18pt"
 ##  $ author     : chr "ttmmghmm"
 ##  $ layout     : chr "post"
-##  $ type       : chr "post"
 ##  $ language   : chr "R"
 ##  $ paginate   : int 3
 </code></pre>
@@ -1348,14 +1348,14 @@ KnitPost("2012-07-03-knitr-jekyll.Rmd")</code></pre>
 ##  ui       X11                         
 ##  language (EN)                        
 ##  collate  C                           
-##  tz       <NA>
+##  tz       UTC
 </code></pre><button class="message R toggle btn btn-xs btn-info">
 <span class="glyphicon glyphicon-chevron-up"></span> R message
 </button><pre style="display:none"><code class="message r">## Packages---------------------------------------------------------------------------------
 </code></pre><button class="output R toggle btn btn-xs btn-success">
 <span class="glyphicon glyphicon-chevron-down"></span> R output
 </button><pre style=""><code class="output r">##  package        * version  date       source                                   
-##  RCurl            1.95.4.5 2014-12-20 CRAN (R 3.1.2)                           
+##  RCurl            1.95.4.5 2014-12-28 CRAN (R 3.1.2)                           
 ##  RJSONIO          1.3.0    2014-07-28 CRAN (R 3.1.2)                           
 ##  Rcpp             0.11.3   2014-09-29 CRAN (R 3.1.2)                           
 ##  RefManageR       0.8.40   2014-10-29 CRAN (R 3.1.2)                           
@@ -1383,9 +1383,9 @@ KnitPost("2012-07-03-knitr-jekyll.Rmd")</code></pre>
 ##  yaml             2.1.13   2014-06-12 CRAN (R 3.1.2)
 </code></pre>
 </div>
-<br><br />Vignette generated in 2.8 seconds.<br />
+<br><br />Vignette generated in 2.9 seconds.<br />
 <p>
-Timestamp 2015-01-02 18:28:18. <!-- Date the vignette was generated -->
+Timestamp 2015-01-02 21:41:52. <!-- Date the vignette was generated -->
 </div>
 </div>
 </div>
