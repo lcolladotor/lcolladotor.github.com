@@ -1,0 +1,11 @@
+<!-- NB: Do not add yaml code here, put it at the start of the top level Rmd -->
+
+# Bibliography
+
+Citations made with `knitcitations` `r citep(bib[['knitcitations']])`.
+
+```{r boiler_plate_bibliography_end, results='asis', echo=FALSE}
+## Print bibliography
+bibliography()
+```
+

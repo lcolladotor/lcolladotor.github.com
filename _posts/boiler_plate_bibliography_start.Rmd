@@ -1,0 +1,24 @@
+<!-- NB: Do not add yaml code here, put it at the start of the top level Rmd -->
+
+```{r boiler_plate_bibliography_start, echo=FALSE, message=FALSE, warning = FALSE}
+library('knitcitations')
+
+## Load knitcitations with a clean bibliography
+cleanbib()
+cite_options(hyperlink = 'to.doc', citation_format = 'text', style = 'html')
+# Note links won't show for now due to the following issue
+# https://github.com/cboettig/knitcitations/issues/63
+
+## Write bibliography information
+write.bibtex(c(knitcitations = citation('knitcitations'),
+    dots = citation('dots'), 
+    knitrBootstrap = citation('knitrBootstrap'), 
+    knitr = citation('knitr')[3],
+    rmarkdown = citation('rmarkdown')),
+    file = 'dotsRef.bib')
+bib <- read.bibtex('dotsRef.bib')
+
+## Assign short names
+names(bib) <- c('knitcitations', 'dots', 'knitrBootstrap',
+    'knitr', 'rmarkdown')
+```
