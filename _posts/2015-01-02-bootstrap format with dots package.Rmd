@@ -20,10 +20,13 @@ status: publish
 output:
   knitrBootstrap::bootstrap_document:
     title: "where does this appear?  - bootstrap web page style"
-    theme: slate # cyborg slate
-    highlight: sunburst
+    theme: cerulean # slate # cyborg slate
+    highlight: google code # sunburst
+    # theme.chooser: FALSE
+    # highlight.chooser: FALSE
     theme.chooser: TRUE
     highlight.chooser: TRUE
+    menu: FALSE
   #html_document:
   #  toc: true
   #  theme: united
@@ -42,13 +45,13 @@ output:
     theme: united # maybe theme is for html_document: only
     highlight: zenburn
 classoption: landscape
-fontsize: 18pt
 author: "ttmmghmm"
 layout: post
-type: post # ??
 language: R # ~~~ R
 # http://vitobotta.com/how-to-migrate-from-wordpress-to-jekyll/
 paginate: 3 # it lets you choose how many posts to show per page (Jekyll supports pagination);
+# type: post # ??
+# fontsize: 18pt # does not work
 ---
 
 <!--
@@ -437,6 +440,8 @@ knitrBootstrapFlag <- packageVersion('knitrBootstrap') < '1.0.0'
 if(knitrBootstrapFlag) {
     ## CRAN version
     library('knitrBootstrap')
+    print(rmarkdown::metadata$title)
+    # TODO: stopifnot(file.exists(paste0(rmarkdown::metadata$title, ".Rmd")))
     docName <- '2015-01-02-bootstrap format with dots package.Rmd'
     system.time(knit_bootstrap(docName, chooser=c('boot', 'code'), show_code = TRUE))
     unlink('dots.md')

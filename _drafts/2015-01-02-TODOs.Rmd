@@ -1,0 +1,81 @@
+---
+title: "TODO"
+author: "ttmmghmm"
+date: "1/2/2015"
+output: html_document
+---
+
+# What they dont tell you about Rmarkdown
+## Lists
+* Unordered lists should be a doddle but there are gotchas.
+* The first element in a list _must_ be preceeded by a blank line before the first item.
+    * Ending the preceeding line with two or more spaces does not seem to work.
+        * Even though it is documented to.
+    * Neither does ending the line with html like < b r >.
+        * TODO: how to do a literal quote.
+* You need to put two tabs at the start of a sub item.
+    + Else the subitem will not render as a subitem in your list.
+
+
+
+```{r child = '../_posts/boiler_plate_vignette_setup.Rmd'}
+# http://stackoverflow.com/questions/25824795/how-to-combine-two-rmarkdown-rmd-files-into-a-single-output
+```
+
+```{r child = '../_posts/boiler_plate_bibliography_start.Rmd'}
+```
+  
+# Wikipedia
+* Tags: text mining
+* Packages: tm
+
+## Graph
+* http://semanticweb.cs.vu.nl/R/wikipedia_graph/wikipedia_graph.html
+* Tags: [text mining, graphs, wikipedia, crawl, Simple Wikipedia, Wikipedia,
+  analytical metrics]
+  * “Basic English 850 basic English words chosen by Charles Kay Ogden.”
+* TODO: dynamic graph, shiny
+
+## WikiPediR package
+* http://www.rexamine.com/2014/06/text-mining-in-r-automatic-categorization-of-wikipedia-articles/
+  *  hierarchical categorization of Wikipedia articles
+* more information about text mining in R: 
+    * http://cran.r-project.org/web/views/NaturalLanguageProcessing.html
+    * http://www.r-bloggers.com/text-mining/
+    * http://onepager.togaware.com/TextMiningO.pdf
+    * http://www.jstatsoft.org/v25/i05/paper
+```{r, eval = FALSE}
+opts_chunk$set(eval = FALSE)
+library(magrittr)
+docs[[1]]
+# Replace all “” elements with a space. 
+# We do it because there are not a part of text document but in general a html code.
+# use the non-greedy .*? match - match up until the first following instance of '>'. Without this, if you use just .*, you'll capture everything up to the last '[END DATA]'>'.
+docs2 <- tm_map(docs, function(x) stri_replace_all_regex(x, "<.+?>", " "))
+docs3 <- tm_map(docs2, function(x) stri_replace_all_fixed(x, "\t", " "))
+docs2[[1]]
+
+docs4 <- tm_map(docs3, PlainTextDocument)
+docs5 <- tm_map(docs4, stripWhitespace)
+docs6 <- tm_map(docs5, removeWords, stopwords("english"))
+docs7 <- tm_map(docs6, removePunctuation)
+docs8 <- tm_map(docs7, tolower)
+
+docs8[[1]]
+
+docs %>% 
+  tm_map(FUN = function(x) stri_replace_all_regex(x, "<.+?>", " ")) ->  
+docs2 
+```
+
+
+
+
+
+```{r child = '../_posts/boiler_plate_reproducibility.Rmd'}
+```
+
+```{r child = '../_posts/boiler_plate_bibliography_end.Rmd'}
+# boiler_plate_bibliography_end has to come last else references in boiler_plate_reproducibility are lost!
+```
+
