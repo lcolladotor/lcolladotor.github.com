@@ -324,6 +324,7 @@ session_info()
 ## Processing time in seconds
 totalTime <- diff(c(startTime, Sys.time()))
 userTime <- round(totalTime, digits = 1)
-```  
-
-Generated in `r userTime` seconds at `r Sys.time()` <!-- Date the vignette was generated -->
+```
+<br>   
+Vignette generated in `r userTime` seconds.   
+<p>Timestamp `r Sys.time()`. <!-- Date the vignette was generated -->
