@@ -110,20 +110,7 @@ Variables
 </html>
 
 
-<html>
-<ul class="entries">
-  {% for post in site.posts %}
- 
-  <li>
-    <a href="{{ post.url }}">
-      <img src="{{ post.image }}" />
-      <h3>{{ post.title }}</h3>
-    </a>
-  </li>
- 
-  {% endfor %}
-</ul>
-<html>
+
 
 
  
@@ -167,19 +154,6 @@ page.url
 
 I don't know why but page.content return mardown and not html, so the filter | markdownify to transform markdown to html.
 <!--break-->
-{{ site.time | date_to_xmlschema }}
-<!--break-->
-{% gist parkr/931c1c8d465a04042403 jekyll-private-gist.markdown %}
-<!--break-->
-[Name of Link]({% post_url 2014-12-29-dotsPkgCopy %})
-<!--break-->
-[site.categories.CATEGORY]({% site.categories.CATEGORY %})
-<p>
- {{% site.categories.CATEGORY %}}
-<p>site.time {{ site.time | date_to_xmlschema | markdownify }}
-<p>{{ site.time | markdownify  | date_to_xmlschema }}
-<p>site.production_url{{ site.production_url | markdownify}}{{ site.rss_path| markdownify }}
-        <title>{{ site.title| markdownify }}</title>
 
 
 {% for post in paginator.posts %}
