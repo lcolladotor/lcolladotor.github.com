@@ -1,12 +1,15 @@
 ---
-title: List of TODOs
+title: "List of TODOs"
+author: "ttmmghmm"
+layout: post
+output:
+  html_document:
+    keep_md: yes
+    self_contained: no
 tags:
 - Rs as
 - plota as asdf
-categories:
-- rstatsas dadf as
-author: ttmmghmm
-layout: post
+categories: rstatsas dadf as
 ---
 
 
