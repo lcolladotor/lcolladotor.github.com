@@ -866,9 +866,6 @@
 <h1 class="title">bootstrap web page style</h1>
 <h2 class="author">ttmmghmm</h2>
 </div>
-<title >
-where does this appear? - bootstrap web page style
-</title>
 <div id="wrap">
 <div class="container">
 <div class="row row-offcanvas row-offcanvas-right">
@@ -885,21 +882,7 @@ where does this appear? - bootstrap web page style
 
 
 
-<h1>Variables</h1>
-<h1>http://vitobotta.com/how-to-migrate-from-wordpress-to-jekyll/</h1>
-<p>{% assign post_title = page.title %} {% capture encoded_post_title %}{{ post_title | urlencode }}{% endcapture %}</p>
-<p>x = ('a', 1, False) <sub>~</sub></p>
-<p>Comment is the simplest tag. It just swallows content.</p>
-<p>We made 1 million dollars {% comment %} in losses {% endcomment %} this year Raw</p>
-<p>Raw temporarily disables tag processing. This is useful for generating content (eg, Mustache, Handlebars) which uses conflicting syntax.</p>
-<p>{% raw %} In Handlebars, {{ this }} will be HTML-escaped, but {{{ that }}} will not. {% endraw %}</p>
-<p>Hello {{ 'tobi' | upcase }} Hello tobi has {{ 'tobi' | size }} letters! Hello {{ '<em>tobi</em>' | textilize | upcase }} Hello {{ 'now' | date: &quot;%Y %h&quot; }}</p>
-<p>Hello {{name}} Hello {{user.name}} Hello {{ 'tobi' }}</p>
-<p>page.url</p>
-<p>
-<p>I don't know why but page.content return mardown and not html, so the filter | markdownify to transform markdown to html. <!--break--></p>
-<h1>Introduction to <code>dots</code></h1>
-<p>If you wish, you can view this vignette online <a href="http://lcolladotor.github.io/dots/">here</a>.</p>
+<p>for <strong>R</strong>'s <code>par()</code> function Here we used the <code>png</code> library and the <code>rasterImage()</code> command to read in and of your <strong>R</strong> plot device, and it will not stay consistent if you resize. {% highlight r %} plot(1:10) # Note that the rectangle we make here has corner coordinates outside of {% endhighlight %} Now let's say we want to <strong>add a logo</strong> or other external image in the margin</p>
 <h1>Overview</h1>
 <p><code>dots</code> <a id='cite-dots'></a>(<a href='https://github.com/lcolladotor/dots'>Collado-Torres, 2014</a>) is a simple package that helps you simplify your function definitions by using the <code>...</code> arguments. This reduces the complexity a new user of your package will face when reading its documentation. At the same time, <code>dots</code> allows you to define advanced arguments which you can then define inside your functions. Experienced users will be able to use them thus controlling those fine parameters most users do not need.</p>
 <h2>dots()</h2>
@@ -961,7 +944,7 @@ myFun(1:10)</code></pre><button class="output R toggle btn btn-xs btn-success">
 </button><pre style=""><code class="source r">## Experienced user wants to print status reports
 myFun(1:10, verbose = TRUE)</code></pre><button class="message R toggle btn btn-xs btn-info">
 <span class="glyphicon glyphicon-chevron-down"></span> R message
-</button><pre style=""><code class="message r">## 2015-01-03 19:25:53 myFun: performing analysis
+</button><pre style=""><code class="message r">## 2015-01-03 20:22:54 myFun: performing analysis
 </code></pre><button class="output R toggle btn btn-xs btn-success">
 <span class="glyphicon glyphicon-chevron-down"></span> R output
 </button><pre style=""><code class="output r">##  [1]  1  2  3  4  5  6  7  8  9 10
@@ -1062,7 +1045,7 @@ funkyPlot <- function(x, y, ...) {
 ## funkyPlot() doesn't work
 tryCatch(funkyPlot(1:10, 10:1, verbose = TRUE, xlab = 'Data (units)'), warning = function(w) { print(w) })</code></pre><button class="message R toggle btn btn-xs btn-info">
 <span class="glyphicon glyphicon-chevron-down"></span> R message
-</button><pre style=""><code class="message r">## 2015-01-03 19:25:53 funkyPlot: getting ready to roll
+</button><pre style=""><code class="message r">## 2015-01-03 20:22:54 funkyPlot: getting ready to roll
 </code></pre>
 <div class="row">
 <div class="col-md-offset-3 col-md-6">
@@ -1091,7 +1074,7 @@ funkyPlot2 <- function(x, y, ...) {
 ## Works now =)
 funkyPlot2(1:10, 10:1, verbose = TRUE, xlab = 'Data (units)')</code></pre><button class="message R toggle btn btn-xs btn-info">
 <span class="glyphicon glyphicon-chevron-down"></span> R message
-</button><pre style=""><code class="message r">## 2015-01-03 19:25:53 funkyPlot: getting ready to roll
+</button><pre style=""><code class="message r">## 2015-01-03 20:22:54 funkyPlot: getting ready to roll
 </code></pre>
 <div class="row">
 <div class="col-md-offset-3 col-md-6">
@@ -1126,7 +1109,7 @@ funkyPlot3 <- function(x, y, ...) {
 ## Works with more graphical parameters
 funkyPlot3(1:10, 10:1, verbose = TRUE, xlab = 'Data (units)', ylab = 'Success', main = 'Complicated example')</code></pre><button class="message R toggle btn btn-xs btn-info">
 <span class="glyphicon glyphicon-chevron-down"></span> R message
-</button><pre style=""><code class="message r">## 2015-01-03 19:25:53 funkyPlot: getting ready to roll
+</button><pre style=""><code class="message r">## 2015-01-03 20:22:54 funkyPlot: getting ready to roll
 </code></pre>
 <div class="row">
 <div class="col-md-offset-3 col-md-6">
@@ -1230,15 +1213,14 @@ KnitPost("2012-07-03-knitr-jekyll.Rmd")</code></pre>
 <span class="glyphicon glyphicon-chevron-down"></span> R source
 </button><pre style=""><code class="source r">str(rmarkdown::metadata) # https://github.com/rstudio/rmarkdown/issues/260</code></pre><button class="output R toggle btn btn-xs btn-success">
 <span class="glyphicon glyphicon-chevron-down"></span> R output
-</button><pre style=""><code class="output r">## List of 11
-##  $ title      : chr "bootstrap web page style"
-##  $ tags       : chr [1:6] "python" "jekyll" "R" "R-Bloggers" ...
-##  $ categories : chr [1:2] "reproducibility" "rstats"
-##  $ published  : logi TRUE
-##  $ status     : chr "publish"
-##  $ output     :List of 2
-##   ..$ knitrBootstrap::bootstrap_document:List of 6
-##   .. ..$ title            : chr "where does this appear?  - bootstrap web page style"
+</button><pre style=""><code class="output r">## List of 8
+##  $ title     : chr "bootstrap web page style"
+##  $ tags      : chr [1:6] "jekyll" "R-Bloggers" "R" "plot" ...
+##  $ categories: chr [1:2] "rstats" "reproducibility"
+##  $ published : logi TRUE
+##  $ status    : chr "publish"
+##  $ output    :List of 2
+##   ..$ knitrBootstrap::bootstrap_document:List of 5
 ##   .. ..$ theme            : chr "cyborg"
 ##   .. ..$ highlight        : chr "google code"
 ##   .. ..$ theme.chooser    : logi TRUE
@@ -1248,11 +1230,8 @@ KnitPost("2012-07-03-knitr-jekyll.Rmd")</code></pre>
 ##   .. ..$ toc      : logi TRUE
 ##   .. ..$ theme    : chr "united"
 ##   .. ..$ highlight: chr "zenburn"
-##  $ classoption: chr "landscape"
-##  $ author     : chr "ttmmghmm"
-##  $ layout     : chr "post"
-##  $ language   : chr "R"
-##  $ paginate   : int 3
+##  $ author    : chr "ttmmghmm"
+##  $ layout    : chr "post"
 </code></pre>
 </div>
 <h2><code>R</code> information</h2>
@@ -1305,9 +1284,9 @@ KnitPost("2012-07-03-knitr-jekyll.Rmd")</code></pre>
 </code></pre>
 </div>
 <h3>Runtime</h3>
-Vignette generated in 1.1 seconds.<br />
+Vignette generated in 3.2 seconds.<br />
 <p>
-<p>Timestamp 2015-01-03 19:25:53. <!-- Date the vignette was generated --></p>
+<p>Timestamp 2015-01-03 20:22:54. <!-- Date the vignette was generated --></p>
 <!-- NB: Do not add yaml code here, put it at the start of the top level Rmd -->
 
 <h1>Bibliography</h1>
