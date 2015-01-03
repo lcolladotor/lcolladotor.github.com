@@ -25,6 +25,18 @@ output: html_document
 ```{r child = '../_posts/boiler_plate_bibliography_start.Rmd'}
 ```
 
+# GuardianR
+```{r}
+library(GuardianR)
+results <- get_guardian("islamic+state",
+  from.date="2014-09-16",
+  to.date="2014-09-16",
+  api.key="3xzg2fk53jcdgaj5tbwqqhcz")
+```
+
+* http://cran.r-project.org/web/packages/GuardianR/GuardianR.pdf
+
+
 # Bitcoin
 http://beautifuldata.net/2015/01/querying-the-bitcoin-blockchain-with-r/
 
@@ -54,7 +66,8 @@ http://opendata.stackexchange.com/questions/1677/a-web-api-users-guide-for-free-
     * http://www.jstatsoft.org/v25/i05/paper
     * http://www.r-bloggers.com/visualising-wikipedia-search-statistics-with-r/
         * search traffic for any article - search statistics for “Financial crisis”. 
-            * The wikiStat() function returns dataframe with the necessary data:
+            * The wikiStat() function returns dataframe with the necessary data.
+    * http://cran.r-project.org/web/packages/tm.plugin.webmining/vignettes/ShortIntro.pdf
 
 ```{r, eval = FALSE}
 opts_chunk$set(eval = FALSE)
