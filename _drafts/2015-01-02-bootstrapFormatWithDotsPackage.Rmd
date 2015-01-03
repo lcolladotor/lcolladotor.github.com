@@ -21,12 +21,12 @@ output:
   knitrBootstrap::bootstrap_document:
     title: "where does this appear?  - bootstrap web page style"
     theme: cyborg # cyborg slate cerulean
-    highlight: google code # sunburst
-    # theme.chooser: FALSE
-    # highlight.chooser: FALSE
-    theme.chooser: TRUE
-    highlight.chooser: TRUE
-    menu: FALSE
+###     highlight: google code # sunburst
+###     # theme.chooser: FALSE
+###     # highlight.chooser: FALSE
+###     theme.chooser: TRUE
+###     highlight.chooser: TRUE
+###     menu: FALSE
 ###   #html_document:
 ###   #  toc: true
 ###   #  theme: united
