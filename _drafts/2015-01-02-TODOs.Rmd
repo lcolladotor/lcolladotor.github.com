@@ -1,50 +1,12 @@
 ---
 title: List of TODOs
-# permalink: If you need your processed blog post URLs to be something other than the default /year/month/day/title.html then you can set this variable and it will be used as the final URL.
-# tags : [ python, jekyll, R, R-Bloggers, Jekyll, github ]
 tags:
-- TODO
-- R-Bloggers
+- Rs as
+- plota as asdf
 categories:
-- rstats
-- reproducibility
-# published = false => Jekyll will not process the file. Else Rmd file appears as a blog with html file i.e. 2 posts.
-published: true
-status: publish
-# output: ioslides_presentation
-output:
-  knitrBootstrap::bootstrap_document:
-    # title: "where does this appear?  - bootstrap web page style"
-    theme: cyborg # cyborg slate cerulean
-    highlight: google code # sunburst
-    theme.chooser: TRUE
-    highlight.chooser: TRUE
-    menu: FALSE
-  #html_document:
-  #  toc: true
-  #  theme: united
-  # http://rmarkdown.rstudio.com/html_fragment_format.html
-  # html_fragment - no title/author - excl std hdr content. HTML within larger web sites (e.g. blogs).
-  #html_fragment: 
-  #  toc: true
-    # united zenburn
-    # theme: united # maybe theme is for html_document: only
-  #  number_sections: true
-  #  keep_md: false
-  # rmarkdown::render(fn) # produces table of contents and united theme
-  # render(fn, pdf_document()) # library(rmarkdown) ; # knit2html() 
-  pdf_document:
-    toc: true
-    theme: united # maybe theme is for html_document: only
-    highlight: zenburn
-author: "ttmmghmm"
+- rstatsas dadf as
+author: ttmmghmm
 layout: post
-# http://vitobotta.com/how-to-migrate-from-wordpress-to-jekyll/
-# paginate: 3 # it lets you choose how many posts to show per page - overrides _config.yml
-# language: R # ~~~ R
-# type: post # ??
-# fontsize: 18pt # does not work
-# classoption: landscape
 ---
 
 
