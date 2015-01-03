@@ -1,11 +1,15 @@
 ---
+title: "An xpd-tion into R plot margins"
 layout: post
-title: An xpd-tion into R plot margins
+output:
+  html_document:
+    keep_md: yes
+    self_contained: no
+    toc: yes
 tags:
 - R
 - plot
-categories:
-- rstats
+categories: rstats
 ---
 
 

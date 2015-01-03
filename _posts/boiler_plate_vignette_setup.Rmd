@@ -1,6 +1,6 @@
 <!-- NB: Do not add yaml code here, put it at the start of the top level Rmd -->
 
-```{r boiler_plate_vignette_setup, echo=FALSE, message=FALSE, warning = FALSE}
+```{r boiler_plate_vignette_setup, echo=TRUE, message=FALSE, warning = FALSE}
 library(knitr)
 opts_chunk$set(fig.width = 5, fig.height = 5, warning = FALSE, echo = TRUE, cache = FALSE, message = TRUE)
 ## Track time spent on making the vignette

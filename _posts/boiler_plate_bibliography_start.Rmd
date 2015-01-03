@@ -15,8 +15,8 @@ write.bibtex(c(knitcitations = citation('knitcitations'),
     knitrBootstrap = citation('knitrBootstrap'), 
     knitr = citation('knitr')[3],
     rmarkdown = citation('rmarkdown')),
-    file = 'dotsRef.bib')
-bib <- read.bibtex('dotsRef.bib')
+    file = 'citations.bib')
+bib <- read.bibtex('citations.bib')
 
 ## Assign short names
 names(bib) <- c('knitcitations', 'dots', 'knitrBootstrap',

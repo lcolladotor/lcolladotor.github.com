@@ -19,8 +19,8 @@ This vignette was generated using:
 
 ```{r boiler_plate_reproducibility, eval=FALSE, bootstrap.show.code=FALSE}
 # TODO: parse permalink? varialble
-print(rmarkdown::metadata$title) # permalink
-docName <- '2015-01-02-bootstrap format with dots package.Rmd'
+print(rmarkdown::metadata$yamlFileName) # permalink
+docName <- rmarkdown::metadata$yamlFileName
 
 ## Create the vignette
 library('knitrBootstrap') 
@@ -32,13 +32,13 @@ if(knitrBootstrapFlag) {
     print(rmarkdown::metadata$title)
     # TODO: stopifnot(file.exists(paste0(rmarkdown::metadata$title, ".Rmd")))
     system.time(knit_bootstrap(docName, chooser=c('boot', 'code'), show_code = TRUE))
-    unlink('dots.md')
+    # unlink('dots.md') # why remove .md file and in yaml?
 } else {
     ## GitHub version
     library('rmarkdown')
     system.time(render(docName))
 }
-unlink('dotsRef.bib')
+unlink('citations.bib')
 ## Note: if you prefer the knitr version use:
 # library('rmarkdown')
 # system.time(render(docName, 'html_document'))
@@ -57,7 +57,7 @@ KnitPost <- function(input, base.url = "/") {
     knit(input, envir = parent.frame())
 }
 # TODO: insert the file name dynamically (both from _drafts and _posts?)
-KnitPost("2012-07-03-knitr-jekyll.Rmd")
+KnitPost(docName)
 
 ```
 

@@ -1,15 +1,27 @@
 ---
-title: "List of TODOs"
-author: "ttmmghmm"
+yamlFileName: 2015-01-02-TODOs.Rmd # WARNING: update the filename?
+title: List of TODOs
+author: ttmmghmm
 layout: post
+# library(knitr) ; fn <- "foo.Rmd" ; knit(fn)  # produces the md file
+# pandoc(fn, format = "docx") # prodces the .docx file - Word doc.
+# produce an identical result to Knit HTML in RStudio- no run-time dependency on RStudio
+#   knit(fn) ; markdownToHTML("foo.md") ; browseURL("foo.html")
 output:
   html_document:
+    fig_caption: yes
     keep_md: yes
+    number_sections: yes
     self_contained: no
+    toc: yes
 tags:
-- Rs as
+- "Rs as"
 - plota as asdf
 categories: rstatsas dadf as
+# published = false => Jekyll will not process Rmd file. 
+# Else Rmd file appears in the blog folders _posts, with html file, 
+# i.e. 2 posts and Rmd file is unformatted.
+published: false 
 ---
 
 
@@ -33,6 +45,9 @@ categories: rstatsas dadf as
 ```{r child = '../_posts/boiler_plate_bibliography_start.Rmd'}
 ```
 
+# Twitter
+http://stackoverflow.com/questions/20024047/oauth-issues-with-twitter-package
+
 # GuardianR
 ```{r 'GuardianR'}
 library(GuardianR)
@@ -41,6 +56,11 @@ results <- get_guardian("islamic+state",
   to.date="2014-09-16",
   api.key="3xzg2fk53jcdgaj5tbwqqhcz")
 ```
+
+```{r}
+plot(rnorm(10))
+```
+
 
 
 * http://cran.r-project.org/web/packages/GuardianR/GuardianR.pdf
