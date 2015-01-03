@@ -48,10 +48,14 @@ http://opendata.stackexchange.com/questions/1677/a-web-api-users-guide-for-free-
 * http://www.rexamine.com/2014/06/text-mining-in-r-automatic-categorization-of-wikipedia-articles/
   *  hierarchical categorization of Wikipedia articles
 * more information about text mining in R: 
+    * http://onepager.togaware.com/TextMiningO.pdf
     * http://cran.r-project.org/web/views/NaturalLanguageProcessing.html
     * http://www.r-bloggers.com/text-mining/
-    * http://onepager.togaware.com/TextMiningO.pdf
     * http://www.jstatsoft.org/v25/i05/paper
+    * http://www.r-bloggers.com/visualising-wikipedia-search-statistics-with-r/
+        * search traffic for any article - search statistics for “Financial crisis”. 
+            * The wikiStat() function returns dataframe with the necessary data:
+
 ```{r, eval = FALSE}
 opts_chunk$set(eval = FALSE)
 library(magrittr)
