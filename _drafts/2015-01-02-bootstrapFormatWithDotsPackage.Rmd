@@ -20,7 +20,7 @@ status: publish
 output:
   knitrBootstrap::bootstrap_document:
     title: "where does this appear?  - bootstrap web page style"
-    theme: cerulean # slate # cyborg slate
+    theme: cyborg # cyborg slate cerulean
     highlight: google code # sunburst
     # theme.chooser: FALSE
     # highlight.chooser: FALSE
@@ -49,7 +49,7 @@ author: "ttmmghmm"
 layout: post
 language: R # ~~~ R
 # http://vitobotta.com/how-to-migrate-from-wordpress-to-jekyll/
-paginate: 3 # it lets you choose how many posts to show per page (Jekyll supports pagination);
+paginate: 3 # it lets you choose how many posts to show per page - overrides _config.yml
 # type: post # ??
 # fontsize: 18pt # does not work
 ---
@@ -68,36 +68,11 @@ plot(1:10)
 Variables
 =====
 # http://vitobotta.com/how-to-migrate-from-wordpress-to-jekyll/
-{% capture post_url %}{{ page.url | prepend:'http://vitobotta.com' | append:'/' }}{% endcapture %}
-{% capture encoded_post_url %}{{ post_url | urlencode }}{% endcapture %}
 {% assign post_title = page.title  %}
 {% capture encoded_post_title %}{{ post_title | urlencode }}{% endcapture %}
-{% capture encoded_post_image_url %}{{ page.image | prepend:'http://vitobotta.com/images/posts/featured/' | urlencode }}{% endcapture %}
-
-
-
-<div class="prev_next post_nav">
-    {% if page.previous.url %}
-    <p class="previous">
-        «&nbsp;<a href="{{ page.previous.url }}/" rel="previous" title="{{ page.previous.title }}">{{ page.previous.title | truncatewords: 15 }}</a>
-    </p>
-    {% endif %}
-    {% if page.next.url %}
-    <p class="next">
-        <a href="{{ page.next.url }}/" rel="next" title="{{ page.next.title }}">{{ page.next.title | truncatewords: 15 }}</a>&nbsp;»
-    </p>
-    {% endif %}
-</div>
 
 x = ('a', 1, False)
 ~~~
-
-
-{% assign name = 'freestyle' %}
-
-{% for t in collections.tags %}{% if t == name %}
-  <p>Freestyle!</p>
-{% endif %}{% endfor %}
 
 
 Comment is the simplest tag. It just swallows content.
@@ -126,22 +101,8 @@ page.url
 
 <p>As you're not actually displaying post excerpt in post page, it's {{ page.content | remove: page.excerpt | markdownify }}. If you want to display excerpt it's : {{ page.content | markdownify }}
 
-
 I don't know why but page.content return mardown and not html, so the filter | markdownify to transform markdown to html.
 <!--break-->
-
-
-{% for post in paginator.posts %}
-   <!-- here add you post markup -->
-   <h1><a href="{{ post.url | markdownify }}">{{ post.title| markdownify }}</a></h1>
-   <p class="author">
-    <span class="date">{{post.date | markdownify| date: "%Y-%m-%d"}}</span>
-  </p>
-  <div class="content">
-    {{ post.content| markdownify }}
-  </div>
-  <div class="content-space"></div>
-{% endfor %}
 
 Introduction to `dots`
 ==================
