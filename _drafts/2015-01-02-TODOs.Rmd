@@ -26,13 +26,14 @@ output: html_document
 ```
 
 # GuardianR
-```{r}
+```{r 'GuardianR'}
 library(GuardianR)
 results <- get_guardian("islamic+state",
   from.date="2014-09-16",
   to.date="2014-09-16",
   api.key="3xzg2fk53jcdgaj5tbwqqhcz")
 ```
+
 
 * http://cran.r-project.org/web/packages/GuardianR/GuardianR.pdf
 

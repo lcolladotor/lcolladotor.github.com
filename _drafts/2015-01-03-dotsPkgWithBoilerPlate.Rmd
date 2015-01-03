@@ -1,24 +1,26 @@
 ---
-title: "bootstrap web page style"
+title: bootstrap web page style
 # permalink: If you need your processed blog post URLs to be something other than the default /year/month/day/title.html then you can set this variable and it will be used as the final URL.
-tags : [ python, jekyll, R, R-Bloggers, Jekyll, github ]
-#tags:
-#- R
-#- dots
-#- plot
-#- sessionInfo
-categories: [reproducibility, rstats]
+# tags : [ python, jekyll, R, R-Bloggers, Jekyll, github ]
+tags:
+- jekyll
+- R-Bloggers
+- R
+- plot
+- dots
+- sessionInfo
+categories:
+- rstats
+- reproducibility
 # published = false => Jekyll will not process the file. Else Rmd file appears as a blog with html file i.e. 2 posts.
 published: true
 status: publish
 # output: ioslides_presentation
 output:
   knitrBootstrap::bootstrap_document:
-    title: "where does this appear?  - bootstrap web page style"
+    # title: "where does this appear?  - bootstrap web page style"
     theme: cyborg # cyborg slate cerulean
     highlight: google code # sunburst
-    # theme.chooser: FALSE
-    # highlight.chooser: FALSE
     theme.chooser: TRUE
     highlight.chooser: TRUE
     menu: FALSE
@@ -26,7 +28,7 @@ output:
   #  toc: true
   #  theme: united
   # http://rmarkdown.rstudio.com/html_fragment_format.html
-  # html_fragment - no title or author -  excl std hdr content. HTML within larger web sites (e.g. blogs).
+  # html_fragment - no title/author - excl std hdr content. HTML within larger web sites (e.g. blogs).
   #html_fragment: 
   #  toc: true
     # united zenburn
@@ -39,14 +41,14 @@ output:
     toc: true
     theme: united # maybe theme is for html_document: only
     highlight: zenburn
-classoption: landscape
 author: "ttmmghmm"
 layout: post
-language: R # ~~~ R
 # http://vitobotta.com/how-to-migrate-from-wordpress-to-jekyll/
-paginate: 3 # it lets you choose how many posts to show per page - overrides _config.yml
+# paginate: 3 # it lets you choose how many posts to show per page - overrides _config.yml
+# language: R # ~~~ R
 # type: post # ??
 # fontsize: 18pt # does not work
+# classoption: landscape
 ---
 
 
@@ -67,22 +69,24 @@ paginate: 3 # it lets you choose how many posts to show per page - overrides _co
 
 ```
 
+for __R__'s `par()` function
+Here we used the ```png``` library and the ```rasterImage()``` command to read in and 
+of your __R__ plot device, and it will not stay consistent if you resize.
+{% highlight r %}
+plot(1:10)
+# Note that the rectangle we make here has corner coordinates outside of
+{% endhighlight %}
+Now let's say we want to __add a logo__ or other external image in the margin 
+
 Variables
 =====
 # http://vitobotta.com/how-to-migrate-from-wordpress-to-jekyll/
 {% assign post_title = page.title  %}
 {% capture encoded_post_title %}{{ post_title | urlencode }}{% endcapture %}
 
-x = ('a', 1, False)
-~~~
-
 
 Comment is the simplest tag. It just swallows content.
-
-We made 1 million dollars {% comment %} in losses {% endcomment %} this year
-Raw
-
-Raw temporarily disables tag processing. This is useful for generating content (eg, Mustache, Handlebars) which uses conflicting syntax.
+{% comment %} in losses {% endcomment %} 
 
 {% raw %}
   In Handlebars, {{ this }} will be HTML-escaped, but {{{ that }}} will not.
@@ -93,18 +97,14 @@ Hello {{ 'tobi' | upcase }}
 Hello tobi has {{ 'tobi' | size }} letters!
 Hello {{ '*tobi*' | textilize | upcase }}
 Hello {{ 'now' | date: "%Y %h" }}
-
 Hello {{name}}
 Hello {{user.name}}
 Hello {{ 'tobi' }}
 
 
-page.url
-
-<p>As you're not actually displaying post excerpt in post page, 
-If you want to display excerpt it's : {{ page.content | markdownify }}
-
+{{ page.content | markdownify }}
 I don't know why but page.content return mardown and not html, so the filter | markdownify to transform markdown to html.
+
 <!--break-->
 
 Introduction to `dots`
@@ -113,33 +113,12 @@ Introduction to `dots`
 If you wish, you can view this vignette online [here](http://lcolladotor.github.io/dots/).
 
 
-```{r vignetteSetup, echo=FALSE, message=FALSE, warning = FALSE}
-library(knitr)
-opts_chunk$set(fig.width = 5, fig.height = 5, warning = FALSE, echo = TRUE, cache = FALSE, message = TRUE)
-## Track time spent on making the vignette
-startTime <- Sys.time()
 
-## Bib setup
-library('knitcitations')
+```{r child = '../_posts/boiler_plate_vignette_setup.Rmd'}
+# http://stackoverflow.com/questions/25824795/how-to-combine-two-rmarkdown-rmd-files-into-a-single-output
+```
 
-## Load knitcitations with a clean bibliography
-cleanbib()
-cite_options(hyperlink = 'to.doc', citation_format = 'text', style = 'html')
-# Note links won't show for now due to the following issue
-# https://github.com/cboettig/knitcitations/issues/63
-
-## Write bibliography information
-write.bibtex(c(knitcitations = citation('knitcitations'),
-    dots = citation('dots'), 
-    knitrBootstrap = citation('knitrBootstrap'), 
-    knitr = citation('knitr')[3],
-    rmarkdown = citation('rmarkdown')),
-    file = 'dotsRef.bib')
-bib <- read.bibtex('dotsRef.bib')
-
-## Assign short names
-names(bib) <- c('knitcitations', 'dots', 'knitrBootstrap',
-    'knitr', 'rmarkdown')
+```{r child = '../_posts/boiler_plate_bibliography_start.Rmd'}
 ```
 
 
