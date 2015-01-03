@@ -101,7 +101,8 @@ Hello {{ 'tobi' }}
 
 page.url
 
-<p>As you're not actually displaying post excerpt in post page, it's {{ page.content | remove: page.excerpt | markdownify }}. If you want to display excerpt it's : {{ page.content | markdownify }}
+<p>As you're not actually displaying post excerpt in post page, 
+If you want to display excerpt it's : {{ page.content | markdownify }}
 
 I don't know why but page.content return mardown and not html, so the filter | markdownify to transform markdown to html.
 <!--break-->
