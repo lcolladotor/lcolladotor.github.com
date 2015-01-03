@@ -80,9 +80,15 @@ Now let's say we want to __add a logo__ or other external image in the margin
 
 
 
+<!--break-->
+
+Introduction to `dots`
+==================
+
+If you wish, you can view this vignette online [here](http://lcolladotor.github.io/dots/).
+
 
 # Overview
-
 
 `dots` `r citep(bib[['dots']])` is a simple package that helps you simplify your function definitions by using the `...` arguments. This reduces the complexity a new user of your package will face when reading its documentation. At the same time, `dots` allows you to define advanced arguments which you can then define inside your functions. Experienced users will be able to use them thus controlling those fine parameters most users do not need.
 
