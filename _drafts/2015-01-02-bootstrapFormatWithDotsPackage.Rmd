@@ -89,31 +89,6 @@ Variables
     {% endif %}
 </div>
 
-
-
-
-<!DOCTYPE html>
-<html lang="en">
-    <body>
-      <h1>{{ title }}</h1>
-      <p>{{ content }}</p>
-    </body>
-</html>
- 
-<!DOCTYPE html>
-<html lang="en">
-  {% include head.html %}
-    <body>
-      <h3>{{ post.title }}</h3>
-      ...
-    </body>
-</html>
-
-
-
-
-
- 
 x = ('a', 1, False)
 ~~~
 
