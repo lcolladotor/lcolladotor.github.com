@@ -78,11 +78,11 @@ http://jekyllrb.com/docs/posts/ says you can embed html and yaml variables.
   {% endfor %}
 <!-- http://jekyllrb.com/docs/collections/
 {{  }}
--->
 
 {{ site.posts }}
 {{ content }}
 {{ output }}
+-->
 
 
 # What they dont tell you about Rmarkdown
