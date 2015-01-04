@@ -80,7 +80,7 @@ http://jekyllrb.com/docs/posts/ says you can embed html and yaml variables.
 {{  }}
 -->
 
-
+{{ site.posts }}
 {{ content }}
 {{ output }}
 
