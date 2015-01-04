@@ -33,9 +33,9 @@ output:
     # http://bootswatch.com/ optionally including a dynamic style switch.
     theme: Cyborg # monokai cyborg slate darkly superhero cerulean 
     theme.chooser: TRUE # (FALSE) - Add a bootstrap style chooser to the page.
-    # highlight - (HighlightJS) - Set the default code style.
+    # highlight Set the default code style. (HighlightJS)
     # https://github.com/jimhester/knitrBootstrap#highlight-themes
-    highlight: Sunburst # Zenburn # HighlightJs # google code 
+    highlight: monokai # Sunburst # Zenburn # HighlightJs # google code 
     highlight.chooser: TRUE # (FALSE) - Add a code style chooser to the page.
     menu: TRUE # FALSE # Whether to include the bottom navbar.
     # keep_md: is unused arguments for knitrBootstrap
