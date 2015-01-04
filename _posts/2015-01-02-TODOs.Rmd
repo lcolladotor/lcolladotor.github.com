@@ -24,44 +24,6 @@ categories: [ghi, jkl]
 # i.e. 2 posts and Rmd file is unformatted. # http://jekyllrb.com/docs/frontmatter/
 published: TRUE # over ridden by the exclude: ["*.Rmd", "_posts/*.md", in config.yml (?)
 # permalink: If you need your processed blog post URLs to be something other than the default /year/month/day/title.html then you can set this variable and it will be used as the final URL.
-output:
-  # https://github.com/jimhester/knitrBootstrap
-  # http://cran.r-project.org/web/packages/knitrBootstrap/README.html
-  # ::bootstrap_document custom rendering function for the Rmarkdown package.
-  knitrBootstrap::bootstrap_document: #  to create bootstrap styled HTML reports - not .md
-    # https://github.com/jimhester/knitrBootstrap#package-options
-    # title: "where does this appear? # (NULL) Set the title for the html document
-    # http://bootswatch.com/ optionally including a dynamic style switch.
-    theme: Cyborg # monokai cyborg slate darkly superhero cerulean 
-    theme.chooser: TRUE # (FALSE) - Add a bootstrap style chooser to the page.
-    # highlight Set the default code style. (HighlightJS)
-    # https://github.com/jimhester/knitrBootstrap#highlight-themes
-    highlight: monokai # Sunburst # Zenburn # HighlightJs # google code 
-    highlight.chooser: TRUE # (FALSE) - Add a code style chooser to the page.
-    menu: TRUE # FALSE # Whether to include the bottom navbar.
-    # keep_md: is unused arguments for knitrBootstrap
-  # html_fragment - no title or author -  excl std hdr content. 
-  # this is for HTML within larger web sites (e.g. blogs).
-  # http://rmarkdown.rstudio.com/html_fragment_format.html
-  # html_fragment: 
-  #   # cyborg     # united zenburn http://jekyllbootstrap.com/
-  #   # theme: zenburn 
-  #   keep_md: true
-  #   toc: true
-  #   number_sections: true
-  # html_document:
-  #   fig_caption: yes
-  #   keep_md: yes
-  #   number_sections: yes
-  #   self_contained: no
-  #   toc: yes
-  #pdf_document:
-  #  toc: true
-  #  highlight: zenburn
-# output: ioslides_presentation
-layout: post
-author: ttmmghmm
-# fontsize: 18pt # does it exist?
 ---
 
 # Displaying an index of posts
@@ -75,6 +37,11 @@ http://jekyllrb.com/docs/posts/ says you can embed html and yaml variables.
       <a href="{{ post.url }}">{{ post.title }}</a>
     </li>
   {% endfor %}
+<!-- http://jekyllrb.com/docs/collections/
+{{  }}
+-->
+{{ content }}
+{{ output }}
 
 
 # What they dont tell you about Rmarkdown

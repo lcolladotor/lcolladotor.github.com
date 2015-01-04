@@ -3,6 +3,60 @@
 # http://jekyllrb.com/docs/configuration/
 # Local configuration file: /Users/jbg/git/github/ttmmghmm.github.com/_config.yml
 
+# http://jekyllrb.com/docs/configuration/
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      output:
+        # https://github.com/jimhester/knitrBootstrap
+        # http://cran.r-project.org/web/packages/knitrBootstrap/README.html
+        # ::bootstrap_document custom rendering function for the Rmarkdown package.
+        knitrBootstrap::bootstrap_document: #  to create bootstrap styled HTML reports - not .md
+          # https://github.com/jimhester/knitrBootstrap#package-options
+          # title: "where does this appear? # (NULL) Set the title for the html document
+          # http://bootswatch.com/ optionally including a dynamic style switch.
+          theme: Cyborg # monokai cyborg slate darkly superhero cerulean 
+          theme.chooser: TRUE # (FALSE) - Add a bootstrap style chooser to the page.
+          # highlight Set the default code style. (HighlightJS)
+          # https://github.com/jimhester/knitrBootstrap#highlight-themes
+          highlight: monokai # Sunburst # Zenburn # HighlightJs # google code 
+          highlight.chooser: TRUE # (FALSE) - Add a code style chooser to the page.
+          menu: TRUE # FALSE # Whether to include the bottom navbar.
+          # keep_md: is unused arguments for knitrBootstrap
+        # html_fragment - no title or author -  excl std hdr content. 
+        # this is for HTML within larger web sites (e.g. blogs).
+        # http://rmarkdown.rstudio.com/html_fragment_format.html
+        # html_fragment: 
+        #   # cyborg     # united zenburn http://jekyllbootstrap.com/
+        #   # theme: zenburn 
+        #   keep_md: true
+        #   toc: true
+        #   number_sections: true
+        # html_document:
+        #   fig_caption: yes
+        #   keep_md: yes
+        #   number_sections: yes
+        #   self_contained: no
+        #   toc: yes
+        #pdf_document:
+        #  toc: true
+        #  highlight: zenburn
+      # output: ioslides_presentation
+      layout: post
+      # layout: "my-site"
+      author: ttmmghmm
+      # fontsize: 18pt # does it exist?
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "project" # overrides previous default layout
+      author: "Mr. Hyde"
+
 # permalink default format. http://jekyllrb.com/docs/permalinks/
 permalink: /:year/:month/:day/:title 
 # permalink: /blog/:categories/:year/:month/:day/:title.html
