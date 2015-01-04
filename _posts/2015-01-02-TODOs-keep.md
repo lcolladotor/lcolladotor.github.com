@@ -1,19 +1,20 @@
+---
+yamlFileName: 2015-01-02-TODOs.Rmd # WARNING: update the filename?
+title: List of TODOs as an .md file - manaully masaged.
+author: ttmmghmm
+layout: post
+# library(knitr) ; fn <- "foo.Rmd" ; knit(fn)  # produces the md file
+# pandoc(fn, format = "docx") # prodces the .docx file - Word doc.
+# produce an identical result to Knit HTML in RStudio- no run-time dependency on RStudio
+#   knit(fn) ; markdownToHTML("foo.md") ; browseURL("foo.html")
+tags:
+- "Rs as"
+- plota as asdf
+categories: rstatsas dadf as
+---
+
 # List of TODOs
 ttmmghmm  
-
-# Displaying an index of posts
-http://jekyllrb.com/docs/posts/ says you can embed html and yaml variables.
-
-* So does http://jekyllrb.com/docs/templates/
-    * http://jekyllrb.com/docs/templates/
-* http://rmarkdown.rstudio.com/ doesnt say anything?
-<ul>
-  {% for post in site.posts %}
-    <li>
-      <a href="{{ post.url }}">{{ post.title }}</a>
-    </li>
-  {% endfor %}
-</ul>
 
 
 # What they dont tell you about Rmarkdown
@@ -94,7 +95,7 @@ http://opendata.stackexchange.com/questions/1677/a-web-api-users-guide-for-free-
 * http://semanticweb.cs.vu.nl/R/wikipedia_graph/wikipedia_graph.html
 * Tags: [text mining, graphs, wikipedia, crawl, Simple Wikipedia, Wikipedia,
   analytical metrics]
-  * “Basic English 850 basic English words chosen by Charles Kay Ogden.”
+  * ???Basic English 850 basic English words chosen by Charles Kay Ogden.???
 * TODO: dynamic graph, shiny
 
 ## WikiPediR package
@@ -106,7 +107,7 @@ http://opendata.stackexchange.com/questions/1677/a-web-api-users-guide-for-free-
     * http://www.r-bloggers.com/text-mining/
     * http://www.jstatsoft.org/v25/i05/paper
     * http://www.r-bloggers.com/visualising-wikipedia-search-statistics-with-r/
-        * search traffic for any article - search statistics for “Financial crisis”. 
+        * search traffic for any article - search statistics for ???Financial crisis???. 
             * The wikiStat() function returns dataframe with the necessary data.
     * http://cran.r-project.org/web/packages/tm.plugin.webmining/vignettes/ShortIntro.pdf
 
@@ -115,7 +116,7 @@ http://opendata.stackexchange.com/questions/1677/a-web-api-users-guide-for-free-
 opts_chunk$set(eval = FALSE)
 library(magrittr)
 docs[[1]]
-# Replace all “” elements with a space. 
+# Replace all ?????? elements with a space. 
 # We do it because there are not a part of text document but in general a html code.
 # use the non-greedy .*? match - match up until the first following instance of '>'. Without this, if you use just .*, you'll capture everything up to the last '[END DATA]'>'.
 docs2 <- tm_map(docs, function(x) stri_replace_all_regex(x, "<.+?>", " "))
@@ -209,19 +210,18 @@ str(rmarkdown::metadata) # https://github.com/rstudio/rmarkdown/issues/260
 ## List of 8
 ##  $ yamlFileName: chr "2015-01-02-TODOs.Rmd"
 ##  $ title       : chr "List of TODOs"
-##  $ tags        : chr [1:2] "Rs as" "plota as asdf"
-##  $ categories  : chr [1:2] "rstatsas dadf as" "blah blah"
-##  $ published   : logi FALSE
-##  $ output      :List of 2
-##   ..$ html_fragment:List of 3
-##   .. ..$ keep_md        : logi TRUE
-##   .. ..$ toc            : logi TRUE
-##   .. ..$ number_sections: logi TRUE
-##   ..$ pdf_document :List of 2
-##   .. ..$ toc      : logi TRUE
-##   .. ..$ highlight: chr "zenburn"
-##  $ layout      : chr "post"
 ##  $ author      : chr "ttmmghmm"
+##  $ layout      : chr "post"
+##  $ output      :List of 1
+##   ..$ html_document:List of 5
+##   .. ..$ fig_caption    : logi TRUE
+##   .. ..$ keep_md        : logi TRUE
+##   .. ..$ number_sections: logi TRUE
+##   .. ..$ self_contained : logi FALSE
+##   .. ..$ toc            : logi TRUE
+##  $ tags        : chr [1:2] "Rs as" "plota as asdf"
+##  $ categories  : chr "rstatsas dadf as"
+##  $ published   : logi FALSE
 ```
 
 ## `R` information
@@ -275,8 +275,8 @@ str(rmarkdown::metadata) # https://github.com/rstudio/rmarkdown/issues/260
 
 ### Runtime 
 
-Vignette generated in 5.3 seconds.   
-<p>Timestamp 2015-01-04 00:04:39. <!-- Date the vignette was generated -->
+Vignette generated in 5.7 seconds.   
+<p>Timestamp 2015-01-03 22:47:46. <!-- Date the vignette was generated -->
 
 
 <!-- NB: Do not add yaml code here, put it at the start of the top level Rmd -->

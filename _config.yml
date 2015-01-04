@@ -1,5 +1,9 @@
-# This is the default format. 
-# For more see: http://jekyllrb.com/docs/permalinks/
+# TODO: set global defaults to avoid repetition.
+# http://jekyllrb.com/docs/configuration/#front-matter-defaults
+# http://jekyllrb.com/docs/configuration/
+# Local configuration file: /Users/jbg/git/github/ttmmghmm.github.com/_config.yml
+
+# permalink default format. http://jekyllrb.com/docs/permalinks/
 permalink: /:year/:month/:day/:title 
 # permalink: /blog/:categories/:year/:month/:day/:title.html
 
@@ -14,11 +18,9 @@ timezone: Europe/London
 # use glob syntax and exclude a whole directory
 exclude: [_posts/*.html, .DS_Store", "README.md", "Rakefile", "changelog.md", ".rvmrc", ".rbenv-version"]
 
-
-# Configuration file: /Users/jbg/git/github/ttmmghmm.github.com/_config.yml
-# Deprecation: The 'pygments' configuration option has been renamed to 'highlighter'. 
-# The allowed values are 'rouge', 'pygments' or null.
-highlighter: pygments
+# syntax highlighting of code snippets using either Pygments or Rouge
+# http://jekyllrb.com/docs/posts/
+highlighter: rouge # 'rouge', 'pygments' or null.
 markdown: rdiscount
 # markdown: redcarpet
 
@@ -39,6 +41,10 @@ author :
 description: A website and blog about data analysis, applied statistics and R.
 # http://stackoverflow.com/questions/25755838/in-my-jekyll-include-file-how-do-i-get-the-markdown-for-a-post
 excerpt_separator: "<!--break-->" # default is "\n\n" = two new lines
+
+# https://help.github.com/articles/using-jekyll-with-pages/
+# github: [Repository metadata] # what goes here?
+
 
 
 # The production_url is only used when full-domain names are needed
