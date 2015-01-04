@@ -98,10 +98,15 @@ opts_chunk$set(fig.width = 5, fig.height = 5)
 opts_chunk$set(warning = FALSE, echo = TRUE, cache = FALSE, message = TRUE)
 # NOT working?
 opts_chunk$set(background = c('red', 'darkgray')[1], panel = TRUE) 
+
+# The package options can be changed using the object opts_knit; for example,
+opts_knit$set(progress = TRUE, verbose = TRUE)
+
 ```
 
 
 ```{r child = '../_posts/boiler_plate_vignette_setup.Rmd'}
+# child: (NULL; character) a character vector of filenames of child documents to be run and input into the main document http://yihui.name/knitr/options/
 # http://stackoverflow.com/questions/25824795/how-to-combine-two-rmarkdown-rmd-files-into-a-single-output
 ```
 
