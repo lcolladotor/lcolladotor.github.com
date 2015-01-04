@@ -13,8 +13,8 @@ title: List of TODOs # date: "2014 December" # (NULL) Set the title for the html
 #
 # like categories, tags can be specified as a YAML list or a space- separated string.
 # http://en.wikipedia.org/wiki/YAML#Lists
-tags: [ Rs as, plota as asdf ]
-categories: [rstatsas dadf as, blah blah]
+tags: [ abc, def]
+categories: [ghi, jkl]
 # published = false => Jekyll will not process Rmd file when site is generated
 # Else Rmd file appears in the blog folders _posts, with html file, 
 # i.e. 2 posts and Rmd file is unformatted. # http://jekyllrb.com/docs/frontmatter/
@@ -27,11 +27,11 @@ output:
     # https://github.com/jimhester/knitrBootstrap#package-options
     # title: "where does this appear? # (NULL) Set the title for the html document
     # http://bootswatch.com/ optionally including a dynamic style switch.
-    theme: superhero # cyborg slate darkly superhero cerulean 
+#    theme: superhero # cyborg slate darkly superhero cerulean 
     theme.chooser: TRUE # (FALSE) - Add a bootstrap style chooser to the page.
     # highlight - (HighlightJS) - Set the default code style.
     # https://github.com/jimhester/knitrBootstrap#highlight-themes
-    highlight: Zenburn # HighlightJs # google code 
+#    highlight: Zenburn # HighlightJs # google code 
     highlight.chooser: TRUE # (FALSE) - Add a code style chooser to the page.
     menu: TRUE # FALSE # Whether to include the bottom navbar.
     toc: TRUE # Automatic table of contents constructed from h1-4 
@@ -51,9 +51,9 @@ output:
   #   number_sections: yes
   #   self_contained: no
   #   toc: yes
-  pdf_document:
-    toc: true
-    highlight: zenburn
+  #pdf_document:
+  #  toc: true
+  #  highlight: zenburn
 # output: ioslides_presentation
 layout: post
 author: ttmmghmm

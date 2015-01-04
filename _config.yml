@@ -20,7 +20,7 @@ exclude: ["*.Rmd", "_posts/*.html", ".DS_Store", "README.md", "Rakefile", "chang
 
 # syntax highlighting of code snippets using either Pygments or Rouge
 # http://jekyllrb.com/docs/posts/
-highlighter: pygments # 'rouge', 'pygments' or null.
+# highlighter: pygments # 'rouge', 'pygments' or null.
 markdown: rdiscount
 # markdown: redcarpet
 
