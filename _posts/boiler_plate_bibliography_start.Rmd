@@ -2,14 +2,23 @@
 
 ```{r boiler_plate_bibliography_start, echo=FALSE, message=FALSE, warning = FALSE}
 library('knitcitations')
-
-## Load knitcitations with a clean bibliography
-cleanbib()
-cite_options(hyperlink = 'to.doc', citation_format = 'text', style = 'html')
+# Now we can generate citations from bib citep(bib[[2]])
+# cite_options(hyperlink = 'to.doc', citation_format = 'text', style = 'html')
+# https://github.com/trinker/knitcitations
+### NOT working?
+#cite_options(linked=TRUE) # In-text citations rather than numbers
+#cite_options(tooltip=TRUE) # will not work inside a github repo due the the lack of the javascript library,
 # Note links won't show for now due to the following issue
 # https://github.com/cboettig/knitcitations/issues/63
+```
+
+```{r write_bibliography_information, echo=FALSE, message=FALSE, warning = FALSE}
+## Load knitcitations with a clean bibliography
+cleanbib()
 
 ## Write bibliography information
+# If we have a bibtex file, we can cite such articles by those keys as well.
+# https://github.com/trinker/knitcitations
 write.bibtex(c(knitcitations = citation('knitcitations'),
     dots = citation('dots'), 
     knitrBootstrap = citation('knitrBootstrap'), 
@@ -17,8 +26,8 @@ write.bibtex(c(knitcitations = citation('knitcitations'),
     rmarkdown = citation('rmarkdown')),
     file = 'citations.bib')
 bib <- read.bibtex('citations.bib')
-
 ## Assign short names
 names(bib) <- c('knitcitations', 'dots', 'knitrBootstrap',
     'knitr', 'rmarkdown')
+print(bib)
 ```

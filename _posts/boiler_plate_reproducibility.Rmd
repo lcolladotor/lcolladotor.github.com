@@ -1,6 +1,14 @@
-<!-- NB: Do not add yaml code here, put it at the start of the top level Rmd -->
+<!-- *** reproducibility *** 
+NB: Do not add yaml code here, put it at the start of the top level Rmd -->
 
-```{r list all Rmd files, eval = FALSE, echo = FALSE, results = 'hide'}
+```{r sdfsdf, eval = TRUE}
+# zsdfhjs asjdf 
+bib
+
+```
+
+```{r list all Rmd files, eval = TRUE, echo = FALSE, results = 'hide'}
+bib
 #rmd <- list.files(pattern = '*.Rmd', recursive = T, include.dirs = T)
 #chunks <- paste0("```{r child = '", rmd, "'}\n```\n")
 #cat(chunks, sep = '\n')
@@ -12,10 +20,14 @@ This final section highlights how this vignette was created.
 ## To recreate this vignette
 This vignette was generated using:    
 
-* `knitrBootstrap` `r citep(bib[['knitrBootstrap']])`
+<!-- Additional semantic markup can be added the the citations themselves, such as the reason for the citation. 
+https://github.com/trinker/knitcitations 
+
+* `knitrBootstrap` ` knitcitations::citep(bib[['knitrBootstrap']], , cito = "usesMethodIn")`
 * Running behind the scenes:  
-    * `knitr` `r citep(bib[['knitr']])` 
-    * `rmarkdown` `r citep(bib[['rmarkdown']])` 
+    * `knitr` ` knitcitations::citep(bib[['knitr']])` 
+    * `rmarkdown` ` knitcitations::citep(bib[['rmarkdown']])` 
+-->
 
 ```{r boiler_plate_reproducibility, eval=FALSE, bootstrap.show.code=FALSE}
 # TODO: parse permalink? varialble
@@ -24,19 +36,18 @@ docName <- rmarkdown::metadata$yamlFileName
 
 ## Create the vignette
 library('knitrBootstrap') 
-
 knitrBootstrapFlag <- packageVersion('knitrBootstrap') < '1.0.0'
 if(knitrBootstrapFlag) {
     ## CRAN version
     library('knitrBootstrap')
-    print(rmarkdown::metadata$title)
+    cat("\n\n\tmetadata:title", rmarkdown::metadata$title, "\n\n")
     # TODO: stopifnot(file.exists(paste0(rmarkdown::metadata$title, ".Rmd")))
-    system.time(knit_bootstrap(docName, chooser=c('boot', 'code'), show_code = TRUE))
+    print(system.time(knit_bootstrap(docName, chooser=c('boot', 'code'), show_code = TRUE)))
     # unlink('dots.md') # why remove .md file and in yaml?
 } else {
     ## GitHub version
     library('rmarkdown')
-    system.time(render(docName))
+    print(system.time(render(docName)))
 }
 unlink('citations.bib')
 ## Note: if you prefer the knitr version use:
@@ -82,5 +93,5 @@ session_info()
 totalTime <- diff(c(startTime, Sys.time()))
 userTime <- round(totalTime, digits = 1)
 ```
-Vignette generated in `r userTime` seconds.   
+Vignette generated in ` userTime` seconds.   
 <p>Timestamp `r Sys.time()`. <!-- Date the vignette was generated -->

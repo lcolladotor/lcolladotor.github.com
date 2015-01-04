@@ -1,7 +1,8 @@
 ---
 yamlFileName: 2015-01-02-TODOs.Rmd # WARNING: update the filename?
-# fn <- "2015-01-02-TODOs.Rmd"
-# library(knitr) ; fn <- "foo.Rmd" ; knit(fn)  # to get the .md file
+# fn <- "2015-01-02-TODOs.Rmd" ; knit(fn)  # to get the .md file # library(knitr) ; library(knitrBootstrap)
+# https://github.com/jimhester/knitrBootstrap#bootstrap-themes
+# rmarkdown::render(fn, knitrBootstrap::bootstrap_document())
 # produce an identical result to Knit HTML in RStudio- no run-time dependency on RStudio
 #   knit(fn) ; markdownToHTML("foo.md") ; browseURL("foo.html")
 # pandoc(fn, format = "docx") # prodces the .docx file - Word doc.
@@ -72,14 +73,14 @@ http://jekyllrb.com/docs/posts/ says you can embed html and yaml variables.
 
 # What they dont tell you about Rmarkdown
 ## Lists
-* Unordered lists should be a doddle but there are gotchas.
-* The first element in a list _must_ be preceeded by a blank line before the first item.
-    * Ending the preceeding line with two or more spaces does not seem to work.
-        * Even though it is documented to.
-    * Neither does ending the line with html like < b r >.
-        * TODO: how to do a literal quote.
-* You need to put two tabs at the start of a sub item.
-    + Else the subitem will not render as a subitem in your list.
+1. Unordered lists should be a doddle but there are gotchas.
+    * The first element in a list _must_ be preceeded by a blank line before the first item.
+        * Ending the preceeding line with two or more spaces does not seem to work.
+            * Even though it is documented to.
+        * Neither does ending the line with html like < b r >.
+            * TODO: how to do a literal quote.
+    * You need to put two tabs at the start of a sub item.
+        + Else the subitem will not render as a subitem in your list.
 
 # Chunk options
 * Avoid spaces and periods . in chunk labels and directory names
@@ -96,12 +97,20 @@ library(knitr) # is this needed here?
 #     panel: FALSE #  Use panels rather than buttons to toggle blocks.
 opts_chunk$set(fig.width = 5, fig.height = 5)
 opts_chunk$set(warning = FALSE, echo = TRUE, cache = FALSE, message = TRUE)
-# NOT working?
-opts_chunk$set(background = c('red', 'darkgray')[1], panel = TRUE) 
+# bootstrap.panel (FALSE) - panels rather than buttons to toggle blocks.
+opts_chunk$set(background = c('gray10'), panel = TRUE) 
+# http://getbootstrap.com/css/#grid
+# bootstrap.thumbnail - (TRUE) - Thumbnail and lightbox images.
+opts_chunk$set(thumbnail = TRUE, thumbnail.size = 'col-md-1')
+# .class ('row') - class to apply to the div containing the chunk.
+opts_chunk$set(class = 'rowew')
+# bootstrap.show.code - (TRUE) - Code from this chunk starts as shown.
+opts_chunk$set(code = FALSE, output = FALSE) 
+opts_chunk$set(message = FALSE, warning = TRUE, error = FALSE) 
 
+# NOT working?
 # The package options can be changed using the object opts_knit; for example,
 opts_knit$set(progress = TRUE, verbose = TRUE)
-
 ```
 
 
@@ -172,7 +181,7 @@ http://opendata.stackexchange.com/questions/1677/a-web-api-users-guide-for-free-
             * The wikiStat() function returns dataframe with the necessary data.
     * http://cran.r-project.org/web/packages/tm.plugin.webmining/vignettes/ShortIntro.pdf
 
-```{r, eval = FALSE}
+```{r docs not evaluated, eval = FALSE}
 opts_chunk$set(eval = FALSE)
 library(magrittr)
 docs[[1]]
@@ -198,12 +207,16 @@ docs2
 
 
 
-
+```{r in main file, eval = TRUE, echo = FALSE, results = 'hide'}
+bib
+```
 
 ```{r child = '../_posts/boiler_plate_reproducibility.Rmd'}
 ```
 
-```{r child = '../_posts/boiler_plate_bibliography_end.Rmd'}
+<!-- 
 # boiler_plate_bibliography_end has to come last else references in boiler_plate_reproducibility are lost!
+-->
+```{ child = '../_posts/boiler_plate_bibliography_end.Rmd'}
 ```
 

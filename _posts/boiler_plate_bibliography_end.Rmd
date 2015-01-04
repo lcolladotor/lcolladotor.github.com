@@ -1,11 +1,15 @@
-<!-- NB: Do not add yaml code here, put it at the start of the top level Rmd -->
+<!-- Bibliography END
+NB: Do not add yaml code here, put it at the start of the top level Rmd 
+-->
 
 # Bibliography
 
 Citations made with `knitcitations` `r citep(bib[['knitcitations']])`.
 
 ```{r boiler_plate_bibliography_end, results='asis', echo=FALSE}
-## Print bibliography
-bibliography()
+## Print bibliography https://github.com/trinker/knitcitations
+# bibliography("markdown", ordering = c("authors", "year", "journal"))
+library(knitcitations)
+# bibliography()
 ```
 
