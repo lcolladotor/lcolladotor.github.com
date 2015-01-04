@@ -22,10 +22,11 @@ categories: [ghi, jkl]
 # published = false => Jekyll will not process Rmd file when site is generated
 # Else Rmd file appears in the blog folders _posts, with html file, 
 # i.e. 2 posts and Rmd file is unformatted. # http://jekyllrb.com/docs/frontmatter/
-published: TRUE 
+published: TRUE # over ridden by the exclude: ["*.Rmd", "_posts/*.md", in config.yml (?)
 # permalink: If you need your processed blog post URLs to be something other than the default /year/month/day/title.html then you can set this variable and it will be used as the final URL.
 output:
   # https://github.com/jimhester/knitrBootstrap
+  # http://cran.r-project.org/web/packages/knitrBootstrap/README.html
   # ::bootstrap_document custom rendering function for the Rmarkdown package.
   knitrBootstrap::bootstrap_document: #  to create bootstrap styled HTML reports - not .md
     # https://github.com/jimhester/knitrBootstrap#package-options
@@ -61,7 +62,6 @@ output:
 layout: post
 author: ttmmghmm
 # fontsize: 18pt # does it exist?
-
 ---
 
 # Displaying an index of posts
