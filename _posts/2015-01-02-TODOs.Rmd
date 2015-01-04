@@ -1,8 +1,9 @@
 ---
 yamlFileName: 2015-01-02-TODOs.Rmd # WARNING: update the filename?
-# fn <- "2015-01-02-TODOs.Rmd" ; knit(fn)  # to get the .md file # library(knitr) ; library(knitrBootstrap)
+# fn <- "2015-01-02-TODOs.Rmd" ; knit(fn)  # to get the .md file 
+# library(knitrBootstrap)
+# rmarkdown::render(fn, knitrBootstrap::bootstrap_document(), clean = FALSE) # no md?
 # https://github.com/jimhester/knitrBootstrap#bootstrap-themes
-# rmarkdown::render(fn, knitrBootstrap::bootstrap_document())
 # produce an identical result to Knit HTML in RStudio- no run-time dependency on RStudio
 #   knit(fn) ; markdownToHTML("foo.md") ; browseURL("foo.html")
 # pandoc(fn, format = "docx") # prodces the .docx file - Word doc.
@@ -29,7 +30,7 @@ output:
     theme: cyborg # cyborg slate darkly superhero cerulean 
     #theme.chooser: TRUE # (FALSE) - Add a bootstrap style chooser to the page.
     # highlight - (HighlightJS) - Set the default code style.
-    highlight: google code # https://github.com/jimhester/knitrBootstrap#highlight-themes
+    highlight: HighlightJs # google code # https://github.com/jimhester/knitrBootstrap#highlight-themes
     # highlight.chooser: TRUE # (FALSE) - Add a code style chooser to the page.
     menu: TRUE # FALSE # Whether to include the bottom navbar.
     # true toc: Automatic table of contents constructed from h1-4 tags. https://github.com/jimhester/knitrBootstrap
