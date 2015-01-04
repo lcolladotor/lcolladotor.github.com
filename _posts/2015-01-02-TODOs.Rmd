@@ -104,23 +104,23 @@ http://jekyllrb.com/docs/posts/ says you can embed html and yaml variables.
 
 ## can change the default global options
 https://github.com/jimhester/knitrBootstrap#chunk-options
-```{r}
+```{r, eval = TRUE}
 library(knitr) # is this needed here?
 # https://github.com/jimhester/knitrBootstrap#chunk-options
 # colors() [grep(patt = "dark", x = colours())]
 #     panel: FALSE #  Use panels rather than buttons to toggle blocks.
 opts_chunk$set(fig.width = 5, fig.height = 5)
-opts_chunk$set(warning = FALSE, echo = TRUE, cache = FALSE, message = TRUE)
 # bootstrap.panel (FALSE) - panels rather than buttons to toggle blocks.
 opts_chunk$set(background = c('gray10'), panel = TRUE) 
 # http://getbootstrap.com/css/#grid
 # bootstrap.thumbnail - (TRUE) - Thumbnail and lightbox images.
-opts_chunk$set(thumbnail = TRUE, thumbnail.size = 'col-md-1')
+opts_chunk$set(thumbnail = TRUE, thumbnail.size = 'col-md-12')
 # .class ('row') - class to apply to the div containing the chunk.
 opts_chunk$set(class = 'rowew')
 # bootstrap.show.code - (TRUE) - Code from this chunk starts as shown.
-opts_chunk$set(code = FALSE, output = FALSE) 
-opts_chunk$set(message = FALSE, warning = TRUE, error = FALSE) 
+# opts_chunk$set(code = FALSE, output = FALSE) 
+# opts_chunk$set(echo = FALSE, cache = FALSE)
+# opts_chunk$set(message = FALSE, warning = FALSE, error = FALSE) 
 
 # NOT working?
 # The package options can be changed using the object opts_knit; for example,
@@ -135,6 +135,25 @@ opts_knit$set(progress = TRUE, verbose = TRUE)
 
 ```{r child = '../_posts/boiler_plate_bibliography_start.Rmd'}
 ```
+
+# here here
+```{r main files boiler_plate_bibliography_end, results='asis', echo=TRUE}
+## Print bibliography https://github.com/trinker/knitcitations
+# bibliography("markdown", ordering = c("authors", "year", "journal"))
+library(knitcitations)
+bib
+xx <- knitcitations::citep(bib[['knitcitations']])
+print(xx)
+# bibliography()
+```
+
+Citations made with 
+`r version$version`.
+
+`r xx`.
+
+`knitcitations` ` knitcitations::citep(bib[['knitcitations']])`.
+
 
 # Twitter
 http://stackoverflow.com/questions/20024047/oauth-issues-with-twitter-package
@@ -231,6 +250,6 @@ bib
 <!-- 
 # boiler_plate_bibliography_end has to come last else references in boiler_plate_reproducibility are lost!
 -->
-```{ child = '../_posts/boiler_plate_bibliography_end.Rmd'}
+```{r child = '../_posts/boiler_plate_bibliography_end.Rmd'}
 ```
 

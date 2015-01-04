@@ -926,17 +926,17 @@ https://github.com/jimhester/knitrBootstrap#chunk-options
 # colors() [grep(patt = "dark", x = colours())]
 #     panel: FALSE #  Use panels rather than buttons to toggle blocks.
 opts_chunk$set(fig.width = 5, fig.height = 5)
-opts_chunk$set(warning = FALSE, echo = TRUE, cache = FALSE, message = TRUE)
 # bootstrap.panel (FALSE) - panels rather than buttons to toggle blocks.
 opts_chunk$set(background = c('gray10'), panel = TRUE) 
 # http://getbootstrap.com/css/#grid
 # bootstrap.thumbnail - (TRUE) - Thumbnail and lightbox images.
-opts_chunk$set(thumbnail = TRUE, thumbnail.size = 'col-md-1')
+opts_chunk$set(thumbnail = TRUE, thumbnail.size = 'col-md-12')
 # .class ('row') - class to apply to the div containing the chunk.
 opts_chunk$set(class = 'rowew')
 # bootstrap.show.code - (TRUE) - Code from this chunk starts as shown.
-opts_chunk$set(code = FALSE, output = FALSE) 
-opts_chunk$set(message = FALSE, warning = TRUE, error = FALSE) 
+# opts_chunk$set(code = FALSE, output = FALSE) 
+# opts_chunk$set(echo = FALSE, cache = FALSE)
+# opts_chunk$set(message = FALSE, warning = FALSE, error = FALSE) 
 
 # NOT working?
 # The package options can be changed using the object opts_knit; for example,
@@ -947,44 +947,101 @@ opts_knit$set(progress = TRUE, verbose = TRUE)</code></pre>
 <div class="row">
 <button class="source R toggle btn btn-xs btn-primary">
 <span class="glyphicon glyphicon-chevron-down"></span> R source
-</button><pre style=""><code class="source r">FALSE</code></pre><button class="output R toggle btn btn-xs btn-success">
-<span class="glyphicon glyphicon-chevron-down"></span> R output
-</button><pre style=""><code class="output r">## [1] FALSE
-</code></pre>
+</button><pre style=""><code class="source r">library(knitr)
+opts_chunk$set(fig.width = 5, fig.height = 5, warning = FALSE, echo = TRUE, cache = FALSE, message = TRUE)
+## Track time spent on making the vignette
+startTime <- Sys.time()</code></pre>
 </div>
 <!-- NB: Do not add yaml code here, put it at the start of the top level Rmd -->
+
+
 
 <div class="row">
 <button class="output R toggle btn btn-xs btn-success">
 <span class="glyphicon glyphicon-chevron-down"></span> R output
-</button><pre style=""><code class="output r">## [1] FALSE
+</button><pre style=""><code class="output r">## [1] J. Allaire, J. McPherson, Y. Xie, et al. _rmarkdown: Dynamic
+## Documents for R_. R package version 0.4.2. 2014. <URL:
+## http://rmarkdown.rstudio.com>.
+## 
+## [2] C. Boettiger. _knitcitations: Citations for knitr markdown
+## files_. R package version 1.0.5. 2014. <URL:
+## http://CRAN.R-project.org/package=knitcitations>.
+## 
+## [3] L. Collado-Torres. _dots: Simplifying function calls_. R
+## package version 1.0.0. 2014. <URL:
+## https://github.com/lcolladotor/dots>.
+## 
+## [4] J. Hester. _knitrBootstrap: Knitr Bootstrap framework._ R
+## package version 1.0.0. 2014. <URL: https://github.com/jimhester/>.
+## 
+## [5] Y. Xie. "knitr: A Comprehensive Tool for Reproducible Research
+## in R". In: _Implementing Reproducible Computational Research_. Ed.
+## by V. Stodden, F. Leisch and R. D. Peng. ISBN 978-1466561595.
+## Chapman and Hall/CRC, 2014. <URL:
+## http://www.crcpress.com/product/isbn/9781466561595>.
 </code></pre>
 </div>
+<h1>here here</h1>
 <div class="row">
-<button class="output R toggle btn btn-xs btn-success">
-<span class="glyphicon glyphicon-chevron-down"></span> R output
-</button><pre style=""><code class="output r">## [1] FALSE
-</code></pre>
+<button class="source R toggle btn btn-xs btn-primary">
+<span class="glyphicon glyphicon-chevron-down"></span> R source
+</button><pre style=""><code class="source r">## Print bibliography https://github.com/trinker/knitcitations
+# bibliography("markdown", ordering = c("authors", "year", "journal"))
+library(knitcitations)
+bib</code></pre>
+<p>[1] J. Allaire, J. McPherson, Y. Xie, et al. <em>rmarkdown: Dynamic Documents for R</em>. R package version 0.4.2. 2014. <URL:
+http://rmarkdown.rstudio.com>.</p>
+<p>[2] C. Boettiger. <em>knitcitations: Citations for knitr markdown files</em>. R package version 1.0.5. 2014. <URL:
+http://CRAN.R-project.org/package=knitcitations>.</p>
+<p>[3] L. Collado-Torres. <em>dots: Simplifying function calls</em>. R package version 1.0.0. 2014. <URL:
+https://github.com/lcolladotor/dots>.</p>
+<p>[4] J. Hester. <em>knitrBootstrap: Knitr Bootstrap framework.</em> R package version 1.0.0. 2014. <URL: https://github.com/jimhester/>.</p>
+[5] Y. Xie. &quot;knitr: A Comprehensive Tool for Reproducible Research in R&quot;. In: <em>Implementing Reproducible Computational Research</em>. Ed. by V. Stodden, F. Leisch and R. D. Peng. ISBN 978-1466561595. Chapman and Hall/CRC, 2014. <URL:
+http://www.crcpress.com/product/isbn/9781466561595>.
+<button class="source R toggle btn btn-xs btn-primary">
+<span class="glyphicon glyphicon-chevron-down"></span> R source
+</button><pre style=""><code class="source r">xx <- knitcitations::citep(bib[['knitcitations']])
+print(xx)</code></pre>
+[1] &quot;(Boettiger, 2014)&quot;
+<button class="source R toggle btn btn-xs btn-primary">
+<span class="glyphicon glyphicon-chevron-down"></span> R source
+</button><pre style=""><code class="source r"># bibliography()</code></pre>
 </div>
+<p>Citations made with R version 3.1.2 (2014-10-31).</p>
+<p>(Boettiger, 2014).</p>
+<p><code>knitcitations</code> <code>knitcitations::citep(bib[['knitcitations']])</code>.</p>
 <h1>Twitter</h1>
 <p>http://stackoverflow.com/questions/20024047/oauth-issues-with-twitter-package</p>
 <h1>GuardianR</h1>
 <div class="row">
 <button class="source R toggle btn btn-xs btn-primary">
 <span class="glyphicon glyphicon-chevron-down"></span> R source
-</button><pre style=""><code class="source r">FALSE</code></pre><button class="output R toggle btn btn-xs btn-success">
+</button><pre style=""><code class="source r">library(GuardianR)
+results <- get_guardian("islamic+state",
+  from.date="2014-09-16",
+  to.date="2014-09-16",
+  api.key="3xzg2fk53jcdgaj5tbwqqhcz")</code></pre><button class="output R toggle btn btn-xs btn-success">
 <span class="glyphicon glyphicon-chevron-down"></span> R output
-</button><pre style=""><code class="output r">## [1] FALSE
+</button><pre style=""><code class="output r">## [1] "Fetched page #1 of 8"
+## [1] "Fetched page #3 of 8"
+## [1] "Fetched page #5 of 8"
+## [1] "Fetched page #7 of 8"
 </code></pre>
 </div>
 <h1>TODO: how to add a caption?</h1>
 <div class="row">
 <button class="source R toggle btn btn-xs btn-primary">
 <span class="glyphicon glyphicon-chevron-down"></span> R source
-</button><pre style=""><code class="source r">FALSE</code></pre><button class="output R toggle btn btn-xs btn-success">
-<span class="glyphicon glyphicon-chevron-down"></span> R output
-</button><pre style=""><code class="output r">## [1] FALSE
-</code></pre>
+</button><pre style=""><code class="source r"># knitrBootstrap Images are automatically centered, thumbnailed and lightboxed using magnific popup.
+# Code blocks automatically highlighted using highlight.js, optionally including a dynamic style switch.
+# Code/Output block and plot visibility can be toggled with a mouse click
+#   Globally and Per language
+plot(rnorm(10))</code></pre>
+<div class="row">
+<div class="col-md-offset-3 col-md-6">
+<a href="#" class="thumbnail"><img src="data:image/png;base64,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" /> </a>
+</div>
+</div>
 </div>
 <p>TODO: how to add a caption?</p>
 <ul>
@@ -1030,7 +1087,27 @@ opts_knit$set(progress = TRUE, verbose = TRUE)</code></pre>
 <div class="row">
 <button class="source R toggle btn btn-xs btn-primary">
 <span class="glyphicon glyphicon-chevron-down"></span> R source
-</button><pre style=""><code class="source r">FALSE</code></pre>
+</button><pre style=""><code class="source r">opts_chunk$set(eval = FALSE)
+library(magrittr)
+docs[[1]]
+# Replace all “” elements with a space. 
+# We do it because there are not a part of text document but in general a html code.
+# use the non-greedy .*? match - match up until the first following instance of '>'. Without this, if you use just .*, you'll capture everything up to the last '[END DATA]'>'.
+docs2 <- tm_map(docs, function(x) stri_replace_all_regex(x, "<.+?>", " "))
+docs3 <- tm_map(docs2, function(x) stri_replace_all_fixed(x, "\t", " "))
+docs2[[1]]
+
+docs4 <- tm_map(docs3, PlainTextDocument)
+docs5 <- tm_map(docs4, stripWhitespace)
+docs6 <- tm_map(docs5, removeWords, stopwords("english"))
+docs7 <- tm_map(docs6, removePunctuation)
+docs8 <- tm_map(docs7, tolower)
+
+docs8[[1]]
+
+docs %>% 
+  tm_map(FUN = function(x) stri_replace_all_regex(x, "<.+?>", " ")) ->  
+docs2 </code></pre>
 </div>
 <!-- *** reproducibility *** 
 NB: Do not add yaml code here, put it at the start of the top level Rmd -->
@@ -1038,9 +1115,29 @@ NB: Do not add yaml code here, put it at the start of the top level Rmd -->
 <div class="row">
 <button class="source R toggle btn btn-xs btn-primary">
 <span class="glyphicon glyphicon-chevron-down"></span> R source
-</button><pre style=""><code class="source r">FALSE</code></pre><button class="output R toggle btn btn-xs btn-success">
+</button><pre style=""><code class="source r"># zsdfhjs asjdf 
+bib</code></pre><button class="output R toggle btn btn-xs btn-success">
 <span class="glyphicon glyphicon-chevron-down"></span> R output
-</button><pre style=""><code class="output r">## [1] FALSE
+</button><pre style=""><code class="output r">## [1] J. Allaire, J. McPherson, Y. Xie, et al. _rmarkdown: Dynamic
+## Documents for R_. R package version 0.4.2. 2014. <URL:
+## http://rmarkdown.rstudio.com>.
+## 
+## [2] C. Boettiger. _knitcitations: Citations for knitr markdown
+## files_. R package version 1.0.5. 2014. <URL:
+## http://CRAN.R-project.org/package=knitcitations>.
+## 
+## [3] L. Collado-Torres. _dots: Simplifying function calls_. R
+## package version 1.0.0. 2014. <URL:
+## https://github.com/lcolladotor/dots>.
+## 
+## [4] J. Hester. _knitrBootstrap: Knitr Bootstrap framework._ R
+## package version 1.0.0. 2014. <URL: https://github.com/jimhester/>.
+## 
+## [5] Y. Xie. "knitr: A Comprehensive Tool for Reproducible Research
+## in R". In: _Implementing Reproducible Computational Research_. Ed.
+## by V. Stodden, F. Leisch and R. D. Peng. ISBN 978-1466561595.
+## Chapman and Hall/CRC, 2014. <URL:
+## http://www.crcpress.com/product/isbn/9781466561595>.
 </code></pre>
 </div>
 <h1>Reproducibility</h1>
@@ -1059,33 +1156,141 @@ https://github.com/trinker/knitcitations
 <div class="row">
 <button class="source R toggle btn btn-xs btn-primary">
 <span class="glyphicon glyphicon-chevron-up"></span> R source
-</button><pre style="display:none"><code class="source r">FALSE</code></pre>
+</button><pre style="display:none"><code class="source r"># TODO: parse permalink? varialble
+print(rmarkdown::metadata$yamlFileName) # permalink
+docName <- rmarkdown::metadata$yamlFileName
+
+## Create the vignette
+library('knitrBootstrap') 
+knitrBootstrapFlag <- packageVersion('knitrBootstrap') < '1.0.0'
+if(knitrBootstrapFlag) {
+    ## CRAN version
+    library('knitrBootstrap')
+    cat("\n\n\tmetadata:title", rmarkdown::metadata$title, "\n\n")
+    # TODO: stopifnot(file.exists(paste0(rmarkdown::metadata$title, ".Rmd")))
+    print(system.time(knit_bootstrap(docName, chooser=c('boot', 'code'), show_code = TRUE)))
+    # unlink('dots.md') # why remove .md file and in yaml?
+} else {
+    ## GitHub version
+    library('rmarkdown')
+    print(system.time(render(docName)))
+}
+unlink('citations.bib')
+## Note: if you prefer the knitr version use:
+# library('rmarkdown')
+# system.time(render(docName, 'html_document'))
+
+## Extract the R code
+library('knitr')
+knit(docName, tangle = TRUE)
+
+KnitPost <- function(input, base.url = "/") {
+    require(knitr)
+    opts_knit$set(base.url = base.url)
+    fig.path <- paste0("figs/", sub(".Rmd$", "", basename(input)), "/")
+    opts_chunk$set(fig.path = fig.path)
+    opts_chunk$set(fig.cap = "center")
+    render_jekyll()
+    knit(input, envir = parent.frame())
+}
+# TODO: insert the file name dynamically (both from _drafts and _posts?)
+KnitPost(docName)</code></pre>
 </div>
 <h2>YAML boiler plate</h2>
 <div class="row">
 <button class="source R toggle btn btn-xs btn-primary">
 <span class="glyphicon glyphicon-chevron-down"></span> R source
-</button><pre style=""><code class="source r">FALSE</code></pre><button class="output R toggle btn btn-xs btn-success">
+</button><pre style=""><code class="source r">str(rmarkdown::metadata) # https://github.com/rstudio/rmarkdown/issues/260</code></pre><button class="output R toggle btn btn-xs btn-success">
 <span class="glyphicon glyphicon-chevron-down"></span> R output
-</button><pre style=""><code class="output r">## [1] FALSE
+</button><pre style=""><code class="output r">## List of 9
+##  $ yamlFileName: chr "2015-01-02-TODOs.Rmd"
+##  $ title       : chr "List of TODOs"
+##  $ type        : chr "posts"
+##  $ tags        : chr [1:2] "qwe" "asd"
+##  $ categories  : chr [1:2] "ghi" "jkl"
+##  $ published   : logi TRUE
+##  $ output      :List of 1
+##   ..$ knitrBootstrap::bootstrap_document:List of 5
+##   .. ..$ theme            : chr "Cyborg"
+##   .. ..$ theme.chooser    : logi TRUE
+##   .. ..$ highlight        : chr "monokai"
+##   .. ..$ highlight.chooser: logi TRUE
+##   .. ..$ menu             : logi TRUE
+##  $ layout      : chr "post"
+##  $ author      : chr "ttmmghmm"
 </code></pre>
 </div>
 <h2><code>R</code> information</h2>
 <h3>Session and packages</h3>
 <div class="row">
-<button class="output R toggle btn btn-xs btn-success">
+<button class="message R toggle btn btn-xs btn-info">
+<span class="glyphicon glyphicon-chevron-up"></span> R message
+</button><pre style="display:none"><code class="message r">## Session info-----------------------------------------------------------------------------
+</code></pre><button class="output R toggle btn btn-xs btn-success">
 <span class="glyphicon glyphicon-chevron-down"></span> R output
-</button><pre style=""><code class="output r">## [1] FALSE
+</button><pre style=""><code class="output r">##  setting  value                       
+##  version  R version 3.1.2 (2014-10-31)
+##  system   x86_64, linux-gnu           
+##  ui       X11                         
+##  language (EN)                        
+##  collate  C                           
+##  tz       UTC
+</code></pre><button class="message R toggle btn btn-xs btn-info">
+<span class="glyphicon glyphicon-chevron-up"></span> R message
+</button><pre style="display:none"><code class="message r">## Packages---------------------------------------------------------------------------------
+</code></pre><button class="output R toggle btn btn-xs btn-success">
+<span class="glyphicon glyphicon-chevron-down"></span> R output
+</button><pre style=""><code class="output r">##  package        * version  date       source                                   
+##  GuardianR      * 0.5      2014-09-16 CRAN (R 3.1.2)                           
+##  RCurl            1.95.4.5 2014-12-28 CRAN (R 3.1.2)                           
+##  RJSONIO          1.3.0    2014-07-28 CRAN (R 3.1.2)                           
+##  Rcpp             0.11.3   2014-09-29 CRAN (R 3.1.2)                           
+##  RefManageR       0.8.40   2014-10-29 CRAN (R 3.1.2)                           
+##  XML              3.98.1.1 2013-06-20 CRAN (R 3.1.2)                           
+##  bibtex           0.4.0    2014-12-31 CRAN (R 3.1.2)                           
+##  bitops           1.0.6    2013-08-17 CRAN (R 3.1.2)                           
+##  devtools       * 1.6.1    2014-10-07 CRAN (R 3.1.2)                           
+##  digest           0.6.8    2014-12-31 CRAN (R 3.1.2)                           
+##  evaluate         0.5.5    2014-04-29 CRAN (R 3.1.2)                           
+##  formatR          1.0      2014-08-25 CRAN (R 3.1.2)                           
+##  htmltools        0.2.6    2014-09-08 CRAN (R 3.1.2)                           
+##  httr             0.6.1    2015-01-01 CRAN (R 3.1.2)                           
+##  knitcitations  * 1.0.5    2014-11-26 CRAN (R 3.1.2)                           
+##  knitr          * 1.8.13   2015-01-01 local                                    
+##  knitrBootstrap   1.0.0    2015-01-01 Github (jimhester/knitrBootstrap@76c41f0)
+##  lubridate        1.3.3    2013-12-31 CRAN (R 3.1.2)                           
+##  markdown         0.7.4    2014-08-24 CRAN (R 3.1.2)                           
+##  memoise          0.2.1    2014-04-22 CRAN (R 3.1.2)                           
+##  mime             0.2      2014-09-26 CRAN (R 3.1.2)                           
+##  plyr             1.8.1    2014-02-26 CRAN (R 3.1.2)                           
+##  rmarkdown        0.4.2    2015-01-01 Github (rstudio/rmarkdown@ddeb876)       
+##  rstudioapi       0.2      2014-12-31 CRAN (R 3.1.2)                           
+##  stringr          0.6.2    2012-12-06 CRAN (R 3.1.2)                           
+##  yaml             2.1.13   2014-06-12 CRAN (R 3.1.2)
 </code></pre>
 </div>
 <h3>Runtime</h3>
 Vignette generated in <code>userTime</code> seconds.<br />
 <p>
-<p>Timestamp 2015-01-04 19:51:39. <!-- Date the vignette was generated --></p>
+<p>Timestamp 2015-01-04 20:35:56. <!-- Date the vignette was generated --></p>
 <!-- 
 # boiler_plate_bibliography_end has to come last else references in boiler_plate_reproducibility are lost!
 -->
-<code>{ child = '../_posts/boiler_plate_bibliography_end.Rmd'}</code>
+
+<!-- *** Bibliography END ***
+NB: Do not add yaml code here, put it at the start of the top level Rmd 
+-->
+
+<h1>Bibliography</h1>
+<div class="row">
+<p>[1] J. Allaire, J. McPherson, Y. Xie, et al. <em>rmarkdown: Dynamic Documents for R</em>. R package version 0.4.2. 2014. <URL: http://rmarkdown.rstudio.com>.</p>
+<p>[2] C. Boettiger. <em>knitcitations: Citations for knitr markdown files</em>. R package version 1.0.5. 2014. <URL: http://CRAN.R-project.org/package=knitcitations>.</p>
+<p>[3] L. Collado-Torres. <em>dots: Simplifying function calls</em>. R package version 1.0.0. 2014. <URL: https://github.com/lcolladotor/dots>.</p>
+<p>[4] J. Hester. <em>knitrBootstrap: Knitr Bootstrap framework.</em> R package version 1.0.0. 2014. <URL: https://github.com/jimhester/>.</p>
+[5] Y. Xie. &quot;knitr: A Comprehensive Tool for Reproducible Research in R&quot;. In: <em>Implementing Reproducible Computational Research</em>. Ed. by V. Stodden, F. Leisch and R. D. Peng. ISBN 978-1466561595. Chapman and Hall/CRC, 2014. <URL:
+http://www.crcpress.com/product/isbn/9781466561595>.
+</div>
+<p>Citations made with <code>knitcitations</code> (Boettiger, 2014).</p>
 </div>
 </div>
 <div class="navbar navbar-fixed-bottom navbar-inverse">
@@ -1117,6 +1322,9 @@ Type
 </li>
 <li class="active">
 <a href="#" class="toggle-global output" type="output">output</a>
+</li>
+<li class="active">
+<a href="#" class="toggle-global message" type="message">message</a>
 </li>
 <li >
 <a href="#" type="all-output" class="toggle-global">All</a>
