@@ -136,12 +136,15 @@ opts_knit$set(progress = TRUE, verbose = TRUE)
 ```{r child = '../_posts/boiler_plate_bibliography_start.Rmd'}
 ```
 
+# FlickR
+http://www.omegahat.org/Rflickr/
 
 
 # Twitter
 http://stackoverflow.com/questions/20024047/oauth-issues-with-twitter-package
 
 # GuardianR
+* http://cran.r-project.org/web/packages/GuardianR/GuardianR.pdf
 ```{r 'GuardianR'}
 library(GuardianR)
 results <- get_guardian("islamic+state",
@@ -191,11 +194,49 @@ http://opendata.stackexchange.com/questions/1677/a-web-api-users-guide-for-free-
     * http://onepager.togaware.com/TextMiningO.pdf
     * http://cran.r-project.org/web/views/NaturalLanguageProcessing.html
     * http://www.r-bloggers.com/text-mining/
+    * http://cran.r-project.org/doc/contrib/Zhao_R_and_data_mining.pdf
     * http://www.jstatsoft.org/v25/i05/paper
     * http://www.r-bloggers.com/visualising-wikipedia-search-statistics-with-r/
         * search traffic for any article - search statistics for ???Financial crisis???. 
             * The wikiStat() function returns dataframe with the necessary data.
     * http://cran.r-project.org/web/packages/tm.plugin.webmining/vignettes/ShortIntro.pdf
+
+# Databases
+* MongoDB 
+    * http://demo.ocpu.io/jsonlite/man/stream_in/html
+    * http://cran.r-project.org/web/packages/jSonarR/index.html
+* http://www.exmachinatech.net/projects/factualR/
+
+# Shiny
+* https://dl.dropboxusercontent.com/u/5728437/r-in-fashion.html
+
+# streaming
+* streamR: Access to Twitter Streaming API via R
+    * * http://cran.r-project.org/web/packages/streamR/index.html 
+
+# scraping
+* http://cran.r-project.org/web/packages/RSelenium/index.html
+
+# cloud 
+* https://github.com/sckott/analogsea
+
+# packages
+* http://www.omegahat.org/Rflickr/
+* gmailr gmailr: Access the Gmail RESTful API
+    * http://cran.r-project.org/web/packages/gmailr/index.html
+* http://cran.r-project.org/web/packages/tumblR/index.html
+* http://cran.r-project.org/web/packages/twitteR/index.html
+    * http://freakonometrics.hypotheses.org/18605
+* http://cran.r-project.org/web/packages/wikipediatrend/index.html
+* Hacking the Google Trends API
+    * http://techslides.com/hacking-the-google-trends-api
+* http://things-about-r.tumblr.com/post/106806522699/change-point-detection-in-time-series-with-r-and
+
+
+# presentations
+* http://gastonsanchez.com/work/webdata/
+    * http://gastonsanchez.com/work/webdata/getting_web_data_r8_web_apis.pdf
+* http://www.theresearchkitchen.com/archives/1017
 
 ```{r docs not evaluated, eval = FALSE}
 opts_chunk$set(eval = FALSE)
