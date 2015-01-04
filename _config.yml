@@ -9,8 +9,8 @@ permalink: /:year/:month/:day/:title
 
 # https://help.github.com/articles/page-build-failed-file-is-not-properly-utf-8-encoded/
 # http://jekyllrb.com/docs/configuration/
-encoding: ASCII-8BIT
-#encoding: UTF-8
+# encoding: ASCII-8BIT
+encoding: UTF-8
 # time zone for site generation. 
 timezone: Europe/London
 
