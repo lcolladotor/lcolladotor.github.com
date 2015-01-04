@@ -181,7 +181,7 @@ http://opendata.stackexchange.com/questions/1677/a-web-api-users-guide-for-free-
 * http://semanticweb.cs.vu.nl/R/wikipedia_graph/wikipedia_graph.html
 * Tags: [text mining, graphs, wikipedia, crawl, Simple Wikipedia, Wikipedia,
   analytical metrics]
-  * “Basic English 850 basic English words chosen by Charles Kay Ogden.”
+  * ???Basic English 850 basic English words chosen by Charles Kay Ogden.???
 * TODO: dynamic graph, shiny
 
 ## WikiPediR package
@@ -193,7 +193,7 @@ http://opendata.stackexchange.com/questions/1677/a-web-api-users-guide-for-free-
     * http://www.r-bloggers.com/text-mining/
     * http://www.jstatsoft.org/v25/i05/paper
     * http://www.r-bloggers.com/visualising-wikipedia-search-statistics-with-r/
-        * search traffic for any article - search statistics for “Financial crisis”. 
+        * search traffic for any article - search statistics for ???Financial crisis???. 
             * The wikiStat() function returns dataframe with the necessary data.
     * http://cran.r-project.org/web/packages/tm.plugin.webmining/vignettes/ShortIntro.pdf
 
@@ -201,7 +201,7 @@ http://opendata.stackexchange.com/questions/1677/a-web-api-users-guide-for-free-
 opts_chunk$set(eval = FALSE)
 library(magrittr)
 docs[[1]]
-# Replace all “” elements with a space. 
+# Replace all ?????? elements with a space. 
 # We do it because there are not a part of text document but in general a html code.
 # use the non-greedy .*? match - match up until the first following instance of '>'. Without this, if you use just .*, you'll capture everything up to the last '[END DATA]'>'.
 docs2 <- tm_map(docs, function(x) stri_replace_all_regex(x, "<.+?>", " "))
