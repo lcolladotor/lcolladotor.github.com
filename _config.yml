@@ -16,7 +16,7 @@ timezone: Europe/London
 
 # http://stackoverflow.com/questions/17735545/how-do-i-make-jekyll-exclude-my-config-rb-for-sass
 # use glob syntax and exclude a whole directory
-exclude: [*.Rmd, *.html, *.bib, .DS_Store", "README.md", "Rakefile", "changelog.md", ".rvmrc", ".rbenv-version"]
+exclude: [*.Rmd, *.html, "*.Rmd", "*.html", "*.bib", ".DS_Store", "README.md", "Rakefile", "changelog.md", ".rvmrc", ".rbenv-version"]
 
 # syntax highlighting of code snippets using either Pygments or Rouge
 # http://jekyllrb.com/docs/posts/
