@@ -13,10 +13,12 @@ This vignette was generated using:
 Additional semantic markup can be added the the citations themselves, such as the reason for the citation. 
 https://github.com/trinker/knitcitations 
 
-* `knitrBootstrap` ` knitcitations::citep(bib[['knitrBootstrap']], , cito = "usesMethodIn")`
+* `knitrBootstrap` `r citep(bib[['knitrBootstrap']], cito = "usesMethodIn")`
 * Running behind the scenes:  
-    * `knitr` ` knitcitations::citep(bib[['knitr']])` 
-    * `rmarkdown` ` knitcitations::citep(bib[['rmarkdown']])` 
+    * `knitr` `r citep(bib[['knitr']])` 
+    * `rmarkdown` `r citep(bib[['rmarkdown']])` 
+    * Cite an R package using the 'bibentry' object `r citep(citation("RCurl"))`.
+
 
 ```{r boiler_plate_reproducibility, eval=FALSE, bootstrap.show.code=FALSE}
 # TODO: parse permalink? varialble
