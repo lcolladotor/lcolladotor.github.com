@@ -136,23 +136,6 @@ opts_knit$set(progress = TRUE, verbose = TRUE)
 ```{r child = '../_posts/boiler_plate_bibliography_start.Rmd'}
 ```
 
-# here here
-```{r main files boiler_plate_bibliography_end, results='asis', echo=TRUE}
-## Print bibliography https://github.com/trinker/knitcitations
-# bibliography("markdown", ordering = c("authors", "year", "journal"))
-library(knitcitations)
-bib
-xx <- knitcitations::citep(bib[['knitcitations']])
-print(xx)
-# bibliography()
-```
-
-Citations made with 
-`r version$version`.
-
-`r xx`.
-
-`knitcitations` ` knitcitations::citep(bib[['knitcitations']])`.
 
 
 # Twitter
@@ -239,10 +222,6 @@ docs2
 ```
 
 
-
-```{r in main file, eval = TRUE, echo = FALSE, results = 'hide'}
-bib
-```
 
 ```{r child = '../_posts/boiler_plate_reproducibility.Rmd'}
 ```

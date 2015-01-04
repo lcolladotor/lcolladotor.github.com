@@ -984,35 +984,6 @@ startTime <- Sys.time()</code></pre>
 ## http://www.crcpress.com/product/isbn/9781466561595>.
 </code></pre>
 </div>
-<h1>here here</h1>
-<div class="row">
-<button class="source R toggle btn btn-xs btn-primary">
-<span class="glyphicon glyphicon-chevron-down"></span> R source
-</button><pre style=""><code class="source r">## Print bibliography https://github.com/trinker/knitcitations
-# bibliography("markdown", ordering = c("authors", "year", "journal"))
-library(knitcitations)
-bib</code></pre>
-<p>[1] J. Allaire, J. McPherson, Y. Xie, et al. <em>rmarkdown: Dynamic Documents for R</em>. R package version 0.4.2. 2014. <URL:
-http://rmarkdown.rstudio.com>.</p>
-<p>[2] C. Boettiger. <em>knitcitations: Citations for knitr markdown files</em>. R package version 1.0.5. 2014. <URL:
-http://CRAN.R-project.org/package=knitcitations>.</p>
-<p>[3] L. Collado-Torres. <em>dots: Simplifying function calls</em>. R package version 1.0.0. 2014. <URL:
-https://github.com/lcolladotor/dots>.</p>
-<p>[4] J. Hester. <em>knitrBootstrap: Knitr Bootstrap framework.</em> R package version 1.0.0. 2014. <URL: https://github.com/jimhester/>.</p>
-[5] Y. Xie. &quot;knitr: A Comprehensive Tool for Reproducible Research in R&quot;. In: <em>Implementing Reproducible Computational Research</em>. Ed. by V. Stodden, F. Leisch and R. D. Peng. ISBN 978-1466561595. Chapman and Hall/CRC, 2014. <URL:
-http://www.crcpress.com/product/isbn/9781466561595>.
-<button class="source R toggle btn btn-xs btn-primary">
-<span class="glyphicon glyphicon-chevron-down"></span> R source
-</button><pre style=""><code class="source r">xx <- knitcitations::citep(bib[['knitcitations']])
-print(xx)</code></pre>
-[1] &quot;(Boettiger, 2014)&quot;
-<button class="source R toggle btn btn-xs btn-primary">
-<span class="glyphicon glyphicon-chevron-down"></span> R source
-</button><pre style=""><code class="source r"># bibliography()</code></pre>
-</div>
-<p>Citations made with R version 3.1.2 (2014-10-31).</p>
-<p>(Boettiger, 2014).</p>
-<p><code>knitcitations</code> <code>knitcitations::citep(bib[['knitcitations']])</code>.</p>
 <h1>Twitter</h1>
 <p>http://stackoverflow.com/questions/20024047/oauth-issues-with-twitter-package</p>
 <h1>GuardianR</h1>
@@ -1042,7 +1013,7 @@ results <- get_guardian("islamic+state",
 plot(rnorm(10))</code></pre>
 <div class="row">
 <div class="col-md-offset-3 col-md-6">
-<a href="#" class="thumbnail"><img src="data:image/png;base64,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" /> </a>
+<a href="#" class="thumbnail"><img src="data:image/png;base64,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" /> </a>
 </div>
 </div>
 </div>
@@ -1113,49 +1084,24 @@ docs %>%
 docs2 </code></pre>
 </div>
 <!-- *** reproducibility *** 
-NB: Do not add yaml code here, put it at the start of the top level Rmd -->
+NB: Do not add yaml code here, put it at the start of the top level Rmd 
+-->
 
-<div class="row">
-<button class="source R toggle btn btn-xs btn-primary">
-<span class="glyphicon glyphicon-chevron-down"></span> R source
-</button><pre style=""><code class="source r"># zsdfhjs asjdf 
-bib</code></pre><button class="output R toggle btn btn-xs btn-success">
-<span class="glyphicon glyphicon-chevron-down"></span> R output
-</button><pre style=""><code class="output r">## [1] J. Allaire, J. McPherson, Y. Xie, et al. _rmarkdown: Dynamic
-## Documents for R_. R package version 0.4.2. 2014. <URL:
-## http://rmarkdown.rstudio.com>.
-## 
-## [2] C. Boettiger. _knitcitations: Citations for knitr markdown
-## files_. R package version 1.0.5. 2014. <URL:
-## http://CRAN.R-project.org/package=knitcitations>.
-## 
-## [3] L. Collado-Torres. _dots: Simplifying function calls_. R
-## package version 1.0.0. 2014. <URL:
-## https://github.com/lcolladotor/dots>.
-## 
-## [4] J. Hester. _knitrBootstrap: Knitr Bootstrap framework._ R
-## package version 1.0.0. 2014. <URL: https://github.com/jimhester/>.
-## 
-## [5] Y. Xie. "knitr: A Comprehensive Tool for Reproducible Research
-## in R". In: _Implementing Reproducible Computational Research_. Ed.
-## by V. Stodden, F. Leisch and R. D. Peng. ISBN 978-1466561595.
-## Chapman and Hall/CRC, 2014. <URL:
-## http://www.crcpress.com/product/isbn/9781466561595>.
-</code></pre>
-</div>
 <h1>Reproducibility</h1>
 <p>This final section highlights how this vignette was created.</p>
 <h2>To recreate this vignette</h2>
 <p>This vignette was generated using:</p>
-<!-- Additional semantic markup can be added the the citations themselves, such as the reason for the citation. 
-https://github.com/trinker/knitcitations 
-
-* `knitrBootstrap` ` knitcitations::citep(bib[['knitrBootstrap']], , cito = "usesMethodIn")`
-* Running behind the scenes:  
-    * `knitr` ` knitcitations::citep(bib[['knitr']])` 
-    * `rmarkdown` ` knitcitations::citep(bib[['rmarkdown']])` 
+<!-- 
 -->
-
+<p>Additional semantic markup can be added the the citations themselves, such as the reason for the citation. https://github.com/trinker/knitcitations</p>
+<ul>
+<li><code>knitrBootstrap</code> <code>knitcitations::citep(bib[['knitrBootstrap']], , cito = &quot;usesMethodIn&quot;)</code></li>
+<li>Running behind the scenes:
+<ul>
+<li><code>knitr</code> <code>knitcitations::citep(bib[['knitr']])</code></li>
+<li><code>rmarkdown</code> <code>knitcitations::citep(bib[['rmarkdown']])</code></li>
+</ul></li>
+</ul>
 <div class="row">
 <button class="source R toggle btn btn-xs btn-primary">
 <span class="glyphicon glyphicon-chevron-up"></span> R source
@@ -1273,9 +1219,9 @@ KnitPost(docName)</code></pre>
 </code></pre>
 </div>
 <h3>Runtime</h3>
-Vignette generated in <code>userTime</code> seconds.<br />
+Vignette generated in 6.1 seconds.<br />
 <p>
-<p>Timestamp 2015-01-04 20:44:15. <!-- Date the vignette was generated --></p>
+<p>Timestamp 2015-01-04 20:49:51. <!-- Date the vignette was generated --></p>
 <!-- 
 # boiler_plate_bibliography_end has to come last else references in boiler_plate_reproducibility are lost!
 -->
@@ -1285,15 +1231,10 @@ NB: Do not add yaml code here, put it at the start of the top level Rmd
 -->
 
 <h1>Bibliography</h1>
-<div class="row">
-<p>[1] J. Allaire, J. McPherson, Y. Xie, et al. <em>rmarkdown: Dynamic Documents for R</em>. R package version 0.4.2. 2014. <URL: http://rmarkdown.rstudio.com>.</p>
-<p>[2] C. Boettiger. <em>knitcitations: Citations for knitr markdown files</em>. R package version 1.0.5. 2014. <URL: http://CRAN.R-project.org/package=knitcitations>.</p>
-<p>[3] L. Collado-Torres. <em>dots: Simplifying function calls</em>. R package version 1.0.0. 2014. <URL: https://github.com/lcolladotor/dots>.</p>
-<p>[4] J. Hester. <em>knitrBootstrap: Knitr Bootstrap framework.</em> R package version 1.0.0. 2014. <URL: https://github.com/jimhester/>.</p>
-[5] Y. Xie. &quot;knitr: A Comprehensive Tool for Reproducible Research in R&quot;. In: <em>Implementing Reproducible Computational Research</em>. Ed. by V. Stodden, F. Leisch and R. D. Peng. ISBN 978-1466561595. Chapman and Hall/CRC, 2014. <URL:
-http://www.crcpress.com/product/isbn/9781466561595>.
-</div>
 <p>Citations made with <code>knitcitations</code> (Boettiger, 2014).</p>
+<div class="row">
+[1] C. Boettiger. <em>knitcitations: Citations for knitr markdown files</em>. R package version 1.0.5. 2014. <URL: http://CRAN.R-project.org/package=knitcitations>.
+</div>
 </div>
 </div>
 <div class="navbar navbar-fixed-bottom navbar-inverse">

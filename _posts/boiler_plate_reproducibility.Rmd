@@ -1,18 +1,6 @@
 <!-- *** reproducibility *** 
-NB: Do not add yaml code here, put it at the start of the top level Rmd -->
-
-```{r sdfsdf, eval = TRUE}
-# zsdfhjs asjdf 
-bib
-
-```
-
-```{r list all Rmd files, eval = TRUE, echo = FALSE, results = 'hide'}
-bib
-#rmd <- list.files(pattern = '*.Rmd', recursive = T, include.dirs = T)
-#chunks <- paste0("```{r child = '", rmd, "'}\n```\n")
-#cat(chunks, sep = '\n')
-```
+NB: Do not add yaml code here, put it at the start of the top level Rmd 
+-->
 
 # Reproducibility
 This final section highlights how this vignette was created.
@@ -20,14 +8,15 @@ This final section highlights how this vignette was created.
 ## To recreate this vignette
 This vignette was generated using:    
 
-<!-- Additional semantic markup can be added the the citations themselves, such as the reason for the citation. 
+<!-- 
+-->
+Additional semantic markup can be added the the citations themselves, such as the reason for the citation. 
 https://github.com/trinker/knitcitations 
 
 * `knitrBootstrap` ` knitcitations::citep(bib[['knitrBootstrap']], , cito = "usesMethodIn")`
 * Running behind the scenes:  
     * `knitr` ` knitcitations::citep(bib[['knitr']])` 
     * `rmarkdown` ` knitcitations::citep(bib[['rmarkdown']])` 
--->
 
 ```{r boiler_plate_reproducibility, eval=FALSE, bootstrap.show.code=FALSE}
 # TODO: parse permalink? varialble
@@ -93,5 +82,5 @@ session_info()
 totalTime <- diff(c(startTime, Sys.time()))
 userTime <- round(totalTime, digits = 1)
 ```
-Vignette generated in ` userTime` seconds.   
+Vignette generated in `r userTime` seconds.   
 <p>Timestamp `r Sys.time()`. <!-- Date the vignette was generated -->
