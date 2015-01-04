@@ -27,8 +27,8 @@ output:
     # https://github.com/jimhester/knitrBootstrap#package-options
     # title: "where does this appear? # (NULL) Set the title for the html document
     # http://bootswatch.com/ optionally including a dynamic style switch.
-    theme: slate # cyborg slate darkly superhero cerulean 
-    #theme.chooser: TRUE # (FALSE) - Add a bootstrap style chooser to the page.
+    theme: superhero # cyborg slate darkly superhero cerulean 
+    theme.chooser: TRUE # (FALSE) - Add a bootstrap style chooser to the page.
     # highlight - (HighlightJS) - Set the default code style.
     # https://github.com/jimhester/knitrBootstrap#highlight-themes
     highlight: Zenburn # HighlightJs # google code 
