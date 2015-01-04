@@ -10,7 +10,7 @@ defaults:
       path: ""
       type: "posts"
     values:
-      layout:
+      output:
         # https://github.com/jimhester/knitrBootstrap
         # http://cran.r-project.org/web/packages/knitrBootstrap/README.html
         # ::bootstrap_document custom rendering function for the Rmarkdown package.
