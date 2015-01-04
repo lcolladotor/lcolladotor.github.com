@@ -14,11 +14,12 @@ title: List of TODOs # date: "2014 December" # (NULL) Set the title for the html
 # like categories, tags can be specified as a YAML list or a space- separated string.
 # http://en.wikipedia.org/wiki/YAML#Lists
 type: posts
+layout: post
 tags:
-- qwe
-- asd
+- Rwww
+- plotwwww
+categories: rstatswww dddd
 # [ abc, def]
-categories: [ghi, jkl]
 ### everything (?) is a post and every post page is a bootstrap_document (?)
 # published = false => Jekyll will not process Rmd file when site is generated
 # Else Rmd file appears in the blog folders _posts, with html file, 
@@ -60,7 +61,6 @@ output:
   #  toc: true
   #  highlight: zenburn
 # output: ioslides_presentation
-layout: post
 author: ttmmghmm
 # fontsize: 18pt # does it exist?
 ---
