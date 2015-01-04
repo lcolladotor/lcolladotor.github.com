@@ -15,7 +15,7 @@ categories: rstats
 
 
 _This is a guest post by [Prasad Patil](http://www.biostat.jhsph.edu/~prpatil/) that answers the question: how to put a shape in the margin of an R plot?_
-
+ 
 The help page for __R__'s `par()` function is a somewhat impenetrable list 
 of abbreviations that allow you to manipulate anything and everything
 in the plotting device. You may have used this function in the past
