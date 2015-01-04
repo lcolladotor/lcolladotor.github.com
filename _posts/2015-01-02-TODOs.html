@@ -1,3 +1,9 @@
+---
+tags:
+- Rwww
+- plotwwww
+categories: rstatswww dddd
+---
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -1035,7 +1041,7 @@ plot(rnorm(10))</code></pre>
 <ul>
 <li>http://semanticweb.cs.vu.nl/R/wikipedia_graph/wikipedia_graph.html</li>
 <li>Tags: [text mining, graphs, wikipedia, crawl, Simple Wikipedia, Wikipedia, analytical metrics]</li>
-<li>“Basic English 850 basic English words chosen by Charles Kay Ogden.”</li>
+<li>???Basic English 850 basic English words chosen by Charles Kay Ogden.???</li>
 <li>TODO: dynamic graph, shiny</li>
 </ul>
 <h2>WikiPediR package</h2>
@@ -1050,7 +1056,7 @@ plot(rnorm(10))</code></pre>
 <li>http://www.jstatsoft.org/v25/i05/paper</li>
 <li>http://www.r-bloggers.com/visualising-wikipedia-search-statistics-with-r/
 <ul>
-<li>search traffic for any article - search statistics for “Financial crisis”.
+<li>search traffic for any article - search statistics for ???Financial crisis???.
 <ul>
 <li>The wikiStat() function returns dataframe with the necessary data.</li>
 </ul></li>
@@ -1064,7 +1070,7 @@ plot(rnorm(10))</code></pre>
 </button><pre style=""><code class="source r">opts_chunk$set(eval = FALSE)
 library(magrittr)
 docs[[1]]
-# Replace all “” elements with a space. 
+# Replace all ?????? elements with a space. 
 # We do it because there are not a part of text document but in general a html code.
 # use the non-greedy .*? match - match up until the first following instance of '>'. Without this, if you use just .*, you'll capture everything up to the last '[END DATA]'>'.
 docs2 <- tm_map(docs, function(x) stri_replace_all_regex(x, "<.+?>", " "))

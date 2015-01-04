@@ -73,7 +73,7 @@ gems:
   - jekyll-sitemap
 
 # Pagination (added this line) - default number of articles per page?
-paginate: 2
+paginate: 1
 
 # All Jekyll-Bootstrap specific configurations are namespaced into this hash
 JB :
