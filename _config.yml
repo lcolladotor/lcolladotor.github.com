@@ -10,7 +10,7 @@ defaults:
       path: ""
       type: "posts"
     values:
-      output:
+      layout:
         # https://github.com/jimhester/knitrBootstrap
         # http://cran.r-project.org/web/packages/knitrBootstrap/README.html
         # ::bootstrap_document custom rendering function for the Rmarkdown package.
@@ -45,7 +45,7 @@ defaults:
         #  toc: true
         #  highlight: zenburn
       # output: ioslides_presentation
-      layout: post
+      # layout: post
       # layout: "my-site"
       author: ttmmghmm
       # fontsize: 18pt # does it exist?
