@@ -13,6 +13,7 @@ title: List of TODOs # date: "2014 December" # (NULL) Set the title for the html
 #
 # like categories, tags can be specified as a YAML list or a space- separated string.
 # http://en.wikipedia.org/wiki/YAML#Lists
+type: "posts"
 tags:
 - qwe
 - asd
