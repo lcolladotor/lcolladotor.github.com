@@ -2,7 +2,7 @@
 yamlFileName: 2015-01-10-sparkline.Rmd # WARNING: update the filename?
 # print(rmarkdown::metadata$yamlFileName) # permalink
 # library(knitr)
-# setwd("~/git/ttmmghmm.github.io/_drafts") ; fn <- "2015-01-10-sparkline.Rmd" ; knit(fn)  # to get the .md file 
+# setwd("~/git/ttmmghmm.github.io/_posts") ; fn <- "2015-01-10-sparkline.Rmd" ; knit(fn)  # to get the .md file 
 #
 # library(knitrBootstrap)
 # rmarkdown::render(fn, knitrBootstrap::bootstrap_document(), clean = FALSE) # no md?
@@ -19,9 +19,9 @@ title: "sparkline"
 type: posts
 layout: post
 tags:
-- Rwww
-- plotwwww
-categories: rstatswww dddd
+- R
+- sparkline plot
+categories: rstats sparkline
 author: ttmmghmm
 ---
 
@@ -48,7 +48,7 @@ opts_chunk$set(fig.width = 5, fig.height = 5)
 opts_chunk$set(background = c('gray10'), panel = TRUE) 
 # http://getbootstrap.com/css/#grid
 # bootstrap.thumbnail - (TRUE) - Thumbnail and lightbox images.
-opts_chunk$set(thumbnail = TRUE, thumbnail.size = 'col-md-2')
+opts_chunk$set(thumbnail = TRUE, thumbnail.size = 'col-md-6')
 # .class ('row') - class to apply to the div containing the chunk.
 # opts_chunk$set(class = 'rowew')
 # bootstrap.show.code - (TRUE) - Code from this chunk starts as shown.
@@ -68,11 +68,9 @@ opts_knit$set(progress = TRUE, verbose = TRUE)
 ```
 
 
-http://www.htmlwidgets.org/develop_intro.html
-
-https://github.com/htmlwidgets/sparkline
-
-
+# Sparklines
+* https://github.com/htmlwidgets/sparkline
+* http://www.htmlwidgets.org/develop_intro.html
 
 ```{r installSparkline, eval = FALSE}
 library(devtools)
@@ -123,7 +121,3 @@ Bar charts  `r sparkline(abs(x), type = 'bar')`  negative values: `r sparkline(x
 
 ```{r child = c('../_posts/boiler_plate_reproducibility.Rmd', '../_posts/boiler_plate_bibliography_end.Rmd') }
 ```
-<!-- 
-# boiler_plate_bibliography_end has to come last else references in boiler_plate_reproducibility are lost!
--->
-

@@ -31,6 +31,14 @@ author: ttmmghmm
       <a href="{{ post.url }}">{{ post.title }}</a>
     </li>
   {% endfor %}
+Hello {{ 'tobi' | upcase }}
+Hello tobi has {{ 'tobi' | size }} letters!
+Hello {{ '*tobi*' | textilize | upcase }}
+Hello {{ 'now' | date: "%Y %h" }}
+Hello {{name}}
+Hello {{user.name}}
+Hello {{ 'tobi' }}
+
 <!-- http://jekyllrb.com/docs/collections/
 {{ con tent }}
 {{ out put }}
@@ -257,7 +265,3 @@ http://beautifuldata.net/2015/01/anomaly-detection-with-wikipedia-page-view-data
 
 ```{r child = c('../_posts/boiler_plate_reproducibility.Rmd', '../_posts/boiler_plate_bibliography_end.Rmd') }
 ```
-<!-- 
-# boiler_plate_bibliography_end has to come last else references in boiler_plate_reproducibility are lost!
--->
-
