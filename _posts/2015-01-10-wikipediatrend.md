@@ -1,6 +1,8 @@
 ---
-yamlFileName: 2015-01-02-TODOs.Rmd # WARNING: update the filename?
+yamlFileName: 2015-01-10-wikipediatrend.Rmd # WARNING: update the filename?
+# print(rmarkdown::metadata$yamlFileName) # permalink
 # setwd("~/git/ttmmghmm.github.io/_posts") ; library(knitr)
+# fn <- "2015-01-10-wikipediatrend.Rmd" ; knit(fn)  # to get the .md file 
 # library(knitrBootstrap)
 # rmarkdown::render(fn, knitrBootstrap::bootstrap_document(), clean = FALSE) # no md?
 # https://github.com/jimhester/knitrBootstrap#bootstrap-themes
@@ -66,46 +68,21 @@ author: ttmmghmm
 ---
 
 # Displaying an index of posts
-http://jekyllrb.com/docs/posts/ says you can embed html and yaml variables.
-
-* So does http://jekyllrb.com/docs/templates/
-    * http://jekyllrb.com/docs/templates/
-* http://rmarkdown.rstudio.com/ doesnt say anything?
+* {{ site.posts }}
 * {% for post in site.posts %}
     <li>
       <a href="{{ post.url }}">{{ post.title }}</a>
     </li>
   {% endfor %}
 <!-- http://jekyllrb.com/docs/collections/
-{{  }}
-
-{{ site.pos ts }}
 {{ con tent }}
 {{ out put }}
 -->
-
-
-# What they dont tell you about Rmarkdown
-## Lists
-1. Unordered lists should be a doddle but there are gotchas.
-    * The first element in a list _must_ be preceeded by a blank line before the first item.
-        * Ending the preceeding line with two or more spaces does not seem to work.
-            * Even though it is documented to.
-        * Neither does ending the line with html like < b r >.
-            * TODO: how to do a literal quote.
-    * You need to put two tabs at the start of a sub item.
-        + Else the subitem will not render as a subitem in your list.
-
-# Chunk options
-* Avoid spaces and periods . in chunk labels and directory names
-* https://github.com/jimhester/knitrBootstrap#chunk-options
-    bootstrap.thumbnail: TRUE # Thumbnail and lightbox images.
-    bootstrap.thumbnail.size: 'col-md-6' # size in bootstrap columns. (see Bootstrap Grid
-
-## can change the default global options
+# Change the default global options
 https://github.com/jimhester/knitrBootstrap#chunk-options
 
 ```r
+library(magrittr)
 # https://github.com/jimhester/knitrBootstrap#chunk-options
 # colors() [grep(patt = "dark", x = colours())]
 #     panel: FALSE #  Use panels rather than buttons to toggle blocks.
@@ -114,9 +91,9 @@ opts_chunk$set(fig.width = 5, fig.height = 5)
 opts_chunk$set(background = c('gray10'), panel = TRUE) 
 # http://getbootstrap.com/css/#grid
 # bootstrap.thumbnail - (TRUE) - Thumbnail and lightbox images.
-opts_chunk$set(thumbnail = TRUE, thumbnail.size = 'col-md-12')
+opts_chunk$set(thumbnail = TRUE, thumbnail.size = 'col-md-2')
 # .class ('row') - class to apply to the div containing the chunk.
-opts_chunk$set(class = 'rowew')
+# opts_chunk$set(class = 'rowew')
 # bootstrap.show.code - (TRUE) - Code from this chunk starts as shown.
 # opts_chunk$set(code = FALSE, output = FALSE) 
 # opts_chunk$set(echo = FALSE, cache = FALSE)
@@ -138,7 +115,6 @@ opts_chunk$set(fig.width = 5, fig.height = 5, warning = FALSE, echo = TRUE, cach
 ## Track time spent on making the vignette
 startTime <- Sys.time()
 ```
-
 
 
 <!-- NB: Do not add yaml code here, put it at the start of the top level Rmd -->
@@ -169,66 +145,20 @@ startTime <- Sys.time()
 ## http://www.crcpress.com/product/isbn/9781466561595>.
 ```
 
-# FlickR
-http://www.omegahat.org/Rflickr/
-
-
-# Twitter
-http://stackoverflow.com/questions/20024047/oauth-issues-with-twitter-package
-
-# GuardianR
-* http://cran.r-project.org/web/packages/GuardianR/GuardianR.pdf
-
-```r
-library(GuardianR)
-results <- get_guardian("islamic+state",
-  from.date="2014-09-16",
-  to.date="2014-09-16",
-  api.key="3xzg2fk53jcdgaj5tbwqqhcz")
-```
-
-```
-## [1] "Fetched page #1 of 8"
-## [1] "Fetched page #3 of 8"
-## [1] "Fetched page #5 of 8"
-## [1] "Fetched page #7 of 8"
-```
-
-# TODO: how to add a caption?
-
-```r
-# knitrBootstrap Images are automatically centered, thumbnailed and lightboxed using magnific popup.
-# Code blocks automatically highlighted using highlight.js, optionally including a dynamic style switch.
-# Code/Output block and plot visibility can be toggled with a mouse click
-#   Globally and Per language
-plot(rnorm(10))
-```
-
-![plot of chunk TODO: how to add a caption?](figure/TODO: how to add a caption?-1.png) 
-TODO: how to add a caption?
-
-
-
-* http://cran.r-project.org/web/packages/GuardianR/GuardianR.pdf
-
-
-# Bitcoin
-http://beautifuldata.net/2015/01/querying-the-bitcoin-blockchain-with-r/
-
-
-# APIs
-## public
-http://opendata.stackexchange.com/questions/1677/a-web-api-users-guide-for-free-and-open-data?newsletter=1&nlcode=386863%7c20e3
-  
 # Wikipedia
 * Tags: text mining
 * Packages: tm
 
-## Anomolies in page views
-use the wikipediatrend package for convenience access statistics directly downloaded into your R-session. 
-* http://cran.r-project.org/web/packages/wikipediatrend/index.html
-
-See also [https://github.com/petermeissner/wikipediatrend] for a quick introduction to package use.
+## Anomolies in Wikipedia page views
+* Use the wikipediatrend package for convenience access statistics directly downloaded into your R-session. 
+* Page access statistics 
+    * e.g. http://stats.grok.se/en/201409/Peter_Principle. 
+    * http://cran.r-project.org/web/packages/wikipediatrend/index.html
+    * See also https://github.com/petermeissner/wikipediatrend for a quick introduction to package use.
+* info pages 
+    * e.g. https://en.wikipedia.org/w/index.php?title=Peter_Principle&action=info. 
+    * See the MediaWiki-package
+    , this package allows loading page view statistics into R.
 
 ### http://beautifuldata.net/2015/01/anomaly-detection-with-wikipedia-page-view-data/
 
@@ -258,7 +188,7 @@ views <- views[order(views$timestamp),]
 ggplot(views, aes(timestamp, count)) + geom_line() + scale_x_datetime() + xlab("") + ylab("views")
 ```
 
-![plot of chunk unnamed-chunk-6](figure/unnamed-chunk-6-1.png) 
+![plot of chunk unnamed-chunk-5](figure/unnamed-chunk-5-1.png) 
 feed a dataframe with a date-time and a value column into the AnomalyDetection function AnomalyDetectionTs(). But in this case, this doesn’t work because our data is much too coarse
 
 our data is much too coarse. It doesn’t seem to work with data on days. So, we use the more generic function AnomalyDetectionVec() that just needs the values and some definition of a period. In this case, the period is 7 (= 7 days for one week):
@@ -268,7 +198,7 @@ res = AnomalyDetectionVec(views$count, max_anoms=0.05, direction='both', plot=TR
 res$plot
 ```
 
-![plot of chunk unnamed-chunk-7](figure/unnamed-chunk-7-1.png) 
+![plot of chunk unnamed-chunk-6](figure/unnamed-chunk-6-1.png) 
 
 
 If you want to do this with more time points though, use the wikipediatrend package for convenience access statistics directly downloaded into your R-session. 
@@ -309,7 +239,7 @@ system.time(df <-
 
 ```
 ##    user  system elapsed 
-##   0.082   0.295   4.418
+##   0.133   0.281   4.304
 ```
 It shows us which URLs it used to retrieve the information we were asking for.
 
@@ -338,7 +268,7 @@ plot( peter_principle,
 lines(peter_principle)
 ```
 
-![plot of chunk unnamed-chunk-9](figure/unnamed-chunk-9-1.png) 
+![plot of chunk unnamed-chunk-8](figure/unnamed-chunk-8-1.png) 
 most pressing on workdays -- or maybe people in general just tend to use their computers less on weekends.
 
 ### friendly
@@ -351,11 +281,47 @@ Let's try it out by making two subsequent requests to get access statistics for 
 
 
 ```r
-file.remove("wp__Islamic_State_of_Iraq_and_the_Levant__en.csv")
+csv <- "wp__Islamic_State_of_Iraq_and_the_Levant__en.csv"
+if (file.exists(csv)) file.remove(csv)
 ```
 
 ```
-## [1] FALSE
+## [1] TRUE
+```
+
+```r
+isis <- wp_trend("Islamic_State_of_Iraq_and_the_Levant", from="2013-01-01", friendly=T)
+```
+
+```
+## http://stats.grok.se/json/en/201301/Islamic_State_of_Iraq_and_the_Levant
+## http://stats.grok.se/json/en/201302/Islamic_State_of_Iraq_and_the_Levant
+## http://stats.grok.se/json/en/201303/Islamic_State_of_Iraq_and_the_Levant
+## http://stats.grok.se/json/en/201304/Islamic_State_of_Iraq_and_the_Levant
+## http://stats.grok.se/json/en/201305/Islamic_State_of_Iraq_and_the_Levant
+## http://stats.grok.se/json/en/201306/Islamic_State_of_Iraq_and_the_Levant
+## http://stats.grok.se/json/en/201307/Islamic_State_of_Iraq_and_the_Levant
+## http://stats.grok.se/json/en/201308/Islamic_State_of_Iraq_and_the_Levant
+## http://stats.grok.se/json/en/201309/Islamic_State_of_Iraq_and_the_Levant
+## http://stats.grok.se/json/en/201310/Islamic_State_of_Iraq_and_the_Levant
+## http://stats.grok.se/json/en/201311/Islamic_State_of_Iraq_and_the_Levant
+## http://stats.grok.se/json/en/201312/Islamic_State_of_Iraq_and_the_Levant
+## http://stats.grok.se/json/en/201401/Islamic_State_of_Iraq_and_the_Levant
+## http://stats.grok.se/json/en/201402/Islamic_State_of_Iraq_and_the_Levant
+## http://stats.grok.se/json/en/201403/Islamic_State_of_Iraq_and_the_Levant
+## http://stats.grok.se/json/en/201404/Islamic_State_of_Iraq_and_the_Levant
+## http://stats.grok.se/json/en/201405/Islamic_State_of_Iraq_and_the_Levant
+## http://stats.grok.se/json/en/201406/Islamic_State_of_Iraq_and_the_Levant
+## http://stats.grok.se/json/en/201407/Islamic_State_of_Iraq_and_the_Levant
+## http://stats.grok.se/json/en/201408/Islamic_State_of_Iraq_and_the_Levant
+## http://stats.grok.se/json/en/201409/Islamic_State_of_Iraq_and_the_Levant
+## http://stats.grok.se/json/en/201410/Islamic_State_of_Iraq_and_the_Levant
+## http://stats.grok.se/json/en/201411/Islamic_State_of_Iraq_and_the_Levant
+## http://stats.grok.se/json/en/201412/Islamic_State_of_Iraq_and_the_Levant
+## http://stats.grok.se/json/en/201501/Islamic_State_of_Iraq_and_the_Levant
+## 
+## Results written to:
+## /home/rstudio/git/ttmmghmm.github.io/_posts/wp__Islamic_State_of_Iraq_and_the_Levant__en.csv
 ```
 
 
@@ -383,68 +349,6 @@ http://beautifuldata.net/2015/01/anomaly-detection-with-wikipedia-page-view-data
             * The wikiStat() function returns dataframe with the necessary data.
     * http://cran.r-project.org/web/packages/tm.plugin.webmining/vignettes/ShortIntro.pdf
 
-# Databases
-* MongoDB 
-    * http://demo.ocpu.io/jsonlite/man/stream_in/html
-    * http://cran.r-project.org/web/packages/jSonarR/index.html
-* http://www.exmachinatech.net/projects/factualR/
-
-# Shiny
-* https://dl.dropboxusercontent.com/u/5728437/r-in-fashion.html
-
-# streaming
-* streamR: Access to Twitter Streaming API via R
-    * * http://cran.r-project.org/web/packages/streamR/index.html 
-
-# scraping
-* http://cran.r-project.org/web/packages/RSelenium/index.html
-
-# cloud 
-* https://github.com/sckott/analogsea
-
-# packages
-* http://www.omegahat.org/Rflickr/
-* gmailr gmailr: Access the Gmail RESTful API
-    * http://cran.r-project.org/web/packages/gmailr/index.html
-* http://cran.r-project.org/web/packages/tumblR/index.html
-* http://cran.r-project.org/web/packages/twitteR/index.html
-    * http://freakonometrics.hypotheses.org/18605
-* http://cran.r-project.org/web/packages/wikipediatrend/index.html
-* Hacking the Google Trends API
-    * http://techslides.com/hacking-the-google-trends-api
-* http://things-about-r.tumblr.com/post/106806522699/change-point-detection-in-time-series-with-r-and
-
-
-# presentations
-* http://gastonsanchez.com/work/webdata/
-    * http://gastonsanchez.com/work/webdata/getting_web_data_r8_web_apis.pdf
-* http://www.theresearchkitchen.com/archives/1017
-
-
-```r
-opts_chunk$set(eval = FALSE)
-library(magrittr)
-docs[[1]]
-# Replace all ?????? elements with a space. 
-# We do it because there are not a part of text document but in general a html code.
-# use the non-greedy .*? match - match up until the first following instance of '>'. Without this, if you use just .*, you'll capture everything up to the last '[END DATA]'>'.
-docs2 <- tm_map(docs, function(x) stri_replace_all_regex(x, "<.+?>", " "))
-docs3 <- tm_map(docs2, function(x) stri_replace_all_fixed(x, "\t", " "))
-docs2[[1]]
-
-docs4 <- tm_map(docs3, PlainTextDocument)
-docs5 <- tm_map(docs4, stripWhitespace)
-docs6 <- tm_map(docs5, removeWords, stopwords("english"))
-docs7 <- tm_map(docs6, removePunctuation)
-docs8 <- tm_map(docs7, tolower)
-
-docs8[[1]]
-
-docs %>% 
-  tm_map(FUN = function(x) stri_replace_all_regex(x, "<.+?>", " ")) ->  
-docs2 
-```
-
 
 
 
@@ -466,7 +370,7 @@ https://github.com/trinker/knitcitations
 * `knitrBootstrap` 
 * Running behind the scenes:  
     * `knitr` (Xie, 2014) 
-    * `rmarkdown` (Allaire, McPherson, Xie, Wickham, Cheng, and Allen, 2014) 
+    * `rmarkdown` (Allaire, McPherson, Xie, et al., 2014) 
     * Cite an R package using the 'bibentry' object (Temple Lang, 2014).
 
 
@@ -572,6 +476,7 @@ str(rmarkdown::metadata) # https://github.com/rstudio/rmarkdown/issues/260
 ##  knitrBootstrap   * 1.0.0     2015-01-01 Github (jimhester/knitrBootstrap@76c41f0)
 ##  labeling           0.3       2014-08-23 CRAN (R 3.1.2)                           
 ##  lubridate          1.3.3     2013-12-31 CRAN (R 3.1.2)                           
+##  magrittr         * 1.5       2014-11-22 CRAN (R 3.1.2)                           
 ##  markdown           0.7.4     2014-08-24 CRAN (R 3.1.2)                           
 ##  memoise            0.2.1     2014-04-22 CRAN (R 3.1.2)                           
 ##  munsell            0.4.2     2013-07-11 CRAN (R 3.1.2)                           
@@ -588,12 +493,8 @@ str(rmarkdown::metadata) # https://github.com/rstudio/rmarkdown/issues/260
 
 ### Runtime 
 
-Vignette generated in 22.2 seconds.   
-<p>Timestamp 2015-01-10 21:22:28. <!-- Date the vignette was generated -->
-
-<!-- 
-# boiler_plate_bibliography_end has to come last else references in boiler_plate_reproducibility are lost!
--->
+Vignette generated in 30.1 seconds.   
+<p>Timestamp 2015-01-10 21:37:25. <!-- Date the vignette was generated -->
 
 <!-- *** Bibliography END ***
 NB: Do not add yaml code here, put it at the start of the top level Rmd 
@@ -623,4 +524,7 @@ and R. D. Peng. ISBN 978-1466561595. Chapman and Hall/CRC, 2014. <URL:
 http://www.crcpress.com/product/isbn/9781466561595>.
 
 
+<!-- 
+# boiler_plate_bibliography_end has to come last else references in boiler_plate_reproducibility are lost!
+-->
 

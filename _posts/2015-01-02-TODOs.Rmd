@@ -1,5 +1,6 @@
 ---
 yamlFileName: 2015-01-02-TODOs.Rmd # WARNING: update the filename?
+# setwd("~/git/ttmmghmm.github.io/_posts") ; library(knitr)
 # fn <- "2015-01-02-TODOs.Rmd" ; knit(fn)  # to get the .md file 
 # library(knitrBootstrap)
 # rmarkdown::render(fn, knitrBootstrap::bootstrap_document(), clean = FALSE) # no md?
@@ -105,7 +106,6 @@ http://jekyllrb.com/docs/posts/ says you can embed html and yaml variables.
 ## can change the default global options
 https://github.com/jimhester/knitrBootstrap#chunk-options
 ```{r, eval = TRUE}
-library(knitr) # is this needed here?
 # https://github.com/jimhester/knitrBootstrap#chunk-options
 # colors() [grep(patt = "dark", x = colours())]
 #     panel: FALSE #  Use panels rather than buttons to toggle blocks.
@@ -223,9 +223,54 @@ If you want to do this with more time points though, use the wikipediatrend pack
 http://cran.r-project.org/web/packages/wikipediatrend/index.html
 See also [https://github.com/petermeissner/wikipediatrend] for a quick introduction to package use.
 
+### wikipediatrend
+```{r}
+require(wikipediatrend)
+
+system.time(df <- 
+  wp_trend(
+    page = "Peter_principle" # the name of the page
+    , from = Sys.Date()-30 # starting date of the timespan to be considered
+    , to = Sys.Date() #  end date of the timespan to be considered
+    , lang = "en" # language of the page
+    , friendly = FALSE # minimize workload on behalf of stats.grok.se
+    , requestFrom = "anonymous" # identify yourself towards stats.grok.se
+    , userAgent = FALSE # send information - plattform, R version, package used to make server requests
+  ) 
+)
+```
+It shows us which URLs it used to retrieve the information we were asking for.
+
+The function's return is a data frame with two variables date and count:
+```{r return is a data frame with two variables date and count}
+str(df)
+```
+
+visualize the page view trend. 
+Using wp_wday() we can furthermore discriminate weekdays (black) from weekends (red).
+```{r}
+peter_principle <- df
+plot( peter_principle, 
+      col=ifelse( wp_wday(peter_principle$date) > 5 , "red", "black") ,
+      ylim=c(0, max(peter_principle$count)),
+      main="Peter Principle's Wikipedia Attention",
+      ylab="views per day", xlab="time")
+lines(peter_principle)
+```
+most pressing on workdays -- or maybe people in general just tend to use their computers less on weekends.
+
+### friendly
+friendly option can be set to different values:
+* FALSE, the default, deactivates wp_trend()'s friendly behavior altogether
+* TRUE, activates wp_trend()'s friendly behavior and retreieved access statistics are stored on disk in CSV format via write.csv()
+* 1 is the same as TRUE
+* 2, is the same as TRUE but storage takes place via write.csv2()
+Let's try it out by making two subsequent requests to get access statistics for for information on ISIS.
 
 ```{r}
-
+csv <- "wp__Islamic_State_of_Iraq_and_the_Levant__en.csv"
+if (file.exists(csv)) file.remove(csv)
+isis <- wp_trend("Islamic_State_of_Iraq_and_the_Levant", from="2013-01-01", friendly=T)
 ```
 
 
