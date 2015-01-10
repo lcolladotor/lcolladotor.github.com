@@ -180,6 +180,58 @@ http://opendata.stackexchange.com/questions/1677/a-web-api-users-guide-for-free-
 * Tags: text mining
 * Packages: tm
 
+## Anomolies in page views
+use the wikipediatrend package for convenience access statistics directly downloaded into your R-session. 
+* http://cran.r-project.org/web/packages/wikipediatrend/index.html
+
+See also [https://github.com/petermeissner/wikipediatrend] for a quick introduction to package use.
+
+### http://beautifuldata.net/2015/01/anomaly-detection-with-wikipedia-page-view-data/
+
+```{r}
+library(RJSONIO)
+library(RCurl)
+library(ggplot2)
+# install.packages("devtools")
+# devtools::install_github("twitter/AnomalyDetection")
+library(AnomalyDetection)
+```
+
+```{r}
+page <- "USA"
+raw_data <- getURL(paste("http://stats.grok.se/json/en/latest90/", page, sep=""))
+data <- fromJSON(raw_data)
+views <- data.frame(timestamp=paste(names(data$daily_views), " 12:00:00", sep=""), stringsAsFactors=F)
+views$count <- data$daily_views
+views$timestamp <- as.POSIXlt(views$timestamp) # Transform to POSIX datetime
+views <- views[order(views$timestamp),]
+```
+
+```{r}
+ggplot(views, aes(timestamp, count)) + geom_line() + scale_x_datetime() + xlab("") + ylab("views")
+```
+feed a dataframe with a date-time and a value column into the AnomalyDetection function AnomalyDetectionTs(). But in this case, this doesn’t work because our data is much too coarse
+
+our data is much too coarse. It doesn’t seem to work with data on days. So, we use the more generic function AnomalyDetectionVec() that just needs the values and some definition of a period. In this case, the period is 7 (= 7 days for one week):
+```{r}
+res = AnomalyDetectionVec(views$count, max_anoms=0.05, direction='both', plot=TRUE, period=7)
+res$plot
+```
+
+
+If you want to do this with more time points though, use the wikipediatrend package for convenience access statistics directly downloaded into your R-session. 
+http://cran.r-project.org/web/packages/wikipediatrend/index.html
+See also [https://github.com/petermeissner/wikipediatrend] for a quick introduction to package use.
+
+
+```{r}
+
+```
+
+
+http://beautifuldata.net/2015/01/anomaly-detection-with-wikipedia-page-view-data/
+
+
 ## Graph and web crawling
 * http://semanticweb.cs.vu.nl/R/wikipedia_graph/wikipedia_graph.html
 * Tags: [text mining, graphs, wikipedia, crawl, Simple Wikipedia, Wikipedia,
