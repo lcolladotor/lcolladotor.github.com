@@ -176,6 +176,58 @@ plot( isis,
       type="l")
 ```
 
+# Cats
+
+```{r}
+cats <- wp_trend("Cat", from="2007-01-01", friendly=T)
+# throw out extreme values
+  no_outlier <- 
+  cats$count < 
+    quantile(cats$count, na.rm=T, 0.99) & 
+  cats$count > 
+    quantile(cats$count, na.rm=T, 0.01)  
+plot( cats[no_outlier,], 
+      col="black",
+      ylim=c(0, max(cats[no_outlier,]$count)),
+      main="Cats' Wikipedia Attention",
+      ylab="views per day", xlab="time", type="h")
+soo_2012_13 <- wp_year(cats$date)== 2012 | wp_year(cats$date)== 2013 
+cats_model  <- lm(count ~ date + date^2 + date^3 + soo_2012_13 ,data=cats)
+cats_smooth <- data.frame(date=cats$date, count_smooth=predict(cats_model))
+lines(cats_smooth,col=rgb(1,0,0,0.5),lwd=5)
+```
+
+# how the desire to inform oneself about Ebola varies over time:
+```{r}
+ebola_en <- wp_trend("Ebola", from="2008-01-01", friendly=T)
+plot( ebola_en, 
+      ylim=c(0, max(ebola_en$count)),
+      main="Ebola's Wikipedia Attention",
+      ylab="views per day", xlab="time",
+      type="l")
+lines(ebola_en)
+
+```
+
+## if media attention differs between languages / cultures 
+
+Compare the attention patterns for the English Wikipedia with those for the German Wikipedia:
+```{r}
+ebola_de <- wp_trend("Ebola", lang="de", from="2008-01-01", friendly=T)
+plot( ebola_en, 
+      ylim=c(0, max(ebola_en$count)),
+      main="Ebola's Wikipedia Attention",
+      ylab="views per day", xlab="time",
+      type="n")
+lines(ebola_en, col="red")
+lines(ebola_de, col=rgb(0,0,0,0.7))
+legend("topleft", 
+       c("en", "de"), 
+       col=c("red", rgb(0,0,0,0.7)),
+       lty=1
+       )
+
+```       
 
 http://beautifuldata.net/2015/01/anomaly-detection-with-wikipedia-page-view-data/
 
