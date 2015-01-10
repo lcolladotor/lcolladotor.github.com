@@ -27,8 +27,8 @@ timezone: Europe/London
 # http://stackoverflow.com/questions/17735545/how-do-i-make-jekyll-exclude-my-config-rb-for-sass
 # WARNING: excl ALL Rmd files in all folders and ALL .md files but _only_ in the posts folder
 # WARNING: Quotes are essential.
-# "*.Rmd", 
-exclude: ["*.Rmd", "_posts/*.md", ".DS_Store", "README.md", "Rakefile", "changelog.md", ".rvmrc", ".rbenv-version"]
+# "*.Rmd", "_posts/*.md", 
+exclude: ["*.Rmd", ".DS_Store", "README.md", "Rakefile", "changelog.md", ".rvmrc", ".rbenv-version"]
 
 # syntax highlighting of code snippets using either Pygments or Rouge
 # http://jekyllrb.com/docs/posts/
