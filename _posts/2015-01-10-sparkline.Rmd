@@ -1,0 +1,129 @@
+---
+yamlFileName: 2015-01-10-sparkline.Rmd # WARNING: update the filename?
+# print(rmarkdown::metadata$yamlFileName) # permalink
+# library(knitr)
+# setwd("~/git/ttmmghmm.github.io/_drafts") ; fn <- "2015-01-10-sparkline.Rmd" ; knit(fn)  # to get the .md file 
+#
+# library(knitrBootstrap)
+# rmarkdown::render(fn, knitrBootstrap::bootstrap_document(), clean = FALSE) # no md?
+# produce an identical result to Knit HTML in RStudio- no run-time dependency on RStudio
+# https://github.com/jimhester/knitrBootstrap#bootstrap-themes
+#   knit(fn) ; markdownToHTML("foo.md") ; browseURL("foo.html")
+# pandoc(fn, format = "docx") # prodces the .docx file - Word doc.
+# rmarkdown::render(fn) # produces table of contents (and html?)
+# rmarkdown::render(fn, pdf_document()) # and knit2html() to get .html from .md
+title: "sparkline"
+#
+# like categories, tags can be specified as a YAML list or a space- separated string.
+# http://en.wikipedia.org/wiki/YAML#Lists
+type: posts
+layout: post
+tags:
+- Rwww
+- plotwwww
+categories: rstatswww dddd
+author: ttmmghmm
+---
+
+# Displaying an index of posts
+* {{ site.posts }}
+* {% for post in site.posts %}
+    <li>
+      <a href="{{ post.url }}">{{ post.title }}</a>
+    </li>
+  {% endfor %}
+<!-- http://jekyllrb.com/docs/collections/
+{{ con tent }}
+{{ out put }}
+-->
+# Change the default global options
+https://github.com/jimhester/knitrBootstrap#chunk-options
+```{r, eval = TRUE}
+library(magrittr)
+# https://github.com/jimhester/knitrBootstrap#chunk-options
+# colors() [grep(patt = "dark", x = colours())]
+#     panel: FALSE #  Use panels rather than buttons to toggle blocks.
+opts_chunk$set(fig.width = 5, fig.height = 5)
+# bootstrap.panel (FALSE) - panels rather than buttons to toggle blocks.
+opts_chunk$set(background = c('gray10'), panel = TRUE) 
+# http://getbootstrap.com/css/#grid
+# bootstrap.thumbnail - (TRUE) - Thumbnail and lightbox images.
+opts_chunk$set(thumbnail = TRUE, thumbnail.size = 'col-md-2')
+# .class ('row') - class to apply to the div containing the chunk.
+# opts_chunk$set(class = 'rowew')
+# bootstrap.show.code - (TRUE) - Code from this chunk starts as shown.
+# opts_chunk$set(code = FALSE, output = FALSE) 
+# opts_chunk$set(echo = FALSE, cache = FALSE)
+# opts_chunk$set(message = FALSE, warning = FALSE, error = FALSE) 
+
+# NOT working?
+# The package options can be changed using the object opts_knit; for example,
+opts_knit$set(progress = TRUE, verbose = TRUE)
+```
+
+
+```{r child = c('../_posts/boiler_plate_vignette_setup.Rmd', '../_posts/boiler_plate_bibliography_start.Rmd') }
+# child: (NULL; character) a character vector of filenames of child documents to be run and input into the main document http://yihui.name/knitr/options/
+# http://stackoverflow.com/questions/25824795/how-to-combine-two-rmarkdown-rmd-files-into-a-single-output
+```
+
+
+http://www.htmlwidgets.org/develop_intro.html
+
+https://github.com/htmlwidgets/sparkline
+
+
+
+```{r installSparkline, eval = FALSE}
+library(devtools)
+install_github('htmlwidgets/sparkline')
+```
+
+http://stats.grok.se retrieves Wikipedia page access statistics on a daily basis. 
+The information is either presented in HTML or provided as JSON data.
+
+The API is pretty simple
+```{r API}
+x = rnorm(20)
+library(sparkline)
+sparkline(x)
+sparkline(x, type = 'bar')
+sparkline(x, type = 'box')
+```
+You can also use it in an R Markdown document.
+
+<pre>
+---
+title: "jquery Sparkline HTML Widget"
+author: "Ramnath Vaidyanathan"
+date: "July 18, 2014"
+output: html_document
+---
+</pre>
+
+```{r}
+library(htmlwidgets)
+library(sparkline)
+set.seed(1234)
+x = rnorm(10)
+y = rnorm(10)
+```
+
+
+Inline line graphs `r sparkline(x)`
+
+Bar charts  `r sparkline(abs(x), type = 'bar')`  negative values: `r sparkline(x, type = 'bar')`
+
+| Stock | Sparkline         | Boxplot  
+|-------|-------------------|--------
+| x     | `r sparkline(x)`  | `r sparkline(x, type ='box')`
+| y     | `r sparkline(y)`  | `r sparkline(y, type ='box')`
+
+
+
+```{r child = c('../_posts/boiler_plate_reproducibility.Rmd', '../_posts/boiler_plate_bibliography_end.Rmd') }
+```
+<!-- 
+# boiler_plate_bibliography_end has to come last else references in boiler_plate_reproducibility are lost!
+-->
+

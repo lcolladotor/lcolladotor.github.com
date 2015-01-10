@@ -11,7 +11,7 @@ yamlFileName: 2015-01-10-wikipediatrend.Rmd # WARNING: update the filename?
 # pandoc(fn, format = "docx") # prodces the .docx file - Word doc.
 # rmarkdown::render(fn) # produces table of contents (and html?)
 # rmarkdown::render(fn, pdf_document()) # and knit2html() to get .html from .md
-title: List of TODOs # date: "2014 December" # (NULL) Set the title for the html document
+title: "sparkline example"
 #
 # like categories, tags can be specified as a YAML list or a space- separated string.
 # http://en.wikipedia.org/wiki/YAML#Lists
@@ -166,6 +166,14 @@ Let's try it out by making two subsequent requests to get access statistics for 
 csv <- "wp__Islamic_State_of_Iraq_and_the_Levant__en.csv"
 if (file.exists(csv)) file.remove(csv)
 isis <- wp_trend("Islamic_State_of_Iraq_and_the_Levant", from="2013-01-01", friendly=T)
+```
+
+```{r}
+plot( isis, 
+      ylim=c(0, max(isis$count)),
+      main="ISIS' Wikipedia Attention",
+      ylab="views per day", xlab="time",
+      type="l")
 ```
 
 

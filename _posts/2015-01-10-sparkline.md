@@ -1,8 +1,9 @@
 ---
-yamlFileName: 2015-01-10-wikipediatrend.Rmd # WARNING: update the filename?
+yamlFileName: 2015-01-10-sparkline.Rmd # WARNING: update the filename?
 # print(rmarkdown::metadata$yamlFileName) # permalink
-# setwd("~/git/ttmmghmm.github.io/_posts") ; library(knitr)
-# fn <- "2015-01-10-wikipediatrend.Rmd" ; knit(fn)  # to get the .md file 
+# library(knitr)
+# setwd("~/git/ttmmghmm.github.io/_posts") ; fn <- "2015-01-10-sparkline.Rmd" ; knit(fn)  # to get the .md file 
+#
 # library(knitrBootstrap)
 # rmarkdown::render(fn, knitrBootstrap::bootstrap_document(), clean = FALSE) # no md?
 # produce an identical result to Knit HTML in RStudio- no run-time dependency on RStudio
@@ -11,7 +12,7 @@ yamlFileName: 2015-01-10-wikipediatrend.Rmd # WARNING: update the filename?
 # pandoc(fn, format = "docx") # prodces the .docx file - Word doc.
 # rmarkdown::render(fn) # produces table of contents (and html?)
 # rmarkdown::render(fn, pdf_document()) # and knit2html() to get .html from .md
-title: "sparkline example"
+title: "sparkline"
 #
 # like categories, tags can be specified as a YAML list or a space- separated string.
 # http://en.wikipedia.org/wiki/YAML#Lists
@@ -102,220 +103,168 @@ startTime <- Sys.time()
 ## http://www.crcpress.com/product/isbn/9781466561595>.
 ```
 
-# Wikipedia
-* Tags: text mining
-* Packages: tm
 
-## Anomolies in Wikipedia page views
-* Use the wikipediatrend package for convenience access statistics directly downloaded into your R-session. 
-* Page access statistics 
-    * e.g. http://stats.grok.se/en/201409/Peter_Principle. 
-    * http://cran.r-project.org/web/packages/wikipediatrend/index.html
-    * See also https://github.com/petermeissner/wikipediatrend for a quick introduction to package use.
-* info pages 
-    * e.g. https://en.wikipedia.org/w/index.php?title=Peter_Principle&action=info. 
-    * See the MediaWiki-package
-    , this package allows loading page view statistics into R.
+http://www.htmlwidgets.org/develop_intro.html
 
-### http://beautifuldata.net/2015/01/anomaly-detection-with-wikipedia-page-view-data/
+https://github.com/htmlwidgets/sparkline
+
+
 
 
 ```r
-library(RJSONIO)
-library(RCurl)
-library(ggplot2)
-# install.packages("devtools")
-# devtools::install_github("twitter/AnomalyDetection")
-library(AnomalyDetection)
+library(devtools)
+install_github('htmlwidgets/sparkline')
 ```
+
+http://stats.grok.se retrieves Wikipedia page access statistics on a daily basis. 
+The information is either presented in HTML or provided as JSON data.
+
+The API is pretty simple
+
+```r
+x = rnorm(20)
+library(sparkline)
+sparkline(x)
+```
+
+<!--html_preserve--><span id="htmlwidget-2042" class="sparkline"></span>
+<script type="application/json" data-for="htmlwidget-2042">{ "x": {
+ "values": [ -2.204348094541716, 0.5431728957249322, 0.02142719449953793, 0.1625657934822754, 1.241754254068704, 0.7827774777543995, 0.04812070895590322, -1.475400135552165, 0.4357623023419553, -0.07047017857200644, 0.1111965327947037,  1.27350464308159, -0.4933836247857628, 1.260113815142508, 1.283974683779917, -1.118793444550408, 0.02903980108390819, -1.931398460372439, 0.6498940072218182, 0.1638518342401837 ],
+"options": {
+ "height":                20,
+"width":                60 
+},
+"width":                60,
+"height":                20 
+},"evals": [  ] }</script><!--/html_preserve-->
+
+```r
+sparkline(x, type = 'bar')
+```
+
+<!--html_preserve--><span id="htmlwidget-1338" class="sparkline"></span>
+<script type="application/json" data-for="htmlwidget-1338">{ "x": {
+ "values": [ -2.204348094541716, 0.5431728957249322, 0.02142719449953793, 0.1625657934822754, 1.241754254068704, 0.7827774777543995, 0.04812070895590322, -1.475400135552165, 0.4357623023419553, -0.07047017857200644, 0.1111965327947037,  1.27350464308159, -0.4933836247857628, 1.260113815142508, 1.283974683779917, -1.118793444550408, 0.02903980108390819, -1.931398460372439, 0.6498940072218182, 0.1638518342401837 ],
+"options": {
+ "type": "bar",
+"height":                20,
+"width":                60 
+},
+"width":                60,
+"height":                20 
+},"evals": [  ] }</script><!--/html_preserve-->
+
+```r
+sparkline(x, type = 'box')
+```
+
+<!--html_preserve--><span id="htmlwidget-3257" class="sparkline"></span>
+<script type="application/json" data-for="htmlwidget-3257">{ "x": {
+ "values": [ -2.204348094541716, 0.5431728957249322, 0.02142719449953793, 0.1625657934822754, 1.241754254068704, 0.7827774777543995, 0.04812070895590322, -1.475400135552165, 0.4357623023419553, -0.07047017857200644, 0.1111965327947037,  1.27350464308159, -0.4933836247857628, 1.260113815142508, 1.283974683779917, -1.118793444550408, 0.02903980108390819, -1.931398460372439, 0.6498940072218182, 0.1638518342401837 ],
+"options": {
+ "type": "box",
+"height":                20,
+"width":                60 
+},
+"width":                60,
+"height":                20 
+},"evals": [  ] }</script><!--/html_preserve-->
+You can also use it in an R Markdown document.
+
+<pre>
+---
+title: "jquery Sparkline HTML Widget"
+author: "Ramnath Vaidyanathan"
+date: "July 18, 2014"
+output: html_document
+---
+</pre>
 
 
 ```r
-page <- "USA"
-raw_data <- getURL(paste("http://stats.grok.se/json/en/latest90/", page, sep=""))
-data <- fromJSON(raw_data)
-views <- data.frame(timestamp=paste(names(data$daily_views), " 12:00:00", sep=""), stringsAsFactors=F)
-views$count <- data$daily_views
-views$timestamp <- as.POSIXlt(views$timestamp) # Transform to POSIX datetime
-views <- views[order(views$timestamp),]
+library(htmlwidgets)
+library(sparkline)
+set.seed(1234)
+x = rnorm(10)
+y = rnorm(10)
 ```
 
 
-```r
-ggplot(views, aes(timestamp, count)) + geom_line() + scale_x_datetime() + xlab("") + ylab("views")
-```
+Inline line graphs <!--html_preserve--><span id="htmlwidget-5533" class="sparkline"></span>
+<script type="application/json" data-for="htmlwidget-5533">{ "x": {
+ "values": [ -1.207065749385421,  0.27742924211066, 1.084441176683056, -2.345697702629349,  0.42912468881105, 0.506055892157574, -0.5747399601346488, -0.546631855784187, -0.564451999093283, -0.8900378290441038 ],
+"options": {
+ "height":                20,
+"width":                60 
+},
+"width":                60,
+"height":                20 
+},"evals": [  ] }</script><!--/html_preserve-->
 
-![plot of chunk unnamed-chunk-5](figure/unnamed-chunk-5-1.png) 
-feed a dataframe with a date-time and a value column into the AnomalyDetection function AnomalyDetectionTs(). But in this case, this doesn’t work because our data is much too coarse
+Bar charts  <!--html_preserve--><span id="htmlwidget-6464" class="sparkline"></span>
+<script type="application/json" data-for="htmlwidget-6464">{ "x": {
+ "values": [ 1.207065749385421,  0.27742924211066, 1.084441176683056, 2.345697702629349,  0.42912468881105, 0.506055892157574, 0.5747399601346488, 0.546631855784187, 0.564451999093283, 0.8900378290441038 ],
+"options": {
+ "type": "bar",
+"height":                20,
+"width":                60 
+},
+"width":                60,
+"height":                20 
+},"evals": [  ] }</script><!--/html_preserve-->  negative values: <!--html_preserve--><span id="htmlwidget-3118" class="sparkline"></span>
+<script type="application/json" data-for="htmlwidget-3118">{ "x": {
+ "values": [ -1.207065749385421,  0.27742924211066, 1.084441176683056, -2.345697702629349,  0.42912468881105, 0.506055892157574, -0.5747399601346488, -0.546631855784187, -0.564451999093283, -0.8900378290441038 ],
+"options": {
+ "type": "bar",
+"height":                20,
+"width":                60 
+},
+"width":                60,
+"height":                20 
+},"evals": [  ] }</script><!--/html_preserve-->
 
-our data is much too coarse. It doesn’t seem to work with data on days. So, we use the more generic function AnomalyDetectionVec() that just needs the values and some definition of a period. In this case, the period is 7 (= 7 days for one week):
-
-```r
-res = AnomalyDetectionVec(views$count, max_anoms=0.05, direction='both', plot=TRUE, period=7)
-res$plot
-```
-
-![plot of chunk unnamed-chunk-6](figure/unnamed-chunk-6-1.png) 
-
-
-If you want to do this with more time points though, use the wikipediatrend package for convenience access statistics directly downloaded into your R-session. 
-http://cran.r-project.org/web/packages/wikipediatrend/index.html
-See also [https://github.com/petermeissner/wikipediatrend] for a quick introduction to package use.
-
-### wikipediatrend
-
-```r
-require(wikipediatrend)
-
-system.time(df <- 
-  wp_trend(
-    page = "Peter_principle" # the name of the page
-    , from = Sys.Date()-30 # starting date of the timespan to be considered
-    , to = Sys.Date() #  end date of the timespan to be considered
-    , lang = "en" # language of the page
-    , friendly = FALSE # minimize workload on behalf of stats.grok.se
-    , requestFrom = "anonymous" # identify yourself towards stats.grok.se
-    , userAgent = FALSE # send information - plattform, R version, package used to make server requests
-  ) 
-)
-```
-
-```
-## 
-##     With option 'friendly' set to FALSE subsequent requests 
-##     of the same wikipedia-entry cause the server -- which is kindly 
-##     providing information for you -- to work hard to get the same 
-##     stuff over and over and over and over again. Do not bore 
-##     the server - be friendly. 
-##     
-##     See: '?wp_trend'
-##     
-## http://stats.grok.se/json/en/201412/Peter_principle
-## http://stats.grok.se/json/en/201501/Peter_principle
-```
-
-```
-##    user  system elapsed 
-##   0.052   0.027   4.015
-```
-It shows us which URLs it used to retrieve the information we were asking for.
-
-The function's return is a data frame with two variables date and count:
-
-```r
-str(df)
-```
-
-```
-## 'data.frame':	30 obs. of  2 variables:
-##  $ date : Date, format: "2014-12-11" "2014-12-12" ...
-##  $ count: int  1304 1228 656 616 1078 1072 1188 1603 1346 705 ...
-```
-
-visualize the page view trend. 
-Using wp_wday() we can furthermore discriminate weekdays (black) from weekends (red).
-
-```r
-peter_principle <- df
-plot( peter_principle, 
-      col=ifelse( wp_wday(peter_principle$date) > 5 , "red", "black") ,
-      ylim=c(0, max(peter_principle$count)),
-      main="Peter Principle's Wikipedia Attention",
-      ylab="views per day", xlab="time")
-lines(peter_principle)
-```
-
-![plot of chunk unnamed-chunk-8](figure/unnamed-chunk-8-1.png) 
-most pressing on workdays -- or maybe people in general just tend to use their computers less on weekends.
-
-### friendly
-friendly option can be set to different values:
-* FALSE, the default, deactivates wp_trend()'s friendly behavior altogether
-* TRUE, activates wp_trend()'s friendly behavior and retreieved access statistics are stored on disk in CSV format via write.csv()
-* 1 is the same as TRUE
-* 2, is the same as TRUE but storage takes place via write.csv2()
-Let's try it out by making two subsequent requests to get access statistics for for information on ISIS.
-
-
-```r
-csv <- "wp__Islamic_State_of_Iraq_and_the_Levant__en.csv"
-if (file.exists(csv)) file.remove(csv)
-```
-
-```
-## [1] TRUE
-```
-
-```r
-isis <- wp_trend("Islamic_State_of_Iraq_and_the_Levant", from="2013-01-01", friendly=T)
-```
-
-```
-## http://stats.grok.se/json/en/201301/Islamic_State_of_Iraq_and_the_Levant
-## http://stats.grok.se/json/en/201302/Islamic_State_of_Iraq_and_the_Levant
-## http://stats.grok.se/json/en/201303/Islamic_State_of_Iraq_and_the_Levant
-## http://stats.grok.se/json/en/201304/Islamic_State_of_Iraq_and_the_Levant
-## http://stats.grok.se/json/en/201305/Islamic_State_of_Iraq_and_the_Levant
-## http://stats.grok.se/json/en/201306/Islamic_State_of_Iraq_and_the_Levant
-## http://stats.grok.se/json/en/201307/Islamic_State_of_Iraq_and_the_Levant
-## http://stats.grok.se/json/en/201308/Islamic_State_of_Iraq_and_the_Levant
-## http://stats.grok.se/json/en/201309/Islamic_State_of_Iraq_and_the_Levant
-## http://stats.grok.se/json/en/201310/Islamic_State_of_Iraq_and_the_Levant
-## http://stats.grok.se/json/en/201311/Islamic_State_of_Iraq_and_the_Levant
-## http://stats.grok.se/json/en/201312/Islamic_State_of_Iraq_and_the_Levant
-## http://stats.grok.se/json/en/201401/Islamic_State_of_Iraq_and_the_Levant
-## http://stats.grok.se/json/en/201402/Islamic_State_of_Iraq_and_the_Levant
-## http://stats.grok.se/json/en/201403/Islamic_State_of_Iraq_and_the_Levant
-## http://stats.grok.se/json/en/201404/Islamic_State_of_Iraq_and_the_Levant
-## http://stats.grok.se/json/en/201405/Islamic_State_of_Iraq_and_the_Levant
-## http://stats.grok.se/json/en/201406/Islamic_State_of_Iraq_and_the_Levant
-## http://stats.grok.se/json/en/201407/Islamic_State_of_Iraq_and_the_Levant
-## http://stats.grok.se/json/en/201408/Islamic_State_of_Iraq_and_the_Levant
-## http://stats.grok.se/json/en/201409/Islamic_State_of_Iraq_and_the_Levant
-## http://stats.grok.se/json/en/201410/Islamic_State_of_Iraq_and_the_Levant
-## http://stats.grok.se/json/en/201411/Islamic_State_of_Iraq_and_the_Levant
-## http://stats.grok.se/json/en/201412/Islamic_State_of_Iraq_and_the_Levant
-## http://stats.grok.se/json/en/201501/Islamic_State_of_Iraq_and_the_Levant
-## 
-## Results written to:
-## /home/rstudio/git/ttmmghmm.github.io/_posts/wp__Islamic_State_of_Iraq_and_the_Levant__en.csv
-```
-
-
-```r
-plot( isis, 
-      ylim=c(0, max(isis$count)),
-      main="ISIS' Wikipedia Attention",
-      ylab="views per day", xlab="time",
-      type="l")
-```
-
-![plot of chunk unnamed-chunk-10](figure/unnamed-chunk-10-1.png) 
-
-
-http://beautifuldata.net/2015/01/anomaly-detection-with-wikipedia-page-view-data/
-
-
-## Graph and web crawling
-* http://semanticweb.cs.vu.nl/R/wikipedia_graph/wikipedia_graph.html
-* Tags: [text mining, graphs, wikipedia, crawl, Simple Wikipedia, Wikipedia,
-  analytical metrics]
-  * ???Basic English 850 basic English words chosen by Charles Kay Ogden.???
-* TODO: dynamic graph, shiny
-
-## WikiPediR package
-* http://www.rexamine.com/2014/06/text-mining-in-r-automatic-categorization-of-wikipedia-articles/
-  *  hierarchical categorization of Wikipedia articles
-* more information about text mining in R: 
-    * http://onepager.togaware.com/TextMiningO.pdf
-    * http://cran.r-project.org/web/views/NaturalLanguageProcessing.html
-    * http://www.r-bloggers.com/text-mining/
-    * http://cran.r-project.org/doc/contrib/Zhao_R_and_data_mining.pdf
-    * http://www.jstatsoft.org/v25/i05/paper
-    * http://www.r-bloggers.com/visualising-wikipedia-search-statistics-with-r/
-        * search traffic for any article - search statistics for ???Financial crisis???. 
-            * The wikiStat() function returns dataframe with the necessary data.
-    * http://cran.r-project.org/web/packages/tm.plugin.webmining/vignettes/ShortIntro.pdf
+| Stock | Sparkline         | Boxplot  
+|-------|-------------------|--------
+| x     | <!--html_preserve--><span id="htmlwidget-6218" class="sparkline"></span>
+<script type="application/json" data-for="htmlwidget-6218">{ "x": {
+ "values": [ -1.207065749385421,  0.27742924211066, 1.084441176683056, -2.345697702629349,  0.42912468881105, 0.506055892157574, -0.5747399601346488, -0.546631855784187, -0.564451999093283, -0.8900378290441038 ],
+"options": {
+ "height":                20,
+"width":                60 
+},
+"width":                60,
+"height":                20 
+},"evals": [  ] }</script><!--/html_preserve-->  | <!--html_preserve--><span id="htmlwidget-3298" class="sparkline"></span>
+<script type="application/json" data-for="htmlwidget-3298">{ "x": {
+ "values": [ -1.207065749385421,  0.27742924211066, 1.084441176683056, -2.345697702629349,  0.42912468881105, 0.506055892157574, -0.5747399601346488, -0.546631855784187, -0.564451999093283, -0.8900378290441038 ],
+"options": {
+ "type": "box",
+"height":                20,
+"width":                60 
+},
+"width":                60,
+"height":                20 
+},"evals": [  ] }</script><!--/html_preserve-->
+| y     | <!--html_preserve--><span id="htmlwidget-5020" class="sparkline"></span>
+<script type="application/json" data-for="htmlwidget-5020">{ "x": {
+ "values": [ -0.477192699753547, -0.998386444859704, -0.77625389463799, 0.06445881727626934, 0.9594940589707713, -0.1102854943907743, -0.5110095058066422, -0.9111954166298112, -0.8371716802689395, 2.415835178489341 ],
+"options": {
+ "height":                20,
+"width":                60 
+},
+"width":                60,
+"height":                20 
+},"evals": [  ] }</script><!--/html_preserve-->  | <!--html_preserve--><span id="htmlwidget-6771" class="sparkline"></span>
+<script type="application/json" data-for="htmlwidget-6771">{ "x": {
+ "values": [ -0.477192699753547, -0.998386444859704, -0.77625389463799, 0.06445881727626934, 0.9594940589707713, -0.1102854943907743, -0.5110095058066422, -0.9111954166298112, -0.8371716802689395, 2.415835178489341 ],
+"options": {
+ "type": "box",
+"height":                20,
+"width":                60 
+},
+"width":                60,
+"height":                20 
+},"evals": [  ] }</script><!--/html_preserve-->
 
 
 
@@ -437,6 +386,7 @@ str(rmarkdown::metadata) # https://github.com/rstudio/rmarkdown/issues/260
 ##  ggplot2          * 1.0.0     2014-05-21 CRAN (R 3.1.2)                           
 ##  gtable             0.1.2     2012-12-05 CRAN (R 3.1.2)                           
 ##  htmltools          0.2.6     2014-09-08 CRAN (R 3.1.2)                           
+##  htmlwidgets      * 0.3.2     2014-12-09 CRAN (R 3.1.2)                           
 ##  httr               0.6.1     2015-01-01 CRAN (R 3.1.2)                           
 ##  jsonlite           0.9.14    2014-12-01 CRAN (R 3.1.2)                           
 ##  knitcitations    * 1.0.5     2014-11-26 CRAN (R 3.1.2)                           
@@ -455,14 +405,16 @@ str(rmarkdown::metadata) # https://github.com/rstudio/rmarkdown/issues/260
 ##  rstudio            0.98.1091 2014-12-28 local                                    
 ##  rstudioapi         0.2       2014-12-31 CRAN (R 3.1.2)                           
 ##  scales             0.2.4     2014-04-22 CRAN (R 3.1.2)                           
+##  sparkline        * 1.0       2015-01-10 Github (htmlwidgets/sparkline@aefe3a1)   
 ##  stringr            0.6.2     2012-12-06 CRAN (R 3.1.2)                           
-##  wikipediatrend   * 0.2.0     2014-11-07 CRAN (R 3.1.2)
+##  wikipediatrend   * 0.2.0     2014-11-07 CRAN (R 3.1.2)                           
+##  yaml               2.1.13    2014-06-12 CRAN (R 3.1.2)
 ```
 
 ### Runtime 
 
-Vignette generated in 27.8 seconds.   
-<p>Timestamp 2015-01-10 21:45:50. <!-- Date the vignette was generated -->
+Vignette generated in 1.2 seconds.   
+<p>Timestamp 2015-01-10 21:51:18. <!-- Date the vignette was generated -->
 
 <!-- *** Bibliography END ***
 NB: Do not add yaml code here, put it at the start of the top level Rmd 
