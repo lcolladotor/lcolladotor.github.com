@@ -27,9 +27,9 @@ author: ttmmghmm
 ---
 
 
-# Change the default global options
+# 
 https://github.com/jimhester/knitrBootstrap#chunk-options
-```{r, eval = TRUE}
+```{r Change-default-global-options, eval = TRUE, results='hide', echo = FALSE}
 library(magrittr)
 # https://github.com/jimhester/knitrBootstrap#chunk-options
 # colors() [grep(patt = "dark", x = colours())]
@@ -59,6 +59,14 @@ opts_chunk$set(fig.width = 5, fig.height = 5)
 ```
 
 # sparkline ems
+
+```{r API}
+x = rnorm(20)
+library(sparkline)
+sparkline(x)
+sparkline(x, type = 'bar')
+sparkline(x, type = 'box')
+```
 
 Inline line graphs `r sparkline(x)`
 
