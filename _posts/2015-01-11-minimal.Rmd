@@ -1,0 +1,76 @@
+---
+yamlFileName: 2015-01-11-minimal.Rmd # WARNING: update the filename?
+# print(rmarkdown::metadata$yamlFileName) # permalink
+# library(knitr)
+# setwd("~/git/ttmmghmm.github.io/_posts") ; fn <- "2015-01-11-minimal.Rmd" ; knit(fn)  # to get the .md file 
+#
+# library(knitrBootstrap)
+# rmarkdown::render(fn, knitrBootstrap::bootstrap_document(), clean = FALSE) # no md?
+# produce an identical result to Knit HTML in RStudio- no run-time dependency on RStudio
+# https://github.com/jimhester/knitrBootstrap#bootstrap-themes
+#   knit(fn) ; markdownToHTML("foo.md") ; browseURL("foo.html")
+# pandoc(fn, format = "docx") # prodces the .docx file - Word doc.
+# rmarkdown::render(fn) # produces table of contents (and html?)
+# rmarkdown::render(fn, pdf_document()) # and knit2html() to get .html from .md
+title: Minimal
+#
+# like categories, tags can be specified as a YAML list or a space- separated string.
+# http://en.wikipedia.org/wiki/YAML#Lists
+type: posts
+layout: post
+tags:
+- R
+- sparkline plot
+categories: rstats sparkline
+author: ttmmghmm
+---
+
+
+# Change the default global options
+https://github.com/jimhester/knitrBootstrap#chunk-options
+```{r, eval = TRUE}
+library(magrittr)
+# https://github.com/jimhester/knitrBootstrap#chunk-options
+# colors() [grep(patt = "dark", x = colours())]
+#     panel: FALSE #  Use panels rather than buttons to toggle blocks.
+opts_chunk$set(fig.width = 5, fig.height = 5)
+#opts_chunk$set(background = c('gray10'), panel = TRUE) 
+#opts_chunk$set(thumbnail = TRUE, thumbnail.size = 'col-md-6')
+# bootstrap.panel (FALSE) - panels rather than buttons to toggle blocks.
+# http://getbootstrap.com/css/#grid
+# bootstrap.thumbnail - (TRUE) - Thumbnail and lightbox images.
+# .class ('row') - class to apply to the div containing the chunk.
+# opts_chunk$set(class = 'rowew')
+# bootstrap.show.code - (TRUE) - Code from this chunk starts as shown.
+# opts_chunk$set(code = FALSE, output = FALSE) 
+# opts_chunk$set(echo = FALSE, cache = FALSE)
+# opts_chunk$set(message = FALSE, warning = FALSE, error = FALSE) 
+
+# NOT working?
+# The package options can be changed using the object opts_knit; for example,
+#opts_knit$set(progress = TRUE, verbose = TRUE)
+```
+
+
+```{r child = c('../_posts/boiler_plate_vignette_setup.Rmd', '../_posts/boiler_plate_bibliography_start.Rmd') }
+# child: (NULL; character) a character vector of filenames of child documents to be run and input into the main document http://yihui.name/knitr/options/
+# http://stackoverflow.com/questions/25824795/how-to-combine-two-rmarkdown-rmd-files-into-a-single-output
+```
+
+# sparkline ems
+
+Inline line graphs `r sparkline(x)`
+
+Bar charts  `r sparkline(abs(x), type = 'bar')`  negative values: `r sparkline(x, type = 'bar')`
+
+# table
+
+| Stock | Sparkline         | Boxplot  
+|-------|-------------------|--------
+| x     | `r sparkline(x)`  | `r sparkline(x, type ='box')`
+| y     | `r sparkline(y)`  | `r sparkline(y, type ='box')`
+
+
+
+```{r child = c('../_posts/boiler_plate_reproducibility.Rmd', '../_posts/boiler_plate_bibliography_end.Rmd') }
+```
