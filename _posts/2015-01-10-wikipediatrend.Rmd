@@ -11,7 +11,7 @@ yamlFileName: 2015-01-10-wikipediatrend.Rmd # WARNING: update the filename?
 # pandoc(fn, format = "docx") # prodces the .docx file - Word doc.
 # rmarkdown::render(fn) # produces table of contents (and html?)
 # rmarkdown::render(fn, pdf_document()) # and knit2html() to get .html from .md
-title: "sparkline example"
+title: "wikipedia trend"
 #
 # like categories, tags can be specified as a YAML list or a space- separated string.
 # http://en.wikipedia.org/wiki/YAML#Lists
