@@ -1,8 +1,29 @@
 <!-- NB: Do not add yaml code here, put it at the start of the top level Rmd -->
 
 ```{r boiler_plate_vignette_setup, echo=TRUE, message=FALSE, warning = FALSE}
+library(magrittr)
 library(knitr)
-opts_chunk$set(fig.width = 5, fig.height = 5, warning = FALSE, echo = TRUE, cache = FALSE, message = TRUE)
+opts_chunk$set(fig.width = 5, fig.height = 5, warning = TRUE, echo = TRUE, cache = FALSE, message = TRUE)
+# https://github.com/jimhester/knitrBootstrap#chunk-options
+# colors() [grep(patt = "dark", x = colours())]
+#     panel: FALSE #  Use panels rather than buttons to toggle blocks.
+opts_chunk$set(background = c('gray10'), panel = TRUE) 
+#opts_chunk$set(thumbnail = TRUE, thumbnail.size = 'col-md-6')
+# bootstrap.panel (FALSE) - panels rather than buttons to toggle blocks.
+# http://getbootstrap.com/css/#grid
+# bootstrap.thumbnail - (TRUE) - Thumbnail and lightbox images.
+# .class ('row') - class to apply to the div containing the chunk.
+# opts_chunk$set(class = 'rowew')
+# bootstrap.show.code - (TRUE) - Code from this chunk starts as shown.
+# opts_chunk$set(code = FALSE, output = FALSE) 
+# opts_chunk$set(echo = FALSE, cache = FALSE)
+# opts_chunk$set(message = FALSE, warning = FALSE, error = FALSE) 
+
+# NOT working?
+# The package options can be changed using the object opts_knit; for example,
+#opts_knit$set(progress = TRUE, verbose = TRUE)
+
+
 ## Track time spent on making the vignette
 startTime <- Sys.time()
 ```
