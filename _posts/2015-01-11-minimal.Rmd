@@ -6,7 +6,8 @@ yamlFileName: 2015-01-11-minimal.Rmd # WARNING: update the filename?
 # setwd("~/git/ttmmghmm.github.io/_posts") ; fn <- "2015-01-11-minimal.Rmd" ; knit(fn)  
 #
 # library(knitrBootstrap)
-# rmarkdown::render(fn, knitrBootstrap::bootstrap_document(), clean = FALSE) # no md?
+# # clean = FALSE => two md files? why
+# rmarkdown::render(fn, knitrBootstrap::bootstrap_document(), clean = FALSE) 
 # produce an identical result to Knit HTML in RStudio- no run-time dependency on RStudio
 # https://github.com/jimhester/knitrBootstrap#bootstrap-themes
 #   knit(fn) ; markdownToHTML("foo.md") ; browseURL("foo.html")
