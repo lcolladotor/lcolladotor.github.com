@@ -27,9 +27,8 @@ author: ttmmghmm
 ---
 
 
-# 
-https://github.com/jimhester/knitrBootstrap#chunk-options
-```{r Change-default-global-options, eval = TRUE, results='hide', echo = FALSE}
+```{r Change-default-global-options, eval = TRUE, echo = FALSE, results='hide'}
+# https://github.com/jimhester/knitrBootstrap#chunk-options
 library(magrittr)
 # https://github.com/jimhester/knitrBootstrap#chunk-options
 # colors() [grep(patt = "dark", x = colours())]
