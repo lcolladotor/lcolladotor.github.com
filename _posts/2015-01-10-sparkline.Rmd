@@ -40,6 +40,7 @@ author: ttmmghmm
 https://github.com/jimhester/knitrBootstrap#chunk-options
 ```{r, eval = TRUE}
 library(magrittr)
+library(knitr)
 # https://github.com/jimhester/knitrBootstrap#chunk-options
 # colors() [grep(patt = "dark", x = colours())]
 #     panel: FALSE #  Use panels rather than buttons to toggle blocks.
@@ -90,34 +91,18 @@ sparkline(x, type = 'box')
 ```
 You can also use it in an R Markdown document.
 
-<pre>
----
-title: "jquery Sparkline HTML Widget"
-author: "Ramnath Vaidyanathan"
-date: "July 18, 2014"
-output: html_document
----
-</pre>
 
 ```{r}
 library(htmlwidgets)
-library(sparkline)
 set.seed(1234)
 x = rnorm(10)
 y = rnorm(10)
 ```
 
 
-Inline line graphs `r sparkline(x)`
-
-Bar charts  `r sparkline(abs(x), type = 'bar')`  negative values: `r sparkline(x, type = 'bar')`
-
-| Stock | Sparkline         | Boxplot  
-|-------|-------------------|--------
-| x     | `r sparkline(x)`  | `r sparkline(x, type ='box')`
-| y     | `r sparkline(y)`  | `r sparkline(y, type ='box')`
 
 
-
-```{r child = c('../_posts/boiler_plate_reproducibility.Rmd', '../_posts/boiler_plate_bibliography_end.Rmd') }
+```{r child = 
+  c('../_posts/boiler_plate_reproducibility.Rmd', 
+  '../_posts/boiler_plate_bibliography_end.Rmd') }
 ```

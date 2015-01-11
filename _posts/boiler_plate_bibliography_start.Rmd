@@ -2,14 +2,6 @@
 
 ```{r boiler_plate_bibliography_start, echo=FALSE, message=FALSE, warning = FALSE}
 library('knitcitations')
-# Now we can generate citations from bib citep(bib[[2]])
-# cite_options(hyperlink = 'to.doc', citation_format = 'text', style = 'html')
-# https://github.com/trinker/knitcitations
-### NOT working?
-#cite_options(linked=TRUE) # In-text citations rather than numbers
-#cite_options(tooltip=TRUE) # will not work inside a github repo due the the lack of the javascript library,
-# Note links won't show for now due to the following issue
-# https://github.com/cboettig/knitcitations/issues/63
 ```
 
 ```{r write_bibliography_information, echo=FALSE, message=FALSE, warning = FALSE}
@@ -29,5 +21,5 @@ bib <- read.bibtex('citations.bib')
 ## Assign short names
 names(bib) <- c('knitcitations', 'dots', 'knitrBootstrap',
     'knitr', 'rmarkdown')
-print(bib)
+# print(bib)
 ```
