@@ -1,6 +1,6 @@
 <!-- NB: Do not add yaml code here, put it at the start of the top level Rmd -->
 
-```{r boiler_plate_vignette_setup, echo=TRUE, message=FALSE, warning = FALSE}
+```{r boiler_plate_vignette_setup, eval = TRUE, echo = FALSE, results='hide'}
 library(magrittr)
 library(knitr)
 opts_chunk$set(fig.width = 5, fig.height = 5, warning = TRUE, echo = TRUE, cache = FALSE, message = TRUE)
