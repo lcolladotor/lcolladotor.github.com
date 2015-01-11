@@ -2,7 +2,8 @@
 yamlFileName: 2015-01-11-minimal.Rmd # WARNING: update the filename?
 # print(rmarkdown::metadata$yamlFileName) # permalink
 # library(knitr)
-# setwd("~/git/ttmmghmm.github.io/_posts") ; fn <- "2015-01-11-minimal.Rmd" ; knit(fn)  # to get the .md file 
+# to get the .md file only 
+# setwd("~/git/ttmmghmm.github.io/_posts") ; fn <- "2015-01-11-minimal.Rmd" ; knit(fn)  
 #
 # library(knitrBootstrap)
 # rmarkdown::render(fn, knitrBootstrap::bootstrap_document(), clean = FALSE) # no md?
@@ -19,9 +20,9 @@ title: Minimal
 type: posts
 layout: post
 tags:
-- R
-- sparkline plot
-categories: rstats sparkline
+- Rminimal
+- sparklineminimal plotminimal
+categories: rstatsminimal sparklineminimal
 author: ttmmghmm
 ---
 
