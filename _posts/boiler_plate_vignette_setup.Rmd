@@ -14,7 +14,7 @@ opts_chunk$set(background = c('gray10'))
 # .class ('row') - class to apply to the div containing the chunk.
 # opts_chunk$set(class = 'rowew')
 # bootstrap.show.code - (TRUE) - Code from this chunk starts as shown.
-#opts_chunk$set(code = FALSE) 
+opts_chunk$set(code = FALSE) 
 opts_chunk$set(output = FALSE) 
 opts_chunk$set(warning = TRUE, echo = TRUE, message = TRUE, error = TRUE)
 # opts_chunk$set(cache = FALSE)
