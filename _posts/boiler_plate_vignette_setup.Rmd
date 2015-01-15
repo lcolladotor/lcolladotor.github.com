@@ -1,20 +1,20 @@
 <!-- NB: Do not add yaml code here, put it at the start of the top level Rmd -->
 
-```{r boiler_plate_vignette_setup, eval = TRUE, echo = FALSE, results='hide'}
+```{r boiler_plate_vignette_setup, echo = FALSE, results='hide'}
 library(magrittr)
 library(knitr)
 opts_chunk$set(fig.width = 5, fig.height = 5)
 # https://github.com/jimhester/knitrBootstrap#chunk-options
 # http://getbootstrap.com/css/#grid
-#opts_chunk$set(panel = TRUE) # NB: panels not buttons to toggle blocks.
 # colors() [grep(patt = "dark", x = colours())]
 opts_chunk$set(background = c('gray10')) 
-#opts_chunk$set(thumbnail = TRUE, thumbnail.size = 'col-md-3')
+# Thumbnail size in bootstrap columns
+# opts_chunk$set(thumbnail = TRUE, thumbnail.size = 'col-md-3') 
 # bootstrap.thumbnail - (TRUE) - Thumbnail and lightbox images.
 # .class ('row') - class to apply to the div containing the chunk.
-# opts_chunk$set(class = 'rowew')
-# bootstrap.show.code - (TRUE) - Code from this chunk starts as shown.
-opts_chunk$set(code = FALSE) 
+# opts_chunk$set(class = 'row')
+# opts_chunk$set(panel = TRUE) # NB: panels not buttons to toggle blocks.
+
 opts_chunk$set(output = FALSE) 
 opts_chunk$set(warning = TRUE, echo = TRUE, message = TRUE, error = TRUE)
 # opts_chunk$set(cache = FALSE)
@@ -27,11 +27,17 @@ opts_chunk$set(warning = TRUE, echo = TRUE, message = TRUE, error = TRUE)
 # cite_options(hyperlink = 'to.doc', citation_format = 'text', style = 'html')
 # https://github.com/trinker/knitcitations
 ### NOT working?
-#cite_options(linked=TRUE) # In-text citations rather than numbers
-#cite_options(tooltip=TRUE) # will not work inside a github repo due the the lack of the javascript library,
+# cite_options(linked=TRUE) # In-text citations rather than numbers
+# cite_options(tooltip=TRUE) # will not work inside a github repo due the the lack of the javascript library,
 # Note links won't show for now due to the following issue
 # https://github.com/cboettig/knitcitations/issues/63
 
+# size: ('normalsize'; character) font size for the default LaTeX output (see ?highlight in the highlight package for a list of possible values)
+# background: ('#F7F7F7'; character or numeric) background color of chunks in LaTeX output (passed to the LaTeX package framed); the color model is rgb; it can be either a numeric vector of length 3, with each element between 0 and 1 to denote red, green and blue, or any built-in color in R like red or springgreen3 (see colors() for a full list), or a hex string like #FFFF00, or an integer (all these colors will be converted to the RGB model; see ?col2rgb for details)
+
+# opts_chunk$set(code = TRUE) # WARNING: causes errors
+# bootstrap.show.code - (TRUE) - Code from this chunk starts as shown.
+# code: (NULL; character) if provided, it will override the code in the current chunk; this allows us to programmatically insert code into the current chunk; e.g. a chunk option code = capture.output(dump('fivenum', '')) will use the source code of the function fivenum to replace the current chunk
 
 ## Track time spent on making the vignette
 startTime <- Sys.time()

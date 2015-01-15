@@ -1,5 +1,5 @@
 ---
-yamlFileName: 2015-01-10-sparkline.Rmd # WARNING: update the filename?
+yamlFileName: 2015-01-10-googleAnalyticsApi.Rmd # WARNING: update the filename?
 # print(rmarkdown::metadata$yamlFileName) # permalink
 # library(knitr)
 # setwd("~/git/ttmmghmm.github.io/_posts") ; fn <- "2015-01-10-sparkline.Rmd" ; knit(fn)  # to get the .md file 
@@ -44,9 +44,51 @@ author: ttmmghmm
 
 # Change the default global options
 https://github.com/jimhester/knitrBootstrap#chunk-options
-```{r, eval = TRUE}
+```{r}
+```
+
+```{r, eval = FALSE}
+library(secure)
+# Create a vault directory.
+stopifnot(file.exists("vault"))
+# add your name and public key to vault/users.json
+secure::add_user("ttmmghmm", local_key())
+# add other people from their github_key()s).
+# store data: 
+secure::encrypt(
+  "google", 
+  key = "xxx.apps.googleusercontent.com", 
+  secret = "xxxx")
+# This creates secure/google.rds.enc, an encrypted rds file.
+
+# Retrieve encrypted data: 
+secure::decrypt("google")
+# This decrypts the encrypted file using your private key.
+# > system("whoami")
+# rstudio
+```
+
+```{r}
+# devtools::install_github("s-u/PKI") # needed for bug fixes not currently on CRAN
+# devtools::install_github("hadley/secure")
+library(secure)
+require(RGoogleAnalytics)
+# Authorize the Google Analytics account
+# need not be executed in every session once the token object is created 
+# and saved
+(x <- secure::decrypt("google"))
+client.id <- x$key
+client.secret <- x$secret
+token <- Auth(client.id, client.secret)
+# Validate and refresh the token
+ValidateToken(token)
+
+
+# Save the token object for future sessions
+save(token, file="./token_file")
 
 ```
+
 
 
 ```{r child = c('../_posts/boiler_plate_vignette_setup.Rmd', '../_posts/boiler_plate_bibliography_start.Rmd') }
