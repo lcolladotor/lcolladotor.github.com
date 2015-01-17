@@ -33,7 +33,8 @@ exclude: ["*.Rmd", "_posts/*.md", ".DS_Store", "README.md", "Rakefile", "changel
 # syntax highlighting of code snippets using either Pygments or Rouge
 # http://jekyllrb.com/docs/posts/
 # highlighter: pygments # 'rouge', 'pygments' or null.
-markdown: rdiscount
+markdown: kramdown
+# markdown: rdiscount
 # markdown: redcarpet
 
 # Themes are encouraged to use these universal variables 
