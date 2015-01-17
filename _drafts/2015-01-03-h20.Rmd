@@ -45,7 +45,7 @@ However, the apply() function from the H2O R package behaves a bit differently
 x <- apply(iris.hex[,1:4],2,sum)
 x
 ```
-Instead of returning the the results it returns the attributes of file in which the results are stored. You can see this from looking at the structure of x.
+Instead of returning the results, it returns the attributes of file in which the results are stored. You can see this from looking at the structure of x.
 ```{r}
 str(x)
 #You can get the data out, by coercing x into being a data frame.

@@ -8,6 +8,7 @@ opts_chunk$set(fig.width = 5, fig.height = 5)
 # http://getbootstrap.com/css/#grid
 # colors() [grep(patt = "dark", x = colours())]
 opts_chunk$set(background = c('gray10')) 
+opts_chunk$set(pars = list(bg = 'white', mar = c(4, 4, .1, .1), mgp = c(2, 1, 0)))
 # Thumbnail size in bootstrap columns
 # opts_chunk$set(thumbnail = TRUE, thumbnail.size = 'col-md-3') 
 # bootstrap.thumbnail - (TRUE) - Thumbnail and lightbox images.
@@ -15,9 +16,9 @@ opts_chunk$set(background = c('gray10'))
 # opts_chunk$set(class = 'row')
 # opts_chunk$set(panel = TRUE) # NB: panels not buttons to toggle blocks.
 
-opts_chunk$set(output = FALSE) 
+opts_chunk$set(output = TRUE) 
 opts_chunk$set(warning = TRUE, echo = TRUE, message = TRUE, error = TRUE)
-# opts_chunk$set(cache = FALSE)
+# opts_chunk$set(cache = TRUE)
 
 # NOT working?
 # The package options can be changed using the object opts_knit; for example,
@@ -28,7 +29,7 @@ opts_chunk$set(warning = TRUE, echo = TRUE, message = TRUE, error = TRUE)
 # https://github.com/trinker/knitcitations
 ### NOT working?
 # cite_options(linked=TRUE) # In-text citations rather than numbers
-# cite_options(tooltip=TRUE) # will not work inside a github repo due the the lack of the javascript library,
+# cite_options(tooltip=TRUE) # will not work inside a github repo due  the lack of the javascript library,
 # Note links won't show for now due to the following issue
 # https://github.com/cboettig/knitcitations/issues/63
 

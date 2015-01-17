@@ -248,7 +248,7 @@ This vignette was generated using:
 
 <!-- 
 -->
-Additional semantic markup can be added the the citations themselves, such as the reason for the citation. 
+Additional semantic markup can be added to the citations themselves, such as the reason for the citation. 
 https://github.com/trinker/knitcitations 
 
 * `knitrBootstrap` 
