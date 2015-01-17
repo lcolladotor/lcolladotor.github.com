@@ -69,6 +69,8 @@ secure::decrypt("google")
 ```
 
 ```{r}
+# https://console.developers.google.com/project/peak-argon-826/apiui/credential?authuser=1
+# http://www.r-bloggers.com/how-to-extract-google-analytics-data-in-r-using-rgoogleanalytics/
 # devtools::install_github("s-u/PKI") # needed for bug fixes not currently on CRAN
 # devtools::install_github("hadley/secure")
 library(secure)
