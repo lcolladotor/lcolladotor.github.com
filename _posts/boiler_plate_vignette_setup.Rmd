@@ -1,5 +1,7 @@
 <!-- NB: Do not add yaml code here, put it at the start of the top level Rmd -->
 
+*(This blog was produced on: `r as.character(Sys.Date())`.)*  
+
 ```{r boiler_plate_vignette_setup, echo = FALSE, results='hide'}
 library(magrittr)
 library(knitr)
