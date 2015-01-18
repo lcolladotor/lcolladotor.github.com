@@ -1,0 +1,179 @@
+---
+yamlFileName: 2015-01-16-stochvolRBitcoin.Rmd # WARNING: update the filename?
+# print(rmarkdown::metadata$yamlFileName) # permalink
+# library(knitr)
+# setwd("~/git/ttmmghmm.github.io/_posts") ; fn <- "2015-01-10-sparkline.Rmd" ; knit(fn)  # to get the .md file 
+#
+# library(knitrBootstrap)
+# rmarkdown::render(fn, knitrBootstrap::bootstrap_document(), clean = FALSE) # no md?
+# produce an identical result to Knit HTML in RStudio- no run-time dependency on RStudio
+# https://github.com/jimhester/knitrBootstrap#bootstrap-themes
+#   knit(fn) ; markdownToHTML("foo.md") ; browseURL("foo.html")
+# pandoc(fn, format = "docx") # prodces the .docx file - Word doc.
+# rmarkdown::render(fn) # produces table of contents (and html?)
+# rmarkdown::render(fn, pdf_document()) # and knit2html() to get .html from .md
+title: "stochvolR example"
+#
+# like categories, tags can be specified as a YAML list or a space- separated string.
+# http://en.wikipedia.org/wiki/YAML#Lists
+type: posts
+layout: post
+tags:
+- R
+- stochvolR
+categories: rstats investing
+output:
+  # https://github.com/jimhester/knitrBootstrap
+  # http://cran.r-project.org/web/packages/knitrBootstrap/README.html
+  # ::bootstrap_document custom rendering function for the Rmarkdown package.
+  knitrBootstrap::bootstrap_document: #  to create bootstrap styled HTML reports - not .md
+    # https://github.com/jimhester/knitrBootstrap#package-options
+    # title: "where does this appear? # (NULL) Set the title for the html document
+    # http://bootswatch.com/ optionally including a dynamic style switch.
+    theme: Cyborg # cerulean # Cyborg # monokai cyborg slate darkly superhero cerulean 
+    theme.chooser: TRUE # (FALSE) - Add a bootstrap style chooser to the page.
+    # highlight Set the default code style. (HighlightJS)
+    # https://github.com/jimhester/knitrBootstrap#highlight-themes
+    highlight: monokai # Zenburn # monokai # Sunburst # Zenburn # HighlightJs # google code 
+    highlight.chooser: TRUE # (FALSE) - Add a code style chooser to the page.
+    menu: TRUE # FALSE # Whether to include the bottom navbar.
+author: ttmmghmm
+---
+
+```{r child = c('../_posts/boiler_plate_vignette_setup.Rmd', '../_posts/boiler_plate_bibliography_start.Rmd') }
+# child: (NULL; character) a character vector of filenames of child documents to be run and input into the main document http://yihui.name/knitr/options/
+# http://stackoverflow.com/questions/25824795/how-to-combine-two-rmarkdown-rmd-files-into-a-single-output
+```
+
+
+# exactly-how-volatile-is-bitcoin
+
+See http://www.themattsimpson.com/2014/02/22/exactly-how-volatile-is-bitcoin/
+
+```{r exactly-how-volatile-is-bitcoin}
+## load the stochastic volatility package
+library("stochvol") 
+## install.packages("stochvol") to install it
+
+btc <- read.csv("btcvol.csv")
+
+## demean the log returns
+btc$logretdm <- btc$return - mean(btc$return)
+
+## set prior hyperparameters
+pmu <- c(0, 100)  
+pphi <- c(5,1.5)  
+psigma <- 10
+
+## Obtain 100000 draws from the sampler w/ 10000 burn in
+n <- 100000
+b <- 10000
+set.seed(34131231)  # if you want to reproduce my random draws
+draws <- svsample(btc$logretdm, draws = n, burnin = b,
+                  priormu = pmu,
+                  priorphi = pphi,
+                  priorsigma = psigma)
+
+## plot the results 
+plot(draws, dates=btc$date)
+
+## better trace plots
+par(mfrow = c(3,1))
+paratraceplot(draws)
+
+## better convergence checks 
+raftery.diag(draws$para)
+geweke.diag(draws$para)
+
+## plot just the volatility estimates
+d <- 100 # predict volatility d steps (days) ahead           
+quants <- c(.05, .5, .95) # which quantiles of volatility distribution to store / plot
+draws <- updatesummary(draws, quantiles = quants)
+volplot(draws, forecast = d, dates=as.character(btc$date))
+
+## save the estimated volatilities 
+quants <- c(0.01, 0.05, 0.25, 0.5, 0.75, 0.95, 0.99)
+draws <- updatesummary(draws, quantiles = quants)
+volquant <- exp(draws$summary$latent[,3:9]/2) # sd's
+colnames(volquant) <- paste("EstVol", quants, sep="")
+rownames(volquant) <- NULL
+btc <- cbind(btc, volquant)
+write.csv(btc, file="btcestvol.csv")
+
+## save predicted volatilities
+d <- 20
+preds <- predict(draws, steps=20)
+pquants <- exp(t(apply(preds, 2, quantile, probs=quants))/2)
+colnames(pquants) <- paste("PredVol", quants, sep="")
+## ugly way to get correct dates for predictions
+pdate <- c(paste("2014-02-", 18+1:(28-18), sep=""),
+           paste("2014-03-", 1:(d - (28-18)), sep=""))
+btcpredvol <- data.frame(date=pdate, pquants)
+write.csv(btcpredvol, file="btcpredvol.csv")
+
+## create and save plots for blog post
+
+## load the best graphics package for anything ever
+library("ggplot2")
+library("reshape2")
+library("plyr")
+## install.packages("x") to install
+
+## first a plot of all estimated volatilities along w/ Eli's
+btc$daten <- as.numeric(btc$date)
+btcmelt <- melt(btc, id=c("date", "daten"))
+intvars <- paste("EstVol", c(.05, .95), sep="")
+n <- length(btc$daten)
+estticks <- (0:(n%/%100))*100 + 1
+p <- ggplot(btcmelt, aes(x=daten, y=value, group=variable)) +
+    geom_line(subset=.(variable %in% intvars), color="gray") +
+    geom_line(subset=.(variable == "EstVol0.5"), color="black") +
+    geom_line(subset=.(variable == "volatility"), color="red")
+btcestvol <- p + labs(x = "Date", y = "Volatility",
+                      title = "Posterior (5% / 50% / 95%) volatility quantiles vs. btcvol") +
+    scale_x_continuous(breaks=estticks, labels=btc$date[estticks]) +
+    theme(axis.text.x = element_text(angle = 45, hjust = 1))
+btcestvol ## view the plot in R
+ggsave(btcestvol, filename="btcestvol.png") ## save the plot
+
+## now a plot of recent estimated vols and predictions
+ll <- 1200 
+ul <- 1300 # make sure > 1278 to get predictions
+ldiff <- ul - ll ## make sure this is an integer
+tickdiff <- 5 ## how many days between ticks on the plot
+predticks <- 1200 + tickdiff*(0:(ldiff/tickdiff))
+predlabs <- c(as.character(btc$date), pdate) ## add pred dates
+btcpredvol$daten <- btc$daten[n] + 1:length(btcpredvol[,1])
+btcpredmelt <- melt(btcpredvol, id=c("date", "daten"))
+predvars <- paste("PredVol", c(.05, .95), sep="")
+btcpredvol <- p + 
+    geom_line(aes(x=daten, y=value), data=btcpredmelt,
+              subset=.(variable %in% predvars),
+              color="gray", linetype=2) +
+        geom_line(aes(x=daten, y=value), data=btcpredmelt,
+              subset=.(variable == "PredVol0.5"),
+              color="black", linetype=2) +
+    labs(x = "Date", y = "Volatility", title = "Posterior (5% / 50% / 95%) volatility quantiles vs. btcvol") +
+    theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+    scale_x_continuous(breaks=predticks,
+                       labels=predlabs[predticks],
+                       limits=c(1200,1300)) +
+    ylim(0, .33)
+btcpredvol ## view the plot in R
+ggsave(btcpredvol, filename="btcpredvol.png") ## save the plot
+
+```
+
+
+The API is pretty simple
+```{r API}
+x = rnorm(20)
+library(sparkline)
+sparkline(x)
+sparkline(x, type = 'bar')
+sparkline(x, type = 'box')
+```
+`r sparkline(x, type = 'bar')` goes here.
+
+```{r child = c('../_posts/boiler_plate_reproducibility.Rmd', '../_posts/boiler_plate_bibliography_end.Rmd') }
+```

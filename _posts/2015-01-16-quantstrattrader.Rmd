@@ -3,7 +3,7 @@ yamlFileName: 2015-01-10-quantstrattrader.Rmd # WARNING: update the filename?
 # print(rmarkdown::metadata$yamlFileName) # permalink
 # library(knitr)
 # setwd("~/git/ttmmghmm.github.io/_posts") ; fn <- "2015-01-10-sparkline.Rmd" ; knit(fn)  # to get the .md file 
-#
+# 
 # library(knitrBootstrap)
 # rmarkdown::render(fn, knitrBootstrap::bootstrap_document(), clean = FALSE) # no md?
 # produce an identical result to Knit HTML in RStudio- no run-time dependency on RStudio
@@ -30,11 +30,11 @@ output:
     # https://github.com/jimhester/knitrBootstrap#package-options
     # title: "where does this appear? # (NULL) Set the title for the html document
     # http://bootswatch.com/ optionally including a dynamic style switch.
-    theme: cerulean # Cyborg # monokai cyborg slate darkly superhero cerulean 
+    theme: Cyborg # cerulean # Cyborg # monokai cyborg slate darkly superhero cerulean 
     theme.chooser: TRUE # (FALSE) - Add a bootstrap style chooser to the page.
     # highlight Set the default code style. (HighlightJS)
     # https://github.com/jimhester/knitrBootstrap#highlight-themes
-    highlight: Zenburn # monokai # Sunburst # Zenburn # HighlightJs # google code 
+    highlight: monokai # Zenburn # monokai # Sunburst # Zenburn # HighlightJs # google code 
     highlight.chooser: TRUE # (FALSE) - Add a code style chooser to the page.
     menu: TRUE # FALSE # Whether to include the bottom navbar.
 author: ttmmghmm
