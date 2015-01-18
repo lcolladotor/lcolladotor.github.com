@@ -105,6 +105,9 @@ library(magrittr)
 simpleNetwork(networkData) %>% saveNetwork(file = 'Net1.html')
 ```
 
+
+# sparkline
+
 The API is pretty simple
 ```{r API}
 x = rnorm(20)
