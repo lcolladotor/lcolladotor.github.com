@@ -1,0 +1,119 @@
+---
+yamlFileName: 2015-01-16-networkD3.Rmd # WARNING: update the filename?
+# print(rmarkdown::metadata$yamlFileName) # permalink
+# library(knitr)
+# setwd("~/git/ttmmghmm.github.io/_posts") ; fn <- "2015-01-10-sparkline.Rmd" ; knit(fn)  # to get the .md file 
+#
+# library(knitrBootstrap)
+# rmarkdown::render(fn, knitrBootstrap::bootstrap_document(), clean = FALSE) # no md?
+# produce an identical result to Knit HTML in RStudio- no run-time dependency on RStudio
+# https://github.com/jimhester/knitrBootstrap#bootstrap-themes
+#   knit(fn) ; markdownToHTML("foo.md") ; browseURL("foo.html")
+# pandoc(fn, format = "docx") # prodces the .docx file - Word doc.
+# rmarkdown::render(fn) # produces table of contents (and html?)
+# rmarkdown::render(fn, pdf_document()) # and knit2html() to get .html from .md
+title: "stochvolR example"
+#
+# like categories, tags can be specified as a YAML list or a space- separated string.
+# http://en.wikipedia.org/wiki/YAML#Lists
+type: posts
+layout: post
+tags:
+- R
+- D3 network
+categories: rstats networkD3
+output:
+  # https://github.com/jimhester/knitrBootstrap
+  # http://cran.r-project.org/web/packages/knitrBootstrap/README.html
+  # ::bootstrap_document custom rendering function for the Rmarkdown package.
+  knitrBootstrap::bootstrap_document: #  to create bootstrap styled HTML reports - not .md
+    # https://github.com/jimhester/knitrBootstrap#package-options
+    # title: "where does this appear? # (NULL) Set the title for the html document
+    # http://bootswatch.com/ optionally including a dynamic style switch.
+    theme: Cyborg # cerulean # Cyborg # monokai cyborg slate darkly superhero cerulean 
+    theme.chooser: TRUE # (FALSE) - Add a bootstrap style chooser to the page.
+    # highlight Set the default code style. (HighlightJS)
+    # https://github.com/jimhester/knitrBootstrap#highlight-themes
+    highlight: monokai # Zenburn # monokai # Sunburst # Zenburn # HighlightJs # google code 
+    highlight.chooser: TRUE # (FALSE) - Add a code style chooser to the page.
+    menu: TRUE # FALSE # Whether to include the bottom navbar.
+author: ttmmghmm
+---
+
+```{r child = c('../_posts/boiler_plate_vignette_setup.Rmd', '../_posts/boiler_plate_bibliography_start.Rmd') }
+# child: (NULL; character) a character vector of filenames of child documents to be run and input into the main document http://yihui.name/knitr/options/
+# http://stackoverflow.com/questions/25824795/how-to-combine-two-rmarkdown-rmd-files-into-a-single-output
+```
+
+
+# networkD3
+
+See https://github.com/christophergandrud/networkD3
+s
+```{r networkD3}
+library(networkD3)
+```
+
+## simpleNetwork
+```{r simpleNetwork}
+# Create fake data
+src <- c("A", "A", "A", "A", "B", "B", "C", "C", "D")
+target <- c("B", "C", "D", "J", "E", "F", "G", "H", "I")
+networkData <- data.frame(src, target)
+
+# Plot
+simpleNetwork(networkData)
+```
+
+## forceNetwork
+```{r forceNetwork}
+# Load data
+data(MisLinks)
+data(MisNodes)
+
+# Plot
+forceNetwork(Links = MisLinks, Nodes = MisNodes, Source = "source",
+             Target = "target", Value = "value", NodeID = "name",
+             Group = "group", opacity = 0.4,
+             colourScale = "d3.scale.category20b()")
+```
+
+## sankeyNetwork
+using a downloaded JSON data file:
+
+```{r}
+# Load energy projection data
+library(RCurl)
+URL <- "https://raw.githubusercontent.com/christophergandrud/networkD3/master/JSONdata/energy.json"
+Energy <- getURL(URL, ssl.verifypeer = FALSE)
+
+# Convert to data frame
+EngLinks <- JSONtoDF(jsonStr = Energy, array = "links")
+EngNodes <- JSONtoDF(jsonStr = Energy, array = "nodes")
+
+# Plot
+sankeyNetwork(Links = EngLinks, Nodes = EngNodes, Source = "source",
+            Target = "target", Value = "value", NodeID = "name",
+            fontsize = 12, nodeWidth = 30)
+```
+
+
+## saveNetwork 
+to save a network to stand alone HTML file:
+```{r saveNetwork}
+library(magrittr)
+simpleNetwork(networkData) %>% saveNetwork(file = 'Net1.html')
+```
+
+The API is pretty simple
+```{r API}
+x = rnorm(20)
+library(sparkline)
+sparkline(x)
+sparkline(x, type = 'bar')
+sparkline(x, type = 'box')
+```
+`r sparkline(x, type = 'bar')` goes here.
+
+```{r child = c('../_posts/boiler_plate_reproducibility.Rmd', '../_posts/boiler_plate_bibliography_end.Rmd') }
+```
