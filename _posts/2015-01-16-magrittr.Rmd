@@ -81,6 +81,7 @@ structure(sapply(x, "[[", "Maintainer"), names = sapply(x, "[[", "Package"))
 ```
 
 ```{r}
+library(magrittr)
 "library" %>% R.home %>% dir %>% 
   lapply(., FUN = packageDescription) %>% 
   lapply(., FUN = "[", c("Package", "Maintainer")) -> 
