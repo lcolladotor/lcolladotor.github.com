@@ -102,7 +102,7 @@ sparkline(x)
 sparkline(x, type = 'bar')
 sparkline(x, type = 'box')
 ```
-
+`r sparkline(x, type = 'bar')` goes here.
 
 ```{r child = c('../_posts/boiler_plate_reproducibility.Rmd', '../_posts/boiler_plate_bibliography_end.Rmd') }
 ```
