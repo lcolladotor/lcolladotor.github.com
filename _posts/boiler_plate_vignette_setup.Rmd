@@ -1,4 +1,5 @@
-<!-- NB: Do not add yaml code here, put it at the start of the top level Rmd -->
+<!-- setup vignette boiler plate
+NB: Do not add yaml code here, put it at the start of the top level Rmd -->
 
 *(This blog was produced on: `r as.character(Sys.Date())`.)*  
 

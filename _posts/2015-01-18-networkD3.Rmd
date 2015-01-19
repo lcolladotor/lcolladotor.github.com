@@ -109,14 +109,33 @@ simpleNetwork(networkData) %>% saveNetwork(file = 'Net1.html')
 # sparkline
 
 The API is pretty simple
-```{r API}
+```{r API, fig.keep='all', fig.cap = "long caption.", fig.scap = "short caption", fig.show = "asis"}
 x = rnorm(20)
+library(htmlwidgets)
 library(sparkline)
+# library(sparkTable)
 sparkline(x)
 sparkline(x, type = 'bar')
 sparkline(x, type = 'box')
 ```
 `r sparkline(x, type = 'bar')` goes here.
+
+```{r}
+
+set.seed(1234)
+x = rnorm(10)
+y = rnorm(10)
+```
+
+Inline line graphs `r sparkline(x)`
+
+Bar charts  `r sparkline(abs(x), type = 'bar')`  negative values: `r sparkline(x, type = 'bar')`
+
+| Stock | Sparkline         | Boxplot  
+|-------|-------------------|--------
+| x     | `r sparkline(x)`  | `r sparkline(x, type ='box')`
+| y     | `r sparkline(y)`  | `r sparkline(y, type ='box')`
+
 
 ```{r child = c('../_posts/boiler_plate_reproducibility.Rmd', '../_posts/boiler_plate_bibliography_end.Rmd') }
 ```
