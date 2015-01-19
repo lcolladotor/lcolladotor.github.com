@@ -271,8 +271,8 @@ str(rmarkdown::metadata) # https://github.com/rstudio/rmarkdown/issues/260
 
 ### Runtime 
 
-Vignette generated in 3.8 seconds.   
-<p>Timestamp 2015-01-19 22:19:00. <!-- Date the vignette was generated -->
+Vignette generated in 4.1 seconds.   
+<p>Timestamp 2015-01-19 22:21:34. <!-- Date the vignette was generated -->
 
 <!-- *** Bibliography END ***
 NB: Do not add yaml code here, put it at the start of the top level Rmd 
