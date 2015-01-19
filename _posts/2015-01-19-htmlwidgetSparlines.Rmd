@@ -11,13 +11,13 @@ tags:
 categories: rstats sparkline htmkwidget
 output:
   html_document:
-    keep_md: TRUE
-#  knitrBootstrap::bootstrap_document: #  to create bootstrap styled HTML reports - not .md
+    keep_md: TRUE # sparkline works where knitrBootstrap leaves blanks.
+  knitrBootstrap::bootstrap_document: #  to create bootstrap styled HTML reports - not .md
     # https://github.com/jimhester/knitrBootstrap#package-options
     # title: "where does this appear? # (NULL) Set the title for the html document
     # http://bootswatch.com/ optionally including a dynamic style switch.
-    ##theme: Cyborg # cerulean # Cyborg # monokai cyborg slate darkly superhero cerulean 
-    ##theme.chooser: TRUE # (FALSE) - Add a bootstrap style chooser to the page.
+    theme: Cyborg # cerulean # Cyborg # monokai cyborg slate darkly superhero cerulean 
+    theme.chooser: TRUE # (FALSE) - Add a bootstrap style chooser to the page.
     # highlight Set the default code style. (HighlightJS)
     # https://github.com/jimhester/knitrBootstrap#highlight-themes
 #    highlight: monokai # Zenburn # monokai # Sunburst # Zenburn # HighlightJs # google code 

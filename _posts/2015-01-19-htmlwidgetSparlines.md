@@ -3,7 +3,8 @@ Ramnath Vaidyanathan
 July 18, 2014  
 
 
-<!-- NB: Do not add yaml code here, put it at the start of the top level Rmd -->
+<!-- setup vignette boiler plate
+NB: Do not add yaml code here, put it at the start of the top level Rmd -->
 
 *(This blog was produced on: 2015-01-19.)*  
 
@@ -182,9 +183,12 @@ str(rmarkdown::metadata) # https://github.com/rstudio/rmarkdown/issues/260
 ##  $ yamlFileName: chr "2015-01-19-htmlwidgetSparlines.Rmd"
 ##  $ tags        : chr [1:2] "R" "sparkline"
 ##  $ categories  : chr "rstats sparkline htmkwidget"
-##  $ output      :List of 1
-##   ..$ html_document:List of 1
+##  $ output      :List of 2
+##   ..$ html_document                     :List of 1
 ##   .. ..$ keep_md: logi TRUE
+##   ..$ knitrBootstrap::bootstrap_document:List of 2
+##   .. ..$ theme        : chr "Cyborg"
+##   .. ..$ theme.chooser: logi TRUE
 ```
 
 ## `R` information
@@ -240,8 +244,8 @@ str(rmarkdown::metadata) # https://github.com/rstudio/rmarkdown/issues/260
 
 ### Runtime 
 
-Vignette generated in 2.2 seconds.   
-<p>Timestamp 2015-01-19 22:01:11. <!-- Date the vignette was generated -->
+Vignette generated in 2.5 seconds.   
+<p>Timestamp 2015-01-19 22:12:22. <!-- Date the vignette was generated -->
 
 <!-- *** Bibliography END ***
 NB: Do not add yaml code here, put it at the start of the top level Rmd 
