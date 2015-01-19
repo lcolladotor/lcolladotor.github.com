@@ -31,6 +31,14 @@ output:
 ```
 
 
+```{r}
+plot(runif(1e3))
+```
+
+```{r}
+library(ggplot2)
+qplot(runif(1e2))
+```
 
 
 ```{r}

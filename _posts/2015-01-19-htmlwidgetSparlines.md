@@ -19,6 +19,24 @@ NB: Do not add yaml code here, put it at the start of the top level Rmd -->
 
 
 
+```r
+plot(runif(1e3))
+```
+
+![](2015-01-19-htmlwidgetSparlines_files/figure-html/unnamed-chunk-2-1.png) 
+
+
+```r
+library(ggplot2)
+qplot(runif(1e2))
+```
+
+```
+## stat_bin: binwidth defaulted to range/30. Use 'binwidth = x' to adjust this.
+```
+
+![](2015-01-19-htmlwidgetSparlines_files/figure-html/unnamed-chunk-3-1.png) 
+
 
 
 ```r
@@ -215,6 +233,7 @@ str(rmarkdown::metadata) # https://github.com/rstudio/rmarkdown/issues/260
 
 ```
 ##  package       * version  date       source                                
+##  MASS            7.3.35   2014-09-30 CRAN (R 3.1.2)                        
 ##  RCurl           1.95.4.5 2014-12-28 CRAN (R 3.1.2)                        
 ##  RJSONIO         1.3.0    2014-07-28 CRAN (R 3.1.2)                        
 ##  Rcpp            0.11.3   2014-09-29 CRAN (R 3.1.2)                        
@@ -222,21 +241,29 @@ str(rmarkdown::metadata) # https://github.com/rstudio/rmarkdown/issues/260
 ##  XML             3.98.1.1 2013-06-20 CRAN (R 3.1.2)                        
 ##  bibtex          0.4.0    2014-12-31 CRAN (R 3.1.2)                        
 ##  bitops          1.0.6    2013-08-17 CRAN (R 3.1.2)                        
+##  colorspace      1.2.4    2013-09-30 CRAN (R 3.1.2)                        
 ##  devtools      * 1.6.1    2014-10-07 CRAN (R 3.1.2)                        
 ##  digest          0.6.8    2014-12-31 CRAN (R 3.1.2)                        
 ##  evaluate        0.5.5    2014-04-29 CRAN (R 3.1.2)                        
 ##  formatR         1.0      2014-08-25 CRAN (R 3.1.2)                        
+##  ggplot2       * 1.0.0.99 2015-01-18 Github (tdhock/ggplot2@aac38b6)       
+##  gtable          0.1.2    2012-12-05 CRAN (R 3.1.2)                        
 ##  htmltools       0.2.6    2014-09-08 CRAN (R 3.1.2)                        
 ##  htmlwidgets   * 0.3.2    2014-12-09 CRAN (R 3.1.2)                        
 ##  httr            0.6.1    2015-01-01 CRAN (R 3.1.2)                        
 ##  knitcitations * 1.0.5    2014-11-26 CRAN (R 3.1.2)                        
 ##  knitr         * 1.8.15   2015-01-11 local                                 
+##  labeling        0.3      2014-08-23 CRAN (R 3.1.2)                        
 ##  lubridate       1.3.3    2013-12-31 CRAN (R 3.1.2)                        
 ##  magrittr      * 1.5      2014-11-22 CRAN (R 3.1.2)                        
 ##  memoise         0.2.1    2014-04-22 CRAN (R 3.1.2)                        
+##  munsell         0.4.2    2013-07-11 CRAN (R 3.1.2)                        
 ##  plyr            1.8.1    2014-02-26 CRAN (R 3.1.2)                        
+##  proto           0.3.10   2012-12-22 CRAN (R 3.1.2)                        
+##  reshape2        1.4.1    2014-12-06 CRAN (R 3.1.2)                        
 ##  rmarkdown       0.4.2    2015-01-11 Github (rstudio/rmarkdown@514d134)    
 ##  rstudioapi      0.2      2014-12-31 CRAN (R 3.1.2)                        
+##  scales          0.2.4    2014-04-22 CRAN (R 3.1.2)                        
 ##  sparkline     * 1.0      2015-01-10 Github (htmlwidgets/sparkline@aefe3a1)
 ##  stringr         0.6.2    2012-12-06 CRAN (R 3.1.2)                        
 ##  yaml            2.1.13   2014-06-12 CRAN (R 3.1.2)
@@ -244,8 +271,8 @@ str(rmarkdown::metadata) # https://github.com/rstudio/rmarkdown/issues/260
 
 ### Runtime 
 
-Vignette generated in 2.5 seconds.   
-<p>Timestamp 2015-01-19 22:12:22. <!-- Date the vignette was generated -->
+Vignette generated in 3.8 seconds.   
+<p>Timestamp 2015-01-19 22:19:00. <!-- Date the vignette was generated -->
 
 <!-- *** Bibliography END ***
 NB: Do not add yaml code here, put it at the start of the top level Rmd 
