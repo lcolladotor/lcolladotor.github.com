@@ -871,11 +871,10 @@
 <div class="row row-offcanvas row-offcanvas-right">
 <div class="contents col-xs-12 col-md-10">
 <h1>https://quantstrattrader.wordpress.com/2015/01/16/an-update-on-eaa-and-a-volatility-strategy/</h1>
-<!-- NB: Do not add yaml code here, put it at the start of the top level Rmd -->
+<!-- setup vignette boiler plate
+NB: Do not add yaml code here, put it at the start of the top level Rmd -->
 
-
-
-
+<p><em>(This blog was produced on: 2015-01-20.)</em></p>
 <!-- NB: Do not add yaml code here, put it at the start of the top level Rmd -->
 
 
@@ -1069,10 +1068,31 @@ charts.PerformanceSummary(compare)</code></pre>
 </button><pre style=""><code class="source r">stats</code></pre><button class="output R toggle btn btn-xs btn-success">
 <span class="glyphicon glyphicon-chevron-down"></span> R output
 </button><pre style=""><code class="output r">##                                 Offensive Defensive      OffRF     DefRF
-## Annualized Return               17.663669 13.835150 16.7835389 13.738821
-## Annualized Standard Deviation   22.737116 13.768256 22.3899408 13.507202
+## Annualized Return               17.663669 13.835150 16.7835420 13.738823
+## Annualized Standard Deviation   22.737116 13.768256 22.3899412 13.507202
 ## Worst Drawdown                  25.353402 12.135310 25.3559118 12.146654
-## Annualized Sharpe Ratio (Rf=0%)  0.776865  1.004859  0.7496018  1.017148
+## Annualized Sharpe Ratio (Rf=0%)  0.776865  1.004859  0.7496019  1.017148
+</code></pre>
+</div>
+<div class="row">
+<button class="source R toggle btn btn-xs btn-primary">
+<span class="glyphicon glyphicon-chevron-down"></span> R source
+</button><pre style=""><code class="source r">test <- EAA(prices, cashAsset = "VBMFX", bestN=3, returnWeights=TRUE)</code></pre><button class="warning R toggle btn btn-xs btn-warning">
+<span class="glyphicon glyphicon-chevron-down"></span> R warning
+</button><pre style=""><code class="warning r">## Warning in Return.rebalancing(R = returns, weights = weights): NA's
+## detected: filling NA's with zeros
+</code></pre><button class="source R toggle btn btn-xs btn-primary">
+<span class="glyphicon glyphicon-chevron-down"></span> R source
+</button><pre style=""><code class="source r">weights <- test[[1]]
+summary(weights$TSLA[weights$TSLA > 0])</code></pre><button class="output R toggle btn btn-xs btn-success">
+<span class="glyphicon glyphicon-chevron-down"></span> R output
+</button><pre style=""><code class="output r">##      Index                 TSLA        
+##  Min.   :2011-07-29   Min.   :0.01614  
+##  1st Qu.:2012-09-14   1st Qu.:0.32345  
+##  Median :2013-07-31   Median :0.48542  
+##  Mean   :2013-06-20   Mean   :0.51415  
+##  3rd Qu.:2014-04-15   3rd Qu.:0.75631  
+##  Max.   :2014-12-31   Max.   :0.95793
 </code></pre>
 </div>
 The API is pretty simple
@@ -1082,9 +1102,9 @@ The API is pretty simple
 </button><pre style=""><code class="source r">x = rnorm(20)
 library(sparkline)
 sparkline(x)</code></pre><!--html_preserve-->
-<span id="htmlwidget-6402" class="sparkline"></span>
-<script type="application/json" data-for="htmlwidget-6402">{ "x": {
- "values": [ -0.1072100237662258,  2.47250403994408, -0.7955260526407826, 0.2810105378637159, -1.433885576315405, -1.167298110148099, -0.004282815993420187, 0.01378183034108134, 0.7694865122754362, 0.7662483685284572, -0.02421240786705137, 0.7090716587189025, 0.701412364967534, 0.9478092408690802, -0.09188733456824023, 1.368827125090686, 0.9051107366643754, 1.679045612096718, -0.5353639053909603, 0.7340531542844564 ],
+<span id="htmlwidget-827" class="sparkline"></span>
+<script type="application/json" data-for="htmlwidget-827">{ "x": {
+ "values": [ -0.740320182674554, -0.6514474359838586, -0.4205484229074922, -0.6132068863419902, -1.019680590967986, -0.6679046186506563, 0.2967244108804238, 1.319520511114356, -0.8137324981155336, -2.963014698320748, 0.557675044740427, -2.329819941200017, 0.9282294303580478, 0.005783886777785284, 0.1264689131719355, 0.07209631999382951, -1.918555865699736, -1.111864369936206, -1.511158208019086, 0.3391509423428351 ],
 "options": {
  "height":                20,
 "width":                60 
@@ -1094,9 +1114,9 @@ sparkline(x)</code></pre><!--html_preserve-->
 },"evals": [  ] }</script><!--/html_preserve--><button class="source R toggle btn btn-xs btn-primary">
 <span class="glyphicon glyphicon-chevron-down"></span> R source
 </button><pre style=""><code class="source r">sparkline(x, type = 'bar')</code></pre><!--html_preserve-->
-<span id="htmlwidget-2660" class="sparkline"></span>
-<script type="application/json" data-for="htmlwidget-2660">{ "x": {
- "values": [ -0.1072100237662258,  2.47250403994408, -0.7955260526407826, 0.2810105378637159, -1.433885576315405, -1.167298110148099, -0.004282815993420187, 0.01378183034108134, 0.7694865122754362, 0.7662483685284572, -0.02421240786705137, 0.7090716587189025, 0.701412364967534, 0.9478092408690802, -0.09188733456824023, 1.368827125090686, 0.9051107366643754, 1.679045612096718, -0.5353639053909603, 0.7340531542844564 ],
+<span id="htmlwidget-9093" class="sparkline"></span>
+<script type="application/json" data-for="htmlwidget-9093">{ "x": {
+ "values": [ -0.740320182674554, -0.6514474359838586, -0.4205484229074922, -0.6132068863419902, -1.019680590967986, -0.6679046186506563, 0.2967244108804238, 1.319520511114356, -0.8137324981155336, -2.963014698320748, 0.557675044740427, -2.329819941200017, 0.9282294303580478, 0.005783886777785284, 0.1264689131719355, 0.07209631999382951, -1.918555865699736, -1.111864369936206, -1.511158208019086, 0.3391509423428351 ],
 "options": {
  "type": "bar",
 "height":                20,
@@ -1107,9 +1127,9 @@ sparkline(x)</code></pre><!--html_preserve-->
 },"evals": [  ] }</script><!--/html_preserve--><button class="source R toggle btn btn-xs btn-primary">
 <span class="glyphicon glyphicon-chevron-down"></span> R source
 </button><pre style=""><code class="source r">sparkline(x, type = 'box')</code></pre><!--html_preserve-->
-<span id="htmlwidget-7628" class="sparkline"></span>
-<script type="application/json" data-for="htmlwidget-7628">{ "x": {
- "values": [ -0.1072100237662258,  2.47250403994408, -0.7955260526407826, 0.2810105378637159, -1.433885576315405, -1.167298110148099, -0.004282815993420187, 0.01378183034108134, 0.7694865122754362, 0.7662483685284572, -0.02421240786705137, 0.7090716587189025, 0.701412364967534, 0.9478092408690802, -0.09188733456824023, 1.368827125090686, 0.9051107366643754, 1.679045612096718, -0.5353639053909603, 0.7340531542844564 ],
+<span id="htmlwidget-3180" class="sparkline"></span>
+<script type="application/json" data-for="htmlwidget-3180">{ "x": {
+ "values": [ -0.740320182674554, -0.6514474359838586, -0.4205484229074922, -0.6132068863419902, -1.019680590967986, -0.6679046186506563, 0.2967244108804238, 1.319520511114356, -0.8137324981155336, -2.963014698320748, 0.557675044740427, -2.329819941200017, 0.9282294303580478, 0.005783886777785284, 0.1264689131719355, 0.07209631999382951, -1.918555865699736, -1.111864369936206, -1.511158208019086, 0.3391509423428351 ],
 "options": {
  "type": "box",
 "height":                20,
@@ -1120,9 +1140,9 @@ sparkline(x)</code></pre><!--html_preserve-->
 },"evals": [  ] }</script><!--/html_preserve-->
 </div>
 <!--html_preserve-->
-<span id="htmlwidget-8332" class="sparkline"></span>
-<script type="application/json" data-for="htmlwidget-8332">{ "x": {
- "values": [ -0.1072100237662258,  2.47250403994408, -0.7955260526407826, 0.2810105378637159, -1.433885576315405, -1.167298110148099, -0.004282815993420187, 0.01378183034108134, 0.7694865122754362, 0.7662483685284572, -0.02421240786705137, 0.7090716587189025, 0.701412364967534, 0.9478092408690802, -0.09188733456824023, 1.368827125090686, 0.9051107366643754, 1.679045612096718, -0.5353639053909603, 0.7340531542844564 ],
+<span id="htmlwidget-4062" class="sparkline"></span>
+<script type="application/json" data-for="htmlwidget-4062">{ "x": {
+ "values": [ -0.740320182674554, -0.6514474359838586, -0.4205484229074922, -0.6132068863419902, -1.019680590967986, -0.6679046186506563, 0.2967244108804238, 1.319520511114356, -0.8137324981155336, -2.963014698320748, 0.557675044740427, -2.329819941200017, 0.9282294303580478, 0.005783886777785284, 0.1264689131719355, 0.07209631999382951, -1.918555865699736, -1.111864369936206, -1.511158208019086, 0.3391509423428351 ],
 "options": {
  "type": "bar",
 "height":                20,
@@ -1207,9 +1227,9 @@ KnitPost(docName)</code></pre>
 ##  $ categories  : chr "rstats investing"
 ##  $ output      :List of 1
 ##   ..$ knitrBootstrap::bootstrap_document:List of 5
-##   .. ..$ theme            : chr "cerulean"
+##   .. ..$ theme            : chr "Cyborg"
 ##   .. ..$ theme.chooser    : logi TRUE
-##   .. ..$ highlight        : chr "Zenburn"
+##   .. ..$ highlight        : chr "monokai"
 ##   .. ..$ highlight.chooser: logi TRUE
 ##   .. ..$ menu             : logi TRUE
 ##  $ author      : chr "ttmmghmm"
@@ -1273,9 +1293,9 @@ KnitPost(docName)</code></pre>
 </code></pre>
 </div>
 <h3>Runtime</h3>
-Vignette generated in 22.8 seconds.<br />
+Vignette generated in 23.2 seconds.<br />
 <p>
-<p>Timestamp 2015-01-18 14:26:48. <!-- Date the vignette was generated --></p>
+<p>Timestamp 2015-01-20 22:44:33. <!-- Date the vignette was generated --></p>
 <!-- *** Bibliography END ***
 NB: Do not add yaml code here, put it at the start of the top level Rmd 
 -->
@@ -1343,13 +1363,13 @@ Type
 <li >
 <a class="theme-switch" title="Amelia" href="#">Amelia</a>
 </li>
-<li class="active">
+<li >
 <a class="theme-switch" title="Cerulean" href="#">Cerulean</a>
 </li>
 <li >
 <a class="theme-switch" title="Cosmo" href="#">Cosmo</a>
 </li>
-<li >
+<li class="active">
 <a class="theme-switch" title="Cyborg" href="#">Cyborg</a>
 </li>
 <li >
@@ -1390,7 +1410,7 @@ Type
 <li >
 <a class="highlight-switch" title="Sunburst" href="#">Sunburst</a>
 </li>
-<li class="active">
+<li >
 <a class="highlight-switch" title="Zenburn" href="#">Zenburn</a>
 </li>
 <li >
@@ -1426,7 +1446,7 @@ Type
 <li >
 <a class="highlight-switch" title="Arta" href="#">Arta</a>
 </li>
-<li >
+<li class="active">
 <a class="highlight-switch" title="Monokai" href="#">Monokai</a>
 </li>
 <li >
@@ -1468,7 +1488,7 @@ Styled with <a href="https://github.com/jimhester/knitrBootstrap">knitrBootstrap
 </p>
 </div>
 </div>
-<link rel="stylesheet" id="theme" href="https://netdna.bootstrapcdn.com/bootswatch/3.0.0/cerulean/bootstrap.min.css" media="screen"></link><link rel="stylesheet" id="highlight" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/7.3/styles/zenburn.min.css" media="screen"></link>
+<link rel="stylesheet" id="theme" href="https://netdna.bootstrapcdn.com/bootswatch/3.0.0/cyborg/bootstrap.min.css" media="screen"></link><link rel="stylesheet" id="highlight" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/7.3/styles/monokai.min.css" media="screen"></link>
 </div>
 </body>
 </html>
