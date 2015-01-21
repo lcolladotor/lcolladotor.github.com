@@ -28,7 +28,7 @@ timezone: Europe/London
 # WARNING: excl ALL Rmd files in all folders and ALL .md files but _only_ in the posts folder
 # WARNING: Quotes are essential.
 # "*.Rmd", "_posts/*.md", 
-exclude: ["*.png", "*.Rmd", "_posts/*.md", ".DS_Store", "README.md", "Rakefile", "changelog.md", ".rvmrc", ".rbenv-version"]
+exclude: ["_posts/*/*/*.png", "*.Rmd", "_posts/*.md", ".DS_Store", "README.md", "Rakefile", "changelog.md", ".rvmrc", ".rbenv-version"]
 
 # syntax highlighting of code snippets using either Pygments or Rouge
 # http://jekyllrb.com/docs/posts/
