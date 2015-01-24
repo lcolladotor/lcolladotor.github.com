@@ -1,17 +1,15 @@
 ---
 title: "jquery Sparkline HTML Widget"
-author: "Ramnath Vaidyanathan"
-date: "July 18, 2014"
+author: ttmmghmmm
+# date: "July 18, 2014"
 yamlFileName: 2015-01-19-htmlwidgetSparlines.Rmd # WARNING: update the filename?
 #type: posts
 #layout: post
-tags:
-- R
-- sparkline
+tags: R sparkline
 categories: rstats sparkline htmkwidget
 output:
   html_document:
-    keep_md: TRUE # sparkline works where knitrBootstrap leaves blanks.
+    keep_md: FALSE # sparkline works where knitrBootstrap leaves blanks.
   knitrBootstrap::bootstrap_document: #  to create bootstrap styled HTML reports - not .md
     # https://github.com/jimhester/knitrBootstrap#package-options
     # title: "where does this appear? # (NULL) Set the title for the html document
