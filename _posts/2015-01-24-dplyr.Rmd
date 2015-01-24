@@ -1,8 +1,8 @@
 ---
 yamlFileName: 2015-01-24-dplyr.Rmd # WARNING: update the filename?
-# print(rmarkdown::metadata$yamlFileName) # permalink
+# print(rmarkdown::metadata$yamlFileName)# permalink
 # library(knitr)
-# setwd("~/git/ttmmghmm.github.io/_posts") ; fn <- "2015-01-10-sparkline.Rmd" ; knit(fn)  # to get the .md file 
+# setwd("~/git/ttmmghmm.github.io/_posts") ; fn <- "2015-01-24-dplyr.Rmd" ; knit(fn)  # to get the .md file 
 #
 # library(knitrBootstrap)
 # rmarkdown::render(fn, knitrBootstrap::bootstrap_document(), clean = FALSE) # no md?
