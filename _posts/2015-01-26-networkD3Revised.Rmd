@@ -62,12 +62,12 @@ simpleNetwork(networkData)
 
 ```{r saveNetwork2}
 simpleNetwork(networkData) %>%
-  saveNetwork(file = '2015-01-26-saveNetwork2.html')
+  saveNetwork(file = '2015-01-25-saveNetwork2.html')
 ```
-<http://ttmmghmm.github.io/2015/01/26/saveNetwork2/>
+<http://ttmmghmm.github.io/2015/01/25/saveNetwork2/>
 
 
-<a http://../saveNetwork2/>attempt 2 ../saveNetwork2/</a>
+<a http://../saveNetwork2/>attempt 2 ../../25/saveNetwork2/</a>
 
 
 
