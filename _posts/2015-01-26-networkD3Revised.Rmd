@@ -1,5 +1,5 @@
 ---
-yamlFileName: 2015-01-18-networkD3.Rmd # WARNING: update the filename?
+yamlFileName: 2015-01-26-networkD3Revised.Rmd # WARNING: update the filename?
 # print(rmarkdown::metadata$yamlFileName) # permalink
 # library(knitr)
 # setwd("~/git/ttmmghmm.github.io/_posts") ; fn <- "2015-01-10-sparkline.Rmd" ; knit(fn)  # to get the .md file 
@@ -52,7 +52,7 @@ author: ttmmghmm
 https://github.com/christophergandrud/networkD3/blob/master/inst/examples/examples.Rmd
 
 ## simpleNetwork
-```{r simpleNetwork}
+```{r simpleNetwork2}
 library(networkD3)
 src <- c("A", "A", "A", "A", "B", "B", "C", "C", "D")
 target <- c("B", "C", "D", "J", "E", "F", "G", "H", "I")
@@ -60,13 +60,13 @@ networkData <- data.frame(src, target)
 simpleNetwork(networkData)
 ```
 
-```{r saveNetwork}
+```{r saveNetwork2}
 simpleNetwork(networkData) %>%
   saveNetwork(file = 'saveNetwork.html')
 ```
 
 ## forceNetwork
-```{r forceNetwork}
+```{r forceNetwork2}
 data(MisLinks)
 data(MisNodes)
 forceNetwork(Links = MisLinks, Nodes = MisNodes, Source = "source",
@@ -75,7 +75,7 @@ forceNetwork(Links = MisLinks, Nodes = MisNodes, Source = "source",
 ```
 
 # sankeyNetwork
-```{r sankeyNetwork}
+```{r sankeyNetwork2}
 URL <- "https://raw.githubusercontent.com/christophergandrud/d3Network/sankey/JSONdata/energy.json"
 Energy <- RCurl::getURL(URL, ssl.verifypeer = FALSE)
 EngLinks <- JSONtoDF(jsonStr = Energy, array = "links")
@@ -88,7 +88,7 @@ sankeyNetwork(Links = EngLinks, Nodes = EngNodes, Source = "source",
 
 ## treeNetwork
 
-```{r treeNetwork}
+```{r treeNetwork2}
 Flare <- RCurl::getURL("https://gist.githubusercontent.com/mbostock/4063550/raw/a05a94858375bd0ae023f6950a2b13fac5127637/flare.json")
 Flare <- rjson::fromJSON(Flare)
 treeNetwork(List = Flare, fontSize = 10, opacity = 0.9, margin=0)
