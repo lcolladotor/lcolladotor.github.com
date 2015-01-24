@@ -7,6 +7,19 @@ tagline: <a href="http://bit.ly/ttmmghmm">Things that make me go hmm</a>
 
 {% include JB/setup %}
 
+<STYLE TYPE="text/css">
+<!--
+BODY
+   {
+   color:white;
+   background-color:black;
+   font-family:sans-serif;
+   }
+A:link{color:white}
+A:visited{color:gray90}
+-->
+</STYLE>
+
 This site is based on Github/Jekyll.<br> 
 Graphs are generated dynamically through the R package 
 <a http://yihui.name/knitr><b>knitr</b></a>.<br>
@@ -23,7 +36,7 @@ The source code to these posts are available on
 </ul>
 
 {% for post in paginator.posts limit:1 %}
-    here add you post markup 
+   <!-- here add you post markup -->
    <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
    <p class="author">
     <span class="date">{{post.date | date: "%Y-%m-%d"}}</span>
