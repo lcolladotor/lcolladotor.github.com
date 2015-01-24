@@ -3,7 +3,7 @@ NB: Do not add yaml code here, put it at the start of the top level Rmd
 -->
 
 # Reproducibility
-This final section highlights how this vignette was created.
+This final 'boiler plate' section highlights how this vignette was created.
 
 ## To recreate this vignette
 
@@ -17,7 +17,7 @@ https://github.com/trinker/knitcitations
     * Cite an R package using the 'bibentry' object `r citep(citation("RCurl"))`.
 
 
-```{r boiler_plate_reproducibility, eval=FALSE, bootstrap.show.code=FALSE}
+```{r boiler_plate_reproducibility, eval=FALSE, bootstrap.show.code=FALSE, bootstrap.show.message=FALSE, bootstrap.show.output=FALSE}
 # TODO: parse permalink? varialble
 print(rmarkdown::metadata$yamlFileName) # permalink
 docName <- rmarkdown::metadata$yamlFileName
@@ -61,14 +61,14 @@ KnitPost(docName)
 ```
 
 ## YAML boiler plate
-```{r YAML setup, echo=TRUE}
+```{r YAML setup, echo=TRUE, bootstrap.show.code=FALSE, bootstrap.show.message=FALSE, bootstrap.show.output=FALSE}
 str(rmarkdown::metadata) # https://github.com/rstudio/rmarkdown/issues/260
 ```
 
 ## `R` information
 
 ### Session and packages
-```{r session information, echo=FALSE, bootstrap.show.code=FALSE, bootstrap.show.message=FALSE}
+```{r session information, echo=FALSE, bootstrap.show.code=FALSE, bootstrap.show.message=FALSE, bootstrap.show.output=FALSE}
 ## Session info
 library('devtools')
 options(width = 90)
@@ -76,7 +76,7 @@ session_info()
 ```
 
 ### Runtime 
-```{r processing time, echo=FALSE, bootstrap.show.code=FALSE, message=FALSE, warning = FALSE, results='hide'} 
+```{r processing time, echo=FALSE, bootstrap.show.code=FALSE, bootstrap.show.message=FALSE, message=FALSE, warning = FALSE, results='hide'} 
 ## Processing time in seconds
 totalTime <- diff(c(startTime, Sys.time()))
 userTime <- round(totalTime, digits = 1)
