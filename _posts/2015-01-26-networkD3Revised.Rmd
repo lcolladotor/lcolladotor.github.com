@@ -49,7 +49,7 @@ author: ttmmghmm
 # networkD3
 
 ## examples for Rmd file
-https://github.com/christophergandrud/networkD3/blob/master/inst/examples/examples.Rmd
+<https://github.com/christophergandrud/networkD3/blob/master/inst/examples/examples.Rmd>
 
 ## simpleNetwork
 ```{r simpleNetwork2}
@@ -64,6 +64,12 @@ simpleNetwork(networkData)
 simpleNetwork(networkData) %>%
   saveNetwork(file = '2015-01-26-saveNetwork2.html')
 ```
+<http://ttmmghmm.github.io/2015/01/26/saveNetwork2/>
+
+
+<a http://../saveNetwork2/>attempt 2 ../saveNetwork2/</a>
+
+
 
 ## forceNetwork
 ```{r forceNetwork2}
