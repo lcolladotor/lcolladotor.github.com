@@ -62,7 +62,7 @@ simpleNetwork(networkData)
 
 ```{r saveNetwork2}
 simpleNetwork(networkData) %>%
-  saveNetwork(file = 'saveNetwork.html')
+  saveNetwork(file = '2015-01-26-saveNetwork2.html')
 ```
 
 ## forceNetwork
