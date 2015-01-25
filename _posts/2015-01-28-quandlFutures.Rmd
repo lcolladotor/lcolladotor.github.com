@@ -1,0 +1,172 @@
+---
+yamlFileName: 2015-01-27-quandl.Rmd # WARNING: update the filename?
+# print(rmarkdown::metadata$yamlFileName) # permalink
+# library(knitr)
+# setwd("~/git/ttmmghmm.github.io/_posts") ; fn <- "2015-01-10-quandl.Rmd" ; knit(fn)  # to get the .md file 
+#
+# library(knitrBootstrap)
+# rmarkdown::render(fn, knitrBootstrap::bootstrap_document(), clean = FALSE) # no md?
+# produce an identical result to Knit HTML in RStudio- no run-time dependency on RStudio
+# https://github.com/jimhester/knitrBootstrap#bootstrap-themes
+#   knit(fn) ; markdownToHTML("foo.md") ; browseURL("foo.html")
+# pandoc(fn, format = "docx") # prodces the .docx file - Word doc.
+# rmarkdown::render(fn) # produces table of contents (and html?)
+# rmarkdown::render(fn, pdf_document()) # and knit2html() to get .html from .md
+title: "stochvolR example"
+#
+# like categories, tags can be specified as a YAML list or a space- separated string.
+# http://en.wikipedia.org/wiki/YAML#Lists
+type: posts
+layout: post
+tags:
+- R
+- D3 network
+categories: rstats networkD3
+output:
+  # https://github.com/jimhester/knitrBootstrap
+  # http://cran.r-project.org/web/packages/knitrBootstrap/README.html
+  # ::bootstrap_document custom rendering function for the Rmarkdown package.
+  knitrBootstrap::bootstrap_document: #  to create bootstrap styled HTML reports - not .md
+    # https://github.com/jimhester/knitrBootstrap#package-options
+    title: where does this appear? # (NULL) Set the title for the html document
+    # http://bootswatch.com/ optionally including a dynamic style switch.
+    theme: Cyborg # cerulean # Cyborg # monokai cyborg slate darkly superhero cerulean 
+    theme.chooser: TRUE # (FALSE) - Add a bootstrap style chooser to the page.
+    # highlight Set the default code style. (HighlightJS)
+    # https://github.com/jimhester/knitrBootstrap#highlight-themes
+    highlight: monokai # Zenburn # monokai # Sunburst # Zenburn # HighlightJs # google code 
+    highlight.chooser: TRUE # (FALSE) - Add a code style chooser to the page.
+    menu: TRUE # FALSE # Whether to include the bottom navbar.
+author: ttmmghmm
+---
+
+```{r child = c('../_posts/boiler_plate_vignette_setup.Rmd', '../_posts/boiler_plate_bibliography_start.Rmd') }
+# child: (NULL; character) a character vector of filenames of child documents to be run and input into the main document http://yihui.name/knitr/options/
+# http://stackoverflow.com/questions/25824795/how-to-combine-two-rmarkdown-rmd-files-into-a-single-output
+```
+
+
+
+# Quandl
+
+Perform a once off task of storing access token for Quandl.
+See <https://github.com/hadley/secure>.
+```{r, eval=FALSE, bootstrap.show.code=FALSE, bootstrap.show.message=FALSE, bootstrap.show.output=FALSE}
+library(secure)
+# Create a vault directory in your working directory.
+stopifnot(file.exists("vault"))
+# add your name and public key to vault/users.json
+# secure::add_user("ttmmghmm", local_key())
+# add other people from their github_key()s).
+# store data securly
+secure::encrypt(
+  "quandl", 
+  key = "Quandl.auth", # https://www.quandl.com/account
+  secret = "")
+# This creates secure/google.rds.enc, an encrypted rds file.
+```
+
+# Set your Quandl access token
+Retrieve encrypted data via the `secure` package.
+See <https://github.com/hadley/secure>.
+```{r}
+library(magrittr)
+library(Quandl) # https://www.quandl.com/account
+library(secure)
+# This decrypts the encrypted file using your private key.
+myQuandl <- secure::decrypt("quandl") # Quandl.auth("yourauthenticationtoken")
+myQuandl$secret %>% (myQuandl$key %>% get) # Quandl.auth("myQuandl$secret")
+# Save the token object for future sessions
+#save(token, file="./token_file")
+```
+
+# Basic futures data
+Just pick a dataset and enter its Quandl code, like this:
+```{r}
+(c("FRED/GDP.1", "NSE/OIL.4","WIKI/AAPL.3") %>% 
+  Quandl(., type="xts")   ->
+  mydata)                 %>%
+  str
+```
+Data in 4 formats: 
+* data frame ("raw") (default)
+* ts ("ts")
+* zoo ("zoo")
+* xts ("xts"). 
+
+Get multiple datasets in one call by passing an array of Quandl codes, like this:
+`mydata = Quandl(c("NSE/OIL.4","WIKI/AAPL.1"))`.
+This grabs the 4th column of dataset NSE/OIL and the 1st column of dataset WIKI/AAPL, and returns them in a single call.
+
+# Search Quandl for datasets 
+## Gold futures
+```{r}
+# str(Quandl.search(query = "crude oil", page = 2, source = "DOE", silent = TRUE))
+(("gold" %>% 
+  Quandl.search(query = ., source = "CME", silent = TRUE)) ->
+  gold) %>%
+  str
+```
+The only mandatory parameter is "query". 
+* "page" specifies which page of search results you wish to see (default=1). 
+* "source" specifies that you want to search within a particular data source (default=all data sources). 
+* "silent" specifies whether or not you want to see the first 3 results on the console.
+
+Extract the code names.
+```{r}
+gold %>%
+  sapply(., "[[", "code") ->
+  goldCode
+```
+
+Order by date of expiry.
+```{r}
+(goldCode %>%
+  gsub(patt = "(.+)([[:upper:]])([[:digit:]]{4})$", repl = "\\3-\\2", x = .) ->
+  yearMth) %>% 
+  str
+(yearMth %>%
+  order %>%
+  extract(goldCode, .) ->
+  goldCodeOrd) %>%
+  str
+```
+Now grab the individual expiry-ordered futures
+```{r}
+system.time(
+  goldCodeOrd %>%
+    lapply(., FUN = Quandl, type="xts") ->
+    futsGold
+)
+names(futsGold) <- goldCodeOrd
+futsGold %>% length
+futsGold %>% extract(1) %>% str
+futsGold %>% extract2(1) %>% tail
+```
+
+Look at open interest
+```{r}
+futsGold
+```
+
+
+```{r, eval=FALSE}
+my_db <- src_sqlite("my_db.sqlite3", create = T)
+copy_to(my_db, futsGold, temporary = FALSE, 
+  indexes = list(c("year", "month", "day"), "carrier", "tailnum")
+)
+tbl(my_db, sql("SELECT * FROM flights"))
+```
+
+```{r}
+(goldCode %>% 
+  Quandl(., type="xts")   ->
+  mydata)                 %>%
+  str
+```
+
+
+
+
+```{r child = c('../_posts/boiler_plate_reproducibility.Rmd', '../_posts/boiler_plate_bibliography_end.Rmd') }
+```
