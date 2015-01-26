@@ -1,0 +1,1584 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <meta name="author" content="ttmmghmm" />
+  <title>stochvolR example</title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- jQuery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+  
+  <!-- bootstrap -->
+  <!--<link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet"  id="style">-->
+  <script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+  
+  <!-- highlight.js -->
+  <!--<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/7.3/styles/default.min.css" rel="stylesheet" id="code-style">-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/7.3/highlight.min.js"></script>
+  <script>
+  hljs.LANGUAGES.r=function(a){var b="([a-zA-Z]|\\.[a-zA-Z.])[a-zA-Z0-9._]*";return{c:[a.HCM,{b:b,l:b,k:{keyword:"function if in break next repeat else for return switch while try tryCatch|10 stop warning require library attach detach source setMethod setGeneric setGroupGeneric setClass ...|10",literal:"NULL NA TRUE FALSE T F Inf NaN NA_integer_|10 NA_real_|10 NA_character_|10 NA_complex_|10"},r:0},{cN:"number",b:"0[xX][0-9a-fA-F]+[Li]?\\b",r:0},{cN:"number",b:"\\d+(?:[eE][+\\-]?\\d*)?L\\b",r:0},{cN:"number",b:"\\d+\\.(?!\\d)(?:i\\b)?",r:0},{cN:"number",b:"\\d+(?:\\.\\d*)?(?:[eE][+\\-]?\\d*)?i?\\b",r:0},{cN:"number",b:"\\.\\d+(?:[eE][+\\-]?\\d*)?i?\\b",r:0},{b:"`",e:"`",r:0},{cN:"string",b:'"',e:'"',c:[a.BE],r:0},{cN:"string",b:"'",e:"'",c:[a.BE],r:0}]}}(hljs); </script>
+  <!--<script type="text/javascript", src="https://yandex.st/highlightjs/7.3/languages/r.min.js"></script>-->
+  
+  <!-- Manific Popup -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/0.8.9/jquery.magnific-popup.min.js"></script>
+  
+  <script type="text/javascript"
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  <script defer="defer">
+  // Function to generate the dynamic table of contents
+  jQuery.fn.generate_TOC = function () {
+    var base = $(this[0]);
+  
+    var selectors = ['h1', 'h2', 'h3', 'h4'];
+  
+    var last_ptr = [{}, {}, {}, {}];
+  
+    var anchors = {};
+  
+    generate_anchor = function (text) {
+      var test = text.replace(/\W/g, '_');
+  
+      while(test in anchors){
+        //if no suffix, add one
+        if(test.match(/_\d+$/) === null){
+          test = test + "_2";
+        }
+        //else generate unique id for duplicates by adding one to the suffix
+        else {
+          test = test.replace(/_(\d+)$/, function(match, number){ var num=+number+1; return("_" + num) });
+        }
+      }
+      anchors[test]=1;
+      return(test);
+    }
+  
+    $(selectors.join(',')).filter(function(index) { return $(this).parent().attr("id") != 'header'; }).each(function () {
+  
+      var heading = $(this);
+      var idx = selectors.indexOf(heading.prop('tagName').toLowerCase());
+      var itr = 0;
+  
+      while (itr <= idx) {
+        if (jQuery.isEmptyObject(last_ptr[itr])) {
+          last_ptr[itr] = $('<ul>').addClass('nav');
+          if (itr === 0) {
+            base.append(last_ptr[itr])
+          } else {
+            if(last_ptr[itr-1].children('li').length === 0){
+              last_ptr[itr-1].append(last_ptr[itr]);
+            }
+            else {
+              last_ptr[itr - 1].children('li').last().append(last_ptr[itr]);
+            }
+          }
+        }
+        itr++;
+      }
+      var anchor = generate_anchor(heading.text());
+      heading.attr('id', anchor);
+      var a = $('<a>')
+      .text(heading.text())
+      .attr('href', '#' + anchor);
+  
+    var li = $('<li>')
+      .append(a);
+  
+    last_ptr[idx].append(li);
+    for (i = idx + 1; i < last_ptr.length; i++) {
+      last_ptr[i] = {};
+    }
+    });
+  }
+  /* run scripts when document is ready */
+  $(function() {
+    "use strict";
+  
+    var $window = $(window);
+    var $body = $(document.body);
+  
+    /* size of thumbnails */
+  
+    var hidden_types = ['source']
+    var output_types = ['output', 'message', 'warning', 'error']
+  
+    /* style tables */
+    $('table').addClass('table table-striped table-bordered table-hover table-condensed');
+  
+    $('pre code').each(function(i, e) {
+      hljs.highlightBlock(e);
+    });
+  
+    /* Magnific Popup */
+    $(".thumbnail").each(function(){
+      $(this).magnificPopup({
+        disableOn: 768,
+        closeOnContentClick: true,
+  
+        type: 'image',
+        items: {
+          src: $(this).find('img').attr('src'),
+        }
+      });
+    });
+  
+    function toggle_block(obj, show) {
+      var span = obj.find('span');
+      if(show === true){
+        span.removeClass('glyphicon-chevron-up').addClass('glyphicon-chevron-down');
+        obj.next('pre').slideDown();
+      }
+      else {
+        span.removeClass('glyphicon-chevron-down').addClass('glyphicon-chevron-up');
+        obj.next('pre').slideUp();
+      }
+    }
+  
+    function toggle_thumbnails(imgs, show){
+      if(show === true){
+        imgs.parents().show()
+        imgs.slideDown();
+      }
+      else {
+        imgs.slideUp(400, function(){ $(this).parent().hide(); });
+      }
+    }
+  
+    function global_toggle(obj){
+      var type = obj.attr('type');
+      var show = !obj.parent('li').hasClass('active');
+      if(show === true){
+        obj.parent('li').addClass('active');
+      }
+      else{
+        obj.parent('li').removeClass('active');
+      }
+      if(type == 'figure'){
+        toggle_thumbnails($('.thumbnail img'), show);
+      }
+      else {
+        $('.toggle.' + type).each(function() { toggle_block($(this), show); });
+      }
+    }
+  
+    /* onclick toggle next code block */
+    $('.toggle').click(function() {
+      var span = $(this).find('span');
+      toggle_block($(this), !span.hasClass('glyphicon-chevron-down'));
+      return false
+    })
+  
+    // global toggles
+    $('.toggle-global').click(function(){
+      var type = $(this).attr('type');
+      if(type === 'all-source'){
+          $('li a.source').each(function() {
+            global_toggle($(this));
+          });
+        }
+      else if(type === 'all-output'){
+        $.each(output_types, function(i, val){
+          console.log(val);
+          global_toggle($('li a.' + val));
+        });
+      }
+      else {
+        console.log($(this));
+        global_toggle($(this));
+      }
+      return false;
+    });
+    /* table of contents */
+    if($(['h1', 'h2', 'h3', 'h4'].join(',')).length > 0){
+      $('body > #wrap > .container > .row').append('<div class="col-md-2"><div id="toc" class="well sidebar sidenav affix hidden-print"/></div>');
+      $('#toc').generate_TOC();
+    }
+  
+    $.each(hidden_types, function(i, type) {
+      $('li[type=' + type + ']').each(function(){ global_toggle($(this)); });
+    });
+  
+    /* remove paragraphs with no content */
+    $('p:empty').remove();
+  
+    $body.scrollspy({
+      target: '.sidebar',
+    });
+  
+    /* theme switch */
+    $('.theme-switch').click(function(){
+      var css = $('link[title=' + $(this).attr('title') + ']');
+      $('#theme[rel=stylesheet]').attr('href', css.attr('href'));
+      $('.theme-switch').closest('li').removeClass('active');
+      $(this).closest('li').addClass('active');
+      return false;
+    });
+    /* code style switch */ //TODO use same function for both of these?
+    $('.highlight-switch').click(function(){
+      var css = $('link[title="' + $(this).attr('title') + '"]');
+      $('#highlight[rel=stylesheet]').attr('href', css.attr('href'));
+      $('.highlight-switch').closest('li').removeClass('active');
+      $(this).closest('li').addClass('active');
+      return false;
+    });
+  
+    //TODO refresh on show/hide
+    $window.on('load', function () {
+      $body.scrollspy('refresh');
+    })
+  
+  });
+  
+  </script>
+  <style>
+  /* Knitr_bootstrap styles */
+  #header {
+    display: none !important;
+    visibility: hidden !important;
+  }
+  #wrap .container-fluid {
+    padding: 0;
+    overflow: hidden;
+  }
+  .toggle{
+    text-transform: capitalize;
+  }
+  
+  .toggle-global{
+    text-transform: capitalize;
+  }
+  
+  /* Sticky footer styles */
+  * {
+    margin:0;
+  }
+  html,
+  body {
+      height: 100%;
+      padding:0 !important;
+      /* The html and body elements cannot have any padding or margin. */
+      /*overflow-x: hidden;*/
+  }
+  
+  /* Wrapper for page content to push down footer */
+  #wrap {
+      min-height: 100%;
+      height: auto !important;
+      height: 100%;
+      /* Negative indent footer by it's height */
+      margin: 0 auto -120px;
+  }
+  
+  /* Set the fixed height of the footer here */
+  #push,
+  #footer {
+      height: 120px;
+  }
+  
+  #footer {
+    text-align: center;
+  }
+  
+  /* Top level subheader elements.  These are the first nested items underneath a header element. */
+  .header li {
+    font-size: 20px;
+  }
+  
+  /* Makes the font smaller for all subheader elements. */
+  .sub-header li {
+      font-size: 12px;
+  }
+  
+  button.thumbnails {
+    margin-left:0px;
+  }
+  
+  /*
+   * Side navigation
+   *
+   * Scrollspy and affixed enhanced navigation to highlight sections and secondary
+   * sections of docs content.
+   */
+  
+  /* By default it's not affixed in mobile views, so undo that */
+  .sidebar.affix {
+    position: static;
+  }
+  
+  /* First level of nav */
+  .sidenav {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding-top:    10px;
+    padding-bottom: 10px;
+    border-radius: 5px;
+  }
+  
+  /* All levels of nav */
+  .sidebar .nav > li > a {
+    display: block;
+    padding: 5px 20px;
+  }
+  .sidebar .nav > li > a:hover,
+  .sidebar .nav > li > a:focus {
+    text-decoration: none;
+    border-right: 1px solid;
+  }
+  .sidebar .nav > .active > a,
+  .sidebar .nav > .active:hover > a,
+  .sidebar .nav > .active:focus > a {
+    font-weight: bold;
+    background-color: transparent;
+    border-right: 1px solid;
+  }
+  
+  /* Nav: second level (shown on .active) */
+  .sidebar .nav .nav {
+    display: none; /* Hide by default, but at >768px, show it */
+    margin-bottom: 8px;
+  }
+  .sidebar .nav .nav > li > a {
+    padding-top:    3px;
+    padding-bottom: 3px;
+    padding-left: 30px;
+    font-size: 90%;
+  }
+  
+  .sidebar .nav .nav .nav > li > a {
+    padding-left: 40px;
+  }
+  .sidebar .nav .nav .nav .nav > li > a {
+    padding-left: 50px;
+  }
+  
+  /* Show and affix the side nav when space allows it */
+  @media screen and (min-width: 992px) {
+    .sidebar .nav > .active > ul {
+      display: block;
+    }
+    /* Widen the fixed sidebar */
+    .sidebar.affix,
+    .sidebar.affix-bottom {
+      width: 213px;
+    }
+    .sidebar.affix-top,
+    .sidebar.affix {
+      position: fixed; /* Undo the static from mobile first approach */
+      top: 30px;
+    }
+    .sidebar.affix-bottom {
+      position: absolute; /* Undo the static from mobile first approach */
+    }
+    .sidebar.affix-bottom .sidenav,
+    .sidebar.affix .sidenav {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    /* Widen the fixed sidebar again */
+    .sidebar.affix-bottom,
+    .sidebar.affix {
+      width: 263px;
+    }
+  }
+  
+  #toc {
+    padding: 10px 0px;
+    margin:0;
+    border:0;
+  }
+  
+  
+  .panel pre {
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+  button + pre {
+    margin: 0;
+    padding: 0;
+  }
+  pre code {
+    border-radius: 0;
+  }
+  /* Magnific Popup CSS */
+  .mfp-bg {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1042;
+    overflow: hidden;
+    position: fixed;
+    background: #0b0b0b;
+    opacity: 0.8;
+    filter: alpha(opacity=80); }
+  
+  .mfp-wrap {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1043;
+    position: fixed;
+    outline: none !important;
+    -webkit-backface-visibility: hidden; }
+  
+  .mfp-container {
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    padding: 0 8px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+  
+  .mfp-container:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle; }
+  
+  .mfp-align-top .mfp-container:before {
+    display: none; }
+  
+  .mfp-content {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 auto;
+    text-align: left;
+    z-index: 1045; }
+  
+  .mfp-inline-holder .mfp-content,
+  .mfp-ajax-holder .mfp-content {
+    width: 100%;
+    cursor: auto; }
+  
+  .mfp-ajax-cur {
+    cursor: progress; }
+  
+  .mfp-zoom-out-cur,
+  .mfp-zoom-out-cur .mfp-image-holder .mfp-close {
+    cursor: -moz-zoom-out;
+    cursor: -webkit-zoom-out;
+    cursor: zoom-out; }
+  
+  .mfp-zoom {
+    cursor: pointer;
+    cursor: -webkit-zoom-in;
+    cursor: -moz-zoom-in;
+    cursor: zoom-in; }
+  
+  .mfp-auto-cursor .mfp-content {
+    cursor: auto; }
+  
+  .mfp-close,
+  .mfp-arrow,
+  .mfp-preloader,
+  .mfp-counter {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none; }
+  
+  .mfp-loading.mfp-figure {
+    display: none; }
+  
+  .mfp-hide {
+    display: none !important; }
+  
+  .mfp-preloader {
+    color: #cccccc;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    text-align: center;
+    margin-top: -0.8em;
+    left: 8px;
+    right: 8px;
+    z-index: 1044; }
+  
+  .mfp-preloader a {
+    color: #cccccc; }
+  
+  .mfp-preloader a:hover {
+    color: white; }
+  
+  .mfp-s-ready .mfp-preloader {
+    display: none; }
+  
+  .mfp-s-error .mfp-content {
+    display: none; }
+  
+  button.mfp-close,
+  button.mfp-arrow {
+    overflow: visible;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    -webkit-appearance: none;
+    display: block;
+    padding: 0;
+    z-index: 1046;
+    -webkit-box-shadow: none;
+    box-shadow: none; }
+  
+  button::-moz-focus-inner {
+    padding: 0;
+    border: 0; }
+  
+  .mfp-close {
+    width: 44px;
+    height: 44px;
+    line-height: 44px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    text-decoration: none;
+    text-align: center;
+    opacity: 0.65;
+    padding: 0 0 18px 10px;
+    color: white;
+    font-style: normal;
+    font-size: 28px;
+    font-family: Arial, Baskerville, monospace; }
+    .mfp-close:hover, .mfp-close:focus {
+      opacity: 1; }
+    .mfp-close:active {
+      top: 1px; }
+  
+  .mfp-close-btn-in .mfp-close {
+    color: #333333; }
+  
+  .mfp-image-holder .mfp-close,
+  .mfp-iframe-holder .mfp-close {
+    color: white;
+    right: -6px;
+    text-align: right;
+    padding-right: 6px;
+    width: 100%; }
+  
+  .mfp-counter {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #cccccc;
+    font-size: 12px;
+    line-height: 18px; }
+  
+  .mfp-arrow {
+    position: absolute;
+    opacity: 0.65;
+    margin: 0;
+    top: 50%;
+    margin-top: -55px;
+    padding: 0;
+    width: 90px;
+    height: 110px;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+  
+  .mfp-arrow:active {
+    margin-top: -54px; }
+  
+  .mfp-arrow:hover,
+  .mfp-arrow:focus {
+    opacity: 1; }
+  
+  .mfp-arrow:before, .mfp-arrow:after,
+  .mfp-arrow .mfp-b,
+  .mfp-arrow .mfp-a {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin-top: 35px;
+    margin-left: 35px;
+    border: medium inset transparent; }
+  .mfp-arrow:after,
+  .mfp-arrow .mfp-a {
+    border-top-width: 13px;
+    border-bottom-width: 13px;
+    top: 8px; }
+  .mfp-arrow:before,
+  .mfp-arrow .mfp-b {
+    border-top-width: 21px;
+    border-bottom-width: 21px; }
+  
+  .mfp-arrow-left {
+    left: 0; }
+    .mfp-arrow-left:after,
+    .mfp-arrow-left .mfp-a {
+      border-right: 17px solid white;
+      margin-left: 31px; }
+    .mfp-arrow-left:before,
+    .mfp-arrow-left .mfp-b {
+      margin-left: 25px;
+      border-right: 27px solid #3f3f3f; }
+  
+  .mfp-arrow-right {
+    right: 0; }
+    .mfp-arrow-right:after,
+    .mfp-arrow-right .mfp-a {
+      border-left: 17px solid white;
+      margin-left: 39px; }
+    .mfp-arrow-right:before,
+    .mfp-arrow-right .mfp-b {
+      border-left: 27px solid #3f3f3f; }
+  
+  .mfp-iframe-holder {
+    padding-top: 40px;
+    padding-bottom: 40px; }
+  
+  .mfp-iframe-holder .mfp-content {
+    line-height: 0;
+    width: 100%;
+    max-width: 900px; }
+  
+  .mfp-iframe-scaler {
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    padding-top: 56.25%; }
+  
+  .mfp-iframe-scaler iframe {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+    background: black; }
+  
+  .mfp-iframe-holder .mfp-close {
+    top: -40px; }
+  
+  /* Main image in popup */
+  img.mfp-img {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    line-height: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 40px 0 40px;
+    margin: 0 auto; }
+  
+  /* The shadow behind the image */
+  .mfp-figure:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 40px;
+    bottom: 40px;
+    display: block;
+    right: 0;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+    background: #444444; }
+  
+  .mfp-figure {
+    line-height: 0; }
+  
+  .mfp-bottom-bar {
+    margin-top: -36px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    cursor: auto; }
+  
+  .mfp-title {
+    text-align: left;
+    line-height: 18px;
+    color: #f3f3f3;
+    word-wrap: break-word;
+    padding-right: 36px; }
+  
+  .mfp-figure small {
+    color: #bdbdbd;
+    display: block;
+    font-size: 12px;
+    line-height: 14px; }
+  
+  .mfp-image-holder .mfp-content {
+    max-width: 100%; }
+  
+  .mfp-gallery .mfp-image-holder .mfp-figure {
+    cursor: pointer; }
+  
+  @media screen and (max-width: 800px) and (orientation: landscape), screen and (max-height: 300px) {
+    /**
+     * Remove all paddings around the image on small screen
+     */
+    .mfp-img-mobile .mfp-image-holder {
+      padding-left: 0;
+      padding-right: 0; }
+  
+    .mfp-img-mobile img.mfp-img {
+      padding: 0; }
+  
+    /* The shadow behind the image */
+    .mfp-img-mobile .mfp-figure:after {
+      top: 0;
+      bottom: 0; }
+  
+    .mfp-img-mobile .mfp-bottom-bar {
+      background: rgba(0, 0, 0, 0.6);
+      bottom: 0;
+      margin: 0;
+      top: auto;
+      padding: 3px 5px;
+      position: fixed;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box; }
+  
+    .mfp-img-mobile .mfp-bottom-bar:empty {
+      padding: 0; }
+  
+    .mfp-img-mobile .mfp-counter {
+      right: 5px;
+      top: 3px; }
+  
+    .mfp-img-mobile .mfp-close {
+      top: 0;
+      right: 0;
+      width: 35px;
+      height: 35px;
+      line-height: 35px;
+      background: rgba(0, 0, 0, 0.6);
+      position: fixed;
+      text-align: center;
+      padding: 0; }
+  
+    .mfp-img-mobile .mfp-figure small {
+      display: inline;
+      margin-left: 5px; } }
+  @media all and (max-width: 900px) {
+    .mfp-arrow {
+      -webkit-transform: scale(0.75);
+      transform: scale(0.75); }
+  
+    .mfp-arrow-left {
+      -webkit-transform-origin: 0;
+      transform-origin: 0; }
+  
+    .mfp-arrow-right {
+      -webkit-transform-origin: 100%;
+      transform-origin: 100%; }
+  
+    .mfp-container {
+      padding-left: 6px;
+      padding-right: 6px; } }
+  .mfp-ie7 .mfp-img {
+    padding: 0; }
+  .mfp-ie7 .mfp-bottom-bar {
+    width: 600px;
+    left: 50%;
+    margin-left: -300px;
+    margin-top: 5px;
+    padding-bottom: 5px; }
+  .mfp-ie7 .mfp-container {
+    padding: 0; }
+  .mfp-ie7 .mfp-content {
+    padding-top: 44px; }
+  .mfp-ie7 .mfp-close {
+    top: 0;
+    right: 0;
+    padding-top: 0; }
+  
+  //Magnific overrides
+  .mfp-image img{
+    background: white;
+  }
+  .mfp-figure:after {
+    background: white;
+  }
+  
+  /*
+   * Off Canvas navbar toggle right
+   * --------------------------------------------------
+   */
+  
+  @media screen and (max-width: 768px) {
+    .row-offcanvas .collapsing {
+    -webkit-transition: none 0;
+      -moz-transition: none 0;
+      transition: none 0;
+    }
+   .row-offcanvas .navbar {
+    position: absolute;
+    z-index: 2;
+      right:0;
+      height:100%;
+      width:55px;
+      border:0;
+      background-color:transparent;
+    }
+    .row-offcanvas .navbar-toggle {
+      margin-right: 5px;
+      margin-left: 5px;
+    }
+    .row-offcanvas {
+      position: relative;
+    }
+    .row-offcanvas-right.active .navbar {
+    position: absolute;
+    z-index: 2;
+      right: -28.4%;
+      width:40%;
+      background-color:#eee;
+      border:0 solid #ddd;
+      border-left-width:1px;
+    }
+    .row-offcanvas-right.active {
+      left: -30%;
+    }
+    .row-offcanvas-right.active .navbar-collapse {
+      position: relative;
+      width: 100%;
+    }
+    .row-offcanvas .content {
+    /*width:calc(100% - 60px);*/
+    }
+  }
+  </style>
+</head>
+<body>
+<div id="header">
+<h1 class="title">stochvolR example</h1>
+<h2 class="author">ttmmghmm</h2>
+</div>
+<title >
+where does this appear?
+</title>
+<div id="wrap">
+<div class="container">
+<div class="row row-offcanvas row-offcanvas-right">
+<div class="contents col-xs-12 col-md-10">
+<!-- setup vignette boiler plate
+NB: Do not add yaml code here, put it at the start of the top level Rmd -->
+
+<p><em>(This blog was produced on: 2015-01-25.)</em></p>
+<!-- NB: Do not add yaml code here, put it at the start of the top level Rmd -->
+
+
+
+
+
+
+
+<h1>Quandl</h1>
+Perform a once off task of storing access token for Quandl. See <a href="https://github.com/hadley/secure">https://github.com/hadley/secure</a>.
+<div class="row">
+<button class="source R toggle btn btn-xs btn-primary">
+<span class="glyphicon glyphicon-chevron-up"></span> R source
+</button><pre style="display:none"><code class="source r">library(secure)
+# Create a vault directory in your working directory.
+stopifnot(file.exists("vault"))
+# add your name and public key to vault/users.json
+# secure::add_user("ttmmghmm", local_key())
+# add other people from their github_key()s).
+# store data securly
+secure::encrypt(
+  "quandl", 
+  key = "Quandl.auth", # https://www.quandl.com/account
+  secret = "")
+# This creates secure/google.rds.enc, an encrypted rds file.</code></pre>
+</div>
+<h1>Set your Quandl access token</h1>
+Retrieve encrypted data via the <code>secure</code> package. See <a href="https://github.com/hadley/secure">https://github.com/hadley/secure</a>.
+<div class="row">
+<button class="source R toggle btn btn-xs btn-primary">
+<span class="glyphicon glyphicon-chevron-down"></span> R source
+</button><pre style=""><code class="source r">library(magrittr)
+library(Quandl) # https://www.quandl.com/account</code></pre><button class="message R toggle btn btn-xs btn-info">
+<span class="glyphicon glyphicon-chevron-up"></span> R message
+</button><pre style="display:none"><code class="message r">## Loading required package: xts
+## Loading required package: zoo
+## 
+## Attaching package: 'zoo'
+## 
+## The following objects are masked from 'package:base':
+## 
+##     as.Date, as.Date.numeric
+</code></pre><button class="source R toggle btn btn-xs btn-primary">
+<span class="glyphicon glyphicon-chevron-down"></span> R source
+</button><pre style=""><code class="source r">library(secure)</code></pre>
+</div>
+Decrypt the local encrypted file using your private key, if approved.
+<div class="row">
+<button class="source R toggle btn btn-xs btn-primary">
+<span class="glyphicon glyphicon-chevron-down"></span> R source
+</button><pre style=""><code class="source r">myQuandl <- secure::decrypt("quandl") # Quandl.auth("yourauthenticationtoken")
+myQuandl$secret %>% (myQuandl$key %>% get) # Quandl.auth("myQuandl$secret")
+# Save the token object for future sessions
+#save(token, file="./token_file")</code></pre>
+</div>
+<p>Without that step, Quandl may complain after the first 50 api calls. Subsequent calls require an authorisation key which is free, after registration.</p>
+<h1>Basic futures data</h1>
+<!--
+Just pick a dataset and enter its Quandl code, like this:
+<div class="row"><button class="source R toggle btn btn-xs btn-primary"><span class="glyphicon glyphicon-chevron-down"></span> R source</button><pre style=""><code class="source r">(c("FRED/GDP.1", "NSE/OIL.4","WIKI/AAPL.3") %>% 
+  Quandl(., type="xts")   ->
+  mydata)                 %>%
+  str</code></pre><button class="output R toggle btn btn-xs btn-success"><span class="glyphicon glyphicon-chevron-down"></span> R output</button><pre style=""><code class="output r">## An 'xts' object on 1947-01-01/2015-01-23 containing:
+##   Data: num [1:8849, 1:3] 243 246 250 260 266 ...
+##  - attr(*, "dimnames")=List of 2
+##   ..$ : NULL
+##   ..$ : chr [1:3] "FRED.GDP - Value" "NSE.OIL - Last" "WIKI.AAPL - Low"
+##   Indexed by objects of class: [Date] TZ: UTC
+##   xts Attributes:  
+##  NULL
+</code></pre></div>
+Data in 4 formats: 
+* data frame ("raw") (default)
+* ts ("ts")
+* zoo ("zoo")
+* xts ("xts"). 
+
+Get multiple datasets in one call by passing an array of Quandl codes, like this:
+`mydata = Quandl(c("NSE/OIL.4","WIKI/AAPL.1"))`.
+This grabs the 4th column of dataset NSE/OIL and the 1st column of dataset WIKI/AAPL, and returns them in a single call.
+-->
+
+<h1>Search Quandl for datasets</h1>
+<h2>Gold futures</h2>
+<div class="row">
+<button class="source R toggle btn btn-xs btn-primary">
+<span class="glyphicon glyphicon-chevron-down"></span> R source
+</button><pre style=""><code class="source r"># str(Quandl.search(query = "crude oil", page = 2, source = "DOE", silent = TRUE))
+(("gold" %>% 
+  Quandl.search(query = ., source = "CME", silent = TRUE)) ->
+  gold) %>%
+  str</code></pre><button class="output R toggle btn btn-xs btn-success">
+<span class="glyphicon glyphicon-chevron-down"></span> R output
+</button><pre style=""><code class="output r">## List of 20
+##  $ :List of 7
+##   ..$ name        : chr "Gold Futures, May 2014 (GCK2014)"
+##   ..$ code        : chr "CME/GCK2014"
+##   ..$ description : chr "Historical CEC futures prices: Gold Futures, Contract Size: 100 troy ounces Tick Size: $0.10 per troy ounce"
+##   ..$ frequency   : chr "daily"
+##   ..$ column_names: chr [1:9] "Date" "Open" "High" "Low" ...
+##   ..$ from_date   : chr "2014-02-28"
+##   ..$ to_date     : chr "2014-05-28"
+##  $ :List of 7
+##   ..$ name        : chr "Gold Futures, September 2014 (GCU2014)"
+##   ..$ code        : chr "CME/GCU2014"
+##   ..$ description : chr "Historical CEC futures prices: Gold Futures, Contract Size: 100 troy ounces Tick Size: $0.10 per troy ounce"
+##   ..$ frequency   : chr "daily"
+##   ..$ column_names: chr [1:9] "Date" "Open" "High" "Low" ...
+##   ..$ from_date   : chr "2014-06-30"
+##   ..$ to_date     : chr "2014-09-26"
+##  $ :List of 7
+##   ..$ name        : chr "Gold Futures, April 2014 (GCJ2014)"
+##   ..$ code        : chr "CME/GCJ2014"
+##   ..$ description : chr "Historical CEC futures prices: Gold Futures, Contract Size: 100 troy ounces Tick Size: $0.10 per troy ounce"
+##   ..$ frequency   : chr "daily"
+##   ..$ column_names: chr [1:9] "Date" "Open" "High" "Low" ...
+##   ..$ from_date   : chr "2012-05-30"
+##   ..$ to_date     : chr "2014-04-28"
+##  $ :List of 7
+##   ..$ name        : chr "Gold Futures, March 2014 (GCH2014)"
+##   ..$ code        : chr "CME/GCH2014"
+##   ..$ description : chr "Historical CEC futures prices: Gold Futures, Contract Size: 100 troy ounces Tick Size: $0.10 per troy ounce"
+##   ..$ frequency   : chr "daily"
+##   ..$ column_names: chr [1:9] "Date" "Open" "High" "Low" ...
+##   ..$ from_date   : chr "2013-12-30"
+##   ..$ to_date     : chr "2014-03-27"
+##  $ :List of 7
+##   ..$ name        : chr "Gold Futures, August 2014 (GCQ2014)"
+##   ..$ code        : chr "CME/GCQ2014"
+##   ..$ description : chr "Historical CEC futures prices: Gold Futures, Contract Size: 100 troy ounces Tick Size: $0.10 per troy ounce"
+##   ..$ frequency   : chr "daily"
+##   ..$ column_names: chr [1:9] "Date" "Open" "High" "Low" ...
+##   ..$ from_date   : chr "2012-09-27"
+##   ..$ to_date     : chr "2014-08-27"
+##  $ :List of 7
+##   ..$ name        : chr "Gold Futures, June 2014 (GCM2014)"
+##   ..$ code        : chr "CME/GCM2014"
+##   ..$ description : chr "Historical CEC futures prices: Gold Futures, Contract Size: 100 troy ounces Tick Size: $0.10 per troy ounce"
+##   ..$ frequency   : chr "daily"
+##   ..$ column_names: chr [1:9] "Date" "Open" "High" "Low" ...
+##   ..$ from_date   : chr "2009-06-30"
+##   ..$ to_date     : chr "2014-06-26"
+##  $ :List of 7
+##   ..$ name        : chr "Gold Futures, July 2014 (GCN2014)"
+##   ..$ code        : chr "CME/GCN2014"
+##   ..$ description : chr "Historical CEC futures prices: Gold Futures, Contract Size: 100 troy ounces Tick Size: $0.10 per troy ounce"
+##   ..$ frequency   : chr "daily"
+##   ..$ column_names: chr [1:9] "Date" "Open" "High" "Low" ...
+##   ..$ from_date   : chr "2014-04-30"
+##   ..$ to_date     : chr "2014-07-29"
+##  $ :List of 7
+##   ..$ name        : chr "Gold Futures, October 2014 (GCV2014)"
+##   ..$ code        : chr "CME/GCV2014"
+##   ..$ description : chr "Historical CEC futures prices: Gold Futures, Contract Size: 100 troy ounces Tick Size: $0.10 per troy ounce"
+##   ..$ frequency   : chr "daily"
+##   ..$ column_names: chr [1:9] "Date" "Open" "High" "Low" ...
+##   ..$ from_date   : chr "2012-11-29"
+##   ..$ to_date     : chr "2014-10-29"
+##  $ :List of 7
+##   ..$ name        : chr "Gold Futures, November 2014 (GCX2014)"
+##   ..$ code        : chr "CME/GCX2014"
+##   ..$ description : chr "Historical CEC futures prices: Gold Futures, Contract Size: 100 troy ounces Tick Size: $0.10 per troy ounce"
+##   ..$ frequency   : chr "daily"
+##   ..$ column_names: chr [1:9] "Date" "Open" "High" "Low" ...
+##   ..$ from_date   : chr "2014-08-29"
+##   ..$ to_date     : chr "2014-11-25"
+##  $ :List of 7
+##   ..$ name        : chr "Gold Futures, December 2014 (GCZ2014)"
+##   ..$ code        : chr "CME/GCZ2014"
+##   ..$ description : chr "Historical CEC futures prices: Gold Futures, Contract Size: 100 troy ounces Tick Size: $0.10 per troy ounce"
+##   ..$ frequency   : chr "daily"
+##   ..$ column_names: chr [1:9] "Date" "Open" "High" "Low" ...
+##   ..$ from_date   : chr "2009-12-31"
+##   ..$ to_date     : chr "2014-12-29"
+##  $ :List of 7
+##   ..$ name        : chr "Gold Futures, February 2015 (GCG2015)"
+##   ..$ code        : chr "CME/GCG2015"
+##   ..$ description : chr "Historical CEC futures prices: Gold Futures, Contract Size: 100 troy ounces Tick Size: $0.10 per troy ounce"
+##   ..$ frequency   : chr "daily"
+##   ..$ column_names: chr [1:9] "Date" "Open" "High" "Low" ...
+##   ..$ from_date   : chr "2013-03-27"
+##   ..$ to_date     : chr "2015-01-23"
+##  $ :List of 7
+##   ..$ name        : chr "Gold Futures, January 2015 (GCF2015)"
+##   ..$ code        : chr "CME/GCF2015"
+##   ..$ description : chr "Historical CEC futures prices: Gold Futures, Contract Size: 100 troy ounces Tick Size: $0.10 per troy ounce"
+##   ..$ frequency   : chr "daily"
+##   ..$ column_names: chr [1:9] "Date" "Open" "High" "Low" ...
+##   ..$ from_date   : chr "2014-10-30"
+##   ..$ to_date     : chr "2015-01-23"
+##  $ :List of 7
+##   ..$ name        : chr "Gold Futures, March 2015 (GCH2015)"
+##   ..$ code        : chr "CME/GCH2015"
+##   ..$ description : chr "Historical CEC futures prices: Gold Futures, Contract Size: 100 troy ounces Tick Size: $0.10 per troy ounce"
+##   ..$ frequency   : chr "daily"
+##   ..$ column_names: chr [1:9] "Date" "Open" "High" "Low" ...
+##   ..$ from_date   : chr "2014-12-30"
+##   ..$ to_date     : chr "2015-01-23"
+##  $ :List of 7
+##   ..$ name        : chr "Gold Futures, April 2015 (GCJ2015)"
+##   ..$ code        : chr "CME/GCJ2015"
+##   ..$ description : chr "Historical CEC futures prices: Gold Futures, Contract Size: 100 troy ounces Tick Size: $0.10 per troy ounce"
+##   ..$ frequency   : chr "daily"
+##   ..$ column_names: chr [1:9] "Date" "Open" "High" "Low" ...
+##   ..$ from_date   : chr "2013-05-30"
+##   ..$ to_date     : chr "2015-01-23"
+##  $ :List of 7
+##   ..$ name        : chr "Gold Futures, October 2015 (GCV2015)"
+##   ..$ code        : chr "CME/GCV2015"
+##   ..$ description : chr "Historical CEC futures prices: Gold Futures, Contract Size: 100 troy ounces Tick Size: $0.10 per troy ounce"
+##   ..$ frequency   : chr "daily"
+##   ..$ column_names: chr [1:9] "Date" "Open" "High" "Low" ...
+##   ..$ from_date   : chr "2013-11-27"
+##   ..$ to_date     : chr "2015-01-23"
+##  $ :List of 7
+##   ..$ name        : chr "Gold Futures, June 2015 (GCM2015)"
+##   ..$ code        : chr "CME/GCM2015"
+##   ..$ description : chr "Historical CEC futures prices: Gold Futures, Contract Size: 100 troy ounces Tick Size: $0.10 per troy ounce"
+##   ..$ frequency   : chr "daily"
+##   ..$ column_names: chr [1:9] "Date" "Open" "High" "Low" ...
+##   ..$ from_date   : chr "2009-12-31"
+##   ..$ to_date     : chr "2015-01-23"
+##  $ :List of 7
+##   ..$ name        : chr "Gold Futures, August 2015 (GCQ2015)"
+##   ..$ code        : chr "CME/GCQ2015"
+##   ..$ description : chr "Historical CEC futures prices: Gold Futures, Contract Size: 100 troy ounces Tick Size: $0.10 per troy ounce"
+##   ..$ frequency   : chr "daily"
+##   ..$ column_names: chr [1:9] "Date" "Open" "High" "Low" ...
+##   ..$ from_date   : chr "2013-09-27"
+##   ..$ to_date     : chr "2015-01-23"
+##  $ :List of 7
+##   ..$ name        : chr "Gold Futures, December 2015 (GCZ2015)"
+##   ..$ code        : chr "CME/GCZ2015"
+##   ..$ description : chr "Historical CEC futures prices: Gold Futures, Contract Size: 100 troy ounces Tick Size: $0.10 per troy ounce"
+##   ..$ frequency   : chr "daily"
+##   ..$ column_names: chr [1:9] "Date" "Open" "High" "Low" ...
+##   ..$ from_date   : chr "2010-09-17"
+##   ..$ to_date     : chr "2015-01-23"
+##  $ :List of 7
+##   ..$ name        : chr "Gold Futures, April 2016 (GCJ2016)"
+##   ..$ code        : chr "CME/GCJ2016"
+##   ..$ description : chr "Historical CEC futures prices: Gold Futures, Contract Size: 100 troy ounces Tick Size: $0.10 per troy ounce"
+##   ..$ frequency   : chr "daily"
+##   ..$ column_names: chr [1:9] "Date" "Open" "High" "Low" ...
+##   ..$ from_date   : chr "2014-05-30"
+##   ..$ to_date     : chr "2015-01-23"
+##  $ :List of 7
+##   ..$ name        : chr "Gold Futures, February 2016 (GCG2016)"
+##   ..$ code        : chr "CME/GCG2016"
+##   ..$ description : chr "Historical CEC futures prices: Gold Futures, Contract Size: 100 troy ounces Tick Size: $0.10 per troy ounce"
+##   ..$ frequency   : chr "daily"
+##   ..$ column_names: chr [1:9] "Date" "Open" "High" "Low" ...
+##   ..$ from_date   : chr "2014-03-31"
+##   ..$ to_date     : chr "2015-01-23"
+</code></pre>
+</div>
+<p>The only mandatory parameter is &quot;query&quot;. * &quot;page&quot; specifies which page of search results you wish to see (default=1). * &quot;source&quot; specifies that you want to search within a particular data source (default=all data sources). * &quot;silent&quot; specifies whether or not you want to see the first 3 results on the console.</p>
+Extract the code names.
+<div class="row">
+<button class="source R toggle btn btn-xs btn-primary">
+<span class="glyphicon glyphicon-chevron-down"></span> R source
+</button><pre style=""><code class="source r">gold %>%
+  sapply(., "[[", "code") ->
+  goldCode</code></pre>
+</div>
+Order by <a href="https://en.wikipedia.org/wiki/Delivery_month">month of expiry</a> by first extracting the month (single character defined by the CME) and year, from the end of the code name.
+<div class="row">
+<button class="source R toggle btn btn-xs btn-primary">
+<span class="glyphicon glyphicon-chevron-down"></span> R source
+</button><pre style=""><code class="source r">(goldCode %>%
+  gsub(patt = "(.+)([[:upper:]])([[:digit:]]{4})$", repl = "\\3-\\2", x = .) ->
+  yearMth) %>% 
+  str</code></pre><button class="output R toggle btn btn-xs btn-success">
+<span class="glyphicon glyphicon-chevron-down"></span> R output
+</button><pre style=""><code class="output r">##  chr [1:20] "2014-K" "2014-U" "2014-J" "2014-H" "2014-Q" ...
+</code></pre><button class="source R toggle btn btn-xs btn-primary">
+<span class="glyphicon glyphicon-chevron-down"></span> R source
+</button><pre style=""><code class="source r">(yearMth %>%
+  order %>%
+  extract(goldCode, .) ->
+  goldCodeOrd) %>%
+  str</code></pre><button class="output R toggle btn btn-xs btn-success">
+<span class="glyphicon glyphicon-chevron-down"></span> R output
+</button><pre style=""><code class="output r">##  chr [1:20] "CME/GCH2014" "CME/GCJ2014" "CME/GCK2014" ...
+</code></pre>
+</div>
+Next grab the individual expiry-ordered futures
+<div class="row">
+<button class="source R toggle btn btn-xs btn-primary">
+<span class="glyphicon glyphicon-chevron-down"></span> R source
+</button><pre style=""><code class="source r">n <- 3 # reduced number of timeseries to save runtime.
+system.time(
+  goldCodeOrd[1:n] %>%
+    lapply(., FUN = Quandl, type="xts") ->
+    futsGold
+)</code></pre><button class="output R toggle btn btn-xs btn-success">
+<span class="glyphicon glyphicon-chevron-down"></span> R output
+</button><pre style=""><code class="output r">##    user  system elapsed 
+##   0.110   0.004   0.995
+</code></pre><button class="source R toggle btn btn-xs btn-primary">
+<span class="glyphicon glyphicon-chevron-down"></span> R source
+</button><pre style=""><code class="source r">names(futsGold) <- goldCodeOrd</code></pre><button class="error R toggle btn btn-xs btn-danger">
+<span class="glyphicon glyphicon-chevron-down"></span> R error
+</button><pre style=""><code class="error r">## Error in names(futsGold) <- goldCodeOrd: 'names' attribute [20] must be the same length as the vector [3]
+</code></pre><button class="source R toggle btn btn-xs btn-primary">
+<span class="glyphicon glyphicon-chevron-down"></span> R source
+</button><pre style=""><code class="source r">futsGold %>% length</code></pre><button class="output R toggle btn btn-xs btn-success">
+<span class="glyphicon glyphicon-chevron-down"></span> R output
+</button><pre style=""><code class="output r">## [1] 3
+</code></pre><button class="source R toggle btn btn-xs btn-primary">
+<span class="glyphicon glyphicon-chevron-down"></span> R source
+</button><pre style=""><code class="source r">futsGold %>% extract(1) %>% str</code></pre><button class="output R toggle btn btn-xs btn-success">
+<span class="glyphicon glyphicon-chevron-down"></span> R output
+</button><pre style=""><code class="output r">## List of 1
+##  $ :An 'xts' object on 2013-12-30/2014-03-27 containing:
+##   Data: num [1:61, 1:8] 1204 1187 1212 1224 1237 ...
+##  - attr(*, "dimnames")=List of 2
+##   ..$ : NULL
+##   ..$ : chr [1:8] "Open" "High" "Low" "Last" ...
+##   Indexed by objects of class: [Date] TZ: UTC
+##   xts Attributes:  
+##  NULL
+</code></pre><button class="source R toggle btn btn-xs btn-primary">
+<span class="glyphicon glyphicon-chevron-down"></span> R source
+</button><pre style=""><code class="source r">futsGold %>% extract2(1) %>% tail</code></pre><button class="output R toggle btn btn-xs btn-success">
+<span class="glyphicon glyphicon-chevron-down"></span> R output
+</button><pre style=""><code class="output r">##              Open   High    Low Last Change Settle Volume Open Interest
+## 2014-03-20 1333.7 1333.7 1325.8   NA   10.9 1330.5     72            59
+## 2014-03-21 1339.1 1339.1 1335.0   NA    5.5 1336.0      3            47
+## 2014-03-24 1333.0 1333.0 1310.5   NA   24.8 1311.2    103            12
+## 2014-03-25 1315.5 1315.5 1307.5   NA    0.2 1311.4     46             7
+## 2014-03-26 1315.2 1315.2 1303.4   NA    8.0 1303.4      4             1
+## 2014-03-27 1294.7 1294.7 1294.7   NA    8.7 1294.7      0             0
+</code></pre>
+</div>
+Look at open interest
+<div class="row">
+<button class="source R toggle btn btn-xs btn-primary">
+<span class="glyphicon glyphicon-chevron-down"></span> R source
+</button><pre style=""><code class="source r">futsGold %>%
+  extract2("Interest")</code></pre><button class="output R toggle btn btn-xs btn-success">
+<span class="glyphicon glyphicon-chevron-down"></span> R output
+</button><pre style=""><code class="output r">## NULL
+</code></pre>
+</div>
+<div class="row">
+<button class="source R toggle btn btn-xs btn-primary">
+<span class="glyphicon glyphicon-chevron-down"></span> R source
+</button><pre style=""><code class="source r">my_db <- src_sqlite("my_db.sqlite3", create = T)
+copy_to(my_db, futsGold, temporary = FALSE, 
+  indexes = list(c("year", "month", "day"), "carrier", "tailnum")
+)
+tbl(my_db, sql("SELECT * FROM flights"))</code></pre>
+</div>
+<div class="row">
+<button class="source R toggle btn btn-xs btn-primary">
+<span class="glyphicon glyphicon-chevron-down"></span> R source
+</button><pre style=""><code class="source r">(goldCode %>% 
+  Quandl(., type="xts")   ->
+  mydata)                 %>%
+  str</code></pre><button class="error R toggle btn btn-xs btn-danger">
+<span class="glyphicon glyphicon-chevron-down"></span> R error
+</button><pre style=""><code class="error r">## Error in xts(data[, -1], order.by = data[, 1]): order.by requires an appropriate time-based object
+</code></pre>
+</div>
+<!-- *** reproducibility *** 
+NB: Do not add yaml code here, put it at the start of the top level Rmd 
+-->
+
+<h1>Reproducibility</h1>
+<p>This final 'boiler plate' section highlights how this vignette was created.</p>
+<h2>To recreate this vignette</h2>
+<p>Additional semantic markup can be added to the citations themselves, such as the reason for the citation. https://github.com/trinker/knitcitations</p>
+<ul>
+<li><code>knitrBootstrap</code></li>
+<li>Running behind the scenes:
+<ul>
+<li><code>knitr</code> (Xie, 2014)</li>
+<li><code>rmarkdown</code> (Allaire, McPherson, Xie, Wickham, Cheng, and Allen, 2014)</li>
+<li>Cite an R package using the 'bibentry' object (Temple Lang, 2014).</li>
+</ul></li>
+</ul>
+<div class="row">
+<button class="source R toggle btn btn-xs btn-primary">
+<span class="glyphicon glyphicon-chevron-up"></span> R source
+</button><pre style="display:none"><code class="source r"># TODO: parse permalink? varialble
+print(rmarkdown::metadata$yamlFileName) # permalink
+docName <- rmarkdown::metadata$yamlFileName
+
+## Create the vignette
+library('knitrBootstrap') 
+knitrBootstrapFlag <- packageVersion('knitrBootstrap') < '1.0.0'
+if(knitrBootstrapFlag) {
+    ## CRAN version
+    library('knitrBootstrap')
+    cat("\n\n\tmetadata:title", rmarkdown::metadata$title, "\n\n")
+    # TODO: stopifnot(file.exists(paste0(rmarkdown::metadata$title, ".Rmd")))
+    print(system.time(knit_bootstrap(docName, chooser=c('boot', 'code'), show_code = TRUE)))
+    # unlink('dots.md') # why remove .md file and in yaml?
+} else {
+    ## GitHub version
+    library('rmarkdown')
+    print(system.time(render(docName)))
+}
+unlink('citations.bib')
+## Note: if you prefer the knitr version use:
+# library('rmarkdown')
+# system.time(render(docName, 'html_document'))
+
+## Extract the R code
+library('knitr')
+knit(docName, tangle = TRUE)
+
+KnitPost <- function(input, base.url = "/") {
+    require(knitr)
+    opts_knit$set(base.url = base.url)
+    fig.path <- paste0("figs/", sub(".Rmd$", "", basename(input)), "/")
+    opts_chunk$set(fig.path = fig.path)
+    opts_chunk$set(fig.cap = "center")
+    render_jekyll()
+    knit(input, envir = parent.frame())
+}
+# TODO: insert the file name dynamically (both from _drafts and _posts?)
+KnitPost(docName)</code></pre>
+</div>
+<h2>YAML boiler plate</h2>
+<div class="row">
+<button class="source R toggle btn btn-xs btn-primary">
+<span class="glyphicon glyphicon-chevron-up"></span> R source
+</button><pre style="display:none"><code class="source r">str(rmarkdown::metadata) # https://github.com/rstudio/rmarkdown/issues/260</code></pre><button class="output R toggle btn btn-xs btn-success">
+<span class="glyphicon glyphicon-chevron-up"></span> R output
+</button><pre style="display:none"><code class="output r">## List of 8
+##  $ yamlFileName: chr "2015-01-27-quandl.Rmd"
+##  $ title       : chr "stochvolR example"
+##  $ type        : chr "posts"
+##  $ layout      : chr "post"
+##  $ tags        : chr [1:2] "R" "D3 network"
+##  $ categories  : chr "rstats networkD3"
+##  $ output      :List of 1
+##   ..$ knitrBootstrap::bootstrap_document:List of 6
+##   .. ..$ title            : chr "where does this appear?"
+##   .. ..$ theme            : chr "Cyborg"
+##   .. ..$ theme.chooser    : logi TRUE
+##   .. ..$ highlight        : chr "monokai"
+##   .. ..$ highlight.chooser: logi TRUE
+##   .. ..$ menu             : logi TRUE
+##  $ author      : chr "ttmmghmm"
+</code></pre>
+</div>
+<h2><code>R</code> information</h2>
+<h3>Session and packages</h3>
+<div class="row">
+<button class="message R toggle btn btn-xs btn-info">
+<span class="glyphicon glyphicon-chevron-up"></span> R message
+</button><pre style="display:none"><code class="message r">## Session info-----------------------------------------------------------------------------
+</code></pre><button class="output R toggle btn btn-xs btn-success">
+<span class="glyphicon glyphicon-chevron-up"></span> R output
+</button><pre style="display:none"><code class="output r">##  setting  value                       
+##  version  R version 3.1.2 (2014-10-31)
+##  system   x86_64, linux-gnu           
+##  ui       X11                         
+##  language (EN)                        
+##  collate  C                           
+##  tz       <NA>
+</code></pre><button class="message R toggle btn btn-xs btn-info">
+<span class="glyphicon glyphicon-chevron-up"></span> R message
+</button><pre style="display:none"><code class="message r">## Packages---------------------------------------------------------------------------------
+</code></pre><button class="output R toggle btn btn-xs btn-success">
+<span class="glyphicon glyphicon-chevron-up"></span> R output
+</button><pre style="display:none"><code class="output r">##  package        * version  date       source                                   
+##  PKI              0.1.3    2015-01-15 Github (s-u/PKI@e58876e)                 
+##  Quandl         * 2.5.2    2015-01-25 Github (quandl/R-package@d28d6fd)        
+##  RCurl            1.95.4.5 2014-12-28 CRAN (R 3.1.2)                           
+##  RJSONIO          1.3.0    2014-07-28 CRAN (R 3.1.2)                           
+##  Rcpp             0.11.3   2014-09-29 CRAN (R 3.1.2)                           
+##  RefManageR       0.8.40   2014-10-29 CRAN (R 3.1.2)                           
+##  XML              3.98.1.1 2013-06-20 CRAN (R 3.1.2)                           
+##  base64enc        0.1.2    2014-06-26 CRAN (R 3.1.2)                           
+##  bibtex           0.4.0    2014-12-31 CRAN (R 3.1.2)                           
+##  bitops           1.0.6    2013-08-17 CRAN (R 3.1.2)                           
+##  devtools       * 1.6.1    2014-10-07 CRAN (R 3.1.2)                           
+##  digest           0.6.8    2014-12-31 CRAN (R 3.1.2)                           
+##  evaluate         0.5.5    2014-04-29 CRAN (R 3.1.2)                           
+##  formatR          1.0      2014-08-25 CRAN (R 3.1.2)                           
+##  htmltools        0.2.6    2014-09-08 CRAN (R 3.1.2)                           
+##  httr             0.6.1    2015-01-01 CRAN (R 3.1.2)                           
+##  jsonlite         0.9.14   2014-12-01 CRAN (R 3.1.2)                           
+##  knitcitations  * 1.0.5    2014-11-26 CRAN (R 3.1.2)                           
+##  knitr          * 1.8.15   2015-01-11 local                                    
+##  knitrBootstrap   1.0.0    2015-01-11 Github (jimhester/knitrBootstrap@76c41f0)
+##  lattice          0.20.29  2014-04-04 CRAN (R 3.1.2)                           
+##  lubridate        1.3.3    2013-12-31 CRAN (R 3.1.2)                           
+##  magrittr       * 1.5      2014-11-22 CRAN (R 3.1.2)                           
+##  markdown         0.7.4    2014-08-24 CRAN (R 3.1.2)                           
+##  memoise          0.2.1    2014-04-22 CRAN (R 3.1.2)                           
+##  plyr             1.8.1    2014-02-26 CRAN (R 3.1.2)                           
+##  rmarkdown        0.4.2    2015-01-11 Github (rstudio/rmarkdown@514d134)       
+##  rstudioapi       0.2      2014-12-31 CRAN (R 3.1.2)                           
+##  secure         * 0.1      2015-01-15 Github (hadley/secure@b279c21)           
+##  stringr          0.6.2    2012-12-06 CRAN (R 3.1.2)                           
+##  xts            * 0.9.7    2014-01-02 CRAN (R 3.1.2)                           
+##  yaml             2.1.13   2014-06-12 CRAN (R 3.1.2)                           
+##  zoo            * 1.7.11   2014-02-27 CRAN (R 3.1.2)
+</code></pre>
+</div>
+<h3>Runtime</h3>
+Vignette generated in 15 seconds.<br />
+<p>
+<p>Timestamp 2015-01-25 21:35:45. <!-- Date the vignette was generated --></p>
+<!-- *** Bibliography END ***
+NB: Do not add yaml code here, put it at the start of the top level Rmd 
+-->
+
+<h1>Bibliography</h1>
+<p>Citations made with <code>knitcitations</code> (Boettiger, 2014).</p>
+<div class="row">
+<p>[1] J. Allaire, J. McPherson, Y. Xie, et al. <em>rmarkdown: Dynamic Documents for R</em>. R package version 0.4.2. 2014. <URL: http://rmarkdown.rstudio.com>.</p>
+<p>[2] C. Boettiger. <em>knitcitations: Citations for knitr markdown files</em>. R package version 1.0.5. 2014. <URL: http://CRAN.R-project.org/package=knitcitations>.</p>
+<p>[3] J. Hester. <em>knitrBootstrap: Knitr Bootstrap framework.</em> R package version 1.0.0. 2014. <URL: https://github.com/jimhester/>.</p>
+<p>[4] D. Temple Lang. <em>RCurl: General network (HTTP/FTP/...) client interface for R</em>. R package version 1.95-4.5. 2014. <URL:
+http://CRAN.R-project.org/package=RCurl>.</p>
+[5] Y. Xie. &quot;knitr: A Comprehensive Tool for Reproducible Research in R&quot;. In: <em>Implementing Reproducible Computational Research</em>. Ed. by V. Stodden, F. Leisch and R. D. Peng. ISBN 978-1466561595. Chapman and Hall/CRC, 2014. <URL:
+http://www.crcpress.com/product/isbn/9781466561595>.
+</div>
+</div>
+</div>
+<div class="navbar navbar-fixed-bottom navbar-inverse">
+<div class="container">
+<div class="navbar-header">
+<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+<span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+</button>
+</div>
+<div id="bottom-navbar" class="navbar-collapse collapse navbar-responsive-collapse">
+<ul class="nav navbar-nav navbar-right"><li class="nav"><p class="navbar-text">
+Toggle
+</p></li>
+<li class="dropup">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown">Code <b class="caret"></b></a>
+<ul class="dropdown-menu"><li class="dropdown-header">
+Languages
+</li>
+<li class="active">
+<a href="#" class="toggle-global source R" type="source.R">R</a>
+</li>
+<li >
+<a href="#" type="all-source" class="toggle-global">All</a>
+</li></ul></li>
+<li class="dropup">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown">Output <b class="caret"></b></a>
+<ul class="dropdown-menu"><li class="dropdown-header">
+Type
+</li>
+<li class="active">
+<a href="#" class="toggle-global message" type="message">message</a>
+</li>
+<li class="active">
+<a href="#" class="toggle-global output" type="output">output</a>
+</li>
+<li class="active">
+<a href="#" class="toggle-global error" type="error">error</a>
+</li>
+<li >
+<a href="#" type="all-output" class="toggle-global">All</a>
+</li></ul></li>
+<li class="active">
+<a href="#" type="figure" class="toggle-global">Figures</a>
+</li></ul>
+<ul class="nav navbar-nav navbar-left"><li class="dropup">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown">Bootstrap theme <b class="caret"></b></a>
+<ul class="dropdown-menu"><li >
+<a class="theme-switch" title="Default" href="#">Default</a>
+</li>
+<li >
+<a class="theme-switch" title="Amelia" href="#">Amelia</a>
+</li>
+<li >
+<a class="theme-switch" title="Cerulean" href="#">Cerulean</a>
+</li>
+<li >
+<a class="theme-switch" title="Cosmo" href="#">Cosmo</a>
+</li>
+<li class="active">
+<a class="theme-switch" title="Cyborg" href="#">Cyborg</a>
+</li>
+<li >
+<a class="theme-switch" title="Journal" href="#">Journal</a>
+</li>
+<li >
+<a class="theme-switch" title="Flatly" href="#">Flatly</a>
+</li>
+<li >
+<a class="theme-switch" title="Readable" href="#">Readable</a>
+</li>
+<li >
+<a class="theme-switch" title="Simplex" href="#">Simplex</a>
+</li>
+<li >
+<a class="theme-switch" title="Slate" href="#">Slate</a>
+</li>
+<li >
+<a class="theme-switch" title="Spacelab" href="#">Spacelab</a>
+</li>
+<li >
+<a class="theme-switch" title="United" href="#">United</a>
+</li></ul></li></ul>
+<ul class="nav navbar-nav navbar-left"><li class="dropup">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown">Code highlighting <b class="caret"></b></a>
+<ul class="dropdown-menu"><li >
+<a class="highlight-switch" title="HighlightJs" href="#">HighlightJs</a>
+</li>
+<li >
+<a class="highlight-switch" title="Dark" href="#">Dark</a>
+</li>
+<li >
+<a class="highlight-switch" title="Far" href="#">Far</a>
+</li>
+<li >
+<a class="highlight-switch" title="Idea" href="#">Idea</a>
+</li>
+<li >
+<a class="highlight-switch" title="Sunburst" href="#">Sunburst</a>
+</li>
+<li >
+<a class="highlight-switch" title="Zenburn" href="#">Zenburn</a>
+</li>
+<li >
+<a class="highlight-switch" title="Visual Studio" href="#">Visual Studio</a>
+</li>
+<li >
+<a class="highlight-switch" title="Ascetic" href="#">Ascetic</a>
+</li>
+<li >
+<a class="highlight-switch" title="Magula" href="#">Magula</a>
+</li>
+<li >
+<a class="highlight-switch" title="Github" href="#">Github</a>
+</li>
+<li >
+<a class="highlight-switch" title="Google Code" href="#">Google Code</a>
+</li>
+<li >
+<a class="highlight-switch" title="Brown Paper" href="#">Brown Paper</a>
+</li>
+<li >
+<a class="highlight-switch" title="School Book" href="#">School Book</a>
+</li>
+<li >
+<a class="highlight-switch" title="IR Black" href="#">IR Black</a>
+</li>
+<li >
+<a class="highlight-switch" title="Solarized - Dark" href="#">Solarized - Dark</a>
+</li>
+<li >
+<a class="highlight-switch" title="Solarized - Light" href="#">Solarized - Light</a>
+</li>
+<li >
+<a class="highlight-switch" title="Arta" href="#">Arta</a>
+</li>
+<li class="active">
+<a class="highlight-switch" title="Monokai" href="#">Monokai</a>
+</li>
+<li >
+<a class="highlight-switch" title="Xcode" href="#">Xcode</a>
+</li>
+<li >
+<a class="highlight-switch" title="Pojoaque" href="#">Pojoaque</a>
+</li>
+<li >
+<a class="highlight-switch" title="Rainbow" href="#">Rainbow</a>
+</li>
+<li >
+<a class="highlight-switch" title="Tomorrow" href="#">Tomorrow</a>
+</li>
+<li >
+<a class="highlight-switch" title="Tomorrow Night" href="#">Tomorrow Night</a>
+</li>
+<li >
+<a class="highlight-switch" title="Tomorrow Night Bright" href="#">Tomorrow Night Bright</a>
+</li>
+<li >
+<a class="highlight-switch" title="Tomorrow Night Blue" href="#">Tomorrow Night Blue</a>
+</li>
+<li >
+<a class="highlight-switch" title="Tomorrow Night Eighties" href="#">Tomorrow Night Eighties</a>
+</li></ul></li></ul>
+</div>
+</div>
+</div>
+<link rel="alternate stylesheet" type="text/css" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" title="Default" media="screen"></link> <link rel="alternate stylesheet" type="text/css" href="https://netdna.bootstrapcdn.com/bootswatch/3.0.0/amelia/bootstrap.min.css" title="Amelia" media="screen"></link> <link rel="alternate stylesheet" type="text/css" href="https://netdna.bootstrapcdn.com/bootswatch/3.0.0/cerulean/bootstrap.min.css" title="Cerulean" media="screen"></link> <link rel="alternate stylesheet" type="text/css" href="https://netdna.bootstrapcdn.com/bootswatch/3.0.0/cosmo/bootstrap.min.css" title="Cosmo" media="screen"></link> <link rel="alternate stylesheet" type="text/css" href="https://netdna.bootstrapcdn.com/bootswatch/3.0.0/cyborg/bootstrap.min.css" title="Cyborg" media="screen"></link> <link rel="alternate stylesheet" type="text/css" href="https://netdna.bootstrapcdn.com/bootswatch/3.0.0/journal/bootstrap.min.css" title="Journal" media="screen"></link> <link rel="alternate stylesheet" type="text/css" href="https://netdna.bootstrapcdn.com/bootswatch/3.0.0/flatly/bootstrap.min.css" title="Flatly" media="screen"></link> <link rel="alternate stylesheet" type="text/css" href="https://netdna.bootstrapcdn.com/bootswatch/3.0.0/readable/bootstrap.min.css" title="Readable" media="screen"></link> <link rel="alternate stylesheet" type="text/css" href="https://netdna.bootstrapcdn.com/bootswatch/3.0.0/simplex/bootstrap.min.css" title="Simplex" media="screen"></link> <link rel="alternate stylesheet" type="text/css" href="https://netdna.bootstrapcdn.com/bootswatch/3.0.0/slate/bootstrap.min.css" title="Slate" media="screen"></link> <link rel="alternate stylesheet" type="text/css" href="https://netdna.bootstrapcdn.com/bootswatch/3.0.0/spacelab/bootstrap.min.css" title="Spacelab" media="screen"></link> <link rel="alternate stylesheet" type="text/css" href="https://netdna.bootstrapcdn.com/bootswatch/3.0.0/united/bootstrap.min.css" title="United" media="screen"></link><link rel="alternate stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/7.3/styles/default.min.css" title="HighlightJs" media="screen"></link> <link rel="alternate stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/7.3/styles/dark.min.css" title="Dark" media="screen"></link> <link rel="alternate stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/7.3/styles/far.min.css" title="Far" media="screen"></link> <link rel="alternate stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/7.3/styles/idea.min.css" title="Idea" media="screen"></link> <link rel="alternate stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/7.3/styles/sunburst.min.css" title="Sunburst" media="screen"></link> <link rel="alternate stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/7.3/styles/zenburn.min.css" title="Zenburn" media="screen"></link> <link rel="alternate stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/7.3/styles/vs.min.css" title="Visual Studio" media="screen"></link> <link rel="alternate stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/7.3/styles/ascetic.min.css" title="Ascetic" media="screen"></link> <link rel="alternate stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/7.3/styles/magula.min.css" title="Magula" media="screen"></link> <link rel="alternate stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/7.3/styles/github.min.css" title="Github" media="screen"></link> <link rel="alternate stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/7.3/styles/googlecode.min.css" title="Google Code" media="screen"></link> <link rel="alternate stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/7.3/styles/brown_paper.min.css" title="Brown Paper" media="screen"></link> <link rel="alternate stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/7.3/styles/school_book.min.css" title="School Book" media="screen"></link> <link rel="alternate stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/7.3/styles/ir_black.min.css" title="IR Black" media="screen"></link> <link rel="alternate stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/7.3/styles/solarized_dark.min.css" title="Solarized - Dark" media="screen"></link> <link rel="alternate stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/7.3/styles/solarized_light.min.css" title="Solarized - Light" media="screen"></link> <link rel="alternate stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/7.3/styles/arta.min.css" title="Arta" media="screen"></link> <link rel="alternate stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/7.3/styles/monokai.min.css" title="Monokai" media="screen"></link> <link rel="alternate stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/7.3/styles/xcode.min.css" title="Xcode" media="screen"></link> <link rel="alternate stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/7.3/styles/pojoaque.min.css" title="Pojoaque" media="screen"></link> <link rel="alternate stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/7.3/styles/rainbow.min.css" title="Rainbow" media="screen"></link> <link rel="alternate stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/7.3/styles/tomorrow.min.css" title="Tomorrow" media="screen"></link> <link rel="alternate stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/7.3/styles/tomorrow-night.min.css" title="Tomorrow Night" media="screen"></link> <link rel="alternate stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/7.3/styles/tomorrow-night-bright.min.css" title="Tomorrow Night Bright" media="screen"></link> <link rel="alternate stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/7.3/styles/tomorrow-night-blue.min.css" title="Tomorrow Night Blue" media="screen"></link> <link rel="alternate stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/7.3/styles/tomorrow-night-eighties.min.css" title="Tomorrow Night Eighties" media="screen"></link>
+</div>
+<div id="push">
+
+</div>
+<div id="footer">
+<div class="container">
+<p class="text-muted" id="credit">
+Styled with <a href="https://github.com/jimhester/knitrBootstrap">knitrBootstrap</a>
+</p>
+</div>
+</div>
+<link rel="stylesheet" id="theme" href="https://netdna.bootstrapcdn.com/bootswatch/3.0.0/cyborg/bootstrap.min.css" media="screen"></link><link rel="stylesheet" id="highlight" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/7.3/styles/monokai.min.css" media="screen"></link>
+</div>
+</body>
+</html>

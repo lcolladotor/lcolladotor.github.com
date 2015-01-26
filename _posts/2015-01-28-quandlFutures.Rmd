@@ -69,18 +69,23 @@ secure::encrypt(
 # Set your Quandl access token
 Retrieve encrypted data via the `secure` package.
 See <https://github.com/hadley/secure>.
-```{r}
+```{r, bootstrap.show.code=TRUE, bootstrap.show.message=FALSE, bootstrap.show.output=FALSE}
 library(magrittr)
 library(Quandl) # https://www.quandl.com/account
 library(secure)
-# This decrypts the encrypted file using your private key.
+```
+Decrypt the local encrypted file using your private key, if approved.
+```{r}
 myQuandl <- secure::decrypt("quandl") # Quandl.auth("yourauthenticationtoken")
 myQuandl$secret %>% (myQuandl$key %>% get) # Quandl.auth("myQuandl$secret")
 # Save the token object for future sessions
 #save(token, file="./token_file")
 ```
+Without that step, Quandl may complain after the first 50 api calls.
+Subsequent calls require an authorisation key which is free, after registration.
 
 # Basic futures data
+<!--
 Just pick a dataset and enter its Quandl code, like this:
 ```{r}
 (c("FRED/GDP.1", "NSE/OIL.4","WIKI/AAPL.3") %>% 
@@ -97,6 +102,7 @@ Data in 4 formats:
 Get multiple datasets in one call by passing an array of Quandl codes, like this:
 `mydata = Quandl(c("NSE/OIL.4","WIKI/AAPL.1"))`.
 This grabs the 4th column of dataset NSE/OIL and the 1st column of dataset WIKI/AAPL, and returns them in a single call.
+-->
 
 # Search Quandl for datasets 
 ## Gold futures
@@ -118,8 +124,7 @@ gold %>%
   sapply(., "[[", "code") ->
   goldCode
 ```
-
-Order by date of expiry.
+Order by [month of expiry](https://en.wikipedia.org/wiki/Delivery_month) by first extracting the month (single character defined by the CME) and year, from the end of the code name.
 ```{r}
 (goldCode %>%
   gsub(patt = "(.+)([[:upper:]])([[:digit:]]{4})$", repl = "\\3-\\2", x = .) ->
@@ -131,10 +136,11 @@ Order by date of expiry.
   goldCodeOrd) %>%
   str
 ```
-Now grab the individual expiry-ordered futures
+Next grab the individual expiry-ordered futures
 ```{r}
+n <- 3 # reduced number of timeseries to save runtime.
 system.time(
-  goldCodeOrd %>%
+  goldCodeOrd[1:n] %>%
     lapply(., FUN = Quandl, type="xts") ->
     futsGold
 )
@@ -146,7 +152,8 @@ futsGold %>% extract2(1) %>% tail
 
 Look at open interest
 ```{r}
-futsGold
+futsGold %>%
+  extract2("Interest")
 ```
 
 
