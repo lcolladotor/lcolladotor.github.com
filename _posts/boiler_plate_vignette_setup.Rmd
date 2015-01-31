@@ -1,5 +1,6 @@
 <!-- setup vignette boiler plate
 NB: Do not add yaml code here, put it at the start of the top level Rmd -->
+{% include JB/setup %}
 
 *(This blog was produced on: `r as.character(Sys.Date())`.)*  
 
@@ -10,8 +11,8 @@ opts_chunk$set(fig.width = 5, fig.height = 5)
 # https://github.com/jimhester/knitrBootstrap#chunk-options
 # http://getbootstrap.com/css/#grid
 # colors() [grep(patt = "dark", x = colours())]
-opts_chunk$set(background = c('gray10')) 
-opts_chunk$set(pars = list(bg = 'white', mar = c(4, 4, .1, .1), mgp = c(2, 1, 0)))
+#opts_chunk$set(background = c('gray90')) 
+#opts_chunk$set(pars = list(bg = 'gray50', mar = c(4, 4, .1, .1), mgp = c(2, 1, 0)))
 # Thumbnail size in bootstrap columns
 # opts_chunk$set(thumbnail = TRUE, thumbnail.size = 'col-md-3') 
 # bootstrap.thumbnail - (TRUE) - Thumbnail and lightbox images.

@@ -878,7 +878,7 @@
 
 <!-- setup vignette boiler plate
 NB: Do not add yaml code here, put it at the start of the top level Rmd -->
-
+<p>{% include JB/setup %}</p>
 <p><em>(This blog was produced on: 2015-01-31.)</em></p>
 <!-- NB: Do not add yaml code here, put it at the start of the top level Rmd -->
 
@@ -1029,13 +1029,13 @@ KnitPost(docName)</code></pre>
 ##  $ title       : chr "sparkline"
 ##  $ type        : chr "posts"
 ##  $ layout      : chr "post"
-##  $ tags        : chr [1:2] "R" "sparkline plot"
+##  $ tags        : chr "R sparkline plot"
 ##  $ categories  : chr "rstats sparkline"
 ##  $ output      :List of 1
 ##   ..$ knitrBootstrap::bootstrap_document:List of 5
-##   .. ..$ theme            : chr "cerulean"
+##   .. ..$ theme            : chr "Cyborg"
 ##   .. ..$ theme.chooser    : logi TRUE
-##   .. ..$ highlight        : chr "Zenburn"
+##   .. ..$ highlight        : chr "monokai"
 ##   .. ..$ highlight.chooser: logi TRUE
 ##   .. ..$ menu             : logi TRUE
 ##  $ author      : chr "ttmmghmm"
@@ -1112,9 +1112,9 @@ KnitPost(docName)</code></pre>
 </code></pre>
 </div>
 <h3>Runtime</h3>
-Vignette generated in 12.4 seconds.<br />
+Vignette generated in 1.1 seconds.<br />
 <p>
-<p>Timestamp 2015-01-31 23:10:53. <!-- Date the vignette was generated --></p>
+<p>Timestamp 2015-01-31 23:35:12. <!-- Date the vignette was generated --></p>
 <!-- *** Bibliography END ***
 NB: Do not add yaml code here, put it at the start of the top level Rmd 
 -->
@@ -1122,12 +1122,9 @@ NB: Do not add yaml code here, put it at the start of the top level Rmd
 <h1>Bibliography</h1>
 <p>Citations made with <code>knitcitations</code> (Boettiger, 2014).</p>
 <div class="row">
-<p>[1] J. Allaire, J. McPherson, Y. Xie, et al. <em>rmarkdown: Dynamic Documents for R</em>. R package version 0.4.2. 2014. <URL:
-http://rmarkdown.rstudio.com>.</p>
-<p>[2] S. M. Bache and H. Wickham. <em>magrittr: A Forward-Pipe Operator for R</em>. R package version 1.5. 2014. <URL:
-http://CRAN.R-project.org/package=magrittr>.</p>
-<p>[3] C. Boettiger. <em>knitcitations: Citations for knitr markdown files</em>. R package version 1.0.5. 2014. <URL:
-http://CRAN.R-project.org/package=knitcitations>.</p>
+<p>[1] J. Allaire, J. McPherson, Y. Xie, et al. <em>rmarkdown: Dynamic Documents for R</em>. R package version 0.4.2. 2014. <URL: http://rmarkdown.rstudio.com>.</p>
+<p>[2] S. M. Bache and H. Wickham. <em>magrittr: A Forward-Pipe Operator for R</em>. R package version 1.5. 2014. <URL: http://CRAN.R-project.org/package=magrittr>.</p>
+<p>[3] C. Boettiger. <em>knitcitations: Citations for knitr markdown files</em>. R package version 1.0.5. 2014. <URL: http://CRAN.R-project.org/package=knitcitations>.</p>
 <p>[4] J. Hester. <em>knitrBootstrap: Knitr Bootstrap framework.</em> R package version 1.0.0. 2014. <URL: https://github.com/jimhester/>.</p>
 <p>[5] D. Temple Lang. <em>RCurl: General network (HTTP/FTP/...) client interface for R</em>. R package version 1.95-4.5. 2014. <URL:
 http://CRAN.R-project.org/package=RCurl>.</p>
@@ -1158,7 +1155,20 @@ Languages
 <li >
 <a href="#" type="all-source" class="toggle-global">All</a>
 </li></ul></li>
-
+<li class="dropup">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown">Output <b class="caret"></b></a>
+<ul class="dropdown-menu"><li class="dropdown-header">
+Type
+</li>
+<li class="active">
+<a href="#" class="toggle-global output" type="output">output</a>
+</li>
+<li class="active">
+<a href="#" class="toggle-global message" type="message">message</a>
+</li>
+<li >
+<a href="#" type="all-output" class="toggle-global">All</a>
+</li></ul></li>
 <li class="active">
 <a href="#" type="figure" class="toggle-global">Figures</a>
 </li></ul>

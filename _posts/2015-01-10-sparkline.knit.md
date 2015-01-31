@@ -46,6 +46,7 @@ author: ttmmghmm
 
 <!-- setup vignette boiler plate
 NB: Do not add yaml code here, put it at the start of the top level Rmd -->
+{% include JB/setup %}
 
 *(This blog was produced on: 2015-01-31.)*  
 
@@ -182,13 +183,13 @@ KnitPost(docName)</code></pre></div>
 ##  $ title       : chr "sparkline"
 ##  $ type        : chr "posts"
 ##  $ layout      : chr "post"
-##  $ tags        : chr [1:2] "R" "sparkline plot"
+##  $ tags        : chr "R sparkline plot"
 ##  $ categories  : chr "rstats sparkline"
 ##  $ output      :List of 1
 ##   ..$ knitrBootstrap::bootstrap_document:List of 5
-##   .. ..$ theme            : chr "cerulean"
+##   .. ..$ theme            : chr "Cyborg"
 ##   .. ..$ theme.chooser    : logi TRUE
-##   .. ..$ highlight        : chr "Zenburn"
+##   .. ..$ highlight        : chr "monokai"
 ##   .. ..$ highlight.chooser: logi TRUE
 ##   .. ..$ menu             : logi TRUE
 ##  $ author      : chr "ttmmghmm"
@@ -258,8 +259,8 @@ KnitPost(docName)</code></pre></div>
 
 ### Runtime 
 
-Vignette generated in 12.4 seconds.   
-<p>Timestamp 2015-01-31 23:10:53. <!-- Date the vignette was generated -->
+Vignette generated in 1.1 seconds.   
+<p>Timestamp 2015-01-31 23:35:12. <!-- Date the vignette was generated -->
 
 <!-- *** Bibliography END ***
 NB: Do not add yaml code here, put it at the start of the top level Rmd 
@@ -270,29 +271,25 @@ NB: Do not add yaml code here, put it at the start of the top level Rmd
 Citations made with `knitcitations` (Boettiger, 2014).
 
 
-<div class="row">[1] J. Allaire, J. McPherson, Y. Xie, et al. _rmarkdown: Dynamic
-Documents for R_. R package version 0.4.2. 2014. <URL:
-http://rmarkdown.rstudio.com>.
+<div class="row">[1] J. Allaire, J. McPherson, Y. Xie, et al. _rmarkdown: Dynamic Documents for
+R_. R package version 0.4.2. 2014. <URL: http://rmarkdown.rstudio.com>.
 
-[2] S. M. Bache and H. Wickham. _magrittr: A Forward-Pipe Operator
-for R_. R package version 1.5. 2014. <URL:
-http://CRAN.R-project.org/package=magrittr>.
+[2] S. M. Bache and H. Wickham. _magrittr: A Forward-Pipe Operator for R_. R
+package version 1.5. 2014. <URL: http://CRAN.R-project.org/package=magrittr>.
 
-[3] C. Boettiger. _knitcitations: Citations for knitr markdown
-files_. R package version 1.0.5. 2014. <URL:
-http://CRAN.R-project.org/package=knitcitations>.
+[3] C. Boettiger. _knitcitations: Citations for knitr markdown files_. R package
+version 1.0.5. 2014. <URL: http://CRAN.R-project.org/package=knitcitations>.
 
-[4] J. Hester. _knitrBootstrap: Knitr Bootstrap framework._ R
-package version 1.0.0. 2014. <URL: https://github.com/jimhester/>.
+[4] J. Hester. _knitrBootstrap: Knitr Bootstrap framework._ R package version
+1.0.0. 2014. <URL: https://github.com/jimhester/>.
 
-[5] D. Temple Lang. _RCurl: General network (HTTP/FTP/...) client
-interface for R_. R package version 1.95-4.5. 2014. <URL:
+[5] D. Temple Lang. _RCurl: General network (HTTP/FTP/...) client interface for
+R_. R package version 1.95-4.5. 2014. <URL:
 http://CRAN.R-project.org/package=RCurl>.
 
-[6] Y. Xie. "knitr: A Comprehensive Tool for Reproducible Research
-in R". In: _Implementing Reproducible Computational Research_. Ed.
-by V. Stodden, F. Leisch and R. D. Peng. ISBN 978-1466561595.
-Chapman and Hall/CRC, 2014. <URL:
+[6] Y. Xie. "knitr: A Comprehensive Tool for Reproducible Research in R". In:
+_Implementing Reproducible Computational Research_. Ed. by V. Stodden, F. Leisch
+and R. D. Peng. ISBN 978-1466561595. Chapman and Hall/CRC, 2014. <URL:
 http://www.crcpress.com/product/isbn/9781466561595>.
 </div>
 
@@ -306,7 +303,12 @@ http://www.crcpress.com/product/isbn/9781466561595>.
 <ul class="dropdown-menu"><li class="dropdown-header">Languages</li>
 <li class="active"><a href="#" class="toggle-global source R" type="source.R">R</a></li>
 <li ><a href="#" type="all-source" class="toggle-global">All</a></li></ul></li>
-
+<li class="dropup"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Output
+<b class="caret"></b></a>
+<ul class="dropdown-menu"><li class="dropdown-header">Type</li>
+<li class="active"><a href="#" class="toggle-global output" type="output">output</a></li>
+<li class="active"><a href="#" class="toggle-global message" type="message">message</a></li>
+<li ><a href="#" type="all-output" class="toggle-global">All</a></li></ul></li>
 <li class="active"><a href="#" type="figure" class="toggle-global">Figures</a></li></ul></div></div></div></div>
 <div id="push"></div>
 <div id="footer"><div class="container"><p class="text-muted" id="credit">Styled with 
