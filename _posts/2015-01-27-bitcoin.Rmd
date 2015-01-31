@@ -47,6 +47,13 @@ opts_chunk$set(cache = TRUE)
 # Bitcoin
 * <http://beautifuldata.net/2015/01/querying-the-bitcoin-blockchain-with-r>
 
+```{r}
+library(devtools)
+devtools::install_github("Rdatatable/data.table") # , build_vignettes=FALSE)
+# library(data.table)
+install_github('jangorecki/Rbitcoin')
+```
+
 ```{r Rbitcoin}
 library(Rbitcoin)
 library(magrittr)
@@ -54,7 +61,8 @@ library(magrittr)
 
 ##  aggregated values
 ```{r}
-wait <- antiddos(market = 'kraken', antispam_interval = 5, verbose = 1)
+# no need for antiddos function anymore as it is now built-in every web call
+# wait <- antiddos(market = 'kraken', antispam_interval = 5, verbose = 1)
 market.api.process('kraken',c('BTC','EUR'),'ticker')
 ```
 ```{r}
@@ -63,7 +71,8 @@ trades <- market.api.process(market = 'kraken', curr = c('BTC', 'EUR'), action =
 )
 str(trades)
 trades  %>% extract('trades') %>% head
-Rbitcoin.plot(trades, col='blue')
+# Instead of Rbitcoin.plot use rbtc.plot
+rbtc.plot(trades, col='blue')
 ```
 
 # download and transform the blockchain data
