@@ -7,14 +7,17 @@ This final 'boiler plate' section highlights how this vignette was created.
 
 ## To recreate this vignette
 
-Additional semantic markup can be added to the citations themselves, such as the reason for the citation. 
-https://github.com/trinker/knitcitations 
+<!-- Additional semantic markup can be added to the citations themselves, such as the reason for the citation. -->
 
-* `knitrBootstrap` `r citep(bib[['knitrBootstrap']], cito = "usesMethodIn")`
+* `knitrBootstrap` `r citep(bib[['knitrBootstrap']])`
+<!-- `r citep(bib[['knitrBootstrap']], cito = 'usesMethodIn')` -->
 * Running behind the scenes:  
-    * `knitr` `r citep(bib[['knitr']])` 
-    * `rmarkdown` `r citep(bib[['rmarkdown']])` 
-    * Cite an R package using the 'bibentry' object `r citep(citation("RCurl"))`.
+    * `knitr` `r citep(bib[['knitr']])`.
+    * `rmarkdown` `r citep(bib[['rmarkdown']])`.
+    * From the bibtex information for select packages:
+        * `RCurl` `r citep(citation("RCurl"))`.
+        * `magrittr` `r citep(citation("magrittr"))`.
+    * <https://github.com/trinker/knitcitations>
 
 
 ```{r boiler_plate_reproducibility, eval=FALSE, bootstrap.show.code=FALSE, bootstrap.show.message=FALSE, bootstrap.show.output=FALSE}
@@ -70,8 +73,8 @@ str(rmarkdown::metadata) # https://github.com/rstudio/rmarkdown/issues/260
 ### Session and packages
 ```{r session information, echo=FALSE, bootstrap.show.code=FALSE, bootstrap.show.message=FALSE, bootstrap.show.output=FALSE}
 ## Session info
-library('devtools')
 options(width = 90)
+library('devtools')
 session_info()
 ```
 

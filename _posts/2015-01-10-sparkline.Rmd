@@ -8,7 +8,7 @@ yamlFileName: 2015-01-10-sparkline.Rmd # WARNING: update the filename?
 # rmarkdown::render(fn, knitrBootstrap::bootstrap_document(), clean = FALSE) # no md?
 # produce an identical result to Knit HTML in RStudio- no run-time dependency on RStudio
 # https://github.com/jimhester/knitrBootstrap#bootstrap-themes
-#   knit(fn) ; markdownToHTML("foo.md") ; browseURL("foo.html")
+#   knit(fn) ; browseURL(sub("Rmd", "html", fn))
 # pandoc(fn, format = "docx") # prodces the .docx file - Word doc.
 # rmarkdown::render(fn) # produces table of contents (and html?)
 # rmarkdown::render(fn, pdf_document()) # and knit2html() to get .html from .md
@@ -18,9 +18,7 @@ title: "sparkline"
 # http://en.wikipedia.org/wiki/YAML#Lists
 type: posts
 layout: post
-tags:
-- R
-- sparkline plot
+tags: R sparkline plot
 categories: rstats sparkline
 output:
   # https://github.com/jimhester/knitrBootstrap
@@ -30,24 +28,20 @@ output:
     # https://github.com/jimhester/knitrBootstrap#package-options
     # title: "where does this appear? # (NULL) Set the title for the html document
     # http://bootswatch.com/ optionally including a dynamic style switch.
-    theme: cerulean # Cyborg # monokai cyborg slate darkly superhero cerulean 
+    theme: Cyborg # Cyborg # monokai cyborg slate darkly superhero cerulean 
     theme.chooser: TRUE # (FALSE) - Add a bootstrap style chooser to the page.
     # highlight Set the default code style. (HighlightJS)
     # https://github.com/jimhester/knitrBootstrap#highlight-themes
-    highlight: Zenburn # monokai # Sunburst # Zenburn # HighlightJs # google code 
+    highlight: monokai # monokai # Sunburst # Zenburn # HighlightJs # google code 
     highlight.chooser: TRUE # (FALSE) - Add a code style chooser to the page.
     menu: TRUE # FALSE # Whether to include the bottom navbar.
 author: ttmmghmm
 ---
 
-
-
+<!--
 # Change the default global options
-https://github.com/jimhester/knitrBootstrap#chunk-options
-```{r, eval = TRUE}
-
-```
-
+<https://github.com/jimhester/knitrBootstrap#chunk-options>
+-->
 
 ```{r child = c('../_posts/boiler_plate_vignette_setup.Rmd', '../_posts/boiler_plate_bibliography_start.Rmd') }
 # child: (NULL; character) a character vector of filenames of child documents to be run and input into the main document http://yihui.name/knitr/options/
@@ -67,8 +61,8 @@ install_github('htmlwidgets/sparkline')
 http://stats.grok.se retrieves Wikipedia page access statistics on a daily basis. 
 The information is either presented in HTML or provided as JSON data.
 
-The API is pretty simple
-```{r API}
+The API is:
+```{r API, cache=FALSE}
 x = rnorm(20)
 library(sparkline)
 sparkline(x)

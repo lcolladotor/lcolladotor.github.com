@@ -8,10 +8,11 @@ Citations made with `knitcitations` `r knitcitations::citep(bib[['knitcitations'
 
 
 ```{r boiler_plate_bibliography_end, results='asis', echo=FALSE}
-## Print bibliography https://github.com/trinker/knitcitations
-# bibliography("markdown", ordering = c("authors", "year", "journal"))
-#library(knitcitations) ; bib
+# generate the full bibliography:
+#bibliography("markdown", ordering = c("authors", "year", "journal"))
 bibliography()
+## Print bibliography https://github.com/trinker/knitcitations
+#library(knitcitations) ; bib
 ```
 
 
