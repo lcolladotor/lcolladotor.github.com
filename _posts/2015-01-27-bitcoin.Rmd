@@ -18,10 +18,8 @@ title: "stochvolR example"
 # http://en.wikipedia.org/wiki/YAML#Lists
 type: posts
 layout: post
-tags:
-- R
-- D3 network
-categories: rstats networkD3
+tags: R bitcoin
+categories: rstats bitcoin
 output:
   # https://github.com/jimhester/knitrBootstrap
   # http://cran.r-project.org/web/packages/knitrBootstrap/README.html
@@ -39,61 +37,95 @@ output:
     menu: TRUE # FALSE # Whether to include the bottom navbar.
 author: ttmmghmm
 ---
-
 ```{r child = c('../_posts/boiler_plate_vignette_setup.Rmd', '../_posts/boiler_plate_bibliography_start.Rmd') }
 # child: (NULL; character) a character vector of filenames of child documents to be run and input into the main document http://yihui.name/knitr/options/
 # http://stackoverflow.com/questions/25824795/how-to-combine-two-rmarkdown-rmd-files-into-a-single-output
+require(knitr)
+opts_chunk$set(cache = TRUE)
 ```
 
-
-# bitcoin
+# Bitcoin
+* <http://beautifuldata.net/2015/01/querying-the-bitcoin-blockchain-with-r>
 
 ```{r Rbitcoin}
 library(Rbitcoin)
+library(magrittr)
 ```
 
-
+##  aggregated values
 ```{r}
 wait <- antiddos(market = 'kraken', antispam_interval = 5, verbose = 1)
 market.api.process('kraken',c('BTC','EUR'),'ticker')
 ```
 ```{r}
-trades <- market.api.process('kraken',c('BTC','EUR'),'trades')
+trades <- market.api.process(market = 'kraken', curr = c('BTC', 'EUR'), action = 'trades'
+  , verbose = T # getOption("Rbitcoin.verbose", 0),
+)
+str(trades)
+trades  %>% extract('trades') %>% head
 Rbitcoin.plot(trades, col='blue')
 ```
 
+# download and transform the blockchain data
+Read every single transaction in the history of Bitcoin?
 
-
-# sparkline
-
-The API is pretty simple
-```{r API, fig.keep='all', fig.cap = "long caption.", fig.scap = "short caption", fig.show = "asis"}
-x = rnorm(20)
-library(htmlwidgets)
-library(sparkline)
-# library(sparkTable)
-sparkline(x)
-sparkline(x, type = 'bar')
-sparkline(x, type = 'box')
+* query historical transactions for one address
+```{r}
+wallet <- blockchain.api.process('15Mb2QcgF3XDMeVn6M7oCG6CQLw4mkedDi')
+seed <- '1NfRMkhm5vjizzqkp2Qb28N7geRQCa4XqC'
+genesis <- '1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa'
+singleaddress <- blockchain.api.query(
+  method = 'Single Address', 
+  bitcoin_address = seed, 
+  limit = 1e2)
+txs <- singleaddress$txs
+#txs[1][[1]]
+#txs %>% str %>% extract2(1)
+length(txs)
 ```
-`r sparkline(x, type = 'bar')` goes here.
+
+* map the connections between all addresses in this strand of the Blockchain
+```{r}
+bc <- data.frame()
+#txs %>%
+#  (extract2('hash') -> hash) %>%
+#  (extract2('inputs') -> inputs)
+ 
+for (t in txs) {
+  hash <- t$hash
+  for (inputs in t$inputs) {
+    from <- inputs$prev_out$addr
+    for (out in t$out) {
+      to <- out$addr
+      va <- out$value
+      bc <- rbind(bc, data.frame(from=from,to=to,value=va, stringsAsFactors=F))
+    }
+  }
+}
+bc %>% str
+bc %>% tail
+```
 
 ```{r}
-
-set.seed(1234)
-x = rnorm(10)
-y = rnorm(10)
+library(dplyr)
+data_frame
+bc %>% 
+  group_by(from, to) %>% 
+  summarise(value = sum(value)) -> 
+  btc 
 ```
 
-Inline line graphs `r sparkline(x)`
+Finally, we’re using igraph to calculate and draw the resulting network of transactions between addresses:
 
-Bar charts  `r sparkline(abs(x), type = 'bar')`  negative values: `r sparkline(x, type = 'bar')`
-
-| Stock | Sparkline         | Boxplot  
-|-------|-------------------|--------
-| x     | `r sparkline(x)`  | `r sparkline(x, type ='box')`
-| y     | `r sparkline(y)`  | `r sparkline(y, type ='box')`
-
+```{r}
+library(igraph)
+btc.net <- graph.data.frame(btc, directed=T)
+V(btc.net)$color <- "blue"
+V(btc.net)$color[unlist(V(btc.net)$name) == seed] <- "red"
+nodes <- unlist(V(btc.net)$name)
+E(btc.net)$width <- log(E(btc.net)$value)/10
+plot.igraph(btc.net, vertex.size=5, edge.arrow.size=0.1, vertex.label=NA, main=paste("BTC transaction network for\n", seed))
+```
 
 ```{r child = c('../_posts/boiler_plate_reproducibility.Rmd', '../_posts/boiler_plate_bibliography_end.Rmd') }
 ```

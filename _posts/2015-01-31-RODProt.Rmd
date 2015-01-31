@@ -45,13 +45,14 @@ author: ttmmghmm
 This is an R Markdown document. Markdown is a simple formatting syntax for authoring web pages (click the **Help** toolbar button for more details on using R Markdown).
 ```{r}
 library(devtools)
-install_github("RODProt", "QBRC")
+# install_github("RODProt", "QBRC")
 library(RODProt)
 myUrl <- "http://raw.github.com/QBRC/RODProt/4f401d0773bcfa613c6640fad8cce356b28ecf95/inst/extdata/mixed.json"
-read_json_table()
- 
+str(read_json_table(myUrl))
+```
+
+```{r}
 # Or to get some more traditional CSV data as it might exist in the Simple Data Format:
-library(RODProt)
 pkg <- read_data_package("http://raw.github.com/datasets/house-prices-us/0b5042bbe9a2c2537a3bd708287321396b534710/datapackage.json")
 file <- get_resource(pkg, "national", overlook.types=TRUE)
 #  overlook.types parameter must be set to TRUE if you're attempting to load a file that has an unsupported data type (such as date)

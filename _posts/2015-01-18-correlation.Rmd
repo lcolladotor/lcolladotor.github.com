@@ -3,7 +3,6 @@ yamlFileName: 2015-01-18-correlation.Rmd # WARNING: update the filename?
 # print(rmarkdown::metadata$yamlFileName) # permalink
 # library(knitr)
 # setwd("~/git/ttmmghmm.github.io/_posts") ; fn <- "2015-01-10-sparkline.Rmd" ; knit(fn)  # to get the .md file 
-#
 # library(knitrBootstrap)
 # rmarkdown::render(fn, knitrBootstrap::bootstrap_document(), clean = FALSE) # no md?
 # produce an identical result to Knit HTML in RStudio- no run-time dependency on RStudio
@@ -18,9 +17,7 @@ title: "stochvolR example"
 # http://en.wikipedia.org/wiki/YAML#Lists
 type: posts
 layout: post
-tags:
-- R
-- D3 network
+tags: R D3 network
 categories: rstats networkD3
 output:
   # https://github.com/jimhester/knitrBootstrap
