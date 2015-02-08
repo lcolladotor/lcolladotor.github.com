@@ -4,21 +4,22 @@ yamlFileName: 2015-01-18-correlation.Rmd # WARNING: update the filename?
 # library(knitr)
 # setwd("~/git/ttmmghmm.github.io/_posts") ; fn <- "2015-01-10-sparkline.Rmd" ; knit(fn)  # to get the .md file 
 # library(knitrBootstrap)
-# rmarkdown::render(fn, knitrBootstrap::bootstrap_document(), clean = FALSE) # no md?
+# rmarkdown::render(fn, knitrBootstrap::bootstrap_document(), clean = FALSE) # no md?ls()
+
 # produce an identical result to Knit HTML in RStudio- no run-time dependency on RStudio
 # https://github.com/jimhester/knitrBootstrap#bootstrap-themes
 #   knit(fn) ; markdownToHTML("foo.md") ; browseURL("foo.html")
 # pandoc(fn, format = "docx") # prodces the .docx file - Word doc.
 # rmarkdown::render(fn) # produces table of contents (and html?)
 # rmarkdown::render(fn, pdf_document()) # and knit2html() to get .html from .md
-title: "stochvolR example"
+title: correlation
 #
 # like categories, tags can be specified as a YAML list or a space- separated string.
 # http://en.wikipedia.org/wiki/YAML#Lists
 type: posts
 layout: post
-tags: R D3 network
-categories: rstats networkD3
+tags: R correlation Distance_correlation
+categories: rstats correlation
 output:
   # https://github.com/jimhester/knitrBootstrap
   # http://cran.r-project.org/web/packages/knitrBootstrap/README.html
@@ -44,6 +45,24 @@ author: ttmmghmm
 
 
 # correlation
+
+## Distance correlation
+http://en.wikipedia.org/wiki/Distance_correlation
+```{r}
+library(energy)
+packageDescription('energy')
+example(edist)
+vignette(package = 'energy')
+```
+```{r}
+x <- matrix(rnorm(100), 10, 10)
+y <- matrix(runif(100), 10, 10)
+dx <- dist(x)
+dy <- dist(y)
+dcor.t(x, y)
+bcdcor(dx, dy, distance=TRUE)
+dcor.ttest(x, y)
+```
 
 
 # sparkline

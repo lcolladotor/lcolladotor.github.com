@@ -18,10 +18,8 @@ title: "sparkline"
 # http://en.wikipedia.org/wiki/YAML#Lists
 type: posts
 layout: post
-tags:
-- R
-- sparkline plot
-categories: rstats sparkline
+tags: openWeatherMap R 
+categories: rstats openWeatherMap
 output:
   # https://github.com/jimhester/knitrBootstrap
   # http://cran.r-project.org/web/packages/knitrBootstrap/README.html
@@ -42,8 +40,8 @@ author: ttmmghmm
 
 ========================================================
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring web pages (click the **Help** toolbar button for more details on using R Markdown).
-```{r}
+
+```{r, eval = FAL}
 library(devtools)
 # install_github("RODProt", "QBRC")
 library(RODProt)
@@ -51,9 +49,45 @@ myUrl <- "http://raw.github.com/QBRC/RODProt/4f401d0773bcfa613c6640fad8cce356b28
 str(read_json_table(myUrl))
 ```
 
-http://api.openweathermap.org/data/2.5/history/city?q=london&type=hour&start=1369728000&cnt=3
+OpenStreetMap package
 
 ```{r}
+cityName <- "London"
+(myUrl <- paste0("http://api.openweathermap.org/data/2.5/history/city?q=",
+  cityName, "&type=hour&start=1369728000&cnt=3", collapse = ""))
+library(RCurl)
+dat <- RCurl::getURL(myUrl)
+str(dat)
+df <- rjson::fromJSON(dat)
+meta  <- unlist(df[names(df) != "list"])
+str(df$list[[2]])
+sapply(, length)
+(df2 <- data.frame(do.call("rbind" , 
+  lapply(df$list, function(ii) unlist(lapply(ii, data.frame)))
+  )))
+indTimeCol <- grep("^dt", names(df2))
+library(xts)
+df3 <- xts(df2[-indTimeCol], index = df2[indTimeCol])
+
+x <- df$list[[1]]
+lapply(x, unlist, rec = F)
+xTimes  <- unlist(lapply(df$list, "[[", "dt"))
+as.POSIXct(xTimes, origin="1970-01-01")
+str(x)
+names(x)
+date(x$dt)
+as.POSIXct(x$dt, origin="1970-01-01")
+
+df <- JSONtoDF(jsonStr = dat)
+do.call(rbind.data.frame, df$list[1])
+
+library(d3Network)
+library(RJSONIO)
+packageDescription('RJSONIO')
+fromJSON
+
+
+
 # Or to get some more traditional CSV data as it might exist in the Simple Data Format:
 pkg <- read_data_package("http://raw.github.com/datasets/house-prices-us/0b5042bbe9a2c2537a3bd708287321396b534710/datapackage.json")
 file <- get_resource(pkg, "national", overlook.types=TRUE)
