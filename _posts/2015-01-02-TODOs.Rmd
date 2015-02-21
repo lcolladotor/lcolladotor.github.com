@@ -142,6 +142,16 @@ http://www.omegahat.org/Rflickr/
 
 # Twitter
 http://stackoverflow.com/questions/20024047/oauth-issues-with-twitter-package
+http://cran.r-project.org/web/packages/tm/vignettes/tm.pdf
+
+load the wikileaks sql file
+```{r}
+http://www.sqlite.org/cli.html
+zcat ex1.dump.gz | sqlite3 ex2
+
+createdb ex2
+$ sqlite3 ex1 .dump | psql ex2
+```
 
 # GuardianR
 * http://cran.r-project.org/web/packages/GuardianR/GuardianR.pdf
@@ -176,6 +186,7 @@ http://opendata.stackexchange.com/questions/1677/a-web-api-users-guide-for-free-
 # Wikipedia
 * Tags: text mining
 * Packages: tm
+    * use the wikileaks sql file.
 
 ## Anomolies in page views
 use the wikipediatrend package for convenience access statistics directly downloaded into your R-session. 

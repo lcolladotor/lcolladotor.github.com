@@ -1,0 +1,82 @@
+# hello world
+
+```{r}
+library(shiny)
+
+ui <- fluidPage(
+  h1("Hello, world!"),
+  sidebarLayout(
+    sidebarPanel(
+      selectInput("dataset", "choose a dataset:",
+        choices = ls("package:datasets"),
+        selected = "pressure")
+    ),
+    mainPanel(
+      tabsetPanel(
+        tabPanel("Str", verbatimTextOutput("dump")),
+        tabPanel("Plot", plotOutput("plot")),
+        tabPanel("Table", tableOutput("table"))        
+      )
+#      verbatimTextOutput("dump"),
+#      plotOutput("plot"),
+#      tableOutput("table")
+      )
+  )
+)
+
+server <- function(input, output, session){
+  output$dump <- renderPrint({
+    dataset <- get(input$dataset, "package:datasets", inherits = FALSE)
+    str(dataset)
+  })
+  output$plot <- renderPlot({
+    dataset <- get(input$dataset, "package:datasets", inherits = FALSE)
+    plot(dataset)
+  })
+  output$table <- renderTable({
+    dataset <- get(input$dataset, "package:datasets", inherits = FALSE)
+    dataset
+  })
+}
+
+shinyApp(ui, server)
+```
+
+<http://ramnathv.github.io/rCharts/>
+```{r}
+library(shiny)
+require(rCharts)
+# shinyUI(pageWithSidebar(
+ui <- fluidPage( # ui.R
+  h1("rCharts"),
+  sidebarLayout(
+    sidebarPanel(
+      selectInput(inputId = "x",
+       label = "Choose X",
+       choices = c('SepalLength', 'SepalWidth', 'PetalLength', 'PetalWidth'),
+       selected = "SepalLength"),
+      selectInput(inputId = "y",
+        label = "Choose Y",
+        choices = c('SepalLength', 'SepalWidth', 'PetalLength', 'PetalWidth'),
+        selected = "SepalWidth")
+    ),
+  mainPanel(
+    showOutput("myChart", "polycharts")
+  )
+))
+
+require(rCharts)
+server <- function # server.r
+(input, output, session)
+{   output$myChart <- renderChart({
+    names(iris) = gsub("\\.", "", names(iris))
+    p1 <- rPlot(input$x, input$y, data = iris, color = "Species", 
+      facet = "Species", type = 'point')
+    p1$addParams(dom = 'myChart')
+    return(p1)
+  })
+}
+shinyApp(ui, server)
+
+```
+
