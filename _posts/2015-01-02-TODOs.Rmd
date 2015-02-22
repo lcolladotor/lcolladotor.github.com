@@ -139,18 +139,10 @@ opts_knit$set(progress = TRUE, verbose = TRUE)
 # FlickR
 http://www.omegahat.org/Rflickr/
 
-
-# Twitter
-http://stackoverflow.com/questions/20024047/oauth-issues-with-twitter-package
-http://cran.r-project.org/web/packages/tm/vignettes/tm.pdf
-
-load the wikileaks sql file
+# NY Times
+<http://pythonhackers.com/p/rOpenGov/rtimes>
 ```{r}
-http://www.sqlite.org/cli.html
-zcat ex1.dump.gz | sqlite3 ex2
-
-createdb ex2
-$ sqlite3 ex1 .dump | psql ex2
+# http://pythonhackers.com/p/rOpenGov/rtimes
 ```
 
 # GuardianR
@@ -322,6 +314,7 @@ http://beautifuldata.net/2015/01/anomaly-detection-with-wikipedia-page-view-data
     * http://www.sciencedirect.com/science/article/pii/S187775031100007X
 
 # scraping
+* http://isites.harvard.edu/fs/docs/icb.topic1385410.files/Lab01WebScrapingI.R
 * http://cran.r-project.org/web/packages/RSelenium/index.html
 
 # cloud 
