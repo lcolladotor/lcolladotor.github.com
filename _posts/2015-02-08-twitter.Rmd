@@ -66,12 +66,17 @@ oauth_endpoints("twitter")
 # 2. Register an application at https://apps.twitter.com/
 #    Insert your values below - if secret is omitted, it will look it up in
 #    the TWITTER_CONSUMER_SECRET environmental variable.
-myapp <- oauth_app("twitter", key = "xUrz8pSfIX8w7q8I6cidGkd7r", secret = "shORRa6h6iAZnfekdHmne74k4HiqRfHEoO2930REL8h3E3dCmO")
+library(secure)
+# secure::encrypt("twitter", key = "", secret = "")
+infoTwitter <- secure::decrypt("twitter")
+myapp <- oauth_app("twitter", key = infoTwitter$key, secret = infoTwitter$secret)
 # 3. Get OAuth credentials
 twitter_token <- oauth1.0_token(
   endpoint = oauth_endpoints("twitter"), app = myapp,
-  cache = F)
-
+  permission = "asdfasdfasdf", 
+  as_header = FALSE,
+  cache = TRUE)
+searchTwitter(searchString = "news", n=20, lang="en")
 ```
 
 ```{r}
