@@ -1,0 +1,63 @@
+---
+# fn <- "2015-05-23-docker.Rmd"
+# library(knitr) ; knit(fn)  # produces the md file
+# pandoc(fn, format = "docx") # prodces the .docx file
+title: "Test post 3"
+# permalink: If you need your processed blog post URLs to be something other than the default /year/month/day/title.html then you can set this variable and it will be used as the final URL.
+date: "2014 December"
+tags:
+- R
+- docker
+categories:
+- rstats
+# published = false => Jekyll will not process the file. Else Rmd file appears as a blog with html file i.e. 2 posts.
+published: false 
+# output: ioslides_presentation
+output:
+  #  html_document:
+  # http://rmarkdown.rstudio.com/html_fragment_format.html
+  # html_fragment - no title or author -  excl std hdr content . HTML within larger web sites (e.g. blogs).
+  html_fragment: 
+    toc: true
+    # theme: united
+    number_sections: true
+    keep_md: false
+  # rmarkdown::render(fn) # produces table of contents and united theme
+  # render(fn, pdf_document()) # library(rmarkdown) ; # knit2html() 
+fontsize: 12pt
+layout: post
+author: "ttmmghmm"
+---
+
+*(this report was produced on: `r as.character(Sys.Date())`)*  
+
+# section 1
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+## sub section 
+```{r}
+library(knitr)
+opts_chunk$set(fig.align='center') 
+summary(cars)
+```
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r summary}
+summary(cars)
+```
+
+You can also embed plots, for example:
+
+```{r plot, echo=FALSE}
+plot(cars)
+```
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+```{r boilerplate sessionInfo}
+sessionInfo()
+```
+
