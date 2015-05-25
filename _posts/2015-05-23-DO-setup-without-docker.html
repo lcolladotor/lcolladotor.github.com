@@ -1,0 +1,200 @@
+<p><em>(this report was produced on: 2015-05-25)</em></p>
+<div id="create-droplet" class="section level1">
+<h1><span class="header-section-number">1</span> Create droplet</h1>
+<p>From the webpage …</p>
+<p>TODO: from the R command line.</p>
+</div>
+<div id="ssh-login" class="section level1">
+<h1><span class="header-section-number">2</span> SSH login</h1>
+<p><a href="https://www.digitalocean.com/community/articles/how-to-set-up-ssh-keys" class="uri">https://www.digitalocean.com/community/articles/how-to-set-up-ssh-keys</a>–2</p>
+<pre><code># To add correct host key in /Users/jbg/.ssh/known_hosts to get rid of this message.
+ssh-keygen -R  your.IP.goes.here
+# Host your.IP.goes.here found: line 2 type RSA
+# /Users/jbg/.ssh/known_hosts updated.
+# Original contents retained as /Users/jbg/.ssh/known_hosts.old</code></pre>
+<div id="avoid-typing-password-to-ssh" class="section level2">
+<h2><span class="header-section-number">2.1</span> Avoid typing password to ssh</h2>
+<pre><code># execute from client.
+cat ~/.ssh/id_rsa.pub | ssh root@your.IP.goes.here 'cat &gt;&gt; .ssh/authorized_keys'</code></pre>
+</div>
+<div id="disable-password-login-on-server" class="section level2">
+<h2><span class="header-section-number">2.2</span> disable password login on server</h2>
+<pre><code># step 4 https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys--2  
+# from server
+sudo nano /etc/ssh/sshd_config
+# find the line about disabling password login</code></pre>
+</div>
+</div>
+<div id="add-user" class="section level1">
+<h1><span class="header-section-number">3</span> add user</h1>
+<pre><code>adduser ttmmghmm
+gpasswd -a ttmmghmm sudo
+su - ttmmghmm</code></pre>
+</div>
+<div id="add-stuff" class="section level1">
+<h1><span class="header-section-number">4</span> add stuff</h1>
+<p>From <a href="http://deanattali.com/2015/05/09/setup-rstudio-shiny-server-digital-ocean/" class="uri">http://deanattali.com/2015/05/09/setup-rstudio-shiny-server-digital-ocean/</a></p>
+<pre><code>sudo apt-get update
+sudo apt-get install nginx
+# Now go to your new server's IP address (http://46.101.24.169/) in a browser.
+sudo nano /usr/share/nginx/html/index.html
+# edit the file and save - does NOT work? i.e. cant see the html updates?
+sudo service nginx stop
+sudo service nginx start
+# sudo service nginx restart</code></pre>
+</div>
+<div id="install-r" class="section level1">
+<h1><span class="header-section-number">5</span> install R</h1>
+<p>Use <a href="http://deanattali.com/2015/05/09/setup-rstudio-shiny-server-digital-ocean/" class="uri">http://deanattali.com/2015/05/09/setup-rstudio-shiny-server-digital-ocean/</a></p>
+<p><a href="https://github.com/szilard/benchm-ml/blob/master/0-init/1-install.txt" class="uri">https://github.com/szilard/benchm-ml/blob/master/0-init/1-install.txt</a> didnt work so well.</p>
+<pre><code># add trusty to our sources.list:
+#sudo echo &quot;deb http://cran.rstudio.com/bin/linux/ubuntu trusty/&quot; &gt; /etc/apt/sources.list.d/r.list
+sudo sh -c 'echo &quot;deb http://cran.rstudio.com/bin/linux/ubuntu trusty/&quot; &gt;&gt; /etc/apt/sources.list'
+# add the public keys:
+gpg --keyserver keyserver.ubuntu.com --recv-key E084DAB9
+gpg -a --export E084DAB9 | sudo apt-key add -
+sudo apt-get update
+sudo apt-get install r-base
+# apt-get install r-base-dev libcurl4-openssl-dev libssl-dev</code></pre>
+<p>add 1G of swap space:</p>
+<pre><code>sudo /bin/dd if=/dev/zero of=/var/swap.1 bs=1M count=1024
+sudo /sbin/mkswap /var/swap.1
+sudo /sbin/swapon /var/swap.1
+sudo sh -c 'echo &quot;/var/swap.1 swap swap defaults 0 0 &quot; &gt;&gt; /etc/fstab'</code></pre>
+<p>devtools dependencies:</p>
+<pre><code>sudo apt-get install libcurl4-gnutls-dev libxml2-dev libssl-dev
+# apt-get install r-base-dev libcurl4-openssl-dev libssl-dev</code></pre>
+</div>
+<div id="install-r-packages" class="section level1">
+<h1><span class="header-section-number">6</span> install R packages</h1>
+<p><code>sudo su - -c &quot;R -e</code> installs the packages as the root user, which means the packages will be installed in a global library and will be available to all users. If you log into R and install packages, by default they will be installed in your personal library and will only be accessible to the current user. From now on, whenever you want to install a package for the whole system, you should either log in as root and intall the package, or use the above command.</p>
+<pre><code>sudo su - -c &quot;R -e \&quot;install.packages('devtools', repos='http://cran.rstudio.com/')\&quot;&quot;
+sudo su - -c &quot;R -e \&quot;devtools::install_github('daattali/shinyjs')\&quot;&quot;
+sudo su - -c &quot;R -e \&quot;install.packages(c('data.table','readr','randomForest','gbm','glmnet','LiblineaR','ROCR','devtools'), repos='http://cran.rstudio.com')\&quot;&quot;
+sudo su - -c &quot;R -e \&quot;devtools::install_github('dmlc/xgboost', subdir = 'R-package')\&quot;&quot;</code></pre>
+</div>
+<div id="install-rstudio-server" class="section level1">
+<h1><span class="header-section-number">7</span> Install RStudio Server</h1>
+</div>
+<div id="download-the-latest-rstudio-server---consult-rstudio-downloads-page-to-get-the-url-for-the-latest-version.-then-install-the-file-you-downloaded." class="section level1">
+<h1><span class="header-section-number">8</span> Download the latest RStudio Server - consult RStudio Downloads page to get the URL for the latest version. Then install the file you downloaded.</h1>
+<p><a href="http://www.rstudio.com/products/rstudio/download-server/">consult RStudio Downloads page</a></p>
+<pre><code>sudo apt-get install gdebi-core
+sudo apt-get install libapparmor1 # Required only for Ubuntu, not Debian
+wget http://download2.rstudio.org/rstudio-server-0.98.1103-amd64.deb
+sudo gdebi rstudio-server-0.98.1103-amd64.deb
+hostname -I</code></pre>
+<p>If you want to let your friend Joe have access to your RStudio, you can create a new user for them with adduser joe.</p>
+</div>
+<div id="shiny-server" class="section level1">
+<h1><span class="header-section-number">9</span> shiny server</h1>
+<pre><code>sudo su - -c &quot;R -e \&quot;install.packages('shiny', repos='http://cran.rstudio.com/')\&quot;&quot;
+sudo su - -c &quot;R -e \&quot;install.packages('rmarkdown', repos='http://cran.rstudio.com/')\&quot;&quot;
+sudo apt-get install gdebi-core
+wget http://download3.rstudio.org/ubuntu-12.04/x86_64/shiny-server-1.3.0.403-amd64.deb
+sudo gdebi shiny-server-1.3.0.403-amd64.deb</code></pre>
+<div id="quick-shiny-server-references" class="section level2">
+<h2><span class="header-section-number">9.1</span> Quick Shiny Server references:</h2>
+<ul>
+<li>Shiny Server log is at /var/log/shiny-server.log.</li>
+<li>The default Shiny Server homepage you???re seeing is located at /srv/shiny-server/index.html - you can edit it or remove it.</li>
+<li>Any Shiny app directory that you place under /srv/shiny-server/ will be served as a Shiny app.</li>
+<li>For example, there is a default app at /srv/shiny-server/sample-apps/hello/, which means you can run the app by going to <a href="http://123.456.1.2:3838/sample-apps/hello/" class="uri">http://123.456.1.2:3838/sample-apps/hello/</a>.</li>
+<li>The config file for Shiny Server is at /etc/shiny-server/shiny-server.conf.</li>
+<li>To reload the server after editing the config, use sudo reload shiny-server.</li>
+<li>When hosting an Rmarkdown file, name the file index.rmd and add runtime: shiny to the document???s frontmatter.</li>
+</ul>
+<p>create a user group called shiny-apps and add both dean and shiny users to it. make sure that the whole /srv/shiny-server folder has read+write permissions to the group.</p>
+<pre><code>sudo groupadd shiny-apps
+sudo usermod -aG shiny-apps ttmmghmm
+sudo usermod -aG shiny-apps shiny
+cd /srv/shiny-server
+sudo chown -R ttmmghmm:shiny-apps .
+sudo chmod g+s .</code></pre>
+<ul>
+<li>any Shiny app you place under /srv/shiny-server/ will be automatically served as a Shiny app.</li>
+</ul>
+</div>
+</div>
+<div id="install-git" class="section level1">
+<h1><span class="header-section-number">10</span> install git</h1>
+<p>have the /srv/shiny-server/ folder be a git repository, so that you can push to this repository from your personal computer and whenever you do a git pull on your droplet, it will update and grab the new apps you added.</p>
+<p>The first step is to install git and make the /srv/shiny-server/ directory a git repository.</p>
+<pre><code>sudo apt-get install git
+cd /srv/shiny-server
+git init</code></pre>
+<pre><code>git remote add origin git@github.com:ttmmghmm/shiny-server.git
+git add .
+git config --global user.email &quot;ttmmghmm@gmail.com&quot;
+git config --global user.name &quot;ttmmghmm&quot;
+git commit -m &quot;Initial commit&quot;
+
+mkdir -p $HOME/.ssh
+chmod 0700 $HOME/.ssh
+#1: Create the key pair
+ssh-keygen -t rsa
+cat $HOME/.ssh/id_rsa.pub # paste into github page
+git push -u origin master</code></pre>
+<p>Refresh the GitHub page, you should see the files that were added from the droplet.</p>
+<p>Add shiny apps to this repository. Whenever you add a new shiny app or edit the index page or an existing app, you???ll need to do a git pull on your droplet to grab those changes and display them in your server.</p>
+</div>
+<div id="pretty-urls-for-rstudio-server-and-shiny-server" class="section level1">
+<h1><span class="header-section-number">11</span> pretty URLs for RStudio Server and Shiny Server</h1>
+<p>some workplace environments often block access to those ports. Use a reverse proxy, so that nginx will listen on port 80 (default HTTP port) at the URL /shiny and will internally redirect that to port 3838. Same for RStudio - we can have nginx listen at /rstudio and redirect it to port 8787. e.g. Shiny apps can be reached at daattali.com/shiny/ which is an easy URL to type, but also at daattali.com:3838. edit the nginx config file /etc/nginx/sites-enabled/default</p>
+<pre><code>sudo nano /etc/nginx/sites-enabled/default </code></pre>
+<p>after the line that reads server_name localhost;:</p>
+<pre><code>location /shiny/ {
+  proxy_pass http://127.0.0.1:3838/;
+}
+
+        location /rstudio/ {
+                proxy_pass http://127.0.0.1:8787/;
+                proxy_http_version 1.1;
+                proxy_set_header Upgrade $http_upgrade;
+                proxy_set_header Connection &quot;upgrade&quot;;
+        }
+#location /rstudio/ {
+#  proxy_pass http://127.0.0.1:8787/;
+#}</code></pre>
+<p>Since we changed the nginx config, we need to restart nginx for it to take effect. <code>sudo service nginx restart</code></p>
+</div>
+<div id="httpsgithub.comszilardbenchm-mlblobmaster0-init1-install.txt" class="section level1">
+<h1><span class="header-section-number">12</span> <a href="https://github.com/szilard/benchm-ml/blob/master/0-init/1-install.txt" class="uri">https://github.com/szilard/benchm-ml/blob/master/0-init/1-install.txt</a></h1>
+<pre><code>#### Java
+sudo add-apt-repository ppa:webupd8team/java
+sudo apt-get update
+sudo apt-get install oracle-java7-installer
+#### H2O
+wget http://h2o-release.s3.amazonaws.com/h2o/rel-nunes/2/h2o-2.8.6.2.zip
+unzip h2o-2.8.6.2.zip 
+sudo su - -c &quot;R -e \&quot;install.packages(c('statmod','RCurl','rjson'), repos='http://cran.rstudio.com') \&quot;&quot;
+R CMD INSTALL h2o-2.8.6.2/R/h2o_2.8.6.2.tar.gz
+#### H2O 3.0 (aka h2o-dev)
+wget http://h2o-release.s3.amazonaws.com/h2o-dev/rel-shannon/2/h2o-dev-3.0.0.2.zip
+unzip h2o-dev-3.0.0.2.zip
+sudo su - -c &quot;R -e \&quot;install.packages(c('statmod','RCurl','rjson'), repos='http://cran.rstudio.com')  \&quot;&quot;
+R CMD INSTALL h2o-dev-3.0.0.2/R/h2o_3.0.0.2.tar.gz
+#### Spark
+wget http://d3kbcqa49mib13.cloudfront.net/spark-1.3.0-bin-hadoop2.4.tgz
+tar xzf spark-1.3.0-bin-hadoop2.4.tgz</code></pre>
+<pre class="r"><code>sessionInfo()</code></pre>
+<pre><code>## R version 3.2.0 (2015-04-16)
+## Platform: x86_64-pc-linux-gnu (64-bit)
+## Running under: Ubuntu 14.04.2 LTS
+## 
+## locale:
+##  [1] LC_CTYPE=en_US.UTF-8       LC_NUMERIC=C              
+##  [3] LC_TIME=en_US.UTF-8        LC_COLLATE=en_US.UTF-8    
+##  [5] LC_MONETARY=en_US.UTF-8    LC_MESSAGES=en_US.UTF-8   
+##  [7] LC_PAPER=en_US.UTF-8       LC_NAME=C                 
+##  [9] LC_ADDRESS=C               LC_TELEPHONE=C            
+## [11] LC_MEASUREMENT=en_US.UTF-8 LC_IDENTIFICATION=C       
+## 
+## attached base packages:
+## [1] stats     graphics  grDevices utils     datasets  methods   base     
+## 
+## loaded via a namespace (and not attached):
+##  [1] magrittr_1.5    formatR_1.0.2   tools_3.2.0     htmltools_0.2.6
+##  [5] yaml_2.1.13     stringi_0.4-1   rmarkdown_0.6.1 knitr_1.10.5   
+##  [9] stringr_1.0.0   digest_0.6.8    evaluate_0.7</code></pre>
+</div>
