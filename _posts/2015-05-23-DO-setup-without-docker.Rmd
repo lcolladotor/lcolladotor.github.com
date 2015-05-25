@@ -36,6 +36,7 @@ author: "ttmmghmm"
 From the webpage ...
 
 TODO: from the R command line.
+https://github.com/sckott/analogsea
 
 # SSH login
 https://www.digitalocean.com/community/articles/how-to-set-up-ssh-keys--2
@@ -134,6 +135,14 @@ hostname -I
 If you want to let your friend Joe have access to your RStudio, you can create a new user for them with adduser joe.
 
 
+# database installations?
+```
+#sudo apt-get install mongodb
+#sudo apt-get install sciDb
+#sudo apt-get install monet
+sudo su - -c "R -e \"install.packages(c('mongolite', 'MonetDB.R'), repos='http://cran.rstudio.com/')\""
+```
+
 # shiny server
 ```
 sudo su - -c "R -e \"install.packages('shiny', repos='http://cran.rstudio.com/')\""
@@ -207,6 +216,13 @@ location /shiny/ {
   proxy_pass http://127.0.0.1:3838/;
 }
 
+# to get past the popup from a remote server problem.
+# e.g. library("analogsea") ; droplets() # Waiting for authentication in browser...
+# e.g. http://46.101.24.169/popup/?code=a115d5446aa3b446514e7495775ac1d9840102fd83d1822bd831faebdfc$
+  location /popup/ {
+      proxy_pass http://127.0.0.1:1410/;
+  }
+        
         location /rstudio/ {
                 proxy_pass http://127.0.0.1:8787/;
                 proxy_http_version 1.1;
