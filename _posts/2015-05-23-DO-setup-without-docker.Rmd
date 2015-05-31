@@ -139,10 +139,8 @@ If you want to let your friend Joe have access to your RStudio, you can create a
 
 # database installations?
 ```
-#sudo apt-get install mongodb
 #sudo apt-get install sciDb
-#sudo apt-get install monet
-sudo su - -c "R -e \"install.packages(c('mongolite', 'MonetDB.R'), repos='http://cran.rstudio.com/')\""
+sudo su - -c "R -e \"install.packages(c('MonetDB.R'), repos='http://cran.rstudio.com/')\""
 ```
 
 # shiny server
@@ -353,10 +351,65 @@ monetdb.read.csv(conn, file, "iris2", 150)
 ```
 
 # mongolite
+http://cran.r-project.org/web/packages/mongolite/vignettes/intro.html
+
+No need for docker or mongodb itself.
 ```
+sudo apt-get install libsasl2-dev
+sudo su - -c "R -e \"install.packages(c('mongolite', 'nycflights13', 'jsonlite'), repos='http://cran.rstudio.com/')\""
+#sudo apt-get install mongodb
+#sudo docker pull monetdb/monetdb-r-docker
+```
+One examples to show it works.
+```{r}
+library(mongolite)
+m <- mongo(collection = "diamonds")
+# Insert test data
+data(diamonds, package="ggplot2")
+m$insert(diamonds)
+# Check records
+m$count()
+nrow(diamonds)
+# Perform a query and retrieve data
+out <- m$find('{"cut" : "Premium", "price" : { "$lt" : 1000 } }')
+# Compare
+nrow(out)
+nrow(subset(diamonds, cut == "Premium" & price < 1000))
+# Remove the collection
+m$drop()
 ```
 
+## Stream from url into mongo
+```{r}
+library(jsonlite)
+library(mongolite)
+# Stream from url into mongo
+m <- mongo("zips")
+stream_in(url("http://media.mongodb.org/zips.json"), handler = function(df){
+  m$insert(df, verbose = FALSE)
+})
+# Check count
+m$count()
+# Import. Note the 'location' column is actually an array!
+zips <- m$find()
+```
+
+## Stream openweathermap nested data
+Stream large bulk samples from openweathermap with deeply nested data (takes a while).
+```{r}
+m <- mongo("weather")
+stream_in(
+  gzcon(url("http://78.46.48.103/sample/daily_14.json.gz")), 
+  handler = function(df){
+    m$insert(df, verbose = FALSE)  
+}, pagesize = 50)
+berlin <- m $find('{"city.name" : "Berlin"}')
+print(berlin$data)
+```
+
+
 # sparkR
+See `2015-05-30-DO-spark-not-docker` post.
 
 https://blog.rstudio.org/2015/05/28/sparkr-preview-by-vincent-warmerdam/#comments
 
