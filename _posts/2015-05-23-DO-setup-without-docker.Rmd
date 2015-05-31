@@ -34,6 +34,7 @@ author: "ttmmghmm"
 # Create droplet
 
 From the webpage ...
+http://deanattali.com/2015/05/09/setup-rstudio-shiny-server-digital-ocean/
 
 TODO: from the R command line.
 https://github.com/sckott/analogsea
@@ -41,17 +42,17 @@ https://github.com/sckott/analogsea
 # SSH login
 https://www.digitalocean.com/community/articles/how-to-set-up-ssh-keys--2
 ```
-ssh-keygen -t rsa
+ssh -Y root@46.101.24.169
+su - ttmmghmm
+
+# ssh-keygen -t rsa
 # To add correct host key in /Users/jbg/.ssh/known_hosts to get rid of this message.
-ssh-keygen -R  your.IP.goes.here
-# Host your.IP.goes.here found: line 2 type RSA
-# /Users/jbg/.ssh/known_hosts updated.
-# Original contents retained as /Users/jbg/.ssh/known_hosts.old
+ssh-keygen -R  46.101.24.169
 ```
 ## Avoid typing password to ssh
 ```
-# execute from client.
-cat ~/.ssh/id_rsa.pub | ssh root@your.IP.goes.here 'cat >> .ssh/authorized_keys'
+# execute from CLIENT (LAPTOP).
+cat ~/.ssh/id_rsa.pub | ssh root@46.101.24.169 'cat >> .ssh/authorized_keys'
 ```
 ## disable password login on server
 ```
@@ -184,7 +185,8 @@ git init
 ```
 
 ```
-git remote add origin git@github.com:ttmmghmm/shiny-server.git
+git remote add origin git@github.com:ttmmghmm/ttmmghmm.github.io.git
+#git remote add origin git@github.com:ttmmghmm/shiny-server.git
 git add .
 git config --global user.email "ttmmghmm@gmail.com"
 git config --global user.name "ttmmghmm"
