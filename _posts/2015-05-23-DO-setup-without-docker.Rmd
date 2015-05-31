@@ -41,6 +41,7 @@ https://github.com/sckott/analogsea
 # SSH login
 https://www.digitalocean.com/community/articles/how-to-set-up-ssh-keys--2
 ```
+ssh-keygen -t rsa
 # To add correct host key in /Users/jbg/.ssh/known_hosts to get rid of this message.
 ssh-keygen -R  your.IP.goes.here
 # Host your.IP.goes.here found: line 2 type RSA
@@ -285,6 +286,10 @@ https://www.monetdb.org/blog/docker-container-monetdb-r
 ````
 # pull the MonetDB container image from the Docker Hub Registry:
 sudo docker pull monetdb/monetdb-r-docker
+# https://gist.github.com/ttmmghmm/f5f53803f8f03f38d8c1
+# start the container with MonetDB and R ready for use.
+# JOB=$(sudo docker run -d -p 50000:50000 -v /home/ttmmghmm/monet:/usr/local/users --name monetTest2 monetdb/monetdb-r-docker)
+
 # start the container with MonetDB and R ready for use.
 sudo docker run -d -P --name monetdb-r monetdb/monetdb-r-docker
 sudo docker start  monetdb-r 
@@ -292,10 +297,70 @@ sudo docker start  monetdb-r
 # authenticate with the default username/password (monetdb/monetdb) 
 sudo docker exec -it monetdb-r mclient db
 
+# get into container to create first db manually.
+sudo docker exec -i -t monetTest2 bash
+# create monetdb db
+mkdir ~/monet ; cd ~/monet/
+monetdbd create test01 # folder may already exist
+# https://docs.docker.com/articles/basics/ Bind Docker to another host/port or a Unix socket
+# https://www.monetdb.org/Documentation/UserGuide/Tutorial
+monetdb create voc # created database in maintenance mode: voc
+monetdb release voc # taken database out of maintenance mode: voc
+mclient -u voc -d voc
+CREATE USER "voc" WITH PASSWORD 'voc' NAME 'VOC Explorer' SCHEMA "sys";
+CREATE SCHEMA "voc" AUTHORIZATION "voc";
+ALTER USER "voc" SET SCHEMA "voc";
+q
 
-sudo docker run -d -P --name monetdb sramazzina/docker-monetdb
+# http://monetr.r-forge.r-project.org/
+# R has db (voc) and a port number (50000) - why is there no default demo db?
+library(MonetDB.R)
+# need to get port number from sudo docker ps
+# conn <- dbConnect(dbDriver("MonetDB"), "monetdb://localhost/voc", port = 32770)
+conn <- dbConnect(dbDriver("MonetDB"), "monetdb://localhost/voc")
+# write some test data
+data(iris)
+dbWriteTable(conn, "iris", iris)
+(ds1 <- dbGetQuery(conn,"SELECT avg(sepal_width) FROM iris"))
+# https://stackoverflow.com/questions/tagged/monetdb?sort=votes&pageSize=15
+
+# 2nd ex https://stackoverflow.com/questions/24694751/monetdb-r-bulk-insert
+# and a MonetDB.R connection
+db <- conn
+# how many records if you stack your example data three times
+data(mtcars) ; nrow( mtcars ) * 3
+# write to three separate tables
+dbWriteTable( db , 'mtcars1' , mtcars )
+dbWriteTable( db , 'mtcars2' , mtcars )
+dbWriteTable( db , 'mtcars3' , mtcars )
+# stack them all
+dbSendUpdate( db , "CREATE TABLE mtcars AS SELECT * FROM mtcars1 UNION ALL SELECT * FROM mtcars2 UNION ALL SELECT * FROM mtcars3 WITH DATA" )
+# correct number of records
+nrow( dbReadTable( db , 'mtcars' ) )
+
+# write test data to temporary CSV file
+data(iris)
+file <- tempfile()
+write.table(iris, file, sep=",")
+# read.csv not working?
+monetdb.read.csv(conn, file, "iris2", 150)
+
+# todo
+# select tables.name from tables where tables.system=false ;
 
 ```
+
+# mongolite
+```
+```
+
+# sparkR
+
+```
+sudo su - -c "R -e \"library(devtools); install_github('amplab-extras/SparkR-pkg', subdir='pkg')\""
+
+```
+
 
 
 ```{r boilerplate sessionInfo}
