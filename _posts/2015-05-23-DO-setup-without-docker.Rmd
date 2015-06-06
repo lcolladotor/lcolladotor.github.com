@@ -138,9 +138,19 @@ If you want to let your friend Joe have access to your RStudio, you can create a
 
 
 # database installations?
+
+## scidb
+install and load from R.
+file:///Users/jbg/Downloads/scidb%20(1).pdf
 ```
-#sudo apt-get install sciDb
-sudo su - -c "R -e \"install.packages(c('MonetDB.R'), repos='http://cran.rstudio.com/')\""
+library('devtools')
+install_github("SciDBR","paradigm4",quick=TRUE)
+library("scidb")
+scidbconnect("localhost")  
+
+#docker run -d yyao/scidbtutorialdocker 
+#sudo apt-get install 
+#sudo su - -c "R -e \"install.packages(c('.R'), repos='http://cran.rstudio.com/')\""
 ```
 
 # shiny server
@@ -213,6 +223,11 @@ sudo nano /etc/nginx/sites-enabled/default
 ```
 after the line that reads server_name localhost;:
 ```
+# scidb installed from inside R
+        location /scidb/ {
+                proxy_pass http://127.0.0.1:8083/;
+        }
+
 location /shiny/ {
   proxy_pass http://127.0.0.1:3838/;
 }
@@ -396,7 +411,7 @@ zips <- m$find()
 
 ## Stream openweathermap nested data
 Stream large bulk samples from openweathermap with deeply nested data (takes a while).
-```{r}
+```{r, eval = FALSE}
 m <- mongo("weather")
 stream_in(
   gzcon(url("http://78.46.48.103/sample/daily_14.json.gz")), 
