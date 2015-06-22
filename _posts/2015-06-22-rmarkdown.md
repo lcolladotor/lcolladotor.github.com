@@ -4,7 +4,7 @@ title: CHANGEME
 tags:
 - CHANGEME
 categories:
-- CHANGEME
+- rstats
 ---
 {% include JB/setup %}
 
