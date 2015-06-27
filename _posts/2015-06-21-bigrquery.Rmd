@@ -1,11 +1,11 @@
 # https://github.com/hadley/bigrquery
-# Project ID: api-project-572780019748 Project Number: 572780019748
+```{r}
 gaAuth <- c(projectId = 'api-project-572780019748', projectNum = '572780019748')
-
 library(bigrquery)
-project <- gaAuth["projectId"] # "fantastic-voyage-389" # put your project ID here
+project <- gaAuth["projectId"] 
 sql <-'SELECT * FROM [bigquery-samples:nasdaq_stock_quotes.quotes] LIMIT 10'
 query_exec(sql, project = project)
+```
 
 # http://stackoverflow.com/questions/27017036/bigquery-counting-number-of-events-within-a-sliding-time-frame
 sql <-"SELECT 
