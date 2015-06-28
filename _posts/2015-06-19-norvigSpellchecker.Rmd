@@ -1,5 +1,7 @@
-# https://theoldreader.com/feeds/5492cceefea0e76433000405
 
+
+# https://theoldreader.com/feeds/5492cceefea0e76433000405
+```{r}
 library(dplyr)
 "https://www.norvig.com/big.txt" %>%
   url() %>%
@@ -53,3 +55,4 @@ correct <- function(word) {
   proposals_by_prob[1]
 }
 
+```
