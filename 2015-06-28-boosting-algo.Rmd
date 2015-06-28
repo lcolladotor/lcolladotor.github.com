@@ -1,0 +1,82 @@
+---
+title: "BOOSTING ALGORITHM"
+# fn <- "2015-05-30-spark-not-docker.Rmd"
+# library(knitr) ; knit(fn)  # produces the md file
+# pandoc(fn, format = "docx") # prodces the .docx file
+# permalink: If you need your processed blog post URLs to be something other than the default /year/month/day/title.html then you can set this variable and it will be used as the final URL.
+date: "2015 June"
+tags:
+- R
+- model
+categories:
+- rstat, boosting
+# published = false => Jekyll will not process the file. Else Rmd file appears as a blog with html file i.e. 2 posts.
+published: false 
+# output: ioslides_presentation
+output:
+  #  html_document:
+  # http://rmarkdown.rstudio.com/html_fragment_format.html
+  # html_fragment - no title or author -  excl std hdr content . HTML within larger web sites (e.g. blogs).
+  html_fragment: 
+    toc: true
+    # theme: united
+    number_sections: true
+    keep_md: false
+  # rmarkdown::render(fn) # produces table of contents and united theme
+  # render(fn, pdf_document()) # library(rmarkdown) ; # knit2html() 
+fontsize: 12pt
+layout: post
+author: "ttmmghmm"
+---
+
+# http://freakonometrics.hypotheses.org/19874
+
+```{r}
+n=300
+set.seed(1)
+u=sort(runif(n)*2*pi)
+y=sin(u)+rnorm(n)/4
+df=data.frame(x=u,y=y)
+plot(df)
+```
+
+# linear-by-part regression models.
+At each iterations, there are 7 parameters to ‘estimate’, the slopes and the nodes. 
+consider some constant shrinkage parameter.
+```{r, echo=FALSE}
+v <- .05 
+library(splines)
+fit <- lm(y ~ bs(x, degree = 1, df = 3), data = df)
+yp <- predict(fit, newdata = df)
+df$yr <- df$y - v * yp
+YP <- v * yp
+```
+
+This is the implementation of the algorithm described above,
+```{r}
+for(t in 1:100){
+  fit=lm(yr~bs(x,degree=1,df=3),data=df)
+  yp=predict(fit,newdata=df)
+  df$yr=df$yr - v*yp
+  YP=cbind(YP,v*yp)
+}
+str(YP)
+```
+
+The red line is the initial guess we have, without boosting, using a simple call of the regression function. 
+The blue one is the one obtained using boosting. 
+The dotted line is the true model.
+```{r}
+nd=data.frame(x=seq(0,2*pi,by=.01))
+viz=function(M){
+if(M==1)  y=YP[,1]
+if(M>1)   y=apply(YP[,1:M],1,sum)
+  plot(df$x,df$y,ylab="",xlab="")
+  lines(df$x,y,type="l",col="red",lwd=3)
+  fit=lm(y~bs(x,degree=1,df=3),data=df)
+  yp=predict(fit,newdata=nd)
+  lines(nd$x,yp,type="l",col="blue",lwd=3)
+  lines(nd$x,sin(nd$x),lty=2)}
+
+viz(50)
+```
