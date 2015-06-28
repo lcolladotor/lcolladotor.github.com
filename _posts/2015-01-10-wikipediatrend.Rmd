@@ -1,0 +1,278 @@
+---
+yamlFileName: 2015-01-10-wikipediatrend.Rmd # WARNING: update the filename?
+# print(rmarkdown::metadata$yamlFileName) # permalink
+# setwd("~/git/ttmmghmm.github.io/_posts") ; library(knitr)
+# fn <- "2015-01-10-wikipediatrend.Rmd" ; knit(fn)  # to get the .md file 
+# library(knitrBootstrap)
+# rmarkdown::render(fn, knitrBootstrap::bootstrap_document(), clean = FALSE) # no md?
+# produce an identical result to Knit HTML in RStudio- no run-time dependency on RStudio
+# https://github.com/jimhester/knitrBootstrap#bootstrap-themes
+#   knit(fn) ; markdownToHTML("foo.md") ; browseURL("foo.html")
+# pandoc(fn, format = "docx") # prodces the .docx file - Word doc.
+# rmarkdown::render(fn) # produces table of contents (and html?)
+# rmarkdown::render(fn, pdf_document()) # and knit2html() to get .html from .md
+title: "wikipedia trend"
+#
+# like categories, tags can be specified as a YAML list or a space- separated string.
+# http://en.wikipedia.org/wiki/YAML#Lists
+type: posts
+layout: post
+tags:
+- Rwww
+- plotwwww
+categories: rstatswww dddd
+author: ttmmghmm
+---
+
+# Displaying an index of posts
+* {{ site.posts }}
+* {% for post in site.posts %}
+    <li>
+      <a href="{{ post.url }}">{{ post.title }}</a>
+    </li>
+  {% endfor %}
+Hello {{ 'tobi' | upcase }}
+Hello tobi has {{ 'tobi' | size }} letters!
+Hello {{ '*tobi*' | textilize | upcase }}
+Hello {{ 'now' | date: "%Y %h" }}
+Hello {{name}}
+Hello {{user.name}}
+Hello {{ 'tobi' }}
+
+<!-- http://jekyllrb.com/docs/collections/
+{{ con tent }}
+{{ out put }}
+-->
+# Change the default global options
+https://github.com/jimhester/knitrBootstrap#chunk-options
+```{r, eval = TRUE}
+library(magrittr)
+# https://github.com/jimhester/knitrBootstrap#chunk-options
+# colors() [grep(patt = "dark", x = colours())]
+#     panel: FALSE #  Use panels rather than buttons to toggle blocks.
+opts_chunk$set(fig.width = 5, fig.height = 5)
+# bootstrap.panel (FALSE) - panels rather than buttons to toggle blocks.
+opts_chunk$set(background = c('gray10'), panel = TRUE) 
+# http://getbootstrap.com/css/#grid
+# bootstrap.thumbnail - (TRUE) - Thumbnail and lightbox images.
+opts_chunk$set(thumbnail = TRUE, thumbnail.size = 'col-md-2')
+# .class ('row') - class to apply to the div containing the chunk.
+# opts_chunk$set(class = 'rowew')
+# bootstrap.show.code - (TRUE) - Code from this chunk starts as shown.
+# opts_chunk$set(code = FALSE, output = FALSE) 
+# opts_chunk$set(echo = FALSE, cache = FALSE)
+# opts_chunk$set(message = FALSE, warning = FALSE, error = FALSE) 
+
+# NOT working?
+# The package options can be changed using the object opts_knit; for example,
+opts_knit$set(progress = TRUE, verbose = TRUE)
+```
+
+
+```{r child = c('../_posts/boiler_plate_vignette_setup.Rmd', '../_posts/boiler_plate_bibliography_start.Rmd') }
+# child: (NULL; character) a character vector of filenames of child documents to be run and input into the main document http://yihui.name/knitr/options/
+# http://stackoverflow.com/questions/25824795/how-to-combine-two-rmarkdown-rmd-files-into-a-single-output
+```
+
+# Wikipedia
+* Tags: text mining
+* Packages: tm
+
+
+# Wikileaks
+load the wikileaks sql file
+```{r}
+http://www.sqlite.org/cli.html
+zcat ex1.dump.gz | sqlite3 ex2
+
+createdb ex2
+$ sqlite3 ex1 .dump | psql ex2
+```
+
+## Anomolies in Wikipedia page views
+* Use the wikipediatrend package for convenience access statistics directly downloaded into your R-session. 
+* Page access statistics 
+    * e.g. http://stats.grok.se/en/201409/Peter_Principle. 
+    * http://cran.r-project.org/web/packages/wikipediatrend/index.html
+    * See also https://github.com/petermeissner/wikipediatrend for a quick introduction to package use.
+* info pages 
+    * e.g. https://en.wikipedia.org/w/index.php?title=Peter_Principle&action=info. 
+    * See the MediaWiki-package
+    , this package allows loading page view statistics into R.
+
+### http://beautifuldata.net/2015/01/anomaly-detection-with-wikipedia-page-view-data/
+
+```{r}
+library(RJSONIO)
+library(RCurl)
+library(ggplot2)
+# install.packages("devtools")
+# devtools::install_github("twitter/AnomalyDetection")
+library(AnomalyDetection)
+```
+
+```{r}
+page <- "USA"
+raw_data <- getURL(paste("http://stats.grok.se/json/en/latest90/", page, sep=""))
+data <- fromJSON(raw_data)
+views <- data.frame(timestamp=paste(names(data$daily_views), " 12:00:00", sep=""), stringsAsFactors=F)
+views$count <- data$daily_views
+views$timestamp <- as.POSIXlt(views$timestamp) # Transform to POSIX datetime
+views <- views[order(views$timestamp),]
+```
+
+```{r}
+ggplot(views, aes(timestamp, count)) + geom_line() + scale_x_datetime() + xlab("") + ylab("views")
+```
+feed a dataframe with a date-time and a value column into the AnomalyDetection function AnomalyDetectionTs(). But in this case, this doesn???t work because our data is much too coarse
+
+our data is much too coarse. It doesn???t seem to work with data on days. So, we use the more generic function AnomalyDetectionVec() that just needs the values and some definition of a period. In this case, the period is 7 (= 7 days for one week):
+```{r}
+res = AnomalyDetectionVec(views$count, max_anoms=0.05, direction='both', plot=TRUE, period=7)
+res$plot
+```
+
+
+If you want to do this with more time points though, use the wikipediatrend package for convenience access statistics directly downloaded into your R-session. 
+http://cran.r-project.org/web/packages/wikipediatrend/index.html
+See also [https://github.com/petermeissner/wikipediatrend] for a quick introduction to package use.
+
+### wikipediatrend
+```{r}
+require(wikipediatrend)
+
+system.time(df <- 
+  wp_trend(
+    page = "Peter_principle" # the name of the page
+    , from = Sys.Date()-30 # starting date of the timespan to be considered
+    , to = Sys.Date() #  end date of the timespan to be considered
+    , lang = "en" # language of the page
+    , friendly = FALSE # minimize workload on behalf of stats.grok.se
+    , requestFrom = "anonymous" # identify yourself towards stats.grok.se
+    , userAgent = FALSE # send information - plattform, R version, package used to make server requests
+  ) 
+)
+```
+It shows us which URLs it used to retrieve the information we were asking for.
+
+The function's return is a data frame with two variables date and count:
+```{r return is a data frame with two variables date and count}
+str(df)
+```
+
+visualize the page view trend. 
+Using wp_wday() we can furthermore discriminate weekdays (black) from weekends (red).
+```{r}
+peter_principle <- df
+plot( peter_principle, 
+      col=ifelse( wp_wday(peter_principle$date) > 5 , "red", "black") ,
+      ylim=c(0, max(peter_principle$count)),
+      main="Peter Principle's Wikipedia Attention",
+      ylab="views per day", xlab="time")
+lines(peter_principle)
+```
+most pressing on workdays -- or maybe people in general just tend to use their computers less on weekends.
+
+### friendly
+friendly option can be set to different values:
+* FALSE, the default, deactivates wp_trend()'s friendly behavior altogether
+* TRUE, activates wp_trend()'s friendly behavior and retreieved access statistics are stored on disk in CSV format via write.csv()
+* 1 is the same as TRUE
+* 2, is the same as TRUE but storage takes place via write.csv2()
+Let's try it out by making two subsequent requests to get access statistics for for information on ISIS.
+
+```{r}
+csv <- "wp__Islamic_State_of_Iraq_and_the_Levant__en.csv"
+if (file.exists(csv)) file.remove(csv)
+isis <- wp_trend("Islamic_State_of_Iraq_and_the_Levant", from="2013-01-01", friendly=T)
+```
+
+```{r}
+plot( isis, 
+      ylim=c(0, max(isis$count)),
+      main="ISIS' Wikipedia Attention",
+      ylab="views per day", xlab="time",
+      type="l")
+```
+
+# Cats
+
+```{r}
+cats <- wp_trend("Cat", from="2007-01-01", friendly=T)
+# throw out extreme values
+  no_outlier <- 
+  cats$count < 
+    quantile(cats$count, na.rm=T, 0.99) & 
+  cats$count > 
+    quantile(cats$count, na.rm=T, 0.01)  
+plot( cats[no_outlier,], 
+      col="black",
+      ylim=c(0, max(cats[no_outlier,]$count)),
+      main="Cats' Wikipedia Attention",
+      ylab="views per day", xlab="time", type="h")
+soo_2012_13 <- wp_year(cats$date)== 2012 | wp_year(cats$date)== 2013 
+cats_model  <- lm(count ~ date + date^2 + date^3 + soo_2012_13 ,data=cats)
+cats_smooth <- data.frame(date=cats$date, count_smooth=predict(cats_model))
+lines(cats_smooth,col=rgb(1,0,0,0.5),lwd=5)
+```
+
+# how the desire to inform oneself about Ebola varies over time:
+```{r}
+ebola_en <- wp_trend("Ebola", from="2008-01-01", friendly=T)
+plot( ebola_en, 
+      ylim=c(0, max(ebola_en$count)),
+      main="Ebola's Wikipedia Attention",
+      ylab="views per day", xlab="time",
+      type="l")
+lines(ebola_en)
+
+```
+
+## if media attention differs between languages / cultures 
+
+Compare the attention patterns for the English Wikipedia with those for the German Wikipedia:
+```{r}
+ebola_de <- wp_trend("Ebola", lang="de", from="2008-01-01", friendly=T)
+plot( ebola_en, 
+      ylim=c(0, max(ebola_en$count)),
+      main="Ebola's Wikipedia Attention",
+      ylab="views per day", xlab="time",
+      type="n")
+lines(ebola_en, col="red")
+lines(ebola_de, col=rgb(0,0,0,0.7))
+legend("topleft", 
+       c("en", "de"), 
+       col=c("red", rgb(0,0,0,0.7)),
+       lty=1
+       )
+
+```       
+
+http://beautifuldata.net/2015/01/anomaly-detection-with-wikipedia-page-view-data/
+
+
+## Graph and web crawling
+* http://semanticweb.cs.vu.nl/R/wikipedia_graph/wikipedia_graph.html
+* Tags: [text mining, graphs, wikipedia, crawl, Simple Wikipedia, Wikipedia,
+  analytical metrics]
+  * ???Basic English 850 basic English words chosen by Charles Kay Ogden.???
+* TODO: dynamic graph, shiny
+
+## WikiPediR package
+* http://www.rexamine.com/2014/06/text-mining-in-r-automatic-categorization-of-wikipedia-articles/
+  *  hierarchical categorization of Wikipedia articles
+* more information about text mining in R: 
+    * http://onepager.togaware.com/TextMiningO.pdf
+    * http://cran.r-project.org/web/views/NaturalLanguageProcessing.html
+    * http://www.r-bloggers.com/text-mining/
+    * http://cran.r-project.org/doc/contrib/Zhao_R_and_data_mining.pdf
+    * http://www.jstatsoft.org/v25/i05/paper
+    * http://www.r-bloggers.com/visualising-wikipedia-search-statistics-with-r/
+        * search traffic for any article - search statistics for ???Financial crisis???. 
+            * The wikiStat() function returns dataframe with the necessary data.
+    * http://cran.r-project.org/web/packages/tm.plugin.webmining/vignettes/ShortIntro.pdf
+
+
+
+```{r child = c('../_posts/boiler_plate_reproducibility.Rmd', '../_posts/boiler_plate_bibliography_end.Rmd') }
+```

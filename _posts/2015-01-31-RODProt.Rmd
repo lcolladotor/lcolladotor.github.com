@@ -1,0 +1,85 @@
+---
+yamlFileName: 2015-01-31-RODProt.Rmd # WARNING: update the filename?
+# print(rmarkdown::metadata$yamlFileName) # permalink
+# library(knitr)
+# setwd("~/git/ttmmghmm.github.io/_posts") ; fn <- "2015-01-10-sparkline.Rmd" ; knit(fn)  # to get the .md file 
+#
+# library(knitrBootstrap)
+# rmarkdown::render(fn, knitrBootstrap::bootstrap_document(), clean = FALSE) # no md?
+# produce an identical result to Knit HTML in RStudio- no run-time dependency on RStudio
+# https://github.com/jimhester/knitrBootstrap#bootstrap-themes
+#   knit(fn) ; markdownToHTML("foo.md") ; browseURL("foo.html")
+# pandoc(fn, format = "docx") # prodces the .docx file - Word doc.
+# rmarkdown::render(fn) # produces table of contents (and html?)
+# rmarkdown::render(fn, pdf_document()) # and knit2html() to get .html from .md
+title: "sparkline"
+#
+# like categories, tags can be specified as a YAML list or a space- separated string.
+# http://en.wikipedia.org/wiki/YAML#Lists
+type: posts
+layout: post
+tags:
+- R
+- sparkline plot
+categories: rstats sparkline
+output:
+  # https://github.com/jimhester/knitrBootstrap
+  # http://cran.r-project.org/web/packages/knitrBootstrap/README.html
+  # ::bootstrap_document custom rendering function for the Rmarkdown package.
+  knitrBootstrap::bootstrap_document: #  to create bootstrap styled HTML reports - not .md
+    # https://github.com/jimhester/knitrBootstrap#package-options
+    # title: "where does this appear? # (NULL) Set the title for the html document
+    # http://bootswatch.com/ optionally including a dynamic style switch.
+    theme: cerulean # Cyborg # monokai cyborg slate darkly superhero cerulean 
+    theme.chooser: TRUE # (FALSE) - Add a bootstrap style chooser to the page.
+    # highlight Set the default code style. (HighlightJS)
+    # https://github.com/jimhester/knitrBootstrap#highlight-themes
+    highlight: Zenburn # monokai # Sunburst # Zenburn # HighlightJs # google code 
+    highlight.chooser: TRUE # (FALSE) - Add a code style chooser to the page.
+    menu: TRUE # FALSE # Whether to include the bottom navbar.
+author: ttmmghmm
+---
+
+========================================================
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring web pages (click the **Help** toolbar button for more details on using R Markdown).
+```{r}
+library(devtools)
+# install_github("RODProt", "QBRC")
+library(RODProt)
+myUrl <- "http://raw.github.com/QBRC/RODProt/4f401d0773bcfa613c6640fad8cce356b28ecf95/inst/extdata/mixed.json"
+str(read_json_table(myUrl))
+```
+
+```{r}
+# Or to get some more traditional CSV data as it might exist in the Simple Data Format:
+pkg <- read_data_package("http://raw.github.com/datasets/house-prices-us/0b5042bbe9a2c2537a3bd708287321396b534710/datapackage.json")
+file <- get_resource(pkg, "national", overlook.types=TRUE)
+#  overlook.types parameter must be set to TRUE if you're attempting to load a file that has an unsupported data type (such as date)
+ 
+ 
+library(RODProt)
+pkg <- read_data_package("http://data.okfn.org/data/cpi/datapackage.json")
+cpi <- get_resource(pkg, "cpi.csv", overlook.types=TRUE)
+head(cpi)
+ 
+```
+
+
+http://data.okfn.org/data
+ 
+https://github.com/QBRC/RODProt
+ 
+http://data.okfn.org/data 
+ 
+https://github.com/mylesmharrison/WTI_ON_gasprices
+ 
+http://okfnlabs.org/blog/2014/09/11/data-api-for-data-packages-with-dpm-and-ckan.html
+ 
+
+You can also embed plots, for example:
+
+```{r fig.width=7, fig.height=6}
+plot(cars)
+```
+

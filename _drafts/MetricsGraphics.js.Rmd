@@ -1,0 +1,34 @@
+---
+title: "metricsgraphics"
+author: "ttmmghmm"
+date: "1/10/2015"
+output: html_document
+---
+
+# metricsgraphicsjs
+http://asbcllc.com/blog/2015/January/ww2_tanks/
+```{r, eval = FALSE}
+c('dplyr','pipeR','data.table','reshape2','tidyr','magrittr') -> packages
+lapply(packages,library,character.only = T)
+```
+
+```{r, eval = FALSE}
+#get table
+"http://ww2db.com/vehicle.php?list=T" %>%
+  html %>%
+	readHTMLTable(header = F) %>>%
+	(.[2] %>% data.frame %>% tbl_df -> tanks)
+ 
+"http://ww2db.com/vehicle.php?list=T" %>%
+	html %>%
+	html_nodes("td a") %>% html_attrs() %>% unlist %>% as.character %>% .[14:89] %>% paste0("http://ww2db.com/",.) -> urls
+
+apply(tanks,2,function(x) substr(x,1,nchar(x)-1)) %>% data.frame -> tanks
+
+```
+
+
+http://metricsgraphicsjs.org/interactive-demo.htm
+
+# networkD3
+https://github.com/christophergandrud/networkD3

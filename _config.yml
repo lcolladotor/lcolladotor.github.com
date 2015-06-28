@@ -1,22 +1,64 @@
-# This is the default format. 
-# For more see: http://jekyllrb.com/docs/permalinks/
-permalink: /:year/:month/:day/:title 
+# TODO: set global defaults to avoid repetition.
+# http://jekyllrb.com/docs/configuration/#front-matter-defaults
+# http://jekyllrb.com/docs/configuration/
+# Local configuration file: /Users/jbg/git/github/ttmmghmm.github.com/_config.yml
 
-exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
-pygments: true
-markdown: rdiscount
+# http://jekyllrb.com/docs/configuration/
+#defaults:
+#  -
+#    scope:
+#      path: ""
+#      type: ""
+#    values:
+#      layout:
+#        output:
+
+# permalink default format. http://jekyllrb.com/docs/permalinks/
+permalink: /:year/:month/:day/:title 
+# permalink: /blog/:categories/:year/:month/:day/:title.html
+
+# https://help.github.com/articles/page-build-failed-file-is-not-properly-utf-8-encoded/
+# http://jekyllrb.com/docs/configuration/
+encoding: ASCII-8BIT
+# encoding: UTF-8
+# time zone for site generation. 
+timezone: Europe/London
+
+# http://stackoverflow.com/questions/17735545/how-do-i-make-jekyll-exclude-my-config-rb-for-sass
+# WARNING: excl ALL Rmd files in all folders and ALL .md files but _only_ in the posts folder
+# WARNING: Quotes are essential.
+# "*.Rmd", "_posts/*.md", 
+exclude: ["_posts/*/*/*.png", "_posts/*.Rmd", "_posts/*.md", "*.Rproj", ".DS_Store", "README.md", "Rakefile", "changelog.md", ".rvmrc", ".rbenv-version"]
+
+# syntax highlighting of code snippets using either Pygments or Rouge
+# http://jekyllrb.com/docs/posts/
+# highlighter: pygments # 'rouge', 'pygments' or null.
+markdown: kramdown
+# markdown: rdiscount
+# markdown: redcarpet
 
 # Themes are encouraged to use these universal variables 
 # so be sure to set them if your theme uses them.
-#
-title : Fellgernon Bit
+title : Things that make me go hmm
 tagline: blog
 author :
-  name : Collado Torres
-  email : lcollado@jhu.edu
-  github : lcolladotor
-  twitter : fellgernon
-  feedburner : FellgernonBit
+  name : ttmmghmm
+  author: ttmmghmm
+  email : ttmmghmm+github@gmail.com
+  github : ttmmghmm
+  twitter : ttmmghmm
+  feedburner : ttmmghmm
+  # googleplus: ttmmghmm
+  # Whatever you specify for ur linkedin option is placed after www.linkedin.com/in/
+  # linkedin: ttmmghmm
+description: A website and blog about data analysis, applied statistics and R.
+# http://stackoverflow.com/questions/25755838/in-my-jekyll-include-file-how-do-i-get-the-markdown-for-a-post
+excerpt_separator: "<!--break-->" # default is "\n\n" = two new lines
+
+# https://help.github.com/articles/using-jekyll-with-pages/
+# github: [Repository metadata] # what goes here?
+
+
 
 # The production_url is only used when full-domain names are needed
 # such as sitemap.txt 
@@ -24,15 +66,17 @@ author :
 #
 # If you have set a CNAME (pages.github.com) set your custom domain here.
 # Else if you are pushing to username.github.io, replace with your username.
-# Finally if you are pushing to a GitHub project page, include the project name at the end.
-#
-production_url : http://lcolladotor.github.io
+# If you are pushing to a GitHub project page, include the project name at the end.
+production_url : http://ttmmghmm.github.io
 
-# Pagination (added this line)
-paginate: 2
+# https://help.github.com/articles/sitemaps-for-github-pages/
+gems:
+  - jekyll-sitemap
+
+# Pagination (added this line) - default number of articles per page?
+paginate: 1
 
 # All Jekyll-Bootstrap specific configurations are namespaced into this hash
-#
 JB :
   version : 0.3.0
 
@@ -86,7 +130,7 @@ JB :
   comments :
     provider : disqus
     disqus :
-      short_name : fellgernonbit
+      short_name : ttmmghmm
     livefyre :
       site_id : 123
     intensedebate :
@@ -104,7 +148,7 @@ JB :
   analytics :
     provider : google 
     google : 
-        tracking_id : 'UA-45299226-1'
+        tracking_id : 'UA-57998178-1'
     getclicky :
       site_id : 
     mixpanel :

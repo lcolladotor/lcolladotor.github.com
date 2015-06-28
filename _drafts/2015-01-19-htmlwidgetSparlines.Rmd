@@ -1,0 +1,61 @@
+---
+title: "jquery Sparkline HTML Widget"
+author: ttmmghmmm
+# date: "July 18, 2014"
+yamlFileName: 2015-01-19-htmlwidgetSparlines.Rmd # WARNING: update the filename?
+#type: posts
+#layout: post
+tags: R sparkline
+categories: rstats sparkline htmkwidget
+output:
+  html_document:
+    keep_md: FALSE # sparkline works where knitrBootstrap leaves blanks.
+  knitrBootstrap::bootstrap_document: #  to create bootstrap styled HTML reports - not .md
+    # https://github.com/jimhester/knitrBootstrap#package-options
+    # title: "where does this appear? # (NULL) Set the title for the html document
+    # http://bootswatch.com/ optionally including a dynamic style switch.
+    theme: Cyborg # cerulean # Cyborg # monokai cyborg slate darkly superhero cerulean 
+    theme.chooser: TRUE # (FALSE) - Add a bootstrap style chooser to the page.
+    # highlight Set the default code style. (HighlightJS)
+    # https://github.com/jimhester/knitrBootstrap#highlight-themes
+#    highlight: monokai # Zenburn # monokai # Sunburst # Zenburn # HighlightJs # google code 
+#    highlight.chooser: TRUE # (FALSE) - Add a code style chooser to the page.
+#    menu: TRUE # FALSE # Whether to include the bottom navbar.
+---
+
+```{r child = c('../_posts/boiler_plate_vignette_setup.Rmd', '../_posts/boiler_plate_bibliography_start.Rmd') }
+# child: (NULL; character) a character vector of filenames of child documents to be run and input into the main document http://yihui.name/knitr/options/
+# http://stackoverflow.com/questions/25824795/how-to-combine-two-rmarkdown-rmd-files-into-a-single-output
+```
+
+
+```{r}
+plot(runif(1e3))
+```
+
+```{r}
+library(ggplot2)
+qplot(runif(1e2))
+```
+
+
+```{r}
+library(htmlwidgets)
+library(sparkline)
+set.seed(1234)
+x = rnorm(10)
+y = rnorm(10)
+```
+
+
+Inline line graphs `r sparkline(x)`
+
+Bar charts  `r sparkline(abs(x), type = 'bar')`  negative values: `r sparkline(x, type = 'bar')`
+
+| Stock | Sparkline         | Boxplot  
+|-------|-------------------|--------
+| x     | `r sparkline(x)`  | `r sparkline(x, type ='box')`
+| y     | `r sparkline(y)`  | `r sparkline(y, type ='box')`
+
+```{r child = c('../_posts/boiler_plate_reproducibility.Rmd', '../_posts/boiler_plate_bibliography_end.Rmd') }
+```

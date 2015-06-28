@@ -1,0 +1,34 @@
+
+```{r}
+op <- options(width = 80, digits = 2, scipen = 5)
+library(portfolio)
+data(assay)
+assay[c(1407, 1873, 1058, 2453, 1833, 1390), 
+      c("id", "symbol", "name", "country", 
+        "currency", "price", "sector", "liq", "on.fl", "ret.0.3.m", "ret.0.6.m")]
+glimpse(assay)
+
+assay$assay.wt <- ifelse(assay$on.fl, -1, NA)
+p <- new("portfolioBasic",
+         name    = "AFL Portfolio",
+         instant = as.Date("2004-12-31"),
+         data    = assay,
+         id.var  = "symbol",
+         in.var  = "assay.wt",
+         type    = "relative",
+         size    = "all",
+         ret.var = "ret.0.3.m")
+summary(p)
+summary(performance(p))
+exposure(p, exp.var = 'sector')
+
+p.m <- matching(p, covariates = c("country", "sector", "liq"))
+summary(p.m)
+all(!p.m@matches[,1] %in% p@weights$id)
+exposure(p, exp.var = "sector")
+exposure(p.m, exp.var = "sector")
+exposure(p, exp.var = "liq")
+exposure(p.m, exp.var = "liq")
+summary(performance(p.m))
+options(op)
+```

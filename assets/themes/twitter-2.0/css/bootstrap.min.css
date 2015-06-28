@@ -638,6 +638,7 @@ a.thumbnail:hover{border-color:#0088cc;-webkit-box-shadow:0 1px 4px rgba(0, 105,
 .hide{display:none;}
 .show{display:block;}
 .invisible{visibility:hidden;}
+#Add the following CSS code to the /assets/themes/twitter-2.0/css/bootstrap.min.css file to center images:
 [alt=center] {
   display: block;
   margin: auto;

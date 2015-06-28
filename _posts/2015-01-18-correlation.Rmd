@@ -1,0 +1,80 @@
+---
+yamlFileName: 2015-01-18-correlation.Rmd # WARNING: update the filename?
+# print(rmarkdown::metadata$yamlFileName) # permalink
+# library(knitr)
+# setwd("~/git/ttmmghmm.github.io/_posts") ; fn <- "2015-01-10-sparkline.Rmd" ; knit(fn)  # to get the .md file 
+# library(knitrBootstrap)
+# rmarkdown::render(fn, knitrBootstrap::bootstrap_document(), clean = FALSE) # no md?ls()
+
+# produce an identical result to Knit HTML in RStudio- no run-time dependency on RStudio
+# https://github.com/jimhester/knitrBootstrap#bootstrap-themes
+#   knit(fn) ; markdownToHTML("foo.md") ; browseURL("foo.html")
+# pandoc(fn, format = "docx") # prodces the .docx file - Word doc.
+# rmarkdown::render(fn) # produces table of contents (and html?)
+# rmarkdown::render(fn, pdf_document()) # and knit2html() to get .html from .md
+title: correlation
+#
+# like categories, tags can be specified as a YAML list or a space- separated string.
+# http://en.wikipedia.org/wiki/YAML#Lists
+type: posts
+layout: post
+tags: R correlation Distance_correlation
+categories: rstats correlation
+output:
+  # https://github.com/jimhester/knitrBootstrap
+  # http://cran.r-project.org/web/packages/knitrBootstrap/README.html
+  # ::bootstrap_document custom rendering function for the Rmarkdown package.
+  knitrBootstrap::bootstrap_document: #  to create bootstrap styled HTML reports - not .md
+    # https://github.com/jimhester/knitrBootstrap#package-options
+    # title: "where does this appear? # (NULL) Set the title for the html document
+    # http://bootswatch.com/ optionally including a dynamic style switch.
+    theme: Cyborg # cerulean # Cyborg # monokai cyborg slate darkly superhero cerulean 
+    theme.chooser: TRUE # (FALSE) - Add a bootstrap style chooser to the page.
+    # highlight Set the default code style. (HighlightJS)
+    # https://github.com/jimhester/knitrBootstrap#highlight-themes
+    highlight: monokai # Zenburn # monokai # Sunburst # Zenburn # HighlightJs # google code 
+    highlight.chooser: TRUE # (FALSE) - Add a code style chooser to the page.
+    menu: TRUE # FALSE # Whether to include the bottom navbar.
+author: ttmmghmm
+---
+
+```{r child = c('../_posts/boiler_plate_vignette_setup.Rmd', '../_posts/boiler_plate_bibliography_start.Rmd') }
+# child: (NULL; character) a character vector of filenames of child documents to be run and input into the main document http://yihui.name/knitr/options/
+# http://stackoverflow.com/questions/25824795/how-to-combine-two-rmarkdown-rmd-files-into-a-single-output
+```
+
+
+# correlation
+
+## Distance correlation
+http://en.wikipedia.org/wiki/Distance_correlation
+```{r}
+library(energy)
+packageDescription('energy')
+example(edist)
+vignette(package = 'energy')
+```
+```{r}
+x <- matrix(rnorm(100), 10, 10)
+y <- matrix(runif(100), 10, 10)
+dx <- dist(x)
+dy <- dist(y)
+dcor.t(x, y)
+bcdcor(dx, dy, distance=TRUE)
+dcor.ttest(x, y)
+```
+
+
+
+# correlation
+```{r}
+http://tools.morningstar.co.uk/uk/etfquickrank/default.aspx?Site=UK&Universe=ETALL%24%24ALL&LanguageId=en-GB
+ 
+http://etfdb.com/country/united-kingdom/
+http://r.search.yahoo.com/_ylt=A9mSs2ZJQsJU9RQAXQFLBQx.;_ylu=X3oDMTByNmJrMW5mBHNlYwNzcgRwb3MDOQRjb2xvA2lyMgR2dGlkAw--/RV=2/RE=1422045898/RO=10/RU=http%3a%2f%2fwww.youtube.com%2fuser%2fETFdb/RK=0/RS=skgiBIo9dAPv6ISSW8YjwlZ6I3Q-
+```
+
+
+# sparkline
+
+

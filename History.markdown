@@ -8,6 +8,7 @@
   * Create History.markdown to help project management (#169)
 
 ### Bug Fixes
+  * Page layout should be null and nil.
 
 ### Site Enhancements
 

@@ -1,0 +1,88 @@
+<!-- *** reproducibility *** 
+NB: Do not add yaml code here, put it at the start of the top level Rmd 
+-->
+
+# Reproducibility
+This final 'boiler plate' section highlights how this vignette was created.
+
+## To recreate this vignette
+
+<!-- Additional semantic markup can be added to the citations themselves, such as the reason for the citation. -->
+
+* `knitrBootstrap` `r citep(bib[['knitrBootstrap']])`
+<!-- `r citep(bib[['knitrBootstrap']], cito = 'usesMethodIn')` -->
+* Running behind the scenes:  
+    * `knitr` `r citep(bib[['knitr']])`.
+    * `rmarkdown` `r citep(bib[['rmarkdown']])`.
+    * From the bibtex information for select packages:
+        * `RCurl` `r citep(citation("RCurl"))`.
+        * `magrittr` `r citep(citation("magrittr"))`.
+    * <https://github.com/trinker/knitcitations>
+
+
+```{r boiler_plate_reproducibility, eval=FALSE, bootstrap.show.code=FALSE, bootstrap.show.message=FALSE, bootstrap.show.output=FALSE}
+# TODO: parse permalink? varialble
+print(rmarkdown::metadata$yamlFileName) # permalink
+docName <- rmarkdown::metadata$yamlFileName
+
+## Create the vignette
+library('knitrBootstrap') 
+knitrBootstrapFlag <- packageVersion('knitrBootstrap') < '1.0.0'
+if(knitrBootstrapFlag) {
+    ## CRAN version
+    library('knitrBootstrap')
+    cat("\n\n\tmetadata:title", rmarkdown::metadata$title, "\n\n")
+    # TODO: stopifnot(file.exists(paste0(rmarkdown::metadata$title, ".Rmd")))
+    print(system.time(knit_bootstrap(docName, chooser=c('boot', 'code'), show_code = TRUE)))
+    # unlink('dots.md') # why remove .md file and in yaml?
+} else {
+    ## GitHub version
+    library('rmarkdown')
+    print(system.time(render(docName)))
+}
+unlink('citations.bib')
+## Note: if you prefer the knitr version use:
+# library('rmarkdown')
+# system.time(render(docName, 'html_document'))
+
+## Extract the R code
+library('knitr')
+knit(docName, tangle = TRUE)
+
+KnitPost <- function(input, base.url = "/") {
+    require(knitr)
+    opts_knit$set(base.url = base.url)
+    fig.path <- paste0("figs/", sub(".Rmd$", "", basename(input)), "/")
+    opts_chunk$set(fig.path = fig.path)
+    opts_chunk$set(fig.cap = "center")
+    render_jekyll()
+    knit(input, envir = parent.frame())
+}
+# TODO: insert the file name dynamically (both from _drafts and _posts?)
+KnitPost(docName)
+
+```
+
+## YAML boiler plate
+```{r YAML setup, echo=TRUE, bootstrap.show.code=FALSE, bootstrap.show.message=FALSE, bootstrap.show.output=FALSE}
+str(rmarkdown::metadata) # https://github.com/rstudio/rmarkdown/issues/260
+```
+
+## `R` information
+
+### Session and packages
+```{r session information, echo=FALSE, bootstrap.show.code=FALSE, bootstrap.show.message=FALSE, bootstrap.show.output=FALSE}
+## Session info
+options(width = 90)
+library('devtools')
+session_info()
+```
+
+### Runtime 
+```{r processing time, echo=FALSE, bootstrap.show.code=FALSE, bootstrap.show.message=FALSE, message=FALSE, warning = FALSE, results='hide'} 
+## Processing time in seconds
+totalTime <- diff(c(startTime, Sys.time()))
+userTime <- round(totalTime, digits = 1)
+```
+Vignette generated in `r userTime` seconds.   
+<p>Timestamp `r Sys.time()`. <!-- Date the vignette was generated -->

@@ -1,0 +1,62 @@
+---
+title: "R Introduction"
+author: "Rory Winston"
+date: "2 August 2014"
+output:
+  ioslides_presentation: default
+  beamer_presentation:
+    fig_height: 6
+    fig_width: 8
+    keep_tex: yes
+# logo: r_logo.png
+self_contained: no
+fontsize: 10pt
+---
+ 
+## Functions {.smaller} # .smaller works in .Rmd but not in .Rpres format.
+ 
+```{r, collapse=TRUE}
+square <- function(x) x^2
+square(2)
+ 
+pow <- function(x, p=2) x^p
+pow(10)
+pow(10,3)
+pow(p=3,10)
+ 
+```
+
+## What is R?
+ 
+- A Domain-Specific-Language (DSL) for statistics and data analysis
+- Based on the S Programming Language
+- An environment for Exploratory Data Analysis (EDA)
+- A quasi-functional language with IDE and REPL
+- A vectorized language with BLAS support
+- A collection of over 7,000+ libraries
+- A large and active community across industry and academia
+- Around 20 years old (Lineage dates from 1975 - almost 40 years ago)
+ 
+```{r,echo=FALSE,message=FALSE}
+options("digits"=5)
+options("digits.secs"=3)
+ 
+```
+ 
+ 
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r}
+summary(cars)
+```
+
+You can also embed plots, for example:
+
+```{r, echo=FALSE}
+plot(cars)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.

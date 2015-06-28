@@ -1,10 +1,25 @@
 ---
 layout: page
-title: Fellgernon Bit
-tagline: <a href="http://bit.ly/LColladoTorres">L. Collado-Torres</a>'s academic corner in the bit world
+title: Recent blogs - 
+tagline: <a href="http://bit.ly/ttmmghmm">Things that make me go hmm</a>
 ---
+{% include JB/setup %}
+This site is based on Github/Jekyll.<br> 
+Graphs are generated dynamically through the R package 
+<a http://yihui.name/knitr><b>knitr</b></a>.<br>
+The source code to these posts are available on 
+<a http://github.com/cpsievert/ttmmghmm.github.com/tree/master/_source><b>GitHub</b></a>. 
 
-{% for post in paginator.posts %}
+<h2>Latest posts</h2>
+
+<ul class="posts">
+  {% for post in site.posts limit:10 %}
+    <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></li>
+  {% endfor %}
+  <li><a href="archive.html">Read More...</a></li>
+</ul>
+
+{% for post in paginator.posts limit:1 %}
    <!-- here add you post markup -->
    <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
    <p class="author">
@@ -16,7 +31,7 @@ tagline: <a href="http://bit.ly/LColladoTorres">L. Collado-Torres</a>'s academic
   <div class="content-space"></div>
 {% endfor %}
 
-<!-- Pagination links -->
+
 <div class="pagination pagination-centered">
   <ul>
   {% if paginator.previous_page %}
@@ -35,3 +50,8 @@ tagline: <a href="http://bit.ly/LColladoTorres">L. Collado-Torres</a>'s academic
   {% endif %}
   </ul>
 </div>
+
+## Copyright
+
+All the content in this website is licensed under 
+[CC BY-NC-SA 3.0](http://creativecommons.org/licenses/by-nc-sa/3.0/). 

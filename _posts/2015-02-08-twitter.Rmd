@@ -1,0 +1,196 @@
+---
+yamlFileName: 2015-02-08-DBpedia.Rmd # WARNING: update the filename?
+# print(rmarkdown::metadata$yamlFileName) # permalink
+# library(knitr)
+# setwd("~/git/ttmmghmm.github.io/_posts") ; fn <- "2015-02-08-DBpedia.Rmd" ; knit(fn)  # to get the .md file 
+#
+# library(knitrBootstrap)
+# rmarkdown::render(fn, knitrBootstrap::bootstrap_document(), clean = FALSE) # no md?
+# produce an identical result to Knit HTML in RStudio- no run-time dependency on RStudio
+# https://github.com/jimhester/knitrBootstrap#bootstrap-themes
+#   knit(fn) ; markdownToHTML("foo.md") ; browseURL("foo.html")
+# pandoc(fn, format = "docx") # prodces the .docx file - Word doc.
+# rmarkdown::render(fn) # produces table of contents (and html?)
+# rmarkdown::render(fn, pdf_document()) # and knit2html() to get .html from .md
+title: DBpedia
+#
+# like categories, tags can be specified as a YAML list or a space- separated string.
+# http://en.wikipedia.org/wiki/YAML#Lists
+type: posts
+layout: post
+tags: DBpedia R 
+categories: rstats openWeatherMap
+output:
+  # https://github.com/jimhester/knitrBootstrap
+  # http://cran.r-project.org/web/packages/knitrBootstrap/README.html
+  # ::bootstrap_document custom rendering function for the Rmarkdown package.
+  knitrBootstrap::bootstrap_document: #  to create bootstrap styled HTML reports - not .md
+    # https://github.com/jimhester/knitrBootstrap#package-options
+    # title: "where does this appear? # (NULL) Set the title for the html document
+    # http://bootswatch.com/ optionally including a dynamic style switch.
+    theme: cerulean # Cyborg # monokai cyborg slate darkly superhero cerulean 
+    theme.chooser: TRUE # (FALSE) - Add a bootstrap style chooser to the page.
+    # highlight Set the default code style. (HighlightJS)
+    # https://github.com/jimhester/knitrBootstrap#highlight-themes
+    highlight: Zenburn # monokai # Sunburst # Zenburn # HighlightJs # google code 
+    highlight.chooser: TRUE # (FALSE) - Add a code style chooser to the page.
+    menu: TRUE # FALSE # Whether to include the bottom navbar.
+author: ttmmghmm
+---
+
+========================================================
+
+Retrieve data on German Federal States:
+```{r, eval = FALSE}
+library(datamart) # version 0.5 or later
+dbp <- dbpedia(lang = "en")
+# see a list of predefined queries
+queries(dbp)
+# lists Federal States
+head(query(dbp, "Nuts1"))[, c("name", "nuts", "gdp")
+```
+
+
+# Twitter
+http://stackoverflow.com/questions/20024047/oauth-issues-with-twitter-package
+http://cran.r-project.org/web/packages/tm/vignettes/tm.pdf
+
+
+# <http://www.r-bloggers.com/the-united-states-in-two-words>
+
+```{r}
+require(httr)
+# 1. Find OAuth settings for twitter:
+#    https://dev.twitter.com/dokeycs/auth/oauth
+oauth_endpoints("twitter")
+# 2. Register an application at https://apps.twitter.com/
+#    Insert your values below - if secret is omitted, it will look it up in
+#    the TWITTER_CONSUMER_SECRET environmental variable.
+library(secure)
+# secure::encrypt("twitter", key = "", secret = "")
+infoTwitter <- secure::decrypt("twitter")
+myapp <- oauth_app("twitter", key = infoTwitter$key, secret = infoTwitter$secret)
+# 3. Get OAuth credentials
+twitter_token <- oauth1.0_token(
+  endpoint = oauth_endpoints("twitter"), app = myapp,
+  permission = "asdfasdfasdf", 
+  as_header = FALSE,
+  cache = TRUE)
+searchTwitter(searchString = "news", n=20, lang="en")
+```
+
+```{r}
+library(twitteR)
+library(RCurl)
+library(XML)
+#load("twitter authentification.Rdata")
+#registerTwitterOAuth(Cred)
+#options(RCurlOptions = list(cainfo = system.file("CurlSSL", "cacert.pem", package = "RCurl")))
+#Read state names from wikipedia
+webpage=getURL("http://simple.wikipedia.org/wiki/List_of_U.S._states")
+table=readHTMLTable(webpage, which=1)
+table=table[!(table$"State name" %in% c("Alaska", "Hawaii")), ]
+#Extract tweets for each state
+results=data.frame()
+for (i in 1:nrow(table)) # i <- 1
+{
+  tweets = searchTwitter(searchString =
+      paste("'", table$"State name"[i], " is'", sep="") , n=200, lang="en")
+  tweets.df=twListToDF(tweets)
+  results=rbind(cbind(table$"State name"[i], tweets.df), results)
+}
+results=results[,c(1,2)]
+colnames(results)=c("State", "Text")
+
+```
+
+
+```{r}
+# Do this if you have not registered your R app in Twitter
+library(twitteR)
+library(RCurl)
+setwd("~/git/ttmmghmm.github.io")
+getwd()
+if (!file.exists('cacert.perm'))
+  download.file(url = 'http://curl.haxx.se/ca/cacert.pem', destfile='cacert.perm')
+requestURL="https://api.twitter.com/oauth/request_token"
+accessURL="https://api.twitter.com/oauth/access_token"
+authURL="https://api.twitter.com/oauth/authorize"
+consumerKey = "xUrz8pSfIX8w7q8I6cidGkd7r"
+consumerSecret = "shORRa6h6iAZnfekdHmne74k4HiqRfHEoO2930REL8h3E3dCmO"
+setup_twitter_oauth(consumer_key = consumerKey, 
+  consumer_secret = consumerSecret, 
+  access_token, access_secret,
+                    credentials_file = "twitauth.RData")
+Cred <- OAuthFactory$new(consumerKey=consumerKey,
+                         consumerSecret=consumerSecret,
+                         requestURL=requestURL,
+                         accessURL=accessURL,
+                         authURL=authURL)
+
+Cred$handshake(cainfo=system.file("CurlSSL", "cacert.pem", package="RCurl"))
+save(Cred, file="twitter authentification.Rdata")
+# Start here if you have already your twitter authentification.Rdata file
+library(twitteR)
+library(RCurl)
+library(XML)
+load("twitter authentification.Rdata")
+registerTwitterOAuth(Cred)
+options(RCurlOptions = list(cainfo = system.file("CurlSSL", "cacert.pem", package = "RCurl")))
+#Read state names from wikipedia
+webpage=getURL("http://simple.wikipedia.org/wiki/List_of_U.S._states")
+table=readHTMLTable(webpage, which=1)
+table=table[!(table$"State name" %in% c("Alaska", "Hawaii")), ]
+#Extract tweets for each state
+results=data.frame()
+for (i in 1:nrow(table))
+{
+  tweets=searchTwitter(searchString=paste("'"", table$"State name"[i], " is"'",sep=""), n=200, lang="en")
+  tweets.df=twListToDF(tweets)
+  results=rbind(cbind(table$"State name"[i], tweets.df), results)
+}
+results=results[,c(1,2)]
+colnames(results)=c("State", "Text")
+library(tm)
+#Lexicons
+pos = scan('positive-words.txt',  what='character', comment.char=';')
+neg = scan('negative-words.txt',  what='character', comment.char=';')
+posneg=c(pos,neg)
+results$Text=tolower(results$Text)
+results$Text=gsub("[[:punct:]]", " ", results$Text)
+# Extract most important words for each state
+words=data.frame(Abbreviation=character(0), State=character(0), word1=character(0), word2=character(0), word3=character(0), word4=character(0))
+for (i in 1:nrow(table))
+{
+  doc=subset(results, State==as.character(table$"State name"[i]))
+  doc.vec=VectorSource(doc[,2])
+  doc.corpus=Corpus(doc.vec)
+  stopwords=c(stopwords("english"), tolower(unlist(strsplit(as.character(table$"State name"), " "))), "like")
+  doc.corpus=tm_map(doc.corpus, removeWords, stopwords)
+  TDM=TermDocumentMatrix(doc.corpus)
+  TDM=TDM[Reduce(intersect, list(rownames(TDM),posneg)),]
+  v=sort(rowSums(as.matrix(TDM)), decreasing=TRUE)
+  words=rbind(words, data.frame(Abbreviation=as.character(table$"Abbreviation"[i]), State=as.character(table$"State name"[i]),
+                                   word1=attr(head(v, 4),"names")[1],
+                                   word2=attr(head(v, 4),"names")[2],
+                                   word3=attr(head(v, 4),"names")[3],
+                                   word4=attr(head(v, 4),"names")[4]))
+}
+# Visualization
+require("sqldf")
+statecoords=as.data.frame(cbind(x=state.center$x, y=state.center$y, abb=state.abb))
+#To make names of right side readable
+texts=sqldf("SELECT a.abb,
+            CASE WHEN a.abb IN ('DE', 'NJ', 'RI', 'NH') THEN a.x+1.7
+            WHEN a.abb IN ('CT', 'MA') THEN a.x-0.5  ELSE a.x END as x,
+            CASE WHEN a.abb IN ('CT', 'VA', 'NY') THEN a.y-0.4 ELSE a.y END as y,
+            b.word1, b.word2 FROM statecoords a INNER JOIN words b ON a.abb=b.Abbreviation")
+texts$col=rgb(sample(0:150, nrow(texts)),sample(0:150, nrow(texts)),sample(0:150, nrow(texts)),max=255)
+library(maps)
+jpeg(filename = "States In Two Words v2.jpeg", width = 1200, height = 600, quality = 100)
+map("state", interior = FALSE, col="gray40", fill=FALSE)
+map("state", boundary = FALSE, col="gray", add = TRUE)
+text(x=as.numeric(as.character(texts$x)), y=as.numeric(as.character(texts$y)), apply(texts[,4:5] , 1 , paste , collapse = "n" ), cex=1, family="Humor Sans", col=texts$col)
+dev.off()
+```
+

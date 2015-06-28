@@ -1,0 +1,393 @@
+---
+yamlFileName: 2015-02-08-DBpedia.Rmd # WARNING: update the filename?
+# print(rmarkdown::metadata$yamlFileName) # permalink
+# library(knitr)
+# setwd("~/git/ttmmghmm.github.io/_posts") ; fn <- "2015-02-08-DBpedia.Rmd" ; knit(fn)  # to get the .md file 
+#
+# library(knitrBootstrap)
+# rmarkdown::render(fn, knitrBootstrap::bootstrap_document(), clean = FALSE) # no md?
+# produce an identical result to Knit HTML in RStudio- no run-time dependency on RStudio
+# https://github.com/jimhester/knitrBootstrap#bootstrap-themes
+#   knit(fn) ; markdownToHTML("foo.md") ; browseURL("foo.html")
+# pandoc(fn, format = "docx") # prodces the .docx file - Word doc.
+# rmarkdown::render(fn) # produces table of contents (and html?)
+# rmarkdown::render(fn, pdf_document()) # and knit2html() to get .html from .md
+title: DBpedia
+#
+# like categories, tags can be specified as a YAML list or a space- separated string.
+# http://en.wikipedia.org/wiki/YAML#Lists
+type: posts
+layout: post
+tags: DBpedia R 
+categories: rstats openWeatherMap
+output:
+  # https://github.com/jimhester/knitrBootstrap
+  # http://cran.r-project.org/web/packages/knitrBootstrap/README.html
+  # ::bootstrap_document custom rendering function for the Rmarkdown package.
+  knitrBootstrap::bootstrap_document: #  to create bootstrap styled HTML reports - not .md
+    # https://github.com/jimhester/knitrBootstrap#package-options
+    # title: "where does this appear? # (NULL) Set the title for the html document
+    # http://bootswatch.com/ optionally including a dynamic style switch.
+    theme: cerulean # Cyborg # monokai cyborg slate darkly superhero cerulean 
+    theme.chooser: TRUE # (FALSE) - Add a bootstrap style chooser to the page.
+    # highlight Set the default code style. (HighlightJS)
+    # https://github.com/jimhester/knitrBootstrap#highlight-themes
+    highlight: Zenburn # monokai # Sunburst # Zenburn # HighlightJs # google code 
+    highlight.chooser: TRUE # (FALSE) - Add a code style chooser to the page.
+    menu: TRUE # FALSE # Whether to include the bottom navbar.
+author: ttmmghmm
+---
+
+========================================================
+
+
+# SPARQL
+<http://www.programmingr.com/content/sparql-with-r/>
+ it’s an attempt to create a data definition for the Web.
+
+The primary method for accessing data made available on the Semantic Web is via SPARQL queries to a data provider’s endpoint. Endpoints are portals to data that a provider has made available for querying. This data is often published in RDF format.
+
+
+```{r}
+library(SPARQL) # SPARQL querying package
+library(ggplot2)
+ 
+# Step 1 - Set up preliminaries and define query
+# Define the data.gov endpoint
+endpoint <- "http://services.data.gov/sparql"
+ 
+# create query statement
+query <-
+"PREFIX  dgp1187: <http://data-gov.tw.rpi.edu/vocab/p/1187/>
+SELECT ?ye ?fi ?ac
+WHERE {
+?s dgp1187:year ?ye .
+?s dgp1187:fires ?fi .
+?s dgp1187:acres ?ac .
+}"
+ 
+# Step 2 - Use SPARQL package to submit query and save results to a data frame
+#qd <- SPARQL(endpoint,query)
+#df <- qd$results
+```
+
+# brazil section??
+
+```{r SPARQL}
+library(ggplot2)
+library(mapproj)
+library(ggmap)
+library(SPARQL)
+```
+
+# <http://linkedscience.org/tools/sparql-package-for-r/tutorial-on-sparql-package-for-r/>
+
+```{r}
+# linked Amazon in R, part I by Benedikt Graeler, ben.graeler@uni-muenster.de
+library(SPARQL)
+library(sp)
+
+# setting the endpoint
+endpoint <- "http://spatial.linkedscience.org/sparql"
+
+# defining a first querry as spatial setup
+q <- "SELECT ?cell ?row ?col ?polygon
+WHERE { 
+   ?cell a <http://linkedscience.org/lsv/ns#Item> ;
+         <http://spatial.linkedscience.org/context/amazon/Lin> ?row ;
+         <http://spatial.linkedscience.org/context/amazon/Col> ?col ;
+         <http://linkedscience.org/lsv/ns#border> ?polygon .
+}"
+
+# getting the data piece-wise to reduce the XML's size
+
+res <- SPARQL(url=endpoint, q)$results
+
+for(var in c("DEFOR_2002", "DEFOR_2003", "DEFOR_2004", "DEFOR_2005", "DEFOR_2006",
+            "DEFOR_2007","DEFOR_2008")) {
+  tmp_q <- paste("SELECT ?cell ?",var,"\n WHERE { \n ?cell a <http://linkedscience.org/lsv/ns#Item> ;\n <http://spatial.linkedscience.org/context/amazon/",var,"> ?",var," .\n }\n",sep="")
+  cat(tmp_q)
+  res <- merge(res, SPARQL(endpoint, tmp_q)$results, by="cell")
+}
+
+# creating the SpatialPixelsDataFrame
+amazon <- res
+amazon$row <- -res$row # swapping the y-axis
+
+coordinates(amazon) <- ~ col+row
+gridded(amazon) <- TRUE
+
+# single map
+spplot(amazon,"DEFOR_2002",col.regions=rev(heat.colors(17))[-1], at=(0:16)/100,
+       main="relative deforestation per pixel during 2002")
+
+# time series of maps
+spplot(amazon, c("DEFOR_2002", "DEFOR_2003", "DEFOR_2004", "DEFOR_2005", 
+                 "DEFOR_2006", "DEFOR_2007","DEFOR_2008"), 
+       col.regions=rev(heat.colors(26))[-1], at=(0:20)/80,as.table=T,
+       main="relative deforestation per pixel")
+
+
+# cumulative deforestation per year
+# assuming grid cells of 25km x 25km
+cumDefor <- apply(amazon@data[,-c(1,2)],2,function(x) sum(x)*25*25) 
+
+plot(2002:2008,cumDefor,type="b", col="blue", ylab="Deforestation [km?]",
+     xlab="year", main="Deforestation from 2002 to 2008", ylim=c(0,26000))
+
+
+```
+
+
+
+# <http://semanticweb.cs.vu.nl/R/sparql_lop/sparql_lop.html>
+
+```{r}
+library(zoo)
+
+# define SPARQL end-point and namespaces
+
+# VU University Amsterdam LOP server
+# endpoint <- "http://semanticweb.cs.vu.nl/lop/sparql/"
+# options <- NULL
+
+# Local Jena Fuseki setup
+endpoint <- "http://localhost:3030/lop/sparql"
+options <- "output=xml"
+
+prefix <- c("lop","http://semanticweb.cs.vu.nl/poseidon/ns/instances/",
+            "eez","http://semanticweb.cs.vu.nl/poseidon/ns/eez/")
+
+sparql_prefix <- "PREFIX sem: <http://semanticweb.cs.vu.nl/2009/11/sem/>
+                  PREFIX poseidon: <http://semanticweb.cs.vu.nl/poseidon/ns/instances/>
+                  PREFIX eez: <http://semanticweb.cs.vu.nl/poseidon/ns/eez/>
+                  PREFIX wgs84: <http://www.w3.org/2003/01/geo/wgs84_pos#>
+                  PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+"
+
+# get events per region
+
+q <- paste(sparql_prefix, 
+  "SELECT *
+   WHERE {
+     ?event sem:hasPlace ?place .
+     ?place eez:inPiracyRegion ?region .
+   }")
+
+res <- SPARQL(endpoint,q,ns=prefix,extra=options)$results
+
+# count the events per region
+
+count_per_region <- table(res$region)
+sorted_counts <- sort(count_per_region)
+
+# plot as a pie chart
+
+pie(sorted_counts, col=rainbow(12))
+
+
+# get event types and region of events
+
+q <- paste(sparql_prefix,
+  "SELECT *
+   WHERE {
+     ?event sem:eventType ?event_type .
+     ?event sem:hasPlace ?place .
+     ?place eez:inPiracyRegion ?region .
+   }")
+
+res <- SPARQL(endpoint,q,ns=prefix,extra=options)$results
+
+# calculate counts with a two-way table
+
+event_region_table <- table(res$event_type,res$region)
+
+# draw a stacked barplot
+
+par(mar=c(4,10,1,1))
+barplot(event_region_table, col=rainbow(10), horiz=TRUE, las=1, cex.names=0.8)
+legend("topright", rownames(event_region_table),
+       cex=0.8, bty="n", fill=rainbow(10))
+
+
+# get event type, latitude and longitude per event
+
+q <- paste(sparql_prefix,
+  "SELECT *
+   WHERE {
+     ?event sem:eventType ?event_type .
+     ?event sem:hasPlace ?place .
+     ?place wgs84:lat ?lat .
+     ?place wgs84:long ?long .
+   }")
+
+res <- SPARQL(endpoint,q,ns=prefix,extra=options)$results
+
+# plot on a map
+
+qmap('Gulf of Aden', zoom=2) +
+  geom_point(aes(x=long, y=lat, colour=event_type), data=res) +
+  scale_color_manual(values = rainbow(10))
+
+
+# get events that mention "RPG" in the description
+# fetch event type, latitude, longitude
+
+q <- paste(sparql_prefix,
+  "SELECT *
+   WHERE {
+     ?event rdfs:comment ?description .
+     FILTER regex(?description,'RPG','i')
+     ?event sem:eventType ?event_type .
+     ?event sem:hasPlace ?place .
+     ?place wgs84:lat ?lat .
+     ?place wgs84:long ?long .
+   }")
+
+res <- SPARQL(endpoint,q,ns=prefix,extra=options)$results
+
+# plot on a map
+
+qmap('Gulf of Aden', zoom=2) +
+  geom_point(aes(x=long, y=lat, colour=event_type), data=res) +
+  scale_color_manual(values = rainbow(10))
+
+
+# get event type, victim ship type, and region of events
+ 
+q <- paste(sparql_prefix,
+"SELECT ?event_type ?actor_type ?region
+   WHERE {
+     ?event sem:eventType ?event_type .
+     ?event sem:hasPlace ?place .
+     ?place eez:inPiracyRegion ?region .
+     ?event sem:hasActor ?actor .
+     ?actor sem:actorType ?actor_type .
+   }")
+
+res <- SPARQL(endpoint,q,ns=prefix,extra=options)$results
+
+et_region <- table(res$event_type,res$region)
+at_region <- table(res$actor_type,res$region)
+
+# compute correlation between regions with respect to event types
+
+et_cor <- cor(et_region, method='pearson')
+sort(et_cor['eez:Region_Gulf_of_Aden',], decreasing=TRUE)
+
+# compute correlation between regions with respect to victim ship types
+
+at_cor <- cor(at_region, method='pearson')
+sort(at_cor['eez:Region_Gulf_of_Aden',], decreasing=TRUE)
+
+
+# get event type of events that involve a merchant vessel of some sort
+
+q <- paste(sparql_prefix,
+  "SELECT *
+   WHERE {
+     ?event sem:eventType ?event_type .
+     ?event sem:hasActor ?actor .
+     ?actor sem:actorType ?actor_type .
+     ?actor_type rdfs:subClassOf poseidon:atype_merchant_vessel .
+   }")
+
+res <- SPARQL(endpoint,q,ns=prefix,extra=paste(options,"&entailment=rdfs"))$results
+
+mv_et_table <- table(res$event_type)
+
+
+# count events per event types for all types of ships
+
+q <- paste(sparql_prefix,
+  "SELECT *
+   WHERE {
+     ?event sem:eventType ?event_type .
+     ?event sem:hasActor ?actor .
+     ?actor sem:actorType ?actor_type .
+   }")
+
+res <- SPARQL(endpoint,q,ns=prefix,extra=options)$results
+
+all_et_table <- table(res$event_type)
+
+
+# count events per event types for non-merchant vessels
+# by subtracting the counts of merchant vessel events from all events 
+
+rest_et_table <- all_et_table - mv_et_table
+
+
+# perform a chi-square test between attacks that happen to
+# merchant vessels and other vessels
+
+chisq.test(mv_et_table,rest_et_table)
+
+
+
+# show number of attacks per quarter
+
+q <- paste(sparql_prefix,
+  "SELECT *
+   WHERE {
+     ?event sem:hasPlace ?place .
+     ?place eez:inPiracyRegion ?region .
+     ?event sem:hasTimeStamp ?time .
+   }")
+
+res <- SPARQL(endpoint,q,ns=prefix,extra=options)$results
+
+# construct a table containing ones for each time at which an event takes place
+
+event_times_aden <- res[res[['region']]=='eez:Region_Gulf_of_Aden',][['time']]
+date_table_aden <- zoo(rep(1,length(event_times_aden)),as.Date(event_times_aden))
+event_times_india <- res[res[['region']]=='eez:Region_India_Bengal',][['time']]
+date_table_india <- zoo(rep(1,length(event_times_india)),as.Date(event_times_india))
+
+# add the ones up per quarter year
+
+india_per_quarter <- aggregate(date_table_india,as.yearqtr)
+aden_per_quarter <- aggregate(date_table_aden,as.yearqtr)
+
+plot(india_per_quarter,type="b",xlab="quarter",ylab="number of piracy events",pch=16,col='purple')
+lines(aden_per_quarter,type="b",pch=16,col="red")
+legend("topleft",c("Gulf of Aden","India and Gulf of Bengal"),fill=c("red","purple"))
+
+
+
+```
+
+# Spain
+
+It uses the SPARQL R package to query the esDBpedia SPARQL EndPoint. In this example it gets the geolocated resources in the Madrid Community (indeed in Madrid's bounding box]
+
+They are classified by their type. For shake of simplicity the schema.org type has been chosen. A resource can have more than one type (e.g. Alcalá de Henares has Place and Hospital).
+```{r spain}
+endpoint <- "http://es.dbpedia.org/sparql"
+query <-
+"SELECT *  WHERE {
+      ?uri geo:lat ?lat .
+      ?uri geo:long ?lon .
+      ?uri rdf:type ?thetype .
+      FILTER ( (?lat> 40.0  && ?lat < 41.15) &&
+               (?lon> 3.1  && ?lon < 4.5)
+               && regex(?thetype,'^http://schema.org')
+             )
+}
+"
+reslist <- SPARQL(endpoint,query)
+df <- reslist$results
+df$lon <- -df$lon
+df$thetype <- factor(df$thetype)
+map.center <- geocode("Madrid, Spain")
+map <- get_map(c(lon=map.center$lon, lat=map.center$lat), 
+                 source="google",  zoom=9)
+ggmap(map) + geom_point(data=df,  
+                        aes(x=lon, y=lat, colour=thetype, position="dodge"), 
+                        size=6, alpha=0.8
+                        )
+
+  
+```
+
+

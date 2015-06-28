@@ -1,0 +1,22 @@
+<!-- *** Bibliography END ***
+NB: Do not add yaml code here, put it at the start of the top level Rmd 
+-->
+
+# Bibliography
+
+Citations made with `knitcitations` `r knitcitations::citep(bib[['knitcitations']])`.
+
+
+```{r boiler_plate_bibliography_end, results='asis', echo=FALSE}
+# generate the full bibliography:
+#bibliography("markdown", ordering = c("authors", "year", "journal"))
+bibliography()
+## Print bibliography https://github.com/trinker/knitcitations
+#library(knitcitations) ; bib
+# https://stackoverflow.com/questions/30911567/extracting-git-information-in-rstudio
+(docVersion <- system("git log -n 1 --pretty=oneline", intern = TRUE))
+(repoStatus <- system("git status -s", intern = TRUE))
+
+```
+
+

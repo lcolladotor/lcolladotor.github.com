@@ -1,0 +1,164 @@
+---
+yamlFileName: 2015-01-11-minimal.Rmd # WARNING: update the filename?
+# print(rmarkdown::metadata$yamlFileName) # permalink
+# library(knitr)
+# to get the .md file only 
+# setwd("~/git/ttmmghmm.github.io/_posts") ; fn <- "2015-01-11-minimal.Rmd" ; knit(fn)  
+#
+# library(knitrBootstrap)
+# # clean = FALSE => two md files? why
+# rmarkdown::render(fn, knitrBootstrap::bootstrap_document(), clean = FALSE) 
+# produce an identical result to Knit HTML in RStudio- no run-time dependency on RStudio
+# https://github.com/jimhester/knitrBootstrap#bootstrap-themes
+#   knit(fn) ; markdown::markdownToHTML("2015-01-11-minimal.md") ; browseURL("2015-01-11-minimal.html")
+# pandoc(fn, format = "docx") # prodces the .docx file - Word doc.
+# rmarkdown::render(fn) # produces table of contents (and html?)
+# rmarkdown::render(fn, pdf_document()) # and knit2html() to get .html from .md
+title: Minimal
+#
+# like categories, tags can be specified as a YAML list or a space- separated string.
+# http://en.wikipedia.org/wiki/YAML#Lists
+type: posts
+layout: post
+tags:
+- Rminimal
+- sparklineminimal plotminimal
+categories: rstatsminimal sparklineminimal
+output:
+  # https://github.com/jimhester/knitrBootstrap
+  # http://cran.r-project.org/web/packages/knitrBootstrap/README.html
+  # ::bootstrap_document custom rendering function for the Rmarkdown package.
+  knitrBootstrap::bootstrap_document: #  to create bootstrap styled HTML reports - not .md
+    # https://github.com/jimhester/knitrBootstrap#package-options
+    # title: "where does this appear? # (NULL) Set the title for the html document
+    # http://bootswatch.com/ optionally including a dynamic style switch.
+    theme: Cyborg # monokai cyborg slate darkly superhero cerulean 
+    theme.chooser: TRUE # (FALSE) - Add a bootstrap style chooser to the page.
+    # highlight Set the default code style. (HighlightJS)
+    # https://github.com/jimhester/knitrBootstrap#highlight-themes
+    highlight: monokai # Sunburst # Zenburn # HighlightJs # google code 
+    highlight.chooser: TRUE # (FALSE) - Add a code style chooser to the page.
+    menu: TRUE # FALSE # Whether to include the bottom navbar.
+author: ttmmghmm
+---
+
+
+```{r Change-default-global-options, eval = TRUE, echo = FALSE, results='hide'}
+# See boiler_plate_vignette_setup.Rmd for default global settings.
+
+```
+
+
+```{r child = c('../_posts/boiler_plate_vignette_setup.Rmd', '../_posts/boiler_plate_bibliography_start.Rmd') }
+# child: (NULL; character) a character vector of filenames of child documents to be run and input into the main document http://yihui.name/knitr/options/
+# http://stackoverflow.com/questions/25824795/how-to-combine-two-rmarkdown-rmd-files-into-a-single-output
+```
+
+```{r}
+library(fitdistrplus)
+library(logspline)
+```
+
+The data is masked for brevity.
+```{r dataButDontItInFull, echo=FALSE}
+str(x <- c(37.50,46.79,48.30,46.04,43.40,39.25,38.49,49.51,40.38,36.98,40.00,
+38.49,37.74,47.92,44.53,44.91,44.91,40.00,41.51,47.92,36.98,43.40,
+42.26,41.89,38.87,43.02,39.25,40.38,42.64,36.98,44.15,44.91,43.40,
+49.81,38.87,40.00,52.45,53.13,47.92,52.45,44.91,29.54,27.13,35.60,
+45.34,43.37,54.15,42.77,42.88,44.26,27.14,39.31,24.80,16.62,30.30,
+36.39,28.60,28.53,35.84,31.10,34.55,52.65,48.81,43.42,52.49,38.00,
+38.65,34.54,37.70,38.11,43.05,29.95,32.48,24.63,35.33,41.34))
+```
+
+Now lets use descdist:
+```{r}
+descdist(x, discrete = FALSE, boot = 5e2)
+```
+
+```{r fitTheData}
+fit.weibull <- fitdist(x, "weibull")
+fit.norm <- fitdist(x, "norm")
+```
+```{r plotTheData}
+plot(fit.norm)
+```
+
+```{r theFit}
+fit.norm$aic
+```
+
+
+As explained here, we can use bootstrapping to add pointwise confidence intervals to the estimated Weibull PDF or CDF:
+
+```{r cis}
+xs <- seq(10, 65, len=500)
+
+n <- 1e4
+true.weibull <- rweibull(n, shape= fit.weibull$estimate["shape"]
+                             , scale = fit.weibull$estimate["scale"])
+
+nn <- 1e2
+boot.pdf <- sapply(1:nn, function(i) {
+  xi <- sample(x, size=length(x), replace=TRUE)
+  MLE.est <- suppressWarnings(fitdist(xi, distr="weibull"))  
+  dweibull(xs, shape=MLE.est$estimate["shape"],  scale = MLE.est$estimate["scale"])
+}
+)
+
+boot.cdf <- sapply(1:nn, function(i) {
+  xi <- sample(x, size=length(x), replace=TRUE)
+  MLE.est <- suppressWarnings(fitdist(xi, distr="weibull"))  
+  pweibull(xs, shape= MLE.est$estimate["shape"],  scale = MLE.est$estimate["scale"])
+}
+)   
+```
+
+```{r plotTheCis}
+#-----------------------------------------------------------------------------
+# Plot PDF
+#-----------------------------------------------------------------------------
+
+par(bg="white", las=1, cex=1.2)
+plot(xs, boot.pdf[, 1], type="l", col=rgb(.6, .6, .6, .1), ylim=range(boot.pdf),
+     xlab="x", ylab="Probability density")
+for(i in 2:ncol(boot.pdf)) lines(xs, boot.pdf[, i], col=rgb(.6, .6, .6, .1))
+
+# Add pointwise confidence bands
+
+quants <- apply(boot.pdf, 1, quantile, c(0.025, 0.5, 0.975))
+min.point <- apply(boot.pdf, 1, min, na.rm=TRUE)
+max.point <- apply(boot.pdf, 1, max, na.rm=TRUE)
+lines(xs, quants[1, ], col="red", lwd=1.5, lty=2)
+lines(xs, quants[3, ], col="red", lwd=1.5, lty=2)
+lines(xs, quants[2, ], col="darkred", lwd=2)
+```
+
+# sparkline example
+
+```{r API}
+x = rnorm(20)
+library(sparkline)
+sparkline(x)
+sparkline(x, type = 'bar')
+sparkline(x, type = 'box')
+```
+
+#Inline line graphs `r sparkline(x)`
+
+Bar charts  `r sparkline(abs(x), type = 'bar')`  
+negative values: `r sparkline(x, type = 'bar')`
+
+# table
+```{r}
+y <- runif(20)
+```
+
+| Stock | Sparkline         | Boxplot  
+|-------|-------------------|--------
+| x     | `r sparkline(x)`  | `r sparkline(x, type ='box')`
+| y     | `r sparkline(y)`  | `r sparkline(y, type ='box')`
+
+
+
+```{r child = c('../_posts/boiler_plate_reproducibility.Rmd', '../_posts/boiler_plate_bibliography_end.Rmd') }
+```

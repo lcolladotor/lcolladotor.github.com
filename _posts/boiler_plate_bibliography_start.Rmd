@@ -1,0 +1,25 @@
+<!-- NB: Do not add yaml code here, put it at the start of the top level Rmd -->
+
+```{r boiler_plate_bibliography_start, echo=FALSE, message=FALSE, warning = FALSE}
+library('knitcitations')
+```
+
+```{r write_bibliography_information, echo=FALSE, message=FALSE, warning = FALSE}
+## Load knitcitations with a clean bibliography
+cleanbib()
+
+## Write bibliography information
+# If we have a bibtex file, we can cite such articles by those keys as well.
+# https://github.com/trinker/knitcitations
+write.bibtex(c(knitcitations = citation('knitcitations'),
+    dots = citation('dots'), 
+    knitrBootstrap = citation('knitrBootstrap'), 
+    knitr = citation('knitr')[3],
+    rmarkdown = citation('rmarkdown')),
+    file = 'citations.bib')
+bib <- read.bibtex('citations.bib')
+## Assign short names
+names(bib) <- c('knitcitations', 'dots', 'knitrBootstrap',
+    'knitr', 'rmarkdown')
+# print(bib)
+```

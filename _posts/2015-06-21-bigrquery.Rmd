@@ -1,0 +1,35 @@
+# https://github.com/hadley/bigrquery
+```{r}
+gaAuth <- c(projectId = 'api-project-572780019748', projectNum = '572780019748')
+library(bigrquery)
+project <- gaAuth["projectId"] 
+sql <-'SELECT * FROM [bigquery-samples:nasdaq_stock_quotes.quotes] LIMIT 10'
+query_exec(sql, project = project)
+```
+
+# http://stackoverflow.com/questions/27017036/bigquery-counting-number-of-events-within-a-sliding-time-frame
+sql <-"SELECT 
+symbol, 
+start_date, 
+start_time, 
+bid_price, 
+count(market_center) over (partition by symbol order by start_time RANGE 1000 PRECEDING) cnt 
+FROM [bigquery-samples:nasdaq_stock_quotes.quotes]  
+where symbol = 'GOOG' 
+order by 2, 3  "
+# used market_center just as a counter, additional fields can be used as well.
+# RANGE function is not documented in BigQuery Query Reference, however it's a standard SQL function which appears to work in this case
+system.time( df <- query_exec(sql, project = project) )
+
+
+sql <- "SELECT year, month, day, weight_pounds FROM [publicdata:samples.natality] LIMIT 5"
+query_exec(sql, project = project)
+
+
+
+# google alanytics
+require(RGoogleAnalytics)
+# Authorize the Google Analytics account
+# This need not be executed in every session once the token object is created
+# and saved
+token <- Auth(with( gaAuth, client.id = projectId

@@ -1,0 +1,440 @@
+---
+# fn <- "2015-05-23-docker.Rmd"
+# library(knitr) ; knit(fn)  # produces the md file
+# pandoc(fn, format = "docx") # prodces the .docx file
+title: "Test post 3"
+# permalink: If you need your processed blog post URLs to be something other than the default /year/month/day/title.html then you can set this variable and it will be used as the final URL.
+date: "2015 May"
+tags:
+- R
+- docker
+categories:
+- rstats # asdfasdfasdfasdf
+# published = false => Jekyll will not process the file. Else Rmd file appears as a blog with html file i.e. 2 posts.
+published: false 
+# output: ioslides_presentation
+output:
+  #  html_document:
+  # http://rmarkdown.rstudio.com/html_fragment_format.html
+  # html_fragment - no title or author -  excl std hdr content . HTML within larger web sites (e.g. blogs).
+  html_fragment: 
+    toc: true
+    # theme: united
+    number_sections: true
+    keep_md: false
+  # rmarkdown::render(fn) # produces table of contents and united theme
+  # render(fn, pdf_document()) # library(rmarkdown) ; # knit2html() 
+fontsize: 12pt
+layout: post
+author: "ttmmghmm"
+---
+
+*(this report was produced on: `r as.character(Sys.Date())`)*  
+
+# Create droplet
+
+From the webpage ...
+http://deanattali.com/2015/05/09/setup-rstudio-shiny-server-digital-ocean/
+
+TODO: from the R command line.
+https://github.com/sckott/analogsea
+
+# SSH login
+https://www.digitalocean.com/community/articles/how-to-set-up-ssh-keys--2
+```
+ssh -Y root@46.101.24.169
+su - ttmmghmm
+
+# ssh-keygen -t rsa
+# To add correct host key in /Users/jbg/.ssh/known_hosts to get rid of this message.
+ssh-keygen -R  46.101.24.169
+```
+## Avoid typing password to ssh
+```
+# execute from CLIENT (LAPTOP).
+cat ~/.ssh/id_rsa.pub | ssh root@46.101.24.169 'cat >> .ssh/authorized_keys'
+```
+## disable password login on server
+```
+# step 4 https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys--2  
+# from server
+sudo nano /etc/ssh/sshd_config
+# find the line about disabling password login
+```
+
+# add user
+```
+adduser ttmmghmm
+gpasswd -a ttmmghmm sudo
+su - ttmmghmm
+```
+
+# add stuff
+From http://deanattali.com/2015/05/09/setup-rstudio-shiny-server-digital-ocean/
+```
+sudo apt-get update
+sudo apt-get install nginx
+# Now go to your new server's IP address (http://46.101.24.169/) in a browser.
+sudo nano /usr/share/nginx/html/index.html
+# edit the file and save - does NOT work? i.e. cant see the html updates?
+sudo service nginx stop
+sudo service nginx start
+# sudo service nginx restart
+```
+
+# install R
+Use http://deanattali.com/2015/05/09/setup-rstudio-shiny-server-digital-ocean/
+
+https://github.com/szilard/benchm-ml/blob/master/0-init/1-install.txt didnt work so well.
+```
+# add trusty to our sources.list:
+#sudo echo "deb http://cran.rstudio.com/bin/linux/ubuntu trusty/" > /etc/apt/sources.list.d/r.list
+sudo sh -c 'echo "deb http://cran.rstudio.com/bin/linux/ubuntu trusty/" >> /etc/apt/sources.list'
+# add the public keys:
+gpg --keyserver keyserver.ubuntu.com --recv-key E084DAB9
+gpg -a --export E084DAB9 | sudo apt-key add -
+sudo apt-get update
+sudo apt-get install r-base
+# apt-get install r-base-dev libcurl4-openssl-dev libssl-dev
+```
+
+add 1G of swap space:
+```
+sudo /bin/dd if=/dev/zero of=/var/swap.1 bs=1M count=1024
+sudo /sbin/mkswap /var/swap.1
+sudo /sbin/swapon /var/swap.1
+sudo sh -c 'echo "/var/swap.1 swap swap defaults 0 0 " >> /etc/fstab'
+```
+
+devtools  dependencies:
+```
+sudo apt-get install libcurl4-gnutls-dev libxml2-dev libssl-dev
+# apt-get install r-base-dev libcurl4-openssl-dev libssl-dev
+```
+
+# install R packages
+```sudo su - -c "R -e``` installs the packages as the root user, which means the packages will be installed in a global library and will be available to all users.
+If you log into R and install packages, by default they will be installed in your personal library and will only be accessible to the current user.
+From now on, whenever you want to install a package for the whole system, you should either log in as root and intall the package, or use the above command. 
+```
+sudo su - -c "R -e \"install.packages('devtools', repos='http://cran.rstudio.com/')\""
+sudo su - -c "R -e \"devtools::install_github('daattali/shinyjs')\""
+sudo su - -c "R -e \"install.packages(c('data.table','readr','randomForest','gbm','glmnet','LiblineaR','ROCR','devtools'), repos='http://cran.rstudio.com')\""
+sudo su - -c "R -e \"devtools::install_github('dmlc/xgboost', subdir = 'R-package')\""
+```
+
+# Install RStudio Server
+# Download the latest RStudio Server - consult RStudio Downloads page to get the URL for the latest version. Then install the file you downloaded. 
+
+[consult RStudio Downloads page](http://www.rstudio.com/products/rstudio/download-server/)
+```
+sudo apt-get install gdebi-core
+sudo apt-get install libapparmor1 # Required only for Ubuntu, not Debian
+wget http://download2.rstudio.org/rstudio-server-0.98.1103-amd64.deb
+sudo gdebi rstudio-server-0.98.1103-amd64.deb
+hostname -I
+```
+If you want to let your friend Joe have access to your RStudio, you can create a new user for them with adduser joe.
+
+
+# database installations?
+
+## scidb
+install and load from R.
+file:///Users/jbg/Downloads/scidb%20(1).pdf
+```
+library('devtools')
+install_github("SciDBR","paradigm4",quick=TRUE)
+library("scidb")
+scidbconnect("localhost")  
+
+#docker run -d yyao/scidbtutorialdocker 
+#sudo apt-get install 
+#sudo su - -c "R -e \"install.packages(c('.R'), repos='http://cran.rstudio.com/')\""
+```
+
+# shiny server
+```
+sudo su - -c "R -e \"install.packages('shiny', repos='http://cran.rstudio.com/')\""
+sudo su - -c "R -e \"install.packages('rmarkdown', repos='http://cran.rstudio.com/')\""
+sudo apt-get install gdebi-core
+wget http://download3.rstudio.org/ubuntu-12.04/x86_64/shiny-server-1.3.0.403-amd64.deb
+sudo gdebi shiny-server-1.3.0.403-amd64.deb
+```
+## Quick Shiny Server references:
+* Shiny Server log is at /var/log/shiny-server.log.
+* The default Shiny Server homepage you???re seeing is located at /srv/shiny-server/index.html - you can edit it or remove it.
+* Any Shiny app directory that you place under /srv/shiny-server/ will be served as a Shiny app. 
+  * For example, there is a default app at /srv/shiny-server/sample-apps/hello/, which means you can run the app by going to http://123.456.1.2:3838/sample-apps/hello/.
+* The config file for Shiny Server is at /etc/shiny-server/shiny-server.conf.
+* To reload the server after editing the config, use sudo reload shiny-server.
+* When hosting an Rmarkdown file, name the file index.rmd and add runtime: shiny to the document???s frontmatter.
+
+create a user group called shiny-apps and add both dean and shiny users to it. 
+make sure that the whole /srv/shiny-server folder has read+write permissions to the group.
+```
+sudo groupadd shiny-apps
+sudo usermod -aG shiny-apps ttmmghmm
+sudo usermod -aG shiny-apps shiny
+cd /srv/shiny-server
+sudo chown -R ttmmghmm:shiny-apps .
+sudo chmod g+s .
+```
+* any Shiny app you place under /srv/shiny-server/ will be automatically served as a Shiny app. 
+
+# install git
+have the /srv/shiny-server/ folder be a git repository, so that you can push to this repository from your personal computer and whenever you do a git pull on your droplet, it will update and grab the new apps you added.
+
+The first step is to install git and make the /srv/shiny-server/ directory a git repository.
+```
+sudo apt-get install git
+cd /srv/shiny-server
+git init
+```
+
+```
+git remote add origin git@github.com:ttmmghmm/ttmmghmm.github.io.git
+#git remote add origin git@github.com:ttmmghmm/shiny-server.git
+git add .
+git config --global user.email "ttmmghmm@gmail.com"
+git config --global user.name "ttmmghmm"
+git commit -m "Initial commit"
+
+mkdir -p $HOME/.ssh
+chmod 0700 $HOME/.ssh
+#1: Create the key pair
+ssh-keygen -t rsa
+cat $HOME/.ssh/id_rsa.pub # paste into github page
+git push -u origin master
+```
+Refresh the GitHub page, you should see the files that were added from the droplet.
+
+Add shiny apps to this repository. 
+Whenever you add a new shiny app or edit the index page or an existing app, you???ll need to do a git pull on your droplet to grab those changes and display them in your server. 
+
+# pretty URLs for RStudio Server and Shiny Server
+some workplace environments often block access to those ports.
+Use a reverse proxy, so that nginx will listen on port 80 (default HTTP port) at the URL /shiny and will internally redirect that to port 3838. 
+Same for RStudio - we can have nginx listen at /rstudio and redirect it to port 8787. 
+e.g. Shiny apps can be reached at daattali.com/shiny/ which is an easy URL to type, but also at daattali.com:3838.
+edit the nginx config file /etc/nginx/sites-enabled/default
+```
+sudo nano /etc/nginx/sites-enabled/default 
+```
+after the line that reads server_name localhost;:
+```
+# scidb installed from inside R
+        location /scidb/ {
+                proxy_pass http://127.0.0.1:8083/;
+        }
+
+location /shiny/ {
+  proxy_pass http://127.0.0.1:3838/;
+}
+
+# to get past the popup from a remote server problem.
+# e.g. library("analogsea") ; droplets() # Waiting for authentication in browser...
+# e.g. http://46.101.24.169/popup/?code=a115d5446aa3b446514e7495775ac1d9840102fd83d1822bd831faebdfc$
+  location /popup/ {
+      proxy_pass http://127.0.0.1:1410/;
+  }
+        
+        location /rstudio/ {
+                proxy_pass http://127.0.0.1:8787/;
+                proxy_http_version 1.1;
+                proxy_set_header Upgrade $http_upgrade;
+                proxy_set_header Connection "upgrade";
+        }
+#location /rstudio/ {
+#  proxy_pass http://127.0.0.1:8787/;
+#}
+```
+Since we changed the nginx config, we need to restart nginx for it to take effect.
+```sudo service nginx restart```
+
+
+
+
+# https://github.com/szilard/benchm-ml/blob/master/0-init/1-install.txt
+```
+#### Java
+sudo add-apt-repository ppa:webupd8team/java
+sudo apt-get update
+sudo apt-get install oracle-java7-installer
+#### H2O
+wget http://h2o-release.s3.amazonaws.com/h2o/rel-nunes/2/h2o-2.8.6.2.zip
+unzip h2o-2.8.6.2.zip 
+sudo su - -c "R -e \"install.packages(c('statmod','RCurl','rjson'), repos='http://cran.rstudio.com') \""
+R CMD INSTALL h2o-2.8.6.2/R/h2o_2.8.6.2.tar.gz
+#### H2O 3.0 (aka h2o-dev)
+wget http://h2o-release.s3.amazonaws.com/h2o-dev/rel-shannon/2/h2o-dev-3.0.0.2.zip
+unzip h2o-dev-3.0.0.2.zip
+sudo su - -c "R -e \"install.packages(c('statmod','RCurl','rjson'), repos='http://cran.rstudio.com')  \""
+R CMD INSTALL h2o-dev-3.0.0.2/R/h2o_3.0.0.2.tar.gz
+#### Spark
+wget http://d3kbcqa49mib13.cloudfront.net/spark-1.3.0-bin-hadoop2.4.tgz
+tar xzf spark-1.3.0-bin-hadoop2.4.tgz
+```
+
+# install docker
+```
+sudo apt-get update
+sudo apt-get -y install docker.io
+sudo ln -sf /usr/bin/docker.io /usr/local/bin/docker
+sudo sed -i '$acomplete -F _docker docker' /etc/bash_completion.d/docker.io
+sudo update-rc.d docker.io defaults
+# https://www.liquidweb.com/kb/how-to-install-docker-on-ubuntu-14-04-lts/
+sudo update-rc.d docker.io defaults
+
+# https://askubuntu.com/questions/472412/how-do-i-upgrade-docker
+wget -qO- https://get.docker.io/gpg | sudo apt-key add -
+sudo sh -c "echo deb http://get.docker.io/ubuntu docker main > /etc/apt/sources.list.d/docker.list"
+sudo apt-get update
+sudo apt-get install lxc-docker
+sudo docker -v
+# Docker version 1.6.2, build 7c8fca2
+
+sudo docker search debian
+```
+# install monetdb
+https://www.monetdb.org/blog/docker-container-monetdb-r
+````
+# pull the MonetDB container image from the Docker Hub Registry:
+sudo docker pull monetdb/monetdb-r-docker
+# https://gist.github.com/ttmmghmm/f5f53803f8f03f38d8c1
+# start the container with MonetDB and R ready for use.
+# JOB=$(sudo docker run -d -p 50000:50000 -v /home/ttmmghmm/monet:/usr/local/users --name monetTest2 monetdb/monetdb-r-docker)
+
+# start the container with MonetDB and R ready for use.
+sudo docker run -d -P --name monetdb-r monetdb/monetdb-r-docker
+sudo docker start  monetdb-r 
+# open up an SQL client shell directly in the container. 
+# authenticate with the default username/password (monetdb/monetdb) 
+sudo docker exec -it monetdb-r mclient db
+
+# get into container to create first db manually.
+sudo docker exec -i -t monetTest2 bash
+# create monetdb db
+mkdir ~/monet ; cd ~/monet/
+monetdbd create test01 # folder may already exist
+# https://docs.docker.com/articles/basics/ Bind Docker to another host/port or a Unix socket
+# https://www.monetdb.org/Documentation/UserGuide/Tutorial
+monetdb create voc # created database in maintenance mode: voc
+monetdb release voc # taken database out of maintenance mode: voc
+mclient -u voc -d voc
+CREATE USER "voc" WITH PASSWORD 'voc' NAME 'VOC Explorer' SCHEMA "sys";
+CREATE SCHEMA "voc" AUTHORIZATION "voc";
+ALTER USER "voc" SET SCHEMA "voc";
+q
+
+# http://monetr.r-forge.r-project.org/
+# R has db (voc) and a port number (50000) - why is there no default demo db?
+library(MonetDB.R)
+# need to get port number from sudo docker ps
+# conn <- dbConnect(dbDriver("MonetDB"), "monetdb://localhost/voc", port = 32770)
+conn <- dbConnect(dbDriver("MonetDB"), "monetdb://localhost/voc")
+# write some test data
+data(iris)
+dbWriteTable(conn, "iris", iris)
+(ds1 <- dbGetQuery(conn,"SELECT avg(sepal_width) FROM iris"))
+# https://stackoverflow.com/questions/tagged/monetdb?sort=votes&pageSize=15
+
+# 2nd ex https://stackoverflow.com/questions/24694751/monetdb-r-bulk-insert
+# and a MonetDB.R connection
+db <- conn
+# how many records if you stack your example data three times
+data(mtcars) ; nrow( mtcars ) * 3
+# write to three separate tables
+dbWriteTable( db , 'mtcars1' , mtcars )
+dbWriteTable( db , 'mtcars2' , mtcars )
+dbWriteTable( db , 'mtcars3' , mtcars )
+# stack them all
+dbSendUpdate( db , "CREATE TABLE mtcars AS SELECT * FROM mtcars1 UNION ALL SELECT * FROM mtcars2 UNION ALL SELECT * FROM mtcars3 WITH DATA" )
+# correct number of records
+nrow( dbReadTable( db , 'mtcars' ) )
+
+# write test data to temporary CSV file
+data(iris)
+file <- tempfile()
+write.table(iris, file, sep=",")
+# read.csv not working?
+monetdb.read.csv(conn, file, "iris2", 150)
+
+# todo
+# select tables.name from tables where tables.system=false ;
+
+```
+
+# mongolite
+http://cran.r-project.org/web/packages/mongolite/vignettes/intro.html
+
+No need for docker or mongodb itself.
+```
+sudo apt-get install libsasl2-dev
+sudo su - -c "R -e \"install.packages(c('mongolite', 'nycflights13', 'jsonlite'), repos='http://cran.rstudio.com/')\""
+#sudo apt-get install mongodb
+#sudo docker pull monetdb/monetdb-r-docker
+```
+One examples to show it works.
+```{r}
+library(mongolite)
+m <- mongo(collection = "diamonds")
+# Insert test data
+data(diamonds, package="ggplot2")
+m$insert(diamonds)
+# Check records
+m$count()
+nrow(diamonds)
+# Perform a query and retrieve data
+out <- m$find('{"cut" : "Premium", "price" : { "$lt" : 1000 } }')
+# Compare
+nrow(out)
+nrow(subset(diamonds, cut == "Premium" & price < 1000))
+# Remove the collection
+m$drop()
+```
+
+## Stream from url into mongo
+```{r}
+library(jsonlite)
+library(mongolite)
+# Stream from url into mongo
+m <- mongo("zips")
+stream_in(url("http://media.mongodb.org/zips.json"), handler = function(df){
+  m$insert(df, verbose = FALSE)
+})
+# Check count
+m$count()
+# Import. Note the 'location' column is actually an array!
+zips <- m$find()
+```
+
+## Stream openweathermap nested data
+Stream large bulk samples from openweathermap with deeply nested data (takes a while).
+```{r, eval = FALSE}
+m <- mongo("weather")
+stream_in(
+  gzcon(url("http://78.46.48.103/sample/daily_14.json.gz")), 
+  handler = function(df){
+    m$insert(df, verbose = FALSE)  
+}, pagesize = 50)
+berlin <- m $find('{"city.name" : "Berlin"}')
+print(berlin$data)
+```
+
+
+# sparkR
+See `2015-05-30-DO-spark-not-docker` post.
+
+https://blog.rstudio.org/2015/05/28/sparkr-preview-by-vincent-warmerdam/#comments
+
+```
+sudo su - -c "R -e \"library(devtools); install_github('amplab-extras/SparkR-pkg', subdir='pkg')\""
+```
+
+
+
+```{r boilerplate sessionInfo}
+sessionInfo()
+```
+

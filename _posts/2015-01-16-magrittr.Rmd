@@ -1,0 +1,108 @@
+---
+yamlFileName: 2015-01-10-magrittr.Rmd # WARNING: update the filename?
+# print(rmarkdown::metadata$yamlFileName) # permalink
+# library(knitr)
+# setwd("~/git/ttmmghmm.github.io/_posts") ; fn <- "2015-01-10-sparkline.Rmd" ; knit(fn)  # to get the .md file 
+#
+# library(knitrBootstrap)
+# rmarkdown::render(fn, knitrBootstrap::bootstrap_document(), clean = FALSE) # no md?
+# produce an identical result to Knit HTML in RStudio- no run-time dependency on RStudio
+# https://github.com/jimhester/knitrBootstrap#bootstrap-themes
+#   knit(fn) ; markdownToHTML("foo.md") ; browseURL("foo.html")
+# pandoc(fn, format = "docx") # prodces the .docx file - Word doc.
+# rmarkdown::render(fn) # produces table of contents (and html?)
+# rmarkdown::render(fn, pdf_document()) # and knit2html() to get .html from .md
+title: "magrittr example"
+#
+# like categories, tags can be specified as a YAML list or a space- separated string.
+# http://en.wikipedia.org/wiki/YAML#Lists
+type: posts
+layout: post
+tags:
+- R
+- sparkline plot
+categories: rstats sparkline
+output:
+  # https://github.com/jimhester/knitrBootstrap
+  # http://cran.r-project.org/web/packages/knitrBootstrap/README.html
+  # ::bootstrap_document custom rendering function for the Rmarkdown package.
+  knitrBootstrap::bootstrap_document: #  to create bootstrap styled HTML reports - not .md
+    # https://github.com/jimhester/knitrBootstrap#package-options
+    # title: "where does this appear? # (NULL) Set the title for the html document
+    # http://bootswatch.com/ optionally including a dynamic style switch.
+    theme: cerulean # Cyborg # monokai cyborg slate darkly superhero cerulean 
+    theme.chooser: TRUE # (FALSE) - Add a bootstrap style chooser to the page.
+    # highlight Set the default code style. (HighlightJS)
+    # https://github.com/jimhester/knitrBootstrap#highlight-themes
+    highlight: Zenburn # monokai # Sunburst # Zenburn # HighlightJs # google code 
+    highlight.chooser: TRUE # (FALSE) - Add a code style chooser to the page.
+    menu: TRUE # FALSE # Whether to include the bottom navbar.
+author: ttmmghmm
+---
+
+
+
+# Change the default global options
+https://github.com/jimhester/knitrBootstrap#chunk-options
+#```{r}
+#```
+
+```{r, eval = FALSE}
+# https://console.developers.google.com/project/peak-argon-826/apiui/credential?authuser=1
+# http://www.r-bloggers.com/how-to-extract-google-analytics-data-in-r-using-rgoogleanalytics/
+# devtools::install_github("s-u/PKI") # needed for bug fixes not currently on CRAN
+# devtools::install_github("hadley/secure")
+library(secure)
+require(RGoogleAnalytics)
+# Authorize the Google Analytics account
+# need not be executed in every session once the token object is created 
+# and saved
+(x <- secure::decrypt("google"))
+client.id <- x$key
+client.secret <- x$secret
+# token <- Auth(client.id, client.secret)
+# Validate and refresh the token
+# ValidateToken(token)
+# Save the token object for future sessions
+#save(token, file="./token_file")
+```
+
+
+
+```{r child = c('../_posts/boiler_plate_vignette_setup.Rmd', '../_posts/boiler_plate_bibliography_start.Rmd') }
+# child: (NULL; character) a character vector of filenames of child documents to be run and input into the main document http://yihui.name/knitr/options/
+# http://stackoverflow.com/questions/25824795/how-to-combine-two-rmarkdown-rmd-files-into-a-single-output
+```
+
+```{r convertToMagrittr, results='hide'}
+x <- lapply(dir(R.home("library")), packageDescription)
+str(x[[1]])
+structure(sapply(x, "[[", "Maintainer"), names = sapply(x, "[[", "Package"))
+```
+
+```{r}
+library(magrittr)
+"library" %>% R.home %>% dir %>% 
+  lapply(., FUN = packageDescription) %>% 
+  lapply(., FUN = "[", c("Package", "Maintainer")) -> 
+  x
+ 
+x %>% (function(xx = .) { structure(xx[2], names = xx[1])})
+```
+```{r needABetterSoln}
+structure(sapply(x, "[[", "Maintainer"), names = sapply(x, "[[", "Package"))
+
+```
+
+The API is pretty simple
+```{r API}
+x = rnorm(20)
+library(sparkline)
+sparkline(x)
+sparkline(x, type = 'bar')
+sparkline(x, type = 'box')
+```
+`r sparkline(x, type = 'bar')` goes here.
+
+```{r child = c('../_posts/boiler_plate_reproducibility.Rmd', '../_posts/boiler_plate_bibliography_end.Rmd') }
+```

@@ -1,0 +1,126 @@
+---
+# fn <- "2015-05-30-spark-not-docker.Rmd"
+# library(knitr) ; knit(fn)  # produces the md file
+# pandoc(fn, format = "docx") # prodces the .docx file
+title: "Test post 3"
+# permalink: If you need your processed blog post URLs to be something other than the default /year/month/day/title.html then you can set this variable and it will be used as the final URL.
+date: "2015 May"
+tags:
+- R
+- sparkR
+categories:
+- rstatw, sparkR
+# published = false => Jekyll will not process the file. Else Rmd file appears as a blog with html file i.e. 2 posts.
+published: false 
+# output: ioslides_presentation
+output:
+  #  html_document:
+  # http://rmarkdown.rstudio.com/html_fragment_format.html
+  # html_fragment - no title or author -  excl std hdr content . HTML within larger web sites (e.g. blogs).
+  html_fragment: 
+    toc: true
+    # theme: united
+    number_sections: true
+    keep_md: false
+  # rmarkdown::render(fn) # produces table of contents and united theme
+  # render(fn, pdf_document()) # library(rmarkdown) ; # knit2html() 
+fontsize: 12pt
+layout: post
+author: "ttmmghmm"
+---
+
+*(this report was produced on: `r as.character(Sys.Date())`)*  
+
+
+# sparkR
+
+https://blog.rstudio.org/2015/05/28/sparkr-preview-by-vincent-warmerdam/#comments
+
+```
+sudo su - -c "R -e \"library(devtools); install_github('amplab-extras/SparkR-pkg', subdir='pkg')\""
+# library(devtools) ; install_github("amplab-extras/SparkR-pkg", subdir="pkg")
+```
+
+follow the API, you don’t need to worry much about parallelizing for performance for your programs.
+```{r}
+library(magrittr)
+library(SparkR)
+
+sc <- sparkR.init(master="local")
+sc %>% 
+  # generate a list, give it to Spark, turn it into an RDD, Spark’s Resilient Distributed Dataset structure) 
+  parallelize(1:100000) %>%
+  # and then counts the number of items in it.
+  count
+```
+
+## grouped operations,
+might remind you a bit of dplyr.
+```{r}
+str( nums <- runif(1e5L, 0, 10) )
+sc %>% 
+  parallelize(nums) %>%             # create a RRD Spark object from the original data
+  map(function(x) round(x)) %>%     # map each number to a rounded number
+  filterRDD(function(x) x %% 2) %>% # it will filter all even numbers out or the RDD
+  map(function(x) list(x, 1)) %>%   # create key/value pairs that can be counted
+  # reduce the key value pairs; 1L = number of partitions for the resulting RDD
+  reduceByKey(function(x,y) x + y, 1L) %>% 
+  collect -> # collect the results
+  x
+str(x)
+```
+
+## bootstrap
+
+```{r}
+str(ChickWeight)
+ChickWeight %>% { rbind(head(., 3), tail(., 4)) }
+sample_cw <- function(n, s){
+  set.seed(s)
+  ChickWeight[sample(nrow(ChickWeight), n), ]
+}
+data_rdd <- sc %>% 
+  parallelize(1:200, 20) %>% 
+  # s argument ensures each partition uses a different random seed when sampling
+  map(function(s) sample_cw(250, s))
+# str(data_rdd) # not working?
+```
+
+`data_rdd` is useful, because it can be reused for multiple purposes.
+```{r}
+# estimate the mean of the weight.
+data_rdd %>% 
+  map(function(x) mean(x$weight)) %>% 
+  collect %>% 
+  as.numeric %>% 
+  hist(20, main="mean weight, bootstrap samples")
+```
+
+## bootstrapped regressions
+use `data_rdd` to perform bootstrapped regressions.
+```{r}
+train_lm <- function(data_in) lm(weight ~ Time, data=data_in)
+coef_rdd <- data_rdd %>% 
+  map(train_lm) %>% 
+  map(function(x) x$coefficients) 
+coef_rdd 
+get_coef <- function(k){
+  coef_rdd %>% 
+    map(function(x) x[k]) %>% 
+    collect %>%
+    as.numeric
+}
+df <- data.frame(intercept = get_coef(1), time_coef = get_coef(2))
+str(df)
+df$intercept %>% hist(breaks = 30, main="beta coef for intercept")
+df$time_coef %>% hist(breaks = 30, main="beta coef for time")
+```
+
+slow part - the creation of the data, because this has to occur locally through R. 
+A more common use case for Spark would be to load a large dataset from S3 which connects to a large EC2 cluster of Spark machines.
+
+
+```{r boilerplate sessionInfo}
+sessionInfo()
+```
+
