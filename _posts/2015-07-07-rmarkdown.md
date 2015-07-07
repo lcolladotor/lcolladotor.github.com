@@ -17,7 +17,18 @@ categories:
 
 A couple weeks ago I was given the opportunity to teach a 1 hr 30 min slot of an introduction to R course. In the past, I've taught lectures for similar courses, and I ended up asking myself what would be the best short topic to teach and how to teach it.
 
-There are two ways to answer the first question, one boring and another one more interesting. The boring answer is that the course instructor selected the topic. The interesting one goes like this. I have taken short R courses before and taught others, and it's always overwhelming. You get to cover many concepts, get familiarized with R's syntax, and in the end without lots of practice it's very challenging to retain much of the information. I think that students love it when they learn how to do something small that could be the first building block for many of their projects. I think that one of the coolest R topics you can learn in an hour is how to create reproducible documents with `rmarkdown` <a id='cite-rmarkdown'></a>(<a href='http://CRAN.R-project.org/package=rmarkdown'>Allaire, Cheng, Xie, McPherson, et al., 2015</a>).
+There are two ways to answer the first question, one boring and another one more interesting. The boring answer is that the course instructor selected the topic. The interesting one goes like this. I have taken short R courses before and taught others, and it's always overwhelming for the students. You get to cover many concepts, get familiarized with R's syntax, and in the end without lots of practice it's very challenging to retain much of the information. I think that students love it when they learn how to do something simple that could be the first building block for many of their projects. I think that one of the coolest R topics you can learn in an hour is how to create reproducible documents with `rmarkdown` <a id='cite-rmarkdown'></a>(<a href='http://CRAN.R-project.org/package=rmarkdown'>Allaire, Cheng, Xie, McPherson, et al., 2015</a>). 
+
+Learning how to use a single function, `render()` in this case, is as simple as it gets. And using the RStudio IDE is even simpler. Of course, it can easily get complicated. For example, on a new computer you need to install all the LaTeX dependencies if you want to create PDF outputs. That task can take some time and maybe scare away some new users. But PDF files are really a plus in this case since you can start creating HTML and Word files. Other complications arise when a user is interested in more control over formatting the file, but like I said earlier, all you need is a simple building block and `rmarkdown` is clearly one of them. 
+
+This is why the final answer to the first question was teaching how to use `rmarkdown` to create reproducible reports (HTML, Word files) using `R`.
+
+
+
+
+
+
+
 
 
 ### Reproducibility
@@ -44,7 +55,7 @@ session_info()
 ##  ui       X11                                        
 ##  language (EN)                                       
 ##  collate  en_US.UTF-8                                
-##  tz       Europe/Vienna
+##  tz       America/New_York
 {% endhighlight %}
 
 
