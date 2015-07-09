@@ -63,7 +63,7 @@ As you can see, I enjoyed thinking what to teach and specially how to teach a sh
 
 ### References
 
-You can find the lecture itself [here](www.aejaffe.com/summerR_2015/modules/module12.html) but like I said earlier, it was designed for class and not for being used as a reference. However, the [lab](http://www.aejaffe.com/summerR_2015/labs/module12_lab.R) and it's [key](http://www.aejaffe.com/summerR_2015/labs/mapping_module_labkey.R) might be more useful.
+You can find the lecture itself [here](http://www.aejaffe.com/summerR_2015/modules/module12.html) but like I said earlier, it was designed for class and not for being used as a reference. However, the [lab](http://www.aejaffe.com/summerR_2015/labs/module12_lab.R) and it's [key](http://www.aejaffe.com/summerR_2015/labs/mapping_module_labkey.R) might be more useful.
 
 
 Citations made with `knitcitations` <a id='cite-knitcitations'></a>(<a href='http://CRAN.R-project.org/package=knitcitations'>Boettiger, 2015</a>).
