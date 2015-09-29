@@ -36,7 +36,7 @@ My publication list is available through my Google Scholar [public profile](http
 1. _Does mapping simulated RNA-seq reads provide information?_ at Joint Genomics Meeting, February 2015. 
 1. _derfinder tutorial_ for Leek group meeting, December 2014, live at [GitHub](http://lcolladotor.github.io/derTutor) (<img src="images/us.png" alt="English">).
 1. _Developmental regulation of human cortex transcription at base-pair resolution_ at the [1st International Summer Symposium on Systems Biology](http://is3b.inmegen.gob.mx/index.html) at INMEGEN, Mexico. August 2014.
-1. _Git for research_ for the _Biostatistics computing club 2013-2014_, April 2014. [Code](https://github.com/lcolladotor/git-for-research) and [view](http://lcolladotor.github.io/git-for-research) at GitHub (<img src="images/us.png" alt="English">).
+1. _Git for research_ for the [Biostatistics computing club 2013-2014](http://www.biostat.jhsph.edu/~jbai/compclub.html), April 2014. [Code](https://github.com/lcolladotor/git-for-research) and [view](http://lcolladotor.github.io/git-for-research) at GitHub (<img src="images/us.png" alt="English">).
 1. _Introduction to ggbio_ for the _Genomics for students_ group. View at [RPubs](http://rpubs.com/lcollado/ggbioIntro) (<img src="images/us.png" alt="English">).
 1. _Fast differential expression analysis annotation-agnostic across groups with biological replicates_ at Biostatistics Journal Club and Joint Genomics Meeting, October 2013. Also at LCG 10 year anniversary symposium, January 2014.
 1. _Differential expression analysis of RNA-seq data at base-pair resolution in multiple biological replicates_ at [useR2013](http://www.edii.uclm.es/~useR-2013/), Albacete, Spain.
