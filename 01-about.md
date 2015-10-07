@@ -12,9 +12,11 @@ Welcome to [Fellgernon Bit](http://bit.ly/FellBit)! It's my _academic_ corner in
 
 <img class="image alignleft" src="images/me.png" width="124" height="200" alt="" />
 
-Currently I am a fifth year PhD student in the [Department of Biostatistics](http://www.jhsph.edu/departments/biostatistics/) at [Johns Hopkins Bloomberg School of Public Health](http://www.jhsph.edu/). I am here thanks to a [CONACyT scholarship](http://www.conacyt.gob.mx/) awarded in 2011. Besides taking classes I am also working as a research and teaching assistant.
+# Main links
 
-As a quick background, I graduated from the [Undergraduate Program on Genomic Sciences](http://www.lcg.unam.mx/) (the [_About_](http://www.lcg.unam.mx/about) page is in English) from the [National Autonomous University of Mexico (UNAM)](http://unam.mx/) in 2009 and worked for two years at [Winter Genomics](http://wintergenomics.com/aboutus/) analyzing high-throughput sequencing data. I am a fan of using [R](http://cran.r-project.org/) and [Bioconductor](http://www.bioconductor.org/) for data analysis, which I use with [R Markdown](http://rmarkdown.rstudio.com/) for creating reproducible reports (hopefully!).
+* [__CV__](cv.html)
+* [__Publications__](publications.html)
+* [__Teaching__](teaching.html)
 
 Here are some of my public ids:
 
@@ -22,6 +24,16 @@ Here are some of my public ids:
 * [ORCID](http://orcid.org/0000-0003-2140-308X)
 * [LinkedIn](https://www.linkedin.com/in/lcollado)
 * [Epernicus](http://www.epernicus.com/lc40)
+* [GitHub](https://github.com/lcolladotor)
+* [Twitter](https://twitter.com/fellgernon)
+
+
+## About Leo
+
+Currently I am a fifth year PhD student in the [Department of Biostatistics](http://www.jhsph.edu/departments/biostatistics/) at [Johns Hopkins Bloomberg School of Public Health](http://www.jhsph.edu/). I am here thanks to a [CONACyT scholarship](http://www.conacyt.gob.mx/) awarded in 2011. Besides taking classes I am also working as a research and teaching assistant.
+
+As a quick background, I graduated from the [Undergraduate Program on Genomic Sciences](http://www.lcg.unam.mx/) (the [_About_](http://www.lcg.unam.mx/about) page is in English) from the [National Autonomous University of Mexico (UNAM)](http://unam.mx/) in 2009 and worked for two years at [Winter Genomics](http://wintergenomics.com/aboutus/) analyzing high-throughput sequencing data. I am a fan of using [R](http://cran.r-project.org/) and [Bioconductor](http://www.bioconductor.org/) for data analysis, which I use with [R Markdown](http://rmarkdown.rstudio.com/) for creating reproducible reports (hopefully!).
+
 
 ## Contact info
 
