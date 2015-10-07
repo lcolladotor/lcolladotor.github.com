@@ -1,0 +1,56 @@
+---
+layout: page
+title : Blog archive
+header : Blog posts archive
+group: navigation
+tagline: <a name="top"></a>Posts by <a href="#archive">date</a>, <a href="#categories">category</a> or <a href="#tags">tag</a>
+permalink: "archive.html"
+---
+{% include JB/setup %}
+
+View posts organized chronologically at the <a href="#archive">archive</a>, by <a href="#categories">categories</a> or by <a href="#tags">tags</a>.
+
+<a name="archive"></a><h1>Archive</h1>
+
+{% assign posts_collate = site.posts %}
+{% include JB/posts_collate %}
+
+Jump to <a href="#top">top</a>.
+
+<a name="categories"></a><h1>Categories</h1>
+
+<ul class="tag_box inline">
+  {% assign categories_list = site.categories %}
+  {% include JB/categories_list %}
+</ul>
+
+
+{% for category in site.categories %} 
+  <div class="anchor" id="{{ category[0] }}-ref"></div>
+  <h2>{{ category[0] | join: "/" }}</h2>
+  <ul>
+    {% assign pages_list = category[1] %}  
+    {% include JB/pages_list %}
+  </ul>
+{% endfor %}
+
+Jump to <a href="#top">top</a>.
+
+<a name="tags"></a><h1>Tags</h1>
+
+<ul class="tag_box inline">
+  {% assign tags_list = site.tags %}  
+  {% include JB/tags_list %}
+</ul>
+
+
+{% for tag in site.tags %} 
+  <div class="anchor" id="{{ tag[0] }}-ref"></div>
+  <h2>{{ tag[0] }}</h2>
+  <ul>
+    {% assign pages_list = tag[1] %}  
+    {% include JB/pages_list %}
+  </ul>
+{% endfor %}
+
+Jump to <a href="#top">top</a>.
