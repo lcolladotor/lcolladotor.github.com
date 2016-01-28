@@ -27,7 +27,7 @@ Currently I am a fifth year PhD student in the [Department of Biostatistics](htt
 
 As a quick background, I graduated from the [Undergraduate Program on Genomic Sciences](http://www.lcg.unam.mx/) (the [_About_](http://www.lcg.unam.mx/about) page is in English) from the [National Autonomous University of Mexico (UNAM)](http://unam.mx/) in 2009 and worked for two years at [Winter Genomics](http://wintergenomics.com/aboutus/) analyzing high-throughput sequencing data. I am a fan of using [R](http://cran.r-project.org/) and [Bioconductor](http://www.bioconductor.org/) for data analysis, which I use with [R Markdown](http://rmarkdown.rstudio.com/) for creating reproducible reports (hopefully!).
 
-Here are some of my public ids:
+Here are some of my public profiles:
 
 * [Google scholar](https://scholar.google.com/citations?user=h57-MykAAAAJ),
 * [ORCID](http://orcid.org/0000-0003-2140-308X),

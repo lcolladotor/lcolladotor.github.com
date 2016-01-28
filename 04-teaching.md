@@ -17,6 +17,7 @@ permalink: "teaching.html"
 1. Teaching assistant and guest lecturer for [Introduction to R for Public Health Researchers](http://www.aejaffe.com/summerR_2015/)
 1. Teaching assistant for Statistical Methods in Public Health [I (140.621)](http://www.biostat.jhsph.edu/courses/bio621/index.html)
 1. Lead teaching assistant for Statistical Methods in Public Health [II (140.622)]((http://www.biostat.jhsph.edu/courses/bio622/index.html).
+1. Teaching assistant for the MPH capstone project.
 
 ## 2014-2015
 
@@ -52,8 +53,8 @@ While I was at the Institute of Biotechnology (UNAM) working with the Winter Gen
 
 I taught three courses during my undergrad stage at the Undergraduate Program on Genomic Sciences (LCG). Each of these courses has its own website organizing the material. These are:
 
-1. [Intensive course on R/Bioconductor](http://www.lcg.unam.mx/~lcollado/R/) Oct-Nov 2008 (<img src="images/mx.png" alt="Spanish">)
-1. [Principles of Statistics](http://www.lcg.unam.mx/~lcollado/E/) Feb-June 2009 (<img src="images/mx.png" alt="Spanish">)
-1. [Seminar III: R/Bioconductor](http://www.lcg.unam.mx/~lcollado/B/) Aug-Dec 2009 (<img src="images/mx.png" alt="Spanish"> <img src="images/us.png" alt="English">)
+1. [Intensive course on R/Bioconductor](http://www.lcg.unam.mx/~lcollado/R/) Oct-Nov 2008 (<img src="images/mx.png" alt="Spanish">) ([backup](http://lcolladotor.github.io/courses/Courses/R/))
+1. [Principles of Statistics](http://www.lcg.unam.mx/~lcollado/E/) Feb-June 2009 (<img src="images/mx.png" alt="Spanish">) ([backup](http://lcolladotor.github.io/courses/Courses/E/))
+1. [Seminar III: R/Bioconductor](http://www.lcg.unam.mx/~lcollado/B/) Aug-Dec 2009 (<img src="images/mx.png" alt="Spanish"> <img src="images/us.png" alt="English">) ([backup](http://lcolladotor.github.io/courses/Courses/B/))
 
 <img src="images/mx.png" alt="Spanish"> = material in Spanish. <img src="images/us.png" alt="English"> = material in English.
