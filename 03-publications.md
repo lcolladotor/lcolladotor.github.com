@@ -47,7 +47,7 @@ My publication list is available through my Google Scholar [public profile](http
 
 ## Other talks
 
-1. _dbFinder_ at Joint Genomics Meeting, February 2015. 
+1. _dbFinder_ at Joint Genomics Meeting, November 2015. 
 1. _Easy parallel computing with BiocParallel and HTML reports with knitrBootstrap_ for the [Biostatistics computing club 2014-2015](http://www.biostat.jhsph.edu/~ydu/comp_club.html), April 2015. [Code](https://github.com/lcolladotor/BiocParallel-knitrBootstrap) and [view](http://lcolladotor.github.io/BiocParallel-knitrBootstrap/) at GitHub (<img src="images/us.png" alt="English">).
 1. _Does mapping simulated RNA-seq reads provide information?_ at Joint Genomics Meeting, February 2015. 
 1. _derfinder tutorial_ for Leek group meeting, December 2014, live at [GitHub](http://lcolladotor.github.io/derTutor) (<img src="images/us.png" alt="English">).
