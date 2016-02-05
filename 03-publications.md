@@ -14,6 +14,7 @@ My publication list is available through my Google Scholar [public profile](http
 
 ## Peer-reviewed
 
+1. __Collado-Torres L__, Jaffe AE and Leek JT. [regionReport: Interactive reports for region-based analyses](http://f1000research.com/articles/4-105/v1). F1000Research 2015, 4:105. doi: 10.12688/f1000research.6379.1 [<img src="images/pdf-icon.png" alt="PDF" width=20 height=20>](http://f1000research.com/articles/4-105/v1/pdf) (<img src="images/us.png" alt="English">)
 1. Jaffe AE, Shin J, __Collado-Torres L__, Leek JT, et al. [Developmental regulation of human cortex transcription and its clinical relevance at single base resolution](http://www.ncbi.nlm.nih.gov/pubmed/25501035). Nat. Neurosci. (2014). doi:10.1038/nn.3898. [<img src="images/pdf-icon.png" alt="PDF" width=20 height=20>](http://www.nature.com/neuro/journal/v18/n1/full/nn.3898.html) (<img src="images/us.png" alt="English">)
 1. Shank EA, Klepac-Ceraj V, __Collado-Torres L__, Powers GE, Losick R, Kolter R. [Interspecies interactions that result in Bacillus subtilis forming biofilms are mediated mainly by members of its own genus](http://www.ncbi.nlm.nih.gov/pubmed/22074846). Proc. Natl. Acad. Sci. U.S.A. 2011 Nov;108(48):E1236–1243. [<img src="images/pdf-icon.png" alt="PDF" width=20 height=20>](http://www.pnas.org/content/108/48/E1236.full.pdf+html) (<img src="images/us.png" alt="English">)
 1. Gama-Castro S, Salgado H, Peralta-Gil M, Santos-Zavaleta A, Muñiz-Rascado L, Solano-Lira H, Jimenez-Jacinto V, Weiss V, García-Sotelo JS, López-Fuentes A, Porrón-Sotelo L, Alquicira-Hernández S, Medina-Rivera A, Martínez-Flores I, Alquicira-Hernández K, Martínez-Adame R, Bonavides-Martínez C, Miranda-Ríos J, Huerta AM, Mendoza-Vargas A, __Collado-Torres L__, Taboada B, Vega-Alvarado L, Olvera M, Olvera L, Grande R, Morett E, Collado-Vides J. [RegulonDB version 7.0: transcriptional regulation of Escherichia coli K-12 integrated within genetic sensory response units (Gensor Units)](http://www.ncbi.nlm.nih.gov/pubmed/21051347). Nucleic Acids Res. 2011 Jan;39(Database issue):D98–105. [<img src="images/pdf-icon.png" alt="PDF" width=20 height=20>](http://nar.oxfordjournals.org/content/39/suppl_1/D98.full.pdf+html) (<img src="images/us.png" alt="English">)
@@ -32,6 +33,7 @@ My publication list is available through my Google Scholar [public profile](http
 
 ## Presentations at conferences
 
+1. _Annotation-agnostic differential expression analysis_ at Genomics and Bioinformatics Symposium, Center for Computational Genomics at Hopkins, Baltimore US. October 2015.
 1. _Dissecting human brain development at high resolution using RNA-seq_ at [ENAR2015](http://www.enar.org/meetings/spring2015/), March 2015. Slides at [SlideShare](http://www.slideshare.net/lcolladotor/dissecting-human-brain-development-at-high-resolution-using-rnaseq) (<img src="images/us.png" alt="English">).
 1. _Developmental regulation of human cortex transcription at base-pair resolution_ at the [1st International Summer Symposium on Systems Biology](http://is3b.inmegen.gob.mx/index.html) at INMEGEN, Mexico. August 2014.
 1. _Fast differential expression analysis annotation-agnostic across groups with biological replicates_ at at LCG 10 year anniversary symposium, January 2014. Also at Biostatistics Journal Club and Joint Genomics Meeting, October 2013.
@@ -42,6 +44,7 @@ My publication list is available through my Google Scholar [public profile](http
 
 ## Posters
 
+1. _Annotation-agnostic RNA-seq differential expression analysis software_ at ASHG2015 and IDIES2015, Baltimore US.
 1. _Fast Annotation-Agnostic Differential Expression Analysis_ at Genomics and Bioinformatics Symposium 2013 (JHSPH), Delta Omega Poster Competition (2014, JHSPH), and ENAR 2014.
 1. Updated version of _Global Analysis of Transcription Start Sites and Transcription Units in Bacterial Genomes_ at EMBO Conference Series From [Functional Genomics to Systems Biology 2010](http://www.embl.de/training/events/2010/OMX10-01/). [<img src="images/pdf-icon.png" alt="PDF" width=20 height=20>](Posters/EMBL%202010%20poster.pdf) (<img src="images/us.png" alt="English">)
 1. _Global Analysis of Transcription Start Sites (TSSs) and Transcription Units (TUs) in Bacterial Genomes_ at [BioC2010](https://secure.bioconductor.org/BioC2010/). [<img src="images/pdf-icon.png" alt="PDF" width=20 height=20>](Posters/BioC2010-v4.pdf) (<img src="images/us.png" alt="English">)
