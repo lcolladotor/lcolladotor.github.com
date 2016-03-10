@@ -74,8 +74,8 @@ JB :
   # Some JB helpers refer to these paths; change them here if needed.
   #
   archive_path: /archive.html
-  categories_path : /categories.html
-  tags_path : /tags.html
+  categories_path : /archive.html
+  tags_path : /archive.html
   atom_path : /atom.xml
   rss_path : /rss.xml
 
