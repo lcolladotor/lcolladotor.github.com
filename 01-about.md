@@ -34,6 +34,7 @@ Here are some of my public profiles:
 * [LinkedIn](https://www.linkedin.com/in/lcollado),
 * [Epernicus](http://www.epernicus.com/lc40),
 * [GitHub](https://github.com/lcolladotor),
+* [SlideShare](http://www.slideshare.net/lcolladotor/),
 * and what I've found interesting lately on Twitter
 
 <a class="twitter-timeline" href="https://twitter.com/fellgernon" data-widget-id="377532871914708992">Tweets by @fellgernon</a>
