@@ -20,12 +20,16 @@ My publication list is available through my Google Scholar [public profile](http
 1. Gama-Castro S, Salgado H, Peralta-Gil M, Santos-Zavaleta A, Muñiz-Rascado L, Solano-Lira H, Jimenez-Jacinto V, Weiss V, García-Sotelo JS, López-Fuentes A, Porrón-Sotelo L, Alquicira-Hernández S, Medina-Rivera A, Martínez-Flores I, Alquicira-Hernández K, Martínez-Adame R, Bonavides-Martínez C, Miranda-Ríos J, Huerta AM, Mendoza-Vargas A, __Collado-Torres L__, Taboada B, Vega-Alvarado L, Olvera M, Olvera L, Grande R, Morett E, Collado-Vides J. [RegulonDB version 7.0: transcriptional regulation of Escherichia coli K-12 integrated within genetic sensory response units (Gensor Units)](http://www.ncbi.nlm.nih.gov/pubmed/21051347). Nucleic Acids Res. 2011 Jan;39(Database issue):D98–105. [![PDF](images/pdf-icon.png){:width="20px" height="20px"}](http://nar.oxfordjournals.org/content/39/suppl_1/D98.full.pdf+html) (<img src="images/us.png" alt="English">)
 
 
-## Pre-prints
+## Pre-prints (unpublished)
 
+1. __Collado-Torres L__, Nellore A, Frazee AC, Wilks C, Love MI, Irizarry RA, Jaffe AE, Leek JT. [Flexible expressed region analysis for RNA-seq with derfinder](http://biorxiv.org/content/early/2016/05/07/015370). bioRxiv 015370 (2016). doi:10.1101/015370. [![PDF](images/pdf-icon.png){:width="20px" height="20px"}](http://biorxiv.org/content/early/2016/05/07/015370.full.pdf) (<img src="images/us.png" alt="English">)
 1. Nellore A, Jaffe AE, Fortin JP, Alquicira-Hernández J, __Collado-Torres L__, Wang S, Phillips RA, Karbhari N, Hansen KD, Langmead B, Leek JT. [Human splicing diversity across the Sequence Read Archive](http://biorxiv.org/content/early/2016/01/29/038224). bioRxiv 038224 (2016). doi:10.1101/038224 [![PDF](images/pdf-icon.png){:width="20px" height="20px"}](http://biorxiv.org/content/biorxiv/early/2016/01/29/038224.full.pdf) (<img src="images/us.png" alt="English">)
 1. Nellore A, __Collado-Torres L__, Jaffe AE, Alquicira-Hernández J, Pritt J, Morton J, Leek JT, Langmead B. [Rail-RNA: Scalable analysis of RNA-seq splicing and coverage](http://www.biorxiv.org/content/early/2015/08/11/019067). bioRxiv 019067 (2015). doi:10.1101/019067. [![PDF](images/pdf-icon.png){:width="20px" height="20px"}](http://www.biorxiv.org/content/biorxiv/early/2015/08/11/019067.full.pdf) (<img src="images/us.png" alt="English">)
+
+
+## Pre-prints (published)
+
 1. __Collado-Torres L__, Jaffe AE, Leek JT. [regionReport: Interactive reports for region-based analyses](http://www.biorxiv.org/content/early/2015/03/17/016659). bioRxiv 016659 (2015). doi:10.1101/016659. [![PDF](images/pdf-icon.png){:width="20px" height="20px"}](http://www.biorxiv.org/content/early/2015/03/17/016659.full.pdf) (<img src="images/us.png" alt="English">)
-1. __Collado-Torres L__, Frazee AC, Love MI, Irizarry RA, Jaffe AE, Leek JT. [derfinder: Software for annotation-agnostic RNA-seq differential expression analysis](http://www.biorxiv.org/content/early/2015/02/19/015370.abstract). bioRxiv 015370 (2015). doi:10.1101/015370. [![PDF](images/pdf-icon.png){:width="20px" height="20px"}](http://www.biorxiv.org/content/early/2015/02/19/015370.full.pdf) (<img src="images/us.png" alt="English">)
 
 ## Books
 
