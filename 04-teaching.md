@@ -16,7 +16,7 @@ permalink: "teaching.html"
 
 1. Teaching assistant and guest lecturer for [Introduction to R for Public Health Researchers](http://www.aejaffe.com/summerR_2015/)
 1. Teaching assistant for Statistical Methods in Public Health [I (140.621)](http://www.biostat.jhsph.edu/courses/bio621/index.html)
-1. Lead teaching assistant for Statistical Methods in Public Health [II (140.622)]((http://www.biostat.jhsph.edu/courses/bio622/index.html).
+1. Lead teaching assistant for Statistical Methods in Public Health [II (140.622)](http://www.biostat.jhsph.edu/courses/bio622/index.html).
 1. Teaching assistant for the MPH capstone project.
 
 ## 2014-2015
