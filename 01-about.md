@@ -23,9 +23,11 @@ Welcome to [Fellgernon Bit](http://bit.ly/FellBit)! It's my _academic_ corner in
 
 <img class="image alignleft" src="images/me.png" width="124" height="200" alt="" />
 
-Currently I am a fifth year PhD student in the [Department of Biostatistics](http://www.jhsph.edu/departments/biostatistics/) at [Johns Hopkins Bloomberg School of Public Health](http://www.jhsph.edu/). I am here thanks to a [CONACyT scholarship](http://www.conacyt.gob.mx/) awarded in 2011. Besides taking classes I am also working as a research and teaching assistant.
+I am a data scientist working with [Andrew Jaffe](http://aejaffe.com/) at the [Lieber Institute for Brain Development](http://www.libd.org/).
 
-As a quick background, I graduated from the [Undergraduate Program on Genomic Sciences](http://www.lcg.unam.mx/) (the [_About_](http://www.lcg.unam.mx/about) page is in English) from the [National Autonomous University of Mexico (UNAM)](http://unam.mx/) in 2009 and worked for two years at [Winter Genomics](http://wintergenomics.com/aboutus/) analyzing high-throughput sequencing data. I am a fan of using [R](http://cran.r-project.org/) and [Bioconductor](http://www.bioconductor.org/) for data analysis, which I use with [R Markdown](http://rmarkdown.rstudio.com/) for creating reproducible reports (hopefully!).
+As a quick background, I graduated from the [Undergraduate Program on Genomic Sciences](http://www.lcg.unam.mx/) (the [_About_](http://www.lcg.unam.mx/about) page is in English) from the [National Autonomous University of Mexico (UNAM)](http://unam.mx/) in 2009 and worked for two years at [Winter Genomics](http://wintergenomics.com/aboutus/) analyzing high-throughput sequencing data. I then got a PhD in the [Department of Biostatistics](http://www.jhsph.edu/departments/biostatistics/) at [Johns Hopkins Bloomberg School of Public Health](http://www.jhsph.edu/) thanks to a [CONACyT scholarship](http://www.conacyt.gob.mx/) awarded in 2011. I worked with [Jeff Leek](http://jtleek.com/) and [Andrew Jaffe](http://aejaffe.com/) in developing [derfinder](http://bioconductor.org/packages/derfinder), [regionReport](http://bioconductor.org/packages/regionReport), [recount](http://bioconductor.org/packages/recount) as well as other applied projects.
+
+I am a fan of using [R](http://cran.r-project.org/) and [Bioconductor](http://www.bioconductor.org/) for data analysis, which I use with [R Markdown](http://rmarkdown.rstudio.com/) for creating reproducible reports (hopefully!).
 
 Here are some of my public profiles:
 
@@ -42,9 +44,9 @@ Here are some of my public profiles:
 
 ## Contact info
 
-* Address: 615 N. Wolfe Street, Room E3032, Baltimore MD 21205-2179, United States
+* Address: 855 N. Wolfe Street, Suite 300, Baltimore MD 21205, United States
 * Office phone: (410) 614-5424. It is best to contact me by email!
-* Email: lcollado ^^ jhu DOT edu
-* Fax: (410) 955-0958.
+* Email: leo DOT collado ^^ libd DOT org
+* Fax: (410) 955-1000.
 
 
