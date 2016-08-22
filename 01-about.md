@@ -21,7 +21,7 @@ Welcome to [Fellgernon Bit](http://bit.ly/FellBit)! It's my _academic_ corner in
 
 ## About Leo
 
-<img class="image alignleft" src="images/me.png" width="124" height="200" alt="" />
+<img class="image alignleft" src="images/me.jpg" width="200" height="200" alt="" />
 
 I am a data scientist working with [Andrew Jaffe](http://aejaffe.com/) at the [Lieber Institute for Brain Development](http://www.libd.org/).
 
