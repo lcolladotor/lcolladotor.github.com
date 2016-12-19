@@ -10,6 +10,10 @@ permalink: "teaching.html"
 
 <img class="image alignleft" src="images/hospital.jpg" width="268" height="200" alt="" />
 
+# LIBD
+
+1. Invited instructor for [Genomeeting 2016](http://www.genomeeting.com/).
+
 # JHSPH
 
 ## 2015-2016

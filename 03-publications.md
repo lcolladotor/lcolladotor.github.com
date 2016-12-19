@@ -33,6 +33,8 @@ My publication list is available through my Google Scholar [public profile](http
 
 ## Presentations at conferences
 
+1. _recount: facilitando el análisis de miles de muestras de RNA-seq_ at [Genomeeting2016](http://www.genomeeting.com/), October 2016. <img src="images/mx.png" alt="Spanish">
+1. _Using Data Science to Study Human Brain Genomic Measurements_ at [SACNAS2016](http://www.2016sacnas.org/), October 2016.
 1. _Annotation-agnostic differential expression analysis_ at [ENAR2016](http://www.enar.org/meetings/spring2016/), March 2016. Slides at [SlideShare](http://www.slideshare.net/lcolladotor/annotationagnostic-differential-expression-analysis) (<img src="images/us.png" alt="English">).
 1. _Annotation-agnostic differential expression analysis_ at Genomics and Bioinformatics Symposium, Center for Computational Genomics at Hopkins, Baltimore US. October 2015.
 1. _Dissecting human brain development at high resolution using RNA-seq_ at [ENAR2015](http://www.enar.org/meetings/spring2015/), March 2015. Slides at [SlideShare](http://www.slideshare.net/lcolladotor/dissecting-human-brain-development-at-high-resolution-using-rnaseq) (<img src="images/us.png" alt="English">).
