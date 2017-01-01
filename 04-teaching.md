@@ -17,7 +17,7 @@ permalink: "teaching.html"
 ## 2016
 
 1. Biostatistics instructor at a [workshop for Kandahar University Faculty](http://lcolladotor.github.io/kandahar), organized by Johns Hopkins University. 
-1. Invited instructor for [Genomeeting 2016](http://www.genomeeting.com/).
+1. Invited instructor for [Genomeeting 2016](http://www.genomeeting.com/) at INMEGEN, Mexico.
 
 # JHSPH
 
