@@ -8,13 +8,20 @@ permalink: "teaching.html"
 ---
 {% include JB/setup %}
 
-<img class="image alignleft" src="images/hospital.jpg" width="268" height="200" alt="" />
 
 # LIBD
 
+<a href="http://libd.org/"><img alt = "LIBD" src="http://aejaffe.com/media/LIBD_logo.jpg" width=268/></a>
+
+## 2016
+
+1. Biostatistics instructor at a [workshop for Kandahar University Faculty](http://lcolladotor.github.io/kandahar), organized by Johns Hopkins University. 
 1. Invited instructor for [Genomeeting 2016](http://www.genomeeting.com/).
 
 # JHSPH
+
+<img class="image alignleft" src="images/hospital.jpg" width="268" height="200" alt="" />
+
 
 ## 2015-2016
 
