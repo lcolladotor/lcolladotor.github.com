@@ -11,7 +11,8 @@ permalink: "teaching.html"
 
 # LIBD
 
-<a href="http://libd.org/"><img alt = "LIBD" src="http://aejaffe.com/media/LIBD_logo.jpg" width=268/></a>
+
+<img class="image alignleft" src="http://aejaffe.com/media/LIBD_logo.jpg" width="268" alt="" />
 
 ## 2016
 
