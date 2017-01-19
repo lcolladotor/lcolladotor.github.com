@@ -1,6 +1,6 @@
 ---
 layout: post
-title: ! 'Beware of mis-assembled genomes: still valid today!'
+title: 'Beware of mis-assembled genomes: still valid today!'
 tags:
 - De novo assembly
 - Genomics

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: ! 'me: Bad rm, don''t delete stuff I didn''t want to delete! (rm: well, I do
+title: 'me: Bad rm, don''t delete stuff I didn''t want to delete! (rm: well, I do
   what you tell me to do!)'
 tags:
 - UNIX

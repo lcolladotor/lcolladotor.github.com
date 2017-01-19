@@ -1,6 +1,6 @@
 ---
 layout: post
-title: ! 'Alfred: a must for any Mac user'
+title: 'Alfred: a must for any Mac user'
 tags:
 - Mac
 categories:

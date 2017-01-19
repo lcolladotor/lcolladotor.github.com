@@ -1,6 +1,6 @@
 ---
 layout: post
-title: ! 'userR2013 data analysis contest: data exploration'
+title: 'userR2013 data analysis contest: data exploration'
 tags:
 - useR2013
 - dataanalysis

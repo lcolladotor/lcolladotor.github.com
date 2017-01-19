@@ -1,6 +1,6 @@
 ---
 layout: post
-title: ! 'Simply Statistics: Characteristics of my favorite statistics talks'
+title: 'Simply Statistics: Characteristics of my favorite statistics talks'
 tags:
 - Science
 - Statistics

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: ! 'Introduction to R and Biostatistics (2012 version): presentation'
+title: 'Introduction to R and Biostatistics (2012 version): presentation'
 tags:
 - LCG
 - rstats

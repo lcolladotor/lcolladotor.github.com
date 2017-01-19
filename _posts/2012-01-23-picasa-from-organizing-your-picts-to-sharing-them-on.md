@@ -1,6 +1,6 @@
 ---
 layout: post
-title: ! 'Picasa: from organizing your picts to sharing them on the web'
+title: 'Picasa: from organizing your picts to sharing them on the web'
 tags:
 - Blog
 - Picasa

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: ! 'National Science and Arts 2011 awardee: Julio Collado Vides'
+title: 'National Science and Arts 2011 awardee: Julio Collado Vides'
 tags:
 - México
 - Science

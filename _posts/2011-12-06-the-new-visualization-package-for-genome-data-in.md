@@ -1,6 +1,6 @@
 ---
 layout: post
-title: ! 'The new visualization package for genome data in Bioconductor: ggbio'
+title: 'The new visualization package for genome data in Bioconductor: ggbio'
 tags:
 - rstats
 - Bioconductor

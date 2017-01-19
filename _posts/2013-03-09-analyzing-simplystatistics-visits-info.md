@@ -4,7 +4,7 @@ title: Analyzing SimplyStatistics visits info
 tags:
 - DataAnalysis
 - Blog
-- ! '@simplystats'
+- '@simplystats'
 - jhsph753
 categories:
 - JHU Biostat

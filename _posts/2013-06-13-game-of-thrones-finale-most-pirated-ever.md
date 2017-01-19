@@ -1,6 +1,6 @@
 ---
 layout: post
-title: ! 'Game of Thrones finale most pirated ever '
+title: 'Game of Thrones finale most pirated ever '
 tags:
 - Piracy
 categories:

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: ! 'Homepage photos: which cheek you show says something?'
+title: 'Homepage photos: which cheek you show says something?'
 tags:
 - Science
 - Photos

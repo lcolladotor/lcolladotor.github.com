@@ -1,6 +1,6 @@
 ---
 layout: post
-title: ! 'Simply Statistics: Why statisticians should join and launch startups'
+title: 'Simply Statistics: Why statisticians should join and launch startups'
 tags:
 - Startup
 categories:

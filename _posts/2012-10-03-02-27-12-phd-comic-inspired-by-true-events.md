@@ -1,6 +1,6 @@
 ---
 layout: post
-title: ! '02/27/12 PHD comic: ''Inspired by true events'''
+title: '02/27/12 PHD comic: ''Inspired by true events'''
 tags:
 - PhD Comics
 - Sleep

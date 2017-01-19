@@ -1,6 +1,6 @@
 ---
 layout: post
-title: ! 'Widespread science to industry connection: a dream?'
+title: 'Widespread science to industry connection: a dream?'
 tags:
 - Science
 - Industry

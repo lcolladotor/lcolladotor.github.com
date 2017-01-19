@@ -1,6 +1,6 @@
 ---
 layout: post
-title: ! '"Do analytics really tell the whole story?"'
+title: '"Do analytics really tell the whole story?"'
 tags:
 - NFL
 - analytics

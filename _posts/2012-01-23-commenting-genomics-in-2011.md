@@ -1,6 +1,6 @@
 ---
 layout: post
-title: ! 'Commenting: Genomics in 2011'
+title: 'Commenting: Genomics in 2011'
 tags:
 - Advice
 - Challenge

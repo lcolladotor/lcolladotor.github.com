@@ -1,6 +1,6 @@
 ---
 layout: post
-title: ! 'Paper.li: a newspaper platform'
+title: 'Paper.li: a newspaper platform'
 tags:
 - México
 - Salmoblog

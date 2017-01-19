@@ -1,6 +1,6 @@
 ---
 layout: post
-title: ! 'Cubby: does it have a niche?'
+title: 'Cubby: does it have a niche?'
 tags:
 - Cubby
 - Cloud

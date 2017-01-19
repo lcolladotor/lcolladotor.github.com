@@ -1,6 +1,6 @@
 ---
 layout: post
-title: ! '"I am a writer" exercise'
+title: '"I am a writer" exercise'
 tags:
 - courseraengcomp
 categories:

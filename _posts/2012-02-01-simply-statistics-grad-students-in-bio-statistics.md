@@ -1,6 +1,6 @@
 ---
 layout: post
-title: ! 'Simply Statistics: Grad students in (bio)statistics - do a postdoc!'
+title: 'Simply Statistics: Grad students in (bio)statistics - do a postdoc!'
 tags:
 - Future
 - Plan

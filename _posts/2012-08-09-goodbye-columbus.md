@@ -1,6 +1,6 @@
 ---
 layout: post
-title: ! '"Goodbye, Columbus"'
+title: '"Goodbye, Columbus"'
 tags:
 - Science
 - Funding

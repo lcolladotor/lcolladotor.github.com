@@ -1,6 +1,6 @@
 ---
 layout: post
-title: ! '05/9/12 PHD comic: ''Grad Stereogram'''
+title: '05/9/12 PHD comic: ''Grad Stereogram'''
 tags:
 - PhD Comics
 categories:

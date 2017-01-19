@@ -1,6 +1,6 @@
 ---
 layout: post
-title: ! 'Simply Statistics: A cool profile of a human rights statistician'
+title: 'Simply Statistics: A cool profile of a human rights statistician'
 tags:
 - Guatemala
 - Statistics

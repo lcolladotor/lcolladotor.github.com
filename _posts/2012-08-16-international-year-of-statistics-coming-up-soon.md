@@ -1,6 +1,6 @@
 ---
 layout: post
-title: ! 'International Year of Statistics: coming up soon!'
+title: 'International Year of Statistics: coming up soon!'
 tags:
 - Statistics
 - México

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: ! 'Super basic Illustrator: event invitation'
+title: 'Super basic Illustrator: event invitation'
 tags:
 - Illustrator
 categories:

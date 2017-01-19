@@ -1,6 +1,6 @@
 ---
 layout: post
-title: ! 'FBit: GitHub repo for posts with R code for this blog'
+title: 'FBit: GitHub repo for posts with R code for this blog'
 tags:
 - knitr
 categories:
