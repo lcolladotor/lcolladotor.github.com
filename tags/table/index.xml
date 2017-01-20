@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Shiny on L. Collado-Torres</title>
-    <link>http://lcolladotor.github.io/tags/shiny/index.xml</link>
-    <description>Recent content in Shiny on L. Collado-Torres</description>
+    <title>Table on L. Collado-Torres</title>
+    <link>http://lcolladotor.github.io/tags/table/index.xml</link>
+    <description>Recent content in Table on L. Collado-Torres</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2011-2017 Leonardo Collado Torres under (CC) BY-NC-SA</copyright>
-    <atom:link href="/tags/shiny/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/tags/table/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Easily explore a table with shinycsv</title>
@@ -139,94 +139,6 @@ URL: &lt;a href=&#34;https://www.R-project.org/&#34;&gt;https://www.R-project.or
 &lt;h3 id=&#34;want-more&#34;&gt;Want more?&lt;/h3&gt;
 
 &lt;p&gt;Check other &lt;a href=&#34;https://twitter.com/jhubiostat&#34; target=&#34;_blank&#34;&gt;@jhubiostat&lt;/a&gt; student blogs at &lt;a href=&#34;http://bmorebiostat.com/&#34; target=&#34;_blank&#34;&gt;Bmore Biostats&lt;/a&gt; as well as topics on &lt;a href=&#34;https://twitter.com/search?q=%23rstats&#34; target=&#34;_blank&#34;&gt;#rstats&lt;/a&gt;.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Concerns that can deter potential orders for developing Shiny apps</title>
-      <link>http://lcolladotor.github.io/2014/06/10/Concerns-that-can-deter-potential-orders-for-developing-Shiny-apps</link>
-      <pubDate>Tue, 10 Jun 2014 00:00:00 +0000</pubDate>
-      
-      <guid>http://lcolladotor.github.io/2014/06/10/Concerns-that-can-deter-potential-orders-for-developing-Shiny-apps</guid>
-      <description>
-
-&lt;p&gt;A few weeks ago I was invited to a meeting where a group was interested in exploring options for replacing their contract with a propriety software. They invited me because they saw some resemblances between a &lt;a href=&#34;http://shiny.rstudio.com/&#34; target=&#34;_blank&#34;&gt;Shiny&lt;/a&gt; application I made and the features they need. It is a relatively small project and it seemed feasible to implement, but well, some details could have been tricky to code. During the meeting I explained what &lt;a href=&#34;http://shiny.rstudio.com/&#34; target=&#34;_blank&#34;&gt;Shiny&lt;/a&gt; is, showcased some of the &lt;a href=&#34;http://shiny.rstudio.com/&#34; target=&#34;_blank&#34;&gt;Shiny&lt;/a&gt; apps I&amp;rsquo;ve made, and proposed some options including a simple site password.&lt;/p&gt;
-
-&lt;p&gt;A few days after the meeting, they raised three concerns.&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Privacy and security of their data. Specially with distribution of the site password.&lt;/li&gt;
-&lt;li&gt;Technical support. They wanted something more than community support.&lt;/li&gt;
-&lt;li&gt;Continuity of the project. Specially since their team might lack the technical expertise to support and modify the Shiny app after it is built.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;These are all valid concerns and they are not something I have dealt with or been concerned with other &lt;a href=&#34;http://shiny.rstudio.com/&#34; target=&#34;_blank&#34;&gt;Shiny&lt;/a&gt; apps I have deployed. Thus, I ended up finding more information and writing up a long reply which I am modifying into a post format here. If you identify other ways to approach these concerns that I missed, share the knowledge please!&lt;/p&gt;
-
-&lt;h2 id=&#34;shiny-overview&#34;&gt;Shiny overview&lt;/h2&gt;
-
-&lt;p&gt;&lt;center&gt;
-&lt;a href=&#34;http://lcolladotor.github.io/figs/2014-06-10-shiny-orders/HelloShiny.png&#34;&gt;&lt;img src=&#34;http://lcolladotor.github.io/figs/2014-06-10-shiny-orders/HelloShiny.png&#34; alt=&#34;Workflow&#34; style=&#34;width: 458px;&#34;/&gt;&lt;/a&gt;
-&lt;/center&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://shiny.rstudio.com/&#34; target=&#34;_blank&#34;&gt;Shiny&lt;/a&gt; is an &lt;code&gt;R&lt;/code&gt; package that allows creating web applications with &lt;code&gt;R&lt;/code&gt;. A user opens the app on their browser, specifies a given set of inputs, these are transmitted to an &lt;code&gt;R&lt;/code&gt; session, some code is evaluated with the input options, output is produced and transmitted back to the browser. Because it is so easy to use and useful, it has been very popular. That is the gist of it!&lt;/p&gt;
-
-&lt;h2 id=&#34;deploying-a-shiny-app&#34;&gt;Deploying a Shiny app&lt;/h2&gt;
-
-&lt;p&gt;Once you develop a &lt;a href=&#34;http://shiny.rstudio.com/&#34; target=&#34;_blank&#34;&gt;Shiny&lt;/a&gt; app, you have to deploy it on a server so users can access it through their browsers. Here I describe several options to do so.&lt;/p&gt;
-
-&lt;p&gt;The application itself needs &amp;ldquo;Shiny Server&amp;rdquo; to run. An implementation of Shiny Server is free via &lt;a href=&#34;http://shinyapps.io/&#34; target=&#34;_blank&#34;&gt;ShinyApps&lt;/a&gt; (&lt;strong&gt;option 1&lt;/strong&gt;) or if you have your own server you can install the open source version of Shiny Server (&lt;strong&gt;option 2&lt;/strong&gt;). Alternatively, you can pay for Shiny Server Pro and also install it in your own server (&lt;strong&gt;option 3&lt;/strong&gt;). Note that glimmer.rstudio.com is previous version of &lt;a href=&#34;http://shinyapps.io/&#34; target=&#34;_blank&#34;&gt;ShinyApps&lt;/a&gt; and you can no longer get accounts on this server.&lt;/p&gt;
-
-&lt;p&gt;Option 1 has the advantage of being completely free and that there is no need to pay for your own server. It does rely on &lt;a href=&#34;http://shinyapps.io/&#34; target=&#34;_blank&#34;&gt;ShinyApps&lt;/a&gt; being online, which should not be a main problem since it is hosted on the cloud. Meaning that it is supposed to be robust.&lt;/p&gt;
-
-&lt;p&gt;Option 2 has the advantage of having technical support for the server (not the app) from whoever is providing the server (could be a company or the school). However, you need to have someone capable of installing Shiny Server and updating it whenever it&amp;rsquo;s necessary to do so.&lt;/p&gt;
-
-&lt;p&gt;Option 3 allows you to have high level password security (via SSL) to any Shiny app you host. Plus &lt;a href=&#34;http://www.rstudio.com/&#34; target=&#34;_blank&#34;&gt;RStudio&lt;/a&gt; provides technical support for Shiny. The server technical support would still have to come from whoever is providing the server. The main disadvantage is that this option is very expensive (even with the academic pricing discount).&lt;/p&gt;
-
-&lt;p&gt;Here is some information you might be interested on checking about Shiny:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.rstudio.com/shiny/&#34; target=&#34;_blank&#34;&gt;Main site for Shiny&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.rstudio.com/shiny/server/&#34; target=&#34;_blank&#34;&gt;Description for Shiny Server and Shiny Server Pro&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.rstudio.com/shiny/commercial/academic-pricing&#34; target=&#34;_blank&#34;&gt;Academic pricing for Shiny Server Pro&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.rstudio.com/shiny/hosted/&#34; target=&#34;_blank&#34;&gt;Description of ShinyApps&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://shiny.rstudio.com/&#34; target=&#34;_blank&#34;&gt;Site for learning how to code a web app using Shiny&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://shiny.rstudio.com/gallery/&#34; target=&#34;_blank&#34;&gt;Examples of Shiny apps&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;concerns&#34;&gt;Concerns&lt;/h2&gt;
-
-&lt;h3 id=&#34;privacy&#34;&gt;Privacy&lt;/h3&gt;
-
-&lt;p&gt;Privacy issues in terms of password sharing can be limited by changing the password frequently. Privacy in terms of protection versus hacking is a different subject and I could implement something like &lt;a href=&#34;http://spark.rstudio.com/withr/authentication/&#34; target=&#34;_blank&#34;&gt;this demo&lt;/a&gt; (username: withr, password: 12345678) as described in this &lt;a href=&#34;http://withr.me/blog/2014/02/14/encrypt-users-password-with-md5-for-you-shiny-app/&#34; target=&#34;_blank&#34;&gt;blog post&lt;/a&gt;. However, if you want further protection vs hacking, you would need Shiny Server Pro. &lt;a href=&#34;http://shiny.rstudio.com/gallery/authentication-and-database.html&#34; target=&#34;_blank&#34;&gt;Here is a demo&lt;/a&gt; of the security provided by Shiny Server Pro  (with multiple users too). I understand that hacking was not the main concern you had, but well, as I said password-sharing can be mitigated by frequent changes to the app site.&lt;/p&gt;
-
-&lt;h3 id=&#34;technical-support&#34;&gt;Technical support&lt;/h3&gt;
-
-&lt;p&gt;I mostly answered the different options regarding technical support when I described the three options for deploying a Shiny app. As for getting support from IT, they would need to learn how to use Shiny.&lt;/p&gt;
-
-&lt;h3 id=&#34;continuity&#34;&gt;Continuity&lt;/h3&gt;
-
-&lt;p&gt;Shiny is one of the most important projects for &lt;a href=&#34;http://www.rstudio.com/&#34; target=&#34;_blank&#34;&gt;RStudio&lt;/a&gt; so they invest a lot in it, the community provides great answers very quickly, and a lot of people are learning how to use it. If you need an R programmer later on instead of a student, you could describe the job at &lt;a href=&#34;http://www.r-users.com/&#34; target=&#34;_blank&#34;&gt;R Users&lt;/a&gt; and employ someone that way. As far as the Biostats department is concerned, I know that several students are using Shiny and some have even published Shiny Apps in the academic literature. Here are some examples:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://spark.rstudio.com/mrosenblum/interAdapt/&#34; target=&#34;_blank&#34;&gt;interAdapt&lt;/a&gt; is a Shiny app written by Aaron Fisher (Biostats student) and published &lt;a href=&#34;http://biostats.bepress.com/jhubiostat/paper262/&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;shinymethyl, a shiny application developed by Jean-Philippe Fortin described &lt;a href=&#34;http://shinymethyl.com/&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt; with a &lt;a href=&#34;http://spark.rstudio.com/jfortin/shinyMethyl/&#34; target=&#34;_blank&#34;&gt;demo here&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://alyssafrazee.shinyapps.io/committees/&#34; target=&#34;_blank&#34;&gt;committees&lt;/a&gt; is a Shiny app made by Alyssa Frazee for verifying your school oral and/or defense committees. It&amp;rsquo;s described in &lt;a href=&#34;http://alyssafrazee.com/committee-checker-2.html&#34; target=&#34;_blank&#34;&gt;this post&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://muschellij2.shinyapps.io/ENAR_2014&#34; target=&#34;_blank&#34;&gt;ENAR 2014&lt;/a&gt; is a Shiny app made by John Muschelli for the ENAR2014 conference which allowed you to quickly identify talks you might be interested in. It&amp;rsquo;s described in &lt;a href=&#34;http://hopstat.wordpress.com/2014/03/12/enar-2014-searcher-enar2014/&#34; target=&#34;_blank&#34;&gt;this post&lt;/a&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;branding&#34;&gt;Branding&lt;/h3&gt;
-
-&lt;p&gt;Regarding branding, a Shiny App can be embedded on a website. For illustrating this, I embedded two apps I made &lt;a href=&#34;http://www.biostat.jhsph.edu/~lcollado/testShiny.html&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h2 id=&#34;conclusions&#34;&gt;Conclusions&lt;/h2&gt;
-
-&lt;p&gt;In the end, this group decided to use something else instead of a &lt;a href=&#34;http://shiny.rstudio.com/&#34; target=&#34;_blank&#34;&gt;Shiny&lt;/a&gt; app for now. I do not know exactly why they made that decision, but I can see that their concerns are probably shared with other potential &lt;a href=&#34;http://shiny.rstudio.com/&#34; target=&#34;_blank&#34;&gt;Shiny&lt;/a&gt; users. These concerns are a challenge &lt;a href=&#34;http://www.rstudio.com/&#34; target=&#34;_blank&#34;&gt;RStudio&lt;/a&gt; must be dealing with and I am curious to know how they would have approached them.&lt;/p&gt;
-
-&lt;h4 id=&#34;want-more&#34;&gt;Want more?&lt;/h4&gt;
-
-&lt;p&gt;Check other &lt;a href=&#34;https://twitter.com/jhubiostat&#34; target=&#34;_blank&#34;&gt;@jhubiostat&lt;/a&gt; student blogs at &lt;a href=&#34;http://bmorebiostat.com/&#34; target=&#34;_blank&#34;&gt;Bmore Biostats&lt;/a&gt; as well as topics on &lt;a href=&#34;https://twitter.com/search?q=%23rstats&#34; target=&#34;_blank&#34;&gt;#rstats&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;This post is part of the summer 2014 &lt;a href=&#34;http://bmorebiostat.com/&#34; target=&#34;_blank&#34;&gt;Bmore Biostats&lt;/a&gt;&amp;rsquo; iron blogger challenge.&lt;/p&gt;
 </description>
     </item>
     

@@ -10,6 +10,139 @@
     <atom:link href="/categories/rstats/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Easily explore a table with shinycsv</title>
+      <link>http://lcolladotor.github.io/2017/01/20/Easily-explore-a-table-with-shinycsv</link>
+      <pubDate>Fri, 20 Jan 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://lcolladotor.github.io/2017/01/20/Easily-explore-a-table-with-shinycsv</guid>
+      <description>
+
+&lt;p&gt;Have you ever had to explore a table with data? I believe the answer is &lt;em&gt;yes&lt;/em&gt; for most people that work at a computer or even just use it for communicating with their friends and family. Tables of data pop up everywhere, for example in personal finance. Websites like &lt;a href=&#34;https://www.mint.com/&#34; target=&#34;_blank&#34;&gt;Mint.com&lt;/a&gt; allow you to download your transactions in a &lt;a href=&#34;https://en.wikipedia.org/wiki/Comma-separated_values&#34; target=&#34;_blank&#34;&gt;CSV&lt;/a&gt; file called &lt;code&gt;transactions.csv&lt;/code&gt;. CSV is one of the many formats for storing tables and most likely when you try to open the &lt;code&gt;transactions.csv&lt;/code&gt; file, it will open with Excel. Now, can you make a quick figure of one of your columns in your table?&lt;/p&gt;
+
+&lt;p&gt;Some will answer yes, others no. The basic issue is that it&amp;rsquo;s not &lt;em&gt;super&lt;/em&gt; easy to explore your data in Excel or similar programs. Wait, shouldn&amp;rsquo;t it be easy? 😕&lt;/p&gt;
+
+&lt;p&gt;What if you want to subset your data and want to re-make the plot? How about getting some simple statistics like the mean or frequency of some categories for a given variable? 😨 These are some of the immediate tasks that are helpful when exploring data. Visually, making figures with two variables is also very common.&lt;/p&gt;
+
+&lt;p&gt;Programmers and experts in Excel, Stata, &lt;code&gt;R&lt;/code&gt; among other options can perform these data explorations. It might take them a little bit of time to write the code or remember it or use the user interface menu of their program of choice. But what about everyone else?&lt;/p&gt;
+
+&lt;p&gt;At the &lt;a href=&#34;http://www.libd.org/&#34; target=&#34;_blank&#34;&gt;Lieber Institute for Brain Development&lt;/a&gt; where I work, it&amp;rsquo;s common for us to exchange data in tables, and thus explore data. That&amp;rsquo;s why we created &lt;code&gt;shinycsv&lt;/code&gt; &lt;a id=&#39;cite-shinycsv&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://github.com/LieberInstitute/shinycsv&#39;&gt;Collado-Torres, Semick, and Jaffe, 2016&lt;/a&gt;). It&amp;rsquo;s an R package &lt;a id=&#39;cite-cran&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://www.R-project.org/&#39;&gt;R Core Team, 2016&lt;/a&gt;) that contains a &lt;code&gt;shiny&lt;/code&gt; &lt;a id=&#39;cite-shiny&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://CRAN.R-project.org/package=shiny&#39;&gt;Chang, Cheng, Allaire, Xie, et al., 2017&lt;/a&gt;) application that allows users to interactively explore a table.&lt;/p&gt;
+
+&lt;p&gt;Installing &lt;code&gt;R&lt;/code&gt; is a pretty high bar, that&amp;rsquo;s why we are hosting this application at &lt;a href=&#34;https://jhubiostatistics.shinyapps.io/shinycsv/&#34; target=&#34;_blank&#34;&gt;https://jhubiostatistics.shinyapps.io/shinycsv/&lt;/a&gt;. Try it out!&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;
+&lt;a href=&#34;https://jhubiostatistics.shinyapps.io/shinycsv/&#34;&gt;&lt;img alt = &#39;shinycsv landing&#39; width=&#39;600&#39; src=&#39;http://lcolladotor.github.io/figs/2017-01-20-shinycsv/landing.png&#39; /&gt;&lt;/a&gt;
+&lt;/center&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;shinycsv-application&#34;&gt;shinycsv application&lt;/h2&gt;
+
+&lt;p&gt;The application includes data about cars to demonstrate what it can do. It&amp;rsquo;s a small data set that is commonly used for demonstration purposes. Anyhow, in the application you&amp;rsquo;ll notice a few tabs.&lt;/p&gt;
+
+&lt;p&gt;The application shows the &lt;strong&gt;&lt;em&gt;raw data&lt;/em&gt;&lt;/strong&gt; in an interactive table that allows you to subset the observations by some criteria, search in the table, and sort in different ways. The &lt;strong&gt;&lt;em&gt;raw summary&lt;/em&gt;&lt;/strong&gt; tab shows quick statistical summaries which depend on the variable type (numerical, categorical, etc). If you interacted with the table in &lt;em&gt;raw data&lt;/em&gt; then the summaries at &lt;em&gt;raw summary&lt;/em&gt; will be based on the subset you selected.&lt;/p&gt;
+
+&lt;p&gt;The &lt;strong&gt;&lt;em&gt;one variable&lt;/em&gt;&lt;/strong&gt; and &lt;strong&gt;&lt;em&gt;two variables&lt;/em&gt;&lt;/strong&gt; tabs are for making figures based on one or two variables at a time. The code in &lt;code&gt;shinycsv&lt;/code&gt; tries to guess what&amp;rsquo;s the best figure for a given type of variable and in case that you are interested in learning R, it also shows the exact code you can use to reproduce the figure in your computer. We added this feature to excite users about learning R. And it&amp;rsquo;s useful for advanced users too that might want to customize the resulting figures. Hm&amp;hellip;, you don&amp;rsquo;t like the colors we chose for the figure? Well go to &lt;strong&gt;&lt;em&gt;plot colors&lt;/em&gt;&lt;/strong&gt;, choose another color, and come back to see your new figure with the color of your choosing. 😄&lt;/p&gt;
+
+&lt;p&gt;Hm&amp;hellip; but what if you don&amp;rsquo;t have a CSV file? Well, &lt;code&gt;shinycsv&lt;/code&gt; can handle many different tables thanks to &lt;code&gt;rio&lt;/code&gt; &lt;a id=&#39;cite-rio&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;#bib-rio&#39;&gt;Chan, Chan, Leeper, and Becker, 2016&lt;/a&gt;). Even Excel sheets! 😉&lt;/p&gt;
+
+&lt;p&gt;So, go ahead and test it out! We&amp;rsquo;ll be glad to hear your feedback at &lt;a href=&#34;https://github.com/LieberInstitute/shinycsv/issues&#34; target=&#34;_blank&#34;&gt;LieberInstitute/shinycsv&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&#34;notes&#34;&gt;Notes&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Note that when I referred to tables earlier, I referred to square tables with different variables (age, height, weight, etc) as columns as observations as rows. That is, Excel files with a single sheet with no comments or figures inside the Excel file.&lt;/li&gt;
+&lt;li&gt;Are you interested in learning more about &lt;code&gt;R&lt;/code&gt; and &lt;code&gt;shiny&lt;/code&gt;? Maybe you&amp;rsquo;ll want to take a look at the &lt;a href=&#34;https://jhubiostatistics.shinyapps.io/shinycsv-showcase/&#34; target=&#34;_blank&#34;&gt;showcase mode version of the application&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;If you use &lt;code&gt;shinycsv::explore()&lt;/code&gt; locally, the file size limit is increased to 500 MB. Although at that point you might want to consider using &lt;code&gt;R&lt;/code&gt; or another programming language.&lt;/li&gt;
+&lt;li&gt;What about casting variables? If you want to have fine control about casting the variables, save your data in a RData file. Sure, this requires an R user.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;reproducibility&#34;&gt;Reproducibility&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;## Reproducibility info
+library(&#39;devtools&#39;)
+options(width = 120)
+session_info()
+
+## Session info -----------------------------------------------------------------------------------------------------------
+
+##  setting  value                                             
+##  version  R Under development (unstable) (2016-10-26 r71594)
+##  system   x86_64, darwin13.4.0                              
+##  ui       X11                                               
+##  language (EN)                                              
+##  collate  en_US.UTF-8                                       
+##  tz       America/New_York                                  
+##  date     2017-01-20
+
+## Packages ---------------------------------------------------------------------------------------------------------------
+
+##  package       * version  date       source        
+##  bibtex          0.4.0    2014-12-31 CRAN (R 3.4.0)
+##  bitops          1.0-6    2013-08-17 CRAN (R 3.4.0)
+##  devtools      * 1.12.0   2016-12-05 CRAN (R 3.4.0)
+##  digest          0.6.11   2017-01-03 CRAN (R 3.4.0)
+##  evaluate        0.10     2016-10-11 CRAN (R 3.4.0)
+##  httr            1.2.1    2016-07-03 CRAN (R 3.4.0)
+##  knitcitations * 1.0.7    2015-10-28 CRAN (R 3.4.0)
+##  knitr         * 1.15.1   2016-11-22 CRAN (R 3.4.0)
+##  lubridate       1.6.0    2016-09-13 CRAN (R 3.4.0)
+##  magrittr        1.5      2014-11-22 CRAN (R 3.4.0)
+##  memoise         1.0.0    2016-01-29 CRAN (R 3.4.0)
+##  plyr            1.8.4    2016-06-08 CRAN (R 3.4.0)
+##  R6              2.2.0    2016-10-05 CRAN (R 3.4.0)
+##  Rcpp            0.12.9   2017-01-14 CRAN (R 3.4.0)
+##  RCurl           1.95-4.8 2016-03-01 CRAN (R 3.4.0)
+##  RefManageR      0.13.1   2016-11-13 CRAN (R 3.4.0)
+##  RJSONIO         1.3-0    2014-07-28 CRAN (R 3.4.0)
+##  stringi         1.1.2    2016-10-01 CRAN (R 3.4.0)
+##  stringr         1.1.0    2016-08-19 CRAN (R 3.4.0)
+##  withr           1.0.2    2016-06-20 CRAN (R 3.4.0)
+##  XML             3.98-1.5 2016-11-10 CRAN (R 3.4.0)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;references&#34;&gt;References&lt;/h3&gt;
+
+&lt;p&gt;Citations made with &lt;code&gt;knitcitations&lt;/code&gt; &lt;a id=&#39;cite-knitcitations&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://CRAN.R-project.org/package=knitcitations&#39;&gt;Boettiger, 2015&lt;/a&gt;).&lt;/p&gt;
+
+&lt;p&gt;&lt;a id=&#39;bib-knitcitations&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-knitcitations&#34;&gt;[1]&lt;/a&gt;&lt;cite&gt;
+C. Boettiger.
+&lt;em&gt;knitcitations: Citations for &#39;Knitr&#39; Markdown Files&lt;/em&gt;.
+R package version 1.0.7.
+2015.
+URL: &lt;a href=&#34;https://CRAN.R-project.org/package=knitcitations&#34;&gt;https://CRAN.R-project.org/package=knitcitations&lt;/a&gt;.&lt;/cite&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a id=&#39;bib-rio&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-rio&#34;&gt;[2]&lt;/a&gt;&lt;cite&gt;
+C. Chan, G. C. Chan, T. J. Leeper and J. Becker.
+&lt;em&gt;rio: A Swiss-army knife for data file I/O&lt;/em&gt;.
+R package version 0.4.16.
+2016.&lt;/cite&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a id=&#39;bib-shiny&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-shiny&#34;&gt;[3]&lt;/a&gt;&lt;cite&gt;
+W. Chang, J. Cheng, J. Allaire, Y. Xie, et al.
+&lt;em&gt;shiny: Web Application Framework for R&lt;/em&gt;.
+R package version 1.0.0.
+2017.
+URL: &lt;a href=&#34;https://CRAN.R-project.org/package=shiny&#34;&gt;https://CRAN.R-project.org/package=shiny&lt;/a&gt;.&lt;/cite&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a id=&#39;bib-shinycsv&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-shinycsv&#34;&gt;[4]&lt;/a&gt;&lt;cite&gt;
+L. Collado-Torres, S. Semick and A. E. Jaffe.
+&lt;em&gt;shinycsv: Explore a table interactively in a shiny application&lt;/em&gt;.
+R package version 0.99.7.
+2016.
+URL: &lt;a href=&#34;https://github.com/LieberInstitute/shinycsv&#34;&gt;https://github.com/LieberInstitute/shinycsv&lt;/a&gt;.&lt;/cite&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a id=&#39;bib-cran&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-cran&#34;&gt;[5]&lt;/a&gt;&lt;cite&gt;
+R Core Team.
+&lt;em&gt;R: A Language and Environment for Statistical Computing&lt;/em&gt;.
+R Foundation for Statistical Computing.
+Vienna, Austria, 2016.
+URL: &lt;a href=&#34;https://www.R-project.org/&#34;&gt;https://www.R-project.org/&lt;/a&gt;.&lt;/cite&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;want-more&#34;&gt;Want more?&lt;/h3&gt;
+
+&lt;p&gt;Check other &lt;a href=&#34;https://twitter.com/jhubiostat&#34; target=&#34;_blank&#34;&gt;@jhubiostat&lt;/a&gt; student blogs at &lt;a href=&#34;http://bmorebiostat.com/&#34; target=&#34;_blank&#34;&gt;Bmore Biostats&lt;/a&gt; as well as topics on &lt;a href=&#34;https://twitter.com/search?q=%23rstats&#34; target=&#34;_blank&#34;&gt;#rstats&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Finding possible class schedules</title>
       <link>http://lcolladotor.github.io/2016/08/02/Finding-possible-class-schedules</link>
       <pubDate>Tue, 02 Aug 2016 00:00:00 +0000</pubDate>
@@ -2313,335 +2446,6 @@ autoplot(micro)
 &lt;script src=&#34;https://gist.github.com/lcolladotor/7462753.js&#34;&gt;&lt;/script&gt;
 
 &lt;p&gt;Check other topics on &lt;a href=&#34;https://twitter.com/search?q=%23rstats&#34; target=&#34;_blank&#34;&gt;#rstats&lt;/a&gt;.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Creating your Jekyll-Bootstrap powered blog for R blogging</title>
-      <link>http://lcolladotor.github.io/2013/11/09/Creating-your-Jekyll-Bootstrap-powered-blog-for-R-blogging</link>
-      <pubDate>Sat, 09 Nov 2013 00:00:00 +0000</pubDate>
-      
-      <guid>http://lcolladotor.github.io/2013/11/09/Creating-your-Jekyll-Bootstrap-powered-blog-for-R-blogging</guid>
-      <description>
-
-&lt;p&gt;As you might have noticed, I recently decided to move &lt;code&gt;Fellgernon Bit&lt;/code&gt; from &lt;a href=&#34;http://bit.ly/FellgernonBit&#34; target=&#34;_blank&#34;&gt;Tumblr&lt;/a&gt; to &lt;a href=&#34;http://bit.ly/FellBit&#34; target=&#34;_blank&#34;&gt;GitHub&lt;/a&gt;. There are a couple of reasons why I made this change.&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;I wanted a more professional-looking blog.
-
-&lt;ul&gt;
-&lt;li&gt;There are not many R blogs on Tumblr, and well, long text posts are not really meant for Tumblr.&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Better code highlighting.
-
-&lt;ul&gt;
-&lt;li&gt;I had enabled R code highlighting using the highlighting instructions from Jeffrey Horner (&lt;span class=&#34;showtooltip&#34; title=&#34;@jeffreyhorner (2013). &#39;Blog with R Markdown and tumblr: Part I.&#39; .&#34;&gt;&lt;a href=&#34;http://jeffreyhorner.tumblr.com/post/25804518110/blog-with-r-markdown-and-tumblr-part-i&#34;&gt;Horner, Part I&lt;/a&gt;&lt;/span&gt;). The instructions are great! I guess I just got lazy to tweak the CSS of my Tumblr blog to fix some things I didn&amp;rsquo;t like.&lt;/li&gt;
-&lt;li&gt;I also want to be able to highlight code from other languages, like &lt;code&gt;bash&lt;/code&gt;.&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Make it easier to embed any HTML code.
-
-&lt;ul&gt;
-&lt;li&gt;Yes, you can write posts at Tumblr in pure HTML but sometimes things break as Tumblr doesn&amp;rsquo;t like them.&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Easier process of writing posts using Rmd files.
-
-&lt;ul&gt;
-&lt;li&gt;The steps in Horner&amp;rsquo;s guide (&lt;span class=&#34;showtooltip&#34; title=&#34;@jeffreyhorner (2013). &#39;Blog with R Markdown and tumblr: Part II.&#39; .&#34;&gt;&lt;a href=&#34;http://jeffreyhorner.tumblr.com/post/25943954723/blog-with-r-markdown-and-tumblr-part-ii&#34;&gt;Horner, Part II&lt;/a&gt;&lt;/span&gt;) are quite involved. Instead of those steps, I was just knitting my posts and then manually copying the html code in the &lt;code&gt;body&lt;/code&gt; tags, then pasting it in Tumblr.&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Easy way to host figures and link to them.
-
-&lt;ul&gt;
-&lt;li&gt;I have previously hosted pictures through Picasa Web Albums, but with the push towards Google Plus they made it harder to embed solo pictures (you can embed Google+ posts though).&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;I had also previously heard about &lt;a href=&#34;http://jekyllrb.com/&#34; target=&#34;_blank&#34;&gt;Jekyll&lt;/a&gt;-powered blogs, specially thanks to Yihui Xie&amp;rsquo;s blog (&lt;span class=&#34;showtooltip&#34; title=&#34;Xie Y (2013). &#39;Statistics, R, Graphics and Fun | Yihui Xie.&#39; .&#34;&gt;&lt;a href=&#34;http://yihui.name/en/&#34;&gt;Xie, English version&lt;/a&gt;&lt;/span&gt;). At the time when I first learned about this type of blog it seemed challenging so I never dedicated the time to really learn about it. What ended up movitivating me to do so was our new student bloggers group &lt;a href=&#34;https://twitter.com/jhubiostat&#34; target=&#34;_blank&#34;&gt;@jhubiostat&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Let me describe how I set up &lt;a href=&#34;http://bit.ly/FellBit&#34; target=&#34;_blank&#34;&gt;Fellgernon Bit @ GitHub&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h2 id=&#34;setting-up-fellgernon-bit-github-http-bit-ly-fellbit&#34;&gt;Setting up &lt;a href=&#34;http://bit.ly/FellBit&#34; target=&#34;_blank&#34;&gt;Fellgernon Bit @ GitHub&lt;/a&gt;&lt;/h2&gt;
-
-&lt;h3 id=&#34;creating-the-jekyll-bootstrap-blog&#34;&gt;Creating the Jekyll-Bootstrap blog&lt;/h3&gt;
-
-&lt;p&gt;My main guide to setup the blog comes from a post by J. Fisher (&lt;span class=&#34;showtooltip&#34; title=&#34;Fisher JC (2012). &#39;Blog with Knitr and Jekyll.&#39; .&#34;&gt;&lt;a href=&#34;http://jfisher-usgs.github.io/r/2012/07/03/knitr-jekyll/&#34;&gt;Fisher, 2012&lt;/a&gt;&lt;/span&gt;) which points to another of his posts (&lt;span class=&#34;showtooltip&#34; title=&#34;Fisher JC (2012). &#39;Jekyll Build on Windows.&#39; .&#34;&gt;&lt;a href=&#34;http://jfisher-usgs.github.io/lessons/2012/05/30/jekyll-build-on-windows/&#34;&gt;Fisher, 2012b&lt;/a&gt;&lt;/span&gt;).&lt;/p&gt;
-
-&lt;h4 id=&#34;install-jekyll&#34;&gt;Install Jekyll&lt;/h4&gt;
-
-&lt;p&gt;Before doing anything, I first had to install &lt;a href=&#34;http://jekyllrb.com/&#34; target=&#34;_blank&#34;&gt;Jekyll&lt;/a&gt;. To do so I recommend checking the installation documentation (&lt;span class=&#34;showtooltip&#34; title=&#34;(2013). &#39;Installation.&#39; .&#34;&gt;&lt;a href=&#34;http://jekyllrb.com/docs/installation/&#34;&gt;Jekyll Installation&lt;/a&gt;&lt;/span&gt;).&lt;/p&gt;
-
-&lt;p&gt;To install &lt;a href=&#34;http://jekyllrb.com/&#34; target=&#34;_blank&#34;&gt;Jekyll&lt;/a&gt;, I needed to have &lt;a href=&#34;https://www.ruby-lang.org/en/downloads/&#34; target=&#34;_blank&#34;&gt;Ruby&lt;/a&gt; and &lt;a href=&#34;http://rubygems.org/pages/download&#34; target=&#34;_blank&#34;&gt;RubyGems&lt;/a&gt;. Since I use &lt;a href=&#34;http://www.macports.org/&#34; target=&#34;_blank&#34;&gt;MacPorts&lt;/a&gt; these are the steps I used:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;
-## Update MacPorts, can take a while!!
-sudo port selfupdate
-sudo port upgrade outdated
-
-## Search for Ruby and install it
-## I think that Jekyll needs 1.9+ since I had 1.8 already installed
-port search ruby
-sudo port install ruby19
-## Set as default version
-sudo port select --set ruby ruby19
-
-## Check which version you have
-ruby --version
-
-## I manually set mine to be ruby1.9
-cd /opt/local/bin
-sudo ln -s ruby1.9 ruby
-ruby --version 
-## This is mine:
-## ruby 1.9.3p448 (2013-06-27 revision 41675) [x86_64-darwin12]
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;With Ruby in place, I could then install jekyll.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;
-sudo gem install jekyll
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Note that you can also do this after initializing the blog.&lt;/p&gt;
-
-&lt;h3 id=&#34;initialize-blog&#34;&gt;Initialize blog&lt;/h3&gt;
-
-&lt;p&gt;Following the instructions (&lt;span class=&#34;showtooltip&#34; title=&#34;Fisher JC (2012). &#39;Jekyll Build on Windows.&#39; .&#34;&gt;&lt;a href=&#34;http://jfisher-usgs.github.io/lessons/2012/05/30/jekyll-build-on-windows/&#34;&gt;Fisher, 2012b&lt;/a&gt;&lt;/span&gt;) I then acquired all the setup files for &lt;a href=&#34;http://jekyllbootstrap.com/&#34; target=&#34;_blank&#34;&gt;Jekyll-Bootstrap&lt;/a&gt;. The installation instructions are quite straight forward as you will see (&lt;span class=&#34;showtooltip&#34; title=&#34;(2013). &#39;Jekyll Quick Start | ruhoh universal static blog generator.&#39; .&#34;&gt;&lt;a href=&#34;http://jekyllbootstrap.com/usage/jekyll-quick-start.html&#34;&gt;JB Quick Start&lt;/a&gt;&lt;/span&gt;).&lt;/p&gt;
-
-&lt;p&gt;First, I created the &lt;code&gt;lcolladotor.github.com&lt;/code&gt; repository on GitHub. As my GitHub username is &lt;code&gt;lcolladotor&lt;/code&gt;, by default GitHub will consider the &lt;code&gt;lcolladotor.github.com&lt;/code&gt; repository as a GitHub pages repository and publish it. Thus creating &lt;a href=&#34;http://lcolladotor.github.io/&#34; target=&#34;_blank&#34;&gt;lcolladotor.github.io/&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Once the repository was created, I added the Jekyll-Bootstrap files.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;
-## Initialize repo with Jekyll-Bootstrap files
-git clone https://github.com/plusjade/jekyll-bootstrap.git lcolladotor.github.com
-cd lcolladotor.github.com/
-git remote set-url origin git@github.com:lcolladotor/lcolladotor.github.com.git
-git push -u origin master
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;change-theme-to-twitter-2-0&#34;&gt;Change theme to Twitter-2.0&lt;/h3&gt;
-
-&lt;p&gt;Jekyll-Bootstrap includes several themes (&lt;span class=&#34;showtooltip&#34; title=&#34;(2013). &#39;Using Themes | ruhoh universal static blog generator.&#39; .&#34;&gt;&lt;a href=&#34;http://jekyllbootstrap.com/usage/jekyll-theming.html&#34;&gt;JB Themes&lt;/a&gt;&lt;/span&gt;) which you check on their &lt;a href=&#34;http://themes.jekyllbootstrap.com/&#34; target=&#34;_blank&#34;&gt;theme explorer&lt;/a&gt;. I think that &lt;a href=&#34;http://jfisher-usgs.github.io/&#34; target=&#34;_blank&#34;&gt;J. Fisher&amp;rsquo;s blog&lt;/a&gt; looks good with Twitter-2.0 and decided to follow his lead. Furthermore, he has customized a few things (check &lt;a href=&#34;https://github.com/jfisher-usgs/jfisher-usgs.github.com/commits/master&#34; target=&#34;_blank&#34;&gt;his blog&amp;rsquo;s history&lt;/a&gt;) which I just plan on using.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;
-## Install Twitter-2.0 theme
-rake theme:install git=&amp;quot;https://github.com/gdagley/theme-twitter-2.0&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;code-highlighting&#34;&gt;Code highlighting&lt;/h3&gt;
-
-&lt;p&gt;The default Jekyll highlighting setup uses &lt;a href=&#34;http://pygments.org/&#34; target=&#34;_blank&#34;&gt;pygments&lt;/a&gt;. I am basing my statement on the documentation for the &lt;em&gt;highlight&lt;/em&gt; argument in &lt;code&gt;?knitr::render_jekyll&lt;/code&gt;:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;which code highlighting engine to use: for pygments, the Liquid syntax is used (default approach Jekyll)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;So I installed Pygments.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;
-## Install Pygments, assuming you have Python installed
-curl -O http://python-distribute.org/distribute_setup.py
-sudo python distribute_setup.py
-sudo easy_install Pygments
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Note that (&lt;span class=&#34;showtooltip&#34; title=&#34;Fisher JC (2012). &#39;Jekyll Build on Windows.&#39; .&#34;&gt;&lt;a href=&#34;http://jfisher-usgs.github.io/lessons/2012/05/30/jekyll-build-on-windows/&#34;&gt;Fisher, 2012b&lt;/a&gt;&lt;/span&gt;) details some other steps. I basically copied his &lt;a href=&#34;https://github.com/jfisher-usgs/jfisher-usgs.github.com/blob/master/assets/themes/twitter-2.0/css/syntax.css&#34; target=&#34;_blank&#34;&gt;syntax.css&lt;/a&gt; file and saved it as &lt;code&gt;/assets/themes/twitter-2.0/css/syntax.css&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;Note that you do have to add to &lt;code&gt;_includes/themes/twitter-2.0/default.html&lt;/code&gt; the following line:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;link href=&amp;quot;/assets/themes/twitter-2.0/css/syntax.css&amp;quot; rel=&amp;quot;stylesheet&amp;quot; type=&amp;quot;text/css&amp;quot;&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;As you can see &lt;a href=&#34;https://github.com/lcolladotor/lcolladotor.github.com/blob/master/_includes/themes/twitter-2.0/default.html&#34; target=&#34;_blank&#34;&gt;on my own file&lt;/a&gt; in line 23 (currently) I am using a Liquid syntax instead of specifying the full path.&lt;/p&gt;
-
-&lt;h3 id=&#34;import-posts&#34;&gt;Import posts&lt;/h3&gt;
-
-&lt;p&gt;Next I had to import my posts from Tumblr. Jekyll has a varied set of tools that allow you to quickly import posts which I recommend using if you are migrating your blog (&lt;span class=&#34;showtooltip&#34; title=&#34;(2013). &#39;Blog migrations.&#39; .&#34;&gt;&lt;a href=&#34;http://jekyllrb.com/docs/migrations/&#34;&gt;Blog Migrations&lt;/a&gt;&lt;/span&gt;).&lt;/p&gt;
-
-&lt;p&gt;The Tumblr importer allows you to either import them into HTML format or Markdown format. I first tried Markdown, but ran into some problems. So I decided to import them into HTML format, and rename them to Markdown.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;
-## Install importing tools
-sudo gem install jekyll-import --pre
-
-## Import the posts
-cd ~/
-mkdir tmp
-/opt/local/bin/ruby1.9 -rubygems -e &#39;require &amp;quot;jekyll/jekyll-import/tumblr&amp;quot;; JekyllImport::Tumblr.process(&amp;quot;http://fellgernon.tumblr.com&amp;quot;, &amp;quot;html&amp;quot;, true, false, false)&#39;
-## There is a post that the converter didn&#39;t like, so I had to set to &amp;quot;private&amp;quot; mode
-
-
-## Rename from HTML to Markdown
-cd _posts/tumblr/
-for i in *html; do echo $i; filename=$(basename &amp;quot;$i&amp;quot;); filename2=&amp;quot;${filename%.*}&amp;quot;; echo $filename2; mv $i ${filename2}.md; done
-
-## Move the posts to _posts
-mv ~/tmp/_posts/tumblr/*md ~/WhereYouHaveYourLocalGitRepoCopy/lcollado.github.com/_posts/
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;I then had to do some manual edits on the posts, specially for code chunks. For example, &lt;a href=&#34;https://raw.github.com/lcolladotor/lcolladotor.github.com/master/_posts/2013-05-09-reading-an-r-file-from-github.md&#34; target=&#34;_blank&#34;&gt;this post&lt;/a&gt; has R chunks which I had to surround by:&lt;/p&gt;
-
-&lt;script src=&#34;https://gist.github.com/lcolladotor/7388043.js&#34;&gt;&lt;/script&gt;
-
-&lt;p&gt;To complete the posts, I made sure the YAML front matter was correct and defined categories since I only had tags in Tumblr.&lt;/p&gt;
-
-&lt;h3 id=&#34;viewing-your-blog-locally&#34;&gt;Viewing your blog locally&lt;/h3&gt;
-
-&lt;p&gt;Once you have the posts, you can use Jekyll to view your blog locally.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;
-## Go to your directory
-~/WhereYouHaveYourLocalGitRepoCopy/lcollado.github.com/
-
-## Generate the static view of your blog
-jekyll serve
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;In my case, &lt;code&gt;jekyll serve&lt;/code&gt; prompted a couple of errors which I had to go to the posts and edit. For example, some HTML tag that I opened but didn&amp;rsquo;t close. Stuff like that.&lt;/p&gt;
-
-&lt;p&gt;Once you run the previous command, you can then view your site on your browser at &lt;a href=&#34;http://localhost:4000/&#34; target=&#34;_blank&#34;&gt;http://localhost:4000/&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;customizing&#34;&gt;Customizing&lt;/h3&gt;
-
-&lt;p&gt;The very first thing you must change is the _config.yml file. The file you copied from Jekyll-Bootstrap includes instructions on how to do so. If you learn by example, take a peek at &lt;a href=&#34;https://github.com/lcolladotor/lcolladotor.github.com/blob/master/_config.yml&#34; target=&#34;_blank&#34;&gt;mine&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;In my case, I use &lt;a href=&#34;http://disqus.com/&#34; target=&#34;_blank&#34;&gt;Disqus&lt;/a&gt; for comments and &lt;a href=&#34;http://www.google.com/analytics&#34; target=&#34;_blank&#34;&gt;Google Analytics&lt;/a&gt; for tracking visits. Since I was also using &lt;a href=&#34;http://disqus.com/&#34; target=&#34;_blank&#34;&gt;Disqus&lt;/a&gt; for my Tumblr blog, I used &lt;a href=&#34;http://disqus.com/&#34; target=&#34;_blank&#34;&gt;Disqus&lt;/a&gt;&amp;rsquo; tools to migrate the comments. Finally, I use &lt;a href=&#34;http://feedburner.google.com/&#34; target=&#34;_blank&#34;&gt;FeedBurner&lt;/a&gt; for my RSS feed, which I was able to update to the new &lt;a href=&#34;http://lcolladotor.github.io/rss.xml&#34; target=&#34;_blank&#34;&gt;RSS generated by Fellgernon Bit @ GitHub&lt;/a&gt;. Thus, the subscribers to &lt;a href=&#34;http://feeds.feedburner.com/FellgernonBit&#34; target=&#34;_blank&#34;&gt;feeds.feedburner.com/FellgernonBit&lt;/a&gt; didn&amp;rsquo;t have to change anything.&lt;/p&gt;
-
-&lt;p&gt;I also added &lt;a href=&#34;https://www.addthis.com/get/smart-layers#.Un5oIpTF2Ql&#34; target=&#34;_blank&#34;&gt;AddThis Smart Layers&lt;/a&gt; with &lt;a href=&#34;https://bitly.com/&#34; target=&#34;_blank&#34;&gt;bit.ly&lt;/a&gt; shortening to the site and a &lt;a href=&#34;http://www.clustrmaps.com/&#34; target=&#34;_blank&#34;&gt;ClustrMap&lt;/a&gt; as you can see in &lt;a href=&#34;https://github.com/lcolladotor/lcolladotor.github.com/blob/master/_layouts/page.html&#34; target=&#34;_blank&#34;&gt;_layouts/page.html&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;As for math, I am currently using the rdiscount flavor of Markdown and loading the MathJax script as you can see in &lt;a href=&#34;https://github.com/lcolladotor/lcolladotor.github.com/blob/master/_layouts/default.html&#34; target=&#34;_blank&#34;&gt;_layouts/default.html&lt;/a&gt;. However, note that we shoudn&amp;rsquo;t ask too much power out of Markdown for math (&lt;span class=&#34;showtooltip&#34; title=&#34;Xie Y (2013). &#39;Markdown or LaTeX? | Yihui Xie.&#39; .&#34;&gt;&lt;a href=&#34;http://yihui.name/en/2013/10/markdown-or-latex/&#34;&gt;Xie, 2013&lt;/a&gt;&lt;/span&gt;).&lt;/p&gt;
-
-&lt;p&gt;To use rdiscount locally, I also had to install it. I have also tried out kramdown.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;
-## Markdown flavors
-sudo gem install rdiscount
-sudo gem install kramdown
-
-## I don&#39;t remember why I also installed this:
-sudo gem install nokogiri
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;I then customized the index and added other pages:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/lcolladotor/lcolladotor.github.com/blob/master/index.html&#34; target=&#34;_blank&#34;&gt;index.html&lt;/a&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Used code from Jason Fisher to add the pagination.&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/lcolladotor/lcolladotor.github.com/blob/master/about.html&#34; target=&#34;_blank&#34;&gt;about.html&lt;/a&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Simple description&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/lcolladotor/lcolladotor.github.com/blob/master/_includes/themes/twitter-2.0/default.html&#34; target=&#34;_blank&#34;&gt;_includes/themes/twitter-2.0/default.html&lt;/a&gt;
-
-&lt;ul&gt;
-&lt;li&gt;I added a CSS drop down menu (constructed with &lt;a href=&#34;http://cssmenumaker.com/builder/1044267&#34; target=&#34;_blank&#34;&gt;CSS Menu Maker&lt;/a&gt;) with the blogs I follow. For this I also had to modify &lt;a href=&#34;https://github.com/lcolladotor/lcolladotor.github.com/commit/15e03fdc317399b37521f130269adf3e7da7efb3&#34; target=&#34;_blank&#34;&gt;_assets/themes/twitter-2.0/css/style.css&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;I modified the footer to mention that my posts are under the Creative Commons License version 3 BY-NC-SA. An idea I took from Yihui Xie&amp;rsquo;s blog.
-&lt;br /&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Since I am interested in getting my blog to be a part of &lt;a href=&#34;http://www.r-bloggers.com/&#34; target=&#34;_blank&#34;&gt;R-bloggers&lt;/a&gt;, I created an RSS specific for the posts under the &lt;code&gt;rstats&lt;/code&gt; category to comply with their requirements (&lt;span class=&#34;showtooltip&#34; title=&#34;Galili T (2013). &#39;add your blog!&#39; .&#34;&gt;&lt;a href=&#34;http://www.r-bloggers.com/add-your-blog/&#34;&gt;Add your blog!&lt;/a&gt;&lt;/span&gt;).&lt;/p&gt;
-
-&lt;p&gt;For the category-specific RSS I used &lt;code&gt;feed.category.xml&lt;/code&gt; (&lt;span class=&#34;showtooltip&#34; title=&#34;(2013). &#39;jekyll-rss-feeds.&#39; .&#34;&gt;&lt;a href=&#34;https://github.com/snaptortoise/jekyll-rss-feeds&#34;&gt;Jekyll RSS Feed Templates&lt;/a&gt;&lt;/span&gt;) and created &lt;a href=&#34;https://github.com/lcolladotor/lcolladotor.github.com/blob/master/rss-rstats.xml&#34; target=&#34;_blank&#34;&gt;rss-rstats.xml&lt;/a&gt; [see &lt;a href=&#34;https://github.com/lcolladotor/lcolladotor.github.com/blob/master/atom-rstats.xml&#34; target=&#34;_blank&#34;&gt;atom-rstats.xml&lt;/a&gt; if you prefer Atom RSS] which is then processed and converted to &lt;a href=&#34;http://feeds.feedburner.com/FellgernonBit-rstats&#34; target=&#34;_blank&#34;&gt;feeds.feedburner.com/FellgernonBit-rstats&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Note that I use &lt;a href=&#34;http://feedburner.google.com/&#34; target=&#34;_blank&#34;&gt;FeedBurner&lt;/a&gt; to then create &lt;a href=&#34;https://twitter.com/fellgernon&#34; target=&#34;_blank&#34;&gt;Twitter updates&lt;/a&gt; linking to back to the posts. Also, for the rstats one I add the &lt;a href=&#34;https://twitter.com/search?q=%23rstats&#34; target=&#34;_blank&#34;&gt;#rstats&lt;/a&gt; hashtag to the post.&lt;/p&gt;
-
-&lt;h3 id=&#34;writing-an-r-post&#34;&gt;Writing an R post&lt;/h3&gt;
-
-&lt;p&gt;J. Fisher again explains in detail how to blog using Knitr and Jekyll (&lt;span class=&#34;showtooltip&#34; title=&#34;Fisher JC (2012). &#39;Blog with Knitr and Jekyll.&#39; .&#34;&gt;&lt;a href=&#34;http://jfisher-usgs.github.io/r/2012/07/03/knitr-jekyll/&#34;&gt;Fisher, 2012&lt;/a&gt;&lt;/span&gt;). Since I use &lt;a href=&#34;https://github.com/textmate/textmate&#34; target=&#34;_blank&#34;&gt;TextMate2&lt;/a&gt; as my text editor, I went ahead and modified his code and created a command to do so.&lt;/p&gt;
-
-&lt;p&gt;Basically, I modified the &lt;code&gt;knit&lt;/code&gt; command from the &lt;code&gt;SWeave&lt;/code&gt; TextMate bundle and added J. Fisher&amp;rsquo;s code. I saved it under the &lt;code&gt;Menu Actions&lt;/code&gt; of the &lt;code&gt;SWeave&lt;/code&gt; bundle and linked it to &lt;code&gt;alt + e&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;For this to work, I use Google Chrome with the &lt;a href=&#34;https://chrome.google.com/webstore/detail/jmchmkecamhbiokiopfpnfgbidieafmd&#34; target=&#34;_blank&#34;&gt;Markdown Preview&lt;/a&gt; extension installed.&lt;/p&gt;
-
-&lt;p&gt;This is the &lt;a href=&#34;https://gist.github.com/lcolladotor/7388033&#34; target=&#34;_blank&#34;&gt;code for the TextMate command&lt;/a&gt;. You could certainly make it much more concise and drop things, but I like to see a quick preview of the post. However, I still recommend using &lt;code&gt;jekyll serve&lt;/code&gt; for a final thorough preview of the post before pushing it to GitHub.&lt;/p&gt;
-
-&lt;script src=&#34;https://gist.github.com/lcolladotor/7388033.js&#34;&gt;&lt;/script&gt;
-
-&lt;h3 id=&#34;things-i-might-add&#34;&gt;Things I might add&lt;/h3&gt;
-
-&lt;p&gt;Carl Boettiger has a great site &amp;ndash;specially the &lt;a href=&#34;http://carlboettiger.info/lab-notebook.html&#34; target=&#34;_blank&#34;&gt;Lab Notebook&lt;/a&gt; part&amp;ndash; and he describes all the tools he used for making it (&lt;span class=&#34;showtooltip&#34; title=&#34;Boettiger C (2013). &#39;About this site.&#39; .&#34;&gt;&lt;a href=&#34;http://carlboettiger.info/README.html&#34;&gt;Boettiger, 2013&lt;/a&gt;&lt;/span&gt;). One of the features I would like to add to my site is the &lt;code&gt;history&lt;/code&gt; button on the right sidebar he has on his posts which link to the GitHub history of the post. For example check &lt;a href=&#34;http://carlboettiger.info/2013/09/25/mozilla-software-review.html&#34; target=&#34;_blank&#34;&gt;this post&lt;/a&gt; and its &lt;a href=&#34;https://github.com/cboettig/labnotebook/commits/master/_posts/2013-09-25-mozilla-software-review.md&#34; target=&#34;_blank&#34;&gt;history&lt;/a&gt;. I think that it can be very useful for those interested in any edits made to the posts. For example, I had to fix a couple of things on one of my recent posts as you can see &lt;a href=&#34;https://github.com/lcolladotor/lcolladotor.github.com/commits/master/_posts/2013-11-07-bmorebiostats.md&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Looking around, I found the code needed for this to work in Carl&amp;rsquo;s repository: &lt;a href=&#34;https://github.com/cboettig/labnotebook/blob/master/_includes/sidebar.html&#34; target=&#34;_blank&#34;&gt;_includes/sidebar.html&lt;/a&gt;, &lt;a href=&#34;https://github.com/cboettig/labnotebook/tree/master/_plugins/jekyll-labnotebook-plugins&#34; target=&#34;_blank&#34;&gt;_plugins/jekyll-labnotebook-plugins&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;However, GitHub currently does not support Jekyll plugins. Meaning that if you use any plugins, you have to create the site locally and then push it to GitHub instead of just pushing the new posts and letting GitHub handle creating the site. It&amp;rsquo;s not a huge deal, but for now I&amp;rsquo;ll rely on GitHub and keep things simple for me.&lt;/p&gt;
-
-&lt;h2 id=&#34;if-i-were-to-do-it-again&#34;&gt;If I were to do it again&lt;/h2&gt;
-
-&lt;p&gt;Once you install Jekyll, I think the easiest way to set up your own blog is to fork another person&amp;rsquo;s blog&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/jfisher-usgs/jfisher-usgs.github.com&#34; target=&#34;_blank&#34;&gt;J. Fisher&amp;rsquo;s&lt;/a&gt;,&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/yihui/en&#34; target=&#34;_blank&#34;&gt;Yihui Xie&amp;rsquo;s&lt;/a&gt;,&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/cboettig/labnotebook&#34; target=&#34;_blank&#34;&gt;Carl Boettiger&amp;rsquo;s&lt;/a&gt;,&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/lcolladotor/lcolladotor.github.com&#34; target=&#34;_blank&#34;&gt;mine&lt;/a&gt;,&lt;/li&gt;
-&lt;li&gt;or someone else blog you like.
-&lt;br /&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Then delete their posts, give attribution, and customize things like the blog title and other things you would have to customize on any blogging platform (RSS, comments provider, etc).&lt;/p&gt;
-
-&lt;p&gt;Obviously Jekyll gives you much more control over your site, but at the same time, you must also dedicate enough time to learn what to change and make sure that things don&amp;rsquo;t break.&lt;/p&gt;
-
-&lt;h3 id=&#34;post-template&#34;&gt;Post template&lt;/h3&gt;
-
-&lt;p&gt;To finish describing my setup, &lt;a href=&#34;https://gist.github.com/lcolladotor/7387745&#34; target=&#34;_blank&#34;&gt;here is my post template&lt;/a&gt;.&lt;/p&gt;
-
-&lt;script src=&#34;https://gist.github.com/lcolladotor/7387745.js&#34;&gt;&lt;/script&gt;
-
-&lt;h2 id=&#34;wrap-up&#34;&gt;Wrap up&lt;/h2&gt;
-
-&lt;p&gt;I hope that you will find some of this information useful if you are thinking of starting your &lt;code&gt;R&lt;/code&gt; blog powered by Jekyll-Bootstrap and hosted by GitHub.&lt;/p&gt;
-
-&lt;p&gt;Note that since the blog is hosted in GitHub, others can send you pull requests to fix things and/or create guest posts. Just as easily you can make it a multi-author blog by changing the collaborators setting of the GitHub repository.&lt;/p&gt;
-
-&lt;p&gt;This wouldn&amp;rsquo;t have been possible without J. Fisher&amp;rsquo;s posts and many other resources available online.&lt;/p&gt;
-
-&lt;h3 id=&#34;references&#34;&gt;References&lt;/h3&gt;
-
-&lt;p&gt;Citations made with &lt;code&gt;knitcitations&lt;/code&gt; (&lt;span class=&#34;showtooltip&#34; title=&#34;Boettiger C (2013). knitcitations: Citations for knitr markdown files. R package version 0.4-7.&#34;&gt;&lt;a href=&#34;http://CRAN.R-project.org/package=knitcitations&#34;&gt;Boettiger, 2013b&lt;/a&gt;&lt;/span&gt;).&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;@jeffreyhorner,  Blog with R Markdown and tumblr: Part I.  &lt;em&gt;Jeffrey Horner&lt;/em&gt;  &lt;a href=&#34;http://jeffreyhorner.tumblr.com/post/25804518110/blog-with-r-markdown-and-tumblr-part-i&#34; target=&#34;_blank&#34;&gt;http://jeffreyhorner.tumblr.com/post/25804518110/blog-with-r-markdown-and-tumblr-part-i&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;@jeffreyhorner,  Blog with R Markdown and tumblr: Part II.  &lt;em&gt;Jeffrey Horner&lt;/em&gt;  &lt;a href=&#34;http://jeffreyhorner.tumblr.com/post/25943954723/blog-with-r-markdown-and-tumblr-part-ii&#34; target=&#34;_blank&#34;&gt;http://jeffreyhorner.tumblr.com/post/25943954723/blog-with-r-markdown-and-tumblr-part-ii&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Yihui Xie,  Statistics, R, Graphics and Fun | Yihui Xie.  &lt;a href=&#34;http://yihui.name/en/&#34; target=&#34;_blank&#34;&gt;http://yihui.name/en/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Jason Fisher,   (2012) Blog with Knitr and Jekyll.  &lt;a href=&#34;http://jfisher-usgs.github.io/r/2012/07/03/knitr-jekyll/&#34; target=&#34;_blank&#34;&gt;http://jfisher-usgs.github.io/r/2012/07/03/knitr-jekyll/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Jason Fisher,   (2012) Jekyll Build on Windows.  &lt;a href=&#34;http://jfisher-usgs.github.io/lessons/2012/05/30/jekyll-build-on-windows/&#34; target=&#34;_blank&#34;&gt;http://jfisher-usgs.github.io/lessons/2012/05/30/jekyll-build-on-windows/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Installation.  &lt;em&gt;Jekyll â¢ Simple, blog-aware, static sites&lt;/em&gt;  &lt;a href=&#34;http://jekyllrb.com/docs/installation/&#34; target=&#34;_blank&#34;&gt;http://jekyllrb.com/docs/installation/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Jekyll Quick Start | ruhoh universal static blog generator.  &lt;a href=&#34;http://jekyllbootstrap.com/usage/jekyll-quick-start.html&#34; target=&#34;_blank&#34;&gt;http://jekyllbootstrap.com/usage/jekyll-quick-start.html&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Using Themes | ruhoh universal static blog generator.  &lt;a href=&#34;http://jekyllbootstrap.com/usage/jekyll-theming.html&#34; target=&#34;_blank&#34;&gt;http://jekyllbootstrap.com/usage/jekyll-theming.html&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Blog migrations.  &lt;em&gt;Jekyll â¢ Simple, blog-aware, static sites&lt;/em&gt;  &lt;a href=&#34;http://jekyllrb.com/docs/migrations/&#34; target=&#34;_blank&#34;&gt;http://jekyllrb.com/docs/migrations/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Tal Galili,  add your blog!.  &lt;em&gt;R-bloggers&lt;/em&gt;  &lt;a href=&#34;http://www.r-bloggers.com/add-your-blog/&#34; target=&#34;_blank&#34;&gt;http://www.r-bloggers.com/add-your-blog/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;jekyll-rss-feeds.  &lt;em&gt;GitHub&lt;/em&gt;  &lt;a href=&#34;https://github.com/snaptortoise/jekyll-rss-feeds&#34; target=&#34;_blank&#34;&gt;https://github.com/snaptortoise/jekyll-rss-feeds&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Yihui Xie,   (2013) Markdown or LaTeX? | Yihui Xie.  &lt;a href=&#34;http://yihui.name/en/2013/10/markdown-or-latex/&#34; target=&#34;_blank&#34;&gt;http://yihui.name/en/2013/10/markdown-or-latex/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Carl Boettiger,   (2013) About this site.  &lt;em&gt;Lab Notebook&lt;/em&gt;  &lt;a href=&#34;http://carlboettiger.info/README.html&#34; target=&#34;_blank&#34;&gt;http://carlboettiger.info/README.html&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Carl Boettiger,   (2013) knitcitations: Citations for knitr markdown files.  &lt;a href=&#34;http://CRAN.R-project.org/package=knitcitations&#34; target=&#34;_blank&#34;&gt;http://CRAN.R-project.org/package=knitcitations&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;reproducibility&#34;&gt;Reproducibility&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;sessionInfo()
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code&gt;## R version 3.0.2 (2013-09-25)
-## Platform: x86_64-apple-darwin10.8.0 (64-bit)
-## 
-## locale:
-## [1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8
-## 
-## attached base packages:
-## [1] stats     graphics  grDevices utils     datasets  methods   base     
-## 
-## other attached packages:
-## [1] knitcitations_0.4-7 bibtex_0.3-6        knitr_1.5          
-## 
-## loaded via a namespace (and not attached):
-##  [1] codetools_0.2-8 digest_0.6.4    evaluate_0.5.1  formatR_0.10   
-##  [5] httr_0.2        RCurl_1.95-4.1  stringr_0.6.2   tools_3.0.2    
-##  [9] XML_3.95-0.2    xtable_1.7-1
-&lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
     

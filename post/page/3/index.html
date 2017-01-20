@@ -176,6 +176,60 @@
   
   <div>
     
+    <h2><a href="http://lcolladotor.github.io/2013/11/14/Trying-to-reduce-the-memory-overhead-when-using-mclapply">Trying to reduce the memory overhead when using mclapply</a></h2>
+    
+
+<div class="article-metadata">
+
+  <span class="article-date">
+    <time datetime="2013-11-14 00:00:00 &#43;0000 UTC" itemprop="datePublished">
+      Thu, Nov 14, 2013
+    </time>
+  </span>
+
+  
+  
+  
+  <span class="article-categories">
+    <i class="fa fa-folder"></i>
+    
+    <a href="/categories/rstats">rstats</a
+    >
+    
+  </span>
+  
+  
+
+  
+  
+  
+  <span class="article-tags">
+    <i class="fa fa-tags"></i>
+    
+    <a href="/tags/help">Help</a
+    >, 
+    
+    <a href="/tags/rstats">rstats</a
+    >
+    
+  </span>
+  
+  
+
+  
+
+</div>
+
+    <div class="article-style"><p>
+      
+      I am currently trying to understand how to reduce the memory used by mclapply. This function is rather complicated and others have explained the differences versus parLapply (A_Skelton73, 2013; lockedoff, 2012 ) and also made it clear that in mclapply each job does not know if the others are running out of memory and thus cannot trigger gc (Urbanek, 2012).
+While I still struggle to understand all the details of mclapply, I can successfully use it to reduce computation time at the expense of a very high memory load.
+      
+    </p></div>
+  </div>
+  
+  <div>
+    
     <h2><a href="http://lcolladotor.github.io/2013/11/09/Creating-your-Jekyll-Bootstrap-powered-blog-for-R-blogging">Creating your Jekyll-Bootstrap powered blog for R blogging</a></h2>
     
 
@@ -672,62 +726,6 @@ The tutorial is very nicely formatted with code in bold highlighting parts that 
       Description The useR2013 conference is organizing a data analysis contest, check the rules here.
 They have a package called useR2013DAC with two data sets: one from La Liga and the other one from the Formula 1. Once you download and install the package (available here), you can quickly explore the data using the following R commands:
 Data exploration ## Load the package library(useR2013DAC) ## Explore laliga data data(laliga) head(laliga)  ## Season Week HomeTeam AwayTeam ## 1 <sup>2008</sup>&frasl;<sub>09</sub> 1 Athletic Club Bilbao Union Deportiva Almeria ## 2 <sup>2008</sup>&frasl;<sub>09</sub> 1 Atlético Madrid Málaga CF ## 3 <sup>2008</sup>&frasl;<sub>09</sub> 1 Betis Sevilla Real Club Recreativo Huelva ## 4 <sup>2008</sup>&frasl;<sub>09</sub> 1 CA Osasuna Villarreal CF ## 5 <sup>2008</sup>&frasl;<sub>09</sub> 1 CD Numancia FC Barcelona ## 6 <sup>2008</sup>&frasl;<sub>09</sub> 1 Deportivo de La Coruña Real Madrid CF ## HomeGoals AwayGoals ## 1 1 3 ## 2 4 0 ## 3 0 1 ## 4 1 1 ## 5 1 0 ## 6 2 1  summary(laliga)  ## Season Week HomeTeam AwayTeam ## Length:1900 Min.
-      
-    </p></div>
-  </div>
-  
-  <div>
-    
-    <h2><a href="http://lcolladotor.github.io/2013/05/09/Reading-an-R-file-from-GitHub">Reading an R file from GitHub</a></h2>
-    
-
-<div class="article-metadata">
-
-  <span class="article-date">
-    <time datetime="2013-05-09 00:00:00 &#43;0000 UTC" itemprop="datePublished">
-      Thu, May 9, 2013
-    </time>
-  </span>
-
-  
-  
-  
-  <span class="article-categories">
-    <i class="fa fa-folder"></i>
-    
-    <a href="/categories/rstats">rstats</a
-    >
-    
-  </span>
-  
-  
-
-  
-  
-  
-  <span class="article-tags">
-    <i class="fa fa-tags"></i>
-    
-    <a href="/tags/rstats">rstats</a
-    >, 
-    
-    <a href="/tags/github">github</a
-    >
-    
-  </span>
-  
-  
-
-  
-
-</div>
-
-    <div class="article-style"><p>
-      
-      Lets say that I want to read in this R file from GitHub into R.
-The first thing you have to do is locate the raw file. You can do so by clicking on the Raw button in GitHub. In this case it&#8217;s <a href="https://raw.github.com/lcolladotor/ballgownR-devel/master/ballgownR/R/infoGene.R" target="_blank">https://raw.github.com/lcolladotor/ballgownR-devel/master/ballgownR/R/infoGene.R</a>
-One would think that using source() would work, but it doesn&#8217;t as shown below:
-source(&quot;<a href="https://raw.github.com/lcolladotor/ballgownR-devel/master/ballgownR/R/infoGene.R&quot;" target="_blank">https://raw.github.com/lcolladotor/ballgownR-devel/master/ballgownR/R/infoGene.R&quot;</a>)  ## Warning: unsupported URL scheme  ## Error: cannot open the connection  However, thanks again to Hadley Wickham you can do so by using the devtools (Wickham &amp; Chang, 2013 ) package.
       
     </p></div>
   </div>
