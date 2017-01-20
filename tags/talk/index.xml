@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Talk on L. Collado-Torres</title>
+    <link>http://lcolladotor.github.io/tags/talk/index.xml</link>
+    <description>Recent content in Talk on L. Collado-Torres</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2011-2017 Leonardo Collado Torres under (CC) BY-NC-SA</copyright>
+    <atom:link href="/tags/talk/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Introduction to R and Biostatistics (2012 version): presentation</title>
+      <link>http://lcolladotor.github.io/2012/11/12/Introduction-to-R-and-Biostatistics-2012-version-presentation</link>
+      <pubDate>Mon, 12 Nov 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://lcolladotor.github.io/2012/11/12/Introduction-to-R-and-Biostatistics-2012-version-presentation</guid>
+      <description>&lt;p&gt;To follow my &lt;a href=&#34;http://fellgernon.tumblr.com/post/34677935591/introducing-r-and-biostatistics-to-first-year-lcg#.UKFlW-Oe918&#34;&gt;Introducing R and Biostatistics to first year LCG students (2012 version)&lt;/a&gt; post,  you can now find the presentation online from my site either in &lt;a href=&#34;http://www.biostat.jhsph.edu/~lcollado/lcg/introR2012/intro_R_Biostat_LCG_2012_slides.html&#34;&gt;presentation format&lt;/a&gt;, in a &lt;a href=&#34;http://www.biostat.jhsph.edu/~lcollado/lcg/introR2012/intro_R_Biostat_LCG_2012.html&#34;&gt;single webpage format&lt;/a&gt;, or the &lt;a href=&#34;http://www.biostat.jhsph.edu/~lcollado/lcg/introR2012/intro_R_Biostat_LCG_2012.Rmd&#34;&gt;raw Rmd file&lt;/a&gt;. To prove the point that publishing to &lt;a href=&#34;http://rpubs.com/&#34;&gt;RPubs&lt;/a&gt; is super easy, you can also find the &lt;a href=&#34;http://rpubs.com/lcollado/2618&#34;&gt;single webpage format over there&lt;/a&gt;. I also like how you can comment and share in RPubs.&lt;/p&gt;
+&lt;p&gt;One of the challenges of giving a presentation to first year students is finding the balance between introducing them to cool things you are doing in your work and actually giving a talk that they can follow. I thought about this and ended dropping anything related to my work.&lt;/p&gt;
+&lt;p&gt;My presentation was split pretty much in two parts. First, I wanted to promote some philosophical discussion about what is statistics. Second, I gave a brief overview of what you can do with R. Or more exactly, what they should be able to learn to do even if they become &lt;em&gt;wet &lt;/em&gt;biologists.&lt;/p&gt;
+&lt;p&gt;While planning this presentation, I knew that I wanted to give the new students a flavor of the three different currents in statistics. I aimed to improve &lt;a href=&#34;http://fellgernon.tumblr.com/post/13739343319/introducing-biostatistics-to-first-year-lcg-students#.UKFl6uOe918&#34;&gt;my 2011 explanations&lt;/a&gt; now that I&amp;#8217;m taking the Foundations of Statistical Inference course. I&amp;#8217;m happy with the result and I think this is greatly due to Royall&amp;#8217;s diagnostic test example.&lt;/p&gt;
+&lt;p&gt;Another key point that I wanted to emphasize was that RStudio is the way to go if you are new to R. It is very straightforward to use, plus it is nicely interegrated with &lt;a href=&#34;http://yihui.name/knitr/&#34;&gt;knitr&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I decided to use R Markdown (Rmd) for the first time, after seeing how easy &lt;a href=&#34;http://daringfireball.net/projects/markdown/&#34;&gt;Markdown&lt;/a&gt; really is compared to using LaTeX and Beamer. However, when it got to doing the presentation I have to say that I was a bit dissapointed by how some things just break when using the R Markdown to Markdown to HTML presentation pipeline —using &lt;a href=&#34;http://johnmacfarlane.net/pandoc/&#34;&gt;pandoc&lt;/a&gt; for the last step. For example, the math breaks when using mathml or mathjax at times (like after adding an iframe for a youtube video), so I had to use webtex which doesn&amp;#8217;t look as nice.&lt;/p&gt;
+&lt;p&gt;If you are interested in the commands, I used the &amp;#8220;Knit HTML&amp;#8221; button in R Studio [equivalent to running from R: &lt;em&gt;library(knitr); knit(&amp;#8220;filename.Rmd&amp;#8221;)&lt;/em&gt;] and then ran the following command:&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;pandoc -s -S &amp;#8212;webtex -i -t dzslides intro_R_Biostat_LCG_2012.md -o intro_R_Biostat_LCG_2012_slides.html &amp;amp; open intro_R_Biostat_LCG_2012_slides.html&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;I was originally aiming to have a single Rmd file to produce an HTML presentation and a Beamer presentation. However, controlling the pictures in the Beamer output proved to be challenging. While I had a work around, the final problem was the math part. By the time I realized this it was too late —I just dropped the Beamer presentation. Googling, even the author of knitr acknowledges that the best input for PDF output is still LaTeX.&lt;/p&gt;
+&lt;p&gt;In the end, I&amp;#8217;m happy that I got the HTML presentation done using R Markdown and briefly introduced it to the first year students. The basics of knitr are very easy to learn and I&amp;#8217;m hoping that it got some of them curious enough to try it.&lt;/p&gt;
+&lt;p&gt;Next thing in line: prepare 5 questions for the students.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Introducing R and Biostatistics to first year LCG students (2012 version)</title>
+      <link>http://lcolladotor.github.io/2012/10/30/Introducing-R-and-Biostatistics-to-first-year-LCG-students-2012-version</link>
+      <pubDate>Tue, 30 Oct 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://lcolladotor.github.io/2012/10/30/Introducing-R-and-Biostatistics-to-first-year-LCG-students-2012-version</guid>
+      <description>&lt;p&gt;&lt;p&gt;On Friday November 9th I&amp;#8217;ll be giving a talk to the first year students from the Undergraduate Program on Genomic Sciences (LCG in Spanish) during their &amp;#8220;Seminar 1: Introduction to Bioinformatics&amp;#8221; course. It&amp;#8217;s just like I did a year ago as I documented in my post &lt;a href=&#34;http://fellgernon.tumblr.com/post/13739343319/introducing-biostatistics-to-first-year-lcg-students#.UJBq6Wl25FQ&#34;&gt;Introducing Biostatistics to first year LCG students&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Well, this time I&amp;#8217;ll change things a bit. I&amp;#8217;m allowed to require the students to read 2-3 papers before my talk to introduce them to my field. I&amp;#8217;ll do so, but in a more peculiar way by requiring them to listen in to a few videos I selected. So, without further ado here are the three required &amp;#8220;papers&amp;#8221;:&lt;/p&gt;
+&lt;p&gt;Here is &amp;#8220;&lt;strong&gt;paper 1&lt;/strong&gt;&amp;rdquo; (~30 minutes). The goal is to introduce you to the basic workings of R and also to great sources of R videos.&lt;/p&gt;
+&lt;p&gt;First, learn to install R (watch it in full screen).&lt;/p&gt;
+&lt;p&gt;&lt;iframe frameborder=&#34;0&#34; height=&#34;305&#34; src=&#34;http://www.screenr.com/embed/kzT8&#34; width=&#34;500&#34;&gt;&lt;/iframe&gt;&lt;/p&gt;
+&lt;p&gt;Or you can also watch any of the two following videos:&lt;/p&gt;
+&lt;p&gt;&lt;iframe frameborder=&#34;0&#34; height=&#34;281&#34; src=&#34;http://www.youtube.com/embed/Icawuhf0Yqo&#34; width=&#34;500&#34;&gt;&lt;/iframe&gt;&lt;/p&gt;
+&lt;p&gt;&lt;iframe frameborder=&#34;0&#34; height=&#34;281&#34; src=&#34;http://www.youtube.com/embed/mfGFv-iB724&#34; width=&#34;500&#34;&gt;&lt;/iframe&gt;&lt;/p&gt;
+&lt;p&gt;Next learn about RStudio and why it&amp;#8217;s a great place to start (watch it on hd and fullscreen).&lt;/p&gt;
+&lt;p&gt;&lt;iframe frameborder=&#34;0&#34; height=&#34;281&#34; src=&#34;http://www.youtube.com/embed/JbTMvQ-SbvQ&#34; width=&#34;500&#34;&gt;&lt;/iframe&gt;&lt;/p&gt;
+&lt;p&gt;Now you are ready to learn how to create a variable in R. Use RStudio instead of the R GUI to do so.&lt;/p&gt;
+&lt;p&gt;&lt;iframe frameborder=&#34;0&#34; height=&#34;305&#34; src=&#34;http://www.screenr.com/embed/qyT8&#34; width=&#34;500&#34;&gt;&lt;/iframe&gt;&lt;/p&gt;
+&lt;p&gt;Next, learn the super basics about the basic R plot system.&lt;/p&gt;
+&lt;p&gt;&lt;iframe frameborder=&#34;0&#34; height=&#34;305&#34; src=&#34;http://www.screenr.com/embed/XeS8&#34; width=&#34;500&#34;&gt;&lt;/iframe&gt;&lt;/p&gt;
+&lt;p&gt;Now you are ready to learn about how to use the combine function.&lt;/p&gt;
+&lt;p&gt;&lt;iframe frameborder=&#34;0&#34; height=&#34;305&#34; src=&#34;http://www.screenr.com/embed/jyT8&#34; width=&#34;500&#34;&gt;&lt;/iframe&gt;&lt;/p&gt;
+&lt;p&gt;Next, learn about data.frame type of objects&lt;/p&gt;
+&lt;p&gt;&lt;iframe frameborder=&#34;0&#34; height=&#34;305&#34; src=&#34;http://www.screenr.com/embed/fCs8&#34; width=&#34;500&#34;&gt;&lt;/iframe&gt;&lt;/p&gt;
+&lt;p&gt;and how to add new variables to them.&lt;/p&gt;
+&lt;p&gt;&lt;iframe frameborder=&#34;0&#34; height=&#34;305&#34; src=&#34;http://www.screenr.com/embed/ge28&#34; width=&#34;500&#34;&gt;&lt;/iframe&gt;&lt;/p&gt;
+&lt;p&gt;Next up is learning how to find help.&lt;/p&gt;
+&lt;p&gt;&lt;iframe frameborder=&#34;0&#34; height=&#34;305&#34; src=&#34;http://www.screenr.com/embed/Pps8&#34; width=&#34;500&#34;&gt;&lt;/iframe&gt;&lt;/p&gt;
+&lt;p&gt;Almost there. Now check how to change your current working directory.&lt;/p&gt;
+&lt;p&gt;&lt;iframe frameborder=&#34;0&#34; height=&#34;281&#34; src=&#34;http://www.youtube.com/embed/8xT3hmJQskU&#34; width=&#34;500&#34;&gt;&lt;/iframe&gt;&lt;/p&gt;
+&lt;p&gt;Finally, learn how to install and load a package in R.&lt;/p&gt;
+&lt;p&gt;&lt;iframe frameborder=&#34;0&#34; height=&#34;396&#34; src=&#34;http://www.screenr.com/embed/Fps8&#34; width=&#34;500&#34;&gt;&lt;/iframe&gt;&lt;/p&gt;
+&lt;p&gt;If you are more curious regarding the origins of R check the next video (not part of &amp;#8220;paper 1&amp;#8221;).&lt;/p&gt;
+&lt;p&gt;&lt;iframe frameborder=&#34;0&#34; height=&#34;281&#34; src=&#34;http://www.youtube.com/embed/kzxHxFHW6hs&#34; width=&#34;500&#34;&gt;&lt;/iframe&gt;&lt;/p&gt;
+&lt;p&gt;Next, &amp;#8220;&lt;strong&gt;paper 2&lt;/strong&gt;&amp;rdquo; (~39 minutes). The goal here is to get a feeling of how you can use R to create plots.&lt;/p&gt;
+&lt;p&gt;First start with this demonstration of the basic R plotting tools (called &amp;#8220;base graphics&amp;#8221;). It does in enough level of detail of how the basic plotting system works and how you can customize the colors, layout, etc. For the purpose of getting used to the tool, I recommend that you follow this video using RStudio. Also, you&amp;#8217;ll want to watch it in 720p.&lt;/p&gt;
+&lt;p&gt;&lt;iframe frameborder=&#34;0&#34; height=&#34;281&#34; src=&#34;http://www.youtube.com/embed/4KLfzsj-qkE&#34; width=&#34;500&#34;&gt;&lt;/iframe&gt;&lt;/p&gt;
+&lt;p&gt;Now check the demo for plotting with the &lt;em&gt;lattice&lt;/em&gt; package. This is more advanced, but it should also be more illustrative of the power you have with R. Plus it shows how we can expand the functionality of R by using packages contributed to the community and freely available for us to use.&lt;/p&gt;
+&lt;p&gt;&lt;iframe frameborder=&#34;0&#34; height=&#34;281&#34; src=&#34;http://www.youtube.com/embed/6VP5JBq1g7g&#34; width=&#34;500&#34;&gt;&lt;/iframe&gt;&lt;/p&gt;
+&lt;p&gt;Finally, &amp;#8220;&lt;strong&gt;paper 3&lt;/strong&gt;&amp;rdquo; (~28 minutes). This is the first lecture from a course by Brian Caffo in which he goes over the definition and overall motivation behind Biostatistics. It should be much more fun to watch than reading a review paper in the area.&lt;/p&gt;
+&lt;p&gt;&lt;iframe frameborder=&#34;0&#34; height=&#34;281&#34; src=&#34;http://www.youtube.com/embed/jkUqDVtpKs4&#34; width=&#34;500&#34;&gt;&lt;/iframe&gt;&lt;/p&gt;
+&lt;p&gt;Now, for those motivated to learn more, I recommend some of my own posts summarizing  information that can be useful to you.&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;a href=&#34;http://fellgernon.tumblr.com/post/32688589475/jhsph-biostat-through-coursera#.UJBzBml25FQ&#34;&gt;JHSPH-Biostat through Coursera&lt;/a&gt; and &lt;a href=&#34;http://fellgernon.tumblr.com/post/33114381084/an-online-bioinformatics-curriculum#.UJBy92l25FQ&#34;&gt;An Online Bioinformatics Curriculum&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://fellgernon.tumblr.com/post/30077689805/setting-up-your-computer-for#.UJBzO2l25FQ&#34;&gt;Setting up your computer for bioinformatics/biostatistics and a compedium of resources&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://fellgernon.tumblr.com/post/30970426274/i-consider-myself-a-fan-of-using-version-control#.UJBzKml25FQ&#34;&gt;Motivation behind using a version control system&lt;/a&gt; and &lt;a href=&#34;http://fellgernon.tumblr.com/post/32198487580/introducing-git-while-making-your-academic-webpage#.UJBzIGl25FQ&#34;&gt;Introducing Git while making your academic webpage&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://fellgernon.tumblr.com/post/33162495473/why-arent-all-of-our-graphs-interactive#.UJBy8ml25FQ&#34;&gt;Why aren’t all of our graphs interactive?&lt;/a&gt; and &lt;a href=&#34;http://fellgernon.tumblr.com/post/33908652237/visualizing-colors#.UJBy6Gl25FQ&#34;&gt;Visualizing colors()&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://fellgernon.tumblr.com/post/16763819010/p-values-and-statistics-phylosophy#.UJB0j2l25FQ&#34;&gt;P-values and Statistics phylosophy&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://fellgernon.tumblr.com/post/13830203652/the-new-visualization-package-for-genome-data-in#.UJB04Wl25FQ&#34;&gt;The new visualization package for genome data in Bioconductor: ggbio&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;p&gt;Sources:&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;a href=&#34;http://www.twotorials.com/&#34;&gt;&lt;a href=&#34;http://www.twotorials.com/&#34;&gt;http://www.twotorials.com/&lt;/a&gt;&lt;/a&gt; by &lt;a href=&#34;http://www.kaiseredu.org/tutorials-and-presentations/bios/anthony-damico.aspx&#34;&gt;Anthony Damico&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.youtube.com/user/rdpeng?feature=results_main&#34;&gt;Youtube videos&lt;/a&gt; by &lt;a href=&#34;http://www.biostat.jhsph.edu/~rpeng/&#34;&gt;Roger Peng&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.youtube.com/user/bcaffo?feature=results_main&#34;&gt;Youtube videos&lt;/a&gt; by &lt;a href=&#34;http://www.bcaffo.com/&#34;&gt;Brian Caffo&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Why aren&#39;t all of our graphs interactive?</title>
+      <link>http://lcolladotor.github.io/2012/10/08/Why-arent-all-of-our-graphs-interactive</link>
+      <pubDate>Mon, 08 Oct 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://lcolladotor.github.io/2012/10/08/Why-arent-all-of-our-graphs-interactive</guid>
+      <description>&lt;p&gt;During the last pre-happy hour seminar, &lt;a href=&#34;http://www.biostat.wisc.edu/~kbroman/&#34;&gt;Karl Broman&lt;/a&gt; talked about &lt;a href=&#34;http://www.biostat.wisc.edu/~kbroman/presentations/DynamicGraphs/&#34;&gt;Why aren&amp;#8217;t all of our graphs interactive?&lt;/a&gt; I didn&amp;#8217;t know, but a few years ago Karl worked in the department and clearly promoted beer-drinking and is &lt;em&gt;the heart of the department. &lt;/em&gt;I&amp;#8217;m a fan of our pre-happy hour seminars since you have a get to listen to good/fun talks over a beer or two.&lt;/p&gt;
+&lt;p&gt;But I&amp;#8217;m also a fan of reproducible research and useful graphics. I do most of this by using &lt;a href=&#34;http://www.statistik.lmu.de/~leisch/Sweave/&#34;&gt;Sweave&lt;/a&gt; (for reproducibility) in LaTeX documents and with the R packages &lt;a href=&#34;http://cran.r-project.org/web/packages/lattice/index.html&#34;&gt;lattice&lt;/a&gt;, &lt;a href=&#34;http://cran.r-project.org/web/packages/car/index.html&#34;&gt;car&lt;/a&gt;, and &lt;a href=&#34;http://cran.r-project.org/web/packages/plotrix/index.html&#34;&gt;plotrix&lt;/a&gt;, and some &lt;a href=&#34;http://ggplot2.org/&#34;&gt;ggplot2&lt;/a&gt; (I should use it more). &lt;/p&gt;
+&lt;p&gt;Karl made &lt;a href=&#34;http://www.biostat.wisc.edu/~kbroman/presentations/DynamicGraphs/&#34;&gt;his presentation&lt;/a&gt; using html (definitely check it out!) and inserted pretty interactive graphics. His talk got me really interested and I definitely need to pick up a few tools. For example, asciidoc or R Markdown can be useful for making html documents with R code. Specially if you want to write a report and you don&amp;#8217;t want to deal with Sweave/Latex when making plots (can be a pain to know where they&amp;#8217;ll show up). &lt;/p&gt;
+&lt;p&gt;For the interactive side, D3 (and other tools Karl listed) can be useful to learn. But I might put this on a hold for some time. Maybe I&amp;#8217;ll wait and see what others in the deparment are developing for R-D3 and embedding interactive plots in pdf files.&lt;/p&gt;
+&lt;p&gt;I don&amp;#8217;t think that it will be long before interactive plots make it to the journals. Specially for their web versions. Though, I still think that if you are showing a 3D plot, as the author you will have to give a few default views where you can clearly see something that you want to talk about instead of having the reader find that sweet spot. &lt;/p&gt;
+&lt;p&gt;One problem that I don&amp;#8217;t think has been solved yet is reproducible research on a cluster. Karl and others mentioned &lt;a href=&#34;http://www.gnu.org/software/make/manual/make.html&#34;&gt;make&lt;/a&gt; as well as having if/else clauses where you either show the output or a cleaned up version of the code that you used to generate the output. &lt;/p&gt;
+&lt;p&gt;Overall, there are many tools and tips I can learn from Karl. And I&amp;#8217;m sure that I&amp;#8217;m not the only one! Hopefully he&amp;#8217;ll give tips on where to start (nothing is more tedious than reading UNIX man-files).&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Learning about social networks through an interactive presentation</title>
+      <link>http://lcolladotor.github.io/2012/09/28/Learning-about-social-networks-through-an-interactive-presentation</link>
+      <pubDate>Fri, 28 Sep 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://lcolladotor.github.io/2012/09/28/Learning-about-social-networks-through-an-interactive-presentation</guid>
+      <description>&lt;p&gt;During this week&amp;#8217;s &lt;a href=&#34;http://www.biostat.jhsph.edu/~zhwu/2012journal.html&#34;&gt;journal club meeting&lt;/a&gt; Hilary Parker (&lt;a href=&#34;http://www.biostat.jhsph.edu/~hiparker/&#34;&gt;homepage&lt;/a&gt;, &lt;a href=&#34;http://hilaryparker.com/&#34;&gt;blog&lt;/a&gt;) led the session on &amp;#8220;Identifying influential and susceptible members of social networks&amp;#8221;. Were there some speakers or why did she &amp;#8220;lead the session&amp;#8221;? By this I mean that Hilary tried a very different (and interesting) format this time. Instead of giving a talk, not a formal one like at seminars, she prepared a short presentation (publicly available &lt;a href=&#34;https://docs.google.com/presentation/d/1wlZvL8z_8bOau2ZQkvxLtOuFwEVoTeOrJeQ9dO7vATs/edit#slide=id.p&#34;&gt;here&lt;/a&gt;) that begins showing a 20 minute video. This video is by the author of the paper where he presents the key points of his research at another conference. The goal of this format was to get us to speed and hopefully provoke enough discussion to make the meeting highly interactive. Plus the author does a great job in his presentation.&lt;/p&gt;
+&lt;p&gt;Now, given that it&amp;#8217;s a biostat journal club, Hilary included some slides to explain the general Cox Proportional Hazard model before showing some of details used in the paper in question. &lt;/p&gt;
+&lt;p&gt;I think that the change of format was a step in the right direction. Hopefully others will follow.&lt;/p&gt;
+&lt;p&gt;&lt;iframe frameborder=&#34;0&#34; height=&#34;253&#34; src=&#34;http://www.youtube.com/embed/JmajkTKlEqw&#34; width=&#34;450&#34;&gt;&lt;/iframe&gt;&lt;/p&gt;
+&lt;p&gt;About the paper itself, the topic is interesting since it shows a different view of the &amp;#8220;data science&amp;#8221; vs biostat discussion. The presenter is trying to convince computer scientists that they need to do some statistics too. Over here, we are poking our heads at whether we need to learn some computer science.&lt;/p&gt;
+&lt;p&gt;In addition, the author is in a different setting than academia or industry, which are commonly the two options. He is at NYU, and academic institution, but he is working closely with the industry (thus getting access to interesting data) and might be getting some consultation money along the way. Anyhow, given the recent talk from Amy Heineike on Quid (&lt;a href=&#34;http://fellgernon.tumblr.com/post/32472984157/quid-biostat-jhsph#.UGYOW_l27mY&#34;&gt;more in my previous post&lt;/a&gt;) there is a growing interest among students to learn more about the industry environment.&lt;/p&gt;
+&lt;p&gt;I made a couple of comments during the discussion, which might be completely wrong. One is that I feel that in academia we care much more about bias and removing sources of error and it seems that in industry that&amp;#8217;s not the main point. There you care more about making something useful which might be biased. You try to minimize it, but the judge are the clients. &lt;/p&gt;
+&lt;p&gt;The second one is that in industry options like getting a larger sample are much more feasible. In the video, at some point the author shows that people eventually joined the app after getting massively spammed. Increasing the exposure is easy in this case, but imagine a public health survey that is carried out door by door. Increasing the number of houses visited is way more expensive.&lt;/p&gt;
+&lt;p&gt;The point is that the club meeting followed an interesting format, social networks seem fun to analyze, and industry vs academia is kind of a hot topic in our department right now.&lt;/p&gt;
+&lt;p&gt;&amp;#8212;&lt;/p&gt;
+&lt;p&gt;Thanks to Hilary for publicly sharing her journal club presentation.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Quid @Biostat-JHSPH</title>
+      <link>http://lcolladotor.github.io/2012/09/28/Quid-Biostat-JHSPH</link>
+      <pubDate>Fri, 28 Sep 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://lcolladotor.github.io/2012/09/28/Quid-Biostat-JHSPH</guid>
+      <description>&lt;p&gt;Just like most scientific departments, we have a seminar (weekly over here) where very bright people come to us to talk about their work. Being a Biostatistics department, we mostly get faculty from other Biostatistics departments from universities to talk to us. This week was quite different. Amy Heineike from &lt;strong&gt;&lt;a href=&#34;http://quid.com/&#34;&gt;Quid&lt;/a&gt;&lt;/strong&gt; gave us a talk describing their product, which fits perfectly in what is now called &amp;#8220;data science&amp;#8221;. You can see Amy at the end of the table in the picture below.&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;Amy is the one at the end of the table.&#34; height=&#34;168&#34; src=&#34;http://quid.com/img/life/team.jpg&#34; width=&#34;299&#34;/&gt;&lt;/p&gt;
+&lt;p&gt;So what is Quid? It&amp;#8217;s a start up tech company that provides either their software or reports derived from it that help big companies (a) analyze a field, (b) look at what the competition is doing, (c) take informed decisions (helpful for marketing). The short video below describes Quid in a more general way, check it out!&lt;/p&gt;
+&lt;p&gt;&lt;iframe frameborder=&#34;0&#34; height=&#34;253&#34; src=&#34;http://www.youtube.com/embed/5hGTjhuimH0&#34; width=&#34;450&#34;&gt;&lt;/iframe&gt;&lt;/p&gt;
+&lt;p&gt;As Amy Heineike described in her talk, the three common decision-taking pathways are:&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;Someone follows their own intuition. Say a big shot that thinks he knows where the world is going.&lt;/li&gt;
+&lt;li&gt;Someone with decision power asks others to generate reports for her/him. That is, lots of manual work where some read, consult others, etc then they summarize the information in a report.&lt;/li&gt;
+&lt;li&gt;Similar to the above one where lots of people gather the information, then a program is run and the decision is pretty much made by the computer.&lt;/li&gt;
+&lt;/ul&gt;&lt;p&gt;The Quid paradigm is to use the computer to gather all the information and then have a human(s) look at a network with a very cool 3D tool to assimilate the information and decide themselves. The argument is that the human brain is very powerful for visual pattern recognition and can out-perform computers. &lt;/p&gt;
+&lt;p&gt;At first I felt that you can do the network part with a software like &lt;a href=&#34;http://www.cytoscape.org/&#34;&gt;Cytoscape&lt;/a&gt; which I find to be very powerful for network analysis. But the pipeline used by Quid is much more extensive and it&amp;#8217;s an all-in-one bundle.&lt;/p&gt;
+&lt;p&gt;Another key argument in favor of Quid is that most of the information shared is done in a list format. Like google search results, powerpoint bullet points, your facebook feed, etc. But who came up with the ranking? How are things related? That&amp;#8217;s when you need a network representation.&lt;/p&gt;
+&lt;p&gt;I recommend taking a look at their &lt;a href=&#34;http://quid.com/technical.php&#34;&gt;technical overview page&lt;/a&gt; where they have the main steps outlined. But needless to say, they depend strongly on the natural language processing early steps. Their 3D tool looked very interesting and I love to play with it. Amy Heineike actually poked us by showing a video of a short session using the software that was designed so we would want to have a go with Quid. I, as many others, were hooked! Sadly, Quid&amp;#8217;s software is not the kind that academics can go buy for now.&lt;/p&gt;
+&lt;p&gt;I found the example using &amp;#8220;synthetic biology&amp;#8221; as the query to be pretty interesting. Sadly I don&amp;#8217;t have a picture, but one of the features that seems very powerful is when you change to a 2D display. In it, you have the time on the X-axis and the number of articles (well, any kind of input file Quid can use) on the Y-axis. By clicking on a point (which corresponds to a node in the network 3D environment) you can then visualize all the connections that are directly linked to it. Thus you have a scatterplot with a 2D network on top of it. That information can be really useful to understand the flow of information. The specific example was how someone proposed years ago that a specific kind of application was possible, time later grants on the subject were announced, and more close to the present he got a grant, then other grants and results were publicized.&lt;/p&gt;
+&lt;p&gt;Now, Quid has some flaws. For instance, one hot question was how to control the threshold that determines whether two nodes are connected or not. The answer was something like this: experts in their fields have validated the results for queries related to them. Not very convincing for a biostat crowd. Another one was how to control/remove/correct bias. Amy Heineike replied that you need to learn where the data used by Quid is like. For example, when looking at companies the number of news articles mentioned is linked to how efficient/big their public relations office is.&lt;/p&gt;
+&lt;p&gt;Nevertheless, Quid&amp;#8217;s product is very interesting. Plus, I feel that part of our tool-box as Biostatisticians is visualizing data in ways that allow us to understand what is going on. As for working at Quid or doing anything alone the line, we definitely need to learn more about computer science. After all, you need incredibly fast algorithms and code to work with enormous data sets. &lt;/p&gt;
+&lt;p&gt;&amp;#8212;&amp;#8212;&lt;/p&gt;
+&lt;p&gt;PS Amy Heineike might develop a &lt;a href=&#34;http://www.ncbi.nlm.nih.gov/pubmed/&#34;&gt;Pubmed&lt;/a&gt; scrapper for Quid. Meaning that Quid would be able to access citations data. Then it would be very cool to use a few &amp;#8220;seed&amp;#8221; papers that you are interested in to find the complete history behind them and any other papers similar to them. There might another group out there working in your field that you don&amp;#8217;t know about! Which I think happens more frequently that what you think. Specially if you don&amp;#8217;t look abroad.&lt;/p&gt;
+&lt;p&gt;&amp;#8212;&amp;#8212;&lt;/p&gt;
+&lt;p&gt;Edit: I had completely forgotten that I had read about &lt;a href=&#34;http://simplystatistics.org/post/19572022804/interview-with-amy-heineike-director-of-mathematics&#34;&gt;Amy Heineike before in her SimpleStatistics interview&lt;/a&gt;. There&amp;#8217;s more about her in this video and in &lt;a href=&#34;http://thephenomlist.com/lists/8/people/32&#34;&gt;The Phenomlist&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;iframe frameborder=&#34;0&#34; height=&#34;253&#34; src=&#34;http://www.youtube.com/embed/IVdwJvQXeg4&#34; width=&#34;450&#34;&gt;&lt;/iframe&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Introducing Git while making your academic webpage</title>
+      <link>http://lcolladotor.github.io/2012/09/24/Introducing-Git-while-making-your-academic-webpage</link>
+      <pubDate>Mon, 24 Sep 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://lcolladotor.github.io/2012/09/24/Introducing-Git-while-making-your-academic-webpage</guid>
+      <description>&lt;p&gt;Last week I gave a presentation during our computing club on how to use git (a version control system). I used as a motivating example the first steps of creating your own academic webpage. The goal was to make it interesting to both new students (who might have been more interested on the webpage part) and older students (for whom version control should be a must). The slides and all the material is publicly available through the following Bitbucket repository: &lt;a href=&#34;https://bitbucket.org/lcolladotor/html_git_intro/overview&#34;&gt;&lt;a href=&#34;https://bitbucket.org/lcolladotor/html_git_intro/overview&#34;&gt;https://bitbucket.org/lcolladotor/html_git_intro/overview&lt;/a&gt;&lt;/a&gt;. You can access the slides by clicking on &amp;#8220;Source&amp;#8221;, &amp;#8220;slides&amp;#8221; and then &amp;#8220;html_git.pdf&amp;#8221;.&lt;/p&gt;
+&lt;p&gt;For the talk, I tried to make it more interactive but at the same time I wanted to make sure that the material could work for reference in the future. For example, I added a &lt;em&gt;commands.txt&lt;/em&gt; file so anyone following me could easily copy-paste the commands. By the way, for Git Bash in Windows, you paste stuff by using the insert key instead of the usual &amp;#8220;ctrl + v&amp;#8221; shortcut.&lt;/p&gt;
+&lt;p&gt;I&amp;#8217;m posting about it as it could be useful to other people, so feel free to share it.&lt;/p&gt;
+&lt;p&gt;Enjoy!&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Introducing Biostatistics to first year LCG students</title>
+      <link>http://lcolladotor.github.io/2011/12/04/Introducing-Biostatistics-to-first-year-LCG-students</link>
+      <pubDate>Sun, 04 Dec 2011 00:00:00 +0000</pubDate>
+      
+      <guid>http://lcolladotor.github.io/2011/12/04/Introducing-Biostatistics-to-first-year-LCG-students</guid>
+      <description>&lt;p&gt;Around two weeks ago I gave a talk via skype to the first year students from the &lt;a href=&#34;http://www.lcg.unam.mx/about&#34;&gt;Undergraduate Program on Genomic Sciences&lt;/a&gt; (LCG in Spanish) from the National Autonomous University of Mexico (UNAM in Spanish). The talk was under the context of the &lt;em&gt;Introduction to Bioinformatics Seminar Series&lt;/em&gt; whose goal is to familiarize the new students with the bioinformatics world. It used to be a course heavy on exploring database websites, some basic theory, and lots of new concepts and algorithm names. Like, what is BLAST? This year, the course involved several talks from former students (like myself) on their experience and current job (most of us are in graduate school).&lt;/p&gt;
+&lt;p&gt;In my case, I was invited to talk about Biostatistics and R as I was one of the first LCG students to learn and teach R to other students (including PhD students ^^): &lt;a href=&#34;http://www.lcg.unam.mx/~lcollado/R/&#34;&gt;12 hour intro to R and Bioconductor&lt;/a&gt;, &lt;a href=&#34;http://www.lcg.unam.mx/~lcollado/E/&#34;&gt;R in an intro to statistics course&lt;/a&gt;, a &lt;a href=&#34;http://www.lcg.unam.mx/~lcollado/B/&#34;&gt;full course on Bioconductor&lt;/a&gt;. &lt;/p&gt;
+&lt;p&gt;I had a lot of fun preparing my talk as I tried to portray the three main currents in Biostatistics in a way that would be understandable, basic concepts such as a P-value, some basic R code (the students knew the super basics only), and doing so in a way that I would also pass how I see things. A key part for any bioinformatician, as I see it, is to have a good basic toolset. That&amp;#8217;s why I tried to pass on many tips to these young students. Also, I do like to go back to the philosophy of science and whether we need hypothesis nowadays or just models based on the data. I definitely had to cover the topic of communication as I strongly believe that any researcher has to be able to communicate with a biostastician if they want their help in analyzing their data. Also, a biostatistician is not a stastistician, meaning that they have to understand the underlying biological question. I tried emphasizing this point with the students and I attempted to motivate them to take a basic stastistics and probability course (2 preferably). After all, biostatistics is key nowadays in science since biology has gone high-throughput.&lt;/p&gt;
+&lt;p&gt;Giving the talk through skype was definitely a new experience for me. The best is to be in the classroom as you miss a lot of the interaction with the students. For instance, I didn&amp;#8217;t always know who as asking the question and frequently I had to ask them to repeat it louder. Plus, I chose to share my desktop with them instead of having them watch at my face all the time. I guess it wasn&amp;#8217;t easy for them to just watch a screen with a background voice for 2 hours :P But well, I hoped they liked it as much as I liked preparing it.&lt;/p&gt;
+&lt;p&gt;If you are interested in the talk, I uploaded the &lt;a href=&#34;https://docs.google.com/open?id=0B-mxZfuflcuONmY1MGI3ZjEtN2JjNy00MDNiLTk0NmMtYjdiNDAwNTZmNGNj&#34;&gt;PDF file&lt;/a&gt;, the associated &lt;a href=&#34;https://docs.google.com/open?id=0B-mxZfuflcuOZTkxMDUzY2ItNmMzYi00ZDcyLTgyMTQtMWI5YzJmN2IzZjUw&#34;&gt;R file&lt;/a&gt; and the master &lt;a href=&#34;https://docs.google.com/open?id=0B-mxZfuflcuOYTY3OTQ4NjUtZTFkOC00MGQ5LThiMzgtNDQ2ZjY2NmZlY2Zi&#34;&gt;Rnw file&lt;/a&gt; to Google Docs. The Rnw file can be useful if you are learning how to write Beamer presentations using Sweave and LaTeX.&lt;/p&gt;
+
+&lt;p&gt;&lt;p&gt;Finally, I was asked to prepare two short questions so that the teachers can evaluate the students. As a bonus for any of them reading my blog ^^ (I did portray blogs as an excellent way to update yourself) here they are:&lt;/p&gt;
+&lt;ol&gt;&lt;li&gt;Argue why you need to learn (at least basic) Biostatistics and why it&amp;#8217;s useful nowadays to analyze biological data.&lt;/li&gt;
+&lt;li&gt;Based on the data from your recent experiment, you construct a 95% confidence interval (frequentist approach) for the mean of your variable of interest. What is the probability that the true mean of the distribution is contained in the confidence interval.&lt;/li&gt;
+&lt;li&gt;Bonus: list 5 basic R plotting functions&lt;/li&gt;
+&lt;/ol&gt;&lt;p&gt;Answers:&lt;/p&gt;
+&lt;ol&gt;&lt;li&gt;You need to learn the basics (at least) of Biostatistics in order to be able to communicate with your biostatistician collaborator, and to analyze your own data specially by performing exploratory data analyses (EDA). Also, biological experiments nowadays generate a lot of data as biology has gone high-throughput. Biostatistics is specially useful in order to analyze all this data.&lt;/li&gt;
+&lt;li&gt;0 or 1 and you cannot know which is the case for your specific dataset.&lt;/li&gt;
+&lt;li&gt;I mentioned: plot, hist, boxplot, qqplot, qqnorm, lines, points, abline, legend&lt;/li&gt;
+&lt;/ol&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

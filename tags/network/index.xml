@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Network on L. Collado-Torres</title>
+    <link>http://lcolladotor.github.io/tags/network/index.xml</link>
+    <description>Recent content in Network on L. Collado-Torres</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2011-2017 Leonardo Collado Torres under (CC) BY-NC-SA</copyright>
+    <atom:link href="/tags/network/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>rMaps Mexico map</title>
+      <link>http://lcolladotor.github.io/2014/02/26/rMaps-Mexico-map</link>
+      <pubDate>Wed, 26 Feb 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://lcolladotor.github.io/2014/02/26/rMaps-Mexico-map</guid>
+      <description>
+
+&lt;h2 id=&#34;it-s-exciting-when-great-people-help-each-other-get-things-done&#34;&gt;It&amp;rsquo;s exciting when great people help each other get things done&lt;/h2&gt;
+
+&lt;p&gt;This is a simple networking story, which might not be surprising to some but I was happily surprised by it. This is how the story goes:&lt;/p&gt;
+
+&lt;p&gt;Two weeks ago &lt;code&gt;rMaps&lt;/code&gt; (&lt;span class=&#34;showtooltip&#34; title=&#34;Vaidyanathan R (2014). rMaps: Interactive Maps from R. R package version 0.1.&#34;&gt;&lt;a href=&#34;&#34;&gt;Vaidyanathan, 2014&lt;/a&gt;&lt;/span&gt;) was released. After making a &lt;a href=&#34;http://lcolladotor.github.io/2014/02/10/rMaps-released/#.Uwz64kJdV18&#34; target=&#34;_blank&#34;&gt;blog post&lt;/a&gt; about it I thought about using it to make a map of the homicide rate in Mexico over the recent years. First, I had the question of how to make custom maps with &lt;code&gt;rMaps&lt;/code&gt;. &lt;a href=&#34;https://github.com/tyokota&#34; target=&#34;_blank&#34;&gt;@tyokota&lt;/a&gt; had the same question and started asking &lt;a href=&#34;https://github.com/ramnathv&#34; target=&#34;_blank&#34;&gt;Ramnath&lt;/a&gt; about it in &lt;a href=&#34;https://github.com/ramnathv/rMaps/issues/6&#34; target=&#34;_blank&#34;&gt;rMaps issue 6&lt;/a&gt;. Then I realized I needed a specific file with the map information. Google lead me to &lt;a href=&#34;https://github.com/diegovalle&#34; target=&#34;_blank&#34;&gt;@diegovalle&lt;/a&gt; who has created the map from official Mexican sources, downloaded the homicide data, cleaned it, and made several maps and analyses: all his work is very impressive! I thought that it&amp;rsquo;d be very cool if &lt;a href=&#34;https://github.com/diegovalle&#34; target=&#34;_blank&#34;&gt;@diegovalle&lt;/a&gt; and &lt;a href=&#34;https://github.com/ramnathv&#34; target=&#34;_blank&#34;&gt;Ramnath&lt;/a&gt; connected, and they did! I saw them interacting via Twitter (&lt;a href=&#34;https://twitter.com/diegovalle/status/433619946434596864&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt; and &lt;a href=&#34;https://twitter.com/ramnath_vaidya/status/433813747593801728&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;) and via &lt;a href=&#34;https://github.com/ramnathv/rMaps/issues/6&#34; target=&#34;_blank&#34;&gt;GitHub&lt;/a&gt;. After sharing &lt;a href=&#34;https://github.com/diegovalle&#34; target=&#34;_blank&#34;&gt;@diegovalle&lt;/a&gt;&amp;rsquo;s work with my friends, it turned out that some old friends already knew him (&lt;a href=&#34;https://twitter.com/unRob/status/433675310542749696&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt; and high school friends). Another friend was interested in additional features and I suggested her to contact &lt;a href=&#34;https://github.com/diegovalle&#34; target=&#34;_blank&#34;&gt;@diegovalle&lt;/a&gt; via Twitter: he quickly replied as you can see &lt;a href=&#34;https://twitter.com/diegovalle/status/434444498341347328&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Beyond how impressive &lt;code&gt;rMaps&lt;/code&gt; and &lt;a href=&#34;https://github.com/diegovalle&#34; target=&#34;_blank&#34;&gt;@diegovalle&lt;/a&gt;&amp;rsquo;s work on mexican data are, I was amazed by the willingness to help each other and how great people easily connected. I believe this is one of the great features of both GitHub and Twitter where you can share your code, ask questions, try to answer them, meet people working with your tools, etc. You can even offer to PayPal a beer like &lt;a href=&#34;https://github.com/tyokota&#34; target=&#34;_blank&#34;&gt;@tyokota&lt;/a&gt; did.&lt;/p&gt;
+
+&lt;p&gt;After all their great work, now someone like me (aka, without knowing javascript, Datamaps, etc) can walk you through an example of making an interactive choropleth map showing the homicides rates in Mexico from 1997 to 2013.&lt;/p&gt;
+
+&lt;h2 id=&#34;homicides-rates-in-mexico-1997-2013&#34;&gt;Homicides rates in Mexico 1997-2013&lt;/h2&gt;
+
+&lt;p&gt;The first thing we need to make a custom map using &lt;code&gt;rMaps&lt;/code&gt; is a &lt;a href=&#34;http://en.wikipedia.org/wiki/TopoJSON&#34; target=&#34;_blank&#34;&gt;topojson&lt;/a&gt; file which in this case specifies the mexican states boundaries. This process is explained in more detail by &lt;a href=&#34;https://github.com/tyokota&#34; target=&#34;_blank&#34;&gt;@tyokota&lt;/a&gt; at &lt;a href=&#34;https://github.com/tyokota/custom-map&#34; target=&#34;_blank&#34;&gt;custom-map&lt;/a&gt; which you can view &lt;a href=&#34;https://github.com/tyokota/custom-map/blob/master/custom-map.Rmd&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;In this particular example, &lt;a href=&#34;http://www.inegi.org.mx/&#34; target=&#34;_blank&#34;&gt;INEGI&lt;/a&gt; which is the National Institute of Statistics and Geography of Mexico has a map of the mexican states. &lt;a href=&#34;https://github.com/diegovalle&#34; target=&#34;_blank&#34;&gt;@diegovalle&lt;/a&gt; explained how to download it &lt;a href=&#34;https://github.com/ramnathv/rMaps/issues/6#issuecomment-34942284&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;But before doing so, you might to install &lt;code&gt;topojson&lt;/code&gt; like I did below following the &lt;a href=&#34;https://github.com/mbostock/topojson/wiki/Installation&#34; target=&#34;_blank&#34;&gt;installation instructions&lt;/a&gt;. In the terminal:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;
+## Install node.js following instructions at https://github.com/mbostock/topojson/wiki/Installation
+brew install node
+## Install topojson
+npm install -g topojson
+
+## Download map info from INEGI (Mexican official source)
+curl -o estados.zip http://mapserver.inegi.org.mx/MGN/mge2010v5_0.zip
+## Decompress file
+unzip estados.zip
+## Create shapefile
+ogr2ogr states.shp Entidades_2010_5.shp -t_srs &amp;quot;+proj=longlat +ellps=WGS84 +no_defs +towgs84=0,0,0&amp;quot;
+## id-property needed so that DataMaps knows how to color the map
+topojson -o mx_states.json -s 1e-7 -q 1e5 states.shp -p state_code=+CVE_ENT,name=NOM_ENT --id-property NOM_ENT
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now that we have the &lt;a href=&#34;http://en.wikipedia.org/wiki/TopoJSON&#34; target=&#34;_blank&#34;&gt;topojson&lt;/a&gt; file &lt;strong&gt;mx_states.json&lt;/strong&gt; we need to get the actual homicide data. &lt;a href=&#34;https://github.com/diegovalle&#34; target=&#34;_blank&#34;&gt;@diegovalle&lt;/a&gt; has gone through the whole process of acquiring the data from official mexican sources and cleaning it. Lets download it.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;# Download crime data
+## From crimenmexico.diegovalle.net/en/csv
+## All local crimes at the state level
+download.file(&amp;quot;http://crimenmexico.diegovalle.net/en/csv/fuero-comun-estados.csv.gz&amp;quot;, 
+	&amp;quot;fuero-comun-estados.csv.gz&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The data is not completely ready for us to use it and we need to reshape it a bit. In particular, we want to consider only the intentional homicides and group the data by state and date. We can get this to work by using &lt;code&gt;dplyr&lt;/code&gt; (&lt;span class=&#34;showtooltip&#34; title=&#34;Wickham H and Francois R (2014). dplyr: dplyr: a grammar of data manipulation. R package version 0.1.1.&#34;&gt;&lt;a href=&#34;http://CRAN.R-project.org/package=dplyr&#34;&gt;Wickham &amp;amp; Francois, 2014&lt;/a&gt;&lt;/span&gt;).&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;## Load required packages
+library(&amp;quot;dplyr&amp;quot;)
+
+## Load the crime data
+crime &amp;lt;- read.csv(&amp;quot;fuero-comun-estados.csv.gz&amp;quot;)
+
+## Only intentional homicides
+crime &amp;lt;- subset(crime, crime == &amp;quot;HOMICIDIOS&amp;quot; &amp;amp; type == &amp;quot;DOLOSOS&amp;quot;)
+
+## Sum homicides by firearm, etc and group by state and date
+hom &amp;lt;- crime %.%
+  filter(year %in% 1997:2013) %.%
+  group_by(state_code, year, type) %.%
+  summarise(total = sum(count, na.rm = TRUE),
+            population = mean(population) ) %.%
+  mutate(rate = total / population * 10^5) %.%
+  arrange(state_code, year)
+
+## How are states coded?
+summary(hom$state_code)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+##    1.00    8.75   16.50   16.50   24.20   32.00
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;We have the slight inconvenience that states are coded as integers from 1 to 32 instead of using their names. Using another of the files supplied by &lt;a href=&#34;https://github.com/diegovalle&#34; target=&#34;_blank&#34;&gt;@diegovalle&lt;/a&gt; we can merge the codes. This requires using the &lt;code&gt;foreign&lt;/code&gt; (&lt;span class=&#34;showtooltip&#34; title=&#34;R Core Team (2014). foreign: Read Data Stored by Minitab, S, SAS, SPSS, Stata, Systat, Weka, dBase.... R package version 0.8-59.&#34;&gt;&lt;a href=&#34;http://CRAN.R-project.org/package=foreign&#34;&gt;R Core Team&lt;/a&gt;&lt;/span&gt;) package for loading a &lt;em&gt;dbf&lt;/em&gt; file and then merging both data sets with &lt;code&gt;plyr&lt;/code&gt; (&lt;span class=&#34;showtooltip&#34; title=&#34;Wickham H (2011). &#39;The Split-Apply-Combine Strategy for Data Analysis.&#39; Journal of Statistical Software, 40(1), pp. 1-29. .&#34;&gt;&lt;a href=&#34;http://www.jstatsoft.org/v40/i01/&#34;&gt;Wickham, 2011&lt;/a&gt;&lt;/span&gt;).&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;## Needed for read.dbf
+library(&amp;quot;foreign&amp;quot;)
+
+## The dbf from the state shapefile needed to merge state_code with state
+## names
+codes &amp;lt;- read.dbf(&amp;quot;states.dbf&amp;quot;)
+codes$NOM_ENT &amp;lt;- iconv(codes$NOM_ENT, &amp;quot;windows-1252&amp;quot;, &amp;quot;utf-8&amp;quot;)
+codes$CVE_ENT &amp;lt;- as.numeric(codes$CVE_ENT)
+codes$OID &amp;lt;- NULL
+names(codes) &amp;lt;- c(&amp;quot;state_code&amp;quot;, &amp;quot;name&amp;quot;)
+
+## Load plyr for join(). Loading it before creates a problem with the dplyr
+## call above
+library(&amp;quot;plyr&amp;quot;)
+
+## Names needed for the map
+hom &amp;lt;- join(hom, codes)
+
+## Lets look at the data
+head(hom)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;##   state_code year    type total population   rate           name
+## 1          1 1997 DOLOSOS   355     958126 37.051 Aguascalientes
+## 2          1 1998 DOLOSOS    66     975585  6.765 Aguascalientes
+## 3          1 1999 DOLOSOS    27     992515  2.720 Aguascalientes
+## 4          1 2000 DOLOSOS    14    1009215  1.387 Aguascalientes
+## 5          1 2001 DOLOSOS    22    1026437  2.143 Aguascalientes
+## 6          1 2002 DOLOSOS    26    1044578  2.489 Aguascalientes
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Great! We now have state names under &lt;em&gt;name&lt;/em&gt; and the intentional homicide rate under &lt;em&gt;rate&lt;/em&gt; (in homicides per 100,000) for each specific &lt;em&gt;year&lt;/em&gt;. We can thus proceed to making the interactive choropleth map using the &lt;code&gt;ichoropleth&lt;/code&gt; function described by &lt;a href=&#34;https://github.com/ramnathv&#34; target=&#34;_blank&#34;&gt;Ramnath&lt;/a&gt; &lt;a href=&#34;http://rmaps.github.io/blog/posts/animated-choropleths/index.html&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;. This requires specifying the &lt;a href=&#34;http://en.wikipedia.org/wiki/TopoJSON&#34; target=&#34;_blank&#34;&gt;topojson&lt;/a&gt; file which is specified via &lt;em&gt;dataUrl&lt;/em&gt;, the name of the map specified via &lt;em&gt;scope&lt;/em&gt; and the most tricky part (for me at least) is that we need to specify the &lt;em&gt;setProjection&lt;/em&gt;. These are all properties of the &lt;a href=&#34;https://github.com/markmarkoh/datamaps&#34; target=&#34;_blank&#34;&gt;Datamaps&lt;/a&gt; library. In particular, the wiki describes &lt;a href=&#34;https://github.com/markmarkoh/datamaps/blob/master/README.md#using-custom-maps&#34; target=&#34;_blank&#34;&gt;how to use custom maps&lt;/a&gt; but this requires some javascript knowledge.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;## Make the map
+library(&amp;quot;rMaps&amp;quot;)
+d1 &amp;lt;- ichoropleth(rate ~ name, data = hom, ncuts = 9, pal = &#39;YlOrRd&#39;, 
+    animate = &#39;year&#39;,  map = &#39;states&#39;
+)
+## Note that I am hosting the mx_states.json in Dropbox
+## but if you are doing it locally, you only need
+## dataUrl = &amp;quot;mx_states.json&amp;quot;
+d1$set(
+  geographyConfig = list(
+   dataUrl = &amp;quot;https://dl.dropboxusercontent.com/u/10794332/mx_states.json&amp;quot;
+  ),
+ scope = &#39;states&#39;,
+ setProjection = &#39;#! function( element, options ) {
+   var projection, path;
+   projection = d3.geo.mercator()
+    .center([-89, 21]).scale(element.offsetWidth)
+    .translate([element.offsetWidth / 2, element.offsetHeight / 2]);
+
+   path = d3.geo.path().projection( projection );
+   return {path: path, projection: projection};
+  } !#&#39;
+)
+d1$save(&#39;rMaps.html&#39;, cdn = TRUE)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The end result is shown below:&lt;/p&gt;
+
+&lt;iframe src=&#39;
+http://lcolladotor.github.io/figs/2014-02-26-excited-by-willingness-to-help-get-things-done/rMaps.html
+&#39; scrolling=&#39;no&#39; seamless
+class=&#39;rChart datamaps &#39;
+id=iframe-
+chart1859838d5e973
+width=100%
+height=500px
+ &gt;&lt;/iframe&gt;
+
+&lt;p&gt;You can also share the map using the &lt;em&gt;publish&lt;/em&gt; method as shown below:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;d1$publish(&amp;quot;Intentional homicides rates for Mexico 1997-2013&amp;quot;)
+## You&#39;ll need a GitHub account
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;You will get a link to the rCharts viewer such as &lt;a href=&#34;http://rcharts.io/viewer/?9223554#.Uw1tNEJdV18&#34; target=&#34;_blank&#34;&gt;this one&lt;/a&gt; or if you prefer, you can also view the result using Pagist as shown &lt;a href=&#34;http://www.pagist.info/9223554&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;The code presented in this post was written by &lt;a href=&#34;https://github.com/diegovalle&#34; target=&#34;_blank&#34;&gt;@diegovalle&lt;/a&gt; which can you view &lt;a href=&#34;http://bl.ocks.org/diegovalle/8967565&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt; and &lt;a href=&#34;https://github.com/ramnathv&#34; target=&#34;_blank&#34;&gt;Ramnath&lt;/a&gt; which is shown &lt;a href=&#34;https://github.com/ramnathv/rMaps/issues/6#issuecomment-34946041&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;. I also figured out the trick of hosting the &lt;a href=&#34;http://en.wikipedia.org/wiki/TopoJSON&#34; target=&#34;_blank&#34;&gt;topojson&lt;/a&gt; file at Dropbox from &lt;a href=&#34;https://github.com/tyokota&#34; target=&#34;_blank&#34;&gt;@tyokota&lt;/a&gt;&amp;rsquo;s &lt;a href=&#34;https://github.com/tyokota/custom-map/blob/master/custom-map.Rmd&#34; target=&#34;_blank&#34;&gt;code&lt;/a&gt; as I was running into &lt;em&gt;Access-Control-Allow-Origin&lt;/em&gt; errors when hosting it in my academic website. Finally, but not least, &lt;a href=&#34;https://github.com/ramnathv&#34; target=&#34;_blank&#34;&gt;Ramnath&lt;/a&gt; appropriately insists that all of this would not be possible without libraries such as &lt;a href=&#34;https://github.com/markmarkoh/datamaps&#34; target=&#34;_blank&#34;&gt;Datamaps&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&#34;references&#34;&gt;References&lt;/h3&gt;
+
+&lt;p&gt;Citations made with &lt;code&gt;knitcitations&lt;/code&gt; (&lt;span class=&#34;showtooltip&#34; title=&#34;Boettiger C (2014). knitcitations: Citations for knitr markdown files. R package version 0.5-0.&#34;&gt;&lt;a href=&#34;http://CRAN.R-project.org/package=knitcitations&#34;&gt;Boettiger, 2014&lt;/a&gt;&lt;/span&gt;).&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Hadley Wickham, Romain Francois,   (2014) dplyr: dplyr: a grammar of data manipulation.  &lt;a href=&#34;http://CRAN.R-project.org/package=dplyr&#34; target=&#34;_blank&#34;&gt;http://CRAN.R-project.org/package=dplyr&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;R Core Team ,   (2014) foreign: Read Data Stored by Minitab, S, SAS, SPSS, Stata, Systat, Weka,
+dBase, &amp;hellip;.  &lt;a href=&#34;http://CRAN.R-project.org/package=foreign&#34; target=&#34;_blank&#34;&gt;http://CRAN.R-project.org/package=foreign&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Carl Boettiger,   (2014) knitcitations: Citations for knitr markdown files.  &lt;a href=&#34;http://CRAN.R-project.org/package=knitcitations&#34; target=&#34;_blank&#34;&gt;http://CRAN.R-project.org/package=knitcitations&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Hadley Wickham,   (2011) The Split-Apply-Combine Strategy for Data Analysis.  &lt;em&gt;Journal of Statistical Software&lt;/em&gt;  &lt;strong&gt;40&lt;/strong&gt;  (1)   1-29  &lt;a href=&#34;http://www.jstatsoft.org/v40/i01/&#34; target=&#34;_blank&#34;&gt;http://www.jstatsoft.org/v40/i01/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Ramnath Vaidyanathan,   (2014) rMaps: Interactive Maps from R.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;reproducibility&#34;&gt;Reproducibility&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;sessionInfo()
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## R version 3.0.2 (2013-09-25)
+## Platform: x86_64-apple-darwin10.8.0 (64-bit)
+## 
+## locale:
+## [1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8
+## 
+## attached base packages:
+## [1] stats     graphics  grDevices utils     datasets  methods   base     
+## 
+## other attached packages:
+## [1] rMaps_0.1.1         plyr_1.8            foreign_0.8-59     
+## [4] dplyr_0.1.1         knitcitations_0.5-0 bibtex_0.3-6       
+## [7] knitr_1.5          
+## 
+## loaded via a namespace (and not attached):
+##  [1] assertthat_0.1     digest_0.6.4       evaluate_0.5.1    
+##  [4] formatR_0.10       grid_3.0.2         httr_0.2          
+##  [7] lattice_0.20-24    rCharts_0.4.2      RColorBrewer_1.0-5
+## [10] Rcpp_0.11.0        RCurl_1.95-4.1     RJSONIO_1.0-3     
+## [13] stringr_0.6.2      tools_3.0.2        whisker_0.3-2     
+## [16] XML_3.95-0.2       xtable_1.7-1       yaml_2.1.10
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Check other topics on &lt;a href=&#34;https://twitter.com/search?q=%23rstats&#34; target=&#34;_blank&#34;&gt;#rstats&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Learning about social networks through an interactive presentation</title>
+      <link>http://lcolladotor.github.io/2012/09/28/Learning-about-social-networks-through-an-interactive-presentation</link>
+      <pubDate>Fri, 28 Sep 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://lcolladotor.github.io/2012/09/28/Learning-about-social-networks-through-an-interactive-presentation</guid>
+      <description>&lt;p&gt;During this week&amp;#8217;s &lt;a href=&#34;http://www.biostat.jhsph.edu/~zhwu/2012journal.html&#34;&gt;journal club meeting&lt;/a&gt; Hilary Parker (&lt;a href=&#34;http://www.biostat.jhsph.edu/~hiparker/&#34;&gt;homepage&lt;/a&gt;, &lt;a href=&#34;http://hilaryparker.com/&#34;&gt;blog&lt;/a&gt;) led the session on &amp;#8220;Identifying influential and susceptible members of social networks&amp;#8221;. Were there some speakers or why did she &amp;#8220;lead the session&amp;#8221;? By this I mean that Hilary tried a very different (and interesting) format this time. Instead of giving a talk, not a formal one like at seminars, she prepared a short presentation (publicly available &lt;a href=&#34;https://docs.google.com/presentation/d/1wlZvL8z_8bOau2ZQkvxLtOuFwEVoTeOrJeQ9dO7vATs/edit#slide=id.p&#34;&gt;here&lt;/a&gt;) that begins showing a 20 minute video. This video is by the author of the paper where he presents the key points of his research at another conference. The goal of this format was to get us to speed and hopefully provoke enough discussion to make the meeting highly interactive. Plus the author does a great job in his presentation.&lt;/p&gt;
+&lt;p&gt;Now, given that it&amp;#8217;s a biostat journal club, Hilary included some slides to explain the general Cox Proportional Hazard model before showing some of details used in the paper in question. &lt;/p&gt;
+&lt;p&gt;I think that the change of format was a step in the right direction. Hopefully others will follow.&lt;/p&gt;
+&lt;p&gt;&lt;iframe frameborder=&#34;0&#34; height=&#34;253&#34; src=&#34;http://www.youtube.com/embed/JmajkTKlEqw&#34; width=&#34;450&#34;&gt;&lt;/iframe&gt;&lt;/p&gt;
+&lt;p&gt;About the paper itself, the topic is interesting since it shows a different view of the &amp;#8220;data science&amp;#8221; vs biostat discussion. The presenter is trying to convince computer scientists that they need to do some statistics too. Over here, we are poking our heads at whether we need to learn some computer science.&lt;/p&gt;
+&lt;p&gt;In addition, the author is in a different setting than academia or industry, which are commonly the two options. He is at NYU, and academic institution, but he is working closely with the industry (thus getting access to interesting data) and might be getting some consultation money along the way. Anyhow, given the recent talk from Amy Heineike on Quid (&lt;a href=&#34;http://fellgernon.tumblr.com/post/32472984157/quid-biostat-jhsph#.UGYOW_l27mY&#34;&gt;more in my previous post&lt;/a&gt;) there is a growing interest among students to learn more about the industry environment.&lt;/p&gt;
+&lt;p&gt;I made a couple of comments during the discussion, which might be completely wrong. One is that I feel that in academia we care much more about bias and removing sources of error and it seems that in industry that&amp;#8217;s not the main point. There you care more about making something useful which might be biased. You try to minimize it, but the judge are the clients. &lt;/p&gt;
+&lt;p&gt;The second one is that in industry options like getting a larger sample are much more feasible. In the video, at some point the author shows that people eventually joined the app after getting massively spammed. Increasing the exposure is easy in this case, but imagine a public health survey that is carried out door by door. Increasing the number of houses visited is way more expensive.&lt;/p&gt;
+&lt;p&gt;The point is that the club meeting followed an interesting format, social networks seem fun to analyze, and industry vs academia is kind of a hot topic in our department right now.&lt;/p&gt;
+&lt;p&gt;&amp;#8212;&lt;/p&gt;
+&lt;p&gt;Thanks to Hilary for publicly sharing her journal club presentation.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Quid @Biostat-JHSPH</title>
+      <link>http://lcolladotor.github.io/2012/09/28/Quid-Biostat-JHSPH</link>
+      <pubDate>Fri, 28 Sep 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://lcolladotor.github.io/2012/09/28/Quid-Biostat-JHSPH</guid>
+      <description>&lt;p&gt;Just like most scientific departments, we have a seminar (weekly over here) where very bright people come to us to talk about their work. Being a Biostatistics department, we mostly get faculty from other Biostatistics departments from universities to talk to us. This week was quite different. Amy Heineike from &lt;strong&gt;&lt;a href=&#34;http://quid.com/&#34;&gt;Quid&lt;/a&gt;&lt;/strong&gt; gave us a talk describing their product, which fits perfectly in what is now called &amp;#8220;data science&amp;#8221;. You can see Amy at the end of the table in the picture below.&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;Amy is the one at the end of the table.&#34; height=&#34;168&#34; src=&#34;http://quid.com/img/life/team.jpg&#34; width=&#34;299&#34;/&gt;&lt;/p&gt;
+&lt;p&gt;So what is Quid? It&amp;#8217;s a start up tech company that provides either their software or reports derived from it that help big companies (a) analyze a field, (b) look at what the competition is doing, (c) take informed decisions (helpful for marketing). The short video below describes Quid in a more general way, check it out!&lt;/p&gt;
+&lt;p&gt;&lt;iframe frameborder=&#34;0&#34; height=&#34;253&#34; src=&#34;http://www.youtube.com/embed/5hGTjhuimH0&#34; width=&#34;450&#34;&gt;&lt;/iframe&gt;&lt;/p&gt;
+&lt;p&gt;As Amy Heineike described in her talk, the three common decision-taking pathways are:&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;Someone follows their own intuition. Say a big shot that thinks he knows where the world is going.&lt;/li&gt;
+&lt;li&gt;Someone with decision power asks others to generate reports for her/him. That is, lots of manual work where some read, consult others, etc then they summarize the information in a report.&lt;/li&gt;
+&lt;li&gt;Similar to the above one where lots of people gather the information, then a program is run and the decision is pretty much made by the computer.&lt;/li&gt;
+&lt;/ul&gt;&lt;p&gt;The Quid paradigm is to use the computer to gather all the information and then have a human(s) look at a network with a very cool 3D tool to assimilate the information and decide themselves. The argument is that the human brain is very powerful for visual pattern recognition and can out-perform computers. &lt;/p&gt;
+&lt;p&gt;At first I felt that you can do the network part with a software like &lt;a href=&#34;http://www.cytoscape.org/&#34;&gt;Cytoscape&lt;/a&gt; which I find to be very powerful for network analysis. But the pipeline used by Quid is much more extensive and it&amp;#8217;s an all-in-one bundle.&lt;/p&gt;
+&lt;p&gt;Another key argument in favor of Quid is that most of the information shared is done in a list format. Like google search results, powerpoint bullet points, your facebook feed, etc. But who came up with the ranking? How are things related? That&amp;#8217;s when you need a network representation.&lt;/p&gt;
+&lt;p&gt;I recommend taking a look at their &lt;a href=&#34;http://quid.com/technical.php&#34;&gt;technical overview page&lt;/a&gt; where they have the main steps outlined. But needless to say, they depend strongly on the natural language processing early steps. Their 3D tool looked very interesting and I love to play with it. Amy Heineike actually poked us by showing a video of a short session using the software that was designed so we would want to have a go with Quid. I, as many others, were hooked! Sadly, Quid&amp;#8217;s software is not the kind that academics can go buy for now.&lt;/p&gt;
+&lt;p&gt;I found the example using &amp;#8220;synthetic biology&amp;#8221; as the query to be pretty interesting. Sadly I don&amp;#8217;t have a picture, but one of the features that seems very powerful is when you change to a 2D display. In it, you have the time on the X-axis and the number of articles (well, any kind of input file Quid can use) on the Y-axis. By clicking on a point (which corresponds to a node in the network 3D environment) you can then visualize all the connections that are directly linked to it. Thus you have a scatterplot with a 2D network on top of it. That information can be really useful to understand the flow of information. The specific example was how someone proposed years ago that a specific kind of application was possible, time later grants on the subject were announced, and more close to the present he got a grant, then other grants and results were publicized.&lt;/p&gt;
+&lt;p&gt;Now, Quid has some flaws. For instance, one hot question was how to control the threshold that determines whether two nodes are connected or not. The answer was something like this: experts in their fields have validated the results for queries related to them. Not very convincing for a biostat crowd. Another one was how to control/remove/correct bias. Amy Heineike replied that you need to learn where the data used by Quid is like. For example, when looking at companies the number of news articles mentioned is linked to how efficient/big their public relations office is.&lt;/p&gt;
+&lt;p&gt;Nevertheless, Quid&amp;#8217;s product is very interesting. Plus, I feel that part of our tool-box as Biostatisticians is visualizing data in ways that allow us to understand what is going on. As for working at Quid or doing anything alone the line, we definitely need to learn more about computer science. After all, you need incredibly fast algorithms and code to work with enormous data sets. &lt;/p&gt;
+&lt;p&gt;&amp;#8212;&amp;#8212;&lt;/p&gt;
+&lt;p&gt;PS Amy Heineike might develop a &lt;a href=&#34;http://www.ncbi.nlm.nih.gov/pubmed/&#34;&gt;Pubmed&lt;/a&gt; scrapper for Quid. Meaning that Quid would be able to access citations data. Then it would be very cool to use a few &amp;#8220;seed&amp;#8221; papers that you are interested in to find the complete history behind them and any other papers similar to them. There might another group out there working in your field that you don&amp;#8217;t know about! Which I think happens more frequently that what you think. Specially if you don&amp;#8217;t look abroad.&lt;/p&gt;
+&lt;p&gt;&amp;#8212;&amp;#8212;&lt;/p&gt;
+&lt;p&gt;Edit: I had completely forgotten that I had read about &lt;a href=&#34;http://simplystatistics.org/post/19572022804/interview-with-amy-heineike-director-of-mathematics&#34;&gt;Amy Heineike before in her SimpleStatistics interview&lt;/a&gt;. There&amp;#8217;s more about her in this video and in &lt;a href=&#34;http://thephenomlist.com/lists/8/people/32&#34;&gt;The Phenomlist&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;iframe frameborder=&#34;0&#34; height=&#34;253&#34; src=&#34;http://www.youtube.com/embed/IVdwJvQXeg4&#34; width=&#34;450&#34;&gt;&lt;/iframe&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Google on L. Collado-Torres</title>
+    <link>http://lcolladotor.github.io/tags/google/index.xml</link>
+    <description>Recent content in Google on L. Collado-Torres</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2011-2017 Leonardo Collado Torres under (CC) BY-NC-SA</copyright>
+    <atom:link href="/tags/google/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>How to upload files to Dropbox and Google Docs from R</title>
+      <link>http://lcolladotor.github.io/2014/02/05/How-to-upload-files-to-Dropbox-and-Google-Docs-from-R</link>
+      <pubDate>Wed, 05 Feb 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://lcolladotor.github.io/2014/02/05/How-to-upload-files-to-Dropbox-and-Google-Docs-from-R</guid>
+      <description>
+
+&lt;p&gt;Have you ever wondered whether you can upload files from &lt;code&gt;R&lt;/code&gt; to &lt;a href=&#34;https://www.dropbox.com/&#34; target=&#34;_blank&#34;&gt;Dropbox&lt;/a&gt; and/or &lt;a href=&#34;docs.google.com&#34; target=&#34;_blank&#34;&gt;Google Docs&lt;/a&gt;? I recently asked myself this question while making my most recent &lt;a href=&#34;http://www.rstudio.com/shiny/&#34; target=&#34;_blank&#34;&gt;Shiny&lt;/a&gt; app (more later).&lt;/p&gt;
+
+&lt;p&gt;The answer is yes, you can upload files from &lt;code&gt;R&lt;/code&gt; to these cloud services!&lt;/p&gt;
+
+&lt;h2 id=&#34;dropbox&#34;&gt;Dropbox&lt;/h2&gt;
+
+&lt;p&gt;As far as I know, the best &lt;code&gt;R&lt;/code&gt; package for uploading files to Dropbox is &lt;code&gt;rDrop&lt;/code&gt; (&lt;span class=&#34;showtooltip&#34; title=&#34;Ram K and Temple Lang D (2012). rDrop: Dropbox R interface.. R package version 0.3-0.&#34;&gt;&lt;a href=&#34;http://github.com/karthikram/rDrop&#34;&gt;Ram &amp;amp; Temple Lang, 2012&lt;/a&gt;&lt;/span&gt;). The whole setup is very well explained in it&amp;rsquo;s GitHub repository (&lt;span class=&#34;showtooltip&#34; title=&#34;karthik (2014). &#39;karthik/rDrop.&#39; .&#34;&gt;&lt;a href=&#34;https://github.com/karthik/rDrop&#34;&gt;Karthik&lt;/a&gt;&lt;/span&gt;). Basically you have to:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Install the package and it&amp;rsquo;s dependencies (some are only on GitHub).&lt;/li&gt;
+&lt;li&gt;Create a Dropbox app in your account.&lt;/li&gt;
+&lt;li&gt;Get the credentials info.&lt;/li&gt;
+&lt;li&gt;Authorize your access to the Dropbox app from &lt;code&gt;R&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Save that info for later use.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;dropbox-save&#34;&gt;dropbox_save()&lt;/h3&gt;
+
+&lt;p&gt;Then uploading any type of &lt;code&gt;R&lt;/code&gt; object to Dropbox becomes as easy as using the &lt;code&gt;dropbox_save()&lt;/code&gt; function.&lt;/p&gt;
+
+&lt;p&gt;For example, lets save a simple vector with random data.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;suppressMessages(library(&amp;quot;rDrop&amp;quot;))
+
+## Define credentials or load them if you defined them already
+## dropbox_credentials &amp;lt;- dropbox_auth(&#39;Your app key&#39;, &#39;Your app secret&#39;)
+load(&amp;quot;dropbox_credentials.Rdata&amp;quot;)
+
+## Lets create some random data
+set.seed(20140205)
+x &amp;lt;- rnorm(1000)
+
+## Lets check the args of the uploading function
+args(dropbox_save)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## function (cred, ..., list = character(), file = stop(&amp;quot;&#39;file&#39; must be specified&amp;quot;), 
+##     envir = parent.frame(), precheck = TRUE, verbose = FALSE, 
+##     curl = getCurlHandle(), ext = &amp;quot;.rda&amp;quot;, .opts = list()) 
+## NULL
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;
+## Then lets upload it to dropbox on the public folder
+done &amp;lt;- dropbox_save(dropbox_credentials, x, file = &amp;quot;public/x&amp;quot;)
+
+## The result has some information, like the path of where you upload the
+## file
+names(done)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;##  [1] &amp;quot;revision&amp;quot;     &amp;quot;rev&amp;quot;          &amp;quot;thumb_exists&amp;quot; &amp;quot;bytes&amp;quot;       
+##  [5] &amp;quot;modified&amp;quot;     &amp;quot;client_mtime&amp;quot; &amp;quot;path&amp;quot;         &amp;quot;is_dir&amp;quot;      
+##  [9] &amp;quot;icon&amp;quot;         &amp;quot;root&amp;quot;         &amp;quot;mime_type&amp;quot;    &amp;quot;size&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;done$path
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;/public/x.rda&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;You can now actually download the &amp;ldquo;x.rda&amp;rdquo; file from &lt;a href=&#34;https://dl.dropboxusercontent.com/u/261002456/x.rda&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;. That&amp;rsquo;s in case that you also wanted to share the file, and is obviously optional.&lt;/p&gt;
+
+&lt;p&gt;Note that you can get the link from withing &lt;code&gt;R&lt;/code&gt; and don&amp;rsquo;t even need to use the Dropbox site.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;dropbox_share(dropbox_credentials, file = &amp;quot;public/x.rda&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## $url
+## [1] &amp;quot;https://db.tt/xzf3huXf&amp;quot;
+## 
+## $expires
+## [1] &amp;quot;Tue, 01 Jan 2030 00:00:00 +0000&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;dropbox-put&#34;&gt;dropbox_put()&lt;/h3&gt;
+
+&lt;p&gt;What if you want to upload an actual file and not only &lt;code&gt;R&lt;/code&gt; objects? That&amp;rsquo;s where &lt;code&gt;dropbox_put()&lt;/code&gt; shines. Below is an example where we create an image, save it as a pdf file, and upload it to Dropbox.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;## Lets create a sample file, in this case a pdf file
+pdf(&amp;quot;dropboxFig.pdf&amp;quot;)
+hist(x, freq = FALSE, col = &amp;quot;light blue&amp;quot;)
+tmp &amp;lt;- dev.off()
+
+## Lets check the args for the uploading function
+args(dropbox_put)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## function (cred, what, filename = what, curl = getCurlHandle(), 
+##     ..., verbose = FALSE, contentType = &amp;quot;application/octet-stream&amp;quot;) 
+## NULL
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;
+## Now, lets upload the file
+done &amp;lt;- dropbox_put(dropbox_credentials, what = &amp;quot;dropboxFig.pdf&amp;quot;, filename = &amp;quot;public/dropboxFig.pdf&amp;quot;)
+
+## Again, the result contains some information about the file
+names(done)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;##  [1] &amp;quot;revision&amp;quot;     &amp;quot;rev&amp;quot;          &amp;quot;thumb_exists&amp;quot; &amp;quot;bytes&amp;quot;       
+##  [5] &amp;quot;modified&amp;quot;     &amp;quot;client_mtime&amp;quot; &amp;quot;path&amp;quot;         &amp;quot;is_dir&amp;quot;      
+##  [9] &amp;quot;icon&amp;quot;         &amp;quot;root&amp;quot;         &amp;quot;mime_type&amp;quot;    &amp;quot;size&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;You can view the result &lt;a href=&#34;https://dl.dropboxusercontent.com/u/261002456/dropboxFig.pdf&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;google-docs&#34;&gt;Google Docs&lt;/h2&gt;
+
+&lt;p&gt;From what I found, it seems to me that &lt;code&gt;RGoogleDocs&lt;/code&gt; (&lt;span class=&#34;showtooltip&#34; title=&#34;Lang DT (2014). RGoogleDocs: Primitive interface to Google Documents from R. R package version 0.7-0.&#34;&gt;&lt;a href=&#34;&#34;&gt;Temple Lang&lt;/a&gt;&lt;/span&gt;) is the package you&amp;rsquo;ll want to use for interacting with Google Docs from R. The manual (&lt;span class=&#34;showtooltip&#34; title=&#34;(2014). &#39;An simple R interface to Google Documents.&#39; .&#34;&gt;&lt;a href=&#34;http://www.omegahat.org/RGoogleDocs/run.html&#34;&gt;Temple Lang&lt;/a&gt;&lt;/span&gt;) explains all what you pretty much need to know. You should know though that you can only upload certain types of files.&lt;/p&gt;
+
+&lt;p&gt;For example, you can upload a text file as shown below.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;suppressMessages(library(&amp;quot;RGoogleDocs&amp;quot;))
+
+## Load password
+load(&amp;quot;gpasswd.Rdata&amp;quot;)
+
+## Something to write
+text &amp;lt;- &amp;quot;Hello world!\n&amp;quot;
+
+## Authentificate
+auth &amp;lt;- getGoogleAuth(&amp;quot;fellgernon@gmail.com&amp;quot;, gpasswd)
+
+## Connect to Google
+con &amp;lt;- getGoogleDocsConnection(auth)
+
+## Check the args for the uploading function
+args(uploadDoc)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## function (content, con, name, type = as.character(findType(content)), 
+##     binary = FALSE, asText = FALSE, folder = NULL, replace = TRUE, 
+##     ...) 
+## NULL
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;
+## Upload the file
+done &amp;lt;- uploadDoc(content = text, con = con, name = &amp;quot;testFile.txt&amp;quot;, type = &amp;quot;txt&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;You can view the file &lt;a href=&#34;https://docs.google.com/document/d/1QCInrPitTJrmXiyA6TlNuQIEhi344MQl1C3zqqoqAVY/edit?usp=sharing&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;conclusions&#34;&gt;Conclusions&lt;/h2&gt;
+
+&lt;p&gt;&lt;code&gt;rDrop&lt;/code&gt; (&lt;span class=&#34;showtooltip&#34; title=&#34;Ram K and Temple Lang D (2012). rDrop: Dropbox R interface.. R package version 0.3-0.&#34;&gt;&lt;a href=&#34;http://github.com/karthikram/rDrop&#34;&gt;Ram &amp;amp; Temple Lang, 2012&lt;/a&gt;&lt;/span&gt;) is very cool and easy to use. Compared to Google Docs, you have much greater flexibility on the type of files you can upload. I guess that will change in the future if there is a Google Drive from &lt;code&gt;R&lt;/code&gt; package.&lt;/p&gt;
+
+&lt;h3 id=&#34;references&#34;&gt;References&lt;/h3&gt;
+
+&lt;p&gt;Citations made with &lt;code&gt;knitcitations&lt;/code&gt; (&lt;span class=&#34;showtooltip&#34; title=&#34;Boettiger C (2014). knitcitations: Citations for knitr markdown files. R package version 0.5-0.&#34;&gt;&lt;a href=&#34;http://CRAN.R-project.org/package=knitcitations&#34;&gt;Boettiger, 2014&lt;/a&gt;&lt;/span&gt;).&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;karthik,  karthik/rDrop.  &lt;em&gt;GitHub&lt;/em&gt;  &lt;a href=&#34;https://github.com/karthik/rDrop&#34; target=&#34;_blank&#34;&gt;https://github.com/karthik/rDrop&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;An simple R interface to Google Documents.  &lt;a href=&#34;http://www.omegahat.org/RGoogleDocs/run.html&#34; target=&#34;_blank&#34;&gt;http://www.omegahat.org/RGoogleDocs/run.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Carl Boettiger,   (2014) knitcitations: Citations for knitr markdown files.  &lt;a href=&#34;http://CRAN.R-project.org/package=knitcitations&#34; target=&#34;_blank&#34;&gt;http://CRAN.R-project.org/package=knitcitations&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Karthik Ram, Duncan  Temple Lang,   (2012) rDrop: Dropbox R interface..  &lt;a href=&#34;http://github.com/karthikram/rDrop&#34; target=&#34;_blank&#34;&gt;http://github.com/karthikram/rDrop&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Duncan Lang,  RGoogleDocs: Primitive interface to Google Documents from R.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;reproducibility&#34;&gt;Reproducibility&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;sessionInfo()
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## R version 3.0.2 (2013-09-25)
+## Platform: x86_64-apple-darwin10.8.0 (64-bit)
+## 
+## locale:
+## [1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8
+## 
+## attached base packages:
+## [1] stats     graphics  grDevices utils     datasets  methods   base     
+## 
+## other attached packages:
+##  [1] RGoogleDocs_0.7-0   rDrop_0.3-0         stringr_0.6.2      
+##  [4] plyr_1.8            ROAuth_0.92.0       digest_0.6.4       
+##  [7] RCurl_1.95-4.1      bitops_1.0-6        RJSONIO_1.0-3      
+## [10] knitcitations_0.5-0 bibtex_0.3-6        knitr_1.5          
+## 
+## loaded via a namespace (and not attached):
+## [1] evaluate_0.5.1 formatR_0.10   httr_0.2       tools_3.0.2   
+## [5] XML_3.95-0.2   xtable_1.7-1
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Check other topics on &lt;a href=&#34;https://twitter.com/search?q=%23rstats&#34; target=&#34;_blank&#34;&gt;#rstats&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

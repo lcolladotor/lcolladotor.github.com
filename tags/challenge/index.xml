@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Challenge on L. Collado-Torres</title>
+    <link>http://lcolladotor.github.io/tags/challenge/index.xml</link>
+    <description>Recent content in Challenge on L. Collado-Torres</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2011-2017 Leonardo Collado Torres under (CC) BY-NC-SA</copyright>
+    <atom:link href="/tags/challenge/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Commenting: Genomics in 2011</title>
+      <link>http://lcolladotor.github.io/2012/01/23/Commenting-Genomics-in-2011</link>
+      <pubDate>Mon, 23 Jan 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://lcolladotor.github.io/2012/01/23/Commenting-Genomics-in-2011</guid>
+      <description>&lt;p&gt;Today is my first day of classes and &lt;a href=&#34;http://scholar.google.com/citations?hl=en&amp;amp;user=8XOPyM4AAAAJ&amp;amp;oi=sra&#34;&gt;Kasper&lt;/a&gt; couldn&amp;#8217;t have had a better timing to share the link to &lt;a href=&#34;http://genomebiology.com/2011/12/12/137&#34;&gt;Genomics in 2011: challenges and opportunities&lt;/a&gt;. There, the Editorial Board members of Genome Biology gave their opinion on: important 2011 papers, influential people for their careers, advice to young scientists, top challenges in their field, and unlimited money projects. I felt identified several times and as:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;I think one of the most important skills in research is the ability to communicate ideas. [&amp;#8230;] practicing both writing skills and oral presentation skills.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;here I am sharing my view on the paper.&lt;/p&gt;
+&lt;p&gt;Overall the paper is a good read and I enjoyed most of it, so I highly recommend reading it.&lt;/p&gt;
+&lt;p&gt;The top papers section is quite broad and it felt to me like a huge abstract on many papers. Now I want to read the paper on &amp;#8220;phenologs&amp;#8221;, a concept that seems very simple and natural, and has helped understand a bit more what genes do (functional genomics).&lt;/p&gt;
+&lt;p&gt;The parts about influential people and unlimited money projects are not so interesting. I felt that it was too personal and I didn&amp;#8217;t feel that it related to me much. Regardless, I&amp;#8217;d like to highlight some parts of the text:&lt;/p&gt;
+&gt; * [&amp;#8230;] showed me the fun of methodology development in computational biology
+&gt; * [&amp;#8230;] emphasized establishing a solid foundation in computer science and statistics but also developed our skills to identify relevant and impactful biological questions
+&gt; * His humble upbringing, ability to admit when he was wrong, and persistence for what was right has continued to inspire me.
+&lt;p&gt;The advice section was very appealing to me and I felt reassured as some of the advice I gave even younger scientists (&lt;a href=&#34;http://fellgernon.tumblr.com/post/13739343319/introducing-biostatistics-to-first-year-lcg-students#.Tx3PlmPOz_g&#34;&gt;check my talk to LCG students&lt;/a&gt;) popped up. I surely learnt a few things too =)&lt;/p&gt;
+&gt; * Surrounding yourself with people who are smarter than you also helps you raise your game.
+&gt; * Published is better than perfect.
+&gt; * Importance of communication
+&gt; * you need to appreciate the biology as much as, if not more than, the statistical method or computer science
+&gt; * The success of our field is ultimately measured by the impact we can have on our understanding of biology
+&gt; * I would say it&amp;#8217;s the ability to understand both the experimental and the computational sciences. [&amp;#8230;] I would learn the key principles in computational biology or at the very least the linguistics, and vice versa.
+
+&lt;p&gt;I hadn&amp;#8217;t taken consciousness of the fact that the amount of computing you can do (per dollar) is doubling every year while the size of genomic databases is going up by a factor of 10. I knew something was off and that we are getting more data, but I didn&amp;#8217;t know the ratio. Plus, I have to agree with the comment that cloud computing is not going to be the solution though I&amp;#8217;m not sure if:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;The only solution is to discover fundamentally better algorithms for processing these databases.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Sure, we need better algorithms, but I think that it&amp;#8217;s fair to ask for cleaner and higher-quality data. This doesn&amp;#8217;t mean that the data format has to be simpler, as:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Far too often, enough biological details are abstracted away so that the solution loses its biological relevance.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Sad, but true.&lt;/p&gt;
+&lt;p&gt;I do agree with:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Another challenge is to educate people about genomics and to tone down the natural hype of the genomics field.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Just as with any discipline, it&amp;#8217;s not easy to explain your field to a random person and it&amp;#8217;s a harder job when someone exaggerates a set of results.&lt;/p&gt;
+&lt;p&gt;The argument that RO1 NIH grants are not built for young genomics scientists is interesting and I do hope that it changes soon. Though I don&amp;#8217;t have a clue as to how the following is going to happen:&lt;/p&gt;
+&gt; the last challenge is to transform the academic review system in our institutions&lt;/p&gt;
+&gt; Understanding the systems-level ecological rules governing microbial community structure&lt;
+&lt;p&gt;surely opened my eyes as it was one of my main interests a few years ago (and stills interests me ^^).&lt;/p&gt;
+&gt; streamlining methods for turning next-generation data into actionable biology
+&lt;p&gt;sounds very fancy!! It&amp;#8217;s as fancy, and important, as developing new ways to visualize networks that take into account time instead of viewing all the possibilities at once.&lt;/p&gt;
+&lt;p&gt;To finish off the post, I agree completely with:&lt;/p&gt;
+&gt;I believe the biggest bottleneck is the bioinformatics and the shortage of researchers in the field. There needs to be a big investment to address this shortage. 
+&lt;p&gt;Note that I think that there are lots of bioinformatics-converts: people who recently joined the field to fill in the gap in their lab. As:&lt;/p&gt;
+&gt;In my opinion, too many computational biology researchers are working in isolation on marginally relevant problems or making incremental improvements in areas that have already been well-populated by methods that are already adequate. 
+&lt;p&gt;So, yes, we need more bioinformaticians as most labs have high-throughput experiments (with only one experiment you already need a bioinformatician), but I do hope that a good proportion of them are trained to develop methods and focus on important problems and new areas instead of marginally relevant ones on &amp;#8220;old&amp;#8221; areas.&lt;/p&gt;
+&lt;p&gt;That&amp;#8217;s why I&amp;#8217;m studying a PhD in Biostatistics!&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

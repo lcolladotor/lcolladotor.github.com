@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme" content="hugo-academic">
+  <meta name="generator" content="Hugo 0.18.1" />
+  <meta name="author" content="Leonardo Collado Torres">
+  <meta name="description" content="Data Scientist">
+
+  
+  
+  
+    
+  
+  
+    
+    
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/tomorrow.min.css">
+    
+  
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/css/academicons.min.css">
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,700|Merriweather|Roboto+Mono">
+  <link rel="stylesheet" href="/css/hugo-academic.css">
+  
+
+  <link rel="alternate" href="http://lcolladotor.github.io/index.xml" type="application/rss+xml" title="L. Collado-Torres">
+  <link rel="feed" href="http://lcolladotor.github.io/index.xml" type="application/rss+xml" title="L. Collado-Torres">
+
+  <link rel="icon" type="image/png" href="/img/icon.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/apple-touch-icon.png">
+
+  <link rel="canonical" href="http://lcolladotor.github.io/2013/11/09/Creating-your-Jekyll-Bootstrap-powered-blog-for-R-blogging">
+
+  
+
+  <title>Creating your Jekyll-Bootstrap powered blog for R blogging | L. Collado-Torres</title>
+
+</head>
+<body id="top" data-spy="scroll" data-target="#navbar-main" data-offset="71">
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+              data-target=".navbar-collapse" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">L. Collado-Torres</a>
+    </div>
+
+    
+    <div class="collapse navbar-collapse">
+
+      
+      <ul class="nav navbar-nav navbar-right">
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#about">
+            
+            <span>Home</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#publications_selected">
+            
+            <span>Publications</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#talks">
+            
+            <span>Talks</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#posts">
+            
+            <span>Posts</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#cv">
+            
+            <span>CV</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#teaching">
+            
+            <span>Teaching</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#contact">
+            
+            <span>Contact</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#search">
+            
+            <span>Search</span>
+          </a>
+        </li>
+
+        
+        
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+
+  <article class="article" itemscope itemtype="http://schema.org/Article">
+
+    
+
+    <h1 itemprop="name">Creating your Jekyll-Bootstrap powered blog for R blogging</h1>
+
+    
+
+<div class="article-metadata">
+
+  <span class="article-date">
+    <time datetime="2013-11-09 00:00:00 &#43;0000 UTC" itemprop="datePublished">
+      Sat, Nov 9, 2013
+    </time>
+  </span>
+
+  
+  
+  
+  <span class="article-categories">
+    <i class="fa fa-folder"></i>
+    
+    <a href="/categories/web">Web</a
+    >, 
+    
+    <a href="/categories/rstats">rstats</a
+    >
+    
+  </span>
+  
+  
+
+  
+  
+  
+  <span class="article-tags">
+    <i class="fa fa-tags"></i>
+    
+    <a href="/tags/blog">Blog</a
+    >
+    
+  </span>
+  
+  
+
+  
+  
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    <li>
+      <a class="facebook"
+         href="https://www.facebook.com/sharer.php?u=http%3a%2f%2flcolladotor.github.io%2f2013%2f11%2f09%2fCreating-your-Jekyll-Bootstrap-powered-blog-for-R-blogging"
+         target="_blank">
+        <i class="fa fa-facebook"></i>
+      </a>
+    </li>
+    <li>
+      <a class="twitter"
+         href="https://twitter.com/intent/tweet?text=Creating%20your%20Jekyll-Bootstrap%20powered%20blog%20for%20R%20blogging&amp;url=http%3a%2f%2flcolladotor.github.io%2f2013%2f11%2f09%2fCreating-your-Jekyll-Bootstrap-powered-blog-for-R-blogging"
+         target="_blank">
+        <i class="fa fa-twitter"></i>
+      </a>
+    </li>
+    <li>
+      <a class="linkedin"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3a%2f%2flcolladotor.github.io%2f2013%2f11%2f09%2fCreating-your-Jekyll-Bootstrap-powered-blog-for-R-blogging&amp;title=Creating%20your%20Jekyll-Bootstrap%20powered%20blog%20for%20R%20blogging"
+         target="_blank">
+        <i class="fa fa-linkedin"></i>
+      </a>
+    </li>
+    <li>
+      <a class="weibo"
+         href="http://service.weibo.com/share/share.php?url=http%3a%2f%2flcolladotor.github.io%2f2013%2f11%2f09%2fCreating-your-Jekyll-Bootstrap-powered-blog-for-R-blogging&amp;title=Creating%20your%20Jekyll-Bootstrap%20powered%20blog%20for%20R%20blogging"
+         target="_blank">
+        <i class="fa fa-weibo"></i>
+      </a>
+    </li>
+    <li>
+      <a class="email"
+         href="mailto:?subject=Creating%20your%20Jekyll-Bootstrap%20powered%20blog%20for%20R%20blogging&amp;body=http%3a%2f%2flcolladotor.github.io%2f2013%2f11%2f09%2fCreating-your-Jekyll-Bootstrap-powered-blog-for-R-blogging">
+        <i class="fa fa-envelope"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+  
+
+</div>
+
+
+    <div class="article-style" itemprop="articleBody">
+      
+
+<p>As you might have noticed, I recently decided to move <code>Fellgernon Bit</code> from <a href="http://bit.ly/FellgernonBit" target="_blank">Tumblr</a> to <a href="http://bit.ly/FellBit" target="_blank">GitHub</a>. There are a couple of reasons why I made this change.</p>
+
+<ol>
+<li>I wanted a more professional-looking blog.
+
+<ul>
+<li>There are not many R blogs on Tumblr, and well, long text posts are not really meant for Tumblr.</li>
+</ul></li>
+<li>Better code highlighting.
+
+<ul>
+<li>I had enabled R code highlighting using the highlighting instructions from Jeffrey Horner (<span class="showtooltip" title="@jeffreyhorner (2013). 'Blog with R Markdown and tumblr: Part I.' ."><a href="http://jeffreyhorner.tumblr.com/post/25804518110/blog-with-r-markdown-and-tumblr-part-i">Horner, Part I</a></span>). The instructions are great! I guess I just got lazy to tweak the CSS of my Tumblr blog to fix some things I didn&rsquo;t like.</li>
+<li>I also want to be able to highlight code from other languages, like <code>bash</code>.</li>
+</ul></li>
+<li>Make it easier to embed any HTML code.
+
+<ul>
+<li>Yes, you can write posts at Tumblr in pure HTML but sometimes things break as Tumblr doesn&rsquo;t like them.</li>
+</ul></li>
+<li>Easier process of writing posts using Rmd files.
+
+<ul>
+<li>The steps in Horner&rsquo;s guide (<span class="showtooltip" title="@jeffreyhorner (2013). 'Blog with R Markdown and tumblr: Part II.' ."><a href="http://jeffreyhorner.tumblr.com/post/25943954723/blog-with-r-markdown-and-tumblr-part-ii">Horner, Part II</a></span>) are quite involved. Instead of those steps, I was just knitting my posts and then manually copying the html code in the <code>body</code> tags, then pasting it in Tumblr.</li>
+</ul></li>
+<li>Easy way to host figures and link to them.
+
+<ul>
+<li>I have previously hosted pictures through Picasa Web Albums, but with the push towards Google Plus they made it harder to embed solo pictures (you can embed Google+ posts though).</li>
+</ul></li>
+</ol>
+
+<p>I had also previously heard about <a href="http://jekyllrb.com/" target="_blank">Jekyll</a>-powered blogs, specially thanks to Yihui Xie&rsquo;s blog (<span class="showtooltip" title="Xie Y (2013). 'Statistics, R, Graphics and Fun | Yihui Xie.' ."><a href="http://yihui.name/en/">Xie, English version</a></span>). At the time when I first learned about this type of blog it seemed challenging so I never dedicated the time to really learn about it. What ended up movitivating me to do so was our new student bloggers group <a href="https://twitter.com/jhubiostat" target="_blank">@jhubiostat</a>.</p>
+
+<p>Let me describe how I set up <a href="http://bit.ly/FellBit" target="_blank">Fellgernon Bit @ GitHub</a>.</p>
+
+<h2 id="setting-up-fellgernon-bit-github-http-bit-ly-fellbit">Setting up <a href="http://bit.ly/FellBit" target="_blank">Fellgernon Bit @ GitHub</a></h2>
+
+<h3 id="creating-the-jekyll-bootstrap-blog">Creating the Jekyll-Bootstrap blog</h3>
+
+<p>My main guide to setup the blog comes from a post by J. Fisher (<span class="showtooltip" title="Fisher JC (2012). 'Blog with Knitr and Jekyll.' ."><a href="http://jfisher-usgs.github.io/r/2012/07/03/knitr-jekyll/">Fisher, 2012</a></span>) which points to another of his posts (<span class="showtooltip" title="Fisher JC (2012). 'Jekyll Build on Windows.' ."><a href="http://jfisher-usgs.github.io/lessons/2012/05/30/jekyll-build-on-windows/">Fisher, 2012b</a></span>).</p>
+
+<h4 id="install-jekyll">Install Jekyll</h4>
+
+<p>Before doing anything, I first had to install <a href="http://jekyllrb.com/" target="_blank">Jekyll</a>. To do so I recommend checking the installation documentation (<span class="showtooltip" title="(2013). 'Installation.' ."><a href="http://jekyllrb.com/docs/installation/">Jekyll Installation</a></span>).</p>
+
+<p>To install <a href="http://jekyllrb.com/" target="_blank">Jekyll</a>, I needed to have <a href="https://www.ruby-lang.org/en/downloads/" target="_blank">Ruby</a> and <a href="http://rubygems.org/pages/download" target="_blank">RubyGems</a>. Since I use <a href="http://www.macports.org/" target="_blank">MacPorts</a> these are the steps I used:</p>
+
+<pre><code class="language-bash">
+## Update MacPorts, can take a while!!
+sudo port selfupdate
+sudo port upgrade outdated
+
+## Search for Ruby and install it
+## I think that Jekyll needs 1.9+ since I had 1.8 already installed
+port search ruby
+sudo port install ruby19
+## Set as default version
+sudo port select --set ruby ruby19
+
+## Check which version you have
+ruby --version
+
+## I manually set mine to be ruby1.9
+cd /opt/local/bin
+sudo ln -s ruby1.9 ruby
+ruby --version 
+## This is mine:
+## ruby 1.9.3p448 (2013-06-27 revision 41675) [x86_64-darwin12]
+</code></pre>
+
+<p>With Ruby in place, I could then install jekyll.</p>
+
+<pre><code class="language-bash">
+sudo gem install jekyll
+</code></pre>
+
+<p>Note that you can also do this after initializing the blog.</p>
+
+<h3 id="initialize-blog">Initialize blog</h3>
+
+<p>Following the instructions (<span class="showtooltip" title="Fisher JC (2012). 'Jekyll Build on Windows.' ."><a href="http://jfisher-usgs.github.io/lessons/2012/05/30/jekyll-build-on-windows/">Fisher, 2012b</a></span>) I then acquired all the setup files for <a href="http://jekyllbootstrap.com/" target="_blank">Jekyll-Bootstrap</a>. The installation instructions are quite straight forward as you will see (<span class="showtooltip" title="(2013). 'Jekyll Quick Start | ruhoh universal static blog generator.' ."><a href="http://jekyllbootstrap.com/usage/jekyll-quick-start.html">JB Quick Start</a></span>).</p>
+
+<p>First, I created the <code>lcolladotor.github.com</code> repository on GitHub. As my GitHub username is <code>lcolladotor</code>, by default GitHub will consider the <code>lcolladotor.github.com</code> repository as a GitHub pages repository and publish it. Thus creating <a href="http://lcolladotor.github.io/" target="_blank">lcolladotor.github.io/</a>.</p>
+
+<p>Once the repository was created, I added the Jekyll-Bootstrap files.</p>
+
+<pre><code class="language-bash">
+## Initialize repo with Jekyll-Bootstrap files
+git clone https://github.com/plusjade/jekyll-bootstrap.git lcolladotor.github.com
+cd lcolladotor.github.com/
+git remote set-url origin git@github.com:lcolladotor/lcolladotor.github.com.git
+git push -u origin master
+</code></pre>
+
+<h3 id="change-theme-to-twitter-2-0">Change theme to Twitter-2.0</h3>
+
+<p>Jekyll-Bootstrap includes several themes (<span class="showtooltip" title="(2013). 'Using Themes | ruhoh universal static blog generator.' ."><a href="http://jekyllbootstrap.com/usage/jekyll-theming.html">JB Themes</a></span>) which you check on their <a href="http://themes.jekyllbootstrap.com/" target="_blank">theme explorer</a>. I think that <a href="http://jfisher-usgs.github.io/" target="_blank">J. Fisher&rsquo;s blog</a> looks good with Twitter-2.0 and decided to follow his lead. Furthermore, he has customized a few things (check <a href="https://github.com/jfisher-usgs/jfisher-usgs.github.com/commits/master" target="_blank">his blog&rsquo;s history</a>) which I just plan on using.</p>
+
+<pre><code class="language-bash">
+## Install Twitter-2.0 theme
+rake theme:install git=&quot;https://github.com/gdagley/theme-twitter-2.0&quot;
+</code></pre>
+
+<h3 id="code-highlighting">Code highlighting</h3>
+
+<p>The default Jekyll highlighting setup uses <a href="http://pygments.org/" target="_blank">pygments</a>. I am basing my statement on the documentation for the <em>highlight</em> argument in <code>?knitr::render_jekyll</code>:</p>
+
+<pre><code>which code highlighting engine to use: for pygments, the Liquid syntax is used (default approach Jekyll)
+</code></pre>
+
+<p>So I installed Pygments.</p>
+
+<pre><code class="language-bash">
+## Install Pygments, assuming you have Python installed
+curl -O http://python-distribute.org/distribute_setup.py
+sudo python distribute_setup.py
+sudo easy_install Pygments
+</code></pre>
+
+<p>Note that (<span class="showtooltip" title="Fisher JC (2012). 'Jekyll Build on Windows.' ."><a href="http://jfisher-usgs.github.io/lessons/2012/05/30/jekyll-build-on-windows/">Fisher, 2012b</a></span>) details some other steps. I basically copied his <a href="https://github.com/jfisher-usgs/jfisher-usgs.github.com/blob/master/assets/themes/twitter-2.0/css/syntax.css" target="_blank">syntax.css</a> file and saved it as <code>/assets/themes/twitter-2.0/css/syntax.css</code></p>
+
+<p>Note that you do have to add to <code>_includes/themes/twitter-2.0/default.html</code> the following line:</p>
+
+<pre><code class="language-html">&lt;link href=&quot;/assets/themes/twitter-2.0/css/syntax.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot;&gt;
+</code></pre>
+
+<p>As you can see <a href="https://github.com/lcolladotor/lcolladotor.github.com/blob/master/_includes/themes/twitter-2.0/default.html" target="_blank">on my own file</a> in line 23 (currently) I am using a Liquid syntax instead of specifying the full path.</p>
+
+<h3 id="import-posts">Import posts</h3>
+
+<p>Next I had to import my posts from Tumblr. Jekyll has a varied set of tools that allow you to quickly import posts which I recommend using if you are migrating your blog (<span class="showtooltip" title="(2013). 'Blog migrations.' ."><a href="http://jekyllrb.com/docs/migrations/">Blog Migrations</a></span>).</p>
+
+<p>The Tumblr importer allows you to either import them into HTML format or Markdown format. I first tried Markdown, but ran into some problems. So I decided to import them into HTML format, and rename them to Markdown.</p>
+
+<pre><code class="language-bash">
+## Install importing tools
+sudo gem install jekyll-import --pre
+
+## Import the posts
+cd ~/
+mkdir tmp
+/opt/local/bin/ruby1.9 -rubygems -e 'require &quot;jekyll/jekyll-import/tumblr&quot;; JekyllImport::Tumblr.process(&quot;http://fellgernon.tumblr.com&quot;, &quot;html&quot;, true, false, false)'
+## There is a post that the converter didn't like, so I had to set to &quot;private&quot; mode
+
+
+## Rename from HTML to Markdown
+cd _posts/tumblr/
+for i in *html; do echo $i; filename=$(basename &quot;$i&quot;); filename2=&quot;${filename%.*}&quot;; echo $filename2; mv $i ${filename2}.md; done
+
+## Move the posts to _posts
+mv ~/tmp/_posts/tumblr/*md ~/WhereYouHaveYourLocalGitRepoCopy/lcollado.github.com/_posts/
+</code></pre>
+
+<p>I then had to do some manual edits on the posts, specially for code chunks. For example, <a href="https://raw.github.com/lcolladotor/lcolladotor.github.com/master/_posts/2013-05-09-reading-an-r-file-from-github.md" target="_blank">this post</a> has R chunks which I had to surround by:</p>
+
+<script src="https://gist.github.com/lcolladotor/7388043.js"></script>
+
+<p>To complete the posts, I made sure the YAML front matter was correct and defined categories since I only had tags in Tumblr.</p>
+
+<h3 id="viewing-your-blog-locally">Viewing your blog locally</h3>
+
+<p>Once you have the posts, you can use Jekyll to view your blog locally.</p>
+
+<pre><code class="language-bash">
+## Go to your directory
+~/WhereYouHaveYourLocalGitRepoCopy/lcollado.github.com/
+
+## Generate the static view of your blog
+jekyll serve
+</code></pre>
+
+<p>In my case, <code>jekyll serve</code> prompted a couple of errors which I had to go to the posts and edit. For example, some HTML tag that I opened but didn&rsquo;t close. Stuff like that.</p>
+
+<p>Once you run the previous command, you can then view your site on your browser at <a href="http://localhost:4000/" target="_blank">http://localhost:4000/</a></p>
+
+<h3 id="customizing">Customizing</h3>
+
+<p>The very first thing you must change is the _config.yml file. The file you copied from Jekyll-Bootstrap includes instructions on how to do so. If you learn by example, take a peek at <a href="https://github.com/lcolladotor/lcolladotor.github.com/blob/master/_config.yml" target="_blank">mine</a>.</p>
+
+<p>In my case, I use <a href="http://disqus.com/" target="_blank">Disqus</a> for comments and <a href="http://www.google.com/analytics" target="_blank">Google Analytics</a> for tracking visits. Since I was also using <a href="http://disqus.com/" target="_blank">Disqus</a> for my Tumblr blog, I used <a href="http://disqus.com/" target="_blank">Disqus</a>&rsquo; tools to migrate the comments. Finally, I use <a href="http://feedburner.google.com/" target="_blank">FeedBurner</a> for my RSS feed, which I was able to update to the new <a href="http://lcolladotor.github.io/rss.xml" target="_blank">RSS generated by Fellgernon Bit @ GitHub</a>. Thus, the subscribers to <a href="http://feeds.feedburner.com/FellgernonBit" target="_blank">feeds.feedburner.com/FellgernonBit</a> didn&rsquo;t have to change anything.</p>
+
+<p>I also added <a href="https://www.addthis.com/get/smart-layers#.Un5oIpTF2Ql" target="_blank">AddThis Smart Layers</a> with <a href="https://bitly.com/" target="_blank">bit.ly</a> shortening to the site and a <a href="http://www.clustrmaps.com/" target="_blank">ClustrMap</a> as you can see in <a href="https://github.com/lcolladotor/lcolladotor.github.com/blob/master/_layouts/page.html" target="_blank">_layouts/page.html</a>.</p>
+
+<p>As for math, I am currently using the rdiscount flavor of Markdown and loading the MathJax script as you can see in <a href="https://github.com/lcolladotor/lcolladotor.github.com/blob/master/_layouts/default.html" target="_blank">_layouts/default.html</a>. However, note that we shoudn&rsquo;t ask too much power out of Markdown for math (<span class="showtooltip" title="Xie Y (2013). 'Markdown or LaTeX? | Yihui Xie.' ."><a href="http://yihui.name/en/2013/10/markdown-or-latex/">Xie, 2013</a></span>).</p>
+
+<p>To use rdiscount locally, I also had to install it. I have also tried out kramdown.</p>
+
+<pre><code class="language-bash">
+## Markdown flavors
+sudo gem install rdiscount
+sudo gem install kramdown
+
+## I don't remember why I also installed this:
+sudo gem install nokogiri
+</code></pre>
+
+<p>I then customized the index and added other pages:</p>
+
+<ul>
+<li><a href="https://github.com/lcolladotor/lcolladotor.github.com/blob/master/index.html" target="_blank">index.html</a>
+
+<ul>
+<li>Used code from Jason Fisher to add the pagination.</li>
+</ul></li>
+<li><a href="https://github.com/lcolladotor/lcolladotor.github.com/blob/master/about.html" target="_blank">about.html</a>
+
+<ul>
+<li>Simple description</li>
+</ul></li>
+<li><a href="https://github.com/lcolladotor/lcolladotor.github.com/blob/master/_includes/themes/twitter-2.0/default.html" target="_blank">_includes/themes/twitter-2.0/default.html</a>
+
+<ul>
+<li>I added a CSS drop down menu (constructed with <a href="http://cssmenumaker.com/builder/1044267" target="_blank">CSS Menu Maker</a>) with the blogs I follow. For this I also had to modify <a href="https://github.com/lcolladotor/lcolladotor.github.com/commit/15e03fdc317399b37521f130269adf3e7da7efb3" target="_blank">_assets/themes/twitter-2.0/css/style.css</a>.</li>
+<li>I modified the footer to mention that my posts are under the Creative Commons License version 3 BY-NC-SA. An idea I took from Yihui Xie&rsquo;s blog.
+<br /></li>
+</ul></li>
+</ul>
+
+<p>Since I am interested in getting my blog to be a part of <a href="http://www.r-bloggers.com/" target="_blank">R-bloggers</a>, I created an RSS specific for the posts under the <code>rstats</code> category to comply with their requirements (<span class="showtooltip" title="Galili T (2013). 'add your blog!' ."><a href="http://www.r-bloggers.com/add-your-blog/">Add your blog!</a></span>).</p>
+
+<p>For the category-specific RSS I used <code>feed.category.xml</code> (<span class="showtooltip" title="(2013). 'jekyll-rss-feeds.' ."><a href="https://github.com/snaptortoise/jekyll-rss-feeds">Jekyll RSS Feed Templates</a></span>) and created <a href="https://github.com/lcolladotor/lcolladotor.github.com/blob/master/rss-rstats.xml" target="_blank">rss-rstats.xml</a> [see <a href="https://github.com/lcolladotor/lcolladotor.github.com/blob/master/atom-rstats.xml" target="_blank">atom-rstats.xml</a> if you prefer Atom RSS] which is then processed and converted to <a href="http://feeds.feedburner.com/FellgernonBit-rstats" target="_blank">feeds.feedburner.com/FellgernonBit-rstats</a>.</p>
+
+<p>Note that I use <a href="http://feedburner.google.com/" target="_blank">FeedBurner</a> to then create <a href="https://twitter.com/fellgernon" target="_blank">Twitter updates</a> linking to back to the posts. Also, for the rstats one I add the <a href="https://twitter.com/search?q=%23rstats" target="_blank">#rstats</a> hashtag to the post.</p>
+
+<h3 id="writing-an-r-post">Writing an R post</h3>
+
+<p>J. Fisher again explains in detail how to blog using Knitr and Jekyll (<span class="showtooltip" title="Fisher JC (2012). 'Blog with Knitr and Jekyll.' ."><a href="http://jfisher-usgs.github.io/r/2012/07/03/knitr-jekyll/">Fisher, 2012</a></span>). Since I use <a href="https://github.com/textmate/textmate" target="_blank">TextMate2</a> as my text editor, I went ahead and modified his code and created a command to do so.</p>
+
+<p>Basically, I modified the <code>knit</code> command from the <code>SWeave</code> TextMate bundle and added J. Fisher&rsquo;s code. I saved it under the <code>Menu Actions</code> of the <code>SWeave</code> bundle and linked it to <code>alt + e</code>.</p>
+
+<p>For this to work, I use Google Chrome with the <a href="https://chrome.google.com/webstore/detail/jmchmkecamhbiokiopfpnfgbidieafmd" target="_blank">Markdown Preview</a> extension installed.</p>
+
+<p>This is the <a href="https://gist.github.com/lcolladotor/7388033" target="_blank">code for the TextMate command</a>. You could certainly make it much more concise and drop things, but I like to see a quick preview of the post. However, I still recommend using <code>jekyll serve</code> for a final thorough preview of the post before pushing it to GitHub.</p>
+
+<script src="https://gist.github.com/lcolladotor/7388033.js"></script>
+
+<h3 id="things-i-might-add">Things I might add</h3>
+
+<p>Carl Boettiger has a great site &ndash;specially the <a href="http://carlboettiger.info/lab-notebook.html" target="_blank">Lab Notebook</a> part&ndash; and he describes all the tools he used for making it (<span class="showtooltip" title="Boettiger C (2013). 'About this site.' ."><a href="http://carlboettiger.info/README.html">Boettiger, 2013</a></span>). One of the features I would like to add to my site is the <code>history</code> button on the right sidebar he has on his posts which link to the GitHub history of the post. For example check <a href="http://carlboettiger.info/2013/09/25/mozilla-software-review.html" target="_blank">this post</a> and its <a href="https://github.com/cboettig/labnotebook/commits/master/_posts/2013-09-25-mozilla-software-review.md" target="_blank">history</a>. I think that it can be very useful for those interested in any edits made to the posts. For example, I had to fix a couple of things on one of my recent posts as you can see <a href="https://github.com/lcolladotor/lcolladotor.github.com/commits/master/_posts/2013-11-07-bmorebiostats.md" target="_blank">here</a>.</p>
+
+<p>Looking around, I found the code needed for this to work in Carl&rsquo;s repository: <a href="https://github.com/cboettig/labnotebook/blob/master/_includes/sidebar.html" target="_blank">_includes/sidebar.html</a>, <a href="https://github.com/cboettig/labnotebook/tree/master/_plugins/jekyll-labnotebook-plugins" target="_blank">_plugins/jekyll-labnotebook-plugins</a>.</p>
+
+<p>However, GitHub currently does not support Jekyll plugins. Meaning that if you use any plugins, you have to create the site locally and then push it to GitHub instead of just pushing the new posts and letting GitHub handle creating the site. It&rsquo;s not a huge deal, but for now I&rsquo;ll rely on GitHub and keep things simple for me.</p>
+
+<h2 id="if-i-were-to-do-it-again">If I were to do it again</h2>
+
+<p>Once you install Jekyll, I think the easiest way to set up your own blog is to fork another person&rsquo;s blog</p>
+
+<ul>
+<li><a href="https://github.com/jfisher-usgs/jfisher-usgs.github.com" target="_blank">J. Fisher&rsquo;s</a>,</li>
+<li><a href="https://github.com/yihui/en" target="_blank">Yihui Xie&rsquo;s</a>,</li>
+<li><a href="https://github.com/cboettig/labnotebook" target="_blank">Carl Boettiger&rsquo;s</a>,</li>
+<li><a href="https://github.com/lcolladotor/lcolladotor.github.com" target="_blank">mine</a>,</li>
+<li>or someone else blog you like.
+<br /></li>
+</ul>
+
+<p>Then delete their posts, give attribution, and customize things like the blog title and other things you would have to customize on any blogging platform (RSS, comments provider, etc).</p>
+
+<p>Obviously Jekyll gives you much more control over your site, but at the same time, you must also dedicate enough time to learn what to change and make sure that things don&rsquo;t break.</p>
+
+<h3 id="post-template">Post template</h3>
+
+<p>To finish describing my setup, <a href="https://gist.github.com/lcolladotor/7387745" target="_blank">here is my post template</a>.</p>
+
+<script src="https://gist.github.com/lcolladotor/7387745.js"></script>
+
+<h2 id="wrap-up">Wrap up</h2>
+
+<p>I hope that you will find some of this information useful if you are thinking of starting your <code>R</code> blog powered by Jekyll-Bootstrap and hosted by GitHub.</p>
+
+<p>Note that since the blog is hosted in GitHub, others can send you pull requests to fix things and/or create guest posts. Just as easily you can make it a multi-author blog by changing the collaborators setting of the GitHub repository.</p>
+
+<p>This wouldn&rsquo;t have been possible without J. Fisher&rsquo;s posts and many other resources available online.</p>
+
+<h3 id="references">References</h3>
+
+<p>Citations made with <code>knitcitations</code> (<span class="showtooltip" title="Boettiger C (2013). knitcitations: Citations for knitr markdown files. R package version 0.4-7."><a href="http://CRAN.R-project.org/package=knitcitations">Boettiger, 2013b</a></span>).</p>
+
+<ul>
+<li>@jeffreyhorner,  Blog with R Markdown and tumblr: Part I.  <em>Jeffrey Horner</em>  <a href="http://jeffreyhorner.tumblr.com/post/25804518110/blog-with-r-markdown-and-tumblr-part-i" target="_blank">http://jeffreyhorner.tumblr.com/post/25804518110/blog-with-r-markdown-and-tumblr-part-i</a></li>
+<li>@jeffreyhorner,  Blog with R Markdown and tumblr: Part II.  <em>Jeffrey Horner</em>  <a href="http://jeffreyhorner.tumblr.com/post/25943954723/blog-with-r-markdown-and-tumblr-part-ii" target="_blank">http://jeffreyhorner.tumblr.com/post/25943954723/blog-with-r-markdown-and-tumblr-part-ii</a></li>
+<li>Yihui Xie,  Statistics, R, Graphics and Fun | Yihui Xie.  <a href="http://yihui.name/en/" target="_blank">http://yihui.name/en/</a></li>
+<li>Jason Fisher,   (2012) Blog with Knitr and Jekyll.  <a href="http://jfisher-usgs.github.io/r/2012/07/03/knitr-jekyll/" target="_blank">http://jfisher-usgs.github.io/r/2012/07/03/knitr-jekyll/</a></li>
+<li>Jason Fisher,   (2012) Jekyll Build on Windows.  <a href="http://jfisher-usgs.github.io/lessons/2012/05/30/jekyll-build-on-windows/" target="_blank">http://jfisher-usgs.github.io/lessons/2012/05/30/jekyll-build-on-windows/</a></li>
+<li>Installation.  <em>Jekyll â¢ Simple, blog-aware, static sites</em>  <a href="http://jekyllrb.com/docs/installation/" target="_blank">http://jekyllrb.com/docs/installation/</a></li>
+<li>Jekyll Quick Start | ruhoh universal static blog generator.  <a href="http://jekyllbootstrap.com/usage/jekyll-quick-start.html" target="_blank">http://jekyllbootstrap.com/usage/jekyll-quick-start.html</a></li>
+<li>Using Themes | ruhoh universal static blog generator.  <a href="http://jekyllbootstrap.com/usage/jekyll-theming.html" target="_blank">http://jekyllbootstrap.com/usage/jekyll-theming.html</a></li>
+<li>Blog migrations.  <em>Jekyll â¢ Simple, blog-aware, static sites</em>  <a href="http://jekyllrb.com/docs/migrations/" target="_blank">http://jekyllrb.com/docs/migrations/</a></li>
+<li>Tal Galili,  add your blog!.  <em>R-bloggers</em>  <a href="http://www.r-bloggers.com/add-your-blog/" target="_blank">http://www.r-bloggers.com/add-your-blog/</a></li>
+<li>jekyll-rss-feeds.  <em>GitHub</em>  <a href="https://github.com/snaptortoise/jekyll-rss-feeds" target="_blank">https://github.com/snaptortoise/jekyll-rss-feeds</a></li>
+<li>Yihui Xie,   (2013) Markdown or LaTeX? | Yihui Xie.  <a href="http://yihui.name/en/2013/10/markdown-or-latex/" target="_blank">http://yihui.name/en/2013/10/markdown-or-latex/</a></li>
+<li>Carl Boettiger,   (2013) About this site.  <em>Lab Notebook</em>  <a href="http://carlboettiger.info/README.html" target="_blank">http://carlboettiger.info/README.html</a></li>
+<li>Carl Boettiger,   (2013) knitcitations: Citations for knitr markdown files.  <a href="http://CRAN.R-project.org/package=knitcitations" target="_blank">http://CRAN.R-project.org/package=knitcitations</a></li>
+</ul>
+
+<h3 id="reproducibility">Reproducibility</h3>
+
+<pre><code class="language-r">sessionInfo()
+</code></pre>
+
+<pre><code>## R version 3.0.2 (2013-09-25)
+## Platform: x86_64-apple-darwin10.8.0 (64-bit)
+## 
+## locale:
+## [1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8
+## 
+## attached base packages:
+## [1] stats     graphics  grDevices utils     datasets  methods   base     
+## 
+## other attached packages:
+## [1] knitcitations_0.4-7 bibtex_0.3-6        knitr_1.5          
+## 
+## loaded via a namespace (and not attached):
+##  [1] codetools_0.2-8 digest_0.6.4    evaluate_0.5.1  formatR_0.10   
+##  [5] httr_0.2        RCurl_1.95-4.1  stringr_0.6.2   tools_3.0.2    
+##  [9] XML_3.95-0.2    xtable_1.7-1
+</code></pre>
+
+    </div>
+
+  </article>
+
+  <nav>
+  <ul class="pager">
+    
+    <li class="previous"><a href="http://lcolladotor.github.io/2013/11/08/My-strategy-for-quickly-grading-homeworks"><span
+      aria-hidden="true">&larr;</span> My strategy for quickly grading homeworks</a></li>
+    
+
+    
+    <li class="next"><a href="http://lcolladotor.github.io/2013/11/14/Trying-to-reduce-the-memory-overhead-when-using-mclapply">Trying to reduce the memory overhead when using mclapply <span
+      aria-hidden="true">&rarr;</span></a></li>
+    
+  </ul>
+</nav>
+
+  
+<section id="comments">
+  <div id="disqus_thread">
+    <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'fellgernonbit';
+    var disqus_identifier = 'http:\/\/lcolladotor.github.io\/2013\/11\/09\/Creating-your-Jekyll-Bootstrap-powered-blog-for-R-blogging';
+    var disqus_title = 'Creating your Jekyll-Bootstrap powered blog for R blogging';
+    var disqus_url = 'http:\/\/lcolladotor.github.io\/2013\/11\/09\/Creating-your-Jekyll-Bootstrap-powered-blog-for-R-blogging';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+  </div>
+</section>
+
+
+
+</div>
+<footer class="site-footer">
+  <div class="container">
+    <p class="powered-by">
+        
+        
+        
+        <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4ef23e545d41b87c"></script>
+        <script type="text/javascript">
+          addthis.layers({
+            'theme' : 'transparent',
+            'share' : {
+              'position' : 'left',
+              'numPreferredServices' : 5,
+              'desktop' : false,
+              'mobile' : true
+            }, 
+            'follow' : {
+              'services' : [
+                {'service': 'twitter', 'id': 'fellgernon'},
+                {'service': 'rss', 'id': 'http://feeds.feedburner.com/FellgernonBit'}
+              ],
+        	  'offset' : {'top':'10px'},
+              'title' : 'Follow'
+            }   
+          });
+        </script>
+        
+
+        <script type="text/javascript">
+        var addthis_config = {
+        	data_ga_property: 'UA-45299226-1',
+        	data_ga_social : true,
+        	data_track_addressbar: true
+        };
+        var addthis_share = {
+        	
+        	url_transforms : {
+        		shorten: {
+        			twitter: 'bitly'
+        		}
+        	}, 
+        	shorteners : {
+        		bitly : {}
+        	}
+        }
+        </script>
+        
+        <center>	 
+        <div id="clustrmaps-widget"></div><script type="text/javascript">var _clustrmaps = {'url' : 'http://lcolladotor.github.io/', 'user' : 1119558, 'server' : '2', 'id' : 'clustrmaps-widget', 'version' : 1, 'date' : '2013-10-30', 'lang' : 'en', 'corners' : 'square' };(function (){ var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = 'http://www2.clustrmaps.com/counter/map.js'; var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);})();</script><noscript><a href="http://www2.clustrmaps.com/user/320111546"><img src="http://www2.clustrmaps.com/stats/maps-no_clusters/lcolladotor.github.io--thumb.jpg" alt="Locations of visitors to this page" /></a></noscript>
+        </center>
+
+      &copy; 2011-2017 Leonardo Collado Torres under (CC) BY-NC-SA &middot; 
+
+      Powered by the <a href="https://github.com/gcushen/hugo-academic" target="_blank">Academic
+      theme</a> for <a href="http://gohugo.io" target="_blank">Hugo</a>.
+
+      <span class="pull-right" aria-hidden="true">
+        <a href="#" id="back_to_top">
+          <span class="button_icon">
+            <i class="fa fa-chevron-up fa-2x"></i>
+          </span>
+        </a>
+      </span>
+
+    </p>
+  </div>
+</footer>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.4/TweenMax.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/ScrollToPlugin.min.js"></script>
+    <script src="/js/jquery-1.12.3.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/isotope.pkgd.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.1/imagesloaded.pkgd.min.js"></script>
+    <script src="/js/hugo-academic.js"></script>
+    
+
+    
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-45299226-1', 'auto');
+        ga('send', 'pageview');
+
+         
+        var links = document.querySelectorAll('a');
+        Array.prototype.map.call(links, function(item) {
+            if (item.host != document.location.host) {
+                item.addEventListener('click', function() {
+                    var action = item.getAttribute('data-action') || 'follow';
+                    ga('send', 'event', 'outbound', action, item.href);
+                });
+            }
+        });
+    </script>
+    
+
+    
+    
+      
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+
+      
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/languages/r.min.js"></script>
+      
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/languages/bash.min.js"></script>
+      
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/languages/python.min.js"></script>
+      
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/languages/stata.min.js"></script>
+      
+
+      
+
+      <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });
+    </script>
+    <script async src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML"></script>
+    
+
+  </body>
+</html>
+

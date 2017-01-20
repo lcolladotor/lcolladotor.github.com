@@ -1,0 +1,506 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blog on L. Collado-Torres</title>
+    <link>http://lcolladotor.github.io/tags/blog/index.xml</link>
+    <description>Recent content in Blog on L. Collado-Torres</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2011-2017 Leonardo Collado Torres under (CC) BY-NC-SA</copyright>
+    <atom:link href="/tags/blog/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Creating your Jekyll-Bootstrap powered blog for R blogging</title>
+      <link>http://lcolladotor.github.io/2013/11/09/Creating-your-Jekyll-Bootstrap-powered-blog-for-R-blogging</link>
+      <pubDate>Sat, 09 Nov 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://lcolladotor.github.io/2013/11/09/Creating-your-Jekyll-Bootstrap-powered-blog-for-R-blogging</guid>
+      <description>
+
+&lt;p&gt;As you might have noticed, I recently decided to move &lt;code&gt;Fellgernon Bit&lt;/code&gt; from &lt;a href=&#34;http://bit.ly/FellgernonBit&#34; target=&#34;_blank&#34;&gt;Tumblr&lt;/a&gt; to &lt;a href=&#34;http://bit.ly/FellBit&#34; target=&#34;_blank&#34;&gt;GitHub&lt;/a&gt;. There are a couple of reasons why I made this change.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;I wanted a more professional-looking blog.
+
+&lt;ul&gt;
+&lt;li&gt;There are not many R blogs on Tumblr, and well, long text posts are not really meant for Tumblr.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Better code highlighting.
+
+&lt;ul&gt;
+&lt;li&gt;I had enabled R code highlighting using the highlighting instructions from Jeffrey Horner (&lt;span class=&#34;showtooltip&#34; title=&#34;@jeffreyhorner (2013). &#39;Blog with R Markdown and tumblr: Part I.&#39; .&#34;&gt;&lt;a href=&#34;http://jeffreyhorner.tumblr.com/post/25804518110/blog-with-r-markdown-and-tumblr-part-i&#34;&gt;Horner, Part I&lt;/a&gt;&lt;/span&gt;). The instructions are great! I guess I just got lazy to tweak the CSS of my Tumblr blog to fix some things I didn&amp;rsquo;t like.&lt;/li&gt;
+&lt;li&gt;I also want to be able to highlight code from other languages, like &lt;code&gt;bash&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Make it easier to embed any HTML code.
+
+&lt;ul&gt;
+&lt;li&gt;Yes, you can write posts at Tumblr in pure HTML but sometimes things break as Tumblr doesn&amp;rsquo;t like them.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Easier process of writing posts using Rmd files.
+
+&lt;ul&gt;
+&lt;li&gt;The steps in Horner&amp;rsquo;s guide (&lt;span class=&#34;showtooltip&#34; title=&#34;@jeffreyhorner (2013). &#39;Blog with R Markdown and tumblr: Part II.&#39; .&#34;&gt;&lt;a href=&#34;http://jeffreyhorner.tumblr.com/post/25943954723/blog-with-r-markdown-and-tumblr-part-ii&#34;&gt;Horner, Part II&lt;/a&gt;&lt;/span&gt;) are quite involved. Instead of those steps, I was just knitting my posts and then manually copying the html code in the &lt;code&gt;body&lt;/code&gt; tags, then pasting it in Tumblr.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Easy way to host figures and link to them.
+
+&lt;ul&gt;
+&lt;li&gt;I have previously hosted pictures through Picasa Web Albums, but with the push towards Google Plus they made it harder to embed solo pictures (you can embed Google+ posts though).&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;I had also previously heard about &lt;a href=&#34;http://jekyllrb.com/&#34; target=&#34;_blank&#34;&gt;Jekyll&lt;/a&gt;-powered blogs, specially thanks to Yihui Xie&amp;rsquo;s blog (&lt;span class=&#34;showtooltip&#34; title=&#34;Xie Y (2013). &#39;Statistics, R, Graphics and Fun | Yihui Xie.&#39; .&#34;&gt;&lt;a href=&#34;http://yihui.name/en/&#34;&gt;Xie, English version&lt;/a&gt;&lt;/span&gt;). At the time when I first learned about this type of blog it seemed challenging so I never dedicated the time to really learn about it. What ended up movitivating me to do so was our new student bloggers group &lt;a href=&#34;https://twitter.com/jhubiostat&#34; target=&#34;_blank&#34;&gt;@jhubiostat&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Let me describe how I set up &lt;a href=&#34;http://bit.ly/FellBit&#34; target=&#34;_blank&#34;&gt;Fellgernon Bit @ GitHub&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;setting-up-fellgernon-bit-github-http-bit-ly-fellbit&#34;&gt;Setting up &lt;a href=&#34;http://bit.ly/FellBit&#34; target=&#34;_blank&#34;&gt;Fellgernon Bit @ GitHub&lt;/a&gt;&lt;/h2&gt;
+
+&lt;h3 id=&#34;creating-the-jekyll-bootstrap-blog&#34;&gt;Creating the Jekyll-Bootstrap blog&lt;/h3&gt;
+
+&lt;p&gt;My main guide to setup the blog comes from a post by J. Fisher (&lt;span class=&#34;showtooltip&#34; title=&#34;Fisher JC (2012). &#39;Blog with Knitr and Jekyll.&#39; .&#34;&gt;&lt;a href=&#34;http://jfisher-usgs.github.io/r/2012/07/03/knitr-jekyll/&#34;&gt;Fisher, 2012&lt;/a&gt;&lt;/span&gt;) which points to another of his posts (&lt;span class=&#34;showtooltip&#34; title=&#34;Fisher JC (2012). &#39;Jekyll Build on Windows.&#39; .&#34;&gt;&lt;a href=&#34;http://jfisher-usgs.github.io/lessons/2012/05/30/jekyll-build-on-windows/&#34;&gt;Fisher, 2012b&lt;/a&gt;&lt;/span&gt;).&lt;/p&gt;
+
+&lt;h4 id=&#34;install-jekyll&#34;&gt;Install Jekyll&lt;/h4&gt;
+
+&lt;p&gt;Before doing anything, I first had to install &lt;a href=&#34;http://jekyllrb.com/&#34; target=&#34;_blank&#34;&gt;Jekyll&lt;/a&gt;. To do so I recommend checking the installation documentation (&lt;span class=&#34;showtooltip&#34; title=&#34;(2013). &#39;Installation.&#39; .&#34;&gt;&lt;a href=&#34;http://jekyllrb.com/docs/installation/&#34;&gt;Jekyll Installation&lt;/a&gt;&lt;/span&gt;).&lt;/p&gt;
+
+&lt;p&gt;To install &lt;a href=&#34;http://jekyllrb.com/&#34; target=&#34;_blank&#34;&gt;Jekyll&lt;/a&gt;, I needed to have &lt;a href=&#34;https://www.ruby-lang.org/en/downloads/&#34; target=&#34;_blank&#34;&gt;Ruby&lt;/a&gt; and &lt;a href=&#34;http://rubygems.org/pages/download&#34; target=&#34;_blank&#34;&gt;RubyGems&lt;/a&gt;. Since I use &lt;a href=&#34;http://www.macports.org/&#34; target=&#34;_blank&#34;&gt;MacPorts&lt;/a&gt; these are the steps I used:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;
+## Update MacPorts, can take a while!!
+sudo port selfupdate
+sudo port upgrade outdated
+
+## Search for Ruby and install it
+## I think that Jekyll needs 1.9+ since I had 1.8 already installed
+port search ruby
+sudo port install ruby19
+## Set as default version
+sudo port select --set ruby ruby19
+
+## Check which version you have
+ruby --version
+
+## I manually set mine to be ruby1.9
+cd /opt/local/bin
+sudo ln -s ruby1.9 ruby
+ruby --version 
+## This is mine:
+## ruby 1.9.3p448 (2013-06-27 revision 41675) [x86_64-darwin12]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;With Ruby in place, I could then install jekyll.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;
+sudo gem install jekyll
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Note that you can also do this after initializing the blog.&lt;/p&gt;
+
+&lt;h3 id=&#34;initialize-blog&#34;&gt;Initialize blog&lt;/h3&gt;
+
+&lt;p&gt;Following the instructions (&lt;span class=&#34;showtooltip&#34; title=&#34;Fisher JC (2012). &#39;Jekyll Build on Windows.&#39; .&#34;&gt;&lt;a href=&#34;http://jfisher-usgs.github.io/lessons/2012/05/30/jekyll-build-on-windows/&#34;&gt;Fisher, 2012b&lt;/a&gt;&lt;/span&gt;) I then acquired all the setup files for &lt;a href=&#34;http://jekyllbootstrap.com/&#34; target=&#34;_blank&#34;&gt;Jekyll-Bootstrap&lt;/a&gt;. The installation instructions are quite straight forward as you will see (&lt;span class=&#34;showtooltip&#34; title=&#34;(2013). &#39;Jekyll Quick Start | ruhoh universal static blog generator.&#39; .&#34;&gt;&lt;a href=&#34;http://jekyllbootstrap.com/usage/jekyll-quick-start.html&#34;&gt;JB Quick Start&lt;/a&gt;&lt;/span&gt;).&lt;/p&gt;
+
+&lt;p&gt;First, I created the &lt;code&gt;lcolladotor.github.com&lt;/code&gt; repository on GitHub. As my GitHub username is &lt;code&gt;lcolladotor&lt;/code&gt;, by default GitHub will consider the &lt;code&gt;lcolladotor.github.com&lt;/code&gt; repository as a GitHub pages repository and publish it. Thus creating &lt;a href=&#34;http://lcolladotor.github.io/&#34; target=&#34;_blank&#34;&gt;lcolladotor.github.io/&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Once the repository was created, I added the Jekyll-Bootstrap files.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;
+## Initialize repo with Jekyll-Bootstrap files
+git clone https://github.com/plusjade/jekyll-bootstrap.git lcolladotor.github.com
+cd lcolladotor.github.com/
+git remote set-url origin git@github.com:lcolladotor/lcolladotor.github.com.git
+git push -u origin master
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;change-theme-to-twitter-2-0&#34;&gt;Change theme to Twitter-2.0&lt;/h3&gt;
+
+&lt;p&gt;Jekyll-Bootstrap includes several themes (&lt;span class=&#34;showtooltip&#34; title=&#34;(2013). &#39;Using Themes | ruhoh universal static blog generator.&#39; .&#34;&gt;&lt;a href=&#34;http://jekyllbootstrap.com/usage/jekyll-theming.html&#34;&gt;JB Themes&lt;/a&gt;&lt;/span&gt;) which you check on their &lt;a href=&#34;http://themes.jekyllbootstrap.com/&#34; target=&#34;_blank&#34;&gt;theme explorer&lt;/a&gt;. I think that &lt;a href=&#34;http://jfisher-usgs.github.io/&#34; target=&#34;_blank&#34;&gt;J. Fisher&amp;rsquo;s blog&lt;/a&gt; looks good with Twitter-2.0 and decided to follow his lead. Furthermore, he has customized a few things (check &lt;a href=&#34;https://github.com/jfisher-usgs/jfisher-usgs.github.com/commits/master&#34; target=&#34;_blank&#34;&gt;his blog&amp;rsquo;s history&lt;/a&gt;) which I just plan on using.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;
+## Install Twitter-2.0 theme
+rake theme:install git=&amp;quot;https://github.com/gdagley/theme-twitter-2.0&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;code-highlighting&#34;&gt;Code highlighting&lt;/h3&gt;
+
+&lt;p&gt;The default Jekyll highlighting setup uses &lt;a href=&#34;http://pygments.org/&#34; target=&#34;_blank&#34;&gt;pygments&lt;/a&gt;. I am basing my statement on the documentation for the &lt;em&gt;highlight&lt;/em&gt; argument in &lt;code&gt;?knitr::render_jekyll&lt;/code&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;which code highlighting engine to use: for pygments, the Liquid syntax is used (default approach Jekyll)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;So I installed Pygments.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;
+## Install Pygments, assuming you have Python installed
+curl -O http://python-distribute.org/distribute_setup.py
+sudo python distribute_setup.py
+sudo easy_install Pygments
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Note that (&lt;span class=&#34;showtooltip&#34; title=&#34;Fisher JC (2012). &#39;Jekyll Build on Windows.&#39; .&#34;&gt;&lt;a href=&#34;http://jfisher-usgs.github.io/lessons/2012/05/30/jekyll-build-on-windows/&#34;&gt;Fisher, 2012b&lt;/a&gt;&lt;/span&gt;) details some other steps. I basically copied his &lt;a href=&#34;https://github.com/jfisher-usgs/jfisher-usgs.github.com/blob/master/assets/themes/twitter-2.0/css/syntax.css&#34; target=&#34;_blank&#34;&gt;syntax.css&lt;/a&gt; file and saved it as &lt;code&gt;/assets/themes/twitter-2.0/css/syntax.css&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Note that you do have to add to &lt;code&gt;_includes/themes/twitter-2.0/default.html&lt;/code&gt; the following line:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;link href=&amp;quot;/assets/themes/twitter-2.0/css/syntax.css&amp;quot; rel=&amp;quot;stylesheet&amp;quot; type=&amp;quot;text/css&amp;quot;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;As you can see &lt;a href=&#34;https://github.com/lcolladotor/lcolladotor.github.com/blob/master/_includes/themes/twitter-2.0/default.html&#34; target=&#34;_blank&#34;&gt;on my own file&lt;/a&gt; in line 23 (currently) I am using a Liquid syntax instead of specifying the full path.&lt;/p&gt;
+
+&lt;h3 id=&#34;import-posts&#34;&gt;Import posts&lt;/h3&gt;
+
+&lt;p&gt;Next I had to import my posts from Tumblr. Jekyll has a varied set of tools that allow you to quickly import posts which I recommend using if you are migrating your blog (&lt;span class=&#34;showtooltip&#34; title=&#34;(2013). &#39;Blog migrations.&#39; .&#34;&gt;&lt;a href=&#34;http://jekyllrb.com/docs/migrations/&#34;&gt;Blog Migrations&lt;/a&gt;&lt;/span&gt;).&lt;/p&gt;
+
+&lt;p&gt;The Tumblr importer allows you to either import them into HTML format or Markdown format. I first tried Markdown, but ran into some problems. So I decided to import them into HTML format, and rename them to Markdown.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;
+## Install importing tools
+sudo gem install jekyll-import --pre
+
+## Import the posts
+cd ~/
+mkdir tmp
+/opt/local/bin/ruby1.9 -rubygems -e &#39;require &amp;quot;jekyll/jekyll-import/tumblr&amp;quot;; JekyllImport::Tumblr.process(&amp;quot;http://fellgernon.tumblr.com&amp;quot;, &amp;quot;html&amp;quot;, true, false, false)&#39;
+## There is a post that the converter didn&#39;t like, so I had to set to &amp;quot;private&amp;quot; mode
+
+
+## Rename from HTML to Markdown
+cd _posts/tumblr/
+for i in *html; do echo $i; filename=$(basename &amp;quot;$i&amp;quot;); filename2=&amp;quot;${filename%.*}&amp;quot;; echo $filename2; mv $i ${filename2}.md; done
+
+## Move the posts to _posts
+mv ~/tmp/_posts/tumblr/*md ~/WhereYouHaveYourLocalGitRepoCopy/lcollado.github.com/_posts/
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;I then had to do some manual edits on the posts, specially for code chunks. For example, &lt;a href=&#34;https://raw.github.com/lcolladotor/lcolladotor.github.com/master/_posts/2013-05-09-reading-an-r-file-from-github.md&#34; target=&#34;_blank&#34;&gt;this post&lt;/a&gt; has R chunks which I had to surround by:&lt;/p&gt;
+
+&lt;script src=&#34;https://gist.github.com/lcolladotor/7388043.js&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;To complete the posts, I made sure the YAML front matter was correct and defined categories since I only had tags in Tumblr.&lt;/p&gt;
+
+&lt;h3 id=&#34;viewing-your-blog-locally&#34;&gt;Viewing your blog locally&lt;/h3&gt;
+
+&lt;p&gt;Once you have the posts, you can use Jekyll to view your blog locally.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;
+## Go to your directory
+~/WhereYouHaveYourLocalGitRepoCopy/lcollado.github.com/
+
+## Generate the static view of your blog
+jekyll serve
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;In my case, &lt;code&gt;jekyll serve&lt;/code&gt; prompted a couple of errors which I had to go to the posts and edit. For example, some HTML tag that I opened but didn&amp;rsquo;t close. Stuff like that.&lt;/p&gt;
+
+&lt;p&gt;Once you run the previous command, you can then view your site on your browser at &lt;a href=&#34;http://localhost:4000/&#34; target=&#34;_blank&#34;&gt;http://localhost:4000/&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;customizing&#34;&gt;Customizing&lt;/h3&gt;
+
+&lt;p&gt;The very first thing you must change is the _config.yml file. The file you copied from Jekyll-Bootstrap includes instructions on how to do so. If you learn by example, take a peek at &lt;a href=&#34;https://github.com/lcolladotor/lcolladotor.github.com/blob/master/_config.yml&#34; target=&#34;_blank&#34;&gt;mine&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;In my case, I use &lt;a href=&#34;http://disqus.com/&#34; target=&#34;_blank&#34;&gt;Disqus&lt;/a&gt; for comments and &lt;a href=&#34;http://www.google.com/analytics&#34; target=&#34;_blank&#34;&gt;Google Analytics&lt;/a&gt; for tracking visits. Since I was also using &lt;a href=&#34;http://disqus.com/&#34; target=&#34;_blank&#34;&gt;Disqus&lt;/a&gt; for my Tumblr blog, I used &lt;a href=&#34;http://disqus.com/&#34; target=&#34;_blank&#34;&gt;Disqus&lt;/a&gt;&amp;rsquo; tools to migrate the comments. Finally, I use &lt;a href=&#34;http://feedburner.google.com/&#34; target=&#34;_blank&#34;&gt;FeedBurner&lt;/a&gt; for my RSS feed, which I was able to update to the new &lt;a href=&#34;http://lcolladotor.github.io/rss.xml&#34; target=&#34;_blank&#34;&gt;RSS generated by Fellgernon Bit @ GitHub&lt;/a&gt;. Thus, the subscribers to &lt;a href=&#34;http://feeds.feedburner.com/FellgernonBit&#34; target=&#34;_blank&#34;&gt;feeds.feedburner.com/FellgernonBit&lt;/a&gt; didn&amp;rsquo;t have to change anything.&lt;/p&gt;
+
+&lt;p&gt;I also added &lt;a href=&#34;https://www.addthis.com/get/smart-layers#.Un5oIpTF2Ql&#34; target=&#34;_blank&#34;&gt;AddThis Smart Layers&lt;/a&gt; with &lt;a href=&#34;https://bitly.com/&#34; target=&#34;_blank&#34;&gt;bit.ly&lt;/a&gt; shortening to the site and a &lt;a href=&#34;http://www.clustrmaps.com/&#34; target=&#34;_blank&#34;&gt;ClustrMap&lt;/a&gt; as you can see in &lt;a href=&#34;https://github.com/lcolladotor/lcolladotor.github.com/blob/master/_layouts/page.html&#34; target=&#34;_blank&#34;&gt;_layouts/page.html&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;As for math, I am currently using the rdiscount flavor of Markdown and loading the MathJax script as you can see in &lt;a href=&#34;https://github.com/lcolladotor/lcolladotor.github.com/blob/master/_layouts/default.html&#34; target=&#34;_blank&#34;&gt;_layouts/default.html&lt;/a&gt;. However, note that we shoudn&amp;rsquo;t ask too much power out of Markdown for math (&lt;span class=&#34;showtooltip&#34; title=&#34;Xie Y (2013). &#39;Markdown or LaTeX? | Yihui Xie.&#39; .&#34;&gt;&lt;a href=&#34;http://yihui.name/en/2013/10/markdown-or-latex/&#34;&gt;Xie, 2013&lt;/a&gt;&lt;/span&gt;).&lt;/p&gt;
+
+&lt;p&gt;To use rdiscount locally, I also had to install it. I have also tried out kramdown.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;
+## Markdown flavors
+sudo gem install rdiscount
+sudo gem install kramdown
+
+## I don&#39;t remember why I also installed this:
+sudo gem install nokogiri
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;I then customized the index and added other pages:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/lcolladotor/lcolladotor.github.com/blob/master/index.html&#34; target=&#34;_blank&#34;&gt;index.html&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Used code from Jason Fisher to add the pagination.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/lcolladotor/lcolladotor.github.com/blob/master/about.html&#34; target=&#34;_blank&#34;&gt;about.html&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Simple description&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/lcolladotor/lcolladotor.github.com/blob/master/_includes/themes/twitter-2.0/default.html&#34; target=&#34;_blank&#34;&gt;_includes/themes/twitter-2.0/default.html&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;I added a CSS drop down menu (constructed with &lt;a href=&#34;http://cssmenumaker.com/builder/1044267&#34; target=&#34;_blank&#34;&gt;CSS Menu Maker&lt;/a&gt;) with the blogs I follow. For this I also had to modify &lt;a href=&#34;https://github.com/lcolladotor/lcolladotor.github.com/commit/15e03fdc317399b37521f130269adf3e7da7efb3&#34; target=&#34;_blank&#34;&gt;_assets/themes/twitter-2.0/css/style.css&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;I modified the footer to mention that my posts are under the Creative Commons License version 3 BY-NC-SA. An idea I took from Yihui Xie&amp;rsquo;s blog.
+&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Since I am interested in getting my blog to be a part of &lt;a href=&#34;http://www.r-bloggers.com/&#34; target=&#34;_blank&#34;&gt;R-bloggers&lt;/a&gt;, I created an RSS specific for the posts under the &lt;code&gt;rstats&lt;/code&gt; category to comply with their requirements (&lt;span class=&#34;showtooltip&#34; title=&#34;Galili T (2013). &#39;add your blog!&#39; .&#34;&gt;&lt;a href=&#34;http://www.r-bloggers.com/add-your-blog/&#34;&gt;Add your blog!&lt;/a&gt;&lt;/span&gt;).&lt;/p&gt;
+
+&lt;p&gt;For the category-specific RSS I used &lt;code&gt;feed.category.xml&lt;/code&gt; (&lt;span class=&#34;showtooltip&#34; title=&#34;(2013). &#39;jekyll-rss-feeds.&#39; .&#34;&gt;&lt;a href=&#34;https://github.com/snaptortoise/jekyll-rss-feeds&#34;&gt;Jekyll RSS Feed Templates&lt;/a&gt;&lt;/span&gt;) and created &lt;a href=&#34;https://github.com/lcolladotor/lcolladotor.github.com/blob/master/rss-rstats.xml&#34; target=&#34;_blank&#34;&gt;rss-rstats.xml&lt;/a&gt; [see &lt;a href=&#34;https://github.com/lcolladotor/lcolladotor.github.com/blob/master/atom-rstats.xml&#34; target=&#34;_blank&#34;&gt;atom-rstats.xml&lt;/a&gt; if you prefer Atom RSS] which is then processed and converted to &lt;a href=&#34;http://feeds.feedburner.com/FellgernonBit-rstats&#34; target=&#34;_blank&#34;&gt;feeds.feedburner.com/FellgernonBit-rstats&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Note that I use &lt;a href=&#34;http://feedburner.google.com/&#34; target=&#34;_blank&#34;&gt;FeedBurner&lt;/a&gt; to then create &lt;a href=&#34;https://twitter.com/fellgernon&#34; target=&#34;_blank&#34;&gt;Twitter updates&lt;/a&gt; linking to back to the posts. Also, for the rstats one I add the &lt;a href=&#34;https://twitter.com/search?q=%23rstats&#34; target=&#34;_blank&#34;&gt;#rstats&lt;/a&gt; hashtag to the post.&lt;/p&gt;
+
+&lt;h3 id=&#34;writing-an-r-post&#34;&gt;Writing an R post&lt;/h3&gt;
+
+&lt;p&gt;J. Fisher again explains in detail how to blog using Knitr and Jekyll (&lt;span class=&#34;showtooltip&#34; title=&#34;Fisher JC (2012). &#39;Blog with Knitr and Jekyll.&#39; .&#34;&gt;&lt;a href=&#34;http://jfisher-usgs.github.io/r/2012/07/03/knitr-jekyll/&#34;&gt;Fisher, 2012&lt;/a&gt;&lt;/span&gt;). Since I use &lt;a href=&#34;https://github.com/textmate/textmate&#34; target=&#34;_blank&#34;&gt;TextMate2&lt;/a&gt; as my text editor, I went ahead and modified his code and created a command to do so.&lt;/p&gt;
+
+&lt;p&gt;Basically, I modified the &lt;code&gt;knit&lt;/code&gt; command from the &lt;code&gt;SWeave&lt;/code&gt; TextMate bundle and added J. Fisher&amp;rsquo;s code. I saved it under the &lt;code&gt;Menu Actions&lt;/code&gt; of the &lt;code&gt;SWeave&lt;/code&gt; bundle and linked it to &lt;code&gt;alt + e&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;For this to work, I use Google Chrome with the &lt;a href=&#34;https://chrome.google.com/webstore/detail/jmchmkecamhbiokiopfpnfgbidieafmd&#34; target=&#34;_blank&#34;&gt;Markdown Preview&lt;/a&gt; extension installed.&lt;/p&gt;
+
+&lt;p&gt;This is the &lt;a href=&#34;https://gist.github.com/lcolladotor/7388033&#34; target=&#34;_blank&#34;&gt;code for the TextMate command&lt;/a&gt;. You could certainly make it much more concise and drop things, but I like to see a quick preview of the post. However, I still recommend using &lt;code&gt;jekyll serve&lt;/code&gt; for a final thorough preview of the post before pushing it to GitHub.&lt;/p&gt;
+
+&lt;script src=&#34;https://gist.github.com/lcolladotor/7388033.js&#34;&gt;&lt;/script&gt;
+
+&lt;h3 id=&#34;things-i-might-add&#34;&gt;Things I might add&lt;/h3&gt;
+
+&lt;p&gt;Carl Boettiger has a great site &amp;ndash;specially the &lt;a href=&#34;http://carlboettiger.info/lab-notebook.html&#34; target=&#34;_blank&#34;&gt;Lab Notebook&lt;/a&gt; part&amp;ndash; and he describes all the tools he used for making it (&lt;span class=&#34;showtooltip&#34; title=&#34;Boettiger C (2013). &#39;About this site.&#39; .&#34;&gt;&lt;a href=&#34;http://carlboettiger.info/README.html&#34;&gt;Boettiger, 2013&lt;/a&gt;&lt;/span&gt;). One of the features I would like to add to my site is the &lt;code&gt;history&lt;/code&gt; button on the right sidebar he has on his posts which link to the GitHub history of the post. For example check &lt;a href=&#34;http://carlboettiger.info/2013/09/25/mozilla-software-review.html&#34; target=&#34;_blank&#34;&gt;this post&lt;/a&gt; and its &lt;a href=&#34;https://github.com/cboettig/labnotebook/commits/master/_posts/2013-09-25-mozilla-software-review.md&#34; target=&#34;_blank&#34;&gt;history&lt;/a&gt;. I think that it can be very useful for those interested in any edits made to the posts. For example, I had to fix a couple of things on one of my recent posts as you can see &lt;a href=&#34;https://github.com/lcolladotor/lcolladotor.github.com/commits/master/_posts/2013-11-07-bmorebiostats.md&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Looking around, I found the code needed for this to work in Carl&amp;rsquo;s repository: &lt;a href=&#34;https://github.com/cboettig/labnotebook/blob/master/_includes/sidebar.html&#34; target=&#34;_blank&#34;&gt;_includes/sidebar.html&lt;/a&gt;, &lt;a href=&#34;https://github.com/cboettig/labnotebook/tree/master/_plugins/jekyll-labnotebook-plugins&#34; target=&#34;_blank&#34;&gt;_plugins/jekyll-labnotebook-plugins&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;However, GitHub currently does not support Jekyll plugins. Meaning that if you use any plugins, you have to create the site locally and then push it to GitHub instead of just pushing the new posts and letting GitHub handle creating the site. It&amp;rsquo;s not a huge deal, but for now I&amp;rsquo;ll rely on GitHub and keep things simple for me.&lt;/p&gt;
+
+&lt;h2 id=&#34;if-i-were-to-do-it-again&#34;&gt;If I were to do it again&lt;/h2&gt;
+
+&lt;p&gt;Once you install Jekyll, I think the easiest way to set up your own blog is to fork another person&amp;rsquo;s blog&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/jfisher-usgs/jfisher-usgs.github.com&#34; target=&#34;_blank&#34;&gt;J. Fisher&amp;rsquo;s&lt;/a&gt;,&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/yihui/en&#34; target=&#34;_blank&#34;&gt;Yihui Xie&amp;rsquo;s&lt;/a&gt;,&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/cboettig/labnotebook&#34; target=&#34;_blank&#34;&gt;Carl Boettiger&amp;rsquo;s&lt;/a&gt;,&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/lcolladotor/lcolladotor.github.com&#34; target=&#34;_blank&#34;&gt;mine&lt;/a&gt;,&lt;/li&gt;
+&lt;li&gt;or someone else blog you like.
+&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Then delete their posts, give attribution, and customize things like the blog title and other things you would have to customize on any blogging platform (RSS, comments provider, etc).&lt;/p&gt;
+
+&lt;p&gt;Obviously Jekyll gives you much more control over your site, but at the same time, you must also dedicate enough time to learn what to change and make sure that things don&amp;rsquo;t break.&lt;/p&gt;
+
+&lt;h3 id=&#34;post-template&#34;&gt;Post template&lt;/h3&gt;
+
+&lt;p&gt;To finish describing my setup, &lt;a href=&#34;https://gist.github.com/lcolladotor/7387745&#34; target=&#34;_blank&#34;&gt;here is my post template&lt;/a&gt;.&lt;/p&gt;
+
+&lt;script src=&#34;https://gist.github.com/lcolladotor/7387745.js&#34;&gt;&lt;/script&gt;
+
+&lt;h2 id=&#34;wrap-up&#34;&gt;Wrap up&lt;/h2&gt;
+
+&lt;p&gt;I hope that you will find some of this information useful if you are thinking of starting your &lt;code&gt;R&lt;/code&gt; blog powered by Jekyll-Bootstrap and hosted by GitHub.&lt;/p&gt;
+
+&lt;p&gt;Note that since the blog is hosted in GitHub, others can send you pull requests to fix things and/or create guest posts. Just as easily you can make it a multi-author blog by changing the collaborators setting of the GitHub repository.&lt;/p&gt;
+
+&lt;p&gt;This wouldn&amp;rsquo;t have been possible without J. Fisher&amp;rsquo;s posts and many other resources available online.&lt;/p&gt;
+
+&lt;h3 id=&#34;references&#34;&gt;References&lt;/h3&gt;
+
+&lt;p&gt;Citations made with &lt;code&gt;knitcitations&lt;/code&gt; (&lt;span class=&#34;showtooltip&#34; title=&#34;Boettiger C (2013). knitcitations: Citations for knitr markdown files. R package version 0.4-7.&#34;&gt;&lt;a href=&#34;http://CRAN.R-project.org/package=knitcitations&#34;&gt;Boettiger, 2013b&lt;/a&gt;&lt;/span&gt;).&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;@jeffreyhorner,  Blog with R Markdown and tumblr: Part I.  &lt;em&gt;Jeffrey Horner&lt;/em&gt;  &lt;a href=&#34;http://jeffreyhorner.tumblr.com/post/25804518110/blog-with-r-markdown-and-tumblr-part-i&#34; target=&#34;_blank&#34;&gt;http://jeffreyhorner.tumblr.com/post/25804518110/blog-with-r-markdown-and-tumblr-part-i&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;@jeffreyhorner,  Blog with R Markdown and tumblr: Part II.  &lt;em&gt;Jeffrey Horner&lt;/em&gt;  &lt;a href=&#34;http://jeffreyhorner.tumblr.com/post/25943954723/blog-with-r-markdown-and-tumblr-part-ii&#34; target=&#34;_blank&#34;&gt;http://jeffreyhorner.tumblr.com/post/25943954723/blog-with-r-markdown-and-tumblr-part-ii&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Yihui Xie,  Statistics, R, Graphics and Fun | Yihui Xie.  &lt;a href=&#34;http://yihui.name/en/&#34; target=&#34;_blank&#34;&gt;http://yihui.name/en/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Jason Fisher,   (2012) Blog with Knitr and Jekyll.  &lt;a href=&#34;http://jfisher-usgs.github.io/r/2012/07/03/knitr-jekyll/&#34; target=&#34;_blank&#34;&gt;http://jfisher-usgs.github.io/r/2012/07/03/knitr-jekyll/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Jason Fisher,   (2012) Jekyll Build on Windows.  &lt;a href=&#34;http://jfisher-usgs.github.io/lessons/2012/05/30/jekyll-build-on-windows/&#34; target=&#34;_blank&#34;&gt;http://jfisher-usgs.github.io/lessons/2012/05/30/jekyll-build-on-windows/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Installation.  &lt;em&gt;Jekyll â¢ Simple, blog-aware, static sites&lt;/em&gt;  &lt;a href=&#34;http://jekyllrb.com/docs/installation/&#34; target=&#34;_blank&#34;&gt;http://jekyllrb.com/docs/installation/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Jekyll Quick Start | ruhoh universal static blog generator.  &lt;a href=&#34;http://jekyllbootstrap.com/usage/jekyll-quick-start.html&#34; target=&#34;_blank&#34;&gt;http://jekyllbootstrap.com/usage/jekyll-quick-start.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Using Themes | ruhoh universal static blog generator.  &lt;a href=&#34;http://jekyllbootstrap.com/usage/jekyll-theming.html&#34; target=&#34;_blank&#34;&gt;http://jekyllbootstrap.com/usage/jekyll-theming.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Blog migrations.  &lt;em&gt;Jekyll â¢ Simple, blog-aware, static sites&lt;/em&gt;  &lt;a href=&#34;http://jekyllrb.com/docs/migrations/&#34; target=&#34;_blank&#34;&gt;http://jekyllrb.com/docs/migrations/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Tal Galili,  add your blog!.  &lt;em&gt;R-bloggers&lt;/em&gt;  &lt;a href=&#34;http://www.r-bloggers.com/add-your-blog/&#34; target=&#34;_blank&#34;&gt;http://www.r-bloggers.com/add-your-blog/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;jekyll-rss-feeds.  &lt;em&gt;GitHub&lt;/em&gt;  &lt;a href=&#34;https://github.com/snaptortoise/jekyll-rss-feeds&#34; target=&#34;_blank&#34;&gt;https://github.com/snaptortoise/jekyll-rss-feeds&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Yihui Xie,   (2013) Markdown or LaTeX? | Yihui Xie.  &lt;a href=&#34;http://yihui.name/en/2013/10/markdown-or-latex/&#34; target=&#34;_blank&#34;&gt;http://yihui.name/en/2013/10/markdown-or-latex/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Carl Boettiger,   (2013) About this site.  &lt;em&gt;Lab Notebook&lt;/em&gt;  &lt;a href=&#34;http://carlboettiger.info/README.html&#34; target=&#34;_blank&#34;&gt;http://carlboettiger.info/README.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Carl Boettiger,   (2013) knitcitations: Citations for knitr markdown files.  &lt;a href=&#34;http://CRAN.R-project.org/package=knitcitations&#34; target=&#34;_blank&#34;&gt;http://CRAN.R-project.org/package=knitcitations&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;reproducibility&#34;&gt;Reproducibility&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;sessionInfo()
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## R version 3.0.2 (2013-09-25)
+## Platform: x86_64-apple-darwin10.8.0 (64-bit)
+## 
+## locale:
+## [1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8
+## 
+## attached base packages:
+## [1] stats     graphics  grDevices utils     datasets  methods   base     
+## 
+## other attached packages:
+## [1] knitcitations_0.4-7 bibtex_0.3-6        knitr_1.5          
+## 
+## loaded via a namespace (and not attached):
+##  [1] codetools_0.2-8 digest_0.6.4    evaluate_0.5.1  formatR_0.10   
+##  [5] httr_0.2        RCurl_1.95-4.1  stringr_0.6.2   tools_3.0.2    
+##  [9] XML_3.95-0.2    xtable_1.7-1
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Bmore Biostats is born!</title>
+      <link>http://lcolladotor.github.io/2013/11/07/Bmore-Biostats-is-born</link>
+      <pubDate>Thu, 07 Nov 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://lcolladotor.github.io/2013/11/07/Bmore-Biostats-is-born</guid>
+      <description>
+
+&lt;p&gt;In recent weeks, I have met with a group of students &lt;a href=&#34;https://twitter.com/jhubiostat&#34; target=&#34;_blank&#34;&gt;@jhubiostat&lt;/a&gt; interested in blogging about their research, tutorials, pieces of R code, among plenty of other subjects. Within this group we had the idea to aggregate our blogs so it would be easier for others to follow us and to easily promote our own blogs to a much larger audience. Basically, do what &lt;a href=&#34;http://www.r-bloggers.com/&#34; target=&#34;_blank&#34;&gt;R-bloggers&lt;/a&gt; does but focused on blogs from students at Johns Hopkins Biostatistics. Ideally, once a student publishes a new post, our site would pick it up and promote it.&lt;/p&gt;
+
+&lt;p&gt;A quick search revealed that making such a site was technically possible via several &lt;a href=&#34;http://wordpress.org/&#34; target=&#34;_blank&#34;&gt;WordPress&lt;/a&gt; plugins available. We initally tried doing so via a wordpress.com account and quickly noticed that we needed a self-hosted wordpress account.&lt;/p&gt;
+
+&lt;h3 id=&#34;paper-li&#34;&gt;paper.li&lt;/h3&gt;
+
+&lt;p&gt;In the meantime, we also explored the possibility of creating a &lt;em&gt;paper&lt;/em&gt; using &lt;a href=&#34;http://paper.li/&#34; target=&#34;_blank&#34;&gt;paper.li&lt;/a&gt; which resulted in the &lt;a href=&#34;bit.ly/BmoreBiostats&#34; target=&#34;_blank&#34;&gt;BmoreBiostats paper&lt;/a&gt;. The free version allows you to select up to 25 RSS feeds (among other sources) as the source of new content that you either publish&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;in the morning and afternoon,&lt;/li&gt;
+&lt;li&gt;daily,&lt;/li&gt;
+&lt;li&gt;weekly.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;This platform offers several options for promoting new content which we implemented. It can create posts to Twitter (see below), Facebook and LinkedIn.&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p&gt;New posts from students &lt;a href=&#34;https://twitter.com/jhubiostat&#34;&gt;@jhubiostat&lt;/a&gt; &lt;a href=&#34;http://t.co/jnHXs7qRPJ&#34;&gt;http://t.co/jnHXs7qRPJ&lt;/a&gt;&lt;/p&gt;&amp;mdash; bmorebiostats (@bmorebiostats) &lt;a href=&#34;https://twitter.com/bmorebiostats/statuses/398439067689689088&#34;&gt;November 7, 2013&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;//platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;You can also embed it on a webpage just like &lt;a href=&#34;http://www.biostat.jhsph.edu/~lcollado/BmoreBiostats.html#.UnxMX5TF2Qn&#34; target=&#34;_blank&#34;&gt;I did in my own website&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;The drawbacks are that customization is limited, specially if you do not like how it looks. It also does not provide you with a RSS feed. However, I did manage to get that to work via Facebook as you can notice &lt;a href=&#34;http://feeds.feedburner.com/BmoreBiostatsPaper&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;We have also heard some comments about paper.li been associated with spammers. I agree with this if you set the paper to be published either twice per day or daily. Weekly wise, I do not see it as a spam generator. However, this is in contradiction with the original goal of promoting posts as soon as they are made, and &lt;strong&gt;only&lt;/strong&gt; when there are new posts.&lt;/p&gt;
+
+&lt;p&gt;Nevertheless, in my opinion, the paper.li alternative can work well as a weekly summary of the posts. Something like the &lt;a href=&#34;http://simplystatistics.org/?s=sunday+data&#34; target=&#34;_blank&#34;&gt;Sunday data/statistics link roundoup&lt;/a&gt;s at &lt;a href=&#34;http://simplystatistics.org/&#34; target=&#34;_blank&#34;&gt;SimplyStatistics&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&#34;planetaki-com&#34;&gt;planetaki.com&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://biostat.jhsph.edu/~jmuschel/index.html&#34; target=&#34;_blank&#34;&gt;John&lt;/a&gt; found this resource and implemented a &lt;a href=&#34;http://www.planetaki.com/bmorestattest#start&#34; target=&#34;_blank&#34;&gt;quick test&lt;/a&gt;. It looks very simple, yet it includes full length posts and was very easy to setup. Note that the material there is deleted after 7 days since they assume that you check it more than once per week. We saw this as a potential negative feature, plus there is no native support for social media.&lt;/p&gt;
+
+&lt;h3 id=&#34;bmorebiostat-com&#34;&gt;bmorebiostat.com&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://mandymejia.wordpress.com/&#34; target=&#34;_blank&#34;&gt;Amanda&lt;/a&gt; and &lt;a href=&#34;http://jfortinbiostats.com/&#34; target=&#34;_blank&#34;&gt;Jean-Philippe&lt;/a&gt; [thanks for trying out Wordpress&lt;strong&gt;.com&lt;/strong&gt;!] figured out the WordPress solution, got us a hosted service and reserved the domain &lt;a href=&#34;http://bmorebiostat.com/&#34; target=&#34;_blank&#34;&gt;bmorebiostat.com&lt;/a&gt;. Then it was just a matter of choosing a plugin to do the job: we are using &lt;a href=&#34;http://wordpress.org/plugins/feedwordpress/&#34; target=&#34;_blank&#34;&gt;FeedWordPress&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;We split the work and some tweaked the layout and added nice pictures of the &lt;a href=&#34;http://bmorebiostat.com/contributors/&#34; target=&#34;_blank&#34;&gt;six founding blog authors&lt;/a&gt;. Thanks to what I learnt making &lt;a href=&#34;http://bit.ly/FellBit&#34; target=&#34;_blank&#34;&gt;Fellgernon Bit&lt;/a&gt; I added the social features: &lt;a href=&#34;http://www.addthis.com/&#34; target=&#34;_blank&#34;&gt;AddThis&lt;/a&gt; Smart Layers, connections to social media, &lt;a href=&#34;http://disqus.com/&#34; target=&#34;_blank&#34;&gt;Disqus&lt;/a&gt; comments (they will not be used much), and &lt;a href=&#34;http://feedburner.google.com/&#34; target=&#34;_blank&#34;&gt;FeedBurner&lt;/a&gt; RSS feeds.&lt;/p&gt;
+
+&lt;p&gt;I like how the site looks and it fully achieves our initial goal. Yay!&lt;/p&gt;
+
+&lt;p&gt;Currently, &lt;a href=&#34;bit.ly/BmoreBiostat&#34; target=&#34;_blank&#34;&gt;BmoreBiostats&lt;/a&gt; is set up in a way that only the beginning of each post is shown. We can also set it up to contain full posts, but then the &lt;code&gt;R&lt;/code&gt; code highlighting needs to be polished out.&lt;/p&gt;
+
+&lt;h3 id=&#34;current-implementation&#34;&gt;Current implementation&lt;/h3&gt;
+
+&lt;p&gt;The full current workflow is illustrated below:&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;
+&lt;a href=&#34;http://lcolladotor.github.io/figs/2013-11-07-bmorebiostats/BmoreBiostats-schema.png&#34;&gt;&lt;img src=&#34;http://lcolladotor.github.io/figs/2013-11-07-bmorebiostats/BmoreBiostats-schema.png&#34; alt=&#34;Workflow&#34; style=&#34;width: 900px;&#34;/&gt;&lt;/a&gt;
+&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;As a group we are now thinking of dropping the paper.li route. Well, the only option we might use is the weekly one. One strong argument in favor of dropping the paper.li route is that one site avoids any dilution given by having two. Furthermore, we do not want to be seen as spammers although some shameless self-promotion is not so bad either (something I learnt from &lt;a href=&#34;https://twitter.com/hspter&#34; target=&#34;_blank&#34;&gt;@hspter&lt;/a&gt;).&lt;/p&gt;
+
+&lt;p&gt;I guess that I am the only one still in favor of weekly summaries and using the feature of embeding the paper in a website (like &lt;a href=&#34;http://www.biostat.jhsph.edu/~lcollado/BmoreBiostats.html#.UnxMX5TF2Qn&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;). To minimize the dilution, all the paper.li links point to &lt;a href=&#34;http://bmorebiostat.com/&#34; target=&#34;_blank&#34;&gt;bmorebiostat.com&lt;/a&gt;. You can also argue that there might be some interested only on the weekly summaries. Aka, we are just giving others options!&lt;/p&gt;
+
+&lt;p&gt;Maybe I am just reluctant to delete the &lt;a href=&#34;bit.ly/BmoreBiostats&#34; target=&#34;_blank&#34;&gt;BmoreBiostats paper&lt;/a&gt; so soon after I finally completed it. However, some of the work involved is not going down the drain since the social media accounts needed for the paper are now being used by &lt;a href=&#34;http://bmorebiostat.com/&#34; target=&#34;_blank&#34;&gt;bmorebiostat.com&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Note that we do not see much of a problem with the fact that &lt;a href=&#34;http://bmorebiostat.com/&#34; target=&#34;_blank&#34;&gt;bmorebiostat.com&lt;/a&gt; involves monthly fees as we are hoping to get some department support (cross fingers!).&lt;/p&gt;
+
+&lt;h3 id=&#34;going-forward&#34;&gt;Going forward&lt;/h3&gt;
+
+&lt;p&gt;We are very excited that we have implemented the aggregator of student blogs from Johns Hopkins Biostatistics. We believe that it will be helpful to others including prosprective students. Now that the aggregator is practically finished, we can now move unto writing exciting posts!&lt;/p&gt;
+
+&lt;p&gt;If you are a student &lt;a href=&#34;https://twitter.com/jhubiostat&#34; target=&#34;_blank&#34;&gt;@jhubiostat&lt;/a&gt; &amp;ndash;or a former student&amp;ndash; and you have a Biostatistics blog that you want to add to &lt;a href=&#34;http://bmorebiostat.com/&#34; target=&#34;_blank&#34;&gt;bmorebiostat.com&lt;/a&gt;, let us know! If you are a current student &lt;a href=&#34;https://twitter.com/jhubiostat&#34; target=&#34;_blank&#34;&gt;@jhubiostat&lt;/a&gt; and need help getting started, contact us!&lt;/p&gt;
+
+&lt;p&gt;Be sure to follow us! Here is a hint why:&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p&gt;It seems clear that &lt;a href=&#34;https://twitter.com/jhubiostat&#34;&gt;@jhubiostat&lt;/a&gt; is just dominating all the social media &lt;a href=&#34;https://twitter.com/bmorebiostats&#34;&gt;@bmorebiostats&lt;/a&gt;&lt;/p&gt;&amp;mdash; Simply Statistics (@simplystats) &lt;a href=&#34;https://twitter.com/simplystats/statuses/398625668851716096&#34;&gt;November 8, 2013&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;//platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Analyzing SimplyStatistics visits info</title>
+      <link>http://lcolladotor.github.io/2013/03/09/Analyzing-SimplyStatistics-visits-info</link>
+      <pubDate>Sat, 09 Mar 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://lcolladotor.github.io/2013/03/09/Analyzing-SimplyStatistics-visits-info</guid>
+      <description>&lt;p&gt;Recently we had to analyze the data of the number of visits per day to &lt;a href=&#34;http://simplystatistics.org/&#34;&gt;SimplyStatistics.org&lt;/a&gt;. There were two goals:&lt;/p&gt;
+&lt;ol&gt;&lt;li&gt;Estimate the fraction of visitors retained after a spike in the number of visitors&lt;/li&gt;
+&lt;li&gt;Identify (if any) any factors that influence the fraction estimated in 1.&lt;/li&gt;
+&lt;/ol&gt;&lt;p&gt;For me it was a fun project in part because I like SimplyStatistics but also because I think that finding the answers to the questions would be interesting and help understand the readers of that blog.&lt;/p&gt;
+&lt;p&gt;Sadly, I didn&amp;#8217;t work on it much. We had lots of stuff due that week, but well, I&amp;#8217;m happy enough with the analysis I did. My own report is hosted &lt;a href=&#34;https://github.com/lcolladotor/lcollado753/tree/master/hw/data-analysis-02&#34;&gt;here&lt;/a&gt; and &lt;a href=&#34;https://github.com/lcolladotor/lcollado753/blob/master/hw/data-analysis-02/report/data_02_lcollado.pdf&#34; target=&#34;_blank&#34;&gt;this is the pdf file of the report itself&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Half joking with other students, I said that I basically did t-tests. Hopefully I can work on changing this tendency with the pile of recommended books I&amp;#8217;ve been acquiring but not really reading through. Except for the &lt;a href=&#34;http://bit.ly/13MyHwt&#34;&gt;ggplot2: Elegant Graphics for Data Analysis&lt;/a&gt; and the &lt;a href=&#34;http://oreil.ly/Yk8xtl&#34;&gt;R Graphics Cookbook&lt;/a&gt;. Sounds like spring break will be fun :P&lt;/p&gt;
+
+&lt;p&gt;Kind of related to this, &lt;a href=&#34;http://bit.ly/13MypWw&#34;&gt;Jeff Leek announced yesterday that he is going to  compile a list of student blogs that have something to do with statistics and data&lt;/a&gt;. He added a link to my blog which is why I saw a large peak of Fellgernon Bit&amp;#8217;s visitor data. After all, when doing the data analysis described above I played around with the data from Fellgernon Bit and now know that at a minimum posting drives visitor&amp;#8217;s into sites (which sounds obvious, but maybe you get random traffic) —see &lt;a href=&#34;https://github.com/lcolladotor/lcollado753/blob/master/hw/data-analysis-02/report/data_02_lcollado.pdf&#34;&gt;fig 1 of the report&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;image&#34; src=&#34;http://media.tumblr.com/f5ce3511fb8d6899a613e348a846dcc8/tumblr_inline_mjf4iavs4A1qz4rgp.png&#34;/&gt;&lt;/p&gt;
+
+&lt;p&gt;Had Jeff done so before, I could have a point estimate (but without being able to say something about the uncertainty of it) that SimplyStatistics has 142 visitors that read the posts AND click on the links. Maybe using the info from &lt;a href=&#34;http://bit.ly/12vVmbp&#34;&gt;Hilary&amp;#8217;s&lt;/a&gt; and &lt;a href=&#34;http://bit.ly/13MyyZS&#34;&gt;Alyssa&amp;#8217;s&lt;/a&gt; blogs we could have an estimate with some measure of uncertainty, but only for March 8th.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Correctly synching AddThis and Google Analytics social stats</title>
+      <link>http://lcolladotor.github.io/2012/01/27/Correctly-synching-AddThis-and-Google-Analytics-social-stats</link>
+      <pubDate>Fri, 27 Jan 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://lcolladotor.github.io/2012/01/27/Correctly-synching-AddThis-and-Google-Analytics-social-stats</guid>
+      <description>&lt;p&gt;&lt;p&gt;As a minor addition to my previous posts about setting up a blog, I want to detail a bit more how to synchronize your &lt;a href=&#34;http://www.addthis.com/analytics&#34;&gt;AddThis social sharing statistics&lt;/a&gt; (AddThis Analytics) with &lt;a href=&#34;http://www.google.com/analytics/&#34;&gt;Google Analytics&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The &lt;a href=&#34;http://www.addthis.com/help/google-analytics-integration#social&#34;&gt;main help file explaining how to do&lt;/a&gt; so has been a bit confusing for me. Though, in part that&amp;#8217;s because I didn&amp;#8217;t read it completely. Plus there were a few things I didn&amp;#8217;t know.&lt;/p&gt;
+&lt;p&gt;First, Google Analytics (GA) has two ways in which you can add it to your site: synchronous and asynchronous. There are a few posts around, &lt;a href=&#34;http://blog.httpwatch.com/2010/07/29/asynchronous-google-analytics-is-better-but-not-faster/&#34;&gt;like this one&lt;/a&gt;, explaining the difference. Basically, the asynchronous mode is supposed to give your site faster load times (negligible normally) and most importantly more complete data in cases where people close your site before it finishes loading.&lt;/p&gt;
+&lt;p&gt;I prefer the asynchronous mode, and the recommendation is to include the script tage before the end of the head tag. In a few cases in Tumblr&amp;#8217;s free blog themes, this script is included at the bottom of the html code. So, you might be interested in changing this otherwise the great advantage of the asynchronous mode is lost: the page has to load entirely to report stuff to GA.&lt;/p&gt;
+&lt;p&gt;Once you do so, note how the AddThis manual has a note that the AddThis script has to go after the GA script. I didn&amp;#8217;t read this the first time and I was quite puzzled when no social events were showing up in the GA report.&lt;/p&gt;
+&lt;p&gt;Next, compared to ShareThis, AddThis social events will be shown in your GA report as &amp;#8220;facebook&amp;#8221;, &amp;#8220;twitter&amp;#8221;, etc instead of &amp;#8220;ShareThis: facebook&amp;#8221; (or something like that). That&amp;#8217;s only true if you included the &amp;#8220;data_ga_social&amp;#160;: true&amp;#8221; part in the code. Otherwise GA will only shown under the &amp;#8220;Social&amp;#8221; tab the Google +1 clicks. &lt;/p&gt;
+&lt;p&gt;In short: use the GA asynchronous code before the end of the head tag. Add the AddThis script tags below it. Happy social sync :)&lt;/p&gt;
+&lt;p&gt;I have to say that so far I like the AddThis Analytics way more than Google Analytics for the social stats. Part of it is the &amp;#8220;viral lift&amp;#8221; percent that AddThis shows. The other part is that it seems to contain more data. Though it might be because I just fixed the sync.&lt;/p&gt;
+&lt;p&gt;You might want to read the:&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;a href=&#34;http://www.addthis.com/blog/2011/10/28/addthis-integrates-with-google-social-plugin-analytics/#.Tx9Ms-POzIw&#34;&gt;AddThis GA sync announcement at AddThis.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.addthis.com/blog/2011/09/13/add-google-social-tracking/#.Tx9Mt-POzIw&#34;&gt;Another AddThis tip about how to do the sync&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://analytics.blogspot.com/2011/10/optimize-engagement-with-addthis-and.html&#34;&gt;The post on GA&amp;#8217;s blog explaining a tiny bit about the difference between ShareThis and AddThis sync to GA.&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Make it easy for your visitors to suscribe with a burnt RSS feed</title>
+      <link>http://lcolladotor.github.io/2011/11/30/Make-it-easy-for-your-visitors-to-suscribe-with-a-burnt-RSS-feed</link>
+      <pubDate>Wed, 30 Nov 2011 00:00:00 +0000</pubDate>
+      
+      <guid>http://lcolladotor.github.io/2011/11/30/Make-it-easy-for-your-visitors-to-suscribe-with-a-burnt-RSS-feed</guid>
+      <description>&lt;p&gt;Recently I talked about &lt;a href=&#34;http://fellgernon.tumblr.com/post/13070638939/setting-up-your-blog&#34;&gt;how to set up your own blog&lt;/a&gt; and now I&amp;#8217;m going to continue by emphasizing the importance of an &lt;a href=&#34;http://en.wikipedia.org/wiki/RSS&#34;&gt;RSS feed&lt;/a&gt;. What is it? Basically it is a unique format in which content from frequently updated sites (like a blog) is &lt;a href=&#34;http://en.wikipedia.org/wiki/Web_syndication&#34;&gt;syndicated&lt;/a&gt;. Web syndication allows you to share the content of your site (blog) to many different sites automatically. This is specially useful for people who are interested in following your blog. Sure, you can let them type your blog&amp;#8217;s site each time or simply allow them to receive updates on their email, feed reader (I recommend &lt;a href=&#34;http://www.google.com/reader&#34;&gt;Google Reader&lt;/a&gt;), etc. After all, you don&amp;#8217;t want your followers to have to remember to visit your site every time if there is an easier option out there. Sure, you already made your blog social but that was meant to facilitate comments and sharing of your blog&amp;#8217;s content by it&amp;#8217;s visitors. While publishing your blog to Twitter will get initial visitors into the blog, an RSS feed will complete the job when they suscribe to it.&lt;/p&gt;
+&lt;p&gt;Blogging platforms will normally create an RSS feed for your blog. Yet, this is a plain XML file which is just a pain to read. However, the good news is that you can &lt;em&gt;burn&lt;/em&gt; your feed which makes it pretty. That&amp;#8217;s where &lt;a href=&#34;http://feedburner.google.com&#34;&gt;FeedBurner&lt;/a&gt; comes into play. &lt;/p&gt;
+&lt;p&gt;To use it, you simply have to give it your RSS feed XML url and choose a name. For example, the RSS feed XML url for Fellgernon Bit is &lt;a href=&#34;http://fellgernon.tumblr.com/rss&#34;&gt;&lt;a href=&#34;http://fellgernon.tumblr.com/rss&#34;&gt;http://fellgernon.tumblr.com/rss&lt;/a&gt;&lt;/a&gt; which is rather ugly, but looks much better with FeedBurner at &lt;a href=&#34;http://feeds.feedburner.com/FellgernonBit&#34;&gt;&lt;a href=&#34;http://feeds.feedburner.com/FellgernonBit&#34;&gt;http://feeds.feedburner.com/FellgernonBit&lt;/a&gt;&lt;/a&gt; The content is readable and FeedBurner allows your visitors to suscribe using a wide variety of tools with a few clicks.&lt;/p&gt;
+&lt;p&gt;This is not the end, as you can create lots of interesting gadgets through FeedBurner. For example, you can add a link with the number of suscribers (as counted through FeedBurner):&lt;/p&gt;
+&lt;p&gt;&lt;img height=&#34;26&#34; src=&#34;http://feeds.feedburner.com/~fc/FellgernonBit?bg=CC0033&amp;amp;fg=444444&amp;amp;anim=0&#34; width=&#34;88&#34;/&gt;&lt;/p&gt;
+&lt;p&gt;To do so, enter the FeedBurner page for your blog then click on the &amp;#8220;Publicize&amp;#8221; tab and go to &amp;#8220;FeedCount&amp;#8221;. There you&amp;#8217;ll have several options (like choosing the color, type, etc) and you&amp;#8217;ll get a piece of html code that creates the link:&lt;/p&gt;
+&lt;p&gt;&amp;lt;p&amp;gt;&amp;lt;a href=&amp;#8221;http://feeds.feedburner.com/FellgernonBit&amp;#8221;&amp;gt;&amp;lt;img src=&amp;#8221;http://feeds.feedburner.com/~fc/FellgernonBit?bg=CC0033&amp;amp;amp;fg=444444&amp;amp;amp;anim=0&amp;#8221; height=&amp;#8221;26&amp;#8221; width=&amp;#8221;88&amp;#8221; style=&amp;#8221;border:0&amp;#8221; alt=&amp;#8221;&amp;#8221; /&amp;gt;&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;&lt;/p&gt;
+&lt;p&gt;Now simply paste it in the html file of your blog wherever you want it to appear.&lt;/p&gt;
+
+&lt;p&gt;FeedBurner offers other options, statistics, etc but I think that one of the most important one is BuzzBoost (again under the Publicize tab). This allows you to show the most recent entries of your blog in other sites you own. Friends might also want to link your blog. In my case, I&amp;#8217;m using it show the most recent posts from &lt;a href=&#34;http://salmoblog.org&#34;&gt;salmoblog.org&lt;/a&gt; as I want to publicize it, plus I&amp;#8217;m part of the contributors there. As with FeedCount, BuzzBoost has several options and will give you an html code. Here is the code for Fellgernon Bit:&lt;/p&gt;
+
+&lt;p&gt;&amp;lt;script src=&amp;#8221;http://feeds.feedburner.com/FellgernonBit?format=sigpro&amp;#8221; type=&amp;#8221;text/javascript&amp;#8221; &amp;gt;&amp;lt;/script&amp;gt;&amp;lt;noscript&amp;gt;&amp;lt;p&amp;gt;Subscribe to RSS headline updates from: &amp;lt;a href=&amp;#8221;http://feeds.feedburner.com/FellgernonBit&amp;#8221;&amp;gt;&amp;lt;/a&amp;gt;&amp;lt;br/&amp;gt;Powered by FeedBurner&amp;lt;/p&amp;gt; &amp;lt;/noscript&amp;gt;&lt;/p&gt;
+&lt;p&gt;In the end, if you make your blog it&amp;#8217;s worth the extra minutes to configure your RSS feed and make it easy for your visitors to suscribe to it. Plus, you can use FeedBurner to make it nice looking and add some cool gadgets if you want.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Setting up your blog</title>
+      <link>http://lcolladotor.github.io/2011/11/20/Setting-up-your-blog</link>
+      <pubDate>Sun, 20 Nov 2011 00:00:00 +0000</pubDate>
+      
+      <guid>http://lcolladotor.github.io/2011/11/20/Setting-up-your-blog</guid>
+      <description>&lt;p&gt;Now that I&amp;#8217;ve spent time re-doing Fellgernon Bit, I thought it&amp;#8217;d be a good time my experience on setting up a socially-connected blog.&lt;/p&gt;
+&lt;p&gt;First of all, you need to choose a blog platform. There are some around like Blogger and WordPress that are widely used and were some of the first platforms. In my case though, I really like how easy http://www.tumblr.com/ is to use. &lt;/p&gt;
+&lt;p&gt;Once you register and have the default blog, go to the customize menu from the Tumblr dashboard and browse the Free Themes. I ended up choosing the &lt;a href=&#34;http://simplethingstheme.tumblr.com/&#34;&gt;Simple Things&lt;/a&gt; theme because I liked the way it looks and it already included some things I wanted like the Google+ button, Facebook and Twitter sharing. This theme also has several easy options so you can easily link your blog to &lt;a href=&#34;http://www.google.com/analytics/&#34;&gt;Google Analytics&lt;/a&gt;. &lt;/p&gt;
+&lt;p&gt;One of the very nice gadgets this theme has (as other Tumblr themes) is an easy to customize &lt;a href=&#34;http://disqus.com/dashboard/&#34;&gt;Disqus&lt;/a&gt; account. What is this? Basically, it&amp;#8217;s a system for comments. If the visitor registers at Disqus they can choose to share their comments via the main social networks, which is something that I liked. An alternative is the Facebook Social Plugin, but I don&amp;#8217;t like because only facebook-users can comment. I know this sounds strange to many of you, but I don&amp;#8217;t think that everyone has a fb account and with newer alternatives I believe they&amp;#8217;ll lose some of their current userbase. Anyhow, with Disqus visitors can use their Twitter, Fb, Google, OpenId, &amp;#8230; accounts to identify themselves and they can easily have their comments appear in the social networks.&lt;/p&gt;
+&lt;p&gt;One of the cool things Disqus offers is an easy to install widget where visitors can see the top commenters, recent comments, and most discussed threads (or only of the three). To set it up, go to the Admin window and then go to the Tools tab and click on Code.&lt;/p&gt;
+&lt;p&gt;As you might have noticed, you will have to modify the html file from your theme if you want to connect it and/or add widgets. Don&amp;#8217;t be afraid and just follow the simple instructions all these widgets give you.&lt;/p&gt;
+&lt;p&gt;Once you have your comment system set up, you might be interested in adding more social networks for your visitors to share your posts on. That&amp;#8217;s where &lt;a href=&#34;http://sharethis.com/&#34;&gt;ShareThis&lt;/a&gt; becomes quite handy. Note that ShareThis allows you to add Twitter, Fb, Google+ so even if the theme you chose doesn&amp;#8217;t come socially-connected you can do it through ShareThis. In my case, I only added the ShareThis button which pretty much allows visitors to use the whole system of social networks. &lt;/p&gt;
+&lt;p&gt;This theme (and other Tumblr themes) allow you to link the RSS feed of your blog with &lt;a href=&#34;http://feedburner.google.com&#34;&gt;FeedBurner&lt;/a&gt; which definitely makes your RSS feed look nicer and easy to subscribe to with tools like &lt;a href=&#34;http://www.google.com/reader&#34;&gt;Google Reader&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Another cool widget to add to your blog is a Tag Cloud. This is probably the easiest widget to add and this &lt;a href=&#34;http://oobly.com/2011/08/05/how-to-get-display-a-post-tag-cloud-widget-in-your-tumblr-blog_387/&#34;&gt;excellent post&lt;/a&gt; describes all the steps you will want to follow. The only difficult part can be choosing where to add the code in the html file. In my case, I simply looked for the RSS tag and added it below. The &lt;a href=&#34;http://www.w3schools.com/tags/tag_div.asp&#34;&gt;div html&lt;/a&gt; tags can be useful when you are adding widgets.&lt;/p&gt;
+&lt;p&gt;To top your blog off, a must-have widget is &lt;a href=&#34;http://www.linkwithin.com/&#34;&gt;LinkWithin&lt;/a&gt;. Basically, it adds 3-5 links to older posts from your blog which definitely helps keep your older posts in the loop. Otherwise they are simply lost in the eternity of the &lt;em&gt;archive&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Finally, don&amp;#8217;t forget to change the settings of your blog from the Tumblr dashboard. You can make so every new post is automatically posted on your Twitter and Fb accounts (I hope they add Google+ soon). &lt;/p&gt;
+&lt;p&gt;This might all seem like a lot of work, but it&amp;#8217;s much quicker to do if you know what you are looking for. And I hope that it&amp;#8217;ll be useful to you.&lt;/p&gt;
+&lt;p&gt;Happy social-blogging!&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

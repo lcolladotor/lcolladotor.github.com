@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mortgage on L. Collado-Torres</title>
+    <link>http://lcolladotor.github.io/tags/mortgage/index.xml</link>
+    <description>Recent content in Mortgage on L. Collado-Torres</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2011-2017 Leonardo Collado Torres under (CC) BY-NC-SA</copyright>
+    <atom:link href="/tags/mortgage/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Simple mortgage calculator</title>
+      <link>http://lcolladotor.github.io/2014/04/22/Simple-mortgage-calculator</link>
+      <pubDate>Tue, 22 Apr 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://lcolladotor.github.io/2014/04/22/Simple-mortgage-calculator</guid>
+      <description>
+
+&lt;p&gt;Have you ever thought of borrowing some money? A common case is when you have to borrow money for buying a house, which is called a mortgage. Wikipedia (&lt;span class=&#34;showtooltip&#34; title=&#34;(2014). &#39;Mortgage loan - Wikipedia, the free encyclopedia.&#39; .&#34;&gt;&lt;a href=&#34;http://en.wikipedia.org/wiki/Mortgage_loan&#34;&gt;&amp;lsquo;Mortgage loan&amp;rsquo; entry&lt;/a&gt;&lt;/span&gt;) goes into much more detail about the definition than what I&amp;rsquo;ll cover.&lt;/p&gt;
+
+&lt;p&gt;One of the aspects you have to evaluate when considering a loan such as a mortgage is how much interest you will be charged and how long the loan will be. Those two determine your monthly payment.&lt;/p&gt;
+
+&lt;h2 id=&#34;comparing-loans&#34;&gt;Comparing loans&lt;/h2&gt;
+
+&lt;p&gt;That is, given the loan amount, you can compare different loans that offer different rates and/or loan lengths. There are many tools out there that allow you to do so and are generally called mortgage calculators. Although the more detailed term is amortization calculator. From wikipedia(&lt;span class=&#34;showtooltip&#34; title=&#34;(2014). &#39;Amortization calculator - Wikipedia, the free encyclopedia.&#39; .&#34;&gt;&lt;a href=&#34;http://en.wikipedia.org/wiki/Amortization_calculator&#34;&gt;&amp;lsquo;Amortization calculator&amp;rsquo; entry&lt;/a&gt;&lt;/span&gt;) we find the so called annuity formula which helps you calculate your monthly payment.&lt;/p&gt;
+
+&lt;p&gt;Several such mortgage calculators have been features in &lt;a href=&#34;http://www.r-bloggers.com/&#34; target=&#34;_blank&#34;&gt;R Bloggers&lt;/a&gt; before such as (&lt;span class=&#34;showtooltip&#34; title=&#34;C (2010). &#39;Mortgage Calculator (and Amortization Charts) with R.&#39; .&#34;&gt;&lt;a href=&#34;http://www.r-chart.com/2010/11/mortgage-calculator-and-amortization.html&#34;&gt;C, 2010&lt;/a&gt;&lt;/span&gt;) and (&lt;span class=&#34;showtooltip&#34; title=&#34;BioStatMatt (2014). &#39;Mortgage Refinance Calculator | BioStatMatt.&#39; .&#34;&gt;&lt;a href=&#34;http://biostatmatt.com/archives/1908&#34;&gt;BioStatMatt&lt;/a&gt;&lt;/span&gt;). Plus there are many other alternatives on the web.&lt;/p&gt;
+
+&lt;h2 id=&#34;my-use-case&#34;&gt;My use case&lt;/h2&gt;
+
+&lt;p&gt;However, a month or so ago I got curious about comparing some loans which had a different twist than normal. Given some circumstances, I wanted to compare some loans where the loaner is willing to receive payments every few months yet with interests being compounded (that is, calculated) on a different time frame. Obviously, the easiest would be to compound interest at the same frequency as payments are made. Plus, probably most banks would not offer such flexible loans.&lt;/p&gt;
+
+&lt;p&gt;Digging around, I did find modifications to the annuity formula that allow non-monthly payments (&lt;span class=&#34;showtooltip&#34; title=&#34;(2014). &#39;Compound Interest Calculator.&#39; .&#34;&gt;&lt;a href=&#34;http://www.calculator.net/compound-interest-calculator.html&#34;&gt;Compound Interest Formula&lt;/a&gt;&lt;/span&gt;) and (&lt;span class=&#34;showtooltip&#34; title=&#34;(2014). &#39;Compound Interest.&#39; .&#34;&gt;&lt;a href=&#34;http://math.about.com/library/weekly/aa042002a.htm&#34;&gt;What is compound interest?&lt;/a&gt;&lt;/span&gt;).&lt;/p&gt;
+
+&lt;h2 id=&#34;shiny-app&#34;&gt;shiny app&lt;/h2&gt;
+
+&lt;p&gt;Being interested in &lt;code&gt;R&lt;/code&gt; code, &lt;a href=&#34;http://www.rstudio.com/shiny/&#34; target=&#34;_blank&#34;&gt;shiny&lt;/a&gt; (&lt;span class=&#34;showtooltip&#34; title=&#34;RStudio and Inc. (2014). shiny: Web Application Framework for R. R package version 0.9.1.&#34;&gt;&lt;a href=&#34;http://CRAN.R-project.org/package=shiny&#34;&gt;RStudio Inc.&lt;/a&gt;&lt;/span&gt;) apps and trying out integrating &lt;a href=&#34;http://rcharts.io/&#34; target=&#34;_blank&#34;&gt;rCharts&lt;/a&gt; (&lt;span class=&#34;showtooltip&#34; title=&#34;Vaidyanathan R (2013). rCharts: Interactive Charts using Polycharts.js. R package version 0.4.2.&#34;&gt;&lt;a href=&#34;&#34;&gt;Vaidyanathan, 2013&lt;/a&gt;&lt;/span&gt;) with shiny, I ended up coding my own mortgage calculator which you can find &lt;a href=&#34;http://glimmer.rstudio.com/lcolladotor/mortgage/&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt; (&lt;span class=&#34;showtooltip&#34; title=&#34;(2014). &#39;Simple Mortgage Calculator.&#39; .&#34;&gt;&lt;a href=&#34;http://glimmer.rstudio.com/lcolladotor/mortgage/&#34;&gt;Simple Mortage Calculator&lt;/a&gt;&lt;/span&gt;). The code is publicly available at &lt;a href=&#34;https://github.com/lcolladotor/mortgage&#34; target=&#34;_blank&#34;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;It has a couple of simple inputs:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Amount to borrow&lt;/li&gt;
+&lt;li&gt;Interest rate&lt;/li&gt;
+&lt;li&gt;Loan duration&lt;/li&gt;
+&lt;li&gt;Payment frequency&lt;/li&gt;
+&lt;li&gt;How frequently interests are compounded&lt;/li&gt;
+&lt;li&gt;Month of the first payment&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The option to begin the loan now but accept the first payment much later is there also because of the complicated use case I had in mind. Again, that is a feature a bank will most likely not offer. But it&amp;rsquo;s something I needed to take into consideration.&lt;/p&gt;
+
+&lt;p&gt;Going back to the app, I tried explaining all the inputs as much as possible. The output is relatively straight forward.&lt;/p&gt;
+
+&lt;p&gt;First, there is a line with focus D3 interactive plot (&lt;span class=&#34;showtooltip&#34; title=&#34;Partners N (2014). &#39;Line Chart With View Finder - NVD3.&#39; .&#34;&gt;&lt;a href=&#34;http://nvd3.org//examples/lineWithFocus.html&#34;&gt;Line Chart with View Finder&lt;/a&gt;&lt;/span&gt;) which shows the principal (the amount you owe) over months as well as how much you&amp;rsquo;ve paid already. The bottom panel allows you to zoom into a specific time range as shown below.&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;
+&lt;a href=&#34;http://lcolladotor.github.io/figs/2014-04-22-mortgage-calculator-flexible-payments/lineWithFocus.png&#34;&gt;&lt;img src=&#34;http://lcolladotor.github.io/figs/2014-04-22-mortgage-calculator-flexible-payments/lineWithFocus.png&#34; alt=&#34;Workflow&#34; style=&#34;width: 775px;&#34;/&gt;&lt;/a&gt;
+&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;Next, the information is shown in more detail as an interactive data table (&lt;span class=&#34;showtooltip&#34; title=&#34;(2014). &#39;DataTables (table plug-in for jQuery).&#39; .&#34;&gt;&lt;a href=&#34;https://datatables.net/&#34;&gt;DataTables&lt;/a&gt;&lt;/span&gt;) 12 months at a time. The interactive part makes it very easy to search for a specific month and look at the state of the loan.&lt;/p&gt;
+
+&lt;p&gt;Finally, you can download the amortization table in CSV format for your records.&lt;/p&gt;
+
+&lt;p&gt;PS You can also access the app via shinyapps at this &lt;a href=&#34;https://lcolladotor.shinyapps.io/mortgage2/&#34; target=&#34;_blank&#34;&gt;url&lt;/a&gt;. It is the first time I&amp;rsquo;ve deployed an app there as I wanted to test shinyapps out.&lt;/p&gt;
+
+&lt;h2 id=&#34;conclusions&#34;&gt;Conclusions&lt;/h2&gt;
+
+&lt;p&gt;The experience of coding the &lt;a href=&#34;http://glimmer.rstudio.com/lcolladotor/mortgage/&#34; target=&#34;_blank&#34;&gt;shiny app&lt;/a&gt; (&lt;span class=&#34;showtooltip&#34; title=&#34;(2014). &#39;Simple Mortgage Calculator.&#39; .&#34;&gt;&lt;a href=&#34;http://glimmer.rstudio.com/lcolladotor/mortgage/&#34;&gt;Simple Mortage Calculator&lt;/a&gt;&lt;/span&gt;) was interesting as I did learn a couple of new things. The same was true for figuring out the calculations for the more flexible options.&lt;/p&gt;
+
+&lt;p&gt;Finally, but not least, the shiny app was useful for my use case and was informative for comparing different loan options. Hopefully it will be useful for other users!&lt;/p&gt;
+
+&lt;h3 id=&#34;references&#34;&gt;References&lt;/h3&gt;
+
+&lt;p&gt;Citations made with &lt;code&gt;knitcitations&lt;/code&gt; (&lt;span class=&#34;showtooltip&#34; title=&#34;Boettiger C (2014). knitcitations: Citations for knitr markdown files. R package version 0.5-0.&#34;&gt;&lt;a href=&#34;http://CRAN.R-project.org/package=knitcitations&#34;&gt;Boettiger, 2014&lt;/a&gt;&lt;/span&gt;).&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Mortgage loan - Wikipedia, the free encyclopedia.  &lt;em&gt;Wikipedia&lt;/em&gt;  &lt;a href=&#34;http://en.wikipedia.org/wiki/Mortgage_loan&#34; target=&#34;_blank&#34;&gt;http://en.wikipedia.org/wiki/Mortgage_loan&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Amortization calculator - Wikipedia, the free encyclopedia.  &lt;em&gt;Wikipedia&lt;/em&gt;  &lt;a href=&#34;http://en.wikipedia.org/wiki/Amortization_calculator&#34; target=&#34;_blank&#34;&gt;http://en.wikipedia.org/wiki/Amortization_calculator&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;C,   (2010) Mortgage Calculator (and Amortization Charts) with R.  &lt;em&gt;R-Chart&lt;/em&gt;  &lt;a href=&#34;http://www.r-chart.com/2010/11/mortgage-calculator-and-amortization.html&#34; target=&#34;_blank&#34;&gt;http://www.r-chart.com/2010/11/mortgage-calculator-and-amortization.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;BioStatMatt,  Mortgage Refinance Calculator | BioStatMatt.  &lt;em&gt;BioStatMatt&lt;/em&gt;  &lt;a href=&#34;http://biostatmatt.com/archives/1908&#34; target=&#34;_blank&#34;&gt;http://biostatmatt.com/archives/1908&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Compound Interest Calculator.  &lt;a href=&#34;http://www.calculator.net/compound-interest-calculator.html&#34; target=&#34;_blank&#34;&gt;http://www.calculator.net/compound-interest-calculator.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Compound Interest.  &lt;a href=&#34;http://math.about.com/library/weekly/aa042002a.htm&#34; target=&#34;_blank&#34;&gt;http://math.about.com/library/weekly/aa042002a.htm&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Simple Mortgage Calculator.  &lt;a href=&#34;http://glimmer.rstudio.com/lcolladotor/mortgage/&#34; target=&#34;_blank&#34;&gt;http://glimmer.rstudio.com/lcolladotor/mortgage/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Novus Partners,  Line Chart With View Finder - NVD3.  &lt;a href=&#34;http://nvd3.org//examples/lineWithFocus.html&#34; target=&#34;_blank&#34;&gt;http://nvd3.org//examples/lineWithFocus.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;DataTables (table plug-in for jQuery).  &lt;em&gt;DataTables (jQuery plug-in)&lt;/em&gt;  &lt;a href=&#34;https://datatables.net/&#34; target=&#34;_blank&#34;&gt;https://datatables.net/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Carl Boettiger,   (2014) knitcitations: Citations for knitr markdown files.  &lt;a href=&#34;http://CRAN.R-project.org/package=knitcitations&#34; target=&#34;_blank&#34;&gt;http://CRAN.R-project.org/package=knitcitations&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Ramnath Vaidyanathan,   (2013) rCharts: Interactive Charts using Polycharts.js.&lt;/li&gt;
+&lt;li&gt;RStudio , Inc. ,   (2014) shiny: Web Application Framework for R.  &lt;a href=&#34;http://CRAN.R-project.org/package=shiny&#34; target=&#34;_blank&#34;&gt;http://CRAN.R-project.org/package=shiny&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;reproducibility&#34;&gt;Reproducibility&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;sessionInfo()
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## R version 3.1.0 (2014-04-10)
+## Platform: x86_64-apple-darwin10.8.0 (64-bit)
+## 
+## locale:
+## [1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8
+## 
+## attached base packages:
+## [1] stats     graphics  grDevices utils     datasets  methods   base     
+## 
+## other attached packages:
+## [1] knitcitations_0.5-0 bibtex_0.3-6        knitr_1.5.27       
+## 
+## loaded via a namespace (and not attached):
+##  [1] codetools_0.2-8 digest_0.6.4    evaluate_0.5.3  formatR_0.10   
+##  [5] httr_0.3        RCurl_1.95-4.1  stringr_0.6.2   tools_3.1.0    
+##  [9] XML_3.98-1.1    xtable_1.7-3
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Check other &lt;a href=&#34;https://twitter.com/jhubiostat&#34; target=&#34;_blank&#34;&gt;@jhubiostat&lt;/a&gt; student blogs at &lt;a href=&#34;http://bmorebiostat.com/&#34; target=&#34;_blank&#34;&gt;Bmore Biostats&lt;/a&gt; as well as topics on &lt;a href=&#34;https://twitter.com/search?q=%23rstats&#34; target=&#34;_blank&#34;&gt;#rstats&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

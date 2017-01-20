@@ -1,37 +1,1565 @@
----
-layout: page
-title: Fellgernon Bit
-tagline: <a href="http://bit.ly/LCollado-Torres">L. Collado-Torres</a>'s academic corner in the bit world
----
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
 
-{% for post in paginator.posts %}
-   <!-- here add you post markup -->
-   <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
-   <p class="author">
-    <span class="date">{{post.date | date: "%Y-%m-%d"}}</span>
-  </p>
-  <div class="content">
-    {{ post.content }}
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme" content="hugo-academic">
+  <meta name="generator" content="Hugo 0.18.1" />
+  <meta name="author" content="Leonardo Collado Torres">
+  <meta name="description" content="Data Scientist">
+
+  
+  
+  
+    
+  
+  
+    
+    
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/tomorrow.min.css">
+    
+  
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/css/academicons.min.css">
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,700|Merriweather|Roboto+Mono">
+  <link rel="stylesheet" href="/css/hugo-academic.css">
+  
+
+  <link rel="alternate" href="http://lcolladotor.github.io/index.xml" type="application/rss+xml" title="L. Collado-Torres">
+  <link rel="feed" href="http://lcolladotor.github.io/index.xml" type="application/rss+xml" title="L. Collado-Torres">
+
+  <link rel="icon" type="image/png" href="/img/icon.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/apple-touch-icon.png">
+
+  <link rel="canonical" href="http://lcolladotor.github.io/">
+
+  
+
+  <title>L. Collado-Torres</title>
+
+</head>
+<body id="top" data-spy="scroll" data-target="#navbar-main" data-offset="71">
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+              data-target=".navbar-collapse" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">L. Collado-Torres</a>
+    </div>
+
+    
+    <div class="collapse navbar-collapse">
+
+      
+      <ul class="nav navbar-nav navbar-right">
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#about" data-target="#about">
+            
+            <span>Home</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#publications_selected" data-target="#publications_selected">
+            
+            <span>Publications</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#talks" data-target="#talks">
+            
+            <span>Talks</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#posts" data-target="#posts">
+            
+            <span>Posts</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#cv" data-target="#cv">
+            
+            <span>CV</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#teaching" data-target="#teaching">
+            
+            <span>Teaching</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#contact" data-target="#contact">
+            
+            <span>Contact</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#search" data-target="#search">
+            
+            <span>Search</span>
+          </a>
+        </li>
+
+        
+        
+      </ul>
+
+    </div>
   </div>
-  <div class="content-space"></div>
-{% endfor %}
+</nav>
 
-<!-- Pagination links -->
-<div class="pagination pagination-centered">
-  <ul>
-  {% if paginator.previous_page %}
-    {% if paginator.previous_page == 1 %}
-      <li class="prev"><a href="/" title="Previous page">Prev</a></li>
-    {% else %}
-      <li class="prev"><a href="/page{{paginator.previous_page}}" title="Previous page">Prev</a></li>
-    {% endif %}
-  {% else %}
-    <li class="prev disabled"><a>Prev</a></li>
-  {% endif %}
-  {% if paginator.next_page %}
-    <li class="next"><a href="/page{{paginator.next_page}}" title="Next page">Next</a></li>
-  {% else %}
-    <li class="next disabled"><a>Next</a>
-  {% endif %}
-  </ul>
+
+
+<span id="homepage" style="display: none"></span>
+
+
+
+  
+  
+  <section id="about" class="home-section">
+    <div class="container">
+      
+
+
+
+<div class="row" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <div class="col-xs-12 col-md-4">
+    <div id="profile">
+
+      
+      <div class="portrait" itemprop="image"
+           style="background-image: url('/img/portrait.jpg');">
+      </div>
+      
+
+      <div class="portrait-title">
+        <h2 itemprop="name">Leonardo Collado Torres</h2>
+        <h3 itemprop="jobTitle">Data Scientist</h3>
+        <h3 itemprop="worksFor">Lieber Institute for Brain Development</h3>
+      </div>
+
+      <ul class="social-icon" aria-hidden="true">
+        
+        
+        <li>
+          <a href="mailto:leo.collado@libd.org" target="_blank">
+            <i class="fa fa-envelope big-icon"></i>
+          </a>
+        </li>
+        
+        
+        <li>
+          <a href="//twitter.com/fellgernon" target="_blank">
+            <i class="fa fa-twitter big-icon"></i>
+          </a>
+        </li>
+        
+        
+        <li>
+          <a href="https://scholar.google.com/citations?user=h57-MykAAAAJ" target="_blank">
+            <i class="ai ai-google-scholar big-icon"></i>
+          </a>
+        </li>
+        
+        
+        <li>
+          <a href="//github.com/lcolladotor" target="_blank">
+            <i class="fa fa-github big-icon"></i>
+          </a>
+        </li>
+        
+        
+        <li>
+          <a href="http://orcid.org/0000-0003-2140-308X" target="_blank">
+            <i class="ai ai-orcid big-icon"></i>
+          </a>
+        </li>
+        
+        
+        <li>
+          <a href="https://impactstory.org/u/0000-0003-2140-308X" target="_blank">
+            <i class="ai ai-impactstory big-icon"></i>
+          </a>
+        </li>
+        
+      </ul>
+
+    </div>
+  </div>
+  <div class="col-xs-12 col-md-8" itemprop="description">
+
+    
+
+<h1 id="l-collado-torres">L. Collado-Torres</h1>
+
+<p>At the <a href="http://www.libd.org/" target="_blank">Lieber Institute for Brain Development</a>, I am part of the Data Science team whose goals include better understanding and characterizing genomics signatures in the human brain, including DNA methylation and gene expression. I help mentor other team members, provide support for LIBD projects and I am advancing my academic career as part of <a href="http://aejaffe.com/" target="_blank">Andrew Jaffe</a>&rsquo;s lab.</p>
+
+<p>As a quick background, I graduated from the <a href="http://www.lcg.unam.mx/" target="_blank">Undergraduate Program on Genomic Sciences</a> (the <a href="http://www.lcg.unam.mx/about" target="_blank"><em>About</em></a> page is in English) from the <a href="http://unam.mx/" target="_blank">National Autonomous University of Mexico (UNAM)</a> in 2009 and worked for two years at <a href="http://wintergenomics.com/aboutus/" target="_blank">Winter Genomics</a> analyzing high-throughput sequencing data. I then got a PhD in the <a href="http://www.jhsph.edu/departments/biostatistics/" target="_blank">Department of Biostatistics</a> at <a href="http://www.jhsph.edu/" target="_blank">Johns Hopkins Bloomberg School of Public Health</a> thanks to a <a href="http://www.conacyt.gob.mx/" target="_blank">CONACyT scholarship</a> awarded in 2011. I worked with <a href="http://jtleek.com/" target="_blank">Jeff Leek</a> and <a href="http://aejaffe.com/" target="_blank">Andrew Jaffe</a> in developing <a href="http://bioconductor.org/packages/derfinder" target="_blank">derfinder</a>, <a href="http://bioconductor.org/packages/regionReport" target="_blank">regionReport</a>, <a href="http://bioconductor.org/packages/recount" target="_blank">recount</a> as well as other applied projects.</p>
+
+<p>I am a fan of using <a href="http://cran.r-project.org/" target="_blank">R</a> and <a href="http://www.bioconductor.org/" target="_blank">Bioconductor</a> for data analysis, which I use with <a href="http://rmarkdown.rstudio.com/" target="_blank">R Markdown</a> for creating reproducible reports (hopefully!).</p>
+
+
+    <div class="row">
+
+      
+      <div class="col-sm-5">
+        <h3>Interests</h3>
+        <ul class="ul-interests">
+          
+          <li>Genomics</li>
+          
+          <li>R programming</li>
+          
+          <li>Biostatistics</li>
+          
+        </ul>
+      </div>
+      
+
+      
+      <div class="col-sm-7">
+        <h3>Education</h3>
+        <ul class="ul-edu fa-ul">
+          
+          <li>
+            <i class="fa-li fa fa-graduation-cap"></i>
+            <div class="description">
+              <p class="course">PhD in Biostatistics, 2016</p>
+              <p class="institution">Johns Hopkins Bloomberg School of Public Health</p>
+            </div>
+          </li>
+          
+          <li>
+            <i class="fa-li fa fa-graduation-cap"></i>
+            <div class="description">
+              <p class="course">Bachelor in Genomic Sciences (LCG), 2009</p>
+              <p class="institution">National Autonomous University of Mexico (UNAM)</p>
+            </div>
+          </li>
+          
+        </ul>
+      </div>
+      
+
+    </div>
+  </div>
 </div>
+
+    </div>
+  </section>
+
+  
+  
+  <section id="publications_selected" class="home-section">
+    <div class="container">
+      
+
+
+
+<div class="row">
+  <div class="col-xs-12 col-md-4 section-heading">
+    <h1>Selected Publications</h1>
+    
+  </div>
+  <div class="col-xs-12 col-md-8">
+    
+
+    
+    
+    <div class="pub-list-item" itemscope itemtype="http://schema.org/CreativeWork">
+  <div class="row">
+
+    
+
+    <div class="col-md-12">
+
+    
+
+      <h3 class="article-title" itemprop="name">
+        <a href="http://lcolladotor.github.io/publication/derfinder/" itemprop="url">Flexible expressed region analysis for RNA-seq with derfinder</a>
+      </h3>
+
+      <div class="pub-abstract" itemprop="text">
+        
+        derfinder analysis using expressed region-level and single base-level approaches provides a compromise between full transcript reconstruction and feature-level analysis. The package is available from Bioconductor.
+        
+      </div>
+
+      <div class="pub-authors" itemprop="author">
+        
+        <strong>L Collado-Torres</strong>, A Nellore, AC Frazee, C Wilks, MI Love, B Langmead, RA Irizarry, JT Leek, AE Jaffe
+        
+      </div>
+
+      <div class="pub-publication">
+        
+        NAR
+        
+      </div>
+
+      <div class="pub-links">
+        
+
+
+
+<a class="btn btn-primary btn-outline btn-xs" href="http://lcolladotor.github.io/publication/derfinder/">
+  Details
+</a>
+
+
+<a class="btn btn-primary btn-outline btn-xs" href="http://nar.oxfordjournals.org/content/early/2016/09/29/nar.gkw852.full.pdf&#43;html">
+  PDF
+</a>
+
+
+
+
+<a class="btn btn-primary btn-outline btn-xs" href="https://github.com/leekgroup/derSupplement">
+  Code
+</a>
+
+
+
+<a class="btn btn-primary btn-outline btn-xs" href="http://leekgroup.github.io/derSupplement/">
+  Project
+</a>
+
+
+<a class="btn btn-primary btn-outline btn-xs" href="http://bioconductor.org/packages/derfinder">
+  Bioconductor
+</a>
+
+<a class="btn btn-primary btn-outline btn-xs" href="http://biorxiv.org/content/early/2016/05/19/015370">
+  Pre-print
+</a>
+
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+    
+    <div class="pub-list-item" itemscope itemtype="http://schema.org/CreativeWork">
+  <div class="row">
+
+    
+
+    <div class="col-md-12">
+
+    
+
+      <h3 class="article-title" itemprop="name">
+        <a href="http://lcolladotor.github.io/publication/rail/" itemprop="url">Rail-RNA: Scalable analysis of RNA-seq splicing and coverage</a>
+      </h3>
+
+      <div class="pub-abstract" itemprop="text">
+        
+        We describe Rail-RNA, a cloud-enabled spliced aligner that analyzes many samples at once. Rail-RNA eliminates redundant work across samples, making it more efficient as samples are added. For many samples, Rail-RNA is more accurate than annotation-assisted aligners.
+        
+      </div>
+
+      <div class="pub-authors" itemprop="author">
+        
+        A Nellore, <strong>L Collado-Torres</strong>, AE Jaffe,  J Alquicira-Hernández, C Wilks, J Pritt, J Morton, JT Leek, B Langmead
+        
+      </div>
+
+      <div class="pub-publication">
+        
+        Bioinformatics
+        
+      </div>
+
+      <div class="pub-links">
+        
+
+
+
+<a class="btn btn-primary btn-outline btn-xs" href="http://lcolladotor.github.io/publication/rail/">
+  Details
+</a>
+
+
+<a class="btn btn-primary btn-outline btn-xs" href="http://bioinformatics.oxfordjournals.org/content/early/2016/09/02/bioinformatics.btw575.full.pdf&#43;html">
+  PDF
+</a>
+
+
+
+
+
+
+<a class="btn btn-primary btn-outline btn-xs" href="http://rail.bio">
+  Project
+</a>
+
+
+<a class="btn btn-primary btn-outline btn-xs" href="http://www.biorxiv.org/content/biorxiv/early/2015/08/11/019067">
+  Pre-print
+</a>
+
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+    
+    <div class="pub-list-item" itemscope itemtype="http://schema.org/CreativeWork">
+  <div class="row">
+
+    
+
+    <div class="col-md-12">
+
+    
+
+      <h3 class="article-title" itemprop="name">
+        <a href="http://lcolladotor.github.io/publication/recount/" itemprop="url">recount: A large-scale resource of analysis-ready RNA-seq expression data</a>
+      </h3>
+
+      <div class="pub-abstract" itemprop="text">
+        
+        recount provides a valuable and user-friendly resource of processed RNA-seq datasets to draw additional biological insights from existing public data.
+        
+      </div>
+
+      <div class="pub-authors" itemprop="author">
+        
+        <strong>L Collado-Torres</strong> <strong>*</strong>, A Nellore <strong>*</strong>, K Kammers, SE Ellis, MA Taub, KD Hansen, AE Jaffe, B Langmead, JT Leek
+        
+      </div>
+
+      <div class="pub-publication">
+        
+        bioRxiv
+        
+      </div>
+
+      <div class="pub-links">
+        
+
+
+
+<a class="btn btn-primary btn-outline btn-xs" href="http://lcolladotor.github.io/publication/recount/">
+  Details
+</a>
+
+
+
+
+
+<a class="btn btn-primary btn-outline btn-xs" href="https://github.com/leekgroup/recount-website">
+  Code
+</a>
+
+
+
+<a class="btn btn-primary btn-outline btn-xs" href="http://leekgroup.github.io/recount-analyses/">
+  Project
+</a>
+
+
+<a class="btn btn-primary btn-outline btn-xs" href="http://bioconductor.org/packages/recount">
+  Bioconductor
+</a>
+
+<a class="btn btn-primary btn-outline btn-xs" href="http://biorxiv.org/content/early/2016/08/08/068478">
+  Pre-print
+</a>
+
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+    
+    
+
+  </div>
+</div>
+
+    </div>
+  </section>
+
+  
+  
+  <section id="publications" class="home-section">
+    <div class="container">
+      
+
+
+
+
+<div class="row">
+  <div class="col-xs-12 col-md-4 section-heading">
+    <h1>Recent Publications</h1>
+    
+    
+    <p class="view-all">
+      <a href="http://lcolladotor.github.io/publication/">
+        More Publications
+        <i class="fa fa-angle-double-right"></i>
+      </a>
+    </p>
+    
+  </div>
+  <div class="col-xs-12 col-md-8">
+    
+
+    
+    <ul class="fa-ul">
+      
+      <li itemscope itemtype="http://schema.org/CreativeWork">
+  <i class="fa-li fa fa-file-text-o pub-icon" aria-hidden="true"></i>
+  <span itemprop="name">Human splicing diversity and the extent of unannotated splice junctions across human RNA-seq samples on the Sequence Read Archive</span>
+  <p>
+
+
+
+<a class="btn btn-primary btn-outline btn-xs" href="http://lcolladotor.github.io/publication/intropolis/">
+  Details
+</a>
+
+
+<a class="btn btn-primary btn-outline btn-xs" href="http://genomebiology.biomedcentral.com/track/pdf/10.1186/s13059-016-1118-6?site=genomebiology.biomedcentral.com">
+  PDF
+</a>
+
+
+
+
+<a class="btn btn-primary btn-outline btn-xs" href="https://figshare.com/articles/Scripts_outputs_for_paper_Human_splicing_diversity_across_the_Sequence_Read_Archive_by_Nellore_et_al_/3811629/1">
+  Code
+</a>
+
+
+<a class="btn btn-primary btn-outline btn-xs" href="https://figshare.com/articles/intropolis_exon-exon_junctions_across_publicly_available_RNA-seq_samples_on_the_Sequence_Read_Archive/3811680/1">
+  Dataset
+</a>
+
+
+<a class="btn btn-primary btn-outline btn-xs" href="http://intropolis.rail.bio/">
+  Project
+</a>
+
+
+<a class="btn btn-primary btn-outline btn-xs" href="http://biorxiv.org/content/biorxiv/early/2016/01/29/038224">
+  Pre-print
+</a>
+
+</p>
+</li>
+
+      
+      <li itemscope itemtype="http://schema.org/CreativeWork">
+  <i class="fa-li fa fa-file-text-o pub-icon" aria-hidden="true"></i>
+  <span itemprop="name">Flexible expressed region analysis for RNA-seq with derfinder</span>
+  <p>
+
+
+
+<a class="btn btn-primary btn-outline btn-xs" href="http://lcolladotor.github.io/publication/derfinder/">
+  Details
+</a>
+
+
+<a class="btn btn-primary btn-outline btn-xs" href="http://nar.oxfordjournals.org/content/early/2016/09/29/nar.gkw852.full.pdf&#43;html">
+  PDF
+</a>
+
+
+
+
+<a class="btn btn-primary btn-outline btn-xs" href="https://github.com/leekgroup/derSupplement">
+  Code
+</a>
+
+
+
+<a class="btn btn-primary btn-outline btn-xs" href="http://leekgroup.github.io/derSupplement/">
+  Project
+</a>
+
+
+<a class="btn btn-primary btn-outline btn-xs" href="http://bioconductor.org/packages/derfinder">
+  Bioconductor
+</a>
+
+<a class="btn btn-primary btn-outline btn-xs" href="http://biorxiv.org/content/early/2016/05/19/015370">
+  Pre-print
+</a>
+
+</p>
+</li>
+
+      
+      <li itemscope itemtype="http://schema.org/CreativeWork">
+  <i class="fa-li fa fa-file-text-o pub-icon" aria-hidden="true"></i>
+  <span itemprop="name">Rail-RNA: Scalable analysis of RNA-seq splicing and coverage</span>
+  <p>
+
+
+
+<a class="btn btn-primary btn-outline btn-xs" href="http://lcolladotor.github.io/publication/rail/">
+  Details
+</a>
+
+
+<a class="btn btn-primary btn-outline btn-xs" href="http://bioinformatics.oxfordjournals.org/content/early/2016/09/02/bioinformatics.btw575.full.pdf&#43;html">
+  PDF
+</a>
+
+
+
+
+
+
+<a class="btn btn-primary btn-outline btn-xs" href="http://rail.bio">
+  Project
+</a>
+
+
+<a class="btn btn-primary btn-outline btn-xs" href="http://www.biorxiv.org/content/biorxiv/early/2015/08/11/019067">
+  Pre-print
+</a>
+
+</p>
+</li>
+
+      
+      <li itemscope itemtype="http://schema.org/CreativeWork">
+  <i class="fa-li fa fa-file-text-o pub-icon" aria-hidden="true"></i>
+  <span itemprop="name">recount: A large-scale resource of analysis-ready RNA-seq expression data</span>
+  <p>
+
+
+
+<a class="btn btn-primary btn-outline btn-xs" href="http://lcolladotor.github.io/publication/recount/">
+  Details
+</a>
+
+
+
+
+
+<a class="btn btn-primary btn-outline btn-xs" href="https://github.com/leekgroup/recount-website">
+  Code
+</a>
+
+
+
+<a class="btn btn-primary btn-outline btn-xs" href="http://leekgroup.github.io/recount-analyses/">
+  Project
+</a>
+
+
+<a class="btn btn-primary btn-outline btn-xs" href="http://bioconductor.org/packages/recount">
+  Bioconductor
+</a>
+
+<a class="btn btn-primary btn-outline btn-xs" href="http://biorxiv.org/content/early/2016/08/08/068478">
+  Pre-print
+</a>
+
+</p>
+</li>
+
+      
+      <li itemscope itemtype="http://schema.org/CreativeWork">
+  <i class="fa-li fa fa-file-text-o pub-icon" aria-hidden="true"></i>
+  <span itemprop="name">regionReport: Interactive reports for region-level and feature-level genomic analyses</span>
+  <p>
+
+
+
+<a class="btn btn-primary btn-outline btn-xs" href="http://lcolladotor.github.io/publication/regionReport/">
+  Details
+</a>
+
+
+<a class="btn btn-primary btn-outline btn-xs" href="https://f1000research.com/articles/4-105/v2/pdf">
+  PDF
+</a>
+
+
+
+
+<a class="btn btn-primary btn-outline btn-xs" href="https://github.com/leekgroup/regionReportSupp">
+  Code
+</a>
+
+
+
+<a class="btn btn-primary btn-outline btn-xs" href="http://leekgroup.github.io/regionReportSupp/">
+  Project
+</a>
+
+
+<a class="btn btn-primary btn-outline btn-xs" href="http://bioconductor.org/packages/regionReport">
+  Bioconductor
+</a>
+
+<a class="btn btn-primary btn-outline btn-xs" href="http://www.biorxiv.org/content/early/2015/03/17/016659">
+  Pre-print
+</a>
+
+</p>
+</li>
+
+      
+    </ul>
+    
+
+  </div>
+</div>
+
+    </div>
+  </section>
+
+  
+  
+  <section id="talks" class="home-section">
+    <div class="container">
+      
+
+
+
+
+<div class="row">
+  <div class="col-xs-12 col-md-4 section-heading">
+    <h1>Recent &amp; Upcoming Talks</h1>
+    
+    
+    <p class="view-all">
+      <a href="http://lcolladotor.github.io/talk/">
+        More Talks
+        <i class="fa fa-angle-double-right"></i>
+      </a>
+    </p>
+    
+  </div>
+  <div class="col-xs-12 col-md-8">
+    
+
+    
+    <ul class="fa-ul">
+      
+      <li itemscope itemtype="http://schema.org/CreativeWork">
+  <i class="fa-li fa fa-comment-o pub-icon" aria-hidden="true"></i>
+  <span itemprop="name"><a href="http://lcolladotor.github.io/talk/genomeeting2016/">recount: facilitando el análisis de miles de muestras de RNA-seq</a></span>
+  <p>
+    Wed, Oct 26, 2016,
+    
+            Genomeeting 2016
+    
+  </p>
+</li>
+
+      
+      <li itemscope itemtype="http://schema.org/CreativeWork">
+  <i class="fa-li fa fa-comment-o pub-icon" aria-hidden="true"></i>
+  <span itemprop="name"><a href="http://lcolladotor.github.io/talk/sacnas2016/">Using Data Science to Study Human Brain Genomic Measurements</a></span>
+  <p>
+    Sat, Oct 15, 2016,
+    
+            SACNAS 2016
+    
+  </p>
+</li>
+
+      
+      <li itemscope itemtype="http://schema.org/CreativeWork">
+  <i class="fa-li fa fa-comment-o pub-icon" aria-hidden="true"></i>
+  <span itemprop="name"><a href="http://lcolladotor.github.io/talk/enar2016/">Annotation-agnostic differential expression analysis</a></span>
+  <p>
+    Mon, Mar 7, 2016,
+    
+            ENAR 2016
+    
+  </p>
+</li>
+
+      
+    </ul>
+    
+
+  </div>
+</div>
+
+    </div>
+  </section>
+
+  
+  
+  <section id="posts" class="home-section">
+    <div class="container">
+      
+
+
+
+
+<div class="row">
+  <div class="col-xs-12 col-md-4 section-heading">
+
+    <h1>Recent Posts</h1>
+    
+    
+    <p class="view-all">
+      <a href="/post/">
+        More Posts
+        <i class="fa fa-angle-double-right"></i>
+      </a>
+    </p>
+    
+
+  </div>
+  <div class="col-xs-12 col-md-8">
+
+    
+
+    
+      
+        
+        
+
+
+<div class="article-list-item" itemscope itemprop="blogPost">
+  
+  <h3 class="article-title" itemprop="name">
+    <a href="http://lcolladotor.github.io/2016/08/02/Finding-possible-class-schedules" itemprop="url">Finding possible class schedules</a>
+  </h3>
+  
+
+<div class="article-metadata">
+
+  <span class="article-date">
+    <time datetime="2016-08-02 00:00:00 &#43;0000 UTC" itemprop="datePublished">
+      Tue, Aug 2, 2016
+    </time>
+  </span>
+
+  
+  
+  
+  <span class="article-categories">
+    <i class="fa fa-folder"></i>
+    
+    <a href="/categories/rstats">rstats</a
+    >, 
+    
+    <a href="/categories/unam">UNAM</a
+    >
+    
+  </span>
+  
+  
+
+  
+  
+  
+  <span class="article-tags">
+    <i class="fa fa-tags"></i>
+    
+    <a href="/tags/rstats">rstats</a
+    >
+    
+  </span>
+  
+  
+
+  
+
+</div>
+
+  <div class="article-style" itemprop="articleBody">
+    
+    Over the weekend my brother wanted to figure out his class schedule for the next semester. He is a veterinary medicine and zootechnology student at UNAM. For this upcoming semester there is a set of classes he has to take and each has 8 or so instructor options. The website where he finds the class times lists about 8 pre-constructed class schedules. So he normally finds one he likes quite a bit, and then manually starts checking if he can change X instructor for Y for a given class.
+    
+  </div>
+  <p class="read-more">
+    <a href="http://lcolladotor.github.io/2016/08/02/Finding-possible-class-schedules" class="btn btn-primary btn-outline">
+      CONTINUE READING
+    </a>
+  </p>
+</div>
+
+      
+        
+        
+
+
+<div class="article-list-item" itemscope itemprop="blogPost">
+  
+  <h3 class="article-title" itemprop="name">
+    <a href="http://lcolladotor.github.io/2016/04/04/Federico-S%C3%A1nchez-Rodr%C3%ADguez-1950-2016" itemprop="url">Federico Sánchez Rodríguez 1950-2016</a>
+  </h3>
+  
+
+<div class="article-metadata">
+
+  <span class="article-date">
+    <time datetime="2016-04-04 00:00:00 &#43;0000 UTC" itemprop="datePublished">
+      Mon, Apr 4, 2016
+    </time>
+  </span>
+
+  
+  
+  
+  <span class="article-categories">
+    <i class="fa fa-folder"></i>
+    
+    <a href="/categories/unam">unam</a
+    >
+    
+  </span>
+  
+  
+
+  
+  
+  
+  <span class="article-tags">
+    <i class="fa fa-tags"></i>
+    
+    <a href="/tags/lcg">LCG</a
+    >
+    
+  </span>
+  
+  
+
+  
+
+</div>
+
+  <div class="article-style" itemprop="articleBody">
+    
+    Today the UNAM community at large mourns the passing of Federico Sánchez Rodríguez. He got his bachelor&rsquo;s degree from the School of Chemistry - UNAM, masters and PhD degrees from Biomedicas - UNAM, postdoc from UCSF, was a member of CIFN-UNAM now called CCG-UNAM (it&rsquo;s his affiliation in this 1983 paper), and worked most of his career at IBT-UNAM.
+  
+I&rsquo;m sure that he made many friends, trained many students at all levels, and had a highly productive academic career as evidenced on his homepage where he lists many papers, patents, etc.
+    
+  </div>
+  <p class="read-more">
+    <a href="http://lcolladotor.github.io/2016/04/04/Federico-S%C3%A1nchez-Rodr%C3%ADguez-1950-2016" class="btn btn-primary btn-outline">
+      CONTINUE READING
+    </a>
+  </p>
+</div>
+
+      
+        
+        
+
+
+<div class="article-list-item" itemscope itemprop="blogPost">
+  
+  <h3 class="article-title" itemprop="name">
+    <a href="http://lcolladotor.github.io/2016/03/10/LCG-UNAM-11-years-ago" itemprop="url">LCG-UNAM 11 years ago</a>
+  </h3>
+  
+
+<div class="article-metadata">
+
+  <span class="article-date">
+    <time datetime="2016-03-10 00:00:00 &#43;0000 UTC" itemprop="datePublished">
+      Thu, Mar 10, 2016
+    </time>
+  </span>
+
+  
+  
+  
+  <span class="article-categories">
+    <i class="fa fa-folder"></i>
+    
+    <a href="/categories/unam">unam</a
+    >, 
+    
+    <a href="/categories/fun">fun</a
+    >
+    
+  </span>
+  
+  
+
+  
+  
+  
+  <span class="article-tags">
+    <i class="fa fa-tags"></i>
+    
+    <a href="/tags/m%c3%a9xico">México</a
+    >, 
+    
+    <a href="/tags/lcg">LCG</a
+    >, 
+    
+    <a href="/tags/work-life">work-life</a
+    >
+    
+  </span>
+  
+  
+
+  
+
+</div>
+
+  <div class="article-style" itemprop="articleBody">
+    
+    This has been a busy week. I just flew in last night from #ENAR2016 and I&rsquo;m getting ready for a postdoc interview tomorrow, which means that I&rsquo;m also flying today. On the flight back from #ENAR2016 I started reading a book my friend John Muschelli bought for me. It&rsquo;s called The Happiness Advantage by Shawn Anchor and so far I&rsquo;m loving it. There are several things that it talks about that I&rsquo;ve done in the past, but maybe not in the past year.
+    
+  </div>
+  <p class="read-more">
+    <a href="http://lcolladotor.github.io/2016/03/10/LCG-UNAM-11-years-ago" class="btn btn-primary btn-outline">
+      CONTINUE READING
+    </a>
+  </p>
+</div>
+
+      
+        
+        
+
+
+<div class="article-list-item" itemscope itemprop="blogPost">
+  
+  <h3 class="article-title" itemprop="name">
+    <a href="http://lcolladotor.github.io/2016/03/07/Are-you-doing-parallel-computations-in-R-Then-use-BiocParallel" itemprop="url">Are you doing parallel computations in R? Then use BiocParallel</a>
+  </h3>
+  
+
+<div class="article-metadata">
+
+  <span class="article-date">
+    <time datetime="2016-03-07 00:00:00 &#43;0000 UTC" itemprop="datePublished">
+      Mon, Mar 7, 2016
+    </time>
+  </span>
+
+  
+  
+  
+  <span class="article-categories">
+    <i class="fa fa-folder"></i>
+    
+    <a href="/categories/rstats">rstats</a
+    >
+    
+  </span>
+  
+  
+
+  
+  
+  
+  <span class="article-tags">
+    <i class="fa fa-tags"></i>
+    
+    <a href="/tags/rstats">rstats</a
+    >, 
+    
+    <a href="/tags/bioconductor">Bioconductor</a
+    >
+    
+  </span>
+  
+  
+
+  
+
+</div>
+
+  <div class="article-style" itemprop="articleBody">
+    
+    It&rsquo;s the morning of the first day of oral conferences at #ENAR2016. I feel like I have a spidey sense since I woke up 3 min after an email from Jeff Leek; just a funny coincidence. Anyhow, I promised Valerie Obenchain at #Bioc2014 that I would write a post about one of my favorite Bioconductor packages: BiocParallel (Morgan, Obenchain, Lang, and Thompson, 2016). By now it&rsquo;s on the top 5% of downloaded Bioconductor packages, so many people know about it or are unaware that their favorite package uses it behind the scenes.
+    
+  </div>
+  <p class="read-more">
+    <a href="http://lcolladotor.github.io/2016/03/07/Are-you-doing-parallel-computations-in-R-Then-use-BiocParallel" class="btn btn-primary btn-outline">
+      CONTINUE READING
+    </a>
+  </p>
+</div>
+
+      
+        
+        
+
+
+<div class="article-list-item" itemscope itemprop="blogPost">
+  
+  <h3 class="article-title" itemprop="name">
+    <a href="http://lcolladotor.github.io/2015/07/07/Teaching-a-short-topic-to-beginner-R-users" itemprop="url">Teaching a short topic to beginner R users</a>
+  </h3>
+  
+
+<div class="article-metadata">
+
+  <span class="article-date">
+    <time datetime="2015-07-07 00:00:00 &#43;0000 UTC" itemprop="datePublished">
+      Tue, Jul 7, 2015
+    </time>
+  </span>
+
+  
+  
+  
+  <span class="article-categories">
+    <i class="fa fa-folder"></i>
+    
+    <a href="/categories/rstats">rstats</a
+    >
+    
+  </span>
+  
+  
+
+  
+  
+  
+  <span class="article-tags">
+    <i class="fa fa-tags"></i>
+    
+    <a href="/tags/teaching">teaching</a
+    >, 
+    
+    <a href="/tags/rstats">rstats</a
+    >
+    
+  </span>
+  
+  
+
+  
+
+</div>
+
+  <div class="article-style" itemprop="articleBody">
+    
+    A couple weeks ago I was given the opportunity to teach a 1 hr 30 min slot of an introduction to R course. In the past, I&rsquo;ve taught lectures for similar courses, and I ended up asking myself what would be the best short topic to teach and how to teach it.
+Best short topic There are two ways to answer the first question, one boring and one more interesting.
+    
+  </div>
+  <p class="read-more">
+    <a href="http://lcolladotor.github.io/2015/07/07/Teaching-a-short-topic-to-beginner-R-users" class="btn btn-primary btn-outline">
+      CONTINUE READING
+    </a>
+  </p>
+</div>
+
+      
+    
+
+  </div>
+</div>
+
+    </div>
+  </section>
+
+  
+  
+  <section id="cv" class="home-section">
+    <div class="container">
+      
+
+
+<div class="row">
+  <div class="col-xs-12 col-md-4 section-heading">
+    <h1>Curriculum Vitae</h1>
+    
+  </div>
+  <div class="col-xs-12 col-md-8">
+    <p><a href="http://lcolladotor.github.io/cv/en_CV_lcollado.pdf" target="_blank">Download my cv</a> or view it at <a href="http://lcolladotor.github.io/cv/" target="_blank">GitHub</a>.</p>
+
+<iframe src="http://docs.google.com/viewer?url=http://lcolladotor.github.io/cv/en_CV_lcollado.pdf&embedded=true" width="900" height="780" style="border: none;"></iframe>
+
+  </div>
+</div>
+
+    </div>
+  </section>
+
+  
+  
+  <section id="teaching" class="home-section">
+    <div class="container">
+      
+
+
+<div class="row">
+  <div class="col-xs-12 col-md-4 section-heading">
+    <h1>Teaching</h1>
+    
+  </div>
+  <div class="col-xs-12 col-md-8">
+    
+
+<h1 id="libd">LIBD</h1>
+
+<p><img class="image alignleft" src="http://aejaffe.com/media/LIBD_logo.jpg" width="268" alt="" /></p>
+
+<h2 id="2016">2016</h2>
+
+<ol>
+<li>Biostatistics and Stata instructor at a <a href="http://lcolladotor.github.io/kandahar" target="_blank">workshop for Kandahar University Faculty</a>, organized by Johns Hopkins University.</li>
+<li>Invited instructor for the <a href="http://www.genomeeting.com/" target="_blank">Genomeeting 2016</a> course at INMEGEN, Mexico City, Mexico.</li>
+</ol>
+
+<h1 id="jhbsph">JHBSPH</h1>
+
+<p><img class="image alignleft" src="images/hospital.jpg" width="268" height="200" alt="" /></p>
+
+<h2 id="2015-2016">2015-2016</h2>
+
+<ol>
+<li>Teaching assistant and guest lecturer for <a href="http://www.aejaffe.com/summerR_2015/" target="_blank">Introduction to R for Public Health Researchers</a></li>
+<li>Teaching assistant for Statistical Methods in Public Health <a href="http://www.biostat.jhsph.edu/courses/bio621/index.html" target="_blank">I (140.621)</a></li>
+<li>Lead teaching assistant for Statistical Methods in Public Health <a href="http://www.biostat.jhsph.edu/courses/bio622/index.html" target="_blank">II (140.622)</a>.</li>
+<li>Teaching assistant for the MPH capstone project.</li>
+</ol>
+
+<h2 id="2014-2015">2014-2015</h2>
+
+<ol>
+<li>Lead teaching assistant for Statistical Methods in Public Health <a href="http://www.biostat.jhsph.edu/courses/bio621/index.html" target="_blank">I (140.621)</a> and <a href="http://www.biostat.jhsph.edu/courses/bio622/index.html" target="_blank">II (140.622)</a>.</li>
+<li>Teaching assistant for the MPH capstone project.</li>
+</ol>
+
+<h2 id="2013-2014">2013-2014</h2>
+
+<ol>
+<li>Teaching assistant for Statistical Methods in Public Health <a href="http://www.biostat.jhsph.edu/courses/bio621/index.html" target="_blank">I (140.621)</a> and <a href="http://www.biostat.jhsph.edu/courses/bio622/index.html" target="_blank">II (140.622)</a>.</li>
+<li>Teaching assistant for the MPH capstone project. Developed a <a href="http://shiny.rstudio.com/" target="_blank">shiny</a> application that allows students to sign up for a TA session (<a href="https://github.com/lcolladotor/MPHcapstoneTA" target="_blank">code</a>) and wrote a report of the number of TA sessions available <a href="http://lcolladotor.github.io/mphtasessions/" target="_blank">here</a>.</li>
+</ol>
+
+<h2 id="2012-2013">2012-2013</h2>
+
+<ol>
+<li>Teaching assistant for Statistical Methods in Public Health <a href="http://www.biostat.jhsph.edu/courses/bio621/index.html" target="_blank">I (140.621)</a>, <a href="http://www.biostat.jhsph.edu/courses/bio622/index.html" target="_blank">II (140.622)</a>, <a href="http://www.biostat.jhsph.edu/courses/bio623/index.html" target="_blank">III (140.623)</a>, and <a href="http://www.biostat.jhsph.edu/courses/bio624/index.html" target="_blank">IV (140.624)</a> courses.</li>
+</ol>
+
+<h1 id="unam">UNAM</h1>
+
+<p><img class="image alignleft" src="https://www.unam.mx/sites/default/files/images/boletines/negro_-290x277.jpg" width="277" alt="" /></p>
+
+<h2 id="pdcb">PDCB</h2>
+
+<p>While working at Winter Genomics I taught two courses for students of the Biomedical Sciences PhD Program (PDCB) from the National Autonomous University of Mexico (UNAM).</p>
+
+<ol>
+<li><a href="http://lcolladotor.github.io/courses/PDCB-HTS.html" target="_blank">Analysis of High-Throughput Sequencing data with Bioconductor</a> Aug-Dec 2010.</li>
+<li><a href="http://lcolladotor.github.io/courses/PDCB-Biostats.html" target="_blank">Introduction to R and Biostatistics</a> (along with two other teachers).</li>
+</ol>
+
+<h2 id="ibt">IBT</h2>
+
+<p>While I was at the Institute of Biotechnology (UNAM) working with the Winter Genomics crew I organized two courses. One was a series of various bioinformatics and biology mini-courses and another one involved members of different institutions.</p>
+
+<ol>
+<li><a href="http://lcolladotor.github.io/courses/mIntroR.html" target="_blank">Introduction to R for bench biologists</a> Oct-Nov 2009. This mini-course has quite a bit of material on learning how to make plots with R.</li>
+<li><a href="http://lcolladotor.github.io/courses/MEyAdDG.html" target="_blank">Métodos Estadísticos y Analíticos de Datos Genómicos</a> (Statistical Methods and Analysis of Genomic Data) Jan 2010. This one week course had lectures about Perl, using a Cluster, high-throughput technologies, R and Bioconductor, C, and biology overviews.</li>
+</ol>
+
+<h2 id="lcg">LCG</h2>
+
+<p>I taught three courses during my undergrad stage at the Undergraduate Program on Genomic Sciences (LCG). Each of these courses has its own website organizing the material. These are:</p>
+
+<ol>
+<li><a href="http://www.lcg.unam.mx/~lcollado/R/" target="_blank">Intensive course on R/Bioconductor</a> Oct-Nov 2008 (<a href="http://lcolladotor.github.io/courses/Courses/R/" target="_blank">backup</a>)</li>
+<li><a href="http://www.lcg.unam.mx/~lcollado/E/" target="_blank">Principles of Statistics</a> Feb-June 2009 (<a href="http://lcolladotor.github.io/courses/Courses/E/" target="_blank">backup</a>)</li>
+<li><a href="http://www.lcg.unam.mx/~lcollado/B/" target="_blank">Seminar III: R/Bioconductor</a> Aug-Dec 2009 (<a href="http://lcolladotor.github.io/courses/Courses/B/" target="_blank">backup</a>)</li>
+</ol>
+
+  </div>
+</div>
+
+    </div>
+  </section>
+
+  
+  
+  <section id="contact" class="home-section">
+    <div class="container">
+      
+
+
+
+
+<div class="row">
+  <div class="col-xs-12 col-md-4 section-heading">
+    <h1>Contact</h1>
+    
+  </div>
+  <div class="col-xs-12 col-md-8">
+    
+
+    <ul class="fa-ul">
+
+      
+      <li>
+        <i class="fa-li fa fa-envelope fa-2x" aria-hidden="true"></i>
+        <span><a href="mailto:leo.collado@libd.org">leo.collado@libd.org</a></span>
+      </li>
+      
+
+      
+
+      
+      <li>
+        <i class="fa-li fa fa-phone fa-2x" aria-hidden="true"></i>
+        <span><a href="tel:410%20614%2054%2024">410 614 54 24</a></span>
+      </li>
+      
+
+      
+
+      
+
+      
+      <li>
+        <i class="fa-li fa fa-map-marker fa-2x" aria-hidden="true"></i>
+        <span>855 N. Wolfe Street, Suite 300, Baltimore MD 21205, United States</span>
+      </li>
+      
+
+      
+
+    </ul>
+
+  </div>
+</div>
+
+    </div>
+  </section>
+
+  
+  
+  <section id="search" class="home-section">
+    <div class="container">
+      
+
+
+<div class="row">
+  <div class="col-xs-12 col-md-4 section-heading">
+    <h1>Search This Website</h1>
+    
+  </div>
+  <div class="col-xs-12 col-md-8">
+    <script>
+  (function() {
+    var cx = '013573190517108741382:7xd8xnepkpi';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+        '//www.google.com/cse/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+<gcse:searchbox-only></gcse:searchbox-only>
+
+  </div>
+</div>
+
+    </div>
+  </section>
+
+
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="powered-by">
+        
+        
+        
+        <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4ef23e545d41b87c"></script>
+        <script type="text/javascript">
+          addthis.layers({
+            'theme' : 'transparent',
+            'share' : {
+              'position' : 'left',
+              'numPreferredServices' : 5,
+              'desktop' : false,
+              'mobile' : true
+            }, 
+            'follow' : {
+              'services' : [
+                {'service': 'twitter', 'id': 'fellgernon'},
+                {'service': 'rss', 'id': 'http://feeds.feedburner.com/FellgernonBit'}
+              ],
+        	  'offset' : {'top':'10px'},
+              'title' : 'Follow'
+            }   
+          });
+        </script>
+        
+
+        <script type="text/javascript">
+        var addthis_config = {
+        	data_ga_property: 'UA-45299226-1',
+        	data_ga_social : true,
+        	data_track_addressbar: true
+        };
+        var addthis_share = {
+        	
+        	url_transforms : {
+        		shorten: {
+        			twitter: 'bitly'
+        		}
+        	}, 
+        	shorteners : {
+        		bitly : {}
+        	}
+        }
+        </script>
+        
+        <center>	 
+        <div id="clustrmaps-widget"></div><script type="text/javascript">var _clustrmaps = {'url' : 'http://lcolladotor.github.io/', 'user' : 1119558, 'server' : '2', 'id' : 'clustrmaps-widget', 'version' : 1, 'date' : '2013-10-30', 'lang' : 'en', 'corners' : 'square' };(function (){ var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = 'http://www2.clustrmaps.com/counter/map.js'; var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);})();</script><noscript><a href="http://www2.clustrmaps.com/user/320111546"><img src="http://www2.clustrmaps.com/stats/maps-no_clusters/lcolladotor.github.io--thumb.jpg" alt="Locations of visitors to this page" /></a></noscript>
+        </center>
+
+      &copy; 2011-2017 Leonardo Collado Torres under (CC) BY-NC-SA &middot; 
+
+      Powered by the <a href="https://github.com/gcushen/hugo-academic" target="_blank">Academic
+      theme</a> for <a href="http://gohugo.io" target="_blank">Hugo</a>.
+
+      <span class="pull-right" aria-hidden="true">
+        <a href="#" id="back_to_top">
+          <span class="button_icon">
+            <i class="fa fa-chevron-up fa-2x"></i>
+          </span>
+        </a>
+      </span>
+
+    </p>
+  </div>
+</footer>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.4/TweenMax.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/ScrollToPlugin.min.js"></script>
+    <script src="/js/jquery-1.12.3.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/isotope.pkgd.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.1/imagesloaded.pkgd.min.js"></script>
+    <script src="/js/hugo-academic.js"></script>
+    
+
+    
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-45299226-1', 'auto');
+        ga('send', 'pageview');
+
+         
+        var links = document.querySelectorAll('a');
+        Array.prototype.map.call(links, function(item) {
+            if (item.host != document.location.host) {
+                item.addEventListener('click', function() {
+                    var action = item.getAttribute('data-action') || 'follow';
+                    ga('send', 'event', 'outbound', action, item.href);
+                });
+            }
+        });
+    </script>
+    
+
+    
+    
+      
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+
+      
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/languages/r.min.js"></script>
+      
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/languages/bash.min.js"></script>
+      
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/languages/python.min.js"></script>
+      
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/languages/stata.min.js"></script>
+      
+
+      
+
+      <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });
+    </script>
+    <script async src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML"></script>
+    
+
+  </body>
+</html>
+

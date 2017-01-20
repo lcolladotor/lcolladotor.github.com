@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Html on L. Collado-Torres</title>
+    <link>http://lcolladotor.github.io/tags/html/index.xml</link>
+    <description>Recent content in Html on L. Collado-Torres</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2011-2017 Leonardo Collado Torres under (CC) BY-NC-SA</copyright>
+    <atom:link href="/tags/html/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Creating awesome reports for multiple audiences using knitrBootstrap</title>
+      <link>http://lcolladotor.github.io/2013/12/10/Creating-awesome-reports-for-multiple-audiences-using-knitrBootstrap</link>
+      <pubDate>Tue, 10 Dec 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://lcolladotor.github.io/2013/12/10/Creating-awesome-reports-for-multiple-audiences-using-knitrBootstrap</guid>
+      <description>
+
+&lt;p&gt;As a biostatistics student, I use &lt;code&gt;R&lt;/code&gt; very frequently when analyzing data. At the same time, I interact with other researchers, some who know how to use &lt;code&gt;R&lt;/code&gt; (R crowd) and some who don&amp;rsquo;t (yet!): no-R crowd. This means that I have to be able to communicate my results to two crowds. It is important that I can quickly provide the code in case that the &lt;code&gt;R&lt;/code&gt; savvy want to look at it: maybe they find a bug and report it ^^. Ideally I want to avoid having to write (organize, share, etc) two crowd-specific reports.&lt;/p&gt;
+
+&lt;p&gt;A solution to this problem is to create reproducible reports that contain the R code, the results, and interpretation. For the specific scenario I am talking about, reproducibility is a plus, however I believe that it is important for research; albeit not the topic of this post. One of the strongest packages out there to create such reports is &lt;code&gt;knitr&lt;/code&gt; (&lt;span class=&#34;showtooltip&#34; title=&#34;Xie Y (2013). Dynamic Documents with R and knitr. Chapman and Hall/CRC. ISBN 978-1482203530.&#34;&gt;&lt;a href=&#34;http://yihui.name/knitr/&#34;&gt;Xie, 2013&lt;/a&gt;&lt;/span&gt;). It is specially easy to create &lt;code&gt;Rmd&lt;/code&gt; files from which you can generate HTML reports. Then using &lt;a href=&#34;http://www.rstudio.com/&#34; target=&#34;_blank&#34;&gt;RStudio&lt;/a&gt; you can share them via &lt;a href=&#34;http://rpubs.com/&#34; target=&#34;_blank&#34;&gt;RPubs&lt;/a&gt;, a private folder on Dropbox, etc. From example, &lt;a href=&#34;http://rpubs.com/lcollado/2618&#34; target=&#34;_blank&#34;&gt;this is a presentation&lt;/a&gt; without the slide formatting I shared more than a year ago.&lt;/p&gt;
+
+&lt;p&gt;Using &lt;code&gt;knitr&lt;/code&gt; (&lt;span class=&#34;showtooltip&#34; title=&#34;Xie Y (2013). Dynamic Documents with R and knitr. Chapman and Hall/CRC. ISBN 978-1482203530.&#34;&gt;&lt;a href=&#34;http://yihui.name/knitr/&#34;&gt;Xie, 2013&lt;/a&gt;&lt;/span&gt;) is definitely a step in the right direction. However, you soon find yourself desiring a better template. This is where &lt;code&gt;knitrBootstrap&lt;/code&gt; (&lt;span class=&#34;showtooltip&#34; title=&#34;Hester J (2013). knitrBootstrap: Knitr Bootstrap framework.. R package version 0.9.0.&#34;&gt;&lt;a href=&#34;http://CRAN.R-project.org/package=knitrBootstrap&#34;&gt;Hester, 2013&lt;/a&gt;&lt;/span&gt;) comes in. This package was initialized in March 20th, 2013 by &lt;a href=&#34;http://jimhester.com/&#34; target=&#34;_blank&#34;&gt;Jim Hester&lt;/a&gt; and hosted on it&amp;rsquo;s &lt;a href=&#34;https://github.com/jimhester/knitrBootstrap&#34; target=&#34;_blank&#34;&gt;GitHub repository&lt;/a&gt;. I was sold on the idea early on and I am now making this post in part as a tribute to celebrate that it has been available via &lt;a href=&#34;http://cran.at.r-project.org/web/packages/knitrBootstrap/index.html&#34; target=&#34;_blank&#34;&gt;CRAN&lt;/a&gt; for nearly 5 months now.&lt;/p&gt;
+
+&lt;p&gt;So what can you do with &lt;code&gt;knitrBootstrap&lt;/code&gt; (&lt;span class=&#34;showtooltip&#34; title=&#34;Hester J (2013). knitrBootstrap: Knitr Bootstrap framework.. R package version 0.9.0.&#34;&gt;&lt;a href=&#34;http://CRAN.R-project.org/package=knitrBootstrap&#34;&gt;Hester, 2013&lt;/a&gt;&lt;/span&gt;)? In my opinion, you get the ideal solution (or very close at the least) to the problem I described at the beginning. Basically, you get a HTML report that has the interpretation and results which is what the no-R crowd wants to read, and the R code easily available at the click of a button for the R crowd. In addition, the report is much more nicely formatted which is pleasant to the eye. Furthermore, a menu with the sections is included which is very useful when navigating the report and for jumping to specific sections. To save space, the plots are saved as thumbnails and you can click on them to get the full view. Finally, you can choose to display toggle menus for allowing the users to change the default text and code formatting.&lt;/p&gt;
+
+&lt;p&gt;How do you use this package? The main workhorse is the &lt;code&gt;knit_boostrap()&lt;/code&gt; function. The initial arguments are similar to those you find in &lt;code&gt;knitr::knit()&lt;/code&gt; while the new features are controlled using:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;boot_style&lt;/code&gt; You can select out of 11 or so options for the default formatting. Basically, you choose one of the Bootstrap themes available.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;code_style&lt;/code&gt; Similar to &lt;code&gt;boot_style&lt;/code&gt; but for controlling the appearance of the code chunks.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;chooser&lt;/code&gt; Allows you to control if you want a toggle menu so the user can choose (hence the name) the bootstrap and/or code styles.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;thumbsize&lt;/code&gt; For controlling the size of figure thumbnails.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;show_code&lt;/code&gt; Whether by default the code is shown. I set this to &lt;code&gt;FALSE&lt;/code&gt; in order to get a report that by default is accessible for the no-R crowd. The R crowd can then click to see the code for each code chunk or use the menu on the bottom to show all the code at once.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;show_output&lt;/code&gt; Similar to &lt;code&gt;show_code&lt;/code&gt; but for controlling the visibility of the output produced from the code. I set this to &lt;code&gt;TRUE&lt;/code&gt; as you normally want to show the output to both the no-R and R crowds.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;show_figure&lt;/code&gt; Whether you want to show the plots or not.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;graphics&lt;/code&gt; Used only for controlling the toggle menus for the bootstrap and code styles.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Once you have decided which options you want to use, it is as simple as running the following code for your &lt;code&gt;Rmd&lt;/code&gt; file (named &lt;code&gt;file.Rmd&lt;/code&gt; in the example):&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;## Install if needed
+install.packages(&amp;quot;knitrBootstrap&amp;quot;)
+
+## knit with knitrBootstrap
+library(&amp;quot;knitrBootstrap&amp;quot;)
+knit_bootstrap(&amp;quot;file.Rmd&amp;quot;, code_style = &amp;quot;Brown Paper&amp;quot;, chooser = c(&amp;quot;boot&amp;quot;, &amp;quot;code&amp;quot;), 
+    show_code = FALSE)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Things get a tiny bit more complicated if you want to use &lt;a href=&#34;http://www.rstudio.com/&#34; target=&#34;_blank&#34;&gt;RStudio&lt;/a&gt;. You basically have to modify your &lt;code&gt;.Rprofile&lt;/code&gt; file, then load RStudio and change the settings to weave files with &lt;code&gt;knitr&lt;/code&gt;instead of using &lt;code&gt;Sweave&lt;/code&gt;. Then, you have to use &lt;code&gt;knitr::render_html()&lt;/code&gt; on the &lt;code&gt;Rmd&lt;/code&gt; file itself. Below is a short example of the &lt;code&gt;.Rprofile&lt;/code&gt; modified to use &lt;code&gt;knitrBootstrap&lt;/code&gt; and the basic &lt;code&gt;Rmd&lt;/code&gt; example.&lt;/p&gt;
+
+&lt;script src=&#34;https://gist.github.com/lcolladotor/6445771.js&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;You can view the final output &lt;a href=&#34;http://rpubs.com/lcollado/11210&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;. Note that you might need to click on &amp;ldquo;hide toolbars&amp;rdquo; (a RPubs option) to clearly view the menus on the bottom.&lt;/p&gt;
+
+&lt;p&gt;If you are like me and use &lt;a href=&#34;https://github.com/textmate/textmate&#34; target=&#34;_blank&#34;&gt;Textmate&lt;/a&gt; as your text editor, you can knit the &lt;code&gt;Rmd&lt;/code&gt; files with &lt;code&gt;knitrBootstrap&lt;/code&gt; and preview them directly on the Textmate viewr using a command like this (modified from the SWeave bundle):&lt;/p&gt;
+
+&lt;script src=&#34;https://gist.github.com/lcolladotor/7884334.js&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;Other usage options are described in the &lt;a href=&#34;http://jimhester.github.io/knitrBootstrap&#34; target=&#34;_blank&#34;&gt;knitrBootstrap help page&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;To close off, let me emphasize how useful it is to be able to generate a single report that is pleasant to the eye, contains all the information, and is easily sharable for both the R and no-R crowds. Plus it&amp;rsquo;s reproducible!&lt;/p&gt;
+
+&lt;p&gt;I really like this package and would like to thank &lt;a href=&#34;http://jimhester.com/&#34; target=&#34;_blank&#34;&gt;Jim Hester&lt;/a&gt; for this great package! Keep up the good work! I even use &lt;code&gt;knitrBootstrap&lt;/code&gt; in &lt;a href=&#34;https://github.com/lcolladotor/derfinderReport&#34; target=&#34;_blank&#34;&gt;derfinderReport&lt;/a&gt; which generates reports on the results from &lt;a href=&#34;https://github.com/lcolladotor/derfinder&#34; target=&#34;_blank&#34;&gt;derfinder&lt;/a&gt;, a package that I am currently developing.&lt;/p&gt;
+
+&lt;h3 id=&#34;references&#34;&gt;References&lt;/h3&gt;
+
+&lt;p&gt;Citations made with &lt;code&gt;knitcitations&lt;/code&gt; (&lt;span class=&#34;showtooltip&#34; title=&#34;Boettiger C (2013). knitcitations: Citations for knitr markdown files. R package version 0.4-7.&#34;&gt;&lt;a href=&#34;http://CRAN.R-project.org/package=knitcitations&#34;&gt;Boettiger, 2013&lt;/a&gt;&lt;/span&gt;).&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Carl Boettiger,   (2013) knitcitations: Citations for knitr markdown files.  &lt;a href=&#34;http://CRAN.R-project.org/package=knitcitations&#34; target=&#34;_blank&#34;&gt;http://CRAN.R-project.org/package=knitcitations&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Yihui Xie,   (2013) Dynamic Documents with {R} and knitr.  &lt;a href=&#34;http://yihui.name/knitr/&#34; target=&#34;_blank&#34;&gt;http://yihui.name/knitr/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Jim Hester,   (2013) knitrBootstrap: Knitr Bootstrap framework..  &lt;a href=&#34;http://CRAN.R-project.org/package=knitrBootstrap&#34; target=&#34;_blank&#34;&gt;http://CRAN.R-project.org/package=knitrBootstrap&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;reproducibility&#34;&gt;Reproducibility&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;sessionInfo()
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## R version 3.0.2 (2013-09-25)
+## Platform: x86_64-apple-darwin10.8.0 (64-bit)
+## 
+## locale:
+## [1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8
+## 
+## attached base packages:
+## [1] stats     graphics  grDevices utils     datasets  methods   base     
+## 
+## other attached packages:
+## [1] knitrBootstrap_0.9.0 knitcitations_0.4-7  bibtex_0.3-6        
+## [4] knitr_1.5           
+## 
+## loaded via a namespace (and not attached):
+##  [1] codetools_0.2-8 digest_0.6.4    evaluate_0.5.1  formatR_0.10   
+##  [5] httr_0.2        markdown_0.6.3  RCurl_1.95-4.1  stringr_0.6.2  
+##  [9] tools_3.0.2     XML_3.95-0.2    xtable_1.7-1
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Check other topics on &lt;a href=&#34;https://twitter.com/search?q=%23rstats&#34; target=&#34;_blank&#34;&gt;#rstats&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Adding youtube videos in pdfs, html reports and html presentations</title>
+      <link>http://lcolladotor.github.io/2012/12/05/Adding-youtube-videos-in-pdfs-html-reports-and-html-presentations</link>
+      <pubDate>Wed, 05 Dec 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://lcolladotor.github.io/2012/12/05/Adding-youtube-videos-in-pdfs-html-reports-and-html-presentations</guid>
+      <description>&lt;p&gt;I got a question today on how to add a video to a beamer pdf presentation. Well, I had never done it, but I got curious enough to google around for a bit and here is the end product.&lt;/p&gt;
+&lt;p&gt;One way of doing it is using the &lt;a href=&#34;http://www.ctan.org/pkg/media9&#34;&gt;media9&lt;/a&gt; tex package. For this to work you need to have the latest version of texlive (or miktex). Then, it&amp;#8217;s quite straight forward to include the video. The issue is that you have to open the pdf with Acrobat Reader 10+ (9 something works. I think that it&amp;#8217;s 9.4.1+ but well, the point is that you need an updated version). You will also need a live web connection to actually show the video. An alternative (if you have the video file) is to convert it to swf and embed it. &lt;/p&gt;
+&lt;p&gt;Here is my &lt;a href=&#34;http://www.biostat.jhsph.edu/~lcollado/misc/video_in_beamer/video.tex&#34;&gt;tex&lt;/a&gt; example file with the corresponding &lt;a href=&#34;http://www.biostat.jhsph.edu/~lcollado/misc/video_in_beamer/video.pdf&#34;&gt;pdf&lt;/a&gt; output compiled using pdflatex. Remember that you need Acrobat Reader to actually see the video in the pdf.&lt;/p&gt;
+&lt;p&gt;After doing this, I just wanted to make some quick examples on how you can add a video to an html report using markdown (well, you add the video itself using html). I did it via &lt;a href=&#34;http://yihui.name/knitr/&#34;&gt;knitr&lt;/a&gt; and &lt;a href=&#34;http://www.rstudio.com/&#34;&gt;Rstudio&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Example &lt;a href=&#34;http://www.biostat.jhsph.edu/~lcollado/misc/video_in_beamer/video_in_report.Rmd&#34;&gt;Rmd&lt;/a&gt; file with corresponding &lt;a href=&#34;http://www.biostat.jhsph.edu/~lcollado/misc/video_in_beamer/video_in_report.md&#34;&gt;md&lt;/a&gt; and &lt;a href=&#34;http://www.biostat.jhsph.edu/~lcollado/misc/video_in_beamer/video_in_report.html&#34;&gt;html&lt;/a&gt; * outputs from &amp;#8220;knit HTML&amp;#8221; in Rstudio.&lt;/p&gt;
+&lt;p&gt;Finally, the more interesting thing you can do is an html presentation which requires &lt;a href=&#34;http://johnmacfarlane.net/pandoc/&#34;&gt;pandoc&lt;/a&gt;. Again, I used knitr to get things started and, while at it, add some R and math.&lt;/p&gt;
+&lt;p&gt;Example &lt;a href=&#34;http://www.biostat.jhsph.edu/~lcollado/misc/video_in_beamer/video_in_web_slides.Rmd&#34;&gt;Rmd&lt;/a&gt; file with corresponding &lt;a href=&#34;http://www.biostat.jhsph.edu/~lcollado/misc/video_in_beamer/video_in_web_slides.md&#34;&gt;md&lt;/a&gt; and &lt;a href=&#34;http://www.biostat.jhsph.edu/~lcollado/misc/video_in_beamer/video_in_web_slides.html&#34;&gt;html&lt;/a&gt; * output from &amp;#8220;knit HTML&amp;#8221; in Rstudio. The slides are created from the md file using pandoc into this &lt;a href=&#34;http://www.biostat.jhsph.edu/~lcollado/misc/video_in_beamer/video_in_web_slides_pre.html&#34;&gt;html&lt;/a&gt; ** file (main output in this case). &lt;/p&gt;
+&lt;p&gt;Hopefully they&amp;#8217;ll be useful to anyone venturing into embedding youtube videos in their presentations.&lt;/p&gt;
+&lt;p&gt;* These two files are very similar.&lt;/p&gt;
+&lt;p&gt;** html presentation.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

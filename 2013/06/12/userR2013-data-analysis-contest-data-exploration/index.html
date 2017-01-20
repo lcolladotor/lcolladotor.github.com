@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme" content="hugo-academic">
+  <meta name="generator" content="Hugo 0.18.1" />
+  <meta name="author" content="Leonardo Collado Torres">
+  <meta name="description" content="Data Scientist">
+
+  
+  
+  
+    
+  
+  
+    
+    
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/tomorrow.min.css">
+    
+  
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/css/academicons.min.css">
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,700|Merriweather|Roboto+Mono">
+  <link rel="stylesheet" href="/css/hugo-academic.css">
+  
+
+  <link rel="alternate" href="http://lcolladotor.github.io/index.xml" type="application/rss+xml" title="L. Collado-Torres">
+  <link rel="feed" href="http://lcolladotor.github.io/index.xml" type="application/rss+xml" title="L. Collado-Torres">
+
+  <link rel="icon" type="image/png" href="/img/icon.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/apple-touch-icon.png">
+
+  <link rel="canonical" href="http://lcolladotor.github.io/2013/06/12/userR2013-data-analysis-contest-data-exploration">
+
+  
+
+  <title>userR2013 data analysis contest: data exploration | L. Collado-Torres</title>
+
+</head>
+<body id="top" data-spy="scroll" data-target="#navbar-main" data-offset="71">
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+              data-target=".navbar-collapse" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">L. Collado-Torres</a>
+    </div>
+
+    
+    <div class="collapse navbar-collapse">
+
+      
+      <ul class="nav navbar-nav navbar-right">
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#about">
+            
+            <span>Home</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#publications_selected">
+            
+            <span>Publications</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#talks">
+            
+            <span>Talks</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#posts">
+            
+            <span>Posts</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#cv">
+            
+            <span>CV</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#teaching">
+            
+            <span>Teaching</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#contact">
+            
+            <span>Contact</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#search">
+            
+            <span>Search</span>
+          </a>
+        </li>
+
+        
+        
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+
+  <article class="article" itemscope itemtype="http://schema.org/Article">
+
+    
+
+    <h1 itemprop="name">userR2013 data analysis contest: data exploration</h1>
+
+    
+
+<div class="article-metadata">
+
+  <span class="article-date">
+    <time datetime="2013-06-12 00:00:00 &#43;0000 UTC" itemprop="datePublished">
+      Wed, Jun 12, 2013
+    </time>
+  </span>
+
+  
+  
+  
+  <span class="article-categories">
+    <i class="fa fa-folder"></i>
+    
+    <a href="/categories/rstats">rstats</a
+    >
+    
+  </span>
+  
+  
+
+  
+  
+  
+  <span class="article-tags">
+    <i class="fa fa-tags"></i>
+    
+    <a href="/tags/user2013">useR2013</a
+    >, 
+    
+    <a href="/tags/dataanalysis">dataanalysis</a
+    >, 
+    
+    <a href="/tags/contest">contest</a
+    >, 
+    
+    <a href="/tags/rstats">rstats</a
+    >
+    
+  </span>
+  
+  
+
+  
+  
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    <li>
+      <a class="facebook"
+         href="https://www.facebook.com/sharer.php?u=http%3a%2f%2flcolladotor.github.io%2f2013%2f06%2f12%2fuserR2013-data-analysis-contest-data-exploration"
+         target="_blank">
+        <i class="fa fa-facebook"></i>
+      </a>
+    </li>
+    <li>
+      <a class="twitter"
+         href="https://twitter.com/intent/tweet?text=userR2013%20data%20analysis%20contest%3a%20data%20exploration&amp;url=http%3a%2f%2flcolladotor.github.io%2f2013%2f06%2f12%2fuserR2013-data-analysis-contest-data-exploration"
+         target="_blank">
+        <i class="fa fa-twitter"></i>
+      </a>
+    </li>
+    <li>
+      <a class="linkedin"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3a%2f%2flcolladotor.github.io%2f2013%2f06%2f12%2fuserR2013-data-analysis-contest-data-exploration&amp;title=userR2013%20data%20analysis%20contest%3a%20data%20exploration"
+         target="_blank">
+        <i class="fa fa-linkedin"></i>
+      </a>
+    </li>
+    <li>
+      <a class="weibo"
+         href="http://service.weibo.com/share/share.php?url=http%3a%2f%2flcolladotor.github.io%2f2013%2f06%2f12%2fuserR2013-data-analysis-contest-data-exploration&amp;title=userR2013%20data%20analysis%20contest%3a%20data%20exploration"
+         target="_blank">
+        <i class="fa fa-weibo"></i>
+      </a>
+    </li>
+    <li>
+      <a class="email"
+         href="mailto:?subject=userR2013%20data%20analysis%20contest%3a%20data%20exploration&amp;body=http%3a%2f%2flcolladotor.github.io%2f2013%2f06%2f12%2fuserR2013-data-analysis-contest-data-exploration">
+        <i class="fa fa-envelope"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+  
+
+</div>
+
+
+    <div class="article-style" itemprop="articleBody">
+      <h1>Description</h1>
+<p>The useR2013 conference is organizing a data analysis contest, check the <a href="http://www.edii.uclm.es/%7EuseR-2013/docs/announce.pdf">rules here</a>.</p>
+<p>They have a package called <strong>useR2013DAC</strong> with two data sets: one from La Liga and the other one from the Formula 1. Once you download and install the package (<a href="http://www.edii.uclm.es/%7EuseR-2013/#contest">available here</a>), you can quickly explore the data using the following R commands:</p>
+<h1>Data exploration</h1>
+
+<pre><code class="language-r">## Load the package
+library(useR2013DAC)
+
+## Explore laliga data
+data(laliga)
+head(laliga)
+</code></pre>
+
+<pre><code class="language-r">##    Season Week               HomeTeam                    AwayTeam
+## 1 2008/09    1   Athletic Club Bilbao     Union Deportiva Almeria
+## 2 2008/09    1        Atlético Madrid                   Málaga CF
+## 3 2008/09    1          Betis Sevilla Real Club Recreativo Huelva
+## 4 2008/09    1             CA Osasuna               Villarreal CF
+## 5 2008/09    1            CD Numancia                FC Barcelona
+## 6 2008/09    1 Deportivo de La Coruña              Real Madrid CF
+##   HomeGoals AwayGoals
+## 1         1         3
+## 2         4         0
+## 3         0         1
+## 4         1         1
+## 5         1         0
+## 6         2         1
+</code></pre>
+
+<pre><code class="language-r">summary(laliga)
+</code></pre>
+
+<pre><code class="language-r">##     Season               Week        HomeTeam           AwayTeam        
+##  Length:1900        Min.   : 1.0   Length:1900        Length:1900       
+##  Class :character   1st Qu.:10.0   Class :character   Class :character  
+##  Mode  :character   Median :19.5   Mode  :character   Mode  :character  
+##                     Mean   :19.5                                        
+##                     3rd Qu.:29.0                                        
+##                     Max.   :38.0                                        
+##                                                                         
+##    HomeGoals      AwayGoals   
+##  Min.   :0.00   Min.   :0.00  
+##  1st Qu.:1.00   1st Qu.:0.00  
+##  Median :1.00   Median :1.00  
+##  Mean   :1.65   Mean   :1.14  
+##  3rd Qu.:2.00   3rd Qu.:2.00  
+##  Max.   :8.00   Max.   :8.00  
+##  NA's   :50     NA's   :50
+</code></pre>
+
+<pre><code class="language-r">lapply(laliga, class)
+</code></pre>
+
+<pre><code class="language-r">## $Season
+## [1] &quot;character&quot;
+## 
+## $Week
+## [1] &quot;integer&quot;
+## 
+## $HomeTeam
+## [1] &quot;character&quot;
+## 
+## $AwayTeam
+## [1] &quot;character&quot;
+## 
+## $HomeGoals
+## [1] &quot;integer&quot;
+## 
+## $AwayGoals
+## [1] &quot;integer&quot;
+</code></pre>
+
+<pre><code class="language-r">## Explore formula1 data
+data(formula1)
+head(formula1)
+</code></pre>
+
+<pre><code class="language-r">##   Pos No             Driver             Team Laps        Time Grid Pts
+## 1   1  8    Fernando Alonso          Ferrari   49 1:39:20.396    3  25
+## 2   2  7       Felipe Massa          Ferrari   49  +16.0 secs    2  18
+## 3   3  2     Lewis Hamilton McLaren-Mercedes   49  +23.1 secs    4  15
+## 4   4  5   Sebastian Vettel      RBR-Renault   49  +38.7 secs    1  12
+## 5   5  4       Nico Rosberg      Mercedes GP   49  +40.2 secs    5  10
+## 6   6  3 Michael Schumacher      Mercedes GP   49  +44.1 secs    7   8
+##                                         Race Season
+## 1 2010 FORMULA 1 GULF AIR BAHRAIN GRAND PRIX   2010
+## 2 2010 FORMULA 1 GULF AIR BAHRAIN GRAND PRIX   2010
+## 3 2010 FORMULA 1 GULF AIR BAHRAIN GRAND PRIX   2010
+## 4 2010 FORMULA 1 GULF AIR BAHRAIN GRAND PRIX   2010
+## 5 2010 FORMULA 1 GULF AIR BAHRAIN GRAND PRIX   2010
+## 6 2010 FORMULA 1 GULF AIR BAHRAIN GRAND PRIX   2010
+</code></pre>
+
+<pre><code class="language-r">summary(formula1)
+</code></pre>
+
+<pre><code class="language-r">##       Pos            No                     Driver    
+##  Ret    :254   1      :  58   Felipe Massa     :  58  
+##  1      : 58   10     :  58   Fernando Alonso  :  58  
+##  10     : 58   11     :  58   Heikki Kovalainen:  58  
+##  11     : 58   12     :  58   Jenson Button    :  58  
+##  12     : 58   14     :  58   Kamui Kobayashi  :  58  
+##  13     : 58   15     :  58   Lewis Hamilton   :  58  
+##  (Other):848   (Other):1044   (Other)          :1044  
+##                    Team          Laps             Time          Grid     
+##  Ferrari             :116   55     :125   +1 Lap    :268   1      :  58  
+##  Force India-Mercedes:116   56     :121   +2 Laps   :102   10     :  58  
+##  HRT-Cosworth        :116   53     : 92   Accident  : 93   11     :  58  
+##  McLaren-Mercedes    :116   57     : 80   +3 Laps   : 41   12     :  58  
+##  STR-Ferrari         :116   70     : 75   Hydraulics: 26   13     :  58  
+##  Lotus-Renault       : 78   52     : 69   Gearbox   : 24   14     :  58  
+##  (Other)             :734   (Other):830   (Other)   :838   (Other):1044  
+##       Pts          Race               Season    
+##         :812   Length:1392        Min.   :2010  
+##  1      : 58   Class :character   1st Qu.:2010  
+##  10     : 58   Mode  :character   Median :2011  
+##  12     : 58                      Mean   :2011  
+##  15     : 58                      3rd Qu.:2012  
+##  18     : 58                      Max.   :2012  
+##  (Other):290
+</code></pre>
+
+<pre><code class="language-r">lapply(formula1, class)
+</code></pre>
+
+<pre><code class="language-r">## $Pos
+## [1] &quot;factor&quot;
+## 
+## $No
+## [1] &quot;factor&quot;
+## 
+## $Driver
+## [1] &quot;factor&quot;
+## 
+## $Team
+## [1] &quot;factor&quot;
+## 
+## $Laps
+## [1] &quot;factor&quot;
+## 
+## $Time
+## [1] &quot;factor&quot;
+## 
+## $Grid
+## [1] &quot;factor&quot;
+## 
+## $Pts
+## [1] &quot;factor&quot;
+## 
+## $Race
+## [1] &quot;character&quot;
+## 
+## $Season
+## [1] &quot;numeric&quot;
+</code></pre>
+
+<p><p>I don&#8217;t see a specific question that they want you to answer with this data, but if you find one related to data analysis or visualization then join the competition!</p>
+<p>Note that you must be attending the conference in order to be eligible to compete.</p>
+<h1>Reproducibility</h1></p>
+
+<pre><code class="language-r">sessionInfo()
+</code></pre>
+
+<pre><code class="language-r">## R version 3.0.0 (2013-04-03)
+## Platform: x86_64-apple-darwin10.8.0 (64-bit)
+## 
+## locale:
+## [1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8
+## 
+## attached base packages:
+## [1] stats     graphics  grDevices utils     datasets  methods   base     
+## 
+## other attached packages:
+## [1] useR2013DAC_0.1-1 knitr_1.2        
+## 
+## loaded via a namespace (and not attached):
+## [1] digest_0.6.3   evaluate_0.4.3 formatR_0.7    stringr_0.6.2 
+## [5] tools_3.0.0
+</code></pre>
+
+    </div>
+
+  </article>
+
+  <nav>
+  <ul class="pager">
+    
+    <li class="previous"><a href="http://lcolladotor.github.io/2013/05/09/Reading-an-R-file-from-GitHub"><span
+      aria-hidden="true">&larr;</span> Reading an R file from GitHub</a></li>
+    
+
+    
+    <li class="next"><a href="http://lcolladotor.github.io/2013/06/12/What-does-it-take-to-be-a-good-leader">What does it take to be a good leader? <span
+      aria-hidden="true">&rarr;</span></a></li>
+    
+  </ul>
+</nav>
+
+  
+<section id="comments">
+  <div id="disqus_thread">
+    <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'fellgernonbit';
+    var disqus_identifier = 'http:\/\/lcolladotor.github.io\/2013\/06\/12\/userR2013-data-analysis-contest-data-exploration';
+    var disqus_title = 'userR2013 data analysis contest: data exploration';
+    var disqus_url = 'http:\/\/lcolladotor.github.io\/2013\/06\/12\/userR2013-data-analysis-contest-data-exploration';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+  </div>
+</section>
+
+
+
+</div>
+<footer class="site-footer">
+  <div class="container">
+    <p class="powered-by">
+        
+        
+        
+        <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4ef23e545d41b87c"></script>
+        <script type="text/javascript">
+          addthis.layers({
+            'theme' : 'transparent',
+            'share' : {
+              'position' : 'left',
+              'numPreferredServices' : 5,
+              'desktop' : false,
+              'mobile' : true
+            }, 
+            'follow' : {
+              'services' : [
+                {'service': 'twitter', 'id': 'fellgernon'},
+                {'service': 'rss', 'id': 'http://feeds.feedburner.com/FellgernonBit'}
+              ],
+        	  'offset' : {'top':'10px'},
+              'title' : 'Follow'
+            }   
+          });
+        </script>
+        
+
+        <script type="text/javascript">
+        var addthis_config = {
+        	data_ga_property: 'UA-45299226-1',
+        	data_ga_social : true,
+        	data_track_addressbar: true
+        };
+        var addthis_share = {
+        	
+        	url_transforms : {
+        		shorten: {
+        			twitter: 'bitly'
+        		}
+        	}, 
+        	shorteners : {
+        		bitly : {}
+        	}
+        }
+        </script>
+        
+        <center>	 
+        <div id="clustrmaps-widget"></div><script type="text/javascript">var _clustrmaps = {'url' : 'http://lcolladotor.github.io/', 'user' : 1119558, 'server' : '2', 'id' : 'clustrmaps-widget', 'version' : 1, 'date' : '2013-10-30', 'lang' : 'en', 'corners' : 'square' };(function (){ var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = 'http://www2.clustrmaps.com/counter/map.js'; var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);})();</script><noscript><a href="http://www2.clustrmaps.com/user/320111546"><img src="http://www2.clustrmaps.com/stats/maps-no_clusters/lcolladotor.github.io--thumb.jpg" alt="Locations of visitors to this page" /></a></noscript>
+        </center>
+
+      &copy; 2011-2017 Leonardo Collado Torres under (CC) BY-NC-SA &middot; 
+
+      Powered by the <a href="https://github.com/gcushen/hugo-academic" target="_blank">Academic
+      theme</a> for <a href="http://gohugo.io" target="_blank">Hugo</a>.
+
+      <span class="pull-right" aria-hidden="true">
+        <a href="#" id="back_to_top">
+          <span class="button_icon">
+            <i class="fa fa-chevron-up fa-2x"></i>
+          </span>
+        </a>
+      </span>
+
+    </p>
+  </div>
+</footer>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.4/TweenMax.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/ScrollToPlugin.min.js"></script>
+    <script src="/js/jquery-1.12.3.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/isotope.pkgd.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.1/imagesloaded.pkgd.min.js"></script>
+    <script src="/js/hugo-academic.js"></script>
+    
+
+    
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-45299226-1', 'auto');
+        ga('send', 'pageview');
+
+         
+        var links = document.querySelectorAll('a');
+        Array.prototype.map.call(links, function(item) {
+            if (item.host != document.location.host) {
+                item.addEventListener('click', function() {
+                    var action = item.getAttribute('data-action') || 'follow';
+                    ga('send', 'event', 'outbound', action, item.href);
+                });
+            }
+        });
+    </script>
+    
+
+    
+    
+      
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+
+      
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/languages/r.min.js"></script>
+      
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/languages/bash.min.js"></script>
+      
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/languages/python.min.js"></script>
+      
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/languages/stata.min.js"></script>
+      
+
+      
+
+      <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });
+    </script>
+    <script async src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML"></script>
+    
+
+  </body>
+</html>
+

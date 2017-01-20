@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Plot on L. Collado-Torres</title>
+    <link>http://lcolladotor.github.io/tags/plot/index.xml</link>
+    <description>Recent content in Plot on L. Collado-Torres</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2011-2017 Leonardo Collado Torres under (CC) BY-NC-SA</copyright>
+    <atom:link href="/tags/plot/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>An xpd-tion into R plot margins</title>
+      <link>http://lcolladotor.github.io/2014/11/21/An-xpd-tion-into-R-plot-margins</link>
+      <pubDate>Fri, 21 Nov 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://lcolladotor.github.io/2014/11/21/An-xpd-tion-into-R-plot-margins</guid>
+      <description>
+
+&lt;p&gt;&lt;em&gt;This is a guest post by &lt;a href=&#34;http://www.biostat.jhsph.edu/~prpatil/&#34; target=&#34;_blank&#34;&gt;Prasad Patil&lt;/a&gt; that answers the question: how to put a shape in the margin of an R plot?&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;The help page for &lt;strong&gt;R&lt;/strong&gt;&amp;rsquo;s &lt;code&gt;par()&lt;/code&gt; function is a somewhat impenetrable list
+of abbreviations that allow you to manipulate anything and everything
+in the plotting device. You may have used this function in the past
+to create an array of plots (using &lt;code&gt;mfrow&lt;/code&gt; or &lt;code&gt;mfcol&lt;/code&gt;) or to set margins
+(&lt;code&gt;mar&lt;/code&gt; or &lt;code&gt;mai&lt;/code&gt;).&lt;/p&gt;
+
+&lt;p&gt;Way down toward the end of the list is the often-overlooked &lt;code&gt;xpd&lt;/code&gt; parameter.
+This value specifies where in the plotting device an object can actually
+be plotted. The default is &lt;code&gt;xpd = FALSE&lt;/code&gt;, which means that plotting is clipped,
+or restricted, to the plotting region. In other words, if your plot has
+&lt;code&gt;xlim = c(0, 10)&lt;/code&gt; and &lt;code&gt;ylim = c(0, 10)&lt;/code&gt; and you try to plot the point (-1,  -1), it will
+not appear anywhere in the device.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;xpd&lt;/code&gt; takes two other values, &lt;code&gt;TRUE&lt;/code&gt; and &lt;code&gt;NA&lt;/code&gt;, which limit plotting to the figure
+and device region, respectively. If you&amp;rsquo;re fuzzy on plotting terms, &lt;a href=&#34;http://research.stowers-institute.org/mcm/efg/R/Graphics/Basics/mar-oma/index.htm&#34; target=&#34;_blank&#34;&gt;this
+tutorial&lt;/a&gt;
+presents those topics well.&lt;/p&gt;
+
+&lt;h2 id=&#34;plotting-outside-the-plot&#34;&gt;Plotting outside the plot&lt;/h2&gt;
+
+&lt;p&gt;If you want to plot outside of the plotting region, I find that setting &lt;code&gt;xpd = NA&lt;/code&gt;
+easiest since it opens up all external space. We also need to make sure that we
+keep space outside of the plot so that we have room to place our objects. Let&amp;rsquo;s
+say we want to put an ugly border above and below our plot:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;# Set xpd=NA and expand the top and bottom margins
+par(xpd = NA, mar = par()$mar + c(2.5, 0, 1, 0))
+plot(1:10)
+# Note that the rectangle we make here has corner coordinates outside of
+# our plotting device
+rect(-5, 11, 12, 14, col=&amp;quot;red&amp;quot;)
+# Random dots in our rectangluar region
+points(runif(100, -4.2, 12.8), runif(100, 11.2, 13.6), col = &amp;quot;green&amp;quot;, pch = 19, cex = 1.2)
+# And another rectangle for below
+rect(-5, -1.7, 12, -3.5, col=&amp;quot;red&amp;quot;)
+points(runif(100, -4.2, 12.8), runif(100, -3.3, -1.8), col = &amp;quot;green&amp;quot;, pch = 19, cex = 1.2)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://lcolladotor.github.io/figs/2014-11-21-add-logo-in-R/plot-1.png&#34; alt=&#34;center&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Here we mentally extend the axes of our plot to determine where to put
+our margin elements. One can imagine a diagonal for the top rectangle
+running from (-5,11) to (12,14). Neither of these points appear in the plot
+itself, but we used the established axes to estimate them and plot outside
+the plotting region.&lt;/p&gt;
+
+&lt;h2 id=&#34;images-outside-the-plot&#34;&gt;Images outside the plot&lt;/h2&gt;
+
+&lt;p&gt;Now let&amp;rsquo;s say we want to &lt;strong&gt;add a logo&lt;/strong&gt; or other external image in the margin
+of our plot. We will use &lt;strong&gt;R&lt;/strong&gt;&amp;rsquo;s &lt;code&gt;png&lt;/code&gt; library to load a PNG image and
+&lt;code&gt;rasterImage()&lt;/code&gt; to plot it:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;## If needed: install.packages(&amp;quot;png&amp;quot;)
+library(png)
+img &amp;lt;- readPNG(&amp;quot;logo.png&amp;quot;)
+par(xpd = NA, mar=par()$mar + c(3, 0, 0, 0))
+plot(1:10)
+rasterImage(img, 0.5, -2.5, 10.5, -1)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://lcolladotor.github.io/figs/2014-11-21-add-logo-in-R/imgplot-1.png&#34; alt=&#34;center&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Here we used the &lt;code&gt;png&lt;/code&gt; library and the &lt;code&gt;r
+asterImage()&lt;/code&gt; command to read in and
+plot the &lt;a href=&#34;http://lcolladotor.github.io/figs/2014-11-21-add-logo-in-R/logo.png&#34; target=&#34;_blank&#34;&gt;&amp;ldquo;logo.png&amp;rdquo;&lt;/a&gt; file. Based on the previously-known dimensions of the
+logo, we can choose which points to use as endpoints for the image. Note
+that this image may appear stretched or contorted depending on the size
+of your &lt;strong&gt;R&lt;/strong&gt; plot device, and it will not stay consistent if you resize.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

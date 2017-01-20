@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Color on L. Collado-Torres</title>
+    <link>http://lcolladotor.github.io/tags/color/index.xml</link>
+    <description>Recent content in Color on L. Collado-Torres</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2011-2017 Leonardo Collado Torres under (CC) BY-NC-SA</copyright>
+    <atom:link href="/tags/color/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Visualizing colors()</title>
+      <link>http://lcolladotor.github.io/2012/10/19/Visualizing-colors</link>
+      <pubDate>Fri, 19 Oct 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://lcolladotor.github.io/2012/10/19/Visualizing-colors</guid>
+      <description>&lt;p&gt;The other day I learnt about the existance of the colors() vector in R which specifies all the character-based colors like &amp;#8220;light blue&amp;#8221;, &amp;#8220;black&amp;#8221;, etc. So I made a simple plot to visualize them all. Here&amp;#8217;s the code:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;mat &amp;lt;- matrix(1:length(colors()), ncol = 9, byrow= TRUE)
+df &amp;lt;- data.frame(col = colors(), 
+	x = as.integer(cut(1:length(colors()), 9)),
+	y = rep(1:73, 9), stringsAsFactors=FALSE)
+plot(y ~ jitter(x), data = df, col = df$col,
+ 	pch=16, main = &amp;quot;Visualizing colors() split in 9 groups&amp;quot;,
+ 	xlab = &amp;quot;Group&amp;quot;, 
+	ylab = &amp;quot;Element of the group (min = 1, max = 73)&amp;quot;,
+	sub = &amp;quot;x = 3, y = 1 means that it&#39;s the 2 * 73 + 1 = 147th color&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;And the plot:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://media.tumblr.com/tumblr_mc5ovbt4uQ1qfs0hy.png&#34;/&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

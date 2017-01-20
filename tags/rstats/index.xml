@@ -1,0 +1,2328 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Rstats on L. Collado-Torres</title>
+    <link>http://lcolladotor.github.io/tags/rstats/index.xml</link>
+    <description>Recent content in Rstats on L. Collado-Torres</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2011-2017 Leonardo Collado Torres under (CC) BY-NC-SA</copyright>
+    <atom:link href="/tags/rstats/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Finding possible class schedules</title>
+      <link>http://lcolladotor.github.io/2016/08/02/Finding-possible-class-schedules</link>
+      <pubDate>Tue, 02 Aug 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://lcolladotor.github.io/2016/08/02/Finding-possible-class-schedules</guid>
+      <description>
+
+&lt;p&gt;Over the weekend my brother wanted to figure out his class schedule for the next semester. He is a veterinary medicine and zootechnology student at UNAM. For this upcoming semester there is a set of classes he has to take and each has 8 or so instructor options. The website where he finds the class times lists about 8 pre-constructed class schedules. So he normally finds one he likes quite a bit, and then manually starts checking if he can change X instructor for Y for a given class. He does this based on the referalls and information he has gathered about the instructors, plus he factors in whether it&amp;rsquo;d be an overall better schedule. For example, he might prefer to have a packed Tuesday if that means that he can leave early on Friday and avoid classes on Saturday.&lt;/p&gt;
+
+&lt;p&gt;The problem is that it&amp;rsquo;s very easy to make a mistake. You (well he) gets all excited thinking that he&amp;rsquo;s found the perfect schedule. Only to then realize that there is a conflict between two classes. Or that the practical portion of a class is in a location one hour away from the university, meaning that the schedule he has selected won&amp;rsquo;t work. This process is very frustrating.&lt;/p&gt;
+
+&lt;p&gt;I was watching him and I started to think if I could help him with some code. Turns out that it was straightforward to write some code to find which options are valid. Once I wrote a test case, it took us like half an hour to fill out the data. I know that tomorrow is when he and his classmates start registering for classes, so this information might help his classmates.&lt;/p&gt;
+
+&lt;p&gt;First, I define some helper functions. These are rather straightforward but I&amp;rsquo;ll be using them later on. For example, &lt;code&gt;dias()&lt;/code&gt; is just there for typing less.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;## Helper functions
+dias &amp;lt;- function(d, i) {
+    paste0(d, i)
+}
+
+extract &amp;lt;- function(m, p) {
+    m[[p]]
+}
+
+extract_names &amp;lt;- function(m, p) {
+    names(m)[p]
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Next comes the input information. I organized it in a set of nested &lt;code&gt;list&lt;/code&gt; objects. The schedule is stored as a character vector. For example, Lucia Eliana&amp;rsquo;s class meets on Wednesdays (&lt;strong&gt;M&lt;/strong&gt;iercoles in Spanish) from 9 to 11 am. I only keep the starting hours (9 and 10 am) because otherwise the code won&amp;rsquo;t detect valid opitons that include another class that starts at 11 am. For classes that are 1 hour away from the university, we included 1 hour before and 1 hour after the class.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;## Input class/prof info and schedule
+materias &amp;lt;- list(
+    repro = list(
+        &#39;lucia eliana&#39; = c(dias(&#39;m&#39;, 9:10), dias(&#39;j&#39;, 9:10), dias(&#39;v&#39;, 8:13)),
+        &#39;esquivel lacroix&#39; = c(dias(&#39;l&#39;, 14:15), dias(&#39;ma&#39;, 12:18), dias(&#39;m&#39;, 14:15)),
+        &#39;ismael porras&#39; = c(dias(&#39;l&#39;, 9:10), dias(&#39;m&#39;, 8:14), dias(&#39;j&#39;, 9:10)),
+        &#39;esquivel lacroix 2&#39; = c(dias(&#39;l&#39;, 14:15), dias(&#39;m&#39;, 14:15), dias(&#39;v&#39;, 12:18)),
+        &#39;salvador galina&#39; = c(dias(&#39;ma&#39;, 8:13), dias(&#39;j&#39;, 9:10), dias(&#39;v&#39;, 9:10)),
+        &#39;alberto balcazar&#39; = c(dias(&#39;l&#39;, 15:16), dias(&#39;j&#39;, 12:18), dias(&#39;v&#39;, 14:15)),
+        &#39;ana myriam boeta&#39; = c(dias(&#39;l&#39;, 8:13), dias(&#39;m&#39;, 10:11), dias(&#39;v&#39;, 9:10)),
+        &#39;rafael eduardo paz&#39; = c(dias(&#39;l&#39;, 11:17), dias(&#39;j&#39;, 14:15), dias(&#39;v&#39;, 16:17)),
+        &#39;juan heberth&#39; = c(dias(&#39;ma&#39;, 9:10), dias(&#39;m&#39;, 11:17), dias(&#39;v&#39;, 11:12)),
+        &#39;vicente octavio mejia&#39; = c(dias(&#39;ma&#39;, 8:17))
+    ),
+    economia = list(
+        &#39;valentin efren espinoza&#39; = c(dias(&#39;l&#39;, 8:10), dias(&#39;ma&#39;, 9:11)),
+        &#39;maria del pilar velazquez&#39; = c(dias(&#39;l&#39;, 16:18), dias(&#39;m&#39;, 16:18)),
+        &#39;arturo alonso pesado&#39; = c(dias(&#39;l&#39;, 11:13), dias(&#39;j&#39;, 11:13)),
+        &#39;laura mendez&#39; = c(dias(&#39;ma&#39;, 13:15), dias(&#39;m&#39;, 18:20)),
+        &#39;laura mendez 2&#39; = c(dias(&#39;j&#39;, 11:13), dias(&#39;v&#39;, 11:13)),
+        &#39;manuela garcia&#39; = c(dias(&#39;l&#39;, 17:19), dias(&#39;v&#39;, 16:18)),
+        &#39;francisco alejandro&#39; = c(dias(&#39;ma&#39;, 7:9), dias(&#39;j&#39;, 7:9)),
+        &#39;isaac reyes&#39; = c(dias(&#39;m&#39;, 13:15), dias(&#39;v&#39;, 13:15)),
+        &#39;jose luis tinoco&#39; = c(dias(&#39;ma&#39;, 12:14), dias(&#39;m&#39;, 9:11)),
+        &#39;isaac reyes 2&#39; = c(dias(&#39;l&#39;, 14:16), dias(&#39;ma&#39;, 14:16))
+        
+    ),
+    bacterianas = list(
+        &#39;jose luis gutierrez&#39; = dias(&#39;s&#39;, 8:11),
+        &#39;rodrigo mena&#39; = c(dias(&#39;ma&#39;, 18:19), dias(&#39;j&#39;, 18:19)),
+        &#39;beatriz arellano&#39; = c(dias(&#39;l&#39;, 7:8), dias(&#39;ma&#39;, 10:11)),
+        &#39;de la pena, ramirez ortega&#39; = c(dias(&#39;j&#39;, 18:19), dias(&#39;v&#39;, 18:19)),
+        &#39;ramirez ortega&#39; = c(dias(&#39;m&#39;, 7:8), dias(&#39;j&#39;, 7:8)),
+        &#39;rodrigo mena 2&#39; = c(dias(&#39;ma&#39;, 16:17), dias(&#39;m&#39;, 16:17)),
+        &#39;de la pena&#39; = dias(&#39;s&#39;, 8:11),
+        &#39;efren diaz aparicio&#39; = dias(&#39;s&#39;, 8:11),
+        &#39;lucia del carmen favila&#39; = dias(&#39;s&#39;, 8:11)
+    ),
+    parasitarias = list(
+        &#39;cintli martinez&#39; = c(dias(&#39;j&#39;, 16:17), dias(&#39;v&#39;, 18:20)),
+        &#39;osvaldo froylan&#39; = c(dias(&#39;ma&#39;, 18:19), dias(&#39;j&#39;, 18:20)),
+        &#39;maria quintero, agustin perez&#39; = c(dias(&#39;ma&#39;, 13:14), dias(&#39;m&#39;, 7:9)),
+        &#39;maria quintero&#39; = c(dias(&#39;m&#39;, 16:18), dias(&#39;j&#39;, 16:17)),
+        &#39;evangelina romero&#39; = c(dias(&#39;ma&#39;, 7:8), dias(&#39;v&#39;, 7:9)),
+        &#39;guadarrama 01&#39; = c(dias(&#39;m&#39;, 7:8), dias(&#39;j&#39;, 11:13)),
+        &#39;guadarrama 03&#39; = c(dias(&#39;ma&#39;, 13:15), dias(&#39;v&#39;, 7:8)),
+        &#39;guadarrama 04&#39; = c(dias(&#39;l&#39;, 16:17), dias(&#39;ma&#39;, 18:20)),
+        &#39;guadarrama 05&#39; = c(dias(&#39;l&#39;, 7:9), dias(&#39;j&#39;, 7:8))
+    ),
+    diagnosticas = list(
+        &#39;1701&#39; = c(dias(&#39;l&#39;, 11:13), dias(&#39;m&#39;, 11:16)),
+        &#39;1702&#39; = c(dias(&#39;j&#39;, 13:15), dias(&#39;v&#39;, 13:18)),
+        &#39;1703&#39; = c(dias(&#39;ma&#39;, 7:9), dias(&#39;v&#39;, 8:13)),
+        &#39;1704&#39; = c(dias(&#39;l&#39;, 18:20), dias(&#39;j&#39;, 13:18)),
+        &#39;1705&#39; = c(dias(&#39;l&#39;, 11:13), dias(&#39;m&#39;, 7:11)),
+        &#39;1706&#39; = c(dias(&#39;ma&#39;, 15:17), dias(&#39;m&#39;, 15:19)),
+        &#39;1707&#39; = c(dias(&#39;ma&#39;, 10:12), dias(&#39;j&#39;, 10:15)),
+        &#39;1708&#39; = c(dias(&#39;l&#39;, 18:20), dias(&#39;ma&#39;, 15:19)),
+        &#39;1709&#39; = c(dias(&#39;l&#39;, 11:13), dias(&#39;j&#39;, 8:13)),
+        &#39;1711&#39; = c(dias(&#39;j&#39;, 13:15), dias(&#39;v&#39;, 10:13))
+    )
+)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now that the input information is complete, I use &lt;code&gt;expand.grid()&lt;/code&gt; to find out all the different possible options.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;## Get all the options
+options &amp;lt;- expand.grid(lapply(materias, function(x) { seq_len(length(x))}))
+dim(options)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## [1] 81000     5
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;There&amp;rsquo;s 81,00 of them including the classes that meet on Saturday. You can see why it&amp;rsquo;s a frustrating process to find which combination of classes work when doing this manually.&lt;/p&gt;
+
+&lt;p&gt;Next, I explore all these options to find those that are valid, meaning that none of the classes overlap. I do this by finding which options have no duplicated hours from the character vectors defined earlier. Nothing fancy.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;valid &amp;lt;- apply(options, 1, function(input) {
+    info &amp;lt;- mapply(extract, materias, input)
+    !any(duplicated(unlist(info)))
+})
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now that I have the valid options, I can find the names of the instructors for them. There&amp;rsquo;s 2,847 valid schedules in the end, out of the 81,000. That&amp;rsquo;s 3.5 percent!&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;valid_prof &amp;lt;- apply(options[valid, ], 1, function(input) {
+    mapply(extract_names, materias, input)
+})
+ncol(valid_prof)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## [1] 2847
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;You can search the interactive version &lt;a href=&#34;https://lcolladotor.shinyapps.io/materias/&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt; to select only the options with a given instructor. For example, in my brother&amp;rsquo;s case there are 30 valid options once he decided to prioritize two instructors as shown in the non-interactive table below.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;## Ideally, this code would create an interactive table, but it doesn&#39;t work for some reason:
+#library(&#39;DT&#39;)
+#datatable(t(valid_prof), options = list(pagingType=&#39;full_numbers&#39;, pageLength=10), rownames = FALSE)
+valid_prof &amp;lt;- t(valid_prof)
+rownames(valid_prof) &amp;lt;- seq_len(nrow(valid_prof))
+top_options &amp;lt;- valid_prof[valid_prof[, 1] == &#39;lucia eliana&#39; &amp;amp; valid_prof[, 2] %in% c(&#39;isaac reyes&#39;, &#39;isaac reyes 2&#39;), ]
+kable(top_options, format = &#39;markdown&#39;, row.names = TRUE)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;left&#34;&gt;&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;repro&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;economia&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;bacterianas&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;parasitarias&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;diagnosticas&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;5&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;lucia eliana&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;isaac reyes 2&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;jose luis gutierrez&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;cintli martinez&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;1701&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;11&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;lucia eliana&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;isaac reyes 2&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;rodrigo mena&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;cintli martinez&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;1701&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;14&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;lucia eliana&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;isaac reyes 2&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;beatriz arellano&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;cintli martinez&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;1701&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;19&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;lucia eliana&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;isaac reyes 2&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;ramirez ortega&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;cintli martinez&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;1701&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;25&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;lucia eliana&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;isaac reyes 2&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;de la pena&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;cintli martinez&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;1701&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;31&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;lucia eliana&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;isaac reyes 2&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;efren diaz aparicio&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;cintli martinez&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;1701&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;37&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;lucia eliana&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;isaac reyes 2&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;lucia del carmen favila&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;cintli martinez&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;1701&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;46&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;lucia eliana&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;isaac reyes 2&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;jose luis gutierrez&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;osvaldo froylan&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;1701&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;50&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;lucia eliana&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;isaac reyes 2&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;beatriz arellano&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;osvaldo froylan&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;1701&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;58&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;lucia eliana&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;isaac reyes 2&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;ramirez ortega&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;osvaldo froylan&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;1701&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;67&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;lucia eliana&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;isaac reyes 2&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;de la pena&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;osvaldo froylan&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;1701&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;76&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;lucia eliana&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;isaac reyes 2&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;efren diaz aparicio&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;osvaldo froylan&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;1701&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;85&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;lucia eliana&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;isaac reyes 2&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;lucia del carmen favila&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;osvaldo froylan&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;1701&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;123&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;lucia eliana&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;isaac reyes 2&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;jose luis gutierrez&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;guadarrama 01&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;1701&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;130&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;lucia eliana&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;isaac reyes 2&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;rodrigo mena&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;guadarrama 01&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;1701&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;134&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;lucia eliana&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;isaac reyes 2&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;beatriz arellano&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;guadarrama 01&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;1701&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;137&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;lucia eliana&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;isaac reyes 2&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;de la pena, ramirez ortega&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;guadarrama 01&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;1701&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;144&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;lucia eliana&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;isaac reyes 2&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;de la pena&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;guadarrama 01&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;1701&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;151&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;lucia eliana&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;isaac reyes 2&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;efren diaz aparicio&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;guadarrama 01&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;1701&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;158&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;lucia eliana&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;isaac reyes 2&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;lucia del carmen favila&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;guadarrama 01&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;1701&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;209&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;lucia eliana&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;isaac reyes 2&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;jose luis gutierrez&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;guadarrama 05&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;1701&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;217&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;lucia eliana&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;isaac reyes 2&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;rodrigo mena&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;guadarrama 05&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;1701&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;222&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;lucia eliana&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;isaac reyes 2&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;de la pena, ramirez ortega&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;guadarrama 05&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;1701&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;232&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;lucia eliana&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;isaac reyes 2&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;de la pena&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;guadarrama 05&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;1701&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;242&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;lucia eliana&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;isaac reyes 2&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;efren diaz aparicio&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;guadarrama 05&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;1701&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;252&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;lucia eliana&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;isaac reyes 2&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;lucia del carmen favila&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;guadarrama 05&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;1701&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;872&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;lucia eliana&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;isaac reyes 2&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;jose luis gutierrez&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;guadarrama 05&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;1704&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;885&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;lucia eliana&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;isaac reyes 2&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;de la pena&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;guadarrama 05&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;1704&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;894&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;lucia eliana&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;isaac reyes 2&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;efren diaz aparicio&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;guadarrama 05&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;1704&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;903&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;lucia eliana&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;isaac reyes 2&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;lucia del carmen favila&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;guadarrama 05&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;1704&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&#34;reproducibility&#34;&gt;Reproducibility&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;## Reproducibility info
+library(&#39;devtools&#39;)
+session_info()
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## Session info --------------------------------------------------------------
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;##  setting  value                       
+##  version  R version 3.3.0 (2016-05-03)
+##  system   x86_64, mingw32             
+##  ui       RStudio (0.99.902)          
+##  language (EN)                        
+##  collate  English_United States.1252  
+##  tz       America/Mexico_City         
+##  date     2016-08-02
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## Packages ------------------------------------------------------------------
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;##  package   * version date       source        
+##  devtools  * 1.12.0  2016-06-24 CRAN (R 3.3.1)
+##  digest      0.6.9   2016-01-08 CRAN (R 3.3.0)
+##  evaluate    0.9     2016-04-29 CRAN (R 3.3.0)
+##  formatR     1.4     2016-05-09 CRAN (R 3.3.0)
+##  highr       0.6     2016-05-09 CRAN (R 3.3.0)
+##  knitr     * 1.13    2016-05-09 CRAN (R 3.3.0)
+##  magrittr    1.5     2014-11-22 CRAN (R 3.3.0)
+##  memoise     1.0.0   2016-01-29 CRAN (R 3.3.0)
+##  rsconnect   0.4.3   2016-05-02 CRAN (R 3.3.0)
+##  stringi     1.1.1   2016-05-27 CRAN (R 3.3.0)
+##  stringr     1.0.0   2015-04-30 CRAN (R 3.3.0)
+##  withr       1.0.2   2016-06-20 CRAN (R 3.3.1)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;want-more&#34;&gt;Want more?&lt;/h3&gt;
+
+&lt;p&gt;Check other &lt;a href=&#34;https://twitter.com/jhubiostat&#34; target=&#34;_blank&#34;&gt;@jhubiostat&lt;/a&gt; student blogs at &lt;a href=&#34;http://bmorebiostat.com/&#34; target=&#34;_blank&#34;&gt;Bmore Biostats&lt;/a&gt; as well as topics on &lt;a href=&#34;https://twitter.com/search?q=%23rstats&#34; target=&#34;_blank&#34;&gt;#rstats&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Are you doing parallel computations in R? Then use BiocParallel</title>
+      <link>http://lcolladotor.github.io/2016/03/07/Are-you-doing-parallel-computations-in-R-Then-use-BiocParallel</link>
+      <pubDate>Mon, 07 Mar 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://lcolladotor.github.io/2016/03/07/Are-you-doing-parallel-computations-in-R-Then-use-BiocParallel</guid>
+      <description>
+
+&lt;p&gt;It&amp;rsquo;s the morning of the first day of oral conferences at &lt;a href=&#34;https://twitter.com/search?q=%23ENAR2016&amp;amp;src=tyah&#34; target=&#34;_blank&#34;&gt;#ENAR2016&lt;/a&gt;. I feel like I have a &lt;a href=&#34;https://en.wiktionary.org/wiki/Spidey-sense&#34; target=&#34;_blank&#34;&gt;spidey sense&lt;/a&gt; since I woke up 3 min after an email from Jeff Leek; just a funny coincidence. Anyhow, I promised Valerie Obenchain at &lt;a href=&#34;https://twitter.com/hashtag/bioc2014&#34; target=&#34;_blank&#34;&gt;#Bioc2014&lt;/a&gt; that I would write a post about one of my favorite Bioconductor packages: &lt;a href=&#34;http://www.bioconductor.org/packages/release/bioc/html/BiocParallel.html&#34; target=&#34;_blank&#34;&gt;BiocParallel&lt;/a&gt; &lt;a id=&#39;cite-biocparallel&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;#bib-biocparallel&#39;&gt;Morgan, Obenchain, Lang, and Thompson, 2016&lt;/a&gt;). By now it&amp;rsquo;s on the top 5% of downloaded Bioconductor packages, so many people know about it or are unaware that their favorite package uses it behind the scenes.&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;
+&lt;a href=&#34;http://www.bioconductor.org&#34;&gt;&lt;img src=&#34;http://www.bioconductor.org/images/logo_bioconductor.gif&#34; alt=&#34;BioconductorLogo&#34; style=&#34;width: 260px;&#34;/&gt;&lt;/a&gt;
+&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;While I haven&amp;rsquo;t blogged about &lt;code&gt;BiocParallel&lt;/code&gt; yet, I did give a presentation about it at our computing club back in April 2nd, 2015. See it &lt;a href=&#34;http://lcolladotor.github.io/BiocParallel-knitrBootstrap/&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt; (&lt;a href=&#34;https://github.com/lcolladotor/BiocParallel-knitrBootstrap&#34; target=&#34;_blank&#34;&gt;source&lt;/a&gt;). I&amp;rsquo;m going to follow its structure in this post.&lt;/p&gt;
+
+&lt;h2 id=&#34;parallel-computing&#34;&gt;Parallel computing&lt;/h2&gt;
+
+&lt;p&gt;Before even thinking about using &lt;code&gt;BiocParallel&lt;/code&gt; you have to decide whether parallel computing is the thing you need.&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;
+&lt;a href=&#39;http://gnoted.com/wp-content/uploads/2012/02/cloud_43-595x553.jpg&#39;&gt;&lt;img alt = &#39;Cloud joke&#39; height=&#39;553&#39; src=&#39;http://lcolladotor.github.io/figs/2016-03-07-BiocParallel/cloud.jpg&#39; /&gt;&lt;/a&gt;
+&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;While I&amp;rsquo;m not talking about cloud computing, I still find this picture funny.&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;
+&lt;a href=&#39;http://www.mathworks.com/cmsimages/63635_wl_91710v00_po_fig2_wl.gif&#39;&gt;&lt;img alt = &#39;Parallel diagram&#39; height=&#39;400&#39; src=&#39;http://lcolladotor.github.io/figs/2016-03-07-BiocParallel/parallel.gif&#39; /&gt;&lt;/a&gt;
+&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;There&amp;rsquo;s different types of parallel computing, but what I&amp;rsquo;m referring to here is called &lt;a href=&#34;https://en.wikipedia.org/wiki/Embarrassingly_parallel&#34; target=&#34;_blank&#34;&gt;embarrassingly parallel&lt;/a&gt; where you have a task to do for a set of inputs, you split your inputs into subsets and perform the task on these subsets. Performing this task for one input a a time is called &lt;em&gt;serial programming&lt;/em&gt; and it&amp;rsquo;s what we do in most cases when using functions like &lt;code&gt;lapply()&lt;/code&gt; or &lt;code&gt;for&lt;/code&gt; loops.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;plot(y = 10 / (1:10), 1:10, xlab = &#39;Number of cores&#39;, ylab = &#39;Time&#39;,
+    main = &#39;Ideal scenario&#39;, type = &#39;o&#39;, col = &#39;blue&#39;,
+    cex = 2, cex.axis = 2, cex.lab = 1.5, cex.main = 2, pch = 16)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://lcolladotor.github.io/figs/2016-03-07-BiocParallel/ideal-1.png&#34; alt=&#34;center&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;You might be running a simulation for a different set of parameters (a parameter grid) and running each simulation could take some time. Parallel computing can help you speed up this problem. In the ideal scenario, the higher number of computing cores (units that evaluate subsets of your inputs) the less time you need to run your full analysis.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;plot(y = 10 / (1:10), 1:10, xlab = &#39;Number of cores&#39;, ylab = &#39;Time&#39;,
+    main = &#39;Reality&#39;, type = &#39;o&#39;, col = &#39;blue&#39;,
+    cex = 2, cex.axis = 2, cex.lab = 1.5, cex.main = 2, pch = 16)
+lines(y = 10 / (1:10) * c(1, 1.05^(2:10) ), 1:10, col = &#39;red&#39;,
+    type = &#39;o&#39;, cex = 2)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://lcolladotor.github.io/figs/2016-03-07-BiocParallel/reality-1.png&#34; alt=&#34;center&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;However, in reality parallel computing is not cost-free. It involves some communication costs, like sending the data to the cores, aggregating the results in a way that you can then easily use, among other things. So, it&amp;rsquo;ll be a bit slower than the ideal scenario but you can potentially still greatly reduce the overall time.&lt;/p&gt;
+
+&lt;p&gt;Having said all of the above, lets say that you now want to do some parallel computing in &lt;code&gt;R&lt;/code&gt;. Where do you start? A pretty good place to start is the &lt;a href=&#34;http://cran.r-project.org/web/views/HighPerformanceComputing.html&#34; target=&#34;_blank&#34;&gt;CRAN Task View: High-Performance and Parallel Computing with R&lt;/a&gt;. There you&amp;rsquo;ll find a lot of information about different packages that enable you to do parallel computing with &lt;code&gt;R&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;
+&lt;a href=&#39;http://thumbs.dreamstime.com/x/word-cloud-parallel-computing-27198811.jpg&#39;&gt;&lt;img alt = &#39;Confusing word cloud&#39; height=&#39;367&#39; src=&#39;http://lcolladotor.github.io/figs/2016-03-07-BiocParallel/wordcloud.jpg&#39; /&gt;&lt;/a&gt;
+&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;But you&amp;rsquo;ll soon be lost in a sea of new terms.&lt;/p&gt;
+
+&lt;h2 id=&#34;why-use-biocparallel&#34;&gt;Why use BiocParallel?&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;It&amp;rsquo;s simple to use.&lt;/li&gt;
+&lt;li&gt;You can try different parallel backends without changing your code.&lt;/li&gt;
+&lt;li&gt;You can use it to submit cluster jobs.&lt;/li&gt;
+&lt;li&gt;You&amp;rsquo;ll have access to great support from the Bioconductor developer team.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Those are the big reasons of why I use &lt;code&gt;BiocParallel&lt;/code&gt;. But let me go through them a bit more slowly.&lt;/p&gt;
+
+&lt;h3 id=&#34;birthday-example&#34;&gt;Birthday example&lt;/h3&gt;
+
+&lt;p&gt;I&amp;rsquo;m going to use as an example the birthday problem where you want to find out empirically the probability that two people share the same birthday in a room.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;birthday &amp;lt;- function(n) {
+    m &amp;lt;- 10000
+    x &amp;lt;- numeric(m)
+    for(i in seq_len(m)) {
+        b &amp;lt;- sample(seq_len(365), n, replace = TRUE)
+        x[i] &amp;lt;- ifelse(length(unique(b)) == n, 0, 1)
+    }
+    mean(x)
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;naive-birthday-code&#34;&gt;Naive birthday code&lt;/h4&gt;
+
+&lt;p&gt;Once you have written the code for it, you can then use &lt;code&gt;lapply()&lt;/code&gt; or a &lt;code&gt;for&lt;/code&gt; loop to calculate the results.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;system.time( lapply(seq_len(100), birthday) )
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;##    user  system elapsed 
+##  25.610   0.442  27.430
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Takes around 25 seconds.&lt;/p&gt;
+
+&lt;h4 id=&#34;via-domc&#34;&gt;Via doMC&lt;/h4&gt;
+
+&lt;p&gt;If you looked at &lt;a href=&#34;http://cran.r-project.org/web/views/HighPerformanceComputing.html&#34; target=&#34;_blank&#34;&gt;CRAN Task View: High-Performance and Parallel Computing with R&lt;/a&gt; you might have found the &lt;code&gt;doMC&lt;/code&gt; &lt;a id=&#39;cite-domc&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;http://CRAN.R-project.org/package=doMC&#39;&gt;Analytics and Weston, 2015&lt;/a&gt;).&lt;/p&gt;
+
+&lt;p&gt;It allows you to run computations in parallel as shown below.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;library(&#39;doMC&#39;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## Loading required package: foreach
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## Loading required package: iterators
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## Loading required package: parallel
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;registerDoMC(2)
+system.time( x &amp;lt;- foreach(j = seq_len(100)) %dopar% birthday(j) )
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;##    user  system elapsed 
+##  12.819   0.246  13.309
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;While it&amp;rsquo;s a bit faster, the main problem is that you had to change your code in order to be able to use it.&lt;/p&gt;
+
+&lt;h4 id=&#34;with-biocparallel&#34;&gt;With BiocParallel&lt;/h4&gt;
+
+&lt;p&gt;This is how you would run things with &lt;code&gt;BiocParallel&lt;/code&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;library(&#39;BiocParallel&#39;)
+system.time( y &amp;lt;- bplapply(seq_len(100), birthday) )
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;##    user  system elapsed 
+##   0.021   0.011  16.095
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The only change here is using &lt;code&gt;bplapply()&lt;/code&gt; instead of &lt;code&gt;lapply()&lt;/code&gt;, so just 2 characters. Well, that and loading the &lt;code&gt;BiocParallel&lt;/code&gt; package.&lt;/p&gt;
+
+&lt;h3 id=&#34;biocparallel-s-advantages&#34;&gt;BiocParallel&amp;rsquo;s advantages&lt;/h3&gt;
+
+&lt;p&gt;There are many computation backends and one of the strongest features of &lt;code&gt;BiocParallel&lt;/code&gt; is that it&amp;rsquo;s easy to switch between them. For example, my computer can run the following options:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;registered()
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## $MulticoreParam
+## class: MulticoreParam 
+##   bpjobname:BPJOB; bpworkers:2; bptasks:0; bptimeout:Inf; bpRNGseed:; bpisup:FALSE
+##   bplog:FALSE; bpthreshold:INFO; bplogdir:NA
+##   bpstopOnError:FALSE; bpprogressbar:FALSE
+##   bpresultdir:NA
+## cluster type: FORK 
+## 
+## $SnowParam
+## class: SnowParam 
+##   bpjobname:BPJOB; bpworkers:2; bptasks:0; bptimeout:Inf; bpRNGseed:; bpisup:FALSE
+##   bplog:FALSE; bpthreshold:INFO; bplogdir:NA
+##   bpstopOnError:FALSE; bpprogressbar:FALSE
+##   bpresultdir:NA
+## cluster type: SOCK 
+## 
+## $SerialParam
+## class: SerialParam 
+##   bplog:FALSE; bpthreshold:INFO
+##   bpcatchErrors:FALSE
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;If I was doing this in our computing cluster, I would see even more options.&lt;/p&gt;
+
+&lt;p&gt;Now lets say that I want to test different computation backends, or even run things in serial mode so I can trace a bug down more easily. Well, all I have to do is change the &lt;code&gt;BPPARAM&lt;/code&gt; argument as shown below.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;## Test in serial mode
+system.time( y.serial &amp;lt;- bplapply(1:10, birthday,
+    BPPARAM = SerialParam()) )
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;##    user  system elapsed 
+##   2.577   0.033   2.733
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;## Try Snow
+system.time( y.snow &amp;lt;- bplapply(1:10, birthday, 
+    BPPARAM = SnowParam(workers = 2)) )
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;##    user  system elapsed 
+##   0.027   0.006   2.436
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Talking about computing clusters, you might be interested in using &lt;code&gt;BatchJobs&lt;/code&gt; &lt;a id=&#39;cite-batchjobs&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;http://www.jstatsoft.org/v64/i11/&#39;&gt;Bischl, Lang, Mersmann, Rahnenführer, et al., 2015&lt;/a&gt;) just like &lt;a href=&#34;http://www.biostat.jhsph.edu/~prpatil/&#34; target=&#34;_blank&#34;&gt;Prasad Patil&lt;/a&gt; did for his PhD work. Well, with &lt;code&gt;BiocParallel&lt;/code&gt; you can also chose to use the &lt;code&gt;BatchJobs&lt;/code&gt; backend. I have code showing this at the &lt;a href=&#34;http://lcolladotor.github.io/BiocParallel-knitrBootstrap/&#34; target=&#34;_blank&#34;&gt;presentation I referenced earlier&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;where-do-i-start&#34;&gt;Where do I start?&lt;/h2&gt;
+
+&lt;p&gt;If you are convinced about using &lt;code&gt;BiocParallel&lt;/code&gt;, which I hope you are by now, check out the &lt;code&gt;Introduction to BiocParallel&lt;/code&gt; vignette available at &lt;a href=&#34;http://www.bioconductor.org/packages/release/bioc/html/BiocParallel.html&#34; target=&#34;_blank&#34;&gt;BiocParallel&amp;rsquo;s landing page&lt;/a&gt;. It explains in more detail how to use it and it&amp;rsquo;s rich set of features. But if you just want to jump right in and start playing around with it, install it by running the following code:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;## try http:// if https:// URLs are not supported
+source(&amp;quot;https://bioconductor.org/biocLite.R&amp;quot;)
+biocLite(&amp;quot;BiocParallel&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;conclusions&#34;&gt;Conclusions&lt;/h2&gt;
+
+&lt;p&gt;Like I said earlier, &lt;code&gt;BiocParallel&lt;/code&gt; is simple to use and has definite advantages over other solutions.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;You can try different parallel backends without changing your code.&lt;/li&gt;
+&lt;li&gt;You can use it to submit cluster jobs.&lt;/li&gt;
+&lt;li&gt;You&amp;rsquo;ll have access to great support from the Bioconductor developer team. See &lt;a href=&#34;https://support.bioconductor.org/t/biocparallel/&#34; target=&#34;_blank&#34;&gt;the biocparallel tag at the support website&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Have fun using it!&lt;/p&gt;
+
+&lt;h3 id=&#34;reproducibility&#34;&gt;Reproducibility&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;## Reproducibility info
+library(&#39;devtools&#39;)
+session_info()
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## Session info --------------------------------------------------------------
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;##  setting  value                       
+##  version  R version 3.2.2 (2015-08-14)
+##  system   x86_64, darwin13.4.0        
+##  ui       X11                         
+##  language (EN)                        
+##  collate  en_US.UTF-8                 
+##  tz       America/Chicago             
+##  date     2016-03-07
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## Packages ------------------------------------------------------------------
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;##  package        * version  date       source        
+##  bibtex           0.4.0    2014-12-31 CRAN (R 3.2.0)
+##  BiocParallel   * 1.4.3    2015-12-16 Bioconductor  
+##  bitops           1.0-6    2013-08-17 CRAN (R 3.2.0)
+##  codetools        0.2-14   2015-07-15 CRAN (R 3.2.2)
+##  devtools       * 1.10.0   2016-01-23 CRAN (R 3.2.3)
+##  digest           0.6.9    2016-01-08 CRAN (R 3.2.3)
+##  doMC           * 1.3.4    2015-10-13 CRAN (R 3.2.0)
+##  evaluate         0.8      2015-09-18 CRAN (R 3.2.0)
+##  foreach        * 1.4.3    2015-10-13 CRAN (R 3.2.0)
+##  formatR          1.2.1    2015-09-18 CRAN (R 3.2.0)
+##  futile.logger    1.4.1    2015-04-20 CRAN (R 3.2.0)
+##  futile.options   1.0.0    2010-04-06 CRAN (R 3.2.0)
+##  httr             1.1.0    2016-01-28 CRAN (R 3.2.3)
+##  iterators      * 1.0.8    2015-10-13 CRAN (R 3.2.0)
+##  knitcitations  * 1.0.7    2015-10-28 CRAN (R 3.2.0)
+##  knitr          * 1.12.3   2016-01-22 CRAN (R 3.2.3)
+##  lambda.r         1.1.7    2015-03-20 CRAN (R 3.2.0)
+##  lubridate        1.5.0    2015-12-03 CRAN (R 3.2.3)
+##  magrittr         1.5      2014-11-22 CRAN (R 3.2.0)
+##  memoise          1.0.0    2016-01-29 CRAN (R 3.2.3)
+##  plyr             1.8.3    2015-06-12 CRAN (R 3.2.1)
+##  R6               2.1.2    2016-01-26 CRAN (R 3.2.3)
+##  Rcpp             0.12.3   2016-01-10 CRAN (R 3.2.3)
+##  RCurl            1.95-4.7 2015-06-30 CRAN (R 3.2.1)
+##  RefManageR       0.10.6   2016-02-15 CRAN (R 3.2.3)
+##  RJSONIO          1.3-0    2014-07-28 CRAN (R 3.2.0)
+##  snow             0.4-1    2015-10-31 CRAN (R 3.2.0)
+##  stringi          1.0-1    2015-10-22 CRAN (R 3.2.0)
+##  stringr          1.0.0    2015-04-30 CRAN (R 3.2.0)
+##  XML              3.98-1.3 2015-06-30 CRAN (R 3.2.0)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;references&#34;&gt;References&lt;/h3&gt;
+
+&lt;p&gt;Citations made with &lt;code&gt;knitcitations&lt;/code&gt; &lt;a id=&#39;cite-knitcitations&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;http://CRAN.R-project.org/package=knitcitations&#39;&gt;Boettiger, 2015&lt;/a&gt;).&lt;/p&gt;
+
+&lt;p&gt;&lt;a id=&#39;bib-domc&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-domc&#34;&gt;[1]&lt;/a&gt;&lt;cite&gt;
+R. Analytics and S. Weston.
+&lt;em&gt;doMC: Foreach Parallel Adaptor for &#39;parallel&#39;&lt;/em&gt;.
+R package version 1.3.4.
+2015.
+URL: &lt;a href=&#34;http://CRAN.R-project.org/package=doMC&#34;&gt;http://CRAN.R-project.org/package=doMC&lt;/a&gt;.&lt;/cite&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a id=&#39;bib-batchjobs&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-batchjobs&#34;&gt;[2]&lt;/a&gt;&lt;cite&gt;
+B. Bischl, M. Lang, O. Mersmann, J. Rahnenführer, et al.
+&amp;ldquo;BatchJobs and BatchExperiments: Abstraction Mechanisms for Using R in Batch Environments&amp;rdquo;.
+In: &lt;em&gt;Journal of Statistical Software&lt;/em&gt; 64.11 (2015), pp. 1&amp;ndash;25.
+URL: &lt;a href=&#34;http://www.jstatsoft.org/v64/i11/&#34;&gt;http://www.jstatsoft.org/v64/i11/&lt;/a&gt;.&lt;/cite&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a id=&#39;bib-knitcitations&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-knitcitations&#34;&gt;[3]&lt;/a&gt;&lt;cite&gt;
+C. Boettiger.
+&lt;em&gt;knitcitations: Citations for &#39;Knitr&#39; Markdown Files&lt;/em&gt;.
+R package version 1.0.7.
+2015.
+URL: &lt;a href=&#34;http://CRAN.R-project.org/package=knitcitations&#34;&gt;http://CRAN.R-project.org/package=knitcitations&lt;/a&gt;.&lt;/cite&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a id=&#39;bib-biocparallel&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-biocparallel&#34;&gt;[4]&lt;/a&gt;&lt;cite&gt;
+M. Morgan, V. Obenchain, M. Lang and R. Thompson.
+&lt;em&gt;BiocParallel: Bioconductor facilities for parallel evaluation&lt;/em&gt;.
+R package version 1.4.3.
+2016.&lt;/cite&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;want-more&#34;&gt;Want more?&lt;/h3&gt;
+
+&lt;p&gt;Check other &lt;a href=&#34;https://twitter.com/jhubiostat&#34; target=&#34;_blank&#34;&gt;@jhubiostat&lt;/a&gt; student blogs at &lt;a href=&#34;http://bmorebiostat.com/&#34; target=&#34;_blank&#34;&gt;Bmore Biostats&lt;/a&gt; as well as topics on &lt;a href=&#34;https://twitter.com/search?q=%23rstats&#34; target=&#34;_blank&#34;&gt;#rstats&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Teaching a short topic to beginner R users</title>
+      <link>http://lcolladotor.github.io/2015/07/07/Teaching-a-short-topic-to-beginner-R-users</link>
+      <pubDate>Tue, 07 Jul 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://lcolladotor.github.io/2015/07/07/Teaching-a-short-topic-to-beginner-R-users</guid>
+      <description>
+
+&lt;p&gt;A couple weeks ago I was given the opportunity to teach a 1 hr 30 min slot of an introduction to &lt;code&gt;R&lt;/code&gt; course. In the past, I&amp;rsquo;ve taught lectures for similar courses, and I ended up asking myself what would be the best short topic to teach and how to teach it.&lt;/p&gt;
+
+&lt;h2 id=&#34;best-short-topic&#34;&gt;Best short topic&lt;/h2&gt;
+
+&lt;p&gt;There are two ways to answer the first question, one boring and one more interesting. The boring answer is that the course instructor selected the topic. The interesting one goes like this. I have taken short &lt;code&gt;R&lt;/code&gt; courses before and taught others, and it&amp;rsquo;s always overwhelming for the students. You get to cover many concepts, get familiarized with &lt;code&gt;R&lt;/code&gt;&amp;rsquo;s syntax, and in the end without lots of practice it&amp;rsquo;s very challenging to retain much of the information. I think that students love it when they learn how to do something simple that could be the first building block for many of their projects. In parallel, I think that one of the coolest &lt;code&gt;R&lt;/code&gt; topics you can learn in an hour is how to create reproducible documents with &lt;code&gt;rmarkdown&lt;/code&gt; &lt;a id=&#39;cite-rmarkdown&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;http://CRAN.R-project.org/package=rmarkdown&#39;&gt;Allaire, Cheng, Xie, McPherson, et al., 2015&lt;/a&gt;).&lt;/p&gt;
+
+&lt;p&gt;Learning how to use a single function, &lt;code&gt;render()&lt;/code&gt; in this case, is as simple as it gets. And using the &lt;a href=&#34;http://www.rstudio.com/products/rstudio/#Desktop&#34; target=&#34;_blank&#34;&gt;RStudio Desktop&lt;/a&gt; is even simpler. Of course, it can easily get complicated. For example, on a new computer you need to install all the LaTeX dependencies if you want to create PDF files. That task can take some time and maybe scare away some new users. But PDF files are really a plus in this case since you can start creating HTML and Word documents. Other complications arise when a user is interested in more control over formatting the file, but like I said earlier, all you need is a simple building block and &lt;code&gt;rmarkdown&lt;/code&gt; is clearly one of them.&lt;/p&gt;
+
+&lt;p&gt;This is why the final answer to the first question was teaching how to use &lt;code&gt;rmarkdown&lt;/code&gt; to create reproducible reports (HTML, Word files) using &lt;code&gt;R&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;how-to-teach-it&#34;&gt;How to teach it&lt;/h2&gt;
+
+&lt;p&gt;Teaching a short topic to a beginner&amp;rsquo;s audience is no easy feat. In the past I&amp;rsquo;ve made lectures that have the code for every single step and many links to resources where students can learn some details. That is, I&amp;rsquo;ve created the lectures in such a way that a student can later use them as reference and follow them without an instructor explaining them.&lt;/p&gt;
+
+&lt;p&gt;That&amp;rsquo;s a strategy that I think works on the long run. However, it makes the actual lecture boring and very limited in interactivity. At the JHSPH biostat computing club, other students have chosen to use a lot of images, funny to witty quotes, and asked listeners to voice their opinions. I&amp;rsquo;ve come to enjoy those presentations and I decided to create my lecture following that trend.&lt;/p&gt;
+
+&lt;p&gt;I started off with a series of questions about reproducible research and asked students to voice their opinions and to define a few key concepts. A couple were aware of the difference between reproducibility and replicability, but most were not. I also questioned them and presented them verbally with some famous cases, so they could realize that it&amp;rsquo;s a fairly complicated matter. Next I presented some answers and definitions from the &lt;a href=&#34;https://osf.io/s9tya/wiki/home/&#34; target=&#34;_blank&#34;&gt;&lt;em&gt;Implementing Reproducible Research&lt;/em&gt;&lt;/a&gt; book.&lt;/p&gt;
+
+&lt;p&gt;Specifically talking about &lt;code&gt;R&lt;/code&gt;, I showed the students several documents I&amp;rsquo;ve created in the past and asked whether they thought that they could reproduce the results or not. Basically, I wanted to highlight that when using &lt;code&gt;R&lt;/code&gt;, you really need the session information if you want to reproduce something. Specially if the analysis involves packages under heavy development.&lt;/p&gt;
+
+&lt;p&gt;After having motivating the need for reproducible documents, I briefly showed what &lt;code&gt;rmarkdown&lt;/code&gt; is with some images from RStudio shown below.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://rmarkdown.rstudio.com/images/markdownOverview.png&#34; alt=&#34;Markdown overview&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://rmarkdown.rstudio.com/images/markdownChunk.png&#34; alt=&#34;Markdown and R&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;That gave the students a general idea of how these documents look when you are writing them. But the most important part was showing them examples of how the resulting documents look like. That is, I showed them some complicated projects so they could imagine doing one themselves. The examples included some books, but given the audience I think that the one that motivated them most was Alyssa Frazee&amp;rsquo;s &lt;code&gt;polyester&lt;/code&gt; reproducible paper (check the &lt;a href=&#34;https://github.com/leekgroup/polyester_code/blob/master/polyester_manuscript.Rmd&#34; target=&#34;_blank&#34;&gt;source here&lt;/a&gt;). I also showed them some of the cool stuff you can create with HTML documents: basically adding interactive elements.&lt;/p&gt;
+
+&lt;p&gt;From there, we left the presentation and I demo&amp;rsquo;ed how to use RStudio to write &lt;code&gt;rmarkdown&lt;/code&gt; documents, the Markdown syntax, where to find help, etc.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://dgdc5.digitalgameslearning.org/dgdc_5th/wp-content/uploads/lc.png&#34; alt=&#34;Lets code&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;By this point, I think the lecture was quite complete and the students were motivated. However, from my past experience, I&amp;rsquo;ve come to realize that students will easily forget a topic if they don&amp;rsquo;t practice doing it. That is why even before making the lecture I spent quite a bit of time designing two practice labs. Both labs involved creating a &lt;code&gt;rmarkdown&lt;/code&gt; document.&lt;/p&gt;
+
+&lt;p&gt;The first lab included some cool illusion plots which involved a lot of &lt;code&gt;R&lt;/code&gt; code. The code wasn&amp;rsquo;t the point, but simply learning some of the basics such as what is a code chunk, some of Markdown&amp;rsquo;s syntax, specifying some code chunk options, adding the session information, and using inline &lt;code&gt;R&lt;/code&gt; code to show the date when the document was made. Ahh, and of course, uploading your HTML document to &lt;a href=&#34;http://rpubs.com/&#34; target=&#34;_blank&#34;&gt;RPubs&lt;/a&gt; (see &lt;a href=&#34;http://rpubs.com/lcollado/illussion2015&#34; target=&#34;_blank&#34;&gt;mine&lt;/a&gt;). I know that not everyone is a fan of RPubs, but I imagined that students would get super excited that they made something that they could then show their colleagues and friends. And some did!&lt;/p&gt;
+
+&lt;p&gt;Sadly, we didn&amp;rsquo;t have enough time for the second lab. I did explain to the students what it was about, but they didn&amp;rsquo;t have time to do it themselves. For this second document, I wanted the students to learn how to create a document reporting some results where all the numbers in the text are written by &lt;code&gt;R&lt;/code&gt; instead of copy-pasting them.&lt;/p&gt;
+
+&lt;h2 id=&#34;conclusions&#34;&gt;Conclusions&lt;/h2&gt;
+
+&lt;p&gt;As you can see, I enjoyed thinking what to teach and specially how to teach a short topic to beginner &lt;code&gt;R&lt;/code&gt; students. Thanks to having one of the later sessions, I could teach them how to use &lt;code&gt;rmarkdown&lt;/code&gt; in a way that hopefully left them highly motivated to do it themselves. I hope that most of them will take that they learned in that module and others and apply them in their day to day work.&lt;/p&gt;
+
+&lt;h3 id=&#34;references&#34;&gt;References&lt;/h3&gt;
+
+&lt;p&gt;You can find the lecture itself &lt;a href=&#34;http://www.aejaffe.com/summerR_2015/modules/module12.html&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt; but like I said earlier, it was designed for class and not for being used as a reference. However, the &lt;a href=&#34;http://www.aejaffe.com/summerR_2015/labs/module12_lab.R&#34; target=&#34;_blank&#34;&gt;lab&lt;/a&gt; and it&amp;rsquo;s &lt;a href=&#34;http://www.aejaffe.com/summerR_2015/labs/mapping_module_labkey.R&#34; target=&#34;_blank&#34;&gt;key&lt;/a&gt; might be more useful.&lt;/p&gt;
+
+&lt;p&gt;Citations made with &lt;code&gt;knitcitations&lt;/code&gt; &lt;a id=&#39;cite-knitcitations&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;http://CRAN.R-project.org/package=knitcitations&#39;&gt;Boettiger, 2015&lt;/a&gt;).&lt;/p&gt;
+
+&lt;p&gt;&lt;a id=&#39;bib-rmarkdown&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-rmarkdown&#34;&gt;[1]&lt;/a&gt;&lt;cite&gt;
+J. Allaire, J. Cheng, Y. Xie, J. McPherson, et al.
+&lt;em&gt;rmarkdown: Dynamic Documents for R&lt;/em&gt;.
+R package version 0.7.
+2015.
+URL: &lt;a href=&#34;http://CRAN.R-project.org/package=rmarkdown&#34;&gt;http://CRAN.R-project.org/package=rmarkdown&lt;/a&gt;.&lt;/cite&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a id=&#39;bib-knitcitations&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-knitcitations&#34;&gt;[2]&lt;/a&gt;&lt;cite&gt;
+C. Boettiger.
+&lt;em&gt;knitcitations: Citations for Knitr Markdown Files&lt;/em&gt;.
+R package version 1.0.6.
+2015.
+URL: &lt;a href=&#34;http://CRAN.R-project.org/package=knitcitations&#34;&gt;http://CRAN.R-project.org/package=knitcitations&lt;/a&gt;.&lt;/cite&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;want-more&#34;&gt;Want more?&lt;/h3&gt;
+
+&lt;p&gt;Check other &lt;a href=&#34;https://twitter.com/jhubiostat&#34; target=&#34;_blank&#34;&gt;@jhubiostat&lt;/a&gt; student blogs at &lt;a href=&#34;http://bmorebiostat.com/&#34; target=&#34;_blank&#34;&gt;Bmore Biostats&lt;/a&gt; as well as topics on &lt;a href=&#34;https://twitter.com/search?q=%23rstats&#34; target=&#34;_blank&#34;&gt;#rstats&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Use hidden advanced arguments for user-friendly functions</title>
+      <link>http://lcolladotor.github.io/2014/12/11/Use-hidden-advanced-arguments-for-user-friendly-functions</link>
+      <pubDate>Thu, 11 Dec 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://lcolladotor.github.io/2014/12/11/Use-hidden-advanced-arguments-for-user-friendly-functions</guid>
+      <description>
+
+&lt;h2 id=&#34;as-a-user&#34;&gt;As a user&lt;/h2&gt;
+
+&lt;p&gt;Imagine that you are starting to learn how to use a specific &lt;code&gt;R&lt;/code&gt; package, lets call it &lt;code&gt;foo&lt;/code&gt;. You will look at the vignette (if there is one), use &lt;code&gt;help(package = foo)&lt;/code&gt;, or look at the reference manual (for example, &lt;a href=&#34;http://cran.r-project.org/web/packages/devtools/devtools.pdf&#34; target=&#34;_blank&#34;&gt;devtools&amp;rsquo; ref man&lt;/a&gt;). Eventually, you will open the help page for the function(s) you are interested in using.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;?function_I_want_to_use
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;In many packages, there is a main use case that is addressed by the package. A common strategy is to export a main function. That function will likely have a long list of arguments. So as a new user, you are suddenly exposed to a complicated help page and you will want to figure out which arguments you need to use.&lt;/p&gt;
+
+&lt;h2 id=&#34;as-a-developer&#34;&gt;As a developer&lt;/h2&gt;
+
+&lt;p&gt;From the developer&amp;rsquo;s side, you want to give users control over several details. Each detail you want the user to control involves one more argument in your function. Sooner rather than later, you will have a long list of arguments. This increases the learning curve for new users of your package, and can potentially scare them away. That is contradictory of another goal you have as a developer: you want to get people to use your package.&lt;/p&gt;
+
+&lt;p&gt;Lets say that you are developing the function &lt;code&gt;use_me()&lt;/code&gt;. If the details you want the users to control are actually arguments of other functions used inside &lt;code&gt;use_me()&lt;/code&gt;, then you can simplify your function by using the &lt;code&gt;...&lt;/code&gt; argument. This argument is very well explained at &lt;a href=&#34;http://www.burns-stat.com/the-three-dots-construct-in-r/&#34; target=&#34;_blank&#34;&gt;The three-dots construct in R&lt;/a&gt; &lt;a id=&#39;cite-greycite20763&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;http://www.burns-stat.com/the-three-dots-construct-in-r/&#39;&gt;Burns, 2013&lt;/a&gt;). It is very useful and can greatly simplify your life as a developer. Plus, it reduces the length of your help pages, thus making your package more user friendly.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://lcolladotor.github.io/figs/2014-12-11-dots/unnamed-chunk-2-1.png&#34; alt=&#34;center&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;However, if some of the details in &lt;code&gt;use_me()&lt;/code&gt; are not arguments to other functions, then the common strategy is to write two functions. One is a low level function with arguments for all the details which might or might not export. Then, you write a second function that is a wrapper for the low level function and pre-specifies values for all the details. See the next minimal example:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;# Don&#39;t export this function
+.use_me &amp;lt;- function(arg1, arg2, verbose = TRUE) {
+    if(verbose) message(paste(Sys.time(), &#39;working&#39;))
+    pmax(arg1, arg2)
+}
+
+#&#39; @export
+use_me &amp;lt;- function(arg1, ...) {
+    .use_me(arg1, 0, ...)
+}
+
+## Lets see it in action
+use_me(1:3)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## 2014-12-11 17:03:32 working
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## [1] 1 2 3
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;use_me(-1:1, verbose = FALSE)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## [1] 0 0 1
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;In this example, the help page for &lt;code&gt;use_me()&lt;/code&gt; is fairly short and friendly. You don&amp;rsquo;t expect users to be interested in changing &lt;code&gt;arg2&lt;/code&gt; much. Surely you could make it so the non-exported function &lt;code&gt;.use_me()&lt;/code&gt; sets a default value for &lt;code&gt;arg2&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Another strategy is to specify inside &lt;code&gt;use_me()&lt;/code&gt; the default values for all the arguments you want to use while keeping the list of visible arguments short. That is, maintain the user friendliness of your functions while also giving them control over all the details. That is what you can do using &lt;code&gt;dots()&lt;/code&gt; from &lt;code&gt;dots&lt;/code&gt; &lt;a id=&#39;cite-dots&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://github.com/lcolladotor/dots&#39;&gt;Collado-Torres, 2014&lt;/a&gt;). &lt;code&gt;dots()&lt;/code&gt; is a very simple function that checks if &lt;code&gt;...&lt;/code&gt; has a specific argument, and if absent, it returns a default value. It can be seen in action below:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;library(&#39;dots&#39;)
+use_me_dots &amp;lt;- function(arg1, ...) {
+    ## Default hidden arguments
+    arg2 &amp;lt;- dots(name = &#39;arg2&#39;, value = 0, ...)
+    verbose &amp;lt;- dots(&#39;verbose&#39;, TRUE, ...)
+    
+    ## Regular code
+    if(verbose) message(paste(Sys.time(), &#39;working&#39;))
+    pmax(arg1, arg2)
+}
+use_me_dots(1:3)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## 2014-12-11 17:03:32 working
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## [1] 1 2 3
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;use_me_dots(-1:1, verbose = FALSE)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## [1] 0 0 1
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;use_me_dots(-1:1, verbose = FALSE, arg2 = 5)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## [1] 5 5 5
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;code&gt;dots&lt;/code&gt; is my solution to the problem of keeping functions user friendly while giving them control over all the details. The idea is that experienced users will be able to find what the advanced arguments are. While they could find them from the code itself, I do recommend describing the advanced arguments in a vignette targeted for these users.&lt;/p&gt;
+
+&lt;h2 id=&#34;complications&#34;&gt;Complications&lt;/h2&gt;
+
+&lt;p&gt;Now, while &lt;code&gt;...&lt;/code&gt; is great, you might run into problems when &lt;code&gt;use_me()&lt;/code&gt; calls two functions that have different arguments and that don&amp;rsquo;t have the &lt;code&gt;...&lt;/code&gt; argument. Such a scenario is illustrated below.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;status &amp;lt;- function(arg3, status = TRUE) {
+    if(status) print(arg3)
+    return(invisible(NULL))
+}
+use_me_again &amp;lt;- function(arg1, ...) {
+    res &amp;lt;- .use_me(arg1, 0, ...)
+    status(res, ...)
+    return(res)
+}
+
+## Seems to work
+x &amp;lt;- use_me_again(1)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## 2014-12-11 17:03:32 working
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## [1] 1
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;## But nope, it doesn&#39;t
+use_me_again(1, verbose = FALSE, status = FALSE)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## Error in .use_me(arg1, 0, ...): unused argument (status = FALSE)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This scenario can happen when you are using functions from other packages. It&amp;rsquo;s happened to me in cases where the main function does have a &lt;code&gt;...&lt;/code&gt; argument but uses several internal functions that don&amp;rsquo;t use it.&lt;/p&gt;
+
+&lt;p&gt;In such situations, you might want to use &lt;code&gt;formal_call()&lt;/code&gt; from &lt;code&gt;dots&lt;/code&gt;. It figures out which are the arguments formally used by the function of interest and drops out un-used arguments from &lt;code&gt;...&lt;/code&gt;, thus avoiding this type of problem.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;use_me_fixed &amp;lt;- function(arg1, ...) {
+    res &amp;lt;- formalCall(.use_me, arg1 = arg1, arg2 = 0, ...)
+    formal_call(status, arg3 = res, ...)
+    return(res)
+}
+
+## Works now!
+use_me_fixed(1, verbose = FALSE, status = FALSE)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## [1] 1
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;For a more complicated example, see the &lt;a href=&#34;http://lcolladotor.github.io/dots/dots.html#Complex_example&#34; target=&#34;_blank&#34;&gt;dots complex example in the vignette&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;conclusions&#34;&gt;Conclusions&lt;/h2&gt;
+
+&lt;p&gt;As a developer, it is possible to keep your functions user friendly while giving experienced users the option to control the fine tuning arguments which you don&amp;rsquo;t expect most users will want to tweak. My solution to this problem is implemented in &lt;a href=&#34;https://github.com/lcolladotor/dots&#34; target=&#34;_blank&#34;&gt;dots&lt;/a&gt; (check it&amp;rsquo;s &lt;a href=&#34;http://lcolladotor.github.io/dots/&#34; target=&#34;_blank&#34;&gt;vignette&lt;/a&gt;). I&amp;rsquo;d love to hear what you think about it! I am specially interested on what users think about the idea of hidden advanced arguments (documented in an advanced users vignette).&lt;/p&gt;
+
+&lt;p&gt;I might try to get &lt;code&gt;dots&lt;/code&gt; into a repository: probably in &lt;a href=&#34;http://www.bioconductor.org/&#34; target=&#34;_blank&#34;&gt;Bioconductor&lt;/a&gt; since most of the &lt;code&gt;dots&lt;/code&gt; code was first implemented for &lt;a href=&#34;http://www.bioconductor.org/packages/release/bioc/html/derfinder.html&#34; target=&#34;_blank&#34;&gt;derfinder&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;PS I just found a similar function to &lt;code&gt;dots()&lt;/code&gt;. It&amp;rsquo;s &lt;code&gt;berryFunctions::owa()&lt;/code&gt; and you can find its &lt;a href=&#34;https://github.com/BerryBoessenkool/berryFunctions/blob/master/R/owa.r&#34; target=&#34;_blank&#34;&gt;code here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&#34;references&#34;&gt;References&lt;/h3&gt;
+
+&lt;p&gt;Citations made with &lt;code&gt;knitcitations&lt;/code&gt; &lt;a id=&#39;cite-knitcitations&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://github.com/cboettig/knitcitations&#39;&gt;Boettiger, 2014&lt;/a&gt;).&lt;/p&gt;
+
+&lt;p&gt;&lt;a id=&#39;bib-knitcitations&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-knitcitations&#34;&gt;[1]&lt;/a&gt;&lt;cite&gt;
+C. Boettiger.
+&lt;em&gt;knitcitations: Citations for knitr markdown files&lt;/em&gt;.
+R package version 1.0.4.
+2014.
+URL: &lt;a href=&#34;https://github.com/cboettig/knitcitations&#34;&gt;https://github.com/cboettig/knitcitations&lt;/a&gt;.&lt;/cite&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a id=&#39;bib-greycite20763&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-greycite20763&#34;&gt;[2]&lt;/a&gt;&lt;cite&gt;
+P. Burns.
+&lt;em&gt;The three-dots construct in R - Burns Statistics&lt;/em&gt;.
+&lt;a href=&#34;http://www.burns-stat.com/the-three-dots-construct-in-r/&#34;&gt;http://www.burns-stat.com/the-three-dots-construct-in-r/&lt;/a&gt;.
+2013.
+URL: &lt;a href=&#34;http://www.burns-stat.com/the-three-dots-construct-in-r/&#34;&gt;http://www.burns-stat.com/the-three-dots-construct-in-r/&lt;/a&gt;.&lt;/cite&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a id=&#39;bib-dots&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-dots&#34;&gt;[3]&lt;/a&gt;&lt;cite&gt;
+L. Collado-Torres.
+&lt;em&gt;dots: Simplifying function calls&lt;/em&gt;.
+R package version 1.0.0.
+2014.
+URL: &lt;a href=&#34;https://github.com/lcolladotor/dots&#34;&gt;https://github.com/lcolladotor/dots&lt;/a&gt;.&lt;/cite&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;reproducibility&#34;&gt;Reproducibility&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;## Reproducibility info
+library(&#39;devtools&#39;)
+options(width = 120)
+session_info()
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## Session info-----------------------------------------------------------------------------------------------------------
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;##  setting  value                                             
+##  version  R Under development (unstable) (2014-11-01 r66923)
+##  system   x86_64, darwin10.8.0                              
+##  ui       X11                                               
+##  language (EN)                                              
+##  collate  en_US.UTF-8                                       
+##  tz       America/New_York
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## Packages---------------------------------------------------------------------------------------------------------------
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;##  package       * version  date       source                                 
+##  bibtex          0.3.6    2013-07-29 CRAN (R 3.2.0)                         
+##  devtools      * 1.6.1    2014-10-07 CRAN (R 3.2.0)                         
+##  digest          0.6.4    2013-12-03 CRAN (R 3.2.0)                         
+##  dots          * 1.0.0    2014-11-14 Github (lcolladotor/dots@a933540)      
+##  evaluate        0.5.5    2014-04-29 CRAN (R 3.2.0)                         
+##  formatR         1.0      2014-08-25 CRAN (R 3.2.0)                         
+##  httr            0.5      2014-09-02 CRAN (R 3.2.0)                         
+##  knitcitations * 1.0.4    2014-11-03 Github (cboettig/knitcitations@508de74)
+##  knitr         * 1.7      2014-10-13 CRAN (R 3.2.0)                         
+##  lubridate       1.3.3    2013-12-31 CRAN (R 3.2.0)                         
+##  memoise         0.2.1    2014-04-22 CRAN (R 3.2.0)                         
+##  plyr            1.8.1    2014-02-26 CRAN (R 3.2.0)                         
+##  RColorBrewer  * 1.0.5    2011-06-17 CRAN (R 3.2.0)                         
+##  Rcpp            0.11.3   2014-09-29 CRAN (R 3.2.0)                         
+##  RCurl           1.95.4.3 2014-07-29 CRAN (R 3.2.0)                         
+##  RefManageR      0.8.40   2014-10-29 CRAN (R 3.2.0)                         
+##  RJSONIO         1.3.0    2014-07-28 CRAN (R 3.2.0)                         
+##  rstudioapi      0.1      2014-03-27 CRAN (R 3.2.0)                         
+##  stringr         0.6.2    2012-12-06 CRAN (R 3.2.0)                         
+##  XML             3.98.1.1 2013-06-20 CRAN (R 3.2.0)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;want-more&#34;&gt;Want more?&lt;/h3&gt;
+
+&lt;p&gt;Check other &lt;a href=&#34;https://twitter.com/jhubiostat&#34; target=&#34;_blank&#34;&gt;@jhubiostat&lt;/a&gt; student blogs at &lt;a href=&#34;http://bmorebiostat.com/&#34; target=&#34;_blank&#34;&gt;Bmore Biostats&lt;/a&gt; as well as topics on &lt;a href=&#34;https://twitter.com/search?q=%23rstats&#34; target=&#34;_blank&#34;&gt;#rstats&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;I wrote &lt;code&gt;dots&lt;/code&gt; a month ago and the post itself today during our bi-weekly blog meeting.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Automatically coloring your R output in the terminal using colorout</title>
+      <link>http://lcolladotor.github.io/2014/02/17/Automatically-coloring-your-R-output-in-the-terminal-using-colorout</link>
+      <pubDate>Mon, 17 Feb 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://lcolladotor.github.io/2014/02/17/Automatically-coloring-your-R-output-in-the-terminal-using-colorout</guid>
+      <description>
+
+&lt;p&gt;Thanks to Alyssa Frazee I just learned about the &lt;code&gt;colorout&lt;/code&gt; package (&lt;span class=&#34;showtooltip&#34; title=&#34;Aquino J (2013). colorout: Colorize R output on terminal emulators. R package version 1.0-2.&#34;&gt;&lt;a href=&#34;http://www.lepem.ufc.br/jaa/colorout.html&#34;&gt;Aquino, 2013&lt;/a&gt;&lt;/span&gt;). It modifies &lt;code&gt;R&lt;/code&gt; so that the output is in different colors, making it much more pleasant to use &lt;code&gt;R&lt;/code&gt; in the terminal.&lt;/p&gt;
+
+&lt;p&gt;Do note that &lt;code&gt;colorout&lt;/code&gt; is not available from CRAN, but you can easily install by following the instructions on the &lt;code&gt;colorout&lt;/code&gt; site (&lt;span class=&#34;showtooltip&#34; title=&#34;(2014). &#39;colorout.&#39; .&#34;&gt;&lt;a href=&#34;http://www.lepem.ufc.br/jaa/colorout.html&#34;&gt;Official site&lt;/a&gt;&lt;/span&gt;) reproduced below:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;download.file(&amp;quot;http://www.lepem.ufc.br/jaa/colorout_1.0-2.tar.gz&amp;quot;, destfile = &amp;quot;colorout_1.0-2.tar.gz&amp;quot;)
+install.packages(&amp;quot;colorout_1.0-2.tar.gz&amp;quot;, type = &amp;quot;source&amp;quot;, repos = NULL)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The next step is to then load &lt;code&gt;colorout&lt;/code&gt; automatically when I start &lt;code&gt;R&lt;/code&gt;. The problem is that I don&amp;rsquo;t use &lt;code&gt;R&lt;/code&gt; solely on the terminal. I easily figured out how to do so thanks to the error message you get when attempting to load &lt;code&gt;colorout&lt;/code&gt; on the R GUI. I thus ended up adding the following lines to my &lt;code&gt;.Rprofile&lt;/code&gt; (both locally and in the cluster):&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;## Change colors when running R in the terminal
+if (Sys.getenv(&amp;quot;TERM&amp;quot;) == &amp;quot;xterm-256color&amp;quot;) library(&amp;quot;colorout&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now I have pretty &lt;code&gt;R&lt;/code&gt; output in the terminal! Thanks again Alyssa! See her original tweet below:&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34; lang=&#34;en&#34;&gt;&lt;p&gt;problem: R output in Terminal isn&amp;#39;t colorful. SOLUTION: &lt;a href=&#34;http://t.co/Vd6OoRoUU5&#34;&gt;http://t.co/Vd6OoRoUU5&lt;/a&gt;&lt;/p&gt;&amp;mdash; Alyssa Frazee (@acfrazee) &lt;a href=&#34;https://twitter.com/acfrazee/statuses/435517664975269888&#34;&gt;February 17, 2014&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;//platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;colorout&lt;/code&gt; has been around for a while and was even at CRAN for some time. I guess that I&amp;rsquo;m just late to the party.&lt;/p&gt;
+
+&lt;p&gt;If the default &lt;code&gt;colorout&lt;/code&gt; colors don&amp;rsquo;t work for you, check functions such as &lt;code&gt;setOutputColors256&lt;/code&gt;. This &lt;a href=&#34;http://musicallyut.blogspot.com/2012/07/colors-in-r-console.html&#34; target=&#34;_blank&#34;&gt;post&lt;/a&gt; shows how you can do it and includes screenshots of the output. Other package details are included &lt;a href=&#34;http://www.inside-r.org/packages/cran/colorout&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt; and &lt;a href=&#34;http://thr3ads.net/r-help/2011/11/1629717-New-package-colorout-to-colorize-R-output-on-terminal-emulators&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&#34;references&#34;&gt;References&lt;/h3&gt;
+
+&lt;p&gt;Citations made with &lt;code&gt;knitcitations&lt;/code&gt; (&lt;span class=&#34;showtooltip&#34; title=&#34;Boettiger C (2014). knitcitations: Citations for knitr markdown files. R package version 0.5-0.&#34;&gt;&lt;a href=&#34;http://CRAN.R-project.org/package=knitcitations&#34;&gt;Boettiger, 2014&lt;/a&gt;&lt;/span&gt;).&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Jakson Aquino,   (2013) colorout: Colorize R output on terminal emulators.  &lt;a href=&#34;http://www.lepem.ufc.br/jaa/colorout.html&#34; target=&#34;_blank&#34;&gt;http://www.lepem.ufc.br/jaa/colorout.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;colorout.  &lt;a href=&#34;http://www.lepem.ufc.br/jaa/colorout.html&#34; target=&#34;_blank&#34;&gt;http://www.lepem.ufc.br/jaa/colorout.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Carl Boettiger,   (2014) knitcitations: Citations for knitr markdown files.  &lt;a href=&#34;http://CRAN.R-project.org/package=knitcitations&#34; target=&#34;_blank&#34;&gt;http://CRAN.R-project.org/package=knitcitations&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;reproducibility&#34;&gt;Reproducibility&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;sessionInfo()
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## R version 3.0.2 (2013-09-25)
+## Platform: x86_64-apple-darwin10.8.0 (64-bit)
+## 
+## locale:
+## [1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8
+## 
+## attached base packages:
+## [1] stats     graphics  grDevices utils     datasets  methods   base     
+## 
+## other attached packages:
+## [1] knitcitations_0.5-0 bibtex_0.3-6        knitr_1.5          
+## 
+## loaded via a namespace (and not attached):
+##  [1] codetools_0.2-8 digest_0.6.4    evaluate_0.5.1  formatR_0.10   
+##  [5] httr_0.2        RCurl_1.95-4.1  stringr_0.6.2   tools_3.0.2    
+##  [9] XML_3.95-0.2    xtable_1.7-1
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Check other topics on &lt;a href=&#34;https://twitter.com/search?q=%23rstats&#34; target=&#34;_blank&#34;&gt;#rstats&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>rMaps released</title>
+      <link>http://lcolladotor.github.io/2014/02/10/rMaps-released</link>
+      <pubDate>Mon, 10 Feb 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://lcolladotor.github.io/2014/02/10/rMaps-released</guid>
+      <description>
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/ramnathv&#34; target=&#34;_blank&#34;&gt;Ramnath Vaidyanathan&lt;/a&gt; just released his new &lt;code&gt;R&lt;/code&gt; interactive package, &lt;code&gt;rMaps&lt;/code&gt; (&lt;span class=&#34;showtooltip&#34; title=&#34;Vaidyanathan R (2014). rMaps: Interactive Maps from R. R package version 0.1.&#34;&gt;&lt;a href=&#34;&#34;&gt;Vaidyanathan, 2014&lt;/a&gt;&lt;/span&gt;). The packages relies on the development version of his widely known &lt;code&gt;rCharts&lt;/code&gt; package (&lt;span class=&#34;showtooltip&#34; title=&#34;Vaidyanathan R (2013). rCharts: Interactive Charts using Polycharts.js. R package version 0.4.2.&#34;&gt;&lt;a href=&#34;&#34;&gt;Vaidyanathan, 2013&lt;/a&gt;&lt;/span&gt;) as well as javascript libraries that specialize in maps. If you don&amp;rsquo;t know Ramnath, he is one of the most active &lt;code&gt;R&lt;/code&gt; developers out there!! You can see that from his &lt;a href=&#34;https://github.com/ramnathv&#34; target=&#34;_blank&#34;&gt;GitHub profile&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;The package is very new and still under development, but I bet that Ramnath released it to get us users excited and maybe find some helpful hands to document it and further develop it.&lt;/p&gt;
+
+&lt;p&gt;I don&amp;rsquo;t know about you, but I surely got excited about the package from his intro video:&lt;/p&gt;
+
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;//www.youtube.com/embed/sSbb3PyaSu8&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;It&amp;rsquo;s a simple screen cast with good music.&lt;/p&gt;
+
+&lt;p&gt;In the &lt;a href=&#34;https://github.com/ramnathv/rMaps&#34; target=&#34;_blank&#34;&gt;GitHub rMaps&lt;/a&gt; repository you can find the simple installation instructions as well as three different examples. They all work if you run them in the latest version of &lt;a href=&#34;http://www.rstudio.com/&#34; target=&#34;_blank&#34;&gt;RStudio&lt;/a&gt; otherwise you might run into a couple minor hiccups like &lt;a href=&#34;https://github.com/ramnathv/rMaps/issues/1&#34; target=&#34;_blank&#34;&gt;I did&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Just to get you excited, this is the third example where you can easily add markers with pop ups.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;suppressMessages(library(&amp;quot;rMaps&amp;quot;))
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;map &amp;lt;- Leaflet$new()
+map$setView(c(51.505, -0.09), zoom = 13)
+map$tileLayer(provider = &amp;quot;Stamen.Watercolor&amp;quot;)
+map$marker(c(51.5, -0.09), bindPopup = &amp;quot;Hi. I am a popup&amp;quot;)
+map
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;center&gt;
+&lt;a href=&#34;http://lcolladotor.github.io/figs/2014-02-10-rMaps-released/example3.png&#34;&gt;&lt;img src=&#34;http://lcolladotor.github.io/figs/2014-02-10-rMaps-released/example3.png&#34; alt=&#34;Workflow&#34; style=&#34;width: 808px;&#34;/&gt;&lt;/a&gt;
+&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;You can view the interactive version of the example &lt;a href=&#34;http://www.biostat.jhsph.edu/~lcollado/misc/rMaps/file5d8743376948.html&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt; &amp;ndash; I&amp;rsquo;m sure that a feature will be added later to make it easy to share the maps you make.&lt;/p&gt;
+
+&lt;p&gt;Overall, I think that this is a great start and I look forward to using it. For now, don&amp;rsquo;t be discouraged with the lack of documentation. I&amp;rsquo;m sure that if you &lt;a href=&#34;https://github.com/ramnathv/rMaps/issues&#34; target=&#34;_blank&#34;&gt;ask nicely&lt;/a&gt; Ramnath will answer asap!&lt;/p&gt;
+
+&lt;h3 id=&#34;references&#34;&gt;References&lt;/h3&gt;
+
+&lt;p&gt;Citations made with &lt;code&gt;knitcitations&lt;/code&gt; (&lt;span class=&#34;showtooltip&#34; title=&#34;Boettiger C (2014). knitcitations: Citations for knitr markdown files. R package version 0.5-0.&#34;&gt;&lt;a href=&#34;http://CRAN.R-project.org/package=knitcitations&#34;&gt;Boettiger, 2014&lt;/a&gt;&lt;/span&gt;).&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Carl Boettiger,   (2014) knitcitations: Citations for knitr markdown files.  &lt;a href=&#34;http://CRAN.R-project.org/package=knitcitations&#34; target=&#34;_blank&#34;&gt;http://CRAN.R-project.org/package=knitcitations&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Ramnath Vaidyanathan,   (2013) rCharts: Interactive Charts using Polycharts.js.&lt;/li&gt;
+&lt;li&gt;Ramnath Vaidyanathan,   (2014) rMaps: Interactive Maps from R.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;reproducibility&#34;&gt;Reproducibility&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;sessionInfo()
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## R version 3.0.2 (2013-09-25)
+## Platform: x86_64-apple-darwin10.8.0 (64-bit)
+## 
+## locale:
+## [1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8
+## 
+## attached base packages:
+## [1] stats     graphics  grDevices utils     datasets  methods   base     
+## 
+## other attached packages:
+## [1] rMaps_0.1           knitcitations_0.5-0 bibtex_0.3-6       
+## [4] knitr_1.5          
+## 
+## loaded via a namespace (and not attached):
+##  [1] codetools_0.2-8    digest_0.6.4       evaluate_0.5.1    
+##  [4] formatR_0.10       grid_3.0.2         httr_0.2          
+##  [7] lattice_0.20-24    plyr_1.8           rCharts_0.4.2     
+## [10] RColorBrewer_1.0-5 RCurl_1.95-4.1     RJSONIO_1.0-3     
+## [13] stringr_0.6.2      tools_3.0.2        whisker_0.3-2     
+## [16] XML_3.95-0.2       xtable_1.7-1       yaml_2.1.10
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Check other topics on &lt;a href=&#34;https://twitter.com/search?q=%23rstats&#34; target=&#34;_blank&#34;&gt;#rstats&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>How to upload files to Dropbox and Google Docs from R</title>
+      <link>http://lcolladotor.github.io/2014/02/05/How-to-upload-files-to-Dropbox-and-Google-Docs-from-R</link>
+      <pubDate>Wed, 05 Feb 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://lcolladotor.github.io/2014/02/05/How-to-upload-files-to-Dropbox-and-Google-Docs-from-R</guid>
+      <description>
+
+&lt;p&gt;Have you ever wondered whether you can upload files from &lt;code&gt;R&lt;/code&gt; to &lt;a href=&#34;https://www.dropbox.com/&#34; target=&#34;_blank&#34;&gt;Dropbox&lt;/a&gt; and/or &lt;a href=&#34;docs.google.com&#34; target=&#34;_blank&#34;&gt;Google Docs&lt;/a&gt;? I recently asked myself this question while making my most recent &lt;a href=&#34;http://www.rstudio.com/shiny/&#34; target=&#34;_blank&#34;&gt;Shiny&lt;/a&gt; app (more later).&lt;/p&gt;
+
+&lt;p&gt;The answer is yes, you can upload files from &lt;code&gt;R&lt;/code&gt; to these cloud services!&lt;/p&gt;
+
+&lt;h2 id=&#34;dropbox&#34;&gt;Dropbox&lt;/h2&gt;
+
+&lt;p&gt;As far as I know, the best &lt;code&gt;R&lt;/code&gt; package for uploading files to Dropbox is &lt;code&gt;rDrop&lt;/code&gt; (&lt;span class=&#34;showtooltip&#34; title=&#34;Ram K and Temple Lang D (2012). rDrop: Dropbox R interface.. R package version 0.3-0.&#34;&gt;&lt;a href=&#34;http://github.com/karthikram/rDrop&#34;&gt;Ram &amp;amp; Temple Lang, 2012&lt;/a&gt;&lt;/span&gt;). The whole setup is very well explained in it&amp;rsquo;s GitHub repository (&lt;span class=&#34;showtooltip&#34; title=&#34;karthik (2014). &#39;karthik/rDrop.&#39; .&#34;&gt;&lt;a href=&#34;https://github.com/karthik/rDrop&#34;&gt;Karthik&lt;/a&gt;&lt;/span&gt;). Basically you have to:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Install the package and it&amp;rsquo;s dependencies (some are only on GitHub).&lt;/li&gt;
+&lt;li&gt;Create a Dropbox app in your account.&lt;/li&gt;
+&lt;li&gt;Get the credentials info.&lt;/li&gt;
+&lt;li&gt;Authorize your access to the Dropbox app from &lt;code&gt;R&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Save that info for later use.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;dropbox-save&#34;&gt;dropbox_save()&lt;/h3&gt;
+
+&lt;p&gt;Then uploading any type of &lt;code&gt;R&lt;/code&gt; object to Dropbox becomes as easy as using the &lt;code&gt;dropbox_save()&lt;/code&gt; function.&lt;/p&gt;
+
+&lt;p&gt;For example, lets save a simple vector with random data.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;suppressMessages(library(&amp;quot;rDrop&amp;quot;))
+
+## Define credentials or load them if you defined them already
+## dropbox_credentials &amp;lt;- dropbox_auth(&#39;Your app key&#39;, &#39;Your app secret&#39;)
+load(&amp;quot;dropbox_credentials.Rdata&amp;quot;)
+
+## Lets create some random data
+set.seed(20140205)
+x &amp;lt;- rnorm(1000)
+
+## Lets check the args of the uploading function
+args(dropbox_save)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## function (cred, ..., list = character(), file = stop(&amp;quot;&#39;file&#39; must be specified&amp;quot;), 
+##     envir = parent.frame(), precheck = TRUE, verbose = FALSE, 
+##     curl = getCurlHandle(), ext = &amp;quot;.rda&amp;quot;, .opts = list()) 
+## NULL
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;
+## Then lets upload it to dropbox on the public folder
+done &amp;lt;- dropbox_save(dropbox_credentials, x, file = &amp;quot;public/x&amp;quot;)
+
+## The result has some information, like the path of where you upload the
+## file
+names(done)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;##  [1] &amp;quot;revision&amp;quot;     &amp;quot;rev&amp;quot;          &amp;quot;thumb_exists&amp;quot; &amp;quot;bytes&amp;quot;       
+##  [5] &amp;quot;modified&amp;quot;     &amp;quot;client_mtime&amp;quot; &amp;quot;path&amp;quot;         &amp;quot;is_dir&amp;quot;      
+##  [9] &amp;quot;icon&amp;quot;         &amp;quot;root&amp;quot;         &amp;quot;mime_type&amp;quot;    &amp;quot;size&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;done$path
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;/public/x.rda&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;You can now actually download the &amp;ldquo;x.rda&amp;rdquo; file from &lt;a href=&#34;https://dl.dropboxusercontent.com/u/261002456/x.rda&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;. That&amp;rsquo;s in case that you also wanted to share the file, and is obviously optional.&lt;/p&gt;
+
+&lt;p&gt;Note that you can get the link from withing &lt;code&gt;R&lt;/code&gt; and don&amp;rsquo;t even need to use the Dropbox site.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;dropbox_share(dropbox_credentials, file = &amp;quot;public/x.rda&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## $url
+## [1] &amp;quot;https://db.tt/xzf3huXf&amp;quot;
+## 
+## $expires
+## [1] &amp;quot;Tue, 01 Jan 2030 00:00:00 +0000&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;dropbox-put&#34;&gt;dropbox_put()&lt;/h3&gt;
+
+&lt;p&gt;What if you want to upload an actual file and not only &lt;code&gt;R&lt;/code&gt; objects? That&amp;rsquo;s where &lt;code&gt;dropbox_put()&lt;/code&gt; shines. Below is an example where we create an image, save it as a pdf file, and upload it to Dropbox.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;## Lets create a sample file, in this case a pdf file
+pdf(&amp;quot;dropboxFig.pdf&amp;quot;)
+hist(x, freq = FALSE, col = &amp;quot;light blue&amp;quot;)
+tmp &amp;lt;- dev.off()
+
+## Lets check the args for the uploading function
+args(dropbox_put)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## function (cred, what, filename = what, curl = getCurlHandle(), 
+##     ..., verbose = FALSE, contentType = &amp;quot;application/octet-stream&amp;quot;) 
+## NULL
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;
+## Now, lets upload the file
+done &amp;lt;- dropbox_put(dropbox_credentials, what = &amp;quot;dropboxFig.pdf&amp;quot;, filename = &amp;quot;public/dropboxFig.pdf&amp;quot;)
+
+## Again, the result contains some information about the file
+names(done)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;##  [1] &amp;quot;revision&amp;quot;     &amp;quot;rev&amp;quot;          &amp;quot;thumb_exists&amp;quot; &amp;quot;bytes&amp;quot;       
+##  [5] &amp;quot;modified&amp;quot;     &amp;quot;client_mtime&amp;quot; &amp;quot;path&amp;quot;         &amp;quot;is_dir&amp;quot;      
+##  [9] &amp;quot;icon&amp;quot;         &amp;quot;root&amp;quot;         &amp;quot;mime_type&amp;quot;    &amp;quot;size&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;You can view the result &lt;a href=&#34;https://dl.dropboxusercontent.com/u/261002456/dropboxFig.pdf&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;google-docs&#34;&gt;Google Docs&lt;/h2&gt;
+
+&lt;p&gt;From what I found, it seems to me that &lt;code&gt;RGoogleDocs&lt;/code&gt; (&lt;span class=&#34;showtooltip&#34; title=&#34;Lang DT (2014). RGoogleDocs: Primitive interface to Google Documents from R. R package version 0.7-0.&#34;&gt;&lt;a href=&#34;&#34;&gt;Temple Lang&lt;/a&gt;&lt;/span&gt;) is the package you&amp;rsquo;ll want to use for interacting with Google Docs from R. The manual (&lt;span class=&#34;showtooltip&#34; title=&#34;(2014). &#39;An simple R interface to Google Documents.&#39; .&#34;&gt;&lt;a href=&#34;http://www.omegahat.org/RGoogleDocs/run.html&#34;&gt;Temple Lang&lt;/a&gt;&lt;/span&gt;) explains all what you pretty much need to know. You should know though that you can only upload certain types of files.&lt;/p&gt;
+
+&lt;p&gt;For example, you can upload a text file as shown below.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;suppressMessages(library(&amp;quot;RGoogleDocs&amp;quot;))
+
+## Load password
+load(&amp;quot;gpasswd.Rdata&amp;quot;)
+
+## Something to write
+text &amp;lt;- &amp;quot;Hello world!\n&amp;quot;
+
+## Authentificate
+auth &amp;lt;- getGoogleAuth(&amp;quot;fellgernon@gmail.com&amp;quot;, gpasswd)
+
+## Connect to Google
+con &amp;lt;- getGoogleDocsConnection(auth)
+
+## Check the args for the uploading function
+args(uploadDoc)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## function (content, con, name, type = as.character(findType(content)), 
+##     binary = FALSE, asText = FALSE, folder = NULL, replace = TRUE, 
+##     ...) 
+## NULL
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;
+## Upload the file
+done &amp;lt;- uploadDoc(content = text, con = con, name = &amp;quot;testFile.txt&amp;quot;, type = &amp;quot;txt&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;You can view the file &lt;a href=&#34;https://docs.google.com/document/d/1QCInrPitTJrmXiyA6TlNuQIEhi344MQl1C3zqqoqAVY/edit?usp=sharing&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;conclusions&#34;&gt;Conclusions&lt;/h2&gt;
+
+&lt;p&gt;&lt;code&gt;rDrop&lt;/code&gt; (&lt;span class=&#34;showtooltip&#34; title=&#34;Ram K and Temple Lang D (2012). rDrop: Dropbox R interface.. R package version 0.3-0.&#34;&gt;&lt;a href=&#34;http://github.com/karthikram/rDrop&#34;&gt;Ram &amp;amp; Temple Lang, 2012&lt;/a&gt;&lt;/span&gt;) is very cool and easy to use. Compared to Google Docs, you have much greater flexibility on the type of files you can upload. I guess that will change in the future if there is a Google Drive from &lt;code&gt;R&lt;/code&gt; package.&lt;/p&gt;
+
+&lt;h3 id=&#34;references&#34;&gt;References&lt;/h3&gt;
+
+&lt;p&gt;Citations made with &lt;code&gt;knitcitations&lt;/code&gt; (&lt;span class=&#34;showtooltip&#34; title=&#34;Boettiger C (2014). knitcitations: Citations for knitr markdown files. R package version 0.5-0.&#34;&gt;&lt;a href=&#34;http://CRAN.R-project.org/package=knitcitations&#34;&gt;Boettiger, 2014&lt;/a&gt;&lt;/span&gt;).&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;karthik,  karthik/rDrop.  &lt;em&gt;GitHub&lt;/em&gt;  &lt;a href=&#34;https://github.com/karthik/rDrop&#34; target=&#34;_blank&#34;&gt;https://github.com/karthik/rDrop&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;An simple R interface to Google Documents.  &lt;a href=&#34;http://www.omegahat.org/RGoogleDocs/run.html&#34; target=&#34;_blank&#34;&gt;http://www.omegahat.org/RGoogleDocs/run.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Carl Boettiger,   (2014) knitcitations: Citations for knitr markdown files.  &lt;a href=&#34;http://CRAN.R-project.org/package=knitcitations&#34; target=&#34;_blank&#34;&gt;http://CRAN.R-project.org/package=knitcitations&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Karthik Ram, Duncan  Temple Lang,   (2012) rDrop: Dropbox R interface..  &lt;a href=&#34;http://github.com/karthikram/rDrop&#34; target=&#34;_blank&#34;&gt;http://github.com/karthikram/rDrop&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Duncan Lang,  RGoogleDocs: Primitive interface to Google Documents from R.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;reproducibility&#34;&gt;Reproducibility&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;sessionInfo()
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## R version 3.0.2 (2013-09-25)
+## Platform: x86_64-apple-darwin10.8.0 (64-bit)
+## 
+## locale:
+## [1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8
+## 
+## attached base packages:
+## [1] stats     graphics  grDevices utils     datasets  methods   base     
+## 
+## other attached packages:
+##  [1] RGoogleDocs_0.7-0   rDrop_0.3-0         stringr_0.6.2      
+##  [4] plyr_1.8            ROAuth_0.92.0       digest_0.6.4       
+##  [7] RCurl_1.95-4.1      bitops_1.0-6        RJSONIO_1.0-3      
+## [10] knitcitations_0.5-0 bibtex_0.3-6        knitr_1.5          
+## 
+## loaded via a namespace (and not attached):
+## [1] evaluate_0.5.1 formatR_0.10   httr_0.2       tools_3.0.2   
+## [5] XML_3.95-0.2   xtable_1.7-1
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Check other topics on &lt;a href=&#34;https://twitter.com/search?q=%23rstats&#34; target=&#34;_blank&#34;&gt;#rstats&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Creating awesome reports for multiple audiences using knitrBootstrap</title>
+      <link>http://lcolladotor.github.io/2013/12/10/Creating-awesome-reports-for-multiple-audiences-using-knitrBootstrap</link>
+      <pubDate>Tue, 10 Dec 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://lcolladotor.github.io/2013/12/10/Creating-awesome-reports-for-multiple-audiences-using-knitrBootstrap</guid>
+      <description>
+
+&lt;p&gt;As a biostatistics student, I use &lt;code&gt;R&lt;/code&gt; very frequently when analyzing data. At the same time, I interact with other researchers, some who know how to use &lt;code&gt;R&lt;/code&gt; (R crowd) and some who don&amp;rsquo;t (yet!): no-R crowd. This means that I have to be able to communicate my results to two crowds. It is important that I can quickly provide the code in case that the &lt;code&gt;R&lt;/code&gt; savvy want to look at it: maybe they find a bug and report it ^^. Ideally I want to avoid having to write (organize, share, etc) two crowd-specific reports.&lt;/p&gt;
+
+&lt;p&gt;A solution to this problem is to create reproducible reports that contain the R code, the results, and interpretation. For the specific scenario I am talking about, reproducibility is a plus, however I believe that it is important for research; albeit not the topic of this post. One of the strongest packages out there to create such reports is &lt;code&gt;knitr&lt;/code&gt; (&lt;span class=&#34;showtooltip&#34; title=&#34;Xie Y (2013). Dynamic Documents with R and knitr. Chapman and Hall/CRC. ISBN 978-1482203530.&#34;&gt;&lt;a href=&#34;http://yihui.name/knitr/&#34;&gt;Xie, 2013&lt;/a&gt;&lt;/span&gt;). It is specially easy to create &lt;code&gt;Rmd&lt;/code&gt; files from which you can generate HTML reports. Then using &lt;a href=&#34;http://www.rstudio.com/&#34; target=&#34;_blank&#34;&gt;RStudio&lt;/a&gt; you can share them via &lt;a href=&#34;http://rpubs.com/&#34; target=&#34;_blank&#34;&gt;RPubs&lt;/a&gt;, a private folder on Dropbox, etc. From example, &lt;a href=&#34;http://rpubs.com/lcollado/2618&#34; target=&#34;_blank&#34;&gt;this is a presentation&lt;/a&gt; without the slide formatting I shared more than a year ago.&lt;/p&gt;
+
+&lt;p&gt;Using &lt;code&gt;knitr&lt;/code&gt; (&lt;span class=&#34;showtooltip&#34; title=&#34;Xie Y (2013). Dynamic Documents with R and knitr. Chapman and Hall/CRC. ISBN 978-1482203530.&#34;&gt;&lt;a href=&#34;http://yihui.name/knitr/&#34;&gt;Xie, 2013&lt;/a&gt;&lt;/span&gt;) is definitely a step in the right direction. However, you soon find yourself desiring a better template. This is where &lt;code&gt;knitrBootstrap&lt;/code&gt; (&lt;span class=&#34;showtooltip&#34; title=&#34;Hester J (2013). knitrBootstrap: Knitr Bootstrap framework.. R package version 0.9.0.&#34;&gt;&lt;a href=&#34;http://CRAN.R-project.org/package=knitrBootstrap&#34;&gt;Hester, 2013&lt;/a&gt;&lt;/span&gt;) comes in. This package was initialized in March 20th, 2013 by &lt;a href=&#34;http://jimhester.com/&#34; target=&#34;_blank&#34;&gt;Jim Hester&lt;/a&gt; and hosted on it&amp;rsquo;s &lt;a href=&#34;https://github.com/jimhester/knitrBootstrap&#34; target=&#34;_blank&#34;&gt;GitHub repository&lt;/a&gt;. I was sold on the idea early on and I am now making this post in part as a tribute to celebrate that it has been available via &lt;a href=&#34;http://cran.at.r-project.org/web/packages/knitrBootstrap/index.html&#34; target=&#34;_blank&#34;&gt;CRAN&lt;/a&gt; for nearly 5 months now.&lt;/p&gt;
+
+&lt;p&gt;So what can you do with &lt;code&gt;knitrBootstrap&lt;/code&gt; (&lt;span class=&#34;showtooltip&#34; title=&#34;Hester J (2013). knitrBootstrap: Knitr Bootstrap framework.. R package version 0.9.0.&#34;&gt;&lt;a href=&#34;http://CRAN.R-project.org/package=knitrBootstrap&#34;&gt;Hester, 2013&lt;/a&gt;&lt;/span&gt;)? In my opinion, you get the ideal solution (or very close at the least) to the problem I described at the beginning. Basically, you get a HTML report that has the interpretation and results which is what the no-R crowd wants to read, and the R code easily available at the click of a button for the R crowd. In addition, the report is much more nicely formatted which is pleasant to the eye. Furthermore, a menu with the sections is included which is very useful when navigating the report and for jumping to specific sections. To save space, the plots are saved as thumbnails and you can click on them to get the full view. Finally, you can choose to display toggle menus for allowing the users to change the default text and code formatting.&lt;/p&gt;
+
+&lt;p&gt;How do you use this package? The main workhorse is the &lt;code&gt;knit_boostrap()&lt;/code&gt; function. The initial arguments are similar to those you find in &lt;code&gt;knitr::knit()&lt;/code&gt; while the new features are controlled using:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;boot_style&lt;/code&gt; You can select out of 11 or so options for the default formatting. Basically, you choose one of the Bootstrap themes available.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;code_style&lt;/code&gt; Similar to &lt;code&gt;boot_style&lt;/code&gt; but for controlling the appearance of the code chunks.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;chooser&lt;/code&gt; Allows you to control if you want a toggle menu so the user can choose (hence the name) the bootstrap and/or code styles.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;thumbsize&lt;/code&gt; For controlling the size of figure thumbnails.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;show_code&lt;/code&gt; Whether by default the code is shown. I set this to &lt;code&gt;FALSE&lt;/code&gt; in order to get a report that by default is accessible for the no-R crowd. The R crowd can then click to see the code for each code chunk or use the menu on the bottom to show all the code at once.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;show_output&lt;/code&gt; Similar to &lt;code&gt;show_code&lt;/code&gt; but for controlling the visibility of the output produced from the code. I set this to &lt;code&gt;TRUE&lt;/code&gt; as you normally want to show the output to both the no-R and R crowds.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;show_figure&lt;/code&gt; Whether you want to show the plots or not.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;graphics&lt;/code&gt; Used only for controlling the toggle menus for the bootstrap and code styles.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Once you have decided which options you want to use, it is as simple as running the following code for your &lt;code&gt;Rmd&lt;/code&gt; file (named &lt;code&gt;file.Rmd&lt;/code&gt; in the example):&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;## Install if needed
+install.packages(&amp;quot;knitrBootstrap&amp;quot;)
+
+## knit with knitrBootstrap
+library(&amp;quot;knitrBootstrap&amp;quot;)
+knit_bootstrap(&amp;quot;file.Rmd&amp;quot;, code_style = &amp;quot;Brown Paper&amp;quot;, chooser = c(&amp;quot;boot&amp;quot;, &amp;quot;code&amp;quot;), 
+    show_code = FALSE)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Things get a tiny bit more complicated if you want to use &lt;a href=&#34;http://www.rstudio.com/&#34; target=&#34;_blank&#34;&gt;RStudio&lt;/a&gt;. You basically have to modify your &lt;code&gt;.Rprofile&lt;/code&gt; file, then load RStudio and change the settings to weave files with &lt;code&gt;knitr&lt;/code&gt;instead of using &lt;code&gt;Sweave&lt;/code&gt;. Then, you have to use &lt;code&gt;knitr::render_html()&lt;/code&gt; on the &lt;code&gt;Rmd&lt;/code&gt; file itself. Below is a short example of the &lt;code&gt;.Rprofile&lt;/code&gt; modified to use &lt;code&gt;knitrBootstrap&lt;/code&gt; and the basic &lt;code&gt;Rmd&lt;/code&gt; example.&lt;/p&gt;
+
+&lt;script src=&#34;https://gist.github.com/lcolladotor/6445771.js&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;You can view the final output &lt;a href=&#34;http://rpubs.com/lcollado/11210&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;. Note that you might need to click on &amp;ldquo;hide toolbars&amp;rdquo; (a RPubs option) to clearly view the menus on the bottom.&lt;/p&gt;
+
+&lt;p&gt;If you are like me and use &lt;a href=&#34;https://github.com/textmate/textmate&#34; target=&#34;_blank&#34;&gt;Textmate&lt;/a&gt; as your text editor, you can knit the &lt;code&gt;Rmd&lt;/code&gt; files with &lt;code&gt;knitrBootstrap&lt;/code&gt; and preview them directly on the Textmate viewr using a command like this (modified from the SWeave bundle):&lt;/p&gt;
+
+&lt;script src=&#34;https://gist.github.com/lcolladotor/7884334.js&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;Other usage options are described in the &lt;a href=&#34;http://jimhester.github.io/knitrBootstrap&#34; target=&#34;_blank&#34;&gt;knitrBootstrap help page&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;To close off, let me emphasize how useful it is to be able to generate a single report that is pleasant to the eye, contains all the information, and is easily sharable for both the R and no-R crowds. Plus it&amp;rsquo;s reproducible!&lt;/p&gt;
+
+&lt;p&gt;I really like this package and would like to thank &lt;a href=&#34;http://jimhester.com/&#34; target=&#34;_blank&#34;&gt;Jim Hester&lt;/a&gt; for this great package! Keep up the good work! I even use &lt;code&gt;knitrBootstrap&lt;/code&gt; in &lt;a href=&#34;https://github.com/lcolladotor/derfinderReport&#34; target=&#34;_blank&#34;&gt;derfinderReport&lt;/a&gt; which generates reports on the results from &lt;a href=&#34;https://github.com/lcolladotor/derfinder&#34; target=&#34;_blank&#34;&gt;derfinder&lt;/a&gt;, a package that I am currently developing.&lt;/p&gt;
+
+&lt;h3 id=&#34;references&#34;&gt;References&lt;/h3&gt;
+
+&lt;p&gt;Citations made with &lt;code&gt;knitcitations&lt;/code&gt; (&lt;span class=&#34;showtooltip&#34; title=&#34;Boettiger C (2013). knitcitations: Citations for knitr markdown files. R package version 0.4-7.&#34;&gt;&lt;a href=&#34;http://CRAN.R-project.org/package=knitcitations&#34;&gt;Boettiger, 2013&lt;/a&gt;&lt;/span&gt;).&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Carl Boettiger,   (2013) knitcitations: Citations for knitr markdown files.  &lt;a href=&#34;http://CRAN.R-project.org/package=knitcitations&#34; target=&#34;_blank&#34;&gt;http://CRAN.R-project.org/package=knitcitations&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Yihui Xie,   (2013) Dynamic Documents with {R} and knitr.  &lt;a href=&#34;http://yihui.name/knitr/&#34; target=&#34;_blank&#34;&gt;http://yihui.name/knitr/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Jim Hester,   (2013) knitrBootstrap: Knitr Bootstrap framework..  &lt;a href=&#34;http://CRAN.R-project.org/package=knitrBootstrap&#34; target=&#34;_blank&#34;&gt;http://CRAN.R-project.org/package=knitrBootstrap&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;reproducibility&#34;&gt;Reproducibility&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;sessionInfo()
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## R version 3.0.2 (2013-09-25)
+## Platform: x86_64-apple-darwin10.8.0 (64-bit)
+## 
+## locale:
+## [1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8
+## 
+## attached base packages:
+## [1] stats     graphics  grDevices utils     datasets  methods   base     
+## 
+## other attached packages:
+## [1] knitrBootstrap_0.9.0 knitcitations_0.4-7  bibtex_0.3-6        
+## [4] knitr_1.5           
+## 
+## loaded via a namespace (and not attached):
+##  [1] codetools_0.2-8 digest_0.6.4    evaluate_0.5.1  formatR_0.10   
+##  [5] httr_0.2        markdown_0.6.3  RCurl_1.95-4.1  stringr_0.6.2  
+##  [9] tools_3.0.2     XML_3.95-0.2    xtable_1.7-1
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Check other topics on &lt;a href=&#34;https://twitter.com/search?q=%23rstats&#34; target=&#34;_blank&#34;&gt;#rstats&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Trying to reduce the memory overhead when using mclapply</title>
+      <link>http://lcolladotor.github.io/2013/11/14/Trying-to-reduce-the-memory-overhead-when-using-mclapply</link>
+      <pubDate>Thu, 14 Nov 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://lcolladotor.github.io/2013/11/14/Trying-to-reduce-the-memory-overhead-when-using-mclapply</guid>
+      <description>
+
+&lt;p&gt;I am currently trying to understand how to reduce the memory used by &lt;code&gt;mclapply&lt;/code&gt;. This function is rather complicated and others have explained the differences versus &lt;code&gt;parLapply&lt;/code&gt; (&lt;span class=&#34;showtooltip&#34; title=&#34;A\_Skelton73 (2013). &#39;understanding the differences between mclapply and parLapply in R.&#39; .&#34;&gt;&lt;a href=&#34;http://stackoverflow.com/questions/17196261/understanding-the-differences-between-mclapply-and-parlapply-in-r&#34;&gt;A_Skelton73, 2013&lt;/a&gt;&lt;/span&gt;; &lt;span class=&#34;showtooltip&#34; title=&#34;lockedoff (2012). &#39;Using mclapply, foreach, or something else in [r] to operate on an object in parallel?&#39; .&#34;&gt;&lt;a href=&#34;http://stackoverflow.com/questions/11036702/using-mclapply-foreach-or-something-else-in-r-to-operate-on-an-object-in-par&#34;&gt;lockedoff, 2012&lt;/a&gt;&lt;/span&gt; ) and also made it clear that in &lt;code&gt;mclapply&lt;/code&gt;  each job does not know if the others are running out of memory and thus cannot trigger &lt;code&gt;gc&lt;/code&gt; (&lt;span class=&#34;showtooltip&#34; title=&#34;(2013). &#39; [R-sig-hpc] mclapply: rm intermediate objects and returning   memory .&#39; .&#34;&gt;&lt;a href=&#34;https://mailman.stat.ethz.ch/pipermail/r-sig-hpc/2012-October/001534.html&#34;&gt;Urbanek, 2012&lt;/a&gt;&lt;/span&gt;).&lt;/p&gt;
+
+&lt;p&gt;While I still struggle to understand all the details of &lt;code&gt;mclapply&lt;/code&gt;, I can successfully use it to reduce computation time at the expense of a very high memory load. I am still looking for tips on how to reduce this memory load.&lt;/p&gt;
+
+&lt;p&gt;Here is what I have done.&lt;/p&gt;
+
+&lt;h2 id=&#34;problem-setting&#34;&gt;Problem setting&lt;/h2&gt;
+
+&lt;p&gt;I have a large data set on the form of a data.frame. I want to apply a function that works using subsets of the data.frame without the need for communication between the chunks, and I want to apply the function fast. In other words, I can safely split the matrix and speed the computation process using &lt;code&gt;mclapply&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;While this works, I would like to minimize memory consumption.&lt;/p&gt;
+
+&lt;h2 id=&#34;toy-data&#34;&gt;Toy data&lt;/h2&gt;
+
+&lt;p&gt;Here is just some toy data for the example.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;## The real data set is much larger than this
+set.seed(20131113)
+data &amp;lt;- data.frame(matrix(rnorm(1e+05), ncol = 10))
+dim(data)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## [1] 10000    10
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;approach-1&#34;&gt;Approach 1&lt;/h2&gt;
+
+&lt;p&gt;The first approach I have used is to pre-split the data and then use &lt;code&gt;mclapply&lt;/code&gt; over the split data. For illustrative purposes, lets say that the function I want to apply is just &lt;code&gt;rowMeans&lt;/code&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;## Pre-split the data
+dataSplit &amp;lt;- split(data, rep(1:10, each = 1000))
+
+## Approach 1
+library(&amp;quot;parallel&amp;quot;)
+res1 &amp;lt;- mclapply(dataSplit, rowMeans, mc.cores = 2)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This gets the job done, but because my real &lt;code&gt;dataSplit&lt;/code&gt; is much larger in memory, using say 8-10 cores blows up the memory.&lt;/p&gt;
+
+&lt;h3 id=&#34;best-way-to-pre-split&#34;&gt;Best way to pre-split?&lt;/h3&gt;
+
+&lt;p&gt;If I know that if I am using \( n \) number of cores (in this example \( n=2 \) ) and the data set has \( m \) rows, then one option for approach #1 is to split the data into \( n \) chunks each of size \( m / n \) (rounding if needed).&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;## Pre-split the data into m/n chunks
+dataSplit1b &amp;lt;- split(data, rep(1:2, each = 5000))
+
+## Approach 1b
+res1b &amp;lt;- mclapply(dataSplit1b, rowMeans, mc.cores = 2)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The memory needed is then in part determined by the chunksize (1000 vs 5000 shown above). One excellent suggestion (via Ben) is to reduce the memory load using this approach is to just smaller chunks. However, the runtime of the function I want to apply (&lt;code&gt;rowMeans&lt;/code&gt; in the example) is not very sensible to the chunksize used, thus using very small chunks is not ideal as it increases computation time. Finding the sweet point is tricky, but using chunksizes of \(m / (2n) \) could certainly help memory wise without majorly affecting computation time.&lt;/p&gt;
+
+&lt;h2 id=&#34;approach-2&#34;&gt;Approach 2&lt;/h2&gt;
+
+&lt;p&gt;One suggestion (via Roger) is to use an environment in order to minimize copying (and thus memory load) while using &lt;code&gt;mclapply&lt;/code&gt; over a set of indexes.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;## Save the split data in an environment
+my.env &amp;lt;- new.env()
+my.env$data1 &amp;lt;- dataSplit1b[[1]]
+my.env$data2 &amp;lt;- dataSplit1b[[2]]
+
+## Function that takes indexes, then extracts the data from the environment
+applyMyFun &amp;lt;- function(idx, env) {
+    eval(parse(text = paste0(&amp;quot;result &amp;lt;- env$&amp;quot;, ls(env)[idx])))
+    rowMeans(result)
+}
+
+## Approach 2
+index &amp;lt;- 1:2
+names(index) &amp;lt;- 1:2
+res2 &amp;lt;- mclapply(index, applyMyFun, env = my.env, mc.cores = 2)
+
+## Same result?
+identical(res1b, res2)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## [1] TRUE
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;approach-3&#34;&gt;Approach 3&lt;/h2&gt;
+
+&lt;p&gt;Another suggestion (via Roger) is to save the data chunks and load them individually inside the function that I pass to &lt;code&gt;mclapply&lt;/code&gt;. This does not seem ideal in terms of having to create the temporary chunk data files. But I would expect this method to have the lowest memory footprint.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;## Save the chunks
+for (i in names(dataSplit1b)) {
+    chunk &amp;lt;- dataSplit1b[[i]]
+    output &amp;lt;- paste0(&amp;quot;chunk&amp;quot;, i, &amp;quot;.Rdata&amp;quot;)
+    save(chunk, file = output)
+}
+
+## Function that loads the chunk
+applyMyFun2 &amp;lt;- function(idx) {
+    load(paste0(&amp;quot;chunk&amp;quot;, idx, &amp;quot;.Rdata&amp;quot;))
+    rowMeans(chunk)
+}
+
+## Approach 3
+res3 &amp;lt;- mclapply(index, applyMyFun2, mc.cores = 2)
+
+## Same result?
+identical(res1b, res3)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## [1] TRUE
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;computation-time-comparison&#34;&gt;Computation time comparison&lt;/h2&gt;
+
+&lt;p&gt;Computation time wise, approaches 2 and 3 do not seem very different. Approach 1b seems a tiny bit faster. [Edit: the order of the best approach might change slightly if you re-run this code]&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;library(&amp;quot;microbenchmark&amp;quot;)
+micro &amp;lt;- microbenchmark(mclapply(dataSplit1b, rowMeans, mc.cores = 2), mclapply(index, 
+    applyMyFun, env = my.env, mc.cores = 2), mclapply(index, applyMyFun2, mc.cores = 2))
+micro
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## Unit: milliseconds
+##                                                     expr   min    lq
+##            mclapply(dataSplit1b, rowMeans, mc.cores = 2) 17.43 19.97
+##  mclapply(index, applyMyFun, env = my.env, mc.cores = 2) 17.05 19.20
+##               mclapply(index, applyMyFun2, mc.cores = 2) 17.19 23.11
+##  median    uq   max neval
+##   21.41 26.00 65.53   100
+##   20.60 23.92 43.67   100
+##   24.56 28.39 46.99   100
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;library(&amp;quot;ggplot2&amp;quot;)
+autoplot(micro)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://lcolladotor.github.io/figs/2013-11-14-Reducing-memory-overhead-when-using-mclapply/compTime.png&#34; alt=&#34;center&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;memory-wise-comparison&#34;&gt;Memory wise comparison&lt;/h2&gt;
+
+&lt;p&gt;Relying on the cluster tools for calculating the maximum memory used, I ran each approach (1b, 2, and 3) ten times each using 2 cores using the scripts available in &lt;a href=&#34;https://gist.github.com/lcolladotor/7462753&#34; target=&#34;_blank&#34;&gt;this gist&lt;/a&gt;. The maximum memory used showed no variability (within an approach) and the results are that approach 1b used 1.224G RAM, approach 2 used 1.176G RAM, and approach 3 used 1.177G RAM. Not a huge difference. Due to having to write and then load, approach 3 was slower than the other two.&lt;/p&gt;
+
+&lt;p&gt;Re-doing the previous test but using 20 cores lead to very similar wall clock computation times between all three approaches and to approaches 1b and 2 for 2 cores. This is due to the nature of the example, aka &lt;code&gt;rowMeans&lt;/code&gt; is fast even with the larger chunks. Approach 1b used 7.728G RAM, approach 2 used 7.674G RAM, and approach 3 used 7.690G RAM. Hm&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;Using 20 cores with previously created data files (either the split data for approaches 1b and 2, or the chunk files for approach 3) has a very different memory footprint. Approach 1b used in average 6.0744G RAM, approach 2 used 4.2647G RAM
+, and approach 3 used 2.6545G RAM.&lt;/p&gt;
+
+&lt;h3 id=&#34;edit&#34;&gt;Edit&lt;/h3&gt;
+
+&lt;p&gt;Ryan from (&lt;span class=&#34;showtooltip&#34; title=&#34;(2013). &#39; [Bioc-devel] Trying to reduce the memory overhead when using mclapply .&#39; .&#34;&gt;&lt;a href=&#34;https://stat.ethz.ch/pipermail/bioc-devel/2013-November/004930.html&#34;&gt;Ryan 2013&lt;/a&gt;&lt;/span&gt;) contributed a fourth approach which used 6.794G RAM when starting from scratch with 20 cores. This approach definitely beats the other ones under the condition of starting from scratch. Note that just creating the &lt;code&gt;data&lt;/code&gt; object uses 558.938M RAM: multiplied by 20 it would be around 10.92G RAM.&lt;/p&gt;
+
+&lt;h2 id=&#34;conclusions&#34;&gt;Conclusions&lt;/h2&gt;
+
+&lt;p&gt;Using 2 or 20 cores, approach 2 beat by a very small margin approaches 3 and 1b in terms of memory usage. However, all approaches failed in terms of not having the memory blow up as you increase the number of cores when starting from scratch.&lt;/p&gt;
+
+&lt;p&gt;If a lower memory option is used for splitting the data and creating the chunk files, approach 3 seems like the winner in terms of memory usage. So in pure terms of lowering the memory load on &lt;code&gt;mclapply&lt;/code&gt; approach 3 wins, although you still need to create the chunk files and do so without much memory usage.&lt;/p&gt;
+
+&lt;p&gt;If you have any ideas or suggestions, please let me know! Thank you!&lt;/p&gt;
+
+&lt;h3 id=&#34;references&#34;&gt;References&lt;/h3&gt;
+
+&lt;p&gt;Citations made with &lt;code&gt;knitcitations&lt;/code&gt; (&lt;span class=&#34;showtooltip&#34; title=&#34;Boettiger C (2013). knitcitations: Citations for knitr markdown files. R package version 0.4-7.&#34;&gt;&lt;a href=&#34;http://CRAN.R-project.org/package=knitcitations&#34;&gt;Boettiger, 2013&lt;/a&gt;&lt;/span&gt;).&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;A_Skelton73,   (2013) understanding the differences between mclapply and parLapply in R.  &lt;em&gt;understanding the differences between mclapply and parLapply in R - Stack Overflow&lt;/em&gt;  &lt;a href=&#34;http://stackoverflow.com/questions/17196261/understanding-the-differences-between-mclapply-and-parlapply-in-r&#34; target=&#34;_blank&#34;&gt;http://stackoverflow.com/questions/17196261/understanding-the-differences-between-mclapply-and-parlapply-in-r&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;lockedoff,   (2012) Using mclapply, foreach, or something else in [r] to operate on an object in parallel?.  &lt;em&gt;Using mclapply, foreach, or something else in [r] to operate on an object in parallel? - Stack Overflow&lt;/em&gt;  &lt;a href=&#34;http://stackoverflow.com/questions/11036702/using-mclapply-foreach-or-something-else-in-r-to-operate-on-an-object-in-par&#34; target=&#34;_blank&#34;&gt;http://stackoverflow.com/questions/11036702/using-mclapply-foreach-or-something-else-in-r-to-operate-on-an-object-in-par&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;[R-sig-hpc] mclapply: rm intermediate objects and returning memory
+.  &lt;a href=&#34;https://mailman.stat.ethz.ch/pipermail/r-sig-hpc/2012-October/001534.html&#34; target=&#34;_blank&#34;&gt;https://mailman.stat.ethz.ch/pipermail/r-sig-hpc/2012-October/001534.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;[Bioc-devel] Trying to reduce the memory overhead when using mclapply
+.  &lt;a href=&#34;https://stat.ethz.ch/pipermail/bioc-devel/2013-November/004930.html&#34; target=&#34;_blank&#34;&gt;https://stat.ethz.ch/pipermail/bioc-devel/2013-November/004930.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Carl Boettiger,   (2013) knitcitations: Citations for knitr markdown files.  &lt;a href=&#34;http://CRAN.R-project.org/package=knitcitations&#34; target=&#34;_blank&#34;&gt;http://CRAN.R-project.org/package=knitcitations&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;reproducibility&#34;&gt;Reproducibility&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;sessionInfo()
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## R version 3.0.2 (2013-09-25)
+## Platform: x86_64-apple-darwin10.8.0 (64-bit)
+## 
+## locale:
+## [1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8
+## 
+## attached base packages:
+## [1] parallel  stats     graphics  grDevices utils     datasets  methods  
+## [8] base     
+## 
+## other attached packages:
+## [1] microbenchmark_1.3-0 ggplot2_0.9.3.1      knitcitations_0.4-7 
+## [4] bibtex_0.3-6         knitr_1.5           
+## 
+## loaded via a namespace (and not attached):
+##  [1] codetools_0.2-8    colorspace_1.2-4   dichromat_2.0-0   
+##  [4] digest_0.6.4       evaluate_0.5.1     formatR_0.10      
+##  [7] grid_3.0.2         gtable_0.1.2       httr_0.2          
+## [10] labeling_0.2       MASS_7.3-29        munsell_0.4.2     
+## [13] plyr_1.8           proto_0.3-10       RColorBrewer_1.0-5
+## [16] RCurl_1.95-4.1     reshape2_1.2.2     scales_0.2.3      
+## [19] stringr_0.6.2      tools_3.0.2        XML_3.95-0.2      
+## [22] xtable_1.7-1
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;scripts&#34;&gt;Scripts&lt;/h3&gt;
+
+&lt;p&gt;The scripts are available in &lt;a href=&#34;https://gist.github.com/lcolladotor/7462753&#34; target=&#34;_blank&#34;&gt;this gist&lt;/a&gt;. The main one is &lt;code&gt;testApproach.R&lt;/code&gt; while the other ones are just job-submitters.&lt;/p&gt;
+
+&lt;script src=&#34;https://gist.github.com/lcolladotor/7462753.js&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;Check other topics on &lt;a href=&#34;https://twitter.com/search?q=%23rstats&#34; target=&#34;_blank&#34;&gt;#rstats&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>ggplot Tutorial</title>
+      <link>http://lcolladotor.github.io/2013/06/21/ggplot-Tutorial</link>
+      <pubDate>Fri, 21 Jun 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://lcolladotor.github.io/2013/06/21/ggplot-Tutorial</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://www.ceb-institute.org/bbs/wp-content/uploads/2011/09/handout_ggplot2.pdf&#34;&gt;ggplot Tutorial&lt;/a&gt;&lt;br/&gt;&lt;p&gt;I liked the &lt;a href=&#34;http://www.ceb-institute.org/bbs/wp-content/uploads/2011/09/handout_ggplot2.pdf&#34;&gt;following ggplot2 tutorial&lt;/a&gt; which is featured in Gabriela de Queiroz&amp;#8217;s blog called &lt;a href=&#34;http://unbiasedestimator.tumblr.com/&#34;&gt;unbiasedestimator&lt;/a&gt;. The tutorial looks very neatly presented and I&amp;#8217;m sure that it will be very helpful to anyone just getting started with ggplot2 before they jump into &lt;a href=&#34;http://ggplot2.org/book/&#34;&gt;ggplot2: Elegant Graphics for Data Analysis&lt;/a&gt; by Hadley Wickham or &lt;a href=&#34;http://shop.oreilly.com/product/0636920023135.do&#34;&gt;R Graphics Cookbook&lt;/a&gt; by Winston Chang.&lt;/p&gt;
+&lt;p&gt;&lt;span&gt;The tutorial is very nicely formatted with code in bold highlighting  parts that change something in the plot. Overall, the tutorial explains how to use qplot() although it does have a longer example using ggplot() to make survival curves.&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Check it out!&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a class=&#34;tumblr_blog&#34; href=&#34;http://unbiasedestimator.tumblr.com/post/26148780483/ggplot-tutorial&#34;&gt;unbiasedestimator&lt;/a&gt;:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Good tutorial about the R package.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;“ggplot2 is an R package for producing statistical, or data, graphics, but it is unlike most other graphics packages because it has a deep underlying grammar. [..]”&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt; - H.Wickham, ggplot2, Use R, DOI 10.1007/978-0-387-98141_1, © Springer Science+Business Media, LLC 2009 -&lt;img alt=&#34;image&#34; height=&#34;403&#34; src=&#34;http://slycoder.files.wordpress.com/2009/08/day-of-week.png&#34; width=&#34;691&#34;/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;image&#34; height=&#34;461&#34; src=&#34;http://r.789695.n4.nabble.com/file/n1689957/plot1.jpeg&#34; width=&#34;462&#34;/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;image&#34; height=&#34;309&#34; src=&#34;http://revolution-computing.typepad.com/.a/6a010534b1db25970b0120a55e3eab970b-500pi&#34; width=&#34;500&#34;/&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>userR2013 data analysis contest: data exploration</title>
+      <link>http://lcolladotor.github.io/2013/06/12/userR2013-data-analysis-contest-data-exploration</link>
+      <pubDate>Wed, 12 Jun 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://lcolladotor.github.io/2013/06/12/userR2013-data-analysis-contest-data-exploration</guid>
+      <description>&lt;h1&gt;Description&lt;/h1&gt;
+&lt;p&gt;The useR2013 conference is organizing a data analysis contest, check the &lt;a href=&#34;http://www.edii.uclm.es/%7EuseR-2013/docs/announce.pdf&#34;&gt;rules here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;They have a package called &lt;strong&gt;useR2013DAC&lt;/strong&gt; with two data sets: one from La Liga and the other one from the Formula 1. Once you download and install the package (&lt;a href=&#34;http://www.edii.uclm.es/%7EuseR-2013/#contest&#34;&gt;available here&lt;/a&gt;), you can quickly explore the data using the following R commands:&lt;/p&gt;
+&lt;h1&gt;Data exploration&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;## Load the package
+library(useR2013DAC)
+
+## Explore laliga data
+data(laliga)
+head(laliga)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;##    Season Week               HomeTeam                    AwayTeam
+## 1 2008/09    1   Athletic Club Bilbao     Union Deportiva Almeria
+## 2 2008/09    1        Atlético Madrid                   Málaga CF
+## 3 2008/09    1          Betis Sevilla Real Club Recreativo Huelva
+## 4 2008/09    1             CA Osasuna               Villarreal CF
+## 5 2008/09    1            CD Numancia                FC Barcelona
+## 6 2008/09    1 Deportivo de La Coruña              Real Madrid CF
+##   HomeGoals AwayGoals
+## 1         1         3
+## 2         4         0
+## 3         0         1
+## 4         1         1
+## 5         1         0
+## 6         2         1
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;summary(laliga)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;##     Season               Week        HomeTeam           AwayTeam        
+##  Length:1900        Min.   : 1.0   Length:1900        Length:1900       
+##  Class :character   1st Qu.:10.0   Class :character   Class :character  
+##  Mode  :character   Median :19.5   Mode  :character   Mode  :character  
+##                     Mean   :19.5                                        
+##                     3rd Qu.:29.0                                        
+##                     Max.   :38.0                                        
+##                                                                         
+##    HomeGoals      AwayGoals   
+##  Min.   :0.00   Min.   :0.00  
+##  1st Qu.:1.00   1st Qu.:0.00  
+##  Median :1.00   Median :1.00  
+##  Mean   :1.65   Mean   :1.14  
+##  3rd Qu.:2.00   3rd Qu.:2.00  
+##  Max.   :8.00   Max.   :8.00  
+##  NA&#39;s   :50     NA&#39;s   :50
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;lapply(laliga, class)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;## $Season
+## [1] &amp;quot;character&amp;quot;
+## 
+## $Week
+## [1] &amp;quot;integer&amp;quot;
+## 
+## $HomeTeam
+## [1] &amp;quot;character&amp;quot;
+## 
+## $AwayTeam
+## [1] &amp;quot;character&amp;quot;
+## 
+## $HomeGoals
+## [1] &amp;quot;integer&amp;quot;
+## 
+## $AwayGoals
+## [1] &amp;quot;integer&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;## Explore formula1 data
+data(formula1)
+head(formula1)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;##   Pos No             Driver             Team Laps        Time Grid Pts
+## 1   1  8    Fernando Alonso          Ferrari   49 1:39:20.396    3  25
+## 2   2  7       Felipe Massa          Ferrari   49  +16.0 secs    2  18
+## 3   3  2     Lewis Hamilton McLaren-Mercedes   49  +23.1 secs    4  15
+## 4   4  5   Sebastian Vettel      RBR-Renault   49  +38.7 secs    1  12
+## 5   5  4       Nico Rosberg      Mercedes GP   49  +40.2 secs    5  10
+## 6   6  3 Michael Schumacher      Mercedes GP   49  +44.1 secs    7   8
+##                                         Race Season
+## 1 2010 FORMULA 1 GULF AIR BAHRAIN GRAND PRIX   2010
+## 2 2010 FORMULA 1 GULF AIR BAHRAIN GRAND PRIX   2010
+## 3 2010 FORMULA 1 GULF AIR BAHRAIN GRAND PRIX   2010
+## 4 2010 FORMULA 1 GULF AIR BAHRAIN GRAND PRIX   2010
+## 5 2010 FORMULA 1 GULF AIR BAHRAIN GRAND PRIX   2010
+## 6 2010 FORMULA 1 GULF AIR BAHRAIN GRAND PRIX   2010
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;summary(formula1)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;##       Pos            No                     Driver    
+##  Ret    :254   1      :  58   Felipe Massa     :  58  
+##  1      : 58   10     :  58   Fernando Alonso  :  58  
+##  10     : 58   11     :  58   Heikki Kovalainen:  58  
+##  11     : 58   12     :  58   Jenson Button    :  58  
+##  12     : 58   14     :  58   Kamui Kobayashi  :  58  
+##  13     : 58   15     :  58   Lewis Hamilton   :  58  
+##  (Other):848   (Other):1044   (Other)          :1044  
+##                    Team          Laps             Time          Grid     
+##  Ferrari             :116   55     :125   +1 Lap    :268   1      :  58  
+##  Force India-Mercedes:116   56     :121   +2 Laps   :102   10     :  58  
+##  HRT-Cosworth        :116   53     : 92   Accident  : 93   11     :  58  
+##  McLaren-Mercedes    :116   57     : 80   +3 Laps   : 41   12     :  58  
+##  STR-Ferrari         :116   70     : 75   Hydraulics: 26   13     :  58  
+##  Lotus-Renault       : 78   52     : 69   Gearbox   : 24   14     :  58  
+##  (Other)             :734   (Other):830   (Other)   :838   (Other):1044  
+##       Pts          Race               Season    
+##         :812   Length:1392        Min.   :2010  
+##  1      : 58   Class :character   1st Qu.:2010  
+##  10     : 58   Mode  :character   Median :2011  
+##  12     : 58                      Mean   :2011  
+##  15     : 58                      3rd Qu.:2012  
+##  18     : 58                      Max.   :2012  
+##  (Other):290
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;lapply(formula1, class)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;## $Pos
+## [1] &amp;quot;factor&amp;quot;
+## 
+## $No
+## [1] &amp;quot;factor&amp;quot;
+## 
+## $Driver
+## [1] &amp;quot;factor&amp;quot;
+## 
+## $Team
+## [1] &amp;quot;factor&amp;quot;
+## 
+## $Laps
+## [1] &amp;quot;factor&amp;quot;
+## 
+## $Time
+## [1] &amp;quot;factor&amp;quot;
+## 
+## $Grid
+## [1] &amp;quot;factor&amp;quot;
+## 
+## $Pts
+## [1] &amp;quot;factor&amp;quot;
+## 
+## $Race
+## [1] &amp;quot;character&amp;quot;
+## 
+## $Season
+## [1] &amp;quot;numeric&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;p&gt;I don&amp;#8217;t see a specific question that they want you to answer with this data, but if you find one related to data analysis or visualization then join the competition!&lt;/p&gt;
+&lt;p&gt;Note that you must be attending the conference in order to be eligible to compete.&lt;/p&gt;
+&lt;h1&gt;Reproducibility&lt;/h1&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;sessionInfo()
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;## R version 3.0.0 (2013-04-03)
+## Platform: x86_64-apple-darwin10.8.0 (64-bit)
+## 
+## locale:
+## [1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8
+## 
+## attached base packages:
+## [1] stats     graphics  grDevices utils     datasets  methods   base     
+## 
+## other attached packages:
+## [1] useR2013DAC_0.1-1 knitr_1.2        
+## 
+## loaded via a namespace (and not attached):
+## [1] digest_0.6.3   evaluate_0.4.3 formatR_0.7    stringr_0.6.2 
+## [5] tools_3.0.0
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Reading an R file from GitHub</title>
+      <link>http://lcolladotor.github.io/2013/05/09/Reading-an-R-file-from-GitHub</link>
+      <pubDate>Thu, 09 May 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://lcolladotor.github.io/2013/05/09/Reading-an-R-file-from-GitHub</guid>
+      <description>&lt;p&gt;&lt;p&gt;Lets say that I want to read in &lt;a href=&#34;https://github.com/lcolladotor/ballgownR-devel/blob/master/ballgownR/R/infoGene.R&#34;&gt;this R file&lt;/a&gt; from GitHub into R.&lt;/p&gt;
+&lt;p&gt;The first thing you have to do is locate the raw file. You can do so by clicking on the &lt;strong&gt;Raw&lt;/strong&gt; button in GitHub. In this case it&amp;#8217;s &lt;a href=&#34;https://raw.github.com/lcolladotor/ballgownR-devel/master/ballgownR/R/infoGene.R&#34;&gt;&lt;a href=&#34;https://raw.github.com/lcolladotor/ballgownR-devel/master/ballgownR/R/infoGene.R&#34;&gt;https://raw.github.com/lcolladotor/ballgownR-devel/master/ballgownR/R/infoGene.R&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;One would think that using &lt;code&gt;source()&lt;/code&gt; would work, but it doesn&amp;#8217;t as shown below:&lt;/p&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;source(&amp;quot;https://raw.github.com/lcolladotor/ballgownR-devel/master/ballgownR/R/infoGene.R&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;## Warning: unsupported URL scheme
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;## Error: cannot open the connection
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;p&gt;However, thanks again to Hadley Wickham you can do so by using the &lt;code&gt;devtools&lt;/code&gt; (&lt;span class=&#34;showtooltip&#34; title=&#34;Wickham H and Chang W (2013). devtools: Tools to make developing R code easier. R package version 1.2.&#34;&gt;&lt;a href=&#34;http://CRAN.R-project.org/package=devtools&#34;&gt;Wickham &amp;amp; Chang, 2013&lt;/a&gt;&lt;/span&gt; ) package.&lt;/p&gt;
+&lt;p&gt;Here is how it works:&lt;/p&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;library(devtools)
+library(roxygen2)
+## Needed because this file has roxygen2 comments. Otherwise you get a
+## &#39;could not find function &#39;digest&#39;&#39; error
+source_url(&amp;quot;https://raw.github.com/lcolladotor/ballgownR-devel/master/ballgownR/R/infoGene.R&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;## SHA-1 hash of file is 6c32a620799eded5d6ff0997a184843d7964724a
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;## Note that you can specify the SHA-1 hash to be very specific about
+## which version of the file you want to read in.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;p&gt;We can then check that &lt;code&gt;infoGene&lt;/code&gt; has actually been sourced:&lt;/p&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;&amp;quot;infoGene&amp;quot; %in% ls()
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;## [1] TRUE
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;p&gt;That&amp;#8217;s it! Enjoy!&lt;/p&gt;
+&lt;p&gt;Citations made with &lt;code&gt;knitcitations&lt;/code&gt; (&lt;span class=&#34;showtooltip&#34; title=&#34;Boettiger C (2013). knitcitations: Citations for knitr markdown files. R package version 0.4-6.&#34;&gt;&lt;a href=&#34;https://github.com/cboettig/knitcitations&#34;&gt;Boettiger, 2013&lt;/a&gt;&lt;/span&gt; ).&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;Hadley Wickham, Winston Chang, (2013) devtools: Tools to make developing R code easier. &lt;a href=&#34;http://CRAN.R-project.org/package=devtools&#34;&gt;&lt;a href=&#34;http://CRAN.R-project.org/package=devtools&#34;&gt;http://CRAN.R-project.org/package=devtools&lt;/a&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Carl Boettiger, (2013) knitcitations: Citations for knitr markdown files. &lt;a href=&#34;https://github.com/cboettig/knitcitations&#34;&gt;&lt;a href=&#34;https://github.com/cboettig/knitcitations&#34;&gt;https://github.com/cboettig/knitcitations&lt;/a&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;p&gt;Reproducibility&lt;/p&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;sessionInfo()
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;## R version 3.0.0 (2013-04-03)
+## Platform: x86_64-apple-darwin10.8.0 (64-bit)
+## 
+## locale:
+## [1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8
+## 
+## attached base packages:
+## [1] stats     graphics  grDevices utils     datasets  methods   base     
+## 
+## other attached packages:
+## [1] roxygen2_2.2.2      digest_0.6.3        devtools_1.2       
+## [4] knitcitations_0.4-6 bibtex_0.3-5        knitr_1.2          
+## 
+## loaded via a namespace (and not attached):
+##  [1] brew_1.0-6     evaluate_0.4.3 formatR_0.7    httr_0.2      
+##  [5] memoise_0.1    parallel_3.0.0 RCurl_1.95-4.1 stringr_0.6.2 
+##  [9] tools_3.0.0    whisker_0.3-2  XML_3.95-0.2   xtable_1.7-1
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Using plyr and doMC for quick and easy apply-family functions</title>
+      <link>http://lcolladotor.github.io/2013/04/26/Using-plyr-and-doMC-for-quick-and-easy-apply-family-functions</link>
+      <pubDate>Fri, 26 Apr 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://lcolladotor.github.io/2013/04/26/Using-plyr-and-doMC-for-quick-and-easy-apply-family-functions</guid>
+      <description>&lt;p&gt;A few weeks back I dedicated a short amount of time to actually read what &lt;code&gt;plyr&lt;/code&gt; (&lt;span class=&#34;showtooltip&#34; title=&#34;Wickham H (2011). The Split-Apply-Combine Strategy for Data
+Analysis. _Journal of Statistical Software_, *40*(1), pp. 1-29.
+ http://www.jstatsoft.org/v40/i01/.&#34;&gt;&lt;a href=&#34;http://www.jstatsoft.org/v40/i01/&#34;&gt;Wickham, 2011&lt;/a&gt;&lt;/span&gt;) is about and I was surprised. The whole idea behind &lt;code&gt;plyr&lt;/code&gt; is very simple: expand the &lt;code&gt;apply()&lt;/code&gt; family to do things easy. &lt;code&gt;plyr&lt;/code&gt; has many functions whose name ends with &lt;code&gt;ply&lt;/code&gt; which is short of apply. Then, the functions are identified by two letters before &lt;code&gt;ply&lt;/code&gt; which are abbreviations for the input (first letter) and output (second one). For instance, &lt;code&gt;ddply&lt;/code&gt; takes an input a &lt;code&gt;data.frame&lt;/code&gt; and returns a &lt;code&gt;data.frame&lt;/code&gt; while &lt;code&gt;ldply&lt;/code&gt; takes as input a &lt;code&gt;list&lt;/code&gt; and returns a &lt;code&gt;data.frame&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;The syntax is pretty straight forward. For example, here are the arguments for &lt;code&gt;ddply&lt;/code&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;library(plyr)
+args(ddply)
+## function (.data, .variables, .fun = NULL, ..., .progress = &amp;quot;none&amp;quot;, 
+##     .inform = FALSE, .drop = TRUE, .parallel = FALSE, .paropts = NULL) 
+## NULL
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;What we basically have to specify are&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;code&gt;.data&lt;/code&gt; which in general is the name of the input &lt;code&gt;data.frame&lt;/code&gt;,&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;.variables&lt;/code&gt; which is a vector (note the use of the &lt;code&gt;.&lt;/code&gt; function) of variable names. In this case, &lt;code&gt;ddply&lt;/code&gt; is very useful for applying some function to subsets of the data as specified by these variables,&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;.fun&lt;/code&gt; which is the actual function we want to run,&lt;/li&gt;
+&lt;li&gt;and &lt;code&gt;...&lt;/code&gt; which are parameter options for the function we are running.&lt;/li&gt;
+&lt;/ul&gt;&lt;p&gt;From the &lt;code&gt;ddply&lt;/code&gt; help page we have the following examples:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;dfx &amp;lt;- data.frame(
+  group = c(rep(&#39;A&#39;, 8), rep(&#39;B&#39;, 15), rep(&#39;C&#39;, 6)),
+  sex = sample(c(&amp;quot;M&amp;quot;, &amp;quot;F&amp;quot;), size = 29, replace = TRUE),
+  age = runif(n = 29, min = 18, max = 54)
+)
+
+# Note the use of the &#39;.&#39; function to allow
+# group and sex to be used without quoting
+ddply(dfx, .(group, sex), summarize,
+ mean = round(mean(age), 2),
+ sd = round(sd(age), 2))
+##   group sex  mean    sd
+## 1     A   F 40.48 12.72
+## 2     A   M 34.48 15.28
+## 3     B   F 36.05  9.98
+## 4     B   M 38.35  7.97
+## 5     C   F 20.04  1.86
+## 6     C   M 43.81 10.72
+
+# An example using a formula for .variables
+ddply(baseball[1:100, ], ~year, nrow)
+
+##   year V1
+## 1 1871  7
+## 2 1872 13
+## 3 1873 13
+## 4 1874 15
+## 5 1875 17
+## 6 1876 15
+## 7 1877 17
+## 8 1878  3
+
+# Applying two functions; nrow and ncol
+ddply(baseball, .(lg), c(&amp;quot;nrow&amp;quot;, &amp;quot;ncol&amp;quot;))
+
+##   lg  nrow ncol
+## 1       65   22
+## 2 AA   171   22
+## 3 AL 10007   22
+## 4 FL    37   22
+## 5 NL 11378   22
+## 6 PL    32   22
+## 7 UA     9   22
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;But this is not the end of the story! Something I really liked about &lt;code&gt;plyr&lt;/code&gt; is that it can be parallelized via the &lt;code&gt;foreach&lt;/code&gt; (&lt;span class=&#34;showtooltip&#34; title=&#34;Analytics R (2012). _foreach: Foreach looping construct for R_. R
+package version 1.4.0, 
+http://CRAN.R-project.org/package=foreach.&#34;&gt;&lt;a href=&#34;http://CRAN.R-project.org/package=foreach&#34;&gt;Analytics, 2012&lt;/a&gt;&lt;/span&gt;) package. I don&amp;#8217;t know much about &lt;code&gt;foreach&lt;/code&gt;, but all I learnt is that you have to use other packages such as &lt;code&gt;doMC&lt;/code&gt; (&lt;span class=&#34;showtooltip&#34; title=&#34;Analytics R (2013). _doMC: Foreach parallel adaptor for the
+multicore package_. R package version 1.3.0, 
+http://CRAN.R-project.org/package=doMC.&#34;&gt;&lt;a href=&#34;http://CRAN.R-project.org/package=doMC&#34;&gt;Analytics, 2013&lt;/a&gt;&lt;/span&gt;) to actually run the code. It&amp;#8217;s like &lt;code&gt;foreach&lt;/code&gt; specifies the infraestructure to communicate in parallel (and split jobs) and packages like &lt;code&gt;doMC&lt;/code&gt; tailor it for specific environments like for running in multi-core.&lt;/p&gt;
+&lt;p&gt;Running things in parallel can then be very easy. Basically, you load the packages, specify the number of cores, and run your &lt;code&gt;ply&lt;/code&gt; function. Here is a short example:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;## Load packages
+library(plyr)
+library(doMC)
+
+## Loading required package: foreach
+## Loading required package: iterators
+## Loading required package: parallel
+
+## Specify the number of cores
+registerDoMC(4)
+
+## Check how many cores we are using
+getDoParWorkers()
+## [1] 4
+
+## Run your ply function
+ddply(dfx, .(group, sex), summarize, mean = round(mean(age), 2), sd = round(sd(age), 
+    2), .parallel = TRUE)
+
+##   group sex  mean    sd
+## 1     A   F 40.48 12.72
+## 2     A   M 34.48 15.28
+## 3     B   F 36.05  9.98
+## 4     B   M 38.35  7.97
+## 5     C   F 20.04  1.86
+## 6     C   M 43.81 10.72
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;In case that you are interested, here is a short shell script for knitting an Rmd file in the cluster and specifying the appropriate number of cores to then use &lt;code&gt;plyr&lt;/code&gt; and &lt;code&gt;doMC&lt;/code&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;#!/bin/bash 
+# To run it in the current working directory
+#$ -cwd 
+# To get an email after the job is done
+#$ -m e 
+# To speficy that we want 4 cores
+#$ -pe local 4
+# The name of the job
+#$ -N myPlyJob
+
+echo &amp;quot;**** Job starts ****&amp;quot;
+date
+
+# Knit your file: assuming it&#39;s called FileToKnit.Rmd
+Rscript -e &amp;quot;library(knitr); knit2html(&#39;FileToKnit.Rmd&#39;)&amp;quot;
+
+echo &amp;quot;**** Job ends ****&amp;quot;
+date
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Lets say that the bash script is named &lt;code&gt;script.sh&lt;/code&gt;. Then you can submit it to the cluster queue using&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;
+qsub script.sh
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;p&gt;This is what I used to re-format a large &lt;code&gt;data.frame&lt;/code&gt; in a few minutes in the cluster for the &lt;a href=&#34;https://twitter.com/search?q=%23jhsph753&amp;amp;src=typd&#34;&gt;#jhsph753&lt;/a&gt; class homework project.&lt;/p&gt;
+&lt;p&gt;So, thank you again &lt;a href=&#34;https://twitter.com/hadleywickham&#34;&gt;Hadley Wickham&lt;/a&gt; for making awesome R packages!&lt;/p&gt;
+&lt;p&gt;Citations made with &lt;code&gt;knitcitations&lt;/code&gt; (&lt;span class=&#34;showtooltip&#34; title=&#34;Boettiger C (2013). _knitcitations: Citations for knitr markdown
+files_. R package version 0.4-4, 
+https://github.com/cboettig/knitcitations.&#34;&gt;&lt;a href=&#34;https://github.com/cboettig/knitcitations&#34;&gt;Boettiger, 2013&lt;/a&gt;&lt;/span&gt;).&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;Revolution Analytics, (2013) doMC: Foreach parallel adaptor for the multicore package. &lt;a href=&#34;http://CRAN.R-project.org/package=doMC&#34;&gt;&lt;a href=&#34;http://CRAN.R-project.org/package=doMC&#34;&gt;http://CRAN.R-project.org/package=doMC&lt;/a&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Revolution Analytics, (2012) foreach: Foreach looping construct for R. &lt;a href=&#34;http://CRAN.R-project.org/package=foreach&#34;&gt;&lt;a href=&#34;http://CRAN.R-project.org/package=foreach&#34;&gt;http://CRAN.R-project.org/package=foreach&lt;/a&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Carl Boettiger, knitcitations: Citations for knitr markdown files. &lt;a href=&#34;https://github.com/cboettig/knitcitations&#34;&gt;&lt;a href=&#34;https://github.com/cboettig/knitcitations&#34;&gt;https://github.com/cboettig/knitcitations&lt;/a&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Hadley Wickham, (2011) The Split-Apply-Combine Strategy for Data Analysis. &lt;em&gt;Journal of Statistical Software&lt;/em&gt; &lt;strong&gt;40&lt;/strong&gt; (1) &lt;a href=&#34;http://www.jstatsoft.org/v40/i01/&#34;&gt;&lt;a href=&#34;http://www.jstatsoft.org/v40/i01/&#34;&gt;http://www.jstatsoft.org/v40/i01/&lt;/a&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Predicting who will win a NFL match at half time</title>
+      <link>http://lcolladotor.github.io/2013/03/23/Predicting-who-will-win-a-NFL-match-at-half-time</link>
+      <pubDate>Sat, 23 Mar 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://lcolladotor.github.io/2013/03/23/Predicting-who-will-win-a-NFL-match-at-half-time</guid>
+      <description>&lt;p&gt;It was great to have a little break, &lt;em&gt;Spring break&lt;/em&gt;, although the weather didn&amp;#8217;t feel like spring at all! During the early part of the break I worked on my final project for Jeff Leek&amp;#8217;s data analysis class, which we call 140.753 here. Continuing &lt;a href=&#34;http://fellgernon.tumblr.com/tagged/jhsph753#.UU44Y1vF2c4&#34;&gt;my previous posts on the topic&lt;/a&gt;, this time I&amp;#8217;ll share the results of my final project.&lt;/p&gt;
+&lt;p&gt;At the beginning of the course, we had to submit a project plan (more like a proposal) and &lt;a href=&#34;https://github.com/lcolladotor/lcollado753/blob/master/hw/projectplan/lcollado_projectplan.pdf&#34;&gt;in mine&lt;/a&gt; I announced my interest to look into some sports data. At the time I included a few links to Brian Burke&amp;#8217;s Advanced NFL Stats site (&lt;span class=&#34;showtooltip&#34; title=&#34;(2013). Advanced NFL Stats.   http://www.advancednflstats.com/ [Online. last-accessed:  2013-03-23 23:28:38].  http://www.advancednflstats.com/.&#34;&gt;&lt;a href=&#34;http://www.advancednflstats.com/&#34;&gt;Burke&lt;/a&gt;&lt;/span&gt;). At the time I didn&amp;#8217;t know that Burke&amp;#8217;s site described in detail a lot of the information I would end up using.&lt;/p&gt;
+&lt;p&gt;My final project had to do with splitting NFL games by half and then use only the play-by-play data from the first half to predict if team A or B would win the game. My overall goal was to have some fun with sports data which I had never looked at, but then also try to come up with something I would personally use in the future. So, why split games by half? I personally would like to know if I should keep watching a game or not at half time. Having a tool to help me decide would be great, and well, if the team I&amp;#8217;m rooting for has high chances of losing or winning, ideally I would switch to doing something else. A related question that I didn&amp;#8217;t try to answer is which half is worth watching? This would be a meaningful question if you only have time to watch one of them.&lt;/p&gt;
+&lt;p&gt;To truly satisfy my goals, it wasn&amp;#8217;t enough to just build a predictive model. That is why I also built a web application using the &lt;code&gt;shiny&lt;/code&gt; package (&lt;span class=&#34;showtooltip&#34; title=&#34;RStudio and Inc. (2013). _shiny: Web Application Framework for R_.  R package version 0.4.0,   http://CRAN.R-project.org/package=shiny.&#34;&gt;&lt;a href=&#34;http://CRAN.R-project.org/package=shiny&#34;&gt;RStudio and Inc., 2013&lt;/a&gt;&lt;/span&gt;). It was the first time I did a shiny app, but thanks to the good manual and some examples on GitHub from John Muschelli like his &lt;a href=&#34;https://github.com/muschellij2/Shiny_model&#34;&gt;Shiny_model&lt;/a&gt; it wasn&amp;#8217;t so bad. I thus invite you to test and browse my shiny app at &lt;a href=&#34;http://glimmer.rstudio.com/lcolladotor/NFLhalf/&#34;&gt;&lt;a href=&#34;http://glimmer.rstudio.com/lcolladotor/NFLhalf/&#34;&gt;http://glimmer.rstudio.com/lcolladotor/NFLhalf/&lt;/a&gt;&lt;/a&gt;. It could be improved by adding some functions that scrape live data for the 2013 season so you don&amp;#8217;t have to input all the variables needed by using the sliders. Anyhow, I&amp;#8217;m happy with the result.&lt;/p&gt;
+&lt;p&gt;The entire project&amp;#8217;s code, EDA steps, shiny app, and report are available via GitHub in my repository (&lt;span class=&#34;showtooltip&#34; title=&#34;lcolladotor (2013). lcollado753.   https://github.com/lcolladotor/lcollado753 [Online.  last-accessed: 2013-03-21 02:23:49].   https://github.com/lcolladotor/lcollado753/tree/master/final/nfl_half.&#34;&gt;&lt;a href=&#34;https://github.com/lcolladotor/lcollado753/tree/master/final/nfl_half&#34;&gt;lcollado753&lt;/a&gt;&lt;/span&gt;). While the details are in the report, I&amp;#8217;ll give a brief summary here.&lt;/p&gt;
+&lt;p&gt;Basically, I summarized the play-by-play data for all NFL games from 2002 to 2012 seasons as provided by Burke (&lt;span class=&#34;showtooltip&#34; title=&#34;(2010). Advanced NFL Stats: Play-by-Play Data.   http://www.advancednflstats.com/2010/04/play-by-play-data.html  [Online. last-accessed: 2013-03-24 00:08:20].   http://www.advancednflstats.com/2010/04/play-by-play-data.html.&#34;&gt;&lt;a href=&#34;http://www.advancednflstats.com/2010/04/play-by-play-data.html&#34;&gt;Burke, 2010&lt;/a&gt;&lt;/span&gt;). I used some of the variables Burke uses (&lt;span class=&#34;showtooltip&#34; title=&#34;(2009). Advanced NFL Stats: How the Model Works-A Detailed  Example Part 1.   http://www.advancednflstats.com/2009/01/how-model-works-detailed-example.html  [Online. last-accessed: 2013-03-24 00:08:21].   http://www.advancednflstats.com/2009/01/how-model-works-detailed-example.html.&#34;&gt;&lt;a href=&#34;http://www.advancednflstats.com/2009/01/how-model-works-detailed-example.html&#34;&gt;Burke, 2009&lt;/a&gt;&lt;/span&gt;) and some others like the score difference, who starts the second half, and the game day winning percentages of both teams. After exploring the data, I discarded the years 2002 to 2005. Then, I trained a model using the 2006 to 2011 data and did some quick model selection. Note that I&amp;#8217;m not doing the adjustment by opponent the way Burke did it (&lt;span class=&#34;showtooltip&#34; title=&#34;(2009). Advanced NFL Stats: How the Model Works-A Detailed  Example Part 2.   http://www.advancednflstats.com/2009/01/how-model-works-detailed-example-part-2.html  [Online. last-accessed: 2013-03-24 00:08:23].   http://www.advancednflstats.com/2009/01/how-model-works-detailed-example-part-2.html.&#34;&gt;&lt;a href=&#34;http://www.advancednflstats.com/2009/01/how-model-works-detailed-example-part-2.html&#34;&gt;Burke, 2009-2&lt;/a&gt;&lt;/span&gt;) in part because I was running out of time, but also because the model already uses the current game winning percentages of both teams to consider the two team&amp;#8217;s strength. I evaluated the model using the 2012 data and after seeing that it worked decently enough, I trained a second model using the data from 2006 to 2012 so it can be used for the 2013 season. These two trained models are the ones available in the shiny app I made.&lt;/p&gt;
+&lt;p&gt;In the report, I didn&amp;#8217;t include ROCs—a big miss—so here they go. The code I will show below is heavily based on a post on GLMs (&lt;span class=&#34;showtooltip&#34; title=&#34;denishaine (2013). Veterinary Epidemiologic Research: GLM  \ Evaluating Logistic Regression Models (part 3).   http://denishaine.wordpress.com/2013/03/19/veterinary-epidemiologic-research-glm-evaluating-logistic-regression-models-part-3/  [Online. last-accessed: 2013-03-23 22:51:49].   http://denishaine.wordpress.com/2013/03/19/veterinary-epidemiologic-research-glm-evaluating-logistic-regression-models-part-3/.&#34;&gt;&lt;a href=&#34;http://denishaine.wordpress.com/2013/03/19/veterinary-epidemiologic-research-glm-evaluating-logistic-regression-models-part-3/&#34;&gt;denishaine, 2013&lt;/a&gt;&lt;/span&gt;). The code below is written in a way that you can easily reproduce it if you have cloned my repository for the 140.753 class (&lt;span class=&#34;showtooltip&#34; title=&#34;lcolladotor (2013). lcollado753.   https://github.com/lcolladotor/lcollado753 [Online.  last-accessed: 2013-03-21 02:23:49].   https://github.com/lcolladotor/lcollado753/tree/master/final/nfl_half.&#34;&gt;&lt;a href=&#34;https://github.com/lcolladotor/lcollado753/tree/master/final/nfl_half&#34;&gt;lcollado753&lt;/a&gt;&lt;/span&gt;).&lt;/p&gt;
+&lt;p&gt;First, some setup steps.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;## Specify the directory where you cloned the lcollado753 repo
+maindir &amp;lt;- &amp;quot;whereYouClonedTheRepo&amp;quot;
+## Load packages needed
+suppressMessages(library(ROCR))
+library(ggplot2)
+
+## Load fits.
+## Remember that 1st one used data from 2006 to 2011
+## and the 2nd one used data from 2006 to 2012.
+load(paste0(maindir, &amp;quot;/lcollado753/final/nfl_half/EDA/model/fits.Rdata&amp;quot;))
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Next, I make the ROCs for both trained models using the data that they were trained on. They should be quite good since it uses the same data to build the model that it will then try to predict.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;## Make the ROC plots
+
+## Simple list where I&#39;ll store all the results so I can compare the ROC plots later on
+all &amp;lt;- list()
+
+## Construct prediction function
+for(i in 1:2) {
+	## Predict on the original data
+	pred &amp;lt;- predict(fits[[i]])
+	
+	## Subset original data (remove NA&#39;s)
+	data &amp;lt;- fits[[i]]$data
+	data &amp;lt;- data[complete.cases(data),]
+	
+	## Construct prediction function
+	pred.fn &amp;lt;- prediction(pred, data$win)
+	
+	## Get performance info
+	perform &amp;lt;- performance(pred.fn, &amp;quot;tpr&amp;quot;, &amp;quot;fpr&amp;quot;)
+	
+	## Get ready to plot
+	toPlot &amp;lt;- data.frame(tpr = unlist(slot(perform, &amp;quot;y.values&amp;quot;)), fpr = unlist(slot(perform, &amp;quot;x.values&amp;quot;)))
+	all &amp;lt;- c(all, list(toPlot))
+
+	## Make the plot
+	res &amp;lt;- ggplot(toPlot) + geom_line(aes(x=fpr, y=tpr)) + geom_abline(intercept=0, slope=1, colour=&amp;quot;orange&amp;quot;) + ylab(&amp;quot;Sensitivity&amp;quot;) + xlab(&amp;quot;1 - Specificity&amp;quot;) + ggtitle(paste(&amp;quot;Years 2006 to&amp;quot;, c(&amp;quot;2011&amp;quot;, &amp;quot;2012&amp;quot;)[i]))
+	print(res)
+	
+	## Print the AUC value
+	print(unlist(performance(pred.fn, &amp;quot;auc&amp;quot;)@y.values))
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img alt=&#34;plot of chunk ROC&#34; src=&#34;http://i.imgur.com/b1FS2ml.png&#34;/&gt;&lt;/p&gt;
+```r
+## [1] 0.8506
+```
+&lt;p&gt;&lt;img alt=&#34;plot of chunk ROC&#34; src=&#34;http://i.imgur.com/f2UOySy.png&#34;/&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;## [1] 0.8513
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Both ROC plots look pretty similar (well, the data sets are very similar!) and have relatively high AUC values.&lt;/p&gt;
+&lt;p&gt;Next, I make the ROC plot using the model trained with the data from 2006 to 2011 to predict the outcomes for the 2012 games.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;## Load 2012 data
+load(paste0(maindir, &amp;quot;/lcollado753/final/nfl_half/data/pred/info2012.Rdata&amp;quot;))
+
+## Predict using model fit with data from 2006 to 2011
+pred &amp;lt;- predict(fits[[1]], info2012)
+
+## Construction prediction function
+pred.fn &amp;lt;- prediction(pred, info2012$win)
+
+## Get performance info
+perform &amp;lt;- performance(pred.fn, &amp;quot;tpr&amp;quot;, &amp;quot;fpr&amp;quot;)
+
+## Get ready to plot
+toPlot &amp;lt;- data.frame(tpr = unlist(slot(perform, &amp;quot;y.values&amp;quot;)), fpr = unlist(slot(perform, &amp;quot;x.values&amp;quot;)))
+all &amp;lt;- c(all, list(toPlot))
+
+## Make the plot
+ggplot(toPlot) + geom_line(aes(x=fpr, y=tpr)) + geom_abline(intercept=0, slope=1, colour=&amp;quot;orange&amp;quot;) + ylab(&amp;quot;Sensitivity&amp;quot;) + xlab(&amp;quot;1 - Specificity&amp;quot;) + ggtitle(&amp;quot;Model trained 2006-2011 predicting 2012&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img alt=&#34;plot of chunk pred2012&#34; src=&#34;http://i.imgur.com/DDcsW7W.png&#34;/&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;## Print the AUC value
+print(unlist(performance(pred.fn, &amp;quot;auc&amp;quot;)@y.values))
+## [1] 0.816
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The steps in the curve are more visible since it is using less data. It also seems to be a little less good than the other two, as expected. This is clear when comparing the AUC values.&lt;/p&gt;
+&lt;p&gt;Finally, I plot all curves in the same picture to visually compare them.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;names(all) &amp;lt;- c(&amp;quot;train2011&amp;quot;, &amp;quot;train2012&amp;quot;, &amp;quot;pred2012&amp;quot;)
+for(i in 1:3) {
+	all[[i]] &amp;lt;- cbind(all[[i]], rep(names(all)[i], nrow(all[[i]])))
+	colnames(all[[i]])[3] &amp;lt;- &amp;quot;set&amp;quot;
+}
+all &amp;lt;- do.call(rbind, all)
+
+ggplot(all) + geom_line(aes(x=fpr, y=tpr, colour=set)) + geom_abline(intercept=0, slope=1, colour=&amp;quot;orange&amp;quot;) + ylab(&amp;quot;Sensitivity&amp;quot;) + xlab(&amp;quot;1 - Specificity&amp;quot;) + ggtitle(&amp;quot;Comparing ROCs&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;p&gt;&lt;img alt=&#34;plot of chunk allInOne&#34; src=&#34;http://i.imgur.com/tUVfgfs.png&#34;/&gt;&lt;/p&gt;
+&lt;p&gt;Both ROCs with the trained data (train2011, train2012) are nearly identical and both are slightly superior to the one predicting the 2012 games.&lt;/p&gt;
+&lt;p&gt;Overall I am happy with the results and while some things can certainly be improved, I look forward to the NFL 2013 season. Also, remember that Burke publishes his winning estimated probabilities from week 4 onward (&lt;span class=&#34;showtooltip&#34; title=&#34;BURKE BB (2013). Brian Burke - The Fifth Down Blog -  NYTimes.com.   http://fifthdown.blogs.nytimes.com/author/brian-burke/ [Online.  last-accessed: 2013-03-24 00:26:32].   http://fifthdown.blogs.nytimes.com/author/brian-burke/.&#34;&gt;&lt;a href=&#34;http://fifthdown.blogs.nytimes.com/author/brian-burke/&#34;&gt;The Fifth Down Blog&lt;/a&gt;&lt;/span&gt;). So you might be interested on comparing the probability at half time versus his estimated probability which is calculated before the game starts. I mean, maybe you could use the difference between the two to have an idea of how unexpected the first half was. After all, if a game falls outside the pattern it might be worth watching.&lt;/p&gt;
+&lt;p&gt;Citations made with &lt;code&gt;knitcitations&lt;/code&gt; (&lt;span class=&#34;showtooltip&#34; title=&#34;Boettiger C (2013). _knitcitations: Citations for knitr markdown  files_. R package version 0.4-4,   https://github.com/cboettig/knitcitations.&#34;&gt;&lt;a href=&#34;https://github.com/cboettig/knitcitations&#34;&gt;Boettiger, 2013&lt;/a&gt;&lt;/span&gt;).&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;lcolladotor, lcollado753. &lt;em&gt;GitHub&lt;/em&gt; &lt;a href=&#34;https://github.com/lcolladotor/lcollado753/tree/master/final/nfl_half&#34;&gt;&lt;a href=&#34;https://github.com/lcolladotor/lcollado753/tree/master/final/nfl_half&#34;&gt;https://github.com/lcolladotor/lcollado753/tree/master/final/nfl_half&lt;/a&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;denishaine, (2013) Veterinary Epidemiologic Research: GLM &amp;amp;ndash; Evaluating Logistic Regression Models (part 3). &lt;em&gt;denis haine&lt;/em&gt; &lt;a href=&#34;http://denishaine.wordpress.com/2013/03/19/veterinary-epidemiologic-research-glm-evaluating-logistic-regression-models-part-3/&#34;&gt;&lt;a href=&#34;http://denishaine.wordpress.com/2013/03/19/veterinary-epidemiologic-research-glm-evaluating-logistic-regression-models-part-3/&#34;&gt;http://denishaine.wordpress.com/2013/03/19/veterinary-epidemiologic-research-glm-evaluating-logistic-regression-models-part-3/&lt;/a&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Advanced NFL Stats. &lt;a href=&#34;http://www.advancednflstats.com/&#34;&gt;&lt;a href=&#34;http://www.advancednflstats.com/&#34;&gt;http://www.advancednflstats.com/&lt;/a&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;(2010) Advanced NFL Stats: Play-by-Play Data. &lt;a href=&#34;http://www.advancednflstats.com/2010/04/play-by-play-data.html&#34;&gt;&lt;a href=&#34;http://www.advancednflstats.com/2010/04/play-by-play-data.html&#34;&gt;http://www.advancednflstats.com/2010/04/play-by-play-data.html&lt;/a&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;(2009) Advanced NFL Stats: How the Model Works–A Detailed Example Part 1. &lt;a href=&#34;http://www.advancednflstats.com/2009/01/how-model-works-detailed-example.html&#34;&gt;&lt;a href=&#34;http://www.advancednflstats.com/2009/01/how-model-works-detailed-example.html&#34;&gt;http://www.advancednflstats.com/2009/01/how-model-works-detailed-example.html&lt;/a&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;(2009) Advanced NFL Stats: How the Model Works–A Detailed Example Part 2. &lt;a href=&#34;http://www.advancednflstats.com/2009/01/how-model-works-detailed-example-part-2.html&#34;&gt;&lt;a href=&#34;http://www.advancednflstats.com/2009/01/how-model-works-detailed-example-part-2.html&#34;&gt;http://www.advancednflstats.com/2009/01/how-model-works-detailed-example-part-2.html&lt;/a&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;By BURKE, Brian Burke - The Fifth Down Blog - NYTimes.com. &lt;em&gt;The Fifth Down Â» Brian Burke&lt;/em&gt; &lt;a href=&#34;http://fifthdown.blogs.nytimes.com/author/brian-burke/&#34;&gt;&lt;a href=&#34;http://fifthdown.blogs.nytimes.com/author/brian-burke/&#34;&gt;http://fifthdown.blogs.nytimes.com/author/brian-burke/&lt;/a&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Carl Boettiger, knitcitations: Citations for knitr markdown files. &lt;a href=&#34;https://github.com/cboettig/knitcitations&#34;&gt;&lt;a href=&#34;https://github.com/cboettig/knitcitations&#34;&gt;https://github.com/cboettig/knitcitations&lt;/a&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;RStudio , Inc. , (2013) shiny: Web Application Framework for R. &lt;a href=&#34;http://CRAN.R-project.org/package=shiny&#34;&gt;&lt;a href=&#34;http://CRAN.R-project.org/package=shiny&#34;&gt;http://CRAN.R-project.org/package=shiny&lt;/a&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Sharing my work for &#34;Advanced Methods III&#34;</title>
+      <link>http://lcolladotor.github.io/2013/02/13/Sharing-my-work-for-Advanced-Methods-III</link>
+      <pubDate>Wed, 13 Feb 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://lcolladotor.github.io/2013/02/13/Sharing-my-work-for-Advanced-Methods-III</guid>
+      <description>&lt;p&gt;This semester I&amp;#8217;m taking the live version of the Data Analysis class by Jeff Leek. His more &lt;a href=&#34;https://class.coursera.org/dataanalysis-001/class/index&#34;&gt;popular version of the course is available through Coursera&lt;/a&gt;. &lt;/p&gt;
+&lt;p&gt;One of the things that Jeff promotes is reproducibility and sharing code. I share that tendency and thus created a Git repository for my homework and code for the class: &lt;a href=&#34;http://bit.ly/12vSk7d&#34;&gt;lcollado753&lt;/a&gt;. I&amp;#8217;m hosting it with GitHub to try it out since I started with Mercurial via Bitbucket. &lt;/p&gt;
+&lt;p&gt;Part of me would love it if everyone in the class had their own Git repositories. I mean, this class involves lots of practice exercises and there are plenty of R packages and functions that others use that I would like to learn. As I don&amp;#8217;t see this happening, I think that it would be great to list the packages/functions you think could be interesting to others at the end of the write-ups. However, this involves sharing the reports and I don&amp;#8217;t know if that will happen.&lt;/p&gt;
+&lt;p&gt;But maybe I didn&amp;#8217;t get the instructions Jeff gave correctly the first time. Listening into his week 2 talks from the Coursera course, I get that he wants our reports to be reproducible. The idea is great, but sometimes I get lots in the technicalities of finding the best fit for our situation. Aka, something we can all do that is worth the time for small scale projects that we have a couple of days to complete and most likely will be finishing the day before they are due. For now we might stick to sharing zip files with the report + summarized data set (it has be small enough to be sharable by email).&lt;/p&gt;
+&lt;p&gt;I&amp;#8217;m pretty happy with hosting my stuff at GitHub. One blunder I made in the&lt;a href=&#34;https://github.com/lcolladotor/lcollado753/blob/master/hw/data-analysis-01/report/data01_lcollado.pdf&#34;&gt; first data analysis report&lt;/a&gt; is that I completely forgot to say in it that I have the code in GitHub :P Oh well, next time!&lt;/p&gt;
+&lt;p&gt;I feel that I also have lots to improve regarding how to tell a story in a report. Plus, for this first project I mainly did some exploratory data analysis without much stat analysis.&lt;/p&gt;
+&lt;p&gt;Overall, I&amp;#8217;m quite excited with this course =) and I think that I&amp;#8217;ll learn a ton on methods to analyze data AND how to actually implement them. Plus, I&amp;#8217;m currently trying to learn ggplot2 as you can see in that first report. Also, I made it with knitr instead of Sweave =)&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
