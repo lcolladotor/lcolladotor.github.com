@@ -10,11 +10,239 @@
     <atom:link href="/tags/help/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Use hidden advanced arguments for user-friendly functions</title>
+      <link>http://lcolladotor.github.io/2014/12/11/dots</link>
+      <pubDate>Thu, 11 Dec 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://lcolladotor.github.io/2014/12/11/dots</guid>
+      <description>
+
+&lt;h2 id=&#34;as-a-user&#34;&gt;As a user&lt;/h2&gt;
+
+&lt;p&gt;Imagine that you are starting to learn how to use a specific &lt;code&gt;R&lt;/code&gt; package, lets call it &lt;code&gt;foo&lt;/code&gt;. You will look at the vignette (if there is one), use &lt;code&gt;help(package = foo)&lt;/code&gt;, or look at the reference manual (for example, &lt;a href=&#34;http://cran.r-project.org/web/packages/devtools/devtools.pdf&#34; target=&#34;_blank&#34;&gt;devtools&amp;rsquo; ref man&lt;/a&gt;). Eventually, you will open the help page for the function(s) you are interested in using.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;?function_I_want_to_use
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;In many packages, there is a main use case that is addressed by the package. A common strategy is to export a main function. That function will likely have a long list of arguments. So as a new user, you are suddenly exposed to a complicated help page and you will want to figure out which arguments you need to use.&lt;/p&gt;
+
+&lt;h2 id=&#34;as-a-developer&#34;&gt;As a developer&lt;/h2&gt;
+
+&lt;p&gt;From the developer&amp;rsquo;s side, you want to give users control over several details. Each detail you want the user to control involves one more argument in your function. Sooner rather than later, you will have a long list of arguments. This increases the learning curve for new users of your package, and can potentially scare them away. That is contradictory of another goal you have as a developer: you want to get people to use your package.&lt;/p&gt;
+
+&lt;p&gt;Lets say that you are developing the function &lt;code&gt;use_me()&lt;/code&gt;. If the details you want the users to control are actually arguments of other functions used inside &lt;code&gt;use_me()&lt;/code&gt;, then you can simplify your function by using the &lt;code&gt;...&lt;/code&gt; argument. This argument is very well explained at &lt;a href=&#34;http://www.burns-stat.com/the-three-dots-construct-in-r/&#34; target=&#34;_blank&#34;&gt;The three-dots construct in R&lt;/a&gt; &lt;a id=&#39;cite-greycite20763&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;http://www.burns-stat.com/the-three-dots-construct-in-r/&#39;&gt;Burns, 2013&lt;/a&gt;). It is very useful and can greatly simplify your life as a developer. Plus, it reduces the length of your help pages, thus making your package more user friendly.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://lcolladotor.github.io/figs/2014-12-11-dots/unnamed-chunk-2-1.png&#34; alt=&#34;center&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;However, if some of the details in &lt;code&gt;use_me()&lt;/code&gt; are not arguments to other functions, then the common strategy is to write two functions. One is a low level function with arguments for all the details which might or might not export. Then, you write a second function that is a wrapper for the low level function and pre-specifies values for all the details. See the next minimal example:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;# Don&#39;t export this function
+.use_me &amp;lt;- function(arg1, arg2, verbose = TRUE) {
+    if(verbose) message(paste(Sys.time(), &#39;working&#39;))
+    pmax(arg1, arg2)
+}
+
+#&#39; @export
+use_me &amp;lt;- function(arg1, ...) {
+    .use_me(arg1, 0, ...)
+}
+
+## Lets see it in action
+use_me(1:3)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## 2014-12-11 17:03:32 working
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## [1] 1 2 3
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;use_me(-1:1, verbose = FALSE)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## [1] 0 0 1
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;In this example, the help page for &lt;code&gt;use_me()&lt;/code&gt; is fairly short and friendly. You don&amp;rsquo;t expect users to be interested in changing &lt;code&gt;arg2&lt;/code&gt; much. Surely you could make it so the non-exported function &lt;code&gt;.use_me()&lt;/code&gt; sets a default value for &lt;code&gt;arg2&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Another strategy is to specify inside &lt;code&gt;use_me()&lt;/code&gt; the default values for all the arguments you want to use while keeping the list of visible arguments short. That is, maintain the user friendliness of your functions while also giving them control over all the details. That is what you can do using &lt;code&gt;dots()&lt;/code&gt; from &lt;code&gt;dots&lt;/code&gt; &lt;a id=&#39;cite-dots&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://github.com/lcolladotor/dots&#39;&gt;Collado-Torres, 2014&lt;/a&gt;). &lt;code&gt;dots()&lt;/code&gt; is a very simple function that checks if &lt;code&gt;...&lt;/code&gt; has a specific argument, and if absent, it returns a default value. It can be seen in action below:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;library(&#39;dots&#39;)
+use_me_dots &amp;lt;- function(arg1, ...) {
+    ## Default hidden arguments
+    arg2 &amp;lt;- dots(name = &#39;arg2&#39;, value = 0, ...)
+    verbose &amp;lt;- dots(&#39;verbose&#39;, TRUE, ...)
+    
+    ## Regular code
+    if(verbose) message(paste(Sys.time(), &#39;working&#39;))
+    pmax(arg1, arg2)
+}
+use_me_dots(1:3)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## 2014-12-11 17:03:32 working
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## [1] 1 2 3
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;use_me_dots(-1:1, verbose = FALSE)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## [1] 0 0 1
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;use_me_dots(-1:1, verbose = FALSE, arg2 = 5)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## [1] 5 5 5
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;code&gt;dots&lt;/code&gt; is my solution to the problem of keeping functions user friendly while giving them control over all the details. The idea is that experienced users will be able to find what the advanced arguments are. While they could find them from the code itself, I do recommend describing the advanced arguments in a vignette targeted for these users.&lt;/p&gt;
+
+&lt;h2 id=&#34;complications&#34;&gt;Complications&lt;/h2&gt;
+
+&lt;p&gt;Now, while &lt;code&gt;...&lt;/code&gt; is great, you might run into problems when &lt;code&gt;use_me()&lt;/code&gt; calls two functions that have different arguments and that don&amp;rsquo;t have the &lt;code&gt;...&lt;/code&gt; argument. Such a scenario is illustrated below.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;status &amp;lt;- function(arg3, status = TRUE) {
+    if(status) print(arg3)
+    return(invisible(NULL))
+}
+use_me_again &amp;lt;- function(arg1, ...) {
+    res &amp;lt;- .use_me(arg1, 0, ...)
+    status(res, ...)
+    return(res)
+}
+
+## Seems to work
+x &amp;lt;- use_me_again(1)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## 2014-12-11 17:03:32 working
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## [1] 1
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;## But nope, it doesn&#39;t
+use_me_again(1, verbose = FALSE, status = FALSE)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## Error in .use_me(arg1, 0, ...): unused argument (status = FALSE)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This scenario can happen when you are using functions from other packages. It&amp;rsquo;s happened to me in cases where the main function does have a &lt;code&gt;...&lt;/code&gt; argument but uses several internal functions that don&amp;rsquo;t use it.&lt;/p&gt;
+
+&lt;p&gt;In such situations, you might want to use &lt;code&gt;formal_call()&lt;/code&gt; from &lt;code&gt;dots&lt;/code&gt;. It figures out which are the arguments formally used by the function of interest and drops out un-used arguments from &lt;code&gt;...&lt;/code&gt;, thus avoiding this type of problem.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;use_me_fixed &amp;lt;- function(arg1, ...) {
+    res &amp;lt;- formalCall(.use_me, arg1 = arg1, arg2 = 0, ...)
+    formal_call(status, arg3 = res, ...)
+    return(res)
+}
+
+## Works now!
+use_me_fixed(1, verbose = FALSE, status = FALSE)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## [1] 1
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;For a more complicated example, see the &lt;a href=&#34;http://lcolladotor.github.io/dots/dots.html#Complex_example&#34; target=&#34;_blank&#34;&gt;dots complex example in the vignette&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;conclusions&#34;&gt;Conclusions&lt;/h2&gt;
+
+&lt;p&gt;As a developer, it is possible to keep your functions user friendly while giving experienced users the option to control the fine tuning arguments which you don&amp;rsquo;t expect most users will want to tweak. My solution to this problem is implemented in &lt;a href=&#34;https://github.com/lcolladotor/dots&#34; target=&#34;_blank&#34;&gt;dots&lt;/a&gt; (check it&amp;rsquo;s &lt;a href=&#34;http://lcolladotor.github.io/dots/&#34; target=&#34;_blank&#34;&gt;vignette&lt;/a&gt;). I&amp;rsquo;d love to hear what you think about it! I am specially interested on what users think about the idea of hidden advanced arguments (documented in an advanced users vignette).&lt;/p&gt;
+
+&lt;p&gt;I might try to get &lt;code&gt;dots&lt;/code&gt; into a repository: probably in &lt;a href=&#34;http://www.bioconductor.org/&#34; target=&#34;_blank&#34;&gt;Bioconductor&lt;/a&gt; since most of the &lt;code&gt;dots&lt;/code&gt; code was first implemented for &lt;a href=&#34;http://www.bioconductor.org/packages/release/bioc/html/derfinder.html&#34; target=&#34;_blank&#34;&gt;derfinder&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;PS I just found a similar function to &lt;code&gt;dots()&lt;/code&gt;. It&amp;rsquo;s &lt;code&gt;berryFunctions::owa()&lt;/code&gt; and you can find its &lt;a href=&#34;https://github.com/BerryBoessenkool/berryFunctions/blob/master/R/owa.r&#34; target=&#34;_blank&#34;&gt;code here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&#34;references&#34;&gt;References&lt;/h3&gt;
+
+&lt;p&gt;Citations made with &lt;code&gt;knitcitations&lt;/code&gt; &lt;a id=&#39;cite-knitcitations&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://github.com/cboettig/knitcitations&#39;&gt;Boettiger, 2014&lt;/a&gt;).&lt;/p&gt;
+
+&lt;p&gt;&lt;a id=&#39;bib-knitcitations&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-knitcitations&#34;&gt;[1]&lt;/a&gt;&lt;cite&gt;
+C. Boettiger.
+&lt;em&gt;knitcitations: Citations for knitr markdown files&lt;/em&gt;.
+R package version 1.0.4.
+2014.
+URL: &lt;a href=&#34;https://github.com/cboettig/knitcitations&#34;&gt;https://github.com/cboettig/knitcitations&lt;/a&gt;.&lt;/cite&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a id=&#39;bib-greycite20763&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-greycite20763&#34;&gt;[2]&lt;/a&gt;&lt;cite&gt;
+P. Burns.
+&lt;em&gt;The three-dots construct in R - Burns Statistics&lt;/em&gt;.
+&lt;a href=&#34;http://www.burns-stat.com/the-three-dots-construct-in-r/&#34;&gt;http://www.burns-stat.com/the-three-dots-construct-in-r/&lt;/a&gt;.
+2013.
+URL: &lt;a href=&#34;http://www.burns-stat.com/the-three-dots-construct-in-r/&#34;&gt;http://www.burns-stat.com/the-three-dots-construct-in-r/&lt;/a&gt;.&lt;/cite&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a id=&#39;bib-dots&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-dots&#34;&gt;[3]&lt;/a&gt;&lt;cite&gt;
+L. Collado-Torres.
+&lt;em&gt;dots: Simplifying function calls&lt;/em&gt;.
+R package version 1.0.0.
+2014.
+URL: &lt;a href=&#34;https://github.com/lcolladotor/dots&#34;&gt;https://github.com/lcolladotor/dots&lt;/a&gt;.&lt;/cite&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;reproducibility&#34;&gt;Reproducibility&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;## Reproducibility info
+library(&#39;devtools&#39;)
+options(width = 120)
+session_info()
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## Session info-----------------------------------------------------------------------------------------------------------
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;##  setting  value                                             
+##  version  R Under development (unstable) (2014-11-01 r66923)
+##  system   x86_64, darwin10.8.0                              
+##  ui       X11                                               
+##  language (EN)                                              
+##  collate  en_US.UTF-8                                       
+##  tz       America/New_York
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## Packages---------------------------------------------------------------------------------------------------------------
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;##  package       * version  date       source                                 
+##  bibtex          0.3.6    2013-07-29 CRAN (R 3.2.0)                         
+##  devtools      * 1.6.1    2014-10-07 CRAN (R 3.2.0)                         
+##  digest          0.6.4    2013-12-03 CRAN (R 3.2.0)                         
+##  dots          * 1.0.0    2014-11-14 Github (lcolladotor/dots@a933540)      
+##  evaluate        0.5.5    2014-04-29 CRAN (R 3.2.0)                         
+##  formatR         1.0      2014-08-25 CRAN (R 3.2.0)                         
+##  httr            0.5      2014-09-02 CRAN (R 3.2.0)                         
+##  knitcitations * 1.0.4    2014-11-03 Github (cboettig/knitcitations@508de74)
+##  knitr         * 1.7      2014-10-13 CRAN (R 3.2.0)                         
+##  lubridate       1.3.3    2013-12-31 CRAN (R 3.2.0)                         
+##  memoise         0.2.1    2014-04-22 CRAN (R 3.2.0)                         
+##  plyr            1.8.1    2014-02-26 CRAN (R 3.2.0)                         
+##  RColorBrewer  * 1.0.5    2011-06-17 CRAN (R 3.2.0)                         
+##  Rcpp            0.11.3   2014-09-29 CRAN (R 3.2.0)                         
+##  RCurl           1.95.4.3 2014-07-29 CRAN (R 3.2.0)                         
+##  RefManageR      0.8.40   2014-10-29 CRAN (R 3.2.0)                         
+##  RJSONIO         1.3.0    2014-07-28 CRAN (R 3.2.0)                         
+##  rstudioapi      0.1      2014-03-27 CRAN (R 3.2.0)                         
+##  stringr         0.6.2    2012-12-06 CRAN (R 3.2.0)                         
+##  XML             3.98.1.1 2013-06-20 CRAN (R 3.2.0)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;want-more&#34;&gt;Want more?&lt;/h3&gt;
+
+&lt;p&gt;Check other &lt;a href=&#34;https://twitter.com/jhubiostat&#34; target=&#34;_blank&#34;&gt;@jhubiostat&lt;/a&gt; student blogs at &lt;a href=&#34;http://bmorebiostat.com/&#34; target=&#34;_blank&#34;&gt;Bmore Biostats&lt;/a&gt; as well as topics on &lt;a href=&#34;https://twitter.com/search?q=%23rstats&#34; target=&#34;_blank&#34;&gt;#rstats&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;I wrote &lt;code&gt;dots&lt;/code&gt; a month ago and the post itself today during our bi-weekly blog meeting.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Trying to reduce the memory overhead when using mclapply</title>
-      <link>http://lcolladotor.github.io/2013/11/14/Trying-to-reduce-the-memory-overhead-when-using-mclapply</link>
+      <link>http://lcolladotor.github.io/2013/11/14/Reducing-memory-overhead-when-using-mclapply</link>
       <pubDate>Thu, 14 Nov 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://lcolladotor.github.io/2013/11/14/Trying-to-reduce-the-memory-overhead-when-using-mclapply</guid>
+      <guid>http://lcolladotor.github.io/2013/11/14/Reducing-memory-overhead-when-using-mclapply</guid>
       <description>
 
 &lt;p&gt;I am currently trying to understand how to reduce the memory used by &lt;code&gt;mclapply&lt;/code&gt;. This function is rather complicated and others have explained the differences versus &lt;code&gt;parLapply&lt;/code&gt; (&lt;span class=&#34;showtooltip&#34; title=&#34;A\_Skelton73 (2013). &#39;understanding the differences between mclapply and parLapply in R.&#39; .&#34;&gt;&lt;a href=&#34;http://stackoverflow.com/questions/17196261/understanding-the-differences-between-mclapply-and-parlapply-in-r&#34;&gt;A_Skelton73, 2013&lt;/a&gt;&lt;/span&gt;; &lt;span class=&#34;showtooltip&#34; title=&#34;lockedoff (2012). &#39;Using mclapply, foreach, or something else in [r] to operate on an object in parallel?&#39; .&#34;&gt;&lt;a href=&#34;http://stackoverflow.com/questions/11036702/using-mclapply-foreach-or-something-else-in-r-to-operate-on-an-object-in-par&#34;&gt;lockedoff, 2012&lt;/a&gt;&lt;/span&gt; ) and also made it clear that in &lt;code&gt;mclapply&lt;/code&gt;  each job does not know if the others are running out of memory and thus cannot trigger &lt;code&gt;gc&lt;/code&gt; (&lt;span class=&#34;showtooltip&#34; title=&#34;(2013). &#39; [R-sig-hpc] mclapply: rm intermediate objects and returning   memory .&#39; .&#34;&gt;&lt;a href=&#34;https://mailman.stat.ethz.ch/pipermail/r-sig-hpc/2012-October/001534.html&#34;&gt;Urbanek, 2012&lt;/a&gt;&lt;/span&gt;).&lt;/p&gt;

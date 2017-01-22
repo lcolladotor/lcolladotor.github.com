@@ -145,10 +145,10 @@ URL: &lt;a href=&#34;https://www.R-project.org/&#34;&gt;https://www.R-project.or
     
     <item>
       <title>Finding possible class schedules</title>
-      <link>http://lcolladotor.github.io/2016/08/02/Finding-possible-class-schedules</link>
+      <link>http://lcolladotor.github.io/2016/08/02/materias</link>
       <pubDate>Tue, 02 Aug 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://lcolladotor.github.io/2016/08/02/Finding-possible-class-schedules</guid>
+      <guid>http://lcolladotor.github.io/2016/08/02/materias</guid>
       <description>
 
 &lt;p&gt;Over the weekend my brother wanted to figure out his class schedule for the next semester. He is a veterinary medicine and zootechnology student at UNAM. For this upcoming semester there is a set of classes he has to take and each has 8 or so instructor options. The website where he finds the class times lists about 8 pre-constructed class schedules. So he normally finds one he likes quite a bit, and then manually starts checking if he can change X instructor for Y for a given class. He does this based on the referalls and information he has gathered about the instructors, plus he factors in whether it&amp;rsquo;d be an overall better schedule. For example, he might prefer to have a packed Tuesday if that means that he can leave early on Friday and avoid classes on Saturday.&lt;/p&gt;
@@ -612,10 +612,10 @@ session_info()
     
     <item>
       <title>Federico Sánchez Rodríguez 1950-2016</title>
-      <link>http://lcolladotor.github.io/2016/04/04/Federico-S%C3%A1nchez-Rodr%C3%ADguez-1950-2016</link>
+      <link>http://lcolladotor.github.io/2016/04/04/FedericoSanchez</link>
       <pubDate>Mon, 04 Apr 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://lcolladotor.github.io/2016/04/04/Federico-S%C3%A1nchez-Rodr%C3%ADguez-1950-2016</guid>
+      <guid>http://lcolladotor.github.io/2016/04/04/FedericoSanchez</guid>
       <description>&lt;p&gt;&lt;center&gt;
 &lt;a href=&#39;http://www.imagechef.com/ic/ribbon/&#39;&gt;&lt;img alt = &#39;Federico Sanchez Ribbon&#39; height=&#39;300&#39; src=&#39;http://lcolladotor.github.io/figs/2016-04-04-FedericoSanchez/Fede-Ribbon.jpg&#39; /&gt;&lt;/a&gt;
 &lt;/center&gt;&lt;/p&gt;
@@ -643,10 +643,10 @@ Leonardo&lt;/p&gt;
     
     <item>
       <title>LCG-UNAM 11 years ago</title>
-      <link>http://lcolladotor.github.io/2016/03/10/LCG-UNAM-11-years-ago</link>
+      <link>http://lcolladotor.github.io/2016/03/10/LCGUNAM</link>
       <pubDate>Thu, 10 Mar 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://lcolladotor.github.io/2016/03/10/LCG-UNAM-11-years-ago</guid>
+      <guid>http://lcolladotor.github.io/2016/03/10/LCGUNAM</guid>
       <description>
 
 &lt;p&gt;This has been a busy week. I just flew in last night from &lt;a href=&#34;https://twitter.com/hashtag/enar2016&#34; target=&#34;_blank&#34;&gt;#ENAR2016&lt;/a&gt; and I&amp;rsquo;m getting ready for a postdoc interview tomorrow, which means that I&amp;rsquo;m also flying today. On the flight back from &lt;a href=&#34;https://twitter.com/hashtag/enar2016&#34; target=&#34;_blank&#34;&gt;#ENAR2016&lt;/a&gt; I started reading a book my friend &lt;a href=&#34;https://twitter.com/StrictlyStat&#34; target=&#34;_blank&#34;&gt;John Muschelli&lt;/a&gt; bought for me. It&amp;rsquo;s called &lt;strong&gt;The Happiness Advantage&lt;/strong&gt; by Shawn Anchor and so far I&amp;rsquo;m loving it. There are several things that it talks about that I&amp;rsquo;ve done in the past, but maybe not in the past year. Anyhow, I&amp;rsquo;ll probably talk about it in a separate blog post.&lt;/p&gt;
@@ -669,10 +669,10 @@ Leonardo&lt;/p&gt;
     
     <item>
       <title>Are you doing parallel computations in R? Then use BiocParallel</title>
-      <link>http://lcolladotor.github.io/2016/03/07/Are-you-doing-parallel-computations-in-R-Then-use-BiocParallel</link>
+      <link>http://lcolladotor.github.io/2016/03/07/BiocParallel</link>
       <pubDate>Mon, 07 Mar 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://lcolladotor.github.io/2016/03/07/Are-you-doing-parallel-computations-in-R-Then-use-BiocParallel</guid>
+      <guid>http://lcolladotor.github.io/2016/03/07/BiocParallel</guid>
       <description>
 
 &lt;p&gt;It&amp;rsquo;s the morning of the first day of oral conferences at &lt;a href=&#34;https://twitter.com/search?q=%23ENAR2016&amp;amp;src=tyah&#34; target=&#34;_blank&#34;&gt;#ENAR2016&lt;/a&gt;. I feel like I have a &lt;a href=&#34;https://en.wiktionary.org/wiki/Spidey-sense&#34; target=&#34;_blank&#34;&gt;spidey sense&lt;/a&gt; since I woke up 3 min after an email from Jeff Leek; just a funny coincidence. Anyhow, I promised Valerie Obenchain at &lt;a href=&#34;https://twitter.com/hashtag/bioc2014&#34; target=&#34;_blank&#34;&gt;#Bioc2014&lt;/a&gt; that I would write a post about one of my favorite Bioconductor packages: &lt;a href=&#34;http://www.bioconductor.org/packages/release/bioc/html/BiocParallel.html&#34; target=&#34;_blank&#34;&gt;BiocParallel&lt;/a&gt; &lt;a id=&#39;cite-biocparallel&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;#bib-biocparallel&#39;&gt;Morgan, Obenchain, Lang, and Thompson, 2016&lt;/a&gt;). By now it&amp;rsquo;s on the top 5% of downloaded Bioconductor packages, so many people know about it or are unaware that their favorite package uses it behind the scenes.&lt;/p&gt;
@@ -976,10 +976,10 @@ R package version 1.4.3.
     
     <item>
       <title>Teaching a short topic to beginner R users</title>
-      <link>http://lcolladotor.github.io/2015/07/07/Teaching-a-short-topic-to-beginner-R-users</link>
+      <link>http://lcolladotor.github.io/2015/07/07/rmarkdown</link>
       <pubDate>Tue, 07 Jul 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://lcolladotor.github.io/2015/07/07/Teaching-a-short-topic-to-beginner-R-users</guid>
+      <guid>http://lcolladotor.github.io/2015/07/07/rmarkdown</guid>
       <description>
 
 &lt;p&gt;A couple weeks ago I was given the opportunity to teach a 1 hr 30 min slot of an introduction to &lt;code&gt;R&lt;/code&gt; course. In the past, I&amp;rsquo;ve taught lectures for similar courses, and I ended up asking myself what would be the best short topic to teach and how to teach it.&lt;/p&gt;
@@ -1052,10 +1052,10 @@ URL: &lt;a href=&#34;http://CRAN.R-project.org/package=knitcitations&#34;&gt;htt
     
     <item>
       <title>What are reasonable work hours and salary expectations for biostats/genomics careers?</title>
-      <link>http://lcolladotor.github.io/2015/02/12/What-are-reasonable-work-hours-and-salary-expectations-for-biostats/genomics-careers</link>
+      <link>http://lcolladotor.github.io/2015/02/12/salary-work-hours-expectations</link>
       <pubDate>Thu, 12 Feb 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://lcolladotor.github.io/2015/02/12/What-are-reasonable-work-hours-and-salary-expectations-for-biostats/genomics-careers</guid>
+      <guid>http://lcolladotor.github.io/2015/02/12/salary-work-hours-expectations</guid>
       <description>
 
 &lt;p&gt;My advisor recently asked me to fill a career planning document (he&amp;rsquo;ll blog about it at some point) that has lots of questions and is being very useful. Trying to fill answer all these questions has gotten me thinking about other important things for the future. Two of them being reasonable expectations for work hours and salary in a biostats/genomics academic career.&lt;/p&gt;
@@ -1484,10 +1484,10 @@ URL: &lt;a href=&#34;http://www.mortgagecalculator.org/&#34;&gt;http://www.mortg
     
     <item>
       <title>Use hidden advanced arguments for user-friendly functions</title>
-      <link>http://lcolladotor.github.io/2014/12/11/Use-hidden-advanced-arguments-for-user-friendly-functions</link>
+      <link>http://lcolladotor.github.io/2014/12/11/dots</link>
       <pubDate>Thu, 11 Dec 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://lcolladotor.github.io/2014/12/11/Use-hidden-advanced-arguments-for-user-friendly-functions</guid>
+      <guid>http://lcolladotor.github.io/2014/12/11/dots</guid>
       <description>
 
 &lt;h2 id=&#34;as-a-user&#34;&gt;As a user&lt;/h2&gt;
@@ -1712,10 +1712,10 @@ session_info()
     
     <item>
       <title>An xpd-tion into R plot margins</title>
-      <link>http://lcolladotor.github.io/2014/11/21/An-xpd-tion-into-R-plot-margins</link>
+      <link>http://lcolladotor.github.io/2014/11/21/add-logo-in-R</link>
       <pubDate>Fri, 21 Nov 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://lcolladotor.github.io/2014/11/21/An-xpd-tion-into-R-plot-margins</guid>
+      <guid>http://lcolladotor.github.io/2014/11/21/add-logo-in-R</guid>
       <description>
 
 &lt;p&gt;&lt;em&gt;This is a guest post by &lt;a href=&#34;http://www.biostat.jhsph.edu/~prpatil/&#34; target=&#34;_blank&#34;&gt;Prasad Patil&lt;/a&gt; that answers the question: how to put a shape in the margin of an R plot?&lt;/em&gt;&lt;/p&gt;
@@ -1793,10 +1793,10 @@ of your &lt;strong&gt;R&lt;/strong&gt; plot device, and it will not stay consist
     
     <item>
       <title>Where do I start using Bioconductor?</title>
-      <link>http://lcolladotor.github.io/2014/10/16/Where-do-I-start-using-Bioconductor</link>
+      <link>http://lcolladotor.github.io/2014/10/16/startBioC</link>
       <pubDate>Thu, 16 Oct 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://lcolladotor.github.io/2014/10/16/Where-do-I-start-using-Bioconductor</guid>
+      <guid>http://lcolladotor.github.io/2014/10/16/startBioC</guid>
       <description>
 
 &lt;p&gt;I was recently asked &lt;em&gt;where do I get started with Bioconductor?&lt;/em&gt; and thought this would be a good short post.&lt;/p&gt;
@@ -1881,10 +1881,10 @@ URL: &lt;a href=&#34;http://www.R-project.org/&#34;&gt;http://www.R-project.org/
     
     <item>
       <title>End of the summer blogger challenge</title>
-      <link>http://lcolladotor.github.io/2014/10/03/End-of-the-summer-blogger-challenge</link>
+      <link>http://lcolladotor.github.io/2014/10/03/kiva</link>
       <pubDate>Fri, 03 Oct 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://lcolladotor.github.io/2014/10/03/End-of-the-summer-blogger-challenge</guid>
+      <guid>http://lcolladotor.github.io/2014/10/03/kiva</guid>
       <description>
 
 &lt;p&gt;This summer a few of us at &lt;a href=&#34;http://bmorebiostat.com/&#34; target=&#34;_blank&#34;&gt;Bmore Biostats&lt;/a&gt; agreed to a summer iron blogger challenge. We either had to blog every week or every two weeks. The penalty of not publishing a post in our chosen timeframe was to donate 5 or 10 USD (respectively) to our charity of choice.&lt;/p&gt;
@@ -1928,10 +1928,10 @@ URL: &lt;a href=&#34;http://www.R-project.org/&#34;&gt;http://www.R-project.org/
     
     <item>
       <title>Concerns that can deter potential orders for developing Shiny apps</title>
-      <link>http://lcolladotor.github.io/2014/06/10/Concerns-that-can-deter-potential-orders-for-developing-Shiny-apps</link>
+      <link>http://lcolladotor.github.io/2014/06/10/shiny-orders</link>
       <pubDate>Tue, 10 Jun 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://lcolladotor.github.io/2014/06/10/Concerns-that-can-deter-potential-orders-for-developing-Shiny-apps</guid>
+      <guid>http://lcolladotor.github.io/2014/06/10/shiny-orders</guid>
       <description>
 
 &lt;p&gt;A few weeks ago I was invited to a meeting where a group was interested in exploring options for replacing their contract with a propriety software. They invited me because they saw some resemblances between a &lt;a href=&#34;http://shiny.rstudio.com/&#34; target=&#34;_blank&#34;&gt;Shiny&lt;/a&gt; application I made and the features they need. It is a relatively small project and it seemed feasible to implement, but well, some details could have been tricky to code. During the meeting I explained what &lt;a href=&#34;http://shiny.rstudio.com/&#34; target=&#34;_blank&#34;&gt;Shiny&lt;/a&gt; is, showcased some of the &lt;a href=&#34;http://shiny.rstudio.com/&#34; target=&#34;_blank&#34;&gt;Shiny&lt;/a&gt; apps I&amp;rsquo;ve made, and proposed some options including a simple site password.&lt;/p&gt;
@@ -2016,10 +2016,10 @@ URL: &lt;a href=&#34;http://www.R-project.org/&#34;&gt;http://www.R-project.org/
     
     <item>
       <title>Simple mortgage calculator</title>
-      <link>http://lcolladotor.github.io/2014/04/22/Simple-mortgage-calculator</link>
+      <link>http://lcolladotor.github.io/2014/04/22/mortgage-calculator-flexible-payments</link>
       <pubDate>Tue, 22 Apr 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://lcolladotor.github.io/2014/04/22/Simple-mortgage-calculator</guid>
+      <guid>http://lcolladotor.github.io/2014/04/22/mortgage-calculator-flexible-payments</guid>
       <description>
 
 &lt;p&gt;Have you ever thought of borrowing some money? A common case is when you have to borrow money for buying a house, which is called a mortgage. Wikipedia (&lt;span class=&#34;showtooltip&#34; title=&#34;(2014). &#39;Mortgage loan - Wikipedia, the free encyclopedia.&#39; .&#34;&gt;&lt;a href=&#34;http://en.wikipedia.org/wiki/Mortgage_loan&#34;&gt;&amp;lsquo;Mortgage loan&amp;rsquo; entry&lt;/a&gt;&lt;/span&gt;) goes into much more detail about the definition than what I&amp;rsquo;ll cover.&lt;/p&gt;
@@ -2123,10 +2123,10 @@ URL: &lt;a href=&#34;http://www.R-project.org/&#34;&gt;http://www.R-project.org/
     
     <item>
       <title>rMaps Mexico map</title>
-      <link>http://lcolladotor.github.io/2014/02/26/rMaps-Mexico-map</link>
+      <link>http://lcolladotor.github.io/2014/02/26/excited-by-willingness-to-help-get-things-done</link>
       <pubDate>Wed, 26 Feb 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://lcolladotor.github.io/2014/02/26/rMaps-Mexico-map</guid>
+      <guid>http://lcolladotor.github.io/2014/02/26/excited-by-willingness-to-help-get-things-done</guid>
       <description>
 
 &lt;h2 id=&#34;it-s-exciting-when-great-people-help-each-other-get-things-done&#34;&gt;It&amp;rsquo;s exciting when great people help each other get things done&lt;/h2&gt;
@@ -2330,10 +2330,10 @@ dBase, &amp;hellip;.  &lt;a href=&#34;http://CRAN.R-project.org/package=foreign&
     
     <item>
       <title>Automatically coloring your R output in the terminal using colorout</title>
-      <link>http://lcolladotor.github.io/2014/02/17/Automatically-coloring-your-R-output-in-the-terminal-using-colorout</link>
+      <link>http://lcolladotor.github.io/2014/02/17/colorout</link>
       <pubDate>Mon, 17 Feb 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://lcolladotor.github.io/2014/02/17/Automatically-coloring-your-R-output-in-the-terminal-using-colorout</guid>
+      <guid>http://lcolladotor.github.io/2014/02/17/colorout</guid>
       <description>
 
 &lt;p&gt;Thanks to Alyssa Frazee I just learned about the &lt;code&gt;colorout&lt;/code&gt; package (&lt;span class=&#34;showtooltip&#34; title=&#34;Aquino J (2013). colorout: Colorize R output on terminal emulators. R package version 1.0-2.&#34;&gt;&lt;a href=&#34;http://www.lepem.ufc.br/jaa/colorout.html&#34;&gt;Aquino, 2013&lt;/a&gt;&lt;/span&gt;). It modifies &lt;code&gt;R&lt;/code&gt; so that the output is in different colors, making it much more pleasant to use &lt;code&gt;R&lt;/code&gt; in the terminal.&lt;/p&gt;

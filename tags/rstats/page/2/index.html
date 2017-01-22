@@ -171,97 +171,19 @@
   
   
   <div>
-    <h2><a href="http://lcolladotor.github.io/2013/06/12/userR2013-data-analysis-contest-data-exploration">userR2013 data analysis contest: data exploration</a></h2>
+    <h2><a href="http://lcolladotor.github.io/2011/12/06/the-new-visualization-package-for-genome-data-in">The new visualization package for genome data in Bioconductor: ggbio</a></h2>
     <div class="article-style">
       
-      Description The useR2013 conference is organizing a data analysis contest, check the rules here.
-They have a package called useR2013DAC with two data sets: one from La Liga and the other one from the Formula 1. Once you download and install the package (available here), you can quickly explore the data using the following R commands:
-Data exploration ## Load the package library(useR2013DAC) ## Explore laliga data data(laliga) head(laliga)  ## Season Week HomeTeam AwayTeam ## 1 <sup>2008</sup>&frasl;<sub>09</sub> 1 Athletic Club Bilbao Union Deportiva Almeria ## 2 <sup>2008</sup>&frasl;<sub>09</sub> 1 Atlético Madrid Málaga CF ## 3 <sup>2008</sup>&frasl;<sub>09</sub> 1 Betis Sevilla Real Club Recreativo Huelva ## 4 <sup>2008</sup>&frasl;<sub>09</sub> 1 CA Osasuna Villarreal CF ## 5 <sup>2008</sup>&frasl;<sub>09</sub> 1 CD Numancia FC Barcelona ## 6 <sup>2008</sup>&frasl;<sub>09</sub> 1 Deportivo de La Coruña Real Madrid CF ## HomeGoals AwayGoals ## 1 1 3 ## 2 4 0 ## 3 0 1 ## 4 1 1 ## 5 1 0 ## 6 2 1  summary(laliga)  ## Season Week HomeTeam AwayTeam ## Length:1900 Min.
+      It&#8217;s been a while since I&#8217;ve been waiting for the release of a visualization package in Bioconductor. Back in 2008 I was really impressed by the power ofGenomeGraphs and I have used it in multiple occasions. Yet from both the Bioconductor Developer Meeting in Heidelberg 2010 and BioC2011 I&#8217;ve been waiting for the release of the visualization tools developed by Michael Lawrence and Tengfei Yin at Genentech. So, after a long hiatus where I didn&#8217;t browse the biocviews in Bioconductor, I found out that Lawrence and Yin released ggbio and biovizBase (it&#8217;s more of an infrastructure package for ggbio) .
       
     </div>
   </div>
   
   <div>
-    <h2><a href="http://lcolladotor.github.io/2013/05/09/Reading-an-R-file-from-GitHub">Reading an R file from GitHub</a></h2>
+    <h2><a href="http://lcolladotor.github.io/2011/12/04/introducing-biostatistics-to-first-year-lcg-students">Introducing Biostatistics to first year LCG students</a></h2>
     <div class="article-style">
       
-      Lets say that I want to read in this R file from GitHub into R.
-The first thing you have to do is locate the raw file. You can do so by clicking on the Raw button in GitHub. In this case it&#8217;s <a href="https://raw.github.com/lcolladotor/ballgownR-devel/master/ballgownR/R/infoGene.R" target="_blank">https://raw.github.com/lcolladotor/ballgownR-devel/master/ballgownR/R/infoGene.R</a>
-One would think that using source() would work, but it doesn&#8217;t as shown below:
-source(&quot;<a href="https://raw.github.com/lcolladotor/ballgownR-devel/master/ballgownR/R/infoGene.R&quot;" target="_blank">https://raw.github.com/lcolladotor/ballgownR-devel/master/ballgownR/R/infoGene.R&quot;</a>)  ## Warning: unsupported URL scheme  ## Error: cannot open the connection  However, thanks again to Hadley Wickham you can do so by using the devtools (Wickham &amp; Chang, 2013 ) package.
-      
-    </div>
-  </div>
-  
-  <div>
-    <h2><a href="http://lcolladotor.github.io/2013/04/26/Using-plyr-and-doMC-for-quick-and-easy-apply-family-functions">Using plyr and doMC for quick and easy apply-family functions</a></h2>
-    <div class="article-style">
-      
-      A few weeks back I dedicated a short amount of time to actually read what plyr (Wickham, 2011) is about and I was surprised. The whole idea behind plyr is very simple: expand the apply() family to do things easy. plyr has many functions whose name ends with ply which is short of apply. Then, the functions are identified by two letters before ply which are abbreviations for the input (first letter) and output (second one).
-      
-    </div>
-  </div>
-  
-  <div>
-    <h2><a href="http://lcolladotor.github.io/2013/03/23/Predicting-who-will-win-a-NFL-match-at-half-time">Predicting who will win a NFL match at half time</a></h2>
-    <div class="article-style">
-      
-      It was great to have a little break, Spring break, although the weather didn&#8217;t feel like spring at all! During the early part of the break I worked on my final project for Jeff Leek&#8217;s data analysis class, which we call 140.753 here. Continuing my previous posts on the topic, this time I&#8217;ll share the results of my final project.
-At the beginning of the course, we had to submit a project plan (more like a proposal) and in mine I announced my interest to look into some sports data.
-      
-    </div>
-  </div>
-  
-  <div>
-    <h2><a href="http://lcolladotor.github.io/2013/02/13/Sharing-my-work-for-Advanced-Methods-III">Sharing my work for &#34;Advanced Methods III&#34;</a></h2>
-    <div class="article-style">
-      
-      This semester I&#8217;m taking the live version of the Data Analysis class by Jeff Leek. His more popular version of the course is available through Coursera. One of the things that Jeff promotes is reproducibility and sharing code. I share that tendency and thus created a Git repository for my homework and code for the class: lcollado753. I&#8217;m hosting it with GitHub to try it out since I started with Mercurial via Bitbucket.
-      
-    </div>
-  </div>
-  
-  <div>
-    <h2><a href="http://lcolladotor.github.io/2012/11/12/Introduction-to-R-and-Biostatistics-2012-version-presentation">Introduction to R and Biostatistics (2012 version): presentation</a></h2>
-    <div class="article-style">
-      
-      To follow my Introducing R and Biostatistics to first year LCG students (2012 version) post, you can now find the presentation online from my site either in presentation format, in a single webpage format, or the raw Rmd file. To prove the point that publishing to RPubs is super easy, you can also find the single webpage format over there. I also like how you can comment and share in RPubs.
-      
-    </div>
-  </div>
-  
-  <div>
-    <h2><a href="http://lcolladotor.github.io/2012/10/30/Introducing-R-and-Biostatistics-to-first-year-LCG-students-2012-version">Introducing R and Biostatistics to first year LCG students (2012 version)</a></h2>
-    <div class="article-style">
-      
-      On Friday November 9th I&#8217;ll be giving a talk to the first year students from the Undergraduate Program on Genomic Sciences (LCG in Spanish) during their &#8220;Seminar 1: Introduction to Bioinformatics&#8221; course. It&#8217;s just like I did a year ago as I documented in my post Introducing Biostatistics to first year LCG students.
-Well, this time I&#8217;ll change things a bit. I&#8217;m allowed to require the students to read 2-3 papers before my talk to introduce them to my field.
-      
-    </div>
-  </div>
-  
-  <div>
-    <h2><a href="http://lcolladotor.github.io/2012/10/19/Visualizing-colors">Visualizing colors()</a></h2>
-    <div class="article-style">
-      
-    </div>
-  </div>
-  
-  <div>
-    <h2><a href="http://lcolladotor.github.io/2012/10/08/Why-arent-all-of-our-graphs-interactive">Why aren&#39;t all of our graphs interactive?</a></h2>
-    <div class="article-style">
-      
-      During the last pre-happy hour seminar, Karl Broman talked about Why aren&#8217;t all of our graphs interactive? I didn&#8217;t know, but a few years ago Karl worked in the department and clearly promoted beer-drinking and is the heart of the department. I&#8217;m a fan of our pre-happy hour seminars since you have a get to listen to good/fun talks over a beer or two.
-But I&#8217;m also a fan of reproducible research and useful graphics.
-      
-    </div>
-  </div>
-  
-  <div>
-    <h2><a href="http://lcolladotor.github.io/2012/10/01/JHSPH-Biostat-through-Coursera">JHSPH-Biostat through Coursera</a></h2>
-    <div class="article-style">
-      
-      Have you heard of online education? If you are in the US or Mexico I&#8217;m sure that you have seen some ads about online universities. Well, that&#8217;s not the type of education I&#8217;m talking about. I&#8217;m talking about free high-quality education. For some years, the top option has been the Open Courseware (OCW) organized under the Open Courseware Consortium (OCWC). Back in 2009 I was pushed my undergrad (LCG-UNAM) to design and teach OCW-compliant courses.
+      Around two weeks ago I gave a talk via skype to the first year students from the Undergraduate Program on Genomic Sciences (LCG in Spanish) from the National Autonomous University of Mexico (UNAM in Spanish). The talk was under the context of the Introduction to Bioinformatics Seminar Series whose goal is to familiarize the new students with the bioinformatics world. It used to be a course heavy on exploring database websites, some basic theory, and lots of new concepts and algorithm names.
       
     </div>
   </div>
@@ -273,8 +195,6 @@ But I&#8217;m also a fan of reproducible research and useful graphics.
     
     <li><a href="http://lcolladotor.github.io//tags/rstats/">&laquo; Previous</a></li>
     
-    
-    <li><a href="http://lcolladotor.github.io//tags/rstats/page/3/">Next &raquo;</a></li>
     
   </ul>
 </nav>

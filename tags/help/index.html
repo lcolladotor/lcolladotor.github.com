@@ -171,7 +171,17 @@
   
   
   <div>
-    <h2><a href="http://lcolladotor.github.io/2013/11/14/Trying-to-reduce-the-memory-overhead-when-using-mclapply">Trying to reduce the memory overhead when using mclapply</a></h2>
+    <h2><a href="http://lcolladotor.github.io/2014/12/11/dots">Use hidden advanced arguments for user-friendly functions</a></h2>
+    <div class="article-style">
+      
+      As a user Imagine that you are starting to learn how to use a specific R package, lets call it foo. You will look at the vignette (if there is one), use help(package = foo), or look at the reference manual (for example, devtools&rsquo; ref man). Eventually, you will open the help page for the function(s) you are interested in using.
+?function_I_want_to_use  In many packages, there is a main use case that is addressed by the package.
+      
+    </div>
+  </div>
+  
+  <div>
+    <h2><a href="http://lcolladotor.github.io/2013/11/14/Reducing-memory-overhead-when-using-mclapply">Trying to reduce the memory overhead when using mclapply</a></h2>
     <div class="article-style">
       
       I am currently trying to understand how to reduce the memory used by mclapply. This function is rather complicated and others have explained the differences versus parLapply (A_Skelton73, 2013; lockedoff, 2012 ) and also made it clear that in mclapply each job does not know if the others are running out of memory and thus cannot trigger gc (Urbanek, 2012).

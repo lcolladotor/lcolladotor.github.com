@@ -143,11 +143,478 @@ URL: &lt;a href=&#34;https://www.R-project.org/&#34;&gt;https://www.R-project.or
     </item>
     
     <item>
+      <title>Finding possible class schedules</title>
+      <link>http://lcolladotor.github.io/2016/08/02/materias</link>
+      <pubDate>Tue, 02 Aug 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://lcolladotor.github.io/2016/08/02/materias</guid>
+      <description>
+
+&lt;p&gt;Over the weekend my brother wanted to figure out his class schedule for the next semester. He is a veterinary medicine and zootechnology student at UNAM. For this upcoming semester there is a set of classes he has to take and each has 8 or so instructor options. The website where he finds the class times lists about 8 pre-constructed class schedules. So he normally finds one he likes quite a bit, and then manually starts checking if he can change X instructor for Y for a given class. He does this based on the referalls and information he has gathered about the instructors, plus he factors in whether it&amp;rsquo;d be an overall better schedule. For example, he might prefer to have a packed Tuesday if that means that he can leave early on Friday and avoid classes on Saturday.&lt;/p&gt;
+
+&lt;p&gt;The problem is that it&amp;rsquo;s very easy to make a mistake. You (well he) gets all excited thinking that he&amp;rsquo;s found the perfect schedule. Only to then realize that there is a conflict between two classes. Or that the practical portion of a class is in a location one hour away from the university, meaning that the schedule he has selected won&amp;rsquo;t work. This process is very frustrating.&lt;/p&gt;
+
+&lt;p&gt;I was watching him and I started to think if I could help him with some code. Turns out that it was straightforward to write some code to find which options are valid. Once I wrote a test case, it took us like half an hour to fill out the data. I know that tomorrow is when he and his classmates start registering for classes, so this information might help his classmates.&lt;/p&gt;
+
+&lt;p&gt;First, I define some helper functions. These are rather straightforward but I&amp;rsquo;ll be using them later on. For example, &lt;code&gt;dias()&lt;/code&gt; is just there for typing less.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;## Helper functions
+dias &amp;lt;- function(d, i) {
+    paste0(d, i)
+}
+
+extract &amp;lt;- function(m, p) {
+    m[[p]]
+}
+
+extract_names &amp;lt;- function(m, p) {
+    names(m)[p]
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Next comes the input information. I organized it in a set of nested &lt;code&gt;list&lt;/code&gt; objects. The schedule is stored as a character vector. For example, Lucia Eliana&amp;rsquo;s class meets on Wednesdays (&lt;strong&gt;M&lt;/strong&gt;iercoles in Spanish) from 9 to 11 am. I only keep the starting hours (9 and 10 am) because otherwise the code won&amp;rsquo;t detect valid opitons that include another class that starts at 11 am. For classes that are 1 hour away from the university, we included 1 hour before and 1 hour after the class.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;## Input class/prof info and schedule
+materias &amp;lt;- list(
+    repro = list(
+        &#39;lucia eliana&#39; = c(dias(&#39;m&#39;, 9:10), dias(&#39;j&#39;, 9:10), dias(&#39;v&#39;, 8:13)),
+        &#39;esquivel lacroix&#39; = c(dias(&#39;l&#39;, 14:15), dias(&#39;ma&#39;, 12:18), dias(&#39;m&#39;, 14:15)),
+        &#39;ismael porras&#39; = c(dias(&#39;l&#39;, 9:10), dias(&#39;m&#39;, 8:14), dias(&#39;j&#39;, 9:10)),
+        &#39;esquivel lacroix 2&#39; = c(dias(&#39;l&#39;, 14:15), dias(&#39;m&#39;, 14:15), dias(&#39;v&#39;, 12:18)),
+        &#39;salvador galina&#39; = c(dias(&#39;ma&#39;, 8:13), dias(&#39;j&#39;, 9:10), dias(&#39;v&#39;, 9:10)),
+        &#39;alberto balcazar&#39; = c(dias(&#39;l&#39;, 15:16), dias(&#39;j&#39;, 12:18), dias(&#39;v&#39;, 14:15)),
+        &#39;ana myriam boeta&#39; = c(dias(&#39;l&#39;, 8:13), dias(&#39;m&#39;, 10:11), dias(&#39;v&#39;, 9:10)),
+        &#39;rafael eduardo paz&#39; = c(dias(&#39;l&#39;, 11:17), dias(&#39;j&#39;, 14:15), dias(&#39;v&#39;, 16:17)),
+        &#39;juan heberth&#39; = c(dias(&#39;ma&#39;, 9:10), dias(&#39;m&#39;, 11:17), dias(&#39;v&#39;, 11:12)),
+        &#39;vicente octavio mejia&#39; = c(dias(&#39;ma&#39;, 8:17))
+    ),
+    economia = list(
+        &#39;valentin efren espinoza&#39; = c(dias(&#39;l&#39;, 8:10), dias(&#39;ma&#39;, 9:11)),
+        &#39;maria del pilar velazquez&#39; = c(dias(&#39;l&#39;, 16:18), dias(&#39;m&#39;, 16:18)),
+        &#39;arturo alonso pesado&#39; = c(dias(&#39;l&#39;, 11:13), dias(&#39;j&#39;, 11:13)),
+        &#39;laura mendez&#39; = c(dias(&#39;ma&#39;, 13:15), dias(&#39;m&#39;, 18:20)),
+        &#39;laura mendez 2&#39; = c(dias(&#39;j&#39;, 11:13), dias(&#39;v&#39;, 11:13)),
+        &#39;manuela garcia&#39; = c(dias(&#39;l&#39;, 17:19), dias(&#39;v&#39;, 16:18)),
+        &#39;francisco alejandro&#39; = c(dias(&#39;ma&#39;, 7:9), dias(&#39;j&#39;, 7:9)),
+        &#39;isaac reyes&#39; = c(dias(&#39;m&#39;, 13:15), dias(&#39;v&#39;, 13:15)),
+        &#39;jose luis tinoco&#39; = c(dias(&#39;ma&#39;, 12:14), dias(&#39;m&#39;, 9:11)),
+        &#39;isaac reyes 2&#39; = c(dias(&#39;l&#39;, 14:16), dias(&#39;ma&#39;, 14:16))
+        
+    ),
+    bacterianas = list(
+        &#39;jose luis gutierrez&#39; = dias(&#39;s&#39;, 8:11),
+        &#39;rodrigo mena&#39; = c(dias(&#39;ma&#39;, 18:19), dias(&#39;j&#39;, 18:19)),
+        &#39;beatriz arellano&#39; = c(dias(&#39;l&#39;, 7:8), dias(&#39;ma&#39;, 10:11)),
+        &#39;de la pena, ramirez ortega&#39; = c(dias(&#39;j&#39;, 18:19), dias(&#39;v&#39;, 18:19)),
+        &#39;ramirez ortega&#39; = c(dias(&#39;m&#39;, 7:8), dias(&#39;j&#39;, 7:8)),
+        &#39;rodrigo mena 2&#39; = c(dias(&#39;ma&#39;, 16:17), dias(&#39;m&#39;, 16:17)),
+        &#39;de la pena&#39; = dias(&#39;s&#39;, 8:11),
+        &#39;efren diaz aparicio&#39; = dias(&#39;s&#39;, 8:11),
+        &#39;lucia del carmen favila&#39; = dias(&#39;s&#39;, 8:11)
+    ),
+    parasitarias = list(
+        &#39;cintli martinez&#39; = c(dias(&#39;j&#39;, 16:17), dias(&#39;v&#39;, 18:20)),
+        &#39;osvaldo froylan&#39; = c(dias(&#39;ma&#39;, 18:19), dias(&#39;j&#39;, 18:20)),
+        &#39;maria quintero, agustin perez&#39; = c(dias(&#39;ma&#39;, 13:14), dias(&#39;m&#39;, 7:9)),
+        &#39;maria quintero&#39; = c(dias(&#39;m&#39;, 16:18), dias(&#39;j&#39;, 16:17)),
+        &#39;evangelina romero&#39; = c(dias(&#39;ma&#39;, 7:8), dias(&#39;v&#39;, 7:9)),
+        &#39;guadarrama 01&#39; = c(dias(&#39;m&#39;, 7:8), dias(&#39;j&#39;, 11:13)),
+        &#39;guadarrama 03&#39; = c(dias(&#39;ma&#39;, 13:15), dias(&#39;v&#39;, 7:8)),
+        &#39;guadarrama 04&#39; = c(dias(&#39;l&#39;, 16:17), dias(&#39;ma&#39;, 18:20)),
+        &#39;guadarrama 05&#39; = c(dias(&#39;l&#39;, 7:9), dias(&#39;j&#39;, 7:8))
+    ),
+    diagnosticas = list(
+        &#39;1701&#39; = c(dias(&#39;l&#39;, 11:13), dias(&#39;m&#39;, 11:16)),
+        &#39;1702&#39; = c(dias(&#39;j&#39;, 13:15), dias(&#39;v&#39;, 13:18)),
+        &#39;1703&#39; = c(dias(&#39;ma&#39;, 7:9), dias(&#39;v&#39;, 8:13)),
+        &#39;1704&#39; = c(dias(&#39;l&#39;, 18:20), dias(&#39;j&#39;, 13:18)),
+        &#39;1705&#39; = c(dias(&#39;l&#39;, 11:13), dias(&#39;m&#39;, 7:11)),
+        &#39;1706&#39; = c(dias(&#39;ma&#39;, 15:17), dias(&#39;m&#39;, 15:19)),
+        &#39;1707&#39; = c(dias(&#39;ma&#39;, 10:12), dias(&#39;j&#39;, 10:15)),
+        &#39;1708&#39; = c(dias(&#39;l&#39;, 18:20), dias(&#39;ma&#39;, 15:19)),
+        &#39;1709&#39; = c(dias(&#39;l&#39;, 11:13), dias(&#39;j&#39;, 8:13)),
+        &#39;1711&#39; = c(dias(&#39;j&#39;, 13:15), dias(&#39;v&#39;, 10:13))
+    )
+)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now that the input information is complete, I use &lt;code&gt;expand.grid()&lt;/code&gt; to find out all the different possible options.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;## Get all the options
+options &amp;lt;- expand.grid(lapply(materias, function(x) { seq_len(length(x))}))
+dim(options)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## [1] 81000     5
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;There&amp;rsquo;s 81,00 of them including the classes that meet on Saturday. You can see why it&amp;rsquo;s a frustrating process to find which combination of classes work when doing this manually.&lt;/p&gt;
+
+&lt;p&gt;Next, I explore all these options to find those that are valid, meaning that none of the classes overlap. I do this by finding which options have no duplicated hours from the character vectors defined earlier. Nothing fancy.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;valid &amp;lt;- apply(options, 1, function(input) {
+    info &amp;lt;- mapply(extract, materias, input)
+    !any(duplicated(unlist(info)))
+})
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now that I have the valid options, I can find the names of the instructors for them. There&amp;rsquo;s 2,847 valid schedules in the end, out of the 81,000. That&amp;rsquo;s 3.5 percent!&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;valid_prof &amp;lt;- apply(options[valid, ], 1, function(input) {
+    mapply(extract_names, materias, input)
+})
+ncol(valid_prof)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## [1] 2847
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;You can search the interactive version &lt;a href=&#34;https://lcolladotor.shinyapps.io/materias/&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt; to select only the options with a given instructor. For example, in my brother&amp;rsquo;s case there are 30 valid options once he decided to prioritize two instructors as shown in the non-interactive table below.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;## Ideally, this code would create an interactive table, but it doesn&#39;t work for some reason:
+#library(&#39;DT&#39;)
+#datatable(t(valid_prof), options = list(pagingType=&#39;full_numbers&#39;, pageLength=10), rownames = FALSE)
+valid_prof &amp;lt;- t(valid_prof)
+rownames(valid_prof) &amp;lt;- seq_len(nrow(valid_prof))
+top_options &amp;lt;- valid_prof[valid_prof[, 1] == &#39;lucia eliana&#39; &amp;amp; valid_prof[, 2] %in% c(&#39;isaac reyes&#39;, &#39;isaac reyes 2&#39;), ]
+kable(top_options, format = &#39;markdown&#39;, row.names = TRUE)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;left&#34;&gt;&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;repro&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;economia&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;bacterianas&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;parasitarias&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;diagnosticas&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;5&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;lucia eliana&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;isaac reyes 2&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;jose luis gutierrez&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;cintli martinez&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;1701&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;11&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;lucia eliana&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;isaac reyes 2&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;rodrigo mena&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;cintli martinez&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;1701&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;14&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;lucia eliana&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;isaac reyes 2&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;beatriz arellano&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;cintli martinez&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;1701&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;19&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;lucia eliana&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;isaac reyes 2&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;ramirez ortega&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;cintli martinez&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;1701&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;25&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;lucia eliana&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;isaac reyes 2&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;de la pena&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;cintli martinez&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;1701&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;31&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;lucia eliana&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;isaac reyes 2&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;efren diaz aparicio&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;cintli martinez&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;1701&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;37&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;lucia eliana&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;isaac reyes 2&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;lucia del carmen favila&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;cintli martinez&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;1701&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;46&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;lucia eliana&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;isaac reyes 2&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;jose luis gutierrez&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;osvaldo froylan&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;1701&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;50&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;lucia eliana&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;isaac reyes 2&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;beatriz arellano&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;osvaldo froylan&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;1701&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;58&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;lucia eliana&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;isaac reyes 2&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;ramirez ortega&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;osvaldo froylan&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;1701&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;67&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;lucia eliana&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;isaac reyes 2&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;de la pena&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;osvaldo froylan&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;1701&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;76&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;lucia eliana&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;isaac reyes 2&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;efren diaz aparicio&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;osvaldo froylan&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;1701&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;85&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;lucia eliana&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;isaac reyes 2&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;lucia del carmen favila&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;osvaldo froylan&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;1701&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;123&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;lucia eliana&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;isaac reyes 2&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;jose luis gutierrez&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;guadarrama 01&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;1701&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;130&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;lucia eliana&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;isaac reyes 2&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;rodrigo mena&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;guadarrama 01&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;1701&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;134&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;lucia eliana&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;isaac reyes 2&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;beatriz arellano&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;guadarrama 01&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;1701&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;137&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;lucia eliana&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;isaac reyes 2&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;de la pena, ramirez ortega&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;guadarrama 01&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;1701&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;144&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;lucia eliana&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;isaac reyes 2&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;de la pena&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;guadarrama 01&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;1701&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;151&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;lucia eliana&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;isaac reyes 2&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;efren diaz aparicio&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;guadarrama 01&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;1701&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;158&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;lucia eliana&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;isaac reyes 2&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;lucia del carmen favila&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;guadarrama 01&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;1701&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;209&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;lucia eliana&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;isaac reyes 2&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;jose luis gutierrez&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;guadarrama 05&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;1701&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;217&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;lucia eliana&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;isaac reyes 2&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;rodrigo mena&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;guadarrama 05&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;1701&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;222&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;lucia eliana&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;isaac reyes 2&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;de la pena, ramirez ortega&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;guadarrama 05&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;1701&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;232&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;lucia eliana&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;isaac reyes 2&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;de la pena&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;guadarrama 05&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;1701&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;242&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;lucia eliana&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;isaac reyes 2&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;efren diaz aparicio&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;guadarrama 05&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;1701&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;252&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;lucia eliana&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;isaac reyes 2&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;lucia del carmen favila&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;guadarrama 05&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;1701&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;872&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;lucia eliana&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;isaac reyes 2&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;jose luis gutierrez&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;guadarrama 05&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;1704&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;885&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;lucia eliana&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;isaac reyes 2&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;de la pena&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;guadarrama 05&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;1704&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;894&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;lucia eliana&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;isaac reyes 2&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;efren diaz aparicio&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;guadarrama 05&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;1704&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;903&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;lucia eliana&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;isaac reyes 2&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;lucia del carmen favila&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;guadarrama 05&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;1704&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&#34;reproducibility&#34;&gt;Reproducibility&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;## Reproducibility info
+library(&#39;devtools&#39;)
+session_info()
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## Session info --------------------------------------------------------------
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;##  setting  value                       
+##  version  R version 3.3.0 (2016-05-03)
+##  system   x86_64, mingw32             
+##  ui       RStudio (0.99.902)          
+##  language (EN)                        
+##  collate  English_United States.1252  
+##  tz       America/Mexico_City         
+##  date     2016-08-02
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## Packages ------------------------------------------------------------------
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;##  package   * version date       source        
+##  devtools  * 1.12.0  2016-06-24 CRAN (R 3.3.1)
+##  digest      0.6.9   2016-01-08 CRAN (R 3.3.0)
+##  evaluate    0.9     2016-04-29 CRAN (R 3.3.0)
+##  formatR     1.4     2016-05-09 CRAN (R 3.3.0)
+##  highr       0.6     2016-05-09 CRAN (R 3.3.0)
+##  knitr     * 1.13    2016-05-09 CRAN (R 3.3.0)
+##  magrittr    1.5     2014-11-22 CRAN (R 3.3.0)
+##  memoise     1.0.0   2016-01-29 CRAN (R 3.3.0)
+##  rsconnect   0.4.3   2016-05-02 CRAN (R 3.3.0)
+##  stringi     1.1.1   2016-05-27 CRAN (R 3.3.0)
+##  stringr     1.0.0   2015-04-30 CRAN (R 3.3.0)
+##  withr       1.0.2   2016-06-20 CRAN (R 3.3.1)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;want-more&#34;&gt;Want more?&lt;/h3&gt;
+
+&lt;p&gt;Check other &lt;a href=&#34;https://twitter.com/jhubiostat&#34; target=&#34;_blank&#34;&gt;@jhubiostat&lt;/a&gt; student blogs at &lt;a href=&#34;http://bmorebiostat.com/&#34; target=&#34;_blank&#34;&gt;Bmore Biostats&lt;/a&gt; as well as topics on &lt;a href=&#34;https://twitter.com/search?q=%23rstats&#34; target=&#34;_blank&#34;&gt;#rstats&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Concerns that can deter potential orders for developing Shiny apps</title>
-      <link>http://lcolladotor.github.io/2014/06/10/Concerns-that-can-deter-potential-orders-for-developing-Shiny-apps</link>
+      <link>http://lcolladotor.github.io/2014/06/10/shiny-orders</link>
       <pubDate>Tue, 10 Jun 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://lcolladotor.github.io/2014/06/10/Concerns-that-can-deter-potential-orders-for-developing-Shiny-apps</guid>
+      <guid>http://lcolladotor.github.io/2014/06/10/shiny-orders</guid>
       <description>
 
 &lt;p&gt;A few weeks ago I was invited to a meeting where a group was interested in exploring options for replacing their contract with a propriety software. They invited me because they saw some resemblances between a &lt;a href=&#34;http://shiny.rstudio.com/&#34; target=&#34;_blank&#34;&gt;Shiny&lt;/a&gt; application I made and the features they need. It is a relatively small project and it seemed feasible to implement, but well, some details could have been tricky to code. During the meeting I explained what &lt;a href=&#34;http://shiny.rstudio.com/&#34; target=&#34;_blank&#34;&gt;Shiny&lt;/a&gt; is, showcased some of the &lt;a href=&#34;http://shiny.rstudio.com/&#34; target=&#34;_blank&#34;&gt;Shiny&lt;/a&gt; apps I&amp;rsquo;ve made, and proposed some options including a simple site password.&lt;/p&gt;
@@ -227,6 +694,113 @@ URL: &lt;a href=&#34;https://www.R-project.org/&#34;&gt;https://www.R-project.or
 &lt;p&gt;Check other &lt;a href=&#34;https://twitter.com/jhubiostat&#34; target=&#34;_blank&#34;&gt;@jhubiostat&lt;/a&gt; student blogs at &lt;a href=&#34;http://bmorebiostat.com/&#34; target=&#34;_blank&#34;&gt;Bmore Biostats&lt;/a&gt; as well as topics on &lt;a href=&#34;https://twitter.com/search?q=%23rstats&#34; target=&#34;_blank&#34;&gt;#rstats&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;This post is part of the summer 2014 &lt;a href=&#34;http://bmorebiostat.com/&#34; target=&#34;_blank&#34;&gt;Bmore Biostats&lt;/a&gt;&amp;rsquo; iron blogger challenge.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Simple mortgage calculator</title>
+      <link>http://lcolladotor.github.io/2014/04/22/mortgage-calculator-flexible-payments</link>
+      <pubDate>Tue, 22 Apr 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://lcolladotor.github.io/2014/04/22/mortgage-calculator-flexible-payments</guid>
+      <description>
+
+&lt;p&gt;Have you ever thought of borrowing some money? A common case is when you have to borrow money for buying a house, which is called a mortgage. Wikipedia (&lt;span class=&#34;showtooltip&#34; title=&#34;(2014). &#39;Mortgage loan - Wikipedia, the free encyclopedia.&#39; .&#34;&gt;&lt;a href=&#34;http://en.wikipedia.org/wiki/Mortgage_loan&#34;&gt;&amp;lsquo;Mortgage loan&amp;rsquo; entry&lt;/a&gt;&lt;/span&gt;) goes into much more detail about the definition than what I&amp;rsquo;ll cover.&lt;/p&gt;
+
+&lt;p&gt;One of the aspects you have to evaluate when considering a loan such as a mortgage is how much interest you will be charged and how long the loan will be. Those two determine your monthly payment.&lt;/p&gt;
+
+&lt;h2 id=&#34;comparing-loans&#34;&gt;Comparing loans&lt;/h2&gt;
+
+&lt;p&gt;That is, given the loan amount, you can compare different loans that offer different rates and/or loan lengths. There are many tools out there that allow you to do so and are generally called mortgage calculators. Although the more detailed term is amortization calculator. From wikipedia(&lt;span class=&#34;showtooltip&#34; title=&#34;(2014). &#39;Amortization calculator - Wikipedia, the free encyclopedia.&#39; .&#34;&gt;&lt;a href=&#34;http://en.wikipedia.org/wiki/Amortization_calculator&#34;&gt;&amp;lsquo;Amortization calculator&amp;rsquo; entry&lt;/a&gt;&lt;/span&gt;) we find the so called annuity formula which helps you calculate your monthly payment.&lt;/p&gt;
+
+&lt;p&gt;Several such mortgage calculators have been features in &lt;a href=&#34;http://www.r-bloggers.com/&#34; target=&#34;_blank&#34;&gt;R Bloggers&lt;/a&gt; before such as (&lt;span class=&#34;showtooltip&#34; title=&#34;C (2010). &#39;Mortgage Calculator (and Amortization Charts) with R.&#39; .&#34;&gt;&lt;a href=&#34;http://www.r-chart.com/2010/11/mortgage-calculator-and-amortization.html&#34;&gt;C, 2010&lt;/a&gt;&lt;/span&gt;) and (&lt;span class=&#34;showtooltip&#34; title=&#34;BioStatMatt (2014). &#39;Mortgage Refinance Calculator | BioStatMatt.&#39; .&#34;&gt;&lt;a href=&#34;http://biostatmatt.com/archives/1908&#34;&gt;BioStatMatt&lt;/a&gt;&lt;/span&gt;). Plus there are many other alternatives on the web.&lt;/p&gt;
+
+&lt;h2 id=&#34;my-use-case&#34;&gt;My use case&lt;/h2&gt;
+
+&lt;p&gt;However, a month or so ago I got curious about comparing some loans which had a different twist than normal. Given some circumstances, I wanted to compare some loans where the loaner is willing to receive payments every few months yet with interests being compounded (that is, calculated) on a different time frame. Obviously, the easiest would be to compound interest at the same frequency as payments are made. Plus, probably most banks would not offer such flexible loans.&lt;/p&gt;
+
+&lt;p&gt;Digging around, I did find modifications to the annuity formula that allow non-monthly payments (&lt;span class=&#34;showtooltip&#34; title=&#34;(2014). &#39;Compound Interest Calculator.&#39; .&#34;&gt;&lt;a href=&#34;http://www.calculator.net/compound-interest-calculator.html&#34;&gt;Compound Interest Formula&lt;/a&gt;&lt;/span&gt;) and (&lt;span class=&#34;showtooltip&#34; title=&#34;(2014). &#39;Compound Interest.&#39; .&#34;&gt;&lt;a href=&#34;http://math.about.com/library/weekly/aa042002a.htm&#34;&gt;What is compound interest?&lt;/a&gt;&lt;/span&gt;).&lt;/p&gt;
+
+&lt;h2 id=&#34;shiny-app&#34;&gt;shiny app&lt;/h2&gt;
+
+&lt;p&gt;Being interested in &lt;code&gt;R&lt;/code&gt; code, &lt;a href=&#34;http://www.rstudio.com/shiny/&#34; target=&#34;_blank&#34;&gt;shiny&lt;/a&gt; (&lt;span class=&#34;showtooltip&#34; title=&#34;RStudio and Inc. (2014). shiny: Web Application Framework for R. R package version 0.9.1.&#34;&gt;&lt;a href=&#34;http://CRAN.R-project.org/package=shiny&#34;&gt;RStudio Inc.&lt;/a&gt;&lt;/span&gt;) apps and trying out integrating &lt;a href=&#34;http://rcharts.io/&#34; target=&#34;_blank&#34;&gt;rCharts&lt;/a&gt; (&lt;span class=&#34;showtooltip&#34; title=&#34;Vaidyanathan R (2013). rCharts: Interactive Charts using Polycharts.js. R package version 0.4.2.&#34;&gt;&lt;a href=&#34;&#34;&gt;Vaidyanathan, 2013&lt;/a&gt;&lt;/span&gt;) with shiny, I ended up coding my own mortgage calculator which you can find &lt;a href=&#34;http://glimmer.rstudio.com/lcolladotor/mortgage/&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt; (&lt;span class=&#34;showtooltip&#34; title=&#34;(2014). &#39;Simple Mortgage Calculator.&#39; .&#34;&gt;&lt;a href=&#34;http://glimmer.rstudio.com/lcolladotor/mortgage/&#34;&gt;Simple Mortage Calculator&lt;/a&gt;&lt;/span&gt;). The code is publicly available at &lt;a href=&#34;https://github.com/lcolladotor/mortgage&#34; target=&#34;_blank&#34;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;It has a couple of simple inputs:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Amount to borrow&lt;/li&gt;
+&lt;li&gt;Interest rate&lt;/li&gt;
+&lt;li&gt;Loan duration&lt;/li&gt;
+&lt;li&gt;Payment frequency&lt;/li&gt;
+&lt;li&gt;How frequently interests are compounded&lt;/li&gt;
+&lt;li&gt;Month of the first payment&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The option to begin the loan now but accept the first payment much later is there also because of the complicated use case I had in mind. Again, that is a feature a bank will most likely not offer. But it&amp;rsquo;s something I needed to take into consideration.&lt;/p&gt;
+
+&lt;p&gt;Going back to the app, I tried explaining all the inputs as much as possible. The output is relatively straight forward.&lt;/p&gt;
+
+&lt;p&gt;First, there is a line with focus D3 interactive plot (&lt;span class=&#34;showtooltip&#34; title=&#34;Partners N (2014). &#39;Line Chart With View Finder - NVD3.&#39; .&#34;&gt;&lt;a href=&#34;http://nvd3.org//examples/lineWithFocus.html&#34;&gt;Line Chart with View Finder&lt;/a&gt;&lt;/span&gt;) which shows the principal (the amount you owe) over months as well as how much you&amp;rsquo;ve paid already. The bottom panel allows you to zoom into a specific time range as shown below.&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;
+&lt;a href=&#34;http://lcolladotor.github.io/figs/2014-04-22-mortgage-calculator-flexible-payments/lineWithFocus.png&#34;&gt;&lt;img src=&#34;http://lcolladotor.github.io/figs/2014-04-22-mortgage-calculator-flexible-payments/lineWithFocus.png&#34; alt=&#34;Workflow&#34; style=&#34;width: 775px;&#34;/&gt;&lt;/a&gt;
+&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;Next, the information is shown in more detail as an interactive data table (&lt;span class=&#34;showtooltip&#34; title=&#34;(2014). &#39;DataTables (table plug-in for jQuery).&#39; .&#34;&gt;&lt;a href=&#34;https://datatables.net/&#34;&gt;DataTables&lt;/a&gt;&lt;/span&gt;) 12 months at a time. The interactive part makes it very easy to search for a specific month and look at the state of the loan.&lt;/p&gt;
+
+&lt;p&gt;Finally, you can download the amortization table in CSV format for your records.&lt;/p&gt;
+
+&lt;p&gt;PS You can also access the app via shinyapps at this &lt;a href=&#34;https://lcolladotor.shinyapps.io/mortgage2/&#34; target=&#34;_blank&#34;&gt;url&lt;/a&gt;. It is the first time I&amp;rsquo;ve deployed an app there as I wanted to test shinyapps out.&lt;/p&gt;
+
+&lt;h2 id=&#34;conclusions&#34;&gt;Conclusions&lt;/h2&gt;
+
+&lt;p&gt;The experience of coding the &lt;a href=&#34;http://glimmer.rstudio.com/lcolladotor/mortgage/&#34; target=&#34;_blank&#34;&gt;shiny app&lt;/a&gt; (&lt;span class=&#34;showtooltip&#34; title=&#34;(2014). &#39;Simple Mortgage Calculator.&#39; .&#34;&gt;&lt;a href=&#34;http://glimmer.rstudio.com/lcolladotor/mortgage/&#34;&gt;Simple Mortage Calculator&lt;/a&gt;&lt;/span&gt;) was interesting as I did learn a couple of new things. The same was true for figuring out the calculations for the more flexible options.&lt;/p&gt;
+
+&lt;p&gt;Finally, but not least, the shiny app was useful for my use case and was informative for comparing different loan options. Hopefully it will be useful for other users!&lt;/p&gt;
+
+&lt;h3 id=&#34;references&#34;&gt;References&lt;/h3&gt;
+
+&lt;p&gt;Citations made with &lt;code&gt;knitcitations&lt;/code&gt; (&lt;span class=&#34;showtooltip&#34; title=&#34;Boettiger C (2014). knitcitations: Citations for knitr markdown files. R package version 0.5-0.&#34;&gt;&lt;a href=&#34;http://CRAN.R-project.org/package=knitcitations&#34;&gt;Boettiger, 2014&lt;/a&gt;&lt;/span&gt;).&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Mortgage loan - Wikipedia, the free encyclopedia.  &lt;em&gt;Wikipedia&lt;/em&gt;  &lt;a href=&#34;http://en.wikipedia.org/wiki/Mortgage_loan&#34; target=&#34;_blank&#34;&gt;http://en.wikipedia.org/wiki/Mortgage_loan&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Amortization calculator - Wikipedia, the free encyclopedia.  &lt;em&gt;Wikipedia&lt;/em&gt;  &lt;a href=&#34;http://en.wikipedia.org/wiki/Amortization_calculator&#34; target=&#34;_blank&#34;&gt;http://en.wikipedia.org/wiki/Amortization_calculator&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;C,   (2010) Mortgage Calculator (and Amortization Charts) with R.  &lt;em&gt;R-Chart&lt;/em&gt;  &lt;a href=&#34;http://www.r-chart.com/2010/11/mortgage-calculator-and-amortization.html&#34; target=&#34;_blank&#34;&gt;http://www.r-chart.com/2010/11/mortgage-calculator-and-amortization.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;BioStatMatt,  Mortgage Refinance Calculator | BioStatMatt.  &lt;em&gt;BioStatMatt&lt;/em&gt;  &lt;a href=&#34;http://biostatmatt.com/archives/1908&#34; target=&#34;_blank&#34;&gt;http://biostatmatt.com/archives/1908&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Compound Interest Calculator.  &lt;a href=&#34;http://www.calculator.net/compound-interest-calculator.html&#34; target=&#34;_blank&#34;&gt;http://www.calculator.net/compound-interest-calculator.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Compound Interest.  &lt;a href=&#34;http://math.about.com/library/weekly/aa042002a.htm&#34; target=&#34;_blank&#34;&gt;http://math.about.com/library/weekly/aa042002a.htm&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Simple Mortgage Calculator.  &lt;a href=&#34;http://glimmer.rstudio.com/lcolladotor/mortgage/&#34; target=&#34;_blank&#34;&gt;http://glimmer.rstudio.com/lcolladotor/mortgage/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Novus Partners,  Line Chart With View Finder - NVD3.  &lt;a href=&#34;http://nvd3.org//examples/lineWithFocus.html&#34; target=&#34;_blank&#34;&gt;http://nvd3.org//examples/lineWithFocus.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;DataTables (table plug-in for jQuery).  &lt;em&gt;DataTables (jQuery plug-in)&lt;/em&gt;  &lt;a href=&#34;https://datatables.net/&#34; target=&#34;_blank&#34;&gt;https://datatables.net/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Carl Boettiger,   (2014) knitcitations: Citations for knitr markdown files.  &lt;a href=&#34;http://CRAN.R-project.org/package=knitcitations&#34; target=&#34;_blank&#34;&gt;http://CRAN.R-project.org/package=knitcitations&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Ramnath Vaidyanathan,   (2013) rCharts: Interactive Charts using Polycharts.js.&lt;/li&gt;
+&lt;li&gt;RStudio , Inc. ,   (2014) shiny: Web Application Framework for R.  &lt;a href=&#34;http://CRAN.R-project.org/package=shiny&#34; target=&#34;_blank&#34;&gt;http://CRAN.R-project.org/package=shiny&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;reproducibility&#34;&gt;Reproducibility&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;sessionInfo()
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## R version 3.1.0 (2014-04-10)
+## Platform: x86_64-apple-darwin10.8.0 (64-bit)
+## 
+## locale:
+## [1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8
+## 
+## attached base packages:
+## [1] stats     graphics  grDevices utils     datasets  methods   base     
+## 
+## other attached packages:
+## [1] knitcitations_0.5-0 bibtex_0.3-6        knitr_1.5.27       
+## 
+## loaded via a namespace (and not attached):
+##  [1] codetools_0.2-8 digest_0.6.4    evaluate_0.5.3  formatR_0.10   
+##  [5] httr_0.3        RCurl_1.95-4.1  stringr_0.6.2   tools_3.1.0    
+##  [9] XML_3.98-1.1    xtable_1.7-3
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Check other &lt;a href=&#34;https://twitter.com/jhubiostat&#34; target=&#34;_blank&#34;&gt;@jhubiostat&lt;/a&gt; student blogs at &lt;a href=&#34;http://bmorebiostat.com/&#34; target=&#34;_blank&#34;&gt;Bmore Biostats&lt;/a&gt; as well as topics on &lt;a href=&#34;https://twitter.com/search?q=%23rstats&#34; target=&#34;_blank&#34;&gt;#rstats&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     

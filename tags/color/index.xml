@@ -11,10 +11,10 @@
     
     <item>
       <title>Visualizing colors()</title>
-      <link>http://lcolladotor.github.io/2012/10/19/Visualizing-colors</link>
+      <link>http://lcolladotor.github.io/2012/10/19/visualizing-colors</link>
       <pubDate>Fri, 19 Oct 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://lcolladotor.github.io/2012/10/19/Visualizing-colors</guid>
+      <guid>http://lcolladotor.github.io/2012/10/19/visualizing-colors</guid>
       <description>&lt;p&gt;The other day I learnt about the existance of the colors() vector in R which specifies all the character-based colors like &amp;#8220;light blue&amp;#8221;, &amp;#8220;black&amp;#8221;, etc. So I made a simple plot to visualize them all. Here&amp;#8217;s the code:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;mat &amp;lt;- matrix(1:length(colors()), ncol = 9, byrow= TRUE)

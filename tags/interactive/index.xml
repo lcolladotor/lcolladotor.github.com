@@ -11,10 +11,10 @@
     
     <item>
       <title>Why aren&#39;t all of our graphs interactive?</title>
-      <link>http://lcolladotor.github.io/2012/10/08/Why-arent-all-of-our-graphs-interactive</link>
+      <link>http://lcolladotor.github.io/2012/10/08/why-arent-all-of-our-graphs-interactive</link>
       <pubDate>Mon, 08 Oct 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://lcolladotor.github.io/2012/10/08/Why-arent-all-of-our-graphs-interactive</guid>
+      <guid>http://lcolladotor.github.io/2012/10/08/why-arent-all-of-our-graphs-interactive</guid>
       <description>&lt;p&gt;During the last pre-happy hour seminar, &lt;a href=&#34;http://www.biostat.wisc.edu/~kbroman/&#34;&gt;Karl Broman&lt;/a&gt; talked about &lt;a href=&#34;http://www.biostat.wisc.edu/~kbroman/presentations/DynamicGraphs/&#34;&gt;Why aren&amp;#8217;t all of our graphs interactive?&lt;/a&gt; I didn&amp;#8217;t know, but a few years ago Karl worked in the department and clearly promoted beer-drinking and is &lt;em&gt;the heart of the department. &lt;/em&gt;I&amp;#8217;m a fan of our pre-happy hour seminars since you have a get to listen to good/fun talks over a beer or two.&lt;/p&gt;
 &lt;p&gt;But I&amp;#8217;m also a fan of reproducible research and useful graphics. I do most of this by using &lt;a href=&#34;http://www.statistik.lmu.de/~leisch/Sweave/&#34;&gt;Sweave&lt;/a&gt; (for reproducibility) in LaTeX documents and with the R packages &lt;a href=&#34;http://cran.r-project.org/web/packages/lattice/index.html&#34;&gt;lattice&lt;/a&gt;, &lt;a href=&#34;http://cran.r-project.org/web/packages/car/index.html&#34;&gt;car&lt;/a&gt;, and &lt;a href=&#34;http://cran.r-project.org/web/packages/plotrix/index.html&#34;&gt;plotrix&lt;/a&gt;, and some &lt;a href=&#34;http://ggplot2.org/&#34;&gt;ggplot2&lt;/a&gt; (I should use it more). &lt;/p&gt;
 &lt;p&gt;Karl made &lt;a href=&#34;http://www.biostat.wisc.edu/~kbroman/presentations/DynamicGraphs/&#34;&gt;his presentation&lt;/a&gt; using html (definitely check it out!) and inserted pretty interactive graphics. His talk got me really interested and I definitely need to pick up a few tools. For example, asciidoc or R Markdown can be useful for making html documents with R code. Specially if you want to write a report and you don&amp;#8217;t want to deal with Sweave/Latex when making plots (can be a pain to know where they&amp;#8217;ll show up). &lt;/p&gt;
