@@ -786,7 +786,7 @@ footer a#back_to_top i {
 }
 
 /* Prevent navbar hiding initial content when jumping to in-page anchor. */
-*[id]:not([id^="fn"]):before {
+*[id]:not([id^="fn"]):not([id^="cite-"]):before {
   display: block;
   content: " ";
   margin-top: -70px;
@@ -861,7 +861,7 @@ nav#navbar-main li {
   }
 
   /* Prevent navbar hiding initial content when jumping to in-page anchor. */
-  *[id]:not([id^="fn"]):before {
+  *[id]:not([id^="fn"]):not([id^="cite-"]):before {
     margin-top: -50px;
     height: 50px;
   }
