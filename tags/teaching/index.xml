@@ -85,5 +85,137 @@ URL: &lt;a href=&#34;http://CRAN.R-project.org/package=knitcitations&#34;&gt;htt
 </description>
     </item>
     
+    <item>
+      <title>My strategy for quickly grading homeworks</title>
+      <link>http://lcolladotor.github.io/2013/11/08/fast-grading</link>
+      <pubDate>Fri, 08 Nov 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://lcolladotor.github.io/2013/11/08/fast-grading</guid>
+      <description>
+
+&lt;p&gt;For the past year and a half &lt;a href=&#34;http://www.biostat.jhsph.edu/~lcollado/teaching.html#.Un2BnJTF2Ql&#34; target=&#34;_blank&#34;&gt;I have been a teaching assistant&lt;/a&gt; (TA) for the Statistical Methods in Public Health I to IV (140.621 to 140.624) courses. As part of being a TA for these courses, we have to grade between 30 and 50 homeworks every two weeks or so: four problem sets per eight week terms. For example, I now have to grade 37 homeworks:&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;
+&lt;a href=&#34;http://lcolladotor.github.io/figs/2013-11-08-fast-grading/list-to-grade.png&#34;&gt;&lt;img src=&#34;http://lcolladotor.github.io/figs/2013-11-08-fast-grading/list-to-grade.png&#34; alt=&#34;HWs to grade&#34; style=&#34;width: 400px;&#34;/&gt;&lt;/a&gt;
+&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;These courses have been polished over time and the instructors do a great job organizing the TA group. For every problem set that we have to grade, we are given a full answer key that is later published in the course site so all the students can access it. As TAs we also receive general grading comments from the instructor; typically a two page document describing the key points that we should expect the students to be able to answer.&lt;/p&gt;
+
+&lt;p&gt;As part of the general grading comments, we are asked to give feedback beyond checkmarks such as &amp;ldquo;good job&amp;rdquo;. When the student completely misses the answer, we can simply refer them to the answer key: if they miss too many, we ask them to re-do the homework. Things get more complicated when the student misses part of the question and writing comments specific to that answer can get very time consuming. We can always use &amp;ldquo;More detailed discussion on results needed. See answer key.&amp;rdquo; but it can be nice for the student if we give them a hint on what they did wrong.&lt;/p&gt;
+
+&lt;p&gt;As a student &lt;a href=&#34;https://twitter.com/jhubiostat&#34; target=&#34;_blank&#34;&gt;@jhubiostat&lt;/a&gt; we agree to dedicate five hours per week to TA responsibilities. In the courses I have been a TA for, the responsibilities include getting familiar with the content, attending TA office hours (either general questions or STATA questions), attending the TA meetings, grading the exams, and grading the homeworks. It might sound like a lot, but I currently feel like I can it all done within the five hours per week. To do so, I obviously need to be efficient grading the homeworks.&lt;/p&gt;
+
+&lt;p&gt;Here is how I do it.&lt;/p&gt;
+
+&lt;h3 id=&#34;setup&#34;&gt;Setup&lt;/h3&gt;
+
+&lt;p&gt;Programs used:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.adobe.com/products/acrobatpro.html&#34; target=&#34;_blank&#34;&gt;Adobe Acrobat Pro&lt;/a&gt; which I believe we can get through Hopkins for free.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.alfredapp.com/&#34; target=&#34;_blank&#34;&gt;Alfred v2&lt;/a&gt; with &lt;a href=&#34;http://www.alfredapp.com/powerpack/&#34; target=&#34;_blank&#34;&gt;Powerpack&lt;/a&gt; purchased/installed.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Why Adobe Acrobat?&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Adobe Acrobat allows you to post &amp;ldquo;stamps&amp;rdquo;. It already includes a checkmark and a red &lt;strong&gt;X&lt;/strong&gt;. I also imported some simple images I made to stamp the homework as: satisfactory, unsatisfactory, or incomplete. We have to clearly mark one of these options at the top of the graded homeworks.&lt;/li&gt;
+&lt;li&gt;Some of the PDF files we get are large, so I use the &lt;code&gt;Save as -&amp;gt; reduced size pdf&lt;/code&gt; tool from Adobe Acrobat to save space and make it easier for the course administrator to upload the graded homeworks to &lt;a href=&#34;http://courseplus.jhsph.edu/&#34; target=&#34;_blank&#34;&gt;CoursePlus&lt;/a&gt; (the tool the school uses for managing courses).&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Why &lt;a href=&#34;http://www.alfredapp.com/&#34; target=&#34;_blank&#34;&gt;Alfred v2&lt;/a&gt;?&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;For grading homeworks all I really need is a software that can remember my recent copy-pastes and make it easy for me to choose among them to paste them back. For example, &lt;a href=&#34;http://www.clipmenu.com/&#34; target=&#34;_blank&#34;&gt;ClipMenu&lt;/a&gt; can do the job.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.alfredapp.com/&#34; target=&#34;_blank&#34;&gt;Alfred v2&lt;/a&gt; has a &lt;code&gt;Clipboard&lt;/code&gt; feature which does the above. Compared to &lt;a href=&#34;http://www.clipmenu.com/&#34; target=&#34;_blank&#34;&gt;ClipMenu&lt;/a&gt; it has the advantage of allowing you to search within the recent copy-pastes, making it easy to find the comment you want to paste.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;If you are on Windows or Linux, there must be some programs that have this functionality.&lt;/p&gt;
+
+&lt;h3 id=&#34;grading-workflow&#34;&gt;Grading workflow&lt;/h3&gt;
+
+&lt;h4 id=&#34;most-used-comment-good-job&#34;&gt;Most used comment: Good job!&lt;/h4&gt;
+
+&lt;p&gt;Let me begin with a very simple case. Basically, you find a answer that is well done and you want to compliment the student for it.&lt;/p&gt;
+
+&lt;p&gt;In the homework I am currently grading, the students have to compute the 95 percent confidence interval for the difference in two proportions using the formula:&lt;/p&gt;
+
+&lt;p&gt;$$ \hat p_1 - \hat p_2 \pm 1.96 \times \sqrt{ \frac{ \hat p_1 (1 - \hat p_1)}{ n_1} + \frac{ \hat p_2 (1 - \hat p_2)}{ n_2} } $$&lt;/p&gt;
+
+&lt;p&gt;which leads to (0.00142, 0.00798) with the data they are using.&lt;/p&gt;
+
+&lt;p&gt;An anonymous student (I tried to choose examples that are not identifiable) wrote an answer that has very similar numbers to those we expect. Since they included the STATA output I can recognize that they used rounded numbers (oddly only for sample 1 but not sample 2) which lead the student to slightly different values. That is not a big deal and I think it deserves the &amp;ldquo;good job!&amp;rdquo; comment. So using the &amp;ldquo;stamps&amp;rdquo;, I added a checkmark. Then I typed &amp;ldquo;Good job!&amp;rdquo; and finally, I copied it so I can paste it the next time I want to add this comment.&lt;/p&gt;
+
+&lt;p&gt;The image below shows the state at which I am copying the comment.&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;
+&lt;a href=&#34;http://lcolladotor.github.io/figs/2013-11-08-fast-grading/goodjob1.png&#34;&gt;&lt;img src=&#34;http://lcolladotor.github.io/figs/2013-11-08-fast-grading/goodjob1.png&#34; alt=&#34;Good job 1&#34; style=&#34;width: 500px;&#34;/&gt;&lt;/a&gt;
+&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;Moving on, I later found another student that has the correct answer presented in a different format. If &amp;ldquo;Good job!&amp;rdquo; is the most recent comment on my clipboard, I can simply paste it. If it is not, then I can use &lt;a href=&#34;http://www.alfredapp.com/&#34; target=&#34;_blank&#34;&gt;Alfred v2&lt;/a&gt; to show me my recent &amp;ldquo;copies&amp;rdquo; and select &amp;ldquo;Good job!&amp;rdquo; from the list. In this case it is under &lt;code&gt;cmd + 2&lt;/code&gt;; you can also use the arrows and the return key, or the mouse. Although note that &lt;a href=&#34;http://www.alfredapp.com/&#34; target=&#34;_blank&#34;&gt;Alfred v2&lt;/a&gt; is designed in such a way that you only have to use the keyboard to gain efficiency.&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;
+&lt;a href=&#34;http://lcolladotor.github.io/figs/2013-11-08-fast-grading/goodjob2.png&#34;&gt;&lt;img src=&#34;http://lcolladotor.github.io/figs/2013-11-08-fast-grading/goodjob2.png&#34; alt=&#34;Good job 2&#34; style=&#34;width: 500px;&#34;/&gt;&lt;/a&gt;
+&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;The end result is a green checkmark with the &amp;ldquo;Good job!&amp;rdquo; comment pasted into it. The next time I use &lt;code&gt;cmd + v&lt;/code&gt; (the regular paste shortcut in Mac), &amp;ldquo;Good job!&amp;rdquo; will be pasted. So you only really need to invoke &lt;a href=&#34;http://www.alfredapp.com/&#34; target=&#34;_blank&#34;&gt;Alfred v2&lt;/a&gt; when you want to change comments.&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;
+&lt;a href=&#34;http://lcolladotor.github.io/figs/2013-11-08-fast-grading/goodjob3.png&#34;&gt;&lt;img src=&#34;http://lcolladotor.github.io/figs/2013-11-08-fast-grading/goodjob3.png&#34; alt=&#34;Good job 3&#34; style=&#34;width: 500px;&#34;/&gt;&lt;/a&gt;
+&lt;/center&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;detailed-comments-where-the-strategy-pays-off&#34;&gt;Detailed comments: where the strategy pays off!&lt;/h4&gt;
+
+&lt;p&gt;You obviously do not all this setup just for pasting &amp;ldquo;Good job!&amp;rdquo; everywhere. However, when grading homeworks you will encounter much more complicated cases where you might need to write a short explanation, point the student to the answer key, etc. To save time you want to minimize having to type the long comments each time you need to. That is where this strategy pays its dividends.&lt;/p&gt;
+
+&lt;p&gt;In this example, I first find a plot that looks very similar to what the students were asked to do. It has a couple of mistakes. First, the age-gender group categories are not labeled in the plot, which makes it impossible to know which group is which unless you know how &lt;em&gt;agegen&lt;/em&gt; is coded. Given that it is the first time students were asked to make such a detailed plot, I can expect other students to make the same mistake. So I copy that comment and add it to my clipboard history as shown below.&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;
+&lt;a href=&#34;http://lcolladotor.github.io/figs/2013-11-08-fast-grading/ci1.png&#34;&gt;&lt;img src=&#34;http://lcolladotor.github.io/figs/2013-11-08-fast-grading/ci1.png&#34; alt=&#34;CI 1&#34; style=&#34;width: 500px;&#34;/&gt;&lt;/a&gt;
+&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;This particular plot has another problem in that the confidence bands look much smaller than expected. The estimates per se look comparable to the expected plot, so I suspect that the student either used the wrong standard errors or forgot to multiply them by 1.96. So I copy this comment separately and add it to my clipboard history. Maybe other students made the same mistake, maybe they did not.&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;
+&lt;a href=&#34;http://lcolladotor.github.io/figs/2013-11-08-fast-grading/ci2.png&#34;&gt;&lt;img src=&#34;http://lcolladotor.github.io/figs/2013-11-08-fast-grading/ci2.png&#34; alt=&#34;CI 2&#34; style=&#34;width: 500px;&#34;/&gt;&lt;/a&gt;
+&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;Having copied both comments separately, I am now ready for cases where they forget to label the X axis, use the wrong confidence bands, or make both mistakes together.&lt;/p&gt;
+
+&lt;p&gt;Later on, I find another homework that has labels on the X axis. So instead of typing my comment, I simply invoke &lt;a href=&#34;http://www.alfredapp.com/&#34; target=&#34;_blank&#34;&gt;Alfred v2&lt;/a&gt; and search the appropriate comment as shown below.&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;
+&lt;a href=&#34;http://lcolladotor.github.io/figs/2013-11-08-fast-grading/ci3.png&#34;&gt;&lt;img src=&#34;http://lcolladotor.github.io/figs/2013-11-08-fast-grading/ci3.png&#34; alt=&#34;CI 3&#34; style=&#34;width: 500px;&#34;/&gt;&lt;/a&gt;
+&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;If my comment list is getting long, using &lt;a href=&#34;http://www.alfredapp.com/&#34; target=&#34;_blank&#34;&gt;Alfred v2&lt;/a&gt; I can easily search my clipboard history by typing keywords. In this particular case, I know that my comment had something to do with the &amp;ldquo;axis&amp;rdquo;, so typing it in I quickly find the comment I want to use.&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;
+&lt;a href=&#34;http://lcolladotor.github.io/figs/2013-11-08-fast-grading/ci4.png&#34;&gt;&lt;img src=&#34;http://lcolladotor.github.io/figs/2013-11-08-fast-grading/ci4.png&#34; alt=&#34;CI 4&#34; style=&#34;width: 500px;&#34;/&gt;&lt;/a&gt;
+&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;And voila! The comment is pasted!&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;
+&lt;a href=&#34;http://lcolladotor.github.io/figs/2013-11-08-fast-grading/ci5.png&#34;&gt;&lt;img src=&#34;http://lcolladotor.github.io/figs/2013-11-08-fast-grading/ci5.png&#34; alt=&#34;CI 5&#34; style=&#34;width: 500px;&#34;/&gt;&lt;/a&gt;
+&lt;/center&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;alternatives&#34;&gt;Alternatives&lt;/h3&gt;
+
+&lt;p&gt;An alternative implementation is to create a spreadsheet where you manually save the comments you are using while grading the homework. When you want to use them, you open the spreadsheet, select the comment, manually copy it, and then you are set to paste it. Using &lt;a href=&#34;http://www.alfredapp.com/&#34; target=&#34;_blank&#34;&gt;Alfred v2&lt;/a&gt; basically makes this a bit faster, but the key point is to save the comments in a way that you can re-use them and combine them if necessary.&lt;/p&gt;
+
+&lt;p&gt;If you want more pointers on this alternative, ask &lt;a href=&#34;https://twitter.com/YennyWebbV&#34; target=&#34;_blank&#34;&gt;@YennyWebbV&lt;/a&gt; who is an expert at it.&lt;/p&gt;
+
+&lt;h3 id=&#34;wrap-up&#34;&gt;Wrap up&lt;/h3&gt;
+
+&lt;p&gt;I hope that others find this strategy useful. In my case, I went from taking 9-11 hours to grade homeworks when I first began as a TA to grading them in 3-4 hours.&lt;/p&gt;
+
+&lt;p&gt;If you are interested in reading more posts from students &lt;a href=&#34;https://twitter.com/jhubiostat&#34; target=&#34;_blank&#34;&gt;@jhubiostat&lt;/a&gt; check out &lt;a href=&#34;http://bmorebiostat.com/&#34; target=&#34;_blank&#34;&gt;bmorebiostat.com&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p&gt;&amp;quot;Bmore Biostats is born!&amp;quot; by Leonardo Collado Torres at &lt;a href=&#34;http://t.co/CXVuni60gh&#34;&gt;http://t.co/CXVuni60gh&lt;/a&gt; &lt;a href=&#34;http://t.co/uIovRg1bAP&#34;&gt;pic.twitter.com/uIovRg1bAP&lt;/a&gt;&lt;/p&gt;&amp;mdash; bmorebiostats (@bmorebiostats) &lt;a href=&#34;https://twitter.com/bmorebiostats/statuses/398917966676258816&#34;&gt;November 8, 2013&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;//platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+</description>
+    </item>
+    
   </channel>
 </rss>
