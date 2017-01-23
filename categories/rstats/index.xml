@@ -611,10 +611,10 @@ session_info()
     
     <item>
       <title>Are you doing parallel computations in R? Then use BiocParallel</title>
-      <link>http://lcolladotor.github.io/2016/03/07/biocparallel</link>
+      <link>http://lcolladotor.github.io/2016/03/07/BiocParallel</link>
       <pubDate>Mon, 07 Mar 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://lcolladotor.github.io/2016/03/07/biocparallel</guid>
+      <guid>http://lcolladotor.github.io/2016/03/07/BiocParallel</guid>
       <description>
 
 &lt;p&gt;It&amp;rsquo;s the morning of the first day of oral conferences at &lt;a href=&#34;https://twitter.com/search?q=%23ENAR2016&amp;amp;src=tyah&#34; target=&#34;_blank&#34;&gt;#ENAR2016&lt;/a&gt;. I feel like I have a &lt;a href=&#34;https://en.wiktionary.org/wiki/Spidey-sense&#34; target=&#34;_blank&#34;&gt;spidey sense&lt;/a&gt; since I woke up 3 min after an email from Jeff Leek; just a funny coincidence. Anyhow, I promised Valerie Obenchain at &lt;a href=&#34;https://twitter.com/hashtag/bioc2014&#34; target=&#34;_blank&#34;&gt;#Bioc2014&lt;/a&gt; that I would write a post about one of my favorite Bioconductor packages: &lt;a href=&#34;http://www.bioconductor.org/packages/release/bioc/html/BiocParallel.html&#34; target=&#34;_blank&#34;&gt;BiocParallel&lt;/a&gt; &lt;a id=&#39;cite-biocparallel&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;#bib-biocparallel&#39;&gt;Morgan, Obenchain, Lang, and Thompson, 2016&lt;/a&gt;). By now it&amp;rsquo;s on the top 5% of downloaded Bioconductor packages, so many people know about it or are unaware that their favorite package uses it behind the scenes.&lt;/p&gt;
@@ -1222,10 +1222,10 @@ session_info()
     
     <item>
       <title>An xpd-tion into R plot margins</title>
-      <link>http://lcolladotor.github.io/2014/11/21/add-logo-in-r</link>
+      <link>http://lcolladotor.github.io/2014/11/21/add-logo-in-R</link>
       <pubDate>Fri, 21 Nov 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://lcolladotor.github.io/2014/11/21/add-logo-in-r</guid>
+      <guid>http://lcolladotor.github.io/2014/11/21/add-logo-in-R</guid>
       <description>
 
 &lt;p&gt;&lt;em&gt;This is a guest post by &lt;a href=&#34;http://www.biostat.jhsph.edu/~prpatil/&#34; target=&#34;_blank&#34;&gt;Prasad Patil&lt;/a&gt; that answers the question: how to put a shape in the margin of an R plot?&lt;/em&gt;&lt;/p&gt;
@@ -1303,10 +1303,10 @@ of your &lt;strong&gt;R&lt;/strong&gt; plot device, and it will not stay consist
     
     <item>
       <title>Where do I start using Bioconductor?</title>
-      <link>http://lcolladotor.github.io/2014/10/16/startbioc</link>
+      <link>http://lcolladotor.github.io/2014/10/16/startBioC</link>
       <pubDate>Thu, 16 Oct 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://lcolladotor.github.io/2014/10/16/startbioc</guid>
+      <guid>http://lcolladotor.github.io/2014/10/16/startBioC</guid>
       <description>
 
 &lt;p&gt;I was recently asked &lt;em&gt;where do I get started with Bioconductor?&lt;/em&gt; and thought this would be a good short post.&lt;/p&gt;
@@ -1861,10 +1861,10 @@ if (Sys.getenv(&amp;quot;TERM&amp;quot;) == &amp;quot;xterm-256color&amp;quot;) 
     
     <item>
       <title>rMaps released</title>
-      <link>http://lcolladotor.github.io/2014/02/10/rmaps-released</link>
+      <link>http://lcolladotor.github.io/2014/02/10/rMaps-released</link>
       <pubDate>Mon, 10 Feb 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://lcolladotor.github.io/2014/02/10/rmaps-released</guid>
+      <guid>http://lcolladotor.github.io/2014/02/10/rMaps-released</guid>
       <description>
 
 &lt;p&gt;&lt;a href=&#34;https://github.com/ramnathv&#34; target=&#34;_blank&#34;&gt;Ramnath Vaidyanathan&lt;/a&gt; just released his new &lt;code&gt;R&lt;/code&gt; interactive package, &lt;code&gt;rMaps&lt;/code&gt; (&lt;span class=&#34;showtooltip&#34; title=&#34;Vaidyanathan R (2014). rMaps: Interactive Maps from R. R package version 0.1.&#34;&gt;&lt;a href=&#34;&#34;&gt;Vaidyanathan, 2014&lt;/a&gt;&lt;/span&gt;). The packages relies on the development version of his widely known &lt;code&gt;rCharts&lt;/code&gt; package (&lt;span class=&#34;showtooltip&#34; title=&#34;Vaidyanathan R (2013). rCharts: Interactive Charts using Polycharts.js. R package version 0.4.2.&#34;&gt;&lt;a href=&#34;&#34;&gt;Vaidyanathan, 2013&lt;/a&gt;&lt;/span&gt;) as well as javascript libraries that specialize in maps. If you don&amp;rsquo;t know Ramnath, he is one of the most active &lt;code&gt;R&lt;/code&gt; developers out there!! You can see that from his &lt;a href=&#34;https://github.com/ramnathv&#34; target=&#34;_blank&#34;&gt;GitHub profile&lt;/a&gt;.&lt;/p&gt;
@@ -1942,10 +1942,10 @@ map
     
     <item>
       <title>How to upload files to Dropbox and Google Docs from R</title>
-      <link>http://lcolladotor.github.io/2014/02/05/dropboxandgoogledocsfromr</link>
+      <link>http://lcolladotor.github.io/2014/02/05/DropboxAndGoogleDocsFromR</link>
       <pubDate>Wed, 05 Feb 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://lcolladotor.github.io/2014/02/05/dropboxandgoogledocsfromr</guid>
+      <guid>http://lcolladotor.github.io/2014/02/05/DropboxAndGoogleDocsFromR</guid>
       <description>
 
 &lt;p&gt;Have you ever wondered whether you can upload files from &lt;code&gt;R&lt;/code&gt; to &lt;a href=&#34;https://www.dropbox.com/&#34; target=&#34;_blank&#34;&gt;Dropbox&lt;/a&gt; and/or &lt;a href=&#34;docs.google.com&#34; target=&#34;_blank&#34;&gt;Google Docs&lt;/a&gt;? I recently asked myself this question while making my most recent &lt;a href=&#34;http://www.rstudio.com/shiny/&#34; target=&#34;_blank&#34;&gt;Shiny&lt;/a&gt; app (more later).&lt;/p&gt;
@@ -2141,10 +2141,10 @@ done &amp;lt;- uploadDoc(content = text, con = con, name = &amp;quot;testFile.tx
     
     <item>
       <title>Creating awesome reports for multiple audiences using knitrBootstrap</title>
-      <link>http://lcolladotor.github.io/2013/12/10/knitrbootstrap</link>
+      <link>http://lcolladotor.github.io/2013/12/10/knitrBootstrap</link>
       <pubDate>Tue, 10 Dec 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://lcolladotor.github.io/2013/12/10/knitrbootstrap</guid>
+      <guid>http://lcolladotor.github.io/2013/12/10/knitrBootstrap</guid>
       <description>
 
 &lt;p&gt;As a biostatistics student, I use &lt;code&gt;R&lt;/code&gt; very frequently when analyzing data. At the same time, I interact with other researchers, some who know how to use &lt;code&gt;R&lt;/code&gt; (R crowd) and some who don&amp;rsquo;t (yet!): no-R crowd. This means that I have to be able to communicate my results to two crowds. It is important that I can quickly provide the code in case that the &lt;code&gt;R&lt;/code&gt; savvy want to look at it: maybe they find a bug and report it ^^. Ideally I want to avoid having to write (organize, share, etc) two crowd-specific reports.&lt;/p&gt;
@@ -2235,10 +2235,10 @@ knit_bootstrap(&amp;quot;file.Rmd&amp;quot;, code_style = &amp;quot;Brown Paper&
     
     <item>
       <title>Trying to reduce the memory overhead when using mclapply</title>
-      <link>http://lcolladotor.github.io/2013/11/14/reducing-memory-overhead-when-using-mclapply</link>
+      <link>http://lcolladotor.github.io/2013/11/14/Reducing-memory-overhead-when-using-mclapply</link>
       <pubDate>Thu, 14 Nov 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://lcolladotor.github.io/2013/11/14/reducing-memory-overhead-when-using-mclapply</guid>
+      <guid>http://lcolladotor.github.io/2013/11/14/Reducing-memory-overhead-when-using-mclapply</guid>
       <description>
 
 &lt;p&gt;I am currently trying to understand how to reduce the memory used by &lt;code&gt;mclapply&lt;/code&gt;. This function is rather complicated and others have explained the differences versus &lt;code&gt;parLapply&lt;/code&gt; (&lt;span class=&#34;showtooltip&#34; title=&#34;A\_Skelton73 (2013). &#39;understanding the differences between mclapply and parLapply in R.&#39; .&#34;&gt;&lt;a href=&#34;http://stackoverflow.com/questions/17196261/understanding-the-differences-between-mclapply-and-parlapply-in-r&#34;&gt;A_Skelton73, 2013&lt;/a&gt;&lt;/span&gt;; &lt;span class=&#34;showtooltip&#34; title=&#34;lockedoff (2012). &#39;Using mclapply, foreach, or something else in [r] to operate on an object in parallel?&#39; .&#34;&gt;&lt;a href=&#34;http://stackoverflow.com/questions/11036702/using-mclapply-foreach-or-something-else-in-r-to-operate-on-an-object-in-par&#34;&gt;lockedoff, 2012&lt;/a&gt;&lt;/span&gt; ) and also made it clear that in &lt;code&gt;mclapply&lt;/code&gt;  each job does not know if the others are running out of memory and thus cannot trigger &lt;code&gt;gc&lt;/code&gt; (&lt;span class=&#34;showtooltip&#34; title=&#34;(2013). &#39; [R-sig-hpc] mclapply: rm intermediate objects and returning   memory .&#39; .&#34;&gt;&lt;a href=&#34;https://mailman.stat.ethz.ch/pipermail/r-sig-hpc/2012-October/001534.html&#34;&gt;Urbanek, 2012&lt;/a&gt;&lt;/span&gt;).&lt;/p&gt;
