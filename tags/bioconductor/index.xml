@@ -11,10 +11,10 @@
     
     <item>
       <title>Are you doing parallel computations in R? Then use BiocParallel</title>
-      <link>http://lcolladotor.github.io/2016/03/07/BiocParallel</link>
+      <link>http://lcolladotor.github.io/2016/03/07/biocparallel</link>
       <pubDate>Mon, 07 Mar 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://lcolladotor.github.io/2016/03/07/BiocParallel</guid>
+      <guid>http://lcolladotor.github.io/2016/03/07/biocparallel</guid>
       <description>
 
 &lt;p&gt;It&amp;rsquo;s the morning of the first day of oral conferences at &lt;a href=&#34;https://twitter.com/search?q=%23ENAR2016&amp;amp;src=tyah&#34; target=&#34;_blank&#34;&gt;#ENAR2016&lt;/a&gt;. I feel like I have a &lt;a href=&#34;https://en.wiktionary.org/wiki/Spidey-sense&#34; target=&#34;_blank&#34;&gt;spidey sense&lt;/a&gt; since I woke up 3 min after an email from Jeff Leek; just a funny coincidence. Anyhow, I promised Valerie Obenchain at &lt;a href=&#34;https://twitter.com/hashtag/bioc2014&#34; target=&#34;_blank&#34;&gt;#Bioc2014&lt;/a&gt; that I would write a post about one of my favorite Bioconductor packages: &lt;a href=&#34;http://www.bioconductor.org/packages/release/bioc/html/BiocParallel.html&#34; target=&#34;_blank&#34;&gt;BiocParallel&lt;/a&gt; &lt;a id=&#39;cite-biocparallel&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;#bib-biocparallel&#39;&gt;Morgan, Obenchain, Lang, and Thompson, 2016&lt;/a&gt;). By now it&amp;rsquo;s on the top 5% of downloaded Bioconductor packages, so many people know about it or are unaware that their favorite package uses it behind the scenes.&lt;/p&gt;
@@ -318,10 +318,10 @@ R package version 1.4.3.
     
     <item>
       <title>Where do I start using Bioconductor?</title>
-      <link>http://lcolladotor.github.io/2014/10/16/startBioC</link>
+      <link>http://lcolladotor.github.io/2014/10/16/startbioc</link>
       <pubDate>Thu, 16 Oct 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://lcolladotor.github.io/2014/10/16/startBioC</guid>
+      <guid>http://lcolladotor.github.io/2014/10/16/startbioc</guid>
       <description>
 
 &lt;p&gt;I was recently asked &lt;em&gt;where do I get started with Bioconductor?&lt;/em&gt; and thought this would be a good short post.&lt;/p&gt;
