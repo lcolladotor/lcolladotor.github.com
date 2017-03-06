@@ -7,8 +7,73 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2011-2017 Leonardo Collado Torres under (CC) BY-NC-SA</copyright>
-    <lastBuildDate>Wed, 25 Jan 2017 02:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 06 Mar 2017 00:00:00 +0000</lastBuildDate>
     <atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>How to ask for help for Bioconductor packages</title>
+      <link>http://lcolladotor.github.io/2017/03/06/How-to-ask-for-help-for-Bioconductor-packages</link>
+      <pubDate>Mon, 06 Mar 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://lcolladotor.github.io/2017/03/06/How-to-ask-for-help-for-Bioconductor-packages</guid>
+      <description>
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;p&gt;tl;dr Please post your question at the Bioconductor support website &lt;a href=&#34;https://support.bioconductor.org/&#34; target=&#34;_blank&#34;&gt;https://support.bioconductor.org/&lt;/a&gt; and check the posting guide &lt;a href=&#34;http://www.bioconductor.org/help/support/posting-guide/&#34; target=&#34;_blank&#34;&gt;http://www.bioconductor.org/help/support/posting-guide/&lt;/a&gt;. It&amp;rsquo;s important that you provide reproducible code and information about your R session.&lt;/p&gt;
+
+&lt;/div&gt;
+
+
+&lt;p&gt;Recently I have been getting more questions about several packages I maintain. It&amp;rsquo;s great to see more interest from users, but at the same time most questions lack the information I need to help the users. I have also gotten most of the questions via email, which is why I am writing this post. As of today, I will no longer answer questions related to my Bioconductor packages via personal emails. This might sound harsh, but hopefully the rest of this post will convince you that it&amp;rsquo;s the best thing to do. You might also be interested in the basics of using &lt;a href=&#34;http://bioconductor.org/packages/release/bioc/vignettes/derfinder/inst/doc/derfinder-quickstart.html#basics&#34; target=&#34;_blank&#34;&gt;derfinder&lt;/a&gt;, &lt;a href=&#34;http://bioconductor.org/packages/release/bioc/vignettes/regionReport/inst/doc/regionReport.html#basics&#34; target=&#34;_blank&#34;&gt;regionReport&lt;/a&gt; or &lt;a href=&#34;http://bioconductor.org/packages/release/bioc/vignettes/recount/inst/doc/recount-quickstart.html#basics&#34; target=&#34;_blank&#34;&gt;recount&lt;/a&gt;, among others.&lt;/p&gt;
+
+&lt;p&gt;The Bioconductor project is a community project and it benefits from users interacting in public venues. When a user asks a question at the &lt;a href=&#34;https://support.bioconductor.org/&#34; target=&#34;_blank&#34;&gt;Bioconductor support website&lt;/a&gt;, they are providing information that future users might be interested in. That is, the user (&lt;strong&gt;U1&lt;/strong&gt;) is contributing information to the overall documentation around the Bioconductor package they are asking a question about. Ideally, a new user (&lt;strong&gt;U2&lt;/strong&gt;) can then read through the question U1 wrote, check the solution, and move on. This is one of the main reasons why we (developers) want questions to be well documented. There are a couple of quick things that U1 can check that will make their question much more useful to the community.&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;
+&lt;a href=&#34;http://www.bioconductor.org/help/support/posting-guide/&#34;&gt;&lt;img alt = &#39;shinycsv landing&#39; width=&#39;600&#39; src=&#39;http://lcolladotor.github.io/figs/2017-03-06-bioc-support/question.png&#39; /&gt;&lt;/a&gt;
+&lt;/center&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;session-information&#34;&gt;Session information&lt;/h2&gt;
+
+&lt;p&gt;One of the strengths of Bioconductor is that all the packages have vignettes and lots of documentation. The packages are also checked regularly and must pass some tests. That also means that packages can change frequently, at least more frequently than CRAN packages. There&amp;rsquo;s also the added complexity that at any given point in time there is a release branch and a development branch. This means that there are many variables and saying that you are using the &amp;ldquo;latest version&amp;rdquo; doesn&amp;rsquo;t mean much to the developer. All of this information and more is part of the &lt;em&gt;R session information&lt;/em&gt;. That is why I and others request users to post their session information. It&amp;rsquo;s very easy to get, simply run the following code:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;## Install devtools if needed
+# install.packages(&#39;devtools&#39;)
+
+## Reproducibility info
+library(&#39;devtools&#39;)
+options(width = 120)
+session_info()
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The output might be too long to post in the &lt;a href=&#34;https://support.bioconductor.org/&#34; target=&#34;_blank&#34;&gt;Bioconductor support website&lt;/a&gt;. The easy solution is to save the information you want displayed in a &lt;a href=&#34;https://gist.github.com/&#34; target=&#34;_blank&#34;&gt;gist&lt;/a&gt;. Then simply add the gist link in your question. Note that you need to have the link under &amp;ldquo;text&amp;rdquo; formatting and not &amp;ldquo;code&amp;rdquo;.&lt;/p&gt;
+
+&lt;h2 id=&#34;code-to-reproduce-the-error&#34;&gt;Code to reproduce the error&lt;/h2&gt;
+
+&lt;p&gt;If U1 includes the session information, their question will be pretty good, but not ideal yet. Many of the questions I&amp;rsquo;ve been asked do not include code for me to figure out the exact steps of what they were doing. A lot of times I can infer pieces of what they were doing from their description of the problem. But doing so takes quite a bit of my time and effort, and is still not perfect. Now imagine that U2 is reading through the question: they would probably get lost!&lt;/p&gt;
+
+&lt;p&gt;There is a wide range of things that U1 could have done. To help the developer, the best thing is for the user to include the code that lead to the error. The code should include how the data was loaded, so that the developer can run it themselves and check in more detail what went wrong. This means providing a small subset of the data or using some publicly available data.&lt;/p&gt;
+
+&lt;p&gt;I realize that writing code that reproduces the error is not easy. But it helps a lot for learning more about R and Bioconductor. I can tell you that I went through the same process, and in my experience you can find out what you are doing wrong by writing the reproducible code.&lt;/p&gt;
+
+&lt;h2 id=&#34;extra&#34;&gt;Extra&lt;/h2&gt;
+
+&lt;p&gt;Here are some other tips that are useful.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;If you run &lt;code&gt;traceback()&lt;/code&gt; immediately after getting the error and include the output in your question, that would be great. It makes it easier to check at what point the code failed and produced the error.&lt;/li&gt;
+&lt;li&gt;Recently when I ask questions myself, I include the &amp;ldquo;non-evaluated code&amp;rdquo; and &amp;ldquo;evaluated code&amp;rdquo;. The non-evaluated code makes it easier for others to copy-paste the code into their R session without having to deal with any formatting issues (&lt;a href=&#34;https://github.com/leekgroup/recount/issues/8#issue-210124094&#34; target=&#34;_blank&#34;&gt;example&lt;/a&gt;).&lt;/li&gt;
+&lt;li&gt;If you encounter a new error, post a new question instead of &amp;ldquo;replying&amp;rdquo; to the first one.&lt;/li&gt;
+&lt;li&gt;Introduce yourself.&lt;/li&gt;
+&lt;li&gt;Be polite.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;By now you should be ready to post some great questions! Thanks for contributing to the Bioconductor community.&lt;/p&gt;
+
+&lt;h3 id=&#34;want-more&#34;&gt;Want more?&lt;/h3&gt;
+
+&lt;p&gt;Check other &lt;a href=&#34;https://twitter.com/jhubiostat&#34; target=&#34;_blank&#34;&gt;@jhubiostat&lt;/a&gt; student and alumni blogs at &lt;a href=&#34;http://bmorebiostat.com/&#34; target=&#34;_blank&#34;&gt;Bmore Biostats&lt;/a&gt; as well as topics on &lt;a href=&#34;https://twitter.com/search?q=%23rstats&#34; target=&#34;_blank&#34;&gt;#rstats&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>An alternative to the Mexico-US wall where the US would gain millions of dollars</title>
@@ -2265,213 +2330,6 @@ URL: &lt;a href=&#34;http://www.R-project.org/&#34;&gt;http://www.R-project.org/
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Check other &lt;a href=&#34;https://twitter.com/jhubiostat&#34; target=&#34;_blank&#34;&gt;@jhubiostat&lt;/a&gt; student blogs at &lt;a href=&#34;http://bmorebiostat.com/&#34; target=&#34;_blank&#34;&gt;Bmore Biostats&lt;/a&gt; as well as topics on &lt;a href=&#34;https://twitter.com/search?q=%23rstats&#34; target=&#34;_blank&#34;&gt;#rstats&lt;/a&gt;.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>rMaps Mexico map</title>
-      <link>http://lcolladotor.github.io/2014/02/26/excited-by-willingness-to-help-get-things-done</link>
-      <pubDate>Wed, 26 Feb 2014 00:00:00 +0000</pubDate>
-      
-      <guid>http://lcolladotor.github.io/2014/02/26/excited-by-willingness-to-help-get-things-done</guid>
-      <description>
-
-&lt;h2 id=&#34;it-s-exciting-when-great-people-help-each-other-get-things-done&#34;&gt;It&amp;rsquo;s exciting when great people help each other get things done&lt;/h2&gt;
-
-&lt;p&gt;This is a simple networking story, which might not be surprising to some but I was happily surprised by it. This is how the story goes:&lt;/p&gt;
-
-&lt;p&gt;Two weeks ago &lt;code&gt;rMaps&lt;/code&gt; (&lt;span class=&#34;showtooltip&#34; title=&#34;Vaidyanathan R (2014). rMaps: Interactive Maps from R. R package version 0.1.&#34;&gt;&lt;a href=&#34;&#34;&gt;Vaidyanathan, 2014&lt;/a&gt;&lt;/span&gt;) was released. After making a &lt;a href=&#34;http://lcolladotor.github.io/2014/02/10/rMaps-released/#.Uwz64kJdV18&#34; target=&#34;_blank&#34;&gt;blog post&lt;/a&gt; about it I thought about using it to make a map of the homicide rate in Mexico over the recent years. First, I had the question of how to make custom maps with &lt;code&gt;rMaps&lt;/code&gt;. &lt;a href=&#34;https://github.com/tyokota&#34; target=&#34;_blank&#34;&gt;@tyokota&lt;/a&gt; had the same question and started asking &lt;a href=&#34;https://github.com/ramnathv&#34; target=&#34;_blank&#34;&gt;Ramnath&lt;/a&gt; about it in &lt;a href=&#34;https://github.com/ramnathv/rMaps/issues/6&#34; target=&#34;_blank&#34;&gt;rMaps issue 6&lt;/a&gt;. Then I realized I needed a specific file with the map information. Google lead me to &lt;a href=&#34;https://github.com/diegovalle&#34; target=&#34;_blank&#34;&gt;@diegovalle&lt;/a&gt; who has created the map from official Mexican sources, downloaded the homicide data, cleaned it, and made several maps and analyses: all his work is very impressive! I thought that it&amp;rsquo;d be very cool if &lt;a href=&#34;https://github.com/diegovalle&#34; target=&#34;_blank&#34;&gt;@diegovalle&lt;/a&gt; and &lt;a href=&#34;https://github.com/ramnathv&#34; target=&#34;_blank&#34;&gt;Ramnath&lt;/a&gt; connected, and they did! I saw them interacting via Twitter (&lt;a href=&#34;https://twitter.com/diegovalle/status/433619946434596864&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt; and &lt;a href=&#34;https://twitter.com/ramnath_vaidya/status/433813747593801728&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;) and via &lt;a href=&#34;https://github.com/ramnathv/rMaps/issues/6&#34; target=&#34;_blank&#34;&gt;GitHub&lt;/a&gt;. After sharing &lt;a href=&#34;https://github.com/diegovalle&#34; target=&#34;_blank&#34;&gt;@diegovalle&lt;/a&gt;&amp;rsquo;s work with my friends, it turned out that some old friends already knew him (&lt;a href=&#34;https://twitter.com/unRob/status/433675310542749696&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt; and high school friends). Another friend was interested in additional features and I suggested her to contact &lt;a href=&#34;https://github.com/diegovalle&#34; target=&#34;_blank&#34;&gt;@diegovalle&lt;/a&gt; via Twitter: he quickly replied as you can see &lt;a href=&#34;https://twitter.com/diegovalle/status/434444498341347328&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Beyond how impressive &lt;code&gt;rMaps&lt;/code&gt; and &lt;a href=&#34;https://github.com/diegovalle&#34; target=&#34;_blank&#34;&gt;@diegovalle&lt;/a&gt;&amp;rsquo;s work on mexican data are, I was amazed by the willingness to help each other and how great people easily connected. I believe this is one of the great features of both GitHub and Twitter where you can share your code, ask questions, try to answer them, meet people working with your tools, etc. You can even offer to PayPal a beer like &lt;a href=&#34;https://github.com/tyokota&#34; target=&#34;_blank&#34;&gt;@tyokota&lt;/a&gt; did.&lt;/p&gt;
-
-&lt;p&gt;After all their great work, now someone like me (aka, without knowing javascript, Datamaps, etc) can walk you through an example of making an interactive choropleth map showing the homicides rates in Mexico from 1997 to 2013.&lt;/p&gt;
-
-&lt;h2 id=&#34;homicides-rates-in-mexico-1997-2013&#34;&gt;Homicides rates in Mexico 1997-2013&lt;/h2&gt;
-
-&lt;p&gt;The first thing we need to make a custom map using &lt;code&gt;rMaps&lt;/code&gt; is a &lt;a href=&#34;http://en.wikipedia.org/wiki/TopoJSON&#34; target=&#34;_blank&#34;&gt;topojson&lt;/a&gt; file which in this case specifies the mexican states boundaries. This process is explained in more detail by &lt;a href=&#34;https://github.com/tyokota&#34; target=&#34;_blank&#34;&gt;@tyokota&lt;/a&gt; at &lt;a href=&#34;https://github.com/tyokota/custom-map&#34; target=&#34;_blank&#34;&gt;custom-map&lt;/a&gt; which you can view &lt;a href=&#34;https://github.com/tyokota/custom-map/blob/master/custom-map.Rmd&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;In this particular example, &lt;a href=&#34;http://www.inegi.org.mx/&#34; target=&#34;_blank&#34;&gt;INEGI&lt;/a&gt; which is the National Institute of Statistics and Geography of Mexico has a map of the mexican states. &lt;a href=&#34;https://github.com/diegovalle&#34; target=&#34;_blank&#34;&gt;@diegovalle&lt;/a&gt; explained how to download it &lt;a href=&#34;https://github.com/ramnathv/rMaps/issues/6#issuecomment-34942284&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;But before doing so, you might to install &lt;code&gt;topojson&lt;/code&gt; like I did below following the &lt;a href=&#34;https://github.com/mbostock/topojson/wiki/Installation&#34; target=&#34;_blank&#34;&gt;installation instructions&lt;/a&gt;. In the terminal:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;
-## Install node.js following instructions at https://github.com/mbostock/topojson/wiki/Installation
-brew install node
-## Install topojson
-npm install -g topojson
-
-## Download map info from INEGI (Mexican official source)
-curl -o estados.zip http://mapserver.inegi.org.mx/MGN/mge2010v5_0.zip
-## Decompress file
-unzip estados.zip
-## Create shapefile
-ogr2ogr states.shp Entidades_2010_5.shp -t_srs &amp;quot;+proj=longlat +ellps=WGS84 +no_defs +towgs84=0,0,0&amp;quot;
-## id-property needed so that DataMaps knows how to color the map
-topojson -o mx_states.json -s 1e-7 -q 1e5 states.shp -p state_code=+CVE_ENT,name=NOM_ENT --id-property NOM_ENT
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Now that we have the &lt;a href=&#34;http://en.wikipedia.org/wiki/TopoJSON&#34; target=&#34;_blank&#34;&gt;topojson&lt;/a&gt; file &lt;strong&gt;mx_states.json&lt;/strong&gt; we need to get the actual homicide data. &lt;a href=&#34;https://github.com/diegovalle&#34; target=&#34;_blank&#34;&gt;@diegovalle&lt;/a&gt; has gone through the whole process of acquiring the data from official mexican sources and cleaning it. Lets download it.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;# Download crime data
-## From crimenmexico.diegovalle.net/en/csv
-## All local crimes at the state level
-download.file(&amp;quot;http://crimenmexico.diegovalle.net/en/csv/fuero-comun-estados.csv.gz&amp;quot;, 
-	&amp;quot;fuero-comun-estados.csv.gz&amp;quot;)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;The data is not completely ready for us to use it and we need to reshape it a bit. In particular, we want to consider only the intentional homicides and group the data by state and date. We can get this to work by using &lt;code&gt;dplyr&lt;/code&gt; (&lt;span class=&#34;showtooltip&#34; title=&#34;Wickham H and Francois R (2014). dplyr: dplyr: a grammar of data manipulation. R package version 0.1.1.&#34;&gt;&lt;a href=&#34;http://CRAN.R-project.org/package=dplyr&#34;&gt;Wickham &amp;amp; Francois, 2014&lt;/a&gt;&lt;/span&gt;).&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;## Load required packages
-library(&amp;quot;dplyr&amp;quot;)
-
-## Load the crime data
-crime &amp;lt;- read.csv(&amp;quot;fuero-comun-estados.csv.gz&amp;quot;)
-
-## Only intentional homicides
-crime &amp;lt;- subset(crime, crime == &amp;quot;HOMICIDIOS&amp;quot; &amp;amp; type == &amp;quot;DOLOSOS&amp;quot;)
-
-## Sum homicides by firearm, etc and group by state and date
-hom &amp;lt;- crime %.%
-  filter(year %in% 1997:2013) %.%
-  group_by(state_code, year, type) %.%
-  summarise(total = sum(count, na.rm = TRUE),
-            population = mean(population) ) %.%
-  mutate(rate = total / population * 10^5) %.%
-  arrange(state_code, year)
-
-## How are states coded?
-summary(hom$state_code)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code&gt;##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
-##    1.00    8.75   16.50   16.50   24.20   32.00
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;We have the slight inconvenience that states are coded as integers from 1 to 32 instead of using their names. Using another of the files supplied by &lt;a href=&#34;https://github.com/diegovalle&#34; target=&#34;_blank&#34;&gt;@diegovalle&lt;/a&gt; we can merge the codes. This requires using the &lt;code&gt;foreign&lt;/code&gt; (&lt;span class=&#34;showtooltip&#34; title=&#34;R Core Team (2014). foreign: Read Data Stored by Minitab, S, SAS, SPSS, Stata, Systat, Weka, dBase.... R package version 0.8-59.&#34;&gt;&lt;a href=&#34;http://CRAN.R-project.org/package=foreign&#34;&gt;R Core Team&lt;/a&gt;&lt;/span&gt;) package for loading a &lt;em&gt;dbf&lt;/em&gt; file and then merging both data sets with &lt;code&gt;plyr&lt;/code&gt; (&lt;span class=&#34;showtooltip&#34; title=&#34;Wickham H (2011). &#39;The Split-Apply-Combine Strategy for Data Analysis.&#39; Journal of Statistical Software, 40(1), pp. 1-29. .&#34;&gt;&lt;a href=&#34;http://www.jstatsoft.org/v40/i01/&#34;&gt;Wickham, 2011&lt;/a&gt;&lt;/span&gt;).&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;## Needed for read.dbf
-library(&amp;quot;foreign&amp;quot;)
-
-## The dbf from the state shapefile needed to merge state_code with state
-## names
-codes &amp;lt;- read.dbf(&amp;quot;states.dbf&amp;quot;)
-codes$NOM_ENT &amp;lt;- iconv(codes$NOM_ENT, &amp;quot;windows-1252&amp;quot;, &amp;quot;utf-8&amp;quot;)
-codes$CVE_ENT &amp;lt;- as.numeric(codes$CVE_ENT)
-codes$OID &amp;lt;- NULL
-names(codes) &amp;lt;- c(&amp;quot;state_code&amp;quot;, &amp;quot;name&amp;quot;)
-
-## Load plyr for join(). Loading it before creates a problem with the dplyr
-## call above
-library(&amp;quot;plyr&amp;quot;)
-
-## Names needed for the map
-hom &amp;lt;- join(hom, codes)
-
-## Lets look at the data
-head(hom)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code&gt;##   state_code year    type total population   rate           name
-## 1          1 1997 DOLOSOS   355     958126 37.051 Aguascalientes
-## 2          1 1998 DOLOSOS    66     975585  6.765 Aguascalientes
-## 3          1 1999 DOLOSOS    27     992515  2.720 Aguascalientes
-## 4          1 2000 DOLOSOS    14    1009215  1.387 Aguascalientes
-## 5          1 2001 DOLOSOS    22    1026437  2.143 Aguascalientes
-## 6          1 2002 DOLOSOS    26    1044578  2.489 Aguascalientes
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Great! We now have state names under &lt;em&gt;name&lt;/em&gt; and the intentional homicide rate under &lt;em&gt;rate&lt;/em&gt; (in homicides per 100,000) for each specific &lt;em&gt;year&lt;/em&gt;. We can thus proceed to making the interactive choropleth map using the &lt;code&gt;ichoropleth&lt;/code&gt; function described by &lt;a href=&#34;https://github.com/ramnathv&#34; target=&#34;_blank&#34;&gt;Ramnath&lt;/a&gt; &lt;a href=&#34;http://rmaps.github.io/blog/posts/animated-choropleths/index.html&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;. This requires specifying the &lt;a href=&#34;http://en.wikipedia.org/wiki/TopoJSON&#34; target=&#34;_blank&#34;&gt;topojson&lt;/a&gt; file which is specified via &lt;em&gt;dataUrl&lt;/em&gt;, the name of the map specified via &lt;em&gt;scope&lt;/em&gt; and the most tricky part (for me at least) is that we need to specify the &lt;em&gt;setProjection&lt;/em&gt;. These are all properties of the &lt;a href=&#34;https://github.com/markmarkoh/datamaps&#34; target=&#34;_blank&#34;&gt;Datamaps&lt;/a&gt; library. In particular, the wiki describes &lt;a href=&#34;https://github.com/markmarkoh/datamaps/blob/master/README.md#using-custom-maps&#34; target=&#34;_blank&#34;&gt;how to use custom maps&lt;/a&gt; but this requires some javascript knowledge.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;## Make the map
-library(&amp;quot;rMaps&amp;quot;)
-d1 &amp;lt;- ichoropleth(rate ~ name, data = hom, ncuts = 9, pal = &#39;YlOrRd&#39;, 
-    animate = &#39;year&#39;,  map = &#39;states&#39;
-)
-## Note that I am hosting the mx_states.json in Dropbox
-## but if you are doing it locally, you only need
-## dataUrl = &amp;quot;mx_states.json&amp;quot;
-d1$set(
-  geographyConfig = list(
-   dataUrl = &amp;quot;https://dl.dropboxusercontent.com/u/10794332/mx_states.json&amp;quot;
-  ),
- scope = &#39;states&#39;,
- setProjection = &#39;#! function( element, options ) {
-   var projection, path;
-   projection = d3.geo.mercator()
-    .center([-89, 21]).scale(element.offsetWidth)
-    .translate([element.offsetWidth / 2, element.offsetHeight / 2]);
-
-   path = d3.geo.path().projection( projection );
-   return {path: path, projection: projection};
-  } !#&#39;
-)
-d1$save(&#39;rMaps.html&#39;, cdn = TRUE)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;The end result is shown below:&lt;/p&gt;
-
-&lt;iframe src=&#39;
-http://lcolladotor.github.io/figs/2014-02-26-excited-by-willingness-to-help-get-things-done/rMaps.html
-&#39; scrolling=&#39;no&#39; seamless
-class=&#39;rChart datamaps &#39;
-id=iframe-
-chart1859838d5e973
-width=100%
-height=500px
- &gt;&lt;/iframe&gt;
-
-&lt;p&gt;You can also share the map using the &lt;em&gt;publish&lt;/em&gt; method as shown below:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;d1$publish(&amp;quot;Intentional homicides rates for Mexico 1997-2013&amp;quot;)
-## You&#39;ll need a GitHub account
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;You will get a link to the rCharts viewer such as &lt;a href=&#34;http://rcharts.io/viewer/?9223554#.Uw1tNEJdV18&#34; target=&#34;_blank&#34;&gt;this one&lt;/a&gt; or if you prefer, you can also view the result using Pagist as shown &lt;a href=&#34;http://www.pagist.info/9223554&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;The code presented in this post was written by &lt;a href=&#34;https://github.com/diegovalle&#34; target=&#34;_blank&#34;&gt;@diegovalle&lt;/a&gt; which can you view &lt;a href=&#34;http://bl.ocks.org/diegovalle/8967565&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt; and &lt;a href=&#34;https://github.com/ramnathv&#34; target=&#34;_blank&#34;&gt;Ramnath&lt;/a&gt; which is shown &lt;a href=&#34;https://github.com/ramnathv/rMaps/issues/6#issuecomment-34946041&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;. I also figured out the trick of hosting the &lt;a href=&#34;http://en.wikipedia.org/wiki/TopoJSON&#34; target=&#34;_blank&#34;&gt;topojson&lt;/a&gt; file at Dropbox from &lt;a href=&#34;https://github.com/tyokota&#34; target=&#34;_blank&#34;&gt;@tyokota&lt;/a&gt;&amp;rsquo;s &lt;a href=&#34;https://github.com/tyokota/custom-map/blob/master/custom-map.Rmd&#34; target=&#34;_blank&#34;&gt;code&lt;/a&gt; as I was running into &lt;em&gt;Access-Control-Allow-Origin&lt;/em&gt; errors when hosting it in my academic website. Finally, but not least, &lt;a href=&#34;https://github.com/ramnathv&#34; target=&#34;_blank&#34;&gt;Ramnath&lt;/a&gt; appropriately insists that all of this would not be possible without libraries such as &lt;a href=&#34;https://github.com/markmarkoh/datamaps&#34; target=&#34;_blank&#34;&gt;Datamaps&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h3 id=&#34;references&#34;&gt;References&lt;/h3&gt;
-
-&lt;p&gt;Citations made with &lt;code&gt;knitcitations&lt;/code&gt; (&lt;span class=&#34;showtooltip&#34; title=&#34;Boettiger C (2014). knitcitations: Citations for knitr markdown files. R package version 0.5-0.&#34;&gt;&lt;a href=&#34;http://CRAN.R-project.org/package=knitcitations&#34;&gt;Boettiger, 2014&lt;/a&gt;&lt;/span&gt;).&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Hadley Wickham, Romain Francois,   (2014) dplyr: dplyr: a grammar of data manipulation.  &lt;a href=&#34;http://CRAN.R-project.org/package=dplyr&#34; target=&#34;_blank&#34;&gt;http://CRAN.R-project.org/package=dplyr&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;R Core Team ,   (2014) foreign: Read Data Stored by Minitab, S, SAS, SPSS, Stata, Systat, Weka,
-dBase, &amp;hellip;.  &lt;a href=&#34;http://CRAN.R-project.org/package=foreign&#34; target=&#34;_blank&#34;&gt;http://CRAN.R-project.org/package=foreign&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Carl Boettiger,   (2014) knitcitations: Citations for knitr markdown files.  &lt;a href=&#34;http://CRAN.R-project.org/package=knitcitations&#34; target=&#34;_blank&#34;&gt;http://CRAN.R-project.org/package=knitcitations&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Hadley Wickham,   (2011) The Split-Apply-Combine Strategy for Data Analysis.  &lt;em&gt;Journal of Statistical Software&lt;/em&gt;  &lt;strong&gt;40&lt;/strong&gt;  (1)   1-29  &lt;a href=&#34;http://www.jstatsoft.org/v40/i01/&#34; target=&#34;_blank&#34;&gt;http://www.jstatsoft.org/v40/i01/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Ramnath Vaidyanathan,   (2014) rMaps: Interactive Maps from R.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;reproducibility&#34;&gt;Reproducibility&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;sessionInfo()
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code&gt;## R version 3.0.2 (2013-09-25)
-## Platform: x86_64-apple-darwin10.8.0 (64-bit)
-## 
-## locale:
-## [1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8
-## 
-## attached base packages:
-## [1] stats     graphics  grDevices utils     datasets  methods   base     
-## 
-## other attached packages:
-## [1] rMaps_0.1.1         plyr_1.8            foreign_0.8-59     
-## [4] dplyr_0.1.1         knitcitations_0.5-0 bibtex_0.3-6       
-## [7] knitr_1.5          
-## 
-## loaded via a namespace (and not attached):
-##  [1] assertthat_0.1     digest_0.6.4       evaluate_0.5.1    
-##  [4] formatR_0.10       grid_3.0.2         httr_0.2          
-##  [7] lattice_0.20-24    rCharts_0.4.2      RColorBrewer_1.0-5
-## [10] Rcpp_0.11.0        RCurl_1.95-4.1     RJSONIO_1.0-3     
-## [13] stringr_0.6.2      tools_3.0.2        whisker_0.3-2     
-## [16] XML_3.95-0.2       xtable_1.7-1       yaml_2.1.10
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Check other topics on &lt;a href=&#34;https://twitter.com/search?q=%23rstats&#34; target=&#34;_blank&#34;&gt;#rstats&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     

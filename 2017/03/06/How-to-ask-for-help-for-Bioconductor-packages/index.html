@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme" content="hugo-academic">
+  <meta name="generator" content="Hugo 0.18.1" />
+  <meta name="author" content="Leonardo Collado Torres">
+  <meta name="description" content="Data Scientist">
+
+  
+  
+  
+    
+  
+  
+    
+    
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/tomorrow.min.css">
+    
+  
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/css/academicons.min.css">
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,700|Merriweather|Roboto+Mono">
+  <link rel="stylesheet" href="/css/hugo-academic.css">
+  
+
+  <link rel="alternate" href="http://lcolladotor.github.io/index.xml" type="application/rss+xml" title="L. Collado-Torres">
+  <link rel="feed" href="http://lcolladotor.github.io/index.xml" type="application/rss+xml" title="L. Collado-Torres">
+
+  <link rel="icon" type="image/png" href="/img/icon.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/apple-touch-icon.png">
+
+  <link rel="canonical" href="http://lcolladotor.github.io/2017/03/06/How-to-ask-for-help-for-Bioconductor-packages">
+
+  
+
+  <title>How to ask for help for Bioconductor packages | L. Collado-Torres</title>
+
+</head>
+<body id="top" data-spy="scroll" data-target="#navbar-main" data-offset="71">
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+              data-target=".navbar-collapse" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">L. Collado-Torres</a>
+    </div>
+
+    
+    <div class="collapse navbar-collapse">
+
+      
+      <ul class="nav navbar-nav navbar-right">
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#about">
+            
+            <span>Home</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#publications_selected">
+            
+            <span>Publications</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#talks">
+            
+            <span>Talks</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#posts">
+            
+            <span>Posts</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#cv">
+            
+            <span>CV</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#teaching">
+            
+            <span>Teaching</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#contact">
+            
+            <span>Contact</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#search">
+            
+            <span>Search</span>
+          </a>
+        </li>
+
+        
+        
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+<article class="article" itemscope itemtype="http://schema.org/Article">
+
+  
+
+  <div class="article-container">
+    <h1 itemprop="name">How to ask for help for Bioconductor packages</h1>
+    
+
+<div class="article-metadata">
+
+  <span class="article-date">
+    <time datetime="2017-03-06 00:00:00 &#43;0000 UTC" itemprop="datePublished">
+      Mon, Mar 6, 2017
+    </time>
+  </span>
+
+  
+  
+  
+  <span class="article-categories">
+    <i class="fa fa-folder"></i>
+    
+    <a href="/categories/rstats">rstats</a
+    >
+    
+  </span>
+  
+  
+
+  
+  
+  
+  <span class="article-tags">
+    <i class="fa fa-tags"></i>
+    
+    <a href="/tags/help">help</a
+    >
+    
+  </span>
+  
+  
+
+  
+  
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    <li>
+      <a class="facebook"
+         href="https://www.facebook.com/sharer.php?u=http%3a%2f%2flcolladotor.github.io%2f2017%2f03%2f06%2fHow-to-ask-for-help-for-Bioconductor-packages"
+         target="_blank">
+        <i class="fa fa-facebook"></i>
+      </a>
+    </li>
+    <li>
+      <a class="twitter"
+         href="https://twitter.com/intent/tweet?text=How%20to%20ask%20for%20help%20for%20Bioconductor%20packages&amp;url=http%3a%2f%2flcolladotor.github.io%2f2017%2f03%2f06%2fHow-to-ask-for-help-for-Bioconductor-packages"
+         target="_blank">
+        <i class="fa fa-twitter"></i>
+      </a>
+    </li>
+    <li>
+      <a class="linkedin"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3a%2f%2flcolladotor.github.io%2f2017%2f03%2f06%2fHow-to-ask-for-help-for-Bioconductor-packages&amp;title=How%20to%20ask%20for%20help%20for%20Bioconductor%20packages"
+         target="_blank">
+        <i class="fa fa-linkedin"></i>
+      </a>
+    </li>
+    <li>
+      <a class="weibo"
+         href="http://service.weibo.com/share/share.php?url=http%3a%2f%2flcolladotor.github.io%2f2017%2f03%2f06%2fHow-to-ask-for-help-for-Bioconductor-packages&amp;title=How%20to%20ask%20for%20help%20for%20Bioconductor%20packages"
+         target="_blank">
+        <i class="fa fa-weibo"></i>
+      </a>
+    </li>
+    <li>
+      <a class="email"
+         href="mailto:?subject=How%20to%20ask%20for%20help%20for%20Bioconductor%20packages&amp;body=http%3a%2f%2flcolladotor.github.io%2f2017%2f03%2f06%2fHow-to-ask-for-help-for-Bioconductor-packages">
+        <i class="fa fa-envelope"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+  
+
+</div>
+
+    <div class="article-style" itemprop="articleBody">
+      
+
+<div class="alert alert-note">
+  <p>tl;dr Please post your question at the Bioconductor support website <a href="https://support.bioconductor.org/" target="_blank">https://support.bioconductor.org/</a> and check the posting guide <a href="http://www.bioconductor.org/help/support/posting-guide/" target="_blank">http://www.bioconductor.org/help/support/posting-guide/</a>. It&rsquo;s important that you provide reproducible code and information about your R session.</p>
+
+</div>
+
+
+<p>Recently I have been getting more questions about several packages I maintain. It&rsquo;s great to see more interest from users, but at the same time most questions lack the information I need to help the users. I have also gotten most of the questions via email, which is why I am writing this post. As of today, I will no longer answer questions related to my Bioconductor packages via personal emails. This might sound harsh, but hopefully the rest of this post will convince you that it&rsquo;s the best thing to do. You might also be interested in the basics of using <a href="http://bioconductor.org/packages/release/bioc/vignettes/derfinder/inst/doc/derfinder-quickstart.html#basics" target="_blank">derfinder</a>, <a href="http://bioconductor.org/packages/release/bioc/vignettes/regionReport/inst/doc/regionReport.html#basics" target="_blank">regionReport</a> or <a href="http://bioconductor.org/packages/release/bioc/vignettes/recount/inst/doc/recount-quickstart.html#basics" target="_blank">recount</a>, among others.</p>
+
+<p>The Bioconductor project is a community project and it benefits from users interacting in public venues. When a user asks a question at the <a href="https://support.bioconductor.org/" target="_blank">Bioconductor support website</a>, they are providing information that future users might be interested in. That is, the user (<strong>U1</strong>) is contributing information to the overall documentation around the Bioconductor package they are asking a question about. Ideally, a new user (<strong>U2</strong>) can then read through the question U1 wrote, check the solution, and move on. This is one of the main reasons why we (developers) want questions to be well documented. There are a couple of quick things that U1 can check that will make their question much more useful to the community.</p>
+
+<p><center>
+<a href="http://www.bioconductor.org/help/support/posting-guide/"><img alt = 'shinycsv landing' width='600' src='http://lcolladotor.github.io/figs/2017-03-06-bioc-support/question.png' /></a>
+</center></p>
+
+<h2 id="session-information">Session information</h2>
+
+<p>One of the strengths of Bioconductor is that all the packages have vignettes and lots of documentation. The packages are also checked regularly and must pass some tests. That also means that packages can change frequently, at least more frequently than CRAN packages. There&rsquo;s also the added complexity that at any given point in time there is a release branch and a development branch. This means that there are many variables and saying that you are using the &ldquo;latest version&rdquo; doesn&rsquo;t mean much to the developer. All of this information and more is part of the <em>R session information</em>. That is why I and others request users to post their session information. It&rsquo;s very easy to get, simply run the following code:</p>
+
+<pre><code>## Install devtools if needed
+# install.packages('devtools')
+
+## Reproducibility info
+library('devtools')
+options(width = 120)
+session_info()
+</code></pre>
+
+<p>The output might be too long to post in the <a href="https://support.bioconductor.org/" target="_blank">Bioconductor support website</a>. The easy solution is to save the information you want displayed in a <a href="https://gist.github.com/" target="_blank">gist</a>. Then simply add the gist link in your question. Note that you need to have the link under &ldquo;text&rdquo; formatting and not &ldquo;code&rdquo;.</p>
+
+<h2 id="code-to-reproduce-the-error">Code to reproduce the error</h2>
+
+<p>If U1 includes the session information, their question will be pretty good, but not ideal yet. Many of the questions I&rsquo;ve been asked do not include code for me to figure out the exact steps of what they were doing. A lot of times I can infer pieces of what they were doing from their description of the problem. But doing so takes quite a bit of my time and effort, and is still not perfect. Now imagine that U2 is reading through the question: they would probably get lost!</p>
+
+<p>There is a wide range of things that U1 could have done. To help the developer, the best thing is for the user to include the code that lead to the error. The code should include how the data was loaded, so that the developer can run it themselves and check in more detail what went wrong. This means providing a small subset of the data or using some publicly available data.</p>
+
+<p>I realize that writing code that reproduces the error is not easy. But it helps a lot for learning more about R and Bioconductor. I can tell you that I went through the same process, and in my experience you can find out what you are doing wrong by writing the reproducible code.</p>
+
+<h2 id="extra">Extra</h2>
+
+<p>Here are some other tips that are useful.</p>
+
+<ul>
+<li>If you run <code>traceback()</code> immediately after getting the error and include the output in your question, that would be great. It makes it easier to check at what point the code failed and produced the error.</li>
+<li>Recently when I ask questions myself, I include the &ldquo;non-evaluated code&rdquo; and &ldquo;evaluated code&rdquo;. The non-evaluated code makes it easier for others to copy-paste the code into their R session without having to deal with any formatting issues (<a href="https://github.com/leekgroup/recount/issues/8#issue-210124094" target="_blank">example</a>).</li>
+<li>If you encounter a new error, post a new question instead of &ldquo;replying&rdquo; to the first one.</li>
+<li>Introduce yourself.</li>
+<li>Be polite.</li>
+</ul>
+
+<p>By now you should be ready to post some great questions! Thanks for contributing to the Bioconductor community.</p>
+
+<h3 id="want-more">Want more?</h3>
+
+<p>Check other <a href="https://twitter.com/jhubiostat" target="_blank">@jhubiostat</a> student and alumni blogs at <a href="http://bmorebiostat.com/" target="_blank">Bmore Biostats</a> as well as topics on <a href="https://twitter.com/search?q=%23rstats" target="_blank">#rstats</a>.</p>
+
+    </div>
+  </div>
+
+</article>
+
+<div class="container">
+  <nav>
+  <ul class="pager">
+    
+    <li class="previous"><a href="http://lcolladotor.github.io/2017/01/25/An-alternative-to-the-Mexico-US-wall-where-the-US-would-gain-millions-of-dollars"><span
+      aria-hidden="true">&larr;</span> An alternative to the Mexico-US wall where the US would gain millions of dollars</a></li>
+    
+
+    
+  </ul>
+</nav>
+
+</div>
+
+<div class="article-container">
+  
+<section id="comments">
+  <div id="disqus_thread">
+    <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'fellgernonbit';
+    var disqus_identifier = 'http:\/\/lcolladotor.github.io\/2017\/03\/06\/How-to-ask-for-help-for-Bioconductor-packages';
+    var disqus_title = 'How to ask for help for Bioconductor packages';
+    var disqus_url = 'http:\/\/lcolladotor.github.io\/2017\/03\/06\/How-to-ask-for-help-for-Bioconductor-packages';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+  </div>
+</section>
+
+
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="powered-by">
+        
+        
+        
+        <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4ef23e545d41b87c"></script>
+        <script type="text/javascript">
+          addthis.layers({
+            'theme' : 'transparent',
+            'share' : {
+              'position' : 'left',
+              'numPreferredServices' : 5,
+              'desktop' : false,
+              'mobile' : true
+            }, 
+            'follow' : {
+              'services' : [
+                {'service': 'twitter', 'id': 'fellgernon'},
+                {'service': 'rss', 'id': 'http://feeds.feedburner.com/FellgernonBit'}
+              ],
+        	  'offset' : {'top':'10px'},
+              'title' : 'Follow'
+            }   
+          });
+        </script>
+        
+
+        <script type="text/javascript">
+        var addthis_config = {
+        	data_ga_property: 'UA-45299226-1',
+        	data_ga_social : true,
+        	data_track_addressbar: true
+        };
+        var addthis_share = {
+        	
+        	url_transforms : {
+        		shorten: {
+        			twitter: 'bitly'
+        		}
+        	}, 
+        	shorteners : {
+        		bitly : {}
+        	}
+        }
+        </script>
+        
+        <center>	 
+        <div id="clustrmaps-widget"></div><script type="text/javascript">var _clustrmaps = {'url' : 'http://lcolladotor.github.io/', 'user' : 1119558, 'server' : '2', 'id' : 'clustrmaps-widget', 'version' : 1, 'date' : '2013-10-30', 'lang' : 'en', 'corners' : 'square' };(function (){ var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = 'http://www2.clustrmaps.com/counter/map.js'; var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);})();</script><noscript><a href="http://www2.clustrmaps.com/user/320111546"><img src="http://www2.clustrmaps.com/stats/maps-no_clusters/lcolladotor.github.io--thumb.jpg" alt="Locations of visitors to this page" /></a></noscript>
+        </center>
+
+      &copy; 2011-2017 Leonardo Collado Torres under (CC) BY-NC-SA &middot; 
+
+      Powered by the <a href="https://github.com/gcushen/hugo-academic" target="_blank">Academic
+      theme</a> for <a href="http://gohugo.io" target="_blank">Hugo</a>.
+
+      <span class="pull-right" aria-hidden="true">
+        <a href="#" id="back_to_top">
+          <span class="button_icon">
+            <i class="fa fa-chevron-up fa-2x"></i>
+          </span>
+        </a>
+      </span>
+
+    </p>
+  </div>
+</footer>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.4/TweenMax.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/ScrollToPlugin.min.js"></script>
+    <script src="/js/jquery-1.12.3.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/isotope.pkgd.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.1/imagesloaded.pkgd.min.js"></script>
+    <script src="/js/hugo-academic.js"></script>
+    
+
+    
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-45299226-1', 'auto');
+        ga('send', 'pageview');
+
+         
+        var links = document.querySelectorAll('a');
+        Array.prototype.map.call(links, function(item) {
+            if (item.host != document.location.host) {
+                item.addEventListener('click', function() {
+                    var action = item.getAttribute('data-action') || 'follow';
+                    ga('send', 'event', 'outbound', action, item.href);
+                });
+            }
+        });
+    </script>
+    
+
+    
+    
+      
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+
+      
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/languages/r.min.js"></script>
+      
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/languages/bash.min.js"></script>
+      
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/languages/python.min.js"></script>
+      
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/languages/stata.min.js"></script>
+      
+
+      
+
+      <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });
+    </script>
+    <script async src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML"></script>
+    
+
+  </body>
+</html>
+

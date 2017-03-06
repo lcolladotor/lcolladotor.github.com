@@ -11,6 +11,71 @@
     <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>How to ask for help for Bioconductor packages</title>
+      <link>http://lcolladotor.github.io/2017/03/06/How-to-ask-for-help-for-Bioconductor-packages</link>
+      <pubDate>Mon, 06 Mar 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://lcolladotor.github.io/2017/03/06/How-to-ask-for-help-for-Bioconductor-packages</guid>
+      <description>
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;p&gt;tl;dr Please post your question at the Bioconductor support website &lt;a href=&#34;https://support.bioconductor.org/&#34; target=&#34;_blank&#34;&gt;https://support.bioconductor.org/&lt;/a&gt; and check the posting guide &lt;a href=&#34;http://www.bioconductor.org/help/support/posting-guide/&#34; target=&#34;_blank&#34;&gt;http://www.bioconductor.org/help/support/posting-guide/&lt;/a&gt;. It&amp;rsquo;s important that you provide reproducible code and information about your R session.&lt;/p&gt;
+
+&lt;/div&gt;
+
+
+&lt;p&gt;Recently I have been getting more questions about several packages I maintain. It&amp;rsquo;s great to see more interest from users, but at the same time most questions lack the information I need to help the users. I have also gotten most of the questions via email, which is why I am writing this post. As of today, I will no longer answer questions related to my Bioconductor packages via personal emails. This might sound harsh, but hopefully the rest of this post will convince you that it&amp;rsquo;s the best thing to do. You might also be interested in the basics of using &lt;a href=&#34;http://bioconductor.org/packages/release/bioc/vignettes/derfinder/inst/doc/derfinder-quickstart.html#basics&#34; target=&#34;_blank&#34;&gt;derfinder&lt;/a&gt;, &lt;a href=&#34;http://bioconductor.org/packages/release/bioc/vignettes/regionReport/inst/doc/regionReport.html#basics&#34; target=&#34;_blank&#34;&gt;regionReport&lt;/a&gt; or &lt;a href=&#34;http://bioconductor.org/packages/release/bioc/vignettes/recount/inst/doc/recount-quickstart.html#basics&#34; target=&#34;_blank&#34;&gt;recount&lt;/a&gt;, among others.&lt;/p&gt;
+
+&lt;p&gt;The Bioconductor project is a community project and it benefits from users interacting in public venues. When a user asks a question at the &lt;a href=&#34;https://support.bioconductor.org/&#34; target=&#34;_blank&#34;&gt;Bioconductor support website&lt;/a&gt;, they are providing information that future users might be interested in. That is, the user (&lt;strong&gt;U1&lt;/strong&gt;) is contributing information to the overall documentation around the Bioconductor package they are asking a question about. Ideally, a new user (&lt;strong&gt;U2&lt;/strong&gt;) can then read through the question U1 wrote, check the solution, and move on. This is one of the main reasons why we (developers) want questions to be well documented. There are a couple of quick things that U1 can check that will make their question much more useful to the community.&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;
+&lt;a href=&#34;http://www.bioconductor.org/help/support/posting-guide/&#34;&gt;&lt;img alt = &#39;shinycsv landing&#39; width=&#39;600&#39; src=&#39;http://lcolladotor.github.io/figs/2017-03-06-bioc-support/question.png&#39; /&gt;&lt;/a&gt;
+&lt;/center&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;session-information&#34;&gt;Session information&lt;/h2&gt;
+
+&lt;p&gt;One of the strengths of Bioconductor is that all the packages have vignettes and lots of documentation. The packages are also checked regularly and must pass some tests. That also means that packages can change frequently, at least more frequently than CRAN packages. There&amp;rsquo;s also the added complexity that at any given point in time there is a release branch and a development branch. This means that there are many variables and saying that you are using the &amp;ldquo;latest version&amp;rdquo; doesn&amp;rsquo;t mean much to the developer. All of this information and more is part of the &lt;em&gt;R session information&lt;/em&gt;. That is why I and others request users to post their session information. It&amp;rsquo;s very easy to get, simply run the following code:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;## Install devtools if needed
+# install.packages(&#39;devtools&#39;)
+
+## Reproducibility info
+library(&#39;devtools&#39;)
+options(width = 120)
+session_info()
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The output might be too long to post in the &lt;a href=&#34;https://support.bioconductor.org/&#34; target=&#34;_blank&#34;&gt;Bioconductor support website&lt;/a&gt;. The easy solution is to save the information you want displayed in a &lt;a href=&#34;https://gist.github.com/&#34; target=&#34;_blank&#34;&gt;gist&lt;/a&gt;. Then simply add the gist link in your question. Note that you need to have the link under &amp;ldquo;text&amp;rdquo; formatting and not &amp;ldquo;code&amp;rdquo;.&lt;/p&gt;
+
+&lt;h2 id=&#34;code-to-reproduce-the-error&#34;&gt;Code to reproduce the error&lt;/h2&gt;
+
+&lt;p&gt;If U1 includes the session information, their question will be pretty good, but not ideal yet. Many of the questions I&amp;rsquo;ve been asked do not include code for me to figure out the exact steps of what they were doing. A lot of times I can infer pieces of what they were doing from their description of the problem. But doing so takes quite a bit of my time and effort, and is still not perfect. Now imagine that U2 is reading through the question: they would probably get lost!&lt;/p&gt;
+
+&lt;p&gt;There is a wide range of things that U1 could have done. To help the developer, the best thing is for the user to include the code that lead to the error. The code should include how the data was loaded, so that the developer can run it themselves and check in more detail what went wrong. This means providing a small subset of the data or using some publicly available data.&lt;/p&gt;
+
+&lt;p&gt;I realize that writing code that reproduces the error is not easy. But it helps a lot for learning more about R and Bioconductor. I can tell you that I went through the same process, and in my experience you can find out what you are doing wrong by writing the reproducible code.&lt;/p&gt;
+
+&lt;h2 id=&#34;extra&#34;&gt;Extra&lt;/h2&gt;
+
+&lt;p&gt;Here are some other tips that are useful.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;If you run &lt;code&gt;traceback()&lt;/code&gt; immediately after getting the error and include the output in your question, that would be great. It makes it easier to check at what point the code failed and produced the error.&lt;/li&gt;
+&lt;li&gt;Recently when I ask questions myself, I include the &amp;ldquo;non-evaluated code&amp;rdquo; and &amp;ldquo;evaluated code&amp;rdquo;. The non-evaluated code makes it easier for others to copy-paste the code into their R session without having to deal with any formatting issues (&lt;a href=&#34;https://github.com/leekgroup/recount/issues/8#issue-210124094&#34; target=&#34;_blank&#34;&gt;example&lt;/a&gt;).&lt;/li&gt;
+&lt;li&gt;If you encounter a new error, post a new question instead of &amp;ldquo;replying&amp;rdquo; to the first one.&lt;/li&gt;
+&lt;li&gt;Introduce yourself.&lt;/li&gt;
+&lt;li&gt;Be polite.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;By now you should be ready to post some great questions! Thanks for contributing to the Bioconductor community.&lt;/p&gt;
+
+&lt;h3 id=&#34;want-more&#34;&gt;Want more?&lt;/h3&gt;
+
+&lt;p&gt;Check other &lt;a href=&#34;https://twitter.com/jhubiostat&#34; target=&#34;_blank&#34;&gt;@jhubiostat&lt;/a&gt; student and alumni blogs at &lt;a href=&#34;http://bmorebiostat.com/&#34; target=&#34;_blank&#34;&gt;Bmore Biostats&lt;/a&gt; as well as topics on &lt;a href=&#34;https://twitter.com/search?q=%23rstats&#34; target=&#34;_blank&#34;&gt;#rstats&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>An alternative to the Mexico-US wall where the US would gain millions of dollars</title>
       <link>http://lcolladotor.github.io/2017/01/25/An-alternative-to-the-Mexico-US-wall-where-the-US-would-gain-millions-of-dollars</link>
       <pubDate>Wed, 25 Jan 2017 02:00:00 +0000</pubDate>
@@ -1191,15 +1256,6 @@ R package version 1.4.3.
 
 &lt;p&gt;Check other &lt;a href=&#34;https://twitter.com/jhubiostat&#34; target=&#34;_blank&#34;&gt;@jhubiostat&lt;/a&gt; student blogs at &lt;a href=&#34;http://bmorebiostat.com/&#34; target=&#34;_blank&#34;&gt;Bmore Biostats&lt;/a&gt; as well as topics on &lt;a href=&#34;https://twitter.com/search?q=%23rstats&#34; target=&#34;_blank&#34;&gt;#rstats&lt;/a&gt;.&lt;/p&gt;
 </description>
-    </item>
-    
-    <item>
-      <title>dbFinder</title>
-      <link>http://lcolladotor.github.io/talk/dbFinder2015/</link>
-      <pubDate>Sun, 01 Nov 2015 00:00:00 +0000</pubDate>
-      
-      <guid>http://lcolladotor.github.io/talk/dbFinder2015/</guid>
-      <description></description>
     </item>
     
   </channel>

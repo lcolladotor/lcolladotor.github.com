@@ -166,14 +166,13 @@
   </div>
 </nav>
 
-<div class="container">
 
-  <article class="article" itemscope itemtype="http://schema.org/Article">
+<article class="article" itemscope itemtype="http://schema.org/Article">
 
-    
+  
 
+  <div class="article-container">
     <h1 itemprop="name">Visualizing colors()</h1>
-
     
 
 <div class="article-metadata">
@@ -256,7 +255,6 @@
 
 </div>
 
-
     <div class="article-style" itemprop="articleBody">
       <p>The other day I learnt about the existance of the colors() vector in R which specifies all the character-based colors like &#8220;light blue&#8221;, &#8220;black&#8221;, etc. So I made a simple plot to visualize them all. Here&#8217;s the code:</p>
 
@@ -275,9 +273,11 @@ plot(y ~ jitter(x), data = df, col = df$col,
 <p><img src="http://media.tumblr.com/tumblr_mc5ovbt4uQ1qfs0hy.png"/></p>
 
     </div>
+  </div>
 
-  </article>
+</article>
 
+<div class="container">
   <nav>
   <ul class="pager">
     
@@ -292,6 +292,9 @@ plot(y ~ jitter(x), data = df, col = df$col,
   </ul>
 </nav>
 
+</div>
+
+<div class="article-container">
   
 <section id="comments">
   <div id="disqus_thread">
@@ -314,8 +317,8 @@ plot(y ~ jitter(x), data = df, col = df$col,
 </section>
 
 
-
 </div>
+
 <footer class="site-footer">
   <div class="container">
     <p class="powered-by">
