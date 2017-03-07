@@ -61,7 +61,7 @@ session_info()
 
 &lt;ul&gt;
 &lt;li&gt;If you run &lt;code&gt;traceback()&lt;/code&gt; immediately after getting the error and include the output in your question, that would be great. It makes it easier to check at what point the code failed and produced the error.&lt;/li&gt;
-&lt;li&gt;Recently when I ask questions myself, I include the &amp;ldquo;non-evaluated code&amp;rdquo; and &amp;ldquo;evaluated code&amp;rdquo;. The non-evaluated code makes it easier for others to copy-paste the code into their R session without having to deal with any formatting issues (&lt;a href=&#34;https://github.com/leekgroup/recount/issues/8#issue-210124094&#34; target=&#34;_blank&#34;&gt;example&lt;/a&gt;).&lt;/li&gt;
+&lt;li&gt;Recently when I ask questions myself, I include the &amp;ldquo;non-evaluated code&amp;rdquo; (clean code in your script) and &amp;ldquo;evaluated code&amp;rdquo; (think of the R console: a mix of code and output). The non-evaluated code makes it easier for others to copy-paste the code into their R session without having to deal with any formatting issues (&lt;a href=&#34;https://github.com/leekgroup/recount/issues/8#issue-210124094&#34; target=&#34;_blank&#34;&gt;example&lt;/a&gt;).&lt;/li&gt;
 &lt;li&gt;If you encounter a new error, post a new question instead of &amp;ldquo;replying&amp;rdquo; to the first one.&lt;/li&gt;
 &lt;li&gt;Introduce yourself.&lt;/li&gt;
 &lt;li&gt;Be polite.&lt;/li&gt;
