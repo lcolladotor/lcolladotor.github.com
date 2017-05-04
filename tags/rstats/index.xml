@@ -61,6 +61,8 @@ load(file.path(list_dir, previous[length(previous)]))
 
 ## Just checking it
 head(installed)
+
+## [1] &amp;quot;abind&amp;quot;   &amp;quot;acepack&amp;quot; &amp;quot;ada&amp;quot;     &amp;quot;AER&amp;quot;     &amp;quot;affy&amp;quot;    &amp;quot;affyio&amp;quot;
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Next, get the list of current R packages you have installed. Every new R installation comes with a few of them (the &lt;em&gt;base&lt;/em&gt; packages). You don&amp;rsquo;t need to install those.&lt;/p&gt;
