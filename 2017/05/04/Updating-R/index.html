@@ -34,11 +34,11 @@
   <link rel="icon" type="image/png" href="/img/icon.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/apple-touch-icon.png">
 
-  <link rel="canonical" href="http://lcolladotor.github.io/2017/03/06/How-to-ask-for-help-for-Bioconductor-packages">
+  <link rel="canonical" href="http://lcolladotor.github.io/2017/05/04/Updating-R">
 
   
 
-  <title>How to ask for help for Bioconductor packages | L. Collado-Torres</title>
+  <title>Updating R | L. Collado-Torres</title>
 
 </head>
 <body id="top" data-spy="scroll" data-target="#navbar-main" data-offset="71">
@@ -172,14 +172,14 @@
   
 
   <div class="article-container">
-    <h1 itemprop="name">How to ask for help for Bioconductor packages</h1>
+    <h1 itemprop="name">Updating R</h1>
     
 
 <div class="article-metadata">
 
   <span class="article-date">
-    <time datetime="2017-03-06 00:00:00 &#43;0000 UTC" itemprop="datePublished">
-      Mon, Mar 6, 2017
+    <time datetime="2017-05-04 00:00:00 &#43;0000 UTC" itemprop="datePublished">
+      Thu, May 4, 2017
     </time>
   </span>
 
@@ -189,7 +189,10 @@
   <span class="article-categories">
     <i class="fa fa-folder"></i>
     
-    <a href="/categories/rstats">rstats</a
+    <a href="/categories/help">help</a
+    >, 
+    
+    <a href="/categories/bioconductor">bioconductor</a
     >
     
   </span>
@@ -202,7 +205,7 @@
   <span class="article-tags">
     <i class="fa fa-tags"></i>
     
-    <a href="/tags/help">help</a
+    <a href="/tags/rstats">rstats</a
     >
     
   </span>
@@ -215,35 +218,35 @@
   <ul class="share">
     <li>
       <a class="facebook"
-         href="https://www.facebook.com/sharer.php?u=http%3a%2f%2flcolladotor.github.io%2f2017%2f03%2f06%2fHow-to-ask-for-help-for-Bioconductor-packages"
+         href="https://www.facebook.com/sharer.php?u=http%3a%2f%2flcolladotor.github.io%2f2017%2f05%2f04%2fUpdating-R"
          target="_blank">
         <i class="fa fa-facebook"></i>
       </a>
     </li>
     <li>
       <a class="twitter"
-         href="https://twitter.com/intent/tweet?text=How%20to%20ask%20for%20help%20for%20Bioconductor%20packages&amp;url=http%3a%2f%2flcolladotor.github.io%2f2017%2f03%2f06%2fHow-to-ask-for-help-for-Bioconductor-packages"
+         href="https://twitter.com/intent/tweet?text=Updating%20R&amp;url=http%3a%2f%2flcolladotor.github.io%2f2017%2f05%2f04%2fUpdating-R"
          target="_blank">
         <i class="fa fa-twitter"></i>
       </a>
     </li>
     <li>
       <a class="linkedin"
-         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3a%2f%2flcolladotor.github.io%2f2017%2f03%2f06%2fHow-to-ask-for-help-for-Bioconductor-packages&amp;title=How%20to%20ask%20for%20help%20for%20Bioconductor%20packages"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3a%2f%2flcolladotor.github.io%2f2017%2f05%2f04%2fUpdating-R&amp;title=Updating%20R"
          target="_blank">
         <i class="fa fa-linkedin"></i>
       </a>
     </li>
     <li>
       <a class="weibo"
-         href="http://service.weibo.com/share/share.php?url=http%3a%2f%2flcolladotor.github.io%2f2017%2f03%2f06%2fHow-to-ask-for-help-for-Bioconductor-packages&amp;title=How%20to%20ask%20for%20help%20for%20Bioconductor%20packages"
+         href="http://service.weibo.com/share/share.php?url=http%3a%2f%2flcolladotor.github.io%2f2017%2f05%2f04%2fUpdating-R&amp;title=Updating%20R"
          target="_blank">
         <i class="fa fa-weibo"></i>
       </a>
     </li>
     <li>
       <a class="email"
-         href="mailto:?subject=How%20to%20ask%20for%20help%20for%20Bioconductor%20packages&amp;body=http%3a%2f%2flcolladotor.github.io%2f2017%2f03%2f06%2fHow-to-ask-for-help-for-Bioconductor-packages">
+         href="mailto:?subject=Updating%20R&amp;body=http%3a%2f%2flcolladotor.github.io%2f2017%2f05%2f04%2fUpdating-R">
         <i class="fa fa-envelope"></i>
       </a>
     </li>
@@ -258,56 +261,145 @@
     <div class="article-style" itemprop="articleBody">
       
 
-<div class="alert alert-note">
-  <p>tl;dr Please post your question at the Bioconductor support website <a href="https://support.bioconductor.org/" target="_blank">https://support.bioconductor.org/</a> and check the posting guide <a href="http://www.bioconductor.org/help/support/posting-guide/" target="_blank">http://www.bioconductor.org/help/support/posting-guide/</a>. It&rsquo;s important that you provide reproducible code and information about your R session.</p>
+<p>As you might know by now, the latest R version was recently released (R 3.4.0). That means that you are <em>highly</em> encouraged to update your R installation. There are several ways to do this some of which are documented in these other blog posts: <a href="https://www.r-statistics.com/2013/03/updating-r-from-r-on-windows-using-the-installr-package/" target="_blank">Tal Galili, 2013</a>, <a href="https://www.datascienceriot.com/how-to-upgrade-r-without-losing-your-packages/kris/" target="_blank">Kris Eberwein, 2015</a>. You would think that it&rsquo;s just a matter of downloading the latest R installer for your OS, installing it, and continuing your analysis. The reality is a bit more complicated. The following short steps will make your life easier.</p>
 
-</div>
+<h2 id="save-your-list-of-currently-installed-packages">Save your list of currently installed packages</h2>
+
+<p>If you want to continue using R with all the packages you previously had installed, the best way is to save the list of packages you currently have before installing a new R version. You can do so with these lines of code:</p>
+
+<pre><code>## Change accordingly
+list_dir &lt;- '/Users/lcollado/Dropbox/Computing/R'
+
+## Get the list of installed packages
+installed &lt;- dir(.libPaths())
+
+## Save the list for later use
+save(installed, file = file.path(list_dir, paste0(Sys.Date(), '-installed.Rdata')))
+
+## Explore the list
+head(installed)
+
+## [1] &quot;abind&quot;   &quot;acepack&quot; &quot;ada&quot;     &quot;AER&quot;     &quot;affy&quot;    &quot;affyio&quot;
+
+length(installed)
+
+## [1] 610
+</code></pre>
+
+<h2 id="install-latest-r">Install latest R</h2>
+
+<p>Ok, now you have a list of installed packages. It&rsquo;s like a restore point. Next, you need to get the latest R installer for your OS from <a href="https://cran.r-project.org/" target="_blank">CRAN</a> and install the latest R. For example, for a Mac that would be <a href="https://cran.r-project.org/bin/macosx/R-3.4.0.pkg" target="_blank">R-3.4.0.pkg</a>. Install it as usual.</p>
+
+<h2 id="restore-your-packages">Restore your packages</h2>
+
+<p>By now you have a new R version installed but without all your favorite packages. So, how do you install them? You just need to open your latest list of installed packages and install them. Now, I&rsquo;m a Bioconductor user which means that some of my packages are not on CRAN. But the following code will work for you even if all the packages you use are from CRAN.</p>
+
+<pre><code>## Change accordingly
+list_dir &lt;- '/Users/lcollado/Dropbox/Computing/R'
+
+## Find the corresponding Rdata files
+previous &lt;- dir(path = list_dir, pattern = 'installed.Rdata')
+
+## Load the latest one
+load(file.path(list_dir, previous[length(previous)]))
+
+## Just checking it
+head(installed)
+</code></pre>
+
+<p>Next, get the list of current R packages you have installed. Every new R installation comes with a few of them (the <em>base</em> packages). You don&rsquo;t need to install those.</p>
+
+<pre><code>current &lt;- dir(.libPaths())
+</code></pre>
+
+<p>Finally, install the missing packages</p>
+
+<pre><code>## For Bioconductor and CRAN packages
+source('http://bioconductor.org/biocLite.R')
+biocLite(installed[!installed %in% current])
 
 
-<p>Recently I have been getting more questions about several packages I maintain. It&rsquo;s great to see more interest from users, but at the same time most questions lack the information I need to help the users. I have also gotten most of the questions via email, which is why I am writing this post. As of today, I will no longer answer questions related to my Bioconductor packages via personal emails. This might sound harsh, but hopefully the rest of this post will convince you that it&rsquo;s the best thing to do. You might also be interested in the basics of using <a href="http://bioconductor.org/packages/release/bioc/vignettes/derfinder/inst/doc/derfinder-quickstart.html#basics" target="_blank">derfinder</a>, <a href="http://bioconductor.org/packages/release/bioc/vignettes/regionReport/inst/doc/regionReport.html#basics" target="_blank">regionReport</a> or <a href="http://bioconductor.org/packages/release/bioc/vignettes/recount/inst/doc/recount-quickstart.html#basics" target="_blank">recount</a>, among others.</p>
+## Bioconductor version 3.6 (BiocInstaller 1.27.2), ?biocLite for help
+</code></pre>
 
-<p>The Bioconductor project is a community project and it benefits from users interacting in public venues. When a user asks a question at the <a href="https://support.bioconductor.org/" target="_blank">Bioconductor support website</a>, they are providing information that future users might be interested in. That is, the user (<strong>U1</strong>) is contributing information to the overall documentation around the Bioconductor package they are asking a question about. Ideally, a new user (<strong>U2</strong>) can then read through the question U1 wrote, check the solution, and move on. This is one of the main reasons why we (developers) want questions to be well documented. There are a couple of quick things that U1 can check that will make their question much more useful to the community.</p>
+<p>and now you can continue on with your analysis 😄 You didn&rsquo;t even need to figure out the best order to install the packages!</p>
+
+<h2 id="github-packages">GitHub packages</h2>
+
+<p>Some of your favorite R packages might only exist via GitHub. This list is likely short since most packages get distributed via CRAN. But if that&rsquo;s the case, you can see which packages are missing by running:</p>
+
+<pre><code>## Check which packages are missing
+current_post_installation &lt;- dir(.libPaths())
+installed[!installed %in% current_post_installation]
+</code></pre>
+
+<p>For example, in my case I use the <a href="https://github.com/jalvesaq/colorout" target="_blank">colorout</a> package which lives only in GitHub. I have to install that one manually:</p>
+
+<pre><code>install.packages('devtools')
+library('devtools')
+install_github(&quot;jalvesaq/colorout&quot;)
+</code></pre>
+
+<p>Other times a package might not be compiling for the new R version or might no longer be supported (defunct).</p>
+
+<h2 id="misc-for-bioconductor-developers">Misc for Bioconductor developers</h2>
+
+<p>If you are a Bioconductor developer or are planning on becoming one, then you need 2 versions of R at all times. One R for the bioc-release branch and another one for the bioc-devel branch. Sometimes it&rsquo;s the same R version sometimes it&rsquo;s not depending on the month of the year. Right now, Bioc-release (3.5) uses R 3.4.0 and Bioc-devel (3.6) also uses R 3.4.0. <a href="http://r.research.att.com/" target="_blank">R Switch</a> for Mac users will be your friend. I can&rsquo;t find the old bioc-devel mailing list thread where I first learned this, but the idea is to download the latest R tar ball, change the name from 3.4 to something else (3.4devel in my case), put it back together into a tar ball and then use this tar ball to install a second R version.</p>
+
+<pre><code class="language-bash">## Download latest R tarball
+wget http://r.research.att.com/el-capitan/R-3.4-branch/R-3.4-branch-el-capitan-sa-x86_64.tar.gz
+
+## Un-tar it
+tar -xvf R-3.4-branch-el-capitan-sa-x86_64.tar.gz
+
+## Renamed files from 3.4 to 3.4 devel
+mv Library/Frameworks/R.framework/Versions/3.4 Library/Frameworks/R.framework/Versions/3.4devel
+
+## Put it back in a tar ball
+tar -cvzf Rlib.tgz Library
+
+## Install it
+sudo tar fvxz Rlib.tgz -C /
+</code></pre>
+
+<p>There you go:</p>
 
 <p><center>
-<a href="http://www.bioconductor.org/help/support/posting-guide/"><img alt = 'shinycsv landing' width='600' src='http://lcolladotor.github.io/figs/2017-03-06-bioc-support/question.png' /></a>
+<img alt = 'Rswitch' width='400' src='http://lcolladotor.github.io/figs/2017-05-04-updateR/rswitch.png' />
 </center></p>
 
-<h2 id="session-information">Session information</h2>
+<h3 id="reproducibility">Reproducibility</h3>
 
-<p>One of the strengths of Bioconductor is that all the packages have vignettes and lots of documentation. The packages are also checked regularly and must pass some tests. That also means that packages can change frequently, at least more frequently than CRAN packages. There&rsquo;s also the added complexity that at any given point in time there is a release branch and a development branch. This means that there are many variables and saying that you are using the &ldquo;latest version&rdquo; doesn&rsquo;t mean much to the developer. All of this information and more is part of the <em>R session information</em>. That is why I and others request users to post their session information. It&rsquo;s very easy to get, simply run the following code:</p>
-
-<pre><code>## Install devtools if needed
-# install.packages('devtools')
-
-## Reproducibility info
+<pre><code>## Reproducibility info
 library('devtools')
 options(width = 120)
 session_info()
+
+## Session info -----------------------------------------------------------------------------------------------------------
+
+##  setting  value                       
+##  version  R version 3.4.0 (2017-04-21)
+##  system   x86_64, darwin15.6.0        
+##  ui       X11                         
+##  language (EN)                        
+##  collate  en_US.UTF-8                 
+##  tz       America/New_York            
+##  date     2017-05-04
+
+## Packages ---------------------------------------------------------------------------------------------------------------
+
+##  package       * version date       source        
+##  BiocInstaller * 1.27.2  2017-05-04 Bioconductor  
+##  devtools      * 1.12.0  2016-12-05 CRAN (R 3.4.0)
+##  digest          0.6.12  2017-01-27 CRAN (R 3.4.0)
+##  evaluate        0.10    2016-10-11 cran (@0.10)  
+##  knitr         * 1.15.1  2016-11-22 cran (@1.15.1)
+##  magrittr        1.5     2014-11-22 cran (@1.5)   
+##  memoise         1.1.0   2017-04-21 CRAN (R 3.4.0)
+##  stringi         1.1.5   2017-04-07 cran (@1.1.5) 
+##  stringr         1.2.0   2017-02-18 cran (@1.2.0) 
+##  withr           1.0.2   2016-06-20 CRAN (R 3.4.0)
 </code></pre>
-
-<p>The output might be too long to post in the <a href="https://support.bioconductor.org/" target="_blank">Bioconductor support website</a>. The easy solution is to save the information you want displayed in a <a href="https://gist.github.com/" target="_blank">gist</a>. Then simply add the gist link in your question. Note that you need to have the link under &ldquo;text&rdquo; formatting and not &ldquo;code&rdquo;.</p>
-
-<h2 id="code-to-reproduce-the-error">Code to reproduce the error</h2>
-
-<p>If U1 includes the session information, their question will be pretty good, but not ideal yet. Many of the questions I&rsquo;ve been asked do not include code for me to figure out the exact steps of what they were doing. A lot of times I can infer pieces of what they were doing from their description of the problem. But doing so takes quite a bit of my time and effort, and is still not perfect. Now imagine that U2 is reading through the question: they would probably get lost!</p>
-
-<p>There is a wide range of things that U1 could have done. To help the developer, the best thing is for the user to include the code that lead to the error. The code should include how the data was loaded, so that the developer can run it themselves and check in more detail what went wrong. This means providing a small subset of the data or using some publicly available data.</p>
-
-<p>I realize that writing code that reproduces the error is not easy. But it helps a lot for learning more about R and Bioconductor. I can tell you that I went through the same process, and in my experience you can find out what you are doing wrong by writing the reproducible code.</p>
-
-<h2 id="extra">Extra</h2>
-
-<p>Here are some other tips that are useful.</p>
-
-<ul>
-<li>If you run <code>traceback()</code> immediately after getting the error and include the output in your question, that would be great. It makes it easier to check at what point the code failed and produced the error.</li>
-<li>Recently when I ask questions myself, I include the &ldquo;non-evaluated code&rdquo; (clean code in your script) and &ldquo;evaluated code&rdquo; (think of the R console: a mix of code and output). The non-evaluated code makes it easier for others to copy-paste the code into their R session without having to deal with any formatting issues (<a href="https://github.com/leekgroup/recount/issues/8#issue-210124094" target="_blank">example</a>).</li>
-<li>If you encounter a new error, post a new question instead of &ldquo;replying&rdquo; to the first one.</li>
-<li>Introduce yourself.</li>
-<li>Be polite.</li>
-</ul>
-
-<p>By now you should be ready to post some great questions! Thanks for contributing to the Bioconductor community.</p>
 
 <h3 id="want-more">Want more?</h3>
 
@@ -322,13 +414,10 @@ session_info()
   <nav>
   <ul class="pager">
     
-    <li class="previous"><a href="http://lcolladotor.github.io/2017/01/25/An-alternative-to-the-Mexico-US-wall-where-the-US-would-gain-millions-of-dollars"><span
-      aria-hidden="true">&larr;</span> An alternative to the Mexico-US wall where the US would gain millions of dollars</a></li>
+    <li class="previous"><a href="http://lcolladotor.github.io/2017/03/06/How-to-ask-for-help-for-Bioconductor-packages"><span
+      aria-hidden="true">&larr;</span> How to ask for help for Bioconductor packages</a></li>
     
 
-    
-    <li class="next"><a href="http://lcolladotor.github.io/2017/05/04/Updating-R">Updating R <span
-      aria-hidden="true">&rarr;</span></a></li>
     
   </ul>
 </nav>
@@ -342,9 +431,9 @@ session_info()
     <div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_shortname = 'fellgernonbit';
-    var disqus_identifier = 'http:\/\/lcolladotor.github.io\/2017\/03\/06\/How-to-ask-for-help-for-Bioconductor-packages';
-    var disqus_title = 'How to ask for help for Bioconductor packages';
-    var disqus_url = 'http:\/\/lcolladotor.github.io\/2017\/03\/06\/How-to-ask-for-help-for-Bioconductor-packages';
+    var disqus_identifier = 'http:\/\/lcolladotor.github.io\/2017\/05\/04\/Updating-R';
+    var disqus_title = 'Updating R';
+    var disqus_url = 'http:\/\/lcolladotor.github.io\/2017\/05\/04\/Updating-R';
 
     (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
