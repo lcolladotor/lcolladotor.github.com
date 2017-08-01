@@ -34,11 +34,11 @@
   <link rel="icon" type="image/png" href="/img/icon.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/apple-touch-icon.png">
 
-  <link rel="canonical" href="http://lcolladotor.github.io/talk/icsa2017/">
+  <link rel="canonical" href="http://lcolladotor.github.io/talk/bioc2017/">
 
   
 
-  <title>Reproducible RNA-seq analysis with recount2 | L. Collado-Torres</title>
+  <title>recount workshop: Learn to leverage 70,000 human RNA-seq samples for your projects | L. Collado-Torres</title>
 
 </head>
 <body id="top" data-spy="scroll" data-target="#navbar-main" data-offset="71">
@@ -173,7 +173,7 @@
   <div class="article-container">
 
     <div class="pub-title">
-      <h1 itemprop="name">Reproducible RNA-seq analysis with recount2</h1>
+      <h1 itemprop="name">recount workshop: Learn to leverage 70,000 human RNA-seq samples for your projects</h1>
       <span class="pub-authors" itemprop="author">
         
       </span>
@@ -183,35 +183,35 @@
   <ul class="share">
     <li>
       <a class="facebook"
-         href="https://www.facebook.com/sharer.php?u=http%3a%2f%2flcolladotor.github.io%2ftalk%2ficsa2017%2f"
+         href="https://www.facebook.com/sharer.php?u=http%3a%2f%2flcolladotor.github.io%2ftalk%2fbioc2017%2f"
          target="_blank">
         <i class="fa fa-facebook"></i>
       </a>
     </li>
     <li>
       <a class="twitter"
-         href="https://twitter.com/intent/tweet?text=Reproducible%20RNA-seq%20analysis%20with%20recount2&amp;url=http%3a%2f%2flcolladotor.github.io%2ftalk%2ficsa2017%2f"
+         href="https://twitter.com/intent/tweet?text=recount%20workshop%3a%20Learn%20to%20leverage%2070%2c000%20human%20RNA-seq%20samples%20for%20your%20projects&amp;url=http%3a%2f%2flcolladotor.github.io%2ftalk%2fbioc2017%2f"
          target="_blank">
         <i class="fa fa-twitter"></i>
       </a>
     </li>
     <li>
       <a class="linkedin"
-         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3a%2f%2flcolladotor.github.io%2ftalk%2ficsa2017%2f&amp;title=Reproducible%20RNA-seq%20analysis%20with%20recount2"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3a%2f%2flcolladotor.github.io%2ftalk%2fbioc2017%2f&amp;title=recount%20workshop%3a%20Learn%20to%20leverage%2070%2c000%20human%20RNA-seq%20samples%20for%20your%20projects"
          target="_blank">
         <i class="fa fa-linkedin"></i>
       </a>
     </li>
     <li>
       <a class="weibo"
-         href="http://service.weibo.com/share/share.php?url=http%3a%2f%2flcolladotor.github.io%2ftalk%2ficsa2017%2f&amp;title=Reproducible%20RNA-seq%20analysis%20with%20recount2"
+         href="http://service.weibo.com/share/share.php?url=http%3a%2f%2flcolladotor.github.io%2ftalk%2fbioc2017%2f&amp;title=recount%20workshop%3a%20Learn%20to%20leverage%2070%2c000%20human%20RNA-seq%20samples%20for%20your%20projects"
          target="_blank">
         <i class="fa fa-weibo"></i>
       </a>
     </li>
     <li>
       <a class="email"
-         href="mailto:?subject=Reproducible%20RNA-seq%20analysis%20with%20recount2&amp;body=http%3a%2f%2flcolladotor.github.io%2ftalk%2ficsa2017%2f">
+         href="mailto:?subject=recount%20workshop%3a%20Learn%20to%20leverage%2070%2c000%20human%20RNA-seq%20samples%20for%20your%20projects&amp;body=http%3a%2f%2flcolladotor.github.io%2ftalk%2fbioc2017%2f">
         <i class="fa fa-envelope"></i>
       </a>
     </li>
@@ -224,7 +224,7 @@
 
     
       <h3>Abstract</h3>
-      <p class="pub-abstract" itemprop="text">In the past decade high-throughput RNA sequencing (RNA-seq) has become the dominant method for studying gene expression. Commonly, researchers generate RNA-seq data to perform a differential expression analysis by either reconstructing transcripts or counting reads that overlap known gene structures. Previously we introduced an intermediate statistical approach called differential expressed region (DER) finder that identifies contiguous regions of the genome showing differential expression signal at single base resolution in an annotation-agnostic manner (Collado-Torres et al, 2017, NAR). These three different approaches all require aligning the RNA-seq data against the reference genome. While over 2,000 projects are publicly available via the Sequence Read Archive (SRA) it is computationally intensive to re-analyze the RNA-seq data in a homogenous way. Using Rail-RNA (Nellore et al, 2016, Bioinformatics) we aligned over 70,000 human RNA-seq samples and created summaries at the gene, exon, exon-exon junction and base pair coverage levels which are available via the recount2 resource at https://jhubiostatistics.shinyapps.io/recount/ and the recount Bioconductor package (Collado-Torres, Nellore et al, 2017, Nature Biotechnology). The data from the recount2 resource can be used for different levels of RNA-seq differential expression analysis while bypassing the costly computational step of alignment. The data from recount2 can be used to predict phenotype information that is otherwise impractical to obtain for all SRA human projects. In recount2 we also provide data for the Genotype-Expression Tissue project (GTEx) and The Cancer Genome Atlas (TCGA) which have richer metadata and can be used for developing new methods and testing them before applying them to the SRA data. We expect that recount2 will be very useful for the genomics community and in particular for the statistical community by fostering the development of new methods, just like ReCount (Frazee et al, 2011, Bioinformatics) played a roll in the development of DESeq2, voom and metagenomeSeq among other methods.</p>
+      <p class="pub-abstract" itemprop="text">The recount2 project re-processed RNA sequencing (RNA-seq) data on over 70,000 human RNA-seq samples spanning a variety of tissues, cell types and disease conditions. Researchers can easily access these data via the `recount` Bioconductor package, and can quickly import gene, exon, exon-exon junction and base-pair coverage data for uniformly processed data from the SRA, GTEx and TCGA projects in R for analysis. This workshop will cover different use cases of the `recount` package, including downloading and normalizing data, processing and cleaning relevant phenotype data, performing differential expression (DE) analyses, and creating reports for exploring the results using other Bioconductor packages. The workshop will also cover how to use the base-pair coverage data for annotation-agnostic DE analyses and for visualizing coverage data for features of interest. After taking this workshop, attendees will be ready to enhance their analyses by leveraging RNA-seq data from 70,000 human samples.</p>
     
 
     <div class="row">
@@ -233,7 +233,7 @@
         <div class="row">
           <div class="col-xs-12 col-sm-3 pub-row-heading">Date</div>
           <div class="col-xs-12 col-sm-9" itemprop="datePublished">
-            Tue, Jun 27, 2017
+            Thu, Jul 27, 2017
           </div>
         </div>
       </div>
@@ -247,8 +247,8 @@
         <div class="row">
           <div class="col-xs-12 col-sm-3 pub-row-heading">Event</div>
           <div class="col-xs-12 col-sm-9">
-            <a href="http://bioinfo.stats.northwestern.edu/~icsa/index.php" target="_blank">
-            ICSA 2017
+            <a href="http://bioconductor.org/help/course-materials/2017/BioC2017/" target="_blank">
+            BioC2017
             </a>
           </div>
         </div>
@@ -263,7 +263,7 @@
       <div class="col-sm-10">
         <div class="row">
           <div class="col-xs-12 col-sm-3 pub-row-heading">Location</div>
-          <div class="col-xs-12 col-sm-9">Chicago, IL, US</div>
+          <div class="col-xs-12 col-sm-9">Boston, MA, US</div>
         </div>
       </div>
       <div class="col-sm-1"></div>
@@ -271,6 +271,38 @@
     <div class="visible-xs space-below"></div>
     
 
+    
+    <div class="row" style="padding-top: 10px">
+      <div class="col-sm-1"></div>
+      <div class="col-sm-10">
+        <div class="row">
+          <div class="col-xs-12 col-sm-3 pub-row-heading" style="line-height:34px;">Links</div>
+          <div class="col-xs-12 col-sm-9">
+
+            
+
+
+
+
+<a class="btn btn-primary btn-outline" href="http://LieberInstitute.github.io/recountWorkshop/compiled_vignette/BioC2017.pdf">
+  PDF
+</a>
+
+
+<a class="btn btn-primary btn-outline" href="http://LieberInstitute.github.io/recountWorkshop/">
+  Slides
+</a>
+
+
+
+
+
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-1"></div>
+    </div>
+    <div class="visible-xs space-below"></div>
     
 
     <div class="space-below"></div>
@@ -286,12 +318,12 @@
   <nav>
   <ul class="pager">
     
-    <li class="previous"><a href="http://lcolladotor.github.io/talk/sobp2017/"><span
-      aria-hidden="true">&larr;</span> RNA-seq samples beyond the known transcriptome with derfinder available via recount2</a></li>
+    <li class="previous"><a href="http://lcolladotor.github.io/talk/icsa2017/"><span
+      aria-hidden="true">&larr;</span> Reproducible RNA-seq analysis with recount2</a></li>
     
 
     
-    <li class="next"><a href="http://lcolladotor.github.io/talk/bioc2017/">recount workshop: Learn to leverage 70,000 human RNA-seq samples for your projects <span
+    <li class="next"><a href="http://lcolladotor.github.io/talk/jsm2017/">Guiding Principles for Interactive Graphics Based on LIBD Data Science Projects <span
       aria-hidden="true">&rarr;</span></a></li>
     
   </ul>
