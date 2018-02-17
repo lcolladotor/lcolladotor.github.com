@@ -2,15 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Blog on L. Collado-Torres</title>
-    <link>http://lcolladotor.github.io/tags/blog/</link>
+    <link>http://lcolladotor.github.io/tags/Blog/</link>
     <description>Recent content in Blog on L. Collado-Torres</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2011-2018 Leonardo Collado Torres under (CC) BY-NC-SA</copyright>
-    <lastBuildDate>Sat, 09 Nov 2013 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 17 Feb 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://lcolladotor.github.io/tags/blog/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://lcolladotor.github.io/tags/Blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>R markdown blog template</title>
+      <link>http://lcolladotor.github.io/2018/02/17/r-markdown-blog-template/</link>
+      <pubDate>Sat, 17 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://lcolladotor.github.io/2018/02/17/r-markdown-blog-template/</guid>
+      <description>This blog post is mostly for myself but maybe it’s useful to others. It contains my current R markdown blog template. I initially posted this as a question at StackOverflow. Then I read how much a burden we put in Yihui Xie and decided that my current setup (copy-pasting) works just fine. In any case using blogdown with the RStudio IDE is much simpler than what I used to do in the past with jekyll or with even my prior setup with blogdown.</description>
+    </item>
     
     <item>
       <title>Creating your Jekyll-Bootstrap powered blog for R blogging</title>

@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2011-2018 Leonardo Collado Torres under (CC) BY-NC-SA</copyright>
-    <lastBuildDate>Thu, 04 May 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 17 Feb 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://lcolladotor.github.io/categories/rstats/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>R markdown blog template</title>
+      <link>http://lcolladotor.github.io/2018/02/17/r-markdown-blog-template/</link>
+      <pubDate>Sat, 17 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://lcolladotor.github.io/2018/02/17/r-markdown-blog-template/</guid>
+      <description>This blog post is mostly for myself but maybe it’s useful to others. It contains my current R markdown blog template. I initially posted this as a question at StackOverflow. Then I read how much a burden we put in Yihui Xie and decided that my current setup (copy-pasting) works just fine. In any case using blogdown with the RStudio IDE is much simpler than what I used to do in the past with jekyll or with even my prior setup with blogdown.</description>
+    </item>
     
     <item>
       <title>Updating R</title>
@@ -18,7 +27,7 @@
       <pubDate>Thu, 04 May 2017 00:00:00 +0000</pubDate>
       
       <guid>http://lcolladotor.github.io/2017/05/04/Updating-R/</guid>
-      <description>As you might know by now, the latest R version was recently released (R 3.4.0). That means that you are highly encouraged to update your R installation. There are several ways to do this some of which are documented in these other blog posts: Tal Galili, 2013, Kris Eberwein, 2015. You would think that it&amp;rsquo;s just a matter of downloading the latest R installer for your OS, installing it, and continuing your analysis.</description>
+      <description>As you might know by now, the latest R version was recently released (R 3.4.0). That means that you are highly encouraged to update your R installation. There are several ways to do this some of which are documented in these other blog posts: Tal Galili, 2013, Kris Eberwein, 2015. You would think that it&#39;s just a matter of downloading the latest R installer for your OS, installing it, and continuing your analysis.</description>
     </item>
     
     <item>
@@ -27,8 +36,8 @@
       <pubDate>Mon, 06 Mar 2017 00:00:00 +0000</pubDate>
       
       <guid>http://lcolladotor.github.io/2017/03/06/How-to-ask-for-help-for-Bioconductor-packages/</guid>
-      <description>tl;dr Please post your question at the Bioconductor support website https://support.bioconductor.org/ and check the posting guide http://www.bioconductor.org/help/support/posting-guide/. It&amp;rsquo;s important that you provide reproducible code and information about your R session.
- Recently I have been getting more questions about several packages I maintain. It&amp;rsquo;s great to see more interest from users, but at the same time most questions lack the information I need to help the users. I have also gotten most of the questions via email, which is why I am writing this post.</description>
+      <description>tl;dr Please post your question at the Bioconductor support website https://support.bioconductor.org/ and check the posting guide http://www.bioconductor.org/help/support/posting-guide/. It&#39;s important that you provide reproducible code and information about your R session.
+ Recently I have been getting more questions about several packages I maintain. It&#39;s great to see more interest from users, but at the same time most questions lack the information I need to help the users. I have also gotten most of the questions via email, which is why I am writing this post.</description>
     </item>
     
     <item>
@@ -55,7 +64,7 @@
       <pubDate>Mon, 07 Mar 2016 00:00:00 +0000</pubDate>
       
       <guid>http://lcolladotor.github.io/2016/03/07/BiocParallel/</guid>
-      <description>It&amp;rsquo;s the morning of the first day of oral conferences at #ENAR2016. I feel like I have a spidey sense since I woke up 3 min after an email from Jeff Leek; just a funny coincidence. Anyhow, I promised Valerie Obenchain at #Bioc2014 that I would write a post about one of my favorite Bioconductor packages: BiocParallel (Morgan, Obenchain, Lang, and Thompson, 2016). By now it&amp;rsquo;s on the top 5% of downloaded Bioconductor packages, so many people know about it or are unaware that their favorite package uses it behind the scenes.</description>
+      <description>It&#39;s the morning of the first day of oral conferences at #ENAR2016. I feel like I have a spidey sense since I woke up 3 min after an email from Jeff Leek; just a funny coincidence. Anyhow, I promised Valerie Obenchain at #Bioc2014 that I would write a post about one of my favorite Bioconductor packages: BiocParallel (Morgan, Obenchain, Lang, and Thompson, 2016). By now it&#39;s on the top 5% of downloaded Bioconductor packages, so many people know about it or are unaware that their favorite package uses it behind the scenes.</description>
     </item>
     
     <item>
@@ -64,7 +73,7 @@
       <pubDate>Tue, 07 Jul 2015 00:00:00 +0000</pubDate>
       
       <guid>http://lcolladotor.github.io/2015/07/07/rmarkdown/</guid>
-      <description>A couple weeks ago I was given the opportunity to teach a 1 hr 30 min slot of an introduction to R course. In the past, I&amp;rsquo;ve taught lectures for similar courses, and I ended up asking myself what would be the best short topic to teach and how to teach it.
+      <description>A couple weeks ago I was given the opportunity to teach a 1 hr 30 min slot of an introduction to R course. In the past, I&#39;ve taught lectures for similar courses, and I ended up asking myself what would be the best short topic to teach and how to teach it.
 Best short topic There are two ways to answer the first question, one boring and one more interesting.</description>
     </item>
     
@@ -74,7 +83,7 @@ Best short topic There are two ways to answer the first question, one boring and
       <pubDate>Thu, 11 Dec 2014 00:00:00 +0000</pubDate>
       
       <guid>http://lcolladotor.github.io/2014/12/11/dots/</guid>
-      <description>As a user Imagine that you are starting to learn how to use a specific R package, lets call it foo. You will look at the vignette (if there is one), use help(package = foo), or look at the reference manual (for example, devtools&amp;rsquo; ref man). Eventually, you will open the help page for the function(s) you are interested in using.
+      <description>As a user Imagine that you are starting to learn how to use a specific R package, lets call it foo. You will look at the vignette (if there is one), use help(package = foo), or look at the reference manual (for example, devtools&#39; ref man). Eventually, you will open the help page for the function(s) you are interested in using.
 ?function_I_want_to_use  In many packages, there is a main use case that is addressed by the package.</description>
     </item>
     
@@ -85,7 +94,7 @@ Best short topic There are two ways to answer the first question, one boring and
       
       <guid>http://lcolladotor.github.io/2014/11/21/add-logo-in-R/</guid>
       <description>This is a guest post by Prasad Patil that answers the question: how to put a shape in the margin of an R plot?
-The help page for R&amp;rsquo;s par() function is a somewhat impenetrable list of abbreviations that allow you to manipulate anything and everything in the plotting device. You may have used this function in the past to create an array of plots (using mfrow or mfcol) or to set margins (mar or mai).</description>
+The help page for R&#39;s par() function is a somewhat impenetrable list of abbreviations that allow you to manipulate anything and everything in the plotting device. You may have used this function in the past to create an array of plots (using mfrow or mfcol) or to set margins (mar or mai).</description>
     </item>
     
     <item>
@@ -104,7 +113,7 @@ What is BioC? Briefly, Bioconductor (Gentleman, Carey, Bates, and others, 2004) 
       <pubDate>Tue, 10 Jun 2014 00:00:00 +0000</pubDate>
       
       <guid>http://lcolladotor.github.io/2014/06/10/shiny-orders/</guid>
-      <description>A few weeks ago I was invited to a meeting where a group was interested in exploring options for replacing their contract with a propriety software. They invited me because they saw some resemblances between a Shiny application I made and the features they need. It is a relatively small project and it seemed feasible to implement, but well, some details could have been tricky to code. During the meeting I explained what Shiny is, showcased some of the Shiny apps I&amp;rsquo;ve made, and proposed some options including a simple site password.</description>
+      <description>A few weeks ago I was invited to a meeting where a group was interested in exploring options for replacing their contract with a propriety software. They invited me because they saw some resemblances between a Shiny application I made and the features they need. It is a relatively small project and it seemed feasible to implement, but well, some details could have been tricky to code. During the meeting I explained what Shiny is, showcased some of the Shiny apps I&#39;ve made, and proposed some options including a simple site password.</description>
     </item>
     
     <item>
@@ -113,7 +122,7 @@ What is BioC? Briefly, Bioconductor (Gentleman, Carey, Bates, and others, 2004) 
       <pubDate>Tue, 22 Apr 2014 00:00:00 +0000</pubDate>
       
       <guid>http://lcolladotor.github.io/2014/04/22/mortgage-calculator-flexible-payments/</guid>
-      <description>Have you ever thought of borrowing some money? A common case is when you have to borrow money for buying a house, which is called a mortgage. Wikipedia (&amp;lsquo;Mortgage loan&amp;rsquo; entry) goes into much more detail about the definition than what I&amp;rsquo;ll cover.
+      <description>Have you ever thought of borrowing some money? A common case is when you have to borrow money for buying a house, which is called a mortgage. Wikipedia (&#39;Mortgage loan&#39; entry) goes into much more detail about the definition than what I&#39;ll cover.
 One of the aspects you have to evaluate when considering a loan such as a mortgage is how much interest you will be charged and how long the loan will be.</description>
     </item>
     
@@ -123,7 +132,7 @@ One of the aspects you have to evaluate when considering a loan such as a mortga
       <pubDate>Wed, 26 Feb 2014 00:00:00 +0000</pubDate>
       
       <guid>http://lcolladotor.github.io/2014/02/26/excited-by-willingness-to-help-get-things-done/</guid>
-      <description>It&amp;rsquo;s exciting when great people help each other get things done This is a simple networking story, which might not be surprising to some but I was happily surprised by it. This is how the story goes:
+      <description>It&#39;s exciting when great people help each other get things done This is a simple networking story, which might not be surprising to some but I was happily surprised by it. This is how the story goes:
 Two weeks ago rMaps (Vaidyanathan, 2014) was released. After making a blog post about it I thought about using it to make a map of the homicide rate in Mexico over the recent years.</description>
     </item>
     
@@ -144,7 +153,7 @@ download.file(&amp;quot;http://www.lepem.ufc.br/jaa/colorout_1.0-2.tar.gz&amp;qu
       <pubDate>Mon, 10 Feb 2014 00:00:00 +0000</pubDate>
       
       <guid>http://lcolladotor.github.io/2014/02/10/rMaps-released/</guid>
-      <description>Ramnath Vaidyanathan just released his new R interactive package, rMaps (Vaidyanathan, 2014). The packages relies on the development version of his widely known rCharts package (Vaidyanathan, 2013) as well as javascript libraries that specialize in maps. If you don&amp;rsquo;t know Ramnath, he is one of the most active R developers out there!! You can see that from his GitHub profile.
+      <description>Ramnath Vaidyanathan just released his new R interactive package, rMaps (Vaidyanathan, 2014). The packages relies on the development version of his widely known rCharts package (Vaidyanathan, 2013) as well as javascript libraries that specialize in maps. If you don&#39;t know Ramnath, he is one of the most active R developers out there!! You can see that from his GitHub profile.
 The package is very new and still under development, but I bet that Ramnath released it to get us users excited and maybe find some helpful hands to document it and further develop it.</description>
     </item>
     
@@ -156,7 +165,7 @@ The package is very new and still under development, but I bet that Ramnath rele
       <guid>http://lcolladotor.github.io/2014/02/05/DropboxAndGoogleDocsFromR/</guid>
       <description>Have you ever wondered whether you can upload files from R to Dropbox and/or Google Docs? I recently asked myself this question while making my most recent Shiny app (more later).
 The answer is yes, you can upload files from R to these cloud services!
-Dropbox As far as I know, the best R package for uploading files to Dropbox is rDrop (Ram &amp;amp; Temple Lang, 2012). The whole setup is very well explained in it&amp;rsquo;s GitHub repository (Karthik).</description>
+Dropbox As far as I know, the best R package for uploading files to Dropbox is rDrop (Ram &amp;amp; Temple Lang, 2012). The whole setup is very well explained in it&#39;s GitHub repository (Karthik).</description>
     </item>
     
     <item>
@@ -165,7 +174,7 @@ Dropbox As far as I know, the best R package for uploading files to Dropbox is r
       <pubDate>Tue, 10 Dec 2013 00:00:00 +0000</pubDate>
       
       <guid>http://lcolladotor.github.io/2013/12/10/knitrBootstrap/</guid>
-      <description>As a biostatistics student, I use R very frequently when analyzing data. At the same time, I interact with other researchers, some who know how to use R (R crowd) and some who don&amp;rsquo;t (yet!): no-R crowd. This means that I have to be able to communicate my results to two crowds. It is important that I can quickly provide the code in case that the R savvy want to look at it: maybe they find a bug and report it ^^.</description>
+      <description>As a biostatistics student, I use R very frequently when analyzing data. At the same time, I interact with other researchers, some who know how to use R (R crowd) and some who don&#39;t (yet!): no-R crowd. This means that I have to be able to communicate my results to two crowds. It is important that I can quickly provide the code in case that the R savvy want to look at it: maybe they find a bug and report it ^^.</description>
     </item>
     
     <item>

@@ -2,14 +2,14 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Bioconductor on L. Collado-Torres</title>
-    <link>http://lcolladotor.github.io/tags/bioconductor/</link>
+    <link>http://lcolladotor.github.io/tags/Bioconductor/</link>
     <description>Recent content in Bioconductor on L. Collado-Torres</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2011-2018 Leonardo Collado Torres under (CC) BY-NC-SA</copyright>
     <lastBuildDate>Thu, 04 May 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://lcolladotor.github.io/tags/bioconductor/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://lcolladotor.github.io/tags/Bioconductor/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -18,7 +18,7 @@
       <pubDate>Thu, 04 May 2017 00:00:00 +0000</pubDate>
       
       <guid>http://lcolladotor.github.io/2017/05/04/Updating-R/</guid>
-      <description>As you might know by now, the latest R version was recently released (R 3.4.0). That means that you are highly encouraged to update your R installation. There are several ways to do this some of which are documented in these other blog posts: Tal Galili, 2013, Kris Eberwein, 2015. You would think that it&amp;rsquo;s just a matter of downloading the latest R installer for your OS, installing it, and continuing your analysis.</description>
+      <description>As you might know by now, the latest R version was recently released (R 3.4.0). That means that you are highly encouraged to update your R installation. There are several ways to do this some of which are documented in these other blog posts: Tal Galili, 2013, Kris Eberwein, 2015. You would think that it&#39;s just a matter of downloading the latest R installer for your OS, installing it, and continuing your analysis.</description>
     </item>
     
     <item>
@@ -27,7 +27,7 @@
       <pubDate>Mon, 07 Mar 2016 00:00:00 +0000</pubDate>
       
       <guid>http://lcolladotor.github.io/2016/03/07/BiocParallel/</guid>
-      <description>It&amp;rsquo;s the morning of the first day of oral conferences at #ENAR2016. I feel like I have a spidey sense since I woke up 3 min after an email from Jeff Leek; just a funny coincidence. Anyhow, I promised Valerie Obenchain at #Bioc2014 that I would write a post about one of my favorite Bioconductor packages: BiocParallel (Morgan, Obenchain, Lang, and Thompson, 2016). By now it&amp;rsquo;s on the top 5% of downloaded Bioconductor packages, so many people know about it or are unaware that their favorite package uses it behind the scenes.</description>
+      <description>It&#39;s the morning of the first day of oral conferences at #ENAR2016. I feel like I have a spidey sense since I woke up 3 min after an email from Jeff Leek; just a funny coincidence. Anyhow, I promised Valerie Obenchain at #Bioc2014 that I would write a post about one of my favorite Bioconductor packages: BiocParallel (Morgan, Obenchain, Lang, and Thompson, 2016). By now it&#39;s on the top 5% of downloaded Bioconductor packages, so many people know about it or are unaware that their favorite package uses it behind the scenes.</description>
     </item>
     
     <item>
