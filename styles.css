@@ -41,7 +41,7 @@ body {
   font-size: 1rem;
   line-height: inherit;
   color: inherit;
-  background-color: #fff;
+  background-color: rgb(40, 42, 54);
   margin-top: 71px; /* Offset body content by navbar height. */
   padding-top: 0;
   counter-reset: captions;
@@ -114,14 +114,14 @@ h4, h5, h6 {
 
 a,
 h3.article-title a:hover {
-  color: #0095eb;
+  color: hsl(339, 90%, 68%);
   text-decoration: none;
   transition: color 0.6s ease;
 }
 
 a:hover,
 a:focus {
-  color: #0095eb;
+  color: hsl(339, 90%, 68%);
 }
 
 img,
@@ -325,7 +325,7 @@ a[data-fancybox] img {
 }
 
 .home-section {
-  background-color: rgb(255, 255, 255);
+  background-color: hsla(231, 15%, 18%, 1);
   padding: 110px 0 110px 0;
   animation: intro 0.3s both;
   animation-delay: 0.15s;
@@ -336,7 +336,7 @@ a[data-fancybox] img {
 }
 
 .home-section:nth-of-type(even) {
-  background-color: rgb(247, 247, 247);
+  background-color: hsla(231, 15%, 17%, 1);
 }
 
 @media screen and (max-width: 768px) {
@@ -431,7 +431,7 @@ a[data-fancybox] img {
 .featurette-icon {
   display: block;
   width: 100%;
-  color: #0095eb;
+  color: hsl(339, 90%, 68%);
   font-size: 3rem;
   text-align: center;
 }
@@ -647,7 +647,7 @@ article .article-metadata {
 }
 
 .article-metadata a:hover {
-  color: #0095eb;
+  color: hsl(339, 90%, 68%);
 }
 
 .middot-divider {
@@ -982,8 +982,8 @@ footer a#back_to_top i {
  **************************************************/
 
 .btn-primary {
-  border-color: #0095eb !important;
-  background: #0095eb !important;
+  border-color: hsl(339, 90%, 68%) !important;
+  background: hsl(339, 90%, 68%) !important;
 }
 
 .btn-primary:hover,
@@ -991,7 +991,7 @@ footer a#back_to_top i {
 .btn-primary.active,
 .btn-primary:visited,
 .open > .dropdown-toggle.btn-primary {
-  background: #0095eb !important;
+  background: hsl(339, 90%, 68%) !important;
 }
 
 .btn-light {
@@ -1025,12 +1025,12 @@ footer a#back_to_top i {
 
 .btn-toolbar .btn.btn-primary:hover,
 .btn-toolbar .btn.btn-primary:focus {
-  background-color: #0069c0 !important;
+  background-color: hsl(339, 90%, 58%) !important;
 }
 
 .btn-toolbar .btn.btn-primary:active,
 .btn-toolbar .btn.btn-primary.active {
-  background-color: #6ec6ff !important;
+  background-color: hsl(339, 90%, 78%) !important;
 }
 
 /*************************************************
@@ -1044,12 +1044,12 @@ footer a#back_to_top i {
 }
 
 .btn-primary.btn-outline {
-  color: #0095eb !important;
-  border-color: #0095eb !important;
+  color: hsl(339, 90%, 68%) !important;
+  border-color: hsl(339, 90%, 68%) !important;
 }
 
 .btn-primary.btn-outline:focus {
-  color: #0095eb !important;
+  color: hsl(339, 90%, 68%) !important;
 }
 
 .btn-primary.btn-outline:active {
@@ -1103,7 +1103,7 @@ footer a#back_to_top i {
 }
 
 .navbar-default {
-  background: #fff;
+  background: rgb(20, 22, 34);
   box-shadow: 0 0.125rem 0.25rem 0 rgba(0,0,0,.11)
 }
 
@@ -1126,24 +1126,24 @@ nav#navbar-main li {
   white-space: nowrap;
   -webkit-transition: 0.2s ease;
   transition: 0.2s ease;
-  color: #34495e;
+  color: rgba(255,255,255,0.6);
   font-weight: 600;
 }
 
 .navbar-default .navbar-nav>li>a:focus {
-  color: #34495e;
+  color: rgba(255,255,255,0.6);
   background-color: transparent;
 }
 
 .navbar-default .navbar-nav>li>a:hover {
-  color: #0095eb;
+  color: rgba(255,255,255,1);
   background-color: transparent;
 }
 
 .navbar-default .navbar-nav>.active>a,
 .navbar-default .navbar-nav>.active>a:focus,
 .navbar-default .navbar-nav>.active>a:hover {
-  color: #0095eb;
+  color: rgba(255,255,255,1);
   font-weight: 700;
   background-color: transparent !important; /* Override Bootstrap. */
 }
@@ -1161,11 +1161,11 @@ nav#navbar-main li {
 }
 
 .navbar-default .navbar-toggle .icon-bar {
-  background-color: #34495e !important;
+  background-color: rgba(255,255,255,0.6) !important;
 }
 
 .dropdown-menu {
-  background-color: #fff !important;
+  background-color: rgb(20, 22, 34) !important;
 }
 
 .dropdown-menu > li > a {
@@ -1174,23 +1174,23 @@ nav#navbar-main li {
   clear: both;
   font-weight: 400;
   line-height: 1.42857143;
-  color: #34495e;
+  color: rgba(255,255,255,0.6);
   white-space: nowrap;
 }
 
 .dropdown-menu>li>a:focus,
 .dropdown-menu>li>a:hover {
-  color: #0095eb;
+  color: rgba(255,255,255,1);
   text-decoration: none;
-  background-color: #fff;
+  background-color: rgb(20, 22, 34);
 }
 
 .dropdown-menu > .active > a,
 .dropdown-menu > .active > a:focus,
 .dropdown-menu > .active > a:hover {
-  color: #fff;
+  color: rgb(20, 22, 34);
   text-decoration: none;
-  background-color: #0095eb;
+  background-color: rgba(255,255,255,1);
   outline: 0;
 }
 
@@ -1198,20 +1198,20 @@ nav#navbar-main li {
 .navbar-default .navbar-nav>.open>a:focus,
 .navbar-default .navbar-nav>.open>a:hover,
 .navbar-default .navbar-nav>.open>a:visited {
-  color: #34495e !important;
-  background-color: #fff !important;
+  color: rgba(255,255,255,0.6) !important;
+  background-color: rgb(20, 22, 34) !important;
 }
 
 .navbar-default .navbar-brand {
   text-transform: uppercase;
   font-weight: bold;
   font-size: 1.2em;
-  color: #2b2b2b;
+  color: #fff;
 }
 
 .navbar-default .navbar-brand:focus,
 .navbar-default .navbar-brand:hover {
-  color: #2b2b2b;
+  color: #fff;
   background-color: transparent;
 }
 
@@ -1276,7 +1276,7 @@ nav#navbar-main li {
     clear: both;
     font-weight: 400;
     line-height: 1.42857143;
-    color: #34495e;
+    color: rgba(255,255,255,0.6);
     white-space: nowrap;
   }
 
@@ -1293,7 +1293,7 @@ nav#navbar-main li {
   .navbar-default .navbar-nav .open .dropdown-menu > li > a {
     padding: 5px 15px 5px 25px;
     line-height: 20px;
-    color: #34495e;
+    color: rgba(255,255,255,0.6);
   }
 
   .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus,
@@ -1305,7 +1305,7 @@ nav#navbar-main li {
   .navbar-default .navbar-nav .open .dropdown-menu > .active > a,
   .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus,
   .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover {
-    color: #0095eb;
+    color: rgba(255,255,255,1);
     background-color: transparent;
   }
 
@@ -1460,7 +1460,7 @@ body.dark {
 }
 
 .dark ul.share li a {
-  background-color: #0095eb;
+  background-color: hsl(339, 90%, 68%);
 }
 
 .dark table table {
@@ -1514,7 +1514,7 @@ body.dark {
 }
 
 .dark .card h4 a {
-  color: #0095eb;
+  color: hsl(339, 90%, 68%);
   border-bottom: solid 1px transparent;
 }
 
