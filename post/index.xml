@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2011-2018 Leonardo Collado Torres under (CC) BY-NC-SA</copyright>
-    <lastBuildDate>Thu, 04 May 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 17 Feb 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://lcolladotor.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>R markdown blog template</title>
+      <link>http://lcolladotor.github.io/2018/02/17/r-markdown-blog-template/</link>
+      <pubDate>Sat, 17 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://lcolladotor.github.io/2018/02/17/r-markdown-blog-template/</guid>
+      <description>This blog post is mostly for myself but maybe it’s useful to others. It contains my current R markdown blog template. I initially posted this as a question at StackOverflow. Then I read how much a burden we put in Yihui Xie and decided that my current setup (copy-pasting) works just fine. In any case using blogdown with the RStudio IDE is much simpler than what I used to do in the past with jekyll or with even my prior setup with blogdown.</description>
+    </item>
     
     <item>
       <title>Updating R</title>
