@@ -93,7 +93,7 @@ As a quick background, I graduated from the Undergraduate Program on Genomic Sci
       
       <guid>http://lcolladotor.github.io/home/search/</guid>
       <description>Search by post category, tag or use Google.
- (function() { var cx = &#39;013573190517108741382:7xd8xnepkpi&#39;; var gcse = document.createElement(&#39;script&#39;); gcse.type = &#39;text/javascript&#39;; gcse.async = true; gcse.src = (document.location.protocol == &#39;https:&#39; ? &#39;https:&#39; : &#39;http:&#39;) + &#39;//www.google.com/cse/cse.js?cx=&#39; + cx; var s = document.getElementsByTagName(&#39;script&#39;)[0]; s.parentNode.insertBefore(gcse, s); })();   </description>
+ (function() { var cx = &#39;013573190517108741382:7xd8xnepkpi&#39;; var gcse = document.createElement(&#39;script&#39;); gcse.type = &#39;text/javascript&#39;; gcse.async = true; gcse.src = &#39;https://cse.google.com/cse.js?cx=&#39; + cx; var s = document.getElementsByTagName(&#39;script&#39;)[0]; s.parentNode.insertBefore(gcse, s); })();   </description>
     </item>
     
   </channel>
