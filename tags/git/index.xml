@@ -2,87 +2,53 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Git on L. Collado-Torres</title>
-    <link>http://lcolladotor.github.io/tags/git/index.xml</link>
+    <link>http://lcolladotor.github.io/tags/git/</link>
     <description>Recent content in Git on L. Collado-Torres</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>&amp;copy; 2011-2017 Leonardo Collado Torres under (CC) BY-NC-SA</copyright>
-    <atom:link href="/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>&amp;copy; 2011-2018 Leonardo Collado Torres under (CC) BY-NC-SA</copyright>
+    <lastBuildDate>Wed, 13 Feb 2013 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://lcolladotor.github.io/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Sharing my work for &#34;Advanced Methods III&#34;</title>
-      <link>http://lcolladotor.github.io/2013/02/13/Sharing-my-work-for-Advanced-Methods-III</link>
+      <link>http://lcolladotor.github.io/2013/02/13/Sharing-my-work-for-Advanced-Methods-III/</link>
       <pubDate>Wed, 13 Feb 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://lcolladotor.github.io/2013/02/13/Sharing-my-work-for-Advanced-Methods-III</guid>
-      <description>&lt;p&gt;This semester I&amp;#8217;m taking the live version of the Data Analysis class by Jeff Leek. His more &lt;a href=&#34;https://class.coursera.org/dataanalysis-001/class/index&#34;&gt;popular version of the course is available through Coursera&lt;/a&gt;. &lt;/p&gt;
-&lt;p&gt;One of the things that Jeff promotes is reproducibility and sharing code. I share that tendency and thus created a Git repository for my homework and code for the class: &lt;a href=&#34;http://bit.ly/12vSk7d&#34;&gt;lcollado753&lt;/a&gt;. I&amp;#8217;m hosting it with GitHub to try it out since I started with Mercurial via Bitbucket. &lt;/p&gt;
-&lt;p&gt;Part of me would love it if everyone in the class had their own Git repositories. I mean, this class involves lots of practice exercises and there are plenty of R packages and functions that others use that I would like to learn. As I don&amp;#8217;t see this happening, I think that it would be great to list the packages/functions you think could be interesting to others at the end of the write-ups. However, this involves sharing the reports and I don&amp;#8217;t know if that will happen.&lt;/p&gt;
-&lt;p&gt;But maybe I didn&amp;#8217;t get the instructions Jeff gave correctly the first time. Listening into his week 2 talks from the Coursera course, I get that he wants our reports to be reproducible. The idea is great, but sometimes I get lots in the technicalities of finding the best fit for our situation. Aka, something we can all do that is worth the time for small scale projects that we have a couple of days to complete and most likely will be finishing the day before they are due. For now we might stick to sharing zip files with the report + summarized data set (it has be small enough to be sharable by email).&lt;/p&gt;
-&lt;p&gt;I&amp;#8217;m pretty happy with hosting my stuff at GitHub. One blunder I made in the&lt;a href=&#34;https://github.com/lcolladotor/lcollado753/blob/master/hw/data-analysis-01/report/data01_lcollado.pdf&#34;&gt; first data analysis report&lt;/a&gt; is that I completely forgot to say in it that I have the code in GitHub :P Oh well, next time!&lt;/p&gt;
-&lt;p&gt;I feel that I also have lots to improve regarding how to tell a story in a report. Plus, for this first project I mainly did some exploratory data analysis without much stat analysis.&lt;/p&gt;
-&lt;p&gt;Overall, I&amp;#8217;m quite excited with this course =) and I think that I&amp;#8217;ll learn a ton on methods to analyze data AND how to actually implement them. Plus, I&amp;#8217;m currently trying to learn ggplot2 as you can see in that first report. Also, I made it with knitr instead of Sweave =)&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;
-</description>
+      <guid>http://lcolladotor.github.io/2013/02/13/Sharing-my-work-for-Advanced-Methods-III/</guid>
+      <description>This semester I&amp;#8217;m taking the live version of the Data Analysis class by Jeff Leek. His more popular version of the course is available through Coursera. One of the things that Jeff promotes is reproducibility and sharing code. I share that tendency and thus created a Git repository for my homework and code for the class: lcollado753. I&amp;#8217;m hosting it with GitHub to try it out since I started with Mercurial via Bitbucket.</description>
     </item>
     
     <item>
       <title>Bitbucket revamped</title>
-      <link>http://lcolladotor.github.io/2012/10/09/Bitbucket-revamped</link>
+      <link>http://lcolladotor.github.io/2012/10/09/Bitbucket-revamped/</link>
       <pubDate>Tue, 09 Oct 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://lcolladotor.github.io/2012/10/09/Bitbucket-revamped</guid>
-      <description>&lt;p&gt;Bitbucket announced their new &amp;#8220;look&amp;#8221; today. The goal is to make it more team friendly but I guess that they also wanted to make it look fresh.&lt;/p&gt;
-&lt;p&gt;For example, the overview page now has a quick summary:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://media.tumblr.com/tumblr_mbn7ffEV281qfs0hy.png&#34;/&gt;&lt;/p&gt;
-&lt;p&gt; That can be useful coupled with the simpler navigation tabs. But I think that the best of the new tools is the ability to comment at a given commit at any line change.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://media.tumblr.com/tumblr_mbn7i8XOGJ1qfs0hy.png&#34;/&gt;&lt;/p&gt;
-&lt;p&gt;This gives a new dimension when working with a team. It&amp;#8217;s independent of the version control system you are using, so this can be a drawback in a sense as you need to log into Bitbucket to see the comments. I guess that if you keep the main explanations inside commit messages, this new comment tool can be helpful when reviewing the code and/or solving merges.&lt;/p&gt;
-&lt;p&gt;Bitbucket thought about how to make these comments more visible, so they show as updates in the overview page. That&amp;#8217;s great, otherwise you would have to go to each commit and check if there is anything new out there. Plus, there is an RSS feed for those of us that prefer to use these instead of browsing to a webpage to check if there is an update.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://media.tumblr.com/tumblr_mbn7osWZpp1qfs0hy.png&#34;/&gt;&lt;/p&gt;
-&lt;p&gt;To foment the discussion when solving merges, they also have some new tools inside the &amp;#8220;pull requests&amp;#8221;:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://media.tumblr.com/tumblr_mbn7m2Oprf1qfs0hy.png&#34;/&gt;&lt;/p&gt;
-&lt;p&gt;Overall, these changes make me happy and want to stay with Bitbucket. Though most of my collaborators use Github and the idea of having to get a new account is a HUGE wall. You wouldn&amp;#8217;t think it is after having accounts for lots of other stuff, right? &lt;/p&gt;
-&lt;p&gt;Well, remember that you can log into Bitbucket using OpenID:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://media.tumblr.com/tumblr_mbn7vlYQYO1qfs0hy.png&#34;/&gt;&lt;/p&gt;
-&lt;p&gt;&amp;lt;3 Bitbucket&lt;/p&gt;
-</description>
+      <guid>http://lcolladotor.github.io/2012/10/09/Bitbucket-revamped/</guid>
+      <description>Bitbucket announced their new &amp;#8220;look&amp;#8221; today. The goal is to make it more team friendly but I guess that they also wanted to make it look fresh.
+For example, the overview page now has a quick summary:
+ That can be useful coupled with the simpler navigation tabs. But I think that the best of the new tools is the ability to comment at a given commit at any line change.</description>
     </item>
     
     <item>
       <title>Introducing Git while making your academic webpage</title>
-      <link>http://lcolladotor.github.io/2012/09/24/Introducing-Git-while-making-your-academic-webpage</link>
+      <link>http://lcolladotor.github.io/2012/09/24/Introducing-Git-while-making-your-academic-webpage/</link>
       <pubDate>Mon, 24 Sep 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://lcolladotor.github.io/2012/09/24/Introducing-Git-while-making-your-academic-webpage</guid>
-      <description>&lt;p&gt;Last week I gave a presentation during our computing club on how to use git (a version control system). I used as a motivating example the first steps of creating your own academic webpage. The goal was to make it interesting to both new students (who might have been more interested on the webpage part) and older students (for whom version control should be a must). The slides and all the material is publicly available through the following Bitbucket repository: &lt;a href=&#34;https://bitbucket.org/lcolladotor/html_git_intro/overview&#34;&gt;&lt;a href=&#34;https://bitbucket.org/lcolladotor/html_git_intro/overview&#34;&gt;https://bitbucket.org/lcolladotor/html_git_intro/overview&lt;/a&gt;&lt;/a&gt;. You can access the slides by clicking on &amp;#8220;Source&amp;#8221;, &amp;#8220;slides&amp;#8221; and then &amp;#8220;html_git.pdf&amp;#8221;.&lt;/p&gt;
-&lt;p&gt;For the talk, I tried to make it more interactive but at the same time I wanted to make sure that the material could work for reference in the future. For example, I added a &lt;em&gt;commands.txt&lt;/em&gt; file so anyone following me could easily copy-paste the commands. By the way, for Git Bash in Windows, you paste stuff by using the insert key instead of the usual &amp;#8220;ctrl + v&amp;#8221; shortcut.&lt;/p&gt;
-&lt;p&gt;I&amp;#8217;m posting about it as it could be useful to other people, so feel free to share it.&lt;/p&gt;
-&lt;p&gt;Enjoy!&lt;/p&gt;
-</description>
+      <guid>http://lcolladotor.github.io/2012/09/24/Introducing-Git-while-making-your-academic-webpage/</guid>
+      <description>Last week I gave a presentation during our computing club on how to use git (a version control system). I used as a motivating example the first steps of creating your own academic webpage. The goal was to make it interesting to both new students (who might have been more interested on the webpage part) and older students (for whom version control should be a must). The slides and all the material is publicly available through the following Bitbucket repository: https://bitbucket.</description>
     </item>
     
     <item>
       <title>Version control: need to learn Git</title>
-      <link>http://lcolladotor.github.io/2012/09/05/i-consider-myself-a-fan-of-using-version-control</link>
+      <link>http://lcolladotor.github.io/2012/09/05/i-consider-myself-a-fan-of-using-version-control/</link>
       <pubDate>Wed, 05 Sep 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://lcolladotor.github.io/2012/09/05/i-consider-myself-a-fan-of-using-version-control</guid>
-      <description>&lt;p&gt;&lt;iframe width=&#34;400&#34; height=&#34;225&#34; src=&#34;http://www.youtube.com/embed/4fsSyLkBdB4?rel0&#34; frameborder=&#34;0&#34; &gt;&lt;/iframe&gt;&lt;br/&gt;&lt;p&gt;I consider myself a fan of using version control for bioinformatics/biostatistics (or any text based, like code) project. Yet my knowledge of version control systems is quite limited. I&amp;#8217;ve used Mercurial for some time, but I haven&amp;#8217;t ventured much beyond the basic commands and some GUIs for merging.&lt;/p&gt;
-&lt;p&gt;I don&amp;#8217;t recall how it all went, but I remember reading that &lt;a href=&#34;http://subversion.apache.org/&#34;&gt;Subversion&lt;/a&gt; (SVN) was much better than &lt;a href=&#34;http://www.nongnu.org/cvs/&#34;&gt;CVS&lt;/a&gt;. Also, the &lt;a href=&#34;http://www.bioconductor.org/&#34;&gt;Bioconductor project&lt;/a&gt; uses SVN. Before that I really learnt how to use SVN, someone from the Bioconductor devel list pointed me to &lt;a href=&#34;http://git-scm.com/&#34;&gt;Git&lt;/a&gt;/&lt;a href=&#34;http://mercurial.selenic.com/&#34;&gt;Mercurial&lt;/a&gt;. Around the same time I read &amp;#8220;&lt;a href=&#34;http://www.ncbi.nlm.nih.gov/pubmed/19649301&#34;&gt;A quick guide to organizing computational biology projects&lt;/a&gt;&amp;rdquo; by William Noble, which further convinced me to start using a version control system. I &amp;ldquo;educated&amp;rdquo; (a tiny bit) myself on the topic with Wikipedia&amp;#8217;s entries on &lt;a href=&#34;http://en.wikipedia.org/wiki/Revision_control&#34;&gt;revision control&lt;/a&gt; and &lt;a href=&#34;http://en.wikipedia.org/wiki/Distributed_revision_control&#34;&gt;distributed revision control&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;I wasn&amp;#8217;t sure whether to use Mercurial or Git, but at the time &lt;a href=&#34;https://bitbucket.org/&#34;&gt;Bitbucket&lt;/a&gt; only supported Mercurial repositories. It felt pretty easy to use, specially after reading the &lt;a href=&#34;http://mercurial.selenic.com/guide/&#34;&gt;guide&lt;/a&gt; whose examples covered pretty much all I needed. By the way, I highly recommend using Bitbucket now (whether for Mercurial or Git repositories) as they offer unlimited private repositories to anyone with an academic email account.&lt;/p&gt;
-&lt;p&gt;Now for my Advanced Methods class by &lt;a href=&#34;http://www.bcaffo.com/&#34;&gt;Brian Caffo&lt;/a&gt; (check out his &lt;a href=&#34;https://www.coursera.org/course/biostats&#34;&gt;Mathematical Biostatistics Boot Camp&lt;/a&gt; Coursera free online course) I need to learn how to use Git. That lead me to check some Git vs Mercurial posts such as:&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;a href=&#34;http://blogs.atlassian.com/2012/03/git-vs-mercurial-why-git/&#34;&gt;Git vs Mercurial: Why Git?&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://blogs.atlassian.com/2012/02/mercurial-vs-git-why-mercurial/?utm_source=wac-dvcs&amp;amp;utm_medium=text&amp;amp;utm_content=dvcs-options-git-or-mercurial&#34;&gt;Git vs Mercurial: Why Mercurial?&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;p&gt;Curiosity and another reason lead me to watch the &lt;a href=&#34;http://youtu.be/4fsSyLkBdB4&#34;&gt;video&lt;/a&gt; from above. It helped me to understand the basic differences between Git and Mercurial, plus it reassured me that skipping SVN was a good thing. I might still need to learn SVN properly, but at least through Git-SVN or HgSubversion it seems that I can dodge the bullet.&lt;/p&gt;
-&lt;p&gt;I&amp;#8217;ll come back once I&amp;#8217;ve tried out Git, but for now it seems that &lt;a href=&#34;http://sourcetreeapp.com/&#34;&gt;SourceTree&lt;/a&gt; will be a great tool to have. It works with Bitbucket and &lt;a href=&#34;https://github.com/&#34;&gt;Github&lt;/a&gt; (free for open source, gotta pay for private repositories).&lt;/p&gt;
-&lt;p&gt;To finish this post, if you are new to the topic you should check out:&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;a href=&#34;http://blogs.atlassian.com/2012/02/version-control-diffs-patches/?utm_source=wac-dvcs&amp;amp;utm_medium=text&amp;amp;utm_content=what-is-version-control&#34;&gt;What is Version Control: Diff and Patches&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://blogs.atlassian.com/2012/02/version-control-centralized-dvcs/?utm_source=wac-dvcs&amp;amp;utm_medium=text&amp;amp;utm_content=what-is-version-control&#34;&gt;What is Version Control: Centralized vs DVCS&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;p&gt;Well, even without knowing much about these tools you probably already use some kind of version history thanks to Dropbox and Google Docs. &lt;/p&gt;
-&lt;p&gt;PS I found lots of stuff &lt;a href=&#34;http://www.atlassian.com/dvcs/overview/what-is-version-control&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
-</description>
+      <guid>http://lcolladotor.github.io/2012/09/05/i-consider-myself-a-fan-of-using-version-control/</guid>
+      <description>I consider myself a fan of using version control for bioinformatics/biostatistics (or any text based, like code) project. Yet my knowledge of version control systems is quite limited. I&amp;#8217;ve used Mercurial for some time, but I haven&amp;#8217;t ventured much beyond the basic commands and some GUIs for merging.
+I don&amp;#8217;t recall how it all went, but I remember reading that Subversion (SVN) was much better than CVS. Also, the Bioconductor project uses SVN.</description>
     </item>
     
   </channel>

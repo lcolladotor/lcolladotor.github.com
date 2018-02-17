@@ -2,12 +2,15 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>0 on L. Collado-Torres</title>
-    <link>http://lcolladotor.github.io/publication_types/0/index.xml</link>
+    <link>http://lcolladotor.github.io/publication_types/0/</link>
     <description>Recent content in 0 on L. Collado-Torres</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>&amp;copy; 2011-2017 Leonardo Collado Torres under (CC) BY-NC-SA</copyright>
-    <atom:link href="/publication_types/0/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>&amp;copy; 2011-2018 Leonardo Collado Torres under (CC) BY-NC-SA</copyright>
+    <lastBuildDate>Thu, 24 Aug 2017 16:45:43 -0500</lastBuildDate>
+    
+	<atom:link href="http://lcolladotor.github.io/publication_types/0/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>recount workflow: Accessing over 70,000 human RNA-seq samples with Bioconductor [version 1; referees: 1 approved, 2 approved with reservations]</title>

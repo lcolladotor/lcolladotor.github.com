@@ -2,22 +2,13 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>L. Collado-Torres on L. Collado-Torres</title>
-    <link>http://lcolladotor.github.io/index.xml</link>
+    <link>http://lcolladotor.github.io/</link>
     <description>Recent content in L. Collado-Torres on L. Collado-Torres</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>&amp;copy; 2011-2017 Leonardo Collado Torres under (CC) BY-NC-SA</copyright>
+    <copyright>&amp;copy; 2011-2018 Leonardo Collado Torres under (CC) BY-NC-SA</copyright>
     <lastBuildDate>Thu, 19 Jan 2017 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>recount workflow: Accessing over 70,000 human RNA-seq samples with Bioconductor</title>
-      <link>http://lcolladotor.github.io/talk/DennisDal2018/</link>
-      <pubDate>Tue, 17 Apr 2018 10:00:00 +0000</pubDate>
-      
-      <guid>http://lcolladotor.github.io/talk/DennisDal2018/</guid>
-      <description></description>
-    </item>
+    <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
       <title>RNA-seq transcript quantification from reduced-representation data in recount2</title>
@@ -47,59 +38,11 @@
     </item>
     
     <item>
-      <title>Guiding Principles for Interactive Graphics Based on LIBD Data Science Projects</title>
-      <link>http://lcolladotor.github.io/talk/jsm2017/</link>
-      <pubDate>Thu, 03 Aug 2017 08:30:00 +0000</pubDate>
-      
-      <guid>http://lcolladotor.github.io/talk/jsm2017/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>recount workshop: Learn to leverage 70,000 human RNA-seq samples for your projects</title>
-      <link>http://lcolladotor.github.io/talk/bioc2017/</link>
-      <pubDate>Thu, 27 Jul 2017 13:30:00 +0000</pubDate>
-      
-      <guid>http://lcolladotor.github.io/talk/bioc2017/</guid>
-      <description>&lt;p&gt;[[url_custom]]
-    name = &amp;ldquo;Workshop website&amp;rdquo;
-    url = &amp;ldquo;&lt;a href=&#34;http://LieberInstitute.github.io/recountWorkshop/&amp;quot;&#34; target=&#34;_blank&#34;&gt;http://LieberInstitute.github.io/recountWorkshop/&amp;quot;&lt;/a&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Reproducible RNA-seq analysis with recount2</title>
-      <link>http://lcolladotor.github.io/talk/icsa2017/</link>
-      <pubDate>Tue, 27 Jun 2017 13:30:00 +0000</pubDate>
-      
-      <guid>http://lcolladotor.github.io/talk/icsa2017/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Reproducible Research and Bioinformatics</title>
-      <link>http://lcolladotor.github.io/talk/reproducibility2017/</link>
-      <pubDate>Sat, 24 Jun 2017 08:30:00 +0000</pubDate>
-      
-      <guid>http://lcolladotor.github.io/talk/reproducibility2017/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Improving the value of public RNA-seq expression data by phenotype prediction</title>
       <link>http://lcolladotor.github.io/publication/rnaseq_prediction/</link>
       <pubDate>Tue, 06 Jun 2017 16:45:43 -0500</pubDate>
       
       <guid>http://lcolladotor.github.io/publication/rnaseq_prediction/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>RNA-seq samples beyond the known transcriptome with derfinder available via recount2</title>
-      <link>http://lcolladotor.github.io/talk/sobp2017/</link>
-      <pubDate>Sat, 20 May 2017 12:30:00 +0000</pubDate>
-      
-      <guid>http://lcolladotor.github.io/talk/sobp2017/</guid>
       <description></description>
     </item>
     
@@ -114,13 +57,13 @@
     
     <item>
       <title>Updating R</title>
-      <link>http://lcolladotor.github.io/2017/05/04/Updating-R</link>
+      <link>http://lcolladotor.github.io/2017/05/04/Updating-R/</link>
       <pubDate>Thu, 04 May 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://lcolladotor.github.io/2017/05/04/Updating-R</guid>
+      <guid>http://lcolladotor.github.io/2017/05/04/Updating-R/</guid>
       <description>
 
-&lt;p&gt;As you might know by now, the latest R version was recently released (R 3.4.0). That means that you are &lt;em&gt;highly&lt;/em&gt; encouraged to update your R installation. There are several ways to do this some of which are documented in these other blog posts: &lt;a href=&#34;https://www.r-statistics.com/2013/03/updating-r-from-r-on-windows-using-the-installr-package/&#34; target=&#34;_blank&#34;&gt;Tal Galili, 2013&lt;/a&gt;, &lt;a href=&#34;https://www.datascienceriot.com/how-to-upgrade-r-without-losing-your-packages/kris/&#34; target=&#34;_blank&#34;&gt;Kris Eberwein, 2015&lt;/a&gt;. You would think that it&amp;rsquo;s just a matter of downloading the latest R installer for your OS, installing it, and continuing your analysis. The reality is a bit more complicated. The following short steps will make your life easier.&lt;/p&gt;
+&lt;p&gt;As you might know by now, the latest R version was recently released (R 3.4.0). That means that you are &lt;em&gt;highly&lt;/em&gt; encouraged to update your R installation. There are several ways to do this some of which are documented in these other blog posts: &lt;a href=&#34;https://www.r-statistics.com/2013/03/updating-r-from-r-on-windows-using-the-installr-package/&#34; target=&#34;_blank&#34;&gt;Tal Galili, 2013&lt;/a&gt;, &lt;a href=&#34;https://www.datascienceriot.com/how-to-upgrade-r-without-losing-your-packages/kris/&#34; target=&#34;_blank&#34;&gt;Kris Eberwein, 2015&lt;/a&gt;. You would think that it&#39;s just a matter of downloading the latest R installer for your OS, installing it, and continuing your analysis. The reality is a bit more complicated. The following short steps will make your life easier.&lt;/p&gt;
 
 &lt;h2 id=&#34;save-your-list-of-currently-installed-packages&#34;&gt;Save your list of currently installed packages&lt;/h2&gt;
 
@@ -147,11 +90,11 @@ length(installed)
 
 &lt;h2 id=&#34;install-latest-r&#34;&gt;Install latest R&lt;/h2&gt;
 
-&lt;p&gt;Ok, now you have a list of installed packages. It&amp;rsquo;s like a restore point. Next, you need to get the latest R installer for your OS from &lt;a href=&#34;https://cran.r-project.org/&#34; target=&#34;_blank&#34;&gt;CRAN&lt;/a&gt; and install the latest R. For example, for a Mac that would be &lt;a href=&#34;https://cran.r-project.org/bin/macosx/R-3.4.0.pkg&#34; target=&#34;_blank&#34;&gt;R-3.4.0.pkg&lt;/a&gt;. Install it as usual.&lt;/p&gt;
+&lt;p&gt;Ok, now you have a list of installed packages. It&#39;s like a restore point. Next, you need to get the latest R installer for your OS from &lt;a href=&#34;https://cran.r-project.org/&#34; target=&#34;_blank&#34;&gt;CRAN&lt;/a&gt; and install the latest R. For example, for a Mac that would be &lt;a href=&#34;https://cran.r-project.org/bin/macosx/R-3.4.0.pkg&#34; target=&#34;_blank&#34;&gt;R-3.4.0.pkg&lt;/a&gt;. Install it as usual.&lt;/p&gt;
 
 &lt;h2 id=&#34;restore-your-packages&#34;&gt;Restore your packages&lt;/h2&gt;
 
-&lt;p&gt;By now you have a new R version installed but without all your favorite packages. So, how do you install them? You just need to open your latest list of installed packages and install them. Now, I&amp;rsquo;m a Bioconductor user which means that some of my packages are not on CRAN. But the following code will work for you even if all the packages you use are from CRAN.&lt;/p&gt;
+&lt;p&gt;By now you have a new R version installed but without all your favorite packages. So, how do you install them? You just need to open your latest list of installed packages and install them. Now, I&#39;m a Bioconductor user which means that some of my packages are not on CRAN. But the following code will work for you even if all the packages you use are from CRAN.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;## Change accordingly
 list_dir &amp;lt;- &#39;/Users/lcollado/Dropbox/Computing/R&#39;
@@ -168,7 +111,7 @@ head(installed)
 ## [1] &amp;quot;abind&amp;quot;   &amp;quot;acepack&amp;quot; &amp;quot;ada&amp;quot;     &amp;quot;AER&amp;quot;     &amp;quot;affy&amp;quot;    &amp;quot;affyio&amp;quot;
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;Next, get the list of current R packages you have installed. Every new R installation comes with a few of them (the &lt;em&gt;base&lt;/em&gt; packages). You don&amp;rsquo;t need to install those.&lt;/p&gt;
+&lt;p&gt;Next, get the list of current R packages you have installed. Every new R installation comes with a few of them (the &lt;em&gt;base&lt;/em&gt; packages). You don&#39;t need to install those.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;current &amp;lt;- dir(.libPaths())
 &lt;/code&gt;&lt;/pre&gt;
@@ -183,11 +126,11 @@ biocLite(installed[!installed %in% current])
 ## Bioconductor version 3.6 (BiocInstaller 1.27.2), ?biocLite for help
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;and now you can continue on with your analysis 😄 You didn&amp;rsquo;t even need to figure out the best order to install the packages!&lt;/p&gt;
+&lt;p&gt;and now you can continue on with your analysis 😄 You didn&#39;t even need to figure out the best order to install the packages!&lt;/p&gt;
 
 &lt;h2 id=&#34;github-packages&#34;&gt;GitHub packages&lt;/h2&gt;
 
-&lt;p&gt;Some of your favorite R packages might only exist via GitHub. This list is likely short since most packages get distributed via CRAN. But if that&amp;rsquo;s the case, you can see which packages are missing by running:&lt;/p&gt;
+&lt;p&gt;Some of your favorite R packages might only exist via GitHub. This list is likely short since most packages get distributed via CRAN. But if that&#39;s the case, you can see which packages are missing by running:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;## Check which packages are missing
 current_post_installation &amp;lt;- dir(.libPaths())
@@ -205,7 +148,7 @@ install_github(&amp;quot;jalvesaq/colorout&amp;quot;)
 
 &lt;h2 id=&#34;misc-for-bioconductor-developers&#34;&gt;Misc for Bioconductor developers&lt;/h2&gt;
 
-&lt;p&gt;If you are a Bioconductor developer or are planning on becoming one, then you need 2 versions of R at all times. One R for the bioc-release branch and another one for the bioc-devel branch. Sometimes it&amp;rsquo;s the same R version sometimes it&amp;rsquo;s not depending on the month of the year. Right now, Bioc-release (3.5) uses R 3.4.0 and Bioc-devel (3.6) also uses R 3.4.0. &lt;a href=&#34;http://r.research.att.com/&#34; target=&#34;_blank&#34;&gt;R Switch&lt;/a&gt; for Mac users will be your friend. I can&amp;rsquo;t find the old bioc-devel mailing list thread where I first learned this, but the idea is to download the latest R tar ball, change the name from 3.4 to something else (3.4devel in my case), put it back together into a tar ball and then use this tar ball to install a second R version.&lt;/p&gt;
+&lt;p&gt;If you are a Bioconductor developer or are planning on becoming one, then you need 2 versions of R at all times. One R for the bioc-release branch and another one for the bioc-devel branch. Sometimes it&#39;s the same R version sometimes it&#39;s not depending on the month of the year. Right now, Bioc-release (3.5) uses R 3.4.0 and Bioc-devel (3.6) also uses R 3.4.0. &lt;a href=&#34;http://r.research.att.com/&#34; target=&#34;_blank&#34;&gt;R Switch&lt;/a&gt; for Mac users will be your friend. I can&#39;t find the old bioc-devel mailing list thread where I first learned this, but the idea is to download the latest R tar ball, change the name from 3.4 to something else (3.4devel in my case), put it back together into a tar ball and then use this tar ball to install a second R version.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;## Download latest R tarball
 wget http://r.research.att.com/el-capitan/R-3.4-branch/R-3.4-branch-el-capitan-sa-x86_64.tar.gz
@@ -288,19 +231,19 @@ session_info()
     
     <item>
       <title>How to ask for help for Bioconductor packages</title>
-      <link>http://lcolladotor.github.io/2017/03/06/How-to-ask-for-help-for-Bioconductor-packages</link>
+      <link>http://lcolladotor.github.io/2017/03/06/How-to-ask-for-help-for-Bioconductor-packages/</link>
       <pubDate>Mon, 06 Mar 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://lcolladotor.github.io/2017/03/06/How-to-ask-for-help-for-Bioconductor-packages</guid>
+      <guid>http://lcolladotor.github.io/2017/03/06/How-to-ask-for-help-for-Bioconductor-packages/</guid>
       <description>
 
 &lt;div class=&#34;alert alert-note&#34;&gt;
-  &lt;p&gt;tl;dr Please post your question at the Bioconductor support website &lt;a href=&#34;https://support.bioconductor.org/&#34; target=&#34;_blank&#34;&gt;https://support.bioconductor.org/&lt;/a&gt; and check the posting guide &lt;a href=&#34;http://www.bioconductor.org/help/support/posting-guide/&#34; target=&#34;_blank&#34;&gt;http://www.bioconductor.org/help/support/posting-guide/&lt;/a&gt;. It&amp;rsquo;s important that you provide reproducible code and information about your R session.&lt;/p&gt;
+  &lt;p&gt;tl;dr Please post your question at the Bioconductor support website &lt;a href=&#34;https://support.bioconductor.org/&#34; target=&#34;_blank&#34;&gt;https://support.bioconductor.org/&lt;/a&gt; and check the posting guide &lt;a href=&#34;http://www.bioconductor.org/help/support/posting-guide/&#34; target=&#34;_blank&#34;&gt;http://www.bioconductor.org/help/support/posting-guide/&lt;/a&gt;. It&#39;s important that you provide reproducible code and information about your R session.&lt;/p&gt;
 
 &lt;/div&gt;
 
 
-&lt;p&gt;Recently I have been getting more questions about several packages I maintain. It&amp;rsquo;s great to see more interest from users, but at the same time most questions lack the information I need to help the users. I have also gotten most of the questions via email, which is why I am writing this post. As of today, I will no longer answer questions related to my Bioconductor packages via personal emails. This might sound harsh, but hopefully the rest of this post will convince you that it&amp;rsquo;s the best thing to do. You might also be interested in the basics of using &lt;a href=&#34;http://bioconductor.org/packages/release/bioc/vignettes/derfinder/inst/doc/derfinder-quickstart.html#basics&#34; target=&#34;_blank&#34;&gt;derfinder&lt;/a&gt;, &lt;a href=&#34;http://bioconductor.org/packages/release/bioc/vignettes/regionReport/inst/doc/regionReport.html#basics&#34; target=&#34;_blank&#34;&gt;regionReport&lt;/a&gt; or &lt;a href=&#34;http://bioconductor.org/packages/release/bioc/vignettes/recount/inst/doc/recount-quickstart.html#basics&#34; target=&#34;_blank&#34;&gt;recount&lt;/a&gt;, among others.&lt;/p&gt;
+&lt;p&gt;Recently I have been getting more questions about several packages I maintain. It&#39;s great to see more interest from users, but at the same time most questions lack the information I need to help the users. I have also gotten most of the questions via email, which is why I am writing this post. As of today, I will no longer answer questions related to my Bioconductor packages via personal emails. This might sound harsh, but hopefully the rest of this post will convince you that it&#39;s the best thing to do. You might also be interested in the basics of using &lt;a href=&#34;http://bioconductor.org/packages/release/bioc/vignettes/derfinder/inst/doc/derfinder-quickstart.html#basics&#34; target=&#34;_blank&#34;&gt;derfinder&lt;/a&gt;, &lt;a href=&#34;http://bioconductor.org/packages/release/bioc/vignettes/regionReport/inst/doc/regionReport.html#basics&#34; target=&#34;_blank&#34;&gt;regionReport&lt;/a&gt; or &lt;a href=&#34;http://bioconductor.org/packages/release/bioc/vignettes/recount/inst/doc/recount-quickstart.html#basics&#34; target=&#34;_blank&#34;&gt;recount&lt;/a&gt;, among others.&lt;/p&gt;
 
 &lt;p&gt;The Bioconductor project is a community project and it benefits from users interacting in public venues. When a user asks a question at the &lt;a href=&#34;https://support.bioconductor.org/&#34; target=&#34;_blank&#34;&gt;Bioconductor support website&lt;/a&gt;, they are providing information that future users might be interested in. That is, the user (&lt;strong&gt;U1&lt;/strong&gt;) is contributing information to the overall documentation around the Bioconductor package they are asking a question about. Ideally, a new user (&lt;strong&gt;U2&lt;/strong&gt;) can then read through the question U1 wrote, check the solution, and move on. This is one of the main reasons why we (developers) want questions to be well documented. There are a couple of quick things that U1 can check that will make their question much more useful to the community.&lt;/p&gt;
 
@@ -310,7 +253,7 @@ session_info()
 
 &lt;h2 id=&#34;session-information&#34;&gt;Session information&lt;/h2&gt;
 
-&lt;p&gt;One of the strengths of Bioconductor is that all the packages have vignettes and lots of documentation. The packages are also checked regularly and must pass some tests. That also means that packages can change frequently, at least more frequently than CRAN packages. There&amp;rsquo;s also the added complexity that at any given point in time there is a release branch and a development branch. This means that there are many variables and saying that you are using the &amp;ldquo;latest version&amp;rdquo; doesn&amp;rsquo;t mean much to the developer. All of this information and more is part of the &lt;em&gt;R session information&lt;/em&gt;. That is why I and others request users to post their session information. It&amp;rsquo;s very easy to get, simply run the following code:&lt;/p&gt;
+&lt;p&gt;One of the strengths of Bioconductor is that all the packages have vignettes and lots of documentation. The packages are also checked regularly and must pass some tests. That also means that packages can change frequently, at least more frequently than CRAN packages. There&#39;s also the added complexity that at any given point in time there is a release branch and a development branch. This means that there are many variables and saying that you are using the &amp;quot;latest version&amp;quot; doesn&#39;t mean much to the developer. All of this information and more is part of the &lt;em&gt;R session information&lt;/em&gt;. That is why I and others request users to post their session information. It&#39;s very easy to get, simply run the following code:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;## Install devtools if needed
 # install.packages(&#39;devtools&#39;)
@@ -321,11 +264,11 @@ options(width = 120)
 session_info()
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;The output might be too long to post in the &lt;a href=&#34;https://support.bioconductor.org/&#34; target=&#34;_blank&#34;&gt;Bioconductor support website&lt;/a&gt;. The easy solution is to save the information you want displayed in a &lt;a href=&#34;https://gist.github.com/&#34; target=&#34;_blank&#34;&gt;gist&lt;/a&gt;. Then simply add the gist link in your question. Note that you need to have the link under &amp;ldquo;text&amp;rdquo; formatting and not &amp;ldquo;code&amp;rdquo;.&lt;/p&gt;
+&lt;p&gt;The output might be too long to post in the &lt;a href=&#34;https://support.bioconductor.org/&#34; target=&#34;_blank&#34;&gt;Bioconductor support website&lt;/a&gt;. The easy solution is to save the information you want displayed in a &lt;a href=&#34;https://gist.github.com/&#34; target=&#34;_blank&#34;&gt;gist&lt;/a&gt;. Then simply add the gist link in your question. Note that you need to have the link under &amp;quot;text&amp;quot; formatting and not &amp;quot;code&amp;quot;.&lt;/p&gt;
 
 &lt;h2 id=&#34;code-to-reproduce-the-error&#34;&gt;Code to reproduce the error&lt;/h2&gt;
 
-&lt;p&gt;If U1 includes the session information, their question will be pretty good, but not ideal yet. Many of the questions I&amp;rsquo;ve been asked do not include code for me to figure out the exact steps of what they were doing. A lot of times I can infer pieces of what they were doing from their description of the problem. But doing so takes quite a bit of my time and effort, and is still not perfect. Now imagine that U2 is reading through the question: they would probably get lost!&lt;/p&gt;
+&lt;p&gt;If U1 includes the session information, their question will be pretty good, but not ideal yet. Many of the questions I&#39;ve been asked do not include code for me to figure out the exact steps of what they were doing. A lot of times I can infer pieces of what they were doing from their description of the problem. But doing so takes quite a bit of my time and effort, and is still not perfect. Now imagine that U2 is reading through the question: they would probably get lost!&lt;/p&gt;
 
 &lt;p&gt;There is a wide range of things that U1 could have done. To help the developer, the best thing is for the user to include the code that lead to the error. The code should include how the data was loaded, so that the developer can run it themselves and check in more detail what went wrong. This means providing a small subset of the data or using some publicly available data.&lt;/p&gt;
 
@@ -337,8 +280,8 @@ session_info()
 
 &lt;ul&gt;
 &lt;li&gt;If you run &lt;code&gt;traceback()&lt;/code&gt; immediately after getting the error and include the output in your question, that would be great. It makes it easier to check at what point the code failed and produced the error.&lt;/li&gt;
-&lt;li&gt;Recently when I ask questions myself, I include the &amp;ldquo;non-evaluated code&amp;rdquo; (clean code in your script) and &amp;ldquo;evaluated code&amp;rdquo; (think of the R console: a mix of code and output). The non-evaluated code makes it easier for others to copy-paste the code into their R session without having to deal with any formatting issues (&lt;a href=&#34;https://github.com/leekgroup/recount/issues/8#issue-210124094&#34; target=&#34;_blank&#34;&gt;example&lt;/a&gt;).&lt;/li&gt;
-&lt;li&gt;If you encounter a new error, post a new question instead of &amp;ldquo;replying&amp;rdquo; to the first one.&lt;/li&gt;
+&lt;li&gt;Recently when I ask questions myself, I include the &amp;quot;non-evaluated code&amp;quot; (clean code in your script) and &amp;quot;evaluated code&amp;quot; (think of the R console: a mix of code and output). The non-evaluated code makes it easier for others to copy-paste the code into their R session without having to deal with any formatting issues (&lt;a href=&#34;https://github.com/leekgroup/recount/issues/8#issue-210124094&#34; target=&#34;_blank&#34;&gt;example&lt;/a&gt;).&lt;/li&gt;
+&lt;li&gt;If you encounter a new error, post a new question instead of &amp;quot;replying&amp;quot; to the first one.&lt;/li&gt;
 &lt;li&gt;Introduce yourself.&lt;/li&gt;
 &lt;li&gt;Be polite.&lt;/li&gt;
 &lt;/ul&gt;
@@ -348,6 +291,781 @@ session_info()
 &lt;h3 id=&#34;want-more&#34;&gt;Want more?&lt;/h3&gt;
 
 &lt;p&gt;Check other &lt;a href=&#34;https://twitter.com/jhubiostat&#34; target=&#34;_blank&#34;&gt;@jhubiostat&lt;/a&gt; student and alumni blogs at &lt;a href=&#34;http://bmorebiostat.com/&#34; target=&#34;_blank&#34;&gt;Bmore Biostats&lt;/a&gt; as well as topics on &lt;a href=&#34;https://twitter.com/search?q=%23rstats&#34; target=&#34;_blank&#34;&gt;#rstats&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>An alternative to the Mexico-US wall where the US would gain millions of dollars</title>
+      <link>http://lcolladotor.github.io/2017/01/25/An-alternative-to-the-Mexico-US-wall-where-the-US-would-gain-millions-of-dollars/</link>
+      <pubDate>Wed, 25 Jan 2017 02:00:00 +0000</pubDate>
+      
+      <guid>http://lcolladotor.github.io/2017/01/25/An-alternative-to-the-Mexico-US-wall-where-the-US-would-gain-millions-of-dollars/</guid>
+      <description>
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;p&gt;tl;dr There is a 600 million to 2 billion USD annual market related to crossing the Mexico-US border. Allow temporary work visas (say 3 years) to take over this market and use the money to boost the US Border Patrol to build a wall of eyes, not a physical wall.&lt;/p&gt;
+
+&lt;/div&gt;
+
+
+&lt;p&gt;President Trump of the United States of America,&lt;/p&gt;
+
+&lt;p&gt;cc President Peña Nieto of the United Mexican States&lt;/p&gt;
+
+&lt;p&gt;Today, Wednesday January 25th 2017, you are expected to announce your plans about building a wall between the United States and Mexico. I am opposed to building that wall but I also believe that providing alternatives is important when disagreeing. With that in mind, let me expose an alternative to your physical wall.&lt;/p&gt;
+
+&lt;p&gt;Mexico has a net immigration rate of -1.7 migrants per 1,000 and a population of 123,166,749 individuals&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:1&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt; which means that about 209,000 people leave Mexico every year. The Department of Homeland Security 2014 report&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:2&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:2&#34;&gt;2&lt;/a&gt;&lt;/sup&gt; shows that 350,177 out of 679,996 (51%) total aliens apprehended are from Mexico (52% reported elsewhere&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:3&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:3&#34;&gt;3&lt;/a&gt;&lt;/sup&gt;,&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:4&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:4&#34;&gt;4&lt;/a&gt;&lt;/sup&gt;). Many of the illegal immigrants pay people for helping them cross the Mexico-US border also known as &lt;em&gt;coyotes&lt;/em&gt;. Some informal surveys put the cost of a &lt;em&gt;coyote&lt;/em&gt; between 3,000 and 20,000 US dollars&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:5&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:5&#34;&gt;5&lt;/a&gt;&lt;/sup&gt;,&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:6&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:6&#34;&gt;6&lt;/a&gt;&lt;/sup&gt;. That means that there is an annual market worth about 627 to 1,050 million US dollars. This market exists and has been steady for years now. A physical wall in the Mexico-US border might not stop the illegal immigration to the US. Loss of jobs in Mexico directly related to your policies might even prompt more people to leave Mexico&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:7&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:7&#34;&gt;7&lt;/a&gt;&lt;/sup&gt;. I believe that the high volume of people crossing the Mexico-US border makes it easier for drug cartels to hide and transport drugs. That is, it makes it harder for the US Border Patrol Agents to find who is transporting drugs and the track down the routes they use.&lt;/p&gt;
+
+&lt;p&gt;So, what if the US took over this multi million dollar market? I have had the opportunity to visit countries that offer temporary work visas (ranging from 6 months to 3 years). The people interested in these visas have to pay a fee, pass a background check and sometimes go through health screenings. I believe that these immigrants pay the fee because it allows them to legally migrate, work for a while, save some money, and then go back to their home countries. From an immigrant&#39;s perspective, it must be very appealing to pay the same amount of money it cost to migrate safely and legally (for temporary work) than to attempt to cross the border illegally with the risk of dying in the process or getting kidnapped. Additionally, I think that temporary workers would feel much safer to go out of their homes while in the US, spending some of their hard earned money in the process and stimulating the local economy. They would be more likely to get a regular job where they would pay income taxes instead of getting payed &lt;em&gt;under the table&lt;/em&gt; and dodging the IRS. Furthermore, having the opportunity to legally go back home and visit family would be a huge advantage from an immigrant&#39;s perspective.&lt;/p&gt;
+
+&lt;p&gt;While writing this letter I realized that the idea of &lt;em&gt;immigration tariffs&lt;/em&gt; is not new&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:8&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:8&#34;&gt;8&lt;/a&gt;&lt;/sup&gt;,&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:9&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:9&#34;&gt;9&lt;/a&gt;&lt;/sup&gt;,&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:10&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:10&#34;&gt;10&lt;/a&gt;&lt;/sup&gt;,&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:11&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:11&#34;&gt;11&lt;/a&gt;&lt;/sup&gt;. However, I have not heard it being discussed recently and simply ask that you consider it.&lt;/p&gt;
+
+&lt;p&gt;To try to convince you that &lt;em&gt;immigration tariffs&lt;/em&gt; are an interesting alternative, consider what your government could do with an additional 600 to 1,000 million US dollars a year -- or multiply those numbers by two to get 1.2 to 2 billions USD a year by taking into account that about 50% of illegal immigrants are Mexicans. The average Border Patrol Agent self-reported salary is 80,250 USD a year&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:12&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:12&#34;&gt;12&lt;/a&gt;&lt;/sup&gt;. The actual salaries range from 21,616 to 157,257 USD as of January 2017&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:13&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:13&#34;&gt;13&lt;/a&gt;&lt;/sup&gt; depending on the &lt;em&gt;grade&lt;/em&gt; and &lt;em&gt;level&lt;/em&gt; as well as other options&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:14&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:14&#34;&gt;14&lt;/a&gt;&lt;/sup&gt;. In 2016, there were nearly 20,000 border patrol agents in the US&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:15&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:15&#34;&gt;15&lt;/a&gt;&lt;/sup&gt;. That means that you could decide to increase the number of Border Patrol Agents by 10,000 (50%) for about 803 million USD or increase the number of Agents by 5,000 while increasing their salaries by 10% for about 602 million USD. Why do I bring up the number of Agents? Because that would mean that you are building a &lt;strong&gt;&lt;em&gt;wall&lt;/em&gt; of eyes&lt;/strong&gt; in the Mexico-US border. I believe that under this scenario, you and your public relations team could convince your supporters that you delivered on your campaign promise of building a wall. It would just be a different kind of wall. The extra Border Patrol Agents and/or happier Agents (due to their increased salary) along with fewer attempts to cross the border (because immigrants would be interested in paying the &lt;em&gt;immigration tariff&lt;/em&gt;) would make them more efficient in their jobs. Some of them could be dedicated to making sure no one overstays their temporary work visa. Also note that by law, you &lt;em&gt;have&lt;/em&gt; to be a US citizen to become a Border Patrol Agent&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:16&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:16&#34;&gt;16&lt;/a&gt;&lt;/sup&gt;, so you would be increasing US jobs by 5 to 10 thousand under this scenario. That is more than the 700 jobs you claim to have saved from moving to Mexico from the US by cancelling the plans to build a factory in Mexico&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:17&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:17&#34;&gt;17&lt;/a&gt;&lt;/sup&gt;. I also imagine that this scenario would boost bus and airplane ticket sales.&lt;/p&gt;
+
+&lt;p&gt;I am of the opinion that &lt;em&gt;immigration tariffs&lt;/em&gt; would allow many individuals to have hope that they can improve their economic situation for them and their families. It would also translate &lt;em&gt;hope&lt;/em&gt; into a specific monetary goal. As of yesterday, 3,000 USD is about 64,000 MXN&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:18&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:18&#34;&gt;18&lt;/a&gt;&lt;/sup&gt; that translates to 800 days of minimum wage salary in Mexico&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:19&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:19&#34;&gt;19&lt;/a&gt;&lt;/sup&gt;. Saving that amount of money would take over 2 years if the person didn&#39;t spend any of their income! While ideally the &lt;em&gt;immigration tariff&lt;/em&gt; would be lower than 3,000 USD, ultimately there would be a threshold that opens doors to more economic opportunity. So, Peña Nieto and Mexico have the challenge of showing that Mexicans can stay in Mexico and improve their economical situation if they can save that amount of money to start a small business, advance their education, among other options.&lt;/p&gt;
+
+&lt;p&gt;Migration involves two sides and as presidents of two countries of &lt;em&gt;united states&lt;/em&gt; (American and Mexican, respectively) I encourage you to keep thinking how to &lt;em&gt;unitedly&lt;/em&gt; address migration and take over the multi million dollar market that &lt;em&gt;coyotes&lt;/em&gt; currently control.&lt;/p&gt;
+
+&lt;p&gt;Best,
+Leonardo&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;
+&lt;a href=&#34;https://en.wikipedia.org/wiki/Mexican_Americans&#34;&gt;&lt;img alt = &#39;Mexican American flag&#39; width=&#39;700&#39; src=&#39;https://upload.wikimedia.org/wikipedia/en/3/32/Mexican_American_Flag.PNG&#39; /&gt;&lt;/a&gt;
+&lt;/center&gt;&lt;/p&gt;
+
+&lt;div class=&#34;alert alert-warning&#34;&gt;
+  &lt;p&gt;This open letter is my opinion only and not that of my employer or other people I know.&lt;/p&gt;
+
+&lt;/div&gt;
+
+
+&lt;h3 id=&#34;calculations-used&#34;&gt;Calculations used&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;## Mexican immigrants per year
+round(-1.7 * 123.166749) * 1000
+
+## [1] -209000
+
+## Percent of Mexican illegal immigrants per year
+round(350177 / 679996 * 100)
+
+## [1] 51
+
+## Range of the coyote market: only Mexicans
+c(209000, 350000) * 3000 / 1e6
+
+## [1]  627 1050
+
+## Range of the coyote market: everyone
+c(209000, 350000) * 3000 / 1e6 * 2
+
+## [1] 1254 2100
+
+## Cost of having 10k more Border Patrol Agents
+10000 * 80250 / 1e6
+
+## [1] 802.5
+
+## Cost of having 5k more Border Patrol Agents while increasing their salary by 10%
+(5000 * 80250 * 1.1 + 20000 * 80250 * 0.1) / 1e6
+
+## [1] 601.875
+
+## 3000 USD in pesos (rounded to thousands)
+round(3 * 21.4230) * 1000
+
+## [1] 64000
+
+## Minimum wage days
+round(64000 / 80.04)
+
+## [1] 800
+
+## Minimum wage years -- without a single break!!!
+round(800 / 365.25, 1)
+
+## [1] 2.2
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;I finally wrote this open letter after my poll a few weeks ago:&lt;/p&gt;
+
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;I&amp;#39;m thinking of writing an open letter to &lt;a href=&#34;https://twitter.com/realDonaldTrump?ref_src=twsrc%5Etfw&#34;&gt;@realDonaldTrump&lt;/a&gt; about an alternative solution to the USA-Mexico wall. Would you do it?&lt;/p&gt;&amp;mdash; L. Collado-Torres (@fellgernon) &lt;a href=&#34;https://twitter.com/fellgernon/status/817608772000608256?ref_src=twsrc%5Etfw&#34;&gt;January 7, 2017&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+
+
+&lt;h3 id=&#34;references&#34;&gt;References&lt;/h3&gt;
+&lt;div class=&#34;footnotes&#34;&gt;
+
+&lt;hr /&gt;
+
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34;&gt;&lt;a href=&#34;https://www.cia.gov/library/PUBLICATIONS/the-world-factbook/geos/mx.html&#34; target=&#34;_blank&#34;&gt;https://www.cia.gov/library/PUBLICATIONS/the-world-factbook/geos/mx.html&lt;/a&gt;
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:1&#34;&gt;&lt;sup&gt;^&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li id=&#34;fn:2&#34;&gt;&lt;a href=&#34;https://www.dhs.gov/sites/default/files/publications/ois_yb_2014.pdf&#34; target=&#34;_blank&#34;&gt;https://www.dhs.gov/sites/default/files/publications/ois_yb_2014.pdf&lt;/a&gt;
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:2&#34;&gt;&lt;sup&gt;^&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li id=&#34;fn:3&#34;&gt;&lt;a href=&#34;http://www.pewresearch.org/fact-tank/2016/11/03/5-facts-about-illegal-immigration-in-the-u-s/&#34; target=&#34;_blank&#34;&gt;http://www.pewresearch.org/fact-tank/2016/11/03/5-facts-about-illegal-immigration-in-the-u-s/&lt;/a&gt;
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:3&#34;&gt;&lt;sup&gt;^&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li id=&#34;fn:4&#34;&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Illegal_immigration_to_the_United_States&#34; target=&#34;_blank&#34;&gt;https://en.wikipedia.org/wiki/Illegal_immigration_to_the_United_States&lt;/a&gt;
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:4&#34;&gt;&lt;sup&gt;^&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li id=&#34;fn:5&#34;&gt;&lt;a href=&#34;http://www.univision.com/noticias/inmigracion/el-costo-del-cruce-indocumentado-a-estados-unidos-varia-entre-3-mil-y-20-mil-dolares&#34; target=&#34;_blank&#34;&gt;http://www.univision.com/noticias/inmigracion/el-costo-del-cruce-indocumentado-a-estados-unidos-varia-entre-3-mil-y-20-mil-dolares&lt;/a&gt;
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:5&#34;&gt;&lt;sup&gt;^&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li id=&#34;fn:6&#34;&gt;&lt;a href=&#34;https://www.bloomberg.com/news/articles/2013-01-20/coming-to-america-its-going-to-cost-you&#34; target=&#34;_blank&#34;&gt;https://www.bloomberg.com/news/articles/2013-01-20/coming-to-america-its-going-to-cost-you&lt;/a&gt;
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:6&#34;&gt;&lt;sup&gt;^&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li id=&#34;fn:7&#34;&gt;&lt;a href=&#34;http://www.jornada.unam.mx/ultimas/2017/01/06/cancelacion-de-ford-dejara-a-miles-sin-empleo&#34; target=&#34;_blank&#34;&gt;http://www.jornada.unam.mx/ultimas/2017/01/06/cancelacion-de-ford-dejara-a-miles-sin-empleo&lt;/a&gt;
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:7&#34;&gt;&lt;sup&gt;^&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li id=&#34;fn:8&#34;&gt;&lt;a href=&#34;https://openborders.info/immigration-tariffs/&#34; target=&#34;_blank&#34;&gt;https://openborders.info/immigration-tariffs/&lt;/a&gt;
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:8&#34;&gt;&lt;sup&gt;^&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li id=&#34;fn:9&#34;&gt;&lt;a href=&#34;http://theconversation.com/tariffs-could-fix-both-immigration-policy-and-people-smuggling-40972&#34; target=&#34;_blank&#34;&gt;http://theconversation.com/tariffs-could-fix-both-immigration-policy-and-people-smuggling-40972&lt;/a&gt;
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:9&#34;&gt;&lt;sup&gt;^&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li id=&#34;fn:10&#34;&gt;&lt;a href=&#34;https://cei.org/onpoint/conservative-case-immigration-tariffs&#34; target=&#34;_blank&#34;&gt;https://cei.org/onpoint/conservative-case-immigration-tariffs&lt;/a&gt;
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:10&#34;&gt;&lt;sup&gt;^&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li id=&#34;fn:11&#34;&gt;&lt;a href=&#34;https://www.brookings.edu/book/brain-gain/&#34; target=&#34;_blank&#34;&gt;https://www.brookings.edu/book/brain-gain/&lt;/a&gt;
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:11&#34;&gt;&lt;sup&gt;^&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li id=&#34;fn:12&#34;&gt;&lt;a href=&#34;https://www.glassdoor.com/Salary/US-Customs-and-Border-Protection-Salaries-E41481.htm&#34; target=&#34;_blank&#34;&gt;https://www.glassdoor.com/Salary/US-Customs-and-Border-Protection-Salaries-E41481.htm&lt;/a&gt;
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:12&#34;&gt;&lt;sup&gt;^&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li id=&#34;fn:13&#34;&gt;&lt;a href=&#34;https://www.opm.gov/policy-data-oversight/pay-leave/salaries-wages/salary-tables/pdf/2017/LR.pdf&#34; target=&#34;_blank&#34;&gt;https://www.opm.gov/policy-data-oversight/pay-leave/salaries-wages/salary-tables/pdf/2017/LR.pdf&lt;/a&gt;
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:13&#34;&gt;&lt;sup&gt;^&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li id=&#34;fn:14&#34;&gt;&lt;a href=&#34;http://work.chron.com/salary-law-enforcement-border-patrol-person-3148.html&#34; target=&#34;_blank&#34;&gt;http://work.chron.com/salary-law-enforcement-border-patrol-person-3148.html&lt;/a&gt;
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:14&#34;&gt;&lt;sup&gt;^&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li id=&#34;fn:15&#34;&gt;&lt;a href=&#34;https://www.cbp.gov/sites/default/files/assets/documents/2017-Jan/USBP%20Stats%20FY2016%20sector%20profile.pdf&#34; target=&#34;_blank&#34;&gt;https://www.cbp.gov/sites/default/files/assets/documents/2017-Jan/USBP%20Stats%20FY2016%20sector%20profile.pdf&lt;/a&gt;
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:15&#34;&gt;&lt;sup&gt;^&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li id=&#34;fn:16&#34;&gt;&lt;a href=&#34;http://www.criminaljusticedegreeschools.com/criminal-justice-careers/border-patrol-agent/&#34; target=&#34;_blank&#34;&gt;http://www.criminaljusticedegreeschools.com/criminal-justice-careers/border-patrol-agent/&lt;/a&gt;
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:16&#34;&gt;&lt;sup&gt;^&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li id=&#34;fn:17&#34;&gt;&lt;a href=&#34;http://www.foxnews.com/politics/2017/01/03/ford-to-scrap-mexico-plant-invest-in-michigan-due-to-trump-policies.html&#34; target=&#34;_blank&#34;&gt;http://www.foxnews.com/politics/2017/01/03/ford-to-scrap-mexico-plant-invest-in-michigan-due-to-trump-policies.html&lt;/a&gt;
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:17&#34;&gt;&lt;sup&gt;^&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li id=&#34;fn:18&#34;&gt;&lt;a href=&#34;http://www.banxico.org.mx/portal-mercado-cambiario/&#34; target=&#34;_blank&#34;&gt;http://www.banxico.org.mx/portal-mercado-cambiario/&lt;/a&gt;
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:18&#34;&gt;&lt;sup&gt;^&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li id=&#34;fn:19&#34;&gt;&lt;a href=&#34;http://www.sat.gob.mx/informacion_fiscal/tablas_indicadores/Paginas/salarios_minimos.aspx&#34; target=&#34;_blank&#34;&gt;http://www.sat.gob.mx/informacion_fiscal/tablas_indicadores/Paginas/salarios_minimos.aspx&lt;/a&gt;
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:19&#34;&gt;&lt;sup&gt;^&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Easily explore a table with shinycsv</title>
+      <link>http://lcolladotor.github.io/2017/01/20/Easily-explore-a-table-with-shinycsv/</link>
+      <pubDate>Fri, 20 Jan 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://lcolladotor.github.io/2017/01/20/Easily-explore-a-table-with-shinycsv/</guid>
+      <description>
+
+&lt;p&gt;Have you ever had to explore a table with data? I believe the answer is &lt;em&gt;yes&lt;/em&gt; for most people that work at a computer or even just use it for communicating with their friends and family. Tables of data pop up everywhere, for example in personal finance. Websites like &lt;a href=&#34;https://www.mint.com/&#34; target=&#34;_blank&#34;&gt;Mint.com&lt;/a&gt; allow you to download your transactions in a &lt;a href=&#34;https://en.wikipedia.org/wiki/Comma-separated_values&#34; target=&#34;_blank&#34;&gt;CSV&lt;/a&gt; file called &lt;code&gt;transactions.csv&lt;/code&gt;. CSV is one of the many formats for storing tables and most likely when you try to open the &lt;code&gt;transactions.csv&lt;/code&gt; file, it will open with Excel. Now, can you make a quick figure of one of your columns in your table?&lt;/p&gt;
+
+&lt;p&gt;Some will answer yes, others no. The basic issue is that it&#39;s not &lt;em&gt;super&lt;/em&gt; easy to explore your data in Excel or similar programs. Wait, shouldn&#39;t it be easy? 😕&lt;/p&gt;
+
+&lt;p&gt;What if you want to subset your data and want to re-make the plot? How about getting some simple statistics like the mean or frequency of some categories for a given variable? 😨 These are some of the immediate tasks that are helpful when exploring data. Visually, making figures with two variables is also very common.&lt;/p&gt;
+
+&lt;p&gt;Programmers and experts in Excel, Stata, &lt;code&gt;R&lt;/code&gt; among other options can perform these data explorations. It might take them a little bit of time to write the code or remember it or use the user interface menu of their program of choice. But what about everyone else?&lt;/p&gt;
+
+&lt;p&gt;At the &lt;a href=&#34;http://www.libd.org/&#34; target=&#34;_blank&#34;&gt;Lieber Institute for Brain Development&lt;/a&gt; where I work, it&#39;s common for us to exchange data in tables, and thus explore data. That&#39;s why we created &lt;code&gt;shinycsv&lt;/code&gt; &lt;a id=&#39;cite-shinycsv&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://github.com/LieberInstitute/shinycsv&#39;&gt;Collado-Torres, Semick, and Jaffe, 2016&lt;/a&gt;). It&#39;s an R package &lt;a id=&#39;cite-cran&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://www.R-project.org/&#39;&gt;R Core Team, 2016&lt;/a&gt;) that contains a &lt;code&gt;shiny&lt;/code&gt; &lt;a id=&#39;cite-shiny&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://CRAN.R-project.org/package=shiny&#39;&gt;Chang, Cheng, Allaire, Xie, et al., 2017&lt;/a&gt;) application that allows users to interactively explore a table.&lt;/p&gt;
+
+&lt;p&gt;Installing &lt;code&gt;R&lt;/code&gt; is a pretty high bar, that&#39;s why we are hosting this application at &lt;a href=&#34;https://jhubiostatistics.shinyapps.io/shinycsv/&#34; target=&#34;_blank&#34;&gt;https://jhubiostatistics.shinyapps.io/shinycsv/&lt;/a&gt;. Try it out!&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;
+&lt;a href=&#34;https://jhubiostatistics.shinyapps.io/shinycsv/&#34;&gt;&lt;img alt = &#39;shinycsv landing&#39; width=&#39;600&#39; src=&#39;http://lcolladotor.github.io/figs/2017-01-20-shinycsv/landing.png&#39; /&gt;&lt;/a&gt;
+&lt;/center&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;shinycsv-application&#34;&gt;shinycsv application&lt;/h2&gt;
+
+&lt;p&gt;The application includes data about cars to demonstrate what it can do. It&#39;s a small data set that is commonly used for demonstration purposes. Anyhow, in the application you&#39;ll notice a few tabs.&lt;/p&gt;
+
+&lt;p&gt;The application shows the &lt;strong&gt;&lt;em&gt;raw data&lt;/em&gt;&lt;/strong&gt; in an interactive table that allows you to subset the observations by some criteria, search in the table, and sort in different ways. The &lt;strong&gt;&lt;em&gt;raw summary&lt;/em&gt;&lt;/strong&gt; tab shows quick statistical summaries which depend on the variable type (numerical, categorical, etc). If you interacted with the table in &lt;em&gt;raw data&lt;/em&gt; then the summaries at &lt;em&gt;raw summary&lt;/em&gt; will be based on the subset you selected.&lt;/p&gt;
+
+&lt;p&gt;The &lt;strong&gt;&lt;em&gt;one variable&lt;/em&gt;&lt;/strong&gt; and &lt;strong&gt;&lt;em&gt;two variables&lt;/em&gt;&lt;/strong&gt; tabs are for making figures based on one or two variables at a time. The code in &lt;code&gt;shinycsv&lt;/code&gt; tries to guess what&#39;s the best figure for a given type of variable and in case that you are interested in learning R, it also shows the exact code you can use to reproduce the figure in your computer. We added this feature to excite users about learning R. And it&#39;s useful for advanced users too that might want to customize the resulting figures. Hm..., you don&#39;t like the colors we chose for the figure? Well go to &lt;strong&gt;&lt;em&gt;plot colors&lt;/em&gt;&lt;/strong&gt;, choose another color, and come back to see your new figure with the color of your choosing. 😄&lt;/p&gt;
+
+&lt;p&gt;Hm... but what if you don&#39;t have a CSV file? Well, &lt;code&gt;shinycsv&lt;/code&gt; can handle many different tables thanks to &lt;code&gt;rio&lt;/code&gt; &lt;a id=&#39;cite-rio&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;#bib-rio&#39;&gt;Chan, Chan, Leeper, and Becker, 2016&lt;/a&gt;). Even Excel sheets! 😉&lt;/p&gt;
+
+&lt;p&gt;So, go ahead and test it out! We&#39;ll be glad to hear your feedback at &lt;a href=&#34;https://github.com/LieberInstitute/shinycsv/issues&#34; target=&#34;_blank&#34;&gt;LieberInstitute/shinycsv&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&#34;notes&#34;&gt;Notes&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Note that when I referred to tables earlier, I referred to square tables with different variables (age, height, weight, etc) as columns as observations as rows. That is, Excel files with a single sheet with no comments or figures inside the Excel file.&lt;/li&gt;
+&lt;li&gt;Are you interested in learning more about &lt;code&gt;R&lt;/code&gt; and &lt;code&gt;shiny&lt;/code&gt;? Maybe you&#39;ll want to take a look at the &lt;a href=&#34;https://jhubiostatistics.shinyapps.io/shinycsv-showcase/&#34; target=&#34;_blank&#34;&gt;showcase mode version of the application&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;If you use &lt;code&gt;shinycsv::explore()&lt;/code&gt; locally, the file size limit is increased to 500 MB. Although at that point you might want to consider using &lt;code&gt;R&lt;/code&gt; or another programming language.&lt;/li&gt;
+&lt;li&gt;What about casting variables? If you want to have fine control about casting the variables, save your data in a RData file. Sure, this requires an R user.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;reproducibility&#34;&gt;Reproducibility&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;## Reproducibility info
+library(&#39;devtools&#39;)
+options(width = 120)
+session_info()
+
+## Session info -----------------------------------------------------------------------------------------------------------
+
+##  setting  value                                             
+##  version  R Under development (unstable) (2016-10-26 r71594)
+##  system   x86_64, darwin13.4.0                              
+##  ui       X11                                               
+##  language (EN)                                              
+##  collate  en_US.UTF-8                                       
+##  tz       America/New_York                                  
+##  date     2017-01-20
+
+## Packages ---------------------------------------------------------------------------------------------------------------
+
+##  package       * version  date       source        
+##  bibtex          0.4.0    2014-12-31 CRAN (R 3.4.0)
+##  bitops          1.0-6    2013-08-17 CRAN (R 3.4.0)
+##  devtools      * 1.12.0   2016-12-05 CRAN (R 3.4.0)
+##  digest          0.6.11   2017-01-03 CRAN (R 3.4.0)
+##  evaluate        0.10     2016-10-11 CRAN (R 3.4.0)
+##  httr            1.2.1    2016-07-03 CRAN (R 3.4.0)
+##  knitcitations * 1.0.7    2015-10-28 CRAN (R 3.4.0)
+##  knitr         * 1.15.1   2016-11-22 CRAN (R 3.4.0)
+##  lubridate       1.6.0    2016-09-13 CRAN (R 3.4.0)
+##  magrittr        1.5      2014-11-22 CRAN (R 3.4.0)
+##  memoise         1.0.0    2016-01-29 CRAN (R 3.4.0)
+##  plyr            1.8.4    2016-06-08 CRAN (R 3.4.0)
+##  R6              2.2.0    2016-10-05 CRAN (R 3.4.0)
+##  Rcpp            0.12.9   2017-01-14 CRAN (R 3.4.0)
+##  RCurl           1.95-4.8 2016-03-01 CRAN (R 3.4.0)
+##  RefManageR      0.13.1   2016-11-13 CRAN (R 3.4.0)
+##  RJSONIO         1.3-0    2014-07-28 CRAN (R 3.4.0)
+##  stringi         1.1.2    2016-10-01 CRAN (R 3.4.0)
+##  stringr         1.1.0    2016-08-19 CRAN (R 3.4.0)
+##  withr           1.0.2    2016-06-20 CRAN (R 3.4.0)
+##  XML             3.98-1.5 2016-11-10 CRAN (R 3.4.0)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;references&#34;&gt;References&lt;/h3&gt;
+
+&lt;p&gt;Citations made with &lt;code&gt;knitcitations&lt;/code&gt; &lt;a id=&#39;cite-knitcitations&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://CRAN.R-project.org/package=knitcitations&#39;&gt;Boettiger, 2015&lt;/a&gt;).&lt;/p&gt;
+
+&lt;p&gt;&lt;a id=&#39;bib-knitcitations&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-knitcitations&#34;&gt;[1]&lt;/a&gt;&lt;cite&gt;
+C. Boettiger.
+&lt;em&gt;knitcitations: Citations for &#39;Knitr&#39; Markdown Files&lt;/em&gt;.
+R package version 1.0.7.
+2015.
+URL: &lt;a href=&#34;https://CRAN.R-project.org/package=knitcitations&#34;&gt;https://CRAN.R-project.org/package=knitcitations&lt;/a&gt;.&lt;/cite&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a id=&#39;bib-rio&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-rio&#34;&gt;[2]&lt;/a&gt;&lt;cite&gt;
+C. Chan, G. C. Chan, T. J. Leeper and J. Becker.
+&lt;em&gt;rio: A Swiss-army knife for data file I/O&lt;/em&gt;.
+R package version 0.4.16.
+2016.&lt;/cite&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a id=&#39;bib-shiny&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-shiny&#34;&gt;[3]&lt;/a&gt;&lt;cite&gt;
+W. Chang, J. Cheng, J. Allaire, Y. Xie, et al.
+&lt;em&gt;shiny: Web Application Framework for R&lt;/em&gt;.
+R package version 1.0.0.
+2017.
+URL: &lt;a href=&#34;https://CRAN.R-project.org/package=shiny&#34;&gt;https://CRAN.R-project.org/package=shiny&lt;/a&gt;.&lt;/cite&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a id=&#39;bib-shinycsv&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-shinycsv&#34;&gt;[4]&lt;/a&gt;&lt;cite&gt;
+L. Collado-Torres, S. Semick and A. E. Jaffe.
+&lt;em&gt;shinycsv: Explore a table interactively in a shiny application&lt;/em&gt;.
+R package version 0.99.7.
+2016.
+URL: &lt;a href=&#34;https://github.com/LieberInstitute/shinycsv&#34;&gt;https://github.com/LieberInstitute/shinycsv&lt;/a&gt;.&lt;/cite&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a id=&#39;bib-cran&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-cran&#34;&gt;[5]&lt;/a&gt;&lt;cite&gt;
+R Core Team.
+&lt;em&gt;R: A Language and Environment for Statistical Computing&lt;/em&gt;.
+R Foundation for Statistical Computing.
+Vienna, Austria, 2016.
+URL: &lt;a href=&#34;https://www.R-project.org/&#34;&gt;https://www.R-project.org/&lt;/a&gt;.&lt;/cite&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;want-more&#34;&gt;Want more?&lt;/h3&gt;
+
+&lt;p&gt;Check other &lt;a href=&#34;https://twitter.com/jhubiostat&#34; target=&#34;_blank&#34;&gt;@jhubiostat&lt;/a&gt; student blogs at &lt;a href=&#34;http://bmorebiostat.com/&#34; target=&#34;_blank&#34;&gt;Bmore Biostats&lt;/a&gt; as well as topics on &lt;a href=&#34;https://twitter.com/search?q=%23rstats&#34; target=&#34;_blank&#34;&gt;#rstats&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Human splicing diversity and the extent of unannotated splice junctions across human RNA-seq samples on the Sequence Read Archive</title>
+      <link>http://lcolladotor.github.io/publication/intropolis/</link>
+      <pubDate>Fri, 30 Dec 2016 17:44:49 -0500</pubDate>
+      
+      <guid>http://lcolladotor.github.io/publication/intropolis/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Flexible expressed region analysis for RNA-seq with derfinder</title>
+      <link>http://lcolladotor.github.io/publication/derfinder/</link>
+      <pubDate>Thu, 15 Sep 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://lcolladotor.github.io/publication/derfinder/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Rail-RNA: Scalable analysis of RNA-seq splicing and coverage</title>
+      <link>http://lcolladotor.github.io/publication/rail/</link>
+      <pubDate>Sat, 03 Sep 2016 17:27:55 -0500</pubDate>
+      
+      <guid>http://lcolladotor.github.io/publication/rail/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Finding possible class schedules</title>
+      <link>http://lcolladotor.github.io/2016/08/02/materias/</link>
+      <pubDate>Tue, 02 Aug 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://lcolladotor.github.io/2016/08/02/materias/</guid>
+      <description>
+
+&lt;p&gt;Over the weekend my brother wanted to figure out his class schedule for the next semester. He is a veterinary medicine and zootechnology student at UNAM. For this upcoming semester there is a set of classes he has to take and each has 8 or so instructor options. The website where he finds the class times lists about 8 pre-constructed class schedules. So he normally finds one he likes quite a bit, and then manually starts checking if he can change X instructor for Y for a given class. He does this based on the referalls and information he has gathered about the instructors, plus he factors in whether it&#39;d be an overall better schedule. For example, he might prefer to have a packed Tuesday if that means that he can leave early on Friday and avoid classes on Saturday.&lt;/p&gt;
+
+&lt;p&gt;The problem is that it&#39;s very easy to make a mistake. You (well he) gets all excited thinking that he&#39;s found the perfect schedule. Only to then realize that there is a conflict between two classes. Or that the practical portion of a class is in a location one hour away from the university, meaning that the schedule he has selected won&#39;t work. This process is very frustrating.&lt;/p&gt;
+
+&lt;p&gt;I was watching him and I started to think if I could help him with some code. Turns out that it was straightforward to write some code to find which options are valid. Once I wrote a test case, it took us like half an hour to fill out the data. I know that tomorrow is when he and his classmates start registering for classes, so this information might help his classmates.&lt;/p&gt;
+
+&lt;p&gt;First, I define some helper functions. These are rather straightforward but I&#39;ll be using them later on. For example, &lt;code&gt;dias()&lt;/code&gt; is just there for typing less.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;## Helper functions
+dias &amp;lt;- function(d, i) {
+    paste0(d, i)
+}
+
+extract &amp;lt;- function(m, p) {
+    m[[p]]
+}
+
+extract_names &amp;lt;- function(m, p) {
+    names(m)[p]
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Next comes the input information. I organized it in a set of nested &lt;code&gt;list&lt;/code&gt; objects. The schedule is stored as a character vector. For example, Lucia Eliana&#39;s class meets on Wednesdays (&lt;strong&gt;M&lt;/strong&gt;iercoles in Spanish) from 9 to 11 am. I only keep the starting hours (9 and 10 am) because otherwise the code won&#39;t detect valid opitons that include another class that starts at 11 am. For classes that are 1 hour away from the university, we included 1 hour before and 1 hour after the class.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;## Input class/prof info and schedule
+materias &amp;lt;- list(
+    repro = list(
+        &#39;lucia eliana&#39; = c(dias(&#39;m&#39;, 9:10), dias(&#39;j&#39;, 9:10), dias(&#39;v&#39;, 8:13)),
+        &#39;esquivel lacroix&#39; = c(dias(&#39;l&#39;, 14:15), dias(&#39;ma&#39;, 12:18), dias(&#39;m&#39;, 14:15)),
+        &#39;ismael porras&#39; = c(dias(&#39;l&#39;, 9:10), dias(&#39;m&#39;, 8:14), dias(&#39;j&#39;, 9:10)),
+        &#39;esquivel lacroix 2&#39; = c(dias(&#39;l&#39;, 14:15), dias(&#39;m&#39;, 14:15), dias(&#39;v&#39;, 12:18)),
+        &#39;salvador galina&#39; = c(dias(&#39;ma&#39;, 8:13), dias(&#39;j&#39;, 9:10), dias(&#39;v&#39;, 9:10)),
+        &#39;alberto balcazar&#39; = c(dias(&#39;l&#39;, 15:16), dias(&#39;j&#39;, 12:18), dias(&#39;v&#39;, 14:15)),
+        &#39;ana myriam boeta&#39; = c(dias(&#39;l&#39;, 8:13), dias(&#39;m&#39;, 10:11), dias(&#39;v&#39;, 9:10)),
+        &#39;rafael eduardo paz&#39; = c(dias(&#39;l&#39;, 11:17), dias(&#39;j&#39;, 14:15), dias(&#39;v&#39;, 16:17)),
+        &#39;juan heberth&#39; = c(dias(&#39;ma&#39;, 9:10), dias(&#39;m&#39;, 11:17), dias(&#39;v&#39;, 11:12)),
+        &#39;vicente octavio mejia&#39; = c(dias(&#39;ma&#39;, 8:17))
+    ),
+    economia = list(
+        &#39;valentin efren espinoza&#39; = c(dias(&#39;l&#39;, 8:10), dias(&#39;ma&#39;, 9:11)),
+        &#39;maria del pilar velazquez&#39; = c(dias(&#39;l&#39;, 16:18), dias(&#39;m&#39;, 16:18)),
+        &#39;arturo alonso pesado&#39; = c(dias(&#39;l&#39;, 11:13), dias(&#39;j&#39;, 11:13)),
+        &#39;laura mendez&#39; = c(dias(&#39;ma&#39;, 13:15), dias(&#39;m&#39;, 18:20)),
+        &#39;laura mendez 2&#39; = c(dias(&#39;j&#39;, 11:13), dias(&#39;v&#39;, 11:13)),
+        &#39;manuela garcia&#39; = c(dias(&#39;l&#39;, 17:19), dias(&#39;v&#39;, 16:18)),
+        &#39;francisco alejandro&#39; = c(dias(&#39;ma&#39;, 7:9), dias(&#39;j&#39;, 7:9)),
+        &#39;isaac reyes&#39; = c(dias(&#39;m&#39;, 13:15), dias(&#39;v&#39;, 13:15)),
+        &#39;jose luis tinoco&#39; = c(dias(&#39;ma&#39;, 12:14), dias(&#39;m&#39;, 9:11)),
+        &#39;isaac reyes 2&#39; = c(dias(&#39;l&#39;, 14:16), dias(&#39;ma&#39;, 14:16))
+        
+    ),
+    bacterianas = list(
+        &#39;jose luis gutierrez&#39; = dias(&#39;s&#39;, 8:11),
+        &#39;rodrigo mena&#39; = c(dias(&#39;ma&#39;, 18:19), dias(&#39;j&#39;, 18:19)),
+        &#39;beatriz arellano&#39; = c(dias(&#39;l&#39;, 7:8), dias(&#39;ma&#39;, 10:11)),
+        &#39;de la pena, ramirez ortega&#39; = c(dias(&#39;j&#39;, 18:19), dias(&#39;v&#39;, 18:19)),
+        &#39;ramirez ortega&#39; = c(dias(&#39;m&#39;, 7:8), dias(&#39;j&#39;, 7:8)),
+        &#39;rodrigo mena 2&#39; = c(dias(&#39;ma&#39;, 16:17), dias(&#39;m&#39;, 16:17)),
+        &#39;de la pena&#39; = dias(&#39;s&#39;, 8:11),
+        &#39;efren diaz aparicio&#39; = dias(&#39;s&#39;, 8:11),
+        &#39;lucia del carmen favila&#39; = dias(&#39;s&#39;, 8:11)
+    ),
+    parasitarias = list(
+        &#39;cintli martinez&#39; = c(dias(&#39;j&#39;, 16:17), dias(&#39;v&#39;, 18:20)),
+        &#39;osvaldo froylan&#39; = c(dias(&#39;ma&#39;, 18:19), dias(&#39;j&#39;, 18:20)),
+        &#39;maria quintero, agustin perez&#39; = c(dias(&#39;ma&#39;, 13:14), dias(&#39;m&#39;, 7:9)),
+        &#39;maria quintero&#39; = c(dias(&#39;m&#39;, 16:18), dias(&#39;j&#39;, 16:17)),
+        &#39;evangelina romero&#39; = c(dias(&#39;ma&#39;, 7:8), dias(&#39;v&#39;, 7:9)),
+        &#39;guadarrama 01&#39; = c(dias(&#39;m&#39;, 7:8), dias(&#39;j&#39;, 11:13)),
+        &#39;guadarrama 03&#39; = c(dias(&#39;ma&#39;, 13:15), dias(&#39;v&#39;, 7:8)),
+        &#39;guadarrama 04&#39; = c(dias(&#39;l&#39;, 16:17), dias(&#39;ma&#39;, 18:20)),
+        &#39;guadarrama 05&#39; = c(dias(&#39;l&#39;, 7:9), dias(&#39;j&#39;, 7:8))
+    ),
+    diagnosticas = list(
+        &#39;1701&#39; = c(dias(&#39;l&#39;, 11:13), dias(&#39;m&#39;, 11:16)),
+        &#39;1702&#39; = c(dias(&#39;j&#39;, 13:15), dias(&#39;v&#39;, 13:18)),
+        &#39;1703&#39; = c(dias(&#39;ma&#39;, 7:9), dias(&#39;v&#39;, 8:13)),
+        &#39;1704&#39; = c(dias(&#39;l&#39;, 18:20), dias(&#39;j&#39;, 13:18)),
+        &#39;1705&#39; = c(dias(&#39;l&#39;, 11:13), dias(&#39;m&#39;, 7:11)),
+        &#39;1706&#39; = c(dias(&#39;ma&#39;, 15:17), dias(&#39;m&#39;, 15:19)),
+        &#39;1707&#39; = c(dias(&#39;ma&#39;, 10:12), dias(&#39;j&#39;, 10:15)),
+        &#39;1708&#39; = c(dias(&#39;l&#39;, 18:20), dias(&#39;ma&#39;, 15:19)),
+        &#39;1709&#39; = c(dias(&#39;l&#39;, 11:13), dias(&#39;j&#39;, 8:13)),
+        &#39;1711&#39; = c(dias(&#39;j&#39;, 13:15), dias(&#39;v&#39;, 10:13))
+    )
+)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now that the input information is complete, I use &lt;code&gt;expand.grid()&lt;/code&gt; to find out all the different possible options.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;## Get all the options
+options &amp;lt;- expand.grid(lapply(materias, function(x) { seq_len(length(x))}))
+dim(options)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## [1] 81000     5
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;There&#39;s 81,00 of them including the classes that meet on Saturday. You can see why it&#39;s a frustrating process to find which combination of classes work when doing this manually.&lt;/p&gt;
+
+&lt;p&gt;Next, I explore all these options to find those that are valid, meaning that none of the classes overlap. I do this by finding which options have no duplicated hours from the character vectors defined earlier. Nothing fancy.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;valid &amp;lt;- apply(options, 1, function(input) {
+    info &amp;lt;- mapply(extract, materias, input)
+    !any(duplicated(unlist(info)))
+})
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now that I have the valid options, I can find the names of the instructors for them. There&#39;s 2,847 valid schedules in the end, out of the 81,000. That&#39;s 3.5 percent!&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;valid_prof &amp;lt;- apply(options[valid, ], 1, function(input) {
+    mapply(extract_names, materias, input)
+})
+ncol(valid_prof)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## [1] 2847
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;You can search the interactive version &lt;a href=&#34;https://lcolladotor.shinyapps.io/materias/&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt; to select only the options with a given instructor. For example, in my brother&#39;s case there are 30 valid options once he decided to prioritize two instructors as shown in the non-interactive table below.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;## Ideally, this code would create an interactive table, but it doesn&#39;t work for some reason:
+#library(&#39;DT&#39;)
+#datatable(t(valid_prof), options = list(pagingType=&#39;full_numbers&#39;, pageLength=10), rownames = FALSE)
+valid_prof &amp;lt;- t(valid_prof)
+rownames(valid_prof) &amp;lt;- seq_len(nrow(valid_prof))
+top_options &amp;lt;- valid_prof[valid_prof[, 1] == &#39;lucia eliana&#39; &amp;amp; valid_prof[, 2] %in% c(&#39;isaac reyes&#39;, &#39;isaac reyes 2&#39;), ]
+kable(top_options, format = &#39;markdown&#39;, row.names = TRUE)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;left&#34;&gt;&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;repro&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;economia&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;bacterianas&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;parasitarias&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;diagnosticas&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;5&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;lucia eliana&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;isaac reyes 2&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;jose luis gutierrez&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;cintli martinez&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;1701&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;11&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;lucia eliana&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;isaac reyes 2&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;rodrigo mena&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;cintli martinez&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;1701&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;14&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;lucia eliana&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;isaac reyes 2&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;beatriz arellano&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;cintli martinez&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;1701&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;19&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;lucia eliana&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;isaac reyes 2&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;ramirez ortega&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;cintli martinez&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;1701&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;25&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;lucia eliana&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;isaac reyes 2&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;de la pena&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;cintli martinez&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;1701&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;31&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;lucia eliana&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;isaac reyes 2&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;efren diaz aparicio&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;cintli martinez&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;1701&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;37&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;lucia eliana&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;isaac reyes 2&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;lucia del carmen favila&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;cintli martinez&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;1701&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;46&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;lucia eliana&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;isaac reyes 2&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;jose luis gutierrez&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;osvaldo froylan&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;1701&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;50&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;lucia eliana&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;isaac reyes 2&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;beatriz arellano&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;osvaldo froylan&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;1701&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;58&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;lucia eliana&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;isaac reyes 2&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;ramirez ortega&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;osvaldo froylan&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;1701&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;67&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;lucia eliana&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;isaac reyes 2&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;de la pena&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;osvaldo froylan&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;1701&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;76&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;lucia eliana&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;isaac reyes 2&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;efren diaz aparicio&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;osvaldo froylan&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;1701&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;85&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;lucia eliana&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;isaac reyes 2&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;lucia del carmen favila&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;osvaldo froylan&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;1701&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;123&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;lucia eliana&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;isaac reyes 2&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;jose luis gutierrez&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;guadarrama 01&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;1701&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;130&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;lucia eliana&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;isaac reyes 2&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;rodrigo mena&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;guadarrama 01&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;1701&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;134&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;lucia eliana&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;isaac reyes 2&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;beatriz arellano&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;guadarrama 01&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;1701&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;137&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;lucia eliana&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;isaac reyes 2&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;de la pena, ramirez ortega&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;guadarrama 01&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;1701&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;144&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;lucia eliana&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;isaac reyes 2&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;de la pena&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;guadarrama 01&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;1701&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;151&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;lucia eliana&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;isaac reyes 2&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;efren diaz aparicio&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;guadarrama 01&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;1701&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;158&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;lucia eliana&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;isaac reyes 2&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;lucia del carmen favila&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;guadarrama 01&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;1701&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;209&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;lucia eliana&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;isaac reyes 2&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;jose luis gutierrez&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;guadarrama 05&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;1701&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;217&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;lucia eliana&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;isaac reyes 2&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;rodrigo mena&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;guadarrama 05&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;1701&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;222&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;lucia eliana&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;isaac reyes 2&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;de la pena, ramirez ortega&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;guadarrama 05&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;1701&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;232&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;lucia eliana&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;isaac reyes 2&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;de la pena&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;guadarrama 05&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;1701&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;242&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;lucia eliana&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;isaac reyes 2&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;efren diaz aparicio&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;guadarrama 05&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;1701&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;252&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;lucia eliana&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;isaac reyes 2&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;lucia del carmen favila&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;guadarrama 05&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;1701&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;872&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;lucia eliana&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;isaac reyes 2&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;jose luis gutierrez&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;guadarrama 05&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;1704&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;885&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;lucia eliana&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;isaac reyes 2&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;de la pena&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;guadarrama 05&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;1704&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;894&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;lucia eliana&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;isaac reyes 2&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;efren diaz aparicio&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;guadarrama 05&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;1704&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;903&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;lucia eliana&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;isaac reyes 2&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;lucia del carmen favila&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;guadarrama 05&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;1704&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&#34;reproducibility&#34;&gt;Reproducibility&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;## Reproducibility info
+library(&#39;devtools&#39;)
+session_info()
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## Session info --------------------------------------------------------------
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;##  setting  value                       
+##  version  R version 3.3.0 (2016-05-03)
+##  system   x86_64, mingw32             
+##  ui       RStudio (0.99.902)          
+##  language (EN)                        
+##  collate  English_United States.1252  
+##  tz       America/Mexico_City         
+##  date     2016-08-02
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## Packages ------------------------------------------------------------------
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;##  package   * version date       source        
+##  devtools  * 1.12.0  2016-06-24 CRAN (R 3.3.1)
+##  digest      0.6.9   2016-01-08 CRAN (R 3.3.0)
+##  evaluate    0.9     2016-04-29 CRAN (R 3.3.0)
+##  formatR     1.4     2016-05-09 CRAN (R 3.3.0)
+##  highr       0.6     2016-05-09 CRAN (R 3.3.0)
+##  knitr     * 1.13    2016-05-09 CRAN (R 3.3.0)
+##  magrittr    1.5     2014-11-22 CRAN (R 3.3.0)
+##  memoise     1.0.0   2016-01-29 CRAN (R 3.3.0)
+##  rsconnect   0.4.3   2016-05-02 CRAN (R 3.3.0)
+##  stringi     1.1.1   2016-05-27 CRAN (R 3.3.0)
+##  stringr     1.0.0   2015-04-30 CRAN (R 3.3.0)
+##  withr       1.0.2   2016-06-20 CRAN (R 3.3.1)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;want-more&#34;&gt;Want more?&lt;/h3&gt;
+
+&lt;p&gt;Check other &lt;a href=&#34;https://twitter.com/jhubiostat&#34; target=&#34;_blank&#34;&gt;@jhubiostat&lt;/a&gt; student blogs at &lt;a href=&#34;http://bmorebiostat.com/&#34; target=&#34;_blank&#34;&gt;Bmore Biostats&lt;/a&gt; as well as topics on &lt;a href=&#34;https://twitter.com/search?q=%23rstats&#34; target=&#34;_blank&#34;&gt;#rstats&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     

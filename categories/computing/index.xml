@@ -2,482 +2,103 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Computing on L. Collado-Torres</title>
-    <link>http://lcolladotor.github.io/categories/computing/index.xml</link>
+    <link>http://lcolladotor.github.io/categories/computing/</link>
     <description>Recent content in Computing on L. Collado-Torres</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>&amp;copy; 2011-2017 Leonardo Collado Torres under (CC) BY-NC-SA</copyright>
-    <atom:link href="/categories/computing/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>&amp;copy; 2011-2018 Leonardo Collado Torres under (CC) BY-NC-SA</copyright>
+    <lastBuildDate>Wed, 11 Dec 2013 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://lcolladotor.github.io/categories/computing/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Login to the cluster, request a node and change to your project directory in a single command</title>
-      <link>http://lcolladotor.github.io/2013/12/11/quick-cluster-login-to-interactive-session</link>
+      <link>http://lcolladotor.github.io/2013/12/11/quick-cluster-login-to-interactive-session/</link>
       <pubDate>Wed, 11 Dec 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://lcolladotor.github.io/2013/12/11/quick-cluster-login-to-interactive-session</guid>
-      <description>
-
-&lt;p&gt;To be able to do RNA-seq research work in large multi-sample studies you have to be able to analyze large files and thus frequently use a powerful computing environment. In my case, this means that I have to login to a &lt;a href=&#34;http://en.wikipedia.org/wiki/Computer_cluster&#34; target=&#34;_blank&#34;&gt;computing cluster&lt;/a&gt; frequently. This is a common task for other biostatisticians (like those that do brain imagining studies) and many other people. When I am working on a project, I generally have to login to the cluster and then change the directory to the location where I have my project files.&lt;/p&gt;
-
-&lt;p&gt;A local cluster is normally composed of a login machine (enigma2 in my case) from where you can request to work on a node. There are several options for controlling this process of requesting a node, and in our institution we use a &lt;a href=&#34;http://en.wikipedia.org/wiki/Oracle_Grid_Engine&#34; target=&#34;_blank&#34;&gt;Sun/Oracle Grid Engine&lt;/a&gt;. When a cluster has a lot of users, you want to dedicate the login machine as much as possible to handling login requests and assigning nodes for people to use. This means that you want to minimize doing any other kind of operations on the login machine, such as input/output operations.&lt;/p&gt;
-
-&lt;h2 id=&#34;basic-workflow&#34;&gt;Basic workflow&lt;/h2&gt;
-
-&lt;p&gt;This means that the steps I normally follow before getting to work on my project are:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;
-## Open the terminal
-## Login to enigma
-ssh username@enigma2.etc.edu
-
-## Request a node to work on interactively
-qrsh
-
-## Change to the directory where I have my project files
-cd projectDir
-
-## Done!
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;For a long time I have used an &lt;a href=&#34;http://en.wikipedia.org/wiki/Alias_(command)&#34; target=&#34;_blank&#34;&gt;alias&lt;/a&gt; for the login step. I have this alias in my local &lt;code&gt;.bashrc&lt;/code&gt; file:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;
-## In local .bashrc file
-alias enigma=&amp;quot;ssh username@enigma2.etc.edu&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Thus saving a tiny bit of typing:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;
-## Open terminal
-## Login to enigma
-enigma
-## Etc
-qrsh
-cd projectDir
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;When the &lt;code&gt;projectDir&lt;/code&gt; gets complicated, I make an &lt;code&gt;alias&lt;/code&gt; on my &lt;code&gt;.bashrc&lt;/code&gt; file on the cluster. For example:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;
-## In cluster .bashrc file
-alias pdir=&amp;quot;cd /very/complicated/path/to/projectDir/&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;And finally, I can accomplish the setup task with minimal typing:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;
-## Open terminal
-enigma
-qrsh
-pdir
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;using-ssh-config&#34;&gt;Using ssh config&lt;/h2&gt;
-
-&lt;p&gt;This section was added after Kasper Hansen&amp;rsquo;s comment.&lt;/p&gt;
-
-&lt;p&gt;You can edit the ~.ssh/config file (check &lt;a href=&#34;http://www.howtogeek.com/75007/stupid-geek-tricks-use-your-ssh-config-file-to-create-aliases-for-hosts/&#34; target=&#34;_blank&#34;&gt;how to set it up&lt;/a&gt;, &lt;a href=&#34;http://nerderati.com/2011/03/simplify-your-life-with-an-ssh-config-file/&#34; target=&#34;_blank&#34;&gt;explained differently&lt;/a&gt; and the &lt;a href=&#34;http://linux.die.net/man/5/ssh_config&#34; target=&#34;_blank&#34;&gt;manual&lt;/a&gt;) to make things even better. This is how mine looks like:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;
-Host enigma
-	User username
-    Hostname enigma2.etc.edu
-	ForwardX11 yes
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;I like the ssh &lt;code&gt;-X&lt;/code&gt; (or &lt;code&gt;-Y&lt;/code&gt;) option so I can later view plots in X11 when running &lt;code&gt;R&lt;/code&gt;. That is why the &lt;strong&gt;ForwardX11&lt;/strong&gt; option is present.&lt;/p&gt;
-
-&lt;p&gt;Then you can use the following command to ssh into the cluster.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;
-ssh enigma
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Or if you prefer, simplify the bash alias to:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;
-## In local .bashrc file
-alias enigma=&amp;quot;ssh enigma&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;The sections below have been edited to assume that you are configured the &lt;strong&gt;enigma&lt;/strong&gt; host shortcut in your ~.ssh/config file.&lt;/p&gt;
-
-&lt;h2 id=&#34;needed-a-new-strategy&#34;&gt;Needed a new strategy&lt;/h2&gt;
-
-&lt;p&gt;The previous strategy works and I had been very comfortable with it. However, at times you might forget to request a node from the cluster to do your work interactively. This is specially true for me when I only plan on using a few &lt;code&gt;git&lt;/code&gt; commands. But when many users forget this, it becomes a problem and our cluster manager had to send us a reminder:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;*ALWAYS* work on a cluster node rather than on enigma2.
-Enigma2 is a *single machine* with many people trying to use it to gain access to the cluster.
-Even for tar commands, cp commands, wc commands ... first qrsh to a node.
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;profiles-in-iterm2-http-www-iterm2-com&#34;&gt;Profiles in &lt;a href=&#34;http://www.iterm2.com/&#34; target=&#34;_blank&#34;&gt;iTerm2&lt;/a&gt;&lt;/h2&gt;
-
-&lt;p&gt;Just a few days after we got this reminder, I decided to take a look at the &lt;a href=&#34;http://www.iterm2.com/&#34; target=&#34;_blank&#34;&gt;iTerm2&lt;/a&gt; profile menu. There are plenty of options for customizing your terminal, but the ones I mainly ended up using are:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;code&gt;Working directory&lt;/code&gt; -&amp;gt; &lt;code&gt;Directory :&lt;/code&gt; -&amp;gt; choose a directory in my laptop. Generally the location of my &lt;code&gt;git&lt;/code&gt; repository for version controlling the code of a given project.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;Command&lt;/code&gt; -&amp;gt; &lt;code&gt;Send text at start&lt;/code&gt; -&amp;gt; an alias from my local &lt;code&gt;.bashrc&lt;/code&gt; file as shown in the image below (the alias is &lt;strong&gt;qr&lt;/strong&gt;).&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;&lt;center&gt;
-&lt;a href=&#34;http://lcolladotor.github.io/figs/2013-12-11-quick-cluster-login-to-interactive-session/iTerm2-profile-cluster.png&#34;&gt;&lt;img src=&#34;http://lcolladotor.github.io/figs/2013-12-11-quick-cluster-login-to-interactive-session/iTerm2-profile-cluster.png&#34; alt=&#34;iTerm2 cluster profile screenshot&#34; style=&#34;width: 400px;&#34;/&gt;&lt;/a&gt;
-&lt;/center&gt;&lt;/p&gt;
-
-&lt;p&gt;The first case above is nice, but the real power comes from the second case. Since I can pretty much evaluate any command, I asked myself if I could set up a profile that automatically logs in to the cluster? Can it also request a node interactively? And even go to my project directory?&lt;/p&gt;
-
-&lt;h2 id=&#34;cluster-qr-alias&#34;&gt;cluster &lt;code&gt;qr&lt;/code&gt; alias&lt;/h2&gt;
-
-&lt;p&gt;I then remembered that &lt;a href=&#34;https://github.com/syounkin&#34; target=&#34;_blank&#34;&gt;Samuel Younkin&lt;/a&gt; explained to us how to set up &lt;strong&gt;qrsh&lt;/strong&gt; to automatically change the directory to the directory from which you invoked &lt;strong&gt;qrsh&lt;/strong&gt; (&lt;span class=&#34;showtooltip&#34; title=&#34;(2013). &#39;BiocHopkins.&#39; .&#34;&gt;&lt;a href=&#34;http://bit.ly/19zLZeD&#34;&gt;Younkin, 2013&lt;/a&gt;&lt;/span&gt;). I modified things a little bit and saved this qrsh version as the &lt;code&gt;qr&lt;/code&gt; alias on the cluster:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;
-## In cluster .bashrc file
-
-## change dir automatically when using qrsh
-## Details: https://github.com/rkostadi/BiocHopkins/wiki/Useless-Tips-&amp;amp;-Code-Snippets
-if [ -f ~/.bash_pwd ]; then
-    source ~/.bash_pwd
-    rm ~/.bash_pwd
-fi
-alias qr=&#39;echo &amp;quot;cd $PWD&amp;quot; &amp;gt; ~/.bash_pwd; history -w; qrsh&#39;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Note that I tried using the &lt;code&gt;qrsh -ac&lt;/code&gt; option, but couldn&amp;rsquo;t get to pass a variable. Doing so in theory would remove the need to create the &lt;strong&gt;.bash_pwd&lt;/strong&gt; temporary file.&lt;/p&gt;
-
-&lt;h2 id=&#34;ssh-and-change-dir-in-one-command&#34;&gt;ssh and change dir in one command&lt;/h2&gt;
-
-&lt;p&gt;Then googling I found how to &lt;strong&gt;ssh&lt;/strong&gt; and change directory in one command (&lt;span class=&#34;showtooltip&#34; title=&#34;Frosty (2009). &#39;How can I ssh directly to a particular directory?&#39; .&#34;&gt;&lt;a href=&#34;http://stackoverflow.com/questions/626533/how-can-i-ssh-directly-to-a-particular-directory&#34;&gt;Frosty, 2009&lt;/a&gt;&lt;/span&gt;):&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;
-ssh -t enigma &#39;cd /very/complicated/path/to/projectDir/; bash&#39;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;The problem I soon encountered was that I couldn&amp;rsquo;t &lt;strong&gt;qrsh&lt;/strong&gt; right after because the command was not been found. Some setup files are not been read even after using &lt;code&gt;bash -l&lt;/code&gt; like shown here:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;
-ssh -t enigma &#39;cd /very/complicated/path/to/projectDir/; bash -l&#39;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;local-qr-alias&#34;&gt;local &lt;code&gt;qr&lt;/code&gt; alias&lt;/h2&gt;
-
-&lt;p&gt;With our cluster administrator&amp;rsquo;s help, I was finally able to find how to do all of this in a single command:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;
-## Requires the code by Sam Younkin to work (or the version I modified)
-ssh -t enigma &#39;cd /very/complicated/path/to/projectDir/; source /etc/profile; echo &amp;quot;cd $PWD&amp;quot; &amp;gt; ~/.bash_pwd; history -w; qrsh&#39;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Finally, I created the &lt;code&gt;qr&lt;/code&gt; alias in my local machine. This alias:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;performs the ssh connection to the login machine of our cluster (enigma2),&lt;/li&gt;
-&lt;li&gt;then changes the directory to the project directory,&lt;/li&gt;
-&lt;li&gt;loads the necessary setup files so &lt;strong&gt;qrsh&lt;/strong&gt; can be found on the path,&lt;/li&gt;
-&lt;li&gt;creates the temporary &lt;strong&gt;.bash_pwd&lt;/strong&gt; file (you could even make this more concise by echoing the directory of interest to the temp file),&lt;/li&gt;
-&lt;li&gt;saves the command history as recommended by &lt;a href=&#34;https://github.com/syounkin&#34; target=&#34;_blank&#34;&gt;Samuel Younkin&lt;/a&gt;,&lt;/li&gt;
-&lt;li&gt;requests an interactive node (with your default settings) by executing &lt;strong&gt;qrsh&lt;/strong&gt;.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;
-## In local .bashrc file
-
-# qrsh
-alias qr=&amp;quot;ssh -t enigma &#39;cd /very/complicated/path/to/projectDir/; source /etc/profile; echo \&amp;quot;cd \$PWD\&amp;quot; &amp;gt; ~/.bash_pwd; qrsh&#39;&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Note the use of the backslash to delay the execution of &lt;code&gt;$PWD&lt;/code&gt;. I want it to be executed on the cluster, not on my local machine.&lt;/p&gt;
-
-&lt;h2 id=&#34;glory&#34;&gt;Glory!&lt;/h2&gt;
-
-&lt;p&gt;So now using &lt;a href=&#34;http://www.iterm2.com/&#34; target=&#34;_blank&#34;&gt;iTerm2&lt;/a&gt; I can simply use the shortcut for my &lt;em&gt;cluster&lt;/em&gt; profile which runs the local &lt;code&gt;qr&lt;/code&gt; alias and the next thing I have is a terminal with an interactive session on the cluster and located in my project directory. Sweet! =)&lt;/p&gt;
-
-&lt;p&gt;Plus I also have the cluster &lt;code&gt;qr&lt;/code&gt; alias for doing what &lt;a href=&#34;https://github.com/syounkin&#34; target=&#34;_blank&#34;&gt;Samuel Younkin&lt;/a&gt; previously described.&lt;/p&gt;
-
-&lt;h3 id=&#34;can-do-it-better&#34;&gt;Can do it better?&lt;/h3&gt;
-
-&lt;p&gt;If you have suggestions on how to improve this, let me know!&lt;/p&gt;
-
-&lt;h3 id=&#34;extra-aliases&#34;&gt;Extra aliases&lt;/h3&gt;
-
-&lt;p&gt;The following two aliases take your local current directory basename and use it for accessing /very/complicated/path/to/projectDir/&lt;strong&gt;basename&lt;/strong&gt;. This is useful if you use an organization similar to mine:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Projects dir
-
-&lt;ul&gt;
-&lt;li&gt;Project 1 dir&lt;/li&gt;
-&lt;li&gt;Project 2 dir
-&lt;br /&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;The full paths are different in my computer and in the cluster, but once you are in  /very/complicated/path/to/projectDir/
-it is all the same on both locations.&lt;/p&gt;
-
-&lt;p&gt;The first one runs &lt;strong&gt;qrsh&lt;/strong&gt; while the second one doesn&amp;rsquo;t request a node for interactive work.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;
-## In local .bashrc file
-
-## qrsh-basename
-alias qs=&#39;LEODIR=`basename $PWD`; ssh -t enigma &amp;quot;cd /very/complicated/path/to/projectDir/$LEODIR/; source /etc/profile; echo \&amp;quot;cd \$PWD\&amp;quot; &amp;gt; ~/.bash_pwd; history -w; qrsh&amp;quot;&#39;
-## basename, but no qrsh
-alias qq=&#39;LEODIR=`basename $PWD`; ssh -t enigma &amp;quot;cd /very/complicated/path/to/projectDir/$LEODIR/; source /etc/profile; echo \&amp;quot;cd \$PWD\&amp;quot; &amp;gt; ~/.bash_pwd; history -w; bash&amp;quot;&#39;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;references&#34;&gt;References&lt;/h3&gt;
-
-&lt;p&gt;Citations made with &lt;code&gt;knitcitations&lt;/code&gt; (&lt;span class=&#34;showtooltip&#34; title=&#34;Boettiger C (2013). knitcitations: Citations for knitr markdown files. R package version 0.4-7.&#34;&gt;&lt;a href=&#34;http://CRAN.R-project.org/package=knitcitations&#34;&gt;Boettiger, 2013&lt;/a&gt;&lt;/span&gt;).&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Frosty,   (2009) How can I ssh directly to a particular directory?.  &lt;em&gt;How can I ssh directly to a particular directory? - Stack Overflow&lt;/em&gt;  &lt;a href=&#34;http://stackoverflow.com/questions/626533/how-can-i-ssh-directly-to-a-particular-directory&#34; target=&#34;_blank&#34;&gt;http://stackoverflow.com/questions/626533/how-can-i-ssh-directly-to-a-particular-directory&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;BiocHopkins.  &lt;em&gt;GitHub&lt;/em&gt;  &lt;a href=&#34;http://bit.ly/19zLZeD&#34; target=&#34;_blank&#34;&gt;http://bit.ly/19zLZeD&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Carl Boettiger,   (2013) knitcitations: Citations for knitr markdown files.  &lt;a href=&#34;http://CRAN.R-project.org/package=knitcitations&#34; target=&#34;_blank&#34;&gt;http://CRAN.R-project.org/package=knitcitations&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;recap&#34;&gt;Recap&lt;/h3&gt;
-
-&lt;p&gt;If you got lost, these are the basic modifications you need to make to your local and cluster &lt;code&gt;.bashrc&lt;/code&gt; files.&lt;/p&gt;
-
-&lt;script src=&#34;https://gist.github.com/lcolladotor/7897221.js&#34;&gt;&lt;/script&gt;
-
-&lt;p&gt;Check the history of this post &lt;a href=&#34;https://github.com/lcolladotor/lcolladotor.github.com/commits/master/_posts/2013-12-11-quick-cluster-login-to-interactive-session.md&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
-</description>
+      <guid>http://lcolladotor.github.io/2013/12/11/quick-cluster-login-to-interactive-session/</guid>
+      <description>To be able to do RNA-seq research work in large multi-sample studies you have to be able to analyze large files and thus frequently use a powerful computing environment. In my case, this means that I have to login to a computing cluster frequently. This is a common task for other biostatisticians (like those that do brain imagining studies) and many other people. When I am working on a project, I generally have to login to the cluster and then change the directory to the location where I have my project files.</description>
     </item>
     
     <item>
       <title>Quickly making posters with PosterGenius</title>
-      <link>http://lcolladotor.github.io/2013/10/29/Quickly-making-posters-with-PosterGenius</link>
+      <link>http://lcolladotor.github.io/2013/10/29/Quickly-making-posters-with-PosterGenius/</link>
       <pubDate>Tue, 29 Oct 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://lcolladotor.github.io/2013/10/29/Quickly-making-posters-with-PosterGenius</guid>
-      <description>&lt;p&gt;It is time to revive &lt;a href=&#34;http://bit.ly/FellgernonBit&#34;&gt;Fellgernon Bit&lt;/a&gt; from it&amp;#8217;s deep hibernation period. A couple of very motivated Ph.D. students from my department (John, Alyssa, Amanda, Jean-Philippe, Elizabeth, etc) are organizing a blogging group. The idea is to review ideas, give suggestions, learn blogging technicalities, write blog posts, review them, and post them. It&amp;#8217;s a great idea! Plus it should us keep our blogs active.&lt;/p&gt;
-&lt;p&gt;So for my first post I am going to talk about &lt;a href=&#34;http://www.postergenius.com/cms/index.php&#34;&gt;PosterGenius&lt;/a&gt;. It&amp;#8217;s a simple to use piece of software for making posters. In my case, I presented a poster at the &lt;a href=&#34;http://genomics.jhu.edu/symposium.html&#34;&gt;7th Annual Young Investigators Symposium and Poster Session on Genomics and Bioinformatics&lt;/a&gt;. It was a relatively small event and I had a limited amount of time to make the poster. The idea behind &lt;a href=&#34;http://www.postergenius.com/cms/index.php&#34;&gt;PosterGenius&lt;/a&gt; is that you separate your poster into several sections (intro, methods, results, references), have some material for each (text and or figures), and just have to put it together with a simple background.&lt;/p&gt;
-&lt;p&gt;Of course, there are plenty of other tools for doing this. But in my case, I was able to make a poster in lunch hour by using slides from a presentation on the same subject and just organizing the content. The basic steps are:&lt;/p&gt;
-&lt;ol&gt;&lt;li&gt;Choose a poster template, number of columns, height and width.&lt;/li&gt;
-&lt;li&gt;Choose how many sections and their titles.&lt;/li&gt;
-&lt;li&gt;Fill in the authors, affiliations, title and institutional logos.&lt;/li&gt;
-&lt;li&gt;Enter the pictures using their picture manager. You might have to choose the appropriate size of the pictures (zoom percent). For example, my slides had white space on the borders, which &lt;a href=&#34;http://www.postergenius.com/cms/index.php&#34;&gt;PosterGenius&lt;/a&gt; did not know, so some space was being wasted.&lt;/li&gt;
-&lt;li&gt;Review it.&lt;/li&gt;
-&lt;li&gt;Print it.&lt;/li&gt;
-&lt;/ol&gt;&lt;p&gt;In the following post you can find some pictures from the creation of the poster in question.&lt;/p&gt;
-&lt;!-- Place this tag in your head or just before your close body tag. --&gt;
-&lt;script src=&#34;https://apis.google.com/js/plusone.js&#34; type=&#34;text/javascript&#34;&gt;&lt;/script&gt;&lt;!-- Place this tag where you want the widget to render. --&gt;&lt;div class=&#34;g-post&#34; data-href=&#34;https://plus.google.com/109750712877885290236/posts/59ZNCeUshK1&#34;&gt;&lt;/div&gt;
-&lt;p&gt;&lt;a href=&#34;http://www.postergenius.com/cms/index.php&#34;&gt;PosterGenius&lt;/a&gt; has the cool feature of creating a poster, a presentation, and a handout from the same material. For other meetings, I have actually printed out a couple of handouts to give to those interested in the material.&lt;/p&gt;
-&lt;p&gt;While it is not free (they have discounts for students), I think that &lt;a href=&#34;http://www.postergenius.com/cms/index.php&#34;&gt;PosterGenius&lt;/a&gt; is a very simple to use, produces good looking posters, and their optimal distance to read feature is quite accurate.&lt;/p&gt;
-</description>
+      <guid>http://lcolladotor.github.io/2013/10/29/Quickly-making-posters-with-PosterGenius/</guid>
+      <description>It is time to revive Fellgernon Bit from it&amp;#8217;s deep hibernation period. A couple of very motivated Ph.D. students from my department (John, Alyssa, Amanda, Jean-Philippe, Elizabeth, etc) are organizing a blogging group. The idea is to review ideas, give suggestions, learn blogging technicalities, write blog posts, review them, and post them. It&amp;#8217;s a great idea! Plus it should us keep our blogs active.
+So for my first post I am going to talk about PosterGenius.</description>
     </item>
     
     <item>
       <title>Alfred: a must for any Mac user</title>
-      <link>http://lcolladotor.github.io/2013/02/15/Alfred-a-must-for-any-Mac-user</link>
+      <link>http://lcolladotor.github.io/2013/02/15/Alfred-a-must-for-any-Mac-user/</link>
       <pubDate>Fri, 15 Feb 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://lcolladotor.github.io/2013/02/15/Alfred-a-must-for-any-Mac-user</guid>
-      <description>&lt;p&gt;At the beginning of the semester, I decided to go hunting for Mac apps that would help me be more organizing and/or enjoy my Mac even more. After all, I was using the basics –with multiple spaces– and had only customized my favorite editors. &lt;/p&gt;
-&lt;p&gt;It turns out that &lt;a href=&#34;http://bit.ly/12w0M6m&#34;&gt;Alfred&lt;/a&gt; is an excellent app. The free version can get you a lot of mileage and save you lots of time by typing alt + space, then entering  the keyword you want to search in Google. Or alt + space, image, then the  query for Google Images. Or alt + space, find, the parts of the name of a file you want. Or alt + space, in, something you want to find inside a file. I love the alt + space, define, something I want to find in the dictionary. I know that dictionaries are just around the corner [a bookmark away!] but still, thanks to Alfred I now look up words WAY more frequently than what I did before. I mean, just not having to move my hands away from my keyboard and doing a ton of stuff is just great =)&lt;/p&gt;
-&lt;p&gt;There are plenty of other default searches that come with Alfred&amp;#8217;s free version. Another thing that I love is using it to do system commands like lock the screen, or send my computer to sleep.&lt;/p&gt;
-&lt;p&gt;Try it out!&lt;/p&gt;
-</description>
+      <guid>http://lcolladotor.github.io/2013/02/15/Alfred-a-must-for-any-Mac-user/</guid>
+      <description>At the beginning of the semester, I decided to go hunting for Mac apps that would help me be more organizing and/or enjoy my Mac even more. After all, I was using the basics –with multiple spaces– and had only customized my favorite editors. It turns out that Alfred is an excellent app. The free version can get you a lot of mileage and save you lots of time by typing alt + space, then entering the keyword you want to search in Google.</description>
     </item>
     
     <item>
       <title>me: Bad rm, don&#39;t delete stuff I didn&#39;t want to delete! (rm: well, I do what you tell me to do!)</title>
-      <link>http://lcolladotor.github.io/2012/11/07/me-bad-rm-dont-delete-stuff-i-didnt-want-to-delete</link>
+      <link>http://lcolladotor.github.io/2012/11/07/me-bad-rm-dont-delete-stuff-i-didnt-want-to-delete/</link>
       <pubDate>Wed, 07 Nov 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://lcolladotor.github.io/2012/11/07/me-bad-rm-dont-delete-stuff-i-didnt-want-to-delete</guid>
-      <description>&lt;p&gt;When Sandy was in town at some point I started doing some of my research work, but I shouldn&amp;#8217;t have. I basically did a silly mistake and erased files that take a long time to compute.&lt;/p&gt;
-&lt;p&gt;Prior to being here, I had an alias in my bash profile like this:&lt;/p&gt;
-&lt;p&gt;alias rm=&amp;#8217;rm -i&amp;#8217;&lt;/p&gt;
-&lt;p&gt;But when I setup my bash profile here I googled a bit to find what was the best common solution to avoid deleting stuff you shouldn&amp;#8217;t be deleting. That&amp;#8217;s when I found the following stackoverflow entry: &lt;a href=&#34;http://superuser.com/questions/384769/alias-rm-rm-i-considered-harmful&#34;&gt;`alias rm=“rm -i”` considered harmful?&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;One of the answers suggests using rmi instead of rm for the alias. The idea is that you will never expect that rm will run interactively in other machines, which could potentially be disastrous. &lt;/p&gt;
-&lt;p&gt;Being &amp;#8220;smart&amp;#8221;, I set up my alias to be rmi. However, I started using rm (without expecting it to be interactive) and just ignored the alias.&lt;/p&gt;
-&lt;p&gt;Problem is that I ran a more command with a pattern, saw that the files were empty, then deleted them with rm. Next, I wanted to check a different pattern, used the up arrow key and instead of editing the more command, I edited the rm command. When I noticed it, it was too late.&lt;/p&gt;
-&lt;p&gt;Luckily, I only deleted some output files that I can recover. But it was a pretty basic mistake. And yes, the files were not backed up.&lt;/p&gt;
-&lt;p&gt;Anyhow, I will now stick to my rmi alias and hopefully avoid running into this kind of pitfall &lt;em&gt;ever&lt;/em&gt; again.&lt;/p&gt;
-</description>
+      <guid>http://lcolladotor.github.io/2012/11/07/me-bad-rm-dont-delete-stuff-i-didnt-want-to-delete/</guid>
+      <description>When Sandy was in town at some point I started doing some of my research work, but I shouldn&amp;#8217;t have. I basically did a silly mistake and erased files that take a long time to compute.
+Prior to being here, I had an alias in my bash profile like this:
+alias rm=&amp;#8217;rm -i&amp;#8217;
+But when I setup my bash profile here I googled a bit to find what was the best common solution to avoid deleting stuff you shouldn&amp;#8217;t be deleting.</description>
     </item>
     
     <item>
       <title>Bitbucket revamped</title>
-      <link>http://lcolladotor.github.io/2012/10/09/Bitbucket-revamped</link>
+      <link>http://lcolladotor.github.io/2012/10/09/Bitbucket-revamped/</link>
       <pubDate>Tue, 09 Oct 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://lcolladotor.github.io/2012/10/09/Bitbucket-revamped</guid>
-      <description>&lt;p&gt;Bitbucket announced their new &amp;#8220;look&amp;#8221; today. The goal is to make it more team friendly but I guess that they also wanted to make it look fresh.&lt;/p&gt;
-&lt;p&gt;For example, the overview page now has a quick summary:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://media.tumblr.com/tumblr_mbn7ffEV281qfs0hy.png&#34;/&gt;&lt;/p&gt;
-&lt;p&gt; That can be useful coupled with the simpler navigation tabs. But I think that the best of the new tools is the ability to comment at a given commit at any line change.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://media.tumblr.com/tumblr_mbn7i8XOGJ1qfs0hy.png&#34;/&gt;&lt;/p&gt;
-&lt;p&gt;This gives a new dimension when working with a team. It&amp;#8217;s independent of the version control system you are using, so this can be a drawback in a sense as you need to log into Bitbucket to see the comments. I guess that if you keep the main explanations inside commit messages, this new comment tool can be helpful when reviewing the code and/or solving merges.&lt;/p&gt;
-&lt;p&gt;Bitbucket thought about how to make these comments more visible, so they show as updates in the overview page. That&amp;#8217;s great, otherwise you would have to go to each commit and check if there is anything new out there. Plus, there is an RSS feed for those of us that prefer to use these instead of browsing to a webpage to check if there is an update.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://media.tumblr.com/tumblr_mbn7osWZpp1qfs0hy.png&#34;/&gt;&lt;/p&gt;
-&lt;p&gt;To foment the discussion when solving merges, they also have some new tools inside the &amp;#8220;pull requests&amp;#8221;:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://media.tumblr.com/tumblr_mbn7m2Oprf1qfs0hy.png&#34;/&gt;&lt;/p&gt;
-&lt;p&gt;Overall, these changes make me happy and want to stay with Bitbucket. Though most of my collaborators use Github and the idea of having to get a new account is a HUGE wall. You wouldn&amp;#8217;t think it is after having accounts for lots of other stuff, right? &lt;/p&gt;
-&lt;p&gt;Well, remember that you can log into Bitbucket using OpenID:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://media.tumblr.com/tumblr_mbn7vlYQYO1qfs0hy.png&#34;/&gt;&lt;/p&gt;
-&lt;p&gt;&amp;lt;3 Bitbucket&lt;/p&gt;
-</description>
+      <guid>http://lcolladotor.github.io/2012/10/09/Bitbucket-revamped/</guid>
+      <description>Bitbucket announced their new &amp;#8220;look&amp;#8221; today. The goal is to make it more team friendly but I guess that they also wanted to make it look fresh.
+For example, the overview page now has a quick summary:
+ That can be useful coupled with the simpler navigation tabs. But I think that the best of the new tools is the ability to comment at a given commit at any line change.</description>
     </item>
     
     <item>
       <title>Introducing Git while making your academic webpage</title>
-      <link>http://lcolladotor.github.io/2012/09/24/Introducing-Git-while-making-your-academic-webpage</link>
+      <link>http://lcolladotor.github.io/2012/09/24/Introducing-Git-while-making-your-academic-webpage/</link>
       <pubDate>Mon, 24 Sep 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://lcolladotor.github.io/2012/09/24/Introducing-Git-while-making-your-academic-webpage</guid>
-      <description>&lt;p&gt;Last week I gave a presentation during our computing club on how to use git (a version control system). I used as a motivating example the first steps of creating your own academic webpage. The goal was to make it interesting to both new students (who might have been more interested on the webpage part) and older students (for whom version control should be a must). The slides and all the material is publicly available through the following Bitbucket repository: &lt;a href=&#34;https://bitbucket.org/lcolladotor/html_git_intro/overview&#34;&gt;&lt;a href=&#34;https://bitbucket.org/lcolladotor/html_git_intro/overview&#34;&gt;https://bitbucket.org/lcolladotor/html_git_intro/overview&lt;/a&gt;&lt;/a&gt;. You can access the slides by clicking on &amp;#8220;Source&amp;#8221;, &amp;#8220;slides&amp;#8221; and then &amp;#8220;html_git.pdf&amp;#8221;.&lt;/p&gt;
-&lt;p&gt;For the talk, I tried to make it more interactive but at the same time I wanted to make sure that the material could work for reference in the future. For example, I added a &lt;em&gt;commands.txt&lt;/em&gt; file so anyone following me could easily copy-paste the commands. By the way, for Git Bash in Windows, you paste stuff by using the insert key instead of the usual &amp;#8220;ctrl + v&amp;#8221; shortcut.&lt;/p&gt;
-&lt;p&gt;I&amp;#8217;m posting about it as it could be useful to other people, so feel free to share it.&lt;/p&gt;
-&lt;p&gt;Enjoy!&lt;/p&gt;
-</description>
+      <guid>http://lcolladotor.github.io/2012/09/24/Introducing-Git-while-making-your-academic-webpage/</guid>
+      <description>Last week I gave a presentation during our computing club on how to use git (a version control system). I used as a motivating example the first steps of creating your own academic webpage. The goal was to make it interesting to both new students (who might have been more interested on the webpage part) and older students (for whom version control should be a must). The slides and all the material is publicly available through the following Bitbucket repository: https://bitbucket.</description>
     </item>
     
     <item>
       <title>Version control: need to learn Git</title>
-      <link>http://lcolladotor.github.io/2012/09/05/i-consider-myself-a-fan-of-using-version-control</link>
+      <link>http://lcolladotor.github.io/2012/09/05/i-consider-myself-a-fan-of-using-version-control/</link>
       <pubDate>Wed, 05 Sep 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://lcolladotor.github.io/2012/09/05/i-consider-myself-a-fan-of-using-version-control</guid>
-      <description>&lt;p&gt;&lt;iframe width=&#34;400&#34; height=&#34;225&#34; src=&#34;http://www.youtube.com/embed/4fsSyLkBdB4?rel0&#34; frameborder=&#34;0&#34; &gt;&lt;/iframe&gt;&lt;br/&gt;&lt;p&gt;I consider myself a fan of using version control for bioinformatics/biostatistics (or any text based, like code) project. Yet my knowledge of version control systems is quite limited. I&amp;#8217;ve used Mercurial for some time, but I haven&amp;#8217;t ventured much beyond the basic commands and some GUIs for merging.&lt;/p&gt;
-&lt;p&gt;I don&amp;#8217;t recall how it all went, but I remember reading that &lt;a href=&#34;http://subversion.apache.org/&#34;&gt;Subversion&lt;/a&gt; (SVN) was much better than &lt;a href=&#34;http://www.nongnu.org/cvs/&#34;&gt;CVS&lt;/a&gt;. Also, the &lt;a href=&#34;http://www.bioconductor.org/&#34;&gt;Bioconductor project&lt;/a&gt; uses SVN. Before that I really learnt how to use SVN, someone from the Bioconductor devel list pointed me to &lt;a href=&#34;http://git-scm.com/&#34;&gt;Git&lt;/a&gt;/&lt;a href=&#34;http://mercurial.selenic.com/&#34;&gt;Mercurial&lt;/a&gt;. Around the same time I read &amp;#8220;&lt;a href=&#34;http://www.ncbi.nlm.nih.gov/pubmed/19649301&#34;&gt;A quick guide to organizing computational biology projects&lt;/a&gt;&amp;rdquo; by William Noble, which further convinced me to start using a version control system. I &amp;ldquo;educated&amp;rdquo; (a tiny bit) myself on the topic with Wikipedia&amp;#8217;s entries on &lt;a href=&#34;http://en.wikipedia.org/wiki/Revision_control&#34;&gt;revision control&lt;/a&gt; and &lt;a href=&#34;http://en.wikipedia.org/wiki/Distributed_revision_control&#34;&gt;distributed revision control&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;I wasn&amp;#8217;t sure whether to use Mercurial or Git, but at the time &lt;a href=&#34;https://bitbucket.org/&#34;&gt;Bitbucket&lt;/a&gt; only supported Mercurial repositories. It felt pretty easy to use, specially after reading the &lt;a href=&#34;http://mercurial.selenic.com/guide/&#34;&gt;guide&lt;/a&gt; whose examples covered pretty much all I needed. By the way, I highly recommend using Bitbucket now (whether for Mercurial or Git repositories) as they offer unlimited private repositories to anyone with an academic email account.&lt;/p&gt;
-&lt;p&gt;Now for my Advanced Methods class by &lt;a href=&#34;http://www.bcaffo.com/&#34;&gt;Brian Caffo&lt;/a&gt; (check out his &lt;a href=&#34;https://www.coursera.org/course/biostats&#34;&gt;Mathematical Biostatistics Boot Camp&lt;/a&gt; Coursera free online course) I need to learn how to use Git. That lead me to check some Git vs Mercurial posts such as:&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;a href=&#34;http://blogs.atlassian.com/2012/03/git-vs-mercurial-why-git/&#34;&gt;Git vs Mercurial: Why Git?&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://blogs.atlassian.com/2012/02/mercurial-vs-git-why-mercurial/?utm_source=wac-dvcs&amp;amp;utm_medium=text&amp;amp;utm_content=dvcs-options-git-or-mercurial&#34;&gt;Git vs Mercurial: Why Mercurial?&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;p&gt;Curiosity and another reason lead me to watch the &lt;a href=&#34;http://youtu.be/4fsSyLkBdB4&#34;&gt;video&lt;/a&gt; from above. It helped me to understand the basic differences between Git and Mercurial, plus it reassured me that skipping SVN was a good thing. I might still need to learn SVN properly, but at least through Git-SVN or HgSubversion it seems that I can dodge the bullet.&lt;/p&gt;
-&lt;p&gt;I&amp;#8217;ll come back once I&amp;#8217;ve tried out Git, but for now it seems that &lt;a href=&#34;http://sourcetreeapp.com/&#34;&gt;SourceTree&lt;/a&gt; will be a great tool to have. It works with Bitbucket and &lt;a href=&#34;https://github.com/&#34;&gt;Github&lt;/a&gt; (free for open source, gotta pay for private repositories).&lt;/p&gt;
-&lt;p&gt;To finish this post, if you are new to the topic you should check out:&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;a href=&#34;http://blogs.atlassian.com/2012/02/version-control-diffs-patches/?utm_source=wac-dvcs&amp;amp;utm_medium=text&amp;amp;utm_content=what-is-version-control&#34;&gt;What is Version Control: Diff and Patches&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://blogs.atlassian.com/2012/02/version-control-centralized-dvcs/?utm_source=wac-dvcs&amp;amp;utm_medium=text&amp;amp;utm_content=what-is-version-control&#34;&gt;What is Version Control: Centralized vs DVCS&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;p&gt;Well, even without knowing much about these tools you probably already use some kind of version history thanks to Dropbox and Google Docs. &lt;/p&gt;
-&lt;p&gt;PS I found lots of stuff &lt;a href=&#34;http://www.atlassian.com/dvcs/overview/what-is-version-control&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
-</description>
+      <guid>http://lcolladotor.github.io/2012/09/05/i-consider-myself-a-fan-of-using-version-control/</guid>
+      <description>I consider myself a fan of using version control for bioinformatics/biostatistics (or any text based, like code) project. Yet my knowledge of version control systems is quite limited. I&amp;#8217;ve used Mercurial for some time, but I haven&amp;#8217;t ventured much beyond the basic commands and some GUIs for merging.
+I don&amp;#8217;t recall how it all went, but I remember reading that Subversion (SVN) was much better than CVS. Also, the Bioconductor project uses SVN.</description>
     </item>
     
     <item>
       <title>Setting up your computer for bioinformatics/biostatistics and a compedium of resources</title>
-      <link>http://lcolladotor.github.io/2012/08/23/setting-up-your-computer-for</link>
+      <link>http://lcolladotor.github.io/2012/08/23/setting-up-your-computer-for/</link>
       <pubDate>Thu, 23 Aug 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://lcolladotor.github.io/2012/08/23/setting-up-your-computer-for</guid>
-      <description>&lt;p&gt;Jumping on the train set by &lt;a href=&#34;http://www.biostat.jhsph.edu/~hiparker/&#34;&gt;Hilary Parker&lt;/a&gt; &amp;#8220;&lt;a href=&#34;http://hilaryparker.com/2012/08/16/the-setup-part-1/&#34;&gt;The Setup (Part 1)&lt;/a&gt;&#34; and &lt;a href=&#34;http://biostat.jhsph.edu/~afrazee/&#34;&gt;Alyssa Frazee&lt;/a&gt; &amp;#8220;&lt;a href=&#34;http://alyssafrazee.wordpress.com/&#34;&gt;my software/hardware setup&lt;/a&gt;&amp;#8221;, I&amp;#8217;m going to share my setup and hopefully add something new. They both did a great job already, so make sure you read their posts!&lt;/p&gt;
-&lt;p&gt;I have some experience with all three main OS: Windows, Linux and Mac. That being said, I know some of the basic stuff for each but I surely use Google very frequently to get help. I used to have a dual Windows / Linux (Ubuntu) set up but now I have a Windows laptop/desktop (it&amp;#8217;s a monster :P) at home and I&amp;#8217;m happy working with my Mac. &lt;/p&gt;
-&lt;p&gt;I&amp;#8217;m going to start by mentioning the software I use(d) in each OS and then add some other tools that I really like.&lt;/p&gt;
-&lt;p&gt;Windows&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Text editor: &lt;a href=&#34;http://notepad-plus-plus.org/&#34;&gt;Notepad++&lt;/a&gt;. It outperforms Notepad by light years! A must for me is the &amp;#8220;View -&amp;gt; Word wrap&amp;#8221; option. I would definitely go to &amp;#8220;Settings -&amp;gt; Preferences -&amp;gt; New Document/Default Directory&amp;#8221; and change the new document format from Windows (Dos) to Unix. This will save you time later when you want to work on a Unix system like the cluster. If you didn&amp;#8217;t, you can change a specific document&amp;#8217;s EOL (end of line) by using &amp;#8220;Edit -&amp;gt; EOL conversion -&amp;gt; UNIX format&amp;#8221;. Another feature that I like is the &amp;#8220;Search -&amp;gt; Replace&amp;#8230;&amp;#8221; which allows you to use regular expressions (like Perl). &lt;/li&gt;
-&lt;li&gt;Statistical software: &lt;a href=&#34;http://cran.r-project.org/&#34;&gt;R&lt;/a&gt; of course! It&amp;#8217;s best to do a custom installation and choose a directory without spaces in it. That will help later (further below). If you want to be convinced to join the R community read &lt;a href=&#34;http://www.nytimes.com/2009/01/07/technology/business-computing/07program.html?_r=3&amp;amp;scp=1&amp;amp;sq=robert%20gentleman&amp;amp;st=cse&#34;&gt;Data Analysits Captivated by R&amp;#8217;s power&lt;/a&gt; and &lt;a href=&#34;http://bits.blogs.nytimes.com/2009/01/08/r-you-ready-for-r/?scp=1&amp;amp;sq=Robert%20Gentleman&amp;amp;st=cse&#34;&gt;R You Ready for R?&lt;/a&gt; or just take a look at what others are using. Remember that the R project is open source, free and easy to contribute to. If you end up choosing Excel as your statistical software, well, there is &lt;strong&gt;no&lt;/strong&gt; hope for you!!&lt;/li&gt;
-&lt;li&gt;R code editor: Notepad++ with &lt;a href=&#34;http://sourceforge.net/projects/npptor/&#34;&gt;NppToR&lt;/a&gt;. For a long time I used Emacs modified to work with Windows by Vincent Goulet available &lt;a href=&#34;http://vgoulet.act.ulaval.ca/en/emacs/&#34;&gt;here&lt;/a&gt;. It works great and saves you quite a bit of setup time. &lt;a href=&#34;http://www.xemacs.org/&#34;&gt;XEmacs&lt;/a&gt; is another option that a friend of mine used, but it never convinced me. Anyhow, I ended up changing from Emacs to Notepad++ with NppToR because I could:&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Force quit R (and not lose code changes) in case I crashed R by doing something stupid like printing something huge or w/e :P &lt;/li&gt;
-&lt;li&gt;Access help pages in a separate window. I&amp;#8217;m sure you can do it too with Emacs, but I was just lazy to configure it.&lt;/li&gt;
-&lt;li&gt;Shorter shortcuts&lt;/li&gt;
-&lt;li&gt;Later on I found the NppToR to PuTTy feature which is very useful.&lt;/li&gt;
-&lt;li&gt;You can create an R syntax dictionary (or something like that) in Notepad++ which will scan all your R packages and add the function names so they are colored when you type them. Also Notepad++ will auto-complete some function names and show you the arguments. Great stuff! (Forgot the name, so&amp;#8230; google it :P)&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;ul&gt;
-&lt;li&gt;SSH: &lt;a href=&#34;http://www.chiark.greenend.org.uk/~sgtatham/putty/&#34;&gt;PuTTY&lt;/a&gt;. As said before, works well with Notepad++ and NppToR.&lt;/li&gt;
-&lt;li&gt;SCP: &lt;a href=&#34;http://winscp.net/eng/index.php&#34;&gt;WinSCP&lt;/a&gt;. There are others that work too like &lt;a href=&#34;http://filezilla-project.org/&#34;&gt;Filezilla&lt;/a&gt; but well, WinSCP does the job well.&lt;/li&gt;
-&lt;li&gt;PDF viewer: &lt;a href=&#34;http://www.adobe.com/products/acrobatpro.html&#34;&gt;Adobe Acrobat Professional&lt;/a&gt;. I&amp;#8217;m using the X version now. I like how I can highlight, underline, cross out, free hand, sticky note, combine files into a single pdf, combine pdfs, and change the highlight colors easily. It also has a change tracker (kind of like Word has). I&amp;#8217;ve seen other use PDF Annotator which is available for free for Hopkins students. Anyhow, I simply love Acrobat for reading papers.&lt;/li&gt;
-&lt;li&gt;LaTeX: &lt;a href=&#34;http://miktex.org/&#34;&gt;MiKTeX&lt;/a&gt;. For writing TeX files I used either Emacs or Notepad++. There is another software which has drop down menus and the like called &lt;a href=&#34;http://www.winedt.com/&#34;&gt;WinEdt&lt;/a&gt;. I got used to typing LaTeX from scratch, well, I have a template.Rnw somewhere. Oh yeah, I always use Sweave when writing TeX files (even if I don&amp;#8217;t use R). &lt;/li&gt;
-&lt;li&gt;R reports: &lt;a href=&#34;http://www.statistik.lmu.de/~leisch/Sweave/&#34;&gt;Sweave by Friedrich Leisch&lt;/a&gt;, one of the champions of reproducibility! To learn more about Sweave first &lt;a href=&#34;http://stat.epfl.ch/webdav/site/stat/shared/Regression/EPFL-Sweave-powerdot.pdf&#34;&gt;read this pdf&lt;/a&gt; by Nicola Sartori. This is another &lt;a href=&#34;http://users.stat.umn.edu/~geyer/Sweave/foo.pdf&#34;&gt;Sweave demo&lt;/a&gt; by Charles J Geyer. Check out this great &lt;a href=&#34;http://www.johndcook.com/troubleshooting_sweave.html&#34;&gt;Windows Sweave troubleshooting page&lt;/a&gt; by John D Cook.&lt;/li&gt;
-&lt;li&gt;Building R packages from source. You will definitely need &lt;a href=&#34;http://cran.fhcrc.org/bin/windows/Rtools/&#34;&gt;Rtools&lt;/a&gt; installed. I would also install &lt;a href=&#34;http://qpdf.sourceforge.net/&#34;&gt;QPDF&lt;/a&gt; which can be used by R to compress your pdf files, which is a good thing if you want to have a small-sized tarball. Last but not least, check out &lt;a href=&#34;http://robjhyndman.com/researchtips/building-r-packages-for-windows/&#34;&gt;Building R packages for Windows&lt;/a&gt; by Rob J Hyndman.&lt;/li&gt;
-&lt;li&gt;Learn to modify your PATH! Check 1.3 from the previous link by Rob J Hyndman. If you are going to use Sweave, it&amp;#8217;s best to add to your PATH the path for the directory containing your Sweave.sty file so that you won&amp;#8217;t need to copy it to every single directory. This is why it pays off to do an R custom installation and put it in C:/R/R-current-version or something like that instead of C:/Program Files/ bla bla with spaces. It used to be more important a few years ago. Also, I created a sw.bat file and put it somewhere where my PATH would find it. That sw.bat file ran Sweave, pdflatex twice, then bibtex and finally opened the pdf file.&lt;/li&gt;
-&lt;li&gt;PDF viewer for LaTeX files. I only learnt about pdf sync and the like a year ago. You should google how to set this up with SumatraPDF (Adobe Acrobat doesn&amp;#8217;t work!).&lt;/li&gt;
-&lt;li&gt;Version control: &lt;a href=&#34;http://mercurial.selenic.com/&#34;&gt;Mercurial&lt;/a&gt;. It&amp;#8217;s very easy to use and you can get an account at &lt;a href=&#34;https://bitbucket.org/&#34;&gt;Bitbucket.org&lt;/a&gt; with unlimited number of private repositories if you have an academic email. Even if you are not doing a collaborative project, you will love using a version control system! It will clean up your directories very nicely and will help you become more organized. Learning a few commands is nothing compared to having lots of files with _v1 v_2, etc at the end. Check out the &lt;a href=&#34;http://mercurial.selenic.com/guide/&#34;&gt;Mercurial guide&lt;/a&gt; to get started. Note that for windows instead of customizing your .hgrc file you will customize a mercurial.ini file.&lt;/li&gt;
-&lt;li&gt;Presentations: both PowerPoint and &lt;a href=&#34;http://en.wikipedia.org/wiki/Beamer_(LaTeX)&#34;&gt;Beamer&lt;/a&gt; (normally with Sweave too). Rarely I use &lt;a href=&#34;https://docs.google.com&#34;&gt;Google Docs&lt;/a&gt; for this.&lt;/li&gt;
-&lt;li&gt;Office: Either Microsoft Office or &lt;a href=&#34;http://www.openoffice.org/&#34;&gt;OpenOffice&lt;/a&gt; (free).&lt;/li&gt;
-&lt;li&gt;Poster creator: &lt;a href=&#34;http://www.postergenius.com/cms/index.php&#34;&gt;PosterGenius&lt;/a&gt; (academic discount price). It was very easy to use and I would surely give the free trial version a go. It adds a watermark, but well, you will appreciate the time you save compared to using PowerPoint. I guess that &lt;a href=&#34;http://www.adobe.com/products/photoshop.html&#34;&gt;Adobe Photoshop&lt;/a&gt; is another option, but I&amp;#8217;ve only used it to edit photos here and there, not to make a whole poster. The most I did was create &lt;a href=&#34;https://picasaweb.google.com/lh/photo/NUiUno0H6MZ8dfTN8ZqF9yRO-Af4bmaijyeT4dbBml0?feat=embedwebsite&#34;&gt;this&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;To de-compress RAR files: &lt;a href=&#34;http://www.win-rar.com/start.html?&amp;amp;L=0&#34;&gt;WinRAR&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;Anti-spyware: &lt;a href=&#34;http://www.avast.com/free-antivirus-download&#34;&gt;Avast&lt;/a&gt; (free version). I normally keep it in silent (gaming) mode so it doesn&amp;#8217;t show pop ups.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.cccp-project.net/&#34;&gt;CCCP codec pack&lt;/a&gt; which includes the Media Player Classic. Great for watching video files and dumping the crappy Windows Media Player.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Linux (Ubuntu)&lt;/p&gt;
-
-&lt;p&gt;Ubuntu provides Linux distributions that are very user friendly and that look much like Mac OS does now. You&amp;#8217;ll find it easy to run multi-core programs which were a pain to do with Windows. Beware that even if you use Ubuntu you will need to learn stuff like how to compile. Also, please check before you install that your computer is supported. For example, some laptops with very new video cards might not work properly. That being said, with Ubuntu you will feel very at ease working in an area like mine (genomics) because a lot of the software runs in Linux (normally in a cluster, but you can test in your lap).&lt;/p&gt;
-&lt;p&gt;You will want to check and/or keep for reference &lt;a href=&#34;http://faculty.ucr.edu/~tgirke/Documents/UNIX/linux_manual.html&#34;&gt;LINUX Essentials&lt;/a&gt; by Thomas Girke (more from him below), &lt;a href=&#34;http://freeengineer.org/learnUNIXin10minutes.html&#34;&gt;Learn Linux in 10 minutes&lt;/a&gt;, &lt;a href=&#34;http://www.linux-tutorial.info/toc&#34;&gt;The Linux tutorial&lt;/a&gt;, and &lt;a href=&#34;http://www.basicconfig.com/linux/vi&#34;&gt;Linux vi editor tutorial&lt;/a&gt;.  &lt;/p&gt;
-* If you are going to use Linux (Ubuntu) at some point you will want to compile something from source and find out that you are missing a dependency. That&amp;#8217;s when I google, then use&amp;#160;:
-1. apt-cache search something
-2. sudo apt-get install something 
-
-* Note that you will frequently need the yyyy-devel version which includes c headers and stuff that you need to compile.
-* You will find a lot of things through the package installer (forgot what it&amp;#8217;s called). Learn the pseudonym for your Ubuntu version so you select the appropriate version of the software in case that you are downloading it from another place.
-* SSH/SCP: terminal commands :) I just wanted to mention that rsync is a nice command for synching folders (recursively too) between your computer and say the cluster.
-* Version control: Mercurial again. The configuration file is .hgrc not mercurial.ini
-* Text editor: Nedit or Emacs. Vi when doing in-terminal modifications.
-* You can get R through aptitude or if you want the very latest (or a devel version) you&amp;#8217;ll have to compile it. The first time you will have to install plenty of dependencies, but it&amp;#8217;s good practice.
-* Office: go with OpenOffice.
-* LaTeX: install the texlive distribution. I normally get everything so that later when I&amp;#8217;m trying to use a TeX package I won&amp;#8217;t have to go install it (which is what MiKTeX does for you in Windows). 
-* Video player: VLC.
-
-&lt;p&gt;Mac&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Terminal: &lt;a href=&#34;http://www.iterm2.com&#34;&gt;iTerm2&lt;/a&gt;. Mac comes with a native terminal, but iTerm2 has other nice functions like tabs and more options to customize it. Check &lt;a href=&#34;http://code.google.com/p/iterm2/wiki/ColorGallery&#34;&gt;this&lt;/a&gt; for free color palettes. I like the Homebrew one from &lt;a href=&#34;https://github.com/mbadolato/iTerm2-Color-Schemes&#34;&gt;here&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;LaTeX and R editor: &lt;a href=&#34;http://aquamacs.org/&#34;&gt;Aquamacs&lt;/a&gt; is a version of Emacs that works great. However, as I discussed in the Windows section I&amp;#8217;m moving away from Emacs. Well, to be honest, I don&amp;#8217;t want to put the time to learn how to customize Emacs properly and do amazing stuff with it like Kasper does. Recently (since June) I&amp;#8217;ve been using &lt;a href=&#34;http://macromates.com/&#34;&gt;TextMate&lt;/a&gt;. It has this thing called &amp;#8220;Bundles&amp;#8221; which provides different hotkeys depending on the file you are editing. Meaning that for Rnw files you can Sweave them directly there and for R files you can either send the code to R or to the terminal (much like Notepad++). The one thing is that it is not free BUT there is a 2.0 alpha release &lt;a href=&#34;https://github.com/textmate/textmate&#34;&gt;available on github&lt;/a&gt; that you can compile. &lt;a href=&#34;http://developers.slashdot.org/story/12/08/09/1947234/textmate-2-released-as-open-source&#34;&gt;This lengthly discussion&lt;/a&gt; can be worth reading if you want to know more about the 2.0 version and the future of TextMate. Someone said there that &lt;a href=&#34;http://www.sublimetext.com/&#34;&gt;Sublime&lt;/a&gt; might be replacing TextMate but I haven&amp;#8217;t looked for any R integration in it. Anyhow, I liked how TextMate included an auto-spell checker that recognizes Sweave/LaTeX code from the box :)&lt;/li&gt;
-&lt;li&gt;Package installer: &lt;a href=&#34;http://www.macports.org/&#34;&gt;MacPorts&lt;/a&gt;. It&amp;#8217;s kind of similar to aptitude from Linux but it&amp;#8217;s Mac only. Note that you will definitely need to get &lt;a href=&#34;https://developer.apple.com/xcode/&#34;&gt;XCode&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;PDF viewer: also Adobe Acrobat Pro for the reasons mentioned previously.&lt;/li&gt;
-&lt;li&gt;PDF viewer for LaTeX: TeXShop which I think comes with the MacTeX distribution. It has the forward sync that Alyssa mentions in her blog.&lt;/li&gt;
-&lt;li&gt;Text editor: &lt;a href=&#34;http://www.barebones.com/products/TextWrangler/&#34;&gt;TextWrangler&lt;/a&gt;. Has several of the functions I talked about in the Notepad++ section like search and replace with regular expressions. It definitely outperforms the native text editor.&lt;/li&gt;
-&lt;li&gt;SCP: &lt;a href=&#34;http://cyberduck.ch&#34;&gt;Cyberduck&lt;/a&gt;. I haven&amp;#8217;t tried others, but it works and I&amp;#8217;m happy with it. I also use the terminal to push/retrieve files like I would do in Linux. Same for ssh and Mercurial.&lt;/li&gt;
-&lt;li&gt;Version control: Mercurial. Note that you might have to add a site key (like bitbucket&amp;#8217;s) to your .hgrc file so it doesn&amp;#8217;t complain when pushing files.&lt;/li&gt;
-&lt;li&gt;Productivity: &lt;a href=&#34;http://itunes.apple.com/us/app/my-little-pomodoro/id412699095?mt=12&#34;&gt;My Little Pomodoro&lt;/a&gt; available from the Mac app store. I love it for following the Pomodoro technique (you can use any other timer that you like) which Hilary introduced me to. It works like a charm when you are under stress and need to be productive. After all, I&amp;#8217;m prone to escape the stress and distract myself, so this helps me keep my distractions limited. I&amp;#8217;ve also found that when I&amp;#8217;m stuck in a problem and I take the 5 min break thinking about something else, well, the machine keeps working and when I come back from the break I have a new idea to try out.&lt;/li&gt;
-&lt;li&gt;Video player: &lt;a href=&#34;http://www.videolan.org/vlc/index.html&#34;&gt;VLC&lt;/a&gt; (includes codecs).&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Other stuff&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Browser: I used to love&lt;a href=&#34;http://www.mozilla.org/en-US/&#34;&gt;Mozilla Firefox&lt;/a&gt; (it has a nice sync functionality) but I&amp;#8217;ve moved to &lt;a href=&#34;https://www.google.com/intl/en/chrome/browser/&#34;&gt;Google Chrome&lt;/a&gt;. It&amp;#8217;s kind of a shame that Google started to compete with Mozilla, but oh well bye bye 2007. I use Chrome because it works a tad bit better with other Google tools, but that&amp;#8217;s it. It also syncs your bookmarks. Both work great and &lt;a href=&#34;http://www.opera.com/&#34;&gt;Opera&lt;/a&gt; is still my favorite backup browser. I guess anything but Internet Explorer and Safari.&lt;/li&gt;
-&lt;li&gt;Learning R. I would definitely check Thomas Girke &lt;a href=&#34;http://manuals.bioinformatics.ucr.edu/home/programming-in-r&#34;&gt;Programming in R&lt;/a&gt; page and Frank McCown&amp;#8217;s &lt;a href=&#34;http://www.harding.edu/fmccown/R/&#34;&gt;Producing Simple Graphs with R&lt;/a&gt; tutorial. I have my own share of R related slides &lt;a href=&#34;http://www.biostat.jhsph.edu/~lcollado/teaching.html#.UDblsWie5Ng&#34;&gt;here&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;Learning Bioconductor. Thomas Girke again wrote a great resource for learning how to use &lt;a href=&#34;http://manuals.bioinformatics.ucr.edu/home/ht-seq#Introduction&#34;&gt;Bioconductor for analyzing high-throughput sequencing data files&lt;/a&gt;. Bioconductor hosts packages for other technologies/problems, so I would also look at it&amp;#8217;s own help pages like the Workflows section. I also like &lt;a href=&#34;http://www2.warwick.ac.uk/fac/sci/moac/people/students/peter_cock/r&#34;&gt;Peter&amp;#8217;s R programming pages&lt;/a&gt;, specially the heatmap section. I have my own share of Bioconductor related slides &lt;a href=&#34;http://www.biostat.jhsph.edu/~lcollado/teaching.html#.UDblsWie5Ng&#34;&gt;here&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;Learning LaTeX. I learnt the hard way I guess&amp;#8230; I learnt by comparing Sweave files and their output and seeing what changed if I modified the code. Nowadays, I would very highly recommend that you first check the &lt;a href=&#34;http://www.uwlax.edu/faculty/matchett/late/late.htm&#34;&gt;How to Use LaTeX&lt;/a&gt; short series of exercises/files by Andrew Matchett. The &lt;a href=&#34;http://tobi.oetiker.ch/lshort/lshort.pdf&#34;&gt;Not so short introduction to LaTeX&lt;/a&gt; is a great resource. For very specific symbols, check the &lt;a href=&#34;http://www.ung.si/~sstanic/teaching/CIS/LaTeX_symbols-a4.pdf&#34;&gt;Comprehensive LaTeX symbol list&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;Using a SGE (Sun Grid Engine) cluster. For some basic commands look &lt;a href=&#34;http://www.rcc.uh.edu/hpc-docs/49-using-torque-to-submit-and-monitor-jobs.html&#34;&gt;here&lt;/a&gt;. For the Hopkins cluster, definitely read &lt;a href=&#34;http://www.biostat.jhsph.edu/bit/cluster-usage.html&#34;&gt;this&lt;/a&gt;. Finally, for running array jobs check &lt;a href=&#34;https://wiki.duke.edu/display/SCSC/SGE+Array+Jobs&#34;&gt;this&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;LaTeX and math. You should definitely &lt;a href=&#34;http://en.wikibooks.org/wiki/LaTeX/Mathematics&#34;&gt;read the wiki books page for this topic&lt;/a&gt;. I kept going back to it over my first year at Hopkins when I really needed to learn all this. The &lt;a href=&#34;http://en.wikibooks.org/wiki/LaTeX/Theorems&#34;&gt;theorems page&lt;/a&gt; is nice, but not a must. Same for &lt;a href=&#34;http://www.stat.ubc.ca/~webmaste/howto/editor/texerr.html&#34;&gt;Common TeX/LaTeX errors&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;Figures in LaTeX. &lt;a href=&#34;http://www.hep.manchester.ac.uk/u/jenny/jcwdocs/latex/figures.html&#34;&gt;Here is a basic overview &lt;/a&gt;but the &lt;a href=&#34;http://en.wikibooks.org/wiki/LaTeX/Floats,_Figures_and_Captions&#34;&gt;wiki books page for the topic&lt;/a&gt; is a must check.&lt;/li&gt;
-&lt;li&gt;Accents in LaTeX. Check this &lt;a href=&#34;http://fontignie.blogspot.com/2006/04/accents-in-latex.html&#34;&gt;blog post&lt;/a&gt; by &amp;#8220;Bugs and Solutions&amp;#8221;.&lt;/li&gt;
-&lt;li&gt;Blogging R code: &lt;a href=&#34;http://www.inside-r.org/pretty-r&#34;&gt;Pretty-R&lt;/a&gt;. I haven&amp;#8217;t really used it but it surely looks pretty!!&lt;/li&gt;
-&lt;li&gt;Cloud storage: &lt;a href=&#34;https://www.dropbox.com/&#34;&gt;Dropbox&lt;/a&gt; works great and tons of iPad apps have an option to backup to it which works great with my note-taking apps. &lt;a href=&#34;https://drive.google.com/&#34;&gt;Google Drive&lt;/a&gt; and others are also around.&lt;/li&gt;
-&lt;li&gt;Paper (biobliography) organizer: &lt;a href=&#34;http://www.zotero.org/&#34;&gt;Zotero&lt;/a&gt; is amazing! I simply love it :) I pull the bibliography from pubmed or the magazine page itself and to avoid any hassle, I have a &amp;#8220;papers&amp;#8221; folder in my Dropbox where I only organize them by last name. Then if I want to find something, I go to Zotero and look use it&amp;#8217;s great search function. I rarely use it to annotate webpages and I hear that it can now upload files to the cloud. Anyhow, I first used it in my Windows/Ubuntu dual setup. You can use it as a Zotero Firefox plugin or as Zotero stand-alone with Zotero Connector (Google Chrome for example). Finally, Zotero can export your bibliography into a BibTex file :)&lt;/li&gt;
-&lt;li&gt;Blog: &lt;a href=&#34;http://www.tumblr.com/dashboard&#34;&gt;Tumblr&lt;/a&gt;. Some like WordPress better, but I like how Tumblr is not only a blogging platform but also a social media tool. I&amp;#8217;ve written &lt;a href=&#34;http://fellgernon.tumblr.com/tagged/Blog#.UDbiDGie5Ng&#34;&gt;several posts before on how to customize your blog&lt;/a&gt; and other blog related tools. But a must in my point of view is to get your RSS feed &amp;#8220;burnt&amp;#8221; with &lt;a href=&#34;http://feedburner.google.com&#34;&gt;feedburner&lt;/a&gt;. It has lots of interesting tools and is much better than a plain XML RSS feed.&lt;/li&gt;
-&lt;li&gt;Notes: &lt;a href=&#34;http://itunes.apple.com/us/app/notability-take-notes-annotate/id360593530?mt=8&#34;&gt;Notability&lt;/a&gt; iPad app. Great stuff and doesn&amp;#8217;t blow up on you (aka, doesn&amp;#8217;t lose your notes) like &lt;a href=&#34;http://notesplusapp.com/&#34;&gt;NotesPlus&lt;/a&gt; did to me. Anyhow, note-taking in my iPad with auto-cloud backups greatly changed my classroom experience. THere are other apps like this one out there.&lt;/li&gt;
-&lt;li&gt;I use &lt;a href=&#34;http://itunes.apple.com/us/app/voice-recorder-hd/id373045717?mt=8&#34;&gt;Voice Recorder HD&lt;/a&gt; iPad app for recording lectures. It&amp;#8217;s useful when you miss something the professor went over quickly and you are trying to understand it later on.&lt;/li&gt;
-&lt;li&gt;Email: &lt;a href=&#34;http://www.gmail.com&#34;&gt;Gmail&lt;/a&gt; with keyboard shortcuts enabled. I also use &amp;#8220;Canned Responses&amp;#8221; from the Google Labs to specify my signature. I have an academic one, one for Mexico, etc.&lt;/li&gt;
-&lt;li&gt;Send emails later: &lt;a href=&#34;http://www.boomeranggmail.com/&#34;&gt;Boomerang for Gmail&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;Calendar: &lt;a href=&#34;https://www.google.com/calendar&#34;&gt;Google Calendar&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;Task manager: Google Tasks from within Google Calendar (not from Gmail, which is doable too) with &lt;a href=&#34;http://itunes.apple.com/us/app/gotasks-google-tasks-client/id389113399?mt=8&#34;&gt;GoTasks&lt;/a&gt; in my iPhone.&lt;/li&gt;
-&lt;li&gt;RSS reader: &lt;a href=&#34;http://www.google.com/reader/view/&#34;&gt;Google Reader&lt;/a&gt;. Works great. By the way, Orbvious interest (below) also works with Google Reader and has a customizable hotkey for it.&lt;/li&gt;
-&lt;li&gt;Mark pages to read later: &lt;a href=&#34;http://shalom.craimer.org/projects/orbviousinterest/&#34;&gt;Orbvious Interest&lt;/a&gt; for Google Chrome. Great stuff! It syncs between computers and you can use Pocket in your iPad to view the links. &lt;/li&gt;
-&lt;li&gt;Maps: &lt;a href=&#34;https://maps.google.com/&#34;&gt;Google Maps&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;Video conversation: &lt;a&gt;Skype&lt;/a&gt;, Google Hangouts. If I&amp;#8217;m going to help someone remotely, then I use &lt;a href=&#34;http://www.teamviewer.com/en/index.aspx&#34;&gt;TeamViewer&lt;/a&gt; which is free for non-profit purposes. With it you can move their mouse, which makes things much easier for support issues!&lt;/li&gt;
-&lt;li&gt;Photos: &lt;a href=&#34;http://picasa.google.com/&#34;&gt;Picasa&lt;/a&gt;. I pay the 5 bucks a year for 20&amp;#160;GB on Picasa Web Albums so all my photos are on the cloud.&lt;/li&gt;
-&lt;li&gt;Dictionary: &lt;a href=&#34;http://dictionary.die.net/&#34;&gt;die.net&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Network visualizer/analyzer: &lt;a href=&#34;http://www.cytoscape.org/&#34;&gt;Cytoscape&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://bioinformatics.psb.ugent.be/webtools/Venn/&#34;&gt;Venn diagrams&lt;/a&gt; with more than 2 sets.&lt;/li&gt;
-&lt;li&gt;Setting up your website. I pretty much followed Alyssa&amp;#8217;s instructions and got my CSS template for &lt;a href=&#34;http://www.biostat.jhsph.edu/~lcollado/#.UDbpKmie5Ng&#34;&gt;my academic page&lt;/a&gt; from &lt;a href=&#34;http://www.freecsstemplates.org/&#34;&gt;FCT&lt;/a&gt;. Then I used simple html to modify it.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;I pretty much dumped a ton of my bookmarks in this huuuuge post! Well, I hope that it will be useful to someone. At least now I&amp;#8217;m happy to have contributed to Hilary&amp;#8217;s computing-resources-post drive.&lt;/p&gt;
-</description>
+      <guid>http://lcolladotor.github.io/2012/08/23/setting-up-your-computer-for/</guid>
+      <description>Jumping on the train set by Hilary Parker &amp;#8220;The Setup (Part 1)&#34; and Alyssa Frazee &amp;#8220;my software/hardware setup&amp;#8221;, I&amp;#8217;m going to share my setup and hopefully add something new. They both did a great job already, so make sure you read their posts!
+I have some experience with all three main OS: Windows, Linux and Mac. That being said, I know some of the basic stuff for each but I surely use Google very frequently to get help.</description>
     </item>
     
     <item>
       <title>Are you good at programming? You probably practice a lot!</title>
-      <link>http://lcolladotor.github.io/2011/12/10/are-you-good-at-programming-you-probably-practice-a</link>
+      <link>http://lcolladotor.github.io/2011/12/10/are-you-good-at-programming-you-probably-practice-a/</link>
       <pubDate>Sat, 10 Dec 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://lcolladotor.github.io/2011/12/10/are-you-good-at-programming-you-probably-practice-a</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;http://bps-occupational-digest.blogspot.com/2011/11/how-to-get-to-great-programming-skills.html?utm_source=feedburner&amp;amp;utm_medium=feed&amp;amp;utm_campaign=Feed%3A+ResearchBloggingAllEnglish+%28Research+Blogging+-+English+-+All+Topics%29&amp;amp;utm_content=Google+Reader&#34;&gt;What makes a great programmer?&lt;/a&gt; I would have said training, motivation, a good and efficient framework for continuous learning from others such as reading blogs like &lt;a href=&#34;http://www.r-bloggers.com/&#34;&gt;R-bloggers&lt;/a&gt; (if you are an R programmer). Well, on the Occupational Digest blog they commented a paper where they found that the best predictor is programming knowledge. This is acquired through years of practice and makes sense. After all, even if you are a gifted person for something, if you don&amp;#8217;t practice and learn from others you won&amp;#8217;t get anywhere. So, welcome to school for life! :P&lt;/p&gt;
-</description>
+      <guid>http://lcolladotor.github.io/2011/12/10/are-you-good-at-programming-you-probably-practice-a/</guid>
+      <description>What makes a great programmer? I would have said training, motivation, a good and efficient framework for continuous learning from others such as reading blogs like R-bloggers (if you are an R programmer). Well, on the Occupational Digest blog they commented a paper where they found that the best predictor is programming knowledge. This is acquired through years of practice and makes sense. After all, even if you are a gifted person for something, if you don&amp;#8217;t practice and learn from others you won&amp;#8217;t get anywhere.</description>
     </item>
     
   </channel>

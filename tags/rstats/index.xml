@@ -2,52 +2,23 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Rstats on L. Collado-Torres</title>
-    <link>http://lcolladotor.github.io/tags/rstats/index.xml</link>
+    <link>http://lcolladotor.github.io/tags/rstats/</link>
     <description>Recent content in Rstats on L. Collado-Torres</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>&amp;copy; 2011-2017 Leonardo Collado Torres under (CC) BY-NC-SA</copyright>
-    <atom:link href="/tags/rstats/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>&amp;copy; 2011-2018 Leonardo Collado Torres under (CC) BY-NC-SA</copyright>
+    <lastBuildDate>Mon, 01 Oct 2012 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://lcolladotor.github.io/tags/rstats/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>JHSPH-Biostat through Coursera</title>
-      <link>http://lcolladotor.github.io/2012/10/01/JHSPH-Biostat-through-Coursera</link>
+      <link>http://lcolladotor.github.io/2012/10/01/JHSPH-Biostat-through-Coursera/</link>
       <pubDate>Mon, 01 Oct 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://lcolladotor.github.io/2012/10/01/JHSPH-Biostat-through-Coursera</guid>
-      <description>&lt;p&gt;Have you heard of online education? If you are in the US or Mexico I&amp;#8217;m sure that you have seen some ads about online universities. Well, that&amp;#8217;s not the type of education I&amp;#8217;m talking about. I&amp;#8217;m talking about free high-quality education. &lt;/p&gt;
-&lt;p&gt;For some years, the top option has been the &lt;strong&gt;O&lt;/strong&gt;pen &lt;strong&gt;C&lt;/strong&gt;ourse&lt;strong&gt;w&lt;/strong&gt;are (OCW) organized under the &lt;a href=&#34;http://www.ocwconsortium.org/&#34;&gt;Open Courseware Consortium&lt;/a&gt; (OCWC). Back in 2009 I was pushed my undergrad (LCG-UNAM) to design and teach OCW-compliant courses. I even taught a &lt;a href=&#34;http://www.lcg.unam.mx/~lcollado/B/index_en.html&#34;&gt;course on R/Bioconductor&lt;/a&gt; and thought of it as a pilot OCW course. The first seven classes were video recorded. But that project hit a wall because many of the biology professors used slides that heavily relied on copyrighted material. For OCW courses you have to own the copyright of the material that you use (or get permission), so just the idea of having to re-do all the diagrams and figures was overwhelming. This hasn&amp;#8217;t stopped some big universities like &lt;a href=&#34;http://ocw.mit.edu/index.htm&#34;&gt;MIT from publishing OCW-compliant courses&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Recently there&amp;#8217;s been talk of the new horse in the race: &lt;a href=&#34;https://www.coursera.org/&#34;&gt;Coursera&lt;/a&gt;. What is it? Well, &lt;a href=&#34;https://www.coursera.org/about&#34;&gt;according to themselves&lt;/a&gt;:&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;We are a social entrepreneurship company that partners with the top universities in the world to offer courses online for anyone to take, for free. We envision a future where the top universities are educating not only thousands of students, but millions. Our technology enables the best professors to teach tens or hundreds of thousands of students.&lt;/p&gt;
-&lt;p&gt;Through this, we hope to give everyone access to the world-class education that has so far been available only to a select few. We want to empower people with education that will improve their lives, the lives of their families, and the communities they live in.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;So far, the motivation is similar to the OCW movement. However, one very big difference is that Coursera &lt;strong&gt;does offer certificates&lt;/strong&gt;. Something which OCW courses do not. For example, &lt;a href=&#34;http://ocw.mit.edu/about/&#34;&gt;MIT-OCW&lt;/a&gt; says:&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;OCW is not an MIT education.&lt;/li&gt;
-&lt;li&gt;OCW does not grant degrees or certificates.&lt;/li&gt;
-&lt;li&gt;OCW does not provide access to MIT faculty.&lt;/li&gt;
-&lt;li&gt;Materials may not reflect entire content of the course.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Coursera courses do provide the entire content of the course. Well, this is slightly tricky since some professors use the same base material in the university-in-class courses but expand it beyond what is available through Coursera. Thus in a sense Coursera are more accesible courses with lesser requirements than the in-class versions. But compared to OCW, you have homeworks (which are graded) and can communicate with the faculty through the use of forums.&lt;/p&gt;
-&lt;p&gt;One advantage of OCW courses is that you can look at them whenever you want. For Coursera ones you have to sign up (and thus register to their system) and they are open for certain periods of time.&lt;/p&gt;
-&lt;p&gt;Currently, the Biostatistics Department at JHSPH is offering three courses through Coursera. These are &lt;a href=&#34;https://www.coursera.org/course/compdata&#34;&gt;Computing for Data Analysis&lt;/a&gt; by &lt;a href=&#34;http://www.biostat.jhsph.edu/~rpeng/&#34;&gt;Roger D. Peng&lt;/a&gt;, &lt;a href=&#34;https://www.coursera.org/course/biostats&#34;&gt;Mathematical Biostatistics Boot Camp&lt;/a&gt; by &lt;a href=&#34;http://www.bcaffo.com/&#34;&gt;Brian Caffo&lt;/a&gt;, and &lt;a href=&#34;https://www.coursera.org/course/dataanalysis&#34;&gt;Data Analysis&lt;/a&gt; by &lt;a href=&#34;http://www.biostat.jhsph.edu/~jleek/&#34;&gt;Jeffrey Leek&lt;/a&gt;. The first two are introductory courses to using R and Biostatistics, respectively. I&amp;#8217;m taking the in-class versions and highly recommend them to anyone that wants to get started in either topic. They both involve youtube videos and practice exercises. The videos themselves are great since they rehearse what they are going to say, used a high-quality audio recording room, tuned the audio, and included highlights in the slides so you can follow them easily. &lt;strong&gt;Right now you can go and sign up for these two courses!&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;The third one, Data Analysis, is more advanced and I&amp;#8217;ll take it in-class next year. In addition, for now the sign up is closed for 2012 (you can go ahead and save a spot for 2013). &lt;/p&gt;
-&lt;p&gt;All of these courses have a couple thousands students registered, which is great! I&amp;#8217;m sure that the great majority will greatly benefit from them. To finish my post, I&amp;#8217;ll leave you with their short introduction videos, which will tell you more than what I can via text!&lt;/p&gt;
-&lt;p&gt;Enjoy!&lt;/p&gt;
-
-&lt;p&gt;&lt;iframe frameborder=&#34;0&#34; height=&#34;253&#34; src=&#34;http://www.youtube.com/embed/gk6E57H6mTs&#34; width=&#34;450&#34;&gt;&lt;/iframe&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;iframe frameborder=&#34;0&#34; height=&#34;253&#34; src=&#34;http://www.youtube.com/embed/ekdpaf_WT_8&#34; width=&#34;450&#34;&gt;&lt;/iframe&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;iframe frameborder=&#34;0&#34; height=&#34;253&#34; src=&#34;http://www.youtube.com/embed/-lutj1vrPwQ&#34; width=&#34;450&#34;&gt;&lt;/iframe&gt;&lt;/p&gt;
-</description>
+      <guid>http://lcolladotor.github.io/2012/10/01/JHSPH-Biostat-through-Coursera/</guid>
+      <description>Have you heard of online education? If you are in the US or Mexico I&amp;#8217;m sure that you have seen some ads about online universities. Well, that&amp;#8217;s not the type of education I&amp;#8217;m talking about. I&amp;#8217;m talking about free high-quality education. For some years, the top option has been the Open Courseware (OCW) organized under the Open Courseware Consortium (OCWC). Back in 2009 I was pushed my undergrad (LCG-UNAM) to design and teach OCW-compliant courses.</description>
     </item>
     
   </channel>

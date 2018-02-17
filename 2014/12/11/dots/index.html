@@ -6,48 +6,113 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="theme" content="hugo-academic">
-  <meta name="generator" content="Hugo 0.18.1" />
+  <meta name="generator" content="Hugo 0.36.1" />
   <meta name="author" content="Leonardo Collado Torres">
-  <meta name="description" content="Data Scientist">
 
   
   
   
-    
-  
   
     
-    
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/tomorrow.min.css">
+      
     
   
-  <link rel="stylesheet" href="/css/bootstrap.min.css">
-  <link rel="stylesheet" href="/css/font-awesome.min.css">
-  <link rel="stylesheet" href="/css/academicons.min.css">
-  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,700|Merriweather|Roboto+Mono">
-  <link rel="stylesheet" href="/css/hugo-academic.css">
+  <meta name="description" content="As a user Imagine that you are starting to learn how to use a specific R package, lets call it foo. You will look at the vignette (if there is one), use help(package = foo), or look at the reference manual (for example, devtools&#39; ref man). Eventually, you will open the help page for the function(s) you are interested in using.
+?function_I_want_to_use  In many packages, there is a main use case that is addressed by the package.">
+
+  
+  <link rel="alternate" hreflang="en-us" href="http://lcolladotor.github.io/2014/12/11/dots/">
+
   
 
+
+  
+
+  
+  
+  <meta name="theme-color" content="#0095eb">
+  
+  
+  
+  
+    
+  
+  
+    
+    
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/tomorrow.min.css">
+    
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha512-6MXa8B6uaO18Hid6blRMetEIoPqHf7Ux1tnyIQdpt9qI5OACx7C+O3IVTr98vwGnlcg0LOLa02i9Y1HpVhlfiw==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.1/css/academicons.min.css" integrity="sha512-NThgw3XKQ1absAahW6to7Ey42uycrVvfNfyjqcFNgCmOCQ5AR4AO0SiXrN+8ZtYeappp56lk1WtvjVmEa+VR6A==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" integrity="sha256-ygkqlh3CYSUri3LhQxzdcm0n1EQvH2Y+U5S2idbLtxs=" crossorigin="anonymous">
+  
+  
+  
+  
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:400,700%7cRoboto:400,400italic,700%7cRoboto&#43;Mono">
+  
+  <link rel="stylesheet" href="/styles.css">
+  
+
+  
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-45299226-1', 'auto');
+      ga('require', 'eventTracker');
+      ga('require', 'outboundLinkTracker');
+      ga('require', 'urlChangeTracker');
+      ga('send', 'pageview');
+    </script>
+    <script async src="//www.google-analytics.com/analytics.js"></script>
+    
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js" integrity="sha512-HUmooslVKj4m6OBu0OgzjXXr+QuFYy/k7eLI5jdeEy/F4RSgMn6XRWRGkFi5IFaFgy7uFTkegp3Z0XnJf3Jq+g==" crossorigin="anonymous"></script>
+    
+  
+
+  
   <link rel="alternate" href="http://lcolladotor.github.io/index.xml" type="application/rss+xml" title="L. Collado-Torres">
   <link rel="feed" href="http://lcolladotor.github.io/index.xml" type="application/rss+xml" title="L. Collado-Torres">
+  
 
+  <link rel="manifest" href="/site.webmanifest">
   <link rel="icon" type="image/png" href="/img/icon.png">
-  <link rel="apple-touch-icon" type="image/png" href="/img/apple-touch-icon.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
 
-  <link rel="canonical" href="http://lcolladotor.github.io/2014/12/11/dots">
+  <link rel="canonical" href="http://lcolladotor.github.io/2014/12/11/dots/">
+
+  <meta property="twitter:card" content="summary_large_image">
+  
+  <meta property="twitter:site" content="@fellgernon">
+  <meta property="twitter:creator" content="@fellgernon">
+  
+  <meta property="og:site_name" content="L. Collado-Torres">
+  <meta property="og:url" content="http://lcolladotor.github.io/2014/12/11/dots/">
+  <meta property="og:title" content="Use hidden advanced arguments for user-friendly functions | L. Collado-Torres">
+  <meta property="og:description" content="As a user Imagine that you are starting to learn how to use a specific R package, lets call it foo. You will look at the vignette (if there is one), use help(package = foo), or look at the reference manual (for example, devtools&#39; ref man). Eventually, you will open the help page for the function(s) you are interested in using.
+?function_I_want_to_use  In many packages, there is a main use case that is addressed by the package.">
+  <meta property="og:locale" content="en-us">
+  
+  <meta property="article:published_time" content="2014-12-11T00:00:00&#43;00:00">
+  
+  <meta property="article:modified_time" content="2014-12-11T00:00:00&#43;00:00">
+  
 
   
 
   <title>Use hidden advanced arguments for user-friendly functions | L. Collado-Torres</title>
 
 </head>
-<body id="top" data-spy="scroll" data-target="#navbar-main" data-offset="71">
+<body id="top" data-spy="scroll" data-target="#toc" data-offset="71" >
 
 <nav class="navbar navbar-default navbar-fixed-top" id="navbar-main">
   <div class="container">
 
     
     <div class="navbar-header">
+      
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
               data-target=".navbar-collapse" aria-expanded="false">
         <span class="sr-only">Toggle navigation</span>
@@ -55,6 +120,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
+      
       <a class="navbar-brand" href="/">L. Collado-Torres</a>
     </div>
 
@@ -62,104 +128,162 @@
     <div class="collapse navbar-collapse">
 
       
+      
       <ul class="nav navbar-nav navbar-right">
         
 
+        
+        
+        
+        
+        
+          
         
 
         <li class="nav-item">
           <a href="/#about">
             
             <span>Home</span>
+            
           </a>
         </li>
 
         
         
 
+        
+        
+        
+        
+        
+          
         
 
         <li class="nav-item">
           <a href="/#publications_selected">
             
             <span>Publications</span>
+            
           </a>
         </li>
 
         
         
 
+        
+        
+        
+        
+        
+          
         
 
         <li class="nav-item">
           <a href="/#talks">
             
             <span>Talks</span>
+            
           </a>
         </li>
 
         
         
 
+        
+        
+        
+        
+        
+          
         
 
         <li class="nav-item">
           <a href="/#posts">
             
             <span>Posts</span>
+            
           </a>
         </li>
 
         
         
 
+        
+        
+        
+        
         
 
         <li class="nav-item">
           <a href="/#cv">
             
             <span>CV</span>
+            
           </a>
         </li>
 
         
         
 
+        
+        
+        
+        
+        
+          
         
 
         <li class="nav-item">
           <a href="/#teaching">
             
             <span>Teaching</span>
+            
           </a>
         </li>
 
         
         
 
+        
+        
+        
+        
+        
+          
         
 
         <li class="nav-item">
           <a href="/#contact">
             
             <span>Contact</span>
+            
           </a>
         </li>
 
         
         
 
+        
+        
+        
+        
+        
+          
         
 
         <li class="nav-item">
           <a href="/#search">
             
             <span>Search</span>
+            
           </a>
         </li>
 
         
         
+      
+
+      
       </ul>
 
     </div>
@@ -171,21 +295,41 @@
 
   
 
+
   <div class="article-container">
     <h1 itemprop="name">Use hidden advanced arguments for user-friendly functions</h1>
+
     
 
 <div class="article-metadata">
 
   <span class="article-date">
-    <time datetime="2014-12-11 00:00:00 &#43;0000 UTC" itemprop="datePublished">
+    
+    <time datetime="2014-12-11 00:00:00 &#43;0000 UTC" itemprop="datePublished dateModified">
       Thu, Dec 11, 2014
     </time>
   </span>
+  <span itemscope itemprop="author publisher" itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="Leonardo Collado Torres">
+  </span>
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    6 min read
+  </span>
+  
+
+  
+  
+  <span class="middot-divider"></span>
+  <a href="http://lcolladotor.github.io/2014/12/11/dots/#disqus_thread"></a>
+  
 
   
   
   
+  <span class="middot-divider"></span>
   <span class="article-categories">
     <i class="fa fa-folder"></i>
     
@@ -198,52 +342,39 @@
 
   
   
-  
-  <span class="article-tags">
-    <i class="fa fa-tags"></i>
-    
-    <a href="/tags/help">help</a
-    >
-    
-  </span>
-  
-  
-
-  
-  
 <div class="share-box" aria-hidden="true">
   <ul class="share">
     <li>
-      <a class="facebook"
-         href="https://www.facebook.com/sharer.php?u=http%3a%2f%2flcolladotor.github.io%2f2014%2f12%2f11%2fdots"
-         target="_blank">
-        <i class="fa fa-facebook"></i>
-      </a>
-    </li>
-    <li>
       <a class="twitter"
-         href="https://twitter.com/intent/tweet?text=Use%20hidden%20advanced%20arguments%20for%20user-friendly%20functions&amp;url=http%3a%2f%2flcolladotor.github.io%2f2014%2f12%2f11%2fdots"
-         target="_blank">
+         href="https://twitter.com/intent/tweet?text=Use%20hidden%20advanced%20arguments%20for%20user-friendly%20functions&amp;url=http%3a%2f%2flcolladotor.github.io%2f2014%2f12%2f11%2fdots%2f"
+         target="_blank" rel="noopener">
         <i class="fa fa-twitter"></i>
       </a>
     </li>
     <li>
+      <a class="facebook"
+         href="https://www.facebook.com/sharer.php?u=http%3a%2f%2flcolladotor.github.io%2f2014%2f12%2f11%2fdots%2f"
+         target="_blank" rel="noopener">
+        <i class="fa fa-facebook"></i>
+      </a>
+    </li>
+    <li>
       <a class="linkedin"
-         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3a%2f%2flcolladotor.github.io%2f2014%2f12%2f11%2fdots&amp;title=Use%20hidden%20advanced%20arguments%20for%20user-friendly%20functions"
-         target="_blank">
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3a%2f%2flcolladotor.github.io%2f2014%2f12%2f11%2fdots%2f&amp;title=Use%20hidden%20advanced%20arguments%20for%20user-friendly%20functions"
+         target="_blank" rel="noopener">
         <i class="fa fa-linkedin"></i>
       </a>
     </li>
     <li>
       <a class="weibo"
-         href="http://service.weibo.com/share/share.php?url=http%3a%2f%2flcolladotor.github.io%2f2014%2f12%2f11%2fdots&amp;title=Use%20hidden%20advanced%20arguments%20for%20user-friendly%20functions"
-         target="_blank">
+         href="http://service.weibo.com/share/share.php?url=http%3a%2f%2flcolladotor.github.io%2f2014%2f12%2f11%2fdots%2f&amp;title=Use%20hidden%20advanced%20arguments%20for%20user-friendly%20functions"
+         target="_blank" rel="noopener">
         <i class="fa fa-weibo"></i>
       </a>
     </li>
     <li>
       <a class="email"
-         href="mailto:?subject=Use%20hidden%20advanced%20arguments%20for%20user-friendly%20functions&amp;body=http%3a%2f%2flcolladotor.github.io%2f2014%2f12%2f11%2fdots">
+         href="mailto:?subject=Use%20hidden%20advanced%20arguments%20for%20user-friendly%20functions&amp;body=http%3a%2f%2flcolladotor.github.io%2f2014%2f12%2f11%2fdots%2f">
         <i class="fa fa-envelope"></i>
       </a>
     </li>
@@ -255,12 +386,13 @@
 
 </div>
 
+
     <div class="article-style" itemprop="articleBody">
       
 
 <h2 id="as-a-user">As a user</h2>
 
-<p>Imagine that you are starting to learn how to use a specific <code>R</code> package, lets call it <code>foo</code>. You will look at the vignette (if there is one), use <code>help(package = foo)</code>, or look at the reference manual (for example, <a href="http://cran.r-project.org/web/packages/devtools/devtools.pdf" target="_blank">devtools&rsquo; ref man</a>). Eventually, you will open the help page for the function(s) you are interested in using.</p>
+<p>Imagine that you are starting to learn how to use a specific <code>R</code> package, lets call it <code>foo</code>. You will look at the vignette (if there is one), use <code>help(package = foo)</code>, or look at the reference manual (for example, <a href="http://cran.r-project.org/web/packages/devtools/devtools.pdf" target="_blank">devtools' ref man</a>). Eventually, you will open the help page for the function(s) you are interested in using.</p>
 
 <pre><code class="language-r">?function_I_want_to_use
 </code></pre>
@@ -269,7 +401,7 @@
 
 <h2 id="as-a-developer">As a developer</h2>
 
-<p>From the developer&rsquo;s side, you want to give users control over several details. Each detail you want the user to control involves one more argument in your function. Sooner rather than later, you will have a long list of arguments. This increases the learning curve for new users of your package, and can potentially scare them away. That is contradictory of another goal you have as a developer: you want to get people to use your package.</p>
+<p>From the developer's side, you want to give users control over several details. Each detail you want the user to control involves one more argument in your function. Sooner rather than later, you will have a long list of arguments. This increases the learning curve for new users of your package, and can potentially scare them away. That is contradictory of another goal you have as a developer: you want to get people to use your package.</p>
 
 <p>Lets say that you are developing the function <code>use_me()</code>. If the details you want the users to control are actually arguments of other functions used inside <code>use_me()</code>, then you can simplify your function by using the <code>...</code> argument. This argument is very well explained at <a href="http://www.burns-stat.com/the-three-dots-construct-in-r/" target="_blank">The three-dots construct in R</a> <a id='cite-greycite20763'></a>(<a href='http://www.burns-stat.com/the-three-dots-construct-in-r/'>Burns, 2013</a>). It is very useful and can greatly simplify your life as a developer. Plus, it reduces the length of your help pages, thus making your package more user friendly.</p>
 
@@ -304,7 +436,7 @@ use_me(1:3)
 <pre><code>## [1] 0 0 1
 </code></pre>
 
-<p>In this example, the help page for <code>use_me()</code> is fairly short and friendly. You don&rsquo;t expect users to be interested in changing <code>arg2</code> much. Surely you could make it so the non-exported function <code>.use_me()</code> sets a default value for <code>arg2</code>.</p>
+<p>In this example, the help page for <code>use_me()</code> is fairly short and friendly. You don't expect users to be interested in changing <code>arg2</code> much. Surely you could make it so the non-exported function <code>.use_me()</code> sets a default value for <code>arg2</code>.</p>
 
 <p>Another strategy is to specify inside <code>use_me()</code> the default values for all the arguments you want to use while keeping the list of visible arguments short. That is, maintain the user friendliness of your functions while also giving them control over all the details. That is what you can do using <code>dots()</code> from <code>dots</code> <a id='cite-dots'></a>(<a href='https://github.com/lcolladotor/dots'>Collado-Torres, 2014</a>). <code>dots()</code> is a very simple function that checks if <code>...</code> has a specific argument, and if absent, it returns a default value. It can be seen in action below:</p>
 
@@ -343,7 +475,7 @@ use_me_dots(1:3)
 
 <h2 id="complications">Complications</h2>
 
-<p>Now, while <code>...</code> is great, you might run into problems when <code>use_me()</code> calls two functions that have different arguments and that don&rsquo;t have the <code>...</code> argument. Such a scenario is illustrated below.</p>
+<p>Now, while <code>...</code> is great, you might run into problems when <code>use_me()</code> calls two functions that have different arguments and that don't have the <code>...</code> argument. Such a scenario is illustrated below.</p>
 
 <pre><code class="language-r">status &lt;- function(arg3, status = TRUE) {
     if(status) print(arg3)
@@ -372,7 +504,7 @@ use_me_again(1, verbose = FALSE, status = FALSE)
 <pre><code>## Error in .use_me(arg1, 0, ...): unused argument (status = FALSE)
 </code></pre>
 
-<p>This scenario can happen when you are using functions from other packages. It&rsquo;s happened to me in cases where the main function does have a <code>...</code> argument but uses several internal functions that don&rsquo;t use it.</p>
+<p>This scenario can happen when you are using functions from other packages. It's happened to me in cases where the main function does have a <code>...</code> argument but uses several internal functions that don't use it.</p>
 
 <p>In such situations, you might want to use <code>formal_call()</code> from <code>dots</code>. It figures out which are the arguments formally used by the function of interest and drops out un-used arguments from <code>...</code>, thus avoiding this type of problem.</p>
 
@@ -393,11 +525,11 @@ use_me_fixed(1, verbose = FALSE, status = FALSE)
 
 <h2 id="conclusions">Conclusions</h2>
 
-<p>As a developer, it is possible to keep your functions user friendly while giving experienced users the option to control the fine tuning arguments which you don&rsquo;t expect most users will want to tweak. My solution to this problem is implemented in <a href="https://github.com/lcolladotor/dots" target="_blank">dots</a> (check it&rsquo;s <a href="http://lcolladotor.github.io/dots/" target="_blank">vignette</a>). I&rsquo;d love to hear what you think about it! I am specially interested on what users think about the idea of hidden advanced arguments (documented in an advanced users vignette).</p>
+<p>As a developer, it is possible to keep your functions user friendly while giving experienced users the option to control the fine tuning arguments which you don't expect most users will want to tweak. My solution to this problem is implemented in <a href="https://github.com/lcolladotor/dots" target="_blank">dots</a> (check it's <a href="http://lcolladotor.github.io/dots/" target="_blank">vignette</a>). I'd love to hear what you think about it! I am specially interested on what users think about the idea of hidden advanced arguments (documented in an advanced users vignette).</p>
 
 <p>I might try to get <code>dots</code> into a repository: probably in <a href="http://www.bioconductor.org/" target="_blank">Bioconductor</a> since most of the <code>dots</code> code was first implemented for <a href="http://www.bioconductor.org/packages/release/bioc/html/derfinder.html" target="_blank">derfinder</a>.</p>
 
-<p>PS I just found a similar function to <code>dots()</code>. It&rsquo;s <code>berryFunctions::owa()</code> and you can find its <a href="https://github.com/BerryBoessenkool/berryFunctions/blob/master/R/owa.r" target="_blank">code here</a>.</p>
+<p>PS I just found a similar function to <code>dots()</code>. It's <code>berryFunctions::owa()</code> and you can find its <a href="https://github.com/BerryBoessenkool/berryFunctions/blob/master/R/owa.r" target="_blank">code here</a>.</p>
 
 <h3 id="references">References</h3>
 
@@ -477,51 +609,52 @@ session_info()
 <p>I wrote <code>dots</code> a month ago and the post itself today during our bi-weekly blog meeting.</p>
 
     </div>
-  </div>
-
-</article>
-
-<div class="container">
-  <nav>
-  <ul class="pager">
-    
-    <li class="previous"><a href="http://lcolladotor.github.io/2014/11/21/add-logo-in-R"><span
-      aria-hidden="true">&larr;</span> An xpd-tion into R plot margins</a></li>
-    
 
     
-    <li class="next"><a href="http://lcolladotor.github.io/2015/02/12/salary-work-hours-expectations">What are reasonable work hours and salary expectations for biostats/genomics careers? <span
-      aria-hidden="true">&rarr;</span></a></li>
-    
-  </ul>
-</nav>
 
+
+<div class="article-tags">
+  
+  <a class="btn btn-primary btn-outline" href="/tags/help">help</a>
+  
 </div>
 
-<div class="article-container">
-  
-<section id="comments">
-  <div id="disqus_thread">
-    <div id="disqus_thread"></div>
-<script type="text/javascript">
-    var disqus_shortname = 'fellgernonbit';
-    var disqus_identifier = 'http:\/\/lcolladotor.github.io\/2014\/12\/11\/dots';
-    var disqus_title = 'Use hidden advanced arguments for user-friendly functions';
-    var disqus_url = 'http:\/\/lcolladotor.github.io\/2014\/12\/11\/dots';
 
+
+
+    
+    
+
+    
+
+    
+<section id="comments">
+  <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
     (function() {
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "fellgernonbit" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
     })();
 </script>
-<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-  </div>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 </section>
 
 
-</div>
+
+  </div>
+</article>
 
 <footer class="site-footer">
   <div class="container">
@@ -574,10 +707,11 @@ session_info()
         <div id="clustrmaps-widget"></div><script type="text/javascript">var _clustrmaps = {'url' : 'http://lcolladotor.github.io/', 'user' : 1119558, 'server' : '2', 'id' : 'clustrmaps-widget', 'version' : 1, 'date' : '2013-10-30', 'lang' : 'en', 'corners' : 'square' };(function (){ var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = 'http://www2.clustrmaps.com/counter/map.js'; var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);})();</script><noscript><a href="http://www2.clustrmaps.com/user/320111546"><img src="http://www2.clustrmaps.com/stats/maps-no_clusters/lcolladotor.github.io--thumb.jpg" alt="Locations of visitors to this page" /></a></noscript>
         </center>
 
-      &copy; 2011-2017 Leonardo Collado Torres under (CC) BY-NC-SA &middot; 
+      &copy; 2011-2018 Leonardo Collado Torres under (CC) BY-NC-SA &middot; 
 
-      Powered by the <a href="https://github.com/gcushen/hugo-academic" target="_blank">Academic
-      theme</a> for <a href="http://gohugo.io" target="_blank">Hugo</a>.
+      Powered by the
+      <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+      <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
 
       <span class="pull-right" aria-hidden="true">
         <a href="#" id="back_to_top">
@@ -591,50 +725,65 @@ session_info()
   </div>
 </footer>
 
-    <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.4/TweenMax.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/ScrollToPlugin.min.js"></script>
-    <script src="/js/jquery-1.12.3.min.js"></script>
-    <script src="/js/bootstrap.min.js"></script>
-    <script src="/js/isotope.pkgd.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.1/imagesloaded.pkgd.min.js"></script>
+
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close btn-large" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Cite</h4>
+      </div>
+      <div>
+        <pre><code class="modal-body tex"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-primary btn-outline js-copy-cite" href="#" target="_blank">
+          <i class="fa fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-primary btn-outline js-download-cite" href="#" target="_blank">
+          <i class="fa fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+    
+    <script id="dsq-count-scr" src="//fellgernonbit.disqus.com/count.js" async></script>
+    
+
+    
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha512-3P8rXCuGJdNZOnUx/03c1jOTnMn3rP63nBip5gOP2qmUh5YAdVAvFZ1E+QLZZbC1rtMrQb+mah3AfYW11RUrWA==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.3/imagesloaded.pkgd.min.js" integrity="sha512-umsR78NN0D23AzgoZ11K7raBD+R6hqKojyBZs1w8WvYlsI+QuKRGBx3LFCwhatzBunCjDuJpDHwxD13sLMbpRA==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha512-iztkobsvnjKfAtTNdHkGVjAYTrrtlC7mGp/54c40wowO7LhURYl3gVzzcEqGl/qKXQltJ2HwMrdLcNUdo+N/RQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.4/isotope.pkgd.min.js" integrity="sha512-VDBOIlDbuC4VWxGJNmuFRQ0Li0SKkDpmGyuhAG5LTDLd/dJ/S0WMVxriR2Y+CyPL5gzjpN4f/6iqWVBJlht0tQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" integrity="sha256-X5PoE3KU5l+JcX+w09p/wHl9AzK333C4hJ2I9S5mD4M=" crossorigin="anonymous"></script>
+    
+    
     <script src="/js/hugo-academic.js"></script>
     
 
     
-    <script>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-        ga('create', 'UA-45299226-1', 'auto');
-        ga('send', 'pageview');
-
-         
-        var links = document.querySelectorAll('a');
-        Array.prototype.map.call(links, function(item) {
-            if (item.host != document.location.host) {
-                item.addEventListener('click', function() {
-                    var action = item.getAttribute('data-action') || 'follow';
-                    ga('send', 'event', 'outbound', action, item.href);
-                });
-            }
-        });
-    </script>
-    
-
-    
     
       
-      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+      
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+      
 
       
-      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/languages/r.min.js"></script>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/r.min.js"></script>
       
-      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/languages/bash.min.js"></script>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/bash.min.js"></script>
       
-      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/languages/python.min.js"></script>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/python.min.js"></script>
       
-      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/languages/stata.min.js"></script>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/stata.min.js"></script>
       
 
       
@@ -647,7 +796,9 @@ session_info()
     <script type="text/x-mathjax-config">
         MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });
     </script>
-    <script async src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML" integrity="sha512-tOav5w1OjvsSJzePRtt2uQPFwBoHt1VZcUq8l8nm5284LEKE9FSJBQryzMBzHxY5P0zRdNqEcpLIRVYFNgu1jw==" crossorigin="anonymous"></script>
+    
     
 
   </body>

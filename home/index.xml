@@ -2,13 +2,98 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Homes on L. Collado-Torres</title>
-    <link>http://lcolladotor.github.io/home/index.xml</link>
+    <link>http://lcolladotor.github.io/home/</link>
     <description>Recent content in Homes on L. Collado-Torres</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>&amp;copy; 2011-2017 Leonardo Collado Torres under (CC) BY-NC-SA</copyright>
+    <copyright>&amp;copy; 2011-2018 Leonardo Collado Torres under (CC) BY-NC-SA</copyright>
     <lastBuildDate>Thu, 19 Jan 2017 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/home/index.xml" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="http://lcolladotor.github.io/home/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title></title>
+      <link>http://lcolladotor.github.io/home/about/</link>
+      <pubDate>Thu, 19 Jan 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://lcolladotor.github.io/home/about/</guid>
+      <description>L. Collado-Torres At the Lieber Institute for Brain Development, I am part of the Data Science team whose goals include better understanding and characterizing genomics signatures in the human brain, including DNA methylation and gene expression. I help mentor other team members, provide support for LIBD projects and I am advancing my academic career as part of Andrew Jaffe&#39;s lab.
+As a quick background, I graduated from the Undergraduate Program on Genomic Sciences (the About page is in English) from the National Autonomous University of Mexico (UNAM) in 2009 and worked for two years at Winter Genomics analyzing high-throughput sequencing data.</description>
+    </item>
+    
+    <item>
+      <title>Selected Publications</title>
+      <link>http://lcolladotor.github.io/home/publications_selected/</link>
+      <pubDate>Thu, 19 Jan 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://lcolladotor.github.io/home/publications_selected/</guid>
+      <description>&amp;dagger; indicates corresponding author, * indicates equal contribution</description>
+    </item>
+    
+    <item>
+      <title>Recent Publications</title>
+      <link>http://lcolladotor.github.io/home/publications/</link>
+      <pubDate>Thu, 19 Jan 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://lcolladotor.github.io/home/publications/</guid>
+      <description>&amp;dagger; indicates corresponding author, * indicates equal contribution</description>
+    </item>
+    
+    <item>
+      <title>Recent &amp; Upcoming Talks</title>
+      <link>http://lcolladotor.github.io/home/talks/</link>
+      <pubDate>Thu, 20 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://lcolladotor.github.io/home/talks/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Recent Posts</title>
+      <link>http://lcolladotor.github.io/home/posts/</link>
+      <pubDate>Thu, 19 Jan 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://lcolladotor.github.io/home/posts/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Curriculum vitae</title>
+      <link>http://lcolladotor.github.io/home/cv/</link>
+      <pubDate>Thu, 19 Jan 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://lcolladotor.github.io/home/cv/</guid>
+      <description>Download my cv or view it at GitHub.
+ </description>
+    </item>
+    
+    <item>
+      <title>Teaching</title>
+      <link>http://lcolladotor.github.io/home/teaching/</link>
+      <pubDate>Thu, 19 Jan 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://lcolladotor.github.io/home/teaching/</guid>
+      <description>LIBD 2016  Biostatistics and Stata instructor at a workshop for Kandahar University Faculty, organized by Johns Hopkins University. Invited instructor for the Genomeeting 2016 course at INMEGEN, Mexico City, Mexico.  JHBSPH 2015-2016  Teaching assistant and guest lecturer for Introduction to R for Public Health Researchers Teaching assistant for Statistical Methods in Public Health I (140.621) Lead teaching assistant for Statistical Methods in Public Health II (140.622). Teaching assistant for the MPH capstone project.</description>
+    </item>
+    
+    <item>
+      <title>Contact</title>
+      <link>http://lcolladotor.github.io/home/contact/</link>
+      <pubDate>Thu, 19 Jan 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://lcolladotor.github.io/home/contact/</guid>
+      <description>If you have questions about the Bioconductor packages I maintain, please read this post. If you send me an email, I&#39;ll simply refer you to the same post.</description>
+    </item>
+    
+    <item>
+      <title>Search this website</title>
+      <link>http://lcolladotor.github.io/home/search/</link>
+      <pubDate>Thu, 19 Jan 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://lcolladotor.github.io/home/search/</guid>
+      <description> (function() { var cx = &#39;013573190517108741382:7xd8xnepkpi&#39;; var gcse = document.createElement(&#39;script&#39;); gcse.type = &#39;text/javascript&#39;; gcse.async = true; gcse.src = (document.location.protocol == &#39;https:&#39; ? &#39;https:&#39; : &#39;http:&#39;) + &#39;//www.google.com/cse/cse.js?cx=&#39; + cx; var s = document.getElementsByTagName(&#39;script&#39;)[0]; s.parentNode.insertBefore(gcse, s); })();   </description>
+    </item>
     
   </channel>
 </rss>

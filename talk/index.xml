@@ -2,138 +2,82 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Talks on L. Collado-Torres</title>
-    <link>http://lcolladotor.github.io/talk/index.xml</link>
+    <link>http://lcolladotor.github.io/talk/</link>
     <description>Recent content in Talks on L. Collado-Torres</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>&amp;copy; 2011-2017 Leonardo Collado Torres under (CC) BY-NC-SA</copyright>
-    <lastBuildDate>Tue, 17 Apr 2018 10:00:00 +0000</lastBuildDate>
-    <atom:link href="/talk/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>&amp;copy; 2011-2018 Leonardo Collado Torres under (CC) BY-NC-SA</copyright>
     
-    <item>
-      <title>recount workflow: Accessing over 70,000 human RNA-seq samples with Bioconductor</title>
-      <link>http://lcolladotor.github.io/talk/DennisDal2018/</link>
-      <pubDate>Tue, 17 Apr 2018 10:00:00 +0000</pubDate>
-      
-      <guid>http://lcolladotor.github.io/talk/DennisDal2018/</guid>
-      <description></description>
-    </item>
+	<atom:link href="http://lcolladotor.github.io/talk/index.xml" rel="self" type="application/rss+xml" />
     
-    <item>
-      <title>Guiding Principles for Interactive Graphics Based on LIBD Data Science Projects</title>
-      <link>http://lcolladotor.github.io/talk/jsm2017/</link>
-      <pubDate>Thu, 03 Aug 2017 08:30:00 +0000</pubDate>
-      
-      <guid>http://lcolladotor.github.io/talk/jsm2017/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>recount workshop: Learn to leverage 70,000 human RNA-seq samples for your projects</title>
-      <link>http://lcolladotor.github.io/talk/bioc2017/</link>
-      <pubDate>Thu, 27 Jul 2017 13:30:00 +0000</pubDate>
-      
-      <guid>http://lcolladotor.github.io/talk/bioc2017/</guid>
-      <description>&lt;p&gt;[[url_custom]]
-    name = &amp;ldquo;Workshop website&amp;rdquo;
-    url = &amp;ldquo;&lt;a href=&#34;http://LieberInstitute.github.io/recountWorkshop/&amp;quot;&#34; target=&#34;_blank&#34;&gt;http://LieberInstitute.github.io/recountWorkshop/&amp;quot;&lt;/a&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Reproducible RNA-seq analysis with recount2</title>
-      <link>http://lcolladotor.github.io/talk/icsa2017/</link>
-      <pubDate>Tue, 27 Jun 2017 13:30:00 +0000</pubDate>
-      
-      <guid>http://lcolladotor.github.io/talk/icsa2017/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Reproducible Research and Bioinformatics</title>
-      <link>http://lcolladotor.github.io/talk/reproducibility2017/</link>
-      <pubDate>Sat, 24 Jun 2017 08:30:00 +0000</pubDate>
-      
-      <guid>http://lcolladotor.github.io/talk/reproducibility2017/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>RNA-seq samples beyond the known transcriptome with derfinder available via recount2</title>
-      <link>http://lcolladotor.github.io/talk/sobp2017/</link>
-      <pubDate>Sat, 20 May 2017 12:30:00 +0000</pubDate>
-      
-      <guid>http://lcolladotor.github.io/talk/sobp2017/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Introduction at Kandahar University MPH training event</title>
-      <link>http://lcolladotor.github.io/talk/kandahar2016/</link>
-      <pubDate>Mon, 26 Dec 2016 08:30:00 +0000</pubDate>
-      
-      <guid>http://lcolladotor.github.io/talk/kandahar2016/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>recount: facilitando el análisis de miles de muestras de RNA-seq</title>
-      <link>http://lcolladotor.github.io/talk/genomeeting2016/</link>
-      <pubDate>Wed, 26 Oct 2016 00:00:00 +0000</pubDate>
-      
-      <guid>http://lcolladotor.github.io/talk/genomeeting2016/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Using Data Science to Study Human Brain Genomic Measurements</title>
-      <link>http://lcolladotor.github.io/talk/sacnas2016/</link>
-      <pubDate>Sat, 15 Oct 2016 00:00:00 +0000</pubDate>
-      
-      <guid>http://lcolladotor.github.io/talk/sacnas2016/</guid>
-      <description></description>
-    </item>
     
     <item>
       <title>Annotation-agnostic differential expression analysis</title>
       <link>http://lcolladotor.github.io/talk/enar2016/</link>
-      <pubDate>Mon, 07 Mar 2016 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://lcolladotor.github.io/talk/enar2016/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>dbFinder</title>
-      <link>http://lcolladotor.github.io/talk/dbFinder2015/</link>
-      <pubDate>Sun, 01 Nov 2015 00:00:00 +0000</pubDate>
-      
-      <guid>http://lcolladotor.github.io/talk/dbFinder2015/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Annotation-agnostic differential expression analysis</title>
       <link>http://lcolladotor.github.io/talk/gbs2015/</link>
-      <pubDate>Thu, 22 Oct 2015 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://lcolladotor.github.io/talk/gbs2015/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Easy parallel computing with BiocParallel and HTML reports with knitrBootstrap</title>
-      <link>http://lcolladotor.github.io/talk/biocparallel2015/</link>
-      <pubDate>Sun, 19 Apr 2015 16:15:21 -0500</pubDate>
+      <title>Bacterial Transcription</title>
+      <link>http://lcolladotor.github.io/talk/biocdev2010/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://lcolladotor.github.io/talk/biocparallel2015/</guid>
+      <guid>http://lcolladotor.github.io/talk/biocdev2010/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Bacteriófagos: analizando su diversidad</title>
+      <link>http://lcolladotor.github.io/talk/fagos2008/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://lcolladotor.github.io/talk/fagos2008/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>DEXSeq paper discussion</title>
+      <link>http://lcolladotor.github.io/talk/dexseq2012/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://lcolladotor.github.io/talk/dexseq2012/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Developmental regulation of human cortex transcription at base-pair resolution</title>
+      <link>http://lcolladotor.github.io/talk/is3b2014/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://lcolladotor.github.io/talk/is3b2014/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Differential expression analysis of RNA-seq data at base-pair resolution in multiple biological replicates</title>
+      <link>http://lcolladotor.github.io/talk/useR2013/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://lcolladotor.github.io/talk/useR2013/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Dissecting human brain development at high resolution using RNA-seq</title>
       <link>http://lcolladotor.github.io/talk/enar2015/</link>
-      <pubDate>Mon, 16 Mar 2015 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://lcolladotor.github.io/talk/enar2015/</guid>
       <description></description>
@@ -142,9 +86,189 @@
     <item>
       <title>Does mapping simulated RNA-seq reads provide information?</title>
       <link>http://lcolladotor.github.io/talk/mapping2015/</link>
-      <pubDate>Thu, 19 Feb 2015 16:18:02 -0500</pubDate>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://lcolladotor.github.io/talk/mapping2015/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Easy parallel computing with BiocParallel and HTML reports with knitrBootstrap</title>
+      <link>http://lcolladotor.github.io/talk/biocparallel2015/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://lcolladotor.github.io/talk/biocparallel2015/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Fast differential expression analysis annotation-agnostic across groups with biological replicates</title>
+      <link>http://lcolladotor.github.io/talk/lcg2014/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://lcolladotor.github.io/talk/lcg2014/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Git for research</title>
+      <link>http://lcolladotor.github.io/talk/git2014/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://lcolladotor.github.io/talk/git2014/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Guiding Principles for Interactive Graphics Based on LIBD Data Science Projects</title>
+      <link>http://lcolladotor.github.io/talk/jsm2017/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://lcolladotor.github.io/talk/jsm2017/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Introducing Git while making your academic webpage</title>
+      <link>http://lcolladotor.github.io/talk/git2012/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://lcolladotor.github.io/talk/git2012/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Introduction at Kandahar University MPH training event</title>
+      <link>http://lcolladotor.github.io/talk/kandahar2016/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://lcolladotor.github.io/talk/kandahar2016/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Introduction to High-Throughput Sequencing and RNA-seq</title>
+      <link>http://lcolladotor.github.io/talk/htsintro2013/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://lcolladotor.github.io/talk/htsintro2013/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Introduction to R and Biostatistics</title>
+      <link>http://lcolladotor.github.io/talk/introbiostats2011/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://lcolladotor.github.io/talk/introbiostats2011/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Introduction to R and Biostatistics (2012 version)</title>
+      <link>http://lcolladotor.github.io/talk/introbiostats2012/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://lcolladotor.github.io/talk/introbiostats2012/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Introduction to ggbio</title>
+      <link>http://lcolladotor.github.io/talk/ggbio2013/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://lcolladotor.github.io/talk/ggbio2013/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Introduction to using Bioconductor for High Throughput Sequencing Analysis</title>
+      <link>http://lcolladotor.github.io/talk/nnb2010/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://lcolladotor.github.io/talk/nnb2010/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>RNA-seq samples beyond the known transcriptome with derfinder available via recount2</title>
+      <link>http://lcolladotor.github.io/talk/sobp2017/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://lcolladotor.github.io/talk/sobp2017/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Reproducible RNA-seq analysis with recount2</title>
+      <link>http://lcolladotor.github.io/talk/icsa2017/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://lcolladotor.github.io/talk/icsa2017/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Reproducible Research and Bioinformatics</title>
+      <link>http://lcolladotor.github.io/talk/reproducibility2017/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://lcolladotor.github.io/talk/reproducibility2017/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Using Data Science to Study Human Brain Genomic Measurements</title>
+      <link>http://lcolladotor.github.io/talk/sacnas2016/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://lcolladotor.github.io/talk/sacnas2016/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>dbFinder</title>
+      <link>http://lcolladotor.github.io/talk/dbFinder2015/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://lcolladotor.github.io/talk/dbFinder2015/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>derfinder tutorial</title>
+      <link>http://lcolladotor.github.io/talk/dertutor2014/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://lcolladotor.github.io/talk/dertutor2014/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>recount workflow: Accessing over 70,000 human RNA-seq samples with Bioconductor</title>
+      <link>http://lcolladotor.github.io/talk/DennisDal2018/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://lcolladotor.github.io/talk/DennisDal2018/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>recount workshop: Learn to leverage 70,000 human RNA-seq samples for your projects</title>
+      <link>http://lcolladotor.github.io/talk/bioc2017/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://lcolladotor.github.io/talk/bioc2017/</guid>
+      <description>[[url_custom]] name = &amp;quot;Workshop website&amp;quot; url = &amp;quot;http://LieberInstitute.github.io/recountWorkshop/&amp;quot;</description>
+    </item>
+    
+    <item>
+      <title>recount: facilitando el análisis de miles de muestras de RNA-seq</title>
+      <link>http://lcolladotor.github.io/talk/genomeeting2016/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://lcolladotor.github.io/talk/genomeeting2016/</guid>
       <description></description>
     </item>
     

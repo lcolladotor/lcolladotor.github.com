@@ -2,332 +2,64 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Graphics on L. Collado-Torres</title>
-    <link>http://lcolladotor.github.io/tags/graphics/index.xml</link>
+    <link>http://lcolladotor.github.io/tags/graphics/</link>
     <description>Recent content in Graphics on L. Collado-Torres</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>&amp;copy; 2011-2017 Leonardo Collado Torres under (CC) BY-NC-SA</copyright>
-    <atom:link href="/tags/graphics/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>&amp;copy; 2011-2018 Leonardo Collado Torres under (CC) BY-NC-SA</copyright>
+    <lastBuildDate>Fri, 21 Nov 2014 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://lcolladotor.github.io/tags/graphics/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>An xpd-tion into R plot margins</title>
-      <link>http://lcolladotor.github.io/2014/11/21/add-logo-in-R</link>
+      <link>http://lcolladotor.github.io/2014/11/21/add-logo-in-R/</link>
       <pubDate>Fri, 21 Nov 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://lcolladotor.github.io/2014/11/21/add-logo-in-R</guid>
-      <description>
-
-&lt;p&gt;&lt;em&gt;This is a guest post by &lt;a href=&#34;http://www.biostat.jhsph.edu/~prpatil/&#34; target=&#34;_blank&#34;&gt;Prasad Patil&lt;/a&gt; that answers the question: how to put a shape in the margin of an R plot?&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;The help page for &lt;strong&gt;R&lt;/strong&gt;&amp;rsquo;s &lt;code&gt;par()&lt;/code&gt; function is a somewhat impenetrable list
-of abbreviations that allow you to manipulate anything and everything
-in the plotting device. You may have used this function in the past
-to create an array of plots (using &lt;code&gt;mfrow&lt;/code&gt; or &lt;code&gt;mfcol&lt;/code&gt;) or to set margins
-(&lt;code&gt;mar&lt;/code&gt; or &lt;code&gt;mai&lt;/code&gt;).&lt;/p&gt;
-
-&lt;p&gt;Way down toward the end of the list is the often-overlooked &lt;code&gt;xpd&lt;/code&gt; parameter.
-This value specifies where in the plotting device an object can actually
-be plotted. The default is &lt;code&gt;xpd = FALSE&lt;/code&gt;, which means that plotting is clipped,
-or restricted, to the plotting region. In other words, if your plot has
-&lt;code&gt;xlim = c(0, 10)&lt;/code&gt; and &lt;code&gt;ylim = c(0, 10)&lt;/code&gt; and you try to plot the point (-1,  -1), it will
-not appear anywhere in the device.&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;xpd&lt;/code&gt; takes two other values, &lt;code&gt;TRUE&lt;/code&gt; and &lt;code&gt;NA&lt;/code&gt;, which limit plotting to the figure
-and device region, respectively. If you&amp;rsquo;re fuzzy on plotting terms, &lt;a href=&#34;http://research.stowers-institute.org/mcm/efg/R/Graphics/Basics/mar-oma/index.htm&#34; target=&#34;_blank&#34;&gt;this
-tutorial&lt;/a&gt;
-presents those topics well.&lt;/p&gt;
-
-&lt;h2 id=&#34;plotting-outside-the-plot&#34;&gt;Plotting outside the plot&lt;/h2&gt;
-
-&lt;p&gt;If you want to plot outside of the plotting region, I find that setting &lt;code&gt;xpd = NA&lt;/code&gt;
-easiest since it opens up all external space. We also need to make sure that we
-keep space outside of the plot so that we have room to place our objects. Let&amp;rsquo;s
-say we want to put an ugly border above and below our plot:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;# Set xpd=NA and expand the top and bottom margins
-par(xpd = NA, mar = par()$mar + c(2.5, 0, 1, 0))
-plot(1:10)
-# Note that the rectangle we make here has corner coordinates outside of
-# our plotting device
-rect(-5, 11, 12, 14, col=&amp;quot;red&amp;quot;)
-# Random dots in our rectangluar region
-points(runif(100, -4.2, 12.8), runif(100, 11.2, 13.6), col = &amp;quot;green&amp;quot;, pch = 19, cex = 1.2)
-# And another rectangle for below
-rect(-5, -1.7, 12, -3.5, col=&amp;quot;red&amp;quot;)
-points(runif(100, -4.2, 12.8), runif(100, -3.3, -1.8), col = &amp;quot;green&amp;quot;, pch = 19, cex = 1.2)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://lcolladotor.github.io/figs/2014-11-21-add-logo-in-R/plot-1.png&#34; alt=&#34;center&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Here we mentally extend the axes of our plot to determine where to put
-our margin elements. One can imagine a diagonal for the top rectangle
-running from (-5,11) to (12,14). Neither of these points appear in the plot
-itself, but we used the established axes to estimate them and plot outside
-the plotting region.&lt;/p&gt;
-
-&lt;h2 id=&#34;images-outside-the-plot&#34;&gt;Images outside the plot&lt;/h2&gt;
-
-&lt;p&gt;Now let&amp;rsquo;s say we want to &lt;strong&gt;add a logo&lt;/strong&gt; or other external image in the margin
-of our plot. We will use &lt;strong&gt;R&lt;/strong&gt;&amp;rsquo;s &lt;code&gt;png&lt;/code&gt; library to load a PNG image and
-&lt;code&gt;rasterImage()&lt;/code&gt; to plot it:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;## If needed: install.packages(&amp;quot;png&amp;quot;)
-library(png)
-img &amp;lt;- readPNG(&amp;quot;logo.png&amp;quot;)
-par(xpd = NA, mar=par()$mar + c(3, 0, 0, 0))
-plot(1:10)
-rasterImage(img, 0.5, -2.5, 10.5, -1)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://lcolladotor.github.io/figs/2014-11-21-add-logo-in-R/imgplot-1.png&#34; alt=&#34;center&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Here we used the &lt;code&gt;png&lt;/code&gt; library and the &lt;code&gt;r
-asterImage()&lt;/code&gt; command to read in and
-plot the &lt;a href=&#34;http://lcolladotor.github.io/figs/2014-11-21-add-logo-in-R/logo.png&#34; target=&#34;_blank&#34;&gt;&amp;ldquo;logo.png&amp;rdquo;&lt;/a&gt; file. Based on the previously-known dimensions of the
-logo, we can choose which points to use as endpoints for the image. Note
-that this image may appear stretched or contorted depending on the size
-of your &lt;strong&gt;R&lt;/strong&gt; plot device, and it will not stay consistent if you resize.&lt;/p&gt;
-</description>
+      <guid>http://lcolladotor.github.io/2014/11/21/add-logo-in-R/</guid>
+      <description>This is a guest post by Prasad Patil that answers the question: how to put a shape in the margin of an R plot?
+The help page for R&amp;rsquo;s par() function is a somewhat impenetrable list of abbreviations that allow you to manipulate anything and everything in the plotting device. You may have used this function in the past to create an array of plots (using mfrow or mfcol) or to set margins (mar or mai).</description>
     </item>
     
     <item>
       <title>userR2013 data analysis contest: data exploration</title>
-      <link>http://lcolladotor.github.io/2013/06/12/userR2013-data-analysis-contest-data-exploration</link>
+      <link>http://lcolladotor.github.io/2013/06/12/userR2013-data-analysis-contest-data-exploration/</link>
       <pubDate>Wed, 12 Jun 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://lcolladotor.github.io/2013/06/12/userR2013-data-analysis-contest-data-exploration</guid>
-      <description>&lt;h1&gt;Description&lt;/h1&gt;
-&lt;p&gt;The useR2013 conference is organizing a data analysis contest, check the &lt;a href=&#34;http://www.edii.uclm.es/%7EuseR-2013/docs/announce.pdf&#34;&gt;rules here&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;They have a package called &lt;strong&gt;useR2013DAC&lt;/strong&gt; with two data sets: one from La Liga and the other one from the Formula 1. Once you download and install the package (&lt;a href=&#34;http://www.edii.uclm.es/%7EuseR-2013/#contest&#34;&gt;available here&lt;/a&gt;), you can quickly explore the data using the following R commands:&lt;/p&gt;
-&lt;h1&gt;Data exploration&lt;/h1&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;## Load the package
-library(useR2013DAC)
-
-## Explore laliga data
-data(laliga)
-head(laliga)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;##    Season Week               HomeTeam                    AwayTeam
-## 1 2008/09    1   Athletic Club Bilbao     Union Deportiva Almeria
-## 2 2008/09    1        Atlético Madrid                   Málaga CF
-## 3 2008/09    1          Betis Sevilla Real Club Recreativo Huelva
-## 4 2008/09    1             CA Osasuna               Villarreal CF
-## 5 2008/09    1            CD Numancia                FC Barcelona
-## 6 2008/09    1 Deportivo de La Coruña              Real Madrid CF
-##   HomeGoals AwayGoals
-## 1         1         3
-## 2         4         0
-## 3         0         1
-## 4         1         1
-## 5         1         0
-## 6         2         1
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;summary(laliga)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;##     Season               Week        HomeTeam           AwayTeam        
-##  Length:1900        Min.   : 1.0   Length:1900        Length:1900       
-##  Class :character   1st Qu.:10.0   Class :character   Class :character  
-##  Mode  :character   Median :19.5   Mode  :character   Mode  :character  
-##                     Mean   :19.5                                        
-##                     3rd Qu.:29.0                                        
-##                     Max.   :38.0                                        
-##                                                                         
-##    HomeGoals      AwayGoals   
-##  Min.   :0.00   Min.   :0.00  
-##  1st Qu.:1.00   1st Qu.:0.00  
-##  Median :1.00   Median :1.00  
-##  Mean   :1.65   Mean   :1.14  
-##  3rd Qu.:2.00   3rd Qu.:2.00  
-##  Max.   :8.00   Max.   :8.00  
-##  NA&#39;s   :50     NA&#39;s   :50
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;lapply(laliga, class)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;## $Season
-## [1] &amp;quot;character&amp;quot;
-## 
-## $Week
-## [1] &amp;quot;integer&amp;quot;
-## 
-## $HomeTeam
-## [1] &amp;quot;character&amp;quot;
-## 
-## $AwayTeam
-## [1] &amp;quot;character&amp;quot;
-## 
-## $HomeGoals
-## [1] &amp;quot;integer&amp;quot;
-## 
-## $AwayGoals
-## [1] &amp;quot;integer&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;## Explore formula1 data
-data(formula1)
-head(formula1)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;##   Pos No             Driver             Team Laps        Time Grid Pts
-## 1   1  8    Fernando Alonso          Ferrari   49 1:39:20.396    3  25
-## 2   2  7       Felipe Massa          Ferrari   49  +16.0 secs    2  18
-## 3   3  2     Lewis Hamilton McLaren-Mercedes   49  +23.1 secs    4  15
-## 4   4  5   Sebastian Vettel      RBR-Renault   49  +38.7 secs    1  12
-## 5   5  4       Nico Rosberg      Mercedes GP   49  +40.2 secs    5  10
-## 6   6  3 Michael Schumacher      Mercedes GP   49  +44.1 secs    7   8
-##                                         Race Season
-## 1 2010 FORMULA 1 GULF AIR BAHRAIN GRAND PRIX   2010
-## 2 2010 FORMULA 1 GULF AIR BAHRAIN GRAND PRIX   2010
-## 3 2010 FORMULA 1 GULF AIR BAHRAIN GRAND PRIX   2010
-## 4 2010 FORMULA 1 GULF AIR BAHRAIN GRAND PRIX   2010
-## 5 2010 FORMULA 1 GULF AIR BAHRAIN GRAND PRIX   2010
-## 6 2010 FORMULA 1 GULF AIR BAHRAIN GRAND PRIX   2010
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;summary(formula1)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;##       Pos            No                     Driver    
-##  Ret    :254   1      :  58   Felipe Massa     :  58  
-##  1      : 58   10     :  58   Fernando Alonso  :  58  
-##  10     : 58   11     :  58   Heikki Kovalainen:  58  
-##  11     : 58   12     :  58   Jenson Button    :  58  
-##  12     : 58   14     :  58   Kamui Kobayashi  :  58  
-##  13     : 58   15     :  58   Lewis Hamilton   :  58  
-##  (Other):848   (Other):1044   (Other)          :1044  
-##                    Team          Laps             Time          Grid     
-##  Ferrari             :116   55     :125   +1 Lap    :268   1      :  58  
-##  Force India-Mercedes:116   56     :121   +2 Laps   :102   10     :  58  
-##  HRT-Cosworth        :116   53     : 92   Accident  : 93   11     :  58  
-##  McLaren-Mercedes    :116   57     : 80   +3 Laps   : 41   12     :  58  
-##  STR-Ferrari         :116   70     : 75   Hydraulics: 26   13     :  58  
-##  Lotus-Renault       : 78   52     : 69   Gearbox   : 24   14     :  58  
-##  (Other)             :734   (Other):830   (Other)   :838   (Other):1044  
-##       Pts          Race               Season    
-##         :812   Length:1392        Min.   :2010  
-##  1      : 58   Class :character   1st Qu.:2010  
-##  10     : 58   Mode  :character   Median :2011  
-##  12     : 58                      Mean   :2011  
-##  15     : 58                      3rd Qu.:2012  
-##  18     : 58                      Max.   :2012  
-##  (Other):290
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;lapply(formula1, class)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;## $Pos
-## [1] &amp;quot;factor&amp;quot;
-## 
-## $No
-## [1] &amp;quot;factor&amp;quot;
-## 
-## $Driver
-## [1] &amp;quot;factor&amp;quot;
-## 
-## $Team
-## [1] &amp;quot;factor&amp;quot;
-## 
-## $Laps
-## [1] &amp;quot;factor&amp;quot;
-## 
-## $Time
-## [1] &amp;quot;factor&amp;quot;
-## 
-## $Grid
-## [1] &amp;quot;factor&amp;quot;
-## 
-## $Pts
-## [1] &amp;quot;factor&amp;quot;
-## 
-## $Race
-## [1] &amp;quot;character&amp;quot;
-## 
-## $Season
-## [1] &amp;quot;numeric&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;p&gt;I don&amp;#8217;t see a specific question that they want you to answer with this data, but if you find one related to data analysis or visualization then join the competition!&lt;/p&gt;
-&lt;p&gt;Note that you must be attending the conference in order to be eligible to compete.&lt;/p&gt;
-&lt;h1&gt;Reproducibility&lt;/h1&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;sessionInfo()
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;## R version 3.0.0 (2013-04-03)
-## Platform: x86_64-apple-darwin10.8.0 (64-bit)
-## 
-## locale:
-## [1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8
-## 
-## attached base packages:
-## [1] stats     graphics  grDevices utils     datasets  methods   base     
-## 
-## other attached packages:
-## [1] useR2013DAC_0.1-1 knitr_1.2        
-## 
-## loaded via a namespace (and not attached):
-## [1] digest_0.6.3   evaluate_0.4.3 formatR_0.7    stringr_0.6.2 
-## [5] tools_3.0.0
-&lt;/code&gt;&lt;/pre&gt;
-</description>
+      <guid>http://lcolladotor.github.io/2013/06/12/userR2013-data-analysis-contest-data-exploration/</guid>
+      <description>Description The useR2013 conference is organizing a data analysis contest, check the rules here.
+They have a package called useR2013DAC with two data sets: one from La Liga and the other one from the Formula 1. Once you download and install the package (available here), you can quickly explore the data using the following R commands:
+Data exploration ## Load the package library(useR2013DAC) ## Explore laliga data data(laliga) head(laliga)  ## Season Week HomeTeam AwayTeam ## 1 2008/09 1 Athletic Club Bilbao Union Deportiva Almeria ## 2 2008/09 1 Atlético Madrid Málaga CF ## 3 2008/09 1 Betis Sevilla Real Club Recreativo Huelva ## 4 2008/09 1 CA Osasuna Villarreal CF ## 5 2008/09 1 CD Numancia FC Barcelona ## 6 2008/09 1 Deportivo de La Coruña Real Madrid CF ## HomeGoals AwayGoals ## 1 1 3 ## 2 4 0 ## 3 0 1 ## 4 1 1 ## 5 1 0 ## 6 2 1  summary(laliga)  ## Season Week HomeTeam AwayTeam ## Length:1900 Min.</description>
     </item>
     
     <item>
       <title>Visualizing colors()</title>
-      <link>http://lcolladotor.github.io/2012/10/19/Visualizing-colors</link>
+      <link>http://lcolladotor.github.io/2012/10/19/Visualizing-colors/</link>
       <pubDate>Fri, 19 Oct 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://lcolladotor.github.io/2012/10/19/Visualizing-colors</guid>
-      <description>&lt;p&gt;The other day I learnt about the existance of the colors() vector in R which specifies all the character-based colors like &amp;#8220;light blue&amp;#8221;, &amp;#8220;black&amp;#8221;, etc. So I made a simple plot to visualize them all. Here&amp;#8217;s the code:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;mat &amp;lt;- matrix(1:length(colors()), ncol = 9, byrow= TRUE)
-df &amp;lt;- data.frame(col = colors(), 
-	x = as.integer(cut(1:length(colors()), 9)),
-	y = rep(1:73, 9), stringsAsFactors=FALSE)
-plot(y ~ jitter(x), data = df, col = df$col,
- 	pch=16, main = &amp;quot;Visualizing colors() split in 9 groups&amp;quot;,
- 	xlab = &amp;quot;Group&amp;quot;, 
-	ylab = &amp;quot;Element of the group (min = 1, max = 73)&amp;quot;,
-	sub = &amp;quot;x = 3, y = 1 means that it&#39;s the 2 * 73 + 1 = 147th color&amp;quot;)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;And the plot:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://media.tumblr.com/tumblr_mc5ovbt4uQ1qfs0hy.png&#34;/&gt;&lt;/p&gt;
-</description>
+      <guid>http://lcolladotor.github.io/2012/10/19/Visualizing-colors/</guid>
+      <description>The other day I learnt about the existance of the colors() vector in R which specifies all the character-based colors like &amp;#8220;light blue&amp;#8221;, &amp;#8220;black&amp;#8221;, etc. So I made a simple plot to visualize them all. Here&amp;#8217;s the code:
+mat &amp;lt;- matrix(1:length(colors()), ncol = 9, byrow= TRUE) df &amp;lt;- data.frame(col = colors(), x = as.integer(cut(1:length(colors()), 9)), y = rep(1:73, 9), stringsAsFactors=FALSE) plot(y ~ jitter(x), data = df, col = df$col, pch=16, main = &amp;quot;Visualizing colors() split in 9 groups&amp;quot;, xlab = &amp;quot;Group&amp;quot;, ylab = &amp;quot;Element of the group (min = 1, max = 73)&amp;quot;, sub = &amp;quot;x = 3, y = 1 means that it&#39;s the 2 * 73 + 1 = 147th color&amp;quot;)  And the plot:</description>
     </item>
     
     <item>
       <title>Why aren&#39;t all of our graphs interactive?</title>
-      <link>http://lcolladotor.github.io/2012/10/08/Why-arent-all-of-our-graphs-interactive</link>
+      <link>http://lcolladotor.github.io/2012/10/08/Why-arent-all-of-our-graphs-interactive/</link>
       <pubDate>Mon, 08 Oct 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://lcolladotor.github.io/2012/10/08/Why-arent-all-of-our-graphs-interactive</guid>
-      <description>&lt;p&gt;During the last pre-happy hour seminar, &lt;a href=&#34;http://www.biostat.wisc.edu/~kbroman/&#34;&gt;Karl Broman&lt;/a&gt; talked about &lt;a href=&#34;http://www.biostat.wisc.edu/~kbroman/presentations/DynamicGraphs/&#34;&gt;Why aren&amp;#8217;t all of our graphs interactive?&lt;/a&gt; I didn&amp;#8217;t know, but a few years ago Karl worked in the department and clearly promoted beer-drinking and is &lt;em&gt;the heart of the department. &lt;/em&gt;I&amp;#8217;m a fan of our pre-happy hour seminars since you have a get to listen to good/fun talks over a beer or two.&lt;/p&gt;
-&lt;p&gt;But I&amp;#8217;m also a fan of reproducible research and useful graphics. I do most of this by using &lt;a href=&#34;http://www.statistik.lmu.de/~leisch/Sweave/&#34;&gt;Sweave&lt;/a&gt; (for reproducibility) in LaTeX documents and with the R packages &lt;a href=&#34;http://cran.r-project.org/web/packages/lattice/index.html&#34;&gt;lattice&lt;/a&gt;, &lt;a href=&#34;http://cran.r-project.org/web/packages/car/index.html&#34;&gt;car&lt;/a&gt;, and &lt;a href=&#34;http://cran.r-project.org/web/packages/plotrix/index.html&#34;&gt;plotrix&lt;/a&gt;, and some &lt;a href=&#34;http://ggplot2.org/&#34;&gt;ggplot2&lt;/a&gt; (I should use it more). &lt;/p&gt;
-&lt;p&gt;Karl made &lt;a href=&#34;http://www.biostat.wisc.edu/~kbroman/presentations/DynamicGraphs/&#34;&gt;his presentation&lt;/a&gt; using html (definitely check it out!) and inserted pretty interactive graphics. His talk got me really interested and I definitely need to pick up a few tools. For example, asciidoc or R Markdown can be useful for making html documents with R code. Specially if you want to write a report and you don&amp;#8217;t want to deal with Sweave/Latex when making plots (can be a pain to know where they&amp;#8217;ll show up). &lt;/p&gt;
-&lt;p&gt;For the interactive side, D3 (and other tools Karl listed) can be useful to learn. But I might put this on a hold for some time. Maybe I&amp;#8217;ll wait and see what others in the deparment are developing for R-D3 and embedding interactive plots in pdf files.&lt;/p&gt;
-&lt;p&gt;I don&amp;#8217;t think that it will be long before interactive plots make it to the journals. Specially for their web versions. Though, I still think that if you are showing a 3D plot, as the author you will have to give a few default views where you can clearly see something that you want to talk about instead of having the reader find that sweet spot. &lt;/p&gt;
-&lt;p&gt;One problem that I don&amp;#8217;t think has been solved yet is reproducible research on a cluster. Karl and others mentioned &lt;a href=&#34;http://www.gnu.org/software/make/manual/make.html&#34;&gt;make&lt;/a&gt; as well as having if/else clauses where you either show the output or a cleaned up version of the code that you used to generate the output. &lt;/p&gt;
-&lt;p&gt;Overall, there are many tools and tips I can learn from Karl. And I&amp;#8217;m sure that I&amp;#8217;m not the only one! Hopefully he&amp;#8217;ll give tips on where to start (nothing is more tedious than reading UNIX man-files).&lt;/p&gt;
-</description>
+      <guid>http://lcolladotor.github.io/2012/10/08/Why-arent-all-of-our-graphs-interactive/</guid>
+      <description>During the last pre-happy hour seminar, Karl Broman talked about Why aren&amp;#8217;t all of our graphs interactive? I didn&amp;#8217;t know, but a few years ago Karl worked in the department and clearly promoted beer-drinking and is the heart of the department. I&amp;#8217;m a fan of our pre-happy hour seminars since you have a get to listen to good/fun talks over a beer or two.
+But I&amp;#8217;m also a fan of reproducible research and useful graphics.</description>
     </item>
     
     <item>
       <title>The new visualization package for genome data in Bioconductor: ggbio</title>
-      <link>http://lcolladotor.github.io/2011/12/06/the-new-visualization-package-for-genome-data-in</link>
+      <link>http://lcolladotor.github.io/2011/12/06/the-new-visualization-package-for-genome-data-in/</link>
       <pubDate>Tue, 06 Dec 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://lcolladotor.github.io/2011/12/06/the-new-visualization-package-for-genome-data-in</guid>
-      <description>&lt;p&gt;It&amp;#8217;s been a while since I&amp;#8217;ve been waiting for the release of a visualization package in Bioconductor. Back in 2008 I was really impressed by the power of&lt;a href=&#34;http://www.bioconductor.org/packages/release/bioc/html/GenomeGraphs.html&#34;&gt; GenomeGraphs&lt;/a&gt; and I have used it in multiple occasions. Yet from both the &lt;a href=&#34;http://www-huber.embl.de/biocdeveleurope2010/&#34;&gt;Bioconductor Developer Meeting in Heidelberg 2010&lt;/a&gt; and &lt;a href=&#34;https://secure.bioconductor.org/BioC2011/&#34;&gt;BioC2011&lt;/a&gt; I&amp;#8217;ve been waiting for the release of the visualization tools developed by Michael Lawrence and Tengfei Yin at Genentech. &lt;/p&gt;
-&lt;p&gt;So, after a long hiatus where I didn&amp;#8217;t browse the &lt;a href=&#34;http://www.bioconductor.org/packages/release/BiocViews.html&#34;&gt;biocviews&lt;/a&gt; in Bioconductor, I found out that Lawrence and Yin released &lt;a href=&#34;http://www.bioconductor.org/packages/release/bioc/html/ggbio.html&#34;&gt;ggbio&lt;/a&gt; and &lt;a href=&#34;http://www.bioconductor.org/packages/release/bioc/html/biovizBase.html&#34;&gt;biovizBase&lt;/a&gt; (it&amp;#8217;s more of an infrastructure package for ggbio) . I haven&amp;#8217;t really had the time to play around with them, but it&amp;#8217;s definitely worth exploring both of their vignette files: &lt;a href=&#34;http://www.bioconductor.org/packages/release/bioc/vignettes/ggbio/inst/doc/intro.pdf&#34;&gt;ggbio&lt;/a&gt;, &lt;a href=&#34;http://www.bioconductor.org/packages/release/bioc/vignettes/biovizBase/inst/doc/intro.pdf&#34;&gt;biovizBase&lt;/a&gt;. I also think that they&amp;#8217;ll fit very well in Bioconductor because quite a few of their examples involved the gamma of objects the BioC team has released for high-throughput sequencing (HTS) data. Meaning that they work well with objects from IRanges and GenomicRanges. Also, some of the examples use BAM files which are common nowadays in any HTS analysis pipeline. As a plus, ggbio uses&lt;a href=&#34;http://cran.r-project.org/web/packages/ggplot2/index.html&#34;&gt; ggplot2&lt;/a&gt;, which definitely makes clear nice plots.&lt;/p&gt;
-&lt;p&gt;I expect ggbio to replace GenomeGraphs soon (although I love using it), but I&amp;#8217;m also kind of disappointed that I didn&amp;#8217;t see any of the cool examples from BioC2011 in ggbio&amp;#8217;s vignette file. After all, &lt;a href=&#34;https://github.com/tengfei/visnab&#34;&gt;visnab&lt;/a&gt; looked pretty impressive as &lt;a href=&#34;http://www.stat.iastate.edu/centers/CCGS/slides/slides-visnab.pdf&#34;&gt;you can see in this presentation&lt;/a&gt;. I don&amp;#8217;t know if they decided to rename visnab into ggbio, or maybe they haven&amp;#8217;t released visnab yet. Anyhow, give ggbio and biovizBase vignette files a look :)&lt;/p&gt;
-</description>
+      <guid>http://lcolladotor.github.io/2011/12/06/the-new-visualization-package-for-genome-data-in/</guid>
+      <description>It&amp;#8217;s been a while since I&amp;#8217;ve been waiting for the release of a visualization package in Bioconductor. Back in 2008 I was really impressed by the power ofGenomeGraphs and I have used it in multiple occasions. Yet from both the Bioconductor Developer Meeting in Heidelberg 2010 and BioC2011 I&amp;#8217;ve been waiting for the release of the visualization tools developed by Michael Lawrence and Tengfei Yin at Genentech. So, after a long hiatus where I didn&amp;#8217;t browse the biocviews in Bioconductor, I found out that Lawrence and Yin released ggbio and biovizBase (it&amp;#8217;s more of an infrastructure package for ggbio) .</description>
     </item>
     
   </channel>

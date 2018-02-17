@@ -2,33 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tutorial on L. Collado-Torres</title>
-    <link>http://lcolladotor.github.io/tags/tutorial/index.xml</link>
+    <link>http://lcolladotor.github.io/tags/tutorial/</link>
     <description>Recent content in Tutorial on L. Collado-Torres</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>&amp;copy; 2011-2017 Leonardo Collado Torres under (CC) BY-NC-SA</copyright>
-    <atom:link href="/tags/tutorial/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>&amp;copy; 2011-2018 Leonardo Collado Torres under (CC) BY-NC-SA</copyright>
+    <lastBuildDate>Fri, 21 Jun 2013 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://lcolladotor.github.io/tags/tutorial/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>ggplot Tutorial</title>
-      <link>http://lcolladotor.github.io/2013/06/21/ggplot-Tutorial</link>
+      <link>http://lcolladotor.github.io/2013/06/21/ggplot-Tutorial/</link>
       <pubDate>Fri, 21 Jun 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://lcolladotor.github.io/2013/06/21/ggplot-Tutorial</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;http://www.ceb-institute.org/bbs/wp-content/uploads/2011/09/handout_ggplot2.pdf&#34;&gt;ggplot Tutorial&lt;/a&gt;&lt;br/&gt;&lt;p&gt;I liked the &lt;a href=&#34;http://www.ceb-institute.org/bbs/wp-content/uploads/2011/09/handout_ggplot2.pdf&#34;&gt;following ggplot2 tutorial&lt;/a&gt; which is featured in Gabriela de Queiroz&amp;#8217;s blog called &lt;a href=&#34;http://unbiasedestimator.tumblr.com/&#34;&gt;unbiasedestimator&lt;/a&gt;. The tutorial looks very neatly presented and I&amp;#8217;m sure that it will be very helpful to anyone just getting started with ggplot2 before they jump into &lt;a href=&#34;http://ggplot2.org/book/&#34;&gt;ggplot2: Elegant Graphics for Data Analysis&lt;/a&gt; by Hadley Wickham or &lt;a href=&#34;http://shop.oreilly.com/product/0636920023135.do&#34;&gt;R Graphics Cookbook&lt;/a&gt; by Winston Chang.&lt;/p&gt;
-&lt;p&gt;&lt;span&gt;The tutorial is very nicely formatted with code in bold highlighting  parts that change something in the plot. Overall, the tutorial explains how to use qplot() although it does have a longer example using ggplot() to make survival curves.&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;Check it out!&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a class=&#34;tumblr_blog&#34; href=&#34;http://unbiasedestimator.tumblr.com/post/26148780483/ggplot-tutorial&#34;&gt;unbiasedestimator&lt;/a&gt;:&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Good tutorial about the R package.&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;“ggplot2 is an R package for producing statistical, or data, graphics, but it is unlike most other graphics packages because it has a deep underlying grammar. [..]”&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt; - H.Wickham, ggplot2, Use R, DOI 10.1007/978-0-387-98141_1, © Springer Science+Business Media, LLC 2009 -&lt;img alt=&#34;image&#34; height=&#34;403&#34; src=&#34;http://slycoder.files.wordpress.com/2009/08/day-of-week.png&#34; width=&#34;691&#34;/&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img alt=&#34;image&#34; height=&#34;461&#34; src=&#34;http://r.789695.n4.nabble.com/file/n1689957/plot1.jpeg&#34; width=&#34;462&#34;/&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img alt=&#34;image&#34; height=&#34;309&#34; src=&#34;http://revolution-computing.typepad.com/.a/6a010534b1db25970b0120a55e3eab970b-500pi&#34; width=&#34;500&#34;/&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-</description>
+      <guid>http://lcolladotor.github.io/2013/06/21/ggplot-Tutorial/</guid>
+      <description>ggplot TutorialI liked the following ggplot2 tutorial which is featured in Gabriela de Queiroz&amp;#8217;s blog called unbiasedestimator. The tutorial looks very neatly presented and I&amp;#8217;m sure that it will be very helpful to anyone just getting started with ggplot2 before they jump into ggplot2: Elegant Graphics for Data Analysis by Hadley Wickham or R Graphics Cookbook by Winston Chang.
+The tutorial is very nicely formatted with code in bold highlighting parts that change something in the plot.</description>
     </item>
     
   </channel>

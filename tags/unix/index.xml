@@ -2,29 +2,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Unix on L. Collado-Torres</title>
-    <link>http://lcolladotor.github.io/tags/unix/index.xml</link>
+    <link>http://lcolladotor.github.io/tags/unix/</link>
     <description>Recent content in Unix on L. Collado-Torres</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>&amp;copy; 2011-2017 Leonardo Collado Torres under (CC) BY-NC-SA</copyright>
-    <atom:link href="/tags/unix/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>&amp;copy; 2011-2018 Leonardo Collado Torres under (CC) BY-NC-SA</copyright>
+    <lastBuildDate>Wed, 07 Nov 2012 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://lcolladotor.github.io/tags/unix/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>me: Bad rm, don&#39;t delete stuff I didn&#39;t want to delete! (rm: well, I do what you tell me to do!)</title>
-      <link>http://lcolladotor.github.io/2012/11/07/me-bad-rm-dont-delete-stuff-i-didnt-want-to-delete</link>
+      <link>http://lcolladotor.github.io/2012/11/07/me-bad-rm-dont-delete-stuff-i-didnt-want-to-delete/</link>
       <pubDate>Wed, 07 Nov 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://lcolladotor.github.io/2012/11/07/me-bad-rm-dont-delete-stuff-i-didnt-want-to-delete</guid>
-      <description>&lt;p&gt;When Sandy was in town at some point I started doing some of my research work, but I shouldn&amp;#8217;t have. I basically did a silly mistake and erased files that take a long time to compute.&lt;/p&gt;
-&lt;p&gt;Prior to being here, I had an alias in my bash profile like this:&lt;/p&gt;
-&lt;p&gt;alias rm=&amp;#8217;rm -i&amp;#8217;&lt;/p&gt;
-&lt;p&gt;But when I setup my bash profile here I googled a bit to find what was the best common solution to avoid deleting stuff you shouldn&amp;#8217;t be deleting. That&amp;#8217;s when I found the following stackoverflow entry: &lt;a href=&#34;http://superuser.com/questions/384769/alias-rm-rm-i-considered-harmful&#34;&gt;`alias rm=“rm -i”` considered harmful?&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;One of the answers suggests using rmi instead of rm for the alias. The idea is that you will never expect that rm will run interactively in other machines, which could potentially be disastrous. &lt;/p&gt;
-&lt;p&gt;Being &amp;#8220;smart&amp;#8221;, I set up my alias to be rmi. However, I started using rm (without expecting it to be interactive) and just ignored the alias.&lt;/p&gt;
-&lt;p&gt;Problem is that I ran a more command with a pattern, saw that the files were empty, then deleted them with rm. Next, I wanted to check a different pattern, used the up arrow key and instead of editing the more command, I edited the rm command. When I noticed it, it was too late.&lt;/p&gt;
-&lt;p&gt;Luckily, I only deleted some output files that I can recover. But it was a pretty basic mistake. And yes, the files were not backed up.&lt;/p&gt;
-&lt;p&gt;Anyhow, I will now stick to my rmi alias and hopefully avoid running into this kind of pitfall &lt;em&gt;ever&lt;/em&gt; again.&lt;/p&gt;
-</description>
+      <guid>http://lcolladotor.github.io/2012/11/07/me-bad-rm-dont-delete-stuff-i-didnt-want-to-delete/</guid>
+      <description>When Sandy was in town at some point I started doing some of my research work, but I shouldn&amp;#8217;t have. I basically did a silly mistake and erased files that take a long time to compute.
+Prior to being here, I had an alias in my bash profile like this:
+alias rm=&amp;#8217;rm -i&amp;#8217;
+But when I setup my bash profile here I googled a bit to find what was the best common solution to avoid deleting stuff you shouldn&amp;#8217;t be deleting.</description>
     </item>
     
   </channel>
