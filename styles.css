@@ -25,7 +25,7 @@
 }
 
 html {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Merriweather', sans-serif;
   font-size: 16px;
   color: rgba(0,0,0,0.8);
   line-height: 1.65;
@@ -79,7 +79,7 @@ ul, ol, dl {
 
 /* Navigation bar text */
 .navbar-default {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Lato', sans-serif;
   font-weight: 400;
   line-height: 1.25;
   text-rendering: optimizeLegibility;
@@ -87,7 +87,7 @@ ul, ol, dl {
 
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Lato', sans-serif;
   font-weight: 400;
   margin-bottom: .5rem;
   line-height: 1.25;
@@ -154,7 +154,7 @@ figcaption {
   line-height: 1.25;
   font-size: 1rem;
   margin-bottom: 1.65rem;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Lato', sans-serif;
   counter-increment: captions;
 }
 
@@ -170,6 +170,9 @@ code {
   font-family: 'Roboto Mono', monospace;
   color: #c7254e;
   background-color: #f9f2f4;
+  overflow: auto;
+  word-wrap: normal;
+  white-space: pre;
 }
 
 pre {
@@ -1451,7 +1454,9 @@ body.dark {
 .dark code {
   color: rgb(139, 233, 253);
   background-color: rgb(68, 71, 90);
-
+  overflow: auto;
+  word-wrap: normal;
+  white-space: pre;
 }
 
 .dark pre {
