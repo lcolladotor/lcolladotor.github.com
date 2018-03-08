@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2011-2018 Leonardo Collado Torres under (CC) BY-NC-SA 4.0</copyright>
-    <lastBuildDate>Wed, 07 Mar 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 08 Mar 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/Blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>blogdown archetype (template)</title>
+      <link>/2018/03/08/blogdown-archetype-template/</link>
+      <pubDate>Thu, 08 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/2018/03/08/blogdown-archetype-template/</guid>
+      <description>In a recent blog post I wrote about having a template for blogdown posts. I wanted to know if it was possible to do this and make my life (and others hopefully) easier for writing new blog posts that are ready to go with the features I frequently re-use.
+In my case, I like using BiocStyle (Oleś, Morgan, and Huber, 2017) for functions such as CRANpkg(), Biocpkg() and Githubpkg(). I also like using knitcitations (Boettiger, 2017) for citing with citep() packages or papers; I use citation() and bib_metadata() to get the necessary information, respectively.</description>
+    </item>
     
     <item>
       <title>blogdown Insert Image addin</title>
