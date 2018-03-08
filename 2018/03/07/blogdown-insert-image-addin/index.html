@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme" content="hugo-academic">
+  <meta name="generator" content="Hugo 0.36.1" />
+  <meta name="author" content="Leonardo Collado Torres">
+
+  
+  
+  
+  
+    
+      
+    
+  
+  <meta name="description" content="Have you ever tried inserting an image into a blogdown post? Maybe you have, or maybe you tried and gave up. Lets first review the hard way before getting to the solution I contributed.
+The hard way The process involves copying the target image to the static directory that corresponds to the blogdown post. Lets say that your post is called 2018-03-07-my-new-post.Rmd and lives at content/post/, so it’s full path is content/post/2018-03-07-my-new-post.">
+
+  
+  <link rel="alternate" hreflang="en-us" href="/2018/03/07/blogdown-insert-image-addin/">
+
+  
+
+
+  
+
+  
+  
+  <meta name="theme-color" content="#e51744">
+  
+  
+  
+  
+    
+  
+  
+    
+    
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css">
+    
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha512-6MXa8B6uaO18Hid6blRMetEIoPqHf7Ux1tnyIQdpt9qI5OACx7C+O3IVTr98vwGnlcg0LOLa02i9Y1HpVhlfiw==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.1/css/academicons.min.css" integrity="sha512-NThgw3XKQ1absAahW6to7Ey42uycrVvfNfyjqcFNgCmOCQ5AR4AO0SiXrN+8ZtYeappp56lk1WtvjVmEa+VR6A==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" integrity="sha256-ygkqlh3CYSUri3LhQxzdcm0n1EQvH2Y+U5S2idbLtxs=" crossorigin="anonymous">
+  
+  
+  
+  
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:400,700%7cRoboto:400,400italic,700%7cRoboto&#43;Mono%7cKarma%7cMina">
+  
+  <link rel="stylesheet" href="/styles.css">
+  
+
+  
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-45299226-1', 'auto');
+      ga('require', 'eventTracker');
+      ga('require', 'outboundLinkTracker');
+      ga('require', 'urlChangeTracker');
+      ga('send', 'pageview');
+    </script>
+    <script async src="//www.google-analytics.com/analytics.js"></script>
+    
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js" integrity="sha512-HUmooslVKj4m6OBu0OgzjXXr+QuFYy/k7eLI5jdeEy/F4RSgMn6XRWRGkFi5IFaFgy7uFTkegp3Z0XnJf3Jq+g==" crossorigin="anonymous"></script>
+    
+  
+
+  
+  <link rel="alternate" href="/index.xml" type="application/rss+xml" title="L. Collado-Torres">
+  <link rel="feed" href="/index.xml" type="application/rss+xml" title="L. Collado-Torres">
+  
+
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="icon" type="image/png" href="/img/icon.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
+
+  <link rel="canonical" href="/2018/03/07/blogdown-insert-image-addin/">
+
+  <meta property="twitter:card" content="summary_large_image">
+  
+  <meta property="twitter:site" content="@fellgernon">
+  <meta property="twitter:creator" content="@fellgernon">
+  
+  <meta property="og:site_name" content="L. Collado-Torres">
+  <meta property="og:url" content="/2018/03/07/blogdown-insert-image-addin/">
+  <meta property="og:title" content="blogdown Insert Image addin | L. Collado-Torres">
+  <meta property="og:description" content="Have you ever tried inserting an image into a blogdown post? Maybe you have, or maybe you tried and gave up. Lets first review the hard way before getting to the solution I contributed.
+The hard way The process involves copying the target image to the static directory that corresponds to the blogdown post. Lets say that your post is called 2018-03-07-my-new-post.Rmd and lives at content/post/, so it’s full path is content/post/2018-03-07-my-new-post.">
+  <meta property="og:locale" content="en-us">
+  
+  <meta property="article:published_time" content="2018-03-07T00:00:00&#43;00:00">
+  
+  <meta property="article:modified_time" content="2018-03-07T00:00:00&#43;00:00">
+  
+
+  
+
+  <title>blogdown Insert Image addin | L. Collado-Torres</title>
+
+</head>
+<body id="top" data-spy="scroll" data-target="#toc" data-offset="71" >
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="navbar-header">
+      
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+              data-target=".navbar-collapse" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      
+      <a class="navbar-brand" href="/">L. Collado-Torres</a>
+    </div>
+
+    
+    <div class="collapse navbar-collapse">
+
+      
+      
+      <ul class="nav navbar-nav navbar-right">
+        
+
+        
+        
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#about">
+            
+            <span>Home</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+        
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#publications_selected">
+            
+            <span>Publications</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+        
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#talks">
+            
+            <span>Talks</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+        
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#blog">
+            
+            <span>Blog</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a href="/#cv">
+            
+            <span>CV</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+        
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#mentoring">
+            
+            <span>Students</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+        
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#teaching">
+            
+            <span>Teaching</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+        
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#contact">
+            
+            <span>Contact</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+        
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#search">
+            
+            <span>Search</span>
+            
+          </a>
+        </li>
+
+        
+        
+      
+
+      
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+<article class="article" itemscope itemtype="http://schema.org/Article">
+
+  
+
+
+  <div class="article-container">
+    <h1 itemprop="name">blogdown Insert Image addin</h1>
+
+    
+
+<div class="article-metadata">
+
+  <span class="article-date">
+    
+    <time datetime="2018-03-07 00:00:00 &#43;0000 UTC" itemprop="datePublished dateModified">
+      Wed, Mar 7, 2018
+    </time>
+  </span>
+  <span itemscope itemprop="author publisher" itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="Leonardo Collado Torres">
+  </span>
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    7 min read
+  </span>
+  
+
+  
+  
+  <span class="middot-divider"></span>
+  <a href="/2018/03/07/blogdown-insert-image-addin/#disqus_thread"></a>
+  
+
+  
+  
+  
+  <span class="middot-divider"></span>
+  <span class="article-categories">
+    <i class="fa fa-folder"></i>
+    
+    <a href="/categories/rstats">rstats</a
+    >
+    
+  </span>
+  
+  
+
+  
+  
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    <li>
+      <a class="twitter"
+         href="https://twitter.com/intent/tweet?text=blogdown%20Insert%20Image%20addin&amp;url=%2f2018%2f03%2f07%2fblogdown-insert-image-addin%2f"
+         target="_blank" rel="noopener">
+        <i class="fa fa-twitter"></i>
+      </a>
+    </li>
+    <li>
+      <a class="facebook"
+         href="https://www.facebook.com/sharer.php?u=%2f2018%2f03%2f07%2fblogdown-insert-image-addin%2f"
+         target="_blank" rel="noopener">
+        <i class="fa fa-facebook"></i>
+      </a>
+    </li>
+    <li>
+      <a class="linkedin"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=%2f2018%2f03%2f07%2fblogdown-insert-image-addin%2f&amp;title=blogdown%20Insert%20Image%20addin"
+         target="_blank" rel="noopener">
+        <i class="fa fa-linkedin"></i>
+      </a>
+    </li>
+    <li>
+      <a class="weibo"
+         href="http://service.weibo.com/share/share.php?url=%2f2018%2f03%2f07%2fblogdown-insert-image-addin%2f&amp;title=blogdown%20Insert%20Image%20addin"
+         target="_blank" rel="noopener">
+        <i class="fa fa-weibo"></i>
+      </a>
+    </li>
+    <li>
+      <a class="email"
+         href="mailto:?subject=blogdown%20Insert%20Image%20addin&amp;body=%2f2018%2f03%2f07%2fblogdown-insert-image-addin%2f">
+        <i class="fa fa-envelope"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+  
+
+</div>
+
+
+    <div class="article-style" itemprop="articleBody">
+      <p>Have you ever tried inserting an image into a <em><a href="https://CRAN.R-project.org/package=blogdown">blogdown</a></em> post? Maybe you have, or maybe you tried and gave up. Lets first review the <em>hard</em> way before getting to the solution I contributed.</p>
+<div id="the-hard-way" class="section level3">
+<h3>The <em>hard</em> way</h3>
+<p>The process involves copying the target image to the static directory that corresponds to the <em><a href="https://CRAN.R-project.org/package=blogdown">blogdown</a></em> post. Lets say that your post is called <code>2018-03-07-my-new-post.Rmd</code> and lives at <code>content/post/</code>, so it’s full path is <code>content/post/2018-03-07-my-new-post.Rmd</code>. When you run the RStudio <em><a href="https://CRAN.R-project.org/package=blogdown">blogdown</a></em> addin <em>Serve Site</em>, behind curtains the directory <code>static/post/2018-03-07-my-new-post_files</code> is created and inside it you can find the images made by your R code: likely at <code>static/post/2018-03-07-my-new-post_files/figure_html</code>.</p>
+<p>So far everything is working! But now you want to add a screenshot or some other image to your blog post. Lets say that your image is <code>~/Desktop/screenshot.jpg</code>. Your <code>~/Desktop</code> directory is not part of your <em><a href="https://CRAN.R-project.org/package=blogdown">blogdown</a></em> directory and well, simply put, your website won’t find the image. We need to put it in a location that will be made public by <code>hugo</code>. That is, we need to put it inside <code>static/post/2018-03-07-my-new-post_files</code> (or anywhere inside <code>static</code>, but we like to keep things tidy!).</p>
+<p>Ok, so we copy our screenshot file <code>~/Desktop/screenshot.jpg</code> and save it as <code>static/post/2018-03-07-my-new-post_files/screenshot.jpg</code>. The next time we render our site and publish it, the figure will be available in the web. But it’s still not part of our <em><a href="https://CRAN.R-project.org/package=blogdown">blogdown</a></em> post.</p>
+<p>So we need to use either the Markdown or HTML syntax for adding the image. Maybe your initial thought is to use:</p>
+<pre><code>![](screenshot.jpg)</code></pre>
+<p>Except that <strong>will not</strong> work. We need to use almost all the path (just remove <code>static</code>) as shown below:</p>
+<pre><code>![](/post/2018-03-07-my-new-post_files/screenshot.jpg)</code></pre>
+<p>If you want to edit the height or width, then you need to use the HTML syntax. Something like:</p>
+<pre><code>&lt;img alt = &#39;my new screenshot&#39; width=&#39;200&#39; src=&#39;(/post/2018-03-07-my-new-post_files/screenshot.jpg&#39; /&gt;</code></pre>
+<div id="hard-way-notes" class="section level4">
+<h4><em>hard way</em> notes</h4>
+<p>You could have also used <code>knitr::include_graphics()</code> and let <em><a href="https://CRAN.R-project.org/package=blogdown">blogdown</a></em> copy it to the final location in <code>static</code> and link to it appropriately. However, you would have to keep your original images organized in a way that won’t bother <code>hugo</code>.</p>
+<p>Another option that I used for a while, even in the days when my blog was based on Jekyll, is to render the figures yourself and copy the directory with the figures, plus mess around with how they are linked from R. Details <a href="https://github.com/lcolladotor/markdown-redcarpet.tmbundle/commit/f043c056ff620299843e9d8ea34144f478aa7965">here</a>. Not something I recommend doing now.</p>
+</div>
+</div>
+<div id="insert-image-addin-aka-the-easy-way" class="section level3">
+<h3><em>Insert Image</em> addin: aka, the <em>easy</em> way</h3>
+<p>If you are using <em><a href="https://CRAN.R-project.org/package=blogdown">blogdown</a></em>, you most likely (you <em>should</em> if you can) are using <a href="https://www.rstudio.com/products/rstudio/download/">RStudio</a> and the great <em><a href="https://CRAN.R-project.org/package=blogdown">blogdown</a></em> addins: <em>New Post</em> and <em>Serve Site</em>. I just recently started using them in the past few days and looking at the code I realized that it should be possible to make an addin that lets you:</p>
+<ol style="list-style-type: decimal">
+<li>select a target image,</li>
+<li>copies the target image to the appropriate location under <code>static</code>,</li>
+<li>gives you the correct code for linking the image.</li>
+</ol>
+<p>Yihui Xie <a href="https://github.com/rstudio/blogdown/issues/269">loved the idea</a> (I think it’s fair to say that ^^) and helped me polish it in the <a href="https://github.com/rstudio/blogdown/pull/272">pull request</a> that implements it. He then refined the code even <a href="https://github.com/rstudio/blogdown/commit/7355a94edc62dd9ffe3792c1103f1536b9c67406">more</a>!</p>
+</div>
+<div id="features-of-the-insert-image-addin" class="section level3">
+<h3>Features of the <em>Insert Image</em> addin</h3>
+<p>The final features, at least as implemented in <em><a href="https://CRAN.R-project.org/package=blogdown">blogdown</a></em> version 0.5.7 are:</p>
+<ul>
+<li>Select an image from anywhere in your computer.</li>
+<li>Automatically generate a candidate final location for your image under <code>static</code>, which you can edit. Useful if you want to rename the final figure.</li>
+<li>Allow specifying the alternate description of the image (<code>alt</code>), height and width.</li>
+<li>If the target image file exists, a dynamic menu shows up that asks you whether to overwrite it or not.</li>
+<li>The final syntax is Markdown unless a width or height are used, in which case it uses HTML code.</li>
+</ul>
+<p>Yihui Xie <a href="https://github.com/rstudio/blogdown/pull/272">hinted</a> at other possible future features, which maybe you can help implement.</p>
+</div>
+<div id="using-the-insert-image-addin" class="section level3">
+<h3>Using the <em>Insert Image</em> addin</h3>
+<div id="step-1-install-appropriate-blogdown-version" class="section level4">
+<h4>Step 1: install appropriate <em><a href="https://github.com/rstudio/blogdown">blogdown</a></em> version</h4>
+<p>First of all, at the time of writing this post, you need the development version of <em><a href="https://github.com/rstudio/blogdown">blogdown</a></em>. You can install it with:</p>
+<pre class="r"><code>## Check if you have version 0.5.7 or newer
+## I actually used version 0.5.9 for this blog post
+packageVersion(&#39;blogdown&#39;)
+
+## If not, then get it!
+##### If necessary:
+## install.packages(&#39;devtools&#39;)
+devtools::install_github(&#39;rstudio/blogdown&#39;)</code></pre>
+<p>You also need an up to date version of <a href="https://www.rstudio.com/products/rstudio/download/">RStudio</a> and I recommend also using <a href="https://cran.r-project.org/">R 3.4.x</a> (or newer if you are reading this in the future). Re-start RStudio so it loads the new version of <em><a href="https://github.com/rstudio/blogdown">blogdown</a></em>.</p>
+</div>
+<div id="step-2-open-the-insert-image-addin" class="section level4">
+<h4>Step 2: open the <em>Insert Image</em> addin</h4>
+<p>Second, go to the <em>Addins</em> menu in the top section of the RStudio window and select the <em>Insert Image</em> <em><a href="https://github.com/rstudio/blogdown">blogdown</a></em> addin.</p>
+<p><img src="/post/2018-03-07-blogdown-insert-image-addin_files/Screen Shot 2018-03-07 at 11.47.37 PM.png" alt="insert image addin screenshot" width="400"/></p>
+</div>
+<div id="step-3-choose-figure-and-inputs" class="section level4">
+<h4>Step 3: choose figure and inputs</h4>
+<p>So far the <em>Insert Image</em> addin looks like this:</p>
+<p><img src="/post/2018-03-07-blogdown-insert-image-addin_files/Screen Shot 2018-03-07 at 11.58.44 PM.png" alt="addin without input" width="400"/></p>
+<p>So lets go head and select an image we want to upload. In my case, I chose an image that already exists.</p>
+<p><img src="/post/2018-03-07-blogdown-insert-image-addin_files/Screen Shot 2018-03-08 at 12.00.01 AM.png" alt="" width="400"/></p>
+<p>You can rename the figure if you want, and if it doesn’t exist, the <em>overwrite</em> option goes away.</p>
+<p><img src="/post/2018-03-07-blogdown-insert-image-addin_files/Screen Shot 2018-03-08 at 12.01.06 AM.png" alt="modified image file" width="400"/></p>
+</div>
+<div id="step-4-hit-done" class="section level4">
+<h4>Step 4: hit done!</h4>
+<p><img src="/post/2018-03-07-blogdown-insert-image-addin_files/Screen Shot 2018-03-08 at 12.02.28 AM.png" alt="hit go" width="400"/></p>
+<p>Lets go ahead and click <code>done</code>! Our text window in RStudio will insert the appropriate code for linking the image. In this case, it’s the following code:</p>
+<pre><code>&lt;img src=&quot;/post/2018-03-07-blogdown-insert-image-addin_files/screenshot.png&quot; alt=&quot;final image&quot; width=&quot;400&quot;/&gt;</code></pre>
+<p>and this is the image:</p>
+<p><img src="/post/2018-03-07-blogdown-insert-image-addin_files/screenshot.png" alt="final image" width="400"/></p>
+</div>
+<div id="optional-step-5" class="section level4">
+<h4>Optional step 5</h4>
+<p>Now use the <em>Serve Site</em> addin and check if you like your images. You might want to change the height/widths or alternate text. You could also wrap the HTML/Markdown code around it for linking to a website.</p>
+<p>You can also delete your original images, if for example, they are cluttering your <code>~/Desktop</code>.</p>
+</div>
+</div>
+<div id="conclusions" class="section level3">
+<h3>Conclusions</h3>
+<p>I hope that you will find this new addin as useful as I’m finding it, or even more. Plus hopefully this blog post gives you an idea of the difficulties before this addin existed. Also, I want to thank Yihui Xie for guiding me, I’ve learnt quite a bit recently. Though I will still use <code>&lt;-</code> assignment operator for my own code hehe.</p>
+</div>
+<div id="acknowledgements" class="section level3">
+<h3>Acknowledgements</h3>
+<p>This blog post was made possible thanks to:</p>
+<ul>
+<li><em><a href="http://bioconductor.org/packages/BiocStyle">BiocStyle</a></em> <a id='cite-Oles_2017'></a>(<a href='https://github.com/Bioconductor/BiocStyle'>Oleś, Morgan, and Huber, 2017</a>)</li>
+<li><em><a href="https://CRAN.R-project.org/package=blogdown">blogdown</a></em> <a id='cite-Xie_2017'></a>(<a href='https://github.com/rstudio/blogdown'>Xie, Hill, and Thomas, 2017</a>)</li>
+<li><em><a href="https://CRAN.R-project.org/package=devtools">devtools</a></em> <a id='cite-Wickham_2018'></a>(<a href='https://CRAN.R-project.org/package=devtools'>Wickham, Hester, and Chang, 2018</a>)</li>
+<li><em><a href="https://CRAN.R-project.org/package=knitcitations">knitcitations</a></em> <a id='cite-Boettiger_2017'></a>(<a href='https://CRAN.R-project.org/package=knitcitations'>Boettiger, 2017</a>)</li>
+</ul>
+<p>as well as Yihui Xie’s help and encouragement in the <a href="https://yihui.name/en/2018/02/bite-sized-pull-requests/">form of a signed sticker</a> and the <em>Great Hacker</em> title ^^. He also wrote <a href="https://yihui.name/en/2018/03/second-pull-request/">a blog post</a> about the <em>Insert Image</em> addin.</p>
+<p><img src="/post/2018-03-07-blogdown-insert-image-addin_files/Screen Shot 2018-03-08 at 12.12.07 AM.png" alt="great hacker signed sticker" width="400"/></p>
+</div>
+<div id="references" class="section level3">
+<h3>References</h3>
+<p>
+<a id='bib-Boettiger_2017'></a><a href="#cite-Boettiger_2017">[1]</a><cite> C. Boettiger. <em>knitcitations: Citations for ‘Knitr’ Markdown Files</em>. R package version 1.0.8. 2017. URL: <a href="https://CRAN.R-project.org/package=knitcitations">https://CRAN.R-project.org/package=knitcitations</a>.</cite>
+</p>
+<p>
+<a id='bib-Oles_2017'></a><a href="#cite-Oles_2017">[2]</a><cite> A. Oleś, M. Morgan and W. Huber. <em>BiocStyle: Standard styles for vignettes and other Bioconductor documents</em>. R package version 2.6.1. 2017. URL: <a href="https://github.com/Bioconductor/BiocStyle">https://github.com/Bioconductor/BiocStyle</a>.</cite>
+</p>
+<p>
+<a id='bib-Wickham_2018'></a><a href="#cite-Wickham_2018">[3]</a><cite> H. Wickham, J. Hester and W. Chang. <em>devtools: Tools to Make Developing R Packages Easier</em>. R package version 1.13.5. 2018. URL: <a href="https://CRAN.R-project.org/package=devtools">https://CRAN.R-project.org/package=devtools</a>.</cite>
+</p>
+<p>
+<a id='bib-Xie_2017'></a><a href="#cite-Xie_2017">[4]</a><cite> Y. Xie, A. P. Hill and A. Thomas. <em>blogdown: Creating Websites with R Markdown</em>. ISBN 978-0815363729. Boca Raton, Florida: Chapman and Hall/CRC, 2017. URL: <a href="https://github.com/rstudio/blogdown">https://github.com/rstudio/blogdown</a>.</cite>
+</p>
+</div>
+<div id="reproducibility" class="section level3">
+<h3>Reproducibility</h3>
+<pre><code>## Session info ----------------------------------------------------------------------------------------------------------</code></pre>
+<pre><code>##  setting  value                       
+##  version  R version 3.4.3 (2017-11-30)
+##  system   x86_64, darwin15.6.0        
+##  ui       X11                         
+##  language (EN)                        
+##  collate  en_US.UTF-8                 
+##  tz       America/New_York            
+##  date     2018-03-08</code></pre>
+<pre><code>## Packages --------------------------------------------------------------------------------------------------------------</code></pre>
+<pre><code>##  package       * version date       source                            
+##  backports       1.1.2   2017-12-13 CRAN (R 3.4.3)                    
+##  base          * 3.4.3   2017-12-07 local                             
+##  bibtex          0.4.2   2017-06-30 CRAN (R 3.4.1)                    
+##  BiocStyle     * 2.6.1   2017-11-30 Bioconductor                      
+##  blogdown        0.5.9   2018-03-08 Github (rstudio/blogdown@dc1f41c) 
+##  bookdown        0.7     2018-02-18 cran (@0.7)                       
+##  colorout      * 1.2-0   2018-02-19 Github (jalvesaq/colorout@2f01173)
+##  compiler        3.4.3   2017-12-07 local                             
+##  datasets      * 3.4.3   2017-12-07 local                             
+##  devtools      * 1.13.5  2018-02-18 CRAN (R 3.4.3)                    
+##  digest          0.6.15  2018-01-28 CRAN (R 3.4.3)                    
+##  evaluate        0.10.1  2017-06-24 CRAN (R 3.4.1)                    
+##  graphics      * 3.4.3   2017-12-07 local                             
+##  grDevices     * 3.4.3   2017-12-07 local                             
+##  htmltools       0.3.6   2017-04-28 CRAN (R 3.4.0)                    
+##  httr            1.3.1   2017-08-20 CRAN (R 3.4.1)                    
+##  jsonlite        1.5     2017-06-01 CRAN (R 3.4.0)                    
+##  knitcitations * 1.0.8   2017-07-04 CRAN (R 3.4.1)                    
+##  knitr           1.20    2018-02-20 cran (@1.20)                      
+##  lubridate       1.7.3   2018-02-27 CRAN (R 3.4.3)                    
+##  magrittr        1.5     2014-11-22 CRAN (R 3.4.0)                    
+##  memoise         1.1.0   2017-04-21 CRAN (R 3.4.0)                    
+##  methods       * 3.4.3   2017-12-07 local                             
+##  plyr            1.8.4   2016-06-08 CRAN (R 3.4.0)                    
+##  R6              2.2.2   2017-06-17 CRAN (R 3.4.0)                    
+##  Rcpp            0.12.15 2018-01-20 CRAN (R 3.4.3)                    
+##  RefManageR      0.14.20 2017-08-17 CRAN (R 3.4.1)                    
+##  rmarkdown       1.9     2018-03-01 cran (@1.9)                       
+##  rprojroot       1.3-2   2018-01-03 CRAN (R 3.4.3)                    
+##  stats         * 3.4.3   2017-12-07 local                             
+##  stringi         1.1.6   2017-11-17 CRAN (R 3.4.2)                    
+##  stringr         1.3.0   2018-02-19 cran (@1.3.0)                     
+##  tools           3.4.3   2017-12-07 local                             
+##  utils         * 3.4.3   2017-12-07 local                             
+##  withr           2.1.1   2017-12-19 CRAN (R 3.4.3)                    
+##  xfun            0.1     2018-01-22 CRAN (R 3.4.3)                    
+##  xml2            1.2.0   2018-01-24 CRAN (R 3.4.3)                    
+##  yaml            2.1.17  2018-02-27 cran (@2.1.17)</code></pre>
+</div>
+
+    </div>
+
+    
+
+
+<div class="article-tags">
+  
+  <a class="btn btn-primary btn-outline" href="/tags/blog">Blog</a>
+  
+  <a class="btn btn-primary btn-outline" href="/tags/rstats">rstats</a>
+  
+</div>
+
+
+
+
+    
+    
+    <div class="article-widget">
+      <div class="hr-light"></div>
+      <h3>Related</h3>
+      <ul>
+        
+        <li><a href="/2018/02/17/r-markdown-blog-template/">R markdown blog template</a></li>
+        
+        <li><a href="/2013/11/09/new-Fellgernon-Bit-setup-in-Github/">Creating your Jekyll-Bootstrap powered blog for R blogging</a></li>
+        
+        <li><a href="/2013/11/07/bmorebiostats/">Bmore Biostats is born!</a></li>
+        
+        <li><a href="/2013/03/09/Analyzing-SimplyStatistics-visits-info/">Analyzing SimplyStatistics visits info</a></li>
+        
+        <li><a href="/2012/10/01/JHSPH-Biostat-through-Coursera/">JHSPH-Biostat through Coursera</a></li>
+        
+      </ul>
+    </div>
+    
+
+    
+
+    
+<section id="comments">
+  <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "fellgernonbit" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+
+
+
+  </div>
+</article>
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="powered-by">
+
+
+      
+      
+      <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4ef23e545d41b87c"></script>
+      <script type="text/javascript">
+        addthis.layers({
+          'theme' : 'transparent',
+          'share' : {
+            'position' : 'left',
+            'numPreferredServices' : 5,
+            'desktop' : false,
+            'mobile' : true
+          }, 
+          'follow' : {
+            'services' : [
+              {'service': 'twitter', 'id': 'fellgernon'},
+              {'service': 'rss', 'id': 'http://feeds.feedburner.com/FellgernonBit'}
+            ],
+      	  'offset' : {'top':'10px'},
+            'title' : 'Follow'
+          }   
+        });
+      </script>
+      
+
+      <script type="text/javascript">
+      var addthis_config = {
+      	data_ga_property: 'UA-45299226-1',
+      	data_ga_social : true,
+      	data_track_addressbar: true
+      };
+      var addthis_share = {
+      	
+      	url_transforms : {
+      		shorten: {
+      			twitter: 'bitly'
+      		}
+      	}, 
+      	shorteners : {
+      		bitly : {}
+      	}
+      }
+      </script>
+      
+      <center>	 
+      <div id="clustrmaps-widget"></div><script type="text/javascript" id="clustrmaps" src="//cdn.clustrmaps.com/map_v2.js?d=Zo-deincaJGsqhqjIWsujtdoNOMJsnnZLefKmxDKVv8"></script>
+      </center>
+
+      &copy; 2011-2018 Leonardo Collado Torres under (CC) BY-NC-SA 4.0 &middot; 
+
+      Powered by the
+      <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+      <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+      <span class="pull-right" aria-hidden="true">
+        <a href="#" id="back_to_top">
+          <span class="button_icon">
+            <i class="fa fa-chevron-up fa-2x"></i>
+          </span>
+        </a>
+      </span>
+
+    </p>
+  </div>
+</footer>
+
+
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close btn-large" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Cite</h4>
+      </div>
+      <div>
+        <pre><code class="modal-body tex"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-primary btn-outline js-copy-cite" href="#" target="_blank">
+          <i class="fa fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-primary btn-outline js-download-cite" href="#" target="_blank">
+          <i class="fa fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+    
+    <script id="dsq-count-scr" src="//fellgernonbit.disqus.com/count.js" async></script>
+    
+
+    
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha512-3P8rXCuGJdNZOnUx/03c1jOTnMn3rP63nBip5gOP2qmUh5YAdVAvFZ1E+QLZZbC1rtMrQb+mah3AfYW11RUrWA==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.3/imagesloaded.pkgd.min.js" integrity="sha512-umsR78NN0D23AzgoZ11K7raBD+R6hqKojyBZs1w8WvYlsI+QuKRGBx3LFCwhatzBunCjDuJpDHwxD13sLMbpRA==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha512-iztkobsvnjKfAtTNdHkGVjAYTrrtlC7mGp/54c40wowO7LhURYl3gVzzcEqGl/qKXQltJ2HwMrdLcNUdo+N/RQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.4/isotope.pkgd.min.js" integrity="sha512-VDBOIlDbuC4VWxGJNmuFRQ0Li0SKkDpmGyuhAG5LTDLd/dJ/S0WMVxriR2Y+CyPL5gzjpN4f/6iqWVBJlht0tQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" integrity="sha256-X5PoE3KU5l+JcX+w09p/wHl9AzK333C4hJ2I9S5mD4M=" crossorigin="anonymous"></script>
+    
+    
+    <script src="/js/hugo-academic.js"></script>
+    
+
+    
+    
+      
+      
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+      
+
+      
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/r.min.js"></script>
+      
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/bash.min.js"></script>
+      
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/python.min.js"></script>
+      
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/stata.min.js"></script>
+      
+
+      
+
+      <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });
+    </script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML" integrity="sha512-tOav5w1OjvsSJzePRtt2uQPFwBoHt1VZcUq8l8nm5284LEKE9FSJBQryzMBzHxY5P0zRdNqEcpLIRVYFNgu1jw==" crossorigin="anonymous"></script>
+    
+    
+
+  </body>
+</html>
+

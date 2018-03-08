@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2011-2018 Leonardo Collado Torres under (CC) BY-NC-SA 4.0</copyright>
-    <lastBuildDate>Sat, 17 Feb 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 07 Mar 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>blogdown Insert Image addin</title>
+      <link>/2018/03/07/blogdown-insert-image-addin/</link>
+      <pubDate>Wed, 07 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/2018/03/07/blogdown-insert-image-addin/</guid>
+      <description>Have you ever tried inserting an image into a blogdown post? Maybe you have, or maybe you tried and gave up. Lets first review the hard way before getting to the solution I contributed.
+The hard way The process involves copying the target image to the static directory that corresponds to the blogdown post. Lets say that your post is called 2018-03-07-my-new-post.Rmd and lives at content/post/, so it’s full path is content/post/2018-03-07-my-new-post.</description>
+    </item>
     
     <item>
       <title>R markdown blog template</title>
