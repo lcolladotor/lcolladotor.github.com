@@ -2,51 +2,51 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Help on L. Collado-Torres</title>
-    <link>http://lcolladotor.github.io/tags/Help/</link>
+    <link>/tags/Help/</link>
     <description>Recent content in Help on L. Collado-Torres</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2011-2018 Leonardo Collado Torres under (CC) BY-NC-SA 4.0</copyright>
     <lastBuildDate>Thu, 04 May 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://lcolladotor.github.io/tags/Help/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/Help/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Updating R</title>
-      <link>http://lcolladotor.github.io/2017/05/04/Updating-R/</link>
+      <link>/2017/05/04/Updating-R/</link>
       <pubDate>Thu, 04 May 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://lcolladotor.github.io/2017/05/04/Updating-R/</guid>
+      <guid>/2017/05/04/Updating-R/</guid>
       <description>As you might know by now, the latest R version was recently released (R 3.4.0). That means that you are highly encouraged to update your R installation. There are several ways to do this some of which are documented in these other blog posts: Tal Galili, 2013, Kris Eberwein, 2015. You would think that it&#39;s just a matter of downloading the latest R installer for your OS, installing it, and continuing your analysis.</description>
     </item>
     
     <item>
       <title>How to ask for help for Bioconductor packages</title>
-      <link>http://lcolladotor.github.io/2017/03/06/How-to-ask-for-help-for-Bioconductor-packages/</link>
+      <link>/2017/03/06/How-to-ask-for-help-for-Bioconductor-packages/</link>
       <pubDate>Mon, 06 Mar 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://lcolladotor.github.io/2017/03/06/How-to-ask-for-help-for-Bioconductor-packages/</guid>
+      <guid>/2017/03/06/How-to-ask-for-help-for-Bioconductor-packages/</guid>
       <description>tl;dr Please post your question at the Bioconductor support website https://support.bioconductor.org/ and check the posting guide http://www.bioconductor.org/help/support/posting-guide/. It&#39;s important that you provide reproducible code and information about your R session.
  Recently I have been getting more questions about several packages I maintain. It&#39;s great to see more interest from users, but at the same time most questions lack the information I need to help the users. I have also gotten most of the questions via email, which is why I am writing this post.</description>
     </item>
     
     <item>
       <title>Use hidden advanced arguments for user-friendly functions</title>
-      <link>http://lcolladotor.github.io/2014/12/11/dots/</link>
+      <link>/2014/12/11/dots/</link>
       <pubDate>Thu, 11 Dec 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://lcolladotor.github.io/2014/12/11/dots/</guid>
+      <guid>/2014/12/11/dots/</guid>
       <description>As a user Imagine that you are starting to learn how to use a specific R package, lets call it foo. You will look at the vignette (if there is one), use help(package = foo), or look at the reference manual (for example, devtools&#39; ref man). Eventually, you will open the help page for the function(s) you are interested in using.
 ?function_I_want_to_use  In many packages, there is a main use case that is addressed by the package.</description>
     </item>
     
     <item>
       <title>Trying to reduce the memory overhead when using mclapply</title>
-      <link>http://lcolladotor.github.io/2013/11/14/Reducing-memory-overhead-when-using-mclapply/</link>
+      <link>/2013/11/14/Reducing-memory-overhead-when-using-mclapply/</link>
       <pubDate>Thu, 14 Nov 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://lcolladotor.github.io/2013/11/14/Reducing-memory-overhead-when-using-mclapply/</guid>
+      <guid>/2013/11/14/Reducing-memory-overhead-when-using-mclapply/</guid>
       <description>I am currently trying to understand how to reduce the memory used by mclapply. This function is rather complicated and others have explained the differences versus parLapply (A_Skelton73, 2013; lockedoff, 2012 ) and also made it clear that in mclapply each job does not know if the others are running out of memory and thus cannot trigger gc (Urbanek, 2012).
 While I still struggle to understand all the details of mclapply, I can successfully use it to reduce computation time at the expense of a very high memory load.</description>
     </item>

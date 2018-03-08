@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Dropbox on L. Collado-Torres</title>
-    <link>http://lcolladotor.github.io/tags/Dropbox/</link>
+    <link>/tags/Dropbox/</link>
     <description>Recent content in Dropbox on L. Collado-Torres</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2011-2018 Leonardo Collado Torres under (CC) BY-NC-SA 4.0</copyright>
     <lastBuildDate>Wed, 05 Feb 2014 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://lcolladotor.github.io/tags/Dropbox/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/Dropbox/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>How to upload files to Dropbox and Google Docs from R</title>
-      <link>http://lcolladotor.github.io/2014/02/05/DropboxAndGoogleDocsFromR/</link>
+      <link>/2014/02/05/DropboxAndGoogleDocsFromR/</link>
       <pubDate>Wed, 05 Feb 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://lcolladotor.github.io/2014/02/05/DropboxAndGoogleDocsFromR/</guid>
+      <guid>/2014/02/05/DropboxAndGoogleDocsFromR/</guid>
       <description>Have you ever wondered whether you can upload files from R to Dropbox and/or Google Docs? I recently asked myself this question while making my most recent Shiny app (more later).
 The answer is yes, you can upload files from R to these cloud services!
 Dropbox As far as I know, the best R package for uploading files to Dropbox is rDrop (Ram &amp;amp; Temple Lang, 2012). The whole setup is very well explained in it&#39;s GitHub repository (Karthik).</description>

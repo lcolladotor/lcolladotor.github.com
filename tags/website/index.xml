@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Website on L. Collado-Torres</title>
-    <link>http://lcolladotor.github.io/tags/Website/</link>
+    <link>/tags/Website/</link>
     <description>Recent content in Website on L. Collado-Torres</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2011-2018 Leonardo Collado Torres under (CC) BY-NC-SA 4.0</copyright>
     <lastBuildDate>Mon, 24 Sep 2012 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://lcolladotor.github.io/tags/Website/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/Website/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Introducing Git while making your academic webpage</title>
-      <link>http://lcolladotor.github.io/2012/09/24/Introducing-Git-while-making-your-academic-webpage/</link>
+      <link>/2012/09/24/Introducing-Git-while-making-your-academic-webpage/</link>
       <pubDate>Mon, 24 Sep 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://lcolladotor.github.io/2012/09/24/Introducing-Git-while-making-your-academic-webpage/</guid>
+      <guid>/2012/09/24/Introducing-Git-while-making-your-academic-webpage/</guid>
       <description>Last week I gave a presentation during our computing club on how to use git (a version control system). I used as a motivating example the first steps of creating your own academic webpage. The goal was to make it interesting to both new students (who might have been more interested on the webpage part) and older students (for whom version control should be a must). The slides and all the material is publicly available through the following Bitbucket repository: https://bitbucket.</description>
     </item>
     

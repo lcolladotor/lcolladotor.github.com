@@ -2,60 +2,60 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Blog on L. Collado-Torres</title>
-    <link>http://lcolladotor.github.io/tags/Blog/</link>
+    <link>/tags/Blog/</link>
     <description>Recent content in Blog on L. Collado-Torres</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2011-2018 Leonardo Collado Torres under (CC) BY-NC-SA 4.0</copyright>
     <lastBuildDate>Sat, 17 Feb 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://lcolladotor.github.io/tags/Blog/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/Blog/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>R markdown blog template</title>
-      <link>http://lcolladotor.github.io/2018/02/17/r-markdown-blog-template/</link>
+      <link>/2018/02/17/r-markdown-blog-template/</link>
       <pubDate>Sat, 17 Feb 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://lcolladotor.github.io/2018/02/17/r-markdown-blog-template/</guid>
+      <guid>/2018/02/17/r-markdown-blog-template/</guid>
       <description>This blog post is mostly for myself but maybe it’s useful to others. It contains my current R markdown blog template. I initially posted this as a question at StackOverflow. Then I read how much a burden we put in Yihui Xie and decided that my current setup (copy-pasting) works just fine. In any case using blogdown with the RStudio IDE is much simpler than what I used to do in the past with jekyll or with even my prior setup with blogdown.</description>
     </item>
     
     <item>
       <title>Creating your Jekyll-Bootstrap powered blog for R blogging</title>
-      <link>http://lcolladotor.github.io/2013/11/09/new-Fellgernon-Bit-setup-in-Github/</link>
+      <link>/2013/11/09/new-Fellgernon-Bit-setup-in-Github/</link>
       <pubDate>Sat, 09 Nov 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://lcolladotor.github.io/2013/11/09/new-Fellgernon-Bit-setup-in-Github/</guid>
+      <guid>/2013/11/09/new-Fellgernon-Bit-setup-in-Github/</guid>
       <description>As you might have noticed, I recently decided to move Fellgernon Bit from Tumblr to GitHub. There are a couple of reasons why I made this change.
  I wanted a more professional-looking blog.  There are not many R blogs on Tumblr, and well, long text posts are not really meant for Tumblr.  Better code highlighting.  I had enabled R code highlighting using the highlighting instructions from Jeffrey Horner (Horner, Part I).</description>
     </item>
     
     <item>
       <title>Bmore Biostats is born!</title>
-      <link>http://lcolladotor.github.io/2013/11/07/bmorebiostats/</link>
+      <link>/2013/11/07/bmorebiostats/</link>
       <pubDate>Thu, 07 Nov 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://lcolladotor.github.io/2013/11/07/bmorebiostats/</guid>
+      <guid>/2013/11/07/bmorebiostats/</guid>
       <description>In recent weeks, I have met with a group of students @jhubiostat interested in blogging about their research, tutorials, pieces of R code, among plenty of other subjects. Within this group we had the idea to aggregate our blogs so it would be easier for others to follow us and to easily promote our own blogs to a much larger audience. Basically, do what R-bloggers does but focused on blogs from students at Johns Hopkins Biostatistics.</description>
     </item>
     
     <item>
       <title>Analyzing SimplyStatistics visits info</title>
-      <link>http://lcolladotor.github.io/2013/03/09/Analyzing-SimplyStatistics-visits-info/</link>
+      <link>/2013/03/09/Analyzing-SimplyStatistics-visits-info/</link>
       <pubDate>Sat, 09 Mar 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://lcolladotor.github.io/2013/03/09/Analyzing-SimplyStatistics-visits-info/</guid>
+      <guid>/2013/03/09/Analyzing-SimplyStatistics-visits-info/</guid>
       <description>Recently we had to analyze the data of the number of visits per day to SimplyStatistics.org. There were two goals:
 Estimate the fraction of visitors retained after a spike in the number of visitors Identify (if any) any factors that influence the fraction estimated in 1. For me it was a fun project in part because I like SimplyStatistics but also because I think that finding the answers to the questions would be interesting and help understand the readers of that blog.</description>
     </item>
     
     <item>
       <title>Correctly synching AddThis and Google Analytics social stats</title>
-      <link>http://lcolladotor.github.io/2012/01/27/correctly-synching-addthis-and-google-analytics-social/</link>
+      <link>/2012/01/27/correctly-synching-addthis-and-google-analytics-social/</link>
       <pubDate>Fri, 27 Jan 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://lcolladotor.github.io/2012/01/27/correctly-synching-addthis-and-google-analytics-social/</guid>
+      <guid>/2012/01/27/correctly-synching-addthis-and-google-analytics-social/</guid>
       <description>As a minor addition to my previous posts about setting up a blog, I want to detail a bit more how to synchronize your AddThis social sharing statistics (AddThis Analytics) with Google Analytics.
 The main help file explaining how to do so has been a bit confusing for me. Though, in part that&amp;#8217;s because I didn&amp;#8217;t read it completely. Plus there were a few things I didn&amp;#8217;t know.
 First, Google Analytics (GA) has two ways in which you can add it to your site: synchronous and asynchronous.</description>
@@ -63,19 +63,19 @@ First, Google Analytics (GA) has two ways in which you can add it to your site: 
     
     <item>
       <title>Make it easy for your visitors to suscribe with a burnt RSS feed</title>
-      <link>http://lcolladotor.github.io/2011/11/30/make-it-easy-for-your-visitors-to-suscribe-with-a-burnt/</link>
+      <link>/2011/11/30/make-it-easy-for-your-visitors-to-suscribe-with-a-burnt/</link>
       <pubDate>Wed, 30 Nov 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://lcolladotor.github.io/2011/11/30/make-it-easy-for-your-visitors-to-suscribe-with-a-burnt/</guid>
+      <guid>/2011/11/30/make-it-easy-for-your-visitors-to-suscribe-with-a-burnt/</guid>
       <description>Recently I talked about how to set up your own blog and now I&amp;#8217;m going to continue by emphasizing the importance of an RSS feed. What is it? Basically it is a unique format in which content from frequently updated sites (like a blog) is syndicated. Web syndication allows you to share the content of your site (blog) to many different sites automatically. This is specially useful for people who are interested in following your blog.</description>
     </item>
     
     <item>
       <title>Setting up your blog</title>
-      <link>http://lcolladotor.github.io/2011/11/20/Setting-up-your-blog/</link>
+      <link>/2011/11/20/Setting-up-your-blog/</link>
       <pubDate>Sun, 20 Nov 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://lcolladotor.github.io/2011/11/20/Setting-up-your-blog/</guid>
+      <guid>/2011/11/20/Setting-up-your-blog/</guid>
       <description>Now that I&amp;#8217;ve spent time re-doing Fellgernon Bit, I thought it&amp;#8217;d be a good time my experience on setting up a socially-connected blog.
 First of all, you need to choose a blog platform. There are some around like Blogger and WordPress that are widely used and were some of the first platforms. In my case though, I really like how easy http://www.tumblr.com/ is to use. Once you register and have the default blog, go to the customize menu from the Tumblr dashboard and browse the Free Themes.</description>
     </item>

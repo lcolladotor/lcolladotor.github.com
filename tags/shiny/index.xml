@@ -2,49 +2,49 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Shiny on L. Collado-Torres</title>
-    <link>http://lcolladotor.github.io/tags/shiny/</link>
+    <link>/tags/shiny/</link>
     <description>Recent content in Shiny on L. Collado-Torres</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2011-2018 Leonardo Collado Torres under (CC) BY-NC-SA 4.0</copyright>
     <lastBuildDate>Fri, 20 Jan 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://lcolladotor.github.io/tags/shiny/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/shiny/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Easily explore a table with shinycsv</title>
-      <link>http://lcolladotor.github.io/2017/01/20/Easily-explore-a-table-with-shinycsv/</link>
+      <link>/2017/01/20/Easily-explore-a-table-with-shinycsv/</link>
       <pubDate>Fri, 20 Jan 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://lcolladotor.github.io/2017/01/20/Easily-explore-a-table-with-shinycsv/</guid>
+      <guid>/2017/01/20/Easily-explore-a-table-with-shinycsv/</guid>
       <description>Have you ever had to explore a table with data? I believe the answer is yes for most people that work at a computer or even just use it for communicating with their friends and family. Tables of data pop up everywhere, for example in personal finance. Websites like Mint.com allow you to download your transactions in a CSV file called transactions.csv. CSV is one of the many formats for storing tables and most likely when you try to open the transactions.</description>
     </item>
     
     <item>
       <title>Finding possible class schedules</title>
-      <link>http://lcolladotor.github.io/2016/08/02/materias/</link>
+      <link>/2016/08/02/materias/</link>
       <pubDate>Tue, 02 Aug 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://lcolladotor.github.io/2016/08/02/materias/</guid>
+      <guid>/2016/08/02/materias/</guid>
       <description>Over the weekend my brother wanted to figure out his class schedule for the next semester. He is a veterinary medicine and zootechnology student at UNAM. For this upcoming semester there is a set of classes he has to take and each has 8 or so instructor options. The website where he finds the class times lists about 8 pre-constructed class schedules. So he normally finds one he likes quite a bit, and then manually starts checking if he can change X instructor for Y for a given class.</description>
     </item>
     
     <item>
       <title>Concerns that can deter potential orders for developing Shiny apps</title>
-      <link>http://lcolladotor.github.io/2014/06/10/shiny-orders/</link>
+      <link>/2014/06/10/shiny-orders/</link>
       <pubDate>Tue, 10 Jun 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://lcolladotor.github.io/2014/06/10/shiny-orders/</guid>
+      <guid>/2014/06/10/shiny-orders/</guid>
       <description>A few weeks ago I was invited to a meeting where a group was interested in exploring options for replacing their contract with a propriety software. They invited me because they saw some resemblances between a Shiny application I made and the features they need. It is a relatively small project and it seemed feasible to implement, but well, some details could have been tricky to code. During the meeting I explained what Shiny is, showcased some of the Shiny apps I&#39;ve made, and proposed some options including a simple site password.</description>
     </item>
     
     <item>
       <title>Simple mortgage calculator</title>
-      <link>http://lcolladotor.github.io/2014/04/22/mortgage-calculator-flexible-payments/</link>
+      <link>/2014/04/22/mortgage-calculator-flexible-payments/</link>
       <pubDate>Tue, 22 Apr 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://lcolladotor.github.io/2014/04/22/mortgage-calculator-flexible-payments/</guid>
+      <guid>/2014/04/22/mortgage-calculator-flexible-payments/</guid>
       <description>Have you ever thought of borrowing some money? A common case is when you have to borrow money for buying a house, which is called a mortgage. Wikipedia (&#39;Mortgage loan&#39; entry) goes into much more detail about the definition than what I&#39;ll cover.
 One of the aspects you have to evaluate when considering a loan such as a mortgage is how much interest you will be charged and how long the loan will be.</description>
     </item>

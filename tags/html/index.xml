@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Html on L. Collado-Torres</title>
-    <link>http://lcolladotor.github.io/tags/html/</link>
+    <link>/tags/html/</link>
     <description>Recent content in Html on L. Collado-Torres</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2011-2018 Leonardo Collado Torres under (CC) BY-NC-SA 4.0</copyright>
     <lastBuildDate>Tue, 10 Dec 2013 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://lcolladotor.github.io/tags/html/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/html/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Creating awesome reports for multiple audiences using knitrBootstrap</title>
-      <link>http://lcolladotor.github.io/2013/12/10/knitrBootstrap/</link>
+      <link>/2013/12/10/knitrBootstrap/</link>
       <pubDate>Tue, 10 Dec 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://lcolladotor.github.io/2013/12/10/knitrBootstrap/</guid>
+      <guid>/2013/12/10/knitrBootstrap/</guid>
       <description>As a biostatistics student, I use R very frequently when analyzing data. At the same time, I interact with other researchers, some who know how to use R (R crowd) and some who don&#39;t (yet!): no-R crowd. This means that I have to be able to communicate my results to two crowds. It is important that I can quickly provide the code in case that the R savvy want to look at it: maybe they find a bug and report it ^^.</description>
     </item>
     
     <item>
       <title>Adding youtube videos in pdfs, html reports and html presentations</title>
-      <link>http://lcolladotor.github.io/2012/12/05/adding-youtube-videos-in-pdfs-html-reports/</link>
+      <link>/2012/12/05/adding-youtube-videos-in-pdfs-html-reports/</link>
       <pubDate>Wed, 05 Dec 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://lcolladotor.github.io/2012/12/05/adding-youtube-videos-in-pdfs-html-reports/</guid>
+      <guid>/2012/12/05/adding-youtube-videos-in-pdfs-html-reports/</guid>
       <description>I got a question today on how to add a video to a beamer pdf presentation. Well, I had never done it, but I got curious enough to google around for a bit and here is the end product.
 One way of doing it is using the media9 tex package. For this to work you need to have the latest version of texlive (or miktex). Then, it&amp;#8217;s quite straight forward to include the video.</description>
     </item>

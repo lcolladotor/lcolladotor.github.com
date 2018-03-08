@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>L. Collado-Torres on L. Collado-Torres</title>
-    <link>http://lcolladotor.github.io/</link>
+    <link>/</link>
     <description>Recent content in L. Collado-Torres on L. Collado-Torres</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -11,11 +11,20 @@
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Improving the value of public RNA-seq expression data by phenotype prediction</title>
+      <link>/publication/rnaseq_prediction/</link>
+      <pubDate>Mon, 05 Mar 2018 16:45:43 -0500</pubDate>
+      
+      <guid>/publication/rnaseq_prediction/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>R markdown blog template</title>
-      <link>http://lcolladotor.github.io/2018/02/17/r-markdown-blog-template/</link>
+      <link>/2018/02/17/r-markdown-blog-template/</link>
       <pubDate>Sat, 17 Feb 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://lcolladotor.github.io/2018/02/17/r-markdown-blog-template/</guid>
+      <guid>/2018/02/17/r-markdown-blog-template/</guid>
       <description>&lt;p&gt;This blog post is mostly for myself but maybe it’s useful to others. It contains my current R markdown blog template. I initially posted this as a question at &lt;a href=&#34;https://stackoverflow.com/questions/48844340/is-it-possible-to-create-a-rmd-file-template-for-the-blogdown-new-post-addin&#34;&gt;StackOverflow&lt;/a&gt;. Then I read how much a burden we put in &lt;a href=&#34;https://yihui.name/en/2018/02/career-crisis/&#34;&gt;Yihui Xie&lt;/a&gt; and decided that my current setup (copy-pasting) works just fine. In any case using &lt;code&gt;blogdown&lt;/code&gt; with the RStudio IDE is much simpler than what I used to do in the past with &lt;a href=&#34;http://lcolladotor.github.io/2013/11/09/new-Fellgernon-Bit-setup-in-Github/&#34;&gt;jekyll&lt;/a&gt; or with even my prior &lt;a href=&#34;https://github.com/rstudio/blogdown/issues/42&#34;&gt;setup with blogdown&lt;/a&gt;.&lt;/p&gt;
 &lt;div id=&#34;bibliography-setup&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Bibliography setup&lt;/h3&gt;
@@ -42,7 +51,7 @@
     ## in the blog post
     plot(1:10, 10:1)
     ```&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;http://lcolladotor.github.io/post/2018-02-17-r-markdown-blog-template_files/figure-html/plot-1.png&#34; width=&#34;480&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2018-02-17-r-markdown-blog-template_files/figure-html/plot-1.png&#34; width=&#34;480&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Note that I modified the YAML portion of the post to set the figure width and height. You can also include a table of contents if you want, though it affects the summary of the post. Check the &lt;a href=&#34;https://bookdown.org/yihui/blogdown/output-format.html&#34;&gt;output format&lt;/a&gt; section of the &lt;code&gt;blogdown&lt;/code&gt; book for more details &lt;a id=&#39;cite-Xie_2017&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://github.com/rstudio/blogdown&#39;&gt;Xie, Hill, and Thomas, 2017&lt;/a&gt;), including differences between &lt;code&gt;.Rmd&lt;/code&gt; and &lt;code&gt;.Rmarkdown&lt;/code&gt; files. Note that you can also use a &lt;code&gt;_output.yml&lt;/code&gt; file as described there.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;output:
   blogdown::html_page:
@@ -56,7 +65,7 @@
 &lt;p&gt;Markdown syntax for custom image:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;![](/post/2018-02-17-r-markdown-blog-template_files/LIBD.jpg)&lt;/code&gt;&lt;/pre&gt;
 &lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;http://lcolladotor.github.io/post/2018-02-17-r-markdown-blog-template_files/LIBD.jpg&#34; /&gt;
+&lt;img src=&#34;/post/2018-02-17-r-markdown-blog-template_files/LIBD.jpg&#34; /&gt;
 
 &lt;/div&gt;
 &lt;p&gt;HTML syntax for centering image, including a link, and re-sizing the image to a fix width of 200 px.&lt;/p&gt;
@@ -64,7 +73,7 @@
 &amp;lt;a href=&amp;quot;http://lcolladotor.github.io/&amp;quot;&amp;gt;&amp;lt;img alt = &amp;#39;some website&amp;#39; width=&amp;#39;200&amp;#39; src=&amp;#39;/post/2018-02-17-r-markdown-blog-template_files/LIBD.jpg&amp;#39; /&amp;gt;&amp;lt;/a&amp;gt;
 &amp;lt;/center&amp;gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;center&gt;
-&lt;a href=&#34;http://lcolladotor.github.io/&#34;&gt;&lt;img alt = &#39;some website&#39; width=&#39;200&#39; src=&#39;http://lcolladotor.github.io/post/2018-02-17-r-markdown-blog-template_files/LIBD.jpg&#39; /&gt;&lt;/a&gt;
+&lt;a href=&#34;http://lcolladotor.github.io/&#34;&gt;&lt;img alt = &#39;some website&#39; width=&#39;200&#39; src=&#39;/post/2018-02-17-r-markdown-blog-template_files/LIBD.jpg&#39; /&gt;&lt;/a&gt;
 &lt;/center&gt;
 &lt;/div&gt;
 &lt;div id=&#34;reproducibility&#34; class=&#34;section level3&#34;&gt;
@@ -81,18 +90,18 @@ session_info()&lt;/code&gt;&lt;/pre&gt;
 ##  language (EN)                        
 ##  collate  en_US.UTF-8                 
 ##  tz       America/New_York            
-##  date     2018-02-17&lt;/code&gt;&lt;/pre&gt;
+##  date     2018-03-07&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## Packages --------------------------------------------------------------------------------------------------------------&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;##  package       * version date       source                            
 ##  backports       1.1.2   2017-12-13 CRAN (R 3.4.3)                    
 ##  base          * 3.4.3   2017-12-07 local                             
 ##  bibtex          0.4.2   2017-06-30 CRAN (R 3.4.1)                    
-##  blogdown        0.5     2018-01-24 CRAN (R 3.4.3)                    
-##  bookdown        0.6     2018-01-25 CRAN (R 3.4.3)                    
-##  colorout      * 1.1-3   2018-01-09 Github (jalvesaq/colorout@31d7db0)
+##  blogdown        0.5.7   2018-03-07 Github (rstudio/blogdown@60f79ed) 
+##  bookdown        0.7     2018-02-18 cran (@0.7)                       
+##  colorout      * 1.2-0   2018-02-19 Github (jalvesaq/colorout@2f01173)
 ##  compiler        3.4.3   2017-12-07 local                             
 ##  datasets      * 3.4.3   2017-12-07 local                             
-##  devtools      * 1.13.4  2017-11-09 CRAN (R 3.4.2)                    
+##  devtools      * 1.13.5  2018-02-18 CRAN (R 3.4.3)                    
 ##  digest          0.6.15  2018-01-28 CRAN (R 3.4.3)                    
 ##  evaluate        0.10.1  2017-06-24 CRAN (R 3.4.1)                    
 ##  graphics      * 3.4.3   2017-12-07 local                             
@@ -101,8 +110,8 @@ session_info()&lt;/code&gt;&lt;/pre&gt;
 ##  httr            1.3.1   2017-08-20 CRAN (R 3.4.1)                    
 ##  jsonlite        1.5     2017-06-01 CRAN (R 3.4.0)                    
 ##  knitcitations * 1.0.8   2017-07-04 CRAN (R 3.4.1)                    
-##  knitr           1.19    2018-01-29 CRAN (R 3.4.3)                    
-##  lubridate       1.7.2   2018-02-06 CRAN (R 3.4.3)                    
+##  knitr           1.20    2018-02-20 cran (@1.20)                      
+##  lubridate       1.7.3   2018-02-27 CRAN (R 3.4.3)                    
 ##  magrittr        1.5     2014-11-22 CRAN (R 3.4.0)                    
 ##  memoise         1.1.0   2017-04-21 CRAN (R 3.4.0)                    
 ##  methods       * 3.4.3   2017-12-07 local                             
@@ -110,26 +119,29 @@ session_info()&lt;/code&gt;&lt;/pre&gt;
 ##  R6              2.2.2   2017-06-17 CRAN (R 3.4.0)                    
 ##  Rcpp            0.12.15 2018-01-20 CRAN (R 3.4.3)                    
 ##  RefManageR      0.14.20 2017-08-17 CRAN (R 3.4.1)                    
-##  rmarkdown       1.8     2017-11-17 CRAN (R 3.4.2)                    
+##  rmarkdown       1.9     2018-03-01 cran (@1.9)                       
 ##  rprojroot       1.3-2   2018-01-03 CRAN (R 3.4.3)                    
 ##  stats         * 3.4.3   2017-12-07 local                             
 ##  stringi         1.1.6   2017-11-17 CRAN (R 3.4.2)                    
-##  stringr         1.2.0   2017-02-18 CRAN (R 3.4.0)                    
+##  stringr         1.3.0   2018-02-19 cran (@1.3.0)                     
 ##  tools           3.4.3   2017-12-07 local                             
 ##  utils         * 3.4.3   2017-12-07 local                             
 ##  withr           2.1.1   2017-12-19 CRAN (R 3.4.3)                    
 ##  xfun            0.1     2018-01-22 CRAN (R 3.4.3)                    
 ##  xml2            1.2.0   2018-01-24 CRAN (R 3.4.3)                    
-##  yaml            2.1.16  2017-12-12 CRAN (R 3.4.3)&lt;/code&gt;&lt;/pre&gt;
+##  yaml            2.1.17  2018-02-27 cran (@2.1.17)&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;div id=&#34;references&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;References&lt;/h3&gt;
 &lt;p&gt;Citations made with &lt;code&gt;knitcitations&lt;/code&gt; &lt;a id=&#39;cite-Boettiger_2017&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://CRAN.R-project.org/package=knitcitations&#39;&gt;Boettiger, 2017&lt;/a&gt;) and blog built using &lt;code&gt;blogdown&lt;/code&gt; (&lt;a href=&#39;https://github.com/rstudio/blogdown&#39;&gt;Xie, Hill, and Thomas, 2017&lt;/a&gt;).&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;## Chunk normaly with options:  results = &amp;#39;asis&amp;#39;, echo = FALSE, cache = FALSE
+## Print bibliography
+bibliography(style = &amp;#39;html&amp;#39;)&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;
 &lt;a id=&#39;bib-Boettiger_2017&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-Boettiger_2017&#34;&gt;[1]&lt;/a&gt;&lt;cite&gt; C. Boettiger. &lt;em&gt;knitcitations: Citations for ‘Knitr’ Markdown Files&lt;/em&gt;. R package version 1.0.8. 2017. URL: &lt;a href=&#34;https://CRAN.R-project.org/package=knitcitations&#34;&gt;https://CRAN.R-project.org/package=knitcitations&lt;/a&gt;.&lt;/cite&gt;
 &lt;/p&gt;
 &lt;p&gt;
-&lt;a id=&#39;bib-Xie_2017&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-Xie_2017&#34;&gt;[1]&lt;/a&gt;&lt;cite&gt; Y. Xie, A. P. Hill and A. Thomas. &lt;em&gt;blogdown: Creating Websites with R Markdown&lt;/em&gt;. ISBN 978-0815363729. Boca Raton, Florida: Chapman and Hall/CRC, 2017. URL: &lt;a href=&#34;https://github.com/rstudio/blogdown&#34;&gt;https://github.com/rstudio/blogdown&lt;/a&gt;.&lt;/cite&gt;
+&lt;a id=&#39;bib-Xie_2017&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-Xie_2017&#34;&gt;[2]&lt;/a&gt;&lt;cite&gt; Y. Xie, A. P. Hill and A. Thomas. &lt;em&gt;blogdown: Creating Websites with R Markdown&lt;/em&gt;. ISBN 978-0815363729. Boca Raton, Florida: Chapman and Hall/CRC, 2017. URL: &lt;a href=&#34;https://github.com/rstudio/blogdown&#34;&gt;https://github.com/rstudio/blogdown&lt;/a&gt;.&lt;/cite&gt;
 &lt;/p&gt;
 &lt;/div&gt;
 </description>
@@ -137,55 +149,46 @@ session_info()&lt;/code&gt;&lt;/pre&gt;
     
     <item>
       <title>RNA-seq transcript quantification from reduced-representation data in recount2</title>
-      <link>http://lcolladotor.github.io/publication/recount_tx/</link>
+      <link>/publication/recount_tx/</link>
       <pubDate>Fri, 12 Jan 2018 16:45:43 -0500</pubDate>
       
-      <guid>http://lcolladotor.github.io/publication/recount_tx/</guid>
+      <guid>/publication/recount_tx/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Developmental effects of maternal smoking during pregnancy on the human frontal cortex transcriptome</title>
-      <link>http://lcolladotor.github.io/publication/maternalsmoking/</link>
+      <link>/publication/maternalsmoking/</link>
       <pubDate>Wed, 20 Dec 2017 16:45:43 -0500</pubDate>
       
-      <guid>http://lcolladotor.github.io/publication/maternalsmoking/</guid>
+      <guid>/publication/maternalsmoking/</guid>
       <description></description>
     </item>
     
     <item>
       <title>recount workflow: Accessing over 70,000 human RNA-seq samples with Bioconductor [version 1; referees: 1 approved, 2 approved with reservations]</title>
-      <link>http://lcolladotor.github.io/publication/recountWorkflow/</link>
+      <link>/publication/recountWorkflow/</link>
       <pubDate>Thu, 24 Aug 2017 16:45:43 -0500</pubDate>
       
-      <guid>http://lcolladotor.github.io/publication/recountWorkflow/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Improving the value of public RNA-seq expression data by phenotype prediction</title>
-      <link>http://lcolladotor.github.io/publication/rnaseq_prediction/</link>
-      <pubDate>Tue, 06 Jun 2017 16:45:43 -0500</pubDate>
-      
-      <guid>http://lcolladotor.github.io/publication/rnaseq_prediction/</guid>
+      <guid>/publication/recountWorkflow/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Altered expression of histamine signaling genes in autism spectrum disorder</title>
-      <link>http://lcolladotor.github.io/publication/histamine/</link>
+      <link>/publication/histamine/</link>
       <pubDate>Tue, 09 May 2017 16:45:43 -0500</pubDate>
       
-      <guid>http://lcolladotor.github.io/publication/histamine/</guid>
+      <guid>/publication/histamine/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Updating R</title>
-      <link>http://lcolladotor.github.io/2017/05/04/Updating-R/</link>
+      <link>/2017/05/04/Updating-R/</link>
       <pubDate>Thu, 04 May 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://lcolladotor.github.io/2017/05/04/Updating-R/</guid>
+      <guid>/2017/05/04/Updating-R/</guid>
       <description>
 
 &lt;p&gt;As you might know by now, the latest R version was recently released (R 3.4.0). That means that you are &lt;em&gt;highly&lt;/em&gt; encouraged to update your R installation. There are several ways to do this some of which are documented in these other blog posts: &lt;a href=&#34;https://www.r-statistics.com/2013/03/updating-r-from-r-on-windows-using-the-installr-package/&#34; target=&#34;_blank&#34;&gt;Tal Galili, 2013&lt;/a&gt;, &lt;a href=&#34;https://www.datascienceriot.com/how-to-upgrade-r-without-losing-your-packages/kris/&#34; target=&#34;_blank&#34;&gt;Kris Eberwein, 2015&lt;/a&gt;. You would think that it&#39;s just a matter of downloading the latest R installer for your OS, installing it, and continuing your analysis. The reality is a bit more complicated. The following short steps will make your life easier.&lt;/p&gt;
@@ -338,28 +341,28 @@ session_info()
     
     <item>
       <title>Reproducible RNA-seq analysis using recount2</title>
-      <link>http://lcolladotor.github.io/publication/recount/</link>
+      <link>/publication/recount/</link>
       <pubDate>Tue, 11 Apr 2017 16:45:43 -0500</pubDate>
       
-      <guid>http://lcolladotor.github.io/publication/recount/</guid>
+      <guid>/publication/recount/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Developmental and genetic regulation of the human cortex transcriptome in schizophrenia</title>
-      <link>http://lcolladotor.github.io/publication/schizophrenia_DE/</link>
+      <link>/publication/schizophrenia_DE/</link>
       <pubDate>Thu, 06 Apr 2017 16:45:43 -0500</pubDate>
       
-      <guid>http://lcolladotor.github.io/publication/schizophrenia_DE/</guid>
+      <guid>/publication/schizophrenia_DE/</guid>
       <description></description>
     </item>
     
     <item>
       <title>How to ask for help for Bioconductor packages</title>
-      <link>http://lcolladotor.github.io/2017/03/06/How-to-ask-for-help-for-Bioconductor-packages/</link>
+      <link>/2017/03/06/How-to-ask-for-help-for-Bioconductor-packages/</link>
       <pubDate>Mon, 06 Mar 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://lcolladotor.github.io/2017/03/06/How-to-ask-for-help-for-Bioconductor-packages/</guid>
+      <guid>/2017/03/06/How-to-ask-for-help-for-Bioconductor-packages/</guid>
       <description>
 
 &lt;div class=&#34;alert alert-note&#34;&gt;
@@ -421,10 +424,10 @@ session_info()
     
     <item>
       <title>An alternative to the Mexico-US wall where the US would gain millions of dollars</title>
-      <link>http://lcolladotor.github.io/2017/01/25/An-alternative-to-the-Mexico-US-wall-where-the-US-would-gain-millions-of-dollars/</link>
+      <link>/2017/01/25/An-alternative-to-the-Mexico-US-wall-where-the-US-would-gain-millions-of-dollars/</link>
       <pubDate>Wed, 25 Jan 2017 02:00:00 +0000</pubDate>
       
-      <guid>http://lcolladotor.github.io/2017/01/25/An-alternative-to-the-Mexico-US-wall-where-the-US-would-gain-millions-of-dollars/</guid>
+      <guid>/2017/01/25/An-alternative-to-the-Mexico-US-wall-where-the-US-would-gain-millions-of-dollars/</guid>
       <description>
 
 &lt;div class=&#34;alert alert-note&#34;&gt;
@@ -569,10 +572,10 @@ round(800 / 365.25, 1)
     
     <item>
       <title>Easily explore a table with shinycsv</title>
-      <link>http://lcolladotor.github.io/2017/01/20/Easily-explore-a-table-with-shinycsv/</link>
+      <link>/2017/01/20/Easily-explore-a-table-with-shinycsv/</link>
       <pubDate>Fri, 20 Jan 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://lcolladotor.github.io/2017/01/20/Easily-explore-a-table-with-shinycsv/</guid>
+      <guid>/2017/01/20/Easily-explore-a-table-with-shinycsv/</guid>
       <description>
 
 &lt;p&gt;Have you ever had to explore a table with data? I believe the answer is &lt;em&gt;yes&lt;/em&gt; for most people that work at a computer or even just use it for communicating with their friends and family. Tables of data pop up everywhere, for example in personal finance. Websites like &lt;a href=&#34;https://www.mint.com/&#34; target=&#34;_blank&#34;&gt;Mint.com&lt;/a&gt; allow you to download your transactions in a &lt;a href=&#34;https://en.wikipedia.org/wiki/Comma-separated_values&#34; target=&#34;_blank&#34;&gt;CSV&lt;/a&gt; file called &lt;code&gt;transactions.csv&lt;/code&gt;. CSV is one of the many formats for storing tables and most likely when you try to open the &lt;code&gt;transactions.csv&lt;/code&gt; file, it will open with Excel. Now, can you make a quick figure of one of your columns in your table?&lt;/p&gt;
@@ -702,28 +705,28 @@ URL: &lt;a href=&#34;https://www.R-project.org/&#34;&gt;https://www.R-project.or
     
     <item>
       <title>Human splicing diversity and the extent of unannotated splice junctions across human RNA-seq samples on the Sequence Read Archive</title>
-      <link>http://lcolladotor.github.io/publication/intropolis/</link>
+      <link>/publication/intropolis/</link>
       <pubDate>Fri, 30 Dec 2016 17:44:49 -0500</pubDate>
       
-      <guid>http://lcolladotor.github.io/publication/intropolis/</guid>
+      <guid>/publication/intropolis/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Flexible expressed region analysis for RNA-seq with derfinder</title>
-      <link>http://lcolladotor.github.io/publication/derfinder/</link>
+      <link>/publication/derfinder/</link>
       <pubDate>Thu, 15 Sep 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://lcolladotor.github.io/publication/derfinder/</guid>
+      <guid>/publication/derfinder/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Rail-RNA: Scalable analysis of RNA-seq splicing and coverage</title>
-      <link>http://lcolladotor.github.io/publication/rail/</link>
+      <link>/publication/rail/</link>
       <pubDate>Sat, 03 Sep 2016 17:27:55 -0500</pubDate>
       
-      <guid>http://lcolladotor.github.io/publication/rail/</guid>
+      <guid>/publication/rail/</guid>
       <description></description>
     </item>
     

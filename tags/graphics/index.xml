@@ -2,32 +2,32 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Graphics on L. Collado-Torres</title>
-    <link>http://lcolladotor.github.io/tags/Graphics/</link>
+    <link>/tags/Graphics/</link>
     <description>Recent content in Graphics on L. Collado-Torres</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2011-2018 Leonardo Collado Torres under (CC) BY-NC-SA 4.0</copyright>
     <lastBuildDate>Fri, 21 Nov 2014 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://lcolladotor.github.io/tags/Graphics/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/Graphics/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>An xpd-tion into R plot margins</title>
-      <link>http://lcolladotor.github.io/2014/11/21/add-logo-in-R/</link>
+      <link>/2014/11/21/add-logo-in-R/</link>
       <pubDate>Fri, 21 Nov 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://lcolladotor.github.io/2014/11/21/add-logo-in-R/</guid>
+      <guid>/2014/11/21/add-logo-in-R/</guid>
       <description>This is a guest post by Prasad Patil that answers the question: how to put a shape in the margin of an R plot?
 The help page for R&#39;s par() function is a somewhat impenetrable list of abbreviations that allow you to manipulate anything and everything in the plotting device. You may have used this function in the past to create an array of plots (using mfrow or mfcol) or to set margins (mar or mai).</description>
     </item>
     
     <item>
       <title>userR2013 data analysis contest: data exploration</title>
-      <link>http://lcolladotor.github.io/2013/06/12/userR2013-data-analysis-contest-data-exploration/</link>
+      <link>/2013/06/12/userR2013-data-analysis-contest-data-exploration/</link>
       <pubDate>Wed, 12 Jun 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://lcolladotor.github.io/2013/06/12/userR2013-data-analysis-contest-data-exploration/</guid>
+      <guid>/2013/06/12/userR2013-data-analysis-contest-data-exploration/</guid>
       <description>Description The useR2013 conference is organizing a data analysis contest, check the rules here.
 They have a package called useR2013DAC with two data sets: one from La Liga and the other one from the Formula 1. Once you download and install the package (available here), you can quickly explore the data using the following R commands:
 Data exploration ## Load the package library(useR2013DAC) ## Explore laliga data data(laliga) head(laliga)  ## Season Week HomeTeam AwayTeam ## 1 2008/09 1 Athletic Club Bilbao Union Deportiva Almeria ## 2 2008/09 1 Atlético Madrid Málaga CF ## 3 2008/09 1 Betis Sevilla Real Club Recreativo Huelva ## 4 2008/09 1 CA Osasuna Villarreal CF ## 5 2008/09 1 CD Numancia FC Barcelona ## 6 2008/09 1 Deportivo de La Coruña Real Madrid CF ## HomeGoals AwayGoals ## 1 1 3 ## 2 4 0 ## 3 0 1 ## 4 1 1 ## 5 1 0 ## 6 2 1  summary(laliga)  ## Season Week HomeTeam AwayTeam ## Length:1900 Min.</description>
@@ -35,30 +35,30 @@ Data exploration ## Load the package library(useR2013DAC) ## Explore laliga data
     
     <item>
       <title>Visualizing colors()</title>
-      <link>http://lcolladotor.github.io/2012/10/19/Visualizing-colors/</link>
+      <link>/2012/10/19/Visualizing-colors/</link>
       <pubDate>Fri, 19 Oct 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://lcolladotor.github.io/2012/10/19/Visualizing-colors/</guid>
+      <guid>/2012/10/19/Visualizing-colors/</guid>
       <description>The other day I learnt about the existance of the colors() vector in R which specifies all the character-based colors like &amp;#8220;light blue&amp;#8221;, &amp;#8220;black&amp;#8221;, etc. So I made a simple plot to visualize them all. Here&amp;#8217;s the code:
 mat &amp;lt;- matrix(1:length(colors()), ncol = 9, byrow= TRUE) df &amp;lt;- data.frame(col = colors(), x = as.integer(cut(1:length(colors()), 9)), y = rep(1:73, 9), stringsAsFactors=FALSE) plot(y ~ jitter(x), data = df, col = df$col, pch=16, main = &amp;quot;Visualizing colors() split in 9 groups&amp;quot;, xlab = &amp;quot;Group&amp;quot;, ylab = &amp;quot;Element of the group (min = 1, max = 73)&amp;quot;, sub = &amp;quot;x = 3, y = 1 means that it&#39;s the 2 * 73 + 1 = 147th color&amp;quot;)  And the plot:</description>
     </item>
     
     <item>
       <title>Why aren&#39;t all of our graphs interactive?</title>
-      <link>http://lcolladotor.github.io/2012/10/08/Why-arent-all-of-our-graphs-interactive/</link>
+      <link>/2012/10/08/Why-arent-all-of-our-graphs-interactive/</link>
       <pubDate>Mon, 08 Oct 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://lcolladotor.github.io/2012/10/08/Why-arent-all-of-our-graphs-interactive/</guid>
+      <guid>/2012/10/08/Why-arent-all-of-our-graphs-interactive/</guid>
       <description>During the last pre-happy hour seminar, Karl Broman talked about Why aren&amp;#8217;t all of our graphs interactive? I didn&amp;#8217;t know, but a few years ago Karl worked in the department and clearly promoted beer-drinking and is the heart of the department. I&amp;#8217;m a fan of our pre-happy hour seminars since you have a get to listen to good/fun talks over a beer or two.
 But I&amp;#8217;m also a fan of reproducible research and useful graphics.</description>
     </item>
     
     <item>
       <title>The new visualization package for genome data in Bioconductor: ggbio</title>
-      <link>http://lcolladotor.github.io/2011/12/06/the-new-visualization-package-for-genome-data-in/</link>
+      <link>/2011/12/06/the-new-visualization-package-for-genome-data-in/</link>
       <pubDate>Tue, 06 Dec 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://lcolladotor.github.io/2011/12/06/the-new-visualization-package-for-genome-data-in/</guid>
+      <guid>/2011/12/06/the-new-visualization-package-for-genome-data-in/</guid>
       <description>It&amp;#8217;s been a while since I&amp;#8217;ve been waiting for the release of a visualization package in Bioconductor. Back in 2008 I was really impressed by the power ofGenomeGraphs and I have used it in multiple occasions. Yet from both the Bioconductor Developer Meeting in Heidelberg 2010 and BioC2011 I&amp;#8217;ve been waiting for the release of the visualization tools developed by Michael Lawrence and Tengfei Yin at Genentech. So, after a long hiatus where I didn&amp;#8217;t browse the biocviews in Bioconductor, I found out that Lawrence and Yin released ggbio and biovizBase (it&amp;#8217;s more of an infrastructure package for ggbio) .</description>
     </item>
     

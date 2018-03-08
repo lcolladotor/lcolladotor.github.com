@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Github on L. Collado-Torres</title>
-    <link>http://lcolladotor.github.io/tags/github/</link>
+    <link>/tags/github/</link>
     <description>Recent content in Github on L. Collado-Torres</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2011-2018 Leonardo Collado Torres under (CC) BY-NC-SA 4.0</copyright>
     <lastBuildDate>Thu, 09 May 2013 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://lcolladotor.github.io/tags/github/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/github/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Reading an R file from GitHub</title>
-      <link>http://lcolladotor.github.io/2013/05/09/Reading-an-R-file-from-GitHub/</link>
+      <link>/2013/05/09/Reading-an-R-file-from-GitHub/</link>
       <pubDate>Thu, 09 May 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://lcolladotor.github.io/2013/05/09/Reading-an-R-file-from-GitHub/</guid>
+      <guid>/2013/05/09/Reading-an-R-file-from-GitHub/</guid>
       <description>Lets say that I want to read in this R file from GitHub into R.
 The first thing you have to do is locate the raw file. You can do so by clicking on the Raw button in GitHub. In this case it&amp;#8217;s https://raw.github.com/lcolladotor/ballgownR-devel/master/ballgownR/R/infoGene.R
 One would think that using source() would work, but it doesn&amp;#8217;t as shown below:
