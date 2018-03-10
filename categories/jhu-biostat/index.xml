@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>JHU Biostat on L. Collado-Torres</title>
-    <link>/categories/JHU-Biostat/</link>
+    <link>http://lcolladotor.github.io/categories/JHU-Biostat/</link>
     <description>Recent content in JHU Biostat on L. Collado-Torres</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2011-2018 Leonardo Collado Torres under (CC) BY-NC-SA 4.0</copyright>
     <lastBuildDate>Wed, 20 Nov 2013 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/categories/JHU-Biostat/" rel="self" type="application/rss+xml" />
+    <atom:link href="http://lcolladotor.github.io/categories/JHU-Biostat/" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Third Student Cultural Mixer</title>
-      <link>/2013/11/20/StudentMixer3/</link>
+      <link>http://lcolladotor.github.io/2013/11/20/StudentMixer3/</link>
       <pubDate>Wed, 20 Nov 2013 00:00:00 +0000</pubDate>
       
       <guid>/2013/11/20/StudentMixer3/</guid>
@@ -26,7 +26,7 @@
     
     <item>
       <title>My strategy for quickly grading homeworks</title>
-      <link>/2013/11/08/fast-grading/</link>
+      <link>http://lcolladotor.github.io/2013/11/08/fast-grading/</link>
       <pubDate>Fri, 08 Nov 2013 00:00:00 +0000</pubDate>
       
       <guid>/2013/11/08/fast-grading/</guid>
@@ -158,7 +158,7 @@
     
     <item>
       <title>Bmore Biostats is born!</title>
-      <link>/2013/11/07/bmorebiostats/</link>
+      <link>http://lcolladotor.github.io/2013/11/07/bmorebiostats/</link>
       <pubDate>Thu, 07 Nov 2013 00:00:00 +0000</pubDate>
       
       <guid>/2013/11/07/bmorebiostats/</guid>
@@ -236,7 +236,7 @@
     
     <item>
       <title>Epi vs Biostat Kickball match Spring 2013</title>
-      <link>/2013/04/24/Epi-vs-Biostat-Kickball-match-Spring-2013/</link>
+      <link>http://lcolladotor.github.io/2013/04/24/Epi-vs-Biostat-Kickball-match-Spring-2013/</link>
       <pubDate>Wed, 24 Apr 2013 00:00:00 +0000</pubDate>
       
       <guid>/2013/04/24/Epi-vs-Biostat-Kickball-match-Spring-2013/</guid>
@@ -253,7 +253,7 @@
     
     <item>
       <title>Predicting who will win a NFL match at half time</title>
-      <link>/2013/03/23/Predicting-who-will-win-a-NFL-match-at-half-time/</link>
+      <link>http://lcolladotor.github.io/2013/03/23/Predicting-who-will-win-a-NFL-match-at-half-time/</link>
       <pubDate>Sat, 23 Mar 2013 00:00:00 +0000</pubDate>
       
       <guid>/2013/03/23/Predicting-who-will-win-a-NFL-match-at-half-time/</guid>
@@ -384,7 +384,7 @@ ggplot(all) + geom_line(aes(x=fpr, y=tpr, colour=set)) + geom_abline(intercept=0
     
     <item>
       <title>Analyzing SimplyStatistics visits info</title>
-      <link>/2013/03/09/Analyzing-SimplyStatistics-visits-info/</link>
+      <link>http://lcolladotor.github.io/2013/03/09/Analyzing-SimplyStatistics-visits-info/</link>
       <pubDate>Sat, 09 Mar 2013 00:00:00 +0000</pubDate>
       
       <guid>/2013/03/09/Analyzing-SimplyStatistics-visits-info/</guid>
@@ -404,7 +404,7 @@ ggplot(all) + geom_line(aes(x=fpr, y=tpr, colour=set)) + geom_abline(intercept=0
     
     <item>
       <title>Second cultural mixer today!</title>
-      <link>/2013/02/15/Second-cultural-mixer-today/</link>
+      <link>http://lcolladotor.github.io/2013/02/15/Second-cultural-mixer-today/</link>
       <pubDate>Fri, 15 Feb 2013 00:00:00 +0000</pubDate>
       
       <guid>/2013/02/15/Second-cultural-mixer-today/</guid>
@@ -414,7 +414,7 @@ ggplot(all) + geom_line(aes(x=fpr, y=tpr, colour=set)) + geom_abline(intercept=0
     
     <item>
       <title>Sharing my work for &#34;Advanced Methods III&#34;</title>
-      <link>/2013/02/13/Sharing-my-work-for-Advanced-Methods-III/</link>
+      <link>http://lcolladotor.github.io/2013/02/13/Sharing-my-work-for-Advanced-Methods-III/</link>
       <pubDate>Wed, 13 Feb 2013 00:00:00 +0000</pubDate>
       
       <guid>/2013/02/13/Sharing-my-work-for-Advanced-Methods-III/</guid>
@@ -432,7 +432,7 @@ ggplot(all) + geom_line(aes(x=fpr, y=tpr, colour=set)) + geom_abline(intercept=0
     
     <item>
       <title>Why aren&#39;t all of our graphs interactive?</title>
-      <link>/2012/10/08/Why-arent-all-of-our-graphs-interactive/</link>
+      <link>http://lcolladotor.github.io/2012/10/08/Why-arent-all-of-our-graphs-interactive/</link>
       <pubDate>Mon, 08 Oct 2012 00:00:00 +0000</pubDate>
       
       <guid>/2012/10/08/Why-arent-all-of-our-graphs-interactive/</guid>
@@ -448,7 +448,7 @@ ggplot(all) + geom_line(aes(x=fpr, y=tpr, colour=set)) + geom_abline(intercept=0
     
     <item>
       <title>JHSPH-Biostat through Coursera</title>
-      <link>/2012/10/01/JHSPH-Biostat-through-Coursera/</link>
+      <link>http://lcolladotor.github.io/2012/10/01/JHSPH-Biostat-through-Coursera/</link>
       <pubDate>Mon, 01 Oct 2012 00:00:00 +0000</pubDate>
       
       <guid>/2012/10/01/JHSPH-Biostat-through-Coursera/</guid>
@@ -489,7 +489,7 @@ ggplot(all) + geom_line(aes(x=fpr, y=tpr, colour=set)) + geom_abline(intercept=0
     
     <item>
       <title>Quid @Biostat-JHSPH</title>
-      <link>/2012/09/28/Quid-Biostat-JHSPH/</link>
+      <link>http://lcolladotor.github.io/2012/09/28/Quid-Biostat-JHSPH/</link>
       <pubDate>Fri, 28 Sep 2012 00:00:00 +0000</pubDate>
       
       <guid>/2012/09/28/Quid-Biostat-JHSPH/</guid>
@@ -518,7 +518,7 @@ ggplot(all) + geom_line(aes(x=fpr, y=tpr, colour=set)) + geom_abline(intercept=0
     
     <item>
       <title>Introducing Git while making your academic webpage</title>
-      <link>/2012/09/24/Introducing-Git-while-making-your-academic-webpage/</link>
+      <link>http://lcolladotor.github.io/2012/09/24/Introducing-Git-while-making-your-academic-webpage/</link>
       <pubDate>Mon, 24 Sep 2012 00:00:00 +0000</pubDate>
       
       <guid>/2012/09/24/Introducing-Git-while-making-your-academic-webpage/</guid>
@@ -531,7 +531,7 @@ ggplot(all) + geom_line(aes(x=fpr, y=tpr, colour=set)) + geom_abline(intercept=0
     
     <item>
       <title>Setting up your computer for bioinformatics/biostatistics and a compedium of resources</title>
-      <link>/2012/08/23/setting-up-your-computer-for/</link>
+      <link>http://lcolladotor.github.io/2012/08/23/setting-up-your-computer-for/</link>
       <pubDate>Thu, 23 Aug 2012 00:00:00 +0000</pubDate>
       
       <guid>/2012/08/23/setting-up-your-computer-for/</guid>

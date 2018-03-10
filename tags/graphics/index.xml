@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Graphics on L. Collado-Torres</title>
-    <link>/tags/Graphics/</link>
+    <link>http://lcolladotor.github.io/tags/Graphics/</link>
     <description>Recent content in Graphics on L. Collado-Torres</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2011-2018 Leonardo Collado Torres under (CC) BY-NC-SA 4.0</copyright>
     <lastBuildDate>Fri, 21 Nov 2014 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/tags/Graphics/" rel="self" type="application/rss+xml" />
+    <atom:link href="http://lcolladotor.github.io/tags/Graphics/" rel="self" type="application/rss+xml" />
     
     <item>
       <title>An xpd-tion into R plot margins</title>
-      <link>/2014/11/21/add-logo-in-R/</link>
+      <link>http://lcolladotor.github.io/2014/11/21/add-logo-in-R/</link>
       <pubDate>Fri, 21 Nov 2014 00:00:00 +0000</pubDate>
       
       <guid>/2014/11/21/add-logo-in-R/</guid>
@@ -93,7 +93,7 @@ of your &lt;strong&gt;R&lt;/strong&gt; plot device, and it will not stay consist
     
     <item>
       <title>userR2013 data analysis contest: data exploration</title>
-      <link>/2013/06/12/userR2013-data-analysis-contest-data-exploration/</link>
+      <link>http://lcolladotor.github.io/2013/06/12/userR2013-data-analysis-contest-data-exploration/</link>
       <pubDate>Wed, 12 Jun 2013 00:00:00 +0000</pubDate>
       
       <guid>/2013/06/12/userR2013-data-analysis-contest-data-exploration/</guid>
@@ -281,7 +281,7 @@ head(formula1)
     
     <item>
       <title>Visualizing colors()</title>
-      <link>/2012/10/19/Visualizing-colors/</link>
+      <link>http://lcolladotor.github.io/2012/10/19/Visualizing-colors/</link>
       <pubDate>Fri, 19 Oct 2012 00:00:00 +0000</pubDate>
       
       <guid>/2012/10/19/Visualizing-colors/</guid>
@@ -305,7 +305,7 @@ plot(y ~ jitter(x), data = df, col = df$col,
     
     <item>
       <title>Why aren&#39;t all of our graphs interactive?</title>
-      <link>/2012/10/08/Why-arent-all-of-our-graphs-interactive/</link>
+      <link>http://lcolladotor.github.io/2012/10/08/Why-arent-all-of-our-graphs-interactive/</link>
       <pubDate>Mon, 08 Oct 2012 00:00:00 +0000</pubDate>
       
       <guid>/2012/10/08/Why-arent-all-of-our-graphs-interactive/</guid>
@@ -321,7 +321,7 @@ plot(y ~ jitter(x), data = df, col = df$col,
     
     <item>
       <title>The new visualization package for genome data in Bioconductor: ggbio</title>
-      <link>/2011/12/06/the-new-visualization-package-for-genome-data-in/</link>
+      <link>http://lcolladotor.github.io/2011/12/06/the-new-visualization-package-for-genome-data-in/</link>
       <pubDate>Tue, 06 Dec 2011 00:00:00 +0000</pubDate>
       
       <guid>/2011/12/06/the-new-visualization-package-for-genome-data-in/</guid>

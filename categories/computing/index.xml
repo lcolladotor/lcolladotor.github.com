@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Computing on L. Collado-Torres</title>
-    <link>/categories/Computing/</link>
+    <link>http://lcolladotor.github.io/categories/Computing/</link>
     <description>Recent content in Computing on L. Collado-Torres</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2011-2018 Leonardo Collado Torres under (CC) BY-NC-SA 4.0</copyright>
     <lastBuildDate>Wed, 11 Dec 2013 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/categories/Computing/" rel="self" type="application/rss+xml" />
+    <atom:link href="http://lcolladotor.github.io/categories/Computing/" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Login to the cluster, request a node and change to your project directory in a single command</title>
-      <link>/2013/12/11/quick-cluster-login-to-interactive-session/</link>
+      <link>http://lcolladotor.github.io/2013/12/11/quick-cluster-login-to-interactive-session/</link>
       <pubDate>Wed, 11 Dec 2013 00:00:00 +0000</pubDate>
       
       <guid>/2013/12/11/quick-cluster-login-to-interactive-session/</guid>
@@ -249,7 +249,7 @@ alias qq=&#39;LEODIR=`basename $PWD`; ssh -t enigma &amp;quot;cd /very/complicat
     
     <item>
       <title>Quickly making posters with PosterGenius</title>
-      <link>/2013/10/29/Quickly-making-posters-with-PosterGenius/</link>
+      <link>http://lcolladotor.github.io/2013/10/29/Quickly-making-posters-with-PosterGenius/</link>
       <pubDate>Tue, 29 Oct 2013 00:00:00 +0000</pubDate>
       
       <guid>/2013/10/29/Quickly-making-posters-with-PosterGenius/</guid>
@@ -272,7 +272,7 @@ alias qq=&#39;LEODIR=`basename $PWD`; ssh -t enigma &amp;quot;cd /very/complicat
     
     <item>
       <title>Alfred: a must for any Mac user</title>
-      <link>/2013/02/15/Alfred-a-must-for-any-Mac-user/</link>
+      <link>http://lcolladotor.github.io/2013/02/15/Alfred-a-must-for-any-Mac-user/</link>
       <pubDate>Fri, 15 Feb 2013 00:00:00 +0000</pubDate>
       
       <guid>/2013/02/15/Alfred-a-must-for-any-Mac-user/</guid>
@@ -285,7 +285,7 @@ alias qq=&#39;LEODIR=`basename $PWD`; ssh -t enigma &amp;quot;cd /very/complicat
     
     <item>
       <title>me: Bad rm, don&#39;t delete stuff I didn&#39;t want to delete! (rm: well, I do what you tell me to do!)</title>
-      <link>/2012/11/07/me-bad-rm-dont-delete-stuff-i-didnt-want-to-delete/</link>
+      <link>http://lcolladotor.github.io/2012/11/07/me-bad-rm-dont-delete-stuff-i-didnt-want-to-delete/</link>
       <pubDate>Wed, 07 Nov 2012 00:00:00 +0000</pubDate>
       
       <guid>/2012/11/07/me-bad-rm-dont-delete-stuff-i-didnt-want-to-delete/</guid>
@@ -303,7 +303,7 @@ alias qq=&#39;LEODIR=`basename $PWD`; ssh -t enigma &amp;quot;cd /very/complicat
     
     <item>
       <title>Bitbucket revamped</title>
-      <link>/2012/10/09/Bitbucket-revamped/</link>
+      <link>http://lcolladotor.github.io/2012/10/09/Bitbucket-revamped/</link>
       <pubDate>Tue, 09 Oct 2012 00:00:00 +0000</pubDate>
       
       <guid>/2012/10/09/Bitbucket-revamped/</guid>
@@ -326,7 +326,7 @@ alias qq=&#39;LEODIR=`basename $PWD`; ssh -t enigma &amp;quot;cd /very/complicat
     
     <item>
       <title>Introducing Git while making your academic webpage</title>
-      <link>/2012/09/24/Introducing-Git-while-making-your-academic-webpage/</link>
+      <link>http://lcolladotor.github.io/2012/09/24/Introducing-Git-while-making-your-academic-webpage/</link>
       <pubDate>Mon, 24 Sep 2012 00:00:00 +0000</pubDate>
       
       <guid>/2012/09/24/Introducing-Git-while-making-your-academic-webpage/</guid>
@@ -339,7 +339,7 @@ alias qq=&#39;LEODIR=`basename $PWD`; ssh -t enigma &amp;quot;cd /very/complicat
     
     <item>
       <title>Version control: need to learn Git</title>
-      <link>/2012/09/05/i-consider-myself-a-fan-of-using-version-control/</link>
+      <link>http://lcolladotor.github.io/2012/09/05/i-consider-myself-a-fan-of-using-version-control/</link>
       <pubDate>Wed, 05 Sep 2012 00:00:00 +0000</pubDate>
       
       <guid>/2012/09/05/i-consider-myself-a-fan-of-using-version-control/</guid>
@@ -361,7 +361,7 @@ alias qq=&#39;LEODIR=`basename $PWD`; ssh -t enigma &amp;quot;cd /very/complicat
     
     <item>
       <title>Setting up your computer for bioinformatics/biostatistics and a compedium of resources</title>
-      <link>/2012/08/23/setting-up-your-computer-for/</link>
+      <link>http://lcolladotor.github.io/2012/08/23/setting-up-your-computer-for/</link>
       <pubDate>Thu, 23 Aug 2012 00:00:00 +0000</pubDate>
       
       <guid>/2012/08/23/setting-up-your-computer-for/</guid>
@@ -473,7 +473,7 @@ alias qq=&#39;LEODIR=`basename $PWD`; ssh -t enigma &amp;quot;cd /very/complicat
     
     <item>
       <title>Are you good at programming? You probably practice a lot!</title>
-      <link>/2011/12/10/are-you-good-at-programming-you-probably-practice-a/</link>
+      <link>http://lcolladotor.github.io/2011/12/10/are-you-good-at-programming-you-probably-practice-a/</link>
       <pubDate>Sat, 10 Dec 2011 00:00:00 +0000</pubDate>
       
       <guid>/2011/12/10/are-you-good-at-programming-you-probably-practice-a/</guid>

@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Rstats on L. Collado-Torres</title>
-    <link>/categories/rstats/</link>
+    <link>http://lcolladotor.github.io/categories/rstats/</link>
     <description>Recent content in Rstats on L. Collado-Torres</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2011-2018 Leonardo Collado Torres under (CC) BY-NC-SA 4.0</copyright>
     <lastBuildDate>Thu, 08 Mar 2018 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/categories/rstats/" rel="self" type="application/rss+xml" />
+    <atom:link href="http://lcolladotor.github.io/categories/rstats/" rel="self" type="application/rss+xml" />
     
     <item>
       <title>blogdown archetype (template)</title>
-      <link>/2018/03/08/blogdown-archetype-template/</link>
+      <link>http://lcolladotor.github.io/2018/03/08/blogdown-archetype-template/</link>
       <pubDate>Thu, 08 Mar 2018 00:00:00 +0000</pubDate>
       
       <guid>/2018/03/08/blogdown-archetype-template/</guid>
@@ -116,7 +116,7 @@
     
     <item>
       <title>blogdown Insert Image addin</title>
-      <link>/2018/03/07/blogdown-insert-image-addin/</link>
+      <link>http://lcolladotor.github.io/2018/03/07/blogdown-insert-image-addin/</link>
       <pubDate>Wed, 07 Mar 2018 00:00:00 +0000</pubDate>
       
       <guid>/2018/03/07/blogdown-insert-image-addin/</guid>
@@ -291,7 +291,7 @@ devtools::install_github(&amp;#39;rstudio/blogdown&amp;#39;)&lt;/code&gt;&lt;/pr
     
     <item>
       <title>R markdown blog template</title>
-      <link>/2018/02/17/r-markdown-blog-template/</link>
+      <link>http://lcolladotor.github.io/2018/02/17/r-markdown-blog-template/</link>
       <pubDate>Sat, 17 Feb 2018 00:00:00 +0000</pubDate>
       
       <guid>/2018/02/17/r-markdown-blog-template/</guid>
@@ -419,7 +419,7 @@ bibliography(style = &amp;#39;html&amp;#39;)&lt;/code&gt;&lt;/pre&gt;
     
     <item>
       <title>Updating R</title>
-      <link>/2017/05/04/Updating-R/</link>
+      <link>http://lcolladotor.github.io/2017/05/04/Updating-R/</link>
       <pubDate>Thu, 04 May 2017 00:00:00 +0000</pubDate>
       
       <guid>/2017/05/04/Updating-R/</guid>
@@ -575,7 +575,7 @@ session_info()
     
     <item>
       <title>How to ask for help for Bioconductor packages</title>
-      <link>/2017/03/06/How-to-ask-for-help-for-Bioconductor-packages/</link>
+      <link>http://lcolladotor.github.io/2017/03/06/How-to-ask-for-help-for-Bioconductor-packages/</link>
       <pubDate>Mon, 06 Mar 2017 00:00:00 +0000</pubDate>
       
       <guid>/2017/03/06/How-to-ask-for-help-for-Bioconductor-packages/</guid>
@@ -640,7 +640,7 @@ session_info()
     
     <item>
       <title>Easily explore a table with shinycsv</title>
-      <link>/2017/01/20/Easily-explore-a-table-with-shinycsv/</link>
+      <link>http://lcolladotor.github.io/2017/01/20/Easily-explore-a-table-with-shinycsv/</link>
       <pubDate>Fri, 20 Jan 2017 00:00:00 +0000</pubDate>
       
       <guid>/2017/01/20/Easily-explore-a-table-with-shinycsv/</guid>
@@ -773,7 +773,7 @@ URL: &lt;a href=&#34;https://www.R-project.org/&#34;&gt;https://www.R-project.or
     
     <item>
       <title>Finding possible class schedules</title>
-      <link>/2016/08/02/materias/</link>
+      <link>http://lcolladotor.github.io/2016/08/02/materias/</link>
       <pubDate>Tue, 02 Aug 2016 00:00:00 +0000</pubDate>
       
       <guid>/2016/08/02/materias/</guid>
@@ -1240,7 +1240,7 @@ session_info()
     
     <item>
       <title>Are you doing parallel computations in R? Then use BiocParallel</title>
-      <link>/2016/03/07/BiocParallel/</link>
+      <link>http://lcolladotor.github.io/2016/03/07/BiocParallel/</link>
       <pubDate>Mon, 07 Mar 2016 00:00:00 +0000</pubDate>
       
       <guid>/2016/03/07/BiocParallel/</guid>
@@ -1547,7 +1547,7 @@ R package version 1.4.3.
     
     <item>
       <title>Teaching a short topic to beginner R users</title>
-      <link>/2015/07/07/rmarkdown/</link>
+      <link>http://lcolladotor.github.io/2015/07/07/rmarkdown/</link>
       <pubDate>Tue, 07 Jul 2015 00:00:00 +0000</pubDate>
       
       <guid>/2015/07/07/rmarkdown/</guid>
@@ -1623,7 +1623,7 @@ URL: &lt;a href=&#34;http://CRAN.R-project.org/package=knitcitations&#34;&gt;htt
     
     <item>
       <title>Use hidden advanced arguments for user-friendly functions</title>
-      <link>/2014/12/11/dots/</link>
+      <link>http://lcolladotor.github.io/2014/12/11/dots/</link>
       <pubDate>Thu, 11 Dec 2014 00:00:00 +0000</pubDate>
       
       <guid>/2014/12/11/dots/</guid>
@@ -1851,7 +1851,7 @@ session_info()
     
     <item>
       <title>An xpd-tion into R plot margins</title>
-      <link>/2014/11/21/add-logo-in-R/</link>
+      <link>http://lcolladotor.github.io/2014/11/21/add-logo-in-R/</link>
       <pubDate>Fri, 21 Nov 2014 00:00:00 +0000</pubDate>
       
       <guid>/2014/11/21/add-logo-in-R/</guid>
@@ -1932,7 +1932,7 @@ of your &lt;strong&gt;R&lt;/strong&gt; plot device, and it will not stay consist
     
     <item>
       <title>Where do I start using Bioconductor?</title>
-      <link>/2014/10/16/startBioC/</link>
+      <link>http://lcolladotor.github.io/2014/10/16/startBioC/</link>
       <pubDate>Thu, 16 Oct 2014 00:00:00 +0000</pubDate>
       
       <guid>/2014/10/16/startBioC/</guid>
@@ -2020,7 +2020,7 @@ URL: &lt;a href=&#34;http://www.R-project.org/&#34;&gt;http://www.R-project.org/
     
     <item>
       <title>Concerns that can deter potential orders for developing Shiny apps</title>
-      <link>/2014/06/10/shiny-orders/</link>
+      <link>http://lcolladotor.github.io/2014/06/10/shiny-orders/</link>
       <pubDate>Tue, 10 Jun 2014 00:00:00 +0000</pubDate>
       
       <guid>/2014/06/10/shiny-orders/</guid>
@@ -2108,7 +2108,7 @@ URL: &lt;a href=&#34;http://www.R-project.org/&#34;&gt;http://www.R-project.org/
     
     <item>
       <title>Simple mortgage calculator</title>
-      <link>/2014/04/22/mortgage-calculator-flexible-payments/</link>
+      <link>http://lcolladotor.github.io/2014/04/22/mortgage-calculator-flexible-payments/</link>
       <pubDate>Tue, 22 Apr 2014 00:00:00 +0000</pubDate>
       
       <guid>/2014/04/22/mortgage-calculator-flexible-payments/</guid>
@@ -2215,7 +2215,7 @@ URL: &lt;a href=&#34;http://www.R-project.org/&#34;&gt;http://www.R-project.org/
     
     <item>
       <title>rMaps Mexico map</title>
-      <link>/2014/02/26/excited-by-willingness-to-help-get-things-done/</link>
+      <link>http://lcolladotor.github.io/2014/02/26/excited-by-willingness-to-help-get-things-done/</link>
       <pubDate>Wed, 26 Feb 2014 00:00:00 +0000</pubDate>
       
       <guid>/2014/02/26/excited-by-willingness-to-help-get-things-done/</guid>

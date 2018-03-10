@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Blog on L. Collado-Torres</title>
-    <link>/tags/Blog/</link>
+    <link>http://lcolladotor.github.io/tags/Blog/</link>
     <description>Recent content in Blog on L. Collado-Torres</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2011-2018 Leonardo Collado Torres under (CC) BY-NC-SA 4.0</copyright>
     <lastBuildDate>Thu, 08 Mar 2018 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/tags/Blog/" rel="self" type="application/rss+xml" />
+    <atom:link href="http://lcolladotor.github.io/tags/Blog/" rel="self" type="application/rss+xml" />
     
     <item>
       <title>blogdown archetype (template)</title>
-      <link>/2018/03/08/blogdown-archetype-template/</link>
+      <link>http://lcolladotor.github.io/2018/03/08/blogdown-archetype-template/</link>
       <pubDate>Thu, 08 Mar 2018 00:00:00 +0000</pubDate>
       
       <guid>/2018/03/08/blogdown-archetype-template/</guid>
@@ -116,7 +116,7 @@
     
     <item>
       <title>blogdown Insert Image addin</title>
-      <link>/2018/03/07/blogdown-insert-image-addin/</link>
+      <link>http://lcolladotor.github.io/2018/03/07/blogdown-insert-image-addin/</link>
       <pubDate>Wed, 07 Mar 2018 00:00:00 +0000</pubDate>
       
       <guid>/2018/03/07/blogdown-insert-image-addin/</guid>
@@ -291,7 +291,7 @@ devtools::install_github(&amp;#39;rstudio/blogdown&amp;#39;)&lt;/code&gt;&lt;/pr
     
     <item>
       <title>R markdown blog template</title>
-      <link>/2018/02/17/r-markdown-blog-template/</link>
+      <link>http://lcolladotor.github.io/2018/02/17/r-markdown-blog-template/</link>
       <pubDate>Sat, 17 Feb 2018 00:00:00 +0000</pubDate>
       
       <guid>/2018/02/17/r-markdown-blog-template/</guid>
@@ -419,7 +419,7 @@ bibliography(style = &amp;#39;html&amp;#39;)&lt;/code&gt;&lt;/pre&gt;
     
     <item>
       <title>Creating your Jekyll-Bootstrap powered blog for R blogging</title>
-      <link>/2013/11/09/new-Fellgernon-Bit-setup-in-Github/</link>
+      <link>http://lcolladotor.github.io/2013/11/09/new-Fellgernon-Bit-setup-in-Github/</link>
       <pubDate>Sat, 09 Nov 2013 00:00:00 +0000</pubDate>
       
       <guid>/2013/11/09/new-Fellgernon-Bit-setup-in-Github/</guid>
@@ -748,7 +748,7 @@ sudo gem install nokogiri
     
     <item>
       <title>Bmore Biostats is born!</title>
-      <link>/2013/11/07/bmorebiostats/</link>
+      <link>http://lcolladotor.github.io/2013/11/07/bmorebiostats/</link>
       <pubDate>Thu, 07 Nov 2013 00:00:00 +0000</pubDate>
       
       <guid>/2013/11/07/bmorebiostats/</guid>
@@ -826,7 +826,7 @@ sudo gem install nokogiri
     
     <item>
       <title>Analyzing SimplyStatistics visits info</title>
-      <link>/2013/03/09/Analyzing-SimplyStatistics-visits-info/</link>
+      <link>http://lcolladotor.github.io/2013/03/09/Analyzing-SimplyStatistics-visits-info/</link>
       <pubDate>Sat, 09 Mar 2013 00:00:00 +0000</pubDate>
       
       <guid>/2013/03/09/Analyzing-SimplyStatistics-visits-info/</guid>
@@ -846,7 +846,7 @@ sudo gem install nokogiri
     
     <item>
       <title>Correctly synching AddThis and Google Analytics social stats</title>
-      <link>/2012/01/27/correctly-synching-addthis-and-google-analytics-social/</link>
+      <link>http://lcolladotor.github.io/2012/01/27/correctly-synching-addthis-and-google-analytics-social/</link>
       <pubDate>Fri, 27 Jan 2012 00:00:00 +0000</pubDate>
       
       <guid>/2012/01/27/correctly-synching-addthis-and-google-analytics-social/</guid>
@@ -868,7 +868,7 @@ sudo gem install nokogiri
     
     <item>
       <title>Make it easy for your visitors to suscribe with a burnt RSS feed</title>
-      <link>/2011/11/30/make-it-easy-for-your-visitors-to-suscribe-with-a-burnt/</link>
+      <link>http://lcolladotor.github.io/2011/11/30/make-it-easy-for-your-visitors-to-suscribe-with-a-burnt/</link>
       <pubDate>Wed, 30 Nov 2011 00:00:00 +0000</pubDate>
       
       <guid>/2011/11/30/make-it-easy-for-your-visitors-to-suscribe-with-a-burnt/</guid>
@@ -890,7 +890,7 @@ sudo gem install nokogiri
     
     <item>
       <title>Setting up your blog</title>
-      <link>/2011/11/20/Setting-up-your-blog/</link>
+      <link>http://lcolladotor.github.io/2011/11/20/Setting-up-your-blog/</link>
       <pubDate>Sun, 20 Nov 2011 00:00:00 +0000</pubDate>
       
       <guid>/2011/11/20/Setting-up-your-blog/</guid>

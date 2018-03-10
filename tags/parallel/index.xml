@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Parallel on L. Collado-Torres</title>
-    <link>/tags/parallel/</link>
+    <link>http://lcolladotor.github.io/tags/parallel/</link>
     <description>Recent content in Parallel on L. Collado-Torres</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2011-2018 Leonardo Collado Torres under (CC) BY-NC-SA 4.0</copyright>
     <lastBuildDate>Mon, 07 Mar 2016 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/tags/parallel/" rel="self" type="application/rss+xml" />
+    <atom:link href="http://lcolladotor.github.io/tags/parallel/" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Are you doing parallel computations in R? Then use BiocParallel</title>
-      <link>/2016/03/07/BiocParallel/</link>
+      <link>http://lcolladotor.github.io/2016/03/07/BiocParallel/</link>
       <pubDate>Mon, 07 Mar 2016 00:00:00 +0000</pubDate>
       
       <guid>/2016/03/07/BiocParallel/</guid>
@@ -319,7 +319,7 @@ R package version 1.4.3.
     
     <item>
       <title>Trying to reduce the memory overhead when using mclapply</title>
-      <link>/2013/11/14/Reducing-memory-overhead-when-using-mclapply/</link>
+      <link>http://lcolladotor.github.io/2013/11/14/Reducing-memory-overhead-when-using-mclapply/</link>
       <pubDate>Thu, 14 Nov 2013 00:00:00 +0000</pubDate>
       
       <guid>/2013/11/14/Reducing-memory-overhead-when-using-mclapply/</guid>
@@ -535,7 +535,7 @@ autoplot(micro)
     
     <item>
       <title>Using plyr and doMC for quick and easy apply-family functions</title>
-      <link>/2013/04/26/using-plyr-and-domc-for-quick-and-easy-apply-family/</link>
+      <link>http://lcolladotor.github.io/2013/04/26/using-plyr-and-domc-for-quick-and-easy-apply-family/</link>
       <pubDate>Fri, 26 Apr 2013 00:00:00 +0000</pubDate>
       
       <guid>/2013/04/26/using-plyr-and-domc-for-quick-and-easy-apply-family/</guid>

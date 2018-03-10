@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Cluster on L. Collado-Torres</title>
-    <link>/tags/cluster/</link>
+    <link>http://lcolladotor.github.io/tags/cluster/</link>
     <description>Recent content in Cluster on L. Collado-Torres</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2011-2018 Leonardo Collado Torres under (CC) BY-NC-SA 4.0</copyright>
     <lastBuildDate>Wed, 11 Dec 2013 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/tags/cluster/" rel="self" type="application/rss+xml" />
+    <atom:link href="http://lcolladotor.github.io/tags/cluster/" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Login to the cluster, request a node and change to your project directory in a single command</title>
-      <link>/2013/12/11/quick-cluster-login-to-interactive-session/</link>
+      <link>http://lcolladotor.github.io/2013/12/11/quick-cluster-login-to-interactive-session/</link>
       <pubDate>Wed, 11 Dec 2013 00:00:00 +0000</pubDate>
       
       <guid>/2013/12/11/quick-cluster-login-to-interactive-session/</guid>
@@ -249,7 +249,7 @@ alias qq=&#39;LEODIR=`basename $PWD`; ssh -t enigma &amp;quot;cd /very/complicat
     
     <item>
       <title>Using plyr and doMC for quick and easy apply-family functions</title>
-      <link>/2013/04/26/using-plyr-and-domc-for-quick-and-easy-apply-family/</link>
+      <link>http://lcolladotor.github.io/2013/04/26/using-plyr-and-domc-for-quick-and-easy-apply-family/</link>
       <pubDate>Fri, 26 Apr 2013 00:00:00 +0000</pubDate>
       
       <guid>/2013/04/26/using-plyr-and-domc-for-quick-and-easy-apply-family/</guid>
