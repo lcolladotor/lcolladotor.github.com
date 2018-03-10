@@ -321,7 +321,7 @@ devtools::install_github(&amp;#39;rstudio/blogdown&amp;#39;)&lt;/code&gt;&lt;/pr
     ## in the blog post
     plot(1:10, 10:1)
     ```&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2018-02-17-r-markdown-blog-template_files/figure-html/plot-1.png&#34; width=&#34;480&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://lcolladotor.github.io/post/2018-02-17-r-markdown-blog-template_files/figure-html/plot-1.png&#34; width=&#34;480&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Note that I modified the YAML portion of the post to set the figure width and height. You can also include a table of contents if you want, though it affects the summary of the post. Check the &lt;a href=&#34;https://bookdown.org/yihui/blogdown/output-format.html&#34;&gt;output format&lt;/a&gt; section of the &lt;code&gt;blogdown&lt;/code&gt; book for more details &lt;a id=&#39;cite-Xie_2017&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://github.com/rstudio/blogdown&#39;&gt;Xie, Hill, and Thomas, 2017&lt;/a&gt;), including differences between &lt;code&gt;.Rmd&lt;/code&gt; and &lt;code&gt;.Rmarkdown&lt;/code&gt; files. Note that you can also use a &lt;code&gt;_output.yml&lt;/code&gt; file as described there.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;output:
   blogdown::html_page:
@@ -362,44 +362,44 @@ session_info()&lt;/code&gt;&lt;/pre&gt;
 ##  tz       America/New_York            
 ##  date     2018-03-10&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## Packages --------------------------------------------------------------------------------------------------------------&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;##  package       * version date       source                            
-##  backports       1.1.2   2017-12-13 CRAN (R 3.4.3)                    
-##  base          * 3.4.3   2017-12-07 local                             
-##  bibtex          0.4.2   2017-06-30 CRAN (R 3.4.1)                    
-##  blogdown        0.5.9   2018-03-08 Github (rstudio/blogdown@dc1f41c) 
-##  bookdown        0.7     2018-02-18 cran (@0.7)                       
-##  colorout      * 1.2-0   2018-02-19 Github (jalvesaq/colorout@2f01173)
-##  compiler        3.4.3   2017-12-07 local                             
-##  datasets      * 3.4.3   2017-12-07 local                             
-##  devtools      * 1.13.5  2018-02-18 CRAN (R 3.4.3)                    
-##  digest          0.6.15  2018-01-28 CRAN (R 3.4.3)                    
-##  evaluate        0.10.1  2017-06-24 CRAN (R 3.4.1)                    
-##  graphics      * 3.4.3   2017-12-07 local                             
-##  grDevices     * 3.4.3   2017-12-07 local                             
-##  htmltools       0.3.6   2017-04-28 CRAN (R 3.4.0)                    
-##  httr            1.3.1   2017-08-20 CRAN (R 3.4.1)                    
-##  jsonlite        1.5     2017-06-01 CRAN (R 3.4.0)                    
-##  knitcitations * 1.0.8   2017-07-04 CRAN (R 3.4.1)                    
-##  knitr           1.20    2018-02-20 cran (@1.20)                      
-##  lubridate       1.7.3   2018-02-27 CRAN (R 3.4.3)                    
-##  magrittr        1.5     2014-11-22 CRAN (R 3.4.0)                    
-##  memoise         1.1.0   2017-04-21 CRAN (R 3.4.0)                    
-##  methods       * 3.4.3   2017-12-07 local                             
-##  plyr            1.8.4   2016-06-08 CRAN (R 3.4.0)                    
-##  R6              2.2.2   2017-06-17 CRAN (R 3.4.0)                    
-##  Rcpp            0.12.15 2018-01-20 CRAN (R 3.4.3)                    
-##  RefManageR      0.14.20 2017-08-17 CRAN (R 3.4.1)                    
-##  rmarkdown       1.9     2018-03-01 cran (@1.9)                       
-##  rprojroot       1.3-2   2018-01-03 CRAN (R 3.4.3)                    
-##  stats         * 3.4.3   2017-12-07 local                             
-##  stringi         1.1.6   2017-11-17 CRAN (R 3.4.2)                    
-##  stringr         1.3.0   2018-02-19 cran (@1.3.0)                     
-##  tools           3.4.3   2017-12-07 local                             
-##  utils         * 3.4.3   2017-12-07 local                             
-##  withr           2.1.1   2017-12-19 CRAN (R 3.4.3)                    
-##  xfun            0.1     2018-01-22 CRAN (R 3.4.3)                    
-##  xml2            1.2.0   2018-01-24 CRAN (R 3.4.3)                    
-##  yaml            2.1.17  2018-02-27 cran (@2.1.17)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##  package       * version date       source                               
+##  backports       1.1.2   2017-12-13 CRAN (R 3.4.3)                       
+##  base          * 3.4.3   2017-12-07 local                                
+##  bibtex          0.4.2   2017-06-30 CRAN (R 3.4.1)                       
+##  blogdown        0.5.10  2018-03-10 Github (lcolladotor/blogdown@471b086)
+##  bookdown        0.7     2018-02-18 cran (@0.7)                          
+##  colorout      * 1.2-0   2018-02-19 Github (jalvesaq/colorout@2f01173)   
+##  compiler        3.4.3   2017-12-07 local                                
+##  datasets      * 3.4.3   2017-12-07 local                                
+##  devtools      * 1.13.5  2018-02-18 CRAN (R 3.4.3)                       
+##  digest          0.6.15  2018-01-28 CRAN (R 3.4.3)                       
+##  evaluate        0.10.1  2017-06-24 CRAN (R 3.4.1)                       
+##  graphics      * 3.4.3   2017-12-07 local                                
+##  grDevices     * 3.4.3   2017-12-07 local                                
+##  htmltools       0.3.6   2017-04-28 CRAN (R 3.4.0)                       
+##  httr            1.3.1   2017-08-20 CRAN (R 3.4.1)                       
+##  jsonlite        1.5     2017-06-01 CRAN (R 3.4.0)                       
+##  knitcitations * 1.0.8   2017-07-04 CRAN (R 3.4.1)                       
+##  knitr           1.20    2018-02-20 cran (@1.20)                         
+##  lubridate       1.7.3   2018-02-27 CRAN (R 3.4.3)                       
+##  magrittr        1.5     2014-11-22 CRAN (R 3.4.0)                       
+##  memoise         1.1.0   2017-04-21 CRAN (R 3.4.0)                       
+##  methods       * 3.4.3   2017-12-07 local                                
+##  plyr            1.8.4   2016-06-08 CRAN (R 3.4.0)                       
+##  R6              2.2.2   2017-06-17 CRAN (R 3.4.0)                       
+##  Rcpp            0.12.15 2018-01-20 CRAN (R 3.4.3)                       
+##  RefManageR      0.14.20 2017-08-17 CRAN (R 3.4.1)                       
+##  rmarkdown       1.9     2018-03-01 cran (@1.9)                          
+##  rprojroot       1.3-2   2018-01-03 CRAN (R 3.4.3)                       
+##  stats         * 3.4.3   2017-12-07 local                                
+##  stringi         1.1.6   2017-11-17 CRAN (R 3.4.2)                       
+##  stringr         1.3.0   2018-02-19 cran (@1.3.0)                        
+##  tools           3.4.3   2017-12-07 local                                
+##  utils         * 3.4.3   2017-12-07 local                                
+##  withr           2.1.1   2017-12-19 CRAN (R 3.4.3)                       
+##  xfun            0.1     2018-01-22 CRAN (R 3.4.3)                       
+##  xml2            1.2.0   2018-01-24 CRAN (R 3.4.3)                       
+##  yaml            2.1.18  2018-03-08 cran (@2.1.18)&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;div id=&#34;references&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;References&lt;/h3&gt;
