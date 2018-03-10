@@ -8,9 +8,7 @@
     <language>en-us</language>
     <copyright>&amp;copy; 2011-2018 Leonardo Collado Torres under (CC) BY-NC-SA 4.0</copyright>
     <lastBuildDate>Wed, 13 Feb 2013 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="/tags/Biostatistics/index.xml" rel="self" type="application/rss+xml" />
-    
+    <atom:link href="/tags/Biostatistics/" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Sharing my work for &#34;Advanced Methods III&#34;</title>
@@ -18,7 +16,16 @@
       <pubDate>Wed, 13 Feb 2013 00:00:00 +0000</pubDate>
       
       <guid>/2013/02/13/Sharing-my-work-for-Advanced-Methods-III/</guid>
-      <description>This semester I&amp;#8217;m taking the live version of the Data Analysis class by Jeff Leek. His more popular version of the course is available through Coursera. One of the things that Jeff promotes is reproducibility and sharing code. I share that tendency and thus created a Git repository for my homework and code for the class: lcollado753. I&amp;#8217;m hosting it with GitHub to try it out since I started with Mercurial via Bitbucket.</description>
+      <description>&lt;p&gt;This semester I&amp;#8217;m taking the live version of the Data Analysis class by Jeff Leek. His more &lt;a href=&#34;https://class.coursera.org/dataanalysis-001/class/index&#34;&gt;popular version of the course is available through Coursera&lt;/a&gt;. &lt;/p&gt;
+&lt;p&gt;One of the things that Jeff promotes is reproducibility and sharing code. I share that tendency and thus created a Git repository for my homework and code for the class: &lt;a href=&#34;http://bit.ly/12vSk7d&#34;&gt;lcollado753&lt;/a&gt;. I&amp;#8217;m hosting it with GitHub to try it out since I started with Mercurial via Bitbucket. &lt;/p&gt;
+&lt;p&gt;Part of me would love it if everyone in the class had their own Git repositories. I mean, this class involves lots of practice exercises and there are plenty of R packages and functions that others use that I would like to learn. As I don&amp;#8217;t see this happening, I think that it would be great to list the packages/functions you think could be interesting to others at the end of the write-ups. However, this involves sharing the reports and I don&amp;#8217;t know if that will happen.&lt;/p&gt;
+&lt;p&gt;But maybe I didn&amp;#8217;t get the instructions Jeff gave correctly the first time. Listening into his week 2 talks from the Coursera course, I get that he wants our reports to be reproducible. The idea is great, but sometimes I get lots in the technicalities of finding the best fit for our situation. Aka, something we can all do that is worth the time for small scale projects that we have a couple of days to complete and most likely will be finishing the day before they are due. For now we might stick to sharing zip files with the report + summarized data set (it has be small enough to be sharable by email).&lt;/p&gt;
+&lt;p&gt;I&amp;#8217;m pretty happy with hosting my stuff at GitHub. One blunder I made in the&lt;a href=&#34;https://github.com/lcolladotor/lcollado753/blob/master/hw/data-analysis-01/report/data01_lcollado.pdf&#34;&gt; first data analysis report&lt;/a&gt; is that I completely forgot to say in it that I have the code in GitHub :P Oh well, next time!&lt;/p&gt;
+&lt;p&gt;I feel that I also have lots to improve regarding how to tell a story in a report. Plus, for this first project I mainly did some exploratory data analysis without much stat analysis.&lt;/p&gt;
+&lt;p&gt;Overall, I&amp;#8217;m quite excited with this course =) and I think that I&amp;#8217;ll learn a ton on methods to analyze data AND how to actually implement them. Plus, I&amp;#8217;m currently trying to learn ggplot2 as you can see in that first report. Also, I made it with knitr instead of Sweave =)&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -27,7 +34,18 @@
       <pubDate>Mon, 12 Nov 2012 00:00:00 +0000</pubDate>
       
       <guid>/2012/11/12/Introduction-to-R-and-Biostatistics-2012-version/</guid>
-      <description>To follow my Introducing R and Biostatistics to first year LCG students (2012 version) post, you can now find the presentation online from my site either in presentation format, in a single webpage format, or the raw Rmd file. To prove the point that publishing to RPubs is super easy, you can also find the single webpage format over there. I also like how you can comment and share in RPubs.</description>
+      <description>&lt;p&gt;To follow my &lt;a href=&#34;http://fellgernon.tumblr.com/post/34677935591/introducing-r-and-biostatistics-to-first-year-lcg#.UKFlW-Oe918&#34;&gt;Introducing R and Biostatistics to first year LCG students (2012 version)&lt;/a&gt; post,  you can now find the presentation online from my site either in &lt;a href=&#34;http://www.biostat.jhsph.edu/~lcollado/lcg/introR2012/intro_R_Biostat_LCG_2012_slides.html&#34;&gt;presentation format&lt;/a&gt;, in a &lt;a href=&#34;http://www.biostat.jhsph.edu/~lcollado/lcg/introR2012/intro_R_Biostat_LCG_2012.html&#34;&gt;single webpage format&lt;/a&gt;, or the &lt;a href=&#34;http://www.biostat.jhsph.edu/~lcollado/lcg/introR2012/intro_R_Biostat_LCG_2012.Rmd&#34;&gt;raw Rmd file&lt;/a&gt;. To prove the point that publishing to &lt;a href=&#34;http://rpubs.com/&#34;&gt;RPubs&lt;/a&gt; is super easy, you can also find the &lt;a href=&#34;http://rpubs.com/lcollado/2618&#34;&gt;single webpage format over there&lt;/a&gt;. I also like how you can comment and share in RPubs.&lt;/p&gt;
+&lt;p&gt;One of the challenges of giving a presentation to first year students is finding the balance between introducing them to cool things you are doing in your work and actually giving a talk that they can follow. I thought about this and ended dropping anything related to my work.&lt;/p&gt;
+&lt;p&gt;My presentation was split pretty much in two parts. First, I wanted to promote some philosophical discussion about what is statistics. Second, I gave a brief overview of what you can do with R. Or more exactly, what they should be able to learn to do even if they become &lt;em&gt;wet &lt;/em&gt;biologists.&lt;/p&gt;
+&lt;p&gt;While planning this presentation, I knew that I wanted to give the new students a flavor of the three different currents in statistics. I aimed to improve &lt;a href=&#34;http://fellgernon.tumblr.com/post/13739343319/introducing-biostatistics-to-first-year-lcg-students#.UKFl6uOe918&#34;&gt;my 2011 explanations&lt;/a&gt; now that I&amp;#8217;m taking the Foundations of Statistical Inference course. I&amp;#8217;m happy with the result and I think this is greatly due to Royall&amp;#8217;s diagnostic test example.&lt;/p&gt;
+&lt;p&gt;Another key point that I wanted to emphasize was that RStudio is the way to go if you are new to R. It is very straightforward to use, plus it is nicely interegrated with &lt;a href=&#34;http://yihui.name/knitr/&#34;&gt;knitr&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I decided to use R Markdown (Rmd) for the first time, after seeing how easy &lt;a href=&#34;http://daringfireball.net/projects/markdown/&#34;&gt;Markdown&lt;/a&gt; really is compared to using LaTeX and Beamer. However, when it got to doing the presentation I have to say that I was a bit dissapointed by how some things just break when using the R Markdown to Markdown to HTML presentation pipeline —using &lt;a href=&#34;http://johnmacfarlane.net/pandoc/&#34;&gt;pandoc&lt;/a&gt; for the last step. For example, the math breaks when using mathml or mathjax at times (like after adding an iframe for a youtube video), so I had to use webtex which doesn&amp;#8217;t look as nice.&lt;/p&gt;
+&lt;p&gt;If you are interested in the commands, I used the &amp;#8220;Knit HTML&amp;#8221; button in R Studio [equivalent to running from R: &lt;em&gt;library(knitr); knit(&amp;#8220;filename.Rmd&amp;#8221;)&lt;/em&gt;] and then ran the following command:&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;pandoc -s -S &amp;#8212;webtex -i -t dzslides intro_R_Biostat_LCG_2012.md -o intro_R_Biostat_LCG_2012_slides.html &amp;amp; open intro_R_Biostat_LCG_2012_slides.html&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;I was originally aiming to have a single Rmd file to produce an HTML presentation and a Beamer presentation. However, controlling the pictures in the Beamer output proved to be challenging. While I had a work around, the final problem was the math part. By the time I realized this it was too late —I just dropped the Beamer presentation. Googling, even the author of knitr acknowledges that the best input for PDF output is still LaTeX.&lt;/p&gt;
+&lt;p&gt;In the end, I&amp;#8217;m happy that I got the HTML presentation done using R Markdown and briefly introduced it to the first year students. The basics of knitr are very easy to learn and I&amp;#8217;m hoping that it got some of them curious enough to try it.&lt;/p&gt;
+&lt;p&gt;Next thing in line: prepare 5 questions for the students.&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -36,8 +54,54 @@
       <pubDate>Tue, 30 Oct 2012 00:00:00 +0000</pubDate>
       
       <guid>/2012/10/30/introducing-r-and-biostatistics-to-first-year-lcg/</guid>
-      <description>On Friday November 9th I&amp;#8217;ll be giving a talk to the first year students from the Undergraduate Program on Genomic Sciences (LCG in Spanish) during their &amp;#8220;Seminar 1: Introduction to Bioinformatics&amp;#8221; course. It&amp;#8217;s just like I did a year ago as I documented in my post Introducing Biostatistics to first year LCG students.
-Well, this time I&amp;#8217;ll change things a bit. I&amp;#8217;m allowed to require the students to read 2-3 papers before my talk to introduce them to my field.</description>
+      <description>&lt;p&gt;&lt;p&gt;On Friday November 9th I&amp;#8217;ll be giving a talk to the first year students from the Undergraduate Program on Genomic Sciences (LCG in Spanish) during their &amp;#8220;Seminar 1: Introduction to Bioinformatics&amp;#8221; course. It&amp;#8217;s just like I did a year ago as I documented in my post &lt;a href=&#34;http://fellgernon.tumblr.com/post/13739343319/introducing-biostatistics-to-first-year-lcg-students#.UJBq6Wl25FQ&#34;&gt;Introducing Biostatistics to first year LCG students&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Well, this time I&amp;#8217;ll change things a bit. I&amp;#8217;m allowed to require the students to read 2-3 papers before my talk to introduce them to my field. I&amp;#8217;ll do so, but in a more peculiar way by requiring them to listen in to a few videos I selected. So, without further ado here are the three required &amp;#8220;papers&amp;#8221;:&lt;/p&gt;
+&lt;p&gt;Here is &amp;#8220;&lt;strong&gt;paper 1&lt;/strong&gt;&amp;quot; (~30 minutes). The goal is to introduce you to the basic workings of R and also to great sources of R videos.&lt;/p&gt;
+&lt;p&gt;First, learn to install R (watch it in full screen).&lt;/p&gt;
+&lt;p&gt;&lt;iframe frameborder=&#34;0&#34; height=&#34;305&#34; src=&#34;http://www.screenr.com/embed/kzT8&#34; width=&#34;500&#34;&gt;&lt;/iframe&gt;&lt;/p&gt;
+&lt;p&gt;Or you can also watch any of the two following videos:&lt;/p&gt;
+&lt;p&gt;&lt;iframe frameborder=&#34;0&#34; height=&#34;281&#34; src=&#34;http://www.youtube.com/embed/Icawuhf0Yqo&#34; width=&#34;500&#34;&gt;&lt;/iframe&gt;&lt;/p&gt;
+&lt;p&gt;&lt;iframe frameborder=&#34;0&#34; height=&#34;281&#34; src=&#34;http://www.youtube.com/embed/mfGFv-iB724&#34; width=&#34;500&#34;&gt;&lt;/iframe&gt;&lt;/p&gt;
+&lt;p&gt;Next learn about RStudio and why it&amp;#8217;s a great place to start (watch it on hd and fullscreen).&lt;/p&gt;
+&lt;p&gt;&lt;iframe frameborder=&#34;0&#34; height=&#34;281&#34; src=&#34;http://www.youtube.com/embed/JbTMvQ-SbvQ&#34; width=&#34;500&#34;&gt;&lt;/iframe&gt;&lt;/p&gt;
+&lt;p&gt;Now you are ready to learn how to create a variable in R. Use RStudio instead of the R GUI to do so.&lt;/p&gt;
+&lt;p&gt;&lt;iframe frameborder=&#34;0&#34; height=&#34;305&#34; src=&#34;http://www.screenr.com/embed/qyT8&#34; width=&#34;500&#34;&gt;&lt;/iframe&gt;&lt;/p&gt;
+&lt;p&gt;Next, learn the super basics about the basic R plot system.&lt;/p&gt;
+&lt;p&gt;&lt;iframe frameborder=&#34;0&#34; height=&#34;305&#34; src=&#34;http://www.screenr.com/embed/XeS8&#34; width=&#34;500&#34;&gt;&lt;/iframe&gt;&lt;/p&gt;
+&lt;p&gt;Now you are ready to learn about how to use the combine function.&lt;/p&gt;
+&lt;p&gt;&lt;iframe frameborder=&#34;0&#34; height=&#34;305&#34; src=&#34;http://www.screenr.com/embed/jyT8&#34; width=&#34;500&#34;&gt;&lt;/iframe&gt;&lt;/p&gt;
+&lt;p&gt;Next, learn about data.frame type of objects&lt;/p&gt;
+&lt;p&gt;&lt;iframe frameborder=&#34;0&#34; height=&#34;305&#34; src=&#34;http://www.screenr.com/embed/fCs8&#34; width=&#34;500&#34;&gt;&lt;/iframe&gt;&lt;/p&gt;
+&lt;p&gt;and how to add new variables to them.&lt;/p&gt;
+&lt;p&gt;&lt;iframe frameborder=&#34;0&#34; height=&#34;305&#34; src=&#34;http://www.screenr.com/embed/ge28&#34; width=&#34;500&#34;&gt;&lt;/iframe&gt;&lt;/p&gt;
+&lt;p&gt;Next up is learning how to find help.&lt;/p&gt;
+&lt;p&gt;&lt;iframe frameborder=&#34;0&#34; height=&#34;305&#34; src=&#34;http://www.screenr.com/embed/Pps8&#34; width=&#34;500&#34;&gt;&lt;/iframe&gt;&lt;/p&gt;
+&lt;p&gt;Almost there. Now check how to change your current working directory.&lt;/p&gt;
+&lt;p&gt;&lt;iframe frameborder=&#34;0&#34; height=&#34;281&#34; src=&#34;http://www.youtube.com/embed/8xT3hmJQskU&#34; width=&#34;500&#34;&gt;&lt;/iframe&gt;&lt;/p&gt;
+&lt;p&gt;Finally, learn how to install and load a package in R.&lt;/p&gt;
+&lt;p&gt;&lt;iframe frameborder=&#34;0&#34; height=&#34;396&#34; src=&#34;http://www.screenr.com/embed/Fps8&#34; width=&#34;500&#34;&gt;&lt;/iframe&gt;&lt;/p&gt;
+&lt;p&gt;If you are more curious regarding the origins of R check the next video (not part of &amp;#8220;paper 1&amp;#8221;).&lt;/p&gt;
+&lt;p&gt;&lt;iframe frameborder=&#34;0&#34; height=&#34;281&#34; src=&#34;http://www.youtube.com/embed/kzxHxFHW6hs&#34; width=&#34;500&#34;&gt;&lt;/iframe&gt;&lt;/p&gt;
+&lt;p&gt;Next, &amp;#8220;&lt;strong&gt;paper 2&lt;/strong&gt;&amp;quot; (~39 minutes). The goal here is to get a feeling of how you can use R to create plots.&lt;/p&gt;
+&lt;p&gt;First start with this demonstration of the basic R plotting tools (called &amp;#8220;base graphics&amp;#8221;). It does in enough level of detail of how the basic plotting system works and how you can customize the colors, layout, etc. For the purpose of getting used to the tool, I recommend that you follow this video using RStudio. Also, you&amp;#8217;ll want to watch it in 720p.&lt;/p&gt;
+&lt;p&gt;&lt;iframe frameborder=&#34;0&#34; height=&#34;281&#34; src=&#34;http://www.youtube.com/embed/4KLfzsj-qkE&#34; width=&#34;500&#34;&gt;&lt;/iframe&gt;&lt;/p&gt;
+&lt;p&gt;Now check the demo for plotting with the &lt;em&gt;lattice&lt;/em&gt; package. This is more advanced, but it should also be more illustrative of the power you have with R. Plus it shows how we can expand the functionality of R by using packages contributed to the community and freely available for us to use.&lt;/p&gt;
+&lt;p&gt;&lt;iframe frameborder=&#34;0&#34; height=&#34;281&#34; src=&#34;http://www.youtube.com/embed/6VP5JBq1g7g&#34; width=&#34;500&#34;&gt;&lt;/iframe&gt;&lt;/p&gt;
+&lt;p&gt;Finally, &amp;#8220;&lt;strong&gt;paper 3&lt;/strong&gt;&amp;quot; (~28 minutes). This is the first lecture from a course by Brian Caffo in which he goes over the definition and overall motivation behind Biostatistics. It should be much more fun to watch than reading a review paper in the area.&lt;/p&gt;
+&lt;p&gt;&lt;iframe frameborder=&#34;0&#34; height=&#34;281&#34; src=&#34;http://www.youtube.com/embed/jkUqDVtpKs4&#34; width=&#34;500&#34;&gt;&lt;/iframe&gt;&lt;/p&gt;
+&lt;p&gt;Now, for those motivated to learn more, I recommend some of my own posts summarizing  information that can be useful to you.&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;a href=&#34;http://fellgernon.tumblr.com/post/32688589475/jhsph-biostat-through-coursera#.UJBzBml25FQ&#34;&gt;JHSPH-Biostat through Coursera&lt;/a&gt; and &lt;a href=&#34;http://fellgernon.tumblr.com/post/33114381084/an-online-bioinformatics-curriculum#.UJBy92l25FQ&#34;&gt;An Online Bioinformatics Curriculum&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://fellgernon.tumblr.com/post/30077689805/setting-up-your-computer-for#.UJBzO2l25FQ&#34;&gt;Setting up your computer for bioinformatics/biostatistics and a compedium of resources&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://fellgernon.tumblr.com/post/30970426274/i-consider-myself-a-fan-of-using-version-control#.UJBzKml25FQ&#34;&gt;Motivation behind using a version control system&lt;/a&gt; and &lt;a href=&#34;http://fellgernon.tumblr.com/post/32198487580/introducing-git-while-making-your-academic-webpage#.UJBzIGl25FQ&#34;&gt;Introducing Git while making your academic webpage&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://fellgernon.tumblr.com/post/33162495473/why-arent-all-of-our-graphs-interactive#.UJBy8ml25FQ&#34;&gt;Why aren’t all of our graphs interactive?&lt;/a&gt; and &lt;a href=&#34;http://fellgernon.tumblr.com/post/33908652237/visualizing-colors#.UJBy6Gl25FQ&#34;&gt;Visualizing colors()&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://fellgernon.tumblr.com/post/16763819010/p-values-and-statistics-phylosophy#.UJB0j2l25FQ&#34;&gt;P-values and Statistics phylosophy&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://fellgernon.tumblr.com/post/13830203652/the-new-visualization-package-for-genome-data-in#.UJB04Wl25FQ&#34;&gt;The new visualization package for genome data in Bioconductor: ggbio&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;p&gt;Sources:&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;a href=&#34;http://www.twotorials.com/&#34;&gt;&lt;a href=&#34;http://www.twotorials.com/&#34;&gt;http://www.twotorials.com/&lt;/a&gt;&lt;/a&gt; by &lt;a href=&#34;http://www.kaiseredu.org/tutorials-and-presentations/bios/anthony-damico.aspx&#34;&gt;Anthony Damico&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.youtube.com/user/rdpeng?feature=results_main&#34;&gt;Youtube videos&lt;/a&gt; by &lt;a href=&#34;http://www.biostat.jhsph.edu/~rpeng/&#34;&gt;Roger Peng&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.youtube.com/user/bcaffo?feature=results_main&#34;&gt;Youtube videos&lt;/a&gt; by &lt;a href=&#34;http://www.bcaffo.com/&#34;&gt;Brian Caffo&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -46,7 +110,39 @@ Well, this time I&amp;#8217;ll change things a bit. I&amp;#8217;m allowed to req
       <pubDate>Mon, 01 Oct 2012 00:00:00 +0000</pubDate>
       
       <guid>/2012/10/01/JHSPH-Biostat-through-Coursera/</guid>
-      <description>Have you heard of online education? If you are in the US or Mexico I&amp;#8217;m sure that you have seen some ads about online universities. Well, that&amp;#8217;s not the type of education I&amp;#8217;m talking about. I&amp;#8217;m talking about free high-quality education. For some years, the top option has been the Open Courseware (OCW) organized under the Open Courseware Consortium (OCWC). Back in 2009 I was pushed my undergrad (LCG-UNAM) to design and teach OCW-compliant courses.</description>
+      <description>&lt;p&gt;Have you heard of online education? If you are in the US or Mexico I&amp;#8217;m sure that you have seen some ads about online universities. Well, that&amp;#8217;s not the type of education I&amp;#8217;m talking about. I&amp;#8217;m talking about free high-quality education. &lt;/p&gt;
+&lt;p&gt;For some years, the top option has been the &lt;strong&gt;O&lt;/strong&gt;pen &lt;strong&gt;C&lt;/strong&gt;ourse&lt;strong&gt;w&lt;/strong&gt;are (OCW) organized under the &lt;a href=&#34;http://www.ocwconsortium.org/&#34;&gt;Open Courseware Consortium&lt;/a&gt; (OCWC). Back in 2009 I was pushed my undergrad (LCG-UNAM) to design and teach OCW-compliant courses. I even taught a &lt;a href=&#34;http://www.lcg.unam.mx/~lcollado/B/index_en.html&#34;&gt;course on R/Bioconductor&lt;/a&gt; and thought of it as a pilot OCW course. The first seven classes were video recorded. But that project hit a wall because many of the biology professors used slides that heavily relied on copyrighted material. For OCW courses you have to own the copyright of the material that you use (or get permission), so just the idea of having to re-do all the diagrams and figures was overwhelming. This hasn&amp;#8217;t stopped some big universities like &lt;a href=&#34;http://ocw.mit.edu/index.htm&#34;&gt;MIT from publishing OCW-compliant courses&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Recently there&amp;#8217;s been talk of the new horse in the race: &lt;a href=&#34;https://www.coursera.org/&#34;&gt;Coursera&lt;/a&gt;. What is it? Well, &lt;a href=&#34;https://www.coursera.org/about&#34;&gt;according to themselves&lt;/a&gt;:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;We are a social entrepreneurship company that partners with the top universities in the world to offer courses online for anyone to take, for free. We envision a future where the top universities are educating not only thousands of students, but millions. Our technology enables the best professors to teach tens or hundreds of thousands of students.&lt;/p&gt;
+&lt;p&gt;Through this, we hope to give everyone access to the world-class education that has so far been available only to a select few. We want to empower people with education that will improve their lives, the lives of their families, and the communities they live in.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;So far, the motivation is similar to the OCW movement. However, one very big difference is that Coursera &lt;strong&gt;does offer certificates&lt;/strong&gt;. Something which OCW courses do not. For example, &lt;a href=&#34;http://ocw.mit.edu/about/&#34;&gt;MIT-OCW&lt;/a&gt; says:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;OCW is not an MIT education.&lt;/li&gt;
+&lt;li&gt;OCW does not grant degrees or certificates.&lt;/li&gt;
+&lt;li&gt;OCW does not provide access to MIT faculty.&lt;/li&gt;
+&lt;li&gt;Materials may not reflect entire content of the course.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Coursera courses do provide the entire content of the course. Well, this is slightly tricky since some professors use the same base material in the university-in-class courses but expand it beyond what is available through Coursera. Thus in a sense Coursera are more accesible courses with lesser requirements than the in-class versions. But compared to OCW, you have homeworks (which are graded) and can communicate with the faculty through the use of forums.&lt;/p&gt;
+&lt;p&gt;One advantage of OCW courses is that you can look at them whenever you want. For Coursera ones you have to sign up (and thus register to their system) and they are open for certain periods of time.&lt;/p&gt;
+&lt;p&gt;Currently, the Biostatistics Department at JHSPH is offering three courses through Coursera. These are &lt;a href=&#34;https://www.coursera.org/course/compdata&#34;&gt;Computing for Data Analysis&lt;/a&gt; by &lt;a href=&#34;http://www.biostat.jhsph.edu/~rpeng/&#34;&gt;Roger D. Peng&lt;/a&gt;, &lt;a href=&#34;https://www.coursera.org/course/biostats&#34;&gt;Mathematical Biostatistics Boot Camp&lt;/a&gt; by &lt;a href=&#34;http://www.bcaffo.com/&#34;&gt;Brian Caffo&lt;/a&gt;, and &lt;a href=&#34;https://www.coursera.org/course/dataanalysis&#34;&gt;Data Analysis&lt;/a&gt; by &lt;a href=&#34;http://www.biostat.jhsph.edu/~jleek/&#34;&gt;Jeffrey Leek&lt;/a&gt;. The first two are introductory courses to using R and Biostatistics, respectively. I&amp;#8217;m taking the in-class versions and highly recommend them to anyone that wants to get started in either topic. They both involve youtube videos and practice exercises. The videos themselves are great since they rehearse what they are going to say, used a high-quality audio recording room, tuned the audio, and included highlights in the slides so you can follow them easily. &lt;strong&gt;Right now you can go and sign up for these two courses!&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;The third one, Data Analysis, is more advanced and I&amp;#8217;ll take it in-class next year. In addition, for now the sign up is closed for 2012 (you can go ahead and save a spot for 2013). &lt;/p&gt;
+&lt;p&gt;All of these courses have a couple thousands students registered, which is great! I&amp;#8217;m sure that the great majority will greatly benefit from them. To finish my post, I&amp;#8217;ll leave you with their short introduction videos, which will tell you more than what I can via text!&lt;/p&gt;
+&lt;p&gt;Enjoy!&lt;/p&gt;
+
+&lt;p&gt;&lt;iframe frameborder=&#34;0&#34; height=&#34;253&#34; src=&#34;http://www.youtube.com/embed/gk6E57H6mTs&#34; width=&#34;450&#34;&gt;&lt;/iframe&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;iframe frameborder=&#34;0&#34; height=&#34;253&#34; src=&#34;http://www.youtube.com/embed/ekdpaf_WT_8&#34; width=&#34;450&#34;&gt;&lt;/iframe&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;iframe frameborder=&#34;0&#34; height=&#34;253&#34; src=&#34;http://www.youtube.com/embed/-lutj1vrPwQ&#34; width=&#34;450&#34;&gt;&lt;/iframe&gt;&lt;/p&gt;
+</description>
     </item>
     
   </channel>

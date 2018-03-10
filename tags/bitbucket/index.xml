@@ -8,9 +8,7 @@
     <language>en-us</language>
     <copyright>&amp;copy; 2011-2018 Leonardo Collado Torres under (CC) BY-NC-SA 4.0</copyright>
     <lastBuildDate>Tue, 09 Oct 2012 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="/tags/Bitbucket/index.xml" rel="self" type="application/rss+xml" />
-    
+    <atom:link href="/tags/Bitbucket/" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Bitbucket revamped</title>
@@ -18,9 +16,21 @@
       <pubDate>Tue, 09 Oct 2012 00:00:00 +0000</pubDate>
       
       <guid>/2012/10/09/Bitbucket-revamped/</guid>
-      <description>Bitbucket announced their new &amp;#8220;look&amp;#8221; today. The goal is to make it more team friendly but I guess that they also wanted to make it look fresh.
-For example, the overview page now has a quick summary:
- That can be useful coupled with the simpler navigation tabs. But I think that the best of the new tools is the ability to comment at a given commit at any line change.</description>
+      <description>&lt;p&gt;Bitbucket announced their new &amp;#8220;look&amp;#8221; today. The goal is to make it more team friendly but I guess that they also wanted to make it look fresh.&lt;/p&gt;
+&lt;p&gt;For example, the overview page now has a quick summary:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://media.tumblr.com/tumblr_mbn7ffEV281qfs0hy.png&#34;/&gt;&lt;/p&gt;
+&lt;p&gt; That can be useful coupled with the simpler navigation tabs. But I think that the best of the new tools is the ability to comment at a given commit at any line change.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://media.tumblr.com/tumblr_mbn7i8XOGJ1qfs0hy.png&#34;/&gt;&lt;/p&gt;
+&lt;p&gt;This gives a new dimension when working with a team. It&amp;#8217;s independent of the version control system you are using, so this can be a drawback in a sense as you need to log into Bitbucket to see the comments. I guess that if you keep the main explanations inside commit messages, this new comment tool can be helpful when reviewing the code and/or solving merges.&lt;/p&gt;
+&lt;p&gt;Bitbucket thought about how to make these comments more visible, so they show as updates in the overview page. That&amp;#8217;s great, otherwise you would have to go to each commit and check if there is anything new out there. Plus, there is an RSS feed for those of us that prefer to use these instead of browsing to a webpage to check if there is an update.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://media.tumblr.com/tumblr_mbn7osWZpp1qfs0hy.png&#34;/&gt;&lt;/p&gt;
+&lt;p&gt;To foment the discussion when solving merges, they also have some new tools inside the &amp;#8220;pull requests&amp;#8221;:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://media.tumblr.com/tumblr_mbn7m2Oprf1qfs0hy.png&#34;/&gt;&lt;/p&gt;
+&lt;p&gt;Overall, these changes make me happy and want to stay with Bitbucket. Though most of my collaborators use Github and the idea of having to get a new account is a HUGE wall. You wouldn&amp;#8217;t think it is after having accounts for lots of other stuff, right? &lt;/p&gt;
+&lt;p&gt;Well, remember that you can log into Bitbucket using OpenID:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://media.tumblr.com/tumblr_mbn7vlYQYO1qfs0hy.png&#34;/&gt;&lt;/p&gt;
+&lt;p&gt;&amp;lt;3 Bitbucket&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -29,7 +39,11 @@ For example, the overview page now has a quick summary:
       <pubDate>Mon, 24 Sep 2012 00:00:00 +0000</pubDate>
       
       <guid>/2012/09/24/Introducing-Git-while-making-your-academic-webpage/</guid>
-      <description>Last week I gave a presentation during our computing club on how to use git (a version control system). I used as a motivating example the first steps of creating your own academic webpage. The goal was to make it interesting to both new students (who might have been more interested on the webpage part) and older students (for whom version control should be a must). The slides and all the material is publicly available through the following Bitbucket repository: https://bitbucket.</description>
+      <description>&lt;p&gt;Last week I gave a presentation during our computing club on how to use git (a version control system). I used as a motivating example the first steps of creating your own academic webpage. The goal was to make it interesting to both new students (who might have been more interested on the webpage part) and older students (for whom version control should be a must). The slides and all the material is publicly available through the following Bitbucket repository: &lt;a href=&#34;https://bitbucket.org/lcolladotor/html_git_intro/overview&#34;&gt;&lt;a href=&#34;https://bitbucket.org/lcolladotor/html_git_intro/overview&#34;&gt;https://bitbucket.org/lcolladotor/html_git_intro/overview&lt;/a&gt;&lt;/a&gt;. You can access the slides by clicking on &amp;#8220;Source&amp;#8221;, &amp;#8220;slides&amp;#8221; and then &amp;#8220;html_git.pdf&amp;#8221;.&lt;/p&gt;
+&lt;p&gt;For the talk, I tried to make it more interactive but at the same time I wanted to make sure that the material could work for reference in the future. For example, I added a &lt;em&gt;commands.txt&lt;/em&gt; file so anyone following me could easily copy-paste the commands. By the way, for Git Bash in Windows, you paste stuff by using the insert key instead of the usual &amp;#8220;ctrl + v&amp;#8221; shortcut.&lt;/p&gt;
+&lt;p&gt;I&amp;#8217;m posting about it as it could be useful to other people, so feel free to share it.&lt;/p&gt;
+&lt;p&gt;Enjoy!&lt;/p&gt;
+</description>
     </item>
     
   </channel>

@@ -8,9 +8,7 @@
     <language>en-us</language>
     <copyright>&amp;copy; 2011-2018 Leonardo Collado Torres under (CC) BY-NC-SA 4.0</copyright>
     <lastBuildDate>Mon, 07 Mar 2016 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="/tags/parallel/index.xml" rel="self" type="application/rss+xml" />
-    
+    <atom:link href="/tags/parallel/" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Are you doing parallel computations in R? Then use BiocParallel</title>
@@ -18,7 +16,305 @@
       <pubDate>Mon, 07 Mar 2016 00:00:00 +0000</pubDate>
       
       <guid>/2016/03/07/BiocParallel/</guid>
-      <description>It&#39;s the morning of the first day of oral conferences at #ENAR2016. I feel like I have a spidey sense since I woke up 3 min after an email from Jeff Leek; just a funny coincidence. Anyhow, I promised Valerie Obenchain at #Bioc2014 that I would write a post about one of my favorite Bioconductor packages: BiocParallel (Morgan, Obenchain, Lang, and Thompson, 2016). By now it&#39;s on the top 5% of downloaded Bioconductor packages, so many people know about it or are unaware that their favorite package uses it behind the scenes.</description>
+      <description>
+
+&lt;p&gt;It&#39;s the morning of the first day of oral conferences at &lt;a href=&#34;https://twitter.com/search?q=%23ENAR2016&amp;amp;src=tyah&#34; target=&#34;_blank&#34;&gt;#ENAR2016&lt;/a&gt;. I feel like I have a &lt;a href=&#34;https://en.wiktionary.org/wiki/Spidey-sense&#34; target=&#34;_blank&#34;&gt;spidey sense&lt;/a&gt; since I woke up 3 min after an email from Jeff Leek; just a funny coincidence. Anyhow, I promised Valerie Obenchain at &lt;a href=&#34;https://twitter.com/hashtag/bioc2014&#34; target=&#34;_blank&#34;&gt;#Bioc2014&lt;/a&gt; that I would write a post about one of my favorite Bioconductor packages: &lt;a href=&#34;http://www.bioconductor.org/packages/release/bioc/html/BiocParallel.html&#34; target=&#34;_blank&#34;&gt;BiocParallel&lt;/a&gt; &lt;a id=&#39;cite-biocparallel&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;#bib-biocparallel&#39;&gt;Morgan, Obenchain, Lang, and Thompson, 2016&lt;/a&gt;). By now it&#39;s on the top 5% of downloaded Bioconductor packages, so many people know about it or are unaware that their favorite package uses it behind the scenes.&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;
+&lt;a href=&#34;http://www.bioconductor.org&#34;&gt;&lt;img src=&#34;http://www.bioconductor.org/images/logo_bioconductor.gif&#34; alt=&#34;BioconductorLogo&#34; style=&#34;width: 260px;&#34;/&gt;&lt;/a&gt;
+&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;While I haven&#39;t blogged about &lt;code&gt;BiocParallel&lt;/code&gt; yet, I did give a presentation about it at our computing club back in April 2nd, 2015. See it &lt;a href=&#34;http://lcolladotor.github.io/BiocParallel-knitrBootstrap/&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt; (&lt;a href=&#34;https://github.com/lcolladotor/BiocParallel-knitrBootstrap&#34; target=&#34;_blank&#34;&gt;source&lt;/a&gt;). I&#39;m going to follow its structure in this post.&lt;/p&gt;
+
+&lt;h2 id=&#34;parallel-computing&#34;&gt;Parallel computing&lt;/h2&gt;
+
+&lt;p&gt;Before even thinking about using &lt;code&gt;BiocParallel&lt;/code&gt; you have to decide whether parallel computing is the thing you need.&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;
+&lt;a href=&#39;http://gnoted.com/wp-content/uploads/2012/02/cloud_43-595x553.jpg&#39;&gt;&lt;img alt = &#39;Cloud joke&#39; height=&#39;553&#39; src=&#39;http://lcolladotor.github.io/figs/2016-03-07-BiocParallel/cloud.jpg&#39; /&gt;&lt;/a&gt;
+&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;While I&#39;m not talking about cloud computing, I still find this picture funny.&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;
+&lt;a href=&#39;http://www.mathworks.com/cmsimages/63635_wl_91710v00_po_fig2_wl.gif&#39;&gt;&lt;img alt = &#39;Parallel diagram&#39; height=&#39;400&#39; src=&#39;http://lcolladotor.github.io/figs/2016-03-07-BiocParallel/parallel.gif&#39; /&gt;&lt;/a&gt;
+&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;There&#39;s different types of parallel computing, but what I&#39;m referring to here is called &lt;a href=&#34;https://en.wikipedia.org/wiki/Embarrassingly_parallel&#34; target=&#34;_blank&#34;&gt;embarrassingly parallel&lt;/a&gt; where you have a task to do for a set of inputs, you split your inputs into subsets and perform the task on these subsets. Performing this task for one input a a time is called &lt;em&gt;serial programming&lt;/em&gt; and it&#39;s what we do in most cases when using functions like &lt;code&gt;lapply()&lt;/code&gt; or &lt;code&gt;for&lt;/code&gt; loops.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;plot(y = 10 / (1:10), 1:10, xlab = &#39;Number of cores&#39;, ylab = &#39;Time&#39;,
+    main = &#39;Ideal scenario&#39;, type = &#39;o&#39;, col = &#39;blue&#39;,
+    cex = 2, cex.axis = 2, cex.lab = 1.5, cex.main = 2, pch = 16)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://lcolladotor.github.io/figs/2016-03-07-BiocParallel/ideal-1.png&#34; alt=&#34;center&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;You might be running a simulation for a different set of parameters (a parameter grid) and running each simulation could take some time. Parallel computing can help you speed up this problem. In the ideal scenario, the higher number of computing cores (units that evaluate subsets of your inputs) the less time you need to run your full analysis.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;plot(y = 10 / (1:10), 1:10, xlab = &#39;Number of cores&#39;, ylab = &#39;Time&#39;,
+    main = &#39;Reality&#39;, type = &#39;o&#39;, col = &#39;blue&#39;,
+    cex = 2, cex.axis = 2, cex.lab = 1.5, cex.main = 2, pch = 16)
+lines(y = 10 / (1:10) * c(1, 1.05^(2:10) ), 1:10, col = &#39;red&#39;,
+    type = &#39;o&#39;, cex = 2)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://lcolladotor.github.io/figs/2016-03-07-BiocParallel/reality-1.png&#34; alt=&#34;center&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;However, in reality parallel computing is not cost-free. It involves some communication costs, like sending the data to the cores, aggregating the results in a way that you can then easily use, among other things. So, it&#39;ll be a bit slower than the ideal scenario but you can potentially still greatly reduce the overall time.&lt;/p&gt;
+
+&lt;p&gt;Having said all of the above, lets say that you now want to do some parallel computing in &lt;code&gt;R&lt;/code&gt;. Where do you start? A pretty good place to start is the &lt;a href=&#34;http://cran.r-project.org/web/views/HighPerformanceComputing.html&#34; target=&#34;_blank&#34;&gt;CRAN Task View: High-Performance and Parallel Computing with R&lt;/a&gt;. There you&#39;ll find a lot of information about different packages that enable you to do parallel computing with &lt;code&gt;R&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;
+&lt;a href=&#39;http://thumbs.dreamstime.com/x/word-cloud-parallel-computing-27198811.jpg&#39;&gt;&lt;img alt = &#39;Confusing word cloud&#39; height=&#39;367&#39; src=&#39;http://lcolladotor.github.io/figs/2016-03-07-BiocParallel/wordcloud.jpg&#39; /&gt;&lt;/a&gt;
+&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;But you&#39;ll soon be lost in a sea of new terms.&lt;/p&gt;
+
+&lt;h2 id=&#34;why-use-biocparallel&#34;&gt;Why use BiocParallel?&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;It&#39;s simple to use.&lt;/li&gt;
+&lt;li&gt;You can try different parallel backends without changing your code.&lt;/li&gt;
+&lt;li&gt;You can use it to submit cluster jobs.&lt;/li&gt;
+&lt;li&gt;You&#39;ll have access to great support from the Bioconductor developer team.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Those are the big reasons of why I use &lt;code&gt;BiocParallel&lt;/code&gt;. But let me go through them a bit more slowly.&lt;/p&gt;
+
+&lt;h3 id=&#34;birthday-example&#34;&gt;Birthday example&lt;/h3&gt;
+
+&lt;p&gt;I&#39;m going to use as an example the birthday problem where you want to find out empirically the probability that two people share the same birthday in a room.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;birthday &amp;lt;- function(n) {
+    m &amp;lt;- 10000
+    x &amp;lt;- numeric(m)
+    for(i in seq_len(m)) {
+        b &amp;lt;- sample(seq_len(365), n, replace = TRUE)
+        x[i] &amp;lt;- ifelse(length(unique(b)) == n, 0, 1)
+    }
+    mean(x)
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;naive-birthday-code&#34;&gt;Naive birthday code&lt;/h4&gt;
+
+&lt;p&gt;Once you have written the code for it, you can then use &lt;code&gt;lapply()&lt;/code&gt; or a &lt;code&gt;for&lt;/code&gt; loop to calculate the results.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;system.time( lapply(seq_len(100), birthday) )
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;##    user  system elapsed 
+##  25.610   0.442  27.430
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Takes around 25 seconds.&lt;/p&gt;
+
+&lt;h4 id=&#34;via-domc&#34;&gt;Via doMC&lt;/h4&gt;
+
+&lt;p&gt;If you looked at &lt;a href=&#34;http://cran.r-project.org/web/views/HighPerformanceComputing.html&#34; target=&#34;_blank&#34;&gt;CRAN Task View: High-Performance and Parallel Computing with R&lt;/a&gt; you might have found the &lt;code&gt;doMC&lt;/code&gt; &lt;a id=&#39;cite-domc&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;http://CRAN.R-project.org/package=doMC&#39;&gt;Analytics and Weston, 2015&lt;/a&gt;).&lt;/p&gt;
+
+&lt;p&gt;It allows you to run computations in parallel as shown below.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;library(&#39;doMC&#39;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## Loading required package: foreach
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## Loading required package: iterators
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## Loading required package: parallel
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;registerDoMC(2)
+system.time( x &amp;lt;- foreach(j = seq_len(100)) %dopar% birthday(j) )
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;##    user  system elapsed 
+##  12.819   0.246  13.309
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;While it&#39;s a bit faster, the main problem is that you had to change your code in order to be able to use it.&lt;/p&gt;
+
+&lt;h4 id=&#34;with-biocparallel&#34;&gt;With BiocParallel&lt;/h4&gt;
+
+&lt;p&gt;This is how you would run things with &lt;code&gt;BiocParallel&lt;/code&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;library(&#39;BiocParallel&#39;)
+system.time( y &amp;lt;- bplapply(seq_len(100), birthday) )
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;##    user  system elapsed 
+##   0.021   0.011  16.095
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The only change here is using &lt;code&gt;bplapply()&lt;/code&gt; instead of &lt;code&gt;lapply()&lt;/code&gt;, so just 2 characters. Well, that and loading the &lt;code&gt;BiocParallel&lt;/code&gt; package.&lt;/p&gt;
+
+&lt;h3 id=&#34;biocparallel-s-advantages&#34;&gt;BiocParallel&#39;s advantages&lt;/h3&gt;
+
+&lt;p&gt;There are many computation backends and one of the strongest features of &lt;code&gt;BiocParallel&lt;/code&gt; is that it&#39;s easy to switch between them. For example, my computer can run the following options:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;registered()
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## $MulticoreParam
+## class: MulticoreParam 
+##   bpjobname:BPJOB; bpworkers:2; bptasks:0; bptimeout:Inf; bpRNGseed:; bpisup:FALSE
+##   bplog:FALSE; bpthreshold:INFO; bplogdir:NA
+##   bpstopOnError:FALSE; bpprogressbar:FALSE
+##   bpresultdir:NA
+## cluster type: FORK 
+## 
+## $SnowParam
+## class: SnowParam 
+##   bpjobname:BPJOB; bpworkers:2; bptasks:0; bptimeout:Inf; bpRNGseed:; bpisup:FALSE
+##   bplog:FALSE; bpthreshold:INFO; bplogdir:NA
+##   bpstopOnError:FALSE; bpprogressbar:FALSE
+##   bpresultdir:NA
+## cluster type: SOCK 
+## 
+## $SerialParam
+## class: SerialParam 
+##   bplog:FALSE; bpthreshold:INFO
+##   bpcatchErrors:FALSE
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;If I was doing this in our computing cluster, I would see even more options.&lt;/p&gt;
+
+&lt;p&gt;Now lets say that I want to test different computation backends, or even run things in serial mode so I can trace a bug down more easily. Well, all I have to do is change the &lt;code&gt;BPPARAM&lt;/code&gt; argument as shown below.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;## Test in serial mode
+system.time( y.serial &amp;lt;- bplapply(1:10, birthday,
+    BPPARAM = SerialParam()) )
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;##    user  system elapsed 
+##   2.577   0.033   2.733
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;## Try Snow
+system.time( y.snow &amp;lt;- bplapply(1:10, birthday, 
+    BPPARAM = SnowParam(workers = 2)) )
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;##    user  system elapsed 
+##   0.027   0.006   2.436
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Talking about computing clusters, you might be interested in using &lt;code&gt;BatchJobs&lt;/code&gt; &lt;a id=&#39;cite-batchjobs&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;http://www.jstatsoft.org/v64/i11/&#39;&gt;Bischl, Lang, Mersmann, Rahnenführer, et al., 2015&lt;/a&gt;) just like &lt;a href=&#34;http://www.biostat.jhsph.edu/~prpatil/&#34; target=&#34;_blank&#34;&gt;Prasad Patil&lt;/a&gt; did for his PhD work. Well, with &lt;code&gt;BiocParallel&lt;/code&gt; you can also chose to use the &lt;code&gt;BatchJobs&lt;/code&gt; backend. I have code showing this at the &lt;a href=&#34;http://lcolladotor.github.io/BiocParallel-knitrBootstrap/&#34; target=&#34;_blank&#34;&gt;presentation I referenced earlier&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;where-do-i-start&#34;&gt;Where do I start?&lt;/h2&gt;
+
+&lt;p&gt;If you are convinced about using &lt;code&gt;BiocParallel&lt;/code&gt;, which I hope you are by now, check out the &lt;code&gt;Introduction to BiocParallel&lt;/code&gt; vignette available at &lt;a href=&#34;http://www.bioconductor.org/packages/release/bioc/html/BiocParallel.html&#34; target=&#34;_blank&#34;&gt;BiocParallel&#39;s landing page&lt;/a&gt;. It explains in more detail how to use it and it&#39;s rich set of features. But if you just want to jump right in and start playing around with it, install it by running the following code:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;## try http:// if https:// URLs are not supported
+source(&amp;quot;https://bioconductor.org/biocLite.R&amp;quot;)
+biocLite(&amp;quot;BiocParallel&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;conclusions&#34;&gt;Conclusions&lt;/h2&gt;
+
+&lt;p&gt;Like I said earlier, &lt;code&gt;BiocParallel&lt;/code&gt; is simple to use and has definite advantages over other solutions.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;You can try different parallel backends without changing your code.&lt;/li&gt;
+&lt;li&gt;You can use it to submit cluster jobs.&lt;/li&gt;
+&lt;li&gt;You&#39;ll have access to great support from the Bioconductor developer team. See &lt;a href=&#34;https://support.bioconductor.org/t/biocparallel/&#34; target=&#34;_blank&#34;&gt;the biocparallel tag at the support website&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Have fun using it!&lt;/p&gt;
+
+&lt;h3 id=&#34;reproducibility&#34;&gt;Reproducibility&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;## Reproducibility info
+library(&#39;devtools&#39;)
+session_info()
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## Session info --------------------------------------------------------------
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;##  setting  value                       
+##  version  R version 3.2.2 (2015-08-14)
+##  system   x86_64, darwin13.4.0        
+##  ui       X11                         
+##  language (EN)                        
+##  collate  en_US.UTF-8                 
+##  tz       America/Chicago             
+##  date     2016-03-07
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## Packages ------------------------------------------------------------------
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;##  package        * version  date       source        
+##  bibtex           0.4.0    2014-12-31 CRAN (R 3.2.0)
+##  BiocParallel   * 1.4.3    2015-12-16 Bioconductor  
+##  bitops           1.0-6    2013-08-17 CRAN (R 3.2.0)
+##  codetools        0.2-14   2015-07-15 CRAN (R 3.2.2)
+##  devtools       * 1.10.0   2016-01-23 CRAN (R 3.2.3)
+##  digest           0.6.9    2016-01-08 CRAN (R 3.2.3)
+##  doMC           * 1.3.4    2015-10-13 CRAN (R 3.2.0)
+##  evaluate         0.8      2015-09-18 CRAN (R 3.2.0)
+##  foreach        * 1.4.3    2015-10-13 CRAN (R 3.2.0)
+##  formatR          1.2.1    2015-09-18 CRAN (R 3.2.0)
+##  futile.logger    1.4.1    2015-04-20 CRAN (R 3.2.0)
+##  futile.options   1.0.0    2010-04-06 CRAN (R 3.2.0)
+##  httr             1.1.0    2016-01-28 CRAN (R 3.2.3)
+##  iterators      * 1.0.8    2015-10-13 CRAN (R 3.2.0)
+##  knitcitations  * 1.0.7    2015-10-28 CRAN (R 3.2.0)
+##  knitr          * 1.12.3   2016-01-22 CRAN (R 3.2.3)
+##  lambda.r         1.1.7    2015-03-20 CRAN (R 3.2.0)
+##  lubridate        1.5.0    2015-12-03 CRAN (R 3.2.3)
+##  magrittr         1.5      2014-11-22 CRAN (R 3.2.0)
+##  memoise          1.0.0    2016-01-29 CRAN (R 3.2.3)
+##  plyr             1.8.3    2015-06-12 CRAN (R 3.2.1)
+##  R6               2.1.2    2016-01-26 CRAN (R 3.2.3)
+##  Rcpp             0.12.3   2016-01-10 CRAN (R 3.2.3)
+##  RCurl            1.95-4.7 2015-06-30 CRAN (R 3.2.1)
+##  RefManageR       0.10.6   2016-02-15 CRAN (R 3.2.3)
+##  RJSONIO          1.3-0    2014-07-28 CRAN (R 3.2.0)
+##  snow             0.4-1    2015-10-31 CRAN (R 3.2.0)
+##  stringi          1.0-1    2015-10-22 CRAN (R 3.2.0)
+##  stringr          1.0.0    2015-04-30 CRAN (R 3.2.0)
+##  XML              3.98-1.3 2015-06-30 CRAN (R 3.2.0)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;references&#34;&gt;References&lt;/h3&gt;
+
+&lt;p&gt;Citations made with &lt;code&gt;knitcitations&lt;/code&gt; &lt;a id=&#39;cite-knitcitations&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;http://CRAN.R-project.org/package=knitcitations&#39;&gt;Boettiger, 2015&lt;/a&gt;).&lt;/p&gt;
+
+&lt;p&gt;&lt;a id=&#39;bib-domc&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-domc&#34;&gt;[1]&lt;/a&gt;&lt;cite&gt;
+R. Analytics and S. Weston.
+&lt;em&gt;doMC: Foreach Parallel Adaptor for &#39;parallel&#39;&lt;/em&gt;.
+R package version 1.3.4.
+2015.
+URL: &lt;a href=&#34;http://CRAN.R-project.org/package=doMC&#34;&gt;http://CRAN.R-project.org/package=doMC&lt;/a&gt;.&lt;/cite&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a id=&#39;bib-batchjobs&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-batchjobs&#34;&gt;[2]&lt;/a&gt;&lt;cite&gt;
+B. Bischl, M. Lang, O. Mersmann, J. Rahnenführer, et al.
+&amp;ldquo;BatchJobs and BatchExperiments: Abstraction Mechanisms for Using R in Batch Environments&amp;rdquo;.
+In: &lt;em&gt;Journal of Statistical Software&lt;/em&gt; 64.11 (2015), pp. 1&amp;ndash;25.
+URL: &lt;a href=&#34;http://www.jstatsoft.org/v64/i11/&#34;&gt;http://www.jstatsoft.org/v64/i11/&lt;/a&gt;.&lt;/cite&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a id=&#39;bib-knitcitations&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-knitcitations&#34;&gt;[3]&lt;/a&gt;&lt;cite&gt;
+C. Boettiger.
+&lt;em&gt;knitcitations: Citations for &#39;Knitr&#39; Markdown Files&lt;/em&gt;.
+R package version 1.0.7.
+2015.
+URL: &lt;a href=&#34;http://CRAN.R-project.org/package=knitcitations&#34;&gt;http://CRAN.R-project.org/package=knitcitations&lt;/a&gt;.&lt;/cite&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a id=&#39;bib-biocparallel&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-biocparallel&#34;&gt;[4]&lt;/a&gt;&lt;cite&gt;
+M. Morgan, V. Obenchain, M. Lang and R. Thompson.
+&lt;em&gt;BiocParallel: Bioconductor facilities for parallel evaluation&lt;/em&gt;.
+R package version 1.4.3.
+2016.&lt;/cite&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;want-more&#34;&gt;Want more?&lt;/h3&gt;
+
+&lt;p&gt;Check other &lt;a href=&#34;https://twitter.com/jhubiostat&#34; target=&#34;_blank&#34;&gt;@jhubiostat&lt;/a&gt; student blogs at &lt;a href=&#34;http://bmorebiostat.com/&#34; target=&#34;_blank&#34;&gt;Bmore Biostats&lt;/a&gt; as well as topics on &lt;a href=&#34;https://twitter.com/search?q=%23rstats&#34; target=&#34;_blank&#34;&gt;#rstats&lt;/a&gt;.&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -27,8 +323,214 @@
       <pubDate>Thu, 14 Nov 2013 00:00:00 +0000</pubDate>
       
       <guid>/2013/11/14/Reducing-memory-overhead-when-using-mclapply/</guid>
-      <description>I am currently trying to understand how to reduce the memory used by mclapply. This function is rather complicated and others have explained the differences versus parLapply (A_Skelton73, 2013; lockedoff, 2012 ) and also made it clear that in mclapply each job does not know if the others are running out of memory and thus cannot trigger gc (Urbanek, 2012).
-While I still struggle to understand all the details of mclapply, I can successfully use it to reduce computation time at the expense of a very high memory load.</description>
+      <description>
+
+&lt;p&gt;I am currently trying to understand how to reduce the memory used by &lt;code&gt;mclapply&lt;/code&gt;. This function is rather complicated and others have explained the differences versus &lt;code&gt;parLapply&lt;/code&gt; (&lt;span class=&#34;showtooltip&#34; title=&#34;A\_Skelton73 (2013). &#39;understanding the differences between mclapply and parLapply in R.&#39; .&#34;&gt;&lt;a href=&#34;http://stackoverflow.com/questions/17196261/understanding-the-differences-between-mclapply-and-parlapply-in-r&#34;&gt;A_Skelton73, 2013&lt;/a&gt;&lt;/span&gt;; &lt;span class=&#34;showtooltip&#34; title=&#34;lockedoff (2012). &#39;Using mclapply, foreach, or something else in [r] to operate on an object in parallel?&#39; .&#34;&gt;&lt;a href=&#34;http://stackoverflow.com/questions/11036702/using-mclapply-foreach-or-something-else-in-r-to-operate-on-an-object-in-par&#34;&gt;lockedoff, 2012&lt;/a&gt;&lt;/span&gt; ) and also made it clear that in &lt;code&gt;mclapply&lt;/code&gt;  each job does not know if the others are running out of memory and thus cannot trigger &lt;code&gt;gc&lt;/code&gt; (&lt;span class=&#34;showtooltip&#34; title=&#34;(2013). &#39; [R-sig-hpc] mclapply: rm intermediate objects and returning   memory .&#39; .&#34;&gt;&lt;a href=&#34;https://mailman.stat.ethz.ch/pipermail/r-sig-hpc/2012-October/001534.html&#34;&gt;Urbanek, 2012&lt;/a&gt;&lt;/span&gt;).&lt;/p&gt;
+
+&lt;p&gt;While I still struggle to understand all the details of &lt;code&gt;mclapply&lt;/code&gt;, I can successfully use it to reduce computation time at the expense of a very high memory load. I am still looking for tips on how to reduce this memory load.&lt;/p&gt;
+
+&lt;p&gt;Here is what I have done.&lt;/p&gt;
+
+&lt;h2 id=&#34;problem-setting&#34;&gt;Problem setting&lt;/h2&gt;
+
+&lt;p&gt;I have a large data set on the form of a data.frame. I want to apply a function that works using subsets of the data.frame without the need for communication between the chunks, and I want to apply the function fast. In other words, I can safely split the matrix and speed the computation process using &lt;code&gt;mclapply&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;While this works, I would like to minimize memory consumption.&lt;/p&gt;
+
+&lt;h2 id=&#34;toy-data&#34;&gt;Toy data&lt;/h2&gt;
+
+&lt;p&gt;Here is just some toy data for the example.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;## The real data set is much larger than this
+set.seed(20131113)
+data &amp;lt;- data.frame(matrix(rnorm(1e+05), ncol = 10))
+dim(data)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## [1] 10000    10
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;approach-1&#34;&gt;Approach 1&lt;/h2&gt;
+
+&lt;p&gt;The first approach I have used is to pre-split the data and then use &lt;code&gt;mclapply&lt;/code&gt; over the split data. For illustrative purposes, lets say that the function I want to apply is just &lt;code&gt;rowMeans&lt;/code&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;## Pre-split the data
+dataSplit &amp;lt;- split(data, rep(1:10, each = 1000))
+
+## Approach 1
+library(&amp;quot;parallel&amp;quot;)
+res1 &amp;lt;- mclapply(dataSplit, rowMeans, mc.cores = 2)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This gets the job done, but because my real &lt;code&gt;dataSplit&lt;/code&gt; is much larger in memory, using say 8-10 cores blows up the memory.&lt;/p&gt;
+
+&lt;h3 id=&#34;best-way-to-pre-split&#34;&gt;Best way to pre-split?&lt;/h3&gt;
+
+&lt;p&gt;If I know that if I am using \( n \) number of cores (in this example \( n=2 \) ) and the data set has \( m \) rows, then one option for approach #1 is to split the data into \( n \) chunks each of size \( m / n \) (rounding if needed).&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;## Pre-split the data into m/n chunks
+dataSplit1b &amp;lt;- split(data, rep(1:2, each = 5000))
+
+## Approach 1b
+res1b &amp;lt;- mclapply(dataSplit1b, rowMeans, mc.cores = 2)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The memory needed is then in part determined by the chunksize (1000 vs 5000 shown above). One excellent suggestion (via Ben) is to reduce the memory load using this approach is to just smaller chunks. However, the runtime of the function I want to apply (&lt;code&gt;rowMeans&lt;/code&gt; in the example) is not very sensible to the chunksize used, thus using very small chunks is not ideal as it increases computation time. Finding the sweet point is tricky, but using chunksizes of \(m / (2n) \) could certainly help memory wise without majorly affecting computation time.&lt;/p&gt;
+
+&lt;h2 id=&#34;approach-2&#34;&gt;Approach 2&lt;/h2&gt;
+
+&lt;p&gt;One suggestion (via Roger) is to use an environment in order to minimize copying (and thus memory load) while using &lt;code&gt;mclapply&lt;/code&gt; over a set of indexes.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;## Save the split data in an environment
+my.env &amp;lt;- new.env()
+my.env$data1 &amp;lt;- dataSplit1b[[1]]
+my.env$data2 &amp;lt;- dataSplit1b[[2]]
+
+## Function that takes indexes, then extracts the data from the environment
+applyMyFun &amp;lt;- function(idx, env) {
+    eval(parse(text = paste0(&amp;quot;result &amp;lt;- env$&amp;quot;, ls(env)[idx])))
+    rowMeans(result)
+}
+
+## Approach 2
+index &amp;lt;- 1:2
+names(index) &amp;lt;- 1:2
+res2 &amp;lt;- mclapply(index, applyMyFun, env = my.env, mc.cores = 2)
+
+## Same result?
+identical(res1b, res2)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## [1] TRUE
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;approach-3&#34;&gt;Approach 3&lt;/h2&gt;
+
+&lt;p&gt;Another suggestion (via Roger) is to save the data chunks and load them individually inside the function that I pass to &lt;code&gt;mclapply&lt;/code&gt;. This does not seem ideal in terms of having to create the temporary chunk data files. But I would expect this method to have the lowest memory footprint.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;## Save the chunks
+for (i in names(dataSplit1b)) {
+    chunk &amp;lt;- dataSplit1b[[i]]
+    output &amp;lt;- paste0(&amp;quot;chunk&amp;quot;, i, &amp;quot;.Rdata&amp;quot;)
+    save(chunk, file = output)
+}
+
+## Function that loads the chunk
+applyMyFun2 &amp;lt;- function(idx) {
+    load(paste0(&amp;quot;chunk&amp;quot;, idx, &amp;quot;.Rdata&amp;quot;))
+    rowMeans(chunk)
+}
+
+## Approach 3
+res3 &amp;lt;- mclapply(index, applyMyFun2, mc.cores = 2)
+
+## Same result?
+identical(res1b, res3)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## [1] TRUE
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;computation-time-comparison&#34;&gt;Computation time comparison&lt;/h2&gt;
+
+&lt;p&gt;Computation time wise, approaches 2 and 3 do not seem very different. Approach 1b seems a tiny bit faster. [Edit: the order of the best approach might change slightly if you re-run this code]&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;library(&amp;quot;microbenchmark&amp;quot;)
+micro &amp;lt;- microbenchmark(mclapply(dataSplit1b, rowMeans, mc.cores = 2), mclapply(index, 
+    applyMyFun, env = my.env, mc.cores = 2), mclapply(index, applyMyFun2, mc.cores = 2))
+micro
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## Unit: milliseconds
+##                                                     expr   min    lq
+##            mclapply(dataSplit1b, rowMeans, mc.cores = 2) 17.43 19.97
+##  mclapply(index, applyMyFun, env = my.env, mc.cores = 2) 17.05 19.20
+##               mclapply(index, applyMyFun2, mc.cores = 2) 17.19 23.11
+##  median    uq   max neval
+##   21.41 26.00 65.53   100
+##   20.60 23.92 43.67   100
+##   24.56 28.39 46.99   100
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;library(&amp;quot;ggplot2&amp;quot;)
+autoplot(micro)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://lcolladotor.github.io/figs/2013-11-14-Reducing-memory-overhead-when-using-mclapply/compTime.png&#34; alt=&#34;center&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;memory-wise-comparison&#34;&gt;Memory wise comparison&lt;/h2&gt;
+
+&lt;p&gt;Relying on the cluster tools for calculating the maximum memory used, I ran each approach (1b, 2, and 3) ten times each using 2 cores using the scripts available in &lt;a href=&#34;https://gist.github.com/lcolladotor/7462753&#34; target=&#34;_blank&#34;&gt;this gist&lt;/a&gt;. The maximum memory used showed no variability (within an approach) and the results are that approach 1b used 1.224G RAM, approach 2 used 1.176G RAM, and approach 3 used 1.177G RAM. Not a huge difference. Due to having to write and then load, approach 3 was slower than the other two.&lt;/p&gt;
+
+&lt;p&gt;Re-doing the previous test but using 20 cores lead to very similar wall clock computation times between all three approaches and to approaches 1b and 2 for 2 cores. This is due to the nature of the example, aka &lt;code&gt;rowMeans&lt;/code&gt; is fast even with the larger chunks. Approach 1b used 7.728G RAM, approach 2 used 7.674G RAM, and approach 3 used 7.690G RAM. Hm...&lt;/p&gt;
+
+&lt;p&gt;Using 20 cores with previously created data files (either the split data for approaches 1b and 2, or the chunk files for approach 3) has a very different memory footprint. Approach 1b used in average 6.0744G RAM, approach 2 used 4.2647G RAM
+, and approach 3 used 2.6545G RAM.&lt;/p&gt;
+
+&lt;h3 id=&#34;edit&#34;&gt;Edit&lt;/h3&gt;
+
+&lt;p&gt;Ryan from (&lt;span class=&#34;showtooltip&#34; title=&#34;(2013). &#39; [Bioc-devel] Trying to reduce the memory overhead when using mclapply .&#39; .&#34;&gt;&lt;a href=&#34;https://stat.ethz.ch/pipermail/bioc-devel/2013-November/004930.html&#34;&gt;Ryan 2013&lt;/a&gt;&lt;/span&gt;) contributed a fourth approach which used 6.794G RAM when starting from scratch with 20 cores. This approach definitely beats the other ones under the condition of starting from scratch. Note that just creating the &lt;code&gt;data&lt;/code&gt; object uses 558.938M RAM: multiplied by 20 it would be around 10.92G RAM.&lt;/p&gt;
+
+&lt;h2 id=&#34;conclusions&#34;&gt;Conclusions&lt;/h2&gt;
+
+&lt;p&gt;Using 2 or 20 cores, approach 2 beat by a very small margin approaches 3 and 1b in terms of memory usage. However, all approaches failed in terms of not having the memory blow up as you increase the number of cores when starting from scratch.&lt;/p&gt;
+
+&lt;p&gt;If a lower memory option is used for splitting the data and creating the chunk files, approach 3 seems like the winner in terms of memory usage. So in pure terms of lowering the memory load on &lt;code&gt;mclapply&lt;/code&gt; approach 3 wins, although you still need to create the chunk files and do so without much memory usage.&lt;/p&gt;
+
+&lt;p&gt;If you have any ideas or suggestions, please let me know! Thank you!&lt;/p&gt;
+
+&lt;h3 id=&#34;references&#34;&gt;References&lt;/h3&gt;
+
+&lt;p&gt;Citations made with &lt;code&gt;knitcitations&lt;/code&gt; (&lt;span class=&#34;showtooltip&#34; title=&#34;Boettiger C (2013). knitcitations: Citations for knitr markdown files. R package version 0.4-7.&#34;&gt;&lt;a href=&#34;http://CRAN.R-project.org/package=knitcitations&#34;&gt;Boettiger, 2013&lt;/a&gt;&lt;/span&gt;).&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;A_Skelton73,   (2013) understanding the differences between mclapply and parLapply in R.  &lt;em&gt;understanding the differences between mclapply and parLapply in R - Stack Overflow&lt;/em&gt;  &lt;a href=&#34;http://stackoverflow.com/questions/17196261/understanding-the-differences-between-mclapply-and-parlapply-in-r&#34; target=&#34;_blank&#34;&gt;http://stackoverflow.com/questions/17196261/understanding-the-differences-between-mclapply-and-parlapply-in-r&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;lockedoff,   (2012) Using mclapply, foreach, or something else in [r] to operate on an object in parallel?.  &lt;em&gt;Using mclapply, foreach, or something else in [r] to operate on an object in parallel? - Stack Overflow&lt;/em&gt;  &lt;a href=&#34;http://stackoverflow.com/questions/11036702/using-mclapply-foreach-or-something-else-in-r-to-operate-on-an-object-in-par&#34; target=&#34;_blank&#34;&gt;http://stackoverflow.com/questions/11036702/using-mclapply-foreach-or-something-else-in-r-to-operate-on-an-object-in-par&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;[R-sig-hpc] mclapply: rm intermediate objects and returning memory
+.  &lt;a href=&#34;https://mailman.stat.ethz.ch/pipermail/r-sig-hpc/2012-October/001534.html&#34; target=&#34;_blank&#34;&gt;https://mailman.stat.ethz.ch/pipermail/r-sig-hpc/2012-October/001534.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;[Bioc-devel] Trying to reduce the memory overhead when using mclapply
+.  &lt;a href=&#34;https://stat.ethz.ch/pipermail/bioc-devel/2013-November/004930.html&#34; target=&#34;_blank&#34;&gt;https://stat.ethz.ch/pipermail/bioc-devel/2013-November/004930.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Carl Boettiger,   (2013) knitcitations: Citations for knitr markdown files.  &lt;a href=&#34;http://CRAN.R-project.org/package=knitcitations&#34; target=&#34;_blank&#34;&gt;http://CRAN.R-project.org/package=knitcitations&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;reproducibility&#34;&gt;Reproducibility&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;sessionInfo()
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## R version 3.0.2 (2013-09-25)
+## Platform: x86_64-apple-darwin10.8.0 (64-bit)
+## 
+## locale:
+## [1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8
+## 
+## attached base packages:
+## [1] parallel  stats     graphics  grDevices utils     datasets  methods  
+## [8] base     
+## 
+## other attached packages:
+## [1] microbenchmark_1.3-0 ggplot2_0.9.3.1      knitcitations_0.4-7 
+## [4] bibtex_0.3-6         knitr_1.5           
+## 
+## loaded via a namespace (and not attached):
+##  [1] codetools_0.2-8    colorspace_1.2-4   dichromat_2.0-0   
+##  [4] digest_0.6.4       evaluate_0.5.1     formatR_0.10      
+##  [7] grid_3.0.2         gtable_0.1.2       httr_0.2          
+## [10] labeling_0.2       MASS_7.3-29        munsell_0.4.2     
+## [13] plyr_1.8           proto_0.3-10       RColorBrewer_1.0-5
+## [16] RCurl_1.95-4.1     reshape2_1.2.2     scales_0.2.3      
+## [19] stringr_0.6.2      tools_3.0.2        XML_3.95-0.2      
+## [22] xtable_1.7-1
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;scripts&#34;&gt;Scripts&lt;/h3&gt;
+
+&lt;p&gt;The scripts are available in &lt;a href=&#34;https://gist.github.com/lcolladotor/7462753&#34; target=&#34;_blank&#34;&gt;this gist&lt;/a&gt;. The main one is &lt;code&gt;testApproach.R&lt;/code&gt; while the other ones are just job-submitters.&lt;/p&gt;
+
+&lt;script src=&#34;https://gist.github.com/lcolladotor/7462753.js&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;Check other topics on &lt;a href=&#34;https://twitter.com/search?q=%23rstats&#34; target=&#34;_blank&#34;&gt;#rstats&lt;/a&gt;.&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -37,7 +539,144 @@ While I still struggle to understand all the details of mclapply, I can successf
       <pubDate>Fri, 26 Apr 2013 00:00:00 +0000</pubDate>
       
       <guid>/2013/04/26/using-plyr-and-domc-for-quick-and-easy-apply-family/</guid>
-      <description>A few weeks back I dedicated a short amount of time to actually read what plyr (Wickham, 2011) is about and I was surprised. The whole idea behind plyr is very simple: expand the apply() family to do things easy. plyr has many functions whose name ends with ply which is short of apply. Then, the functions are identified by two letters before ply which are abbreviations for the input (first letter) and output (second one).</description>
+      <description>&lt;p&gt;A few weeks back I dedicated a short amount of time to actually read what &lt;code&gt;plyr&lt;/code&gt; (&lt;span class=&#34;showtooltip&#34; title=&#34;Wickham H (2011). The Split-Apply-Combine Strategy for Data
+Analysis. _Journal of Statistical Software_, *40*(1), pp. 1-29.
+ http://www.jstatsoft.org/v40/i01/.&#34;&gt;&lt;a href=&#34;http://www.jstatsoft.org/v40/i01/&#34;&gt;Wickham, 2011&lt;/a&gt;&lt;/span&gt;) is about and I was surprised. The whole idea behind &lt;code&gt;plyr&lt;/code&gt; is very simple: expand the &lt;code&gt;apply()&lt;/code&gt; family to do things easy. &lt;code&gt;plyr&lt;/code&gt; has many functions whose name ends with &lt;code&gt;ply&lt;/code&gt; which is short of apply. Then, the functions are identified by two letters before &lt;code&gt;ply&lt;/code&gt; which are abbreviations for the input (first letter) and output (second one). For instance, &lt;code&gt;ddply&lt;/code&gt; takes an input a &lt;code&gt;data.frame&lt;/code&gt; and returns a &lt;code&gt;data.frame&lt;/code&gt; while &lt;code&gt;ldply&lt;/code&gt; takes as input a &lt;code&gt;list&lt;/code&gt; and returns a &lt;code&gt;data.frame&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;The syntax is pretty straight forward. For example, here are the arguments for &lt;code&gt;ddply&lt;/code&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;library(plyr)
+args(ddply)
+## function (.data, .variables, .fun = NULL, ..., .progress = &amp;quot;none&amp;quot;, 
+##     .inform = FALSE, .drop = TRUE, .parallel = FALSE, .paropts = NULL) 
+## NULL
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;What we basically have to specify are&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;code&gt;.data&lt;/code&gt; which in general is the name of the input &lt;code&gt;data.frame&lt;/code&gt;,&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;.variables&lt;/code&gt; which is a vector (note the use of the &lt;code&gt;.&lt;/code&gt; function) of variable names. In this case, &lt;code&gt;ddply&lt;/code&gt; is very useful for applying some function to subsets of the data as specified by these variables,&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;.fun&lt;/code&gt; which is the actual function we want to run,&lt;/li&gt;
+&lt;li&gt;and &lt;code&gt;...&lt;/code&gt; which are parameter options for the function we are running.&lt;/li&gt;
+&lt;/ul&gt;&lt;p&gt;From the &lt;code&gt;ddply&lt;/code&gt; help page we have the following examples:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;dfx &amp;lt;- data.frame(
+  group = c(rep(&#39;A&#39;, 8), rep(&#39;B&#39;, 15), rep(&#39;C&#39;, 6)),
+  sex = sample(c(&amp;quot;M&amp;quot;, &amp;quot;F&amp;quot;), size = 29, replace = TRUE),
+  age = runif(n = 29, min = 18, max = 54)
+)
+
+# Note the use of the &#39;.&#39; function to allow
+# group and sex to be used without quoting
+ddply(dfx, .(group, sex), summarize,
+ mean = round(mean(age), 2),
+ sd = round(sd(age), 2))
+##   group sex  mean    sd
+## 1     A   F 40.48 12.72
+## 2     A   M 34.48 15.28
+## 3     B   F 36.05  9.98
+## 4     B   M 38.35  7.97
+## 5     C   F 20.04  1.86
+## 6     C   M 43.81 10.72
+
+# An example using a formula for .variables
+ddply(baseball[1:100, ], ~year, nrow)
+
+##   year V1
+## 1 1871  7
+## 2 1872 13
+## 3 1873 13
+## 4 1874 15
+## 5 1875 17
+## 6 1876 15
+## 7 1877 17
+## 8 1878  3
+
+# Applying two functions; nrow and ncol
+ddply(baseball, .(lg), c(&amp;quot;nrow&amp;quot;, &amp;quot;ncol&amp;quot;))
+
+##   lg  nrow ncol
+## 1       65   22
+## 2 AA   171   22
+## 3 AL 10007   22
+## 4 FL    37   22
+## 5 NL 11378   22
+## 6 PL    32   22
+## 7 UA     9   22
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;But this is not the end of the story! Something I really liked about &lt;code&gt;plyr&lt;/code&gt; is that it can be parallelized via the &lt;code&gt;foreach&lt;/code&gt; (&lt;span class=&#34;showtooltip&#34; title=&#34;Analytics R (2012). _foreach: Foreach looping construct for R_. R
+package version 1.4.0, 
+http://CRAN.R-project.org/package=foreach.&#34;&gt;&lt;a href=&#34;http://CRAN.R-project.org/package=foreach&#34;&gt;Analytics, 2012&lt;/a&gt;&lt;/span&gt;) package. I don&amp;#8217;t know much about &lt;code&gt;foreach&lt;/code&gt;, but all I learnt is that you have to use other packages such as &lt;code&gt;doMC&lt;/code&gt; (&lt;span class=&#34;showtooltip&#34; title=&#34;Analytics R (2013). _doMC: Foreach parallel adaptor for the
+multicore package_. R package version 1.3.0, 
+http://CRAN.R-project.org/package=doMC.&#34;&gt;&lt;a href=&#34;http://CRAN.R-project.org/package=doMC&#34;&gt;Analytics, 2013&lt;/a&gt;&lt;/span&gt;) to actually run the code. It&amp;#8217;s like &lt;code&gt;foreach&lt;/code&gt; specifies the infraestructure to communicate in parallel (and split jobs) and packages like &lt;code&gt;doMC&lt;/code&gt; tailor it for specific environments like for running in multi-core.&lt;/p&gt;
+&lt;p&gt;Running things in parallel can then be very easy. Basically, you load the packages, specify the number of cores, and run your &lt;code&gt;ply&lt;/code&gt; function. Here is a short example:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;## Load packages
+library(plyr)
+library(doMC)
+
+## Loading required package: foreach
+## Loading required package: iterators
+## Loading required package: parallel
+
+## Specify the number of cores
+registerDoMC(4)
+
+## Check how many cores we are using
+getDoParWorkers()
+## [1] 4
+
+## Run your ply function
+ddply(dfx, .(group, sex), summarize, mean = round(mean(age), 2), sd = round(sd(age), 
+    2), .parallel = TRUE)
+
+##   group sex  mean    sd
+## 1     A   F 40.48 12.72
+## 2     A   M 34.48 15.28
+## 3     B   F 36.05  9.98
+## 4     B   M 38.35  7.97
+## 5     C   F 20.04  1.86
+## 6     C   M 43.81 10.72
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;In case that you are interested, here is a short shell script for knitting an Rmd file in the cluster and specifying the appropriate number of cores to then use &lt;code&gt;plyr&lt;/code&gt; and &lt;code&gt;doMC&lt;/code&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;#!/bin/bash 
+# To run it in the current working directory
+#$ -cwd 
+# To get an email after the job is done
+#$ -m e 
+# To speficy that we want 4 cores
+#$ -pe local 4
+# The name of the job
+#$ -N myPlyJob
+
+echo &amp;quot;**** Job starts ****&amp;quot;
+date
+
+# Knit your file: assuming it&#39;s called FileToKnit.Rmd
+Rscript -e &amp;quot;library(knitr); knit2html(&#39;FileToKnit.Rmd&#39;)&amp;quot;
+
+echo &amp;quot;**** Job ends ****&amp;quot;
+date
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Lets say that the bash script is named &lt;code&gt;script.sh&lt;/code&gt;. Then you can submit it to the cluster queue using&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;
+qsub script.sh
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;p&gt;This is what I used to re-format a large &lt;code&gt;data.frame&lt;/code&gt; in a few minutes in the cluster for the &lt;a href=&#34;https://twitter.com/search?q=%23jhsph753&amp;amp;src=typd&#34;&gt;#jhsph753&lt;/a&gt; class homework project.&lt;/p&gt;
+&lt;p&gt;So, thank you again &lt;a href=&#34;https://twitter.com/hadleywickham&#34;&gt;Hadley Wickham&lt;/a&gt; for making awesome R packages!&lt;/p&gt;
+&lt;p&gt;Citations made with &lt;code&gt;knitcitations&lt;/code&gt; (&lt;span class=&#34;showtooltip&#34; title=&#34;Boettiger C (2013). _knitcitations: Citations for knitr markdown
+files_. R package version 0.4-4, 
+https://github.com/cboettig/knitcitations.&#34;&gt;&lt;a href=&#34;https://github.com/cboettig/knitcitations&#34;&gt;Boettiger, 2013&lt;/a&gt;&lt;/span&gt;).&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;Revolution Analytics, (2013) doMC: Foreach parallel adaptor for the multicore package. &lt;a href=&#34;http://CRAN.R-project.org/package=doMC&#34;&gt;&lt;a href=&#34;http://CRAN.R-project.org/package=doMC&#34;&gt;http://CRAN.R-project.org/package=doMC&lt;/a&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Revolution Analytics, (2012) foreach: Foreach looping construct for R. &lt;a href=&#34;http://CRAN.R-project.org/package=foreach&#34;&gt;&lt;a href=&#34;http://CRAN.R-project.org/package=foreach&#34;&gt;http://CRAN.R-project.org/package=foreach&lt;/a&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Carl Boettiger, knitcitations: Citations for knitr markdown files. &lt;a href=&#34;https://github.com/cboettig/knitcitations&#34;&gt;&lt;a href=&#34;https://github.com/cboettig/knitcitations&#34;&gt;https://github.com/cboettig/knitcitations&lt;/a&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Hadley Wickham, (2011) The Split-Apply-Combine Strategy for Data Analysis. &lt;em&gt;Journal of Statistical Software&lt;/em&gt; &lt;strong&gt;40&lt;/strong&gt; (1) &lt;a href=&#34;http://www.jstatsoft.org/v40/i01/&#34;&gt;&lt;a href=&#34;http://www.jstatsoft.org/v40/i01/&#34;&gt;http://www.jstatsoft.org/v40/i01/&lt;/a&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/p&gt;
+</description>
     </item>
     
   </channel>

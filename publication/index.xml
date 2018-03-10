@@ -8,9 +8,7 @@
     <language>en-us</language>
     <copyright>&amp;copy; 2011-2018 Leonardo Collado Torres under (CC) BY-NC-SA 4.0</copyright>
     <lastBuildDate>Mon, 05 Mar 2018 16:45:43 -0500</lastBuildDate>
-    
-	<atom:link href="/publication/index.xml" rel="self" type="application/rss+xml" />
-    
+    <atom:link href="/publication/" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Improving the value of public RNA-seq expression data by phenotype prediction</title>
@@ -144,33 +142,6 @@
       <pubDate>Sat, 19 Jan 2013 16:52:21 -0500</pubDate>
       
       <guid>/publication/poster2013/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Interspecies interactions that result in Bacillus subtilis forming biofilms are mediated mainly by members of its own genus</title>
-      <link>/publication/bsubtilis/</link>
-      <pubDate>Thu, 10 Nov 2011 17:13:40 -0500</pubDate>
-      
-      <guid>/publication/bsubtilis/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>RegulonDB version 7.0: transcriptional regulation of Escherichia coli K-12 integrated within genetic sensory response units (Gensor Units)</title>
-      <link>/publication/regulonDBv7/</link>
-      <pubDate>Wed, 19 Jan 2011 16:58:16 -0500</pubDate>
-      
-      <guid>/publication/regulonDBv7/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Global Analysis of Transcription Start Sites and Transcription Units in Bacterial Genomes</title>
-      <link>/publication/poster2010/</link>
-      <pubDate>Tue, 19 Jan 2010 16:52:21 -0500</pubDate>
-      
-      <guid>/publication/poster2010/</guid>
       <description></description>
     </item>
     

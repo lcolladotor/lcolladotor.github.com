@@ -7,9 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2011-2018 Leonardo Collado Torres under (CC) BY-NC-SA 4.0</copyright>
-    
-	<atom:link href="/talk/index.xml" rel="self" type="application/rss+xml" />
-    
+    <atom:link href="/talk/" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Annotation-agnostic differential expression analysis</title>
@@ -143,132 +141,6 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/talk/kandahar2016/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Introduction to High-Throughput Sequencing and RNA-seq</title>
-      <link>/talk/htsintro2013/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/talk/htsintro2013/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Introduction to R and Biostatistics</title>
-      <link>/talk/introbiostats2011/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/talk/introbiostats2011/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Introduction to R and Biostatistics (2012 version)</title>
-      <link>/talk/introbiostats2012/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/talk/introbiostats2012/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Introduction to ggbio</title>
-      <link>/talk/ggbio2013/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/talk/ggbio2013/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Introduction to using Bioconductor for High Throughput Sequencing Analysis</title>
-      <link>/talk/nnb2010/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/talk/nnb2010/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>RNA-seq samples beyond the known transcriptome with derfinder available via recount2</title>
-      <link>/talk/sobp2017/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/talk/sobp2017/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Reproducible RNA-seq analysis with recount2</title>
-      <link>/talk/icsa2017/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/talk/icsa2017/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Reproducible Research and Bioinformatics</title>
-      <link>/talk/reproducibility2017/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/talk/reproducibility2017/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Using Data Science to Study Human Brain Genomic Measurements</title>
-      <link>/talk/sacnas2016/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/talk/sacnas2016/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>dbFinder</title>
-      <link>/talk/dbFinder2015/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/talk/dbFinder2015/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>derfinder tutorial</title>
-      <link>/talk/dertutor2014/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/talk/dertutor2014/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>recount workflow: Accessing over 70,000 human RNA-seq samples with Bioconductor</title>
-      <link>/talk/DennisDal2018/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/talk/DennisDal2018/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>recount workshop: Learn to leverage 70,000 human RNA-seq samples for your projects</title>
-      <link>/talk/bioc2017/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/talk/bioc2017/</guid>
-      <description>[[url_custom]] name = &amp;quot;Workshop website&amp;quot; url = &amp;quot;http://LieberInstitute.github.io/recountWorkshop/&amp;quot;</description>
-    </item>
-    
-    <item>
-      <title>recount: facilitando el análisis de miles de muestras de RNA-seq</title>
-      <link>/talk/genomeeting2016/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/talk/genomeeting2016/</guid>
       <description></description>
     </item>
     

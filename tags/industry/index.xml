@@ -8,9 +8,7 @@
     <language>en-us</language>
     <copyright>&amp;copy; 2011-2018 Leonardo Collado Torres under (CC) BY-NC-SA 4.0</copyright>
     <lastBuildDate>Fri, 28 Sep 2012 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="/tags/Industry/index.xml" rel="self" type="application/rss+xml" />
-    
+    <atom:link href="/tags/Industry/" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Learning about social networks through an interactive presentation</title>
@@ -18,7 +16,18 @@
       <pubDate>Fri, 28 Sep 2012 00:00:00 +0000</pubDate>
       
       <guid>/2012/09/28/learning-about-social-networks-through-an-interactive/</guid>
-      <description>During this week&amp;#8217;s journal club meeting Hilary Parker (homepage, blog) led the session on &amp;#8220;Identifying influential and susceptible members of social networks&amp;#8221;. Were there some speakers or why did she &amp;#8220;lead the session&amp;#8221;? By this I mean that Hilary tried a very different (and interesting) format this time. Instead of giving a talk, not a formal one like at seminars, she prepared a short presentation (publicly available here) that begins showing a 20 minute video.</description>
+      <description>&lt;p&gt;During this week&amp;#8217;s &lt;a href=&#34;http://www.biostat.jhsph.edu/~zhwu/2012journal.html&#34;&gt;journal club meeting&lt;/a&gt; Hilary Parker (&lt;a href=&#34;http://www.biostat.jhsph.edu/~hiparker/&#34;&gt;homepage&lt;/a&gt;, &lt;a href=&#34;http://hilaryparker.com/&#34;&gt;blog&lt;/a&gt;) led the session on &amp;#8220;Identifying influential and susceptible members of social networks&amp;#8221;. Were there some speakers or why did she &amp;#8220;lead the session&amp;#8221;? By this I mean that Hilary tried a very different (and interesting) format this time. Instead of giving a talk, not a formal one like at seminars, she prepared a short presentation (publicly available &lt;a href=&#34;https://docs.google.com/presentation/d/1wlZvL8z_8bOau2ZQkvxLtOuFwEVoTeOrJeQ9dO7vATs/edit#slide=id.p&#34;&gt;here&lt;/a&gt;) that begins showing a 20 minute video. This video is by the author of the paper where he presents the key points of his research at another conference. The goal of this format was to get us to speed and hopefully provoke enough discussion to make the meeting highly interactive. Plus the author does a great job in his presentation.&lt;/p&gt;
+&lt;p&gt;Now, given that it&amp;#8217;s a biostat journal club, Hilary included some slides to explain the general Cox Proportional Hazard model before showing some of details used in the paper in question. &lt;/p&gt;
+&lt;p&gt;I think that the change of format was a step in the right direction. Hopefully others will follow.&lt;/p&gt;
+&lt;p&gt;&lt;iframe frameborder=&#34;0&#34; height=&#34;253&#34; src=&#34;http://www.youtube.com/embed/JmajkTKlEqw&#34; width=&#34;450&#34;&gt;&lt;/iframe&gt;&lt;/p&gt;
+&lt;p&gt;About the paper itself, the topic is interesting since it shows a different view of the &amp;#8220;data science&amp;#8221; vs biostat discussion. The presenter is trying to convince computer scientists that they need to do some statistics too. Over here, we are poking our heads at whether we need to learn some computer science.&lt;/p&gt;
+&lt;p&gt;In addition, the author is in a different setting than academia or industry, which are commonly the two options. He is at NYU, and academic institution, but he is working closely with the industry (thus getting access to interesting data) and might be getting some consultation money along the way. Anyhow, given the recent talk from Amy Heineike on Quid (&lt;a href=&#34;http://fellgernon.tumblr.com/post/32472984157/quid-biostat-jhsph#.UGYOW_l27mY&#34;&gt;more in my previous post&lt;/a&gt;) there is a growing interest among students to learn more about the industry environment.&lt;/p&gt;
+&lt;p&gt;I made a couple of comments during the discussion, which might be completely wrong. One is that I feel that in academia we care much more about bias and removing sources of error and it seems that in industry that&amp;#8217;s not the main point. There you care more about making something useful which might be biased. You try to minimize it, but the judge are the clients. &lt;/p&gt;
+&lt;p&gt;The second one is that in industry options like getting a larger sample are much more feasible. In the video, at some point the author shows that people eventually joined the app after getting massively spammed. Increasing the exposure is easy in this case, but imagine a public health survey that is carried out door by door. Increasing the number of houses visited is way more expensive.&lt;/p&gt;
+&lt;p&gt;The point is that the club meeting followed an interesting format, social networks seem fun to analyze, and industry vs academia is kind of a hot topic in our department right now.&lt;/p&gt;
+&lt;p&gt;&amp;#8212;&lt;/p&gt;
+&lt;p&gt;Thanks to Hilary for publicly sharing her journal club presentation.&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -27,7 +36,10 @@
       <pubDate>Tue, 24 Jan 2012 00:00:00 +0000</pubDate>
       
       <guid>/2012/01/24/simply-statistics-why-statisticians-should-join-and/</guid>
-      <description>Simply Statistics: Why statisticians should join and launch startupsI really like this post in SimplyStatistics by leekgroup. The topic is worth considering, but what got me hooked was the list of links to startups, which were all new to me. 100plus looks promising, though I don&amp;#8217;t have a clue as to what they are going to offer. Sure, I know the general topic, but not much beyond that. As I just flew back to town, Flightcaster and Hipmunk caught my attention.</description>
+      <description>&lt;p&gt;&lt;a href=&#34;http://simplystatistics.tumblr.com/post/16347982080/why-statisticians-should-join-and-launch-startups&#34;&gt;Simply Statistics: Why statisticians should join and launch startups&lt;/a&gt;&lt;br/&gt;&lt;p&gt;I really like this post in &lt;a href=&#34;http://simplystatistics.tumblr.com&#34;&gt;SimplyStatistics&lt;/a&gt; by &lt;a href=&#34;http://leekgroup.tumblr.com/&#34;&gt;leekgroup&lt;/a&gt;. The topic is worth considering, but what got me hooked was the list of links to startups, which were all new to me. 100plus looks promising, though I don&amp;#8217;t have a clue as to what they are going to offer. Sure, I know the general topic, but not much beyond that. As I just flew back to town, Flightcaster and Hipmunk caught my attention. While Flightcaster works faster and has a great FAQ, I don&amp;#8217;t find it super useful since it&amp;#8217;s limited to US domestic flights, which are not the kind I usually jump into. Plus, without automatic updates it seems kind of a pain to use. After all, I don&amp;#8217;t want to become a panic-driven person who has to refresh the status of his flight every hour or maybe even every few minutes. Hipmunk on the other hand is slow, but I like their &amp;#8220;agony&amp;#8221; ranking :) It also looks easy to find cheap days to fly though I&amp;#8217;ll mostly cross-check with Expedia when I need it.&lt;/p&gt;
+&lt;p&gt;Anyhow, to read more on the title subject check the original post at &lt;a class=&#34;tumblr_blog&#34; href=&#34;http://simplystatistics.tumblr.com/post/16347982080/why-statisticians-should-join-and-launch-startups&#34;&gt;simplystatistics&lt;/a&gt;:&lt;/p&gt;
+&amp;gt; The tough economic times we live in, and the potential for big paydays, have made &lt;a href=&#34;http://en.wikipedia.org/wiki/The_Social_Network&#34; target=&#34;_blank&#34;&gt;entrepreneurship cool&lt;/a&gt;. From the &lt;a href=&#34;http://www.whitehouse.gov/issues/startup-america&#34; target=&#34;_blank&#34;&gt;venture capitalist-in-chief&lt;/a&gt;, to the javascript &lt;a href=&#34;http://chats-blog.com/2012/01/08/michael-bloomberg-learning-to-code/&#34; target=&#34;_blank&#34;&gt;coding mayor of New York&lt;/a&gt;, everyone is on board. No surprise there, successful startups lead to job creation which can have a&amp;#8230;&lt;/p&gt;
+</description>
     </item>
     
   </channel>
