@@ -25,7 +25,7 @@
 &lt;li&gt;I hadn’t even thought of making the &lt;a href=&#34;http://lcolladotor.github.io/2018/03/07/blogdown-insert-image-addin/#.WqDRmpPwa50&#34;&gt;Insert Image addin&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;I went down the rabbit hole of archetypes and &lt;em&gt;&lt;a href=&#34;https://CRAN.R-project.org/package=blogdown&#34;&gt;blogdown&lt;/a&gt;&lt;/em&gt;, reported an &lt;a href=&#34;https://github.com/rstudio/blogdown/issues/261&#34;&gt;issue resulated to this topic&lt;/a&gt; that was in the way of using archetypes for &lt;code&gt;.Rmd&lt;/code&gt; posts. After some encouragement by Yihui Xie, I ended up fixing this issues in &lt;a href=&#34;https://github.com/rstudio/blogdown/pull/263&#34;&gt;my first pull request&lt;/a&gt; &lt;em&gt;ever&lt;/em&gt; to an RStudio package. The PR also added the &lt;code&gt;Archetype&lt;/code&gt; option to the &lt;em&gt;New Post&lt;/em&gt; RStudio addin (which I used right now ^^).&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2018-03-08-blogdown-archetype-template_files/Screen Shot 2018-03-08 at 1.05.13 AM.png&#34; alt=&#34;new post addin with archetype option&#34; width=&#34;400&#34;/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://lcolladotor.github.io/post/2018-03-08-blogdown-archetype-template_files/Screen Shot 2018-03-08 at 1.05.13 AM.png&#34; alt=&#34;new post addin with archetype option&#34; width=&#34;400&#34;/&gt;&lt;/p&gt;
 &lt;div id=&#34;creating-my-blogdown-archetype-template&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Creating my &lt;em&gt;&lt;a href=&#34;https://CRAN.R-project.org/package=blogdown&#34;&gt;blogdown&lt;/a&gt;&lt;/em&gt; archetype (template)&lt;/h3&gt;
 &lt;p&gt;To make my archetype (template) for blog posts I looked at the GitHub repo for the theme I’m using. It contains an &lt;code&gt;archetypes&lt;/code&gt; directory with several files. I just looked at the one called &lt;code&gt;post.md&lt;/code&gt; (check it &lt;a href=&#34;https://github.com/gcushen/hugo-academic/blob/master/archetypes/post.md&#34;&gt;here&lt;/a&gt;) and copied it from &lt;code&gt;themes/hugo-academic/archetypes/post.md&lt;/code&gt; to &lt;code&gt;archetypes/post.md&lt;/code&gt;. Next I added my favorite R code below the last &lt;code&gt;+++&lt;/code&gt; mark. You can check out the final version &lt;a href=&#34;https://github.com/lcolladotor/hugoblog/blob/master/archetypes/post.md&#34;&gt;here&lt;/a&gt;. Below I display the version at the time of writing this blog post (I’m using a &lt;code&gt;.txt&lt;/code&gt; extension otherwise the embedded gist doesn’t look good, but you want it to end in &lt;code&gt;.md&lt;/code&gt;).&lt;/p&gt;
@@ -69,7 +69,7 @@
 ##  language (EN)                        
 ##  collate  en_US.UTF-8                 
 ##  tz       America/New_York            
-##  date     2018-03-08&lt;/code&gt;&lt;/pre&gt;
+##  date     2018-03-10&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## Packages --------------------------------------------------------------------------------------------------------------&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;##  package       * version date       source                            
 ##  backports       1.1.2   2017-12-13 CRAN (R 3.4.3)                    
@@ -131,7 +131,7 @@
 &lt;p&gt;Except that &lt;strong&gt;will not&lt;/strong&gt; work. We need to use almost all the path (just remove &lt;code&gt;static&lt;/code&gt;) as shown below:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;![](/post/2018-03-07-my-new-post_files/screenshot.jpg)&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;If you want to edit the height or width, then you need to use the HTML syntax. Something like:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;img alt = &amp;#39;my new screenshot&amp;#39; width=&amp;#39;200&amp;#39; src=&amp;#39;(/post/2018-03-07-my-new-post_files/screenshot.jpg&amp;#39; /&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;img alt = &amp;#39;my new screenshot&amp;#39; width=&amp;#39;200&amp;#39; src=&amp;#39;/post/2018-03-07-my-new-post_files/screenshot.jpg&amp;#39; /&amp;gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;div id=&#34;hard-way-notes&#34; class=&#34;section level4&#34;&gt;
 &lt;h4&gt;&lt;em&gt;hard way&lt;/em&gt; notes&lt;/h4&gt;
 &lt;p&gt;You could have also used &lt;code&gt;knitr::include_graphics()&lt;/code&gt; and let &lt;em&gt;&lt;a href=&#34;https://CRAN.R-project.org/package=blogdown&#34;&gt;blogdown&lt;/a&gt;&lt;/em&gt; copy it to the final location in &lt;code&gt;static&lt;/code&gt; and link to it appropriately. However, you would have to keep your original images organized in a way that won’t bother &lt;code&gt;hugo&lt;/code&gt;.&lt;/p&gt;
@@ -178,24 +178,24 @@ devtools::install_github(&amp;#39;rstudio/blogdown&amp;#39;)&lt;/code&gt;&lt;/pr
 &lt;div id=&#34;step-2-open-the-insert-image-addin&#34; class=&#34;section level4&#34;&gt;
 &lt;h4&gt;Step 2: open the &lt;em&gt;Insert Image&lt;/em&gt; addin&lt;/h4&gt;
 &lt;p&gt;Second, go to the &lt;em&gt;Addins&lt;/em&gt; menu in the top section of the RStudio window and select the &lt;em&gt;Insert Image&lt;/em&gt; &lt;em&gt;&lt;a href=&#34;https://github.com/rstudio/blogdown&#34;&gt;blogdown&lt;/a&gt;&lt;/em&gt; addin.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2018-03-07-blogdown-insert-image-addin_files/Screen Shot 2018-03-07 at 11.47.37 PM.png&#34; alt=&#34;insert image addin screenshot&#34; width=&#34;400&#34;/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://lcolladotor.github.io/post/2018-03-07-blogdown-insert-image-addin_files/Screen Shot 2018-03-07 at 11.47.37 PM.png&#34; alt=&#34;insert image addin screenshot&#34; width=&#34;400&#34;/&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;step-3-choose-figure-and-inputs&#34; class=&#34;section level4&#34;&gt;
 &lt;h4&gt;Step 3: choose figure and inputs&lt;/h4&gt;
 &lt;p&gt;So far the &lt;em&gt;Insert Image&lt;/em&gt; addin looks like this:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2018-03-07-blogdown-insert-image-addin_files/Screen Shot 2018-03-07 at 11.58.44 PM.png&#34; alt=&#34;addin without input&#34; width=&#34;400&#34;/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://lcolladotor.github.io/post/2018-03-07-blogdown-insert-image-addin_files/Screen Shot 2018-03-07 at 11.58.44 PM.png&#34; alt=&#34;addin without input&#34; width=&#34;400&#34;/&gt;&lt;/p&gt;
 &lt;p&gt;So lets go head and select an image we want to upload. In my case, I chose an image that already exists.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2018-03-07-blogdown-insert-image-addin_files/Screen Shot 2018-03-08 at 12.00.01 AM.png&#34; alt=&#34;&#34; width=&#34;400&#34;/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://lcolladotor.github.io/post/2018-03-07-blogdown-insert-image-addin_files/Screen Shot 2018-03-08 at 12.00.01 AM.png&#34; alt=&#34;&#34; width=&#34;400&#34;/&gt;&lt;/p&gt;
 &lt;p&gt;You can rename the figure if you want, and if it doesn’t exist, the &lt;em&gt;overwrite&lt;/em&gt; option goes away.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2018-03-07-blogdown-insert-image-addin_files/Screen Shot 2018-03-08 at 12.01.06 AM.png&#34; alt=&#34;modified image file&#34; width=&#34;400&#34;/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://lcolladotor.github.io/post/2018-03-07-blogdown-insert-image-addin_files/Screen Shot 2018-03-08 at 12.01.06 AM.png&#34; alt=&#34;modified image file&#34; width=&#34;400&#34;/&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;step-4-hit-done&#34; class=&#34;section level4&#34;&gt;
 &lt;h4&gt;Step 4: hit done!&lt;/h4&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2018-03-07-blogdown-insert-image-addin_files/Screen Shot 2018-03-08 at 12.02.28 AM.png&#34; alt=&#34;hit go&#34; width=&#34;400&#34;/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://lcolladotor.github.io/post/2018-03-07-blogdown-insert-image-addin_files/Screen Shot 2018-03-08 at 12.02.28 AM.png&#34; alt=&#34;hit go&#34; width=&#34;400&#34;/&gt;&lt;/p&gt;
 &lt;p&gt;Lets go ahead and click &lt;code&gt;done&lt;/code&gt;! Our text window in RStudio will insert the appropriate code for linking the image. In this case, it’s the following code:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;&amp;lt;img src=&amp;quot;/post/2018-03-07-blogdown-insert-image-addin_files/screenshot.png&amp;quot; alt=&amp;quot;final image&amp;quot; width=&amp;quot;400&amp;quot;/&amp;gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;and this is the image:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2018-03-07-blogdown-insert-image-addin_files/screenshot.png&#34; alt=&#34;final image&#34; width=&#34;400&#34;/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://lcolladotor.github.io/post/2018-03-07-blogdown-insert-image-addin_files/screenshot.png&#34; alt=&#34;final image&#34; width=&#34;400&#34;/&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;optional-step-5&#34; class=&#34;section level4&#34;&gt;
 &lt;h4&gt;Optional step 5&lt;/h4&gt;
@@ -244,7 +244,7 @@ devtools::install_github(&amp;#39;rstudio/blogdown&amp;#39;)&lt;/code&gt;&lt;/pr
 ##  language (EN)                        
 ##  collate  en_US.UTF-8                 
 ##  tz       America/New_York            
-##  date     2018-03-08&lt;/code&gt;&lt;/pre&gt;
+##  date     2018-03-10&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## Packages --------------------------------------------------------------------------------------------------------------&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;##  package       * version date       source                            
 ##  backports       1.1.2   2017-12-13 CRAN (R 3.4.3)                    
@@ -344,7 +344,7 @@ devtools::install_github(&amp;#39;rstudio/blogdown&amp;#39;)&lt;/code&gt;&lt;/pr
 &lt;p&gt;Markdown syntax for custom image:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;![](/post/2018-02-17-r-markdown-blog-template_files/LIBD.jpg)&lt;/code&gt;&lt;/pre&gt;
 &lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;/post/2018-02-17-r-markdown-blog-template_files/LIBD.jpg&#34; /&gt;
+&lt;img src=&#34;http://lcolladotor.github.io/post/2018-02-17-r-markdown-blog-template_files/LIBD.jpg&#34; /&gt;
 
 &lt;/div&gt;
 &lt;p&gt;HTML syntax for centering image, including a link, and re-sizing the image to a fix width of 200 px.&lt;/p&gt;
@@ -352,7 +352,7 @@ devtools::install_github(&amp;#39;rstudio/blogdown&amp;#39;)&lt;/code&gt;&lt;/pr
 &amp;lt;a href=&amp;quot;http://lcolladotor.github.io/&amp;quot;&amp;gt;&amp;lt;img alt = &amp;#39;some website&amp;#39; width=&amp;#39;200&amp;#39; src=&amp;#39;/post/2018-02-17-r-markdown-blog-template_files/LIBD.jpg&amp;#39; /&amp;gt;&amp;lt;/a&amp;gt;
 &amp;lt;/center&amp;gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;center&gt;
-&lt;a href=&#34;http://lcolladotor.github.io/&#34;&gt;&lt;img alt = &#39;some website&#39; width=&#39;200&#39; src=&#39;/post/2018-02-17-r-markdown-blog-template_files/LIBD.jpg&#39; /&gt;&lt;/a&gt;
+&lt;a href=&#34;http://lcolladotor.github.io/&#34;&gt;&lt;img alt = &#39;some website&#39; width=&#39;200&#39; src=&#39;http://lcolladotor.github.io/post/2018-02-17-r-markdown-blog-template_files/LIBD.jpg&#39; /&gt;&lt;/a&gt;
 &lt;/center&gt;
 &lt;/div&gt;
 &lt;div id=&#34;reproducibility&#34; class=&#34;section level3&#34;&gt;
@@ -369,13 +369,13 @@ session_info()&lt;/code&gt;&lt;/pre&gt;
 ##  language (EN)                        
 ##  collate  en_US.UTF-8                 
 ##  tz       America/New_York            
-##  date     2018-03-07&lt;/code&gt;&lt;/pre&gt;
+##  date     2018-03-10&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## Packages --------------------------------------------------------------------------------------------------------------&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;##  package       * version date       source                            
 ##  backports       1.1.2   2017-12-13 CRAN (R 3.4.3)                    
 ##  base          * 3.4.3   2017-12-07 local                             
 ##  bibtex          0.4.2   2017-06-30 CRAN (R 3.4.1)                    
-##  blogdown        0.5.7   2018-03-07 Github (rstudio/blogdown@60f79ed) 
+##  blogdown        0.5.9   2018-03-08 Github (rstudio/blogdown@dc1f41c) 
 ##  bookdown        0.7     2018-02-18 cran (@0.7)                       
 ##  colorout      * 1.2-0   2018-02-19 Github (jalvesaq/colorout@2f01173)
 ##  compiler        3.4.3   2017-12-07 local                             

@@ -418,7 +418,7 @@ The hard way The process involves copying the target image to the static directo
 <p>Except that <strong>will not</strong> work. We need to use almost all the path (just remove <code>static</code>) as shown below:</p>
 <pre><code>![](/post/2018-03-07-my-new-post_files/screenshot.jpg)</code></pre>
 <p>If you want to edit the height or width, then you need to use the HTML syntax. Something like:</p>
-<pre><code>&lt;img alt = &#39;my new screenshot&#39; width=&#39;200&#39; src=&#39;(/post/2018-03-07-my-new-post_files/screenshot.jpg&#39; /&gt;</code></pre>
+<pre><code>&lt;img alt = &#39;my new screenshot&#39; width=&#39;200&#39; src=&#39;/post/2018-03-07-my-new-post_files/screenshot.jpg&#39; /&gt;</code></pre>
 <div id="hard-way-notes" class="section level4">
 <h4><em>hard way</em> notes</h4>
 <p>You could have also used <code>knitr::include_graphics()</code> and let <em><a href="https://CRAN.R-project.org/package=blogdown">blogdown</a></em> copy it to the final location in <code>static</code> and link to it appropriately. However, you would have to keep your original images organized in a way that won’t bother <code>hugo</code>.</p>
@@ -465,24 +465,24 @@ devtools::install_github(&#39;rstudio/blogdown&#39;)</code></pre>
 <div id="step-2-open-the-insert-image-addin" class="section level4">
 <h4>Step 2: open the <em>Insert Image</em> addin</h4>
 <p>Second, go to the <em>Addins</em> menu in the top section of the RStudio window and select the <em>Insert Image</em> <em><a href="https://github.com/rstudio/blogdown">blogdown</a></em> addin.</p>
-<p><img src="/post/2018-03-07-blogdown-insert-image-addin_files/Screen Shot 2018-03-07 at 11.47.37 PM.png" alt="insert image addin screenshot" width="400"/></p>
+<p><img src="http://lcolladotor.github.io/post/2018-03-07-blogdown-insert-image-addin_files/Screen Shot 2018-03-07 at 11.47.37 PM.png" alt="insert image addin screenshot" width="400"/></p>
 </div>
 <div id="step-3-choose-figure-and-inputs" class="section level4">
 <h4>Step 3: choose figure and inputs</h4>
 <p>So far the <em>Insert Image</em> addin looks like this:</p>
-<p><img src="/post/2018-03-07-blogdown-insert-image-addin_files/Screen Shot 2018-03-07 at 11.58.44 PM.png" alt="addin without input" width="400"/></p>
+<p><img src="http://lcolladotor.github.io/post/2018-03-07-blogdown-insert-image-addin_files/Screen Shot 2018-03-07 at 11.58.44 PM.png" alt="addin without input" width="400"/></p>
 <p>So lets go head and select an image we want to upload. In my case, I chose an image that already exists.</p>
-<p><img src="/post/2018-03-07-blogdown-insert-image-addin_files/Screen Shot 2018-03-08 at 12.00.01 AM.png" alt="" width="400"/></p>
+<p><img src="http://lcolladotor.github.io/post/2018-03-07-blogdown-insert-image-addin_files/Screen Shot 2018-03-08 at 12.00.01 AM.png" alt="" width="400"/></p>
 <p>You can rename the figure if you want, and if it doesn’t exist, the <em>overwrite</em> option goes away.</p>
-<p><img src="/post/2018-03-07-blogdown-insert-image-addin_files/Screen Shot 2018-03-08 at 12.01.06 AM.png" alt="modified image file" width="400"/></p>
+<p><img src="http://lcolladotor.github.io/post/2018-03-07-blogdown-insert-image-addin_files/Screen Shot 2018-03-08 at 12.01.06 AM.png" alt="modified image file" width="400"/></p>
 </div>
 <div id="step-4-hit-done" class="section level4">
 <h4>Step 4: hit done!</h4>
-<p><img src="/post/2018-03-07-blogdown-insert-image-addin_files/Screen Shot 2018-03-08 at 12.02.28 AM.png" alt="hit go" width="400"/></p>
+<p><img src="http://lcolladotor.github.io/post/2018-03-07-blogdown-insert-image-addin_files/Screen Shot 2018-03-08 at 12.02.28 AM.png" alt="hit go" width="400"/></p>
 <p>Lets go ahead and click <code>done</code>! Our text window in RStudio will insert the appropriate code for linking the image. In this case, it’s the following code:</p>
 <pre><code>&lt;img src=&quot;/post/2018-03-07-blogdown-insert-image-addin_files/screenshot.png&quot; alt=&quot;final image&quot; width=&quot;400&quot;/&gt;</code></pre>
 <p>and this is the image:</p>
-<p><img src="/post/2018-03-07-blogdown-insert-image-addin_files/screenshot.png" alt="final image" width="400"/></p>
+<p><img src="http://lcolladotor.github.io/post/2018-03-07-blogdown-insert-image-addin_files/screenshot.png" alt="final image" width="400"/></p>
 </div>
 <div id="optional-step-5" class="section level4">
 <h4>Optional step 5</h4>
@@ -531,7 +531,7 @@ devtools::install_github(&#39;rstudio/blogdown&#39;)</code></pre>
 ##  language (EN)                        
 ##  collate  en_US.UTF-8                 
 ##  tz       America/New_York            
-##  date     2018-03-08</code></pre>
+##  date     2018-03-10</code></pre>
 <pre><code>## Packages --------------------------------------------------------------------------------------------------------------</code></pre>
 <pre><code>##  package       * version date       source                            
 ##  backports       1.1.2   2017-12-13 CRAN (R 3.4.3)                    

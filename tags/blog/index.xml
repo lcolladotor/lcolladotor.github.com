@@ -15,7 +15,7 @@
       <link>http://lcolladotor.github.io/2018/03/08/blogdown-archetype-template/</link>
       <pubDate>Thu, 08 Mar 2018 00:00:00 +0000</pubDate>
       
-      <guid>/2018/03/08/blogdown-archetype-template/</guid>
+      <guid>http://lcolladotor.github.io/2018/03/08/blogdown-archetype-template/</guid>
       <description>&lt;p&gt;In a recent blog post I &lt;a href=&#34;http://lcolladotor.github.io/2018/02/17/r-markdown-blog-template/#.WqDOdpPwa50&#34;&gt;wrote about having a template&lt;/a&gt; for &lt;em&gt;&lt;a href=&#34;https://CRAN.R-project.org/package=blogdown&#34;&gt;blogdown&lt;/a&gt;&lt;/em&gt; posts. I wanted to know if it was possible to do this and make my life (and others hopefully) easier for writing new blog posts that are ready to go with the features I frequently re-use.&lt;/p&gt;
 &lt;p&gt;In my case, I like using &lt;em&gt;&lt;a href=&#34;http://bioconductor.org/packages/BiocStyle&#34;&gt;BiocStyle&lt;/a&gt;&lt;/em&gt; &lt;a id=&#39;cite-Oles_2017&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://github.com/Bioconductor/BiocStyle&#39;&gt;Oleś, Morgan, and Huber, 2017&lt;/a&gt;) for functions such as &lt;code&gt;CRANpkg()&lt;/code&gt;, &lt;code&gt;Biocpkg()&lt;/code&gt; and &lt;code&gt;Githubpkg()&lt;/code&gt;. I also like using &lt;em&gt;&lt;a href=&#34;https://CRAN.R-project.org/package=knitcitations&#34;&gt;knitcitations&lt;/a&gt;&lt;/em&gt; &lt;a id=&#39;cite-Boettiger_2017&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://CRAN.R-project.org/package=knitcitations&#39;&gt;Boettiger, 2017&lt;/a&gt;) for citing with &lt;code&gt;citep()&lt;/code&gt; packages or papers; I use &lt;code&gt;citation()&lt;/code&gt; and &lt;code&gt;bib_metadata()&lt;/code&gt; to get the necessary information, respectively. Furthermore, I prefer &lt;code&gt;devtools::session_info()&lt;/code&gt; &lt;a id=&#39;cite-Wickham_2018&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://CRAN.R-project.org/package=devtools&#39;&gt;Wickham, Hester, and Chang, 2018&lt;/a&gt;) over &lt;code&gt;sessionInfo()&lt;/code&gt; since it provides information of where you got the package, which becomes specially relevant when using packages from GitHub. Finally, I like thanking the creators of the tools I use, which in this case is &lt;em&gt;&lt;a href=&#34;https://CRAN.R-project.org/package=blogdown&#34;&gt;blogdown&lt;/a&gt;&lt;/em&gt; &lt;a id=&#39;cite-Xie_2017&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://github.com/rstudio/blogdown&#39;&gt;Xie, Hill, and Thomas, 2017&lt;/a&gt;).&lt;/p&gt;
 &lt;p&gt;I also like reminding myself how to do some common tasks. Basically, the equivalent of the new R Markdown file you get when using RStudio. In my case, I want to remind myself of the YAML options I frequently use (toc, fig height and width) or how to add screenshots.&lt;/p&gt;
@@ -25,7 +25,7 @@
 &lt;li&gt;I hadn’t even thought of making the &lt;a href=&#34;http://lcolladotor.github.io/2018/03/07/blogdown-insert-image-addin/#.WqDRmpPwa50&#34;&gt;Insert Image addin&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;I went down the rabbit hole of archetypes and &lt;em&gt;&lt;a href=&#34;https://CRAN.R-project.org/package=blogdown&#34;&gt;blogdown&lt;/a&gt;&lt;/em&gt;, reported an &lt;a href=&#34;https://github.com/rstudio/blogdown/issues/261&#34;&gt;issue resulated to this topic&lt;/a&gt; that was in the way of using archetypes for &lt;code&gt;.Rmd&lt;/code&gt; posts. After some encouragement by Yihui Xie, I ended up fixing this issues in &lt;a href=&#34;https://github.com/rstudio/blogdown/pull/263&#34;&gt;my first pull request&lt;/a&gt; &lt;em&gt;ever&lt;/em&gt; to an RStudio package. The PR also added the &lt;code&gt;Archetype&lt;/code&gt; option to the &lt;em&gt;New Post&lt;/em&gt; RStudio addin (which I used right now ^^).&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2018-03-08-blogdown-archetype-template_files/Screen Shot 2018-03-08 at 1.05.13 AM.png&#34; alt=&#34;new post addin with archetype option&#34; width=&#34;400&#34;/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://lcolladotor.github.io/post/2018-03-08-blogdown-archetype-template_files/Screen Shot 2018-03-08 at 1.05.13 AM.png&#34; alt=&#34;new post addin with archetype option&#34; width=&#34;400&#34;/&gt;&lt;/p&gt;
 &lt;div id=&#34;creating-my-blogdown-archetype-template&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Creating my &lt;em&gt;&lt;a href=&#34;https://CRAN.R-project.org/package=blogdown&#34;&gt;blogdown&lt;/a&gt;&lt;/em&gt; archetype (template)&lt;/h3&gt;
 &lt;p&gt;To make my archetype (template) for blog posts I looked at the GitHub repo for the theme I’m using. It contains an &lt;code&gt;archetypes&lt;/code&gt; directory with several files. I just looked at the one called &lt;code&gt;post.md&lt;/code&gt; (check it &lt;a href=&#34;https://github.com/gcushen/hugo-academic/blob/master/archetypes/post.md&#34;&gt;here&lt;/a&gt;) and copied it from &lt;code&gt;themes/hugo-academic/archetypes/post.md&lt;/code&gt; to &lt;code&gt;archetypes/post.md&lt;/code&gt;. Next I added my favorite R code below the last &lt;code&gt;+++&lt;/code&gt; mark. You can check out the final version &lt;a href=&#34;https://github.com/lcolladotor/hugoblog/blob/master/archetypes/post.md&#34;&gt;here&lt;/a&gt;. Below I display the version at the time of writing this blog post (I’m using a &lt;code&gt;.txt&lt;/code&gt; extension otherwise the embedded gist doesn’t look good, but you want it to end in &lt;code&gt;.md&lt;/code&gt;).&lt;/p&gt;
@@ -69,7 +69,7 @@
 ##  language (EN)                        
 ##  collate  en_US.UTF-8                 
 ##  tz       America/New_York            
-##  date     2018-03-08&lt;/code&gt;&lt;/pre&gt;
+##  date     2018-03-10&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## Packages --------------------------------------------------------------------------------------------------------------&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;##  package       * version date       source                            
 ##  backports       1.1.2   2017-12-13 CRAN (R 3.4.3)                    
@@ -119,7 +119,7 @@
       <link>http://lcolladotor.github.io/2018/03/07/blogdown-insert-image-addin/</link>
       <pubDate>Wed, 07 Mar 2018 00:00:00 +0000</pubDate>
       
-      <guid>/2018/03/07/blogdown-insert-image-addin/</guid>
+      <guid>http://lcolladotor.github.io/2018/03/07/blogdown-insert-image-addin/</guid>
       <description>&lt;p&gt;Have you ever tried inserting an image into a &lt;em&gt;&lt;a href=&#34;https://CRAN.R-project.org/package=blogdown&#34;&gt;blogdown&lt;/a&gt;&lt;/em&gt; post? Maybe you have, or maybe you tried and gave up. Lets first review the &lt;em&gt;hard&lt;/em&gt; way before getting to the solution I contributed.&lt;/p&gt;
 &lt;div id=&#34;the-hard-way&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;The &lt;em&gt;hard&lt;/em&gt; way&lt;/h3&gt;
@@ -131,7 +131,7 @@
 &lt;p&gt;Except that &lt;strong&gt;will not&lt;/strong&gt; work. We need to use almost all the path (just remove &lt;code&gt;static&lt;/code&gt;) as shown below:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;![](/post/2018-03-07-my-new-post_files/screenshot.jpg)&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;If you want to edit the height or width, then you need to use the HTML syntax. Something like:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;img alt = &amp;#39;my new screenshot&amp;#39; width=&amp;#39;200&amp;#39; src=&amp;#39;(/post/2018-03-07-my-new-post_files/screenshot.jpg&amp;#39; /&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;img alt = &amp;#39;my new screenshot&amp;#39; width=&amp;#39;200&amp;#39; src=&amp;#39;/post/2018-03-07-my-new-post_files/screenshot.jpg&amp;#39; /&amp;gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;div id=&#34;hard-way-notes&#34; class=&#34;section level4&#34;&gt;
 &lt;h4&gt;&lt;em&gt;hard way&lt;/em&gt; notes&lt;/h4&gt;
 &lt;p&gt;You could have also used &lt;code&gt;knitr::include_graphics()&lt;/code&gt; and let &lt;em&gt;&lt;a href=&#34;https://CRAN.R-project.org/package=blogdown&#34;&gt;blogdown&lt;/a&gt;&lt;/em&gt; copy it to the final location in &lt;code&gt;static&lt;/code&gt; and link to it appropriately. However, you would have to keep your original images organized in a way that won’t bother &lt;code&gt;hugo&lt;/code&gt;.&lt;/p&gt;
@@ -178,24 +178,24 @@ devtools::install_github(&amp;#39;rstudio/blogdown&amp;#39;)&lt;/code&gt;&lt;/pr
 &lt;div id=&#34;step-2-open-the-insert-image-addin&#34; class=&#34;section level4&#34;&gt;
 &lt;h4&gt;Step 2: open the &lt;em&gt;Insert Image&lt;/em&gt; addin&lt;/h4&gt;
 &lt;p&gt;Second, go to the &lt;em&gt;Addins&lt;/em&gt; menu in the top section of the RStudio window and select the &lt;em&gt;Insert Image&lt;/em&gt; &lt;em&gt;&lt;a href=&#34;https://github.com/rstudio/blogdown&#34;&gt;blogdown&lt;/a&gt;&lt;/em&gt; addin.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2018-03-07-blogdown-insert-image-addin_files/Screen Shot 2018-03-07 at 11.47.37 PM.png&#34; alt=&#34;insert image addin screenshot&#34; width=&#34;400&#34;/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://lcolladotor.github.io/post/2018-03-07-blogdown-insert-image-addin_files/Screen Shot 2018-03-07 at 11.47.37 PM.png&#34; alt=&#34;insert image addin screenshot&#34; width=&#34;400&#34;/&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;step-3-choose-figure-and-inputs&#34; class=&#34;section level4&#34;&gt;
 &lt;h4&gt;Step 3: choose figure and inputs&lt;/h4&gt;
 &lt;p&gt;So far the &lt;em&gt;Insert Image&lt;/em&gt; addin looks like this:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2018-03-07-blogdown-insert-image-addin_files/Screen Shot 2018-03-07 at 11.58.44 PM.png&#34; alt=&#34;addin without input&#34; width=&#34;400&#34;/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://lcolladotor.github.io/post/2018-03-07-blogdown-insert-image-addin_files/Screen Shot 2018-03-07 at 11.58.44 PM.png&#34; alt=&#34;addin without input&#34; width=&#34;400&#34;/&gt;&lt;/p&gt;
 &lt;p&gt;So lets go head and select an image we want to upload. In my case, I chose an image that already exists.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2018-03-07-blogdown-insert-image-addin_files/Screen Shot 2018-03-08 at 12.00.01 AM.png&#34; alt=&#34;&#34; width=&#34;400&#34;/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://lcolladotor.github.io/post/2018-03-07-blogdown-insert-image-addin_files/Screen Shot 2018-03-08 at 12.00.01 AM.png&#34; alt=&#34;&#34; width=&#34;400&#34;/&gt;&lt;/p&gt;
 &lt;p&gt;You can rename the figure if you want, and if it doesn’t exist, the &lt;em&gt;overwrite&lt;/em&gt; option goes away.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2018-03-07-blogdown-insert-image-addin_files/Screen Shot 2018-03-08 at 12.01.06 AM.png&#34; alt=&#34;modified image file&#34; width=&#34;400&#34;/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://lcolladotor.github.io/post/2018-03-07-blogdown-insert-image-addin_files/Screen Shot 2018-03-08 at 12.01.06 AM.png&#34; alt=&#34;modified image file&#34; width=&#34;400&#34;/&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;step-4-hit-done&#34; class=&#34;section level4&#34;&gt;
 &lt;h4&gt;Step 4: hit done!&lt;/h4&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2018-03-07-blogdown-insert-image-addin_files/Screen Shot 2018-03-08 at 12.02.28 AM.png&#34; alt=&#34;hit go&#34; width=&#34;400&#34;/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://lcolladotor.github.io/post/2018-03-07-blogdown-insert-image-addin_files/Screen Shot 2018-03-08 at 12.02.28 AM.png&#34; alt=&#34;hit go&#34; width=&#34;400&#34;/&gt;&lt;/p&gt;
 &lt;p&gt;Lets go ahead and click &lt;code&gt;done&lt;/code&gt;! Our text window in RStudio will insert the appropriate code for linking the image. In this case, it’s the following code:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;&amp;lt;img src=&amp;quot;/post/2018-03-07-blogdown-insert-image-addin_files/screenshot.png&amp;quot; alt=&amp;quot;final image&amp;quot; width=&amp;quot;400&amp;quot;/&amp;gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;and this is the image:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2018-03-07-blogdown-insert-image-addin_files/screenshot.png&#34; alt=&#34;final image&#34; width=&#34;400&#34;/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://lcolladotor.github.io/post/2018-03-07-blogdown-insert-image-addin_files/screenshot.png&#34; alt=&#34;final image&#34; width=&#34;400&#34;/&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;optional-step-5&#34; class=&#34;section level4&#34;&gt;
 &lt;h4&gt;Optional step 5&lt;/h4&gt;
@@ -244,7 +244,7 @@ devtools::install_github(&amp;#39;rstudio/blogdown&amp;#39;)&lt;/code&gt;&lt;/pr
 ##  language (EN)                        
 ##  collate  en_US.UTF-8                 
 ##  tz       America/New_York            
-##  date     2018-03-08&lt;/code&gt;&lt;/pre&gt;
+##  date     2018-03-10&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## Packages --------------------------------------------------------------------------------------------------------------&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;##  package       * version date       source                            
 ##  backports       1.1.2   2017-12-13 CRAN (R 3.4.3)                    
@@ -294,7 +294,7 @@ devtools::install_github(&amp;#39;rstudio/blogdown&amp;#39;)&lt;/code&gt;&lt;/pr
       <link>http://lcolladotor.github.io/2018/02/17/r-markdown-blog-template/</link>
       <pubDate>Sat, 17 Feb 2018 00:00:00 +0000</pubDate>
       
-      <guid>/2018/02/17/r-markdown-blog-template/</guid>
+      <guid>http://lcolladotor.github.io/2018/02/17/r-markdown-blog-template/</guid>
       <description>&lt;p&gt;This blog post is mostly for myself but maybe it’s useful to others. It contains my current R markdown blog template. I initially posted this as a question at &lt;a href=&#34;https://stackoverflow.com/questions/48844340/is-it-possible-to-create-a-rmd-file-template-for-the-blogdown-new-post-addin&#34;&gt;StackOverflow&lt;/a&gt;. Then I read how much a burden we put in &lt;a href=&#34;https://yihui.name/en/2018/02/career-crisis/&#34;&gt;Yihui Xie&lt;/a&gt; and decided that my current setup (copy-pasting) works just fine. In any case using &lt;code&gt;blogdown&lt;/code&gt; with the RStudio IDE is much simpler than what I used to do in the past with &lt;a href=&#34;http://lcolladotor.github.io/2013/11/09/new-Fellgernon-Bit-setup-in-Github/&#34;&gt;jekyll&lt;/a&gt; or with even my prior &lt;a href=&#34;https://github.com/rstudio/blogdown/issues/42&#34;&gt;setup with blogdown&lt;/a&gt;.&lt;/p&gt;
 &lt;div id=&#34;bibliography-setup&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Bibliography setup&lt;/h3&gt;
@@ -335,7 +335,7 @@ devtools::install_github(&amp;#39;rstudio/blogdown&amp;#39;)&lt;/code&gt;&lt;/pr
 &lt;p&gt;Markdown syntax for custom image:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;![](/post/2018-02-17-r-markdown-blog-template_files/LIBD.jpg)&lt;/code&gt;&lt;/pre&gt;
 &lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;/post/2018-02-17-r-markdown-blog-template_files/LIBD.jpg&#34; /&gt;
+&lt;img src=&#34;http://lcolladotor.github.io/post/2018-02-17-r-markdown-blog-template_files/LIBD.jpg&#34; /&gt;
 
 &lt;/div&gt;
 &lt;p&gt;HTML syntax for centering image, including a link, and re-sizing the image to a fix width of 200 px.&lt;/p&gt;
@@ -343,7 +343,7 @@ devtools::install_github(&amp;#39;rstudio/blogdown&amp;#39;)&lt;/code&gt;&lt;/pr
 &amp;lt;a href=&amp;quot;http://lcolladotor.github.io/&amp;quot;&amp;gt;&amp;lt;img alt = &amp;#39;some website&amp;#39; width=&amp;#39;200&amp;#39; src=&amp;#39;/post/2018-02-17-r-markdown-blog-template_files/LIBD.jpg&amp;#39; /&amp;gt;&amp;lt;/a&amp;gt;
 &amp;lt;/center&amp;gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;center&gt;
-&lt;a href=&#34;http://lcolladotor.github.io/&#34;&gt;&lt;img alt = &#39;some website&#39; width=&#39;200&#39; src=&#39;/post/2018-02-17-r-markdown-blog-template_files/LIBD.jpg&#39; /&gt;&lt;/a&gt;
+&lt;a href=&#34;http://lcolladotor.github.io/&#34;&gt;&lt;img alt = &#39;some website&#39; width=&#39;200&#39; src=&#39;http://lcolladotor.github.io/post/2018-02-17-r-markdown-blog-template_files/LIBD.jpg&#39; /&gt;&lt;/a&gt;
 &lt;/center&gt;
 &lt;/div&gt;
 &lt;div id=&#34;reproducibility&#34; class=&#34;section level3&#34;&gt;
@@ -360,13 +360,13 @@ session_info()&lt;/code&gt;&lt;/pre&gt;
 ##  language (EN)                        
 ##  collate  en_US.UTF-8                 
 ##  tz       America/New_York            
-##  date     2018-03-07&lt;/code&gt;&lt;/pre&gt;
+##  date     2018-03-10&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## Packages --------------------------------------------------------------------------------------------------------------&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;##  package       * version date       source                            
 ##  backports       1.1.2   2017-12-13 CRAN (R 3.4.3)                    
 ##  base          * 3.4.3   2017-12-07 local                             
 ##  bibtex          0.4.2   2017-06-30 CRAN (R 3.4.1)                    
-##  blogdown        0.5.7   2018-03-07 Github (rstudio/blogdown@60f79ed) 
+##  blogdown        0.5.9   2018-03-08 Github (rstudio/blogdown@dc1f41c) 
 ##  bookdown        0.7     2018-02-18 cran (@0.7)                       
 ##  colorout      * 1.2-0   2018-02-19 Github (jalvesaq/colorout@2f01173)
 ##  compiler        3.4.3   2017-12-07 local                             
@@ -422,7 +422,7 @@ bibliography(style = &amp;#39;html&amp;#39;)&lt;/code&gt;&lt;/pre&gt;
       <link>http://lcolladotor.github.io/2013/11/09/new-Fellgernon-Bit-setup-in-Github/</link>
       <pubDate>Sat, 09 Nov 2013 00:00:00 +0000</pubDate>
       
-      <guid>/2013/11/09/new-Fellgernon-Bit-setup-in-Github/</guid>
+      <guid>http://lcolladotor.github.io/2013/11/09/new-Fellgernon-Bit-setup-in-Github/</guid>
       <description>
 
 &lt;p&gt;As you might have noticed, I recently decided to move &lt;code&gt;Fellgernon Bit&lt;/code&gt; from &lt;a href=&#34;http://bit.ly/FellgernonBit&#34; target=&#34;_blank&#34;&gt;Tumblr&lt;/a&gt; to &lt;a href=&#34;http://bit.ly/FellBit&#34; target=&#34;_blank&#34;&gt;GitHub&lt;/a&gt;. There are a couple of reasons why I made this change.&lt;/p&gt;
@@ -751,7 +751,7 @@ sudo gem install nokogiri
       <link>http://lcolladotor.github.io/2013/11/07/bmorebiostats/</link>
       <pubDate>Thu, 07 Nov 2013 00:00:00 +0000</pubDate>
       
-      <guid>/2013/11/07/bmorebiostats/</guid>
+      <guid>http://lcolladotor.github.io/2013/11/07/bmorebiostats/</guid>
       <description>
 
 &lt;p&gt;In recent weeks, I have met with a group of students &lt;a href=&#34;https://twitter.com/jhubiostat&#34; target=&#34;_blank&#34;&gt;@jhubiostat&lt;/a&gt; interested in blogging about their research, tutorials, pieces of R code, among plenty of other subjects. Within this group we had the idea to aggregate our blogs so it would be easier for others to follow us and to easily promote our own blogs to a much larger audience. Basically, do what &lt;a href=&#34;http://www.r-bloggers.com/&#34; target=&#34;_blank&#34;&gt;R-bloggers&lt;/a&gt; does but focused on blogs from students at Johns Hopkins Biostatistics. Ideally, once a student publishes a new post, our site would pick it up and promote it.&lt;/p&gt;
@@ -829,7 +829,7 @@ sudo gem install nokogiri
       <link>http://lcolladotor.github.io/2013/03/09/Analyzing-SimplyStatistics-visits-info/</link>
       <pubDate>Sat, 09 Mar 2013 00:00:00 +0000</pubDate>
       
-      <guid>/2013/03/09/Analyzing-SimplyStatistics-visits-info/</guid>
+      <guid>http://lcolladotor.github.io/2013/03/09/Analyzing-SimplyStatistics-visits-info/</guid>
       <description>&lt;p&gt;Recently we had to analyze the data of the number of visits per day to &lt;a href=&#34;http://simplystatistics.org/&#34;&gt;SimplyStatistics.org&lt;/a&gt;. There were two goals:&lt;/p&gt;
 &lt;ol&gt;&lt;li&gt;Estimate the fraction of visitors retained after a spike in the number of visitors&lt;/li&gt;
 &lt;li&gt;Identify (if any) any factors that influence the fraction estimated in 1.&lt;/li&gt;
@@ -849,7 +849,7 @@ sudo gem install nokogiri
       <link>http://lcolladotor.github.io/2012/01/27/correctly-synching-addthis-and-google-analytics-social/</link>
       <pubDate>Fri, 27 Jan 2012 00:00:00 +0000</pubDate>
       
-      <guid>/2012/01/27/correctly-synching-addthis-and-google-analytics-social/</guid>
+      <guid>http://lcolladotor.github.io/2012/01/27/correctly-synching-addthis-and-google-analytics-social/</guid>
       <description>&lt;p&gt;&lt;p&gt;As a minor addition to my previous posts about setting up a blog, I want to detail a bit more how to synchronize your &lt;a href=&#34;http://www.addthis.com/analytics&#34;&gt;AddThis social sharing statistics&lt;/a&gt; (AddThis Analytics) with &lt;a href=&#34;http://www.google.com/analytics/&#34;&gt;Google Analytics&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;The &lt;a href=&#34;http://www.addthis.com/help/google-analytics-integration#social&#34;&gt;main help file explaining how to do&lt;/a&gt; so has been a bit confusing for me. Though, in part that&amp;#8217;s because I didn&amp;#8217;t read it completely. Plus there were a few things I didn&amp;#8217;t know.&lt;/p&gt;
 &lt;p&gt;First, Google Analytics (GA) has two ways in which you can add it to your site: synchronous and asynchronous. There are a few posts around, &lt;a href=&#34;http://blog.httpwatch.com/2010/07/29/asynchronous-google-analytics-is-better-but-not-faster/&#34;&gt;like this one&lt;/a&gt;, explaining the difference. Basically, the asynchronous mode is supposed to give your site faster load times (negligible normally) and most importantly more complete data in cases where people close your site before it finishes loading.&lt;/p&gt;
@@ -871,7 +871,7 @@ sudo gem install nokogiri
       <link>http://lcolladotor.github.io/2011/11/30/make-it-easy-for-your-visitors-to-suscribe-with-a-burnt/</link>
       <pubDate>Wed, 30 Nov 2011 00:00:00 +0000</pubDate>
       
-      <guid>/2011/11/30/make-it-easy-for-your-visitors-to-suscribe-with-a-burnt/</guid>
+      <guid>http://lcolladotor.github.io/2011/11/30/make-it-easy-for-your-visitors-to-suscribe-with-a-burnt/</guid>
       <description>&lt;p&gt;Recently I talked about &lt;a href=&#34;http://fellgernon.tumblr.com/post/13070638939/setting-up-your-blog&#34;&gt;how to set up your own blog&lt;/a&gt; and now I&amp;#8217;m going to continue by emphasizing the importance of an &lt;a href=&#34;http://en.wikipedia.org/wiki/RSS&#34;&gt;RSS feed&lt;/a&gt;. What is it? Basically it is a unique format in which content from frequently updated sites (like a blog) is &lt;a href=&#34;http://en.wikipedia.org/wiki/Web_syndication&#34;&gt;syndicated&lt;/a&gt;. Web syndication allows you to share the content of your site (blog) to many different sites automatically. This is specially useful for people who are interested in following your blog. Sure, you can let them type your blog&amp;#8217;s site each time or simply allow them to receive updates on their email, feed reader (I recommend &lt;a href=&#34;http://www.google.com/reader&#34;&gt;Google Reader&lt;/a&gt;), etc. After all, you don&amp;#8217;t want your followers to have to remember to visit your site every time if there is an easier option out there. Sure, you already made your blog social but that was meant to facilitate comments and sharing of your blog&amp;#8217;s content by it&amp;#8217;s visitors. While publishing your blog to Twitter will get initial visitors into the blog, an RSS feed will complete the job when they suscribe to it.&lt;/p&gt;
 &lt;p&gt;Blogging platforms will normally create an RSS feed for your blog. Yet, this is a plain XML file which is just a pain to read. However, the good news is that you can &lt;em&gt;burn&lt;/em&gt; your feed which makes it pretty. That&amp;#8217;s where &lt;a href=&#34;http://feedburner.google.com&#34;&gt;FeedBurner&lt;/a&gt; comes into play. &lt;/p&gt;
 &lt;p&gt;To use it, you simply have to give it your RSS feed XML url and choose a name. For example, the RSS feed XML url for Fellgernon Bit is &lt;a href=&#34;http://fellgernon.tumblr.com/rss&#34;&gt;&lt;a href=&#34;http://fellgernon.tumblr.com/rss&#34;&gt;http://fellgernon.tumblr.com/rss&lt;/a&gt;&lt;/a&gt; which is rather ugly, but looks much better with FeedBurner at &lt;a href=&#34;http://feeds.feedburner.com/FellgernonBit&#34;&gt;&lt;a href=&#34;http://feeds.feedburner.com/FellgernonBit&#34;&gt;http://feeds.feedburner.com/FellgernonBit&lt;/a&gt;&lt;/a&gt; The content is readable and FeedBurner allows your visitors to suscribe using a wide variety of tools with a few clicks.&lt;/p&gt;
@@ -893,7 +893,7 @@ sudo gem install nokogiri
       <link>http://lcolladotor.github.io/2011/11/20/Setting-up-your-blog/</link>
       <pubDate>Sun, 20 Nov 2011 00:00:00 +0000</pubDate>
       
-      <guid>/2011/11/20/Setting-up-your-blog/</guid>
+      <guid>http://lcolladotor.github.io/2011/11/20/Setting-up-your-blog/</guid>
       <description>&lt;p&gt;Now that I&amp;#8217;ve spent time re-doing Fellgernon Bit, I thought it&amp;#8217;d be a good time my experience on setting up a socially-connected blog.&lt;/p&gt;
 &lt;p&gt;First of all, you need to choose a blog platform. There are some around like Blogger and WordPress that are widely used and were some of the first platforms. In my case though, I really like how easy http://www.tumblr.com/ is to use. &lt;/p&gt;
 &lt;p&gt;Once you register and have the default blog, go to the customize menu from the Tumblr dashboard and browse the Free Themes. I ended up choosing the &lt;a href=&#34;http://simplethingstheme.tumblr.com/&#34;&gt;Simple Things&lt;/a&gt; theme because I liked the way it looks and it already included some things I wanted like the Google+ button, Facebook and Twitter sharing. This theme also has several easy options so you can easily link your blog to &lt;a href=&#34;http://www.google.com/analytics/&#34;&gt;Google Analytics&lt;/a&gt;. &lt;/p&gt;

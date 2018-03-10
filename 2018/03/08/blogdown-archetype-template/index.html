@@ -416,7 +416,7 @@ In my case, I like using BiocStyle (Oleś, Morgan, and Huber, 2017) for function
 <li>I hadn’t even thought of making the <a href="http://lcolladotor.github.io/2018/03/07/blogdown-insert-image-addin/#.WqDRmpPwa50">Insert Image addin</a>.</li>
 </ul>
 <p>I went down the rabbit hole of archetypes and <em><a href="https://CRAN.R-project.org/package=blogdown">blogdown</a></em>, reported an <a href="https://github.com/rstudio/blogdown/issues/261">issue resulated to this topic</a> that was in the way of using archetypes for <code>.Rmd</code> posts. After some encouragement by Yihui Xie, I ended up fixing this issues in <a href="https://github.com/rstudio/blogdown/pull/263">my first pull request</a> <em>ever</em> to an RStudio package. The PR also added the <code>Archetype</code> option to the <em>New Post</em> RStudio addin (which I used right now ^^).</p>
-<p><img src="/post/2018-03-08-blogdown-archetype-template_files/Screen Shot 2018-03-08 at 1.05.13 AM.png" alt="new post addin with archetype option" width="400"/></p>
+<p><img src="http://lcolladotor.github.io/post/2018-03-08-blogdown-archetype-template_files/Screen Shot 2018-03-08 at 1.05.13 AM.png" alt="new post addin with archetype option" width="400"/></p>
 <div id="creating-my-blogdown-archetype-template" class="section level3">
 <h3>Creating my <em><a href="https://CRAN.R-project.org/package=blogdown">blogdown</a></em> archetype (template)</h3>
 <p>To make my archetype (template) for blog posts I looked at the GitHub repo for the theme I’m using. It contains an <code>archetypes</code> directory with several files. I just looked at the one called <code>post.md</code> (check it <a href="https://github.com/gcushen/hugo-academic/blob/master/archetypes/post.md">here</a>) and copied it from <code>themes/hugo-academic/archetypes/post.md</code> to <code>archetypes/post.md</code>. Next I added my favorite R code below the last <code>+++</code> mark. You can check out the final version <a href="https://github.com/lcolladotor/hugoblog/blob/master/archetypes/post.md">here</a>. Below I display the version at the time of writing this blog post (I’m using a <code>.txt</code> extension otherwise the embedded gist doesn’t look good, but you want it to end in <code>.md</code>).</p>
@@ -460,7 +460,7 @@ In my case, I like using BiocStyle (Oleś, Morgan, and Huber, 2017) for function
 ##  language (EN)                        
 ##  collate  en_US.UTF-8                 
 ##  tz       America/New_York            
-##  date     2018-03-08</code></pre>
+##  date     2018-03-10</code></pre>
 <pre><code>## Packages --------------------------------------------------------------------------------------------------------------</code></pre>
 <pre><code>##  package       * version date       source                            
 ##  backports       1.1.2   2017-12-13 CRAN (R 3.4.3)                    
