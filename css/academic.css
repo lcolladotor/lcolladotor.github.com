@@ -1,7 +1,3 @@
-
-
-
-  
 /*************************************************
  *  Hugo Academic: an academic theme for Hugo.
  *  Designed by @GeorgeCushen.
@@ -25,14 +21,14 @@
 }
 
 html {
-  font-family: 'Karma', sans-serif;
-  font-size: 16px;
+  font-family: '{{ .Get "body_font" }}', sans-serif;
+  font-size: {{ .Get "font_size_small" }}px;
   color: rgba(0,0,0,0.8);
   line-height: 1.65;
 }
 @media screen and (min-width: 58em) {
   html {
-    font-size: 20px;
+    font-size: {{ .Get "font_size" }}px;
   }
 }
 
@@ -41,7 +37,7 @@ body {
   font-size: 1rem;
   line-height: inherit;
   color: inherit;
-  background-color: #fff;
+  background-color: {{ .Get "background" }};
   margin-top: 71px; /* Offset body content by navbar height. */
   padding-top: 0;
   counter-reset: captions;
@@ -79,7 +75,7 @@ ul, ol, dl {
 
 /* Navigation bar text */
 .navbar-default {
-  font-family: 'Mina', sans-serif;
+  font-family: '{{ .Get "nav_font" }}', sans-serif;
   font-weight: 400;
   line-height: 1.25;
   text-rendering: optimizeLegibility;
@@ -87,7 +83,7 @@ ul, ol, dl {
 
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Montserrat', sans-serif;
+  font-family: '{{ .Get "heading_font" }}', sans-serif;
   font-weight: 400;
   margin-bottom: .5rem;
   line-height: 1.25;
@@ -114,14 +110,14 @@ h4, h5, h6 {
 
 a,
 h3.article-title a:hover {
-  color: #e51744;
+  color: {{ .Get "primary" }};
   text-decoration: none;
   transition: color 0.6s ease;
 }
 
 a:hover,
 a:focus {
-  color: #e51744;
+  color: {{ .Get "primary" }};
 }
 
 img,
@@ -154,7 +150,7 @@ figcaption {
   line-height: 1.25;
   font-size: 1rem;
   margin-bottom: 1.65rem;
-  font-family: 'Montserrat', sans-serif;
+  font-family: '{{ .Get "heading_font" }}', sans-serif;
   counter-increment: captions;
 }
 
@@ -167,9 +163,12 @@ figcaption h4 {
 
 pre,
 code {
-  font-family: 'Roboto Mono', monospace;
+  font-family: '{{ .Get "mono_font" }}', monospace;
   color: #c7254e;
   background-color: #f9f2f4;
+  overflow: auto;
+  word-wrap: normal;
+  white-space: pre;
 }
 
 pre {
@@ -325,7 +324,7 @@ a[data-fancybox] img {
 }
 
 .home-section {
-  background-color: #fff;
+  background-color: {{ .Get "home_section_odd" }};
   padding: 110px 0 110px 0;
   animation: intro 0.3s both;
   animation-delay: 0.15s;
@@ -336,7 +335,7 @@ a[data-fancybox] img {
 }
 
 .home-section:nth-of-type(even) {
-  background-color: #bfcad1;
+  background-color: {{ .Get "home_section_even" }};
 }
 
 @media screen and (max-width: 768px) {
@@ -431,7 +430,7 @@ a[data-fancybox] img {
 .featurette-icon {
   display: block;
   width: 100%;
-  color: #e51744;
+  color: {{ .Get "primary" }};
   font-size: 3rem;
   text-align: center;
 }
@@ -647,7 +646,7 @@ article .article-metadata {
 }
 
 .article-metadata a:hover {
-  color: #e51744;
+  color: {{ .Get "primary" }};
 }
 
 .middot-divider {
@@ -982,8 +981,8 @@ footer a#back_to_top i {
  **************************************************/
 
 .btn-primary {
-  border-color: #e51744 !important;
-  background: #e51744 !important;
+  border-color: {{ .Get "primary" }} !important;
+  background: {{ .Get "primary" }} !important;
 }
 
 .btn-primary:hover,
@@ -991,7 +990,7 @@ footer a#back_to_top i {
 .btn-primary.active,
 .btn-primary:visited,
 .open > .dropdown-toggle.btn-primary {
-  background: #e51744 !important;
+  background: {{ .Get "primary" }} !important;
 }
 
 .btn-light {
@@ -1025,12 +1024,12 @@ footer a#back_to_top i {
 
 .btn-toolbar .btn.btn-primary:hover,
 .btn-toolbar .btn.btn-primary:focus {
-  background-color: #DA2536 !important;
+  background-color: {{ .Get "primary_dark" }} !important;
 }
 
 .btn-toolbar .btn.btn-primary:active,
 .btn-toolbar .btn.btn-primary.active {
-  background-color: #FF6771 !important;
+  background-color: {{ .Get "primary_light" }} !important;
 }
 
 /*************************************************
@@ -1044,12 +1043,12 @@ footer a#back_to_top i {
 }
 
 .btn-primary.btn-outline {
-  color: #e51744 !important;
-  border-color: #e51744 !important;
+  color: {{ .Get "primary" }} !important;
+  border-color: {{ .Get "primary" }} !important;
 }
 
 .btn-primary.btn-outline:focus {
-  color: #e51744 !important;
+  color: {{ .Get "primary" }} !important;
 }
 
 .btn-primary.btn-outline:active {
@@ -1103,7 +1102,7 @@ footer a#back_to_top i {
 }
 
 .navbar-default {
-  background: #bfcad1;
+  background: {{ .Get "menu_primary" }};
   box-shadow: 0 0.125rem 0.25rem 0 rgba(0,0,0,.11)
 }
 
@@ -1117,7 +1116,7 @@ footer a#back_to_top i {
 }
 
 nav#navbar-main li {
-  font-size: 16px;
+  font-size: {{ .Get "font_size_small" }}px;
 }
 
 .navbar-default .navbar-nav>li>a,
@@ -1126,24 +1125,24 @@ nav#navbar-main li {
   white-space: nowrap;
   -webkit-transition: 0.2s ease;
   transition: 0.2s ease;
-  color: #2f2f2f;
+  color: {{ .Get "menu_text" }};
   font-weight: 600;
 }
 
 .navbar-default .navbar-nav>li>a:focus {
-  color: #2f2f2f;
+  color: {{ .Get "menu_text" }};
   background-color: transparent;
 }
 
 .navbar-default .navbar-nav>li>a:hover {
-  color: #e51744;
+  color: {{ .Get "menu_text_active" }};
   background-color: transparent;
 }
 
 .navbar-default .navbar-nav>.active>a,
 .navbar-default .navbar-nav>.active>a:focus,
 .navbar-default .navbar-nav>.active>a:hover {
-  color: #e51744;
+  color: {{ .Get "menu_text_active" }};
   font-weight: 700;
   background-color: transparent !important; /* Override Bootstrap. */
 }
@@ -1161,11 +1160,11 @@ nav#navbar-main li {
 }
 
 .navbar-default .navbar-toggle .icon-bar {
-  background-color: #2f2f2f !important;
+  background-color: {{ .Get "menu_text" }} !important;
 }
 
 .dropdown-menu {
-  background-color: #bfcad1 !important;
+  background-color: {{ .Get "menu_primary" }} !important;
 }
 
 .dropdown-menu > li > a {
@@ -1174,23 +1173,23 @@ nav#navbar-main li {
   clear: both;
   font-weight: 400;
   line-height: 1.42857143;
-  color: #2f2f2f;
+  color: {{ .Get "menu_text" }};
   white-space: nowrap;
 }
 
 .dropdown-menu>li>a:focus,
 .dropdown-menu>li>a:hover {
-  color: #e51744;
+  color: {{ .Get "menu_text_active" }};
   text-decoration: none;
-  background-color: #bfcad1;
+  background-color: {{ .Get "menu_primary" }};
 }
 
 .dropdown-menu > .active > a,
 .dropdown-menu > .active > a:focus,
 .dropdown-menu > .active > a:hover {
-  color: #bfcad1;
+  color: {{ .Get "menu_primary" }};
   text-decoration: none;
-  background-color: #e51744;
+  background-color: {{ .Get "menu_text_active" }};
   outline: 0;
 }
 
@@ -1198,20 +1197,20 @@ nav#navbar-main li {
 .navbar-default .navbar-nav>.open>a:focus,
 .navbar-default .navbar-nav>.open>a:hover,
 .navbar-default .navbar-nav>.open>a:visited {
-  color: #2f2f2f !important;
-  background-color: #bfcad1 !important;
+  color: {{ .Get "menu_text" }} !important;
+  background-color: {{ .Get "menu_primary" }} !important;
 }
 
 .navbar-default .navbar-brand {
   text-transform: uppercase;
   font-weight: bold;
   font-size: 1.2em;
-  color: #eb1f4b;
+  color: {{ .Get "menu_title" }};
 }
 
 .navbar-default .navbar-brand:focus,
 .navbar-default .navbar-brand:hover {
-  color: #eb1f4b;
+  color: {{ .Get "menu_title" }};
   background-color: transparent;
 }
 
@@ -1276,7 +1275,7 @@ nav#navbar-main li {
     clear: both;
     font-weight: 400;
     line-height: 1.42857143;
-    color: #2f2f2f;
+    color: {{ .Get "menu_text" }};
     white-space: nowrap;
   }
 
@@ -1293,7 +1292,7 @@ nav#navbar-main li {
   .navbar-default .navbar-nav .open .dropdown-menu > li > a {
     padding: 5px 15px 5px 25px;
     line-height: 20px;
-    color: #2f2f2f;
+    color: {{ .Get "menu_text" }};
   }
 
   .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus,
@@ -1305,7 +1304,7 @@ nav#navbar-main li {
   .navbar-default .navbar-nav .open .dropdown-menu > .active > a,
   .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus,
   .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover {
-    color: #e51744;
+    color: {{ .Get "menu_text_active" }};
     background-color: transparent;
   }
 
@@ -1451,7 +1450,9 @@ body.dark {
 .dark code {
   color: rgb(139, 233, 253);
   background-color: rgb(68, 71, 90);
-
+  overflow: auto;
+  word-wrap: normal;
+  white-space: pre;
 }
 
 .dark pre {
@@ -1460,7 +1461,7 @@ body.dark {
 }
 
 .dark ul.share li a {
-  background-color: #e51744;
+  background-color: {{ .Get "primary" }};
 }
 
 .dark table table {
@@ -1514,7 +1515,7 @@ body.dark {
 }
 
 .dark .card h4 a {
-  color: #e51744;
+  color: {{ .Get "primary" }};
   border-bottom: solid 1px transparent;
 }
 
