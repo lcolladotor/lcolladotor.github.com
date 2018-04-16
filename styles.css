@@ -93,6 +93,7 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.25;
   color: #313131;
   text-rendering: optimizeLegibility;
+  overflow-wrap: break-word; /* Ensures very long heading words do not overflow into content. */
 }
 h1 {
   font-size: 2.25rem;
@@ -174,9 +175,13 @@ code {
 
 pre {
   margin: 0 0 1rem 0;
-  overflow: auto;
   background-color: rgb(248, 248, 248); /* Match default highlight theme. */
   border-color: rgb(248, 248, 248);
+}
+
+pre code {
+  white-space: pre; /* Override Bootstrap to preserve line breaks in code. */
+  overflow-x: auto;
 }
 
 hr {
@@ -473,6 +478,7 @@ a[data-fancybox] img {
   display: inline-flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: center;
   list-style: none;
   padding: 0;
   margin-top: 30px;
@@ -1457,6 +1463,10 @@ body.dark {
 .dark pre {
   background-color: rgb(68, 71, 90);
   border-color: rgb(68, 71, 90);
+}
+
+.dark #MathJax_Zoom {
+  background-color: rgb(68, 71, 90) !important;
 }
 
 .dark ul.share li a {
