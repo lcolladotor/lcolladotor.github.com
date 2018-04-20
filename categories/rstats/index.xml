@@ -7,8 +7,77 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2011-2018 Leonardo Collado Torres under (CC) BY-NC-SA 4.0. All thoughts and opinions here are my own.</copyright>
-    <lastBuildDate>Thu, 08 Mar 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 19 Apr 2018 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://lcolladotor.github.io/categories/rstats/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Latin American R/BioConductor Developers Workshop 2018</title>
+      <link>http://lcolladotor.github.io/2018/04/19/latin-american-r-bioconductor-developers-workshop-2018/</link>
+      <pubDate>Thu, 19 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://lcolladotor.github.io/2018/04/19/latin-american-r-bioconductor-developers-workshop-2018/</guid>
+      <description>&lt;p&gt;Today I’m excited to invite you to attend the &lt;a href=&#34;http://www.comunidadbioinfo.org/r-bioconductor-developers-workshop-2018/&#34;&gt;Latin American R/BioConductor Developers Workshop 2018&lt;/a&gt;! It’ll be held in Cuernavaca, Mexico from July 30th to August 3rd, 2018. You can find the &lt;a href=&#34;https://support.bioconductor.org/p/108108&#34;&gt;official announcement in the Bioconductor support website&lt;/a&gt;. Let me share with you why I’m excited about this workshop.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://bioconductor.org/images/logo_bioconductor.gif&#34;&gt;&lt;/p&gt;
+&lt;p&gt;At &lt;a href=&#34;https://bioconductor.org/help/course-materials/2017/BioC2017/&#34;&gt;BioC2017&lt;/a&gt;, &lt;a href=&#34;http://alejandroreyes.org/&#34;&gt;Alejandro Reyes&lt;/a&gt; and I talked for a while about the low representation of Latin Americans through out the years that either of us have attended the BioC meetings&lt;a href=&#34;#fn1&#34; class=&#34;footnoteRef&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;. We wanted to see more Latin faces in person but also in the Bioconductor Support Website and among package contributors. We brainstormed for a while and a at dinner with Bioconductor core members we simply ran with our ideas: we brought up the subject and were pleasantly rewarded with support from the Bioconductor team (Alejandro did most of the convincing!). That is, if we organized a conference/workshop, they would help us by sending someone to be one of the instructors.&lt;/p&gt;
+&lt;p&gt;Previously, Alejandro and I had already discussed why we like the Bioc meetings so much. One of the keys is that the Bioc meetings have always had events for different levels of R users. That is, you can attend the conference each year and learn something new (that’s how I got my career started). So you can progress from learning R, to mastering several R packages, to contributing R packages to Bioconductor, to brainstorming future directions for the Bioconductor project&lt;a href=&#34;#fn2&#34; class=&#34;footnoteRef&#34; id=&#34;fnref2&#34;&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;. Additionally, the Bioc meetings have scientific talks in the mornings so that you can learn new scientific and R developments in a single conference. We’ve seen this model adapted in other Bioc events like BiocAsia, the European Bioconductor Meeting, etc. It would be ideal if we got to that point, but we wanted to start smaller with a focus on developing R packages.&lt;/p&gt;
+&lt;p&gt;Separately, &lt;a href=&#34;https://www.linkedin.com/in/heladia-salgado-bb122954/&#34;&gt;Heladia Salgado&lt;/a&gt;, Romualdo Zayas and others from CCG-UNAM&lt;a href=&#34;#fn3&#34; class=&#34;footnoteRef&#34; id=&#34;fnref3&#34;&gt;&lt;sup&gt;3&lt;/sup&gt;&lt;/a&gt; and NNB-UNAM&lt;a href=&#34;#fn4&#34; class=&#34;footnoteRef&#34; id=&#34;fnref4&#34;&gt;&lt;sup&gt;4&lt;/sup&gt;&lt;/a&gt; have organized the &lt;a href=&#34;http://congresos.nnb.unam.mx/&#34;&gt;“Talleres Internacionales de Bioinformática”&lt;/a&gt;&lt;a href=&#34;#fn5&#34; class=&#34;footnoteRef&#34; id=&#34;fnref5&#34;&gt;&lt;sup&gt;5&lt;/sup&gt;&lt;/a&gt; (TIBs) for years now. Actually, I was a student in 2006 and gave a lecture in the summer 2010 event. At the TIBs they’ve had an introductory R class for a few years now where &lt;a href=&#34;https://www.linkedin.com/in/selenefernandez/&#34;&gt;Selene Fernandez-Valverde&lt;/a&gt; and &lt;a href=&#34;http://liigh.unam.mx/amedina/&#34;&gt;Alejandra Medina-Rivera&lt;/a&gt; have participated as instructors. Among the feedback they’ve received is the desire for a more advanced R course.&lt;/p&gt;
+&lt;p&gt;Alejandro and I talked to Alejandra Medina-Rivera who shared our enthusiasm for Bioconductor. As a PI in Mexico, Alejandra knows very well how sparse are the R/Bioconductor courses that she can send her students to. By the way, Alejandra is the one who first invited me to attend BioC2008!&lt;a href=&#34;#fn6&#34; class=&#34;footnoteRef&#34; id=&#34;fnref6&#34;&gt;&lt;sup&gt;6&lt;/sup&gt;&lt;/a&gt; We quickly started an email thread with Heladia and basically, the pieces started to fall in the right places. Heladia, Delfino Garcia-Alonso, Daniela Ledezma, Laura Gómez, Shirley Alquicira, Thalia Uranga Martínez, among others have been instrumental in organizing the workshop. Heladia, Alejandra and others also secured crucial funding from &lt;a href=&#34;http://www.ccg.unam.mx/&#34;&gt;CCG-UNAM&lt;/a&gt; and &lt;a href=&#34;http://liigh.unam.mx/&#34;&gt;LIIGH-UNAM&lt;/a&gt;. Together we were able to invite and get all the logistics so that &lt;a href=&#34;https://www.roswellpark.org/martin-morgan&#34;&gt;Martin Morgan&lt;/a&gt;, &lt;a href=&#34;http://www.heatherturner.net/&#34;&gt;Heather Turner&lt;/a&gt;, &lt;a href=&#34;http://www.somos.unicamp.br/professores/view/4722&#34;&gt;Benilton Carvalho&lt;/a&gt;, Selene Fernandez-Valverde, &lt;a href=&#34;http://www.teresa-ortiz.com/eng&#34;&gt;María Teresa Ortiz&lt;/a&gt; and &lt;a href=&#34;http://mastrettayanes-lab.org/&#34;&gt;Alicia Mastretta Yanes&lt;/a&gt; could all help us teach part of the workshop and/or present their work.&lt;/p&gt;
+&lt;p&gt;Briefly, these are some of the reasons why they are amazing:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Martin: Bioconductor project leader.&lt;/li&gt;
+&lt;li&gt;Heather: extensive experience teaching R and bioinformatics.&lt;/li&gt;
+&lt;li&gt;Benilton: he helped organize a similar workshop in 2015: &lt;a href=&#34;http://lab.foundation/&#34;&gt;LAb Foundation Brasil&lt;/a&gt;. Also an academic relative of Alejandro and myself.&lt;/li&gt;
+&lt;li&gt;Selene: &lt;a href=&#34;https://www.fondationloreal.com/categories/for-women-in-science/lang/en&#34;&gt;L’Oréal-UNESCO For Women in Science&lt;/a&gt;, has taught at TIBs before.&lt;/li&gt;
+&lt;li&gt;Teresa: &lt;a href=&#34;https://www.meetup.com/rladiescdmx/&#34;&gt;RLadiesCDMX&lt;/a&gt; plus just look at her awesome &lt;a href=&#34;https://github.com/tereom?tab=repositories&#34;&gt;GitHub&lt;/a&gt; profile!&lt;/li&gt;
+&lt;li&gt;Alicia: she has taught an intro to bioinformatics and reproducible genetic analyses course, plus check her &lt;a href=&#34;https://github.com/AliciaMstt?tab=repositories&#34;&gt;GitHub&lt;/a&gt; profile!&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If you check the &lt;a href=&#34;http://www.comunidadbioinfo.org/r-bioconductor-developers-workshop-2018/&#34;&gt;workshop schedule&lt;/a&gt; we have, you’ll notice that we will have several sessions devoted to actually writing R packages. So the course will cover both the theory and the practice side of things. If you attend the workshop, you’ll have plenty of opportunities to network with your peers and to learn from other R developers. You should be super excited now!! ^^ Plus we have a &lt;a href=&#34;https://github.com/ComunidadBioInfo/R-BioConductor-Developers-Workshop-2018/blob/master/R-Bioconductor-2018_Program.rmd#code-of-conduct&#34;&gt;code of conduct&lt;/a&gt; (en &lt;a href=&#34;http://www.comunidadbioinfo.org/codigo-de-conducta/&#34;&gt;Español&lt;/a&gt;) to ensure that the conference will be welcoming to everyone.&lt;/p&gt;
+&lt;p&gt;This is also a reminder that you have to keep trying. Back in 2009 or 2010 I had gotten an offer of support from Bioc for sending someone to Cuernavaca, but due to funding circumstances it fell through. Like I said, all the pieces fell in the right places this time. Plus Heladia Salgado has made it all possible!&lt;/p&gt;
+&lt;p&gt;2018 is looking like a good year for R courses in Latin America. For example, there’s &lt;a href=&#34;http://latin-r.com/en&#34;&gt;LatinR&lt;/a&gt; and &lt;a href=&#34;https://www.meetup.com/rladies-buenos-aires/&#34;&gt;Buenos Aires RLadies&lt;/a&gt; plus our workshop! Fingers crossed, I’ll be able to attend the workshop in 2019!&lt;/p&gt;
+&lt;p&gt;Again, I’m excited to invite you to attend the &lt;a href=&#34;http://www.comunidadbioinfo.org/r-bioconductor-developers-workshop-2018/&#34;&gt;Latin American R/BioConductor Developers Workshop 2018&lt;/a&gt;! Regardless of whether you can attend it, help us spread the word:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Bioc Support website: &lt;a href=&#34;https://support.bioconductor.org/p/108108/&#34; class=&#34;uri&#34;&gt;https://support.bioconductor.org/p/108108/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Bioc twitter: &lt;a href=&#34;https://twitter.com/Bioconductor/status/986943878535303168&#34; class=&#34;uri&#34;&gt;https://twitter.com/Bioconductor/status/986943878535303168&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;&lt;a href=&#34;https://twitter.com/hashtag/rstats?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#rstats&lt;/a&gt; / &lt;a href=&#34;https://twitter.com/Bioconductor?ref_src=twsrc%5Etfw&#34;&gt;@Bioconductor&lt;/a&gt; Latin American BioC Developers Workshop 2018 &lt;a href=&#34;https://t.co/eoL4O4V5xT&#34;&gt;https://t.co/eoL4O4V5xT&lt;/a&gt;&lt;/p&gt;&amp;mdash; Bioconductor (@Bioconductor) &lt;a href=&#34;https://twitter.com/Bioconductor/status/986943878535303168?ref_src=twsrc%5Etfw&#34;&gt;April 19, 2018&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Tweet by Alejandro Reyes: &lt;a href=&#34;https://twitter.com/areyesq/status/986943887976656896&#34; class=&#34;uri&#34;&gt;https://twitter.com/areyesq/status/986943887976656896&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;If you are a programmer and want to become a &lt;a href=&#34;https://twitter.com/Bioconductor?ref_src=twsrc%5Etfw&#34;&gt;@Bioconductor&lt;/a&gt; developer, join the Latin American Developers Workshop in Cuernavaca, Mexico, from Jul 30 to Aug 3. More info here: &lt;a href=&#34;https://t.co/TAcfqYSiM6&#34;&gt;https://t.co/TAcfqYSiM6&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/rstats?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#rstats&lt;/a&gt; &lt;a href=&#34;https://twitter.com/CDSBMexico?ref_src=twsrc%5Etfw&#34;&gt;@CDSBMexico&lt;/a&gt; &lt;a href=&#34;https://twitter.com/ccg_unam?ref_src=twsrc%5Etfw&#34;&gt;@ccg_unam&lt;/a&gt;&lt;/p&gt;&amp;mdash; Alejandro Reyes (@areyesq) &lt;a href=&#34;https://twitter.com/areyesq/status/986943887976656896?ref_src=twsrc%5Etfw&#34;&gt;April 19, 2018&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Tweet by LCG UNAM: &lt;a href=&#34;https://twitter.com/lcgunam/status/986691090920230913&#34; class=&#34;uri&#34;&gt;https://twitter.com/lcgunam/status/986691090920230913&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ca&#34; dir=&#34;ltr&#34;&gt;Talleres Internacionales de Bioinformática 2018 y Latin American R/Bioconductor Developers Workshop 30jul-3ago &lt;a href=&#34;https://twitter.com/ccg_unam?ref_src=twsrc%5Etfw&#34;&gt;@ccg_unam&lt;/a&gt; &lt;a href=&#34;https://twitter.com/unammorelos?ref_src=twsrc%5Etfw&#34;&gt;@unammorelos&lt;/a&gt; &lt;a href=&#34;https://twitter.com/UNAM_MX?ref_src=twsrc%5Etfw&#34;&gt;@unam_mx&lt;/a&gt; &lt;a href=&#34;https://t.co/oHWKjbrDrb&#34;&gt;https://t.co/oHWKjbrDrb&lt;/a&gt;&lt;a href=&#34;https://twitter.com/hashtag/RegistroAbierto?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#RegistroAbierto&lt;/a&gt; &lt;a href=&#34;https://t.co/bdmOREzhuy&#34;&gt;pic.twitter.com/bdmOREzhuy&lt;/a&gt;&lt;/p&gt;&amp;mdash; LCG UNAM (@lcgunam) &lt;a href=&#34;https://twitter.com/lcgunam/status/986691090920230913?ref_src=twsrc%5Etfw&#34;&gt;April 18, 2018&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+
+&lt;ul&gt;
+&lt;li&gt;CDSBMexico twitter: &lt;a href=&#34;https://twitter.com/CDSBMexico/status/986672270964871169&#34; class=&#34;uri&#34;&gt;https://twitter.com/CDSBMexico/status/986672270964871169&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;es&#34; dir=&#34;ltr&#34;&gt;Te invitamos a los Talleres Internacionales de Bioinformática 2018&lt;a href=&#34;https://t.co/dsSekSp4U8&#34;&gt;https://t.co/dsSekSp4U8&lt;/a&gt; &lt;a href=&#34;https://t.co/UN1wmOF9SX&#34;&gt;pic.twitter.com/UN1wmOF9SX&lt;/a&gt;&lt;/p&gt;&amp;mdash; ComunidadBioInfo (@CDSBMexico) &lt;a href=&#34;https://twitter.com/CDSBMexico/status/986672270964871169?ref_src=twsrc%5Etfw&#34;&gt;April 18, 2018&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+
+&lt;ul&gt;
+&lt;li&gt;CDSBMexico facebook: &lt;a href=&#34;https://www.facebook.com/events/215830399185346/&#34; class=&#34;uri&#34;&gt;https://www.facebook.com/events/215830399185346/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Website: &lt;a href=&#34;http://www.comunidadbioinfo.org/r-bioconductor-developers-workshop-2018/&#34; class=&#34;uri&#34;&gt;http://www.comunidadbioinfo.org/r-bioconductor-developers-workshop-2018/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Registration form: &lt;a href=&#34;http://congresos.nnb.unam.mx/TIB2018/registro/&#34; class=&#34;uri&#34;&gt;http://congresos.nnb.unam.mx/TIB2018/registro/&lt;/a&gt; (select “Latin American R/BioConductor Developers Workshop 2018”)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;footnotes&#34;&gt;
+&lt;hr /&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;The Bioc team has been great about financially supporting newcomers! I was one of them: just remember to apply before the deadline expires!&lt;a href=&#34;#fnref1&#34;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn2&#34;&gt;&lt;p&gt;It doesn’t have to be in that order. For example, anyone attending the Bioc meeting is welcome at the Developer’s Day and to chime in the discussions about the Bioconductor project.&lt;a href=&#34;#fnref2&#34;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn3&#34;&gt;&lt;p&gt;Centro de Ciencias Genómicas: Center for Genomic Sciences&lt;a href=&#34;#fnref3&#34;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn4&#34;&gt;&lt;p&gt;Nodo Nacional de Bioinformática: National Bioinformatics Node&lt;a href=&#34;#fnref4&#34;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn5&#34;&gt;&lt;p&gt;Internacional Bioinformatics Workshops&lt;a href=&#34;#fnref5&#34;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn6&#34;&gt;&lt;p&gt;I then taught a few courses at LCG-UNAM, CCG-UNAM and IBT-UNAM from 2008 to 2011 with some slides in Spanish and English. Alejandro was my TA for one of these courses! For a few years since then I would get emails in Spanish asking about some of those courses. You can still find those courses online, but I bet that the material is outdated. In any case, it’s another example of the limited training opportunities.&lt;a href=&#34;#fnref6&#34;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</description>
+    </item>
     
     <item>
       <title>blogdown archetype (template)</title>
@@ -2210,213 +2279,6 @@ URL: &lt;a href=&#34;http://www.R-project.org/&#34;&gt;http://www.R-project.org/
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Check other &lt;a href=&#34;https://twitter.com/jhubiostat&#34; target=&#34;_blank&#34;&gt;@jhubiostat&lt;/a&gt; student blogs at &lt;a href=&#34;http://bmorebiostat.com/&#34; target=&#34;_blank&#34;&gt;Bmore Biostats&lt;/a&gt; as well as topics on &lt;a href=&#34;https://twitter.com/search?q=%23rstats&#34; target=&#34;_blank&#34;&gt;#rstats&lt;/a&gt;.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>rMaps Mexico map</title>
-      <link>http://lcolladotor.github.io/2014/02/26/excited-by-willingness-to-help-get-things-done/</link>
-      <pubDate>Wed, 26 Feb 2014 00:00:00 +0000</pubDate>
-      
-      <guid>http://lcolladotor.github.io/2014/02/26/excited-by-willingness-to-help-get-things-done/</guid>
-      <description>
-
-&lt;h2 id=&#34;it-s-exciting-when-great-people-help-each-other-get-things-done&#34;&gt;It&#39;s exciting when great people help each other get things done&lt;/h2&gt;
-
-&lt;p&gt;This is a simple networking story, which might not be surprising to some but I was happily surprised by it. This is how the story goes:&lt;/p&gt;
-
-&lt;p&gt;Two weeks ago &lt;code&gt;rMaps&lt;/code&gt; (&lt;span class=&#34;showtooltip&#34; title=&#34;Vaidyanathan R (2014). rMaps: Interactive Maps from R. R package version 0.1.&#34;&gt;&lt;a href=&#34;&#34;&gt;Vaidyanathan, 2014&lt;/a&gt;&lt;/span&gt;) was released. After making a &lt;a href=&#34;http://lcolladotor.github.io/2014/02/10/rMaps-released/#.Uwz64kJdV18&#34; target=&#34;_blank&#34;&gt;blog post&lt;/a&gt; about it I thought about using it to make a map of the homicide rate in Mexico over the recent years. First, I had the question of how to make custom maps with &lt;code&gt;rMaps&lt;/code&gt;. &lt;a href=&#34;https://github.com/tyokota&#34; target=&#34;_blank&#34;&gt;@tyokota&lt;/a&gt; had the same question and started asking &lt;a href=&#34;https://github.com/ramnathv&#34; target=&#34;_blank&#34;&gt;Ramnath&lt;/a&gt; about it in &lt;a href=&#34;https://github.com/ramnathv/rMaps/issues/6&#34; target=&#34;_blank&#34;&gt;rMaps issue 6&lt;/a&gt;. Then I realized I needed a specific file with the map information. Google lead me to &lt;a href=&#34;https://github.com/diegovalle&#34; target=&#34;_blank&#34;&gt;@diegovalle&lt;/a&gt; who has created the map from official Mexican sources, downloaded the homicide data, cleaned it, and made several maps and analyses: all his work is very impressive! I thought that it&#39;d be very cool if &lt;a href=&#34;https://github.com/diegovalle&#34; target=&#34;_blank&#34;&gt;@diegovalle&lt;/a&gt; and &lt;a href=&#34;https://github.com/ramnathv&#34; target=&#34;_blank&#34;&gt;Ramnath&lt;/a&gt; connected, and they did! I saw them interacting via Twitter (&lt;a href=&#34;https://twitter.com/diegovalle/status/433619946434596864&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt; and &lt;a href=&#34;https://twitter.com/ramnath_vaidya/status/433813747593801728&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;) and via &lt;a href=&#34;https://github.com/ramnathv/rMaps/issues/6&#34; target=&#34;_blank&#34;&gt;GitHub&lt;/a&gt;. After sharing &lt;a href=&#34;https://github.com/diegovalle&#34; target=&#34;_blank&#34;&gt;@diegovalle&lt;/a&gt;&#39;s work with my friends, it turned out that some old friends already knew him (&lt;a href=&#34;https://twitter.com/unRob/status/433675310542749696&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt; and high school friends). Another friend was interested in additional features and I suggested her to contact &lt;a href=&#34;https://github.com/diegovalle&#34; target=&#34;_blank&#34;&gt;@diegovalle&lt;/a&gt; via Twitter: he quickly replied as you can see &lt;a href=&#34;https://twitter.com/diegovalle/status/434444498341347328&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Beyond how impressive &lt;code&gt;rMaps&lt;/code&gt; and &lt;a href=&#34;https://github.com/diegovalle&#34; target=&#34;_blank&#34;&gt;@diegovalle&lt;/a&gt;&#39;s work on mexican data are, I was amazed by the willingness to help each other and how great people easily connected. I believe this is one of the great features of both GitHub and Twitter where you can share your code, ask questions, try to answer them, meet people working with your tools, etc. You can even offer to PayPal a beer like &lt;a href=&#34;https://github.com/tyokota&#34; target=&#34;_blank&#34;&gt;@tyokota&lt;/a&gt; did.&lt;/p&gt;
-
-&lt;p&gt;After all their great work, now someone like me (aka, without knowing javascript, Datamaps, etc) can walk you through an example of making an interactive choropleth map showing the homicides rates in Mexico from 1997 to 2013.&lt;/p&gt;
-
-&lt;h2 id=&#34;homicides-rates-in-mexico-1997-2013&#34;&gt;Homicides rates in Mexico 1997-2013&lt;/h2&gt;
-
-&lt;p&gt;The first thing we need to make a custom map using &lt;code&gt;rMaps&lt;/code&gt; is a &lt;a href=&#34;http://en.wikipedia.org/wiki/TopoJSON&#34; target=&#34;_blank&#34;&gt;topojson&lt;/a&gt; file which in this case specifies the mexican states boundaries. This process is explained in more detail by &lt;a href=&#34;https://github.com/tyokota&#34; target=&#34;_blank&#34;&gt;@tyokota&lt;/a&gt; at &lt;a href=&#34;https://github.com/tyokota/custom-map&#34; target=&#34;_blank&#34;&gt;custom-map&lt;/a&gt; which you can view &lt;a href=&#34;https://github.com/tyokota/custom-map/blob/master/custom-map.Rmd&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;In this particular example, &lt;a href=&#34;http://www.inegi.org.mx/&#34; target=&#34;_blank&#34;&gt;INEGI&lt;/a&gt; which is the National Institute of Statistics and Geography of Mexico has a map of the mexican states. &lt;a href=&#34;https://github.com/diegovalle&#34; target=&#34;_blank&#34;&gt;@diegovalle&lt;/a&gt; explained how to download it &lt;a href=&#34;https://github.com/ramnathv/rMaps/issues/6#issuecomment-34942284&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;But before doing so, you might to install &lt;code&gt;topojson&lt;/code&gt; like I did below following the &lt;a href=&#34;https://github.com/mbostock/topojson/wiki/Installation&#34; target=&#34;_blank&#34;&gt;installation instructions&lt;/a&gt;. In the terminal:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;
-## Install node.js following instructions at https://github.com/mbostock/topojson/wiki/Installation
-brew install node
-## Install topojson
-npm install -g topojson
-
-## Download map info from INEGI (Mexican official source)
-curl -o estados.zip http://mapserver.inegi.org.mx/MGN/mge2010v5_0.zip
-## Decompress file
-unzip estados.zip
-## Create shapefile
-ogr2ogr states.shp Entidades_2010_5.shp -t_srs &amp;quot;+proj=longlat +ellps=WGS84 +no_defs +towgs84=0,0,0&amp;quot;
-## id-property needed so that DataMaps knows how to color the map
-topojson -o mx_states.json -s 1e-7 -q 1e5 states.shp -p state_code=+CVE_ENT,name=NOM_ENT --id-property NOM_ENT
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Now that we have the &lt;a href=&#34;http://en.wikipedia.org/wiki/TopoJSON&#34; target=&#34;_blank&#34;&gt;topojson&lt;/a&gt; file &lt;strong&gt;mx_states.json&lt;/strong&gt; we need to get the actual homicide data. &lt;a href=&#34;https://github.com/diegovalle&#34; target=&#34;_blank&#34;&gt;@diegovalle&lt;/a&gt; has gone through the whole process of acquiring the data from official mexican sources and cleaning it. Lets download it.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;# Download crime data
-## From crimenmexico.diegovalle.net/en/csv
-## All local crimes at the state level
-download.file(&amp;quot;http://crimenmexico.diegovalle.net/en/csv/fuero-comun-estados.csv.gz&amp;quot;, 
-	&amp;quot;fuero-comun-estados.csv.gz&amp;quot;)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;The data is not completely ready for us to use it and we need to reshape it a bit. In particular, we want to consider only the intentional homicides and group the data by state and date. We can get this to work by using &lt;code&gt;dplyr&lt;/code&gt; (&lt;span class=&#34;showtooltip&#34; title=&#34;Wickham H and Francois R (2014). dplyr: dplyr: a grammar of data manipulation. R package version 0.1.1.&#34;&gt;&lt;a href=&#34;http://CRAN.R-project.org/package=dplyr&#34;&gt;Wickham &amp;amp; Francois, 2014&lt;/a&gt;&lt;/span&gt;).&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;## Load required packages
-library(&amp;quot;dplyr&amp;quot;)
-
-## Load the crime data
-crime &amp;lt;- read.csv(&amp;quot;fuero-comun-estados.csv.gz&amp;quot;)
-
-## Only intentional homicides
-crime &amp;lt;- subset(crime, crime == &amp;quot;HOMICIDIOS&amp;quot; &amp;amp; type == &amp;quot;DOLOSOS&amp;quot;)
-
-## Sum homicides by firearm, etc and group by state and date
-hom &amp;lt;- crime %.%
-  filter(year %in% 1997:2013) %.%
-  group_by(state_code, year, type) %.%
-  summarise(total = sum(count, na.rm = TRUE),
-            population = mean(population) ) %.%
-  mutate(rate = total / population * 10^5) %.%
-  arrange(state_code, year)
-
-## How are states coded?
-summary(hom$state_code)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code&gt;##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
-##    1.00    8.75   16.50   16.50   24.20   32.00
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;We have the slight inconvenience that states are coded as integers from 1 to 32 instead of using their names. Using another of the files supplied by &lt;a href=&#34;https://github.com/diegovalle&#34; target=&#34;_blank&#34;&gt;@diegovalle&lt;/a&gt; we can merge the codes. This requires using the &lt;code&gt;foreign&lt;/code&gt; (&lt;span class=&#34;showtooltip&#34; title=&#34;R Core Team (2014). foreign: Read Data Stored by Minitab, S, SAS, SPSS, Stata, Systat, Weka, dBase.... R package version 0.8-59.&#34;&gt;&lt;a href=&#34;http://CRAN.R-project.org/package=foreign&#34;&gt;R Core Team&lt;/a&gt;&lt;/span&gt;) package for loading a &lt;em&gt;dbf&lt;/em&gt; file and then merging both data sets with &lt;code&gt;plyr&lt;/code&gt; (&lt;span class=&#34;showtooltip&#34; title=&#34;Wickham H (2011). &#39;The Split-Apply-Combine Strategy for Data Analysis.&#39; Journal of Statistical Software, 40(1), pp. 1-29. .&#34;&gt;&lt;a href=&#34;http://www.jstatsoft.org/v40/i01/&#34;&gt;Wickham, 2011&lt;/a&gt;&lt;/span&gt;).&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;## Needed for read.dbf
-library(&amp;quot;foreign&amp;quot;)
-
-## The dbf from the state shapefile needed to merge state_code with state
-## names
-codes &amp;lt;- read.dbf(&amp;quot;states.dbf&amp;quot;)
-codes$NOM_ENT &amp;lt;- iconv(codes$NOM_ENT, &amp;quot;windows-1252&amp;quot;, &amp;quot;utf-8&amp;quot;)
-codes$CVE_ENT &amp;lt;- as.numeric(codes$CVE_ENT)
-codes$OID &amp;lt;- NULL
-names(codes) &amp;lt;- c(&amp;quot;state_code&amp;quot;, &amp;quot;name&amp;quot;)
-
-## Load plyr for join(). Loading it before creates a problem with the dplyr
-## call above
-library(&amp;quot;plyr&amp;quot;)
-
-## Names needed for the map
-hom &amp;lt;- join(hom, codes)
-
-## Lets look at the data
-head(hom)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code&gt;##   state_code year    type total population   rate           name
-## 1          1 1997 DOLOSOS   355     958126 37.051 Aguascalientes
-## 2          1 1998 DOLOSOS    66     975585  6.765 Aguascalientes
-## 3          1 1999 DOLOSOS    27     992515  2.720 Aguascalientes
-## 4          1 2000 DOLOSOS    14    1009215  1.387 Aguascalientes
-## 5          1 2001 DOLOSOS    22    1026437  2.143 Aguascalientes
-## 6          1 2002 DOLOSOS    26    1044578  2.489 Aguascalientes
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Great! We now have state names under &lt;em&gt;name&lt;/em&gt; and the intentional homicide rate under &lt;em&gt;rate&lt;/em&gt; (in homicides per 100,000) for each specific &lt;em&gt;year&lt;/em&gt;. We can thus proceed to making the interactive choropleth map using the &lt;code&gt;ichoropleth&lt;/code&gt; function described by &lt;a href=&#34;https://github.com/ramnathv&#34; target=&#34;_blank&#34;&gt;Ramnath&lt;/a&gt; &lt;a href=&#34;http://rmaps.github.io/blog/posts/animated-choropleths/index.html&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;. This requires specifying the &lt;a href=&#34;http://en.wikipedia.org/wiki/TopoJSON&#34; target=&#34;_blank&#34;&gt;topojson&lt;/a&gt; file which is specified via &lt;em&gt;dataUrl&lt;/em&gt;, the name of the map specified via &lt;em&gt;scope&lt;/em&gt; and the most tricky part (for me at least) is that we need to specify the &lt;em&gt;setProjection&lt;/em&gt;. These are all properties of the &lt;a href=&#34;https://github.com/markmarkoh/datamaps&#34; target=&#34;_blank&#34;&gt;Datamaps&lt;/a&gt; library. In particular, the wiki describes &lt;a href=&#34;https://github.com/markmarkoh/datamaps/blob/master/README.md#using-custom-maps&#34; target=&#34;_blank&#34;&gt;how to use custom maps&lt;/a&gt; but this requires some javascript knowledge.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;## Make the map
-library(&amp;quot;rMaps&amp;quot;)
-d1 &amp;lt;- ichoropleth(rate ~ name, data = hom, ncuts = 9, pal = &#39;YlOrRd&#39;, 
-    animate = &#39;year&#39;,  map = &#39;states&#39;
-)
-## Note that I am hosting the mx_states.json in Dropbox
-## but if you are doing it locally, you only need
-## dataUrl = &amp;quot;mx_states.json&amp;quot;
-d1$set(
-  geographyConfig = list(
-   dataUrl = &amp;quot;https://dl.dropboxusercontent.com/u/10794332/mx_states.json&amp;quot;
-  ),
- scope = &#39;states&#39;,
- setProjection = &#39;#! function( element, options ) {
-   var projection, path;
-   projection = d3.geo.mercator()
-    .center([-89, 21]).scale(element.offsetWidth)
-    .translate([element.offsetWidth / 2, element.offsetHeight / 2]);
-
-   path = d3.geo.path().projection( projection );
-   return {path: path, projection: projection};
-  } !#&#39;
-)
-d1$save(&#39;rMaps.html&#39;, cdn = TRUE)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;The end result is shown below:&lt;/p&gt;
-
-&lt;iframe src=&#39;
-http://lcolladotor.github.io/figs/2014-02-26-excited-by-willingness-to-help-get-things-done/rMaps.html
-&#39; scrolling=&#39;no&#39; seamless
-class=&#39;rChart datamaps &#39;
-id=iframe-
-chart1859838d5e973
-width=100%
-height=500px
- &gt;&lt;/iframe&gt;
-
-&lt;p&gt;You can also share the map using the &lt;em&gt;publish&lt;/em&gt; method as shown below:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;d1$publish(&amp;quot;Intentional homicides rates for Mexico 1997-2013&amp;quot;)
-## You&#39;ll need a GitHub account
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;You will get a link to the rCharts viewer such as &lt;a href=&#34;http://rcharts.io/viewer/?9223554#.Uw1tNEJdV18&#34; target=&#34;_blank&#34;&gt;this one&lt;/a&gt; or if you prefer, you can also view the result using Pagist as shown &lt;a href=&#34;http://www.pagist.info/9223554&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;The code presented in this post was written by &lt;a href=&#34;https://github.com/diegovalle&#34; target=&#34;_blank&#34;&gt;@diegovalle&lt;/a&gt; which can you view &lt;a href=&#34;http://bl.ocks.org/diegovalle/8967565&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt; and &lt;a href=&#34;https://github.com/ramnathv&#34; target=&#34;_blank&#34;&gt;Ramnath&lt;/a&gt; which is shown &lt;a href=&#34;https://github.com/ramnathv/rMaps/issues/6#issuecomment-34946041&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;. I also figured out the trick of hosting the &lt;a href=&#34;http://en.wikipedia.org/wiki/TopoJSON&#34; target=&#34;_blank&#34;&gt;topojson&lt;/a&gt; file at Dropbox from &lt;a href=&#34;https://github.com/tyokota&#34; target=&#34;_blank&#34;&gt;@tyokota&lt;/a&gt;&#39;s &lt;a href=&#34;https://github.com/tyokota/custom-map/blob/master/custom-map.Rmd&#34; target=&#34;_blank&#34;&gt;code&lt;/a&gt; as I was running into &lt;em&gt;Access-Control-Allow-Origin&lt;/em&gt; errors when hosting it in my academic website. Finally, but not least, &lt;a href=&#34;https://github.com/ramnathv&#34; target=&#34;_blank&#34;&gt;Ramnath&lt;/a&gt; appropriately insists that all of this would not be possible without libraries such as &lt;a href=&#34;https://github.com/markmarkoh/datamaps&#34; target=&#34;_blank&#34;&gt;Datamaps&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h3 id=&#34;references&#34;&gt;References&lt;/h3&gt;
-
-&lt;p&gt;Citations made with &lt;code&gt;knitcitations&lt;/code&gt; (&lt;span class=&#34;showtooltip&#34; title=&#34;Boettiger C (2014). knitcitations: Citations for knitr markdown files. R package version 0.5-0.&#34;&gt;&lt;a href=&#34;http://CRAN.R-project.org/package=knitcitations&#34;&gt;Boettiger, 2014&lt;/a&gt;&lt;/span&gt;).&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Hadley Wickham, Romain Francois,   (2014) dplyr: dplyr: a grammar of data manipulation.  &lt;a href=&#34;http://CRAN.R-project.org/package=dplyr&#34; target=&#34;_blank&#34;&gt;http://CRAN.R-project.org/package=dplyr&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;R Core Team ,   (2014) foreign: Read Data Stored by Minitab, S, SAS, SPSS, Stata, Systat, Weka,
-dBase, ....  &lt;a href=&#34;http://CRAN.R-project.org/package=foreign&#34; target=&#34;_blank&#34;&gt;http://CRAN.R-project.org/package=foreign&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Carl Boettiger,   (2014) knitcitations: Citations for knitr markdown files.  &lt;a href=&#34;http://CRAN.R-project.org/package=knitcitations&#34; target=&#34;_blank&#34;&gt;http://CRAN.R-project.org/package=knitcitations&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Hadley Wickham,   (2011) The Split-Apply-Combine Strategy for Data Analysis.  &lt;em&gt;Journal of Statistical Software&lt;/em&gt;  &lt;strong&gt;40&lt;/strong&gt;  (1)   1-29  &lt;a href=&#34;http://www.jstatsoft.org/v40/i01/&#34; target=&#34;_blank&#34;&gt;http://www.jstatsoft.org/v40/i01/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Ramnath Vaidyanathan,   (2014) rMaps: Interactive Maps from R.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;reproducibility&#34;&gt;Reproducibility&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;sessionInfo()
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code&gt;## R version 3.0.2 (2013-09-25)
-## Platform: x86_64-apple-darwin10.8.0 (64-bit)
-## 
-## locale:
-## [1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8
-## 
-## attached base packages:
-## [1] stats     graphics  grDevices utils     datasets  methods   base     
-## 
-## other attached packages:
-## [1] rMaps_0.1.1         plyr_1.8            foreign_0.8-59     
-## [4] dplyr_0.1.1         knitcitations_0.5-0 bibtex_0.3-6       
-## [7] knitr_1.5          
-## 
-## loaded via a namespace (and not attached):
-##  [1] assertthat_0.1     digest_0.6.4       evaluate_0.5.1    
-##  [4] formatR_0.10       grid_3.0.2         httr_0.2          
-##  [7] lattice_0.20-24    rCharts_0.4.2      RColorBrewer_1.0-5
-## [10] Rcpp_0.11.0        RCurl_1.95-4.1     RJSONIO_1.0-3     
-## [13] stringr_0.6.2      tools_3.0.2        whisker_0.3-2     
-## [16] XML_3.95-0.2       xtable_1.7-1       yaml_2.1.10
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Check other topics on &lt;a href=&#34;https://twitter.com/search?q=%23rstats&#34; target=&#34;_blank&#34;&gt;#rstats&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     

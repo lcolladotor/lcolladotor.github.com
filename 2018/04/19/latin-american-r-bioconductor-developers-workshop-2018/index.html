@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme" content="hugo-academic">
+  <meta name="generator" content="Hugo 0.37.1" />
+  <meta name="author" content="Leonardo Collado Torres">
+
+  
+  
+  
+  
+    
+      
+    
+  
+  <meta name="description" content="Today I’m excited to invite you to attend the Latin American R/BioConductor Developers Workshop 2018! It’ll be held in Cuernavaca, Mexico from July 30th to August 3rd, 2018. You can find the official announcement in the Bioconductor support website. Let me share with you why I’m excited about this workshop.
+At BioC2017, Alejandro Reyes and I talked for a while about the low representation of Latin Americans through out the years that either of us have attended the BioC meetings1.">
+
+  
+  <link rel="alternate" hreflang="en-us" href="http://lcolladotor.github.io/2018/04/19/latin-american-r-bioconductor-developers-workshop-2018/">
+
+  
+
+
+  
+
+  
+  
+  <meta name="theme-color" content="#e51744">
+  
+  
+  
+  
+    
+  
+  
+    
+    
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css">
+    
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha512-6MXa8B6uaO18Hid6blRMetEIoPqHf7Ux1tnyIQdpt9qI5OACx7C+O3IVTr98vwGnlcg0LOLa02i9Y1HpVhlfiw==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.1/css/academicons.min.css" integrity="sha512-NThgw3XKQ1absAahW6to7Ey42uycrVvfNfyjqcFNgCmOCQ5AR4AO0SiXrN+8ZtYeappp56lk1WtvjVmEa+VR6A==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" integrity="sha256-ygkqlh3CYSUri3LhQxzdcm0n1EQvH2Y+U5S2idbLtxs=" crossorigin="anonymous">
+  
+  
+  
+  
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:400,700%7cRoboto:400,400italic,700%7cRoboto&#43;Mono%7cKarma%7cMina">
+  
+  <link rel="stylesheet" href="/styles.css">
+  
+
+  
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-45299226-1', 'auto');
+      ga('require', 'eventTracker');
+      ga('require', 'outboundLinkTracker');
+      ga('require', 'urlChangeTracker');
+      ga('send', 'pageview');
+    </script>
+    <script async src="//www.google-analytics.com/analytics.js"></script>
+    
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js" integrity="sha512-HUmooslVKj4m6OBu0OgzjXXr+QuFYy/k7eLI5jdeEy/F4RSgMn6XRWRGkFi5IFaFgy7uFTkegp3Z0XnJf3Jq+g==" crossorigin="anonymous"></script>
+    
+  
+
+  
+  <link rel="alternate" href="http://lcolladotor.github.io/index.xml" type="application/rss+xml" title="L. Collado-Torres">
+  <link rel="feed" href="http://lcolladotor.github.io/index.xml" type="application/rss+xml" title="L. Collado-Torres">
+  
+
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="icon" type="image/png" href="/img/icon.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
+
+  <link rel="canonical" href="http://lcolladotor.github.io/2018/04/19/latin-american-r-bioconductor-developers-workshop-2018/">
+
+  <meta property="twitter:card" content="summary_large_image">
+  
+  <meta property="twitter:site" content="@fellgernon">
+  <meta property="twitter:creator" content="@fellgernon">
+  
+  <meta property="og:site_name" content="L. Collado-Torres">
+  <meta property="og:url" content="http://lcolladotor.github.io/2018/04/19/latin-american-r-bioconductor-developers-workshop-2018/">
+  <meta property="og:title" content="Latin American R/BioConductor Developers Workshop 2018 | L. Collado-Torres">
+  <meta property="og:description" content="Today I’m excited to invite you to attend the Latin American R/BioConductor Developers Workshop 2018! It’ll be held in Cuernavaca, Mexico from July 30th to August 3rd, 2018. You can find the official announcement in the Bioconductor support website. Let me share with you why I’m excited about this workshop.
+At BioC2017, Alejandro Reyes and I talked for a while about the low representation of Latin Americans through out the years that either of us have attended the BioC meetings1.">
+  <meta property="og:locale" content="en-us">
+  
+  <meta property="article:published_time" content="2018-04-19T00:00:00&#43;00:00">
+  
+  <meta property="article:modified_time" content="2018-04-19T00:00:00&#43;00:00">
+  
+
+  
+
+  <title>Latin American R/BioConductor Developers Workshop 2018 | L. Collado-Torres</title>
+
+</head>
+<body id="top" data-spy="scroll" data-target="#toc" data-offset="71" >
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="navbar-header">
+      
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+              data-target=".navbar-collapse" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      
+      <a class="navbar-brand" href="/">L. Collado-Torres</a>
+    </div>
+
+    
+    <div class="collapse navbar-collapse">
+
+      
+      
+      <ul class="nav navbar-nav navbar-right">
+        
+
+        
+        
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#about">
+            
+            <span>Home</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+        
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#publications_selected">
+            
+            <span>Publications</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+        
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#talks">
+            
+            <span>Talks</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+        
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#blog">
+            
+            <span>Blog</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a href="/#cv">
+            
+            <span>CV</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+        
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#mentoring">
+            
+            <span>Students</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+        
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#teaching">
+            
+            <span>Teaching</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+        
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#contact">
+            
+            <span>Contact</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+        
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#search">
+            
+            <span>Search</span>
+            
+          </a>
+        </li>
+
+        
+        
+      
+
+      
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+<article class="article" itemscope itemtype="http://schema.org/Article">
+
+  
+
+
+  <div class="article-container">
+    <h1 itemprop="name">Latin American R/BioConductor Developers Workshop 2018</h1>
+
+    
+
+<div class="article-metadata">
+
+  <span class="article-date">
+    
+    <time datetime="2018-04-19 00:00:00 &#43;0000 UTC" itemprop="datePublished dateModified">
+      Thu, Apr 19, 2018
+    </time>
+  </span>
+  <span itemscope itemprop="author publisher" itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="Leonardo Collado Torres">
+  </span>
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    6 min read
+  </span>
+  
+
+  
+  
+  <span class="middot-divider"></span>
+  <a href="http://lcolladotor.github.io/2018/04/19/latin-american-r-bioconductor-developers-workshop-2018/#disqus_thread"></a>
+  
+
+  
+  
+  
+  <span class="middot-divider"></span>
+  <span class="article-categories">
+    <i class="fa fa-folder"></i>
+    
+    <a href="/categories/rstats">rstats</a
+    >, 
+    
+    <a href="/categories/unam">UNAM</a
+    >
+    
+  </span>
+  
+  
+
+  
+  
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    <li>
+      <a class="twitter"
+         href="https://twitter.com/intent/tweet?text=Latin%20American%20R%2fBioConductor%20Developers%20Workshop%202018&amp;url=http%3a%2f%2flcolladotor.github.io%2f2018%2f04%2f19%2flatin-american-r-bioconductor-developers-workshop-2018%2f"
+         target="_blank" rel="noopener">
+        <i class="fa fa-twitter"></i>
+      </a>
+    </li>
+    <li>
+      <a class="facebook"
+         href="https://www.facebook.com/sharer.php?u=http%3a%2f%2flcolladotor.github.io%2f2018%2f04%2f19%2flatin-american-r-bioconductor-developers-workshop-2018%2f"
+         target="_blank" rel="noopener">
+        <i class="fa fa-facebook"></i>
+      </a>
+    </li>
+    <li>
+      <a class="linkedin"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3a%2f%2flcolladotor.github.io%2f2018%2f04%2f19%2flatin-american-r-bioconductor-developers-workshop-2018%2f&amp;title=Latin%20American%20R%2fBioConductor%20Developers%20Workshop%202018"
+         target="_blank" rel="noopener">
+        <i class="fa fa-linkedin"></i>
+      </a>
+    </li>
+    <li>
+      <a class="weibo"
+         href="http://service.weibo.com/share/share.php?url=http%3a%2f%2flcolladotor.github.io%2f2018%2f04%2f19%2flatin-american-r-bioconductor-developers-workshop-2018%2f&amp;title=Latin%20American%20R%2fBioConductor%20Developers%20Workshop%202018"
+         target="_blank" rel="noopener">
+        <i class="fa fa-weibo"></i>
+      </a>
+    </li>
+    <li>
+      <a class="email"
+         href="mailto:?subject=Latin%20American%20R%2fBioConductor%20Developers%20Workshop%202018&amp;body=http%3a%2f%2flcolladotor.github.io%2f2018%2f04%2f19%2flatin-american-r-bioconductor-developers-workshop-2018%2f">
+        <i class="fa fa-envelope"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+  
+
+</div>
+
+
+    <div class="article-style" itemprop="articleBody">
+      <p>Today I’m excited to invite you to attend the <a href="http://www.comunidadbioinfo.org/r-bioconductor-developers-workshop-2018/">Latin American R/BioConductor Developers Workshop 2018</a>! It’ll be held in Cuernavaca, Mexico from July 30th to August 3rd, 2018. You can find the <a href="https://support.bioconductor.org/p/108108">official announcement in the Bioconductor support website</a>. Let me share with you why I’m excited about this workshop.</p>
+<p><img src="http://bioconductor.org/images/logo_bioconductor.gif"></p>
+<p>At <a href="https://bioconductor.org/help/course-materials/2017/BioC2017/">BioC2017</a>, <a href="http://alejandroreyes.org/">Alejandro Reyes</a> and I talked for a while about the low representation of Latin Americans through out the years that either of us have attended the BioC meetings<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a>. We wanted to see more Latin faces in person but also in the Bioconductor Support Website and among package contributors. We brainstormed for a while and a at dinner with Bioconductor core members we simply ran with our ideas: we brought up the subject and were pleasantly rewarded with support from the Bioconductor team (Alejandro did most of the convincing!). That is, if we organized a conference/workshop, they would help us by sending someone to be one of the instructors.</p>
+<p>Previously, Alejandro and I had already discussed why we like the Bioc meetings so much. One of the keys is that the Bioc meetings have always had events for different levels of R users. That is, you can attend the conference each year and learn something new (that’s how I got my career started). So you can progress from learning R, to mastering several R packages, to contributing R packages to Bioconductor, to brainstorming future directions for the Bioconductor project<a href="#fn2" class="footnoteRef" id="fnref2"><sup>2</sup></a>. Additionally, the Bioc meetings have scientific talks in the mornings so that you can learn new scientific and R developments in a single conference. We’ve seen this model adapted in other Bioc events like BiocAsia, the European Bioconductor Meeting, etc. It would be ideal if we got to that point, but we wanted to start smaller with a focus on developing R packages.</p>
+<p>Separately, <a href="https://www.linkedin.com/in/heladia-salgado-bb122954/">Heladia Salgado</a>, Romualdo Zayas and others from CCG-UNAM<a href="#fn3" class="footnoteRef" id="fnref3"><sup>3</sup></a> and NNB-UNAM<a href="#fn4" class="footnoteRef" id="fnref4"><sup>4</sup></a> have organized the <a href="http://congresos.nnb.unam.mx/">“Talleres Internacionales de Bioinformática”</a><a href="#fn5" class="footnoteRef" id="fnref5"><sup>5</sup></a> (TIBs) for years now. Actually, I was a student in 2006 and gave a lecture in the summer 2010 event. At the TIBs they’ve had an introductory R class for a few years now where <a href="https://www.linkedin.com/in/selenefernandez/">Selene Fernandez-Valverde</a> and <a href="http://liigh.unam.mx/amedina/">Alejandra Medina-Rivera</a> have participated as instructors. Among the feedback they’ve received is the desire for a more advanced R course.</p>
+<p>Alejandro and I talked to Alejandra Medina-Rivera who shared our enthusiasm for Bioconductor. As a PI in Mexico, Alejandra knows very well how sparse are the R/Bioconductor courses that she can send her students to. By the way, Alejandra is the one who first invited me to attend BioC2008!<a href="#fn6" class="footnoteRef" id="fnref6"><sup>6</sup></a> We quickly started an email thread with Heladia and basically, the pieces started to fall in the right places. Heladia, Delfino Garcia-Alonso, Daniela Ledezma, Laura Gómez, Shirley Alquicira, Thalia Uranga Martínez, among others have been instrumental in organizing the workshop. Heladia, Alejandra and others also secured crucial funding from <a href="http://www.ccg.unam.mx/">CCG-UNAM</a> and <a href="http://liigh.unam.mx/">LIIGH-UNAM</a>. Together we were able to invite and get all the logistics so that <a href="https://www.roswellpark.org/martin-morgan">Martin Morgan</a>, <a href="http://www.heatherturner.net/">Heather Turner</a>, <a href="http://www.somos.unicamp.br/professores/view/4722">Benilton Carvalho</a>, Selene Fernandez-Valverde, <a href="http://www.teresa-ortiz.com/eng">María Teresa Ortiz</a> and <a href="http://mastrettayanes-lab.org/">Alicia Mastretta Yanes</a> could all help us teach part of the workshop and/or present their work.</p>
+<p>Briefly, these are some of the reasons why they are amazing:</p>
+<ul>
+<li>Martin: Bioconductor project leader.</li>
+<li>Heather: extensive experience teaching R and bioinformatics.</li>
+<li>Benilton: he helped organize a similar workshop in 2015: <a href="http://lab.foundation/">LAb Foundation Brasil</a>. Also an academic relative of Alejandro and myself.</li>
+<li>Selene: <a href="https://www.fondationloreal.com/categories/for-women-in-science/lang/en">L’Oréal-UNESCO For Women in Science</a>, has taught at TIBs before.</li>
+<li>Teresa: <a href="https://www.meetup.com/rladiescdmx/">RLadiesCDMX</a> plus just look at her awesome <a href="https://github.com/tereom?tab=repositories">GitHub</a> profile!</li>
+<li>Alicia: she has taught an intro to bioinformatics and reproducible genetic analyses course, plus check her <a href="https://github.com/AliciaMstt?tab=repositories">GitHub</a> profile!</li>
+</ul>
+<p>If you check the <a href="http://www.comunidadbioinfo.org/r-bioconductor-developers-workshop-2018/">workshop schedule</a> we have, you’ll notice that we will have several sessions devoted to actually writing R packages. So the course will cover both the theory and the practice side of things. If you attend the workshop, you’ll have plenty of opportunities to network with your peers and to learn from other R developers. You should be super excited now!! ^^ Plus we have a <a href="https://github.com/ComunidadBioInfo/R-BioConductor-Developers-Workshop-2018/blob/master/R-Bioconductor-2018_Program.rmd#code-of-conduct">code of conduct</a> (en <a href="http://www.comunidadbioinfo.org/codigo-de-conducta/">Español</a>) to ensure that the conference will be welcoming to everyone.</p>
+<p>This is also a reminder that you have to keep trying. Back in 2009 or 2010 I had gotten an offer of support from Bioc for sending someone to Cuernavaca, but due to funding circumstances it fell through. Like I said, all the pieces fell in the right places this time. Plus Heladia Salgado has made it all possible!</p>
+<p>2018 is looking like a good year for R courses in Latin America. For example, there’s <a href="http://latin-r.com/en">LatinR</a> and <a href="https://www.meetup.com/rladies-buenos-aires/">Buenos Aires RLadies</a> plus our workshop! Fingers crossed, I’ll be able to attend the workshop in 2019!</p>
+<p>Again, I’m excited to invite you to attend the <a href="http://www.comunidadbioinfo.org/r-bioconductor-developers-workshop-2018/">Latin American R/BioConductor Developers Workshop 2018</a>! Regardless of whether you can attend it, help us spread the word:</p>
+<ul>
+<li>Bioc Support website: <a href="https://support.bioconductor.org/p/108108/" class="uri">https://support.bioconductor.org/p/108108/</a></li>
+<li>Bioc twitter: <a href="https://twitter.com/Bioconductor/status/986943878535303168" class="uri">https://twitter.com/Bioconductor/status/986943878535303168</a></li>
+</ul>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr"><a href="https://twitter.com/hashtag/rstats?src=hash&amp;ref_src=twsrc%5Etfw">#rstats</a> / <a href="https://twitter.com/Bioconductor?ref_src=twsrc%5Etfw">@Bioconductor</a> Latin American BioC Developers Workshop 2018 <a href="https://t.co/eoL4O4V5xT">https://t.co/eoL4O4V5xT</a></p>&mdash; Bioconductor (@Bioconductor) <a href="https://twitter.com/Bioconductor/status/986943878535303168?ref_src=twsrc%5Etfw">April 19, 2018</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<ul>
+<li>Tweet by Alejandro Reyes: <a href="https://twitter.com/areyesq/status/986943887976656896" class="uri">https://twitter.com/areyesq/status/986943887976656896</a></li>
+</ul>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">If you are a programmer and want to become a <a href="https://twitter.com/Bioconductor?ref_src=twsrc%5Etfw">@Bioconductor</a> developer, join the Latin American Developers Workshop in Cuernavaca, Mexico, from Jul 30 to Aug 3. More info here: <a href="https://t.co/TAcfqYSiM6">https://t.co/TAcfqYSiM6</a> <a href="https://twitter.com/hashtag/rstats?src=hash&amp;ref_src=twsrc%5Etfw">#rstats</a> <a href="https://twitter.com/CDSBMexico?ref_src=twsrc%5Etfw">@CDSBMexico</a> <a href="https://twitter.com/ccg_unam?ref_src=twsrc%5Etfw">@ccg_unam</a></p>&mdash; Alejandro Reyes (@areyesq) <a href="https://twitter.com/areyesq/status/986943887976656896?ref_src=twsrc%5Etfw">April 19, 2018</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<ul>
+<li>Tweet by LCG UNAM: <a href="https://twitter.com/lcgunam/status/986691090920230913" class="uri">https://twitter.com/lcgunam/status/986691090920230913</a></li>
+</ul>
+<blockquote class="twitter-tweet"><p lang="ca" dir="ltr">Talleres Internacionales de Bioinformática 2018 y Latin American R/Bioconductor Developers Workshop 30jul-3ago <a href="https://twitter.com/ccg_unam?ref_src=twsrc%5Etfw">@ccg_unam</a> <a href="https://twitter.com/unammorelos?ref_src=twsrc%5Etfw">@unammorelos</a> <a href="https://twitter.com/UNAM_MX?ref_src=twsrc%5Etfw">@unam_mx</a> <a href="https://t.co/oHWKjbrDrb">https://t.co/oHWKjbrDrb</a><a href="https://twitter.com/hashtag/RegistroAbierto?src=hash&amp;ref_src=twsrc%5Etfw">#RegistroAbierto</a> <a href="https://t.co/bdmOREzhuy">pic.twitter.com/bdmOREzhuy</a></p>&mdash; LCG UNAM (@lcgunam) <a href="https://twitter.com/lcgunam/status/986691090920230913?ref_src=twsrc%5Etfw">April 18, 2018</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<ul>
+<li>CDSBMexico twitter: <a href="https://twitter.com/CDSBMexico/status/986672270964871169" class="uri">https://twitter.com/CDSBMexico/status/986672270964871169</a></li>
+</ul>
+<blockquote class="twitter-tweet"><p lang="es" dir="ltr">Te invitamos a los Talleres Internacionales de Bioinformática 2018<a href="https://t.co/dsSekSp4U8">https://t.co/dsSekSp4U8</a> <a href="https://t.co/UN1wmOF9SX">pic.twitter.com/UN1wmOF9SX</a></p>&mdash; ComunidadBioInfo (@CDSBMexico) <a href="https://twitter.com/CDSBMexico/status/986672270964871169?ref_src=twsrc%5Etfw">April 18, 2018</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<ul>
+<li>CDSBMexico facebook: <a href="https://www.facebook.com/events/215830399185346/" class="uri">https://www.facebook.com/events/215830399185346/</a></li>
+<li>Website: <a href="http://www.comunidadbioinfo.org/r-bioconductor-developers-workshop-2018/" class="uri">http://www.comunidadbioinfo.org/r-bioconductor-developers-workshop-2018/</a></li>
+<li>Registration form: <a href="http://congresos.nnb.unam.mx/TIB2018/registro/" class="uri">http://congresos.nnb.unam.mx/TIB2018/registro/</a> (select “Latin American R/BioConductor Developers Workshop 2018”)</li>
+</ul>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>The Bioc team has been great about financially supporting newcomers! I was one of them: just remember to apply before the deadline expires!<a href="#fnref1">↩</a></p></li>
+<li id="fn2"><p>It doesn’t have to be in that order. For example, anyone attending the Bioc meeting is welcome at the Developer’s Day and to chime in the discussions about the Bioconductor project.<a href="#fnref2">↩</a></p></li>
+<li id="fn3"><p>Centro de Ciencias Genómicas: Center for Genomic Sciences<a href="#fnref3">↩</a></p></li>
+<li id="fn4"><p>Nodo Nacional de Bioinformática: National Bioinformatics Node<a href="#fnref4">↩</a></p></li>
+<li id="fn5"><p>Internacional Bioinformatics Workshops<a href="#fnref5">↩</a></p></li>
+<li id="fn6"><p>I then taught a few courses at LCG-UNAM, CCG-UNAM and IBT-UNAM from 2008 to 2011 with some slides in Spanish and English. Alejandro was my TA for one of these courses! For a few years since then I would get emails in Spanish asking about some of those courses. You can still find those courses online, but I bet that the material is outdated. In any case, it’s another example of the limited training opportunities.<a href="#fnref6">↩</a></p></li>
+</ol>
+</div>
+
+    </div>
+
+    
+
+
+<div class="article-tags">
+  
+  <a class="btn btn-primary btn-outline" href="/tags/bioconductor">Bioconductor</a>
+  
+  <a class="btn btn-primary btn-outline" href="/tags/rstats">rstats</a>
+  
+  <a class="btn btn-primary btn-outline" href="/tags/teaching">Teaching</a>
+  
+</div>
+
+
+
+
+    
+    
+    <div class="article-widget">
+      <div class="hr-light"></div>
+      <h3>Related</h3>
+      <ul>
+        
+        <li><a href="/2018/03/08/blogdown-archetype-template/">blogdown archetype (template)</a></li>
+        
+        <li><a href="/2018/03/07/blogdown-insert-image-addin/">blogdown Insert Image addin</a></li>
+        
+        <li><a href="/2018/02/17/r-markdown-blog-template/">R markdown blog template</a></li>
+        
+        <li><a href="/2017/05/04/Updating-R/">Updating R</a></li>
+        
+        <li><a href="/2016/03/07/BiocParallel/">Are you doing parallel computations in R? Then use BiocParallel</a></li>
+        
+      </ul>
+    </div>
+    
+
+    
+
+    
+<section id="comments">
+  <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "fellgernonbit" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+
+
+
+  </div>
+</article>
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="powered-by">
+
+
+      
+      
+      <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4ef23e545d41b87c"></script>
+      <script type="text/javascript">
+        addthis.layers({
+          'theme' : 'transparent',
+          'share' : {
+            'position' : 'left',
+            'numPreferredServices' : 5,
+            'desktop' : false,
+            'mobile' : true
+          }, 
+          'follow' : {
+            'services' : [
+              {'service': 'twitter', 'id': 'fellgernon'},
+              {'service': 'rss', 'id': 'http://feeds.feedburner.com/FellgernonBit'}
+            ],
+      	  'offset' : {'top':'10px'},
+            'title' : 'Follow'
+          }   
+        });
+      </script>
+      
+
+      <script type="text/javascript">
+      var addthis_config = {
+      	data_ga_property: 'UA-45299226-1',
+      	data_ga_social : true,
+      	data_track_addressbar: true
+      };
+      var addthis_share = {
+      	
+      	url_transforms : {
+      		shorten: {
+      			twitter: 'bitly'
+      		}
+      	}, 
+      	shorteners : {
+      		bitly : {}
+      	}
+      }
+      </script>
+      
+      <center>	 
+      <div id="clustrmaps-widget"></div><script type="text/javascript" id="clustrmaps" src="//cdn.clustrmaps.com/map_v2.js?d=Zo-deincaJGsqhqjIWsujtdoNOMJsnnZLefKmxDKVv8"></script>
+      </center>
+
+      &copy; 2011-2018 Leonardo Collado Torres under (CC) BY-NC-SA 4.0. All thoughts and opinions here are my own. &middot; 
+
+      Powered by the
+      <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+      <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+      <span class="pull-right" aria-hidden="true">
+        <a href="#" id="back_to_top">
+          <span class="button_icon">
+            <i class="fa fa-chevron-up fa-2x"></i>
+          </span>
+        </a>
+      </span>
+
+    </p>
+  </div>
+</footer>
+
+
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close btn-large" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Cite</h4>
+      </div>
+      <div>
+        <pre><code class="modal-body tex"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-primary btn-outline js-copy-cite" href="#" target="_blank">
+          <i class="fa fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-primary btn-outline js-download-cite" href="#" target="_blank">
+          <i class="fa fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+    
+    <script id="dsq-count-scr" src="//fellgernonbit.disqus.com/count.js" async></script>
+    
+
+    
+    <script async defer src="//maps.googleapis.com/maps/api/js?key=AIzaSyCFaEeoiq3R9a7jhc-oi4ZxxxY4oCd2BWU"></script>
+    
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha512-3P8rXCuGJdNZOnUx/03c1jOTnMn3rP63nBip5gOP2qmUh5YAdVAvFZ1E+QLZZbC1rtMrQb+mah3AfYW11RUrWA==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.3/imagesloaded.pkgd.min.js" integrity="sha512-umsR78NN0D23AzgoZ11K7raBD+R6hqKojyBZs1w8WvYlsI+QuKRGBx3LFCwhatzBunCjDuJpDHwxD13sLMbpRA==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha512-iztkobsvnjKfAtTNdHkGVjAYTrrtlC7mGp/54c40wowO7LhURYl3gVzzcEqGl/qKXQltJ2HwMrdLcNUdo+N/RQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.4/isotope.pkgd.min.js" integrity="sha512-VDBOIlDbuC4VWxGJNmuFRQ0Li0SKkDpmGyuhAG5LTDLd/dJ/S0WMVxriR2Y+CyPL5gzjpN4f/6iqWVBJlht0tQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" integrity="sha256-X5PoE3KU5l+JcX+w09p/wHl9AzK333C4hJ2I9S5mD4M=" crossorigin="anonymous"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gmaps.js/0.4.25/gmaps.min.js" integrity="sha256-7vjlAeb8OaTrCXZkCNun9djzuB2owUsaO72kXaFDBJs=" crossorigin="anonymous"></script>
+    
+    
+    <script src="/js/hugo-academic.js"></script>
+    
+
+    
+    
+      
+      
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+      
+
+      
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/r.min.js"></script>
+      
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/bash.min.js"></script>
+      
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/python.min.js"></script>
+      
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/stata.min.js"></script>
+      
+
+      
+
+      <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });
+    </script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML" integrity="sha512-tOav5w1OjvsSJzePRtt2uQPFwBoHt1VZcUq8l8nm5284LEKE9FSJBQryzMBzHxY5P0zRdNqEcpLIRVYFNgu1jw==" crossorigin="anonymous"></script>
+    
+    
+
+  </body>
+</html>
+
