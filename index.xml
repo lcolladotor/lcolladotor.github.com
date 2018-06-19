@@ -11,6 +11,127 @@
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Using Slack for Academic Departmental Communication</title>
+      <link>http://lcolladotor.github.io/2018/06/19/using-slack-for-academic-departmental-communication/</link>
+      <pubDate>Tue, 19 Jun 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://lcolladotor.github.io/2018/06/19/using-slack-for-academic-departmental-communication/</guid>
+      <description>&lt;p&gt;This is a joint blog post between &lt;a href=&#34;http://stephaniehicks.com&#34;&gt;Stephanie Hicks&lt;/a&gt; and &lt;a href=&#34;http://lcolladotor.github.io/&#34;&gt;Leonardo Collado-Torres&lt;/a&gt;. We want to share with you our experience using Slack and why you should join us. This post is in an interview style.&lt;/p&gt;
+&lt;div class=&#34;figure&#34;&gt;
+&lt;img src=&#34;http://lcolladotor.github.io/post/2018-06-19-using-slack-for-academic-departmental-communication_files/slack-logo.png&#34; width=&#34;400&#34; /&gt;
+
+&lt;/div&gt;
+&lt;div id=&#34;what-is-slack&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;What is Slack?&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;[SH]&lt;/code&gt; Slack is a communication tool for &lt;em&gt;teams&lt;/em&gt;. The main idea is you have individual chat rooms (referred to as &lt;em&gt;channels&lt;/em&gt; that always begin with the # symbol), which are organized by topics. Traditionally, if an email is sent to everyone on your team, each person must decide how tag or organize emails in their account. In contrast, Slack provides the structure and organization for all users on the team. Each user clicks on a specific topic, or channel, and all the messages related to that topic are already there, thereby reducing the organizational burden. In a slack team used by academic department, topics can be anything from announcements of #conferences, #workshops, #jobs, #seminars, #working_groups, #good_reads, #food_alerts, #payroll, and #IT_help. You can write public messages in the individual channels or send private direct messages to anyone on your team. Everything in Slack is searchable (e.g. files, conversations, people). Finally, Slack includes a lot of functionality and integration with other useful tools such as Google Drive.&lt;/p&gt;
+&lt;div class=&#34;figure&#34;&gt;
+&lt;img src=&#34;http://lcolladotor.github.io/post/2018-06-19-using-slack-for-academic-departmental-communication_files/Screen%20Shot%202018-06-19%20at%204.00.33%20PM.png&#34; width=&#34;600&#34; /&gt;
+
+&lt;/div&gt;
+&lt;p&gt;&lt;code&gt;[LCT]&lt;/code&gt; Slack is a website that provides access to a group of message channels bundled together in what they call a workspace. These channels can have specific purposes and different sets of members. Slack also provides many integrations with other software that we commonly use, like integration with GitHub, todo lists, Google Calendar, Google Docs, etc. The idea of using Slack is to keep your communications with close colleagues organized and make them more fluid than email. You might use the &lt;em&gt;general&lt;/em&gt; channel for making broad announcements, such as an interesting talk from a guest. Then switch to a private channel with your 4 colleagues for that new secret project you are working on and discuss some ideas that would be useful to explore in more detail. And finally, switch to a one-on-one channel with your advisor and ask if you can meet for a few minutes that later today. Like many websites, Slack is also available as its own desktop and phone applications.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;how-do-you-use-slack&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;How do you use Slack?&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;[SH]&lt;/code&gt; While I communicate with colleagues everyday on Slack, I think it’s important to distinguish between Slack and email. Both are important, I just use them for different purposes. I view communication on Slack to be for instant, real-time messaging and discussion to increase collaboration. These are usually short messages compassing a single idea. In contrast, I view email to be a slower, more deliberate medium. There is less expectation for immediate response. In both cases, you can always turn them off completely and enjoy some peace too!&lt;/p&gt;
+&lt;div class=&#34;figure&#34;&gt;
+&lt;img src=&#34;http://lcolladotor.github.io/post/2018-06-19-using-slack-for-academic-departmental-communication_files/Screen%20Shot%202018-06-19%20at%204.04.08%20PM.png&#34; width=&#34;600&#34; /&gt;
+
+&lt;/div&gt;
+&lt;p&gt;versus&lt;/p&gt;
+&lt;div class=&#34;figure&#34;&gt;
+&lt;img src=&#34;http://lcolladotor.github.io/post/2018-06-19-using-slack-for-academic-departmental-communication_files/Screen%20Shot%202018-06-19%20at%204.04.18%20PM.png&#34; width=&#34;600&#34; /&gt;
+
+&lt;/div&gt;
+&lt;p&gt;&lt;code&gt;[LCT]&lt;/code&gt; I’m part of multiple Slack &lt;em&gt;workplaces&lt;/em&gt; (collections of channels and users) but I mostly use one with my genomics collaborators. There, we have a channel per project, some of which can be silent for weeks/months. But that’s ok, because I can always jump back to them and revise what we were talking about. We have a channel for R questions, one for the team that I’m a part of (Andrew Jaffe’s lab), one for organizing when and where to eat lunch, another one with the recount2 team, a diversity channel, one for our computing cluster JHPCE, among others. I also frequently ask and get asked questions on one-on-one channels with Andrew’s lab members and people elsewhere from our genomics workplace. I love using Twitter for networking in academia and keeping myself updated. So I also tend to share relevant news to specific channels I’m a part of. For the project specific channels I also use the integration with GitHub to keep everything in one place and reduce the chance of git merge issues :P&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;what-do-you-like-about-slack&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;What do you like about Slack?&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;[SH]&lt;/code&gt; I recently transitioned from being a postdoctoral research fellow to an assistant professor. Many people warned me about the increase in the number of emails that I would receive. While that is certainly true, I would attribute Slack to being the biggest mitigator in reducing the number of emails that I have received. It reduces my email burden and increases communication between collaborators and colleagues. When an email sometimes seems too formal, Slack is &lt;em&gt;perfect&lt;/em&gt; for sending out quick messages.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;[LCT]&lt;/code&gt; It greatly reduces the amount of emails and email chains. Also, I like having the option of more communication with all my colleagues than would be typically allowed via email. Like no one would like an email about some interesting R package tweet or emails about lunch. Also, it was very useful this past year when I advised two students. I could get them involved in different projects, get them observe how we do some things, but also provide them a space to ask me questions during the week outside of our weekly meeting slot. Ultimately, I like to be organized and Slack helps me stay organized.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;any-more-tips&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Any more tips?&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;[SH]&lt;/code&gt; I have found that the more I engage and write messages in channels on a Slack team, the more I get in return. As conversations flow in a given channel on a particular topic, I may or may not have anything useful to contribute. If it’s the former, I try to pass along links, advice, knowledge or whatever is appropriate. If it’s the latter, I still gain knowledge by being able to read other people’s responses and learning how others would have approached or solved a problem. Either way it’s a win-win!&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;[LCT]&lt;/code&gt; Regardless of what channel you use, it’s important to keep your messages polite. Basically, following a code of conduct similar to &lt;a href=&#34;http://research.libd.org/rstatsclub/#coc&#34;&gt;this one&lt;/a&gt;. This is not the anonymous internet, here you are interacting with your colleagues and you have to be aware of biases you might have, otherwise you might perpetrate some problems &lt;a href=&#34;https://work.qz.com/1128150/your-companys-slack-is-probably-sexist/&#34;&gt;like sexism&lt;/a&gt;. Remember, you share the responsibility of making sure that your Slack workspace is a welcoming environment where anyone is allowed to ask questions. I also think that it’s very important to keep your boundaries clear between work and home. I highly recommend going to your &lt;em&gt;preferences&lt;/em&gt; and automatically disabling notifications outside work hours as shown below. That’s something you can’t do with Google Chat: yes, I might be available after work hours, but I want to choose whether to respond or not and I don’t want others to expect an immediate answer if they see me online.&lt;/p&gt;
+&lt;div class=&#34;figure&#34;&gt;
+&lt;img src=&#34;http://lcolladotor.github.io/post/2018-06-19-using-slack-for-academic-departmental-communication_files/Screen%20Shot%202018-06-18%20at%209.52.35%20AM.png&#34; width=&#34;600&#34; /&gt;
+
+&lt;/div&gt;
+&lt;p&gt;If you want more, check &lt;a href=&#34;https://docs.google.com/presentation/d/1ji-3hLYPs3yIEu7wqyRdkGanxdON84ypuq8lyL5Yf-I/edit#slide=id.p&#34;&gt;this great presentation&lt;/a&gt; about Slack by Stephanie Hicks.&lt;/p&gt;
+&lt;div id=&#34;acknowledgements&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Acknowledgements&lt;/h3&gt;
+&lt;p&gt;This blog post was made possible thanks to:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;&lt;a href=&#34;https://CRAN.R-project.org/package=blogdown&#34;&gt;blogdown&lt;/a&gt;&lt;/em&gt; &lt;a id=&#39;cite-Xie_2017&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://github.com/rstudio/blogdown&#39;&gt;Xie, Hill, and Thomas, 2017&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;a href=&#34;https://CRAN.R-project.org/package=devtools&#34;&gt;devtools&lt;/a&gt;&lt;/em&gt; &lt;a id=&#39;cite-Wickham_2018&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://CRAN.R-project.org/package=devtools&#39;&gt;Wickham, Hester, and Chang, 2018&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;references&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;References&lt;/h3&gt;
+&lt;p&gt;
+&lt;a id=&#39;bib-Wickham_2018&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-Wickham_2018&#34;&gt;[1]&lt;/a&gt;&lt;cite&gt; H. Wickham, J. Hester and W. Chang. &lt;em&gt;devtools: Tools to Make Developing R Packages Easier&lt;/em&gt;. R package version 1.13.5. 2018. URL: &lt;a href=&#34;https://CRAN.R-project.org/package=devtools&#34;&gt;https://CRAN.R-project.org/package=devtools&lt;/a&gt;.&lt;/cite&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;a id=&#39;bib-Xie_2017&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-Xie_2017&#34;&gt;[2]&lt;/a&gt;&lt;cite&gt; Y. Xie, A. P. Hill and A. Thomas. &lt;em&gt;blogdown: Creating Websites with R Markdown&lt;/em&gt;. ISBN 978-0815363729. Boca Raton, Florida: Chapman and Hall/CRC, 2017. URL: &lt;a href=&#34;https://github.com/rstudio/blogdown&#34;&gt;https://github.com/rstudio/blogdown&lt;/a&gt;.&lt;/cite&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;reproducibility&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Reproducibility&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;## Session info ----------------------------------------------------------------------------------------------------------&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##  setting  value                       
+##  version  R version 3.5.0 (2018-04-23)
+##  system   x86_64, darwin15.6.0        
+##  ui       X11                         
+##  language (EN)                        
+##  collate  en_US.UTF-8                 
+##  tz       America/New_York            
+##  date     2018-06-19&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Packages --------------------------------------------------------------------------------------------------------------&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##  package       * version date       source                            
+##  backports       1.1.2   2017-12-13 cran (@1.1.2)                     
+##  base          * 3.5.0   2018-04-24 local                             
+##  bibtex          0.4.2   2017-06-30 CRAN (R 3.5.0)                    
+##  BiocStyle     * 2.8.2   2018-05-30 Bioconductor                      
+##  blogdown        0.6     2018-04-18 CRAN (R 3.5.0)                    
+##  bookdown        0.7     2018-02-18 CRAN (R 3.5.0)                    
+##  colorout      * 1.2-0   2018-05-03 Github (jalvesaq/colorout@c42088d)
+##  compiler        3.5.0   2018-04-24 local                             
+##  datasets      * 3.5.0   2018-04-24 local                             
+##  devtools      * 1.13.5  2018-02-18 CRAN (R 3.5.0)                    
+##  digest          0.6.15  2018-01-28 CRAN (R 3.5.0)                    
+##  evaluate        0.10.1  2017-06-24 cran (@0.10.1)                    
+##  graphics      * 3.5.0   2018-04-24 local                             
+##  grDevices     * 3.5.0   2018-04-24 local                             
+##  htmltools       0.3.6   2017-04-28 cran (@0.3.6)                     
+##  httr            1.3.1   2017-08-20 CRAN (R 3.5.0)                    
+##  jsonlite        1.5     2017-06-01 CRAN (R 3.5.0)                    
+##  knitcitations * 1.0.8   2017-07-04 CRAN (R 3.5.0)                    
+##  knitr           1.20    2018-02-20 cran (@1.20)                      
+##  lubridate       1.7.4   2018-04-11 CRAN (R 3.5.0)                    
+##  magrittr        1.5     2014-11-22 cran (@1.5)                       
+##  memoise         1.1.0   2017-04-21 CRAN (R 3.5.0)                    
+##  methods       * 3.5.0   2018-04-24 local                             
+##  plyr            1.8.4   2016-06-08 cran (@1.8.4)                     
+##  R6              2.2.2   2017-06-17 CRAN (R 3.5.0)                    
+##  Rcpp            0.12.17 2018-05-18 cran (@0.12.17)                   
+##  RefManageR      1.2.0   2018-04-25 CRAN (R 3.5.0)                    
+##  rmarkdown       1.10    2018-06-11 CRAN (R 3.5.0)                    
+##  rprojroot       1.3-2   2018-01-03 cran (@1.3-2)                     
+##  stats         * 3.5.0   2018-04-24 local                             
+##  stringi         1.2.3   2018-06-12 CRAN (R 3.5.0)                    
+##  stringr         1.3.1   2018-05-10 CRAN (R 3.5.0)                    
+##  tools           3.5.0   2018-04-24 local                             
+##  utils         * 3.5.0   2018-04-24 local                             
+##  withr           2.1.2   2018-03-15 CRAN (R 3.5.0)                    
+##  xfun            0.2     2018-06-16 CRAN (R 3.5.0)                    
+##  xml2            1.2.0   2018-01-24 CRAN (R 3.5.0)                    
+##  yaml            2.1.19  2018-05-01 CRAN (R 3.5.0)&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Mindfulness</title>
       <link>http://lcolladotor.github.io/2018/06/11/mindfulness/</link>
       <pubDate>Mon, 11 Jun 2018 00:00:00 +0000</pubDate>
@@ -22,7 +143,7 @@ experiences occurring in the present moment, which can be developed
 through the practice of meditation and other training.&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;In academia and science, but really anywhere, we can encounter many sources of stress (some examples below). We all deal with it in different ways and this MBSR course is just one that I’m liking right now and recommend. If there’s no course near you, check out the &lt;a href=&#34;https://www.amazon.com/gp/product/B00C4BA3UK&#34;&gt;Full Catastrophe Living&lt;/a&gt; book that my course is based on&lt;a href=&#34;#fn1&#34; class=&#34;footnoteRef&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;All these tweets are threads, so you’ll have to open them to see them: click on the blue bird on the right side of each tweet.&lt;/p&gt;
-&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;I won an NSF grant yesterday, with three weeks to go before applying to tenure. &lt;br&gt;&lt;br&gt;A thread👇&lt;/p&gt;&amp;mdash; Bryony DuPont (@BryonyDuPont) &lt;a href=&#34;https://twitter.com/BryonyDuPont/status/1005618536100683777?ref_src=twsrc%5Etfw&#34;&gt;June 10, 2018&lt;/a&gt;&lt;/blockquote&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;I won an NSF grant yesterday, with three weeks to go before applying to tenure. &lt;br&gt;&lt;br&gt;A thread👇&lt;/p&gt;&amp;mdash; Dr. Bryony DuPont (@BryonyDuPont) &lt;a href=&#34;https://twitter.com/BryonyDuPont/status/1005618536100683777?ref_src=twsrc%5Etfw&#34;&gt;June 10, 2018&lt;/a&gt;&lt;/blockquote&gt;
 &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
 
 &lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Just another barrier that us scientists in &lt;a href=&#34;https://twitter.com/hashtag/developing?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#developing&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/countries?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#countries&lt;/a&gt; need to find ways to overcome. Not only do we have less funding, but also generating data that for other countries is routine is more expensive. &lt;a href=&#34;https://twitter.com/hashtag/latin?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#latin&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/american?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#american&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/scientists?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#scientists&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/plight?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#plight&lt;/a&gt; &lt;a href=&#34;https://t.co/Hln7N4x4iM&#34;&gt;https://t.co/Hln7N4x4iM&lt;/a&gt;&lt;/p&gt;&amp;mdash; Daniela Robles (@daniela_oaks) &lt;a href=&#34;https://twitter.com/daniela_oaks/status/1004798860835938305?ref_src=twsrc%5Etfw&#34;&gt;June 7, 2018&lt;/a&gt;&lt;/blockquote&gt;
@@ -964,71 +1085,6 @@ session_info()
       
       <guid>http://lcolladotor.github.io/publication/schizophrenia_DE/</guid>
       <description></description>
-    </item>
-    
-    <item>
-      <title>How to ask for help for Bioconductor packages</title>
-      <link>http://lcolladotor.github.io/2017/03/06/How-to-ask-for-help-for-Bioconductor-packages/</link>
-      <pubDate>Mon, 06 Mar 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://lcolladotor.github.io/2017/03/06/How-to-ask-for-help-for-Bioconductor-packages/</guid>
-      <description>
-
-&lt;div class=&#34;alert alert-note&#34;&gt;
-  &lt;p&gt;tl;dr Please post your question at the Bioconductor support website &lt;a href=&#34;https://support.bioconductor.org/&#34; target=&#34;_blank&#34;&gt;https://support.bioconductor.org/&lt;/a&gt; and check the posting guide &lt;a href=&#34;http://www.bioconductor.org/help/support/posting-guide/&#34; target=&#34;_blank&#34;&gt;http://www.bioconductor.org/help/support/posting-guide/&lt;/a&gt;. It&#39;s important that you provide reproducible code and information about your R session.&lt;/p&gt;
-
-&lt;/div&gt;
-
-
-&lt;p&gt;Recently I have been getting more questions about several packages I maintain. It&#39;s great to see more interest from users, but at the same time most questions lack the information I need to help the users. I have also gotten most of the questions via email, which is why I am writing this post. As of today, I will no longer answer questions related to my Bioconductor packages via personal emails. This might sound harsh, but hopefully the rest of this post will convince you that it&#39;s the best thing to do. You might also be interested in the basics of using &lt;a href=&#34;http://bioconductor.org/packages/release/bioc/vignettes/derfinder/inst/doc/derfinder-quickstart.html#basics&#34; target=&#34;_blank&#34;&gt;derfinder&lt;/a&gt;, &lt;a href=&#34;http://bioconductor.org/packages/release/bioc/vignettes/regionReport/inst/doc/regionReport.html#basics&#34; target=&#34;_blank&#34;&gt;regionReport&lt;/a&gt; or &lt;a href=&#34;http://bioconductor.org/packages/release/bioc/vignettes/recount/inst/doc/recount-quickstart.html#basics&#34; target=&#34;_blank&#34;&gt;recount&lt;/a&gt;, among others.&lt;/p&gt;
-
-&lt;p&gt;The Bioconductor project is a community project and it benefits from users interacting in public venues. When a user asks a question at the &lt;a href=&#34;https://support.bioconductor.org/&#34; target=&#34;_blank&#34;&gt;Bioconductor support website&lt;/a&gt;, they are providing information that future users might be interested in. That is, the user (&lt;strong&gt;U1&lt;/strong&gt;) is contributing information to the overall documentation around the Bioconductor package they are asking a question about. Ideally, a new user (&lt;strong&gt;U2&lt;/strong&gt;) can then read through the question U1 wrote, check the solution, and move on. This is one of the main reasons why we (developers) want questions to be well documented. There are a couple of quick things that U1 can check that will make their question much more useful to the community.&lt;/p&gt;
-
-&lt;p&gt;&lt;center&gt;
-&lt;a href=&#34;http://www.bioconductor.org/help/support/posting-guide/&#34;&gt;&lt;img alt = &#39;shinycsv landing&#39; width=&#39;600&#39; src=&#39;http://lcolladotor.github.io/figs/2017-03-06-bioc-support/question.png&#39; /&gt;&lt;/a&gt;
-&lt;/center&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;session-information&#34;&gt;Session information&lt;/h2&gt;
-
-&lt;p&gt;One of the strengths of Bioconductor is that all the packages have vignettes and lots of documentation. The packages are also checked regularly and must pass some tests. That also means that packages can change frequently, at least more frequently than CRAN packages. There&#39;s also the added complexity that at any given point in time there is a release branch and a development branch. This means that there are many variables and saying that you are using the &amp;quot;latest version&amp;quot; doesn&#39;t mean much to the developer. All of this information and more is part of the &lt;em&gt;R session information&lt;/em&gt;. That is why I and others request users to post their session information. It&#39;s very easy to get, simply run the following code:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;## Install devtools if needed
-# install.packages(&#39;devtools&#39;)
-
-## Reproducibility info
-library(&#39;devtools&#39;)
-options(width = 120)
-session_info()
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;The output might be too long to post in the &lt;a href=&#34;https://support.bioconductor.org/&#34; target=&#34;_blank&#34;&gt;Bioconductor support website&lt;/a&gt;. The easy solution is to save the information you want displayed in a &lt;a href=&#34;https://gist.github.com/&#34; target=&#34;_blank&#34;&gt;gist&lt;/a&gt;. Then simply add the gist link in your question. Note that you need to have the link under &amp;quot;text&amp;quot; formatting and not &amp;quot;code&amp;quot;.&lt;/p&gt;
-
-&lt;h2 id=&#34;code-to-reproduce-the-error&#34;&gt;Code to reproduce the error&lt;/h2&gt;
-
-&lt;p&gt;If U1 includes the session information, their question will be pretty good, but not ideal yet. Many of the questions I&#39;ve been asked do not include code for me to figure out the exact steps of what they were doing. A lot of times I can infer pieces of what they were doing from their description of the problem. But doing so takes quite a bit of my time and effort, and is still not perfect. Now imagine that U2 is reading through the question: they would probably get lost!&lt;/p&gt;
-
-&lt;p&gt;There is a wide range of things that U1 could have done. To help the developer, the best thing is for the user to include the code that lead to the error. The code should include how the data was loaded, so that the developer can run it themselves and check in more detail what went wrong. This means providing a small subset of the data or using some publicly available data.&lt;/p&gt;
-
-&lt;p&gt;I realize that writing code that reproduces the error is not easy. But it helps a lot for learning more about R and Bioconductor. I can tell you that I went through the same process, and in my experience you can find out what you are doing wrong by writing the reproducible code.&lt;/p&gt;
-
-&lt;h2 id=&#34;extra&#34;&gt;Extra&lt;/h2&gt;
-
-&lt;p&gt;Here are some other tips that are useful.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;If you run &lt;code&gt;traceback()&lt;/code&gt; immediately after getting the error and include the output in your question, that would be great. It makes it easier to check at what point the code failed and produced the error.&lt;/li&gt;
-&lt;li&gt;Recently when I ask questions myself, I include the &amp;quot;non-evaluated code&amp;quot; (clean code in your script) and &amp;quot;evaluated code&amp;quot; (think of the R console: a mix of code and output). The non-evaluated code makes it easier for others to copy-paste the code into their R session without having to deal with any formatting issues (&lt;a href=&#34;https://github.com/leekgroup/recount/issues/8#issue-210124094&#34; target=&#34;_blank&#34;&gt;example&lt;/a&gt;).&lt;/li&gt;
-&lt;li&gt;If you encounter a new error, post a new question instead of &amp;quot;replying&amp;quot; to the first one.&lt;/li&gt;
-&lt;li&gt;Introduce yourself.&lt;/li&gt;
-&lt;li&gt;Be polite.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;By now you should be ready to post some great questions! Thanks for contributing to the Bioconductor community.&lt;/p&gt;
-
-&lt;h3 id=&#34;want-more&#34;&gt;Want more?&lt;/h3&gt;
-
-&lt;p&gt;Check other &lt;a href=&#34;https://twitter.com/jhubiostat&#34; target=&#34;_blank&#34;&gt;@jhubiostat&lt;/a&gt; student and alumni blogs at &lt;a href=&#34;http://bmorebiostat.com/&#34; target=&#34;_blank&#34;&gt;Bmore Biostats&lt;/a&gt; as well as topics on &lt;a href=&#34;https://twitter.com/search?q=%23rstats&#34; target=&#34;_blank&#34;&gt;#rstats&lt;/a&gt;.&lt;/p&gt;
-</description>
     </item>
     
   </channel>
