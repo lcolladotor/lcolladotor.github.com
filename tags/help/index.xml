@@ -195,11 +195,8 @@ head(installed)
 &lt;p&gt;Finally, install the missing packages&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;## For Bioconductor and CRAN packages
-source(&#39;http://bioconductor.org/biocLite.R&#39;)
-biocLite(installed[!installed %in% current])
-
-
-## Bioconductor version 3.6 (BiocInstaller 1.27.2), ?biocLite for help
+install.packages(&amp;quot;BiocManager&amp;quot;)
+BiocManager::install(installed[!installed %in% current])
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;and now you can continue on with your analysis 😄 You didn&#39;t even need to figure out the best order to install the packages!&lt;/p&gt;

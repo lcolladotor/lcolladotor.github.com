@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="theme" content="hugo-academic">
-  <meta name="generator" content="Hugo 0.37.1" />
+  <meta name="generator" content="Hugo 0.44" />
   <meta name="author" content="Leonardo Collado Torres">
 
   
@@ -463,11 +463,8 @@ head(installed)
 <p>Finally, install the missing packages</p>
 
 <pre><code>## For Bioconductor and CRAN packages
-source('http://bioconductor.org/biocLite.R')
-biocLite(installed[!installed %in% current])
-
-
-## Bioconductor version 3.6 (BiocInstaller 1.27.2), ?biocLite for help
+install.packages(&quot;BiocManager&quot;)
+BiocManager::install(installed[!installed %in% current])
 </code></pre>
 
 <p>and now you can continue on with your analysis 😄 You didn't even need to figure out the best order to install the packages!</p>

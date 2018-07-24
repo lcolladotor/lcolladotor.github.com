@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="theme" content="hugo-academic">
-  <meta name="generator" content="Hugo 0.37.1" />
+  <meta name="generator" content="Hugo 0.44" />
   <meta name="author" content="Leonardo Collado Torres">
 
   
@@ -597,9 +597,8 @@ system.time( y.snow &lt;- bplapply(1:10, birthday,
 
 <p>If you are convinced about using <code>BiocParallel</code>, which I hope you are by now, check out the <code>Introduction to BiocParallel</code> vignette available at <a href="http://www.bioconductor.org/packages/release/bioc/html/BiocParallel.html" target="_blank">BiocParallel's landing page</a>. It explains in more detail how to use it and it's rich set of features. But if you just want to jump right in and start playing around with it, install it by running the following code:</p>
 
-<pre><code class="language-r">## try http:// if https:// URLs are not supported
-source(&quot;https://bioconductor.org/biocLite.R&quot;)
-biocLite(&quot;BiocParallel&quot;)
+<pre><code class="language-r">install.packages(&quot;BiocManager&quot;)
+BiocManager::install(&quot;BiocParallel&quot;)
 </code></pre>
 
 <h2 id="conclusions">Conclusions</h2>

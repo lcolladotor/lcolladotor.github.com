@@ -208,9 +208,8 @@ system.time( y.snow &amp;lt;- bplapply(1:10, birthday,
 
 &lt;p&gt;If you are convinced about using &lt;code&gt;BiocParallel&lt;/code&gt;, which I hope you are by now, check out the &lt;code&gt;Introduction to BiocParallel&lt;/code&gt; vignette available at &lt;a href=&#34;http://www.bioconductor.org/packages/release/bioc/html/BiocParallel.html&#34; target=&#34;_blank&#34;&gt;BiocParallel&#39;s landing page&lt;/a&gt;. It explains in more detail how to use it and it&#39;s rich set of features. But if you just want to jump right in and start playing around with it, install it by running the following code:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;## try http:// if https:// URLs are not supported
-source(&amp;quot;https://bioconductor.org/biocLite.R&amp;quot;)
-biocLite(&amp;quot;BiocParallel&amp;quot;)
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;install.packages(&amp;quot;BiocManager&amp;quot;)
+BiocManager::install(&amp;quot;BiocParallel&amp;quot;)
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;h2 id=&#34;conclusions&#34;&gt;Conclusions&lt;/h2&gt;

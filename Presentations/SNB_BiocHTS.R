@@ -38,8 +38,8 @@ plot(rnorm(1000, mean = 3.3128, sd = 0.123), runif(1000, -10.74, 231), type="p",
 ###################################################
 ### chunk number 7:  eval=FALSE
 ###################################################
-## source("http://bioconductor.org/biocLite.R")
-## biocLite(c("Rsamtools", "GenomicRanges", "ChIPpeakAnno"))
+## install.packages("BiocManager")
+## BiocManager::install(c("Rsamtools", "GenomicRanges", "ChIPpeakAnno"))
 
 
 ###################################################
