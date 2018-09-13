@@ -7,8 +7,218 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2011-2018 Leonardo Collado Torres under (CC) BY-NC-SA 4.0. All thoughts and opinions here are my own.</copyright>
-    <lastBuildDate>Mon, 30 Jul 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 13 Sep 2018 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://lcolladotor.github.io/post/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>R Gene Regulatory Interaction Formulator For Inquiring Networks</title>
+      <link>http://lcolladotor.github.io/2018/09/13/r-gene-regulatory-interaction-formulator-for-inquiring-networks/</link>
+      <pubDate>Thu, 13 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://lcolladotor.github.io/2018/09/13/r-gene-regulatory-interaction-formulator-for-inquiring-networks/</guid>
+      <description>&lt;p&gt;&lt;em&gt;This blog post was written by &lt;a href=&#34;https://github.com/mar-esther23/&#34;&gt;ME Martinez-Sanchez&lt;/a&gt;, &lt;a href=&#34;https://www.researchgate.net/profile/Stalin_Munoz&#34;&gt;S Muñoz&lt;/a&gt;, &lt;a href=&#34;http://www.fciencias.unam.mx/directorio/33021&#34;&gt;M Carrillo&lt;/a&gt;, &lt;a href=&#34;https://www.researchgate.net/profile/Eugenio_Azpeitia&#34;&gt;E Azpeitia&lt;/a&gt;, &lt;a href=&#34;turing.iimas.unam.mx/~drosenbl/&#34;&gt;D Rosenblueth&lt;/a&gt; and originally posted at the &lt;a href=&#34;http://www.comunidadbioinfo.org/r-gene-regulatory-interaction-formulator-for-inquiring-networks/&#34;&gt;CDSB blog&lt;/a&gt;.&lt;a href=&#34;#fn1&#34; class=&#34;footnoteRef&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;In this blog post we will describe the package &lt;em&gt;&lt;a href=&#34;https://github.com/mar-esther23/rGriffin&#34;&gt;rGriffin&lt;/a&gt;&lt;/em&gt; &lt;a id=&#39;cite-Martinez-Sanchez_2018&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;#bib-Martinez-Sanchez_2018&#39;&gt;Martinez-Sanchez, Muñoz, Carrillo, Azpeitia, et al., 2018&lt;/a&gt;) that was one of the projects developed during the &lt;a href=&#34;http://congresos.nnb.unam.mx/TIB2018/r-bioconductor-developers-workshop-2018/&#34;&gt;TIB2018-BCDW&lt;/a&gt;. We hope to continue developing &lt;a href=&#34;http://turing.iimas.unam.mx/griffin/&#34;&gt;&lt;code&gt;Griffin&lt;/code&gt;&lt;/a&gt; and &lt;em&gt;&lt;a href=&#34;https://github.com/mar-esther23/rGriffin&#34;&gt;rGriffin&lt;/a&gt;&lt;/em&gt; (&lt;a href=&#39;#bib-Martinez-Sanchez_2018&#39;&gt;Martinez-Sanchez, Muñoz, Carrillo, Azpeitia, et al., 2018&lt;/a&gt;). If you have ideas, suggestions or bugs, please contact us via &lt;a href=&#34;https://github.com/mar-esther23/rGriffin&#34;&gt;rGriffin GitHub repo&lt;/a&gt;.&lt;/p&gt;
+&lt;div class=&#34;figure&#34;&gt;
+&lt;img src=&#34;http://lcolladotor.github.io/post/2018-09-13-r-gene-regulatory-interaction-formulator-for-inquiring-networks_files/header.jpg&#34; width=&#34;800&#34; /&gt;
+
+&lt;/div&gt;
+&lt;div id=&#34;the-problem&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;The problem&lt;/h3&gt;
+&lt;p&gt;Boolean networks allow us to give a mechanistic explanation to how cell types emerge from regulatory networks. However, inferring the regulatory network and its functions is complex problem, as the available information is often incomplete. &lt;em&gt;&lt;a href=&#34;https://github.com/mar-esther23/rGriffin&#34;&gt;rGriffin&lt;/a&gt;&lt;/em&gt; (&lt;a href=&#39;#bib-Martinez-Sanchez_2018&#39;&gt;Martinez-Sanchez, Muñoz, Carrillo, Azpeitia, et al., 2018&lt;/a&gt;) uses available biological information (regulatory interactions, cell types, mutants) codified as a set of restrictions and returns the &lt;a href=&#34;https://en.wikipedia.org/wiki/Boolean_network&#34;&gt;Boolean Networks&lt;/a&gt; that satisfy that restrictions. This Boolean networks can then be used to study the biological system.&lt;/p&gt;
+&lt;p&gt;The &lt;em&gt;&lt;a href=&#34;https://github.com/mar-esther23/rGriffin&#34;&gt;rGriffin&lt;/a&gt;&lt;/em&gt; (&lt;a href=&#39;#bib-Martinez-Sanchez_2018&#39;&gt;Martinez-Sanchez, Muñoz, Carrillo, Azpeitia, et al., 2018&lt;/a&gt;) package is an R connector to &lt;a href=&#34;http://turing.iimas.unam.mx/griffin/&#34;&gt;&lt;code&gt;Griffin&lt;/code&gt;&lt;/a&gt; (Gene Regulatory Interaction Formulator For Inquiring Networks), a java library for inference and analysis of Boolean Network models. &lt;a href=&#34;http://turing.iimas.unam.mx/griffin/&#34;&gt;&lt;code&gt;Griffin&lt;/code&gt;&lt;/a&gt; takes as inputs biologically meaningful constraints and turns them into a symbolic representation. Using a SAT engine, &lt;a href=&#34;http://turing.iimas.unam.mx/griffin/&#34;&gt;&lt;code&gt;Griffin&lt;/code&gt;&lt;/a&gt; explores the Boolean Network search space, finding all satisfying assignments that are compatible with the specified constraints. The &lt;em&gt;&lt;a href=&#34;https://github.com/mar-esther23/rGriffin&#34;&gt;rGriffin&lt;/a&gt;&lt;/em&gt; (&lt;a href=&#39;#bib-Martinez-Sanchez_2018&#39;&gt;Martinez-Sanchez, Muñoz, Carrillo, Azpeitia, et al., 2018&lt;/a&gt;) package includes a number of functions to interact with the BoolNet package.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;a-small-example&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;A small example&lt;/h3&gt;
+&lt;p&gt;Let us suppose a cell, we know that this cell has three proteins called &lt;strong&gt;a&lt;/strong&gt;, &lt;strong&gt;b&lt;/strong&gt; and &lt;strong&gt;c&lt;/strong&gt;. We know that &lt;strong&gt;a&lt;/strong&gt; activates &lt;strong&gt;b&lt;/strong&gt; and that &lt;strong&gt;b&lt;/strong&gt; and &lt;strong&gt;c&lt;/strong&gt; inhibit each other. We also suspect that &lt;strong&gt;b&lt;/strong&gt; and &lt;strong&gt;c&lt;/strong&gt; &lt;strong&gt;may&lt;/strong&gt; have positive self-regulatory loops. We can add this interactions to the table as “OPU” (optional, positive, unambiguous). This dataframe is the topology of the network.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr class=&#34;header&#34;&gt;
+&lt;th&gt;Source&lt;/th&gt;
+&lt;th&gt;Target&lt;/th&gt;
+&lt;th&gt;Interaction&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td&gt;a&lt;/td&gt;
+&lt;td&gt;b&lt;/td&gt;
+&lt;td&gt;+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td&gt;b&lt;/td&gt;
+&lt;td&gt;c&lt;/td&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td&gt;c&lt;/td&gt;
+&lt;td&gt;b&lt;/td&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td&gt;b&lt;/td&gt;
+&lt;td&gt;b&lt;/td&gt;
+&lt;td&gt;OPU&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td&gt;c&lt;/td&gt;
+&lt;td&gt;c&lt;/td&gt;
+&lt;td&gt;OPU&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Suppose we also have some information of what cell types have been observed. For example, there is a cell type that expresses &lt;strong&gt;b&lt;/strong&gt;, but not &lt;strong&gt;a&lt;/strong&gt; or &lt;strong&gt;c&lt;/strong&gt; and an other cell type that expresses &lt;strong&gt;c&lt;/strong&gt;, but not &lt;strong&gt;a&lt;/strong&gt; or &lt;strong&gt;b&lt;/strong&gt;. There might exist a third cell type that has not been fully characterized where we know that the cell expresses no &lt;strong&gt;a&lt;/strong&gt; or &lt;strong&gt;c&lt;/strong&gt; but we have NO information on &lt;strong&gt;b&lt;/strong&gt;. This dataframe is the attractors of the network.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr class=&#34;header&#34;&gt;
+&lt;th&gt;a&lt;/th&gt;
+&lt;th&gt;b&lt;/th&gt;
+&lt;th&gt;c&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;*&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;We can then use this information to create a query. &lt;em&gt;&lt;a href=&#34;https://github.com/mar-esther23/rGriffin&#34;&gt;rGriffin&lt;/a&gt;&lt;/em&gt; (&lt;a href=&#39;#bib-Martinez-Sanchez_2018&#39;&gt;Martinez-Sanchez, Muñoz, Carrillo, Azpeitia, et al., 2018&lt;/a&gt;) can include other types of information like transition between cell type, cycles, transitions between cell types or mutant cell types.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;## Install using:
+# devtools::install_github(&amp;#39;mar-esther23/rgriffin&amp;#39;)
+## Note that the package depends on rJava
+
+library(&amp;#39;rGriffin&amp;#39;)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Loading required package: rJava&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;genes = c(&amp;#39;a&amp;#39;,&amp;#39;b&amp;#39;,&amp;#39;c&amp;#39;)
+inter = data.frame(source=c(&amp;#39;a&amp;#39;,&amp;#39;b&amp;#39;,&amp;#39;c&amp;#39;, &amp;#39;b&amp;#39;,&amp;#39;c&amp;#39;), 
+                  target=c(&amp;#39;b&amp;#39;, &amp;#39;c&amp;#39;, &amp;#39;b&amp;#39;, &amp;#39;b&amp;#39;, &amp;#39;c&amp;#39;), 
+                  type=c(&amp;#39;+&amp;#39;,&amp;#39;-&amp;#39;,&amp;#39;-&amp;#39;,&amp;#39;OPU&amp;#39;,&amp;#39;OPU&amp;#39;),
+                    stringsAsFactors = F )
+q = create.gquery.graph(inter, genes)
+attr = data.frame(a=c(0,&amp;#39;*&amp;#39;,0), 
+                 b=c(0,1,0), 
+                 c=c(0,0,1),
+                 stringsAsFactors = F )
+q = add.gquery.attractors(q, attr)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Then we can use &lt;code&gt;Griffin&lt;/code&gt; to find the networks that behave according with our biological information.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;nets = run.gquery(q)
+nets&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;targets,factors\na,false\nb,((((!a&amp;amp;b)&amp;amp;!c)|((a&amp;amp;!b)&amp;amp;!c))|((a&amp;amp;b)&amp;amp;!c))\nc,(!b&amp;amp;c)\n&amp;quot;                         
+## [2] &amp;quot;targets,factors\na,false\nb,(((((!a&amp;amp;b)&amp;amp;!c)|((a&amp;amp;!b)&amp;amp;!c))|((a&amp;amp;b)&amp;amp;!c))|((a&amp;amp;b)&amp;amp;c))\nc,(!b&amp;amp;c)\n&amp;quot;             
+## [3] &amp;quot;targets,factors\na,false\nb,((((((!a&amp;amp;b)&amp;amp;!c)|((!a&amp;amp;b)&amp;amp;c))|((a&amp;amp;!b)&amp;amp;!c))|((a&amp;amp;b)&amp;amp;!c))|((a&amp;amp;b)&amp;amp;c))\nc,(!b&amp;amp;c)\n&amp;quot;
+## [4] &amp;quot;targets,factors\na,false\nb,((((!a&amp;amp;b)&amp;amp;!c)|((a&amp;amp;b)&amp;amp;!c))|((a&amp;amp;b)&amp;amp;c))\nc,(!b&amp;amp;c)\n&amp;quot;                           
+## [5] &amp;quot;targets,factors\na,false\nb,((((((!a&amp;amp;b)&amp;amp;!c)|((a&amp;amp;!b)&amp;amp;!c))|((a&amp;amp;!b)&amp;amp;c))|((a&amp;amp;b)&amp;amp;!c))|((a&amp;amp;b)&amp;amp;c))\nc,(!b&amp;amp;c)\n&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;There are multiple options to integrate &lt;code&gt;BoolNet&lt;/code&gt; and &lt;em&gt;&lt;a href=&#34;https://github.com/mar-esther23/rGriffin&#34;&gt;rGriffin&lt;/a&gt;&lt;/em&gt; (&lt;a href=&#39;#bib-Martinez-Sanchez_2018&#39;&gt;Martinez-Sanchez, Muñoz, Carrillo, Azpeitia, et al., 2018&lt;/a&gt;). The function &lt;code&gt;get.net.topology()&lt;/code&gt; can obtain the topology with interaction signs of a BoolNet network. The function &lt;code&gt;attractor2dataframe()&lt;/code&gt; can be used to export a BoolNet attractor as a dataframe that &lt;em&gt;&lt;a href=&#34;https://github.com/mar-esther23/rGriffin&#34;&gt;rGriffin&lt;/a&gt;&lt;/em&gt; (&lt;a href=&#39;#bib-Martinez-Sanchez_2018&#39;&gt;Martinez-Sanchez, Muñoz, Carrillo, Azpeitia, et al., 2018&lt;/a&gt;) can use. The function &lt;code&gt;run.gquery()&lt;/code&gt; includes the option &lt;code&gt;return=’BoolNet’&lt;/code&gt;, that return the inferred networks as &lt;code&gt;BoolNet&lt;/code&gt; networks.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;history&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;History&lt;/h3&gt;
+&lt;p&gt;The development of &lt;a href=&#34;http://turing.iimas.unam.mx/griffin/&#34;&gt;&lt;code&gt;Griffin&lt;/code&gt;&lt;/a&gt; began in 2013 as a PAPIIT (Programa de Apoyo a Proyectos de Investigación e Innovación Tecnológica) project to solve the inference of Boolean Network models for the &lt;strong&gt;Arabidopsis thaliana&lt;/strong&gt; root stem cell niche. It continued in 2015 with support of Conacyt grant 221341.&lt;/p&gt;
+&lt;p&gt;In January, 2017 we organized a course in &lt;a href=&#34;https://www.c3.unam.mx&#34;&gt;C3-UNAM&lt;/a&gt; to teach biologist how to use &lt;a href=&#34;http://turing.iimas.unam.mx/griffin/&#34;&gt;&lt;code&gt;Griffin&lt;/code&gt;&lt;/a&gt;. We received two main comments: the input format was too complicated and it was uncomfortable to use the output with other packages. After some consideration we decided to create an &lt;code&gt;R&lt;/code&gt; wrapper that could export and import &lt;code&gt;BoolNet&lt;/code&gt; networks. We selected &lt;code&gt;BoolNet&lt;/code&gt; as it has an good documentation and the package &lt;code&gt;BoolFilter&lt;/code&gt; had been designed to work with it.&lt;/p&gt;
+&lt;p&gt;The development of &lt;em&gt;&lt;a href=&#34;https://github.com/mar-esther23/rGriffin&#34;&gt;rGriffin&lt;/a&gt;&lt;/em&gt; (&lt;a href=&#39;#bib-Martinez-Sanchez_2018&#39;&gt;Martinez-Sanchez, Muñoz, Carrillo, Azpeitia, et al., 2018&lt;/a&gt;) began during the &lt;a href=&#34;http://fejer.ucol.mx/biomate/&#34;&gt;EOBM 2017&lt;/a&gt; in &lt;a href=&#34;https://portal.ucol.mx/cuib/&#34;&gt;CUIB&lt;/a&gt;. For the following year we continued developing &lt;em&gt;&lt;a href=&#34;https://github.com/mar-esther23/rGriffin&#34;&gt;rGriffin&lt;/a&gt;&lt;/em&gt; (&lt;a href=&#39;#bib-Martinez-Sanchez_2018&#39;&gt;Martinez-Sanchez, Muñoz, Carrillo, Azpeitia, et al., 2018&lt;/a&gt;) as our schedules allowed. There were multiple challenges during the development: defining user-friendly inputs, using &lt;code&gt;Rjava&lt;/code&gt;, and structuring the package. In August 2018, we attended the &lt;a href=&#34;http://congresos.nnb.unam.mx/TIB2018/r-bioconductor-developers-workshop-2018/&#34;&gt;TIB2018-BCDW&lt;/a&gt; where we received valuable guidance from Martin Morgan and Benilton S Carvalho. It was during this workshop that the first version of &lt;em&gt;&lt;a href=&#34;https://github.com/mar-esther23/rGriffin&#34;&gt;rGriffin&lt;/a&gt;&lt;/em&gt; (&lt;a href=&#39;#bib-Martinez-Sanchez_2018&#39;&gt;Martinez-Sanchez, Muñoz, Carrillo, Azpeitia, et al., 2018&lt;/a&gt;) was finished.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;acknowledgements&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Acknowledgements&lt;/h3&gt;
+&lt;p&gt;Here you can find the tweet about the original blog post:&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Check our first contributed blog post: R Gene Regulatory Interaction Formulator For Inquiring Networks&lt;a href=&#34;https://t.co/9azbElGZGH&#34;&gt;https://t.co/9azbElGZGH&lt;/a&gt;&lt;br&gt;&lt;br&gt;ME Martinez-Sanchez, S Muñoz, M Carrillo, E Azpeitia, D Rosenblueth&lt;br&gt;&lt;br&gt;Thx &lt;a href=&#34;https://twitter.com/mt_morgan?ref_src=twsrc%5Etfw&#34;&gt;@mt_morgan&lt;/a&gt; &lt;a href=&#34;https://twitter.com/benilton?ref_src=twsrc%5Etfw&#34;&gt;@benilton&lt;/a&gt;!&lt;a href=&#34;https://twitter.com/hashtag/CDSBMexico?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#CDSBMexico&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/TIB2018?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#TIB2018&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/LatAmBioc18?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#LatAmBioc18&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/rstats?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#rstats&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/TIB?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#TIB&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/blog?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#blog&lt;/a&gt; &lt;a href=&#34;https://t.co/TbJv37fkWQ&#34;&gt;pic.twitter.com/TbJv37fkWQ&lt;/a&gt;&lt;/p&gt;&amp;mdash; ComunidadBioInfo (@CDSBMexico) &lt;a href=&#34;https://twitter.com/CDSBMexico/status/1031904001833414659?ref_src=twsrc%5Etfw&#34;&gt;August 21, 2018&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;This blog post was made possible thanks to:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;&lt;a href=&#34;https://CRAN.R-project.org/package=blogdown&#34;&gt;blogdown&lt;/a&gt;&lt;/em&gt; &lt;a id=&#39;cite-Xie_2017&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://github.com/rstudio/blogdown&#39;&gt;Xie, Hill, and Thomas, 2017&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;a href=&#34;https://CRAN.R-project.org/package=devtools&#34;&gt;devtools&lt;/a&gt;&lt;/em&gt; &lt;a id=&#39;cite-Wickham_2018&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://CRAN.R-project.org/package=devtools&#39;&gt;Wickham, Hester, and Chang, 2018&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;a href=&#34;https://CRAN.R-project.org/package=knitcitations&#34;&gt;knitcitations&lt;/a&gt;&lt;/em&gt; &lt;a id=&#39;cite-Boettiger_2017&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://CRAN.R-project.org/package=knitcitations&#39;&gt;Boettiger, 2017&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;a href=&#34;https://github.com/mar-esther23/rGriffin&#34;&gt;rGriffin&lt;/a&gt;&lt;/em&gt; (&lt;a href=&#39;#bib-Martinez-Sanchez_2018&#39;&gt;Martinez-Sanchez, Muñoz, Carrillo, Azpeitia, et al., 2018&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;references&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;References&lt;/h3&gt;
+&lt;p&gt;
+&lt;a id=&#39;bib-Boettiger_2017&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-Boettiger_2017&#34;&gt;[1]&lt;/a&gt;&lt;cite&gt; C. Boettiger. &lt;em&gt;knitcitations: Citations for ‘Knitr’ Markdown Files&lt;/em&gt;. R package version 1.0.8. 2017. URL: &lt;a href=&#34;https://CRAN.R-project.org/package=knitcitations&#34;&gt;https://CRAN.R-project.org/package=knitcitations&lt;/a&gt;.&lt;/cite&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;a id=&#39;bib-Martinez-Sanchez_2018&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-Martinez-Sanchez_2018&#34;&gt;[2]&lt;/a&gt;&lt;cite&gt; M. Martinez-Sanchez, S. Muñoz, M. Carrillo, E. Azpeitia, et al. &lt;em&gt;rGriffin: Gene Regulatory Interaction Formulator For Inquiring Networks&lt;/em&gt;. R package version 0.1. 2018.&lt;/cite&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;a id=&#39;bib-Wickham_2018&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-Wickham_2018&#34;&gt;[3]&lt;/a&gt;&lt;cite&gt; H. Wickham, J. Hester and W. Chang. &lt;em&gt;devtools: Tools to Make Developing R Packages Easier&lt;/em&gt;. R package version 1.13.6. 2018. URL: &lt;a href=&#34;https://CRAN.R-project.org/package=devtools&#34;&gt;https://CRAN.R-project.org/package=devtools&lt;/a&gt;.&lt;/cite&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;a id=&#39;bib-Xie_2017&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-Xie_2017&#34;&gt;[4]&lt;/a&gt;&lt;cite&gt; Y. Xie, A. P. Hill and A. Thomas. &lt;em&gt;blogdown: Creating Websites with R Markdown&lt;/em&gt;. ISBN 978-0815363729. Boca Raton, Florida: Chapman and Hall/CRC, 2017. URL: &lt;a href=&#34;https://github.com/rstudio/blogdown&#34;&gt;https://github.com/rstudio/blogdown&lt;/a&gt;.&lt;/cite&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;reproducibility&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Reproducibility&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;## Session info ----------------------------------------------------------------------------------------------------------&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##  setting  value                       
+##  version  R version 3.5.1 (2018-07-02)
+##  system   x86_64, darwin15.6.0        
+##  ui       X11                         
+##  language (EN)                        
+##  collate  en_US.UTF-8                 
+##  tz       America/New_York            
+##  date     2018-09-13&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Packages --------------------------------------------------------------------------------------------------------------&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##  package       * version date       source                                
+##  backports       1.1.2   2017-12-13 cran (@1.1.2)                         
+##  base          * 3.5.1   2018-07-09 local                                 
+##  bibtex          0.4.2   2017-06-30 CRAN (R 3.5.0)                        
+##  BiocManager     1.30.2  2018-08-24 CRAN (R 3.5.0)                        
+##  BiocStyle     * 2.9.6   2018-08-19 Bioconductor                          
+##  blogdown        0.8     2018-07-15 CRAN (R 3.5.0)                        
+##  bookdown        0.7     2018-02-18 CRAN (R 3.5.0)                        
+##  colorout      * 1.2-0   2018-05-03 Github (jalvesaq/colorout@c42088d)    
+##  compiler        3.5.1   2018-07-09 local                                 
+##  datasets      * 3.5.1   2018-07-09 local                                 
+##  devtools      * 1.13.6  2018-06-27 CRAN (R 3.5.0)                        
+##  digest          0.6.16  2018-08-22 CRAN (R 3.5.0)                        
+##  evaluate        0.11    2018-07-17 CRAN (R 3.5.0)                        
+##  graphics      * 3.5.1   2018-07-09 local                                 
+##  grDevices     * 3.5.1   2018-07-09 local                                 
+##  htmltools       0.3.6   2017-04-28 cran (@0.3.6)                         
+##  httr            1.3.1   2017-08-20 CRAN (R 3.5.0)                        
+##  jsonlite        1.5     2017-06-01 CRAN (R 3.5.0)                        
+##  knitcitations * 1.0.8   2017-07-04 CRAN (R 3.5.0)                        
+##  knitr           1.20    2018-02-20 cran (@1.20)                          
+##  lubridate       1.7.4   2018-04-11 CRAN (R 3.5.0)                        
+##  magrittr        1.5     2014-11-22 cran (@1.5)                           
+##  memoise         1.1.0   2017-04-21 CRAN (R 3.5.0)                        
+##  methods       * 3.5.1   2018-07-09 local                                 
+##  plyr            1.8.4   2016-06-08 cran (@1.8.4)                         
+##  R6              2.2.2   2017-06-17 CRAN (R 3.5.0)                        
+##  Rcpp            0.12.18 2018-07-23 CRAN (R 3.5.1)                        
+##  RefManageR      1.2.0   2018-04-25 CRAN (R 3.5.0)                        
+##  rGriffin      * 0.1     2018-09-13 Github (mar-esther23/rgriffin@04cdc39)
+##  rJava         * 0.9-10  2018-05-29 CRAN (R 3.5.0)                        
+##  rmarkdown       1.10    2018-06-11 CRAN (R 3.5.0)                        
+##  rprojroot       1.3-2   2018-01-03 cran (@1.3-2)                         
+##  stats         * 3.5.1   2018-07-09 local                                 
+##  stringi         1.2.4   2018-07-20 CRAN (R 3.5.0)                        
+##  stringr         1.3.1   2018-05-10 CRAN (R 3.5.0)                        
+##  tools           3.5.1   2018-07-09 local                                 
+##  utils         * 3.5.1   2018-07-09 local                                 
+##  withr           2.1.2   2018-03-15 CRAN (R 3.5.0)                        
+##  xfun            0.3     2018-07-06 CRAN (R 3.5.0)                        
+##  xml2            1.2.0   2018-01-24 CRAN (R 3.5.0)                        
+##  yaml            2.2.0   2018-07-25 CRAN (R 3.5.0)&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div class=&#34;footnotes&#34;&gt;
+&lt;hr /&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;I’m re-posting their blog post here with their permission so that their post will be shared more widely via &lt;a href=&#34;https://www.r-bloggers.com/&#34;&gt;R-Bloggers&lt;/a&gt; and &lt;a href=&#34;https://rweekly.org/&#34;&gt;R Weekly&lt;/a&gt; among other sites since the CDSB blog is currently not linked to those aggregators. The original blog post has been edited so that it evaluates the R code and includes all the information needed for reproducibility.&lt;a href=&#34;#fnref1&#34;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</description>
+    </item>
     
     <item>
       <title>Harassment, diversity in science and inspiration from my grandmother</title>
@@ -2143,37 +2353,6 @@ session_info()
 &lt;h3 id=&#34;want-more&#34;&gt;Want more?&lt;/h3&gt;
 
 &lt;p&gt;Check other &lt;a href=&#34;https://twitter.com/jhubiostat&#34; target=&#34;_blank&#34;&gt;@jhubiostat&lt;/a&gt; student blogs at &lt;a href=&#34;http://bmorebiostat.com/&#34; target=&#34;_blank&#34;&gt;Bmore Biostats&lt;/a&gt; as well as topics on &lt;a href=&#34;https://twitter.com/search?q=%23rstats&#34; target=&#34;_blank&#34;&gt;#rstats&lt;/a&gt;.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Federico Sánchez Rodríguez 1950-2016</title>
-      <link>http://lcolladotor.github.io/2016/04/04/FedericoSanchez/</link>
-      <pubDate>Mon, 04 Apr 2016 00:00:00 +0000</pubDate>
-      
-      <guid>http://lcolladotor.github.io/2016/04/04/FedericoSanchez/</guid>
-      <description>&lt;p&gt;&lt;center&gt;
-&lt;a href=&#39;http://www.imagechef.com/ic/ribbon/&#39;&gt;&lt;img alt = &#39;Federico Sanchez Ribbon&#39; height=&#39;300&#39; src=&#39;http://lcolladotor.github.io/figs/2016-04-04-FedericoSanchez/Fede-Ribbon.jpg&#39; /&gt;&lt;/a&gt;
-&lt;/center&gt;&lt;/p&gt;
-
-&lt;p&gt;Today the &lt;a href=&#34;https://www.unam.mx/&#34; target=&#34;_blank&#34;&gt;UNAM&lt;/a&gt; community at large mourns the passing of Federico Sánchez Rodríguez. He got his bachelor&#39;s degree from the &lt;a href=&#34;http://www.quimica.unam.mx/&#34; target=&#34;_blank&#34;&gt;School of Chemistry - UNAM&lt;/a&gt;, masters and PhD degrees from &lt;a href=&#34;http://www.biomedicas.unam.mx/&#34; target=&#34;_blank&#34;&gt;Biomedicas - UNAM&lt;/a&gt;, postdoc from &lt;a href=&#34;https://www.ucsf.edu/&#34; target=&#34;_blank&#34;&gt;UCSF&lt;/a&gt;, was a member of CIFN-UNAM now called &lt;a href=&#34;http://www.ccg.unam.mx/en&#34; target=&#34;_blank&#34;&gt;CCG-UNAM&lt;/a&gt; (it&#39;s his affiliation in &lt;a href=&#34;http://www.jbc.org/content/258/20/12618.full.pdf+html&#34; target=&#34;_blank&#34;&gt;this&lt;/a&gt; 1983 paper), and worked most of his career at &lt;a href=&#34;http://ibt.unam.mx/&#34; target=&#34;_blank&#34;&gt;IBT-UNAM&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;center&gt;
-&lt;a href=&#39;http://www.ibt.unam.mx/server/PRG.base?tipo:doc,dir:PRG.curriculum,par:federico&#39;&gt;&lt;img alt = &#39;Federico Sanchez homepage&#39; height=&#39;227&#39; src=&#39;http://www.ibt.unam.mx/img/fot/federico.gif&#39; /&gt;&lt;/a&gt;
-&lt;/center&gt;&lt;/p&gt;
-
-&lt;p&gt;I&#39;m sure that he made many friends, trained many students at all levels, and had a highly productive academic career as evidenced on his &lt;a href=&#34;http://www.ibt.unam.mx/server/PRG.base?tipo:doc,dir:PRG.curriculum,par:federico&#34; target=&#34;_blank&#34;&gt;homepage&lt;/a&gt; where he lists many papers, patents, etc. A &lt;a href=&#34;http://www.ncbi.nlm.nih.gov/pubmed/?term=S%C3%A1nchez%20F%5BAuthor%5D&amp;amp;cauthor=true&amp;amp;cauthor_uid=26911872&#34; target=&#34;_blank&#34;&gt;PubMed author search&lt;/a&gt; includes his papers but be careful to not confuse him with other authors that shared his name.&lt;/p&gt;
-
-&lt;p&gt;I&#39;ll remember Federico fondly for the time we shared at &lt;a href=&#34;http://www.lcg.unam.mx/es/about&#34; target=&#34;_blank&#34;&gt;LCG-UNAM&lt;/a&gt;. He was a great teacher and motivated me to ask as many questions as I could think of. My background in biology was weaker than my classmates, and I loved to ask questions of the sort: if X biolgical process is possible, could Y happen in the cell? He let my imagination run wild. Federico was very supportive of an elective class a few of us organized in our 4th year. You could always tell that he fed off the energy of enthusiastic students. He was always there if you needed some advice. At the end of my time at LCG-UNAM, he enjoyed how I argued against other members of the LCG academic committee. He always supported me in my non-traditional choices. Federico knew many things about plants, but also about the best food, the best drinks, and was always eager to share his knowledge with you.&lt;/p&gt;
-
-&lt;p&gt;In one of my last interactions with him at &lt;em&gt;FedeFest&lt;/em&gt; in August 2014, I asked him a question in the style that I used to during class. I asked him how would he evaluate results from single-cell sequencing and verify that the results were indeed biogical and not technical. A month later, I sent him &lt;a href=&#34;http://genomebiology.biomedcentral.com/articles/10.1186/s13059-014-0452-9&#34; target=&#34;_blank&#34;&gt;this paper&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Fede, I will always remember you fondly.&lt;/p&gt;
-
-&lt;p&gt;Best,
-Leonardo&lt;/p&gt;
-
-&lt;p&gt;LCG-UNAM 2005-2009&lt;/p&gt;
 </description>
     </item>
     
