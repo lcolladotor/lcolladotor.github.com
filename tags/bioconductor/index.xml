@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Bioconductor on L. Collado-Torres</title>
-    <link>/tags/Bioconductor/</link>
+    <link>http://lcolladotor.github.io/tags/Bioconductor/</link>
     <description>Recent content in Bioconductor on L. Collado-Torres</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -12,10 +12,10 @@
     
     <item>
       <title>R Gene Regulatory Interaction Formulator For Inquiring Networks</title>
-      <link>/2018/09/13/r-gene-regulatory-interaction-formulator-for-inquiring-networks/</link>
+      <link>http://lcolladotor.github.io/2018/09/13/r-gene-regulatory-interaction-formulator-for-inquiring-networks/</link>
       <pubDate>Thu, 13 Sep 2018 00:00:00 +0000</pubDate>
       
-      <guid>/2018/09/13/r-gene-regulatory-interaction-formulator-for-inquiring-networks/</guid>
+      <guid>http://lcolladotor.github.io/2018/09/13/r-gene-regulatory-interaction-formulator-for-inquiring-networks/</guid>
       <description>&lt;p&gt;&lt;em&gt;This blog post was written by &lt;a href=&#34;https://github.com/mar-esther23/&#34;&gt;ME Martinez-Sanchez&lt;/a&gt;, &lt;a href=&#34;https://www.researchgate.net/profile/Stalin_Munoz&#34;&gt;S Muñoz&lt;/a&gt;, &lt;a href=&#34;http://www.fciencias.unam.mx/directorio/33021&#34;&gt;M Carrillo&lt;/a&gt;, &lt;a href=&#34;https://www.researchgate.net/profile/Eugenio_Azpeitia&#34;&gt;E Azpeitia&lt;/a&gt;, &lt;a href=&#34;turing.iimas.unam.mx/~drosenbl/&#34;&gt;D Rosenblueth&lt;/a&gt; and originally posted at the &lt;a href=&#34;http://www.comunidadbioinfo.org/r-gene-regulatory-interaction-formulator-for-inquiring-networks/&#34;&gt;CDSB blog&lt;/a&gt;.&lt;a href=&#34;#fn1&#34; class=&#34;footnoteRef&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;In this blog post we will describe the package &lt;em&gt;&lt;a href=&#34;https://github.com/mar-esther23/rGriffin&#34;&gt;rGriffin&lt;/a&gt;&lt;/em&gt; &lt;a id=&#39;cite-Martinez-Sanchez_2018&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;#bib-Martinez-Sanchez_2018&#39;&gt;Martinez-Sanchez, Muñoz, Carrillo, Azpeitia, et al., 2018&lt;/a&gt;) that was one of the projects developed during the &lt;a href=&#34;http://congresos.nnb.unam.mx/TIB2018/r-bioconductor-developers-workshop-2018/&#34;&gt;TIB2018-BCDW&lt;/a&gt;. We hope to continue developing &lt;a href=&#34;http://turing.iimas.unam.mx/griffin/&#34;&gt;&lt;code&gt;Griffin&lt;/code&gt;&lt;/a&gt; and &lt;em&gt;&lt;a href=&#34;https://github.com/mar-esther23/rGriffin&#34;&gt;rGriffin&lt;/a&gt;&lt;/em&gt; (&lt;a href=&#39;#bib-Martinez-Sanchez_2018&#39;&gt;Martinez-Sanchez, Muñoz, Carrillo, Azpeitia, et al., 2018&lt;/a&gt;). If you have ideas, suggestions or bugs, please contact us via &lt;a href=&#34;https://github.com/mar-esther23/rGriffin&#34;&gt;rGriffin GitHub repo&lt;/a&gt;.&lt;/p&gt;
 &lt;div class=&#34;figure&#34;&gt;
@@ -222,10 +222,10 @@ nets&lt;/code&gt;&lt;/pre&gt;
     
     <item>
       <title>Latin American R/BioConductor Developers Workshop 2018</title>
-      <link>/2018/04/19/latin-american-r-bioconductor-developers-workshop-2018/</link>
+      <link>http://lcolladotor.github.io/2018/04/19/latin-american-r-bioconductor-developers-workshop-2018/</link>
       <pubDate>Thu, 19 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>/2018/04/19/latin-american-r-bioconductor-developers-workshop-2018/</guid>
+      <guid>http://lcolladotor.github.io/2018/04/19/latin-american-r-bioconductor-developers-workshop-2018/</guid>
       <description>&lt;p&gt;Today I’m excited to invite you to attend the &lt;a href=&#34;http://www.comunidadbioinfo.org/r-bioconductor-developers-workshop-2018/&#34;&gt;Latin American R/BioConductor Developers Workshop 2018&lt;/a&gt;! It’ll be held in Cuernavaca, Mexico from July 30th to August 3rd, 2018. You can find the &lt;a href=&#34;https://support.bioconductor.org/p/108108&#34;&gt;official announcement in the Bioconductor support website&lt;/a&gt;. Let me share with you why I’m excited about this workshop.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;http://bioconductor.org/images/logo_bioconductor.gif&#34;&gt;&lt;/p&gt;
 &lt;p&gt;At &lt;a href=&#34;https://bioconductor.org/help/course-materials/2017/BioC2017/&#34;&gt;BioC2017&lt;/a&gt;, &lt;a href=&#34;http://alejandroreyes.org/&#34;&gt;Alejandro Reyes&lt;/a&gt; and I talked for a while about the low representation of Latin Americans through out the years that either of us have attended the BioC meetings&lt;a href=&#34;#fn1&#34; class=&#34;footnoteRef&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;. We wanted to see more Latin faces in person but also in the Bioconductor Support Website and among package contributors. We brainstormed for a while and a at dinner with Bioconductor core members we simply ran with our ideas: we brought up the subject and were pleasantly rewarded with support from the Bioconductor team (Alejandro did most of the convincing!). That is, if we organized a conference/workshop, they would help us by sending someone to be one of the instructors.&lt;/p&gt;
@@ -291,10 +291,10 @@ nets&lt;/code&gt;&lt;/pre&gt;
     
     <item>
       <title>Updating R</title>
-      <link>/2017/05/04/Updating-R/</link>
+      <link>http://lcolladotor.github.io/2017/05/04/Updating-R/</link>
       <pubDate>Thu, 04 May 2017 00:00:00 +0000</pubDate>
       
-      <guid>/2017/05/04/Updating-R/</guid>
+      <guid>http://lcolladotor.github.io/2017/05/04/Updating-R/</guid>
       <description>
 
 &lt;p&gt;As you might know by now, the latest R version was recently released (R 3.4.0). That means that you are &lt;em&gt;highly&lt;/em&gt; encouraged to update your R installation. There are several ways to do this some of which are documented in these other blog posts: &lt;a href=&#34;https://www.r-statistics.com/2013/03/updating-r-from-r-on-windows-using-the-installr-package/&#34; target=&#34;_blank&#34;&gt;Tal Galili, 2013&lt;/a&gt;, &lt;a href=&#34;https://www.datascienceriot.com/how-to-upgrade-r-without-losing-your-packages/kris/&#34; target=&#34;_blank&#34;&gt;Kris Eberwein, 2015&lt;/a&gt;. You would think that it&#39;s just a matter of downloading the latest R installer for your OS, installing it, and continuing your analysis. The reality is a bit more complicated. The following short steps will make your life easier.&lt;/p&gt;
@@ -444,10 +444,10 @@ session_info()
     
     <item>
       <title>Are you doing parallel computations in R? Then use BiocParallel</title>
-      <link>/2016/03/07/BiocParallel/</link>
+      <link>http://lcolladotor.github.io/2016/03/07/BiocParallel/</link>
       <pubDate>Mon, 07 Mar 2016 00:00:00 +0000</pubDate>
       
-      <guid>/2016/03/07/BiocParallel/</guid>
+      <guid>http://lcolladotor.github.io/2016/03/07/BiocParallel/</guid>
       <description>
 
 &lt;p&gt;It&#39;s the morning of the first day of oral conferences at &lt;a href=&#34;https://twitter.com/search?q=%23ENAR2016&amp;amp;src=tyah&#34; target=&#34;_blank&#34;&gt;#ENAR2016&lt;/a&gt;. I feel like I have a &lt;a href=&#34;https://en.wiktionary.org/wiki/Spidey-sense&#34; target=&#34;_blank&#34;&gt;spidey sense&lt;/a&gt; since I woke up 3 min after an email from Jeff Leek; just a funny coincidence. Anyhow, I promised Valerie Obenchain at &lt;a href=&#34;https://twitter.com/hashtag/bioc2014&#34; target=&#34;_blank&#34;&gt;#Bioc2014&lt;/a&gt; that I would write a post about one of my favorite Bioconductor packages: &lt;a href=&#34;http://www.bioconductor.org/packages/release/bioc/html/BiocParallel.html&#34; target=&#34;_blank&#34;&gt;BiocParallel&lt;/a&gt; &lt;a id=&#39;cite-biocparallel&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;#bib-biocparallel&#39;&gt;Morgan, Obenchain, Lang, and Thompson, 2016&lt;/a&gt;). By now it&#39;s on the top 5% of downloaded Bioconductor packages, so many people know about it or are unaware that their favorite package uses it behind the scenes.&lt;/p&gt;
@@ -750,10 +750,10 @@ R package version 1.4.3.
     
     <item>
       <title>Where do I start using Bioconductor?</title>
-      <link>/2014/10/16/startBioC/</link>
+      <link>http://lcolladotor.github.io/2014/10/16/startBioC/</link>
       <pubDate>Thu, 16 Oct 2014 00:00:00 +0000</pubDate>
       
-      <guid>/2014/10/16/startBioC/</guid>
+      <guid>http://lcolladotor.github.io/2014/10/16/startBioC/</guid>
       <description>
 
 &lt;p&gt;I was recently asked &lt;em&gt;where do I get started with Bioconductor?&lt;/em&gt; and thought this would be a good short post.&lt;/p&gt;
@@ -838,10 +838,10 @@ URL: &lt;a href=&#34;http://www.R-project.org/&#34;&gt;http://www.R-project.org/
     
     <item>
       <title>Setting up your computer for bioinformatics/biostatistics and a compedium of resources</title>
-      <link>/2012/08/23/setting-up-your-computer-for/</link>
+      <link>http://lcolladotor.github.io/2012/08/23/setting-up-your-computer-for/</link>
       <pubDate>Thu, 23 Aug 2012 00:00:00 +0000</pubDate>
       
-      <guid>/2012/08/23/setting-up-your-computer-for/</guid>
+      <guid>http://lcolladotor.github.io/2012/08/23/setting-up-your-computer-for/</guid>
       <description>&lt;p&gt;Jumping on the train set by &lt;a href=&#34;http://www.biostat.jhsph.edu/~hiparker/&#34;&gt;Hilary Parker&lt;/a&gt; &amp;#8220;&lt;a href=&#34;http://hilaryparker.com/2012/08/16/the-setup-part-1/&#34;&gt;The Setup (Part 1)&lt;/a&gt;&#34; and &lt;a href=&#34;http://biostat.jhsph.edu/~afrazee/&#34;&gt;Alyssa Frazee&lt;/a&gt; &amp;#8220;&lt;a href=&#34;http://alyssafrazee.wordpress.com/&#34;&gt;my software/hardware setup&lt;/a&gt;&amp;#8221;, I&amp;#8217;m going to share my setup and hopefully add something new. They both did a great job already, so make sure you read their posts!&lt;/p&gt;
 &lt;p&gt;I have some experience with all three main OS: Windows, Linux and Mac. That being said, I know some of the basic stuff for each but I surely use Google very frequently to get help. I used to have a dual Windows / Linux (Ubuntu) set up but now I have a Windows laptop/desktop (it&amp;#8217;s a monster :P) at home and I&amp;#8217;m happy working with my Mac. &lt;/p&gt;
 &lt;p&gt;I&amp;#8217;m going to start by mentioning the software I use(d) in each OS and then add some other tools that I really like.&lt;/p&gt;
@@ -950,10 +950,10 @@ URL: &lt;a href=&#34;http://www.R-project.org/&#34;&gt;http://www.R-project.org/
     
     <item>
       <title>The new visualization package for genome data in Bioconductor: ggbio</title>
-      <link>/2011/12/06/the-new-visualization-package-for-genome-data-in/</link>
+      <link>http://lcolladotor.github.io/2011/12/06/the-new-visualization-package-for-genome-data-in/</link>
       <pubDate>Tue, 06 Dec 2011 00:00:00 +0000</pubDate>
       
-      <guid>/2011/12/06/the-new-visualization-package-for-genome-data-in/</guid>
+      <guid>http://lcolladotor.github.io/2011/12/06/the-new-visualization-package-for-genome-data-in/</guid>
       <description>&lt;p&gt;It&amp;#8217;s been a while since I&amp;#8217;ve been waiting for the release of a visualization package in Bioconductor. Back in 2008 I was really impressed by the power of&lt;a href=&#34;http://www.bioconductor.org/packages/release/bioc/html/GenomeGraphs.html&#34;&gt; GenomeGraphs&lt;/a&gt; and I have used it in multiple occasions. Yet from both the &lt;a href=&#34;http://www-huber.embl.de/biocdeveleurope2010/&#34;&gt;Bioconductor Developer Meeting in Heidelberg 2010&lt;/a&gt; and &lt;a href=&#34;https://secure.bioconductor.org/BioC2011/&#34;&gt;BioC2011&lt;/a&gt; I&amp;#8217;ve been waiting for the release of the visualization tools developed by Michael Lawrence and Tengfei Yin at Genentech. &lt;/p&gt;
 &lt;p&gt;So, after a long hiatus where I didn&amp;#8217;t browse the &lt;a href=&#34;http://www.bioconductor.org/packages/release/BiocViews.html&#34;&gt;biocviews&lt;/a&gt; in Bioconductor, I found out that Lawrence and Yin released &lt;a href=&#34;http://www.bioconductor.org/packages/release/bioc/html/ggbio.html&#34;&gt;ggbio&lt;/a&gt; and &lt;a href=&#34;http://www.bioconductor.org/packages/release/bioc/html/biovizBase.html&#34;&gt;biovizBase&lt;/a&gt; (it&amp;#8217;s more of an infrastructure package for ggbio) . I haven&amp;#8217;t really had the time to play around with them, but it&amp;#8217;s definitely worth exploring both of their vignette files: &lt;a href=&#34;http://www.bioconductor.org/packages/release/bioc/vignettes/ggbio/inst/doc/intro.pdf&#34;&gt;ggbio&lt;/a&gt;, &lt;a href=&#34;http://www.bioconductor.org/packages/release/bioc/vignettes/biovizBase/inst/doc/intro.pdf&#34;&gt;biovizBase&lt;/a&gt;. I also think that they&amp;#8217;ll fit very well in Bioconductor because quite a few of their examples involved the gamma of objects the BioC team has released for high-throughput sequencing (HTS) data. Meaning that they work well with objects from IRanges and GenomicRanges. Also, some of the examples use BAM files which are common nowadays in any HTS analysis pipeline. As a plus, ggbio uses&lt;a href=&#34;http://cran.r-project.org/web/packages/ggplot2/index.html&#34;&gt; ggplot2&lt;/a&gt;, which definitely makes clear nice plots.&lt;/p&gt;
 &lt;p&gt;I expect ggbio to replace GenomeGraphs soon (although I love using it), but I&amp;#8217;m also kind of disappointed that I didn&amp;#8217;t see any of the cool examples from BioC2011 in ggbio&amp;#8217;s vignette file. After all, &lt;a href=&#34;https://github.com/tengfei/visnab&#34;&gt;visnab&lt;/a&gt; looked pretty impressive as &lt;a href=&#34;http://www.stat.iastate.edu/centers/CCGS/slides/slides-visnab.pdf&#34;&gt;you can see in this presentation&lt;/a&gt;. I don&amp;#8217;t know if they decided to rename visnab into ggbio, or maybe they haven&amp;#8217;t released visnab yet. Anyhow, give ggbio and biovizBase vignette files a look :)&lt;/p&gt;
@@ -962,10 +962,10 @@ URL: &lt;a href=&#34;http://www.R-project.org/&#34;&gt;http://www.R-project.org/
     
     <item>
       <title>Introducing Biostatistics to first year LCG students</title>
-      <link>/2011/12/04/Introducing-Biostatistics-to-first-year-LCG-students/</link>
+      <link>http://lcolladotor.github.io/2011/12/04/Introducing-Biostatistics-to-first-year-LCG-students/</link>
       <pubDate>Sun, 04 Dec 2011 00:00:00 +0000</pubDate>
       
-      <guid>/2011/12/04/Introducing-Biostatistics-to-first-year-LCG-students/</guid>
+      <guid>http://lcolladotor.github.io/2011/12/04/Introducing-Biostatistics-to-first-year-LCG-students/</guid>
       <description>&lt;p&gt;Around two weeks ago I gave a talk via skype to the first year students from the &lt;a href=&#34;http://www.lcg.unam.mx/about&#34;&gt;Undergraduate Program on Genomic Sciences&lt;/a&gt; (LCG in Spanish) from the National Autonomous University of Mexico (UNAM in Spanish). The talk was under the context of the &lt;em&gt;Introduction to Bioinformatics Seminar Series&lt;/em&gt; whose goal is to familiarize the new students with the bioinformatics world. It used to be a course heavy on exploring database websites, some basic theory, and lots of new concepts and algorithm names. Like, what is BLAST? This year, the course involved several talks from former students (like myself) on their experience and current job (most of us are in graduate school).&lt;/p&gt;
 &lt;p&gt;In my case, I was invited to talk about Biostatistics and R as I was one of the first LCG students to learn and teach R to other students (including PhD students ^^): &lt;a href=&#34;http://www.lcg.unam.mx/~lcollado/R/&#34;&gt;12 hour intro to R and Bioconductor&lt;/a&gt;, &lt;a href=&#34;http://www.lcg.unam.mx/~lcollado/E/&#34;&gt;R in an intro to statistics course&lt;/a&gt;, a &lt;a href=&#34;http://www.lcg.unam.mx/~lcollado/B/&#34;&gt;full course on Bioconductor&lt;/a&gt;. &lt;/p&gt;
 &lt;p&gt;I had a lot of fun preparing my talk as I tried to portray the three main currents in Biostatistics in a way that would be understandable, basic concepts such as a P-value, some basic R code (the students knew the super basics only), and doing so in a way that I would also pass how I see things. A key part for any bioinformatician, as I see it, is to have a good basic toolset. That&amp;#8217;s why I tried to pass on many tips to these young students. Also, I do like to go back to the philosophy of science and whether we need hypothesis nowadays or just models based on the data. I definitely had to cover the topic of communication as I strongly believe that any researcher has to be able to communicate with a biostastician if they want their help in analyzing their data. Also, a biostatistician is not a stastistician, meaning that they have to understand the underlying biological question. I tried emphasizing this point with the students and I attempted to motivate them to take a basic stastistics and probability course (2 preferably). After all, biostatistics is key nowadays in science since biology has gone high-throughput.&lt;/p&gt;

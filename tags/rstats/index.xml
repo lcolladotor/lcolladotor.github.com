@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Rstats on L. Collado-Torres</title>
-    <link>/tags/rstats/</link>
+    <link>http://lcolladotor.github.io/tags/rstats/</link>
     <description>Recent content in Rstats on L. Collado-Torres</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -12,10 +12,10 @@
     
     <item>
       <title>R Gene Regulatory Interaction Formulator For Inquiring Networks</title>
-      <link>/2018/09/13/r-gene-regulatory-interaction-formulator-for-inquiring-networks/</link>
+      <link>http://lcolladotor.github.io/2018/09/13/r-gene-regulatory-interaction-formulator-for-inquiring-networks/</link>
       <pubDate>Thu, 13 Sep 2018 00:00:00 +0000</pubDate>
       
-      <guid>/2018/09/13/r-gene-regulatory-interaction-formulator-for-inquiring-networks/</guid>
+      <guid>http://lcolladotor.github.io/2018/09/13/r-gene-regulatory-interaction-formulator-for-inquiring-networks/</guid>
       <description>&lt;p&gt;&lt;em&gt;This blog post was written by &lt;a href=&#34;https://github.com/mar-esther23/&#34;&gt;ME Martinez-Sanchez&lt;/a&gt;, &lt;a href=&#34;https://www.researchgate.net/profile/Stalin_Munoz&#34;&gt;S Muñoz&lt;/a&gt;, &lt;a href=&#34;http://www.fciencias.unam.mx/directorio/33021&#34;&gt;M Carrillo&lt;/a&gt;, &lt;a href=&#34;https://www.researchgate.net/profile/Eugenio_Azpeitia&#34;&gt;E Azpeitia&lt;/a&gt;, &lt;a href=&#34;turing.iimas.unam.mx/~drosenbl/&#34;&gt;D Rosenblueth&lt;/a&gt; and originally posted at the &lt;a href=&#34;http://www.comunidadbioinfo.org/r-gene-regulatory-interaction-formulator-for-inquiring-networks/&#34;&gt;CDSB blog&lt;/a&gt;.&lt;a href=&#34;#fn1&#34; class=&#34;footnoteRef&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;In this blog post we will describe the package &lt;em&gt;&lt;a href=&#34;https://github.com/mar-esther23/rGriffin&#34;&gt;rGriffin&lt;/a&gt;&lt;/em&gt; &lt;a id=&#39;cite-Martinez-Sanchez_2018&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;#bib-Martinez-Sanchez_2018&#39;&gt;Martinez-Sanchez, Muñoz, Carrillo, Azpeitia, et al., 2018&lt;/a&gt;) that was one of the projects developed during the &lt;a href=&#34;http://congresos.nnb.unam.mx/TIB2018/r-bioconductor-developers-workshop-2018/&#34;&gt;TIB2018-BCDW&lt;/a&gt;. We hope to continue developing &lt;a href=&#34;http://turing.iimas.unam.mx/griffin/&#34;&gt;&lt;code&gt;Griffin&lt;/code&gt;&lt;/a&gt; and &lt;em&gt;&lt;a href=&#34;https://github.com/mar-esther23/rGriffin&#34;&gt;rGriffin&lt;/a&gt;&lt;/em&gt; (&lt;a href=&#39;#bib-Martinez-Sanchez_2018&#39;&gt;Martinez-Sanchez, Muñoz, Carrillo, Azpeitia, et al., 2018&lt;/a&gt;). If you have ideas, suggestions or bugs, please contact us via &lt;a href=&#34;https://github.com/mar-esther23/rGriffin&#34;&gt;rGriffin GitHub repo&lt;/a&gt;.&lt;/p&gt;
 &lt;div class=&#34;figure&#34;&gt;
@@ -222,10 +222,10 @@ nets&lt;/code&gt;&lt;/pre&gt;
     
     <item>
       <title>Getting ready to attend rOpenSci unconf18 and probably working on tidyverse-like functions for the first time</title>
-      <link>/2018/04/27/ropensci-unconf18-and-working-on-tidyverse-like-functions-for-the-first-time/</link>
+      <link>http://lcolladotor.github.io/2018/04/27/ropensci-unconf18-and-working-on-tidyverse-like-functions-for-the-first-time/</link>
       <pubDate>Fri, 27 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>/2018/04/27/ropensci-unconf18-and-working-on-tidyverse-like-functions-for-the-first-time/</guid>
+      <guid>http://lcolladotor.github.io/2018/04/27/ropensci-unconf18-and-working-on-tidyverse-like-functions-for-the-first-time/</guid>
       <description>&lt;p&gt;It’s Friday 7pm and it’s been a long week with ups and downs&lt;a href=&#34;#fn1&#34; class=&#34;footnoteRef&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;. But I’m enthused as I write this blog post. In less than a month from now I’ll be attending &lt;a href=&#34;http://unconf18.ropensci.org/&#34;&gt;rOpenSci unconf18&lt;/a&gt; and it’ll be my first time at this type of event. Yay!&lt;/p&gt;
 &lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Building on my streak of good news, I&amp;#39;m delighted to have been selected to attend &lt;a href=&#34;https://twitter.com/rOpenSci?ref_src=twsrc%5Etfw&#34;&gt;@rOpenSci&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/Unconf18?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#Unconf18&lt;/a&gt; &lt;a href=&#34;https://t.co/Xe6lojB7TS&#34;&gt;https://t.co/Xe6lojB7TS&lt;/a&gt; ^_^ Also, thanks to the &lt;a href=&#34;https://t.co/o5OwUWEaBD&#34;&gt;https://t.co/o5OwUWEaBD&lt;/a&gt; and &lt;a href=&#34;https://twitter.com/LieberInstitute?ref_src=twsrc%5Etfw&#34;&gt;@LieberInstitute&lt;/a&gt; for their support! I&amp;#39;m hoping to relay as much as I can to &lt;a href=&#34;https://twitter.com/LIBDrstats?ref_src=twsrc%5Etfw&#34;&gt;@LIBDrstats&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/rstats?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#rstats&lt;/a&gt;&lt;/p&gt;&amp;mdash; 🇲🇽 Dr. Leonardo Collado-Torres (@fellgernon) &lt;a href=&#34;https://twitter.com/fellgernon/status/983876013015826432?ref_src=twsrc%5Etfw&#34;&gt;April 11, 2018&lt;/a&gt;&lt;/blockquote&gt;
 &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
@@ -369,10 +369,10 @@ Sys.time()&lt;/code&gt;&lt;/pre&gt;
     
     <item>
       <title>Latin American R/BioConductor Developers Workshop 2018</title>
-      <link>/2018/04/19/latin-american-r-bioconductor-developers-workshop-2018/</link>
+      <link>http://lcolladotor.github.io/2018/04/19/latin-american-r-bioconductor-developers-workshop-2018/</link>
       <pubDate>Thu, 19 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>/2018/04/19/latin-american-r-bioconductor-developers-workshop-2018/</guid>
+      <guid>http://lcolladotor.github.io/2018/04/19/latin-american-r-bioconductor-developers-workshop-2018/</guid>
       <description>&lt;p&gt;Today I’m excited to invite you to attend the &lt;a href=&#34;http://www.comunidadbioinfo.org/r-bioconductor-developers-workshop-2018/&#34;&gt;Latin American R/BioConductor Developers Workshop 2018&lt;/a&gt;! It’ll be held in Cuernavaca, Mexico from July 30th to August 3rd, 2018. You can find the &lt;a href=&#34;https://support.bioconductor.org/p/108108&#34;&gt;official announcement in the Bioconductor support website&lt;/a&gt;. Let me share with you why I’m excited about this workshop.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;http://bioconductor.org/images/logo_bioconductor.gif&#34;&gt;&lt;/p&gt;
 &lt;p&gt;At &lt;a href=&#34;https://bioconductor.org/help/course-materials/2017/BioC2017/&#34;&gt;BioC2017&lt;/a&gt;, &lt;a href=&#34;http://alejandroreyes.org/&#34;&gt;Alejandro Reyes&lt;/a&gt; and I talked for a while about the low representation of Latin Americans through out the years that either of us have attended the BioC meetings&lt;a href=&#34;#fn1&#34; class=&#34;footnoteRef&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;. We wanted to see more Latin faces in person but also in the Bioconductor Support Website and among package contributors. We brainstormed for a while and a at dinner with Bioconductor core members we simply ran with our ideas: we brought up the subject and were pleasantly rewarded with support from the Bioconductor team (Alejandro did most of the convincing!). That is, if we organized a conference/workshop, they would help us by sending someone to be one of the instructors.&lt;/p&gt;
@@ -438,10 +438,10 @@ Sys.time()&lt;/code&gt;&lt;/pre&gt;
     
     <item>
       <title>blogdown archetype (template)</title>
-      <link>/2018/03/08/blogdown-archetype-template/</link>
+      <link>http://lcolladotor.github.io/2018/03/08/blogdown-archetype-template/</link>
       <pubDate>Thu, 08 Mar 2018 00:00:00 +0000</pubDate>
       
-      <guid>/2018/03/08/blogdown-archetype-template/</guid>
+      <guid>http://lcolladotor.github.io/2018/03/08/blogdown-archetype-template/</guid>
       <description>&lt;p&gt;In a recent blog post I &lt;a href=&#34;http://lcolladotor.github.io/2018/02/17/r-markdown-blog-template/#.WqDOdpPwa50&#34;&gt;wrote about having a template&lt;/a&gt; for &lt;em&gt;&lt;a href=&#34;https://CRAN.R-project.org/package=blogdown&#34;&gt;blogdown&lt;/a&gt;&lt;/em&gt; posts. I wanted to know if it was possible to do this and make my life (and others hopefully) easier for writing new blog posts that are ready to go with the features I frequently re-use.&lt;/p&gt;
 &lt;p&gt;In my case, I like using &lt;em&gt;&lt;a href=&#34;http://bioconductor.org/packages/BiocStyle&#34;&gt;BiocStyle&lt;/a&gt;&lt;/em&gt; &lt;a id=&#39;cite-Oles_2017&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://github.com/Bioconductor/BiocStyle&#39;&gt;Oleś, Morgan, and Huber, 2017&lt;/a&gt;) for functions such as &lt;code&gt;CRANpkg()&lt;/code&gt;, &lt;code&gt;Biocpkg()&lt;/code&gt; and &lt;code&gt;Githubpkg()&lt;/code&gt;. I also like using &lt;em&gt;&lt;a href=&#34;https://CRAN.R-project.org/package=knitcitations&#34;&gt;knitcitations&lt;/a&gt;&lt;/em&gt; &lt;a id=&#39;cite-Boettiger_2017&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://CRAN.R-project.org/package=knitcitations&#39;&gt;Boettiger, 2017&lt;/a&gt;) for citing with &lt;code&gt;citep()&lt;/code&gt; packages or papers; I use &lt;code&gt;citation()&lt;/code&gt; and &lt;code&gt;bib_metadata()&lt;/code&gt; to get the necessary information, respectively. Furthermore, I prefer &lt;code&gt;devtools::session_info()&lt;/code&gt; &lt;a id=&#39;cite-Wickham_2018&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://CRAN.R-project.org/package=devtools&#39;&gt;Wickham, Hester, and Chang, 2018&lt;/a&gt;) over &lt;code&gt;sessionInfo()&lt;/code&gt; since it provides information of where you got the package, which becomes specially relevant when using packages from GitHub. Finally, I like thanking the creators of the tools I use, which in this case is &lt;em&gt;&lt;a href=&#34;https://CRAN.R-project.org/package=blogdown&#34;&gt;blogdown&lt;/a&gt;&lt;/em&gt; &lt;a id=&#39;cite-Xie_2017&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://github.com/rstudio/blogdown&#39;&gt;Xie, Hill, and Thomas, 2017&lt;/a&gt;).&lt;/p&gt;
 &lt;p&gt;I also like reminding myself how to do some common tasks. Basically, the equivalent of the new R Markdown file you get when using RStudio. In my case, I want to remind myself of the YAML options I frequently use (toc, fig height and width) or how to add screenshots.&lt;/p&gt;
@@ -542,10 +542,10 @@ Sys.time()&lt;/code&gt;&lt;/pre&gt;
     
     <item>
       <title>blogdown Insert Image addin</title>
-      <link>/2018/03/07/blogdown-insert-image-addin/</link>
+      <link>http://lcolladotor.github.io/2018/03/07/blogdown-insert-image-addin/</link>
       <pubDate>Wed, 07 Mar 2018 00:00:00 +0000</pubDate>
       
-      <guid>/2018/03/07/blogdown-insert-image-addin/</guid>
+      <guid>http://lcolladotor.github.io/2018/03/07/blogdown-insert-image-addin/</guid>
       <description>&lt;p&gt;Have you ever tried inserting an image into a &lt;em&gt;&lt;a href=&#34;https://CRAN.R-project.org/package=blogdown&#34;&gt;blogdown&lt;/a&gt;&lt;/em&gt; post? Maybe you have, or maybe you tried and gave up. Lets first review the &lt;em&gt;hard&lt;/em&gt; way before getting to the solution I contributed.&lt;/p&gt;
 &lt;div id=&#34;the-hard-way&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;The &lt;em&gt;hard&lt;/em&gt; way&lt;/h3&gt;
@@ -717,10 +717,10 @@ devtools::install_github(&amp;#39;rstudio/blogdown&amp;#39;)&lt;/code&gt;&lt;/pr
     
     <item>
       <title>R markdown blog template</title>
-      <link>/2018/02/17/r-markdown-blog-template/</link>
+      <link>http://lcolladotor.github.io/2018/02/17/r-markdown-blog-template/</link>
       <pubDate>Sat, 17 Feb 2018 00:00:00 +0000</pubDate>
       
-      <guid>/2018/02/17/r-markdown-blog-template/</guid>
+      <guid>http://lcolladotor.github.io/2018/02/17/r-markdown-blog-template/</guid>
       <description>&lt;p&gt;This blog post is mostly for myself but maybe it’s useful to others. It contains my current R markdown blog template. I initially posted this as a question at &lt;a href=&#34;https://stackoverflow.com/questions/48844340/is-it-possible-to-create-a-rmd-file-template-for-the-blogdown-new-post-addin&#34;&gt;StackOverflow&lt;/a&gt;. Then I read how much a burden we put in &lt;a href=&#34;https://yihui.name/en/2018/02/career-crisis/&#34;&gt;Yihui Xie&lt;/a&gt; and decided that my current setup (copy-pasting) works just fine. In any case using &lt;code&gt;blogdown&lt;/code&gt; with the RStudio IDE is much simpler than what I used to do in the past with &lt;a href=&#34;http://lcolladotor.github.io/2013/11/09/new-Fellgernon-Bit-setup-in-Github/&#34;&gt;jekyll&lt;/a&gt; or with even my prior &lt;a href=&#34;https://github.com/rstudio/blogdown/issues/42&#34;&gt;setup with blogdown&lt;/a&gt;.&lt;/p&gt;
 &lt;div id=&#34;bibliography-setup&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Bibliography setup&lt;/h3&gt;
@@ -845,10 +845,10 @@ bibliography(style = &amp;#39;html&amp;#39;)&lt;/code&gt;&lt;/pre&gt;
     
     <item>
       <title>JHSPH-Biostat through Coursera</title>
-      <link>/2012/10/01/JHSPH-Biostat-through-Coursera/</link>
+      <link>http://lcolladotor.github.io/2012/10/01/JHSPH-Biostat-through-Coursera/</link>
       <pubDate>Mon, 01 Oct 2012 00:00:00 +0000</pubDate>
       
-      <guid>/2012/10/01/JHSPH-Biostat-through-Coursera/</guid>
+      <guid>http://lcolladotor.github.io/2012/10/01/JHSPH-Biostat-through-Coursera/</guid>
       <description>&lt;p&gt;Have you heard of online education? If you are in the US or Mexico I&amp;#8217;m sure that you have seen some ads about online universities. Well, that&amp;#8217;s not the type of education I&amp;#8217;m talking about. I&amp;#8217;m talking about free high-quality education. &lt;/p&gt;
 &lt;p&gt;For some years, the top option has been the &lt;strong&gt;O&lt;/strong&gt;pen &lt;strong&gt;C&lt;/strong&gt;ourse&lt;strong&gt;w&lt;/strong&gt;are (OCW) organized under the &lt;a href=&#34;http://www.ocwconsortium.org/&#34;&gt;Open Courseware Consortium&lt;/a&gt; (OCWC). Back in 2009 I was pushed my undergrad (LCG-UNAM) to design and teach OCW-compliant courses. I even taught a &lt;a href=&#34;http://www.lcg.unam.mx/~lcollado/B/index_en.html&#34;&gt;course on R/Bioconductor&lt;/a&gt; and thought of it as a pilot OCW course. The first seven classes were video recorded. But that project hit a wall because many of the biology professors used slides that heavily relied on copyrighted material. For OCW courses you have to own the copyright of the material that you use (or get permission), so just the idea of having to re-do all the diagrams and figures was overwhelming. This hasn&amp;#8217;t stopped some big universities like &lt;a href=&#34;http://ocw.mit.edu/index.htm&#34;&gt;MIT from publishing OCW-compliant courses&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Recently there&amp;#8217;s been talk of the new horse in the race: &lt;a href=&#34;https://www.coursera.org/&#34;&gt;Coursera&lt;/a&gt;. What is it? Well, &lt;a href=&#34;https://www.coursera.org/about&#34;&gt;according to themselves&lt;/a&gt;:&lt;/p&gt;

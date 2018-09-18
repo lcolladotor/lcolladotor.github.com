@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Web on L. Collado-Torres</title>
-    <link>/categories/Web/</link>
+    <link>http://lcolladotor.github.io/categories/Web/</link>
     <description>Recent content in Web on L. Collado-Torres</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -12,10 +12,10 @@
     
     <item>
       <title>Creating your Jekyll-Bootstrap powered blog for R blogging</title>
-      <link>/2013/11/09/new-Fellgernon-Bit-setup-in-Github/</link>
+      <link>http://lcolladotor.github.io/2013/11/09/new-Fellgernon-Bit-setup-in-Github/</link>
       <pubDate>Sat, 09 Nov 2013 00:00:00 +0000</pubDate>
       
-      <guid>/2013/11/09/new-Fellgernon-Bit-setup-in-Github/</guid>
+      <guid>http://lcolladotor.github.io/2013/11/09/new-Fellgernon-Bit-setup-in-Github/</guid>
       <description>
 
 &lt;p&gt;As you might have noticed, I recently decided to move &lt;code&gt;Fellgernon Bit&lt;/code&gt; from &lt;a href=&#34;http://bit.ly/FellgernonBit&#34; target=&#34;_blank&#34;&gt;Tumblr&lt;/a&gt; to &lt;a href=&#34;http://bit.ly/FellBit&#34; target=&#34;_blank&#34;&gt;GitHub&lt;/a&gt;. There are a couple of reasons why I made this change.&lt;/p&gt;
@@ -341,10 +341,10 @@ sudo gem install nokogiri
     
     <item>
       <title>Bmore Biostats is born!</title>
-      <link>/2013/11/07/bmorebiostats/</link>
+      <link>http://lcolladotor.github.io/2013/11/07/bmorebiostats/</link>
       <pubDate>Thu, 07 Nov 2013 00:00:00 +0000</pubDate>
       
-      <guid>/2013/11/07/bmorebiostats/</guid>
+      <guid>http://lcolladotor.github.io/2013/11/07/bmorebiostats/</guid>
       <description>
 
 &lt;p&gt;In recent weeks, I have met with a group of students &lt;a href=&#34;https://twitter.com/jhubiostat&#34; target=&#34;_blank&#34;&gt;@jhubiostat&lt;/a&gt; interested in blogging about their research, tutorials, pieces of R code, among plenty of other subjects. Within this group we had the idea to aggregate our blogs so it would be easier for others to follow us and to easily promote our own blogs to a much larger audience. Basically, do what &lt;a href=&#34;http://www.r-bloggers.com/&#34; target=&#34;_blank&#34;&gt;R-bloggers&lt;/a&gt; does but focused on blogs from students at Johns Hopkins Biostatistics. Ideally, once a student publishes a new post, our site would pick it up and promote it.&lt;/p&gt;
@@ -419,10 +419,10 @@ sudo gem install nokogiri
     
     <item>
       <title>Liking &#34;Inbox Zero for Life&#34;</title>
-      <link>/2013/02/14/Liking-Inbox-Zero-for-Life/</link>
+      <link>http://lcolladotor.github.io/2013/02/14/Liking-Inbox-Zero-for-Life/</link>
       <pubDate>Thu, 14 Feb 2013 00:00:00 +0000</pubDate>
       
-      <guid>/2013/02/14/Liking-Inbox-Zero-for-Life/</guid>
+      <guid>http://lcolladotor.github.io/2013/02/14/Liking-Inbox-Zero-for-Life/</guid>
       <description>&lt;p&gt;I&amp;#8217;ve been using the &amp;#8220;&lt;a href=&#34;http://bit.ly/12vYvIh&#34;&gt;Inbox Zero for Life&lt;/a&gt;&#34; strategy for a few weeks, and I think that it&amp;#8217;s been payed off for me in this short span.&lt;/p&gt;
 &lt;p&gt;As it&amp;#8217;s stated in that long guide, one of the major concerns you might have is that it could end up as just changing a current problem for another one. I think that so far, that hasn&amp;#8217;t been the case for me. Sure, my starred emails is not 0, but it stays at a steady number and doesn&amp;#8217;t increase as my inbox (even with priority inbox) did. &lt;/p&gt;
 &lt;p&gt;I also have a few filters in place that pick up the emails that I will most likely never read. For example, advertising emails and school wide announcements.&lt;/p&gt;
@@ -433,10 +433,10 @@ sudo gem install nokogiri
     
     <item>
       <title>Adding youtube videos in pdfs, html reports and html presentations</title>
-      <link>/2012/12/05/adding-youtube-videos-in-pdfs-html-reports/</link>
+      <link>http://lcolladotor.github.io/2012/12/05/adding-youtube-videos-in-pdfs-html-reports/</link>
       <pubDate>Wed, 05 Dec 2012 00:00:00 +0000</pubDate>
       
-      <guid>/2012/12/05/adding-youtube-videos-in-pdfs-html-reports/</guid>
+      <guid>http://lcolladotor.github.io/2012/12/05/adding-youtube-videos-in-pdfs-html-reports/</guid>
       <description>&lt;p&gt;I got a question today on how to add a video to a beamer pdf presentation. Well, I had never done it, but I got curious enough to google around for a bit and here is the end product.&lt;/p&gt;
 &lt;p&gt;One way of doing it is using the &lt;a href=&#34;http://www.ctan.org/pkg/media9&#34;&gt;media9&lt;/a&gt; tex package. For this to work you need to have the latest version of texlive (or miktex). Then, it&amp;#8217;s quite straight forward to include the video. The issue is that you have to open the pdf with Acrobat Reader 10+ (9 something works. I think that it&amp;#8217;s 9.4.1+ but well, the point is that you need an updated version). You will also need a live web connection to actually show the video. An alternative (if you have the video file) is to convert it to swf and embed it. &lt;/p&gt;
 &lt;p&gt;Here is my &lt;a href=&#34;http://www.biostat.jhsph.edu/~lcollado/misc/video_in_beamer/video.tex&#34;&gt;tex&lt;/a&gt; example file with the corresponding &lt;a href=&#34;http://www.biostat.jhsph.edu/~lcollado/misc/video_in_beamer/video.pdf&#34;&gt;pdf&lt;/a&gt; output compiled using pdflatex. Remember that you need Acrobat Reader to actually see the video in the pdf.&lt;/p&gt;
@@ -452,10 +452,10 @@ sudo gem install nokogiri
     
     <item>
       <title>Super basic Illustrator: event invitation</title>
-      <link>/2012/10/24/Super-basic-Illustrator-event-invitation/</link>
+      <link>http://lcolladotor.github.io/2012/10/24/Super-basic-Illustrator-event-invitation/</link>
       <pubDate>Wed, 24 Oct 2012 00:00:00 +0000</pubDate>
       
-      <guid>/2012/10/24/Super-basic-Illustrator-event-invitation/</guid>
+      <guid>http://lcolladotor.github.io/2012/10/24/Super-basic-Illustrator-event-invitation/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;http://www.biostat.jhsph.edu/people/student/mejia.shtml&#34;&gt;Amanda&lt;/a&gt; and I are organizing a cultural student mixer for students in our department. One of the things we needed to do was invite everyone to attend. I like using computers, but graphic design is not something that I&amp;#8217;m too excited about, but I still wanted to try something out.&lt;/p&gt;
 &lt;p&gt;My goal was to show an image of a bowling lane where the Earth (as the ball) knocks down &amp;#8220;statistical pins&amp;#8221;. We recently covered least squares in our class, so I felt that the analogy of &amp;#8220;minimizing our cultural differences&amp;#8221; fit perfectly. &lt;/p&gt;
 &lt;p&gt;I&amp;#8217;ve used Photoshop in the past, but after reading (or parts of) &lt;a href=&#34;http://www.dreaminfinity.com/nocturne/2010/10/photoshop-illustrator-or-indesign/&#34;&gt;Photoshop, Illustrator, or Indesign?&lt;/a&gt; by Chris Takakura I decided to use Illustrator. The first thing I tried to do was to crop the Earth from the following image which I found using Google Images with the &amp;#8220;large&amp;#8221; option (I didn&amp;#8217;t want small pics that would look bad if enlarged).&lt;/p&gt;
@@ -477,10 +477,10 @@ sudo gem install nokogiri
     
     <item>
       <title>Check all your accounts for emails at once in Gmail</title>
-      <link>/2012/10/02/Check-all-your-accounts-for-emails-at-once-in-Gmail/</link>
+      <link>http://lcolladotor.github.io/2012/10/02/Check-all-your-accounts-for-emails-at-once-in-Gmail/</link>
       <pubDate>Tue, 02 Oct 2012 00:00:00 +0000</pubDate>
       
-      <guid>/2012/10/02/Check-all-your-accounts-for-emails-at-once-in-Gmail/</guid>
+      <guid>http://lcolladotor.github.io/2012/10/02/Check-all-your-accounts-for-emails-at-once-in-Gmail/</guid>
       <description>&lt;p&gt;Do you use Gmail as your primary email account? Primary, what? Well, I&amp;#8217;m sure that you have your personal account somewhere and your work or university account too. You can either log into each email interface or you can integrate them to a single one.&lt;/p&gt;
 &lt;p&gt;Gmail makes this easy as you can go to the &amp;#8220;Settings -&amp;gt; Accounts and Import&amp;#8221; to set up Gmail to pull all of your email into it. In that same page you can configure Gmail to send email through your work/university accounts or at least camouflage it. &lt;/p&gt;
 &lt;p&gt;That is all great, but as you will soon learn, Gmail pulls the emails from your other accounts at random intervals. It tries to do so in an intelligent way by pulling more frequently during the times of the day that you get more emails from those accounts. But you&amp;#8217;ll soon realize that some emails get pulled an hour later.&lt;/p&gt;
@@ -499,10 +499,10 @@ sudo gem install nokogiri
     
     <item>
       <title>JHSPH-Biostat through Coursera</title>
-      <link>/2012/10/01/JHSPH-Biostat-through-Coursera/</link>
+      <link>http://lcolladotor.github.io/2012/10/01/JHSPH-Biostat-through-Coursera/</link>
       <pubDate>Mon, 01 Oct 2012 00:00:00 +0000</pubDate>
       
-      <guid>/2012/10/01/JHSPH-Biostat-through-Coursera/</guid>
+      <guid>http://lcolladotor.github.io/2012/10/01/JHSPH-Biostat-through-Coursera/</guid>
       <description>&lt;p&gt;Have you heard of online education? If you are in the US or Mexico I&amp;#8217;m sure that you have seen some ads about online universities. Well, that&amp;#8217;s not the type of education I&amp;#8217;m talking about. I&amp;#8217;m talking about free high-quality education. &lt;/p&gt;
 &lt;p&gt;For some years, the top option has been the &lt;strong&gt;O&lt;/strong&gt;pen &lt;strong&gt;C&lt;/strong&gt;ourse&lt;strong&gt;w&lt;/strong&gt;are (OCW) organized under the &lt;a href=&#34;http://www.ocwconsortium.org/&#34;&gt;Open Courseware Consortium&lt;/a&gt; (OCWC). Back in 2009 I was pushed my undergrad (LCG-UNAM) to design and teach OCW-compliant courses. I even taught a &lt;a href=&#34;http://www.lcg.unam.mx/~lcollado/B/index_en.html&#34;&gt;course on R/Bioconductor&lt;/a&gt; and thought of it as a pilot OCW course. The first seven classes were video recorded. But that project hit a wall because many of the biology professors used slides that heavily relied on copyrighted material. For OCW courses you have to own the copyright of the material that you use (or get permission), so just the idea of having to re-do all the diagrams and figures was overwhelming. This hasn&amp;#8217;t stopped some big universities like &lt;a href=&#34;http://ocw.mit.edu/index.htm&#34;&gt;MIT from publishing OCW-compliant courses&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Recently there&amp;#8217;s been talk of the new horse in the race: &lt;a href=&#34;https://www.coursera.org/&#34;&gt;Coursera&lt;/a&gt;. What is it? Well, &lt;a href=&#34;https://www.coursera.org/about&#34;&gt;according to themselves&lt;/a&gt;:&lt;/p&gt;
@@ -540,10 +540,10 @@ sudo gem install nokogiri
     
     <item>
       <title>Correctly synching AddThis and Google Analytics social stats</title>
-      <link>/2012/01/27/correctly-synching-addthis-and-google-analytics-social/</link>
+      <link>http://lcolladotor.github.io/2012/01/27/correctly-synching-addthis-and-google-analytics-social/</link>
       <pubDate>Fri, 27 Jan 2012 00:00:00 +0000</pubDate>
       
-      <guid>/2012/01/27/correctly-synching-addthis-and-google-analytics-social/</guid>
+      <guid>http://lcolladotor.github.io/2012/01/27/correctly-synching-addthis-and-google-analytics-social/</guid>
       <description>&lt;p&gt;&lt;p&gt;As a minor addition to my previous posts about setting up a blog, I want to detail a bit more how to synchronize your &lt;a href=&#34;http://www.addthis.com/analytics&#34;&gt;AddThis social sharing statistics&lt;/a&gt; (AddThis Analytics) with &lt;a href=&#34;http://www.google.com/analytics/&#34;&gt;Google Analytics&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;The &lt;a href=&#34;http://www.addthis.com/help/google-analytics-integration#social&#34;&gt;main help file explaining how to do&lt;/a&gt; so has been a bit confusing for me. Though, in part that&amp;#8217;s because I didn&amp;#8217;t read it completely. Plus there were a few things I didn&amp;#8217;t know.&lt;/p&gt;
 &lt;p&gt;First, Google Analytics (GA) has two ways in which you can add it to your site: synchronous and asynchronous. There are a few posts around, &lt;a href=&#34;http://blog.httpwatch.com/2010/07/29/asynchronous-google-analytics-is-better-but-not-faster/&#34;&gt;like this one&lt;/a&gt;, explaining the difference. Basically, the asynchronous mode is supposed to give your site faster load times (negligible normally) and most importantly more complete data in cases where people close your site before it finishes loading.&lt;/p&gt;
@@ -562,10 +562,10 @@ sudo gem install nokogiri
     
     <item>
       <title>Make it easy for your visitors to suscribe with a burnt RSS feed</title>
-      <link>/2011/11/30/make-it-easy-for-your-visitors-to-suscribe-with-a-burnt/</link>
+      <link>http://lcolladotor.github.io/2011/11/30/make-it-easy-for-your-visitors-to-suscribe-with-a-burnt/</link>
       <pubDate>Wed, 30 Nov 2011 00:00:00 +0000</pubDate>
       
-      <guid>/2011/11/30/make-it-easy-for-your-visitors-to-suscribe-with-a-burnt/</guid>
+      <guid>http://lcolladotor.github.io/2011/11/30/make-it-easy-for-your-visitors-to-suscribe-with-a-burnt/</guid>
       <description>&lt;p&gt;Recently I talked about &lt;a href=&#34;http://fellgernon.tumblr.com/post/13070638939/setting-up-your-blog&#34;&gt;how to set up your own blog&lt;/a&gt; and now I&amp;#8217;m going to continue by emphasizing the importance of an &lt;a href=&#34;http://en.wikipedia.org/wiki/RSS&#34;&gt;RSS feed&lt;/a&gt;. What is it? Basically it is a unique format in which content from frequently updated sites (like a blog) is &lt;a href=&#34;http://en.wikipedia.org/wiki/Web_syndication&#34;&gt;syndicated&lt;/a&gt;. Web syndication allows you to share the content of your site (blog) to many different sites automatically. This is specially useful for people who are interested in following your blog. Sure, you can let them type your blog&amp;#8217;s site each time or simply allow them to receive updates on their email, feed reader (I recommend &lt;a href=&#34;http://www.google.com/reader&#34;&gt;Google Reader&lt;/a&gt;), etc. After all, you don&amp;#8217;t want your followers to have to remember to visit your site every time if there is an easier option out there. Sure, you already made your blog social but that was meant to facilitate comments and sharing of your blog&amp;#8217;s content by it&amp;#8217;s visitors. While publishing your blog to Twitter will get initial visitors into the blog, an RSS feed will complete the job when they suscribe to it.&lt;/p&gt;
 &lt;p&gt;Blogging platforms will normally create an RSS feed for your blog. Yet, this is a plain XML file which is just a pain to read. However, the good news is that you can &lt;em&gt;burn&lt;/em&gt; your feed which makes it pretty. That&amp;#8217;s where &lt;a href=&#34;http://feedburner.google.com&#34;&gt;FeedBurner&lt;/a&gt; comes into play. &lt;/p&gt;
 &lt;p&gt;To use it, you simply have to give it your RSS feed XML url and choose a name. For example, the RSS feed XML url for Fellgernon Bit is &lt;a href=&#34;http://fellgernon.tumblr.com/rss&#34;&gt;&lt;a href=&#34;http://fellgernon.tumblr.com/rss&#34;&gt;http://fellgernon.tumblr.com/rss&lt;/a&gt;&lt;/a&gt; which is rather ugly, but looks much better with FeedBurner at &lt;a href=&#34;http://feeds.feedburner.com/FellgernonBit&#34;&gt;&lt;a href=&#34;http://feeds.feedburner.com/FellgernonBit&#34;&gt;http://feeds.feedburner.com/FellgernonBit&lt;/a&gt;&lt;/a&gt; The content is readable and FeedBurner allows your visitors to suscribe using a wide variety of tools with a few clicks.&lt;/p&gt;
@@ -584,10 +584,10 @@ sudo gem install nokogiri
     
     <item>
       <title>Setting up your blog</title>
-      <link>/2011/11/20/Setting-up-your-blog/</link>
+      <link>http://lcolladotor.github.io/2011/11/20/Setting-up-your-blog/</link>
       <pubDate>Sun, 20 Nov 2011 00:00:00 +0000</pubDate>
       
-      <guid>/2011/11/20/Setting-up-your-blog/</guid>
+      <guid>http://lcolladotor.github.io/2011/11/20/Setting-up-your-blog/</guid>
       <description>&lt;p&gt;Now that I&amp;#8217;ve spent time re-doing Fellgernon Bit, I thought it&amp;#8217;d be a good time my experience on setting up a socially-connected blog.&lt;/p&gt;
 &lt;p&gt;First of all, you need to choose a blog platform. There are some around like Blogger and WordPress that are widely used and were some of the first platforms. In my case though, I really like how easy http://www.tumblr.com/ is to use. &lt;/p&gt;
 &lt;p&gt;Once you register and have the default blog, go to the customize menu from the Tumblr dashboard and browse the Free Themes. I ended up choosing the &lt;a href=&#34;http://simplethingstheme.tumblr.com/&#34;&gt;Simple Things&lt;/a&gt; theme because I liked the way it looks and it already included some things I wanted like the Google+ button, Facebook and Twitter sharing. This theme also has several easy options so you can easily link your blog to &lt;a href=&#34;http://www.google.com/analytics/&#34;&gt;Google Analytics&lt;/a&gt;. &lt;/p&gt;

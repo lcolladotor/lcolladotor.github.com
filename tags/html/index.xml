@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Html on L. Collado-Torres</title>
-    <link>/tags/html/</link>
+    <link>http://lcolladotor.github.io/tags/html/</link>
     <description>Recent content in Html on L. Collado-Torres</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -12,10 +12,10 @@
     
     <item>
       <title>Creating awesome reports for multiple audiences using knitrBootstrap</title>
-      <link>/2013/12/10/knitrBootstrap/</link>
+      <link>http://lcolladotor.github.io/2013/12/10/knitrBootstrap/</link>
       <pubDate>Tue, 10 Dec 2013 00:00:00 +0000</pubDate>
       
-      <guid>/2013/12/10/knitrBootstrap/</guid>
+      <guid>http://lcolladotor.github.io/2013/12/10/knitrBootstrap/</guid>
       <description>
 
 &lt;p&gt;As a biostatistics student, I use &lt;code&gt;R&lt;/code&gt; very frequently when analyzing data. At the same time, I interact with other researchers, some who know how to use &lt;code&gt;R&lt;/code&gt; (R crowd) and some who don&#39;t (yet!): no-R crowd. This means that I have to be able to communicate my results to two crowds. It is important that I can quickly provide the code in case that the &lt;code&gt;R&lt;/code&gt; savvy want to look at it: maybe they find a bug and report it ^^. Ideally I want to avoid having to write (organize, share, etc) two crowd-specific reports.&lt;/p&gt;
@@ -106,10 +106,10 @@ knit_bootstrap(&amp;quot;file.Rmd&amp;quot;, code_style = &amp;quot;Brown Paper&
     
     <item>
       <title>Adding youtube videos in pdfs, html reports and html presentations</title>
-      <link>/2012/12/05/adding-youtube-videos-in-pdfs-html-reports/</link>
+      <link>http://lcolladotor.github.io/2012/12/05/adding-youtube-videos-in-pdfs-html-reports/</link>
       <pubDate>Wed, 05 Dec 2012 00:00:00 +0000</pubDate>
       
-      <guid>/2012/12/05/adding-youtube-videos-in-pdfs-html-reports/</guid>
+      <guid>http://lcolladotor.github.io/2012/12/05/adding-youtube-videos-in-pdfs-html-reports/</guid>
       <description>&lt;p&gt;I got a question today on how to add a video to a beamer pdf presentation. Well, I had never done it, but I got curious enough to google around for a bit and here is the end product.&lt;/p&gt;
 &lt;p&gt;One way of doing it is using the &lt;a href=&#34;http://www.ctan.org/pkg/media9&#34;&gt;media9&lt;/a&gt; tex package. For this to work you need to have the latest version of texlive (or miktex). Then, it&amp;#8217;s quite straight forward to include the video. The issue is that you have to open the pdf with Acrobat Reader 10+ (9 something works. I think that it&amp;#8217;s 9.4.1+ but well, the point is that you need an updated version). You will also need a live web connection to actually show the video. An alternative (if you have the video file) is to convert it to swf and embed it. &lt;/p&gt;
 &lt;p&gt;Here is my &lt;a href=&#34;http://www.biostat.jhsph.edu/~lcollado/misc/video_in_beamer/video.tex&#34;&gt;tex&lt;/a&gt; example file with the corresponding &lt;a href=&#34;http://www.biostat.jhsph.edu/~lcollado/misc/video_in_beamer/video.pdf&#34;&gt;pdf&lt;/a&gt; output compiled using pdflatex. Remember that you need Acrobat Reader to actually see the video in the pdf.&lt;/p&gt;
