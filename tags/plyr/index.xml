@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Plyr on L. Collado-Torres</title>
-    <link>http://lcolladotor.github.io/tags/plyr/</link>
+    <link>/tags/plyr/</link>
     <description>Recent content in Plyr on L. Collado-Torres</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -12,10 +12,10 @@
     
     <item>
       <title>Using plyr and doMC for quick and easy apply-family functions</title>
-      <link>http://lcolladotor.github.io/2013/04/26/using-plyr-and-domc-for-quick-and-easy-apply-family/</link>
+      <link>/2013/04/26/using-plyr-and-domc-for-quick-and-easy-apply-family/</link>
       <pubDate>Fri, 26 Apr 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://lcolladotor.github.io/2013/04/26/using-plyr-and-domc-for-quick-and-easy-apply-family/</guid>
+      <guid>/2013/04/26/using-plyr-and-domc-for-quick-and-easy-apply-family/</guid>
       <description>&lt;p&gt;A few weeks back I dedicated a short amount of time to actually read what &lt;code&gt;plyr&lt;/code&gt; (&lt;span class=&#34;showtooltip&#34; title=&#34;Wickham H (2011). The Split-Apply-Combine Strategy for Data
 Analysis. _Journal of Statistical Software_, *40*(1), pp. 1-29.
  http://www.jstatsoft.org/v40/i01/.&#34;&gt;&lt;a href=&#34;http://www.jstatsoft.org/v40/i01/&#34;&gt;Wickham, 2011&lt;/a&gt;&lt;/span&gt;) is about and I was surprised. The whole idea behind &lt;code&gt;plyr&lt;/code&gt; is very simple: expand the &lt;code&gt;apply()&lt;/code&gt; family to do things easy. &lt;code&gt;plyr&lt;/code&gt; has many functions whose name ends with &lt;code&gt;ply&lt;/code&gt; which is short of apply. Then, the functions are identified by two letters before &lt;code&gt;ply&lt;/code&gt; which are abbreviations for the input (first letter) and output (second one). For instance, &lt;code&gt;ddply&lt;/code&gt; takes an input a &lt;code&gt;data.frame&lt;/code&gt; and returns a &lt;code&gt;data.frame&lt;/code&gt; while &lt;code&gt;ldply&lt;/code&gt; takes as input a &lt;code&gt;list&lt;/code&gt; and returns a &lt;code&gt;data.frame&lt;/code&gt;.&lt;/p&gt;

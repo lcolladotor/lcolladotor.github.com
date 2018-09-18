@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Computing on L. Collado-Torres</title>
-    <link>http://lcolladotor.github.io/categories/Computing/</link>
+    <link>/categories/Computing/</link>
     <description>Recent content in Computing on L. Collado-Torres</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -12,10 +12,10 @@
     
     <item>
       <title>Login to the cluster, request a node and change to your project directory in a single command</title>
-      <link>http://lcolladotor.github.io/2013/12/11/quick-cluster-login-to-interactive-session/</link>
+      <link>/2013/12/11/quick-cluster-login-to-interactive-session/</link>
       <pubDate>Wed, 11 Dec 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://lcolladotor.github.io/2013/12/11/quick-cluster-login-to-interactive-session/</guid>
+      <guid>/2013/12/11/quick-cluster-login-to-interactive-session/</guid>
       <description>
 
 &lt;p&gt;To be able to do RNA-seq research work in large multi-sample studies you have to be able to analyze large files and thus frequently use a powerful computing environment. In my case, this means that I have to login to a &lt;a href=&#34;http://en.wikipedia.org/wiki/Computer_cluster&#34; target=&#34;_blank&#34;&gt;computing cluster&lt;/a&gt; frequently. This is a common task for other biostatisticians (like those that do brain imagining studies) and many other people. When I am working on a project, I generally have to login to the cluster and then change the directory to the location where I have my project files.&lt;/p&gt;
@@ -249,10 +249,10 @@ alias qq=&#39;LEODIR=`basename $PWD`; ssh -t enigma &amp;quot;cd /very/complicat
     
     <item>
       <title>Quickly making posters with PosterGenius</title>
-      <link>http://lcolladotor.github.io/2013/10/29/Quickly-making-posters-with-PosterGenius/</link>
+      <link>/2013/10/29/Quickly-making-posters-with-PosterGenius/</link>
       <pubDate>Tue, 29 Oct 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://lcolladotor.github.io/2013/10/29/Quickly-making-posters-with-PosterGenius/</guid>
+      <guid>/2013/10/29/Quickly-making-posters-with-PosterGenius/</guid>
       <description>&lt;p&gt;It is time to revive &lt;a href=&#34;http://bit.ly/FellgernonBit&#34;&gt;Fellgernon Bit&lt;/a&gt; from it&amp;#8217;s deep hibernation period. A couple of very motivated Ph.D. students from my department (John, Alyssa, Amanda, Jean-Philippe, Elizabeth, etc) are organizing a blogging group. The idea is to review ideas, give suggestions, learn blogging technicalities, write blog posts, review them, and post them. It&amp;#8217;s a great idea! Plus it should us keep our blogs active.&lt;/p&gt;
 &lt;p&gt;So for my first post I am going to talk about &lt;a href=&#34;http://www.postergenius.com/cms/index.php&#34;&gt;PosterGenius&lt;/a&gt;. It&amp;#8217;s a simple to use piece of software for making posters. In my case, I presented a poster at the &lt;a href=&#34;http://genomics.jhu.edu/symposium.html&#34;&gt;7th Annual Young Investigators Symposium and Poster Session on Genomics and Bioinformatics&lt;/a&gt;. It was a relatively small event and I had a limited amount of time to make the poster. The idea behind &lt;a href=&#34;http://www.postergenius.com/cms/index.php&#34;&gt;PosterGenius&lt;/a&gt; is that you separate your poster into several sections (intro, methods, results, references), have some material for each (text and or figures), and just have to put it together with a simple background.&lt;/p&gt;
 &lt;p&gt;Of course, there are plenty of other tools for doing this. But in my case, I was able to make a poster in lunch hour by using slides from a presentation on the same subject and just organizing the content. The basic steps are:&lt;/p&gt;
@@ -272,10 +272,10 @@ alias qq=&#39;LEODIR=`basename $PWD`; ssh -t enigma &amp;quot;cd /very/complicat
     
     <item>
       <title>Alfred: a must for any Mac user</title>
-      <link>http://lcolladotor.github.io/2013/02/15/Alfred-a-must-for-any-Mac-user/</link>
+      <link>/2013/02/15/Alfred-a-must-for-any-Mac-user/</link>
       <pubDate>Fri, 15 Feb 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://lcolladotor.github.io/2013/02/15/Alfred-a-must-for-any-Mac-user/</guid>
+      <guid>/2013/02/15/Alfred-a-must-for-any-Mac-user/</guid>
       <description>&lt;p&gt;At the beginning of the semester, I decided to go hunting for Mac apps that would help me be more organizing and/or enjoy my Mac even more. After all, I was using the basics –with multiple spaces– and had only customized my favorite editors. &lt;/p&gt;
 &lt;p&gt;It turns out that &lt;a href=&#34;http://bit.ly/12w0M6m&#34;&gt;Alfred&lt;/a&gt; is an excellent app. The free version can get you a lot of mileage and save you lots of time by typing alt + space, then entering  the keyword you want to search in Google. Or alt + space, image, then the  query for Google Images. Or alt + space, find, the parts of the name of a file you want. Or alt + space, in, something you want to find inside a file. I love the alt + space, define, something I want to find in the dictionary. I know that dictionaries are just around the corner [a bookmark away!] but still, thanks to Alfred I now look up words WAY more frequently than what I did before. I mean, just not having to move my hands away from my keyboard and doing a ton of stuff is just great =)&lt;/p&gt;
 &lt;p&gt;There are plenty of other default searches that come with Alfred&amp;#8217;s free version. Another thing that I love is using it to do system commands like lock the screen, or send my computer to sleep.&lt;/p&gt;
@@ -285,10 +285,10 @@ alias qq=&#39;LEODIR=`basename $PWD`; ssh -t enigma &amp;quot;cd /very/complicat
     
     <item>
       <title>me: Bad rm, don&#39;t delete stuff I didn&#39;t want to delete! (rm: well, I do what you tell me to do!)</title>
-      <link>http://lcolladotor.github.io/2012/11/07/me-bad-rm-dont-delete-stuff-i-didnt-want-to-delete/</link>
+      <link>/2012/11/07/me-bad-rm-dont-delete-stuff-i-didnt-want-to-delete/</link>
       <pubDate>Wed, 07 Nov 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://lcolladotor.github.io/2012/11/07/me-bad-rm-dont-delete-stuff-i-didnt-want-to-delete/</guid>
+      <guid>/2012/11/07/me-bad-rm-dont-delete-stuff-i-didnt-want-to-delete/</guid>
       <description>&lt;p&gt;When Sandy was in town at some point I started doing some of my research work, but I shouldn&amp;#8217;t have. I basically did a silly mistake and erased files that take a long time to compute.&lt;/p&gt;
 &lt;p&gt;Prior to being here, I had an alias in my bash profile like this:&lt;/p&gt;
 &lt;p&gt;alias rm=&amp;#8217;rm -i&amp;#8217;&lt;/p&gt;
@@ -303,10 +303,10 @@ alias qq=&#39;LEODIR=`basename $PWD`; ssh -t enigma &amp;quot;cd /very/complicat
     
     <item>
       <title>Bitbucket revamped</title>
-      <link>http://lcolladotor.github.io/2012/10/09/Bitbucket-revamped/</link>
+      <link>/2012/10/09/Bitbucket-revamped/</link>
       <pubDate>Tue, 09 Oct 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://lcolladotor.github.io/2012/10/09/Bitbucket-revamped/</guid>
+      <guid>/2012/10/09/Bitbucket-revamped/</guid>
       <description>&lt;p&gt;Bitbucket announced their new &amp;#8220;look&amp;#8221; today. The goal is to make it more team friendly but I guess that they also wanted to make it look fresh.&lt;/p&gt;
 &lt;p&gt;For example, the overview page now has a quick summary:&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;http://media.tumblr.com/tumblr_mbn7ffEV281qfs0hy.png&#34;/&gt;&lt;/p&gt;
@@ -326,10 +326,10 @@ alias qq=&#39;LEODIR=`basename $PWD`; ssh -t enigma &amp;quot;cd /very/complicat
     
     <item>
       <title>Introducing Git while making your academic webpage</title>
-      <link>http://lcolladotor.github.io/2012/09/24/Introducing-Git-while-making-your-academic-webpage/</link>
+      <link>/2012/09/24/Introducing-Git-while-making-your-academic-webpage/</link>
       <pubDate>Mon, 24 Sep 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://lcolladotor.github.io/2012/09/24/Introducing-Git-while-making-your-academic-webpage/</guid>
+      <guid>/2012/09/24/Introducing-Git-while-making-your-academic-webpage/</guid>
       <description>&lt;p&gt;Last week I gave a presentation during our computing club on how to use git (a version control system). I used as a motivating example the first steps of creating your own academic webpage. The goal was to make it interesting to both new students (who might have been more interested on the webpage part) and older students (for whom version control should be a must). The slides and all the material is publicly available through the following Bitbucket repository: &lt;a href=&#34;https://bitbucket.org/lcolladotor/html_git_intro/overview&#34;&gt;&lt;a href=&#34;https://bitbucket.org/lcolladotor/html_git_intro/overview&#34;&gt;https://bitbucket.org/lcolladotor/html_git_intro/overview&lt;/a&gt;&lt;/a&gt;. You can access the slides by clicking on &amp;#8220;Source&amp;#8221;, &amp;#8220;slides&amp;#8221; and then &amp;#8220;html_git.pdf&amp;#8221;.&lt;/p&gt;
 &lt;p&gt;For the talk, I tried to make it more interactive but at the same time I wanted to make sure that the material could work for reference in the future. For example, I added a &lt;em&gt;commands.txt&lt;/em&gt; file so anyone following me could easily copy-paste the commands. By the way, for Git Bash in Windows, you paste stuff by using the insert key instead of the usual &amp;#8220;ctrl + v&amp;#8221; shortcut.&lt;/p&gt;
 &lt;p&gt;I&amp;#8217;m posting about it as it could be useful to other people, so feel free to share it.&lt;/p&gt;
@@ -339,10 +339,10 @@ alias qq=&#39;LEODIR=`basename $PWD`; ssh -t enigma &amp;quot;cd /very/complicat
     
     <item>
       <title>Version control: need to learn Git</title>
-      <link>http://lcolladotor.github.io/2012/09/05/i-consider-myself-a-fan-of-using-version-control/</link>
+      <link>/2012/09/05/i-consider-myself-a-fan-of-using-version-control/</link>
       <pubDate>Wed, 05 Sep 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://lcolladotor.github.io/2012/09/05/i-consider-myself-a-fan-of-using-version-control/</guid>
+      <guid>/2012/09/05/i-consider-myself-a-fan-of-using-version-control/</guid>
       <description>&lt;p&gt;&lt;iframe width=&#34;400&#34; height=&#34;225&#34; src=&#34;http://www.youtube.com/embed/4fsSyLkBdB4?rel0&#34; frameborder=&#34;0&#34; &gt;&lt;/iframe&gt;&lt;br/&gt;&lt;p&gt;I consider myself a fan of using version control for bioinformatics/biostatistics (or any text based, like code) project. Yet my knowledge of version control systems is quite limited. I&amp;#8217;ve used Mercurial for some time, but I haven&amp;#8217;t ventured much beyond the basic commands and some GUIs for merging.&lt;/p&gt;
 &lt;p&gt;I don&amp;#8217;t recall how it all went, but I remember reading that &lt;a href=&#34;http://subversion.apache.org/&#34;&gt;Subversion&lt;/a&gt; (SVN) was much better than &lt;a href=&#34;http://www.nongnu.org/cvs/&#34;&gt;CVS&lt;/a&gt;. Also, the &lt;a href=&#34;http://www.bioconductor.org/&#34;&gt;Bioconductor project&lt;/a&gt; uses SVN. Before that I really learnt how to use SVN, someone from the Bioconductor devel list pointed me to &lt;a href=&#34;http://git-scm.com/&#34;&gt;Git&lt;/a&gt;/&lt;a href=&#34;http://mercurial.selenic.com/&#34;&gt;Mercurial&lt;/a&gt;. Around the same time I read &amp;#8220;&lt;a href=&#34;http://www.ncbi.nlm.nih.gov/pubmed/19649301&#34;&gt;A quick guide to organizing computational biology projects&lt;/a&gt;&amp;quot; by William Noble, which further convinced me to start using a version control system. I &amp;quot;educated&amp;quot; (a tiny bit) myself on the topic with Wikipedia&amp;#8217;s entries on &lt;a href=&#34;http://en.wikipedia.org/wiki/Revision_control&#34;&gt;revision control&lt;/a&gt; and &lt;a href=&#34;http://en.wikipedia.org/wiki/Distributed_revision_control&#34;&gt;distributed revision control&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;I wasn&amp;#8217;t sure whether to use Mercurial or Git, but at the time &lt;a href=&#34;https://bitbucket.org/&#34;&gt;Bitbucket&lt;/a&gt; only supported Mercurial repositories. It felt pretty easy to use, specially after reading the &lt;a href=&#34;http://mercurial.selenic.com/guide/&#34;&gt;guide&lt;/a&gt; whose examples covered pretty much all I needed. By the way, I highly recommend using Bitbucket now (whether for Mercurial or Git repositories) as they offer unlimited private repositories to anyone with an academic email account.&lt;/p&gt;
@@ -361,10 +361,10 @@ alias qq=&#39;LEODIR=`basename $PWD`; ssh -t enigma &amp;quot;cd /very/complicat
     
     <item>
       <title>Setting up your computer for bioinformatics/biostatistics and a compedium of resources</title>
-      <link>http://lcolladotor.github.io/2012/08/23/setting-up-your-computer-for/</link>
+      <link>/2012/08/23/setting-up-your-computer-for/</link>
       <pubDate>Thu, 23 Aug 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://lcolladotor.github.io/2012/08/23/setting-up-your-computer-for/</guid>
+      <guid>/2012/08/23/setting-up-your-computer-for/</guid>
       <description>&lt;p&gt;Jumping on the train set by &lt;a href=&#34;http://www.biostat.jhsph.edu/~hiparker/&#34;&gt;Hilary Parker&lt;/a&gt; &amp;#8220;&lt;a href=&#34;http://hilaryparker.com/2012/08/16/the-setup-part-1/&#34;&gt;The Setup (Part 1)&lt;/a&gt;&#34; and &lt;a href=&#34;http://biostat.jhsph.edu/~afrazee/&#34;&gt;Alyssa Frazee&lt;/a&gt; &amp;#8220;&lt;a href=&#34;http://alyssafrazee.wordpress.com/&#34;&gt;my software/hardware setup&lt;/a&gt;&amp;#8221;, I&amp;#8217;m going to share my setup and hopefully add something new. They both did a great job already, so make sure you read their posts!&lt;/p&gt;
 &lt;p&gt;I have some experience with all three main OS: Windows, Linux and Mac. That being said, I know some of the basic stuff for each but I surely use Google very frequently to get help. I used to have a dual Windows / Linux (Ubuntu) set up but now I have a Windows laptop/desktop (it&amp;#8217;s a monster :P) at home and I&amp;#8217;m happy working with my Mac. &lt;/p&gt;
 &lt;p&gt;I&amp;#8217;m going to start by mentioning the software I use(d) in each OS and then add some other tools that I really like.&lt;/p&gt;
@@ -473,10 +473,10 @@ alias qq=&#39;LEODIR=`basename $PWD`; ssh -t enigma &amp;quot;cd /very/complicat
     
     <item>
       <title>Are you good at programming? You probably practice a lot!</title>
-      <link>http://lcolladotor.github.io/2011/12/10/are-you-good-at-programming-you-probably-practice-a/</link>
+      <link>/2011/12/10/are-you-good-at-programming-you-probably-practice-a/</link>
       <pubDate>Sat, 10 Dec 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://lcolladotor.github.io/2011/12/10/are-you-good-at-programming-you-probably-practice-a/</guid>
+      <guid>/2011/12/10/are-you-good-at-programming-you-probably-practice-a/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;http://bps-occupational-digest.blogspot.com/2011/11/how-to-get-to-great-programming-skills.html?utm_source=feedburner&amp;amp;utm_medium=feed&amp;amp;utm_campaign=Feed%3A+ResearchBloggingAllEnglish+%28Research+Blogging+-+English+-+All+Topics%29&amp;amp;utm_content=Google+Reader&#34;&gt;What makes a great programmer?&lt;/a&gt; I would have said training, motivation, a good and efficient framework for continuous learning from others such as reading blogs like &lt;a href=&#34;http://www.r-bloggers.com/&#34;&gt;R-bloggers&lt;/a&gt; (if you are an R programmer). Well, on the Occupational Digest blog they commented a paper where they found that the best predictor is programming knowledge. This is acquired through years of practice and makes sense. After all, even if you are a gifted person for something, if you don&amp;#8217;t practice and learn from others you won&amp;#8217;t get anywhere. So, welcome to school for life! :P&lt;/p&gt;
 </description>
     </item>

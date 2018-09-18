@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Biostatistics on L. Collado-Torres</title>
-    <link>http://lcolladotor.github.io/tags/Biostatistics/</link>
+    <link>/tags/Biostatistics/</link>
     <description>Recent content in Biostatistics on L. Collado-Torres</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -12,10 +12,10 @@
     
     <item>
       <title>Sharing my work for &#34;Advanced Methods III&#34;</title>
-      <link>http://lcolladotor.github.io/2013/02/13/Sharing-my-work-for-Advanced-Methods-III/</link>
+      <link>/2013/02/13/Sharing-my-work-for-Advanced-Methods-III/</link>
       <pubDate>Wed, 13 Feb 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://lcolladotor.github.io/2013/02/13/Sharing-my-work-for-Advanced-Methods-III/</guid>
+      <guid>/2013/02/13/Sharing-my-work-for-Advanced-Methods-III/</guid>
       <description>&lt;p&gt;This semester I&amp;#8217;m taking the live version of the Data Analysis class by Jeff Leek. His more &lt;a href=&#34;https://class.coursera.org/dataanalysis-001/class/index&#34;&gt;popular version of the course is available through Coursera&lt;/a&gt;. &lt;/p&gt;
 &lt;p&gt;One of the things that Jeff promotes is reproducibility and sharing code. I share that tendency and thus created a Git repository for my homework and code for the class: &lt;a href=&#34;http://bit.ly/12vSk7d&#34;&gt;lcollado753&lt;/a&gt;. I&amp;#8217;m hosting it with GitHub to try it out since I started with Mercurial via Bitbucket. &lt;/p&gt;
 &lt;p&gt;Part of me would love it if everyone in the class had their own Git repositories. I mean, this class involves lots of practice exercises and there are plenty of R packages and functions that others use that I would like to learn. As I don&amp;#8217;t see this happening, I think that it would be great to list the packages/functions you think could be interesting to others at the end of the write-ups. However, this involves sharing the reports and I don&amp;#8217;t know if that will happen.&lt;/p&gt;
@@ -30,10 +30,10 @@
     
     <item>
       <title>Introduction to R and Biostatistics (2012 version): presentation</title>
-      <link>http://lcolladotor.github.io/2012/11/12/Introduction-to-R-and-Biostatistics-2012-version/</link>
+      <link>/2012/11/12/Introduction-to-R-and-Biostatistics-2012-version/</link>
       <pubDate>Mon, 12 Nov 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://lcolladotor.github.io/2012/11/12/Introduction-to-R-and-Biostatistics-2012-version/</guid>
+      <guid>/2012/11/12/Introduction-to-R-and-Biostatistics-2012-version/</guid>
       <description>&lt;p&gt;To follow my &lt;a href=&#34;http://fellgernon.tumblr.com/post/34677935591/introducing-r-and-biostatistics-to-first-year-lcg#.UKFlW-Oe918&#34;&gt;Introducing R and Biostatistics to first year LCG students (2012 version)&lt;/a&gt; post,  you can now find the presentation online from my site either in &lt;a href=&#34;http://www.biostat.jhsph.edu/~lcollado/lcg/introR2012/intro_R_Biostat_LCG_2012_slides.html&#34;&gt;presentation format&lt;/a&gt;, in a &lt;a href=&#34;http://www.biostat.jhsph.edu/~lcollado/lcg/introR2012/intro_R_Biostat_LCG_2012.html&#34;&gt;single webpage format&lt;/a&gt;, or the &lt;a href=&#34;http://www.biostat.jhsph.edu/~lcollado/lcg/introR2012/intro_R_Biostat_LCG_2012.Rmd&#34;&gt;raw Rmd file&lt;/a&gt;. To prove the point that publishing to &lt;a href=&#34;http://rpubs.com/&#34;&gt;RPubs&lt;/a&gt; is super easy, you can also find the &lt;a href=&#34;http://rpubs.com/lcollado/2618&#34;&gt;single webpage format over there&lt;/a&gt;. I also like how you can comment and share in RPubs.&lt;/p&gt;
 &lt;p&gt;One of the challenges of giving a presentation to first year students is finding the balance between introducing them to cool things you are doing in your work and actually giving a talk that they can follow. I thought about this and ended dropping anything related to my work.&lt;/p&gt;
 &lt;p&gt;My presentation was split pretty much in two parts. First, I wanted to promote some philosophical discussion about what is statistics. Second, I gave a brief overview of what you can do with R. Or more exactly, what they should be able to learn to do even if they become &lt;em&gt;wet &lt;/em&gt;biologists.&lt;/p&gt;
@@ -50,10 +50,10 @@
     
     <item>
       <title>Introducing R and Biostatistics to first year LCG students (2012 version)</title>
-      <link>http://lcolladotor.github.io/2012/10/30/introducing-r-and-biostatistics-to-first-year-lcg/</link>
+      <link>/2012/10/30/introducing-r-and-biostatistics-to-first-year-lcg/</link>
       <pubDate>Tue, 30 Oct 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://lcolladotor.github.io/2012/10/30/introducing-r-and-biostatistics-to-first-year-lcg/</guid>
+      <guid>/2012/10/30/introducing-r-and-biostatistics-to-first-year-lcg/</guid>
       <description>&lt;p&gt;&lt;p&gt;On Friday November 9th I&amp;#8217;ll be giving a talk to the first year students from the Undergraduate Program on Genomic Sciences (LCG in Spanish) during their &amp;#8220;Seminar 1: Introduction to Bioinformatics&amp;#8221; course. It&amp;#8217;s just like I did a year ago as I documented in my post &lt;a href=&#34;http://fellgernon.tumblr.com/post/13739343319/introducing-biostatistics-to-first-year-lcg-students#.UJBq6Wl25FQ&#34;&gt;Introducing Biostatistics to first year LCG students&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Well, this time I&amp;#8217;ll change things a bit. I&amp;#8217;m allowed to require the students to read 2-3 papers before my talk to introduce them to my field. I&amp;#8217;ll do so, but in a more peculiar way by requiring them to listen in to a few videos I selected. So, without further ado here are the three required &amp;#8220;papers&amp;#8221;:&lt;/p&gt;
 &lt;p&gt;Here is &amp;#8220;&lt;strong&gt;paper 1&lt;/strong&gt;&amp;quot; (~30 minutes). The goal is to introduce you to the basic workings of R and also to great sources of R videos.&lt;/p&gt;
@@ -106,10 +106,10 @@
     
     <item>
       <title>JHSPH-Biostat through Coursera</title>
-      <link>http://lcolladotor.github.io/2012/10/01/JHSPH-Biostat-through-Coursera/</link>
+      <link>/2012/10/01/JHSPH-Biostat-through-Coursera/</link>
       <pubDate>Mon, 01 Oct 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://lcolladotor.github.io/2012/10/01/JHSPH-Biostat-through-Coursera/</guid>
+      <guid>/2012/10/01/JHSPH-Biostat-through-Coursera/</guid>
       <description>&lt;p&gt;Have you heard of online education? If you are in the US or Mexico I&amp;#8217;m sure that you have seen some ads about online universities. Well, that&amp;#8217;s not the type of education I&amp;#8217;m talking about. I&amp;#8217;m talking about free high-quality education. &lt;/p&gt;
 &lt;p&gt;For some years, the top option has been the &lt;strong&gt;O&lt;/strong&gt;pen &lt;strong&gt;C&lt;/strong&gt;ourse&lt;strong&gt;w&lt;/strong&gt;are (OCW) organized under the &lt;a href=&#34;http://www.ocwconsortium.org/&#34;&gt;Open Courseware Consortium&lt;/a&gt; (OCWC). Back in 2009 I was pushed my undergrad (LCG-UNAM) to design and teach OCW-compliant courses. I even taught a &lt;a href=&#34;http://www.lcg.unam.mx/~lcollado/B/index_en.html&#34;&gt;course on R/Bioconductor&lt;/a&gt; and thought of it as a pilot OCW course. The first seven classes were video recorded. But that project hit a wall because many of the biology professors used slides that heavily relied on copyrighted material. For OCW courses you have to own the copyright of the material that you use (or get permission), so just the idea of having to re-do all the diagrams and figures was overwhelming. This hasn&amp;#8217;t stopped some big universities like &lt;a href=&#34;http://ocw.mit.edu/index.htm&#34;&gt;MIT from publishing OCW-compliant courses&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Recently there&amp;#8217;s been talk of the new horse in the race: &lt;a href=&#34;https://www.coursera.org/&#34;&gt;Coursera&lt;/a&gt;. What is it? Well, &lt;a href=&#34;https://www.coursera.org/about&#34;&gt;according to themselves&lt;/a&gt;:&lt;/p&gt;

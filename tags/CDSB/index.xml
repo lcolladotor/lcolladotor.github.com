@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>CDSB on L. Collado-Torres</title>
-    <link>http://lcolladotor.github.io/tags/CDSB/</link>
+    <link>/tags/CDSB/</link>
     <description>Recent content in CDSB on L. Collado-Torres</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -12,10 +12,10 @@
     
     <item>
       <title>R Gene Regulatory Interaction Formulator For Inquiring Networks</title>
-      <link>http://lcolladotor.github.io/2018/09/13/r-gene-regulatory-interaction-formulator-for-inquiring-networks/</link>
+      <link>/2018/09/13/r-gene-regulatory-interaction-formulator-for-inquiring-networks/</link>
       <pubDate>Thu, 13 Sep 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://lcolladotor.github.io/2018/09/13/r-gene-regulatory-interaction-formulator-for-inquiring-networks/</guid>
+      <guid>/2018/09/13/r-gene-regulatory-interaction-formulator-for-inquiring-networks/</guid>
       <description>&lt;p&gt;&lt;em&gt;This blog post was written by &lt;a href=&#34;https://github.com/mar-esther23/&#34;&gt;ME Martinez-Sanchez&lt;/a&gt;, &lt;a href=&#34;https://www.researchgate.net/profile/Stalin_Munoz&#34;&gt;S Muñoz&lt;/a&gt;, &lt;a href=&#34;http://www.fciencias.unam.mx/directorio/33021&#34;&gt;M Carrillo&lt;/a&gt;, &lt;a href=&#34;https://www.researchgate.net/profile/Eugenio_Azpeitia&#34;&gt;E Azpeitia&lt;/a&gt;, &lt;a href=&#34;turing.iimas.unam.mx/~drosenbl/&#34;&gt;D Rosenblueth&lt;/a&gt; and originally posted at the &lt;a href=&#34;http://www.comunidadbioinfo.org/r-gene-regulatory-interaction-formulator-for-inquiring-networks/&#34;&gt;CDSB blog&lt;/a&gt;.&lt;a href=&#34;#fn1&#34; class=&#34;footnoteRef&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;In this blog post we will describe the package &lt;em&gt;&lt;a href=&#34;https://github.com/mar-esther23/rGriffin&#34;&gt;rGriffin&lt;/a&gt;&lt;/em&gt; &lt;a id=&#39;cite-Martinez-Sanchez_2018&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;#bib-Martinez-Sanchez_2018&#39;&gt;Martinez-Sanchez, Muñoz, Carrillo, Azpeitia, et al., 2018&lt;/a&gt;) that was one of the projects developed during the &lt;a href=&#34;http://congresos.nnb.unam.mx/TIB2018/r-bioconductor-developers-workshop-2018/&#34;&gt;TIB2018-BCDW&lt;/a&gt;. We hope to continue developing &lt;a href=&#34;http://turing.iimas.unam.mx/griffin/&#34;&gt;&lt;code&gt;Griffin&lt;/code&gt;&lt;/a&gt; and &lt;em&gt;&lt;a href=&#34;https://github.com/mar-esther23/rGriffin&#34;&gt;rGriffin&lt;/a&gt;&lt;/em&gt; (&lt;a href=&#39;#bib-Martinez-Sanchez_2018&#39;&gt;Martinez-Sanchez, Muñoz, Carrillo, Azpeitia, et al., 2018&lt;/a&gt;). If you have ideas, suggestions or bugs, please contact us via &lt;a href=&#34;https://github.com/mar-esther23/rGriffin&#34;&gt;rGriffin GitHub repo&lt;/a&gt;.&lt;/p&gt;
 &lt;div class=&#34;figure&#34;&gt;

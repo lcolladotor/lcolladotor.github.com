@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Shiny on L. Collado-Torres</title>
-    <link>http://lcolladotor.github.io/tags/shiny/</link>
+    <link>/tags/shiny/</link>
     <description>Recent content in Shiny on L. Collado-Torres</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -12,10 +12,10 @@
     
     <item>
       <title>Easily explore a table with shinycsv</title>
-      <link>http://lcolladotor.github.io/2017/01/20/Easily-explore-a-table-with-shinycsv/</link>
+      <link>/2017/01/20/Easily-explore-a-table-with-shinycsv/</link>
       <pubDate>Fri, 20 Jan 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://lcolladotor.github.io/2017/01/20/Easily-explore-a-table-with-shinycsv/</guid>
+      <guid>/2017/01/20/Easily-explore-a-table-with-shinycsv/</guid>
       <description>
 
 &lt;p&gt;Have you ever had to explore a table with data? I believe the answer is &lt;em&gt;yes&lt;/em&gt; for most people that work at a computer or even just use it for communicating with their friends and family. Tables of data pop up everywhere, for example in personal finance. Websites like &lt;a href=&#34;https://www.mint.com/&#34; target=&#34;_blank&#34;&gt;Mint.com&lt;/a&gt; allow you to download your transactions in a &lt;a href=&#34;https://en.wikipedia.org/wiki/Comma-separated_values&#34; target=&#34;_blank&#34;&gt;CSV&lt;/a&gt; file called &lt;code&gt;transactions.csv&lt;/code&gt;. CSV is one of the many formats for storing tables and most likely when you try to open the &lt;code&gt;transactions.csv&lt;/code&gt; file, it will open with Excel. Now, can you make a quick figure of one of your columns in your table?&lt;/p&gt;
@@ -145,10 +145,10 @@ URL: &lt;a href=&#34;https://www.R-project.org/&#34;&gt;https://www.R-project.or
     
     <item>
       <title>Finding possible class schedules</title>
-      <link>http://lcolladotor.github.io/2016/08/02/materias/</link>
+      <link>/2016/08/02/materias/</link>
       <pubDate>Tue, 02 Aug 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://lcolladotor.github.io/2016/08/02/materias/</guid>
+      <guid>/2016/08/02/materias/</guid>
       <description>
 
 &lt;p&gt;Over the weekend my brother wanted to figure out his class schedule for the next semester. He is a veterinary medicine and zootechnology student at UNAM. For this upcoming semester there is a set of classes he has to take and each has 8 or so instructor options. The website where he finds the class times lists about 8 pre-constructed class schedules. So he normally finds one he likes quite a bit, and then manually starts checking if he can change X instructor for Y for a given class. He does this based on the referalls and information he has gathered about the instructors, plus he factors in whether it&#39;d be an overall better schedule. For example, he might prefer to have a packed Tuesday if that means that he can leave early on Friday and avoid classes on Saturday.&lt;/p&gt;
@@ -612,10 +612,10 @@ session_info()
     
     <item>
       <title>Concerns that can deter potential orders for developing Shiny apps</title>
-      <link>http://lcolladotor.github.io/2014/06/10/shiny-orders/</link>
+      <link>/2014/06/10/shiny-orders/</link>
       <pubDate>Tue, 10 Jun 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://lcolladotor.github.io/2014/06/10/shiny-orders/</guid>
+      <guid>/2014/06/10/shiny-orders/</guid>
       <description>
 
 &lt;p&gt;A few weeks ago I was invited to a meeting where a group was interested in exploring options for replacing their contract with a propriety software. They invited me because they saw some resemblances between a &lt;a href=&#34;http://shiny.rstudio.com/&#34; target=&#34;_blank&#34;&gt;Shiny&lt;/a&gt; application I made and the features they need. It is a relatively small project and it seemed feasible to implement, but well, some details could have been tricky to code. During the meeting I explained what &lt;a href=&#34;http://shiny.rstudio.com/&#34; target=&#34;_blank&#34;&gt;Shiny&lt;/a&gt; is, showcased some of the &lt;a href=&#34;http://shiny.rstudio.com/&#34; target=&#34;_blank&#34;&gt;Shiny&lt;/a&gt; apps I&#39;ve made, and proposed some options including a simple site password.&lt;/p&gt;
@@ -700,10 +700,10 @@ session_info()
     
     <item>
       <title>Simple mortgage calculator</title>
-      <link>http://lcolladotor.github.io/2014/04/22/mortgage-calculator-flexible-payments/</link>
+      <link>/2014/04/22/mortgage-calculator-flexible-payments/</link>
       <pubDate>Tue, 22 Apr 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://lcolladotor.github.io/2014/04/22/mortgage-calculator-flexible-payments/</guid>
+      <guid>/2014/04/22/mortgage-calculator-flexible-payments/</guid>
       <description>
 
 &lt;p&gt;Have you ever thought of borrowing some money? A common case is when you have to borrow money for buying a house, which is called a mortgage. Wikipedia (&lt;span class=&#34;showtooltip&#34; title=&#34;(2014). &#39;Mortgage loan - Wikipedia, the free encyclopedia.&#39; .&#34;&gt;&lt;a href=&#34;http://en.wikipedia.org/wiki/Mortgage_loan&#34;&gt;&#39;Mortgage loan&#39; entry&lt;/a&gt;&lt;/span&gt;) goes into much more detail about the definition than what I&#39;ll cover.&lt;/p&gt;
