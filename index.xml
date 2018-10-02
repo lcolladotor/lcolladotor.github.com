@@ -11,6 +11,24 @@
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Divergent neuronal DNA methylation patterns across human cortical development: Critical periods and a unique role of CpH methylation</title>
+      <link>http://lcolladotor.github.io/publication/dnam_mcph_neuron_glia/</link>
+      <pubDate>Sat, 29 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://lcolladotor.github.io/publication/dnam_mcph_neuron_glia/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Integrated DNA methylation and gene expression profiling across multiple brain regions implicate novel genes in Alzheimer&#39;s disease</title>
+      <link>http://lcolladotor.github.io/publication/dnam_alzheimer/</link>
+      <pubDate>Sat, 29 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://lcolladotor.github.io/publication/dnam_alzheimer/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Why I applied to join SNI: the Mexican National Researchers registry</title>
       <link>http://lcolladotor.github.io/2018/09/29/why-i-applied-to-join-sni-the-mexican-national-researchers-registry/</link>
       <pubDate>Sat, 29 Sep 2018 00:00:00 +0000</pubDate>
@@ -1236,222 +1254,6 @@ through the practice of meditation and other training.&lt;/code&gt;&lt;/pre&gt;
 &lt;ol&gt;
 &lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;Baltimore friends, I have a paper copy if you want to borrow it for a while.&lt;a href=&#34;#fnref1&#34;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;li id=&#34;fn2&#34;&gt;&lt;p&gt;It could be a coincidence with other events in my life.&lt;a href=&#34;#fnref2&#34;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Getting ready to attend rOpenSci unconf18 and probably working on tidyverse-like functions for the first time</title>
-      <link>http://lcolladotor.github.io/2018/04/27/ropensci-unconf18-and-working-on-tidyverse-like-functions-for-the-first-time/</link>
-      <pubDate>Fri, 27 Apr 2018 00:00:00 +0000</pubDate>
-      
-      <guid>http://lcolladotor.github.io/2018/04/27/ropensci-unconf18-and-working-on-tidyverse-like-functions-for-the-first-time/</guid>
-      <description>&lt;p&gt;It’s Friday 7pm and it’s been a long week with ups and downs&lt;a href=&#34;#fn1&#34; class=&#34;footnoteRef&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;. But I’m enthused as I write this blog post. In less than a month from now I’ll be attending &lt;a href=&#34;http://unconf18.ropensci.org/&#34;&gt;rOpenSci unconf18&lt;/a&gt; and it’ll be my first time at this type of event. Yay!&lt;/p&gt;
-&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Building on my streak of good news, I&amp;#39;m delighted to have been selected to attend &lt;a href=&#34;https://twitter.com/rOpenSci?ref_src=twsrc%5Etfw&#34;&gt;@rOpenSci&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/Unconf18?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#Unconf18&lt;/a&gt; &lt;a href=&#34;https://t.co/Xe6lojB7TS&#34;&gt;https://t.co/Xe6lojB7TS&lt;/a&gt; ^_^ Also, thanks to the &lt;a href=&#34;https://t.co/o5OwUWEaBD&#34;&gt;https://t.co/o5OwUWEaBD&lt;/a&gt; and &lt;a href=&#34;https://twitter.com/LieberInstitute?ref_src=twsrc%5Etfw&#34;&gt;@LieberInstitute&lt;/a&gt; for their support! I&amp;#39;m hoping to relay as much as I can to &lt;a href=&#34;https://twitter.com/LIBDrstats?ref_src=twsrc%5Etfw&#34;&gt;@LIBDrstats&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/rstats?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#rstats&lt;/a&gt;&lt;/p&gt;&amp;mdash; 🇲🇽 Dr. Leonardo Collado-Torres (@fellgernon) &lt;a href=&#34;https://twitter.com/fellgernon/status/983876013015826432?ref_src=twsrc%5Etfw&#34;&gt;April 11, 2018&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
-
-&lt;p&gt;In my self introduction to everyone attending, I mentioned that I don’t use the pipe (&lt;code&gt;%&amp;gt;%&lt;/code&gt;) symbol and that I use &lt;code&gt;&amp;lt;-&lt;/code&gt; for assignment.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://lcolladotor.github.io/post/2018-04-27-getting-ready-to-attend-ropensci-unconf18-and-probably-working-on-tidyverse-like-functions-for-the-first-time_files/Screen%20Shot%202018-04-27%20at%207.11.14%20PM.png&#34; width=&#34;600&#34; /&gt; Recently I had my pre-unconf chat with &lt;a href=&#34;https://ropensci.org/about/#team&#34;&gt;Stefanie Butland&lt;/a&gt; (read more about these chats &lt;a href=&#34;https://blog.trelliscience.com/the-value-of-welcome-part-2-how-to-prepare-40-new-community-members-for-an-unconference/&#34;&gt;in her great blog post&lt;/a&gt;). In my notes to Stefanie before our chat I had mentioned again my lack of R piping experience and we talked about it. As we talked, it became clear that a blog post on related topics would be useful. Sure, I could have asked directly to the other unconf18 participants, but maybe others from the R community in general can chime in or benefit from reading the answers.&lt;/p&gt;
-&lt;div id=&#34;coding-style-and-git&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Coding style and git&lt;/h3&gt;
-&lt;p&gt;I’m attending unconf18 with an open mind and I think of myself as someone who can be quite flexible (not with my body!) and accommodating. I’m assuming that most participants at unconf18 will use &lt;code&gt;=&lt;/code&gt; for assignment. I’m not looking to start any discussions about the different assignment operators. Simply, I am willing to use whatever the majority uses. Just like I did in my first pull request to the &lt;code&gt;blogdown&lt;/code&gt; package (&lt;a href=&#34;https://github.com/rstudio/blogdown/pull/263&#34;&gt;issue 263&lt;/a&gt;). I was trying to follow Yihui Xie’s coding style to make his life easier and have a clean (or cleaner) git history. From &lt;a href=&#34;https://yihui.name/en/2018/02/bite-sized-pull-requests/&#34;&gt;Yihui’s post on this pull request&lt;/a&gt; I can see that he liked it.&lt;/p&gt;
-&lt;p&gt;Keeping this in mind, I think that following the coding style of others will be something I’ll do at unconf18. I haven’t really worked in any R packages with many developers actively working on the package. But I imagine that setting a common coding style will minimize git conflicts, and &lt;strong&gt;no one&lt;/strong&gt; wants those&lt;a href=&#34;#fn2&#34; class=&#34;footnoteRef&#34; id=&#34;fnref2&#34;&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;. I don’t know if we’ll all follow some common guidelines at unconf18. I actually imagine that it’ll be project-specific. Why? Well because you can create an R project in RStudio&lt;a href=&#34;#fn3&#34; class=&#34;footnoteRef&#34; id=&#34;fnref3&#34;&gt;&lt;sup&gt;3&lt;/sup&gt;&lt;/a&gt; and set some defaults for the project such as:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;the number of spaces for tab&lt;/li&gt;
-&lt;li&gt;line ending conversions&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;http://lcolladotor.github.io/post/2018-04-27-getting-ready-to-attend-ropensci-unconf18-and-probably-working-on-tidyverse-like-functions-for-the-first-time_files/Screen%20Shot%202018-04-27%20at%207.27.27%20PM.png&#34; width=&#34;400&#34; /&gt;
-
-&lt;/div&gt;
-&lt;p&gt;We can also set some global RStudio preferences like whether to &lt;em&gt;auto-indent code after paste&lt;/em&gt;, length of lines.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://lcolladotor.github.io/post/2018-04-27-getting-ready-to-attend-ropensci-unconf18-and-probably-working-on-tidyverse-like-functions-for-the-first-time_files/Screen%20Shot%202018-04-27%20at%207.28.49%20PM.png&#34; width=&#34;400&#34; /&gt; Additionally, we can decide whether we’ll use the RStudio “wand” to &lt;em&gt;reformat code&lt;/em&gt;.&lt;/p&gt;
-&lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;http://lcolladotor.github.io/post/2018-04-27-getting-ready-to-attend-ropensci-unconf18-and-probably-working-on-tidyverse-like-functions-for-the-first-time_files/Screen%20Shot%202018-04-27%20at%207.31.29%20PM.png&#34; width=&#34;300&#34; /&gt;
-
-&lt;/div&gt;
-&lt;p&gt;Maybe all of this is unnecessary, maybe everyone will work in different non-overlapping functions and thus avoid git conflicts. For example, at my job sometimes I write code with &lt;code&gt;=&lt;/code&gt; users, but we don’t work on the same lines of the code file. Later on it becomes easy to identify who wrote which line without having to use &lt;code&gt;git blame&lt;/code&gt; (awful name, right?).&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;tidyverse-like-functions&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Tidyverse-like functions&lt;/h3&gt;
-&lt;p&gt;So far, I think that these coding style issues are minor and will be easily dealt with. I think that we’ll all be able to adapt and instead focus on other problems (like whatever the package is trying to solve) and enjoy the experience (network, build &lt;strong&gt;trust&lt;/strong&gt; as Stefanie put it).&lt;/p&gt;
-&lt;p&gt;My second concern has to do with something I imagine could require more effort: my homework before the unconf. That is, writing tidyverse-like functions. Like I’ve said, I haven’t used the R pipe &lt;code&gt;%&amp;gt;%&lt;/code&gt; symbol. I’ve executed some code with it before, seeing it in many blog posts, but I’ve never actually written functions designed to be compatible with this type of logic.&lt;/p&gt;
-&lt;p&gt;If I help write a function that is not pipe-friendly, then it might not integrate nicely with other functions written by the rest of the team. It would lead to workarounds in the vignette or maybe having someone else re-factor my first function to make it pipe-friendly. Sure, I would learn from observing others make changes to my code. But I want to take advantage as much as I can from my experience at rOpenSci unconf&lt;a href=&#34;#fn4&#34; class=&#34;footnoteRef&#34; id=&#34;fnref4&#34;&gt;&lt;sup&gt;4&lt;/sup&gt;&lt;/a&gt;!&lt;/p&gt;
-&lt;p&gt;Since I don’t really use &lt;code&gt;%&amp;gt;%&lt;/code&gt;, I’m unfamiliar with many things related to pipe-friendly (tidyverse-like) functions. For example:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Do you document them differently? Like make a single Rd file for multiple functions. Or do you make an Rd file per function even if the example usage doesn’t involve &lt;code&gt;%&amp;gt;%&lt;/code&gt;?&lt;/li&gt;
-&lt;li&gt;I know that the first argument is important in pipe-friendly functions. But I ignore if the second and other arguments play a role or not.&lt;/li&gt;
-&lt;li&gt;Do people use the ellipsis (&lt;code&gt;...&lt;/code&gt;) argument in pipe-friendly functions? With my &lt;em&gt;&lt;a href=&#34;http://bioconductor.org/packages/derfinder&#34;&gt;derfinder&lt;/a&gt;&lt;/em&gt; package I ended up a very deep rabbit hole using &lt;code&gt;...&lt;/code&gt;. I explained some of the logic in my &lt;code&gt;dots&lt;/code&gt; &lt;a href=&#34;http://lcolladotor.github.io/2014/12/11/dots/#.WuO4-VMvy50&#34;&gt;blog post&lt;/a&gt; (there are fair criticisms to going deep with &lt;code&gt;...&lt;/code&gt; in the comments).&lt;/li&gt;
-&lt;li&gt;How do you write unit tests for pipe-friendly functions? Similar to how you write documentation for them, do the unit tests just test one function a time or do they test several at a time (that is the output after using &lt;code&gt;%&amp;gt;%&lt;/code&gt;)?&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;These and other questions could involve time getting familiar with. Time that I could spend now, before unconf18, learning and at least getting a better sense of what to expect. Maybe I’m complicating myself and worrying too much about this. I imagine that the solution will involve a combination of:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Checking some popular tidyverse packages that use &lt;code&gt;%&amp;gt;%&lt;/code&gt;. Like the vignettes/README files and examples.&lt;/li&gt;
-&lt;li&gt;Reading more about this in a book(s): I don’t know which one though.&lt;/li&gt;
-&lt;li&gt;Playing around a bit as a user with some of these functions. See what error messages pop up: actually I don’t know how users debug a series of functions tied together via &lt;code&gt;%&amp;gt;%&lt;/code&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;wrapping-up&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Wrapping up&lt;/h3&gt;
-&lt;p&gt;I’m not saying everyone should learn about these topics before unconf18. I think that we are all (well, maybe excluding some) worried about not knowing &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; or &lt;span class=&#34;math inline&#34;&gt;\(Y\)&lt;/span&gt; &lt;code&gt;R&lt;/code&gt;/&lt;code&gt;git&lt;/code&gt;/&lt;code&gt;travis&lt;/code&gt;/&lt;code&gt;testthat&lt;/code&gt;/&lt;code&gt;usethis&lt;/code&gt;/etc topic before unconf18. And that will part of why it’ll be great to meet everyone in what is known to be an extremely welcoming R conference ^^ (seriously, check &lt;a href=&#34;https://ropensci.org/blog/2017/06/02/unconf2017/&#34;&gt;all the unconf17 posts&lt;/a&gt;!).&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;## And I&amp;#39;m done proofreading the post. Yay!
-Sys.time()&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;2018-04-27 20:24:12 EDT&amp;quot;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&#34;acknowledgements&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Acknowledgements&lt;/h3&gt;
-&lt;p&gt;This blog post was made possible thanks to:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;em&gt;&lt;a href=&#34;http://bioconductor.org/packages/BiocStyle&#34;&gt;BiocStyle&lt;/a&gt;&lt;/em&gt; &lt;a id=&#39;cite-Oles_2018&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://github.com/Bioconductor/BiocStyle&#39;&gt;Oleś, Morgan, and Huber, 2018&lt;/a&gt;)&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;&lt;a href=&#34;https://CRAN.R-project.org/package=blogdown&#34;&gt;blogdown&lt;/a&gt;&lt;/em&gt; &lt;a id=&#39;cite-Xie_2017&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://github.com/rstudio/blogdown&#39;&gt;Xie, Hill, and Thomas, 2017&lt;/a&gt;)&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;&lt;a href=&#34;https://CRAN.R-project.org/package=devtools&#34;&gt;devtools&lt;/a&gt;&lt;/em&gt; &lt;a id=&#39;cite-Wickham_2018&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://CRAN.R-project.org/package=devtools&#39;&gt;Wickham, Hester, and Chang, 2018&lt;/a&gt;)&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;&lt;a href=&#34;https://CRAN.R-project.org/package=knitcitations&#34;&gt;knitcitations&lt;/a&gt;&lt;/em&gt; &lt;a id=&#39;cite-Boettiger_2017&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://CRAN.R-project.org/package=knitcitations&#39;&gt;Boettiger, 2017&lt;/a&gt;)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;references&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;References&lt;/h3&gt;
-&lt;p&gt;
-&lt;a id=&#39;bib-Boettiger_2017&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-Boettiger_2017&#34;&gt;[1]&lt;/a&gt;&lt;cite&gt; C. Boettiger. &lt;em&gt;knitcitations: Citations for ‘Knitr’ Markdown Files&lt;/em&gt;. R package version 1.0.8. 2017. URL: &lt;a href=&#34;https://CRAN.R-project.org/package=knitcitations&#34;&gt;https://CRAN.R-project.org/package=knitcitations&lt;/a&gt;.&lt;/cite&gt;
-&lt;/p&gt;
-&lt;p&gt;
-&lt;a id=&#39;bib-Oles_2018&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-Oles_2018&#34;&gt;[2]&lt;/a&gt;&lt;cite&gt; A. Oleś, M. Morgan and W. Huber. &lt;em&gt;BiocStyle: Standard styles for vignettes and other Bioconductor documents&lt;/em&gt;. R package version 2.7.9. 2018. URL: &lt;a href=&#34;https://github.com/Bioconductor/BiocStyle&#34;&gt;https://github.com/Bioconductor/BiocStyle&lt;/a&gt;.&lt;/cite&gt;
-&lt;/p&gt;
-&lt;p&gt;
-&lt;a id=&#39;bib-Wickham_2018&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-Wickham_2018&#34;&gt;[3]&lt;/a&gt;&lt;cite&gt; H. Wickham, J. Hester and W. Chang. &lt;em&gt;devtools: Tools to Make Developing R Packages Easier&lt;/em&gt;. R package version 1.13.5. 2018. URL: &lt;a href=&#34;https://CRAN.R-project.org/package=devtools&#34;&gt;https://CRAN.R-project.org/package=devtools&lt;/a&gt;.&lt;/cite&gt;
-&lt;/p&gt;
-&lt;p&gt;
-&lt;a id=&#39;bib-Xie_2017&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-Xie_2017&#34;&gt;[4]&lt;/a&gt;&lt;cite&gt; Y. Xie, A. P. Hill and A. Thomas. &lt;em&gt;blogdown: Creating Websites with R Markdown&lt;/em&gt;. ISBN 978-0815363729. Boca Raton, Florida: Chapman and Hall/CRC, 2017. URL: &lt;a href=&#34;https://github.com/rstudio/blogdown&#34;&gt;https://github.com/rstudio/blogdown&lt;/a&gt;.&lt;/cite&gt;
-&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;reproducibility&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Reproducibility&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;## Session info ----------------------------------------------------------------------------------------------------------&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;##  setting  value                                             
-##  version  R Under development (unstable) (2017-11-29 r73789)
-##  system   x86_64, darwin15.6.0                              
-##  ui       X11                                               
-##  language (EN)                                              
-##  collate  en_US.UTF-8                                       
-##  tz       America/New_York                                  
-##  date     2018-04-27&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## Packages --------------------------------------------------------------------------------------------------------------&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;##  package       * version date       source                            
-##  backports       1.1.2   2017-12-13 CRAN (R 3.5.0)                    
-##  base          * 3.5.0   2017-11-29 local                             
-##  bibtex          0.4.2   2017-06-30 CRAN (R 3.5.0)                    
-##  BiocStyle     * 2.7.9   2018-04-27 Bioconductor                      
-##  blogdown        0.6     2018-04-18 CRAN (R 3.5.0)                    
-##  bookdown        0.7     2018-02-18 CRAN (R 3.5.0)                    
-##  colorout      * 1.1-3   2017-11-29 Github (jalvesaq/colorout@e2a175c)
-##  compiler        3.5.0   2017-11-29 local                             
-##  datasets      * 3.5.0   2017-11-29 local                             
-##  devtools      * 1.13.5  2018-02-18 CRAN (R 3.5.0)                    
-##  digest          0.6.15  2018-01-28 CRAN (R 3.5.0)                    
-##  evaluate        0.10.1  2017-06-24 CRAN (R 3.5.0)                    
-##  graphics      * 3.5.0   2017-11-29 local                             
-##  grDevices     * 3.5.0   2017-11-29 local                             
-##  htmltools       0.3.6   2017-04-28 CRAN (R 3.5.0)                    
-##  httr            1.3.1   2017-08-20 CRAN (R 3.5.0)                    
-##  jsonlite        1.5     2017-06-01 CRAN (R 3.5.0)                    
-##  knitcitations * 1.0.8   2017-07-04 CRAN (R 3.5.0)                    
-##  knitr           1.20    2018-02-20 CRAN (R 3.5.0)                    
-##  lubridate       1.7.4   2018-04-11 CRAN (R 3.5.0)                    
-##  magrittr        1.5     2014-11-22 CRAN (R 3.5.0)                    
-##  memoise         1.1.0   2017-04-21 CRAN (R 3.5.0)                    
-##  methods       * 3.5.0   2017-11-29 local                             
-##  plyr            1.8.4   2016-06-08 CRAN (R 3.5.0)                    
-##  R6              2.2.2   2017-06-17 CRAN (R 3.5.0)                    
-##  Rcpp            0.12.16 2018-03-13 CRAN (R 3.5.0)                    
-##  RefManageR      1.2.0   2018-04-25 CRAN (R 3.5.0)                    
-##  rmarkdown       1.9     2018-03-01 CRAN (R 3.5.0)                    
-##  rprojroot       1.3-2   2018-01-03 CRAN (R 3.5.0)                    
-##  stats         * 3.5.0   2017-11-29 local                             
-##  stringi         1.1.7   2018-03-12 CRAN (R 3.5.0)                    
-##  stringr         1.3.0   2018-02-19 CRAN (R 3.5.0)                    
-##  tools           3.5.0   2017-11-29 local                             
-##  utils         * 3.5.0   2017-11-29 local                             
-##  withr           2.1.2   2018-03-15 CRAN (R 3.5.0)                    
-##  xfun            0.1     2018-01-22 CRAN (R 3.5.0)                    
-##  xml2            1.2.0   2018-01-24 CRAN (R 3.5.0)                    
-##  yaml            2.1.18  2018-03-08 CRAN (R 3.5.0)&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div class=&#34;footnotes&#34;&gt;
-&lt;hr /&gt;
-&lt;ol&gt;
-&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;Feeling welcomed can be hard… oh well.&lt;a href=&#34;#fnref1&#34;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li id=&#34;fn2&#34;&gt;&lt;p&gt;We could talk about git for a long time too. But I hope that I’ll get by with some git push, git pull, and maybe git branch.&lt;a href=&#34;#fnref2&#34;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li id=&#34;fn3&#34;&gt;&lt;p&gt;It’s one of the sponsors &lt;a href=&#34;http://unconf18.ropensci.org/#sponsors&#34; class=&#34;uri&#34;&gt;http://unconf18.ropensci.org/#sponsors&lt;/a&gt; and well, probably want most will be using since it has such nice tools for writing R packages.&lt;a href=&#34;#fnref3&#34;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li id=&#34;fn4&#34;&gt;&lt;p&gt;Specially since most only attend one unconf, I think. So it’s different from other conferences that you can experience multiple years and network with the group across a longer period of time: that’s what I’ve done with the Bioconductor meetings.&lt;a href=&#34;#fnref4&#34;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Latin American R/BioConductor Developers Workshop 2018</title>
-      <link>http://lcolladotor.github.io/2018/04/19/latin-american-r-bioconductor-developers-workshop-2018/</link>
-      <pubDate>Thu, 19 Apr 2018 00:00:00 +0000</pubDate>
-      
-      <guid>http://lcolladotor.github.io/2018/04/19/latin-american-r-bioconductor-developers-workshop-2018/</guid>
-      <description>&lt;p&gt;Today I’m excited to invite you to attend the &lt;a href=&#34;http://www.comunidadbioinfo.org/r-bioconductor-developers-workshop-2018/&#34;&gt;Latin American R/BioConductor Developers Workshop 2018&lt;/a&gt;! It’ll be held in Cuernavaca, Mexico from July 30th to August 3rd, 2018. You can find the &lt;a href=&#34;https://support.bioconductor.org/p/108108&#34;&gt;official announcement in the Bioconductor support website&lt;/a&gt;. Let me share with you why I’m excited about this workshop.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://bioconductor.org/images/logo_bioconductor.gif&#34;&gt;&lt;/p&gt;
-&lt;p&gt;At &lt;a href=&#34;https://bioconductor.org/help/course-materials/2017/BioC2017/&#34;&gt;BioC2017&lt;/a&gt;, &lt;a href=&#34;http://alejandroreyes.org/&#34;&gt;Alejandro Reyes&lt;/a&gt; and I talked for a while about the low representation of Latin Americans through out the years that either of us have attended the BioC meetings&lt;a href=&#34;#fn1&#34; class=&#34;footnoteRef&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;. We wanted to see more Latin faces in person but also in the Bioconductor Support Website and among package contributors. We brainstormed for a while and a at dinner with Bioconductor core members we simply ran with our ideas: we brought up the subject and were pleasantly rewarded with support from the Bioconductor team (Alejandro did most of the convincing!). That is, if we organized a conference/workshop, they would help us by sending someone to be one of the instructors.&lt;/p&gt;
-&lt;p&gt;Previously, Alejandro and I had already discussed why we like the Bioc meetings so much. One of the keys is that the Bioc meetings have always had events for different levels of R users. That is, you can attend the conference each year and learn something new (that’s how I got my career started). So you can progress from learning R, to mastering several R packages, to contributing R packages to Bioconductor, to brainstorming future directions for the Bioconductor project&lt;a href=&#34;#fn2&#34; class=&#34;footnoteRef&#34; id=&#34;fnref2&#34;&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;. Additionally, the Bioc meetings have scientific talks in the mornings so that you can learn new scientific and R developments in a single conference. We’ve seen this model adapted in other Bioc events like BiocAsia, the European Bioconductor Meeting, etc. It would be ideal if we got to that point, but we wanted to start smaller with a focus on developing R packages.&lt;/p&gt;
-&lt;p&gt;Separately, &lt;a href=&#34;https://www.linkedin.com/in/heladia-salgado-bb122954/&#34;&gt;Heladia Salgado&lt;/a&gt;, Romualdo Zayas and others from CCG-UNAM&lt;a href=&#34;#fn3&#34; class=&#34;footnoteRef&#34; id=&#34;fnref3&#34;&gt;&lt;sup&gt;3&lt;/sup&gt;&lt;/a&gt; and NNB-UNAM&lt;a href=&#34;#fn4&#34; class=&#34;footnoteRef&#34; id=&#34;fnref4&#34;&gt;&lt;sup&gt;4&lt;/sup&gt;&lt;/a&gt; have organized the &lt;a href=&#34;http://congresos.nnb.unam.mx/&#34;&gt;“Talleres Internacionales de Bioinformática”&lt;/a&gt;&lt;a href=&#34;#fn5&#34; class=&#34;footnoteRef&#34; id=&#34;fnref5&#34;&gt;&lt;sup&gt;5&lt;/sup&gt;&lt;/a&gt; (TIBs) for years now. Actually, I was a student in 2006 and gave a lecture in the summer 2010 event. At the TIBs they’ve had an introductory R class for a few years now where &lt;a href=&#34;https://www.linkedin.com/in/selenefernandez/&#34;&gt;Selene Fernandez-Valverde&lt;/a&gt; and &lt;a href=&#34;http://liigh.unam.mx/amedina/&#34;&gt;Alejandra Medina-Rivera&lt;/a&gt; have participated as instructors. Among the feedback they’ve received is the desire for a more advanced R course.&lt;/p&gt;
-&lt;p&gt;Alejandro and I talked to Alejandra Medina-Rivera who shared our enthusiasm for Bioconductor. As a PI in Mexico, Alejandra knows very well how sparse are the R/Bioconductor courses that she can send her students to. By the way, Alejandra is the one who first invited me to attend BioC2008!&lt;a href=&#34;#fn6&#34; class=&#34;footnoteRef&#34; id=&#34;fnref6&#34;&gt;&lt;sup&gt;6&lt;/sup&gt;&lt;/a&gt; We quickly started an email thread with Heladia and basically, the pieces started to fall in the right places. Heladia, Delfino Garcia-Alonso, Daniela Ledezma, Laura Gómez, Shirley Alquicira, Thalia Uranga Martínez, among others have been instrumental in organizing the workshop. Heladia, Alejandra and others also secured crucial funding from &lt;a href=&#34;http://www.ccg.unam.mx/&#34;&gt;CCG-UNAM&lt;/a&gt; and &lt;a href=&#34;http://liigh.unam.mx/&#34;&gt;LIIGH-UNAM&lt;/a&gt;. Together we were able to invite and get all the logistics so that &lt;a href=&#34;https://www.roswellpark.org/martin-morgan&#34;&gt;Martin Morgan&lt;/a&gt;, &lt;a href=&#34;http://www.heatherturner.net/&#34;&gt;Heather Turner&lt;/a&gt;, &lt;a href=&#34;http://www.somos.unicamp.br/professores/view/4722&#34;&gt;Benilton Carvalho&lt;/a&gt;, Selene Fernandez-Valverde, &lt;a href=&#34;http://www.teresa-ortiz.com/eng&#34;&gt;María Teresa Ortiz&lt;/a&gt; and &lt;a href=&#34;http://mastrettayanes-lab.org/&#34;&gt;Alicia Mastretta Yanes&lt;/a&gt; could all help us teach part of the workshop and/or present their work.&lt;/p&gt;
-&lt;p&gt;Briefly, these are some of the reasons why they are amazing:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Martin: Bioconductor project leader.&lt;/li&gt;
-&lt;li&gt;Heather: extensive experience teaching R and bioinformatics.&lt;/li&gt;
-&lt;li&gt;Benilton: he helped organize a similar workshop in 2015: &lt;a href=&#34;http://lab.foundation/&#34;&gt;LAb Foundation Brasil&lt;/a&gt;. Also an academic relative of Alejandro and myself.&lt;/li&gt;
-&lt;li&gt;Selene: &lt;a href=&#34;https://www.fondationloreal.com/categories/for-women-in-science/lang/en&#34;&gt;L’Oréal-UNESCO For Women in Science&lt;/a&gt;, has taught at TIBs before.&lt;/li&gt;
-&lt;li&gt;Teresa: &lt;a href=&#34;https://www.meetup.com/rladiescdmx/&#34;&gt;RLadiesCDMX&lt;/a&gt; plus just look at her awesome &lt;a href=&#34;https://github.com/tereom?tab=repositories&#34;&gt;GitHub&lt;/a&gt; profile!&lt;/li&gt;
-&lt;li&gt;Alicia: she has taught an intro to bioinformatics and reproducible genetic analyses course, plus check her &lt;a href=&#34;https://github.com/AliciaMstt?tab=repositories&#34;&gt;GitHub&lt;/a&gt; profile!&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;If you check the &lt;a href=&#34;http://www.comunidadbioinfo.org/r-bioconductor-developers-workshop-2018/&#34;&gt;workshop schedule&lt;/a&gt; we have, you’ll notice that we will have several sessions devoted to actually writing R packages. So the course will cover both the theory and the practice side of things. If you attend the workshop, you’ll have plenty of opportunities to network with your peers and to learn from other R developers. You should be super excited now!! ^^ Plus we have a &lt;a href=&#34;https://github.com/ComunidadBioInfo/R-BioConductor-Developers-Workshop-2018/blob/master/R-Bioconductor-2018_Program.rmd#code-of-conduct&#34;&gt;code of conduct&lt;/a&gt; (en &lt;a href=&#34;http://www.comunidadbioinfo.org/codigo-de-conducta/&#34;&gt;Español&lt;/a&gt;) to ensure that the conference will be welcoming to everyone.&lt;/p&gt;
-&lt;p&gt;This is also a reminder that you have to keep trying. Back in 2009 or 2010 I had gotten an offer of support from Bioc for sending someone to Cuernavaca, but due to funding circumstances it fell through. Like I said, all the pieces fell in the right places this time. Plus Heladia Salgado has made it all possible!&lt;/p&gt;
-&lt;p&gt;2018 is looking like a good year for R courses in Latin America. For example, there’s &lt;a href=&#34;http://latin-r.com/en&#34;&gt;LatinR&lt;/a&gt; and &lt;a href=&#34;https://www.meetup.com/rladies-buenos-aires/&#34;&gt;Buenos Aires RLadies&lt;/a&gt; plus our workshop! Fingers crossed, I’ll be able to attend the workshop in 2019!&lt;/p&gt;
-&lt;p&gt;Again, I’m excited to invite you to attend the &lt;a href=&#34;http://www.comunidadbioinfo.org/r-bioconductor-developers-workshop-2018/&#34;&gt;Latin American R/BioConductor Developers Workshop 2018&lt;/a&gt;! Regardless of whether you can attend it, help us spread the word:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Bioc Support website: &lt;a href=&#34;https://support.bioconductor.org/p/108108/&#34; class=&#34;uri&#34;&gt;https://support.bioconductor.org/p/108108/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Bioc twitter: &lt;a href=&#34;https://twitter.com/Bioconductor/status/986943878535303168&#34; class=&#34;uri&#34;&gt;https://twitter.com/Bioconductor/status/986943878535303168&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;&lt;a href=&#34;https://twitter.com/hashtag/rstats?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#rstats&lt;/a&gt; / &lt;a href=&#34;https://twitter.com/Bioconductor?ref_src=twsrc%5Etfw&#34;&gt;@Bioconductor&lt;/a&gt; Latin American BioC Developers Workshop 2018 &lt;a href=&#34;https://t.co/eoL4O4V5xT&#34;&gt;https://t.co/eoL4O4V5xT&lt;/a&gt;&lt;/p&gt;&amp;mdash; Bioconductor (@Bioconductor) &lt;a href=&#34;https://twitter.com/Bioconductor/status/986943878535303168?ref_src=twsrc%5Etfw&#34;&gt;April 19, 2018&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Tweet by Alejandro Reyes: &lt;a href=&#34;https://twitter.com/areyesq/status/986943887976656896&#34; class=&#34;uri&#34;&gt;https://twitter.com/areyesq/status/986943887976656896&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;If you are a programmer and want to become a &lt;a href=&#34;https://twitter.com/Bioconductor?ref_src=twsrc%5Etfw&#34;&gt;@Bioconductor&lt;/a&gt; developer, join the Latin American Developers Workshop in Cuernavaca, Mexico, from Jul 30 to Aug 3. More info here: &lt;a href=&#34;https://t.co/TAcfqYSiM6&#34;&gt;https://t.co/TAcfqYSiM6&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/rstats?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#rstats&lt;/a&gt; &lt;a href=&#34;https://twitter.com/CDSBMexico?ref_src=twsrc%5Etfw&#34;&gt;@CDSBMexico&lt;/a&gt; &lt;a href=&#34;https://twitter.com/ccg_unam?ref_src=twsrc%5Etfw&#34;&gt;@ccg_unam&lt;/a&gt;&lt;/p&gt;&amp;mdash; Alejandro Reyes (@areyesq) &lt;a href=&#34;https://twitter.com/areyesq/status/986943887976656896?ref_src=twsrc%5Etfw&#34;&gt;April 19, 2018&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Tweet by LCG UNAM: &lt;a href=&#34;https://twitter.com/lcgunam/status/986691090920230913&#34; class=&#34;uri&#34;&gt;https://twitter.com/lcgunam/status/986691090920230913&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ca&#34; dir=&#34;ltr&#34;&gt;Talleres Internacionales de Bioinformática 2018 y Latin American R/Bioconductor Developers Workshop 30jul-3ago &lt;a href=&#34;https://twitter.com/ccg_unam?ref_src=twsrc%5Etfw&#34;&gt;@ccg_unam&lt;/a&gt; &lt;a href=&#34;https://twitter.com/unammorelos?ref_src=twsrc%5Etfw&#34;&gt;@unammorelos&lt;/a&gt; &lt;a href=&#34;https://twitter.com/UNAM_MX?ref_src=twsrc%5Etfw&#34;&gt;@unam_mx&lt;/a&gt; &lt;a href=&#34;https://t.co/oHWKjbrDrb&#34;&gt;https://t.co/oHWKjbrDrb&lt;/a&gt;&lt;a href=&#34;https://twitter.com/hashtag/RegistroAbierto?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#RegistroAbierto&lt;/a&gt; &lt;a href=&#34;https://t.co/bdmOREzhuy&#34;&gt;pic.twitter.com/bdmOREzhuy&lt;/a&gt;&lt;/p&gt;&amp;mdash; LCG UNAM (@lcgunam) &lt;a href=&#34;https://twitter.com/lcgunam/status/986691090920230913?ref_src=twsrc%5Etfw&#34;&gt;April 18, 2018&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
-
-&lt;ul&gt;
-&lt;li&gt;CDSBMexico twitter: &lt;a href=&#34;https://twitter.com/CDSBMexico/status/986672270964871169&#34; class=&#34;uri&#34;&gt;https://twitter.com/CDSBMexico/status/986672270964871169&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;es&#34; dir=&#34;ltr&#34;&gt;Te invitamos a los Talleres Internacionales de Bioinformática 2018&lt;a href=&#34;https://t.co/dsSekSp4U8&#34;&gt;https://t.co/dsSekSp4U8&lt;/a&gt; &lt;a href=&#34;https://t.co/UN1wmOF9SX&#34;&gt;pic.twitter.com/UN1wmOF9SX&lt;/a&gt;&lt;/p&gt;&amp;mdash; ComunidadBioInfo (@CDSBMexico) &lt;a href=&#34;https://twitter.com/CDSBMexico/status/986672270964871169?ref_src=twsrc%5Etfw&#34;&gt;April 18, 2018&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
-
-&lt;ul&gt;
-&lt;li&gt;CDSBMexico facebook: &lt;a href=&#34;https://www.facebook.com/events/215830399185346/&#34; class=&#34;uri&#34;&gt;https://www.facebook.com/events/215830399185346/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Website: &lt;a href=&#34;http://www.comunidadbioinfo.org/r-bioconductor-developers-workshop-2018/&#34; class=&#34;uri&#34;&gt;http://www.comunidadbioinfo.org/r-bioconductor-developers-workshop-2018/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Registration form: &lt;a href=&#34;http://congresos.nnb.unam.mx/TIB2018/registro/&#34; class=&#34;uri&#34;&gt;http://congresos.nnb.unam.mx/TIB2018/registro/&lt;/a&gt; (select “Latin American R/BioConductor Developers Workshop 2018”)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class=&#34;footnotes&#34;&gt;
-&lt;hr /&gt;
-&lt;ol&gt;
-&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;The Bioc team has been great about financially supporting newcomers! I was one of them: just remember to apply before the deadline expires!&lt;a href=&#34;#fnref1&#34;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li id=&#34;fn2&#34;&gt;&lt;p&gt;It doesn’t have to be in that order. For example, anyone attending the Bioc meeting is welcome at the Developer’s Day and to chime in the discussions about the Bioconductor project.&lt;a href=&#34;#fnref2&#34;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li id=&#34;fn3&#34;&gt;&lt;p&gt;Centro de Ciencias Genómicas: Center for Genomic Sciences&lt;a href=&#34;#fnref3&#34;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li id=&#34;fn4&#34;&gt;&lt;p&gt;Nodo Nacional de Bioinformática: National Bioinformatics Node&lt;a href=&#34;#fnref4&#34;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li id=&#34;fn5&#34;&gt;&lt;p&gt;Internacional Bioinformatics Workshops&lt;a href=&#34;#fnref5&#34;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li id=&#34;fn6&#34;&gt;&lt;p&gt;I then taught a few courses at LCG-UNAM, CCG-UNAM and IBT-UNAM from 2008 to 2011 with some slides in Spanish and English. Alejandro was my TA for one of these courses! For a few years since then I would get emails in Spanish asking about some of those courses. You can still find those courses online, but I bet that the material is outdated. In any case, it’s another example of the limited training opportunities.&lt;a href=&#34;#fnref6&#34;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;
 </description>
