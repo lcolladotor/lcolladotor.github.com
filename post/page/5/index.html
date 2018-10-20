@@ -89,7 +89,7 @@
   <meta property="og:description" content="Staff Scientist">
   <meta property="og:locale" content="en-us">
   
-  <meta property="og:updated_time" content="2013-11-09T00:00:00&#43;00:00">
+  <meta property="og:updated_time" content="2013-11-14T00:00:00&#43;00:00">
   
 
   
@@ -312,6 +312,77 @@
   
 
   
+  
+    
+    
+      
+
+<div class="card-simple" itemscope itemprop="blogPost" itemtype="http://schema.org/BlogPosting">
+  
+
+<div class="article-metadata">
+
+  <span class="article-date">
+    
+    <time datetime="2013-11-14 00:00:00 &#43;0000 UTC" itemprop="datePublished dateModified">
+      Thu, Nov 14, 2013
+    </time>
+  </span>
+  <span itemscope itemprop="author publisher" itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="Leonardo Collado Torres">
+  </span>
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    7 min read
+  </span>
+  
+
+  
+  
+  <span class="middot-divider"></span>
+  <a href="http://lcolladotor.github.io/2013/11/14/Reducing-memory-overhead-when-using-mclapply/#disqus_thread"></a>
+  
+
+  
+  
+  
+  <span class="middot-divider"></span>
+  <span class="article-categories">
+    <i class="fa fa-folder"></i>
+    
+    <a href="/categories/rstats">rstats</a
+    >
+    
+  </span>
+  
+  
+
+  
+
+</div>
+
+
+  
+  
+  <h3 class="article-title" itemprop="headline">
+    <a href="http://lcolladotor.github.io/2013/11/14/Reducing-memory-overhead-when-using-mclapply/" itemprop="url">Trying to reduce the memory overhead when using mclapply</a>
+  </h3>
+  <div class="article-style" itemprop="articleBody">
+    
+    I am currently trying to understand how to reduce the memory used by mclapply. This function is rather complicated and others have explained the differences versus parLapply (A_Skelton73, 2013; lockedoff, 2012 ) and also made it clear that in mclapply each job does not know if the others are running out of memory and thus cannot trigger gc (Urbanek, 2012).
+While I still struggle to understand all the details of mclapply, I can successfully use it to reduce computation time at the expense of a very high memory load.
+    
+  </div>
+  <p class="read-more" itemprop="mainEntityOfPage">
+    <a href="http://lcolladotor.github.io/2013/11/14/Reducing-memory-overhead-when-using-mclapply/" class="btn btn-primary btn-outline">
+      CONTINUE READING
+    </a>
+  </p>
+</div>
+
+    
   
     
     
@@ -955,79 +1026,6 @@ Data exploration ## Load the package library(useR2013DAC) ## Explore laliga data
   </div>
   <p class="read-more" itemprop="mainEntityOfPage">
     <a href="http://lcolladotor.github.io/2013/06/12/userR2013-data-analysis-contest-data-exploration/" class="btn btn-primary btn-outline">
-      CONTINUE READING
-    </a>
-  </p>
-</div>
-
-    
-  
-    
-    
-      
-
-<div class="card-simple" itemscope itemprop="blogPost" itemtype="http://schema.org/BlogPosting">
-  
-
-<div class="article-metadata">
-
-  <span class="article-date">
-    
-    <time datetime="2013-05-09 00:00:00 &#43;0000 UTC" itemprop="datePublished dateModified">
-      Thu, May 9, 2013
-    </time>
-  </span>
-  <span itemscope itemprop="author publisher" itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="Leonardo Collado Torres">
-  </span>
-
-  
-  <span class="middot-divider"></span>
-  <span class="article-reading-time">
-    2 min read
-  </span>
-  
-
-  
-  
-  <span class="middot-divider"></span>
-  <a href="http://lcolladotor.github.io/2013/05/09/Reading-an-R-file-from-GitHub/#disqus_thread"></a>
-  
-
-  
-  
-  
-  <span class="middot-divider"></span>
-  <span class="article-categories">
-    <i class="fa fa-folder"></i>
-    
-    <a href="/categories/rstats">rstats</a
-    >
-    
-  </span>
-  
-  
-
-  
-
-</div>
-
-
-  
-  
-  <h3 class="article-title" itemprop="headline">
-    <a href="http://lcolladotor.github.io/2013/05/09/Reading-an-R-file-from-GitHub/" itemprop="url">Reading an R file from GitHub</a>
-  </h3>
-  <div class="article-style" itemprop="articleBody">
-    
-    Lets say that I want to read in this R file from GitHub into R.
-The first thing you have to do is locate the raw file. You can do so by clicking on the Raw button in GitHub. In this case it&#8217;s https://raw.github.com/lcolladotor/ballgownR-devel/master/ballgownR/R/infoGene.R
-One would think that using source() would work, but it doesn&#8217;t as shown below:
-source(&quot;https://raw.github.com/lcolladotor/ballgownR-devel/master/ballgownR/R/infoGene.R&quot;)  ## Warning: unsupported URL scheme  ## Error: cannot open the connection  However, thanks again to Hadley Wickham you can do so by using the devtools (Wickham &amp; Chang, 2013 ) package.
-    
-  </div>
-  <p class="read-more" itemprop="mainEntityOfPage">
-    <a href="http://lcolladotor.github.io/2013/05/09/Reading-an-R-file-from-GitHub/" class="btn btn-primary btn-outline">
       CONTINUE READING
     </a>
   </p>
