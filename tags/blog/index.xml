@@ -113,6 +113,7 @@ I just completed my &lt;a href=&#34;https://twitter.com/hashtag/ASHG18?src=hash&
 &lt;/blockquote&gt;
 &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
 &lt;p&gt;There might be other ways of doing this that are specific to your blog platform.&lt;/p&gt;
+&lt;p&gt;I also imagine that it should be possible to &lt;em&gt;bookmark&lt;/em&gt; the tweets on Twitter and then use an R package to extract your bookmarked tweets from the past 24 hours in order to simplify the process. Maybe this can be done with &lt;em&gt;&lt;a href=&#34;https://CRAN.R-project.org/package=rtweet&#34;&gt;rtweet&lt;/a&gt;&lt;/em&gt; although I haven’t dived into it.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;new-to-blogdown&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;New to &lt;code&gt;blogdown&lt;/code&gt;?&lt;/h3&gt;
