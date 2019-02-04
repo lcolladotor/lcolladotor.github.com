@@ -91,7 +91,7 @@
   <meta property="og:description" content="Staff Scientist">
   <meta property="og:locale" content="en-us">
   
-  <meta property="og:updated_time" content="2014-02-26T00:00:00&#43;00:00">
+  <meta property="og:updated_time" content="2014-04-22T00:00:00&#43;00:00">
   
 
   
@@ -316,6 +316,16 @@
   
   
   <div>
+    <h2><a href="http://lcolladotor.github.io/2014/04/22/mortgage-calculator-flexible-payments/">Simple mortgage calculator</a></h2>
+    <div class="article-style">
+      
+      Have you ever thought of borrowing some money? A common case is when you have to borrow money for buying a house, which is called a mortgage. Wikipedia ('Mortgage loan' entry) goes into much more detail about the definition than what I'll cover.
+One of the aspects you have to evaluate when considering a loan such as a mortgage is how much interest you will be charged and how long the loan will be.
+      
+    </div>
+  </div>
+  
+  <div>
     <h2><a href="http://lcolladotor.github.io/2014/02/26/excited-by-willingness-to-help-get-things-done/">rMaps Mexico map</a></h2>
     <div class="article-style">
       
@@ -403,18 +413,6 @@ The tutorial is very nicely formatted with code in bold highlighting parts that 
       Description The useR2013 conference is organizing a data analysis contest, check the rules here.
 They have a package called useR2013DAC with two data sets: one from La Liga and the other one from the Formula 1. Once you download and install the package (available here), you can quickly explore the data using the following R commands:
 Data exploration ## Load the package library(useR2013DAC) ## Explore laliga data data(laliga) head(laliga)  ## Season Week HomeTeam AwayTeam ## 1 2008/09 1 Athletic Club Bilbao Union Deportiva Almeria ## 2 2008/09 1 Atlético Madrid Málaga CF ## 3 2008/09 1 Betis Sevilla Real Club Recreativo Huelva ## 4 2008/09 1 CA Osasuna Villarreal CF ## 5 2008/09 1 CD Numancia FC Barcelona ## 6 2008/09 1 Deportivo de La Coruña Real Madrid CF ## HomeGoals AwayGoals ## 1 1 3 ## 2 4 0 ## 3 0 1 ## 4 1 1 ## 5 1 0 ## 6 2 1  summary(laliga)  ## Season Week HomeTeam AwayTeam ## Length:1900 Min.
-      
-    </div>
-  </div>
-  
-  <div>
-    <h2><a href="http://lcolladotor.github.io/2013/05/09/Reading-an-R-file-from-GitHub/">Reading an R file from GitHub</a></h2>
-    <div class="article-style">
-      
-      Lets say that I want to read in this R file from GitHub into R.
-The first thing you have to do is locate the raw file. You can do so by clicking on the Raw button in GitHub. In this case it&#8217;s <a href="https://raw.github.com/lcolladotor/ballgownR-devel/master/ballgownR/R/infoGene.R" target="_blank">https://raw.github.com/lcolladotor/ballgownR-devel/master/ballgownR/R/infoGene.R</a>
-One would think that using source() would work, but it doesn&#8217;t as shown below:
-source(&quot;<a href="https://raw.github.com/lcolladotor/ballgownR-devel/master/ballgownR/R/infoGene.R&quot;" target="_blank">https://raw.github.com/lcolladotor/ballgownR-devel/master/ballgownR/R/infoGene.R&quot;</a>)  ## Warning: unsupported URL scheme  ## Error: cannot open the connection  However, thanks again to Hadley Wickham you can do so by using the devtools (Wickham &amp; Chang, 2013 ) package.
       
     </div>
   </div>
