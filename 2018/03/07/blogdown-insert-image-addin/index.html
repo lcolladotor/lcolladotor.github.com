@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="theme" content="hugo-academic">
-  <meta name="generator" content="Hugo 0.49" />
+  <meta name="generator" content="Hugo 0.54.0" />
   <meta name="author" content="Leonardo Collado Torres">
 
   
@@ -407,7 +407,10 @@ The hard way The process involves copying the target image to the static directo
 
 
     <div class="article-style" itemprop="articleBody">
-      <p>Have you ever tried inserting an image into a <em><a href="https://CRAN.R-project.org/package=blogdown">blogdown</a></em> post? Maybe you have, or maybe you tried and gave up. Lets first review the <em>hard</em> way before getting to the solution I contributed.</p>
+      
+
+
+<p>Have you ever tried inserting an image into a <em><a href="https://CRAN.R-project.org/package=blogdown">blogdown</a></em> post? Maybe you have, or maybe you tried and gave up. Lets first review the <em>hard</em> way before getting to the solution I contributed.</p>
 <div id="the-hard-way" class="section level3">
 <h3>The <em>hard</em> way</h3>
 <p>The process involves copying the target image to the static directory that corresponds to the <em><a href="https://CRAN.R-project.org/package=blogdown">blogdown</a></em> post. Lets say that your post is called <code>2018-03-07-my-new-post.Rmd</code> and lives at <code>content/post/</code>, so it’s full path is <code>content/post/2018-03-07-my-new-post.Rmd</code>. When you run the RStudio <em><a href="https://CRAN.R-project.org/package=blogdown">blogdown</a></em> addin <em>Serve Site</em>, behind curtains the directory <code>static/post/2018-03-07-my-new-post_files</code> is created and inside it you can find the images made by your R code: likely at <code>static/post/2018-03-07-my-new-post_files/figure_html</code>.</p>
