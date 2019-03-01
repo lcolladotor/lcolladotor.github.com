@@ -87,7 +87,38 @@ that you start your application materials as soon as you can. Remember that the 
 &lt;/div&gt;
 &lt;div id=&#34;references&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;References&lt;/h3&gt;
-&lt;p&gt;&lt;code&gt;{r bibliography, results = &#39;asis&#39;, echo = FALSE, warnincache g = FALSE, = FALSE, warnrint bibliography bibliography(style = &#39;html&#39;)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;
+&lt;a id=&#39;bib-Boettiger_2017&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-Boettiger_2017&#34;&gt;[1]&lt;/a&gt;&lt;cite&gt;
+C. Boettiger.
+&lt;em&gt;knitcitations: Citations for ‘Knitr’ Markdown Files&lt;/em&gt;.
+R package version 1.0.8.
+2017.
+URL: &lt;a href=&#34;https://CRAN.R-project.org/package=knitcitations&#34;&gt;https://CRAN.R-project.org/package=knitcitations&lt;/a&gt;.&lt;/cite&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;a id=&#39;bib-Csardi_2018&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-Csardi_2018&#34;&gt;[2]&lt;/a&gt;&lt;cite&gt;
+G. Csárdi, R. core, H. Wickham, W. Chang, et al.
+&lt;em&gt;sessioninfo: R Session Information&lt;/em&gt;.
+R package version 1.1.1.
+2018.
+URL: &lt;a href=&#34;https://CRAN.R-project.org/package=sessioninfo&#34;&gt;https://CRAN.R-project.org/package=sessioninfo&lt;/a&gt;.&lt;/cite&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;a id=&#39;bib-Oles_2018&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-Oles_2018&#34;&gt;[3]&lt;/a&gt;&lt;cite&gt;
+A. Oleś, M. Morgan and W. Huber.
+&lt;em&gt;BiocStyle: Standard styles for vignettes and other Bioconductor documents&lt;/em&gt;.
+R package version 2.10.0.
+2018.
+URL: &lt;a href=&#34;https://github.com/Bioconductor/BiocStyle&#34;&gt;https://github.com/Bioconductor/BiocStyle&lt;/a&gt;.&lt;/cite&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;a id=&#39;bib-Xie_2017&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-Xie_2017&#34;&gt;[4]&lt;/a&gt;&lt;cite&gt;
+Y. Xie, A. P. Hill and A. Thomas.
+&lt;em&gt;blogdown: Creating Websites with R Markdown&lt;/em&gt;.
+ISBN 978-0815363729.
+Boca Raton, Florida: Chapman and Hall/CRC, 2017.
+URL: &lt;a href=&#34;https://github.com/rstudio/blogdown&#34;&gt;https://github.com/rstudio/blogdown&lt;/a&gt;.&lt;/cite&gt;
+&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;reproducibility&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Reproducibility&lt;/h3&gt;
