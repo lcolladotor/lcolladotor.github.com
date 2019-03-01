@@ -11,6 +11,143 @@
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>CDSBMexico: remember to apply for BioC2019 travel scholarships</title>
+      <link>http://lcolladotor.github.io/2019/02/28/cdsbmexico-remember-to-apply-for-bioc2019-travel-scholarships/</link>
+      <pubDate>Thu, 28 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://lcolladotor.github.io/2019/02/28/cdsbmexico-remember-to-apply-for-bioc2019-travel-scholarships/</guid>
+      <description>
+
+
+&lt;p&gt;&lt;em&gt;This blog post was first published at the &lt;a href=&#34;http://www.comunidadbioinfo.org/cdsbmexico-remember-to-apply-for-bioc2019-travel-scholarships/&#34;&gt;CDSBMexico website&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;&lt;a href=&#34;https://twitter.com/hashtag/CDSBMexico?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#CDSBMexico&lt;/a&gt;: remember to apply for BioC2019 travel scholarships!!&lt;br&gt;&lt;br&gt;Due date is March 15th&lt;a href=&#34;https://t.co/iegG0qQzwu&#34;&gt;https://t.co/iegG0qQzwu&lt;/a&gt;&lt;br&gt;&lt;br&gt;Let us help you! Here we give you some ideas 💡We can also give you feedback via Slack ✅&lt;a href=&#34;https://twitter.com/hashtag/rstats?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#rstats&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/bioconductor?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#bioconductor&lt;/a&gt; &lt;a href=&#34;https://twitter.com/Bioconductor?ref_src=twsrc%5Etfw&#34;&gt;@Bioconductor&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/bioc2019?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#bioc2019&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/diversity?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#diversity&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/LatAm?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#LatAm&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/rstatsES?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#rstatsES&lt;/a&gt; &lt;a href=&#34;https://t.co/EORg8d2Qxj&#34;&gt;pic.twitter.com/EORg8d2Qxj&lt;/a&gt;&lt;/p&gt;&amp;mdash; ComunidadBioInfo (@CDSBMexico) &lt;a href=&#34;https://twitter.com/CDSBMexico/status/1101339389395943424?ref_src=twsrc%5Etfw&#34;&gt;March 1, 2019&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;About 10 months ago &lt;a href=&#34;http://lcolladotor.github.io/2018/04/19/latin-american-r-bioconductor-developers-workshop-2018/#.XHiaE1NKg0o&#34;&gt;we announced our plans&lt;/a&gt; to start a new community of R/Bioconductor developers in Mexico and Latin America. The National Bioinformatics Node (&lt;a href=&#34;http://www.nnb.unam.mx/&#34;&gt;NNB-UNAM&lt;/a&gt; in Spanish) &lt;a href=&#34;http://congresos.nnb.unam.mx/&#34;&gt;has organized workshops&lt;/a&gt; in bioinformatics and R since 2006 and more frequently since 2010. Last year, 2018, there were &lt;a href=&#34;http://congresos.nnb.unam.mx/TIB2018/&#34;&gt;five simultaneous one week workshops&lt;/a&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Introduction to R and RStudio&lt;/li&gt;
+&lt;li&gt;Exploratory data analysis (EDA) of biological data with R&lt;/li&gt;
+&lt;li&gt;EDA of RNA-seq data and differential expression studies&lt;/li&gt;
+&lt;li&gt;Genome assembly and annotation from high-throughput sequencing data&lt;/li&gt;
+&lt;li&gt;And our &lt;a href=&#34;http://congresos.nnb.unam.mx/TIB2018/r-bioconductor-developers-workshop-2018/&#34;&gt;&lt;em&gt;Latin American R/Bioconductor Developers Workshop&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Overall it was a success as described in &lt;a href=&#34;http://www.comunidadbioinfo.org/a-recap-of-cdsb-2018-the-start-of-a-community/&#34;&gt;&lt;em&gt;A recap of CDSB 2018: the start of a community&lt;/em&gt;&lt;/a&gt;. However, we are not done yet! 💪🏽As we have stated several times, our goal is to turn R users into developers and to increase the representation of Mexicans and Latin Americans at other R events.&lt;/p&gt;
+&lt;div id=&#34;bioc2019&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;BioC2019&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;http://bioconductor.org/images/logo_bioconductor.gif&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;The one R event that we followed as a guide last year is the Bioconductor yearly meeting, or &lt;em&gt;BioC&lt;/em&gt;. This year, &lt;a href=&#34;https://bioc2019.bioconductor.org/index&#34;&gt;BioC2019&lt;/a&gt; will be held during June 24 to 27 at New York City in the United States. If you are an academic the registration fee is 300 USD prior to May 24th. As of today (Feb 28th), a round trip from Mexico City on June 23 to 28th is about 320-410 USD&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;. The &lt;a href=&#34;https://bioc2019.bioconductor.org/travel-accommodations&#34;&gt;accommodation options listed&lt;/a&gt; start at 118 USD plus tax a night. As you can see, these numbers add up fairly fast which is a limiting factor for scientists from Mexico (and Latin American in general) to attend &lt;em&gt;BioC2019&lt;/em&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;travel-scholarships&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Travel scholarships&lt;/h3&gt;
+&lt;p&gt;However, we want to remind you that there are travel scholarships available! And we, &lt;a href=&#34;http://www.comunidadbioinfo.org/&#34;&gt;&lt;em&gt;CDSB&lt;/em&gt;&lt;/a&gt;, want to help you! 🙌🏽&lt;/p&gt;
+&lt;p&gt;All the details about the travel scholarship and different types of submission proposals are available on the &lt;a href=&#34;https://bioc2019.bioconductor.org/call-for-abstracts&#34;&gt;BioC2019&lt;/a&gt; website. But let us summarize the process for you.&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;You have to apply for either a &lt;strong&gt;talk&lt;/strong&gt;, &lt;strong&gt;poster&lt;/strong&gt; or &lt;strong&gt;workshop&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;You need a professional website, GitHub profile or your CV to be available online.&lt;/li&gt;
+&lt;li&gt;You need to answer two questions:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;How have you participated in the Bioconductor project in the past?&lt;/li&gt;
+&lt;li&gt;What do you hope to get out of the conference?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;For a talk or poster proposal you have a maximum of 300 words while workshop proposals involve filling out a template.&lt;/p&gt;
+&lt;p&gt;This is quite a bit of work, but the payoff is immense! You will compete for the opportunity to travel basically for free: free registration and hotel, plus $500 for travel expenses. This can be a career changing opportunity as it was &lt;a href=&#34;https://speakerdeck.com/lcolladotor/cdsbmexico&#34;&gt;the case for L. Collado-Torres (see his keynote slides)&lt;/a&gt; and others.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;get-started-on-your-scholarship-application&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Get started on your scholarship application!&lt;/h3&gt;
+&lt;p&gt;We know that many of us have a tendency to do things at the last minute. However, we hope 🙏🏽
+that you start your application materials as soon as you can. Remember that the deadline is &lt;strong&gt;March 15th&lt;/strong&gt; and &lt;strong&gt;no exceptions&lt;/strong&gt; are made.&lt;/p&gt;
+&lt;div id=&#34;website&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Website&lt;/h4&gt;
+&lt;p&gt;If you don’t have a professional website, we recommend that you make one following &lt;a href=&#34;https://www.emilyzabor.com/tutorials/rmarkdown_websites_tutorial.html&#34;&gt;Emily Zabor’s tutorial&lt;/a&gt;. This is the tutorial that one of your fellow CDSBMexico 2018 attendees used to create his website: &lt;a href=&#34;https://joseaia.github.io/&#34;&gt;joseaia.github.io&lt;/a&gt;. Alternatively, check out the &lt;a href=&#34;https://leanpub.com/universities/courses/jhu/cbds-intro-r&#34;&gt;Chromebook Data Science: intro to R course (available for free if you can’t afford it)&lt;/a&gt; which includes a lesson that walks you through this process.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;bioconductor-project-participation&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Bioconductor project participation&lt;/h4&gt;
+&lt;p&gt;Next, we know that each of you worked at least in one R package during CDSBMexico 2018 such as &lt;a href=&#34;http://www.comunidadbioinfo.org/r-gene-regulatory-interaction-formulator-for-inquiring-networks/&#34;&gt;rGriffin (check the blog post)&lt;/a&gt;. Maybe you even submitted your package to Bioconductor. At least, you met and interacted with longtime Bioconductor members such as Martin Morgan and Benilton Carvalho. Since then, you might have worked on other R packages, shiny applications, etc. You might have also answered questions on the Bioconductor support website, reported bugs or opened issues in existing packages, joined the developers mailing list, joined the Bioconductor Slack workspace, etc. Ultimately, you could potentially present a poster or give a talk about the package you worked on last summer, but you’ll need to coordinate with your team members and/or lab principal investigator.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;benefitting-from-bioc2019&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Benefitting from BioC2019&lt;/h4&gt;
+&lt;p&gt;As for what you hope to get out of the conference, well, we will remind you that BioC has different workshops that can help you advance your R skills and knowledge. Furthermore, there’ll be scientific talks from excellent bioinformatics researchers. Then, once you return from the conference, you can spread the knowledge you acquired in a variety of ways: implementing it on your work, teaching at your local university or research institute, participating in the Bioconductor community (Slack, the support website, contributing an R package, etc), presenting at a local R meetup, and participating in other forums. You can also benefit personally from attending the conference by networking with other users and developers that will attend it. From it, you might start new collaborations, find about graduate school programs, find potential postdoc advisors, among other opportunities. Hey, you might help us out with future CDSBMexico events!&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;cdsbmexico-hands-on-help&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;CDSBMexico hands on help&lt;/h4&gt;
+&lt;p&gt;If you need help directly, please get in touch with us via the CDSBMexico Slack workspace. If you either don’t remember the Slack workspace or you couldn’t attend CDSBMexico 2018, please get in touch with us via Twitter at &lt;a href=&#34;https://twitter.com/CDSBMexico&#34;&gt;twitter.com/CDSBMexico&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;We understand that not many will be able to attend BioC2019, so keep an eye open for CDSBMexico 2019! We are hoping to announce our plans soon.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;acknowledgements&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Acknowledgements&lt;/h3&gt;
+&lt;p&gt;This blog post was made possible thanks to:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;&lt;a href=&#34;https://bioconductor.org/packages/3.8/BiocStyle&#34;&gt;BiocStyle&lt;/a&gt;&lt;/em&gt; &lt;a id=&#39;cite-Oles_2018&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://github.com/Bioconductor/BiocStyle&#39;&gt;Oleś, Morgan, and Huber, 2018&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;a href=&#34;https://CRAN.R-project.org/package=blogdown&#34;&gt;blogdown&lt;/a&gt;&lt;/em&gt; &lt;a id=&#39;cite-Xie_2017&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://github.com/rstudio/blogdown&#39;&gt;Xie, Hill, and Thomas, 2017&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;a href=&#34;https://CRAN.R-project.org/package=knitcitations&#34;&gt;knitcitations&lt;/a&gt;&lt;/em&gt; &lt;a id=&#39;cite-Boettiger_2017&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://CRAN.R-project.org/package=knitcitations&#39;&gt;Boettiger, 2017&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;a href=&#34;https://CRAN.R-project.org/package=sessioninfo&#34;&gt;sessioninfo&lt;/a&gt;&lt;/em&gt; &lt;a id=&#39;cite-Csardi_2018&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://CRAN.R-project.org/package=sessioninfo&#39;&gt;Csárdi, core, Wickham, Chang, et al., 2018&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;references&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;References&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;{r bibliography, results = &#39;asis&#39;, echo = FALSE, warnincache g = FALSE, = FALSE, warnrint bibliography bibliography(style = &#39;html&#39;)&lt;/code&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;reproducibility&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Reproducibility&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;## ─ Session info ───────────────────────────────────────────────────────────────────────────────────────────────────────
+##  setting  value                                      
+##  version  R version 3.5.2 Patched (2019-02-17 r76113)
+##  os       macOS Mojave 10.14.3                       
+##  system   x86_64, darwin15.6.0                       
+##  ui       X11                                        
+##  language (EN)                                       
+##  collate  en_US.UTF-8                                
+##  ctype    en_US.UTF-8                                
+##  tz       America/New_York                           
+##  date     2019-02-28                                 
+## 
+## ─ Packages ───────────────────────────────────────────────────────────────────────────────────────────────────────────
+##  package       * version date       lib source                            
+##  assertthat      0.2.0   2017-04-11 [1] CRAN (R 3.5.0)                    
+##  bibtex          0.4.2   2017-06-30 [1] CRAN (R 3.5.0)                    
+##  BiocManager     1.30.4  2018-11-13 [1] CRAN (R 3.5.0)                    
+##  BiocStyle     * 2.10.0  2018-10-30 [1] Bioconductor                      
+##  blogdown        0.10    2019-01-09 [1] CRAN (R 3.5.2)                    
+##  bookdown        0.9     2018-12-21 [1] CRAN (R 3.5.0)                    
+##  cli             1.0.1   2018-09-25 [1] CRAN (R 3.5.0)                    
+##  colorout      * 1.2-0   2019-02-18 [1] Github (jalvesaq/colorout@cc5fbfa)
+##  crayon          1.3.4   2017-09-16 [1] CRAN (R 3.5.0)                    
+##  digest          0.6.18  2018-10-10 [1] CRAN (R 3.5.0)                    
+##  evaluate        0.13    2019-02-12 [1] CRAN (R 3.5.2)                    
+##  htmltools       0.3.6   2017-04-28 [1] CRAN (R 3.5.0)                    
+##  httr            1.4.0   2018-12-11 [1] CRAN (R 3.5.0)                    
+##  jsonlite        1.6     2018-12-07 [1] CRAN (R 3.5.0)                    
+##  knitcitations * 1.0.8   2017-07-04 [1] CRAN (R 3.5.0)                    
+##  knitr           1.21    2018-12-10 [1] CRAN (R 3.5.2)                    
+##  lubridate       1.7.4   2018-04-11 [1] CRAN (R 3.5.0)                    
+##  magrittr        1.5     2014-11-22 [1] CRAN (R 3.5.0)                    
+##  plyr            1.8.4   2016-06-08 [1] CRAN (R 3.5.0)                    
+##  R6              2.4.0   2019-02-14 [1] CRAN (R 3.5.2)                    
+##  Rcpp            1.0.0   2018-11-07 [1] CRAN (R 3.5.0)                    
+##  RefManageR      1.2.0   2018-04-25 [1] CRAN (R 3.5.0)                    
+##  rmarkdown       1.11    2018-12-08 [1] CRAN (R 3.5.0)                    
+##  sessioninfo   * 1.1.1   2018-11-05 [1] CRAN (R 3.5.0)                    
+##  stringi         1.3.1   2019-02-13 [1] CRAN (R 3.5.2)                    
+##  stringr         1.4.0   2019-02-10 [1] CRAN (R 3.5.2)                    
+##  withr           2.1.2   2018-03-15 [1] CRAN (R 3.5.0)                    
+##  xfun            0.5     2019-02-20 [1] CRAN (R 3.5.2)                    
+##  xml2            1.2.0   2018-01-24 [1] CRAN (R 3.5.0)                    
+##  yaml            2.2.0   2018-07-25 [1] CRAN (R 3.5.0)                    
+## 
+## [1] /Library/Frameworks/R.framework/Versions/3.5/Resources/library&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div class=&#34;footnotes&#34;&gt;
+&lt;hr /&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;Using &lt;a href=&#34;https://www.google.com/flights&#34;&gt;Google flights&lt;/a&gt; for the search.&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Why do you like living where you live?</title>
       <link>http://lcolladotor.github.io/2019/02/12/why-do-you-like-living-where-you-live/</link>
       <pubDate>Tue, 12 Feb 2019 00:00:00 +0000</pubDate>
@@ -2408,150 +2545,6 @@ URL: &lt;a href=&#34;https://github.com/rstudio/blogdown&#34;&gt;https://github.
       
       <guid>http://lcolladotor.github.io/publication/dnam_mcph_neuron_glia/</guid>
       <description></description>
-    </item>
-    
-    <item>
-      <title>Why I applied to join SNI: the Mexican National Researchers registry</title>
-      <link>http://lcolladotor.github.io/2018/09/29/why-i-applied-to-join-sni-the-mexican-national-researchers-registry/</link>
-      <pubDate>Sat, 29 Sep 2018 00:00:00 +0000</pubDate>
-      
-      <guid>http://lcolladotor.github.io/2018/09/29/why-i-applied-to-join-sni-the-mexican-national-researchers-registry/</guid>
-      <description>
-
-
-&lt;p&gt;A few days ago a friend of mine told me that I was on the list of newly admitted SNI members. A few have asked me since why did I request to join it. So here’s my public reply.&lt;/p&gt;
-&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;es&#34; dir=&#34;ltr&#34;&gt;Woo! Ya soy &amp;quot;Investigador Nacional Nivel I&amp;quot; en el Sistema Nacional de Investigadores de CONACyT en México &lt;a href=&#34;https://twitter.com/Conacyt_MX?ref_src=twsrc%5Etfw&#34;&gt;@Conacyt_MX&lt;/a&gt; 🎉💪🏾🇲🇽&lt;br&gt;&lt;br&gt;I&amp;#39;m a National Researcher lvl I in the Mexican National Researchers Registry ^_^ 🎆🎉&lt;a href=&#34;https://t.co/hud7Z22WLY&#34;&gt;https://t.co/hud7Z22WLY&lt;/a&gt;&lt;br&gt;&lt;br&gt;Gracias &lt;a href=&#34;https://twitter.com/malacopa_genome?ref_src=twsrc%5Etfw&#34;&gt;@malacopa_genome&lt;/a&gt; por el aviso! &lt;a href=&#34;https://t.co/NWnf90KOF1&#34;&gt;pic.twitter.com/NWnf90KOF1&lt;/a&gt;&lt;/p&gt;&amp;mdash; 🇲🇽 Dr. Leonardo Collado-Torres (@fellgernon) &lt;a href=&#34;https://twitter.com/fellgernon/status/1045051193146396674?ref_src=twsrc%5Etfw&#34;&gt;September 26, 2018&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
-
-&lt;div id=&#34;sni&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;SNI&lt;/h3&gt;
-&lt;p&gt;First let me tell you what SNI is. It stands for &lt;em&gt;Sistema Nacional de Investigadores&lt;/em&gt; which translates to National Researchers Registry. It’s a way that the Mexican government created in 1984 to recognize &lt;em&gt;high&lt;/em&gt; quality researchers and encourage them to continue to do great research, teach the next generation of researchers and promote innovation (&lt;a href=&#34;https://es.wikipedia.org/wiki/Sistema_Nacional_de_Investigadores_(M%C3%A9xico)&#34;&gt;Wikipedia&lt;/a&gt;). There are three types of members:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;em&gt;Candidato a Investigador Nacional&lt;/em&gt;: Candidate to National Researcher&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;Investigador Nacional&lt;/em&gt;: National Researchers with 3 levels (1, 2 and 3)&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;Investigador Nacional Emérito&lt;/em&gt;: National Emeritus Researcher&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;To become a member you have to submit documentation to &lt;a href=&#34;https://twitter.com/Conacyt_MX&#34;&gt;CONACyT&lt;/a&gt; showing that you have made contributions to science, technology, culture and society through scientific or technological developments, training new students, popularizing or translating science and technology, among other criteria. Once you are a member, you have to keep submitting new documents every couple of years to stay a member or advance in the ranks.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;the-real-reason-behind-joining-sni&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;The &lt;em&gt;real&lt;/em&gt; reason behind joining SNI&lt;/h3&gt;
-&lt;p&gt;I’ve read a little bit that there are many critics of the SNI system. Most of the criticisms are based on how they decide what is a &lt;em&gt;good&lt;/em&gt; contribution and how they judge applications. The reality is also that the process of sending the necessary documentation is cumbersome to say the least. The CONACyT website breaks often enough that it can be painful to use.&lt;/p&gt;
-&lt;p&gt;So why do people want to join the SNI and go through all this complicated process? The main reason (I think) why people want to join the SNI is because being a member comes with a financial supplement. It’s enough that I’ve heard that it can constitute about a third of your salary. You can find headlines such as &lt;a href=&#34;http://www.elfinanciero.com.mx/empresas/apoyo-del-conacyt-a-investigadores-paso-de-privilegio-a-sueldo&#34;&gt;how CONACyT’s support to researchers went from a priviledge to a salary&lt;/a&gt;. This financial supplement is given to those members that work 20 hours a week on Mexican institutions.&lt;/p&gt;
-&lt;p&gt;Given how important this boost in salary is, I can understand very well the frustrations that come with interacting with the CONACyT website: specially when the website goes down and you have to submit your application before a given deadline.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;so-why-did-i-apply-to-join-sni&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;So why did I apply to join SNI?&lt;/h3&gt;
-&lt;p&gt;You can find on CONACyT’s website an &lt;a href=&#34;http://www.conacytprensa.mx/index.php/sociedad/politica-cientifica/7698-por-que-es-importante-pertenecer-al-sni&#34;&gt;interview on why it’s important to join SNI&lt;/a&gt; or go elsewhere to read a study on the &lt;a href=&#34;https://sinectica.iteso.mx/index.php/SINECTICA/article/view/155/786&#34;&gt;motivations people have for joining SNI&lt;/a&gt;. But why did I apply to join SNI given that I’m outside Mexico and won’t be getting the financial supplement?&lt;/p&gt;
-&lt;p&gt;My main motivation was protection.&lt;/p&gt;
-&lt;p&gt;Lets say that I return to Mexico as a researcher at UNAM or another Mexican institution. Currently there is only 1 call for new SNI members per year. If I were to return today (September 2018), I would need to wait several months for the 2019 application cycle. Then I would need to wait several months for all applications to be evaluated and would probably start receiving the financial salary boost on January 2020. That is a lot of time to wait!&lt;/p&gt;
-&lt;p&gt;Furthermore, right now I don’t need the salary boost. But if I were to return then it could be a significant portion of my salary. Having all this riding on a cumbersome application (I’d be afraid of making a silly mistake in the application) and on an external evaluation would be stressful.&lt;/p&gt;
-&lt;p&gt;So the stakes for me were low right now. Now that I’m a SNI member if I were to return to Mexico I could start receiving that financial boost much sooner. Thus I’m also protecting myself by keeping my options open to stay abroad (in the US for me) or return to Mexico. For example, I have a verbal agreement with my boss on the length of my current job, but technically I’m an employee at will and can be fired pretty easily.&lt;/p&gt;
-&lt;p&gt;I also applied because I have several friends that were applying or recently applied and helped me a lot navigate the application process&lt;a href=&#34;#fn1&#34; class=&#34;footnoteRef&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;. Also, you never know if the application process will change and become more complicated later on: though I hope that it will get easier!&lt;/p&gt;
-&lt;p&gt;But back to protection and security. My father has taught me that it’s our responsibility to cover our backs. Lets imagine that I have dependents. It would be irresponsible of me to miss out on the financial supplement because I didn’t send my documentation on time or because I forgot to send in the renewal documents: maybe it wouldn’t affect me, but it would affect them. Completing my application in time is under my control. What CONACyT cares about, their evaluation process, the clarity and reliability of their website are not.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;beyond-sni&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Beyond SNI&lt;/h3&gt;
-&lt;p&gt;This attitude goes beyond SNI. That is why I compete when I can for awards and scholarships that I think fit me, even if its a long shot. No one will come to you and say, “hey, your work is great, now you are a SNI member” (or any award). I believe that you have to keep working and make it hard for others to say no to your applications. You have to keep trying though because you won’t get them all. That was one of my messages in my recent CDSBMexico keynote.&lt;/p&gt;
-&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Here are my slides for my &lt;a href=&#34;https://twitter.com/hashtag/CDSBMexico?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#CDSBMexico&lt;/a&gt; remote talk tomorrow for day 1 of the &amp;quot;Latin American R/BioConductor Developers Workshop 2018&amp;quot;. 70 slides for ~20 min, I can do this! 💪🏾 Right &lt;a href=&#34;https://twitter.com/jtleek?ref_src=twsrc%5Etfw&#34;&gt;@jtleek&lt;/a&gt; &lt;a href=&#34;https://twitter.com/Shannon_E_Ellis?ref_src=twsrc%5Etfw&#34;&gt;@Shannon_E_Ellis&lt;/a&gt;?&lt;a href=&#34;https://t.co/xKh2214YbM&#34;&gt;https://t.co/xKh2214YbM&lt;/a&gt;&lt;a href=&#34;https://twitter.com/hashtag/rstats?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#rstats&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/teaching?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#teaching&lt;/a&gt; &lt;a href=&#34;https://twitter.com/Bioconductor?ref_src=twsrc%5Etfw&#34;&gt;@Bioconductor&lt;/a&gt; &lt;a href=&#34;https://twitter.com/CDSBMexico?ref_src=twsrc%5Etfw&#34;&gt;@CDSBMexico&lt;/a&gt; &lt;a href=&#34;https://t.co/SULAoPbHeZ&#34;&gt;pic.twitter.com/SULAoPbHeZ&lt;/a&gt;&lt;/p&gt;&amp;mdash; 🇲🇽 Dr. Leonardo Collado-Torres (@fellgernon) &lt;a href=&#34;https://twitter.com/fellgernon/status/1023665229882961922?ref_src=twsrc%5Etfw&#34;&gt;July 29, 2018&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
-
-&lt;p&gt;Here are some of my recent applications:&lt;/p&gt;
-&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;You still have time to participate in this year&amp;#39;s SciLifeLab prize! I wrote a blog post about it &amp;amp; shared my unsuccessful 2017 entry &lt;a href=&#34;https://t.co/6y7DOP1m1a&#34;&gt;https://t.co/6y7DOP1m1a&lt;/a&gt; Got Qs? SciLifeLabPrize@aaas.org &lt;a href=&#34;https://twitter.com/sciencemagazine?ref_src=twsrc%5Etfw&#34;&gt;@sciencemagazine&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/academia?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#academia&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/science?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#science&lt;/a&gt; Thx &lt;a href=&#34;https://twitter.com/jtleek?ref_src=twsrc%5Etfw&#34;&gt;@jtleek&lt;/a&gt; for the last minute recommendation letter! &lt;a href=&#34;https://t.co/Yfyq7j9RTc&#34;&gt;pic.twitter.com/Yfyq7j9RTc&lt;/a&gt;&lt;/p&gt;&amp;mdash; 🇲🇽 Dr. Leonardo Collado-Torres (@fellgernon) &lt;a href=&#34;https://twitter.com/fellgernon/status/1009559232931401730?ref_src=twsrc%5Etfw&#34;&gt;June 20, 2018&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
-
-&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Check our &lt;a href=&#34;https://twitter.com/hashtag/Bioinformatics?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#Bioinformatics&lt;/a&gt; Peer Prize III entry at &lt;a href=&#34;https://t.co/WdggoD6KPh&#34;&gt;https://t.co/WdggoD6KPh&lt;/a&gt; highlighting recount2 &lt;a href=&#34;https://t.co/tK6iRfUT21&#34;&gt;https://t.co/tK6iRfUT21&lt;/a&gt; We appreciate the votes! Team submission w &lt;a href=&#34;https://twitter.com/AbhiNellore?ref_src=twsrc%5Etfw&#34;&gt;@AbhiNellore&lt;/a&gt; et al &lt;a href=&#34;https://twitter.com/hashtag/RNAseq?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#RNAseq&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/rstats?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#rstats&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/reproducibility?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#reproducibility&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/scitwitter?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#scitwitter&lt;/a&gt; Video code &lt;a href=&#34;https://t.co/J0nwUcV3O4&#34;&gt;https://t.co/J0nwUcV3O4&lt;/a&gt; w ari &lt;a href=&#34;https://twitter.com/seankross?ref_src=twsrc%5Etfw&#34;&gt;@seankross&lt;/a&gt;&lt;/p&gt;&amp;mdash; 🇲🇽 Dr. Leonardo Collado-Torres (@fellgernon) &lt;a href=&#34;https://twitter.com/fellgernon/status/960590896310968320?ref_src=twsrc%5Etfw&#34;&gt;February 5, 2018&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
-
-&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;I just submitted my rstudio::conf(2019) diversity scholarship app &lt;a href=&#34;https://t.co/nmZY7UJsiP&#34;&gt;https://t.co/nmZY7UJsiP&lt;/a&gt; &lt;a href=&#34;https://twitter.com/rstudio?ref_src=twsrc%5Etfw&#34;&gt;@rstudio&lt;/a&gt; Text entries have a 1000 char limit!&lt;br&gt;&lt;br&gt;I&amp;#39;m sharing mine &lt;a href=&#34;https://t.co/q3wqbSuVbW&#34;&gt;https://t.co/q3wqbSuVbW&lt;/a&gt; in case it helps other &lt;a href=&#34;https://twitter.com/LIBDrstats?ref_src=twsrc%5Etfw&#34;&gt;@LIBDrstats&lt;/a&gt; &lt;a href=&#34;https://twitter.com/CDSBMexico?ref_src=twsrc%5Etfw&#34;&gt;@CDSBMexico&lt;/a&gt; &amp;amp; &lt;a href=&#34;https://twitter.com/hashtag/rstats?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#rstats&lt;/a&gt; members at large.&lt;a href=&#34;https://twitter.com/hashtag/tip?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#tip&lt;/a&gt; Always ask for help!&lt;/p&gt;&amp;mdash; 🇲🇽 Dr. Leonardo Collado-Torres (@fellgernon) &lt;a href=&#34;https://twitter.com/fellgernon/status/1032287739176267776?ref_src=twsrc%5Etfw&#34;&gt;August 22, 2018&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
-
-&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;I just submitted my application for the &amp;quot;Early Career Clinical Research Symbiont Award&amp;quot;. If I get selected, then I&amp;#39;ll be able to attend &lt;a href=&#34;https://twitter.com/hashtag/PSB19?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#PSB19&lt;/a&gt; &lt;a href=&#34;https://twitter.com/PacSymBiocomp?ref_src=twsrc%5Etfw&#34;&gt;@PacSymBiocomp&lt;/a&gt;. Thx to someone who prompted me to send my application! You should submit yours too. Deadline 9/30 &lt;a href=&#34;https://t.co/Pv1aHySVbI&#34;&gt;https://t.co/Pv1aHySVbI&lt;/a&gt;&lt;/p&gt;&amp;mdash; 🇲🇽 Dr. Leonardo Collado-Torres (@fellgernon) &lt;a href=&#34;https://twitter.com/fellgernon/status/1045763904964612096?ref_src=twsrc%5Etfw&#34;&gt;September 28, 2018&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
-
-&lt;p&gt;So what happens now? I updated my CV as a friend suggested to list that I’m a SNI National Researcher Level 1.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;acknowledgements&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Acknowledgements&lt;/h3&gt;
-&lt;p&gt;I want to thank my friends that helped me during the SNI application process!&lt;/p&gt;
-&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;es&#34; dir=&#34;ltr&#34;&gt;Gracias &lt;a href=&#34;https://twitter.com/sur_hp?ref_src=twsrc%5Etfw&#34;&gt;@sur_hp&lt;/a&gt;, &lt;a href=&#34;https://twitter.com/FSanchezQuinto?ref_src=twsrc%5Etfw&#34;&gt;@FSanchezQuinto&lt;/a&gt;, &lt;a href=&#34;https://twitter.com/mariagutierrez?ref_src=twsrc%5Etfw&#34;&gt;@mariagutierrez&lt;/a&gt;, &lt;a href=&#34;https://twitter.com/areyesq?ref_src=twsrc%5Etfw&#34;&gt;@areyesq&lt;/a&gt;, &lt;a href=&#34;https://twitter.com/malacopa_genome?ref_src=twsrc%5Etfw&#34;&gt;@malacopa_genome&lt;/a&gt;, &lt;a href=&#34;https://twitter.com/mgschiavon?ref_src=twsrc%5Etfw&#34;&gt;@mgschiavon&lt;/a&gt;, &lt;a href=&#34;https://twitter.com/AleMedinaRivera?ref_src=twsrc%5Etfw&#34;&gt;@AleMedinaRivera&lt;/a&gt; por el apoyo en todo el proceso de enviar la solicitud y motivarme a enviarla!&lt;br&gt;&lt;br&gt;Ahora.... me falta obtener la FIEL para firmar el doc de &lt;a href=&#34;https://twitter.com/Conacyt_MX?ref_src=twsrc%5Etfw&#34;&gt;@Conacyt_MX&lt;/a&gt; (creo)... ugh!&lt;/p&gt;&amp;mdash; 🇲🇽 Dr. Leonardo Collado-Torres (@fellgernon) &lt;a href=&#34;https://twitter.com/fellgernon/status/1045053659967639555?ref_src=twsrc%5Etfw&#34;&gt;September 26, 2018&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
-
-&lt;p&gt;This blog post was made possible thanks to:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;em&gt;&lt;a href=&#34;https://bioconductor.org/packages/3.8/BiocStyle&#34;&gt;BiocStyle&lt;/a&gt;&lt;/em&gt; &lt;a id=&#39;cite-Oles_2018&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://github.com/Bioconductor/BiocStyle&#39;&gt;Oleś, Morgan, and Huber, 2018&lt;/a&gt;)&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;&lt;a href=&#34;https://CRAN.R-project.org/package=blogdown&#34;&gt;blogdown&lt;/a&gt;&lt;/em&gt; &lt;a id=&#39;cite-Xie_2017&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://github.com/rstudio/blogdown&#39;&gt;Xie, Hill, and Thomas, 2017&lt;/a&gt;)&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;&lt;a href=&#34;https://CRAN.R-project.org/package=sessioninfo&#34;&gt;sessioninfo&lt;/a&gt;&lt;/em&gt; &lt;a id=&#39;cite-Csardi_2017&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://CRAN.R-project.org/package=sessioninfo&#39;&gt;Csárdi, core, Wickham, Chang, et al., 2017&lt;/a&gt;)&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;&lt;a href=&#34;https://CRAN.R-project.org/package=knitcitations&#34;&gt;knitcitations&lt;/a&gt;&lt;/em&gt; &lt;a id=&#39;cite-Boettiger_2017&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://CRAN.R-project.org/package=knitcitations&#39;&gt;Boettiger, 2017&lt;/a&gt;)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;references&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;References&lt;/h3&gt;
-&lt;p&gt;
-&lt;a id=&#39;bib-Boettiger_2017&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-Boettiger_2017&#34;&gt;[1]&lt;/a&gt;&lt;cite&gt; C. Boettiger. &lt;em&gt;knitcitations: Citations for ‘Knitr’ Markdown Files&lt;/em&gt;. R package version 1.0.8. 2017. URL: &lt;a href=&#34;https://CRAN.R-project.org/package=knitcitations&#34;&gt;https://CRAN.R-project.org/package=knitcitations&lt;/a&gt;.&lt;/cite&gt;
-&lt;/p&gt;
-&lt;p&gt;
-&lt;a id=&#39;bib-Csardi_2017&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-Csardi_2017&#34;&gt;[2]&lt;/a&gt;&lt;cite&gt; G. Csárdi, R. core, H. Wickham, W. Chang, et al. &lt;em&gt;sessioninfo: R Session Information&lt;/em&gt;. R package version 1.0.0. 2017. URL: &lt;a href=&#34;https://CRAN.R-project.org/package=sessioninfo&#34;&gt;https://CRAN.R-project.org/package=sessioninfo&lt;/a&gt;.&lt;/cite&gt;
-&lt;/p&gt;
-&lt;p&gt;
-&lt;a id=&#39;bib-Oles_2018&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-Oles_2018&#34;&gt;[3]&lt;/a&gt;&lt;cite&gt; A. Oleś, M. Morgan and W. Huber. &lt;em&gt;BiocStyle: Standard styles for vignettes and other Bioconductor documents&lt;/em&gt;. R package version 2.9.6. 2018. URL: &lt;a href=&#34;https://github.com/Bioconductor/BiocStyle&#34;&gt;https://github.com/Bioconductor/BiocStyle&lt;/a&gt;.&lt;/cite&gt;
-&lt;/p&gt;
-&lt;p&gt;
-&lt;a id=&#39;bib-Xie_2017&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-Xie_2017&#34;&gt;[4]&lt;/a&gt;&lt;cite&gt; Y. Xie, A. P. Hill and A. Thomas. &lt;em&gt;blogdown: Creating Websites with R Markdown&lt;/em&gt;. ISBN 978-0815363729. Boca Raton, Florida: Chapman and Hall/CRC, 2017. URL: &lt;a href=&#34;https://github.com/rstudio/blogdown&#34;&gt;https://github.com/rstudio/blogdown&lt;/a&gt;.&lt;/cite&gt;
-&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;reproducibility&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Reproducibility&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;## ─ Session info ───────────────────────────────────────────────────────────────────────────────────────────────────────
-##  setting  value                       
-##  version  R version 3.5.1 (2018-07-02)
-##  os       macOS High Sierra 10.13.6   
-##  system   x86_64, darwin15.6.0        
-##  ui       X11                         
-##  language (EN)                        
-##  collate  en_US.UTF-8                 
-##  tz       America/New_York            
-##  date     2018-09-29                  
-## 
-## ─ Packages ───────────────────────────────────────────────────────────────────────────────────────────────────────────
-##  package       * version date       source                            
-##  backports       1.1.2   2017-12-13 cran (@1.1.2)                     
-##  bibtex          0.4.2   2017-06-30 CRAN (R 3.5.0)                    
-##  BiocManager     1.30.2  2018-08-24 CRAN (R 3.5.0)                    
-##  BiocStyle     * 2.9.6   2018-08-19 Bioconductor                      
-##  blogdown        0.8     2018-07-15 CRAN (R 3.5.0)                    
-##  bookdown        0.7     2018-02-18 CRAN (R 3.5.0)                    
-##  clisymbols      1.2.0   2017-05-21 CRAN (R 3.5.0)                    
-##  colorout      * 1.2-0   2018-05-03 Github (jalvesaq/colorout@c42088d)
-##  digest          0.6.17  2018-09-12 CRAN (R 3.5.1)                    
-##  evaluate        0.11    2018-07-17 CRAN (R 3.5.0)                    
-##  htmltools       0.3.6   2017-04-28 cran (@0.3.6)                     
-##  httr            1.3.1   2017-08-20 CRAN (R 3.5.0)                    
-##  jsonlite        1.5     2017-06-01 CRAN (R 3.5.0)                    
-##  knitcitations * 1.0.8   2017-07-04 CRAN (R 3.5.0)                    
-##  knitr           1.20    2018-02-20 cran (@1.20)                      
-##  lubridate       1.7.4   2018-04-11 CRAN (R 3.5.0)                    
-##  magrittr        1.5     2014-11-22 cran (@1.5)                       
-##  plyr            1.8.4   2016-06-08 cran (@1.8.4)                     
-##  R6              2.2.2   2017-06-17 CRAN (R 3.5.0)                    
-##  Rcpp            0.12.18 2018-07-23 CRAN (R 3.5.1)                    
-##  RefManageR      1.2.0   2018-04-25 CRAN (R 3.5.0)                    
-##  rmarkdown       1.10    2018-06-11 CRAN (R 3.5.0)                    
-##  rprojroot       1.3-2   2018-01-03 cran (@1.3-2)                     
-##  sessioninfo   * 1.0.0   2017-06-21 CRAN (R 3.5.0)                    
-##  stringi         1.2.4   2018-07-20 CRAN (R 3.5.0)                    
-##  stringr         1.3.1   2018-05-10 CRAN (R 3.5.0)                    
-##  withr           2.1.2   2018-03-15 CRAN (R 3.5.0)                    
-##  xfun            0.3     2018-07-06 CRAN (R 3.5.0)                    
-##  xml2            1.2.0   2018-01-24 CRAN (R 3.5.0)                    
-##  yaml            2.2.0   2018-07-25 CRAN (R 3.5.0)&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div class=&#34;footnotes&#34;&gt;
-&lt;hr /&gt;
-&lt;ol&gt;
-&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;Actually, we are still trying to find out how we can sign the agreement from abroad.&lt;a href=&#34;#fnref1&#34;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
-</description>
     </item>
     
   </channel>

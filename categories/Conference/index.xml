@@ -7,8 +7,145 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2011-2018 Leonardo Collado Torres under (CC) BY-NC-SA 4.0. All thoughts and opinions here are my own.</copyright>
-    <lastBuildDate>Tue, 06 Nov 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 28 Feb 2019 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://lcolladotor.github.io/categories/Conference/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>CDSBMexico: remember to apply for BioC2019 travel scholarships</title>
+      <link>http://lcolladotor.github.io/2019/02/28/cdsbmexico-remember-to-apply-for-bioc2019-travel-scholarships/</link>
+      <pubDate>Thu, 28 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://lcolladotor.github.io/2019/02/28/cdsbmexico-remember-to-apply-for-bioc2019-travel-scholarships/</guid>
+      <description>
+
+
+&lt;p&gt;&lt;em&gt;This blog post was first published at the &lt;a href=&#34;http://www.comunidadbioinfo.org/cdsbmexico-remember-to-apply-for-bioc2019-travel-scholarships/&#34;&gt;CDSBMexico website&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;&lt;a href=&#34;https://twitter.com/hashtag/CDSBMexico?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#CDSBMexico&lt;/a&gt;: remember to apply for BioC2019 travel scholarships!!&lt;br&gt;&lt;br&gt;Due date is March 15th&lt;a href=&#34;https://t.co/iegG0qQzwu&#34;&gt;https://t.co/iegG0qQzwu&lt;/a&gt;&lt;br&gt;&lt;br&gt;Let us help you! Here we give you some ideas 💡We can also give you feedback via Slack ✅&lt;a href=&#34;https://twitter.com/hashtag/rstats?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#rstats&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/bioconductor?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#bioconductor&lt;/a&gt; &lt;a href=&#34;https://twitter.com/Bioconductor?ref_src=twsrc%5Etfw&#34;&gt;@Bioconductor&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/bioc2019?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#bioc2019&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/diversity?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#diversity&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/LatAm?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#LatAm&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/rstatsES?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#rstatsES&lt;/a&gt; &lt;a href=&#34;https://t.co/EORg8d2Qxj&#34;&gt;pic.twitter.com/EORg8d2Qxj&lt;/a&gt;&lt;/p&gt;&amp;mdash; ComunidadBioInfo (@CDSBMexico) &lt;a href=&#34;https://twitter.com/CDSBMexico/status/1101339389395943424?ref_src=twsrc%5Etfw&#34;&gt;March 1, 2019&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;About 10 months ago &lt;a href=&#34;http://lcolladotor.github.io/2018/04/19/latin-american-r-bioconductor-developers-workshop-2018/#.XHiaE1NKg0o&#34;&gt;we announced our plans&lt;/a&gt; to start a new community of R/Bioconductor developers in Mexico and Latin America. The National Bioinformatics Node (&lt;a href=&#34;http://www.nnb.unam.mx/&#34;&gt;NNB-UNAM&lt;/a&gt; in Spanish) &lt;a href=&#34;http://congresos.nnb.unam.mx/&#34;&gt;has organized workshops&lt;/a&gt; in bioinformatics and R since 2006 and more frequently since 2010. Last year, 2018, there were &lt;a href=&#34;http://congresos.nnb.unam.mx/TIB2018/&#34;&gt;five simultaneous one week workshops&lt;/a&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Introduction to R and RStudio&lt;/li&gt;
+&lt;li&gt;Exploratory data analysis (EDA) of biological data with R&lt;/li&gt;
+&lt;li&gt;EDA of RNA-seq data and differential expression studies&lt;/li&gt;
+&lt;li&gt;Genome assembly and annotation from high-throughput sequencing data&lt;/li&gt;
+&lt;li&gt;And our &lt;a href=&#34;http://congresos.nnb.unam.mx/TIB2018/r-bioconductor-developers-workshop-2018/&#34;&gt;&lt;em&gt;Latin American R/Bioconductor Developers Workshop&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Overall it was a success as described in &lt;a href=&#34;http://www.comunidadbioinfo.org/a-recap-of-cdsb-2018-the-start-of-a-community/&#34;&gt;&lt;em&gt;A recap of CDSB 2018: the start of a community&lt;/em&gt;&lt;/a&gt;. However, we are not done yet! 💪🏽As we have stated several times, our goal is to turn R users into developers and to increase the representation of Mexicans and Latin Americans at other R events.&lt;/p&gt;
+&lt;div id=&#34;bioc2019&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;BioC2019&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;http://bioconductor.org/images/logo_bioconductor.gif&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;The one R event that we followed as a guide last year is the Bioconductor yearly meeting, or &lt;em&gt;BioC&lt;/em&gt;. This year, &lt;a href=&#34;https://bioc2019.bioconductor.org/index&#34;&gt;BioC2019&lt;/a&gt; will be held during June 24 to 27 at New York City in the United States. If you are an academic the registration fee is 300 USD prior to May 24th. As of today (Feb 28th), a round trip from Mexico City on June 23 to 28th is about 320-410 USD&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;. The &lt;a href=&#34;https://bioc2019.bioconductor.org/travel-accommodations&#34;&gt;accommodation options listed&lt;/a&gt; start at 118 USD plus tax a night. As you can see, these numbers add up fairly fast which is a limiting factor for scientists from Mexico (and Latin American in general) to attend &lt;em&gt;BioC2019&lt;/em&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;travel-scholarships&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Travel scholarships&lt;/h3&gt;
+&lt;p&gt;However, we want to remind you that there are travel scholarships available! And we, &lt;a href=&#34;http://www.comunidadbioinfo.org/&#34;&gt;&lt;em&gt;CDSB&lt;/em&gt;&lt;/a&gt;, want to help you! 🙌🏽&lt;/p&gt;
+&lt;p&gt;All the details about the travel scholarship and different types of submission proposals are available on the &lt;a href=&#34;https://bioc2019.bioconductor.org/call-for-abstracts&#34;&gt;BioC2019&lt;/a&gt; website. But let us summarize the process for you.&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;You have to apply for either a &lt;strong&gt;talk&lt;/strong&gt;, &lt;strong&gt;poster&lt;/strong&gt; or &lt;strong&gt;workshop&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;You need a professional website, GitHub profile or your CV to be available online.&lt;/li&gt;
+&lt;li&gt;You need to answer two questions:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;How have you participated in the Bioconductor project in the past?&lt;/li&gt;
+&lt;li&gt;What do you hope to get out of the conference?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;For a talk or poster proposal you have a maximum of 300 words while workshop proposals involve filling out a template.&lt;/p&gt;
+&lt;p&gt;This is quite a bit of work, but the payoff is immense! You will compete for the opportunity to travel basically for free: free registration and hotel, plus $500 for travel expenses. This can be a career changing opportunity as it was &lt;a href=&#34;https://speakerdeck.com/lcolladotor/cdsbmexico&#34;&gt;the case for L. Collado-Torres (see his keynote slides)&lt;/a&gt; and others.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;get-started-on-your-scholarship-application&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Get started on your scholarship application!&lt;/h3&gt;
+&lt;p&gt;We know that many of us have a tendency to do things at the last minute. However, we hope 🙏🏽
+that you start your application materials as soon as you can. Remember that the deadline is &lt;strong&gt;March 15th&lt;/strong&gt; and &lt;strong&gt;no exceptions&lt;/strong&gt; are made.&lt;/p&gt;
+&lt;div id=&#34;website&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Website&lt;/h4&gt;
+&lt;p&gt;If you don’t have a professional website, we recommend that you make one following &lt;a href=&#34;https://www.emilyzabor.com/tutorials/rmarkdown_websites_tutorial.html&#34;&gt;Emily Zabor’s tutorial&lt;/a&gt;. This is the tutorial that one of your fellow CDSBMexico 2018 attendees used to create his website: &lt;a href=&#34;https://joseaia.github.io/&#34;&gt;joseaia.github.io&lt;/a&gt;. Alternatively, check out the &lt;a href=&#34;https://leanpub.com/universities/courses/jhu/cbds-intro-r&#34;&gt;Chromebook Data Science: intro to R course (available for free if you can’t afford it)&lt;/a&gt; which includes a lesson that walks you through this process.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;bioconductor-project-participation&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Bioconductor project participation&lt;/h4&gt;
+&lt;p&gt;Next, we know that each of you worked at least in one R package during CDSBMexico 2018 such as &lt;a href=&#34;http://www.comunidadbioinfo.org/r-gene-regulatory-interaction-formulator-for-inquiring-networks/&#34;&gt;rGriffin (check the blog post)&lt;/a&gt;. Maybe you even submitted your package to Bioconductor. At least, you met and interacted with longtime Bioconductor members such as Martin Morgan and Benilton Carvalho. Since then, you might have worked on other R packages, shiny applications, etc. You might have also answered questions on the Bioconductor support website, reported bugs or opened issues in existing packages, joined the developers mailing list, joined the Bioconductor Slack workspace, etc. Ultimately, you could potentially present a poster or give a talk about the package you worked on last summer, but you’ll need to coordinate with your team members and/or lab principal investigator.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;benefitting-from-bioc2019&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Benefitting from BioC2019&lt;/h4&gt;
+&lt;p&gt;As for what you hope to get out of the conference, well, we will remind you that BioC has different workshops that can help you advance your R skills and knowledge. Furthermore, there’ll be scientific talks from excellent bioinformatics researchers. Then, once you return from the conference, you can spread the knowledge you acquired in a variety of ways: implementing it on your work, teaching at your local university or research institute, participating in the Bioconductor community (Slack, the support website, contributing an R package, etc), presenting at a local R meetup, and participating in other forums. You can also benefit personally from attending the conference by networking with other users and developers that will attend it. From it, you might start new collaborations, find about graduate school programs, find potential postdoc advisors, among other opportunities. Hey, you might help us out with future CDSBMexico events!&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;cdsbmexico-hands-on-help&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;CDSBMexico hands on help&lt;/h4&gt;
+&lt;p&gt;If you need help directly, please get in touch with us via the CDSBMexico Slack workspace. If you either don’t remember the Slack workspace or you couldn’t attend CDSBMexico 2018, please get in touch with us via Twitter at &lt;a href=&#34;https://twitter.com/CDSBMexico&#34;&gt;twitter.com/CDSBMexico&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;We understand that not many will be able to attend BioC2019, so keep an eye open for CDSBMexico 2019! We are hoping to announce our plans soon.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;acknowledgements&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Acknowledgements&lt;/h3&gt;
+&lt;p&gt;This blog post was made possible thanks to:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;&lt;a href=&#34;https://bioconductor.org/packages/3.8/BiocStyle&#34;&gt;BiocStyle&lt;/a&gt;&lt;/em&gt; &lt;a id=&#39;cite-Oles_2018&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://github.com/Bioconductor/BiocStyle&#39;&gt;Oleś, Morgan, and Huber, 2018&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;a href=&#34;https://CRAN.R-project.org/package=blogdown&#34;&gt;blogdown&lt;/a&gt;&lt;/em&gt; &lt;a id=&#39;cite-Xie_2017&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://github.com/rstudio/blogdown&#39;&gt;Xie, Hill, and Thomas, 2017&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;a href=&#34;https://CRAN.R-project.org/package=knitcitations&#34;&gt;knitcitations&lt;/a&gt;&lt;/em&gt; &lt;a id=&#39;cite-Boettiger_2017&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://CRAN.R-project.org/package=knitcitations&#39;&gt;Boettiger, 2017&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;a href=&#34;https://CRAN.R-project.org/package=sessioninfo&#34;&gt;sessioninfo&lt;/a&gt;&lt;/em&gt; &lt;a id=&#39;cite-Csardi_2018&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://CRAN.R-project.org/package=sessioninfo&#39;&gt;Csárdi, core, Wickham, Chang, et al., 2018&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;references&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;References&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;{r bibliography, results = &#39;asis&#39;, echo = FALSE, warnincache g = FALSE, = FALSE, warnrint bibliography bibliography(style = &#39;html&#39;)&lt;/code&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;reproducibility&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Reproducibility&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;## ─ Session info ───────────────────────────────────────────────────────────────────────────────────────────────────────
+##  setting  value                                      
+##  version  R version 3.5.2 Patched (2019-02-17 r76113)
+##  os       macOS Mojave 10.14.3                       
+##  system   x86_64, darwin15.6.0                       
+##  ui       X11                                        
+##  language (EN)                                       
+##  collate  en_US.UTF-8                                
+##  ctype    en_US.UTF-8                                
+##  tz       America/New_York                           
+##  date     2019-02-28                                 
+## 
+## ─ Packages ───────────────────────────────────────────────────────────────────────────────────────────────────────────
+##  package       * version date       lib source                            
+##  assertthat      0.2.0   2017-04-11 [1] CRAN (R 3.5.0)                    
+##  bibtex          0.4.2   2017-06-30 [1] CRAN (R 3.5.0)                    
+##  BiocManager     1.30.4  2018-11-13 [1] CRAN (R 3.5.0)                    
+##  BiocStyle     * 2.10.0  2018-10-30 [1] Bioconductor                      
+##  blogdown        0.10    2019-01-09 [1] CRAN (R 3.5.2)                    
+##  bookdown        0.9     2018-12-21 [1] CRAN (R 3.5.0)                    
+##  cli             1.0.1   2018-09-25 [1] CRAN (R 3.5.0)                    
+##  colorout      * 1.2-0   2019-02-18 [1] Github (jalvesaq/colorout@cc5fbfa)
+##  crayon          1.3.4   2017-09-16 [1] CRAN (R 3.5.0)                    
+##  digest          0.6.18  2018-10-10 [1] CRAN (R 3.5.0)                    
+##  evaluate        0.13    2019-02-12 [1] CRAN (R 3.5.2)                    
+##  htmltools       0.3.6   2017-04-28 [1] CRAN (R 3.5.0)                    
+##  httr            1.4.0   2018-12-11 [1] CRAN (R 3.5.0)                    
+##  jsonlite        1.6     2018-12-07 [1] CRAN (R 3.5.0)                    
+##  knitcitations * 1.0.8   2017-07-04 [1] CRAN (R 3.5.0)                    
+##  knitr           1.21    2018-12-10 [1] CRAN (R 3.5.2)                    
+##  lubridate       1.7.4   2018-04-11 [1] CRAN (R 3.5.0)                    
+##  magrittr        1.5     2014-11-22 [1] CRAN (R 3.5.0)                    
+##  plyr            1.8.4   2016-06-08 [1] CRAN (R 3.5.0)                    
+##  R6              2.4.0   2019-02-14 [1] CRAN (R 3.5.2)                    
+##  Rcpp            1.0.0   2018-11-07 [1] CRAN (R 3.5.0)                    
+##  RefManageR      1.2.0   2018-04-25 [1] CRAN (R 3.5.0)                    
+##  rmarkdown       1.11    2018-12-08 [1] CRAN (R 3.5.0)                    
+##  sessioninfo   * 1.1.1   2018-11-05 [1] CRAN (R 3.5.0)                    
+##  stringi         1.3.1   2019-02-13 [1] CRAN (R 3.5.2)                    
+##  stringr         1.4.0   2019-02-10 [1] CRAN (R 3.5.2)                    
+##  withr           2.1.2   2018-03-15 [1] CRAN (R 3.5.0)                    
+##  xfun            0.5     2019-02-20 [1] CRAN (R 3.5.2)                    
+##  xml2            1.2.0   2018-01-24 [1] CRAN (R 3.5.0)                    
+##  yaml            2.2.0   2018-07-25 [1] CRAN (R 3.5.0)                    
+## 
+## [1] /Library/Frameworks/R.framework/Versions/3.5/Resources/library&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div class=&#34;footnotes&#34;&gt;
+&lt;hr /&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;Using &lt;a href=&#34;https://www.google.com/flights&#34;&gt;Google flights&lt;/a&gt; for the search.&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</description>
+    </item>
     
     <item>
       <title>A knot of threads: from CSHL to LCG-UNAM to Aldo Barrientos to diversity scholarship opportunities</title>
