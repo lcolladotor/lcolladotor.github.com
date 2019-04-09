@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Google on L. Collado-Torres</title>
-    <link>http://lcolladotor.github.io/tags/Google/</link>
+    <link>/tags/google/</link>
     <description>Recent content in Google on L. Collado-Torres</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>&amp;copy; 2011-2018 Leonardo Collado Torres under (CC) BY-NC-SA 4.0. All thoughts and opinions here are my own.</copyright>
+    <copyright>&amp;copy; 2011-{year} Leonardo Collado Torres under (CC) BY-NC-SA 4.0. All thoughts and opinions here are my own.</copyright>
     <lastBuildDate>Tue, 02 Apr 2019 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://lcolladotor.github.io/tags/Google/" rel="self" type="application/rss+xml" />
+    <atom:link href="http://lcolladotor.github.io/tags/google/" rel="self" type="application/rss+xml" />
     
     <item>
       <title>How to write academic documents with GoogleDocs</title>
-      <link>http://lcolladotor.github.io/2019/04/02/how-to-write-academic-documents-with-googledocs/</link>
+      <link>/2019/04/02/how-to-write-academic-documents-with-googledocs/</link>
       <pubDate>Tue, 02 Apr 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://lcolladotor.github.io/2019/04/02/how-to-write-academic-documents-with-googledocs/</guid>
+      <guid>/2019/04/02/how-to-write-academic-documents-with-googledocs/</guid>
       <description>
 
 
@@ -262,10 +262,10 @@ URL: &lt;a href=&#34;https://github.com/rstudio/blogdown&#34;&gt;https://github.
     
     <item>
       <title>How to upload files to Dropbox and Google Docs from R</title>
-      <link>http://lcolladotor.github.io/2014/02/05/DropboxAndGoogleDocsFromR/</link>
+      <link>/2014/02/05/dropboxandgoogledocsfromr/</link>
       <pubDate>Wed, 05 Feb 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://lcolladotor.github.io/2014/02/05/DropboxAndGoogleDocsFromR/</guid>
+      <guid>/2014/02/05/dropboxandgoogledocsfromr/</guid>
       <description>
 
 &lt;p&gt;Have you ever wondered whether you can upload files from &lt;code&gt;R&lt;/code&gt; to &lt;a href=&#34;https://www.dropbox.com/&#34; target=&#34;_blank&#34;&gt;Dropbox&lt;/a&gt; and/or &lt;a href=&#34;docs.google.com&#34; target=&#34;_blank&#34;&gt;Google Docs&lt;/a&gt;? I recently asked myself this question while making my most recent &lt;a href=&#34;http://www.rstudio.com/shiny/&#34; target=&#34;_blank&#34;&gt;Shiny&lt;/a&gt; app (more later).&lt;/p&gt;
@@ -274,10 +274,10 @@ URL: &lt;a href=&#34;https://github.com/rstudio/blogdown&#34;&gt;https://github.
 
 &lt;h2 id=&#34;dropbox&#34;&gt;Dropbox&lt;/h2&gt;
 
-&lt;p&gt;As far as I know, the best &lt;code&gt;R&lt;/code&gt; package for uploading files to Dropbox is &lt;code&gt;rDrop&lt;/code&gt; (&lt;span class=&#34;showtooltip&#34; title=&#34;Ram K and Temple Lang D (2012). rDrop: Dropbox R interface.. R package version 0.3-0.&#34;&gt;&lt;a href=&#34;http://github.com/karthikram/rDrop&#34;&gt;Ram &amp;amp; Temple Lang, 2012&lt;/a&gt;&lt;/span&gt;). The whole setup is very well explained in it&#39;s GitHub repository (&lt;span class=&#34;showtooltip&#34; title=&#34;karthik (2014). &#39;karthik/rDrop.&#39; .&#34;&gt;&lt;a href=&#34;https://github.com/karthik/rDrop&#34;&gt;Karthik&lt;/a&gt;&lt;/span&gt;). Basically you have to:&lt;/p&gt;
+&lt;p&gt;As far as I know, the best &lt;code&gt;R&lt;/code&gt; package for uploading files to Dropbox is &lt;code&gt;rDrop&lt;/code&gt; (&lt;span class=&#34;showtooltip&#34; title=&#34;Ram K and Temple Lang D (2012). rDrop: Dropbox R interface.. R package version 0.3-0.&#34;&gt;&lt;a href=&#34;http://github.com/karthikram/rDrop&#34;&gt;Ram &amp;amp; Temple Lang, 2012&lt;/a&gt;&lt;/span&gt;). The whole setup is very well explained in it&amp;rsquo;s GitHub repository (&lt;span class=&#34;showtooltip&#34; title=&#34;karthik (2014). &#39;karthik/rDrop.&#39; .&#34;&gt;&lt;a href=&#34;https://github.com/karthik/rDrop&#34;&gt;Karthik&lt;/a&gt;&lt;/span&gt;). Basically you have to:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Install the package and it&#39;s dependencies (some are only on GitHub).&lt;/li&gt;
+&lt;li&gt;Install the package and it&amp;rsquo;s dependencies (some are only on GitHub).&lt;/li&gt;
 &lt;li&gt;Create a Dropbox app in your account.&lt;/li&gt;
 &lt;li&gt;Get the credentials info.&lt;/li&gt;
 &lt;li&gt;Authorize your access to the Dropbox app from &lt;code&gt;R&lt;/code&gt;.&lt;/li&gt;
@@ -330,9 +330,9 @@ names(done)
 &lt;pre&gt;&lt;code&gt;## [1] &amp;quot;/public/x.rda&amp;quot;
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;You can now actually download the &amp;quot;x.rda&amp;quot; file from &lt;a href=&#34;https://dl.dropboxusercontent.com/u/261002456/x.rda&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;. That&#39;s in case that you also wanted to share the file, and is obviously optional.&lt;/p&gt;
+&lt;p&gt;You can now actually download the &amp;ldquo;x.rda&amp;rdquo; file from &lt;a href=&#34;https://dl.dropboxusercontent.com/u/261002456/x.rda&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;. That&amp;rsquo;s in case that you also wanted to share the file, and is obviously optional.&lt;/p&gt;
 
-&lt;p&gt;Note that you can get the link from withing &lt;code&gt;R&lt;/code&gt; and don&#39;t even need to use the Dropbox site.&lt;/p&gt;
+&lt;p&gt;Note that you can get the link from withing &lt;code&gt;R&lt;/code&gt; and don&amp;rsquo;t even need to use the Dropbox site.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;dropbox_share(dropbox_credentials, file = &amp;quot;public/x.rda&amp;quot;)
 &lt;/code&gt;&lt;/pre&gt;
@@ -346,7 +346,7 @@ names(done)
 
 &lt;h3 id=&#34;dropbox-put&#34;&gt;dropbox_put()&lt;/h3&gt;
 
-&lt;p&gt;What if you want to upload an actual file and not only &lt;code&gt;R&lt;/code&gt; objects? That&#39;s where &lt;code&gt;dropbox_put()&lt;/code&gt; shines. Below is an example where we create an image, save it as a pdf file, and upload it to Dropbox.&lt;/p&gt;
+&lt;p&gt;What if you want to upload an actual file and not only &lt;code&gt;R&lt;/code&gt; objects? That&amp;rsquo;s where &lt;code&gt;dropbox_put()&lt;/code&gt; shines. Below is an example where we create an image, save it as a pdf file, and upload it to Dropbox.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;## Lets create a sample file, in this case a pdf file
 pdf(&amp;quot;dropboxFig.pdf&amp;quot;)
@@ -379,7 +379,7 @@ names(done)
 
 &lt;h2 id=&#34;google-docs&#34;&gt;Google Docs&lt;/h2&gt;
 
-&lt;p&gt;From what I found, it seems to me that &lt;code&gt;RGoogleDocs&lt;/code&gt; (&lt;span class=&#34;showtooltip&#34; title=&#34;Lang DT (2014). RGoogleDocs: Primitive interface to Google Documents from R. R package version 0.7-0.&#34;&gt;&lt;a href=&#34;&#34;&gt;Temple Lang&lt;/a&gt;&lt;/span&gt;) is the package you&#39;ll want to use for interacting with Google Docs from R. The manual (&lt;span class=&#34;showtooltip&#34; title=&#34;(2014). &#39;An simple R interface to Google Documents.&#39; .&#34;&gt;&lt;a href=&#34;http://www.omegahat.org/RGoogleDocs/run.html&#34;&gt;Temple Lang&lt;/a&gt;&lt;/span&gt;) explains all what you pretty much need to know. You should know though that you can only upload certain types of files.&lt;/p&gt;
+&lt;p&gt;From what I found, it seems to me that &lt;code&gt;RGoogleDocs&lt;/code&gt; (&lt;span class=&#34;showtooltip&#34; title=&#34;Lang DT (2014). RGoogleDocs: Primitive interface to Google Documents from R. R package version 0.7-0.&#34;&gt;&lt;a href=&#34;&#34;&gt;Temple Lang&lt;/a&gt;&lt;/span&gt;) is the package you&amp;rsquo;ll want to use for interacting with Google Docs from R. The manual (&lt;span class=&#34;showtooltip&#34; title=&#34;(2014). &#39;An simple R interface to Google Documents.&#39; .&#34;&gt;&lt;a href=&#34;http://www.omegahat.org/RGoogleDocs/run.html&#34;&gt;Temple Lang&lt;/a&gt;&lt;/span&gt;) explains all what you pretty much need to know. You should know though that you can only upload certain types of files.&lt;/p&gt;
 
 &lt;p&gt;For example, you can upload a text file as shown below.&lt;/p&gt;
 

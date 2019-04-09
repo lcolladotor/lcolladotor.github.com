@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>UNIX on L. Collado-Torres</title>
-    <link>http://lcolladotor.github.io/tags/UNIX/</link>
+    <link>/tags/unix/</link>
     <description>Recent content in UNIX on L. Collado-Torres</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>&amp;copy; 2011-2018 Leonardo Collado Torres under (CC) BY-NC-SA 4.0. All thoughts and opinions here are my own.</copyright>
+    <copyright>&amp;copy; 2011-{year} Leonardo Collado Torres under (CC) BY-NC-SA 4.0. All thoughts and opinions here are my own.</copyright>
     <lastBuildDate>Wed, 07 Nov 2012 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://lcolladotor.github.io/tags/UNIX/" rel="self" type="application/rss+xml" />
+    <atom:link href="http://lcolladotor.github.io/tags/unix/" rel="self" type="application/rss+xml" />
     
     <item>
       <title>me: Bad rm, don&#39;t delete stuff I didn&#39;t want to delete! (rm: well, I do what you tell me to do!)</title>
-      <link>http://lcolladotor.github.io/2012/11/07/me-bad-rm-dont-delete-stuff-i-didnt-want-to-delete/</link>
+      <link>/2012/11/07/me-bad-rm-dont-delete-stuff-i-didnt-want-to-delete/</link>
       <pubDate>Wed, 07 Nov 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://lcolladotor.github.io/2012/11/07/me-bad-rm-dont-delete-stuff-i-didnt-want-to-delete/</guid>
+      <guid>/2012/11/07/me-bad-rm-dont-delete-stuff-i-didnt-want-to-delete/</guid>
       <description>&lt;p&gt;When Sandy was in town at some point I started doing some of my research work, but I shouldn&amp;#8217;t have. I basically did a silly mistake and erased files that take a long time to compute.&lt;/p&gt;
 &lt;p&gt;Prior to being here, I had an alias in my bash profile like this:&lt;/p&gt;
 &lt;p&gt;alias rm=&amp;#8217;rm -i&amp;#8217;&lt;/p&gt;

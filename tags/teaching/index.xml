@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Teaching on L. Collado-Torres</title>
-    <link>http://lcolladotor.github.io/tags/Teaching/</link>
+    <link>/tags/teaching/</link>
     <description>Recent content in Teaching on L. Collado-Torres</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>&amp;copy; 2011-2018 Leonardo Collado Torres under (CC) BY-NC-SA 4.0. All thoughts and opinions here are my own.</copyright>
+    <copyright>&amp;copy; 2011-{year} Leonardo Collado Torres under (CC) BY-NC-SA 4.0. All thoughts and opinions here are my own.</copyright>
     <lastBuildDate>Thu, 19 Apr 2018 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://lcolladotor.github.io/tags/Teaching/" rel="self" type="application/rss+xml" />
+    <atom:link href="http://lcolladotor.github.io/tags/teaching/" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Latin American R/BioConductor Developers Workshop 2018</title>
-      <link>http://lcolladotor.github.io/2018/04/19/latin-american-r-bioconductor-developers-workshop-2018/</link>
+      <link>/2018/04/19/latin-american-r-bioconductor-developers-workshop-2018/</link>
       <pubDate>Thu, 19 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://lcolladotor.github.io/2018/04/19/latin-american-r-bioconductor-developers-workshop-2018/</guid>
+      <guid>/2018/04/19/latin-american-r-bioconductor-developers-workshop-2018/</guid>
       <description>
 
 
@@ -84,17 +84,17 @@
     
     <item>
       <title>Teaching a short topic to beginner R users</title>
-      <link>http://lcolladotor.github.io/2015/07/07/rmarkdown/</link>
+      <link>/2015/07/07/rmarkdown/</link>
       <pubDate>Tue, 07 Jul 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://lcolladotor.github.io/2015/07/07/rmarkdown/</guid>
+      <guid>/2015/07/07/rmarkdown/</guid>
       <description>
 
-&lt;p&gt;A couple weeks ago I was given the opportunity to teach a 1 hr 30 min slot of an introduction to &lt;code&gt;R&lt;/code&gt; course. In the past, I&#39;ve taught lectures for similar courses, and I ended up asking myself what would be the best short topic to teach and how to teach it.&lt;/p&gt;
+&lt;p&gt;A couple weeks ago I was given the opportunity to teach a 1 hr 30 min slot of an introduction to &lt;code&gt;R&lt;/code&gt; course. In the past, I&amp;rsquo;ve taught lectures for similar courses, and I ended up asking myself what would be the best short topic to teach and how to teach it.&lt;/p&gt;
 
 &lt;h2 id=&#34;best-short-topic&#34;&gt;Best short topic&lt;/h2&gt;
 
-&lt;p&gt;There are two ways to answer the first question, one boring and one more interesting. The boring answer is that the course instructor selected the topic. The interesting one goes like this. I have taken short &lt;code&gt;R&lt;/code&gt; courses before and taught others, and it&#39;s always overwhelming for the students. You get to cover many concepts, get familiarized with &lt;code&gt;R&lt;/code&gt;&#39;s syntax, and in the end without lots of practice it&#39;s very challenging to retain much of the information. I think that students love it when they learn how to do something simple that could be the first building block for many of their projects. In parallel, I think that one of the coolest &lt;code&gt;R&lt;/code&gt; topics you can learn in an hour is how to create reproducible documents with &lt;code&gt;rmarkdown&lt;/code&gt; &lt;a id=&#39;cite-rmarkdown&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;http://CRAN.R-project.org/package=rmarkdown&#39;&gt;Allaire, Cheng, Xie, McPherson, et al., 2015&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;There are two ways to answer the first question, one boring and one more interesting. The boring answer is that the course instructor selected the topic. The interesting one goes like this. I have taken short &lt;code&gt;R&lt;/code&gt; courses before and taught others, and it&amp;rsquo;s always overwhelming for the students. You get to cover many concepts, get familiarized with &lt;code&gt;R&lt;/code&gt;&amp;rsquo;s syntax, and in the end without lots of practice it&amp;rsquo;s very challenging to retain much of the information. I think that students love it when they learn how to do something simple that could be the first building block for many of their projects. In parallel, I think that one of the coolest &lt;code&gt;R&lt;/code&gt; topics you can learn in an hour is how to create reproducible documents with &lt;code&gt;rmarkdown&lt;/code&gt; &lt;a id=&#39;cite-rmarkdown&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;http://CRAN.R-project.org/package=rmarkdown&#39;&gt;Allaire, Cheng, Xie, McPherson, et al., 2015&lt;/a&gt;).&lt;/p&gt;
 
 &lt;p&gt;Learning how to use a single function, &lt;code&gt;render()&lt;/code&gt; in this case, is as simple as it gets. And using the &lt;a href=&#34;http://www.rstudio.com/products/rstudio/#Desktop&#34; target=&#34;_blank&#34;&gt;RStudio Desktop&lt;/a&gt; is even simpler. Of course, it can easily get complicated. For example, on a new computer you need to install all the LaTeX dependencies if you want to create PDF files. That task can take some time and maybe scare away some new users. But PDF files are really a plus in this case since you can start creating HTML and Word documents. Other complications arise when a user is interested in more control over formatting the file, but like I said earlier, all you need is a simple building block and &lt;code&gt;rmarkdown&lt;/code&gt; is clearly one of them.&lt;/p&gt;
 
@@ -102,13 +102,13 @@
 
 &lt;h2 id=&#34;how-to-teach-it&#34;&gt;How to teach it&lt;/h2&gt;
 
-&lt;p&gt;Teaching a short topic to a beginner&#39;s audience is no easy feat. In the past I&#39;ve made lectures that have the code for every single step and many links to resources where students can learn some details. That is, I&#39;ve created the lectures in such a way that a student can later use them as reference and follow them without an instructor explaining them.&lt;/p&gt;
+&lt;p&gt;Teaching a short topic to a beginner&amp;rsquo;s audience is no easy feat. In the past I&amp;rsquo;ve made lectures that have the code for every single step and many links to resources where students can learn some details. That is, I&amp;rsquo;ve created the lectures in such a way that a student can later use them as reference and follow them without an instructor explaining them.&lt;/p&gt;
 
-&lt;p&gt;That&#39;s a strategy that I think works on the long run. However, it makes the actual lecture boring and very limited in interactivity. At the JHSPH biostat computing club, other students have chosen to use a lot of images, funny to witty quotes, and asked listeners to voice their opinions. I&#39;ve come to enjoy those presentations and I decided to create my lecture following that trend.&lt;/p&gt;
+&lt;p&gt;That&amp;rsquo;s a strategy that I think works on the long run. However, it makes the actual lecture boring and very limited in interactivity. At the JHSPH biostat computing club, other students have chosen to use a lot of images, funny to witty quotes, and asked listeners to voice their opinions. I&amp;rsquo;ve come to enjoy those presentations and I decided to create my lecture following that trend.&lt;/p&gt;
 
-&lt;p&gt;I started off with a series of questions about reproducible research and asked students to voice their opinions and to define a few key concepts. A couple were aware of the difference between reproducibility and replicability, but most were not. I also questioned them and presented them verbally with some famous cases, so they could realize that it&#39;s a fairly complicated matter. Next I presented some answers and definitions from the &lt;a href=&#34;https://osf.io/s9tya/wiki/home/&#34; target=&#34;_blank&#34;&gt;&lt;em&gt;Implementing Reproducible Research&lt;/em&gt;&lt;/a&gt; book.&lt;/p&gt;
+&lt;p&gt;I started off with a series of questions about reproducible research and asked students to voice their opinions and to define a few key concepts. A couple were aware of the difference between reproducibility and replicability, but most were not. I also questioned them and presented them verbally with some famous cases, so they could realize that it&amp;rsquo;s a fairly complicated matter. Next I presented some answers and definitions from the &lt;a href=&#34;https://osf.io/s9tya/wiki/home/&#34; target=&#34;_blank&#34;&gt;&lt;em&gt;Implementing Reproducible Research&lt;/em&gt;&lt;/a&gt; book.&lt;/p&gt;
 
-&lt;p&gt;Specifically talking about &lt;code&gt;R&lt;/code&gt;, I showed the students several documents I&#39;ve created in the past and asked whether they thought that they could reproduce the results or not. Basically, I wanted to highlight that when using &lt;code&gt;R&lt;/code&gt;, you really need the session information if you want to reproduce something. Specially if the analysis involves packages under heavy development.&lt;/p&gt;
+&lt;p&gt;Specifically talking about &lt;code&gt;R&lt;/code&gt;, I showed the students several documents I&amp;rsquo;ve created in the past and asked whether they thought that they could reproduce the results or not. Basically, I wanted to highlight that when using &lt;code&gt;R&lt;/code&gt;, you really need the session information if you want to reproduce something. Specially if the analysis involves packages under heavy development.&lt;/p&gt;
 
 &lt;p&gt;After having motivating the need for reproducible documents, I briefly showed what &lt;code&gt;rmarkdown&lt;/code&gt; is with some images from RStudio shown below.&lt;/p&gt;
 
@@ -116,17 +116,17 @@
 
 &lt;p&gt;&lt;img src=&#34;http://rmarkdown.rstudio.com/images/markdownChunk.png&#34; alt=&#34;Markdown and R&#34; /&gt;&lt;/p&gt;
 
-&lt;p&gt;That gave the students a general idea of how these documents look when you are writing them. But the most important part was showing them examples of how the resulting documents look like. That is, I showed them some complicated projects so they could imagine doing one themselves. The examples included some books, but given the audience I think that the one that motivated them most was Alyssa Frazee&#39;s &lt;code&gt;polyester&lt;/code&gt; reproducible paper (check the &lt;a href=&#34;https://github.com/leekgroup/polyester_code/blob/master/polyester_manuscript.Rmd&#34; target=&#34;_blank&#34;&gt;source here&lt;/a&gt;). I also showed them some of the cool stuff you can create with HTML documents: basically adding interactive elements.&lt;/p&gt;
+&lt;p&gt;That gave the students a general idea of how these documents look when you are writing them. But the most important part was showing them examples of how the resulting documents look like. That is, I showed them some complicated projects so they could imagine doing one themselves. The examples included some books, but given the audience I think that the one that motivated them most was Alyssa Frazee&amp;rsquo;s &lt;code&gt;polyester&lt;/code&gt; reproducible paper (check the &lt;a href=&#34;https://github.com/leekgroup/polyester_code/blob/master/polyester_manuscript.Rmd&#34; target=&#34;_blank&#34;&gt;source here&lt;/a&gt;). I also showed them some of the cool stuff you can create with HTML documents: basically adding interactive elements.&lt;/p&gt;
 
-&lt;p&gt;From there, we left the presentation and I demo&#39;ed how to use RStudio to write &lt;code&gt;rmarkdown&lt;/code&gt; documents, the Markdown syntax, where to find help, etc.&lt;/p&gt;
+&lt;p&gt;From there, we left the presentation and I demo&amp;rsquo;ed how to use RStudio to write &lt;code&gt;rmarkdown&lt;/code&gt; documents, the Markdown syntax, where to find help, etc.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&#34;http://dgdc5.digitalgameslearning.org/dgdc_5th/wp-content/uploads/lc.png&#34; alt=&#34;Lets code&#34; /&gt;&lt;/p&gt;
 
-&lt;p&gt;By this point, I think the lecture was quite complete and the students were motivated. However, from my past experience, I&#39;ve come to realize that students will easily forget a topic if they don&#39;t practice doing it. That is why even before making the lecture I spent quite a bit of time designing two practice labs. Both labs involved creating a &lt;code&gt;rmarkdown&lt;/code&gt; document.&lt;/p&gt;
+&lt;p&gt;By this point, I think the lecture was quite complete and the students were motivated. However, from my past experience, I&amp;rsquo;ve come to realize that students will easily forget a topic if they don&amp;rsquo;t practice doing it. That is why even before making the lecture I spent quite a bit of time designing two practice labs. Both labs involved creating a &lt;code&gt;rmarkdown&lt;/code&gt; document.&lt;/p&gt;
 
-&lt;p&gt;The first lab included some cool illusion plots which involved a lot of &lt;code&gt;R&lt;/code&gt; code. The code wasn&#39;t the point, but simply learning some of the basics such as what is a code chunk, some of Markdown&#39;s syntax, specifying some code chunk options, adding the session information, and using inline &lt;code&gt;R&lt;/code&gt; code to show the date when the document was made. Ahh, and of course, uploading your HTML document to &lt;a href=&#34;http://rpubs.com/&#34; target=&#34;_blank&#34;&gt;RPubs&lt;/a&gt; (see &lt;a href=&#34;http://rpubs.com/lcollado/illussion2015&#34; target=&#34;_blank&#34;&gt;mine&lt;/a&gt;). I know that not everyone is a fan of RPubs, but I imagined that students would get super excited that they made something that they could then show their colleagues and friends. And some did!&lt;/p&gt;
+&lt;p&gt;The first lab included some cool illusion plots which involved a lot of &lt;code&gt;R&lt;/code&gt; code. The code wasn&amp;rsquo;t the point, but simply learning some of the basics such as what is a code chunk, some of Markdown&amp;rsquo;s syntax, specifying some code chunk options, adding the session information, and using inline &lt;code&gt;R&lt;/code&gt; code to show the date when the document was made. Ahh, and of course, uploading your HTML document to &lt;a href=&#34;http://rpubs.com/&#34; target=&#34;_blank&#34;&gt;RPubs&lt;/a&gt; (see &lt;a href=&#34;http://rpubs.com/lcollado/illussion2015&#34; target=&#34;_blank&#34;&gt;mine&lt;/a&gt;). I know that not everyone is a fan of RPubs, but I imagined that students would get super excited that they made something that they could then show their colleagues and friends. And some did!&lt;/p&gt;
 
-&lt;p&gt;Sadly, we didn&#39;t have enough time for the second lab. I did explain to the students what it was about, but they didn&#39;t have time to do it themselves. For this second document, I wanted the students to learn how to create a document reporting some results where all the numbers in the text are written by &lt;code&gt;R&lt;/code&gt; instead of copy-pasting them.&lt;/p&gt;
+&lt;p&gt;Sadly, we didn&amp;rsquo;t have enough time for the second lab. I did explain to the students what it was about, but they didn&amp;rsquo;t have time to do it themselves. For this second document, I wanted the students to learn how to create a document reporting some results where all the numbers in the text are written by &lt;code&gt;R&lt;/code&gt; instead of copy-pasting them.&lt;/p&gt;
 
 &lt;h2 id=&#34;conclusions&#34;&gt;Conclusions&lt;/h2&gt;
 
@@ -134,7 +134,7 @@
 
 &lt;h3 id=&#34;references&#34;&gt;References&lt;/h3&gt;
 
-&lt;p&gt;You can find the lecture itself &lt;a href=&#34;http://www.aejaffe.com/summerR_2015/modules/module12.html&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt; but like I said earlier, it was designed for class and not for being used as a reference. However, the &lt;a href=&#34;http://www.aejaffe.com/summerR_2015/labs/module12_lab.R&#34; target=&#34;_blank&#34;&gt;lab&lt;/a&gt; and it&#39;s &lt;a href=&#34;http://www.aejaffe.com/summerR_2015/labs/mapping_module_labkey.R&#34; target=&#34;_blank&#34;&gt;key&lt;/a&gt; might be more useful.&lt;/p&gt;
+&lt;p&gt;You can find the lecture itself &lt;a href=&#34;http://www.aejaffe.com/summerR_2015/modules/module12.html&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt; but like I said earlier, it was designed for class and not for being used as a reference. However, the &lt;a href=&#34;http://www.aejaffe.com/summerR_2015/labs/module12_lab.R&#34; target=&#34;_blank&#34;&gt;lab&lt;/a&gt; and it&amp;rsquo;s &lt;a href=&#34;http://www.aejaffe.com/summerR_2015/labs/mapping_module_labkey.R&#34; target=&#34;_blank&#34;&gt;key&lt;/a&gt; might be more useful.&lt;/p&gt;
 
 &lt;p&gt;Citations made with &lt;code&gt;knitcitations&lt;/code&gt; &lt;a id=&#39;cite-knitcitations&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;http://CRAN.R-project.org/package=knitcitations&#39;&gt;Boettiger, 2015&lt;/a&gt;).&lt;/p&gt;
 
@@ -160,10 +160,10 @@ URL: &lt;a href=&#34;http://CRAN.R-project.org/package=knitcitations&#34;&gt;htt
     
     <item>
       <title>My strategy for quickly grading homeworks</title>
-      <link>http://lcolladotor.github.io/2013/11/08/fast-grading/</link>
+      <link>/2013/11/08/fast-grading/</link>
       <pubDate>Fri, 08 Nov 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://lcolladotor.github.io/2013/11/08/fast-grading/</guid>
+      <guid>/2013/11/08/fast-grading/</guid>
       <description>
 
 &lt;p&gt;For the past year and a half &lt;a href=&#34;http://www.biostat.jhsph.edu/~lcollado/teaching.html#.Un2BnJTF2Ql&#34; target=&#34;_blank&#34;&gt;I have been a teaching assistant&lt;/a&gt; (TA) for the Statistical Methods in Public Health I to IV (140.621 to 140.624) courses. As part of being a TA for these courses, we have to grade between 30 and 50 homeworks every two weeks or so: four problem sets per eight week terms. For example, I now have to grade 37 homeworks:&lt;/p&gt;
@@ -174,7 +174,7 @@ URL: &lt;a href=&#34;http://CRAN.R-project.org/package=knitcitations&#34;&gt;htt
 
 &lt;p&gt;These courses have been polished over time and the instructors do a great job organizing the TA group. For every problem set that we have to grade, we are given a full answer key that is later published in the course site so all the students can access it. As TAs we also receive general grading comments from the instructor; typically a two page document describing the key points that we should expect the students to be able to answer.&lt;/p&gt;
 
-&lt;p&gt;As part of the general grading comments, we are asked to give feedback beyond checkmarks such as &amp;quot;good job&amp;quot;. When the student completely misses the answer, we can simply refer them to the answer key: if they miss too many, we ask them to re-do the homework. Things get more complicated when the student misses part of the question and writing comments specific to that answer can get very time consuming. We can always use &amp;quot;More detailed discussion on results needed. See answer key.&amp;quot; but it can be nice for the student if we give them a hint on what they did wrong.&lt;/p&gt;
+&lt;p&gt;As part of the general grading comments, we are asked to give feedback beyond checkmarks such as &amp;ldquo;good job&amp;rdquo;. When the student completely misses the answer, we can simply refer them to the answer key: if they miss too many, we ask them to re-do the homework. Things get more complicated when the student misses part of the question and writing comments specific to that answer can get very time consuming. We can always use &amp;ldquo;More detailed discussion on results needed. See answer key.&amp;rdquo; but it can be nice for the student if we give them a hint on what they did wrong.&lt;/p&gt;
 
 &lt;p&gt;As a student &lt;a href=&#34;https://twitter.com/jhubiostat&#34; target=&#34;_blank&#34;&gt;@jhubiostat&lt;/a&gt; we agree to dedicate five hours per week to TA responsibilities. In the courses I have been a TA for, the responsibilities include getting familiar with the content, attending TA office hours (either general questions or STATA questions), attending the TA meetings, grading the exams, and grading the homeworks. It might sound like a lot, but I currently feel like I can it all done within the five hours per week. To do so, I obviously need to be efficient grading the homeworks.&lt;/p&gt;
 
@@ -192,7 +192,7 @@ URL: &lt;a href=&#34;http://CRAN.R-project.org/package=knitcitations&#34;&gt;htt
 &lt;p&gt;Why Adobe Acrobat?&lt;/p&gt;
 
 &lt;ol&gt;
-&lt;li&gt;Adobe Acrobat allows you to post &amp;quot;stamps&amp;quot;. It already includes a checkmark and a red &lt;strong&gt;X&lt;/strong&gt;. I also imported some simple images I made to stamp the homework as: satisfactory, unsatisfactory, or incomplete. We have to clearly mark one of these options at the top of the graded homeworks.&lt;/li&gt;
+&lt;li&gt;Adobe Acrobat allows you to post &amp;ldquo;stamps&amp;rdquo;. It already includes a checkmark and a red &lt;strong&gt;X&lt;/strong&gt;. I also imported some simple images I made to stamp the homework as: satisfactory, unsatisfactory, or incomplete. We have to clearly mark one of these options at the top of the graded homeworks.&lt;/li&gt;
 &lt;li&gt;Some of the PDF files we get are large, so I use the &lt;code&gt;Save as -&amp;gt; reduced size pdf&lt;/code&gt; tool from Adobe Acrobat to save space and make it easier for the course administrator to upload the graded homeworks to &lt;a href=&#34;http://courseplus.jhsph.edu/&#34; target=&#34;_blank&#34;&gt;CoursePlus&lt;/a&gt; (the tool the school uses for managing courses).&lt;/li&gt;
 &lt;/ol&gt;
 
@@ -217,7 +217,7 @@ URL: &lt;a href=&#34;http://CRAN.R-project.org/package=knitcitations&#34;&gt;htt
 
 &lt;p&gt;which leads to (0.00142, 0.00798) with the data they are using.&lt;/p&gt;
 
-&lt;p&gt;An anonymous student (I tried to choose examples that are not identifiable) wrote an answer that has very similar numbers to those we expect. Since they included the STATA output I can recognize that they used rounded numbers (oddly only for sample 1 but not sample 2) which lead the student to slightly different values. That is not a big deal and I think it deserves the &amp;quot;good job!&amp;quot; comment. So using the &amp;quot;stamps&amp;quot;, I added a checkmark. Then I typed &amp;quot;Good job!&amp;quot; and finally, I copied it so I can paste it the next time I want to add this comment.&lt;/p&gt;
+&lt;p&gt;An anonymous student (I tried to choose examples that are not identifiable) wrote an answer that has very similar numbers to those we expect. Since they included the STATA output I can recognize that they used rounded numbers (oddly only for sample 1 but not sample 2) which lead the student to slightly different values. That is not a big deal and I think it deserves the &amp;ldquo;good job!&amp;rdquo; comment. So using the &amp;ldquo;stamps&amp;rdquo;, I added a checkmark. Then I typed &amp;ldquo;Good job!&amp;rdquo; and finally, I copied it so I can paste it the next time I want to add this comment.&lt;/p&gt;
 
 &lt;p&gt;The image below shows the state at which I am copying the comment.&lt;/p&gt;
 
@@ -225,13 +225,13 @@ URL: &lt;a href=&#34;http://CRAN.R-project.org/package=knitcitations&#34;&gt;htt
 &lt;a href=&#34;http://lcolladotor.github.io/figs/2013-11-08-fast-grading/goodjob1.png&#34;&gt;&lt;img src=&#34;http://lcolladotor.github.io/figs/2013-11-08-fast-grading/goodjob1.png&#34; alt=&#34;Good job 1&#34; style=&#34;width: 500px;&#34;/&gt;&lt;/a&gt;
 &lt;/center&gt;&lt;/p&gt;
 
-&lt;p&gt;Moving on, I later found another student that has the correct answer presented in a different format. If &amp;quot;Good job!&amp;quot; is the most recent comment on my clipboard, I can simply paste it. If it is not, then I can use &lt;a href=&#34;http://www.alfredapp.com/&#34; target=&#34;_blank&#34;&gt;Alfred v2&lt;/a&gt; to show me my recent &amp;quot;copies&amp;quot; and select &amp;quot;Good job!&amp;quot; from the list. In this case it is under &lt;code&gt;cmd + 2&lt;/code&gt;; you can also use the arrows and the return key, or the mouse. Although note that &lt;a href=&#34;http://www.alfredapp.com/&#34; target=&#34;_blank&#34;&gt;Alfred v2&lt;/a&gt; is designed in such a way that you only have to use the keyboard to gain efficiency.&lt;/p&gt;
+&lt;p&gt;Moving on, I later found another student that has the correct answer presented in a different format. If &amp;ldquo;Good job!&amp;rdquo; is the most recent comment on my clipboard, I can simply paste it. If it is not, then I can use &lt;a href=&#34;http://www.alfredapp.com/&#34; target=&#34;_blank&#34;&gt;Alfred v2&lt;/a&gt; to show me my recent &amp;ldquo;copies&amp;rdquo; and select &amp;ldquo;Good job!&amp;rdquo; from the list. In this case it is under &lt;code&gt;cmd + 2&lt;/code&gt;; you can also use the arrows and the return key, or the mouse. Although note that &lt;a href=&#34;http://www.alfredapp.com/&#34; target=&#34;_blank&#34;&gt;Alfred v2&lt;/a&gt; is designed in such a way that you only have to use the keyboard to gain efficiency.&lt;/p&gt;
 
 &lt;p&gt;&lt;center&gt;
 &lt;a href=&#34;http://lcolladotor.github.io/figs/2013-11-08-fast-grading/goodjob2.png&#34;&gt;&lt;img src=&#34;http://lcolladotor.github.io/figs/2013-11-08-fast-grading/goodjob2.png&#34; alt=&#34;Good job 2&#34; style=&#34;width: 500px;&#34;/&gt;&lt;/a&gt;
 &lt;/center&gt;&lt;/p&gt;
 
-&lt;p&gt;The end result is a green checkmark with the &amp;quot;Good job!&amp;quot; comment pasted into it. The next time I use &lt;code&gt;cmd + v&lt;/code&gt; (the regular paste shortcut in Mac), &amp;quot;Good job!&amp;quot; will be pasted. So you only really need to invoke &lt;a href=&#34;http://www.alfredapp.com/&#34; target=&#34;_blank&#34;&gt;Alfred v2&lt;/a&gt; when you want to change comments.&lt;/p&gt;
+&lt;p&gt;The end result is a green checkmark with the &amp;ldquo;Good job!&amp;rdquo; comment pasted into it. The next time I use &lt;code&gt;cmd + v&lt;/code&gt; (the regular paste shortcut in Mac), &amp;ldquo;Good job!&amp;rdquo; will be pasted. So you only really need to invoke &lt;a href=&#34;http://www.alfredapp.com/&#34; target=&#34;_blank&#34;&gt;Alfred v2&lt;/a&gt; when you want to change comments.&lt;/p&gt;
 
 &lt;p&gt;&lt;center&gt;
 &lt;a href=&#34;http://lcolladotor.github.io/figs/2013-11-08-fast-grading/goodjob3.png&#34;&gt;&lt;img src=&#34;http://lcolladotor.github.io/figs/2013-11-08-fast-grading/goodjob3.png&#34; alt=&#34;Good job 3&#34; style=&#34;width: 500px;&#34;/&gt;&lt;/a&gt;
@@ -239,7 +239,7 @@ URL: &lt;a href=&#34;http://CRAN.R-project.org/package=knitcitations&#34;&gt;htt
 
 &lt;h4 id=&#34;detailed-comments-where-the-strategy-pays-off&#34;&gt;Detailed comments: where the strategy pays off!&lt;/h4&gt;
 
-&lt;p&gt;You obviously do not all this setup just for pasting &amp;quot;Good job!&amp;quot; everywhere. However, when grading homeworks you will encounter much more complicated cases where you might need to write a short explanation, point the student to the answer key, etc. To save time you want to minimize having to type the long comments each time you need to. That is where this strategy pays its dividends.&lt;/p&gt;
+&lt;p&gt;You obviously do not all this setup just for pasting &amp;ldquo;Good job!&amp;rdquo; everywhere. However, when grading homeworks you will encounter much more complicated cases where you might need to write a short explanation, point the student to the answer key, etc. To save time you want to minimize having to type the long comments each time you need to. That is where this strategy pays its dividends.&lt;/p&gt;
 
 &lt;p&gt;In this example, I first find a plot that looks very similar to what the students were asked to do. It has a couple of mistakes. First, the age-gender group categories are not labeled in the plot, which makes it impossible to know which group is which unless you know how &lt;em&gt;agegen&lt;/em&gt; is coded. Given that it is the first time students were asked to make such a detailed plot, I can expect other students to make the same mistake. So I copy that comment and add it to my clipboard history as shown below.&lt;/p&gt;
 
@@ -261,7 +261,7 @@ URL: &lt;a href=&#34;http://CRAN.R-project.org/package=knitcitations&#34;&gt;htt
 &lt;a href=&#34;http://lcolladotor.github.io/figs/2013-11-08-fast-grading/ci3.png&#34;&gt;&lt;img src=&#34;http://lcolladotor.github.io/figs/2013-11-08-fast-grading/ci3.png&#34; alt=&#34;CI 3&#34; style=&#34;width: 500px;&#34;/&gt;&lt;/a&gt;
 &lt;/center&gt;&lt;/p&gt;
 
-&lt;p&gt;If my comment list is getting long, using &lt;a href=&#34;http://www.alfredapp.com/&#34; target=&#34;_blank&#34;&gt;Alfred v2&lt;/a&gt; I can easily search my clipboard history by typing keywords. In this particular case, I know that my comment had something to do with the &amp;quot;axis&amp;quot;, so typing it in I quickly find the comment I want to use.&lt;/p&gt;
+&lt;p&gt;If my comment list is getting long, using &lt;a href=&#34;http://www.alfredapp.com/&#34; target=&#34;_blank&#34;&gt;Alfred v2&lt;/a&gt; I can easily search my clipboard history by typing keywords. In this particular case, I know that my comment had something to do with the &amp;ldquo;axis&amp;rdquo;, so typing it in I quickly find the comment I want to use.&lt;/p&gt;
 
 &lt;p&gt;&lt;center&gt;
 &lt;a href=&#34;http://lcolladotor.github.io/figs/2013-11-08-fast-grading/ci4.png&#34;&gt;&lt;img src=&#34;http://lcolladotor.github.io/figs/2013-11-08-fast-grading/ci4.png&#34; alt=&#34;CI 4&#34; style=&#34;width: 500px;&#34;/&gt;&lt;/a&gt;

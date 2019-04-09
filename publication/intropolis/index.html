@@ -5,61 +5,99 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="theme" content="hugo-academic">
+  <meta name="generator" content="Source Themes Academic 4.1.0">
   <meta name="generator" content="Hugo 0.54.0" />
-  <meta name="author" content="Leonardo Collado Torres">
 
+  
+
+  
   
   
   
   
     
-      
+    
     
   
-  <meta name="description" content="Background: Gene annotations, such as those in GENCODE, are derived primarily from alignments of spliced cDNA sequences and protein sequences. The impact of RNA-seq data on annotation has been confined to major projects like ENCODE and Illumina Body Map 2.0. Results: We aligned 21,504 Illumina-sequenced human RNA-seq samples from the Sequence Read Archive (SRA) to the human genome and compared detected exon-exon junctions with junctions in several recent gene annotations. We found 56,861 junctions (18.6%) in at least 1000 samples that were not annotated, and their expression associated with tissue type. Junctions well expressed in individual samples tended to be annotated. Newer samples contributed few novel well-supported junctions, with the vast majority of detected junctions present in samples before 2013. We compiled junction data into a resource called intropolis available at http://intropolis.rail.bio. We used this resource to search for a recently validated isoform of the ALK gene and characterized the potential functional implications of unannotated junctions with publicly available TRAP-seq data. Conclusions: Considering only the variation contained in annotation may suffice if an investigator is interested only in well-expressed transcript isoforms. However, genes that are not generally well expressed and nonetheless present in a small but significant number of samples in the SRA are likelier to be incompletely annotated. The rate at which evidence for novel junctions has been added to the SRA has tapered dramatically, even to the point of an asymptote. Now is perhaps an appropriate time to update incomplete annotations to include splicing present in the now-stable snapshot provided by the SRA.">
-
-  
-  <link rel="alternate" hreflang="en-us" href="http://lcolladotor.github.io/publication/intropolis/">
-
   
 
+  <meta name="author" content="Leonardo Collado-Torres">
+
+  
+  
+  
+    
+  
+  <meta name="description" content="We found 56,861 junctions (18.6%) in at least 1000 samples that were not annotated out of 21,504 samples, and their expression associated with tissue type. We compiled junction data into a resource called intropolis available at http://intropolis.rail.bio.">
+
+  
+  <link rel="alternate" hreflang="en-us" href="/publication/intropolis/">
 
   
 
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
   
   
   <meta name="theme-color" content="#e51744">
   
+
+  
   
   
   
     
-  
-  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha256-eSi1q2PG6J7g7ib17yAaWMcrr5GrtohYChqibrV7PBE=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" integrity="sha256-ygkqlh3CYSUri3LhQxzdcm0n1EQvH2Y+U5S2idbLtxs=" crossorigin="anonymous">
+
     
     
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css">
     
+      
+    
+    
+      
+      
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css" crossorigin="anonymous">
+      
+    
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.css" integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ==" crossorigin="anonymous">
+    
+
+    
+
+  
+
   
   
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha512-6MXa8B6uaO18Hid6blRMetEIoPqHf7Ux1tnyIQdpt9qI5OACx7C+O3IVTr98vwGnlcg0LOLa02i9Y1HpVhlfiw==" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.1/css/academicons.min.css" integrity="sha512-NThgw3XKQ1absAahW6to7Ey42uycrVvfNfyjqcFNgCmOCQ5AR4AO0SiXrN+8ZtYeappp56lk1WtvjVmEa+VR6A==" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" integrity="sha256-ygkqlh3CYSUri3LhQxzdcm0n1EQvH2Y+U5S2idbLtxs=" crossorigin="anonymous">
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:400,700|Roboto:400,400italic,700|Roboto+Mono|Karma|Mina">
   
-  
-  
-  
-  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:400,700%7cRoboto:400,400italic,700%7cRoboto&#43;Mono%7cKarma%7cMina">
-  
+
   <link rel="stylesheet" href="/styles.css">
   
 
   
+  
     <script>
       window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
       ga('create', 'UA-45299226-1', 'auto');
+      
       ga('require', 'eventTracker');
       ga('require', 'outboundLinkTracker');
       ga('require', 'urlChangeTracker');
@@ -70,27 +108,34 @@
     <script async src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js" integrity="sha512-HUmooslVKj4m6OBu0OgzjXXr+QuFYy/k7eLI5jdeEy/F4RSgMn6XRWRGkFi5IFaFgy7uFTkegp3Z0XnJf3Jq+g==" crossorigin="anonymous"></script>
     
   
+  
 
   
-  <link rel="alternate" href="http://lcolladotor.github.io/index.xml" type="application/rss+xml" title="L. Collado-Torres">
-  <link rel="feed" href="http://lcolladotor.github.io/index.xml" type="application/rss+xml" title="L. Collado-Torres">
+  <link rel="alternate" href="/index.xml" type="application/rss+xml" title="L. Collado-Torres">
+  <link rel="feed" href="/index.xml" type="application/rss+xml" title="L. Collado-Torres">
   
 
   <link rel="manifest" href="/site.webmanifest">
   <link rel="icon" type="image/png" href="/img/icon.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
 
-  <link rel="canonical" href="http://lcolladotor.github.io/publication/intropolis/">
+  <link rel="canonical" href="/publication/intropolis/">
 
+  
+  
+  
+  
+    
+  
   <meta property="twitter:card" content="summary_large_image">
   
   <meta property="twitter:site" content="@fellgernon">
   <meta property="twitter:creator" content="@fellgernon">
   
   <meta property="og:site_name" content="L. Collado-Torres">
-  <meta property="og:url" content="http://lcolladotor.github.io/publication/intropolis/">
+  <meta property="og:url" content="/publication/intropolis/">
   <meta property="og:title" content="Human splicing diversity and the extent of unannotated splice junctions across human RNA-seq samples on the Sequence Read Archive | L. Collado-Torres">
-  <meta property="og:description" content="Background: Gene annotations, such as those in GENCODE, are derived primarily from alignments of spliced cDNA sequences and protein sequences. The impact of RNA-seq data on annotation has been confined to major projects like ENCODE and Illumina Body Map 2.0. Results: We aligned 21,504 Illumina-sequenced human RNA-seq samples from the Sequence Read Archive (SRA) to the human genome and compared detected exon-exon junctions with junctions in several recent gene annotations. We found 56,861 junctions (18.6%) in at least 1000 samples that were not annotated, and their expression associated with tissue type. Junctions well expressed in individual samples tended to be annotated. Newer samples contributed few novel well-supported junctions, with the vast majority of detected junctions present in samples before 2013. We compiled junction data into a resource called intropolis available at http://intropolis.rail.bio. We used this resource to search for a recently validated isoform of the ALK gene and characterized the potential functional implications of unannotated junctions with publicly available TRAP-seq data. Conclusions: Considering only the variation contained in annotation may suffice if an investigator is interested only in well-expressed transcript isoforms. However, genes that are not generally well expressed and nonetheless present in a small but significant number of samples in the SRA are likelier to be incompletely annotated. The rate at which evidence for novel junctions has been added to the SRA has tapered dramatically, even to the point of an asymptote. Now is perhaps an appropriate time to update incomplete annotations to include splicing present in the now-stable snapshot provided by the SRA.">
+  <meta property="og:description" content="We found 56,861 junctions (18.6%) in at least 1000 samples that were not annotated out of 21,504 samples, and their expression associated with tissue type. We compiled junction data into a resource called intropolis available at http://intropolis.rail.bio."><meta property="og:image" content="/publication/intropolis/featured.png">
   <meta property="og:locale" content="en-us">
   
   <meta property="article:published_time" content="2016-12-30T17:44:49-05:00">
@@ -100,38 +145,66 @@
 
   
 
+  
+
   <title>Human splicing diversity and the extent of unannotated splice junctions across human RNA-seq samples on the Sequence Read Archive | L. Collado-Torres</title>
 
 </head>
-<body id="top" data-spy="scroll" data-target="#toc" data-offset="71" >
+<body id="top" data-spy="scroll" data-target="#TableOfContents" data-offset="71" >
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
 
-<nav class="navbar navbar-default navbar-fixed-top" id="navbar-main">
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" role="textbox" spellcheck="false" type="search">
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+<nav class="navbar navbar-light fixed-top navbar-expand-lg py-0" id="navbar-main">
   <div class="container">
 
     
-    <div class="navbar-header">
+      <a class="navbar-brand" href="/">L. Collado-Torres</a>
       
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-              data-target=".navbar-collapse" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span><i class="fas fa-bars"></i></span>
       </button>
       
-      <a class="navbar-brand" href="/">L. Collado-Torres</a>
-    </div>
 
     
-    <div class="collapse navbar-collapse">
+    <div class="collapse navbar-collapse" id="navbar">
 
       
       
-      <ul class="nav navbar-nav navbar-right">
+      <ul class="navbar-nav mr-auto">
         
 
         
-        
+
         
         
         
@@ -139,7 +212,7 @@
         
 
         <li class="nav-item">
-          <a href="/#about">
+          <a class="nav-link" href="/#about">
             
             <span>Home</span>
             
@@ -150,7 +223,7 @@
         
 
         
-        
+
         
         
         
@@ -158,7 +231,26 @@
         
 
         <li class="nav-item">
-          <a href="/#publications_selected">
+          <a class="nav-link" href="/#projects">
+            
+            <span>Projects</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="/#publications">
             
             <span>Publications</span>
             
@@ -169,7 +261,7 @@
         
 
         
-        
+
         
         
         
@@ -177,7 +269,7 @@
         
 
         <li class="nav-item">
-          <a href="/#talks">
+          <a class="nav-link" href="/#talks_favorite">
             
             <span>Talks</span>
             
@@ -188,7 +280,7 @@
         
 
         
-        
+
         
         
         
@@ -196,7 +288,7 @@
         
 
         <li class="nav-item">
-          <a href="/#blog">
+          <a class="nav-link" href="/#blog">
             
             <span>Blog</span>
             
@@ -207,13 +299,13 @@
         
 
         
-        
+
         
         
         
 
         <li class="nav-item">
-          <a href="/#cv">
+          <a class="nav-link" href="/#cv">
             
             <span>CV</span>
             
@@ -224,7 +316,7 @@
         
 
         
-        
+
         
         
         
@@ -232,9 +324,9 @@
         
 
         <li class="nav-item">
-          <a href="/#mentoring">
+          <a class="nav-link" href="/#mentoring">
             
-            <span>Students</span>
+            <span>Mentoring</span>
             
           </a>
         </li>
@@ -243,7 +335,7 @@
         
 
         
-        
+
         
         
         
@@ -251,7 +343,7 @@
         
 
         <li class="nav-item">
-          <a href="/#teaching">
+          <a class="nav-link" href="/#teaching">
             
             <span>Teaching</span>
             
@@ -262,7 +354,7 @@
         
 
         
-        
+
         
         
         
@@ -270,7 +362,7 @@
         
 
         <li class="nav-item">
-          <a href="/#contact">
+          <a class="nav-link" href="/#contact">
             
             <span>Contact</span>
             
@@ -280,27 +372,27 @@
         
         
 
-        
-        
-        
-        
-        
-          
+      
+      </ul>
+      <ul class="navbar-nav ml-auto">
+      
+
         
 
+        
         <li class="nav-item">
-          <a href="/#search">
-            
-            <span>Search</span>
-            
-          </a>
+          <a class="nav-link js-search" href="#"><i class="fas fa-search" aria-hidden="true"></i></a>
         </li>
+        
 
         
-        
-      
 
-      
+        
+        <li class="nav-item">
+          <a class="nav-link js-dark-toggle" href="#"><i class="fas fa-moon" aria-hidden="true"></i></a>
+        </li>
+        
+
       </ul>
 
     </div>
@@ -312,58 +404,587 @@
   
 
 
-  <div class="article-container">
-    <h1 itemprop="name">Human splicing diversity and the extent of unannotated splice junctions across human RNA-seq samples on the Sequence Read Archive</h1>
-    <span class="pub-authors" itemprop="author">
+
+
+
+
+
+
+
+
+
+
+
+<div class="article-header d-xl-none">
+  <div class="featured-image" style="background-image: url('/publication/intropolis/featured_hu86bb6472eb05fa8968374278fa4ec260_236812_800x0_resize_lanczos_2.png');"></div>
+  <span class="article-header-caption">Image credit: <a href="https://doi.org/10.1186/s13059-016-1118-6" target="_blank"><strong>bioRxiv</strong></a></span>
+</div>
+
+
+<div class="container-fluid split-header d-none d-xl-block">
+  <div class="row">
+    <div class="col-6">
+      <div class="split-header-content">
+        <h1 itemprop="name">Human splicing diversity and the extent of unannotated splice junctions across human RNA-seq samples on the Sequence Read Archive</h1>
+
+        
+
+        
+
+
+
+<meta content="2016-12-30 17:44:49 -0500 EST" itemprop="datePublished">
+<meta content="2016-12-30 17:44:49 -0500 EST" itemprop="dateModified">
+
+<div class="article-metadata">
+
+  
+  
+  
+  
+  <div>
+    
+
+
+
+  <span itemscope itemprop="author" itemtype="http://schema.org/Person">
+      <span itemprop="name">
+        
+
       
-      A Nellore, AE Jaffe, JP Fortin, J Alquicira-Hernández, <strong>L Collado-Torres</strong>, S Wang, RA Phillips, N Karbhari, KD Hansen, B Langmead, JT Leek
       
-    </span>
-    <span class="pull-right">
+      <a href="/authors/a-nellore/">A Nellore</a></span></span>, 
+  <span itemscope itemprop="author" itemtype="http://schema.org/Person">
+      <span itemprop="name">
+        
+
       
+      
+      <a href="/authors/ae-jaffe/">AE Jaffe</a></span></span>, 
+  <span itemscope itemprop="author" itemtype="http://schema.org/Person">
+      <span itemprop="name">
+        
+
+      
+      
+      <a href="/authors/jp-fortin/">JP Fortin</a></span></span>, 
+  <span itemscope itemprop="author" itemtype="http://schema.org/Person">
+      <span itemprop="name">
+        
+
+      
+      
+      <a href="/authors/j-alquicira-hern%C3%A1ndez/">J Alquicira-Hernández</a></span></span>, 
+  <span itemscope itemprop="author" itemtype="http://schema.org/Person">
+      <span itemprop="name">
+        
+
+      
+      
+      <a href="/authors/__l-collado-torres__/authors/admin/"><a href="/authors/admin"><strong>L Collado-Torres</strong></a></a></span></span>, 
+  <span itemscope itemprop="author" itemtype="http://schema.org/Person">
+      <span itemprop="name">
+        
+
+      
+      
+      <a href="/authors/s-wang/">S Wang</a></span></span>, 
+  <span itemscope itemprop="author" itemtype="http://schema.org/Person">
+      <span itemprop="name">
+        
+
+      
+      
+      <a href="/authors/ra-phillips/">RA Phillips</a></span></span>, 
+  <span itemscope itemprop="author" itemtype="http://schema.org/Person">
+      <span itemprop="name">
+        
+
+      
+      
+      <a href="/authors/n-karbhari/">N Karbhari</a></span></span>, 
+  <span itemscope itemprop="author" itemtype="http://schema.org/Person">
+      <span itemprop="name">
+        
+
+      
+      
+      <a href="/authors/kd-hansen/">KD Hansen</a></span></span>, 
+  <span itemscope itemprop="author" itemtype="http://schema.org/Person">
+      <span itemprop="name">
+        
+
+      
+      
+      <a href="/authors/b-langmead/">B Langmead</a></span></span>, 
+  <span itemscope itemprop="author" itemtype="http://schema.org/Person">
+      <span itemprop="name">
+        
+
+      
+      
+      <a href="/authors/jt-leek/">JT Leek</a></span></span>
+  
+
+
+
+  </div>
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    <time>Fri, Dec 30, 2016</time>
+  </span>
+  
+
+  
+
+  
+
+  
+  
+  <span class="middot-divider"></span>
+  <a href="/publication/intropolis/#disqus_thread"></a>
+  
+
+  
+
+  
+
+</div>
+
+
+        
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+<div class="btn-links mb-3">
+  
+  
+
+
+
+
+  
+  
+    
+  
+<a class="btn btn-outline-primary my-1 mr-1" href="https://www.biorxiv.org/content/10.1101/038224v1" target="_blank" rel="noopener">
+  Preprint
+</a>
+
+
+
+
+  
+    
+  
+
+
+<a class="btn btn-outline-primary my-1 mr-1" href="http://genomebiology.biomedcentral.com/track/pdf/10.1186/s13059-016-1118-6?site=genomebiology.biomedcentral.com" target="_blank" rel="noopener">
+  PDF
+</a>
+
+
+
+<button type="button" class="btn btn-outline-primary my-1 mr-1 js-cite-modal"
+        data-filename="/publication/intropolis/cite.bib">
+  Cite
+</button>
+
+
+  
+  
+    
+  
+<a class="btn btn-outline-primary my-1 mr-1" href="https://figshare.com/articles/Scripts_outputs_for_paper_Human_splicing_diversity_across_the_Sequence_Read_Archive_by_Nellore_et_al_/3811629/1" target="_blank" rel="noopener">
+  Code
+</a>
+
+
+  
+  
+    
+  
+<a class="btn btn-outline-primary my-1 mr-1" href="https://figshare.com/articles/intropolis_exon-exon_junctions_across_publicly_available_RNA-seq_samples_on_the_Sequence_Read_Archive/3811680/1" target="_blank" rel="noopener">
+  Dataset
+</a>
+
+
+
+  
+  <a class="btn btn-outline-primary my-1 mr-1" href="/project/recount2/">
+    Project
+  </a>
+  
+
+
+
+
+
+
+
+
+
+<a class="btn btn-outline-primary my-1 mr-1" href="https://doi.org/10.1186/s13059-016-1118-6" target="_blank" rel="noopener">
+  DOI
+</a>
+
+
+
+</div>
+
+
+
+        
 <div class="share-box" aria-hidden="true">
   <ul class="share">
     <li>
       <a class="twitter"
-         href="https://twitter.com/intent/tweet?text=Human%20splicing%20diversity%20and%20the%20extent%20of%20unannotated%20splice%20junctions%20across%20human%20RNA-seq%20samples%20on%20the%20Sequence%20Read%20Archive&amp;url=http%3a%2f%2flcolladotor.github.io%2fpublication%2fintropolis%2f"
+         href="https://twitter.com/intent/tweet?text=Human%20splicing%20diversity%20and%20the%20extent%20of%20unannotated%20splice%20junctions%20across%20human%20RNA-seq%20samples%20on%20the%20Sequence%20Read%20Archive&amp;url=%2fpublication%2fintropolis%2f"
          target="_blank" rel="noopener">
-        <i class="fa fa-twitter"></i>
+        <i class="fab fa-twitter"></i>
       </a>
     </li>
     <li>
       <a class="facebook"
-         href="https://www.facebook.com/sharer.php?u=http%3a%2f%2flcolladotor.github.io%2fpublication%2fintropolis%2f"
+         href="https://www.facebook.com/sharer.php?u=%2fpublication%2fintropolis%2f"
          target="_blank" rel="noopener">
-        <i class="fa fa-facebook"></i>
+        <i class="fab fa-facebook-f"></i>
       </a>
     </li>
     <li>
       <a class="linkedin"
-         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3a%2f%2flcolladotor.github.io%2fpublication%2fintropolis%2f&amp;title=Human%20splicing%20diversity%20and%20the%20extent%20of%20unannotated%20splice%20junctions%20across%20human%20RNA-seq%20samples%20on%20the%20Sequence%20Read%20Archive"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=%2fpublication%2fintropolis%2f&amp;title=Human%20splicing%20diversity%20and%20the%20extent%20of%20unannotated%20splice%20junctions%20across%20human%20RNA-seq%20samples%20on%20the%20Sequence%20Read%20Archive"
          target="_blank" rel="noopener">
-        <i class="fa fa-linkedin"></i>
+        <i class="fab fa-linkedin-in"></i>
       </a>
     </li>
     <li>
       <a class="weibo"
-         href="http://service.weibo.com/share/share.php?url=http%3a%2f%2flcolladotor.github.io%2fpublication%2fintropolis%2f&amp;title=Human%20splicing%20diversity%20and%20the%20extent%20of%20unannotated%20splice%20junctions%20across%20human%20RNA-seq%20samples%20on%20the%20Sequence%20Read%20Archive"
+         href="http://service.weibo.com/share/share.php?url=%2fpublication%2fintropolis%2f&amp;title=Human%20splicing%20diversity%20and%20the%20extent%20of%20unannotated%20splice%20junctions%20across%20human%20RNA-seq%20samples%20on%20the%20Sequence%20Read%20Archive"
          target="_blank" rel="noopener">
-        <i class="fa fa-weibo"></i>
+        <i class="fab fa-weibo"></i>
       </a>
     </li>
     <li>
       <a class="email"
-         href="mailto:?subject=Human%20splicing%20diversity%20and%20the%20extent%20of%20unannotated%20splice%20junctions%20across%20human%20RNA-seq%20samples%20on%20the%20Sequence%20Read%20Archive&amp;body=http%3a%2f%2flcolladotor.github.io%2fpublication%2fintropolis%2f">
-        <i class="fa fa-envelope"></i>
+         href="mailto:?subject=Human%20splicing%20diversity%20and%20the%20extent%20of%20unannotated%20splice%20junctions%20across%20human%20RNA-seq%20samples%20on%20the%20Sequence%20Read%20Archive&amp;body=%2fpublication%2fintropolis%2f">
+        <i class="fas fa-envelope"></i>
       </a>
     </li>
   </ul>
 </div>
 
 
-    </span>
+      </div>
+    </div>
+    <div class="col-6">
+      <div class="split-header-image">
+        <img src="/publication/intropolis/featured_hu86bb6472eb05fa8968374278fa4ec260_236812_680x500_fill_q90_lanczos_smart1_2.png" itemprop="image" alt="">
+        <span class="article-header-caption">Image credit: <a href="https://doi.org/10.1186/s13059-016-1118-6" target="_blank"><strong>bioRxiv</strong></a></span>
+      </div>
+    </div>
+  </div>
+</div>
 
+<div class="article-container d-xl-none">
+  <h1 itemprop="name">Human splicing diversity and the extent of unannotated splice junctions across human RNA-seq samples on the Sequence Read Archive</h1>
+
+  
+
+  
+
+
+
+<meta content="2016-12-30 17:44:49 -0500 EST" itemprop="datePublished">
+<meta content="2016-12-30 17:44:49 -0500 EST" itemprop="dateModified">
+
+<div class="article-metadata">
+
+  
+  
+  
+  
+  <div>
     
+
+
+
+  <span itemscope itemprop="author" itemtype="http://schema.org/Person">
+      <span itemprop="name">
+        
+
+      
+      
+      <a href="/authors/a-nellore/">A Nellore</a></span></span>, 
+  <span itemscope itemprop="author" itemtype="http://schema.org/Person">
+      <span itemprop="name">
+        
+
+      
+      
+      <a href="/authors/ae-jaffe/">AE Jaffe</a></span></span>, 
+  <span itemscope itemprop="author" itemtype="http://schema.org/Person">
+      <span itemprop="name">
+        
+
+      
+      
+      <a href="/authors/jp-fortin/">JP Fortin</a></span></span>, 
+  <span itemscope itemprop="author" itemtype="http://schema.org/Person">
+      <span itemprop="name">
+        
+
+      
+      
+      <a href="/authors/j-alquicira-hern%C3%A1ndez/">J Alquicira-Hernández</a></span></span>, 
+  <span itemscope itemprop="author" itemtype="http://schema.org/Person">
+      <span itemprop="name">
+        
+
+      
+      
+      <a href="/authors/__l-collado-torres__/authors/admin/"><a href="/authors/admin"><strong>L Collado-Torres</strong></a></a></span></span>, 
+  <span itemscope itemprop="author" itemtype="http://schema.org/Person">
+      <span itemprop="name">
+        
+
+      
+      
+      <a href="/authors/s-wang/">S Wang</a></span></span>, 
+  <span itemscope itemprop="author" itemtype="http://schema.org/Person">
+      <span itemprop="name">
+        
+
+      
+      
+      <a href="/authors/ra-phillips/">RA Phillips</a></span></span>, 
+  <span itemscope itemprop="author" itemtype="http://schema.org/Person">
+      <span itemprop="name">
+        
+
+      
+      
+      <a href="/authors/n-karbhari/">N Karbhari</a></span></span>, 
+  <span itemscope itemprop="author" itemtype="http://schema.org/Person">
+      <span itemprop="name">
+        
+
+      
+      
+      <a href="/authors/kd-hansen/">KD Hansen</a></span></span>, 
+  <span itemscope itemprop="author" itemtype="http://schema.org/Person">
+      <span itemprop="name">
+        
+
+      
+      
+      <a href="/authors/b-langmead/">B Langmead</a></span></span>, 
+  <span itemscope itemprop="author" itemtype="http://schema.org/Person">
+      <span itemprop="name">
+        
+
+      
+      
+      <a href="/authors/jt-leek/">JT Leek</a></span></span>
+  
+
+
+
+  </div>
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    <time>Fri, Dec 30, 2016</time>
+  </span>
+  
+
+  
+
+  
+
+  
+  
+  <span class="middot-divider"></span>
+  <a href="/publication/intropolis/#disqus_thread"></a>
+  
+
+  
+
+  
+    
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    <li>
+      <a class="twitter"
+         href="https://twitter.com/intent/tweet?text=Human%20splicing%20diversity%20and%20the%20extent%20of%20unannotated%20splice%20junctions%20across%20human%20RNA-seq%20samples%20on%20the%20Sequence%20Read%20Archive&amp;url=%2fpublication%2fintropolis%2f"
+         target="_blank" rel="noopener">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </li>
+    <li>
+      <a class="facebook"
+         href="https://www.facebook.com/sharer.php?u=%2fpublication%2fintropolis%2f"
+         target="_blank" rel="noopener">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+    </li>
+    <li>
+      <a class="linkedin"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=%2fpublication%2fintropolis%2f&amp;title=Human%20splicing%20diversity%20and%20the%20extent%20of%20unannotated%20splice%20junctions%20across%20human%20RNA-seq%20samples%20on%20the%20Sequence%20Read%20Archive"
+         target="_blank" rel="noopener">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+    </li>
+    <li>
+      <a class="weibo"
+         href="http://service.weibo.com/share/share.php?url=%2fpublication%2fintropolis%2f&amp;title=Human%20splicing%20diversity%20and%20the%20extent%20of%20unannotated%20splice%20junctions%20across%20human%20RNA-seq%20samples%20on%20the%20Sequence%20Read%20Archive"
+         target="_blank" rel="noopener">
+        <i class="fab fa-weibo"></i>
+      </a>
+    </li>
+    <li>
+      <a class="email"
+         href="mailto:?subject=Human%20splicing%20diversity%20and%20the%20extent%20of%20unannotated%20splice%20junctions%20across%20human%20RNA-seq%20samples%20on%20the%20Sequence%20Read%20Archive&amp;body=%2fpublication%2fintropolis%2f">
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+  
+
+</div>
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+<div class="btn-links mb-3">
+  
+  
+
+
+
+
+  
+  
+    
+  
+<a class="btn btn-outline-primary my-1 mr-1" href="https://www.biorxiv.org/content/10.1101/038224v1" target="_blank" rel="noopener">
+  Preprint
+</a>
+
+
+
+
+  
+    
+  
+
+
+<a class="btn btn-outline-primary my-1 mr-1" href="http://genomebiology.biomedcentral.com/track/pdf/10.1186/s13059-016-1118-6?site=genomebiology.biomedcentral.com" target="_blank" rel="noopener">
+  PDF
+</a>
+
+
+
+<button type="button" class="btn btn-outline-primary my-1 mr-1 js-cite-modal"
+        data-filename="/publication/intropolis/cite.bib">
+  Cite
+</button>
+
+
+  
+  
+    
+  
+<a class="btn btn-outline-primary my-1 mr-1" href="https://figshare.com/articles/Scripts_outputs_for_paper_Human_splicing_diversity_across_the_Sequence_Read_Archive_by_Nellore_et_al_/3811629/1" target="_blank" rel="noopener">
+  Code
+</a>
+
+
+  
+  
+    
+  
+<a class="btn btn-outline-primary my-1 mr-1" href="https://figshare.com/articles/intropolis_exon-exon_junctions_across_publicly_available_RNA-seq_samples_on_the_Sequence_Read_Archive/3811680/1" target="_blank" rel="noopener">
+  Dataset
+</a>
+
+
+
+  
+  <a class="btn btn-outline-primary my-1 mr-1" href="/project/recount2/">
+    Project
+  </a>
+  
+
+
+
+
+
+
+
+
+
+<a class="btn btn-outline-primary my-1 mr-1" href="https://doi.org/10.1186/s13059-016-1118-6" target="_blank" rel="noopener">
+  DOI
+</a>
+
+
+
+</div>
+
+
+</div>
+
+
+
+  <div class="article-container">
 
     
     <h3>Abstract</h3>
@@ -372,111 +993,77 @@
 
     
     <div class="row">
-      <div class="col-sm-1"></div>
-      <div class="col-sm-10">
+      <div class="col-md-1"></div>
+      <div class="col-md-10">
         <div class="row">
-          <div class="col-xs-12 col-sm-3 pub-row-heading">Type</div>
-          <div class="col-xs-12 col-sm-9">
+          <div class="col-12 col-md-3 pub-row-heading">Type</div>
+          <div class="col-12 col-md-9">
             
-            <a href="/publication/#0">
-              Peer-reviewed
+
+            
+            
+            <a href="/publication/#2">
+              Journal article
             </a>
             
           </div>
         </div>
       </div>
-      <div class="col-sm-1"></div>
+      <div class="col-md-1"></div>
     </div>
-    <div class="visible-xs space-below"></div>
+    <div class="d-md-none space-below"></div>
     
 
     
     <div class="row">
-      <div class="col-sm-1"></div>
-      <div class="col-sm-10">
+      <div class="col-md-1"></div>
+      <div class="col-md-10">
         <div class="row">
-          <div class="col-xs-12 col-sm-3 pub-row-heading">Publication</div>
-          <div class="col-xs-12 col-sm-9">Genome Biology</div>
+          <div class="col-12 col-md-3 pub-row-heading">Publication</div>
+          <div class="col-12 col-md-9">Genome Biology</div>
         </div>
       </div>
-      <div class="col-sm-1"></div>
+      <div class="col-md-1"></div>
     </div>
-    <div class="visible-xs space-below"></div>
+    <div class="d-md-none space-below"></div>
     
-
-    <div class="row">
-      <div class="col-sm-1"></div>
-      <div class="col-sm-10">
-        <div class="row">
-          <div class="col-xs-12 col-sm-3 pub-row-heading">Date</div>
-          <div class="col-xs-12 col-sm-9" itemprop="datePublished">
-            December, 2016
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-1"></div>
-    </div>
-    <div class="visible-xs space-below"></div>
-
-    <div class="row" style="padding-top: 10px">
-      <div class="col-sm-1"></div>
-      <div class="col-sm-10">
-        <div class="row">
-          <div class="col-xs-12 col-sm-3 pub-row-heading" style="line-height:34px;">Links</div>
-          <div class="col-xs-12 col-sm-9">
-
-            
-
-
-
-
-<a class="btn btn-primary btn-outline" href="http://genomebiology.biomedcentral.com/track/pdf/10.1186/s13059-016-1118-6?site=genomebiology.biomedcentral.com" target="_blank" rel="noopener">
-  PDF
-</a>
-
-
-
-
-
-<a class="btn btn-primary btn-outline" href="https://figshare.com/articles/Scripts_outputs_for_paper_Human_splicing_diversity_across_the_Sequence_Read_Archive_by_Nellore_et_al_/3811629/1" target="_blank" rel="noopener">
-  Code
-</a>
-
-
-<a class="btn btn-primary btn-outline" href="https://figshare.com/articles/intropolis_exon-exon_junctions_across_publicly_available_RNA-seq_samples_on_the_Sequence_Read_Archive/3811680/1" target="_blank" rel="noopener">
-  Dataset
-</a>
-
-
-
-<a class="btn btn-primary btn-outline" href="http://intropolis.rail.bio/" target="_blank" rel="noopener">
-  Project
-</a>
-
-
-
-
-
-
-
-<a class="btn btn-primary btn-outline" href="http://biorxiv.org/content/biorxiv/early/2016/01/29/038224" target="_blank" rel="noopener">
-  Pre-print
-</a>
-
-
-
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-1"></div>
-    </div>
-    <div class="visible-xs space-below"></div>
 
     <div class="space-below"></div>
 
-    <div class="article-style"></div>
+    <div class="article-style"><!-- More detail can easily be written here using *Markdown* and $\rm \LaTeX$ math code. -->
+</div>
 
     
+
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/tags/recount2/">recount2</a>
+  
+  <a class="badge badge-light" href="/tags/rail-rna/">Rail-RNA</a>
+  
+</div>
+
+
+
+    
+
+
+
+
+
+
+  
+  
+    
+  
+  
+
+
+
+
+
+
 
 
   </div>
@@ -484,33 +1071,15 @@
 
 
 
-<footer class="site-footer">
-  <div class="container">
-    <p class="powered-by">
-
-
+<div class="container">
+  <footer class="site-footer">
+  
+  
+  <p class="powered-by">
       
       
       <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4ef23e545d41b87c"></script>
-      <script type="text/javascript">
-        addthis.layers({
-          'theme' : 'transparent',
-          'share' : {
-            'position' : 'left',
-            'numPreferredServices' : 5,
-            'desktop' : false,
-            'mobile' : true
-          }, 
-          'follow' : {
-            'services' : [
-              {'service': 'twitter', 'id': 'fellgernon'},
-              {'service': 'rss', 'id': 'http://feeds.feedburner.com/FellgernonBit'}
-            ],
-      	  'offset' : {'top':'10px'},
-            'title' : 'Follow'
-          }   
-        });
-      </script>
+      
       
 
       <script type="text/javascript">
@@ -535,42 +1104,48 @@
       <center>	 
       <div id="clustrmaps-widget"></div><script type="text/javascript" id="clustrmaps" src="//cdn.clustrmaps.com/map_v2.js?d=Zo-deincaJGsqhqjIWsujtdoNOMJsnnZLefKmxDKVv8"></script>
       </center>
+  </p>
 
-      &copy; 2011-2018 Leonardo Collado Torres under (CC) BY-NC-SA 4.0. All thoughts and opinions here are my own. &middot; 
+  <p class="powered-by">
+    &copy; 2011-2019 Leonardo Collado Torres under (CC) BY-NC-SA 4.0. All thoughts and opinions here are my own. &middot; 
 
-      Powered by the
-      <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
-      <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+    Powered by the
+    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
 
-      <span class="pull-right" aria-hidden="true">
-        <a href="#" id="back_to_top">
-          <span class="button_icon">
-            <i class="fa fa-chevron-up fa-2x"></i>
-          </span>
-        </a>
-      </span>
-
-    </p>
-  </div>
+    
+    <span class="float-right" aria-hidden="true">
+      <a href="#" id="back_to_top">
+        <span class="button_icon">
+          <i class="fas fa-chevron-up fa-2x"></i>
+        </span>
+      </a>
+    </span>
+    
+  </p>
 </footer>
+
+</div>
 
 
 <div id="modal" class="modal fade" role="dialog">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <button type="button" class="close btn-large" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Cite</h4>
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
       </div>
-      <div>
-        <pre><code class="modal-body tex"></code></pre>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
       </div>
       <div class="modal-footer">
-        <a class="btn btn-primary btn-outline js-copy-cite" href="#" target="_blank">
-          <i class="fa fa-copy"></i> Copy
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
         </a>
-        <a class="btn btn-primary btn-outline js-download-cite" href="#" target="_blank">
-          <i class="fa fa-download"></i> Download
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
         </a>
         <div id="modal-error"></div>
       </div>
@@ -582,53 +1157,113 @@
 
     
     
+    
+    <script src="/js/mathjax-config.js"></script>
+    
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha512-+NqPlbbtM1QqiK8ZAo4Yrj2c4lNQoGv8P79DPtKzj++l5jnN39rHA/xsqn8zE9l0uSoxaCdrOgFs6yjyfbBxSg==" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha256-VsEqElsCHSGmnmHXGQzvoWjWwoznFSZc6hs7ARLRacQ=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" integrity="sha256-X5PoE3KU5l+JcX+w09p/wHl9AzK333C4hJ2I9S5mD4M=" crossorigin="anonymous"></script>
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+        
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/r.min.js"></script>
+        
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/bash.min.js"></script>
+        
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/python.min.js"></script>
+        
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/stata.min.js"></script>
+        
+      
+
+      
+      
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS_CHTML-full" integrity="sha256-GhM+5JHb6QUzOQPXSJLEWP7R73CbkisjzK5Eyij4U9w=" crossorigin="anonymous" async></script>
+      
+    
+
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.js" integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log==" crossorigin="anonymous"></script>
+    
+
+    
+    
+    
     <script id="dsq-count-scr" src="//fellgernonbit.disqus.com/count.js" async></script>
     
 
     
-
     
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha512-3P8rXCuGJdNZOnUx/03c1jOTnMn3rP63nBip5gOP2qmUh5YAdVAvFZ1E+QLZZbC1rtMrQb+mah3AfYW11RUrWA==" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.3/imagesloaded.pkgd.min.js" integrity="sha512-umsR78NN0D23AzgoZ11K7raBD+R6hqKojyBZs1w8WvYlsI+QuKRGBx3LFCwhatzBunCjDuJpDHwxD13sLMbpRA==" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha512-iztkobsvnjKfAtTNdHkGVjAYTrrtlC7mGp/54c40wowO7LhURYl3gVzzcEqGl/qKXQltJ2HwMrdLcNUdo+N/RQ==" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.4/isotope.pkgd.min.js" integrity="sha512-VDBOIlDbuC4VWxGJNmuFRQ0Li0SKkDpmGyuhAG5LTDLd/dJ/S0WMVxriR2Y+CyPL5gzjpN4f/6iqWVBJlht0tQ==" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" integrity="sha256-X5PoE3KU5l+JcX+w09p/wHl9AzK333C4hJ2I9S5mD4M=" crossorigin="anonymous"></script>
-    
-    
-    <script src="/js/hugo-academic.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
     
 
     
     
-      
-      
-      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
-      
-
-      
-      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/r.min.js"></script>
-      
-      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/bash.min.js"></script>
-      
-      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/python.min.js"></script>
-      
-      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/stata.min.js"></script>
-      
-
-      
-
-      <script>hljs.initHighlightingOnLoad();</script>
-    
-
-    
-    
-    <script type="text/x-mathjax-config">
-        MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });
+    <script>
+      const search_index_filename = "/index.json";
+      const i18n = {
+        'placeholder': "Search...",
+        'results': "results found",
+        'no_results': "No results found"
+      };
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks"
+        };
     </script>
     
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML" integrity="sha512-tOav5w1OjvsSJzePRtt2uQPFwBoHt1VZcUq8l8nm5284LEKE9FSJBQryzMBzHxY5P0zRdNqEcpLIRVYFNgu1jw==" crossorigin="anonymous"></script>
+
     
     
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    <script src="/js/academic.min.d7381f2d79e6271d4da28f474f49096c.js"></script>
 
   </body>
 </html>

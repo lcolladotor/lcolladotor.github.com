@@ -1,0 +1,15 @@
+@article{nellore_rail-rna:_2016,
+	title = {Rail-{RNA}: scalable analysis of {RNA}-seq splicing and coverage},
+	issn = {1367-4811},
+	shorttitle = {Rail-{RNA}},
+	doi = {10.1093/bioinformatics/btw575},
+	abstract = {MOTIVATION: RNA sequencing (RNA-seq) experiments now span hundreds to thousands of samples. Current spliced alignment software is designed to analyze each sample separately. Consequently, no information is gained from analyzing multiple samples together, and it requires extra work to obtain analysis products that incorporate data from across samples.
+RESULTS: We describe Rail-RNA, a cloud-enabled spliced aligner that analyzes many samples at once. Rail-RNA eliminates redundant work across samples, making it more efficient as samples are added. For many samples, Rail-RNA is more accurate than annotation-assisted aligners. We use Rail-RNA to align 667 RNA-seq samples from the GEUVADIS project on Amazon Web Services in under 16 h for US\$0.91 per sample. Rail-RNA outputs alignments in SAM/BAM format; but it also outputs (i) base-level coverage bigWigs for each sample; (ii) coverage bigWigs encoding normalized mean and median coverages at each base across samples analyzed; and (iii) exon-exon splice junctions and indels (features) in columnar formats that juxtapose coverages in samples in which a given feature is found. Supplementary outputs are ready for use with downstream packages for reproducible statistical analysis. We use Rail-RNA to identify expressed regions in the GEUVADIS samples and show that both annotated and unannotated (novel) expressed regions exhibit consistent patterns of variation across populations and with respect to known confounding variables.
+AVAILABILITY AND IMPLEMENTATION: Rail-RNA is open-source software available at http://rail.bio CONTACTS: anellore@gmail.com or langmea@cs.jhu.eduSupplementary information: Supplementary data are available at Bioinformatics online.},
+	language = {eng},
+	journal = {Bioinformatics (Oxford, England)},
+	author = {Nellore, Abhinav and Collado-Torres, Leonardo and Jaffe, Andrew E. and Alquicira-Hernández, José and Wilks, Christopher and Pritt, Jacob and Morton, James and Leek, Jeffrey T. and Langmead, Ben},
+	month = sep,
+	year = {2016},
+	pmid = {27592709}
+}

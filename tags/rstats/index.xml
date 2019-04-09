@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>rstats on L. Collado-Torres</title>
-    <link>http://lcolladotor.github.io/tags/rstats/</link>
+    <link>/tags/rstats/</link>
     <description>Recent content in rstats on L. Collado-Torres</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>&amp;copy; 2011-2018 Leonardo Collado Torres under (CC) BY-NC-SA 4.0. All thoughts and opinions here are my own.</copyright>
+    <copyright>&amp;copy; 2011-{year} Leonardo Collado Torres under (CC) BY-NC-SA 4.0. All thoughts and opinions here are my own.</copyright>
     <lastBuildDate>Tue, 23 Oct 2018 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://lcolladotor.github.io/tags/rstats/" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Steps for writing a Twitter summary conference blog post</title>
-      <link>http://lcolladotor.github.io/2018/10/23/steps-for-writing-a-twitter-summary-conference-blog-post/</link>
+      <link>/2018/10/23/steps-for-writing-a-twitter-summary-conference-blog-post/</link>
       <pubDate>Tue, 23 Oct 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://lcolladotor.github.io/2018/10/23/steps-for-writing-a-twitter-summary-conference-blog-post/</guid>
+      <guid>/2018/10/23/steps-for-writing-a-twitter-summary-conference-blog-post/</guid>
       <description>
 
 
@@ -220,10 +220,10 @@ I just completed my &lt;a href=&#34;https://twitter.com/hashtag/ASHG18?src=hash&
     
     <item>
       <title>R Gene Regulatory Interaction Formulator For Inquiring Networks</title>
-      <link>http://lcolladotor.github.io/2018/09/13/r-gene-regulatory-interaction-formulator-for-inquiring-networks/</link>
+      <link>/2018/09/13/r-gene-regulatory-interaction-formulator-for-inquiring-networks/</link>
       <pubDate>Thu, 13 Sep 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://lcolladotor.github.io/2018/09/13/r-gene-regulatory-interaction-formulator-for-inquiring-networks/</guid>
+      <guid>/2018/09/13/r-gene-regulatory-interaction-formulator-for-inquiring-networks/</guid>
       <description>
 
 
@@ -433,10 +433,10 @@ nets&lt;/code&gt;&lt;/pre&gt;
     
     <item>
       <title>Getting ready to attend rOpenSci unconf18 and probably working on tidyverse-like functions for the first time</title>
-      <link>http://lcolladotor.github.io/2018/04/27/ropensci-unconf18-and-working-on-tidyverse-like-functions-for-the-first-time/</link>
+      <link>/2018/04/27/ropensci-unconf18-and-working-on-tidyverse-like-functions-for-the-first-time/</link>
       <pubDate>Fri, 27 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://lcolladotor.github.io/2018/04/27/ropensci-unconf18-and-working-on-tidyverse-like-functions-for-the-first-time/</guid>
+      <guid>/2018/04/27/ropensci-unconf18-and-working-on-tidyverse-like-functions-for-the-first-time/</guid>
       <description>
 
 
@@ -583,10 +583,10 @@ Sys.time()&lt;/code&gt;&lt;/pre&gt;
     
     <item>
       <title>Latin American R/BioConductor Developers Workshop 2018</title>
-      <link>http://lcolladotor.github.io/2018/04/19/latin-american-r-bioconductor-developers-workshop-2018/</link>
+      <link>/2018/04/19/latin-american-r-bioconductor-developers-workshop-2018/</link>
       <pubDate>Thu, 19 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://lcolladotor.github.io/2018/04/19/latin-american-r-bioconductor-developers-workshop-2018/</guid>
+      <guid>/2018/04/19/latin-american-r-bioconductor-developers-workshop-2018/</guid>
       <description>
 
 
@@ -655,10 +655,10 @@ Sys.time()&lt;/code&gt;&lt;/pre&gt;
     
     <item>
       <title>blogdown archetype (template)</title>
-      <link>http://lcolladotor.github.io/2018/03/08/blogdown-archetype-template/</link>
+      <link>/2018/03/08/blogdown-archetype-template/</link>
       <pubDate>Thu, 08 Mar 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://lcolladotor.github.io/2018/03/08/blogdown-archetype-template/</guid>
+      <guid>/2018/03/08/blogdown-archetype-template/</guid>
       <description>
 
 
@@ -762,10 +762,10 @@ Sys.time()&lt;/code&gt;&lt;/pre&gt;
     
     <item>
       <title>blogdown Insert Image addin</title>
-      <link>http://lcolladotor.github.io/2018/03/07/blogdown-insert-image-addin/</link>
+      <link>/2018/03/07/blogdown-insert-image-addin/</link>
       <pubDate>Wed, 07 Mar 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://lcolladotor.github.io/2018/03/07/blogdown-insert-image-addin/</guid>
+      <guid>/2018/03/07/blogdown-insert-image-addin/</guid>
       <description>
 
 
@@ -940,10 +940,10 @@ devtools::install_github(&amp;#39;rstudio/blogdown&amp;#39;)&lt;/code&gt;&lt;/pr
     
     <item>
       <title>R markdown blog template</title>
-      <link>http://lcolladotor.github.io/2018/02/17/r-markdown-blog-template/</link>
+      <link>/2018/02/17/r-markdown-blog-template/</link>
       <pubDate>Sat, 17 Feb 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://lcolladotor.github.io/2018/02/17/r-markdown-blog-template/</guid>
+      <guid>/2018/02/17/r-markdown-blog-template/</guid>
       <description>
 
 
@@ -1071,10 +1071,10 @@ bibliography(style = &amp;#39;html&amp;#39;)&lt;/code&gt;&lt;/pre&gt;
     
     <item>
       <title>JHSPH-Biostat through Coursera</title>
-      <link>http://lcolladotor.github.io/2012/10/01/JHSPH-Biostat-through-Coursera/</link>
+      <link>/2012/10/01/jhsph-biostat-through-coursera/</link>
       <pubDate>Mon, 01 Oct 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://lcolladotor.github.io/2012/10/01/JHSPH-Biostat-through-Coursera/</guid>
+      <guid>/2012/10/01/jhsph-biostat-through-coursera/</guid>
       <description>&lt;p&gt;Have you heard of online education? If you are in the US or Mexico I&amp;#8217;m sure that you have seen some ads about online universities. Well, that&amp;#8217;s not the type of education I&amp;#8217;m talking about. I&amp;#8217;m talking about free high-quality education. &lt;/p&gt;
 &lt;p&gt;For some years, the top option has been the &lt;strong&gt;O&lt;/strong&gt;pen &lt;strong&gt;C&lt;/strong&gt;ourse&lt;strong&gt;w&lt;/strong&gt;are (OCW) organized under the &lt;a href=&#34;http://www.ocwconsortium.org/&#34;&gt;Open Courseware Consortium&lt;/a&gt; (OCWC). Back in 2009 I was pushed my undergrad (LCG-UNAM) to design and teach OCW-compliant courses. I even taught a &lt;a href=&#34;http://www.lcg.unam.mx/~lcollado/B/index_en.html&#34;&gt;course on R/Bioconductor&lt;/a&gt; and thought of it as a pilot OCW course. The first seven classes were video recorded. But that project hit a wall because many of the biology professors used slides that heavily relied on copyrighted material. For OCW courses you have to own the copyright of the material that you use (or get permission), so just the idea of having to re-do all the diagrams and figures was overwhelming. This hasn&amp;#8217;t stopped some big universities like &lt;a href=&#34;http://ocw.mit.edu/index.htm&#34;&gt;MIT from publishing OCW-compliant courses&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Recently there&amp;#8217;s been talk of the new horse in the race: &lt;a href=&#34;https://www.coursera.org/&#34;&gt;Coursera&lt;/a&gt;. What is it? Well, &lt;a href=&#34;https://www.coursera.org/about&#34;&gt;according to themselves&lt;/a&gt;:&lt;/p&gt;

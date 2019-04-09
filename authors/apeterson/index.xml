@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>apeterson on L. Collado-Torres</title>
+    <link>/authors/apeterson/</link>
+    <description>Recent content in apeterson on L. Collado-Torres</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2011-{year} Leonardo Collado Torres under (CC) BY-NC-SA 4.0. All thoughts and opinions here are my own.</copyright>
+    <atom:link href="http://lcolladotor.github.io/authors/apeterson/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title></title>
+      <link>/author/apeterson/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/author/apeterson/</guid>
+      <description>
+
+&lt;p&gt;Along with Andrew Jaffe, I co-mentored Amy Peterson in 2017-2018. Check her website for more information about her.&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;Amy&amp;rsquo;s MPH capstone presentation&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;img src=&#34;/img/amy_mph.jpg&#34; alt=&#34;&#34; /&gt;&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;/img/amy_mph2.jpg&#34; alt=&#34;&#34; /&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Here are some of projects she did with me (taken from her website):&lt;/p&gt;
+
+&lt;h3 id=&#34;projects&#34;&gt;Projects&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Worked in collaboration with &lt;a href=&#34;http://www.ucl.ac.uk/ukpdc/research-groups/neurogenomics-group/mina-ryten&#34; target=&#34;_blank&#34;&gt;Mina Ryten&lt;/a&gt;&amp;rsquo;s lab at &lt;a href=&#34;https://www.ucl.ac.uk/ion/&#34; target=&#34;_blank&#34;&gt;University College London&amp;rsquo;s Institute of Neurology&lt;/a&gt; to analyze &lt;a href=&#34;https://www.gtexportal.org/&#34; target=&#34;_blank&#34;&gt;Genotype-Tissue Expression (GTEx)&lt;/a&gt; project data to explore gene expression variability across brain regions
+
+&lt;ul&gt;
+&lt;li&gt;Analyzed GTEx brain samples from &lt;a href=&#34;http://bioconductor.org/packages/recount&#34; target=&#34;_blank&#34;&gt;recount2&lt;/a&gt; using &lt;a href=&#34;https://github.com/LieberInstitute/recount.bwtool&#34; target=&#34;_blank&#34;&gt;recount.bwtool&lt;/a&gt; with &lt;a href=&#34;https://jhpce.jhu.edu&#34; target=&#34;_blank&#34;&gt;JHPCE&lt;/a&gt;, a high-performance computing environment&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Capstone: Applying Statistical Correction for Brain Tissue Degradation to Gene Expression in Schizophrenia
+
+&lt;ul&gt;
+&lt;li&gt;Analyzed postmortem human brain RNA-sequencing data in &lt;a href=&#34;https://cran.r-project.org&#34; target=&#34;_blank&#34;&gt;R&lt;/a&gt; using &lt;a href=&#34;https://www.bioconductor.org&#34; target=&#34;_blank&#34;&gt;Bioconductor&lt;/a&gt; packages with &lt;a href=&#34;https://jhpce.jhu.edu&#34; target=&#34;_blank&#34;&gt;JHPCE&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;presentations&#34;&gt;Presentations&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;MPH Capstone Presentation &amp;ldquo;Applying Statistical Correction for Brain Tissue RNA Degradation to Gene Expression Differences in Schizophrenia&amp;rdquo; (May 4, 2018) &lt;a href=&#34;https://speakerdeck.com/apeterson/rna-quality-degradation&#34; target=&#34;_blank&#34;&gt;slides&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Presented &amp;ldquo;Postmortem Human Brain RNA-seq Analyses with Public and Private Data&amp;rdquo; at Delta Omega Poster Competition at JHPSH &lt;a href=&#34;http://amy-peterson.github.io/files/Peterson Poster.pdf&#34; target=&#34;_blank&#34;&gt;PDF&lt;/a&gt; (February 28, 2018).&lt;/li&gt;
+&lt;li&gt;Presented &amp;ldquo;Expression Profiles in GTEx Data&amp;rdquo; at the &lt;a href=&#34;http://jtleek.com/members.html&#34; target=&#34;_blank&#34;&gt;Leekgroup&lt;/a&gt; meeting (February 19, 2018) &lt;a href=&#34;https://speakerdeck.com/apeterson/expression-profiles-in-gtex-data&#34; target=&#34;_blank&#34;&gt;slides&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://ghchart.rshah.org/DA2536/amy-peterson.svg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

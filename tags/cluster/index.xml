@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>cluster on L. Collado-Torres</title>
-    <link>http://lcolladotor.github.io/tags/cluster/</link>
+    <link>/tags/cluster/</link>
     <description>Recent content in cluster on L. Collado-Torres</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>&amp;copy; 2011-2018 Leonardo Collado Torres under (CC) BY-NC-SA 4.0. All thoughts and opinions here are my own.</copyright>
+    <copyright>&amp;copy; 2011-{year} Leonardo Collado Torres under (CC) BY-NC-SA 4.0. All thoughts and opinions here are my own.</copyright>
     <lastBuildDate>Wed, 11 Dec 2013 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://lcolladotor.github.io/tags/cluster/" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Login to the cluster, request a node and change to your project directory in a single command</title>
-      <link>http://lcolladotor.github.io/2013/12/11/quick-cluster-login-to-interactive-session/</link>
+      <link>/2013/12/11/quick-cluster-login-to-interactive-session/</link>
       <pubDate>Wed, 11 Dec 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://lcolladotor.github.io/2013/12/11/quick-cluster-login-to-interactive-session/</guid>
+      <guid>/2013/12/11/quick-cluster-login-to-interactive-session/</guid>
       <description>
 
 &lt;p&gt;To be able to do RNA-seq research work in large multi-sample studies you have to be able to analyze large files and thus frequently use a powerful computing environment. In my case, this means that I have to login to a &lt;a href=&#34;http://en.wikipedia.org/wiki/Computer_cluster&#34; target=&#34;_blank&#34;&gt;computing cluster&lt;/a&gt; frequently. This is a common task for other biostatisticians (like those that do brain imagining studies) and many other people. When I am working on a project, I generally have to login to the cluster and then change the directory to the location where I have my project files.&lt;/p&gt;
@@ -76,7 +76,7 @@ pdir
 
 &lt;h2 id=&#34;using-ssh-config&#34;&gt;Using ssh config&lt;/h2&gt;
 
-&lt;p&gt;This section was added after Kasper Hansen&#39;s comment.&lt;/p&gt;
+&lt;p&gt;This section was added after Kasper Hansen&amp;rsquo;s comment.&lt;/p&gt;
 
 &lt;p&gt;You can edit the ~.ssh/config file (check &lt;a href=&#34;http://www.howtogeek.com/75007/stupid-geek-tricks-use-your-ssh-config-file-to-create-aliases-for-hosts/&#34; target=&#34;_blank&#34;&gt;how to set it up&lt;/a&gt;, &lt;a href=&#34;http://nerderati.com/2011/03/simplify-your-life-with-an-ssh-config-file/&#34; target=&#34;_blank&#34;&gt;explained differently&lt;/a&gt; and the &lt;a href=&#34;http://linux.die.net/man/5/ssh_config&#34; target=&#34;_blank&#34;&gt;manual&lt;/a&gt;) to make things even better. This is how mine looks like:&lt;/p&gt;
 
@@ -144,7 +144,7 @@ fi
 alias qr=&#39;echo &amp;quot;cd $PWD&amp;quot; &amp;gt; ~/.bash_pwd; history -w; qrsh&#39;
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;Note that I tried using the &lt;code&gt;qrsh -ac&lt;/code&gt; option, but couldn&#39;t get to pass a variable. Doing so in theory would remove the need to create the &lt;strong&gt;.bash_pwd&lt;/strong&gt; temporary file.&lt;/p&gt;
+&lt;p&gt;Note that I tried using the &lt;code&gt;qrsh -ac&lt;/code&gt; option, but couldn&amp;rsquo;t get to pass a variable. Doing so in theory would remove the need to create the &lt;strong&gt;.bash_pwd&lt;/strong&gt; temporary file.&lt;/p&gt;
 
 &lt;h2 id=&#34;ssh-and-change-dir-in-one-command&#34;&gt;ssh and change dir in one command&lt;/h2&gt;
 
@@ -154,7 +154,7 @@ alias qr=&#39;echo &amp;quot;cd $PWD&amp;quot; &amp;gt; ~/.bash_pwd; history -w;
 ssh -t enigma &#39;cd /very/complicated/path/to/projectDir/; bash&#39;
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;The problem I soon encountered was that I couldn&#39;t &lt;strong&gt;qrsh&lt;/strong&gt; right after because the command was not been found. Some setup files are not been read even after using &lt;code&gt;bash -l&lt;/code&gt; like shown here:&lt;/p&gt;
+&lt;p&gt;The problem I soon encountered was that I couldn&amp;rsquo;t &lt;strong&gt;qrsh&lt;/strong&gt; right after because the command was not been found. Some setup files are not been read even after using &lt;code&gt;bash -l&lt;/code&gt; like shown here:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;
 ssh -t enigma &#39;cd /very/complicated/path/to/projectDir/; bash -l&#39;
@@ -162,7 +162,7 @@ ssh -t enigma &#39;cd /very/complicated/path/to/projectDir/; bash -l&#39;
 
 &lt;h2 id=&#34;local-qr-alias&#34;&gt;local &lt;code&gt;qr&lt;/code&gt; alias&lt;/h2&gt;
 
-&lt;p&gt;With our cluster administrator&#39;s help, I was finally able to find how to do all of this in a single command:&lt;/p&gt;
+&lt;p&gt;With our cluster administrator&amp;rsquo;s help, I was finally able to find how to do all of this in a single command:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;
 ## Requires the code by Sam Younkin to work (or the version I modified)
@@ -216,7 +216,7 @@ alias qr=&amp;quot;ssh -t enigma &#39;cd /very/complicated/path/to/projectDir/; 
 &lt;p&gt;The full paths are different in my computer and in the cluster, but once you are in  /very/complicated/path/to/projectDir/
 it is all the same on both locations.&lt;/p&gt;
 
-&lt;p&gt;The first one runs &lt;strong&gt;qrsh&lt;/strong&gt; while the second one doesn&#39;t request a node for interactive work.&lt;/p&gt;
+&lt;p&gt;The first one runs &lt;strong&gt;qrsh&lt;/strong&gt; while the second one doesn&amp;rsquo;t request a node for interactive work.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;
 ## In local .bashrc file
@@ -249,10 +249,10 @@ alias qq=&#39;LEODIR=`basename $PWD`; ssh -t enigma &amp;quot;cd /very/complicat
     
     <item>
       <title>Using plyr and doMC for quick and easy apply-family functions</title>
-      <link>http://lcolladotor.github.io/2013/04/26/using-plyr-and-domc-for-quick-and-easy-apply-family/</link>
+      <link>/2013/04/26/using-plyr-and-domc-for-quick-and-easy-apply-family/</link>
       <pubDate>Fri, 26 Apr 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://lcolladotor.github.io/2013/04/26/using-plyr-and-domc-for-quick-and-easy-apply-family/</guid>
+      <guid>/2013/04/26/using-plyr-and-domc-for-quick-and-easy-apply-family/</guid>
       <description>&lt;p&gt;A few weeks back I dedicated a short amount of time to actually read what &lt;code&gt;plyr&lt;/code&gt; (&lt;span class=&#34;showtooltip&#34; title=&#34;Wickham H (2011). The Split-Apply-Combine Strategy for Data
 Analysis. _Journal of Statistical Software_, *40*(1), pp. 1-29.
  http://www.jstatsoft.org/v40/i01/.&#34;&gt;&lt;a href=&#34;http://www.jstatsoft.org/v40/i01/&#34;&gt;Wickham, 2011&lt;/a&gt;&lt;/span&gt;) is about and I was surprised. The whole idea behind &lt;code&gt;plyr&lt;/code&gt; is very simple: expand the &lt;code&gt;apply()&lt;/code&gt; family to do things easy. &lt;code&gt;plyr&lt;/code&gt; has many functions whose name ends with &lt;code&gt;ply&lt;/code&gt; which is short of apply. Then, the functions are identified by two letters before &lt;code&gt;ply&lt;/code&gt; which are abbreviations for the input (first letter) and output (second one). For instance, &lt;code&gt;ddply&lt;/code&gt; takes an input a &lt;code&gt;data.frame&lt;/code&gt; and returns a &lt;code&gt;data.frame&lt;/code&gt; while &lt;code&gt;ldply&lt;/code&gt; takes as input a &lt;code&gt;list&lt;/code&gt; and returns a &lt;code&gt;data.frame&lt;/code&gt;.&lt;/p&gt;
