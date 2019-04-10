@@ -141,7 +141,7 @@
   <meta property="og:description" content="Staff Scientist"><meta property="og:image" content="/img/icon-192.png">
   <meta property="og:locale" content="en-us">
   
-  <meta property="og:updated_time" content="2013-06-12T00:00:00&#43;00:00">
+  <meta property="og:updated_time" content="2013-06-21T00:00:00&#43;00:00">
   
 
   
@@ -437,6 +437,16 @@
   
   
   <div>
+    <h2><a href="/2013/06/21/ggplot-tutorial/">ggplot Tutorial</a></h2>
+    <div class="article-style">
+      
+      ggplot TutorialI liked the following ggplot2 tutorial which is featured in Gabriela de Queiroz&#8217;s blog called unbiasedestimator. The tutorial looks very neatly presented and I&#8217;m sure that it will be very helpful to anyone just getting started with ggplot2 before they jump into ggplot2: Elegant Graphics for Data Analysis by Hadley Wickham or R Graphics Cookbook by Winston Chang.
+The tutorial is very nicely formatted with code in bold highlighting parts that change something in the plot.
+      
+    </div>
+  </div>
+  
+  <div>
     <h2><a href="/2013/06/12/userr2013-data-analysis-contest-data-exploration/">userR2013 data analysis contest: data exploration</a></h2>
     <div class="article-style">
       
@@ -522,16 +532,6 @@ Estimate the fraction of visitors retained after a spike in the number of visito
       
       On Friday November 9th I&#8217;ll be giving a talk to the first year students from the Undergraduate Program on Genomic Sciences (LCG in Spanish) during their &#8220;Seminar 1: Introduction to Bioinformatics&#8221; course. It&#8217;s just like I did a year ago as I documented in my post Introducing Biostatistics to first year LCG students.
 Well, this time I&#8217;ll change things a bit. I&#8217;m allowed to require the students to read 2-3 papers before my talk to introduce them to my field.
-      
-    </div>
-  </div>
-  
-  <div>
-    <h2><a href="/2012/10/19/visualizing-colors/">Visualizing colors()</a></h2>
-    <div class="article-style">
-      
-      The other day I learnt about the existance of the colors() vector in R which specifies all the character-based colors like &#8220;light blue&#8221;, &#8220;black&#8221;, etc. So I made a simple plot to visualize them all. Here&#8217;s the code:
-mat &lt;- matrix(1:length(colors()), ncol = 9, byrow= TRUE) df &lt;- data.frame(col = colors(), x = as.integer(cut(1:length(colors()), 9)), y = rep(1:73, 9), stringsAsFactors=FALSE) plot(y ~ jitter(x), data = df, col = df$col, pch=16, main = &quot;Visualizing colors() split in 9 groups&quot;, xlab = &quot;Group&quot;, ylab = &quot;Element of the group (min = 1, max = 73)&quot;, sub = &quot;x = 3, y = 1 means that it's the 2 * 73 + 1 = 147th color&quot;)  And the plot:
       
     </div>
   </div>
