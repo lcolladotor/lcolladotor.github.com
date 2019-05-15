@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>rstats on L. Collado-Torres</title>
@@ -2223,11 +2222,9 @@ session_info()
 
 &lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
-    &lt;p&gt;tl;dr Please post your question at the Bioconductor support website &lt;a href=&#34;https://support.bioconductor.org/&#34; target=&#34;_blank&#34;&gt;https://support.bioconductor.org/&lt;/a&gt; and check the posting guide &lt;a href=&#34;http://www.bioconductor.org/help/support/posting-guide/&#34; target=&#34;_blank&#34;&gt;http://www.bioconductor.org/help/support/posting-guide/&lt;/a&gt;. It&amp;rsquo;s important that you provide reproducible code and information about your R session.&lt;/p&gt;
-
+    tl;dr Please post your question at the Bioconductor support website &lt;a href=&#34;https://support.bioconductor.org/&#34; target=&#34;_blank&#34;&gt;https://support.bioconductor.org/&lt;/a&gt; and check the posting guide &lt;a href=&#34;http://www.bioconductor.org/help/support/posting-guide/&#34; target=&#34;_blank&#34;&gt;http://www.bioconductor.org/help/support/posting-guide/&lt;/a&gt;. It&amp;rsquo;s important that you provide reproducible code and information about your R session.
   &lt;/div&gt;
 &lt;/div&gt;
-
 
 &lt;p&gt;Recently I have been getting more questions about several packages I maintain. It&amp;rsquo;s great to see more interest from users, but at the same time most questions lack the information I need to help the users. I have also gotten most of the questions via email, which is why I am writing this post. As of today, I will no longer answer questions related to my Bioconductor packages via personal emails. This might sound harsh, but hopefully the rest of this post will convince you that it&amp;rsquo;s the best thing to do. You might also be interested in the basics of using &lt;a href=&#34;http://bioconductor.org/packages/release/bioc/vignettes/derfinder/inst/doc/derfinder-quickstart.html#basics&#34; target=&#34;_blank&#34;&gt;derfinder&lt;/a&gt;, &lt;a href=&#34;http://bioconductor.org/packages/release/bioc/vignettes/regionReport/inst/doc/regionReport.html#basics&#34; target=&#34;_blank&#34;&gt;regionReport&lt;/a&gt; or &lt;a href=&#34;http://bioconductor.org/packages/release/bioc/vignettes/recount/inst/doc/recount-quickstart.html#basics&#34; target=&#34;_blank&#34;&gt;recount&lt;/a&gt;, among others.&lt;/p&gt;
 
