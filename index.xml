@@ -8946,7 +8946,7 @@ load(&amp;quot;gpasswd.Rdata&amp;quot;)
 text &amp;lt;- &amp;quot;Hello world!\n&amp;quot;
 
 ## Authentificate
-auth &amp;lt;- getGoogleAuth(&amp;quot;fellgernon@gmail.com&amp;quot;, gpasswd)
+auth &amp;lt;- getGoogleAuth(&amp;quot;lcolladotor@gmail.com&amp;quot;, gpasswd)
 
 ## Connect to Google
 con &amp;lt;- getGoogleDocsConnection(auth)
