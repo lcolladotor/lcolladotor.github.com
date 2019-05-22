@@ -6,8 +6,18 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2011-{year} Leonardo Collado Torres under (CC) BY-NC-SA 4.0. All thoughts and opinions here are my own. Icon is the [R logo](https://www.r-project.org/logo/) modified</copyright>
-    <lastBuildDate>Mon, 25 Feb 2019 13:00:00 -0500</lastBuildDate>
+    <lastBuildDate>Wed, 08 May 2019 14:00:00 +0000</lastBuildDate>
     <atom:link href="http://lcolladotor.github.io/authors/admin/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>recount-brain: a curated repository of human brain RNA-seq datasets metadata</title>
+      <link>/publication/poster2019bog/</link>
+      <pubDate>Wed, 08 May 2019 14:00:00 +0000</pubDate>
+      
+      <guid>/publication/poster2019bog/</guid>
+      <description>&lt;!-- More detail can easily be written here using *Markdown* and $\rm \LaTeX$ math code. --&gt;
+</description>
+    </item>
     
     <item>
       <title>Analyzing BrainSeq Phase II and generating the recount-brain resource</title>
@@ -100,6 +110,16 @@ Further talk details can easily be added to this page using *Markdown* and $\rm 
     </item>
     
     <item>
+      <title>Regional heterogeneity in gene expression, regulation and coherence in hippocampus and dorsolateral prefrontal cortex across development and in schizophrenia</title>
+      <link>/publication/poster2018ashg/</link>
+      <pubDate>Tue, 16 Oct 2018 16:52:21 -0500</pubDate>
+      
+      <guid>/publication/poster2018ashg/</guid>
+      <description>&lt;!-- More detail can easily be written here using *Markdown* and $\rm \LaTeX$ math code. --&gt;
+</description>
+    </item>
+    
+    <item>
       <title>From learning to using to teaching to developing R</title>
       <link>/talk/cdsbmexico2018/</link>
       <pubDate>Mon, 30 Jul 2018 10:00:00 -0400</pubDate>
@@ -126,6 +146,16 @@ Slides can be added in a few ways:
 Further talk details can easily be added to this page using *Markdown* and $\rm \LaTeX$ math code.
 
 --&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>BrainSeq Phase II: schizophrenia-associated expression differences between the hippocampus and the dorsolateral prefrontal cortex</title>
+      <link>/publication/poster2018sages/</link>
+      <pubDate>Fri, 01 Jun 2018 16:52:21 -0500</pubDate>
+      
+      <guid>/publication/poster2018sages/</guid>
+      <description>&lt;!-- More detail can easily be written here using *Markdown* and $\rm \LaTeX$ math code. --&gt;
 </description>
     </item>
     
@@ -250,6 +280,16 @@ Further talk details can easily be added to this page using *Markdown* and $\rm 
     </item>
     
     <item>
+      <title>Getting started with recount2 and accessing it via R</title>
+      <link>/publication/poster2017idies/</link>
+      <pubDate>Fri, 20 Oct 2017 16:52:21 -0500</pubDate>
+      
+      <guid>/publication/poster2017idies/</guid>
+      <description>&lt;!-- More detail can easily be written here using *Markdown* and $\rm \LaTeX$ math code. --&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Guiding Principles for Interactive Graphics Based on LIBD Data Science Projects</title>
       <link>/talk/jsm2017/</link>
       <pubDate>Thu, 03 Aug 2017 08:30:00 -0400</pubDate>
@@ -316,124 +356,6 @@ Further talk details can easily be added to this page using *Markdown* and $\rm 
       
       <guid>/talk/icsa2017/</guid>
       <description>&lt;script async class=&#34;speakerdeck-embed&#34; data-id=&#34;19261ec55356439bb1742241fe29aee9&#34; data-ratio=&#34;1.77777777777778&#34; src=&#34;//speakerdeck.com/assets/embed.js&#34;&gt;&lt;/script&gt;
-
-&lt;!--
-
-&lt;div class=&#34;alert alert-note&#34;&gt;
-  &lt;div&gt;
-    Click on the &lt;strong&gt;Slides&lt;/strong&gt; button above to view the built-in slides feature.
-  &lt;/div&gt;
-&lt;/div&gt;
-
-
-
-Slides can be added in a few ways:
-
-- **Create** slides using Academic&#39;s *Slides* feature and link using `url_slides` parameter in the front matter of the talk file
-- **Upload** an existing slide deck to `static/` and link using `url_slides` parameter in the front matter of the talk file
-- **Embed** your slides (e.g. Google Slides) or presentation video on this page using [shortcodes](https://sourcethemes.com/academic/docs/writing-markdown-latex/).
-
-Further talk details can easily be added to this page using *Markdown* and $\rm \LaTeX$ math code.
-
---&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Reproducible Research and Bioinformatics</title>
-      <link>/talk/reproducibility2017/</link>
-      <pubDate>Sat, 24 Jun 2017 08:30:00 -0400</pubDate>
-      
-      <guid>/talk/reproducibility2017/</guid>
-      <description>&lt;script async class=&#34;speakerdeck-embed&#34; data-id=&#34;c2dcb6f805fc41348f16e7ae34dd3569&#34; data-ratio=&#34;1.29456384323641&#34; src=&#34;//speakerdeck.com/assets/embed.js&#34;&gt;&lt;/script&gt;
-
-&lt;!--
-
-&lt;div class=&#34;alert alert-note&#34;&gt;
-  &lt;div&gt;
-    Click on the &lt;strong&gt;Slides&lt;/strong&gt; button above to view the built-in slides feature.
-  &lt;/div&gt;
-&lt;/div&gt;
-
-
-
-Slides can be added in a few ways:
-
-- **Create** slides using Academic&#39;s *Slides* feature and link using `url_slides` parameter in the front matter of the talk file
-- **Upload** an existing slide deck to `static/` and link using `url_slides` parameter in the front matter of the talk file
-- **Embed** your slides (e.g. Google Slides) or presentation video on this page using [shortcodes](https://sourcethemes.com/academic/docs/writing-markdown-latex/).
-
-Further talk details can easily be added to this page using *Markdown* and $\rm \LaTeX$ math code.
-
---&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>RNA-seq samples beyond the known transcriptome with derfinder available via recount2</title>
-      <link>/talk/sobp2017/</link>
-      <pubDate>Sat, 20 May 2017 12:30:00 -0400</pubDate>
-      
-      <guid>/talk/sobp2017/</guid>
-      <description>&lt;!--
-
-&lt;div class=&#34;alert alert-note&#34;&gt;
-  &lt;div&gt;
-    Click on the &lt;strong&gt;Slides&lt;/strong&gt; button above to view the built-in slides feature.
-  &lt;/div&gt;
-&lt;/div&gt;
-
-
-
-Slides can be added in a few ways:
-
-- **Create** slides using Academic&#39;s *Slides* feature and link using `url_slides` parameter in the front matter of the talk file
-- **Upload** an existing slide deck to `static/` and link using `url_slides` parameter in the front matter of the talk file
-- **Embed** your slides (e.g. Google Slides) or presentation video on this page using [shortcodes](https://sourcethemes.com/academic/docs/writing-markdown-latex/).
-
-Further talk details can easily be added to this page using *Markdown* and $\rm \LaTeX$ math code.
-
---&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Introduction at Kandahar University MPH training event</title>
-      <link>/talk/kandahar2016/</link>
-      <pubDate>Mon, 26 Dec 2016 08:30:00 -0500</pubDate>
-      
-      <guid>/talk/kandahar2016/</guid>
-      <description>&lt;script async class=&#34;speakerdeck-embed&#34; data-id=&#34;4476a6dd694d4fe59de7e8c48dbde7dd&#34; data-ratio=&#34;1.29456384323641&#34; src=&#34;//speakerdeck.com/assets/embed.js&#34;&gt;&lt;/script&gt;
-
-&lt;!--
-
-&lt;div class=&#34;alert alert-note&#34;&gt;
-  &lt;div&gt;
-    Click on the &lt;strong&gt;Slides&lt;/strong&gt; button above to view the built-in slides feature.
-  &lt;/div&gt;
-&lt;/div&gt;
-
-
-
-Slides can be added in a few ways:
-
-- **Create** slides using Academic&#39;s *Slides* feature and link using `url_slides` parameter in the front matter of the talk file
-- **Upload** an existing slide deck to `static/` and link using `url_slides` parameter in the front matter of the talk file
-- **Embed** your slides (e.g. Google Slides) or presentation video on this page using [shortcodes](https://sourcethemes.com/academic/docs/writing-markdown-latex/).
-
-Further talk details can easily be added to this page using *Markdown* and $\rm \LaTeX$ math code.
-
---&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>recount: facilitando el análisis de miles de muestras de RNA-seq</title>
-      <link>/talk/genomeeting2016/</link>
-      <pubDate>Wed, 26 Oct 2016 00:00:00 -0400</pubDate>
-      
-      <guid>/talk/genomeeting2016/</guid>
-      <description>&lt;script async class=&#34;speakerdeck-embed&#34; data-id=&#34;8720fc701f444e8789f83ac225cd2077&#34; data-ratio=&#34;1.33333333333333&#34; src=&#34;//speakerdeck.com/assets/embed.js&#34;&gt;&lt;/script&gt;
 
 &lt;!--
 

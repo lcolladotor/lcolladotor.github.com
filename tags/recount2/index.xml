@@ -6,8 +6,28 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2011-{year} Leonardo Collado Torres under (CC) BY-NC-SA 4.0. All thoughts and opinions here are my own. Icon is the [R logo](https://www.r-project.org/logo/) modified</copyright>
-    <lastBuildDate>Thu, 28 Mar 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 08 May 2019 14:00:00 +0000</lastBuildDate>
     <atom:link href="http://lcolladotor.github.io/tags/recount2/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>recount-brain: a curated repository of human brain RNA-seq datasets metadata</title>
+      <link>/publication/poster2019bog/</link>
+      <pubDate>Wed, 08 May 2019 14:00:00 +0000</pubDate>
+      
+      <guid>/publication/poster2019bog/</guid>
+      <description>&lt;!-- More detail can easily be written here using *Markdown* and $\rm \LaTeX$ math code. --&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>recount-brain: a curated repository of human brain RNA-seq datasets metadata</title>
+      <link>/publication/recount_brain/</link>
+      <pubDate>Wed, 24 Apr 2019 16:45:43 -0500</pubDate>
+      
+      <guid>/publication/recount_brain/</guid>
+      <description>&lt;!-- More detail can easily be written here using *Markdown* and $\rm \LaTeX$ math code. --&gt;
+</description>
+    </item>
     
     <item>
       <title>Regulatory sites for known and novel splicing in human basal ganglia are enriched for disease-relevant information</title>
@@ -276,44 +296,6 @@ Slides can be added in a few ways:
 Further talk details can easily be added to this page using *Markdown* and $\rm \LaTeX$ math code.
 
 --&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>RNA-seq samples beyond the known transcriptome with derfinder available via recount2</title>
-      <link>/talk/sobp2017/</link>
-      <pubDate>Sat, 20 May 2017 12:30:00 -0400</pubDate>
-      
-      <guid>/talk/sobp2017/</guid>
-      <description>&lt;!--
-
-&lt;div class=&#34;alert alert-note&#34;&gt;
-  &lt;div&gt;
-    Click on the &lt;strong&gt;Slides&lt;/strong&gt; button above to view the built-in slides feature.
-  &lt;/div&gt;
-&lt;/div&gt;
-
-
-
-Slides can be added in a few ways:
-
-- **Create** slides using Academic&#39;s *Slides* feature and link using `url_slides` parameter in the front matter of the talk file
-- **Upload** an existing slide deck to `static/` and link using `url_slides` parameter in the front matter of the talk file
-- **Embed** your slides (e.g. Google Slides) or presentation video on this page using [shortcodes](https://sourcethemes.com/academic/docs/writing-markdown-latex/).
-
-Further talk details can easily be added to this page using *Markdown* and $\rm \LaTeX$ math code.
-
---&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Reproducible RNA-seq analysis using recount2</title>
-      <link>/publication/recount/</link>
-      <pubDate>Tue, 11 Apr 2017 16:45:43 -0500</pubDate>
-      
-      <guid>/publication/recount/</guid>
-      <description>&lt;!-- More detail can easily be written here using *Markdown* and $\rm \LaTeX$ math code. --&gt;
 </description>
     </item>
     
