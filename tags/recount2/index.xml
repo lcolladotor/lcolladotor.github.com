@@ -6,8 +6,18 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2011-{year} Leonardo Collado Torres under (CC) BY-NC-SA 4.0. All thoughts and opinions here are my own. Icon is the [R logo](https://www.r-project.org/logo/) modified</copyright>
-    <lastBuildDate>Wed, 08 May 2019 14:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 13 Jun 2019 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://lcolladotor.github.io/tags/recount2/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Recounting the FANTOM Cage Associated Transcriptome</title>
+      <link>/publication/fantomrecount2/</link>
+      <pubDate>Thu, 13 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/fantomrecount2/</guid>
+      <description>&lt;!-- More detail can easily be written here using *Markdown* and $\rm \LaTeX$ math code. --&gt;
+</description>
+    </item>
     
     <item>
       <title>recount-brain: a curated repository of human brain RNA-seq datasets metadata</title>
@@ -246,36 +256,6 @@ Further talk details can easily be added to this page using *Markdown* and $\rm 
       
       <guid>/talk/bioc2017/</guid>
       <description>&lt;script async class=&#34;speakerdeck-embed&#34; data-id=&#34;7d2ab9486f174ef5a8a8134bf60cab74&#34; data-ratio=&#34;1.77777777777778&#34; src=&#34;//speakerdeck.com/assets/embed.js&#34;&gt;&lt;/script&gt;
-
-&lt;!--
-
-&lt;div class=&#34;alert alert-note&#34;&gt;
-  &lt;div&gt;
-    Click on the &lt;strong&gt;Slides&lt;/strong&gt; button above to view the built-in slides feature.
-  &lt;/div&gt;
-&lt;/div&gt;
-
-
-
-Slides can be added in a few ways:
-
-- **Create** slides using Academic&#39;s *Slides* feature and link using `url_slides` parameter in the front matter of the talk file
-- **Upload** an existing slide deck to `static/` and link using `url_slides` parameter in the front matter of the talk file
-- **Embed** your slides (e.g. Google Slides) or presentation video on this page using [shortcodes](https://sourcethemes.com/academic/docs/writing-markdown-latex/).
-
-Further talk details can easily be added to this page using *Markdown* and $\rm \LaTeX$ math code.
-
---&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Reproducible RNA-seq analysis with recount2</title>
-      <link>/talk/icsa2017/</link>
-      <pubDate>Tue, 27 Jun 2017 13:30:00 -0400</pubDate>
-      
-      <guid>/talk/icsa2017/</guid>
-      <description>&lt;script async class=&#34;speakerdeck-embed&#34; data-id=&#34;19261ec55356439bb1742241fe29aee9&#34; data-ratio=&#34;1.77777777777778&#34; src=&#34;//speakerdeck.com/assets/embed.js&#34;&gt;&lt;/script&gt;
 
 &lt;!--
 
