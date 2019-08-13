@@ -7,10 +7,20 @@
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2011-{year} Leonardo Collado Torres under (CC) BY-NC-SA 4.0. All thoughts and opinions here are my own. Icon is the [R logo](https://www.r-project.org/logo/) modified</copyright>
-    <lastBuildDate>Thu, 13 Jun 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 21 Jun 2019 00:00:00 +0000</lastBuildDate>
     
 	    <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Comprehensive assessment of multiple biases in small RNA sequencing reveals significant differences in the performance of widely used methods</title>
+      <link>/publication/mirna_kit_comp/</link>
+      <pubDate>Fri, 21 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/mirna_kit_comp/</guid>
+      <description>&lt;!-- More detail can easily be written here using *Markdown* and $\rm \LaTeX$ math code. --&gt;
+</description>
+    </item>
     
     <item>
       <title>Recounting the FANTOM Cage Associated Transcriptome</title>
@@ -1536,16 +1546,6 @@ dev.off()&lt;/code&gt;&lt;/pre&gt;
 &lt;li id=&#34;fn5&#34;&gt;&lt;p&gt;I believe that others asked me since I was or had been the class representative.&lt;a href=&#34;#fnref5&#34;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Comprehensive assessment of multiple biases in small RNA sequencing reveals significant differences in the performance of widely used methods</title>
-      <link>/publication/mirna_kit_comp/</link>
-      <pubDate>Tue, 30 Oct 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/publication/mirna_kit_comp/</guid>
-      <description>&lt;!-- More detail can easily be written here using *Markdown* and $\rm \LaTeX$ math code. --&gt;
 </description>
     </item>
     
@@ -9240,15 +9240,16 @@ ssh -t enigma &#39;cd /very/complicated/path/to/projectDir/; source /etc/profile
 &lt;li&gt;loads the necessary setup files so &lt;strong&gt;qrsh&lt;/strong&gt; can be found on the path,&lt;/li&gt;
 &lt;li&gt;creates the temporary &lt;strong&gt;.bash_pwd&lt;/strong&gt; file (you could even make this more concise by echoing the directory of interest to the temp file),&lt;/li&gt;
 &lt;li&gt;saves the command history as recommended by &lt;a href=&#34;https://github.com/syounkin&#34; target=&#34;_blank&#34;&gt;Samuel Younkin&lt;/a&gt;,&lt;/li&gt;
-&lt;li&gt;requests an interactive node (with your default settings) by executing &lt;strong&gt;qrsh&lt;/strong&gt;.&lt;/li&gt;
-&lt;/ol&gt;
+
+&lt;li&gt;&lt;p&gt;requests an interactive node (with your default settings) by executing &lt;strong&gt;qrsh&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;
 ## In local .bashrc file
 
 # qrsh
 alias qr=&amp;quot;ssh -t enigma &#39;cd /very/complicated/path/to/projectDir/; source /etc/profile; echo \&amp;quot;cd \$PWD\&amp;quot; &amp;gt; ~/.bash_pwd; qrsh&#39;&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ol&gt;
 
 &lt;p&gt;Note the use of the backslash to delay the execution of &lt;code&gt;$PWD&lt;/code&gt;. I want it to be executed on the cluster, not on my local machine.&lt;/p&gt;
 
