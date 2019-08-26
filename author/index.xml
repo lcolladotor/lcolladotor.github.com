@@ -8,5 +8,90 @@
     <copyright>&amp;copy; 2011-{year} Leonardo Collado Torres under (CC) BY-NC-SA 4.0. All thoughts and opinions here are my own. Icon is the [R logo](https://www.r-project.org/logo/) modified</copyright>
     <atom:link href="http://lcolladotor.github.io/author/" rel="self" type="application/rss+xml" />
     
+    <item>
+      <title></title>
+      <link>/author/admin/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/author/admin/</guid>
+      <description>&lt;p&gt;At the Lieber Institute for Brain Development, I am part of the Data Science team whose goals include better understanding and characterizing genomics signatures in the human brain. We use high-throughput technologies such as DNA methylation and RNA sequencing. I help mentor other team members, provide support for LIBD projects and I am advancing my academic career as part of &lt;a href=&#34;http://aejaffe.com/&#34; target=&#34;_blank&#34;&gt;Andrew Jaffe&lt;/a&gt;&amp;rsquo;s lab.&lt;/p&gt;
+
+&lt;p&gt;As a quick background, I graduated from the &lt;a href=&#34;http://www.lcg.unam.mx/about&#34; target=&#34;_blank&#34;&gt;Undergraduate Program on Genomic Sciences&lt;/a&gt; from the National Autonomous University of Mexico (&lt;a href=&#34;http://unam.mx/&#34; target=&#34;_blank&#34;&gt;UNAM&lt;/a&gt;) in 2009 and worked for two years at Winter Genomics analyzing high-throughput sequencing data. I then got a PhD in the &lt;a href=&#34;http://www.jhsph.edu/departments/biostatistics/&#34; target=&#34;_blank&#34;&gt;Department of Biostatistics&lt;/a&gt; at &lt;a href=&#34;http://www.jhsph.edu/&#34; target=&#34;_blank&#34;&gt;Johns Hopkins Bloomberg School of Public Health&lt;/a&gt; thanks to a &lt;a href=&#34;http://www.conacyt.gob.mx/&#34; target=&#34;_blank&#34;&gt;CONACyT scholarship&lt;/a&gt; awarded in 2011. I worked with &lt;a href=&#34;http://jtleek.com/&#34; target=&#34;_blank&#34;&gt;Jeff Leek&lt;/a&gt; and Andrew Jaffe in developing &lt;a href=&#34;http://bioconductor.org/packages/derfinder&#34; target=&#34;_blank&#34;&gt;derfinder&lt;/a&gt;, &lt;a href=&#34;http://bioconductor.org/packages/regionReport&#34; target=&#34;_blank&#34;&gt;regionReport&lt;/a&gt;, &lt;a href=&#34;http://bioconductor.org/packages/recount&#34; target=&#34;_blank&#34;&gt;recount&lt;/a&gt; as well as other applied projects.&lt;/p&gt;
+
+&lt;p&gt;Every day I use &lt;a href=&#34;http://cran.r-project.org/&#34; target=&#34;_blank&#34;&gt;R&lt;/a&gt; and &lt;a href=&#34;http://www.bioconductor.org/&#34; target=&#34;_blank&#34;&gt;Bioconductor&lt;/a&gt;. Occasionally I blog about them and other tools. I&amp;rsquo;m a co-founder of the &lt;a href=&#34;http://LieberInstitute.github.io/rstatsclub/&#34; target=&#34;_blank&#34;&gt;LIBD rstats club&lt;/a&gt; and the &lt;a href=&#34;https://comunidadbioinfo.github.io&#34; target=&#34;_blank&#34;&gt;CDSBMexico&lt;/a&gt; community of R and Bioconductor developers in Latin America.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/author/apeterson/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/author/apeterson/</guid>
+      <description>
+
+&lt;p&gt;Along with Andrew Jaffe, I co-mentored Amy Peterson in 2017-2018. Check her website for more information about her.&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;Amy&amp;rsquo;s MPH capstone presentation&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;img src=&#34;/img/amy_mph.jpg&#34; alt=&#34;&#34; /&gt;&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;/img/amy_mph2.jpg&#34; alt=&#34;&#34; /&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Here are some of projects she did with me (taken from her website):&lt;/p&gt;
+
+&lt;h3 id=&#34;projects&#34;&gt;Projects&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Worked in collaboration with &lt;a href=&#34;http://www.ucl.ac.uk/ukpdc/research-groups/neurogenomics-group/mina-ryten&#34; target=&#34;_blank&#34;&gt;Mina Ryten&lt;/a&gt;&amp;rsquo;s lab at &lt;a href=&#34;https://www.ucl.ac.uk/ion/&#34; target=&#34;_blank&#34;&gt;University College London&amp;rsquo;s Institute of Neurology&lt;/a&gt; to analyze &lt;a href=&#34;https://www.gtexportal.org/&#34; target=&#34;_blank&#34;&gt;Genotype-Tissue Expression (GTEx)&lt;/a&gt; project data to explore gene expression variability across brain regions
+
+&lt;ul&gt;
+&lt;li&gt;Analyzed GTEx brain samples from &lt;a href=&#34;http://bioconductor.org/packages/recount&#34; target=&#34;_blank&#34;&gt;recount2&lt;/a&gt; using &lt;a href=&#34;https://github.com/LieberInstitute/recount.bwtool&#34; target=&#34;_blank&#34;&gt;recount.bwtool&lt;/a&gt; with &lt;a href=&#34;https://jhpce.jhu.edu&#34; target=&#34;_blank&#34;&gt;JHPCE&lt;/a&gt;, a high-performance computing environment&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Capstone: Applying Statistical Correction for Brain Tissue Degradation to Gene Expression in Schizophrenia
+
+&lt;ul&gt;
+&lt;li&gt;Analyzed postmortem human brain RNA-sequencing data in &lt;a href=&#34;https://cran.r-project.org&#34; target=&#34;_blank&#34;&gt;R&lt;/a&gt; using &lt;a href=&#34;https://www.bioconductor.org&#34; target=&#34;_blank&#34;&gt;Bioconductor&lt;/a&gt; packages with &lt;a href=&#34;https://jhpce.jhu.edu&#34; target=&#34;_blank&#34;&gt;JHPCE&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;presentations&#34;&gt;Presentations&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;MPH Capstone Presentation &amp;ldquo;Applying Statistical Correction for Brain Tissue RNA Degradation to Gene Expression Differences in Schizophrenia&amp;rdquo; (May 4, 2018) &lt;a href=&#34;https://speakerdeck.com/apeterson/rna-quality-degradation&#34; target=&#34;_blank&#34;&gt;slides&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Presented &amp;ldquo;Postmortem Human Brain RNA-seq Analyses with Public and Private Data&amp;rdquo; at Delta Omega Poster Competition at JHPSH &lt;a href=&#34;http://amy-peterson.github.io/files/Peterson Poster.pdf&#34; target=&#34;_blank&#34;&gt;PDF&lt;/a&gt; (February 28, 2018).&lt;/li&gt;
+&lt;li&gt;Presented &amp;ldquo;Expression Profiles in GTEx Data&amp;rdquo; at the &lt;a href=&#34;http://jtleek.com/members.html&#34; target=&#34;_blank&#34;&gt;Leekgroup&lt;/a&gt; meeting (February 19, 2018) &lt;a href=&#34;https://speakerdeck.com/apeterson/expression-profiles-in-gtex-data&#34; target=&#34;_blank&#34;&gt;slides&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://ghchart.rshah.org/DA2536/amy-peterson.svg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/author/arazmara/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/author/arazmara/</guid>
+      <description>&lt;p&gt;I mentored Ashkaun Razmara in 2017-2018 while he was visiting the Johns Hopkins Bloomberg School of Public Health. Check his website for more information about him.&lt;/p&gt;
+
+&lt;p&gt;Ashkaun is the lead author of the &lt;code&gt;recount-brain&lt;/code&gt; project which you can read in more detail at &lt;a href=&#34;http://LieberInstitute.github.io/recount-brain/&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;/img/recount_brain.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;!-- ![](http://ghchart.rshah.org/DA2536/Ashkaunr.svg) --&gt;
+</description>
+    </item>
+    
   </channel>
 </rss>
