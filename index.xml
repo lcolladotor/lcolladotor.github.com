@@ -24,10 +24,10 @@
 &lt;p&gt;Are you a Microsoft Windows &lt;code&gt;R&lt;/code&gt; user? Does your Windows username include a space? Like &lt;code&gt;Firstname Lastname&lt;/code&gt;. Then you might occassionally run into issues installing packages due to spaces.&lt;/p&gt;
 &lt;div id=&#34;solutions&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Solutions&lt;/h3&gt;
-&lt;p&gt;You could either re-install Windows with a username that has no spaces such as &lt;code&gt;Lastname&lt;/code&gt;, but that’s probably not an easy option. Or you can:&lt;/p&gt;
+&lt;p&gt;You could either re-install Windows with a username that has no spaces such as &lt;code&gt;Lastname&lt;/code&gt; &lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;, but that’s probably not an easy option. Or you can:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Edit your &lt;code&gt;TMP&lt;/code&gt; and &lt;code&gt;TEMP&lt;/code&gt; environment variables to a location with no spaces, like &lt;code&gt;C:\TEMP&lt;/code&gt; following instructions like &lt;a href=&#34;https://www.howtogeek.com/285710/how-to-move-windows-temporary-folders-to-another-drive/&#34;&gt;these ones&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;Preferably install &lt;code&gt;R&lt;/code&gt; at a location with no spaces, like &lt;code&gt;C:\R&lt;/code&gt;, instead of the default &lt;code&gt;C:\Program Files&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Preferably install &lt;code&gt;R&lt;/code&gt; at a location with no spaces, like &lt;code&gt;C:\R&lt;/code&gt;, instead of the default &lt;code&gt;C:\Program Files&lt;/code&gt; &lt;a href=&#34;#fn2&#34; class=&#34;footnote-ref&#34; id=&#34;fnref2&#34;&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div id=&#34;backstory&#34; class=&#34;section level3&#34;&gt;
@@ -86,7 +86,7 @@ if (!nzchar(TAR) &amp;amp;&amp;amp; .Platform$OS.type == &amp;quot;windows&amp;q
   TAR &amp;lt;- &amp;quot;tar.exe&amp;quot;
 if (!nzchar(TAR) || TAR == &amp;quot;internal&amp;quot;) 
   return(untar2(tarfile, files, list, exdir))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;In this case, the first &lt;code&gt;untar2()&lt;/code&gt; call is called. That is: &lt;code&gt;return(untar2(tarfile, files, list, exdir, restore_times))&lt;/code&gt;. The error message &lt;code&gt;incomplete block on file&lt;/code&gt; is not really informative in this case because &lt;code&gt;untar2()&lt;/code&gt; is not happy when there’s a space in the path to the file &lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;In this case, the first &lt;code&gt;untar2()&lt;/code&gt; call is called. That is: &lt;code&gt;return(untar2(tarfile, files, list, exdir, restore_times))&lt;/code&gt;. The error message &lt;code&gt;incomplete block on file&lt;/code&gt; is not really informative in this case because &lt;code&gt;untar2()&lt;/code&gt; is not happy when there’s a space in the path to the file &lt;a href=&#34;#fn3&#34; class=&#34;footnote-ref&#34; id=&#34;fnref3&#34;&gt;&lt;sup&gt;3&lt;/sup&gt;&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;We can get around this &lt;code&gt;untar2()&lt;/code&gt; issue by uncompressing the &lt;code&gt;tar.gz&lt;/code&gt; file ourselves in a path that has no spaces. For example, if we download &lt;code&gt;DO.db_2.9.tar.gz&lt;/code&gt; to &lt;code&gt;C:\R&lt;/code&gt; we can uncompress the &lt;code&gt;tar.gz&lt;/code&gt; file with:&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;utils::untar(&amp;#39;C:/R/DO.db_2.9.tar.gz&amp;#39;)&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
@@ -112,7 +112,7 @@ In install.packages(&amp;quot;C:/R/DO.db&amp;quot;, repos = NULL, type = &amp;qu
   installation of package ‘C:/R/DO.db’ had non-zero exit status
 &amp;gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Oh noes! It didn’t work 😖 What happened?&lt;/p&gt;
-&lt;p&gt;If you look closely, you’ll see that it says &lt;code&gt;ARGUMENT &#39;Collado\AppData\Local\Temp\Rtmp8EQDjB\Rin2ef05088650f&#39; __ignored__&lt;/code&gt;. Wait! &lt;code&gt;Collado&lt;/code&gt; is the &lt;code&gt;Lastname&lt;/code&gt; portion of the username! So we have another space issue &lt;a href=&#34;#fn2&#34; class=&#34;footnote-ref&#34; id=&#34;fnref2&#34;&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;. That structure though looks very familiar, it’s from &lt;code&gt;base::tempdir()&lt;/code&gt;!&lt;/p&gt;
+&lt;p&gt;If you look closely, you’ll see that it says &lt;code&gt;ARGUMENT &#39;Collado\AppData\Local\Temp\Rtmp8EQDjB\Rin2ef05088650f&#39; __ignored__&lt;/code&gt;. Wait! &lt;code&gt;Collado&lt;/code&gt; is the &lt;code&gt;Lastname&lt;/code&gt; portion of the username! So we have another space issue &lt;a href=&#34;#fn4&#34; class=&#34;footnote-ref&#34; id=&#34;fnref4&#34;&gt;&lt;sup&gt;4&lt;/sup&gt;&lt;/a&gt;. That structure though looks very familiar, it’s from &lt;code&gt;base::tempdir()&lt;/code&gt;!&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;&amp;gt; tempdir()
 
 [1] &amp;quot;C:\\Users\\Leo Collado\\AppData\\Local\\Temp\\RtmpqiBJ53&amp;quot;&lt;/code&gt;&lt;/pre&gt;
@@ -214,7 +214,7 @@ if (is.null(destdir) &amp;amp;&amp;amp; nonlocalrepos) {
     stop(gettextf(&amp;quot;unable to create temporary directory %s&amp;quot;, 
       sQuote(tmpd)), domain = NA)
 }&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Setting the environment variable &lt;code&gt;TMPDIR&lt;/code&gt; doesn’t work here as the instructions for &lt;code&gt;tempdir()&lt;/code&gt; specify &lt;a href=&#34;#fn3&#34; class=&#34;footnote-ref&#34; id=&#34;fnref3&#34;&gt;&lt;sup&gt;3&lt;/sup&gt;&lt;/a&gt; although I now see that you can edit the &lt;code&gt;.Renviron&lt;/code&gt; file as instructed &lt;a href=&#34;https://stackoverflow.com/questions/17107206/change-temporary-directory&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Setting the environment variable &lt;code&gt;TMPDIR&lt;/code&gt; doesn’t work here as the instructions for &lt;code&gt;tempdir()&lt;/code&gt; specify &lt;a href=&#34;#fn5&#34; class=&#34;footnote-ref&#34; id=&#34;fnref5&#34;&gt;&lt;sup&gt;5&lt;/sup&gt;&lt;/a&gt; although I now see that you can edit the &lt;code&gt;.Renviron&lt;/code&gt; file as instructed &lt;a href=&#34;https://stackoverflow.com/questions/17107206/change-temporary-directory&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;In any case, if we specify a &lt;code&gt;destdir&lt;/code&gt; without spaces we overide the need to control &lt;code&gt;tempdir()&lt;/code&gt;, enable &lt;code&gt;utils::untar()&lt;/code&gt; to work and we can finally install &lt;em&gt;&lt;a href=&#34;https://bioconductor.org/packages/3.9/clusterProfiler&#34;&gt;clusterProfiler&lt;/a&gt;&lt;/em&gt; 🎉.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;&amp;gt; BiocManager::install(&amp;#39;clusterProfiler&amp;#39;, lib = &amp;#39;C:/R/R-3.6.0/library&amp;#39;, destdir = &amp;#39;C:/R/dest_leo&amp;#39;)
 Bioconductor version 3.9 (BiocManager 1.30.4), R 3.6.0 (2019-04-26)
@@ -273,7 +273,7 @@ Making &amp;#39;packages.html&amp;#39; ... done&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;div id=&#34;closing&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Closing&lt;/h3&gt;
-&lt;p&gt;All of the above seemed like too much. In addition, it seemed like &lt;code&gt;BiocManager::install(&#39;hypeR&#39;, destdir = &#39;C:/R/dest_leo&#39;)&lt;/code&gt; was not working &lt;a href=&#34;#fn4&#34; class=&#34;footnote-ref&#34; id=&#34;fnref4&#34;&gt;&lt;sup&gt;4&lt;/sup&gt;&lt;/a&gt;. I likely missed something here earlier today. So controlling &lt;code&gt;utils::tempdir()&lt;/code&gt; seemed like the easiest solution such that the defaults of where a package gets downloaded, uncompressed, etc all worked. And the simplest solution we thought of was to create the &lt;code&gt;C:\TEMP&lt;/code&gt; directory and update the Windows environment variables &lt;code&gt;TMP&lt;/code&gt; and &lt;code&gt;TEMP&lt;/code&gt; to &lt;a href=&#34;https://www.howtogeek.com/285710/how-to-move-windows-temporary-folders-to-another-drive/&#34;&gt;point&lt;/a&gt; to that location. Then, the rest of the commands worked without having to specify &lt;code&gt;lib&lt;/code&gt; or &lt;code&gt;destdir&lt;/code&gt; or manually run &lt;code&gt;utils::untar()&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;All of the above seemed like too much. In addition, it seemed like &lt;code&gt;BiocManager::install(&#39;hypeR&#39;, destdir = &#39;C:/R/dest_leo&#39;)&lt;/code&gt; was not working &lt;a href=&#34;#fn6&#34; class=&#34;footnote-ref&#34; id=&#34;fnref6&#34;&gt;&lt;sup&gt;6&lt;/sup&gt;&lt;/a&gt;. I likely missed something here earlier today. So controlling &lt;code&gt;utils::tempdir()&lt;/code&gt; seemed like the easiest solution such that the defaults of where a package gets downloaded, uncompressed, etc all worked. And the simplest solution we thought of was to create the &lt;code&gt;C:\TEMP&lt;/code&gt; directory and update the Windows environment variables &lt;code&gt;TMP&lt;/code&gt; and &lt;code&gt;TEMP&lt;/code&gt; to &lt;a href=&#34;https://www.howtogeek.com/285710/how-to-move-windows-temporary-folders-to-another-drive/&#34;&gt;point&lt;/a&gt; to that location. Then, the rest of the commands worked without having to specify &lt;code&gt;lib&lt;/code&gt; or &lt;code&gt;destdir&lt;/code&gt; or manually run &lt;code&gt;utils::untar()&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;As a whole, remember to look for spaces in the error messages! This is specially relevant when you are having issues as a Microsoft Windows &lt;code&gt;R&lt;/code&gt; user.&lt;/p&gt;
 &lt;p&gt;If you have other solutions for Microsoft Windows &lt;code&gt;R&lt;/code&gt; users with usernames that have at least one space, please let us know in the comments! Thank you! 🙌🏽&lt;/p&gt;
 &lt;/div&gt;
@@ -374,10 +374,12 @@ URL: &lt;a href=&#34;https://github.com/rstudio/blogdown&#34;&gt;https://github.
 &lt;div class=&#34;footnotes&#34;&gt;
 &lt;hr /&gt;
 &lt;ol&gt;
-&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;Hopefully in the future Google will lead you to this blog post and you might avoid the rabbit hole I went through!&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li id=&#34;fn2&#34;&gt;&lt;p&gt;By the way, at this point I thought that the error was related to &lt;code&gt;Error: object &#39;ÿþ&#39; not found&lt;/code&gt; and maybe some encoding issues since the &lt;em&gt;&lt;a href=&#34;https://bioconductor.org/packages/3.9/DO.db&#34;&gt;DO.db&lt;/a&gt;&lt;/em&gt; package has Chinese characters.&lt;a href=&#34;#fnref2&#34; class=&#34;footnote-back&#34;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li id=&#34;fn3&#34;&gt;&lt;p&gt;Didn’t stop me from trying hehe. I tried using &lt;code&gt;usethis::edit_r_profile()&lt;/code&gt; and adding &lt;code&gt;Sys.setenv(TMPDIR = &#39;C:/R/tmp_leo&#39;)&lt;/code&gt; but that didn’t work.&lt;a href=&#34;#fnref3&#34; class=&#34;footnote-back&#34;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li id=&#34;fn4&#34;&gt;&lt;p&gt;I would need to test this more before reporting it properly to Bioconductor.&lt;a href=&#34;#fnref4&#34; class=&#34;footnote-back&#34;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;This is the case in the Bioconductor Windows build machine where the username is &lt;code&gt;biocbuild&lt;/code&gt; as you can see &lt;a href=&#34;http://bioconductor.org/checkResults/release/bioc-LATEST/recount/tokay2-install.html&#34;&gt;here&lt;/a&gt;.&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn2&#34;&gt;&lt;p&gt;In the Bioconductor Windows build machines there are again no spaces in the path to the R installation and the library where packages are installed.&lt;a href=&#34;#fnref2&#34; class=&#34;footnote-back&#34;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn3&#34;&gt;&lt;p&gt;Hopefully in the future Google will lead you to this blog post and you might avoid the rabbit hole I went through!&lt;a href=&#34;#fnref3&#34; class=&#34;footnote-back&#34;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn4&#34;&gt;&lt;p&gt;By the way, at this point I thought that the error was related to &lt;code&gt;Error: object &#39;ÿþ&#39; not found&lt;/code&gt; and maybe some encoding issues since the &lt;em&gt;&lt;a href=&#34;https://bioconductor.org/packages/3.9/DO.db&#34;&gt;DO.db&lt;/a&gt;&lt;/em&gt; package has Chinese characters.&lt;a href=&#34;#fnref4&#34; class=&#34;footnote-back&#34;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn5&#34;&gt;&lt;p&gt;Didn’t stop me from trying hehe. I tried using &lt;code&gt;usethis::edit_r_profile()&lt;/code&gt; and adding &lt;code&gt;Sys.setenv(TMPDIR = &#39;C:/R/tmp_leo&#39;)&lt;/code&gt; but that didn’t work.&lt;a href=&#34;#fnref5&#34; class=&#34;footnote-back&#34;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn6&#34;&gt;&lt;p&gt;I would need to test this more before reporting it properly to Bioconductor.&lt;a href=&#34;#fnref6&#34; class=&#34;footnote-back&#34;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;
 </description>

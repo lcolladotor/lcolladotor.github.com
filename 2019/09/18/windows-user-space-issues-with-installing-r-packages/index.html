@@ -28,7 +28,7 @@
     
   
   <meta name="description" content="Are you a Microsoft Windows R user? Does your Windows username include a space? Like Firstname Lastname. Then you might occassionally run into issues installing packages due to spaces.
-Solutions You could either re-install Windows with a username that has no spaces such as Lastname, but that’s probably not an easy option. Or you can:
+Solutions You could either re-install Windows with a username that has no spaces such as Lastname 1, but that’s probably not an easy option. Or you can:
  Edit your TMP and TEMP environment variables to a location with no spaces, like C:\TEMP following instructions like these ones.">
 
   
@@ -139,13 +139,13 @@ Solutions You could either re-install Windows with a username that has no spaces
   <meta property="og:url" content="/2019/09/18/windows-user-space-issues-with-installing-r-packages/">
   <meta property="og:title" content="Windows user space issues with installing R packages | L. Collado-Torres">
   <meta property="og:description" content="Are you a Microsoft Windows R user? Does your Windows username include a space? Like Firstname Lastname. Then you might occassionally run into issues installing packages due to spaces.
-Solutions You could either re-install Windows with a username that has no spaces such as Lastname, but that’s probably not an easy option. Or you can:
+Solutions You could either re-install Windows with a username that has no spaces such as Lastname 1, but that’s probably not an easy option. Or you can:
  Edit your TMP and TEMP environment variables to a location with no spaces, like C:\TEMP following instructions like these ones."><meta property="og:image" content="/img/icon-192.png">
   <meta property="og:locale" content="en-us">
   
   <meta property="article:published_time" content="2019-09-18T00:00:00&#43;00:00">
   
-  <meta property="article:modified_time" content="2019-09-18T00:00:00&#43;00:00">
+  <meta property="article:modified_time" content="2019-09-18T00:01:32-04:00">
   
 
   
@@ -436,7 +436,7 @@ Solutions You could either re-install Windows with a username that has no spaces
 
 
 <meta content="2019-09-18 00:00:00 &#43;0000 UTC" itemprop="datePublished">
-<meta content="2019-09-18 00:00:00 &#43;0000 UTC" itemprop="dateModified">
+<meta content="2019-09-18 00:01:32 -0400 EDT" itemprop="dateModified">
 
 <div class="article-metadata">
 
@@ -447,6 +447,8 @@ Solutions You could either re-install Windows with a username that has no spaces
   <span class="article-date">
     
     
+      
+          Last updated on
       
     
     <time>Sep 18, 2019</time>
@@ -553,10 +555,10 @@ Solutions You could either re-install Windows with a username that has no spaces
 <p>Are you a Microsoft Windows <code>R</code> user? Does your Windows username include a space? Like <code>Firstname Lastname</code>. Then you might occassionally run into issues installing packages due to spaces.</p>
 <div id="solutions" class="section level3">
 <h3>Solutions</h3>
-<p>You could either re-install Windows with a username that has no spaces such as <code>Lastname</code>, but that’s probably not an easy option. Or you can:</p>
+<p>You could either re-install Windows with a username that has no spaces such as <code>Lastname</code> <a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>, but that’s probably not an easy option. Or you can:</p>
 <ul>
 <li>Edit your <code>TMP</code> and <code>TEMP</code> environment variables to a location with no spaces, like <code>C:\TEMP</code> following instructions like <a href="https://www.howtogeek.com/285710/how-to-move-windows-temporary-folders-to-another-drive/">these ones</a>.</li>
-<li>Preferably install <code>R</code> at a location with no spaces, like <code>C:\R</code>, instead of the default <code>C:\Program Files</code>.</li>
+<li>Preferably install <code>R</code> at a location with no spaces, like <code>C:\R</code>, instead of the default <code>C:\Program Files</code> <a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a>.</li>
 </ul>
 </div>
 <div id="backstory" class="section level3">
@@ -615,7 +617,7 @@ if (!nzchar(TAR) &amp;&amp; .Platform$OS.type == &quot;windows&quot; &amp;&amp; 
   TAR &lt;- &quot;tar.exe&quot;
 if (!nzchar(TAR) || TAR == &quot;internal&quot;) 
   return(untar2(tarfile, files, list, exdir))</code></pre>
-<p>In this case, the first <code>untar2()</code> call is called. That is: <code>return(untar2(tarfile, files, list, exdir, restore_times))</code>. The error message <code>incomplete block on file</code> is not really informative in this case because <code>untar2()</code> is not happy when there’s a space in the path to the file <a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>.</p>
+<p>In this case, the first <code>untar2()</code> call is called. That is: <code>return(untar2(tarfile, files, list, exdir, restore_times))</code>. The error message <code>incomplete block on file</code> is not really informative in this case because <code>untar2()</code> is not happy when there’s a space in the path to the file <a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a>.</p>
 <p>We can get around this <code>untar2()</code> issue by uncompressing the <code>tar.gz</code> file ourselves in a path that has no spaces. For example, if we download <code>DO.db_2.9.tar.gz</code> to <code>C:\R</code> we can uncompress the <code>tar.gz</code> file with:</p>
 <pre class="r"><code>utils::untar(&#39;C:/R/DO.db_2.9.tar.gz&#39;)</code></pre>
 </div>
@@ -641,7 +643,7 @@ In install.packages(&quot;C:/R/DO.db&quot;, repos = NULL, type = &quot;source&qu
   installation of package ‘C:/R/DO.db’ had non-zero exit status
 &gt;</code></pre>
 <p>Oh noes! It didn’t work 😖 What happened?</p>
-<p>If you look closely, you’ll see that it says <code>ARGUMENT 'Collado\AppData\Local\Temp\Rtmp8EQDjB\Rin2ef05088650f' __ignored__</code>. Wait! <code>Collado</code> is the <code>Lastname</code> portion of the username! So we have another space issue <a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a>. That structure though looks very familiar, it’s from <code>base::tempdir()</code>!</p>
+<p>If you look closely, you’ll see that it says <code>ARGUMENT 'Collado\AppData\Local\Temp\Rtmp8EQDjB\Rin2ef05088650f' __ignored__</code>. Wait! <code>Collado</code> is the <code>Lastname</code> portion of the username! So we have another space issue <a href="#fn4" class="footnote-ref" id="fnref4"><sup>4</sup></a>. That structure though looks very familiar, it’s from <code>base::tempdir()</code>!</p>
 <pre class="r"><code>&gt; tempdir()
 
 [1] &quot;C:\\Users\\Leo Collado\\AppData\\Local\\Temp\\RtmpqiBJ53&quot;</code></pre>
@@ -743,7 +745,7 @@ if (is.null(destdir) &amp;&amp; nonlocalrepos) {
     stop(gettextf(&quot;unable to create temporary directory %s&quot;, 
       sQuote(tmpd)), domain = NA)
 }</code></pre>
-<p>Setting the environment variable <code>TMPDIR</code> doesn’t work here as the instructions for <code>tempdir()</code> specify <a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a> although I now see that you can edit the <code>.Renviron</code> file as instructed <a href="https://stackoverflow.com/questions/17107206/change-temporary-directory">here</a>.</p>
+<p>Setting the environment variable <code>TMPDIR</code> doesn’t work here as the instructions for <code>tempdir()</code> specify <a href="#fn5" class="footnote-ref" id="fnref5"><sup>5</sup></a> although I now see that you can edit the <code>.Renviron</code> file as instructed <a href="https://stackoverflow.com/questions/17107206/change-temporary-directory">here</a>.</p>
 <p>In any case, if we specify a <code>destdir</code> without spaces we overide the need to control <code>tempdir()</code>, enable <code>utils::untar()</code> to work and we can finally install <em><a href="https://bioconductor.org/packages/3.9/clusterProfiler">clusterProfiler</a></em> 🎉.</p>
 <pre class="r"><code>&gt; BiocManager::install(&#39;clusterProfiler&#39;, lib = &#39;C:/R/R-3.6.0/library&#39;, destdir = &#39;C:/R/dest_leo&#39;)
 Bioconductor version 3.9 (BiocManager 1.30.4), R 3.6.0 (2019-04-26)
@@ -802,7 +804,7 @@ Making &#39;packages.html&#39; ... done</code></pre>
 </div>
 <div id="closing" class="section level3">
 <h3>Closing</h3>
-<p>All of the above seemed like too much. In addition, it seemed like <code>BiocManager::install('hypeR', destdir = 'C:/R/dest_leo')</code> was not working <a href="#fn4" class="footnote-ref" id="fnref4"><sup>4</sup></a>. I likely missed something here earlier today. So controlling <code>utils::tempdir()</code> seemed like the easiest solution such that the defaults of where a package gets downloaded, uncompressed, etc all worked. And the simplest solution we thought of was to create the <code>C:\TEMP</code> directory and update the Windows environment variables <code>TMP</code> and <code>TEMP</code> to <a href="https://www.howtogeek.com/285710/how-to-move-windows-temporary-folders-to-another-drive/">point</a> to that location. Then, the rest of the commands worked without having to specify <code>lib</code> or <code>destdir</code> or manually run <code>utils::untar()</code>.</p>
+<p>All of the above seemed like too much. In addition, it seemed like <code>BiocManager::install('hypeR', destdir = 'C:/R/dest_leo')</code> was not working <a href="#fn6" class="footnote-ref" id="fnref6"><sup>6</sup></a>. I likely missed something here earlier today. So controlling <code>utils::tempdir()</code> seemed like the easiest solution such that the defaults of where a package gets downloaded, uncompressed, etc all worked. And the simplest solution we thought of was to create the <code>C:\TEMP</code> directory and update the Windows environment variables <code>TMP</code> and <code>TEMP</code> to <a href="https://www.howtogeek.com/285710/how-to-move-windows-temporary-folders-to-another-drive/">point</a> to that location. Then, the rest of the commands worked without having to specify <code>lib</code> or <code>destdir</code> or manually run <code>utils::untar()</code>.</p>
 <p>As a whole, remember to look for spaces in the error messages! This is specially relevant when you are having issues as a Microsoft Windows <code>R</code> user.</p>
 <p>If you have other solutions for Microsoft Windows <code>R</code> users with usernames that have at least one space, please let us know in the comments! Thank you! 🙌🏽</p>
 </div>
@@ -903,10 +905,12 @@ URL: <a href="https://github.com/rstudio/blogdown">https://github.com/rstudio/bl
 <div class="footnotes">
 <hr />
 <ol>
-<li id="fn1"><p>Hopefully in the future Google will lead you to this blog post and you might avoid the rabbit hole I went through!<a href="#fnref1" class="footnote-back">↩</a></p></li>
-<li id="fn2"><p>By the way, at this point I thought that the error was related to <code>Error: object 'ÿþ' not found</code> and maybe some encoding issues since the <em><a href="https://bioconductor.org/packages/3.9/DO.db">DO.db</a></em> package has Chinese characters.<a href="#fnref2" class="footnote-back">↩</a></p></li>
-<li id="fn3"><p>Didn’t stop me from trying hehe. I tried using <code>usethis::edit_r_profile()</code> and adding <code>Sys.setenv(TMPDIR = 'C:/R/tmp_leo')</code> but that didn’t work.<a href="#fnref3" class="footnote-back">↩</a></p></li>
-<li id="fn4"><p>I would need to test this more before reporting it properly to Bioconductor.<a href="#fnref4" class="footnote-back">↩</a></p></li>
+<li id="fn1"><p>This is the case in the Bioconductor Windows build machine where the username is <code>biocbuild</code> as you can see <a href="http://bioconductor.org/checkResults/release/bioc-LATEST/recount/tokay2-install.html">here</a>.<a href="#fnref1" class="footnote-back">↩</a></p></li>
+<li id="fn2"><p>In the Bioconductor Windows build machines there are again no spaces in the path to the R installation and the library where packages are installed.<a href="#fnref2" class="footnote-back">↩</a></p></li>
+<li id="fn3"><p>Hopefully in the future Google will lead you to this blog post and you might avoid the rabbit hole I went through!<a href="#fnref3" class="footnote-back">↩</a></p></li>
+<li id="fn4"><p>By the way, at this point I thought that the error was related to <code>Error: object 'ÿþ' not found</code> and maybe some encoding issues since the <em><a href="https://bioconductor.org/packages/3.9/DO.db">DO.db</a></em> package has Chinese characters.<a href="#fnref4" class="footnote-back">↩</a></p></li>
+<li id="fn5"><p>Didn’t stop me from trying hehe. I tried using <code>usethis::edit_r_profile()</code> and adding <code>Sys.setenv(TMPDIR = 'C:/R/tmp_leo')</code> but that didn’t work.<a href="#fnref5" class="footnote-back">↩</a></p></li>
+<li id="fn6"><p>I would need to test this more before reporting it properly to Bioconductor.<a href="#fnref6" class="footnote-back">↩</a></p></li>
 </ol>
 </div>
 
