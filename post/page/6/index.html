@@ -462,6 +462,100 @@
 
 
 
+<meta content="2013-11-14 00:00:00 &#43;0000 UTC" itemprop="datePublished">
+<meta content="2017-01-23 09:06:40 -0500 EST" itemprop="dateModified">
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+          Last updated on
+      
+    
+    <time>Jan 23, 2017</time>
+  </span>
+  
+
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    7 min read
+  </span>
+  
+
+  
+  
+  <span class="middot-divider"></span>
+  <a href="/2013/11/14/reducing-memory-overhead-when-using-mclapply/#disqus_thread"></a>
+  
+
+  
+  
+  <span class="middot-divider"></span>
+  <span class="article-categories">
+    <i class="fas fa-folder"></i>
+    <a href="/categories/rstats/">rstats</a></span>
+  
+
+  
+
+</div>
+
+  
+
+  
+  
+  
+
+  <h3 class="article-title mb-1 mt-3" itemprop="name">
+    <a href="/2013/11/14/reducing-memory-overhead-when-using-mclapply/" itemprop="url">Trying to reduce the memory overhead when using mclapply</a>
+  </h3>
+
+  
+  <div class="article-style" itemprop="articleBody">
+    I am currently trying to understand how to reduce the memory used by mclapply. This function is rather complicated and others have explained the differences versus parLapply (A_Skelton73, 2013; lockedoff, 2012 ) and also made it clear that in mclapply each job does not know if the others are running out of memory and thus cannot trigger gc (Urbanek, 2012).
+While I still struggle to understand all the details of mclapply, I can successfully use it to reduce computation time at the expense of a very high memory load.
+  </div>
+  
+
+  
+
+</div>
+
+    
+  
+    
+      
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+<div class="card-simple" itemscope itemtype="http://schema.org/BlogPosting">
+
+  
+    
+
+
+
 <meta content="2013-11-09 00:00:00 &#43;0000 UTC" itemprop="datePublished">
 <meta content="2017-01-23 09:06:40 -0500 EST" itemprop="dateModified">
 
@@ -1272,102 +1366,6 @@ Data exploration ## Load the package library(useR2013DAC) ## Explore laliga data
   
   <div class="article-style" itemprop="articleBody">
     Leader: scientific or project In my mind before trying to answer this question I have to define leader. Right now I have two —possibly conflicting— leaders in mind. One is a scientific leader in the sense of a leader in a specific scientific discipline. The other is a leader who can organize and lead projects, either scientific ones (across labs for example) or what I want to call revolutionary projects. With such a grandiose name I am trying to cover the type of projects that can help change a country.
-  </div>
-  
-
-  
-
-</div>
-
-    
-  
-    
-      
-
-
-
-
-
-
-  
-
-
-
-
-
-  
-
-
-<div class="card-simple" itemscope itemtype="http://schema.org/BlogPosting">
-
-  
-    
-
-
-
-<meta content="2013-05-09 00:00:00 &#43;0000 UTC" itemprop="datePublished">
-<meta content="2017-01-23 09:28:34 -0500 EST" itemprop="dateModified">
-
-<div class="article-metadata">
-
-  
-  
-
-  
-  <span class="article-date">
-    
-    
-      
-          Last updated on
-      
-    
-    <time>Jan 23, 2017</time>
-  </span>
-  
-
-  
-
-  
-  <span class="middot-divider"></span>
-  <span class="article-reading-time">
-    2 min read
-  </span>
-  
-
-  
-  
-  <span class="middot-divider"></span>
-  <a href="/2013/05/09/reading-an-r-file-from-github/#disqus_thread"></a>
-  
-
-  
-  
-  <span class="middot-divider"></span>
-  <span class="article-categories">
-    <i class="fas fa-folder"></i>
-    <a href="/categories/rstats/">rstats</a></span>
-  
-
-  
-
-</div>
-
-  
-
-  
-  
-  
-
-  <h3 class="article-title mb-1 mt-3" itemprop="name">
-    <a href="/2013/05/09/reading-an-r-file-from-github/" itemprop="url">Reading an R file from GitHub</a>
-  </h3>
-
-  
-  <div class="article-style" itemprop="articleBody">
-    Lets say that I want to read in this R file from GitHub into R.
-The first thing you have to do is locate the raw file. You can do so by clicking on the Raw button in GitHub. In this case it&#8217;s https://raw.github.com/lcolladotor/ballgownR-devel/master/ballgownR/R/infoGene.R
-One would think that using source() would work, but it doesn&#8217;t as shown below:
-source(&quot;https://raw.github.com/lcolladotor/ballgownR-devel/master/ballgownR/R/infoGene.R&quot;)  ## Warning: unsupported URL scheme  ## Error: cannot open the connection  However, thanks again to Hadley Wickham you can do so by using the devtools (Wickham &amp; Chang, 2013 ) package.
   </div>
   
 
