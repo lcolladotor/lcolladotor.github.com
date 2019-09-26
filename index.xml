@@ -7,10 +7,20 @@
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2011-{year} Leonardo Collado Torres under (CC) BY-NC-SA 4.0. All thoughts and opinions here are my own. Icon is the [R logo](https://www.r-project.org/logo/) modified</copyright>
-    <lastBuildDate>Wed, 18 Sep 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 26 Sep 2019 00:00:00 +0000</lastBuildDate>
     
 	    <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Divergent neuronal DNA methylation patterns across human cortical development reveal critical periods and a unique role of CpH methylation</title>
+      <link>/publication/dnam_mcph_neuron_glia/</link>
+      <pubDate>Thu, 26 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/dnam_mcph_neuron_glia/</guid>
+      <description>&lt;!-- More detail can easily be written here using *Markdown* and $\rm \LaTeX$ math code. --&gt;
+</description>
+    </item>
     
     <item>
       <title>Windows user space issues with installing R packages</title>
@@ -431,6 +441,16 @@ URL: &lt;a href=&#34;https://github.com/rstudio/blogdown&#34;&gt;https://github.
       <pubDate>Wed, 24 Apr 2019 16:45:43 -0500</pubDate>
       
       <guid>/publication/recount_brain/</guid>
+      <description>&lt;!-- More detail can easily be written here using *Markdown* and $\rm \LaTeX$ math code. --&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Integrated Transcriptomic and Proteomic Analysis of Primary Human Umbilical Vein Endothelial Cells</title>
+      <link>/publication/recount_proteomics/</link>
+      <pubDate>Sun, 14 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/recount_proteomics/</guid>
       <description>&lt;!-- More detail can easily be written here using *Markdown* and $\rm \LaTeX$ math code. --&gt;
 </description>
     </item>
@@ -2844,7 +2864,7 @@ I just completed my &lt;a href=&#34;https://twitter.com/hashtag/ASHG18?src=hash&
 &lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;On our way to the presidential address.  &lt;a href=&#34;https://twitter.com/hashtag/scooters?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#scooters&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/ASHG18?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#ASHG18&lt;/a&gt; &lt;a href=&#34;https://t.co/UrtAuoD2jd&#34;&gt;pic.twitter.com/UrtAuoD2jd&lt;/a&gt;&lt;/p&gt;&amp;mdash; Audrey Hendricks (@hendricks_ae) &lt;a href=&#34;https://twitter.com/hendricks_ae/status/1053073453035642881?ref_src=twsrc%5Etfw&#34;&gt;October 19, 2018&lt;/a&gt;&lt;/blockquote&gt;
 &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
 
-&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Still can&amp;#39;t get over that almost 9,000 people are here! Absolutely amazing. &lt;a href=&#34;https://twitter.com/hashtag/ASHG18?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#ASHG18&lt;/a&gt;&lt;/p&gt;&amp;mdash; John A. Morris, PhD (@morris_genetics) &lt;a href=&#34;https://twitter.com/morris_genetics/status/1053076114032205824?ref_src=twsrc%5Etfw&#34;&gt;October 19, 2018&lt;/a&gt;&lt;/blockquote&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Still can&amp;#39;t get over that almost 9,000 people are here! Absolutely amazing. &lt;a href=&#34;https://twitter.com/hashtag/ASHG18?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#ASHG18&lt;/a&gt;&lt;/p&gt;&amp;mdash; John A. Morris (@morris_genetics) &lt;a href=&#34;https://twitter.com/morris_genetics/status/1053076114032205824?ref_src=twsrc%5Etfw&#34;&gt;October 19, 2018&lt;/a&gt;&lt;/blockquote&gt;
 &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
 
 &lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;As always please feel free to correct anything I got wrong! Thanks &lt;a href=&#34;https://twitter.com/splon?ref_src=twsrc%5Etfw&#34;&gt;@splon&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/ASHG18?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#ASHG18&lt;/a&gt; &lt;a href=&#34;https://t.co/hmRGx5CuM1&#34;&gt;https://t.co/hmRGx5CuM1&lt;/a&gt;&lt;/p&gt;&amp;mdash; Michael Hoffman (@michaelhoffman) &lt;a href=&#34;https://twitter.com/michaelhoffman/status/1053081242042691584?ref_src=twsrc%5Etfw&#34;&gt;October 19, 2018&lt;/a&gt;&lt;/blockquote&gt;
@@ -3604,16 +3624,6 @@ URL: &lt;a href=&#34;https://github.com/rstudio/blogdown&#34;&gt;https://github.
 &lt;li id=&#34;fn3&#34;&gt;&lt;p&gt;Some with a few followers, some with many. It didn’t matter. I was just checking the &lt;em&gt;latest&lt;/em&gt; and saving the ones I liked the most.&lt;a href=&#34;#fnref3&#34;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Divergent neuronal DNA methylation patterns across human cortical development: Critical periods and a unique role of CpH methylation</title>
-      <link>/publication/dnam_mcph_neuron_glia/</link>
-      <pubDate>Sat, 29 Sep 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/publication/dnam_mcph_neuron_glia/</guid>
-      <description>&lt;!-- More detail can easily be written here using *Markdown* and $\rm \LaTeX$ math code. --&gt;
 </description>
     </item>
     
