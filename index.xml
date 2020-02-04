@@ -7,10 +7,177 @@
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2011-{year} Leonardo Collado Torres under (CC) BY-NC-SA 4.0. All thoughts and opinions here are my own. Icon is the [R logo](https://www.r-project.org/logo/) modified</copyright>
-    <lastBuildDate>Wed, 30 Oct 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 03 Feb 2020 00:00:00 +0000</lastBuildDate>
     
 	    <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Conference feelings: from newbie to sponsor</title>
+      <link>/2020/02/03/conference-feelings-from-newbie-to-sponsor/</link>
+      <pubDate>Mon, 03 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/2020/02/03/conference-feelings-from-newbie-to-sponsor/</guid>
+      <description>
+
+
+&lt;p&gt;In the summer of 2008, nearly 12 years ago, I attended my first R/Bioconductor conference: &lt;a href=&#34;https://bioconductor.org/help/course-materials/2008/BioC2008/&#34;&gt;BioC2008&lt;/a&gt;. Just last week I went to my second &lt;a href=&#34;https://rstudio.com/conference/&#34;&gt;rstudio::conf(2020)&lt;/a&gt; which I greatly enjoyed. After some &lt;a href=&#34;https://twitter.com/fellgernon/status/1224512627017244673?s=20&#34;&gt;tweets exchanges today&lt;/a&gt;, I started reflecting on my journey and wanted to share my thoughts.&lt;/p&gt;
+&lt;div id=&#34;why-i-like-going-to-conferences&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Why I like going to conferences&lt;/h3&gt;
+&lt;p&gt;I typically enjoy going to conferences, though I also end up exhausted.&lt;/p&gt;
+&lt;iframe src=&#34;https://giphy.com/embed/l3V0p1WFoSIrzPLW0&#34; width=&#34;480&#34; height=&#34;480&#34; frameBorder=&#34;0&#34; class=&#34;giphy-embed&#34; allowFullScreen&gt;
+&lt;/iframe&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://giphy.com/gifs/l3V0p1WFoSIrzPLW0&#34;&gt;via GIPHY&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;Part of it could be the traveling and all that goes with it, but I think that conferences are mostly mentally taxing. There’s an information deluge which I typically find overwhelming. Sure, I love finding about new work but at some point it’s like collecting bookmarks of stuff to read or try out later &lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;. Yet the most exhausting component of going to a conference could be the networking aspect. Meeting others and catching up with friends is &lt;strong&gt;extremely&lt;/strong&gt; rewarding which is why I ultimately sign up for the next conference. How rewarding can it be? My most extreme example is when two professors invited me to apply to the Ph.D. program that I ended up studying. Though simply making friends and having friendly faces around you can go a long way. I’ll expand a bit on this later.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;as-a-newbie&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;As a newbie&lt;/h3&gt;
+&lt;p&gt;Across my career I have felt as a &lt;em&gt;newbie&lt;/em&gt; when attending many different conferences. I might be alone or maybe have a friend at the conference, or it could be my first time at a conference that I haven’t been to. Your mind, like mine, can be filled up with questions that later might seem simple like:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;How should I dress?&lt;/li&gt;
+&lt;li&gt;Is it ok to drink alcohol? &lt;a href=&#34;#fn2&#34; class=&#34;footnote-ref&#34; id=&#34;fnref2&#34;&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;How do I not feel alone?&lt;/li&gt;
+&lt;li&gt;Am I the odd one here?&lt;/li&gt;
+&lt;li&gt;How can I talk to X or Y person I’ve heard about before but never met?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;My answers have likely changed over time and currently are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Comfortable, but remember that this is a work event. So look professional by getting a haircut and dressing up a bit &lt;a href=&#34;#fn3&#34; class=&#34;footnote-ref&#34; id=&#34;fnref3&#34;&gt;&lt;sup&gt;3&lt;/sup&gt;&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Yes, but not too much and if I don’t want any, that’s ok too.&lt;/li&gt;
+&lt;li&gt;Talk to whoever seems friendly: could be someone new or an old friend or acquaintance.&lt;/li&gt;
+&lt;li&gt;Maybe, but &lt;em&gt;meh&lt;/em&gt; 🤷🏽‍♂️. I do try talking to other latinos or foreigners specially when there’s not many of us around.&lt;/li&gt;
+&lt;li&gt;This one is still hard, but maybe someone I know knows them and can introduce me. If so, I ask for the favor. Otherwise I try to approach them with a question about their work.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;as-a-sponsor&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;As a… &lt;em&gt;sponsor&lt;/em&gt;?&lt;/h3&gt;
+&lt;p&gt;The desire to avoid feeling alone is something that can still shape my behavior at a conference. If possible, I like having some close friends I can hang out with and be relaxed, almost as if we were not at the conference. They provide a zone that I can enter, recharge, and then head out of it again to continue networking.&lt;/p&gt;
+&lt;p&gt;Yet recently, I’ve grown more conscious of the fact that I’ve been around longer than others. Meaning that I might be the person that knows X or Y that they want to meet or talk to. That is, I find myself more frequently in the position of introducing people and helping them make connections. Somehow asking X or Y: “hey, do you have a minute? Can I introduce you to someone?” is way less scary even if I’m not the closest acquaintance of X or Y. That is, becoming a &lt;em&gt;sponsor&lt;/em&gt;: mostly the &lt;em&gt;access&lt;/em&gt; portion as defined by &lt;a href=&#34;https://hookedondata.org/the-importance-of-sponsorship/&#34;&gt;this blog post by Emily Robinson&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;So, while I still network like I used to, a portion of my time is spent checking on others I know so they are not alone and helping them when possible make the connections they want. Doing so also helps me strengthen my own connections as I detailed near the end of my &lt;a href=&#34;https://twitter.com/fellgernon/status/1224034242537119744?s=20&#34;&gt;tweet series post-rstudio::conf(2020)&lt;/a&gt;.&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;&lt;a href=&#34;https://twitter.com/hashtag/rstudioconf?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#rstudioconf&lt;/a&gt; + I also asked &amp;amp; appreciated their advise! Thanks!&lt;br&gt;&lt;br&gt;I&amp;#39;m just trying to emulate what others have done for me in the past (too many to list, thank youuu!), as I know that getting someone to answer the doorbell is the first step towards opening a door🤗🙌🏾&lt;a href=&#34;https://twitter.com/hashtag/rstats?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#rstats&lt;/a&gt; 11/11&lt;/p&gt;&amp;mdash; 🇲🇽 Dr. Leonardo Collado-Torres (@fellgernon) &lt;a href=&#34;https://twitter.com/fellgernon/status/1224034315429994502?ref_src=twsrc%5Etfw&#34;&gt;February 2, 2020&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+
+&lt;/div&gt;
+&lt;div id=&#34;feeling-empowered&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Feeling empowered&lt;/h3&gt;
+&lt;p&gt;Reaching out and trying to meet someone is hard and scary. Something that helped me since BioC2008 was the fact that I had others in mind: I knew that I was going to teach R later that fall at LCG-UNAM, so any questions I could get through or people I could meet were huge wins for me. Thus, thinking about others empowered me to network. And that’s still true for me through our CDSB project at &lt;a href=&#34;https://comunidadbioinfo.github.io/&#34;&gt;comunidadbioinfo.github.io&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;If I’m still feeling shy or alone, I remember a story from my dad: he claims that without approaching others who were having dinner at a table, introducing himself and creating a social connection, his ideas would have not made the &lt;a href=&#34;https://www.ncbi.nlm.nih.gov/pubmed/9278503&#34;&gt;&lt;em&gt;Escherichia coli&lt;/em&gt; genome paper&lt;/a&gt; that helped launch his career. Personally, once I break that barrier and start to feel comfortable, I feel like I can ask anything: specially feedback and support from others on how to advance some ideas of mine. Lately, that’s mostly been related to our &lt;a href=&#34;https://comunidadbioinfo.github.io/&#34;&gt;CDSB&lt;/a&gt; project.&lt;/p&gt;
+&lt;p&gt;I wish others could feel empowered too, yet it’s hard to get there. For now, I simply try to help others emulating what others have done for me. Ultimately, I know that getting someone to answer the doorbell is the first step towards opening a door 🤗🙌🏾 which motivates me and helps me overcome my shyness. Whatever they do after someone answers the doorbell is up to the person I’m helping. Yet in that moment, the satisfaction of helping others make connections fulfills me. Later on, it brings a smile to my face even if I’m exhausted after the conference.&lt;/p&gt;
+&lt;iframe src=&#34;https://giphy.com/embed/jOyNf6zPoQ2UE&#34; width=&#34;480&#34; height=&#34;271&#34; frameBorder=&#34;0&#34; class=&#34;giphy-embed&#34; allowFullScreen&gt;
+&lt;/iframe&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://giphy.com/gifs/soccer-angry-mash-up-jOyNf6zPoQ2UE&#34;&gt;via GIPHY&lt;/a&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;acknowledgments&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Acknowledgments&lt;/h3&gt;
+&lt;p&gt;This blog post was made possible thanks to:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;&lt;a href=&#34;https://bioconductor.org/packages/3.10/BiocStyle&#34;&gt;BiocStyle&lt;/a&gt;&lt;/em&gt; &lt;a id=&#39;cite-Oles_2020&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://github.com/Bioconductor/BiocStyle&#39;&gt;Oleś, Morgan, and Huber, 2020&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;a href=&#34;https://CRAN.R-project.org/package=blogdown&#34;&gt;blogdown&lt;/a&gt;&lt;/em&gt; &lt;a id=&#39;cite-Xie_2017&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://github.com/rstudio/blogdown&#39;&gt;Xie, Hill, and Thomas, 2017&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;a href=&#34;https://CRAN.R-project.org/package=knitcitations&#34;&gt;knitcitations&lt;/a&gt;&lt;/em&gt; &lt;a id=&#39;cite-Boettiger_2019&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://CRAN.R-project.org/package=knitcitations&#39;&gt;Boettiger, 2019&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;a href=&#34;https://CRAN.R-project.org/package=sessioninfo&#34;&gt;sessioninfo&lt;/a&gt;&lt;/em&gt; &lt;a id=&#39;cite-Csardi_2018&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://CRAN.R-project.org/package=sessioninfo&#39;&gt;Csárdi, core, Wickham, Chang, et al., 2018&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;references&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;References&lt;/h3&gt;
+&lt;p&gt;
+&lt;a id=&#39;bib-Boettiger_2019&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-Boettiger_2019&#34;&gt;[1]&lt;/a&gt;&lt;cite&gt;
+C. Boettiger.
+&lt;em&gt;knitcitations: Citations for ‘Knitr’ Markdown Files&lt;/em&gt;.
+R package version 1.0.10.
+2019.
+URL: &lt;a href=&#34;https://CRAN.R-project.org/package=knitcitations&#34;&gt;https://CRAN.R-project.org/package=knitcitations&lt;/a&gt;.&lt;/cite&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;a id=&#39;bib-Csardi_2018&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-Csardi_2018&#34;&gt;[2]&lt;/a&gt;&lt;cite&gt;
+G. Csárdi, R. core, H. Wickham, W. Chang, et al.
+&lt;em&gt;sessioninfo: R Session Information&lt;/em&gt;.
+R package version 1.1.1.
+2018.
+URL: &lt;a href=&#34;https://CRAN.R-project.org/package=sessioninfo&#34;&gt;https://CRAN.R-project.org/package=sessioninfo&lt;/a&gt;.&lt;/cite&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;a id=&#39;bib-Oles_2020&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-Oles_2020&#34;&gt;[3]&lt;/a&gt;&lt;cite&gt;
+A. Oleś, M. Morgan, and W. Huber.
+&lt;em&gt;BiocStyle: Standard styles for vignettes and other Bioconductor documents&lt;/em&gt;.
+R package version 2.14.4.
+2020.
+URL: &lt;a href=&#34;https://github.com/Bioconductor/BiocStyle&#34;&gt;https://github.com/Bioconductor/BiocStyle&lt;/a&gt;.&lt;/cite&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;a id=&#39;bib-Xie_2017&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-Xie_2017&#34;&gt;[4]&lt;/a&gt;&lt;cite&gt;
+Y. Xie, A. P. Hill, and A. Thomas.
+&lt;em&gt;blogdown: Creating Websites with R Markdown&lt;/em&gt;.
+ISBN 978-0815363729.
+Boca Raton, Florida: Chapman and Hall/CRC, 2017.
+URL: &lt;a href=&#34;https://github.com/rstudio/blogdown&#34;&gt;https://github.com/rstudio/blogdown&lt;/a&gt;.&lt;/cite&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;reproducibility&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Reproducibility&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;## ─ Session info ───────────────────────────────────────────────────────────────────────────────────────────────────────
+##  setting  value                       
+##  version  R version 3.6.2 (2019-12-12)
+##  os       macOS Catalina 10.15.2      
+##  system   x86_64, darwin15.6.0        
+##  ui       X11                         
+##  language (EN)                        
+##  collate  en_US.UTF-8                 
+##  ctype    en_US.UTF-8                 
+##  tz       America/New_York            
+##  date     2020-02-04                  
+## 
+## ─ Packages ───────────────────────────────────────────────────────────────────────────────────────────────────────────
+##  package       * version date       lib source                            
+##  assertthat      0.2.1   2019-03-21 [1] CRAN (R 3.6.0)                    
+##  bibtex          0.4.2.2 2020-01-02 [1] CRAN (R 3.6.0)                    
+##  BiocManager     1.30.10 2019-11-16 [1] CRAN (R 3.6.1)                    
+##  BiocStyle     * 2.14.4  2020-01-09 [1] Bioconductor                      
+##  blogdown        0.17    2019-11-13 [1] CRAN (R 3.6.1)                    
+##  bookdown        0.17    2020-01-11 [1] CRAN (R 3.6.0)                    
+##  cli             2.0.1   2020-01-08 [1] CRAN (R 3.6.0)                    
+##  colorout      * 1.2-1   2019-05-07 [1] Github (jalvesaq/colorout@7ea9440)
+##  crayon          1.3.4   2017-09-16 [1] CRAN (R 3.6.0)                    
+##  digest          0.6.23  2019-11-23 [1] CRAN (R 3.6.0)                    
+##  evaluate        0.14    2019-05-28 [1] CRAN (R 3.6.0)                    
+##  fansi           0.4.1   2020-01-08 [1] CRAN (R 3.6.0)                    
+##  glue            1.3.1   2019-03-12 [1] CRAN (R 3.6.0)                    
+##  htmltools       0.4.0   2019-10-04 [1] CRAN (R 3.6.0)                    
+##  httr            1.4.1   2019-08-05 [1] CRAN (R 3.6.0)                    
+##  jsonlite        1.6     2018-12-07 [1] CRAN (R 3.6.0)                    
+##  knitcitations * 1.0.10  2019-09-15 [1] CRAN (R 3.6.0)                    
+##  knitr           1.27    2020-01-16 [1] CRAN (R 3.6.0)                    
+##  lubridate       1.7.4   2018-04-11 [1] CRAN (R 3.6.0)                    
+##  magrittr        1.5     2014-11-22 [1] CRAN (R 3.6.0)                    
+##  plyr            1.8.5   2019-12-10 [1] CRAN (R 3.6.0)                    
+##  R6              2.4.1   2019-11-12 [1] CRAN (R 3.6.1)                    
+##  Rcpp            1.0.3   2019-11-08 [1] CRAN (R 3.6.0)                    
+##  RefManageR      1.2.12  2019-04-03 [1] CRAN (R 3.6.0)                    
+##  rlang           0.4.3   2020-01-24 [1] CRAN (R 3.6.2)                    
+##  rmarkdown       2.1     2020-01-20 [1] CRAN (R 3.6.0)                    
+##  sessioninfo   * 1.1.1   2018-11-05 [1] CRAN (R 3.6.0)                    
+##  stringi         1.4.5   2020-01-11 [1] CRAN (R 3.6.0)                    
+##  stringr         1.4.0   2019-02-10 [1] CRAN (R 3.6.0)                    
+##  withr           2.1.2   2018-03-15 [1] CRAN (R 3.6.0)                    
+##  xfun            0.12    2020-01-13 [1] CRAN (R 3.6.0)                    
+##  xml2            1.2.2   2019-08-09 [1] CRAN (R 3.6.0)                    
+##  yaml            2.2.0   2018-07-25 [1] CRAN (R 3.6.0)                    
+## 
+## [1] /Library/Frameworks/R.framework/Versions/3.6/Resources/library&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div class=&#34;footnotes&#34;&gt;
+&lt;hr /&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;Which is why I have recently taken to Twitter to take “notes”. Notes that I make public and not necessarily go back and revisit, but if I want to, I know where they are.&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn2&#34;&gt;&lt;p&gt;Or not drink alcohol. Whichever you want.&lt;a href=&#34;#fnref2&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn3&#34;&gt;&lt;p&gt;I don’t wear suits or anything like that though.&lt;a href=&#34;#fnref3&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</description>
+    </item>
     
     <item>
       <title>Characterizing the dynamic and functional DNA methylation landscape in the developing human cortex</title>
@@ -1578,10 +1745,10 @@ Further talk details can easily be added to this page using *Markdown* and $\rm 
 &lt;h3&gt;Programming context&lt;/h3&gt;
 &lt;p&gt;In the context of R and Bioconductor, and programming in general, it can be scary to ask for help in public forums such as a GitHub issue page, the &lt;a href=&#34;https://support.bioconductor.org/&#34;&gt;Bioconductor Support website&lt;/a&gt;, the &lt;a href=&#34;https://community.rstudio.com/&#34;&gt;RStudio Community website&lt;/a&gt;, etc. That’s because you might get a very short reply that can seem unhelpful if it involves terms you are not familiar with (though it might be a precise reply). There are also issues with online communities that I won’t get into. Over the years, I’ve tried to help those who will potentially answer my questions by:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Double checking the documentation&lt;a href=&#34;#fn1&#34; class=&#34;footnoteRef&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Double checking the documentation&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;.&lt;/li&gt;
 &lt;li&gt;Providing information to reproduce my problem: sometimes doing so makes me realize my mistake.&lt;/li&gt;
 &lt;li&gt;Trying for a while (&amp;gt;20 min?) to solve the problem by myself which involves googling quite a bit. However, sometimes I’m not aware of the correct search terms.&lt;/li&gt;
-&lt;li&gt;Avoiding sounding like I’m demanding help, asking for help immediately or requesting the same person for help lots of times in a short time window&lt;a href=&#34;#fn2&#34; class=&#34;footnoteRef&#34; id=&#34;fnref2&#34;&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Avoiding sounding like I’m demanding help, asking for help immediately or requesting the same person for help lots of times in a short time window&lt;a href=&#34;#fn2&#34; class=&#34;footnote-ref&#34; id=&#34;fnref2&#34;&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;I’ve also tried to highlight my main question, though this can be hard when you are not sure what’s wrong.&lt;/p&gt;
 &lt;p&gt;When I get a short reply that seems unfriendly, I try to be appreciative of the time this other person took to reply to me. The terms they use in their reply can be important clues on what to search on Google next.&lt;/p&gt;
@@ -1604,105 +1771,123 @@ Further talk details can easily be added to this page using *Markdown* and $\rm 
 &lt;div id=&#34;personal-context&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Personal context&lt;/h3&gt;
 &lt;p&gt;Asking for help in a programming context is hard because you are leaving your questions public (most of the time): that way you can reach multiple people that can potentially answer your question, and the people answering the question want them to be public with the hope that the answers will help others. Asking for help in personal context is different, since it tends to be in private.&lt;/p&gt;
-&lt;p&gt;This might just be me, but I’ve had several situations in my life where I’ve opened up and asked a group of individuals for help. For example, I recently started a conversation with several friends about ways to limit alcohol consumption. It was scary at first to bring this topic up, but the friends I talked to about this subject had also been thinking about it and it lead to some great conversations. I have other examples listed in my &lt;a href=&#34;http://lcolladotor.github.io/misc/timeline.pdf&#34;&gt;timeline&lt;/a&gt;&lt;a href=&#34;#fn3&#34; class=&#34;footnoteRef&#34; id=&#34;fnref3&#34;&gt;&lt;sup&gt;3&lt;/sup&gt;&lt;/a&gt; on occasions where others have helped me with career advice.&lt;/p&gt;
+&lt;p&gt;This might just be me, but I’ve had several situations in my life where I’ve opened up and asked a group of individuals for help. For example, I recently started a conversation with several friends about ways to limit alcohol consumption. It was scary at first to bring this topic up, but the friends I talked to about this subject had also been thinking about it and it lead to some great conversations. I have other examples listed in my &lt;a href=&#34;http://lcolladotor.github.io/misc/timeline.pdf&#34;&gt;timeline&lt;/a&gt;&lt;a href=&#34;#fn3&#34; class=&#34;footnote-ref&#34; id=&#34;fnref3&#34;&gt;&lt;sup&gt;3&lt;/sup&gt;&lt;/a&gt; on occasions where others have helped me with career advice.&lt;/p&gt;
 &lt;p&gt;One story that I want to share now is about grad school. I was a first year student and I had an accident one Friday in February. I knew immediately that I needed a surgery to repair my shoulder. I already had experience with orthopedic surgeons in Mexico whose quality was widely variable: it took my family years to find one we could trust for my first surgery. In my first year at a new city and country, I didn’t have my family’s network support. So I reached out via email to the faculty that I had met in person with the hopes that one of them knew a good orthopedic surgeon. This was a personal help request, so I didn’t use the Department wide mailing list. The response was excellent, and not only did some faculty help me find an excellent orthopedic surgeon, but also get an appointment with him for Monday. After my appointment on Monday, I replied to the same set of faculty thanking them for their support.&lt;/p&gt;
-&lt;p&gt;Later that week, one faculty dropped by my office to reprimand me for emailing all the faculty. I assume that this faculty thought I had emailed the whole Department. This situation shocked me and made me feel awful. My mind started racing and I wanted to clarify the situation with the faculty member. It was taking a lot of my internal courage to approach this faculty member and a second faculty member noticed that I wasn’t well. This second faculty member listened to me&lt;a href=&#34;#fn4&#34; class=&#34;footnoteRef&#34; id=&#34;fnref4&#34;&gt;&lt;sup&gt;4&lt;/sup&gt;&lt;/a&gt; and later invited me to have dinner with his family.&lt;/p&gt;
+&lt;p&gt;Later that week, one faculty dropped by my office to reprimand me for emailing all the faculty. I assume that this faculty thought I had emailed the whole Department. This situation shocked me and made me feel awful. My mind started racing and I wanted to clarify the situation with the faculty member. It was taking a lot of my internal courage to approach this faculty member and a second faculty member noticed that I wasn’t well. This second faculty member listened to me&lt;a href=&#34;#fn4&#34; class=&#34;footnote-ref&#34; id=&#34;fnref4&#34;&gt;&lt;sup&gt;4&lt;/sup&gt;&lt;/a&gt; and later invited me to have dinner with his family.&lt;/p&gt;
 &lt;p&gt;A Department staff member also helped me during these weeks and pointed me to the &lt;a href=&#34;http://jhsap.org/&#34;&gt;Johns Hopkins Student Assistance Program&lt;/a&gt; where I got help (2 or 3 sessions). Getting professional help was great; some things I remember were that they explained to me that I was mourning since injuring my arm was like losing a piece of me (given my injury history) and they also explained potential cultural differences that lead to the situation with the first faculty member. Once I calmed down, I did email the first faculty to clarify what had happened.&lt;/p&gt;
-&lt;p&gt;This was a rough situation and probably my toughest moment in grad school, or at least among the top ones. I also value it as a learning moment and it fueled me and continues to do so in some ways. For example, it motivated me to organize Cultural Mixer events (see the &lt;a href=&#34;http://lcolladotor.github.io/2013/11/20/StudentMixer3/#.W-pKO-hKiUk&#34;&gt;ad for the third event&lt;/a&gt;), with the hope that they would help us understand each other better&lt;a href=&#34;#fn5&#34; class=&#34;footnoteRef&#34; id=&#34;fnref5&#34;&gt;&lt;sup&gt;5&lt;/sup&gt;&lt;/a&gt;, as well as creating the Biostat Social mailing list (now defunct but replaced by a &lt;a href=&#34;http://lcolladotor.github.io/2018/06/19/using-slack-for-academic-departmental-communication/#.W-pLHehKiUk&#34;&gt;Department Slack&lt;/a&gt;). I also think that the reactions to my request for help were overall positive. The balance for sure is positive although there was a bit of negative in the mix. I wish others would just get positive reactions with zero negative ones, but there are no guarantees.&lt;/p&gt;
+&lt;p&gt;This was a rough situation and probably my toughest moment in grad school, or at least among the top ones. I also value it as a learning moment and it fueled me and continues to do so in some ways. For example, it motivated me to organize Cultural Mixer events (see the &lt;a href=&#34;http://lcolladotor.github.io/2013/11/20/StudentMixer3/#.W-pKO-hKiUk&#34;&gt;ad for the third event&lt;/a&gt;), with the hope that they would help us understand each other better&lt;a href=&#34;#fn5&#34; class=&#34;footnote-ref&#34; id=&#34;fnref5&#34;&gt;&lt;sup&gt;5&lt;/sup&gt;&lt;/a&gt;, as well as creating the Biostat Social mailing list (now defunct but replaced by a &lt;a href=&#34;http://lcolladotor.github.io/2018/06/19/using-slack-for-academic-departmental-communication/#.W-pLHehKiUk&#34;&gt;Department Slack&lt;/a&gt;). I also think that the reactions to my request for help were overall positive. The balance for sure is positive although there was a bit of negative in the mix. I wish others would just get positive reactions with zero negative ones, but there are no guarantees.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;closing-thoughts&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Closing thoughts&lt;/h3&gt;
 &lt;p&gt;With this post I’m hoping to invite others to reflect on situations that involve asking for help. I also hope that others break their internal barriers and ask for help when needed. Echoing words of others, asking for help takes courage. Given the potential rewards, I encourage you to ask for help from your family, friends and colleagues depending on the situation. Simply knowing the term(s) for what you are searching for in code or for what you are feeling (for example, &lt;a href=&#34;https://hopstat.wordpress.com/2015/10/14/dealing-with-imposter-syndrome-in-graduate-school/&#34;&gt;imposter syndrome&lt;/a&gt;) can help a lot. Also being directed to professionals, like &lt;a href=&#34;http://jhsap.org/&#34;&gt;JHSAP&lt;/a&gt; in my shoulder story, and the proper documentation manual, like the &lt;a href=&#34;https://cran.r-project.org/doc/manuals/r-devel/R-admin.html&#34;&gt;R admin devel manual&lt;/a&gt;, can propel you in the right direction.&lt;/p&gt;
-&lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;http://lcolladotor.github.io/post/2018-11-12-asking-for-help-is-challenging-but-is-typically-worth-it_files/2018-11-09%2008.19.53.jpg&#34; width=&#34;500&#34; /&gt;
-
-&lt;/div&gt;
+&lt;p&gt;&lt;img src=&#34;http://lcolladotor.github.io/post/2018-11-12-asking-for-help-is-challenging-but-is-typically-worth-it_files/2018-11-09%2008.19.53.jpg&#34; width=&#34;500&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Best of luck walking the uphill path of asking for help!&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;acknowledgements&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Acknowledgements&lt;/h3&gt;
 &lt;p&gt;This blog post was made possible thanks to:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;em&gt;&lt;a href=&#34;https://bioconductor.org/packages/3.8/BiocStyle&#34;&gt;BiocStyle&lt;/a&gt;&lt;/em&gt; &lt;a id=&#39;cite-Oles_2018&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://github.com/Bioconductor/BiocStyle&#39;&gt;Oleś, Morgan, and Huber, 2018&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;a href=&#34;https://bioconductor.org/packages/3.10/BiocStyle&#34;&gt;BiocStyle&lt;/a&gt;&lt;/em&gt; &lt;a id=&#39;cite-Oles_2020&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://github.com/Bioconductor/BiocStyle&#39;&gt;Oleś, Morgan, and Huber, 2020&lt;/a&gt;)&lt;/li&gt;
 &lt;li&gt;&lt;em&gt;&lt;a href=&#34;https://CRAN.R-project.org/package=blogdown&#34;&gt;blogdown&lt;/a&gt;&lt;/em&gt; &lt;a id=&#39;cite-Xie_2017&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://github.com/rstudio/blogdown&#39;&gt;Xie, Hill, and Thomas, 2017&lt;/a&gt;)&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;&lt;a href=&#34;https://CRAN.R-project.org/package=knitcitations&#34;&gt;knitcitations&lt;/a&gt;&lt;/em&gt; &lt;a id=&#39;cite-Boettiger_2017&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://CRAN.R-project.org/package=knitcitations&#39;&gt;Boettiger, 2017&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;a href=&#34;https://CRAN.R-project.org/package=knitcitations&#34;&gt;knitcitations&lt;/a&gt;&lt;/em&gt; &lt;a id=&#39;cite-Boettiger_2019&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://CRAN.R-project.org/package=knitcitations&#39;&gt;Boettiger, 2019&lt;/a&gt;)&lt;/li&gt;
 &lt;li&gt;&lt;em&gt;&lt;a href=&#34;https://CRAN.R-project.org/package=sessioninfo&#34;&gt;sessioninfo&lt;/a&gt;&lt;/em&gt; &lt;a id=&#39;cite-Csardi_2018&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://CRAN.R-project.org/package=sessioninfo&#39;&gt;Csárdi, core, Wickham, Chang, et al., 2018&lt;/a&gt;)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div id=&#34;references&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;References&lt;/h3&gt;
 &lt;p&gt;
-&lt;a id=&#39;bib-Boettiger_2017&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-Boettiger_2017&#34;&gt;[1]&lt;/a&gt;&lt;cite&gt; C. Boettiger. &lt;em&gt;knitcitations: Citations for ‘Knitr’ Markdown Files&lt;/em&gt;. R package version 1.0.8. 2017. URL: &lt;a href=&#34;https://CRAN.R-project.org/package=knitcitations&#34;&gt;https://CRAN.R-project.org/package=knitcitations&lt;/a&gt;.&lt;/cite&gt;
+&lt;a id=&#39;bib-Boettiger_2019&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-Boettiger_2019&#34;&gt;[1]&lt;/a&gt;&lt;cite&gt;
+C. Boettiger.
+&lt;em&gt;knitcitations: Citations for ‘Knitr’ Markdown Files&lt;/em&gt;.
+R package version 1.0.10.
+2019.
+URL: &lt;a href=&#34;https://CRAN.R-project.org/package=knitcitations&#34;&gt;https://CRAN.R-project.org/package=knitcitations&lt;/a&gt;.&lt;/cite&gt;
 &lt;/p&gt;
 &lt;p&gt;
-&lt;a id=&#39;bib-Csardi_2018&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-Csardi_2018&#34;&gt;[2]&lt;/a&gt;&lt;cite&gt; G. Csárdi, R. core, H. Wickham, W. Chang, et al. &lt;em&gt;sessioninfo: R Session Information&lt;/em&gt;. R package version 1.1.1. 2018. URL: &lt;a href=&#34;https://CRAN.R-project.org/package=sessioninfo&#34;&gt;https://CRAN.R-project.org/package=sessioninfo&lt;/a&gt;.&lt;/cite&gt;
+&lt;a id=&#39;bib-Csardi_2018&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-Csardi_2018&#34;&gt;[2]&lt;/a&gt;&lt;cite&gt;
+G. Csárdi, R. core, H. Wickham, W. Chang, et al.
+&lt;em&gt;sessioninfo: R Session Information&lt;/em&gt;.
+R package version 1.1.1.
+2018.
+URL: &lt;a href=&#34;https://CRAN.R-project.org/package=sessioninfo&#34;&gt;https://CRAN.R-project.org/package=sessioninfo&lt;/a&gt;.&lt;/cite&gt;
 &lt;/p&gt;
 &lt;p&gt;
-&lt;a id=&#39;bib-Oles_2018&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-Oles_2018&#34;&gt;[3]&lt;/a&gt;&lt;cite&gt; A. Oleś, M. Morgan and W. Huber. &lt;em&gt;BiocStyle: Standard styles for vignettes and other Bioconductor documents&lt;/em&gt;. R package version 2.10.0. 2018. URL: &lt;a href=&#34;https://github.com/Bioconductor/BiocStyle&#34;&gt;https://github.com/Bioconductor/BiocStyle&lt;/a&gt;.&lt;/cite&gt;
+&lt;a id=&#39;bib-Oles_2020&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-Oles_2020&#34;&gt;[3]&lt;/a&gt;&lt;cite&gt;
+A. Oleś, M. Morgan, and W. Huber.
+&lt;em&gt;BiocStyle: Standard styles for vignettes and other Bioconductor documents&lt;/em&gt;.
+R package version 2.14.4.
+2020.
+URL: &lt;a href=&#34;https://github.com/Bioconductor/BiocStyle&#34;&gt;https://github.com/Bioconductor/BiocStyle&lt;/a&gt;.&lt;/cite&gt;
 &lt;/p&gt;
 &lt;p&gt;
-&lt;a id=&#39;bib-Xie_2017&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-Xie_2017&#34;&gt;[4]&lt;/a&gt;&lt;cite&gt; Y. Xie, A. P. Hill and A. Thomas. &lt;em&gt;blogdown: Creating Websites with R Markdown&lt;/em&gt;. ISBN 978-0815363729. Boca Raton, Florida: Chapman and Hall/CRC, 2017. URL: &lt;a href=&#34;https://github.com/rstudio/blogdown&#34;&gt;https://github.com/rstudio/blogdown&lt;/a&gt;.&lt;/cite&gt;
+&lt;a id=&#39;bib-Xie_2017&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-Xie_2017&#34;&gt;[4]&lt;/a&gt;&lt;cite&gt;
+Y. Xie, A. P. Hill, and A. Thomas.
+&lt;em&gt;blogdown: Creating Websites with R Markdown&lt;/em&gt;.
+ISBN 978-0815363729.
+Boca Raton, Florida: Chapman and Hall/CRC, 2017.
+URL: &lt;a href=&#34;https://github.com/rstudio/blogdown&#34;&gt;https://github.com/rstudio/blogdown&lt;/a&gt;.&lt;/cite&gt;
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;reproducibility&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Reproducibility&lt;/h3&gt;
 &lt;pre&gt;&lt;code&gt;## ─ Session info ───────────────────────────────────────────────────────────────────────────────────────────────────────
 ##  setting  value                       
-##  version  R version 3.5.1 (2018-07-02)
-##  os       macOS Mojave 10.14.1        
+##  version  R version 3.6.2 (2019-12-12)
+##  os       macOS Catalina 10.15.2      
 ##  system   x86_64, darwin15.6.0        
 ##  ui       X11                         
 ##  language (EN)                        
 ##  collate  en_US.UTF-8                 
 ##  ctype    en_US.UTF-8                 
 ##  tz       America/New_York            
-##  date     2018-11-13                  
+##  date     2020-02-03                  
 ## 
 ## ─ Packages ───────────────────────────────────────────────────────────────────────────────────────────────────────────
 ##  package       * version date       lib source                            
-##  assertthat      0.2.0   2017-04-11 [1] CRAN (R 3.5.0)                    
-##  backports       1.1.2   2017-12-13 [1] CRAN (R 3.5.0)                    
-##  bibtex          0.4.2   2017-06-30 [1] CRAN (R 3.5.0)                    
-##  BiocManager     1.30.3  2018-10-10 [1] CRAN (R 3.5.0)                    
-##  BiocStyle     * 2.10.0  2018-10-30 [1] Bioconductor                      
-##  blogdown        0.9     2018-10-23 [1] CRAN (R 3.5.0)                    
-##  bookdown        0.7     2018-02-18 [1] CRAN (R 3.5.0)                    
-##  cli             1.0.1   2018-09-25 [1] CRAN (R 3.5.0)                    
-##  colorout      * 1.2-0   2018-05-03 [1] Github (jalvesaq/colorout@c42088d)
-##  crayon          1.3.4   2017-09-16 [1] CRAN (R 3.5.0)                    
-##  digest          0.6.18  2018-10-10 [1] CRAN (R 3.5.0)                    
-##  evaluate        0.12    2018-10-09 [1] CRAN (R 3.5.0)                    
-##  htmltools       0.3.6   2017-04-28 [1] CRAN (R 3.5.0)                    
-##  httr            1.3.1   2017-08-20 [1] CRAN (R 3.5.0)                    
-##  jsonlite        1.5     2017-06-01 [1] CRAN (R 3.5.0)                    
-##  knitcitations * 1.0.8   2017-07-04 [1] CRAN (R 3.5.0)                    
-##  knitr           1.20    2018-02-20 [1] CRAN (R 3.5.0)                    
-##  lubridate       1.7.4   2018-04-11 [1] CRAN (R 3.5.0)                    
-##  magrittr        1.5     2014-11-22 [1] CRAN (R 3.5.0)                    
-##  plyr            1.8.4   2016-06-08 [1] CRAN (R 3.5.0)                    
-##  R6              2.3.0   2018-10-04 [1] CRAN (R 3.5.0)                    
-##  Rcpp            1.0.0   2018-11-07 [1] CRAN (R 3.5.0)                    
-##  RefManageR      1.2.0   2018-04-25 [1] CRAN (R 3.5.0)                    
-##  rmarkdown       1.10    2018-06-11 [1] CRAN (R 3.5.0)                    
-##  rprojroot       1.3-2   2018-01-03 [1] CRAN (R 3.5.0)                    
-##  sessioninfo   * 1.1.1   2018-11-05 [1] CRAN (R 3.5.0)                    
-##  stringi         1.2.4   2018-07-20 [1] CRAN (R 3.5.0)                    
-##  stringr         1.3.1   2018-05-10 [1] CRAN (R 3.5.0)                    
-##  withr           2.1.2   2018-03-15 [1] CRAN (R 3.5.0)                    
-##  xfun            0.4     2018-10-23 [1] CRAN (R 3.5.0)                    
-##  xml2            1.2.0   2018-01-24 [1] CRAN (R 3.5.0)                    
-##  yaml            2.2.0   2018-07-25 [1] CRAN (R 3.5.0)                    
+##  assertthat      0.2.1   2019-03-21 [1] CRAN (R 3.6.0)                    
+##  bibtex          0.4.2.2 2020-01-02 [1] CRAN (R 3.6.0)                    
+##  BiocManager     1.30.10 2019-11-16 [1] CRAN (R 3.6.1)                    
+##  BiocStyle     * 2.14.4  2020-01-09 [1] Bioconductor                      
+##  blogdown        0.17    2019-11-13 [1] CRAN (R 3.6.1)                    
+##  bookdown        0.17    2020-01-11 [1] CRAN (R 3.6.0)                    
+##  cli             2.0.1   2020-01-08 [1] CRAN (R 3.6.0)                    
+##  colorout      * 1.2-1   2019-05-07 [1] Github (jalvesaq/colorout@7ea9440)
+##  crayon          1.3.4   2017-09-16 [1] CRAN (R 3.6.0)                    
+##  digest          0.6.23  2019-11-23 [1] CRAN (R 3.6.0)                    
+##  evaluate        0.14    2019-05-28 [1] CRAN (R 3.6.0)                    
+##  fansi           0.4.1   2020-01-08 [1] CRAN (R 3.6.0)                    
+##  glue            1.3.1   2019-03-12 [1] CRAN (R 3.6.0)                    
+##  htmltools       0.4.0   2019-10-04 [1] CRAN (R 3.6.0)                    
+##  httr            1.4.1   2019-08-05 [1] CRAN (R 3.6.0)                    
+##  jsonlite        1.6     2018-12-07 [1] CRAN (R 3.6.0)                    
+##  knitcitations * 1.0.10  2019-09-15 [1] CRAN (R 3.6.0)                    
+##  knitr           1.27    2020-01-16 [1] CRAN (R 3.6.0)                    
+##  lubridate       1.7.4   2018-04-11 [1] CRAN (R 3.6.0)                    
+##  magrittr        1.5     2014-11-22 [1] CRAN (R 3.6.0)                    
+##  plyr            1.8.5   2019-12-10 [1] CRAN (R 3.6.0)                    
+##  R6              2.4.1   2019-11-12 [1] CRAN (R 3.6.1)                    
+##  Rcpp            1.0.3   2019-11-08 [1] CRAN (R 3.6.0)                    
+##  RefManageR      1.2.12  2019-04-03 [1] CRAN (R 3.6.0)                    
+##  rlang           0.4.3   2020-01-24 [1] CRAN (R 3.6.2)                    
+##  rmarkdown       2.1     2020-01-20 [1] CRAN (R 3.6.0)                    
+##  sessioninfo   * 1.1.1   2018-11-05 [1] CRAN (R 3.6.0)                    
+##  stringi         1.4.5   2020-01-11 [1] CRAN (R 3.6.0)                    
+##  stringr         1.4.0   2019-02-10 [1] CRAN (R 3.6.0)                    
+##  withr           2.1.2   2018-03-15 [1] CRAN (R 3.6.0)                    
+##  xfun            0.12    2020-01-13 [1] CRAN (R 3.6.0)                    
+##  xml2            1.2.2   2019-08-09 [1] CRAN (R 3.6.0)                    
+##  yaml            2.2.0   2018-07-25 [1] CRAN (R 3.6.0)                    
 ## 
-## [1] /Library/Frameworks/R.framework/Versions/3.5devel/Resources/library&lt;/code&gt;&lt;/pre&gt;
+## [1] /Library/Frameworks/R.framework/Versions/3.6/Resources/library&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;div class=&#34;footnotes&#34;&gt;
 &lt;hr /&gt;
 &lt;ol&gt;
-&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;Sometimes I simply don’t understand the documentation, or I’m not aware of the best documentation for my problem.&lt;a href=&#34;#fnref1&#34;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li id=&#34;fn2&#34;&gt;&lt;p&gt;Doing any of these typically won’t get you anywhere. The person(s) responding to your help requests is(are) also busy!&lt;a href=&#34;#fnref2&#34;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li id=&#34;fn3&#34;&gt;&lt;p&gt;Explained in more detail in &lt;a href=&#34;http://lcolladotor.github.io/2018/11/06/a-knot-of-threads-from-cshl-to-lcg-unam-to-aldo-barrientos-to-diversity-scholarship-opportunities/#.W-pFRuhKiUk&#34;&gt;this post&lt;/a&gt;.&lt;a href=&#34;#fnref3&#34;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li id=&#34;fn4&#34;&gt;&lt;p&gt;Or tried to because I couldn’t contain the tears.&lt;a href=&#34;#fnref4&#34;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li id=&#34;fn5&#34;&gt;&lt;p&gt;Among other great reasons, I’ll write a blog post about them sometime soon.&lt;a href=&#34;#fnref5&#34;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;Sometimes I simply don’t understand the documentation, or I’m not aware of the best documentation for my problem.&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn2&#34;&gt;&lt;p&gt;Doing any of these typically won’t get you anywhere. The person(s) responding to your help requests is(are) also busy!&lt;a href=&#34;#fnref2&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn3&#34;&gt;&lt;p&gt;Explained in more detail in &lt;a href=&#34;http://lcolladotor.github.io/2018/11/06/a-knot-of-threads-from-cshl-to-lcg-unam-to-aldo-barrientos-to-diversity-scholarship-opportunities/#.W-pFRuhKiUk&#34;&gt;this post&lt;/a&gt;.&lt;a href=&#34;#fnref3&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn4&#34;&gt;&lt;p&gt;Or tried to because I couldn’t contain the tears.&lt;a href=&#34;#fnref4&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn5&#34;&gt;&lt;p&gt;Among other great reasons, I’ll write a blog post about them sometime soon.&lt;a href=&#34;#fnref5&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;
 </description>
@@ -2612,7 +2797,7 @@ I just completed my &lt;a href=&#34;https://twitter.com/hashtag/ASHG18?src=hash&
 &lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Jenna Carlson &lt;a href=&#34;https://twitter.com/PittPubHealth?ref_src=twsrc%5Etfw&#34;&gt;@PittPubHealth&lt;/a&gt;: Population-specific reference panels for genotype imputation, with Samoans as an example, in Room 20BC &lt;a href=&#34;https://twitter.com/hashtag/ASHG18?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#ASHG18&lt;/a&gt;&lt;/p&gt;&amp;mdash; Kevin L. Keys (@_klkeys_) &lt;a href=&#34;https://twitter.com/_klkeys_/status/1052956715623170060?ref_src=twsrc%5Etfw&#34;&gt;October 18, 2018&lt;/a&gt;&lt;/blockquote&gt;
 &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
 
-&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Jenna Carlson: creating population-specific reference panels for improved genotype imputation &lt;a href=&#34;https://twitter.com/hashtag/ASHG18?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#ASHG18&lt;/a&gt;&lt;/p&gt;&amp;mdash; Charleston Chiang - hiring postdoc! (@CharlestonCWKC) &lt;a href=&#34;https://twitter.com/CharlestonCWKC/status/1052956456578834432?ref_src=twsrc%5Etfw&#34;&gt;October 18, 2018&lt;/a&gt;&lt;/blockquote&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Jenna Carlson: creating population-specific reference panels for improved genotype imputation &lt;a href=&#34;https://twitter.com/hashtag/ASHG18?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#ASHG18&lt;/a&gt;&lt;/p&gt;&amp;mdash; Charleston Chiang (@CharlestonCWKC) &lt;a href=&#34;https://twitter.com/CharlestonCWKC/status/1052956456578834432?ref_src=twsrc%5Etfw&#34;&gt;October 18, 2018&lt;/a&gt;&lt;/blockquote&gt;
 &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
 
 &lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;JC: Genotype chips cheap, useful for global health research. Utility of imputed genotypes is key. Must invest in panels with representative populations. &lt;a href=&#34;https://twitter.com/hashtag/ASHG18?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#ASHG18&lt;/a&gt;&lt;/p&gt;&amp;mdash; Kevin L. Keys (@_klkeys_) &lt;a href=&#34;https://twitter.com/_klkeys_/status/1052959060452990976?ref_src=twsrc%5Etfw&#34;&gt;October 18, 2018&lt;/a&gt;&lt;/blockquote&gt;
@@ -2633,7 +2818,7 @@ I just completed my &lt;a href=&#34;https://twitter.com/hashtag/ASHG18?src=hash&
 &lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Christopher Gignoux: revised version of Population Architecture using Genomics and Epidemiology (PAGE) study now on &lt;a href=&#34;https://twitter.com/biorxivpreprint?ref_src=twsrc%5Etfw&#34;&gt;@biorxivpreprint&lt;/a&gt; &lt;a href=&#34;https://t.co/t1x4qeGSkB&#34;&gt;https://t.co/t1x4qeGSkB&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/ASHG18?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#ASHG18&lt;/a&gt;&lt;/p&gt;&amp;mdash; Brooke LaFlamme (@Brooke_LaFlamme) &lt;a href=&#34;https://twitter.com/Brooke_LaFlamme/status/1052961594487988224?ref_src=twsrc%5Etfw&#34;&gt;October 18, 2018&lt;/a&gt;&lt;/blockquote&gt;
 &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
 
-&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;CG: tested selection in pharmaco variants (haplotype length-based, corr with environment). Enviro-WAS takes geographic/climatic/ecological variables and cross with PAGE populations. &lt;a href=&#34;https://twitter.com/hashtag/ASHG18?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#ASHG18&lt;/a&gt;&lt;/p&gt;&amp;mdash; Charleston Chiang - hiring postdoc! (@CharlestonCWKC) &lt;a href=&#34;https://twitter.com/CharlestonCWKC/status/1052962128749969408?ref_src=twsrc%5Etfw&#34;&gt;October 18, 2018&lt;/a&gt;&lt;/blockquote&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;CG: tested selection in pharmaco variants (haplotype length-based, corr with environment). Enviro-WAS takes geographic/climatic/ecological variables and cross with PAGE populations. &lt;a href=&#34;https://twitter.com/hashtag/ASHG18?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#ASHG18&lt;/a&gt;&lt;/p&gt;&amp;mdash; Charleston Chiang (@CharlestonCWKC) &lt;a href=&#34;https://twitter.com/CharlestonCWKC/status/1052962128749969408?ref_src=twsrc%5Etfw&#34;&gt;October 18, 2018&lt;/a&gt;&lt;/blockquote&gt;
 &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
 
 &lt;p&gt;&lt;a href=&#34;www.pagestudy.org&#34;&gt;www.pagestudy.org&lt;/a&gt;&lt;/p&gt;
@@ -2651,7 +2836,7 @@ I just completed my &lt;a href=&#34;https://twitter.com/hashtag/ASHG18?src=hash&
 “Aspiring doctor Angela Andaleon”&lt;/p&gt;
 &lt;p&gt;^_^&lt;/p&gt;
 &lt;p&gt;Angela is presenting the continuation of her undergrad project.&lt;/p&gt;
-&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Angela Andaleon: transcriptome-based association study in hispanic cohorts implicates novel genes in lipid traits. &lt;a href=&#34;https://twitter.com/hashtag/ASHG18?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#ASHG18&lt;/a&gt;&lt;/p&gt;&amp;mdash; Charleston Chiang - hiring postdoc! (@CharlestonCWKC) &lt;a href=&#34;https://twitter.com/CharlestonCWKC/status/1052964260764995584?ref_src=twsrc%5Etfw&#34;&gt;October 18, 2018&lt;/a&gt;&lt;/blockquote&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Angela Andaleon: transcriptome-based association study in hispanic cohorts implicates novel genes in lipid traits. &lt;a href=&#34;https://twitter.com/hashtag/ASHG18?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#ASHG18&lt;/a&gt;&lt;/p&gt;&amp;mdash; Charleston Chiang (@CharlestonCWKC) &lt;a href=&#34;https://twitter.com/CharlestonCWKC/status/1052964260764995584?ref_src=twsrc%5Etfw&#34;&gt;October 18, 2018&lt;/a&gt;&lt;/blockquote&gt;
 &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
 
 &lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;AA: Replication cohorts: MESA HIS, GLGC. Ran gene-based association test in PrediXcan, using GTEx model and MESA model &lt;a href=&#34;https://t.co/6wuD1fQB7l&#34;&gt;https://t.co/6wuD1fQB7l&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/ASHG18?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#ASHG18&lt;/a&gt;&lt;/p&gt;&amp;mdash; 23andMe Research (@23andMeResearch) &lt;a href=&#34;https://twitter.com/23andMeResearch/status/1052964989030490112?ref_src=twsrc%5Etfw&#34;&gt;October 18, 2018&lt;/a&gt;&lt;/blockquote&gt;
@@ -3043,7 +3228,7 @@ URL: &lt;a href=&#34;https://github.com/rstudio/blogdown&#34;&gt;https://github.
 &lt;/div&gt;
 &lt;div id=&#34;nadine-caron&#34; class=&#34;section level4&#34;&gt;
 &lt;h4&gt;Nadine Caron&lt;/h4&gt;
-&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Nadine Caron: addressing inequity in genomic diagnosis &amp;amp; research. &lt;a href=&#34;https://twitter.com/hashtag/ASHG18?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#ASHG18&lt;/a&gt;&lt;/p&gt;&amp;mdash; Charleston Chiang - hiring postdoc! (@CharlestonCWKC) &lt;a href=&#34;https://twitter.com/CharlestonCWKC/status/1052618270384185345?ref_src=twsrc%5Etfw&#34;&gt;October 17, 2018&lt;/a&gt;&lt;/blockquote&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Nadine Caron: addressing inequity in genomic diagnosis &amp;amp; research. &lt;a href=&#34;https://twitter.com/hashtag/ASHG18?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#ASHG18&lt;/a&gt;&lt;/p&gt;&amp;mdash; Charleston Chiang (@CharlestonCWKC) &lt;a href=&#34;https://twitter.com/CharlestonCWKC/status/1052618270384185345?ref_src=twsrc%5Etfw&#34;&gt;October 17, 2018&lt;/a&gt;&lt;/blockquote&gt;
 &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
 
 &lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Nadine Caron: &amp;quot;It is known that those who have the greatest health disparities, will actually benefit the least from new technologies and research&amp;quot; &lt;a href=&#34;https://twitter.com/hashtag/ashg18?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#ashg18&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/silentgenomes?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#silentgenomes&lt;/a&gt;&lt;/p&gt;&amp;mdash; John Hawks (@johnhawks) &lt;a href=&#34;https://twitter.com/johnhawks/status/1052618572575453185?ref_src=twsrc%5Etfw&#34;&gt;October 17, 2018&lt;/a&gt;&lt;/blockquote&gt;
@@ -3100,7 +3285,7 @@ URL: &lt;a href=&#34;https://github.com/rstudio/blogdown&#34;&gt;https://github.
 &lt;h3&gt;6C 11:30 am&lt;/h3&gt;
 &lt;div id=&#34;kelly-east&#34; class=&#34;section level4&#34;&gt;
 &lt;h4&gt;Kelly East&lt;/h4&gt;
-&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Kelly East of &lt;a href=&#34;https://twitter.com/hudsonalpha?ref_src=twsrc%5Etfw&#34;&gt;@hudsonalpha&lt;/a&gt;: data from Concert Genetics suggest on average, 10 new genetic testing products enter the market every day. &lt;a href=&#34;https://twitter.com/hashtag/ASHG18?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#ASHG18&lt;/a&gt;&lt;/p&gt;&amp;mdash; Dr. Chris Gunter (@girlscientist) &lt;a href=&#34;https://twitter.com/girlscientist/status/1052628766739054592?ref_src=twsrc%5Etfw&#34;&gt;October 17, 2018&lt;/a&gt;&lt;/blockquote&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Kelly East of &lt;a href=&#34;https://twitter.com/hudsonalpha?ref_src=twsrc%5Etfw&#34;&gt;@hudsonalpha&lt;/a&gt;: data from Concert Genetics suggest on average, 10 new genetic testing products enter the market every day. &lt;a href=&#34;https://twitter.com/hashtag/ASHG18?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#ASHG18&lt;/a&gt;&lt;/p&gt;&amp;mdash; Chris Gunter (@girlscientist) &lt;a href=&#34;https://twitter.com/girlscientist/status/1052628766739054592?ref_src=twsrc%5Etfw&#34;&gt;October 17, 2018&lt;/a&gt;&lt;/blockquote&gt;
 &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
 
 &lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;KE discussing how medical genetic testing is rapidly expanding both in types of tests and patients being tested. We don’t have enough genetic providers to handle this, and the ones we do have aren’t uniformly distributed. &lt;a href=&#34;https://twitter.com/hashtag/ASHG18?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#ASHG18&lt;/a&gt;&lt;/p&gt;&amp;mdash; Dr. Avery Davis Bell (@averydavisbell) &lt;a href=&#34;https://twitter.com/averydavisbell/status/1052628958330552320?ref_src=twsrc%5Etfw&#34;&gt;October 17, 2018&lt;/a&gt;&lt;/blockquote&gt;
@@ -3109,7 +3294,7 @@ URL: &lt;a href=&#34;https://github.com/rstudio/blogdown&#34;&gt;https://github.
 &lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Kelly East wants to train MD, NP, PA so that they can understand genetics more and help patients too &lt;a href=&#34;https://twitter.com/hashtag/ASHG18?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#ASHG18&lt;/a&gt;&lt;/p&gt;&amp;mdash; 🇲🇽 Dr. Leonardo Collado-Torres (@fellgernon) &lt;a href=&#34;https://twitter.com/fellgernon/status/1052630261052002304?ref_src=twsrc%5Etfw&#34;&gt;October 17, 2018&lt;/a&gt;&lt;/blockquote&gt;
 &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
  (others made better tweets!)&lt;/p&gt;
-&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;K East: how do we bring more genetics services to everyone? 1. Make more providers. 2. Increase capacity of existing genetics providers. Or 3, her favorite: Train other healthcare providers to do genetics. &lt;a href=&#34;https://twitter.com/hashtag/ASHG18?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#ASHG18&lt;/a&gt;&lt;/p&gt;&amp;mdash; Dr. Chris Gunter (@girlscientist) &lt;a href=&#34;https://twitter.com/girlscientist/status/1052630028364599296?ref_src=twsrc%5Etfw&#34;&gt;October 17, 2018&lt;/a&gt;&lt;/blockquote&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;K East: how do we bring more genetics services to everyone? 1. Make more providers. 2. Increase capacity of existing genetics providers. Or 3, her favorite: Train other healthcare providers to do genetics. &lt;a href=&#34;https://twitter.com/hashtag/ASHG18?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#ASHG18&lt;/a&gt;&lt;/p&gt;&amp;mdash; Chris Gunter (@girlscientist) &lt;a href=&#34;https://twitter.com/girlscientist/status/1052630028364599296?ref_src=twsrc%5Etfw&#34;&gt;October 17, 2018&lt;/a&gt;&lt;/blockquote&gt;
 &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
 
 &lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Solution to this KE is advocating is training non-genetic healthcare providers to do the genetics to help patients who will never make it to a genetic counselor. Many providers already interested in genetics. &lt;a href=&#34;https://twitter.com/hashtag/ASHG18?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#ASHG18&lt;/a&gt;&lt;/p&gt;&amp;mdash; Dr. Avery Davis Bell (@averydavisbell) &lt;a href=&#34;https://twitter.com/averydavisbell/status/1052630250918567937?ref_src=twsrc%5Etfw&#34;&gt;October 17, 2018&lt;/a&gt;&lt;/blockquote&gt;
@@ -3160,7 +3345,7 @@ URL: &lt;a href=&#34;https://github.com/rstudio/blogdown&#34;&gt;https://github.
 &lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Hmm, I get the point that a republican scientist might have an easier time communicating with a republican audience. But it also felt discouraging to me. Well, I guess that you should always try to be aware of your audience and try your best to connect with them. &lt;a href=&#34;https://twitter.com/hashtag/ASHG18?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#ASHG18&lt;/a&gt;&lt;/p&gt;&amp;mdash; 🇲🇽 Dr. Leonardo Collado-Torres (@fellgernon) &lt;a href=&#34;https://twitter.com/fellgernon/status/1052643639267012613?ref_src=twsrc%5Etfw&#34;&gt;October 17, 2018&lt;/a&gt;&lt;/blockquote&gt;
 &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
 
-&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Beth Tuck: &lt;a href=&#34;https://twitter.com/genome_gov?ref_src=twsrc%5Etfw&#34;&gt;@genome_gov&lt;/a&gt; would love to have everyone as partners for DNA Day 2019. Check out their site at &lt;a href=&#34;https://t.co/DQUWzVO5bB&#34;&gt;https://t.co/DQUWzVO5bB&lt;/a&gt;, of their Pinterest, or Twitter, or Facebook, or suggest something new! &lt;a href=&#34;https://twitter.com/hashtag/ASHG18?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#ASHG18&lt;/a&gt;&lt;/p&gt;&amp;mdash; Dr. Chris Gunter (@girlscientist) &lt;a href=&#34;https://twitter.com/girlscientist/status/1052620297155829760?ref_src=twsrc%5Etfw&#34;&gt;October 17, 2018&lt;/a&gt;&lt;/blockquote&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Beth Tuck: &lt;a href=&#34;https://twitter.com/genome_gov?ref_src=twsrc%5Etfw&#34;&gt;@genome_gov&lt;/a&gt; would love to have everyone as partners for DNA Day 2019. Check out their site at &lt;a href=&#34;https://t.co/DQUWzVO5bB&#34;&gt;https://t.co/DQUWzVO5bB&lt;/a&gt;, of their Pinterest, or Twitter, or Facebook, or suggest something new! &lt;a href=&#34;https://twitter.com/hashtag/ASHG18?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#ASHG18&lt;/a&gt;&lt;/p&gt;&amp;mdash; Chris Gunter (@girlscientist) &lt;a href=&#34;https://twitter.com/girlscientist/status/1052620297155829760?ref_src=twsrc%5Etfw&#34;&gt;October 17, 2018&lt;/a&gt;&lt;/blockquote&gt;
 &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
 
 &lt;/div&gt;
@@ -3470,7 +3655,7 @@ URL: &lt;a href=&#34;https://github.com/rstudio/blogdown&#34;&gt;https://github.
 &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
 
 &lt;p&gt;3 types that can be identified by 2 in silico methods.&lt;/p&gt;
-&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;PN: Used &lt;a href=&#34;https://twitter.com/23andMeResearch?ref_src=twsrc%5Etfw&#34;&gt;@23andMeResearch&lt;/a&gt; data, 5M+ customers, 80% consented for research. Computationally detect 3 subtypes of UPD (heterodisomy, isodisomy, or partial isodisomy) based on IBD between parent-child and ROH analysis. &lt;a href=&#34;https://twitter.com/hashtag/ASHG18?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#ASHG18&lt;/a&gt;&lt;/p&gt;&amp;mdash; Charleston Chiang - hiring postdoc! (@CharlestonCWKC) &lt;a href=&#34;https://twitter.com/CharlestonCWKC/status/1052366223487381504?ref_src=twsrc%5Etfw&#34;&gt;October 17, 2018&lt;/a&gt;&lt;/blockquote&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;PN: Used &lt;a href=&#34;https://twitter.com/23andMeResearch?ref_src=twsrc%5Etfw&#34;&gt;@23andMeResearch&lt;/a&gt; data, 5M+ customers, 80% consented for research. Computationally detect 3 subtypes of UPD (heterodisomy, isodisomy, or partial isodisomy) based on IBD between parent-child and ROH analysis. &lt;a href=&#34;https://twitter.com/hashtag/ASHG18?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#ASHG18&lt;/a&gt;&lt;/p&gt;&amp;mdash; Charleston Chiang (@CharlestonCWKC) &lt;a href=&#34;https://twitter.com/CharlestonCWKC/status/1052366223487381504?ref_src=twsrc%5Etfw&#34;&gt;October 17, 2018&lt;/a&gt;&lt;/blockquote&gt;
 &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
 
 &lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;PN: In ~900k duos in the 23andMe database, find 199 individuals with UPD. Overall rate of 1/2000 - twice as common as previously thought &amp;amp; first estimate of UPD prevalence in general population &lt;a href=&#34;https://twitter.com/hashtag/ASHG18?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#ASHG18&lt;/a&gt;&lt;/p&gt;&amp;mdash; 23andMe Research (@23andMeResearch) &lt;a href=&#34;https://twitter.com/23andMeResearch/status/1052366741118976001?ref_src=twsrc%5Etfw&#34;&gt;October 17, 2018&lt;/a&gt;&lt;/blockquote&gt;
