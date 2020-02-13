@@ -252,8 +252,8 @@ mat &lt;- matrix(1:length(colors()), ncol = 9, byrow= TRUE) df &lt;- data.frame(
   
 
   <link rel="manifest" href="/index.webmanifest">
-  <link rel="icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_2.png">
-  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png">
+  <link rel="icon" type="image/png" href="/images/icon_hud8dee3557e10006fe17dfcbd3a844227_119689_32x32_fill_lanczos_center_2.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hud8dee3557e10006fe17dfcbd3a844227_119689_192x192_fill_lanczos_center_2.png">
 
   <link rel="canonical" href="/2012/10/19/visualizing-colors/">
 
@@ -322,7 +322,7 @@ mat &lt;- matrix(1:length(colors()), ncol = 9, byrow= TRUE) df &lt;- data.frame(
     "name": "L. Collado-Torres",
     "logo": {
       "@type": "ImageObject",
-      "url": "/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png"
+      "url": "/images/icon_hud8dee3557e10006fe17dfcbd3a844227_119689_192x192_fill_lanczos_center_2.png"
     }
   },
   "description": "The other day I learnt about the existance of the colors() vector in R which specifies all the character-based colors like \u0026#8220;light blue\u0026#8221;, \u0026#8220;black\u0026#8221;, etc. So I made a simple plot to visualize them all. Here\u0026#8217;s the code:\nmat \u0026lt;- matrix(1:length(colors()), ncol = 9, byrow= TRUE) df \u0026lt;- data.frame(col = colors(), x = as.integer(cut(1:length(colors()), 9)), y = rep(1:73, 9), stringsAsFactors=FALSE) plot(y ~ jitter(x), data = df, col = df$col, pch=16, main = \u0026quot;Visualizing colors() split in 9 groups\u0026quot;, xlab = \u0026quot;Group\u0026quot;, ylab = \u0026quot;Element of the group (min = 1, max = 73)\u0026quot;, sub = \u0026quot;x = 3, y = 1 means that it's the 2 * 73 + 1 = 147th color\u0026quot;)  And the plot:"
