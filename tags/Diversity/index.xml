@@ -5,12 +5,333 @@
     <link>/tags/diversity/</link>
       <atom:link href=http://lcolladotor.github.io/tags/diversity/index.xml rel="self" type="application/rss+xml" />
     <description>Diversity</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2011-2020 Leonardo Collado Torres under (CC) BY-NC-SA 4.0. All thoughts and opinions here are my own. Icon is the [R logo](https://www.r-project.org/logo/) modified</copyright><lastBuildDate>Thu, 28 Feb 2019 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2011-2020 Leonardo Collado Torres under (CC) BY-NC-SA 4.0. All thoughts and opinions here are my own. Icon is the [R logo](https://www.r-project.org/logo/) modified</copyright><lastBuildDate>Wed, 12 Feb 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
       <title>Diversity</title>
       <link>/tags/diversity/</link>
     </image>
+    
+    <item>
+      <title>Learning from our search history</title>
+      <link>/2020/02/12/learning-from-our-search-history/</link>
+      <pubDate>Wed, 12 Feb 2020 00:00:00 +0000</pubDate>
+      <guid>/2020/02/12/learning-from-our-search-history/</guid>
+      <description>
+
+
+&lt;div id=&#34;origin-of-the-idea&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Origin of the idea&lt;/h3&gt;
+&lt;p&gt;Recently the team I work with has had a few new members and I’ve been thinking lately of ways we could try to help them. The team leader was traveling this week, which gave me the opportunity to come up with a new type of session and test it out. That’s the origin of this &lt;em&gt;learning from our search history&lt;/em&gt; idea. We tested it today and I’m quite happy with the results so far, so I thought it would be useful to document what we did and share it with others.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;motivation&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Motivation&lt;/h3&gt;
+&lt;div id=&#34;the-theory&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;The theory&lt;/h4&gt;
+&lt;p&gt;As I show in the slides below, in our group we follow the &lt;a href=&#34;https://blogs.akamai.com/2013/10/you-must-try-and-then-you-must-ask.html&#34;&gt;&lt;em&gt;you must try, and then you must ask&lt;/em&gt;&lt;/a&gt; framework although with a little different interpretation. The basic goal is to search independently for a period of time (say 15 minutes), but then ask others for help if you are still stuck beyond that point.&lt;/p&gt;
+&lt;script async class=&#34;speakerdeck-embed&#34; data-id=&#34;a99280d748df4a88bf328e1bcaa8e95b&#34; data-ratio=&#34;1.29456384323641&#34; src=&#34;//speakerdeck.com/assets/embed.js&#34;&gt;&lt;/script&gt;
+&lt;p&gt;In other words, you have to be able to find some answers yourself since that’s part of our job using resources that range from &lt;a href=&#34;https://www.google.com/&#34;&gt;Google Search&lt;/a&gt;, to the &lt;a href=&#34;https://support.bioconductor.org/&#34;&gt;Bioconductor Support&lt;/a&gt;, to the &lt;a href=&#34;https://community.rstudio.com/&#34;&gt;RStudio Community&lt;/a&gt;, among other websites. However, we also acknowledge that some questions have difficult answers. Maybe a Stack Overflow thread has multiple answers and not necessarily the top voted question has the answer you are looking for. So instead of spending too much energy, we also tell our members to avoid getting into a rabbit hole for hours. That’s where asking for help comes to play. And you can ask for help from any community you belong to: those involved in the project through Slack, our full team, other scientists in our university, communities we belong to like the &lt;a href=&#34;https://twitter.com/search?q=%23rstats&amp;amp;src=typed_query&#34;&gt;&lt;em&gt;rstats&lt;/em&gt; community on Twitter&lt;/a&gt;, the Bioconductor users community at large, etc.&lt;/p&gt;
+&lt;p&gt;I did mention that it’s ideal to think about the person who will be helping you answer your question. Small reproducible examples, versions of the software you used, sharing your code on GitHub &lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;, the commands you used and the order you used them in can all be valuable for resolving different types of problems. &lt;a href=&#34;https://twitter.com/JennyBryan&#34;&gt;Jenny Bryan&lt;/a&gt; has talked much more about this subject, for example in this &lt;a href=&#34;https://resources.rstudio.com/webinars/help-me-help-you-creating-reproducible-examples-jenny-bryan&#34;&gt;2018 webinar&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;in-practice&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;In practice&lt;/h4&gt;
+&lt;p&gt;Trying for a while then asking for help is all good in practice. However, &lt;strong&gt;asking for help is very challenging&lt;/strong&gt;. It’s scary, you open yourself because you show what you don’t know to other people, and sadly historically many questions have been met with negative feedback on the Internet. Thus, they can make you feel dumb, stupid and many other negative emotions.&lt;/p&gt;
+&lt;p&gt;I do think that asking for help can be worth it and even wrote a &lt;a href=&#34;http://lcolladotor.github.io/2018/11/12/asking-for-help-is-challenging-but-is-typically-worth-it/&#34;&gt;previous blog post on this subject&lt;/a&gt;. Some reasons why it’s worth it include being able to move on with your work &lt;a href=&#34;#fn2&#34; class=&#34;footnote-ref&#34; id=&#34;fnref2&#34;&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;, you might learn something new, and if you follow the strategies for helping others help you, you might even figure out the answer yourself.&lt;/p&gt;
+&lt;p&gt;Now, we all ask for help regardless of how long we have been writing code. Here’s an example tweet that conveys the same message. There are thousands of such tweets online.&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;I conduct approximately 3948234 programming-related Google searches per day. So does every other developer I know, whether they have 5 weeks of experience or 5 years. Help normalize this practice by tweeting your daily searches with &lt;a href=&#34;https://twitter.com/hashtag/devgoogle?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#devgoogle&lt;/a&gt;! &lt;a href=&#34;https://t.co/XfNVUZlhC5&#34;&gt;https://t.co/XfNVUZlhC5&lt;/a&gt;&lt;/p&gt;&amp;mdash; Lyzi Diamond (@lyzidiamond) &lt;a href=&#34;https://twitter.com/lyzidiamond/status/1085227527587561472?ref_src=twsrc%5Etfw&#34;&gt;January 15, 2019&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+
+&lt;/div&gt;
+&lt;div id=&#34;we-are-diverse&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;We are diverse&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&#34;http://lcolladotor.github.io/img/amy_mph.jpg&#34; width=&#34;600&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;The team (shown as of May 2018) we work at is very diverse because we all:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;have different backgrounds,&lt;/li&gt;
+&lt;li&gt;have acquired different skills,&lt;/li&gt;
+&lt;li&gt;are at different career stages (from rotation student up to associate professor),&lt;/li&gt;
+&lt;li&gt;have different interests,&lt;/li&gt;
+&lt;li&gt;use different operating systems (from Fedora to Ubuntu to macOS to Windows)&lt;/li&gt;
+&lt;li&gt;use different tools (mobaxterm vs putty, TextMate vs RStudio, …).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;But also because we seek help in different ways &lt;a href=&#34;#fn3&#34; class=&#34;footnote-ref&#34; id=&#34;fnref3&#34;&gt;&lt;sup&gt;3&lt;/sup&gt;&lt;/a&gt; and we learn differently.&lt;/p&gt;
+&lt;p&gt;This means that we have a lot to learn from each other 😊🤓.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;learn-from-each-other-exercise&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Learn from each other exercise&lt;/h3&gt;
+&lt;p&gt;At &lt;a href=&#34;http://bit.ly/learnfromsearch&#34;&gt;bit.ly/learnfromsearch&lt;/a&gt; you can find a copy of the Google Spreadsheet with the information you need for your team.&lt;/p&gt;
+&lt;div id=&#34;some-rules&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Some rules&lt;/h4&gt;
+&lt;p&gt;First, we need to make sure that everyone will feel save to ask questions. That’s why I:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;reminded others about our code of conduct,&lt;/li&gt;
+&lt;li&gt;invited everyone to practice their empathy and be mindful that language matters &lt;a href=&#34;#fn4&#34; class=&#34;footnote-ref&#34; id=&#34;fnref4&#34;&gt;&lt;sup&gt;4&lt;/sup&gt;&lt;/a&gt;,&lt;/li&gt;
+&lt;li&gt;to keep everyone’s time in their mind as a question could lead to a longer discussion which is best to take another occasion. &lt;a href=&#34;#fn5&#34; class=&#34;footnote-ref&#34; id=&#34;fnref5&#34;&gt;&lt;sup&gt;5&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;main-steps&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Main steps&lt;/h4&gt;
+&lt;p&gt;The idea is that you pick a problem you solved recently and share:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;what you were trying to solve,&lt;/li&gt;
+&lt;li&gt;the actual text you searched for in Google or elsewhere &lt;a href=&#34;#fn6&#34; class=&#34;footnote-ref&#34; id=&#34;fnref6&#34;&gt;&lt;sup&gt;6&lt;/sup&gt;&lt;/a&gt;,&lt;/li&gt;
+&lt;li&gt;the link of the website where you find your answer or that guided in this process.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;em&gt;We improved the steps as we were testing this!&lt;/em&gt; 🙌🏽🙂&lt;/p&gt;
+&lt;p&gt;Once everyone has contributed their information to the spreadsheet, we then proceed to go around the table showing and explaining our search use cases.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;goals&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Goals&lt;/h4&gt;
+&lt;p&gt;Ultimately the goals of this exercise are to&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;empower ourselves with the knowledge from our teammates,&lt;/li&gt;
+&lt;li&gt;learn from how we all find help,&lt;/li&gt;
+&lt;li&gt;build a supportive environment where we feel comfortable asking for help.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Thus in the end, we are enabling our team to fully follow the &lt;a href=&#34;https://blogs.akamai.com/2013/10/you-must-try-and-then-you-must-ask.html&#34;&gt;&lt;em&gt;you must try, and then you must ask&lt;/em&gt;&lt;/a&gt; framework.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;test-session&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Test session&lt;/h3&gt;
+&lt;p&gt;The first and only session so far went approximately like this:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Min 0-5: get settled in the room.&lt;/li&gt;
+&lt;li&gt;Min 5-22: presentation about the idea to get members to buy into it.&lt;/li&gt;
+&lt;li&gt;Min 22-26: demonstration.&lt;/li&gt;
+&lt;li&gt;Min 26-33: members prepared their information to share with the team.&lt;/li&gt;
+&lt;li&gt;Min 33-58: members presented their problems, the searches the did, and the solution(s) they found.&lt;/li&gt;
+&lt;li&gt;Min 58-60: quick wrap up.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div id=&#34;my-search-example&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;My search example&lt;/h4&gt;
+&lt;p&gt;At &lt;a href=&#34;http://bit.ly/learnfromsearch&#34;&gt;bit.ly/learnfromsearch&lt;/a&gt; I left some examples (anonymized). Mine was about increasing the point size of the output of a plot made with &lt;code&gt;scater::plotReducedDim()&lt;/code&gt; which returns a &lt;em&gt;&lt;a href=&#34;https://CRAN.R-project.org/package=ggplot2&#34;&gt;ggplot2&lt;/a&gt;&lt;/em&gt; &lt;a id=&#39;cite-Wickham_2016&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://ggplot2.tidyverse.org&#39;&gt;Wickham, 2016&lt;/a&gt;) object. Hence why I searched in Google for &lt;code&gt;ggplot2 increase point size&lt;/code&gt; which lead me to the &lt;a href=&#34;https://ggplot2.tidyverse.org/reference/geom_point.html&#34;&gt;&lt;code&gt;geom_point()&lt;/code&gt;&lt;/a&gt; reference website. I then tried using &lt;code&gt;+ geom_point(size = 20)&lt;/code&gt; but that broke the color mapping. I was about to dive into the GitHub code for &lt;em&gt;&lt;a href=&#34;https://bioconductor.org/packages/3.10/scater&#34;&gt;scater&lt;/a&gt;&lt;/em&gt; &lt;a id=&#39;cite-McCarthy_2017&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://doi.org/10.1093/bioinformatics/btw777&#39;&gt;McCarthy, Campbell, Lun, and Willis, 2017&lt;/a&gt;) as this my go-to behavior for many similar quests, but I decided to check the help page using &lt;code&gt;?scater::plotReducedDim&lt;/code&gt;.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;… Additional arguments for visualization, see ?“scater-plot-args” for details.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;The documentation for &lt;code&gt;...&lt;/code&gt; lead me to &lt;code&gt;?&#34;scater-plot-args&#34;&lt;/code&gt; where I finally found the &lt;code&gt;point_size&lt;/code&gt; argument&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;point_size: Numeric scalar, specifying the size of the points. Defaults to NULL.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;and that solved my problem.&lt;/p&gt;
+&lt;p&gt;So what used to look like this:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://lcolladotor.github.io/post/2020-02-12-learning-from-our-search-history_files/Screen%20Shot%202020-02-12%20at%209.54.41%20PM.png&#34; width=&#34;400&#34; /&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(&amp;#39;scater&amp;#39;)
+library(&amp;#39;SummarizedExperiment&amp;#39;)
+
+plotReducedDim(
+    sce,
+    dimred = &amp;#39;PCA&amp;#39;,
+    colour_by = &amp;#39;my_cluster_variable&amp;#39;,
+    theme_size = 20
+)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;now looks like this:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://lcolladotor.github.io/post/2020-02-12-learning-from-our-search-history_files/Screen%20Shot%202020-02-12%20at%209.55.09%20PM.png&#34; width=&#34;400&#34; /&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;plotReducedDim(
+    sce,
+    dimred = &amp;#39;PCA&amp;#39;,
+    colour_by = &amp;#39;my_cluster_variable&amp;#39;,
+    theme_size = 20,
+    point_size = 5
+)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Other examples involve different websites and showcase the diversity of questions we have as a team.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;conclusions&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Conclusions&lt;/h3&gt;
+&lt;p&gt;I hope that you like this idea and try it out yourselves. Maybe some of the lessons you learn trying it out could be useful to us as well. Ultimately, the information stored there could be useful for new team members as well as for current members since the spreadsheet becomes like an informal FAQ or team wiki.&lt;/p&gt;
+&lt;iframe src=&#34;https://giphy.com/embed/MRwR1blxryNJm&#34; width=&#34;315&#34; height=&#34;480&#34; frameBorder=&#34;0&#34; class=&#34;giphy-embed&#34; allowFullScreen&gt;
+&lt;/iframe&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://giphy.com/gifs/MRwR1blxryNJm&#34;&gt;via GIPHY&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;I was strongly encouraged by the feedback two members gave me individually after our trial session. Maybe this is not for everyone as we realized that it’s quite hard to be anonymous while participating &lt;a href=&#34;#fn7&#34; class=&#34;footnote-ref&#34; id=&#34;fnref7&#34;&gt;&lt;sup&gt;7&lt;/sup&gt;&lt;/a&gt;. This idea could evolve into something else, but at least for today, I’m happy with the amount of people that bought into the trial and participated in it. We’ll see what happens next.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://lcolladotor.github.io/post/2020-02-12-learning-from-our-search-history_files/Screen%20Shot%202020-02-12%20at%203.56.43%20PM.png&#34; width=&#34;600&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;acknowledgments&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Acknowledgments&lt;/h3&gt;
+&lt;p&gt;This blog post was made possible thanks to:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;&lt;a href=&#34;https://bioconductor.org/packages/3.10/BiocStyle&#34;&gt;BiocStyle&lt;/a&gt;&lt;/em&gt; &lt;a id=&#39;cite-Oles_2020&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://github.com/Bioconductor/BiocStyle&#39;&gt;Oleś, Morgan, and Huber, 2020&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;a href=&#34;https://CRAN.R-project.org/package=blogdown&#34;&gt;blogdown&lt;/a&gt;&lt;/em&gt; &lt;a id=&#39;cite-Xie_2017&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://github.com/rstudio/blogdown&#39;&gt;Xie, Hill, and Thomas, 2017&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;a href=&#34;https://CRAN.R-project.org/package=ggplot2&#34;&gt;ggplot2&lt;/a&gt;&lt;/em&gt; (&lt;a href=&#39;https://ggplot2.tidyverse.org&#39;&gt;Wickham, 2016&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;a href=&#34;https://CRAN.R-project.org/package=knitcitations&#34;&gt;knitcitations&lt;/a&gt;&lt;/em&gt; &lt;a id=&#39;cite-Boettiger_2019&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://CRAN.R-project.org/package=knitcitations&#39;&gt;Boettiger, 2019&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;a href=&#34;https://bioconductor.org/packages/3.10/scater&#34;&gt;scater&lt;/a&gt;&lt;/em&gt; (&lt;a href=&#39;https://doi.org/10.1093/bioinformatics/btw777&#39;&gt;McCarthy, Campbell, Lun, and Willis, 2017&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;a href=&#34;https://CRAN.R-project.org/package=sessioninfo&#34;&gt;sessioninfo&lt;/a&gt;&lt;/em&gt; &lt;a id=&#39;cite-Csardi_2018&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://CRAN.R-project.org/package=sessioninfo&#39;&gt;Csárdi, core, Wickham, Chang, et al., 2018&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;a href=&#34;https://bioconductor.org/packages/3.10/SummarizedExperiment&#34;&gt;SummarizedExperiment&lt;/a&gt;&lt;/em&gt; &lt;a id=&#39;cite-Morgan_2019&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;#bib-Morgan_2019&#39;&gt;Morgan, Obenchain, Hester, and Pagès, 2019&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I would also like to acknowledge the general inspiration I’ve gotten from &lt;a href=&#34;https://twitter.com/apreshill&#34;&gt;Alison Hill&lt;/a&gt;’s educational work. Once the &lt;code&gt;rstudio::conf(2020)&lt;/code&gt; videos are available, check the work her intern &lt;a href=&#34;https://twitter.com/dcossyle&#34;&gt;Desirée de Leon&lt;/a&gt; showcased which is related to the following tweet.&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Ever seen a giraffe that can fit in a teacup? Time to share the first draft of the R and stats project that Hasse Wallum and I have been working on for some time. More to come! &lt;a href=&#34;https://twitter.com/hashtag/rstats?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#rstats&lt;/a&gt; 🦒 &lt;a href=&#34;https://t.co/SOlBzop8vz&#34;&gt;https://t.co/SOlBzop8vz&lt;/a&gt;&lt;/p&gt;&amp;mdash; Desirée De Leon (@dcossyle) &lt;a href=&#34;https://twitter.com/dcossyle/status/1161679518777712641?ref_src=twsrc%5Etfw&#34;&gt;August 14, 2019&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;P.S. &lt;em&gt;dinámica&lt;/em&gt; in Spanish is used for a set of exercises that have a specific purpose in mind. I now realize that &lt;em&gt;dynamic&lt;/em&gt; doesn’t hold the same meaning. Oh well 🤷🏾&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;references&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;References&lt;/h3&gt;
+&lt;p&gt;
+&lt;a id=&#39;bib-Boettiger_2019&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-Boettiger_2019&#34;&gt;[1]&lt;/a&gt;&lt;cite&gt;
+C. Boettiger.
+&lt;em&gt;knitcitations: Citations for ‘Knitr’ Markdown Files&lt;/em&gt;.
+R package version 1.0.10.
+2019.
+URL: &lt;a href=&#34;https://CRAN.R-project.org/package=knitcitations&#34;&gt;https://CRAN.R-project.org/package=knitcitations&lt;/a&gt;.&lt;/cite&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;a id=&#39;bib-Csardi_2018&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-Csardi_2018&#34;&gt;[2]&lt;/a&gt;&lt;cite&gt;
+G. Csárdi, R. core, H. Wickham, W. Chang, et al.
+&lt;em&gt;sessioninfo: R Session Information&lt;/em&gt;.
+R package version 1.1.1.
+2018.
+URL: &lt;a href=&#34;https://CRAN.R-project.org/package=sessioninfo&#34;&gt;https://CRAN.R-project.org/package=sessioninfo&lt;/a&gt;.&lt;/cite&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;a id=&#39;bib-McCarthy_2017&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-McCarthy_2017&#34;&gt;[3]&lt;/a&gt;&lt;cite&gt;
+D. J. McCarthy, K. R. Campbell, A. T. L. Lun, and Q. F. Willis.
+“Scater: pre-processing, quality control, normalisation and visualisation of single-cell RNA-seq data in R”.
+In: &lt;em&gt;Bioinformatics&lt;/em&gt; 33 (8 2017), pp. 1179-1186.
+DOI: &lt;a href=&#34;https://doi.org/10.1093/bioinformatics/btw777&#34;&gt;10.1093/bioinformatics/btw777&lt;/a&gt;.&lt;/cite&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;a id=&#39;bib-Morgan_2019&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-Morgan_2019&#34;&gt;[4]&lt;/a&gt;&lt;cite&gt;
+M. Morgan, V. Obenchain, J. Hester, and H. Pagès.
+&lt;em&gt;SummarizedExperiment: SummarizedExperiment container&lt;/em&gt;.
+R package version 1.16.1.
+2019.&lt;/cite&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;a id=&#39;bib-Oles_2020&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-Oles_2020&#34;&gt;[5]&lt;/a&gt;&lt;cite&gt;
+A. Oleś, M. Morgan, and W. Huber.
+&lt;em&gt;BiocStyle: Standard styles for vignettes and other Bioconductor documents&lt;/em&gt;.
+R package version 2.14.4.
+2020.
+URL: &lt;a href=&#34;https://github.com/Bioconductor/BiocStyle&#34;&gt;https://github.com/Bioconductor/BiocStyle&lt;/a&gt;.&lt;/cite&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;a id=&#39;bib-Wickham_2016&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-Wickham_2016&#34;&gt;[6]&lt;/a&gt;&lt;cite&gt;
+H. Wickham.
+&lt;em&gt;ggplot2: Elegant Graphics for Data Analysis&lt;/em&gt;.
+Springer-Verlag New York, 2016.
+ISBN: 978-3-319-24277-4.
+URL: &lt;a href=&#34;https://ggplot2.tidyverse.org&#34;&gt;https://ggplot2.tidyverse.org&lt;/a&gt;.&lt;/cite&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;a id=&#39;bib-Xie_2017&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-Xie_2017&#34;&gt;[7]&lt;/a&gt;&lt;cite&gt;
+Y. Xie, A. P. Hill, and A. Thomas.
+&lt;em&gt;blogdown: Creating Websites with R Markdown&lt;/em&gt;.
+ISBN 978-0815363729.
+Boca Raton, Florida: Chapman and Hall/CRC, 2017.
+URL: &lt;a href=&#34;https://github.com/rstudio/blogdown&#34;&gt;https://github.com/rstudio/blogdown&lt;/a&gt;.&lt;/cite&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;reproducibility&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Reproducibility&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;## ─ Session info ───────────────────────────────────────────────────────────────────────────────────────────────────────
+##  setting  value                       
+##  version  R version 3.6.2 (2019-12-12)
+##  os       macOS Catalina 10.15.2      
+##  system   x86_64, darwin15.6.0        
+##  ui       X11                         
+##  language (EN)                        
+##  collate  en_US.UTF-8                 
+##  ctype    en_US.UTF-8                 
+##  tz       America/New_York            
+##  date     2020-02-12                  
+## 
+## ─ Packages ───────────────────────────────────────────────────────────────────────────────────────────────────────────
+##  package              * version  date       lib source                            
+##  assertthat             0.2.1    2019-03-21 [1] CRAN (R 3.6.0)                    
+##  beeswarm               0.2.3    2016-04-25 [1] CRAN (R 3.6.0)                    
+##  bibtex                 0.4.2.2  2020-01-02 [1] CRAN (R 3.6.0)                    
+##  Biobase              * 2.46.0   2019-10-29 [1] Bioconductor                      
+##  BiocGenerics         * 0.32.0   2019-10-29 [1] Bioconductor                      
+##  BiocManager            1.30.10  2019-11-16 [1] CRAN (R 3.6.1)                    
+##  BiocNeighbors          1.4.1    2019-11-01 [1] Bioconductor                      
+##  BiocParallel         * 1.20.1   2019-12-21 [1] Bioconductor                      
+##  BiocSingular           1.2.1    2019-12-23 [1] Bioconductor                      
+##  BiocStyle            * 2.14.4   2020-01-09 [1] Bioconductor                      
+##  bitops                 1.0-6    2013-08-17 [1] CRAN (R 3.6.0)                    
+##  blogdown               0.17     2019-11-13 [1] CRAN (R 3.6.1)                    
+##  bookdown               0.17     2020-01-11 [1] CRAN (R 3.6.0)                    
+##  cli                    2.0.1    2020-01-08 [1] CRAN (R 3.6.0)                    
+##  colorout             * 1.2-1    2019-05-07 [1] Github (jalvesaq/colorout@7ea9440)
+##  colorspace             1.4-1    2019-03-18 [1] CRAN (R 3.6.0)                    
+##  crayon                 1.3.4    2017-09-16 [1] CRAN (R 3.6.0)                    
+##  DelayedArray         * 0.12.2   2020-01-06 [1] Bioconductor                      
+##  DelayedMatrixStats     1.8.0    2019-10-29 [1] Bioconductor                      
+##  digest                 0.6.23   2019-11-23 [1] CRAN (R 3.6.0)                    
+##  dplyr                  0.8.3    2019-07-04 [1] CRAN (R 3.6.0)                    
+##  evaluate               0.14     2019-05-28 [1] CRAN (R 3.6.0)                    
+##  fansi                  0.4.1    2020-01-08 [1] CRAN (R 3.6.0)                    
+##  GenomeInfoDb         * 1.22.0   2019-10-29 [1] Bioconductor                      
+##  GenomeInfoDbData       1.2.2    2019-10-31 [1] Bioconductor                      
+##  GenomicRanges        * 1.38.0   2019-10-29 [1] Bioconductor                      
+##  ggbeeswarm             0.6.0    2017-08-07 [1] CRAN (R 3.6.0)                    
+##  ggplot2              * 3.2.1    2019-08-10 [1] CRAN (R 3.6.0)                    
+##  glue                   1.3.1    2019-03-12 [1] CRAN (R 3.6.0)                    
+##  gridExtra              2.3      2017-09-09 [1] CRAN (R 3.6.0)                    
+##  gtable                 0.3.0    2019-03-25 [1] CRAN (R 3.6.0)                    
+##  htmltools              0.4.0    2019-10-04 [1] CRAN (R 3.6.0)                    
+##  httr                   1.4.1    2019-08-05 [1] CRAN (R 3.6.0)                    
+##  IRanges              * 2.20.2   2020-01-13 [1] Bioconductor                      
+##  irlba                  2.3.3    2019-02-05 [1] CRAN (R 3.6.0)                    
+##  jsonlite               1.6      2018-12-07 [1] CRAN (R 3.6.0)                    
+##  knitcitations        * 1.0.10   2019-09-15 [1] CRAN (R 3.6.0)                    
+##  knitr                  1.27     2020-01-16 [1] CRAN (R 3.6.0)                    
+##  lattice                0.20-38  2018-11-04 [1] CRAN (R 3.6.2)                    
+##  lazyeval               0.2.2    2019-03-15 [1] CRAN (R 3.6.0)                    
+##  lifecycle              0.1.0    2019-08-01 [1] CRAN (R 3.6.0)                    
+##  lubridate              1.7.4    2018-04-11 [1] CRAN (R 3.6.0)                    
+##  magrittr               1.5      2014-11-22 [1] CRAN (R 3.6.0)                    
+##  Matrix                 1.2-18   2019-11-27 [1] CRAN (R 3.6.2)                    
+##  matrixStats          * 0.55.0   2019-09-07 [1] CRAN (R 3.6.0)                    
+##  munsell                0.5.0    2018-06-12 [1] CRAN (R 3.6.0)                    
+##  pillar                 1.4.3    2019-12-20 [1] CRAN (R 3.6.0)                    
+##  pkgconfig              2.0.3    2019-09-22 [1] CRAN (R 3.6.1)                    
+##  plyr                   1.8.5    2019-12-10 [1] CRAN (R 3.6.0)                    
+##  purrr                  0.3.3    2019-10-18 [1] CRAN (R 3.6.0)                    
+##  R6                     2.4.1    2019-11-12 [1] CRAN (R 3.6.1)                    
+##  Rcpp                   1.0.3    2019-11-08 [1] CRAN (R 3.6.0)                    
+##  RCurl                  1.98-1.1 2020-01-19 [1] CRAN (R 3.6.0)                    
+##  RefManageR             1.2.12   2019-04-03 [1] CRAN (R 3.6.0)                    
+##  rlang                  0.4.3    2020-01-24 [1] CRAN (R 3.6.2)                    
+##  rmarkdown              2.1      2020-01-20 [1] CRAN (R 3.6.0)                    
+##  rsvd                   1.0.2    2019-07-29 [1] CRAN (R 3.6.0)                    
+##  S4Vectors            * 0.24.3   2020-01-18 [1] Bioconductor                      
+##  scales                 1.1.0    2019-11-18 [1] CRAN (R 3.6.1)                    
+##  scater               * 1.14.6   2019-12-16 [1] Bioconductor                      
+##  sessioninfo          * 1.1.1    2018-11-05 [1] CRAN (R 3.6.0)                    
+##  SingleCellExperiment * 1.8.0    2019-10-29 [1] Bioconductor                      
+##  stringi                1.4.5    2020-01-11 [1] CRAN (R 3.6.0)                    
+##  stringr                1.4.0    2019-02-10 [1] CRAN (R 3.6.0)                    
+##  SummarizedExperiment * 1.16.1   2019-12-19 [1] Bioconductor                      
+##  tibble                 2.1.3    2019-06-06 [1] CRAN (R 3.6.0)                    
+##  tidyselect             0.2.5    2018-10-11 [1] CRAN (R 3.6.0)                    
+##  vipor                  0.4.5    2017-03-22 [1] CRAN (R 3.6.0)                    
+##  viridis                0.5.1    2018-03-29 [1] CRAN (R 3.6.0)                    
+##  viridisLite            0.3.0    2018-02-01 [1] CRAN (R 3.6.0)                    
+##  withr                  2.1.2    2018-03-15 [1] CRAN (R 3.6.0)                    
+##  xfun                   0.12     2020-01-13 [1] CRAN (R 3.6.0)                    
+##  xml2                   1.2.2    2019-08-09 [1] CRAN (R 3.6.0)                    
+##  XVector                0.26.0   2019-10-29 [1] Bioconductor                      
+##  yaml                   2.2.0    2018-07-25 [1] CRAN (R 3.6.0)                    
+##  zlibbioc               1.32.0   2019-10-29 [1] Bioconductor                      
+## 
+## [1] /Library/Frameworks/R.framework/Versions/3.6/Resources/library&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div class=&#34;footnotes&#34;&gt;
+&lt;hr /&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;So you can link to specific lines and see things you changed through time that might be the source of the problem are among the main reasons why you should try to version control your code.&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn2&#34;&gt;&lt;p&gt;Potentially to a more interesting problem than the one you are stuck currently at.&lt;a href=&#34;#fnref2&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn3&#34;&gt;&lt;p&gt;For example, some use a particular project Slack channel, others the lab one, others through direct messages.&lt;a href=&#34;#fnref3&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn4&#34;&gt;&lt;p&gt;If you say that something is obvious or easy, you are telling the other person that it should be easy for them too, but we know that it isn’t the case and that’s why they are asking a question.&lt;a href=&#34;#fnref4&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn5&#34;&gt;&lt;p&gt;If we want to incorporate this exercise into our weekly meetings (maybe once a month), we need to make sure that our team meeting will finish on time.&lt;a href=&#34;#fnref5&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn6&#34;&gt;&lt;p&gt;The use of keywords can dramatically affect a search results, and this information is useful to convey among ourselves so we can learn to search for help more effectively.&lt;a href=&#34;#fnref6&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn7&#34;&gt;&lt;p&gt;Basically, you can only be anonymous for those not in the room at the time the question was discussed.&lt;a href=&#34;#fnref7&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</description>
+    </item>
     
     <item>
       <title>CDSBMexico: remember to apply for BioC2019 travel scholarships</title>
@@ -76,24 +397,24 @@ that you start your application materials as soon as you can. Remember that the 
 &lt;p&gt;We understand that not many will be able to attend BioC2019, so keep an eye open for CDSBMexico 2019! We are hoping to announce our plans soon.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&#34;acknowledgements&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Acknowledgements&lt;/h3&gt;
+&lt;div id=&#34;acknowledgments&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Acknowledgments&lt;/h3&gt;
 &lt;p&gt;This blog post was made possible thanks to:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;em&gt;&lt;a href=&#34;https://bioconductor.org/packages/3.8/BiocStyle&#34;&gt;BiocStyle&lt;/a&gt;&lt;/em&gt; &lt;a id=&#39;cite-Oles_2018&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://github.com/Bioconductor/BiocStyle&#39;&gt;Oleś, Morgan, and Huber, 2018&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;a href=&#34;https://bioconductor.org/packages/3.10/BiocStyle&#34;&gt;BiocStyle&lt;/a&gt;&lt;/em&gt; &lt;a id=&#39;cite-Oles_2020&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://github.com/Bioconductor/BiocStyle&#39;&gt;Oleś, Morgan, and Huber, 2020&lt;/a&gt;)&lt;/li&gt;
 &lt;li&gt;&lt;em&gt;&lt;a href=&#34;https://CRAN.R-project.org/package=blogdown&#34;&gt;blogdown&lt;/a&gt;&lt;/em&gt; &lt;a id=&#39;cite-Xie_2017&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://github.com/rstudio/blogdown&#39;&gt;Xie, Hill, and Thomas, 2017&lt;/a&gt;)&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;&lt;a href=&#34;https://CRAN.R-project.org/package=knitcitations&#34;&gt;knitcitations&lt;/a&gt;&lt;/em&gt; &lt;a id=&#39;cite-Boettiger_2017&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://CRAN.R-project.org/package=knitcitations&#39;&gt;Boettiger, 2017&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;a href=&#34;https://CRAN.R-project.org/package=knitcitations&#34;&gt;knitcitations&lt;/a&gt;&lt;/em&gt; &lt;a id=&#39;cite-Boettiger_2019&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://CRAN.R-project.org/package=knitcitations&#39;&gt;Boettiger, 2019&lt;/a&gt;)&lt;/li&gt;
 &lt;li&gt;&lt;em&gt;&lt;a href=&#34;https://CRAN.R-project.org/package=sessioninfo&#34;&gt;sessioninfo&lt;/a&gt;&lt;/em&gt; &lt;a id=&#39;cite-Csardi_2018&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://CRAN.R-project.org/package=sessioninfo&#39;&gt;Csárdi, core, Wickham, Chang, et al., 2018&lt;/a&gt;)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div id=&#34;references&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;References&lt;/h3&gt;
 &lt;p&gt;
-&lt;a id=&#39;bib-Boettiger_2017&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-Boettiger_2017&#34;&gt;[1]&lt;/a&gt;&lt;cite&gt;
+&lt;a id=&#39;bib-Boettiger_2019&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-Boettiger_2019&#34;&gt;[1]&lt;/a&gt;&lt;cite&gt;
 C. Boettiger.
 &lt;em&gt;knitcitations: Citations for ‘Knitr’ Markdown Files&lt;/em&gt;.
-R package version 1.0.8.
-2017.
+R package version 1.0.10.
+2019.
 URL: &lt;a href=&#34;https://CRAN.R-project.org/package=knitcitations&#34;&gt;https://CRAN.R-project.org/package=knitcitations&lt;/a&gt;.&lt;/cite&gt;
 &lt;/p&gt;
 &lt;p&gt;
@@ -105,11 +426,11 @@ R package version 1.1.1.
 URL: &lt;a href=&#34;https://CRAN.R-project.org/package=sessioninfo&#34;&gt;https://CRAN.R-project.org/package=sessioninfo&lt;/a&gt;.&lt;/cite&gt;
 &lt;/p&gt;
 &lt;p&gt;
-&lt;a id=&#39;bib-Oles_2018&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-Oles_2018&#34;&gt;[3]&lt;/a&gt;&lt;cite&gt;
+&lt;a id=&#39;bib-Oles_2020&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-Oles_2020&#34;&gt;[3]&lt;/a&gt;&lt;cite&gt;
 A. Oleś, M. Morgan, and W. Huber.
 &lt;em&gt;BiocStyle: Standard styles for vignettes and other Bioconductor documents&lt;/em&gt;.
-R package version 2.10.0.
-2018.
+R package version 2.14.4.
+2020.
 URL: &lt;a href=&#34;https://github.com/Bioconductor/BiocStyle&#34;&gt;https://github.com/Bioconductor/BiocStyle&lt;/a&gt;.&lt;/cite&gt;
 &lt;/p&gt;
 &lt;p&gt;
@@ -124,56 +445,59 @@ URL: &lt;a href=&#34;https://github.com/rstudio/blogdown&#34;&gt;https://github.
 &lt;div id=&#34;reproducibility&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Reproducibility&lt;/h3&gt;
 &lt;pre&gt;&lt;code&gt;## ─ Session info ───────────────────────────────────────────────────────────────────────────────────────────────────────
-##  setting  value                                      
-##  version  R version 3.5.2 Patched (2019-02-17 r76113)
-##  os       macOS Mojave 10.14.4                       
-##  system   x86_64, darwin15.6.0                       
-##  ui       X11                                        
-##  language (EN)                                       
-##  collate  en_US.UTF-8                                
-##  ctype    en_US.UTF-8                                
-##  tz       America/New_York                           
-##  date     2019-04-10                                 
+##  setting  value                       
+##  version  R version 3.6.2 (2019-12-12)
+##  os       macOS Catalina 10.15.2      
+##  system   x86_64, darwin15.6.0        
+##  ui       X11                         
+##  language (EN)                        
+##  collate  en_US.UTF-8                 
+##  ctype    en_US.UTF-8                 
+##  tz       America/New_York            
+##  date     2020-02-12                  
 ## 
 ## ─ Packages ───────────────────────────────────────────────────────────────────────────────────────────────────────────
 ##  package       * version date       lib source                            
-##  assertthat      0.2.1   2019-03-21 [1] CRAN (R 3.5.2)                    
-##  bibtex          0.4.2   2017-06-30 [1] CRAN (R 3.5.0)                    
-##  BiocManager     1.30.4  2018-11-13 [1] CRAN (R 3.5.0)                    
-##  BiocStyle     * 2.10.0  2018-10-30 [1] Bioconductor                      
-##  blogdown        0.11.1  2019-04-05 [1] Github (rstudio/blogdown@5179caf) 
-##  bookdown        0.9     2018-12-21 [1] CRAN (R 3.5.0)                    
-##  cli             1.1.0   2019-03-19 [1] CRAN (R 3.5.2)                    
-##  colorout      * 1.2-0   2019-02-18 [1] Github (jalvesaq/colorout@cc5fbfa)
-##  crayon          1.3.4   2017-09-16 [1] CRAN (R 3.5.0)                    
-##  digest          0.6.18  2018-10-10 [1] CRAN (R 3.5.0)                    
-##  evaluate        0.13    2019-02-12 [1] CRAN (R 3.5.2)                    
-##  htmltools       0.3.6   2017-04-28 [1] CRAN (R 3.5.0)                    
-##  httr            1.4.0   2018-12-11 [1] CRAN (R 3.5.0)                    
-##  jsonlite        1.6     2018-12-07 [1] CRAN (R 3.5.0)                    
-##  knitcitations * 1.0.8   2017-07-04 [1] CRAN (R 3.5.0)                    
-##  knitr           1.22    2019-03-08 [1] CRAN (R 3.5.2)                    
-##  lubridate       1.7.4   2018-04-11 [1] CRAN (R 3.5.0)                    
-##  magrittr        1.5     2014-11-22 [1] CRAN (R 3.5.0)                    
-##  plyr            1.8.4   2016-06-08 [1] CRAN (R 3.5.0)                    
-##  R6              2.4.0   2019-02-14 [1] CRAN (R 3.5.2)                    
-##  Rcpp            1.0.1   2019-03-17 [1] CRAN (R 3.5.2)                    
-##  RefManageR      1.2.12  2019-04-03 [1] CRAN (R 3.5.2)                    
-##  rmarkdown       1.12    2019-03-14 [1] CRAN (R 3.5.2)                    
-##  sessioninfo   * 1.1.1   2018-11-05 [1] CRAN (R 3.5.0)                    
-##  stringi         1.4.3   2019-03-12 [1] CRAN (R 3.5.2)                    
-##  stringr         1.4.0   2019-02-10 [1] CRAN (R 3.5.2)                    
-##  withr           2.1.2   2018-03-15 [1] CRAN (R 3.5.0)                    
-##  xfun            0.6     2019-04-02 [1] CRAN (R 3.5.2)                    
-##  xml2            1.2.0   2018-01-24 [1] CRAN (R 3.5.0)                    
-##  yaml            2.2.0   2018-07-25 [1] CRAN (R 3.5.0)                    
+##  assertthat      0.2.1   2019-03-21 [1] CRAN (R 3.6.0)                    
+##  bibtex          0.4.2.2 2020-01-02 [1] CRAN (R 3.6.0)                    
+##  BiocManager     1.30.10 2019-11-16 [1] CRAN (R 3.6.1)                    
+##  BiocStyle     * 2.14.4  2020-01-09 [1] Bioconductor                      
+##  blogdown        0.17    2019-11-13 [1] CRAN (R 3.6.1)                    
+##  bookdown        0.17    2020-01-11 [1] CRAN (R 3.6.0)                    
+##  cli             2.0.1   2020-01-08 [1] CRAN (R 3.6.0)                    
+##  colorout      * 1.2-1   2019-05-07 [1] Github (jalvesaq/colorout@7ea9440)
+##  crayon          1.3.4   2017-09-16 [1] CRAN (R 3.6.0)                    
+##  digest          0.6.23  2019-11-23 [1] CRAN (R 3.6.0)                    
+##  evaluate        0.14    2019-05-28 [1] CRAN (R 3.6.0)                    
+##  fansi           0.4.1   2020-01-08 [1] CRAN (R 3.6.0)                    
+##  glue            1.3.1   2019-03-12 [1] CRAN (R 3.6.0)                    
+##  htmltools       0.4.0   2019-10-04 [1] CRAN (R 3.6.0)                    
+##  httr            1.4.1   2019-08-05 [1] CRAN (R 3.6.0)                    
+##  jsonlite        1.6     2018-12-07 [1] CRAN (R 3.6.0)                    
+##  knitcitations * 1.0.10  2019-09-15 [1] CRAN (R 3.6.0)                    
+##  knitr           1.27    2020-01-16 [1] CRAN (R 3.6.0)                    
+##  lubridate       1.7.4   2018-04-11 [1] CRAN (R 3.6.0)                    
+##  magrittr        1.5     2014-11-22 [1] CRAN (R 3.6.0)                    
+##  plyr            1.8.5   2019-12-10 [1] CRAN (R 3.6.0)                    
+##  R6              2.4.1   2019-11-12 [1] CRAN (R 3.6.1)                    
+##  Rcpp            1.0.3   2019-11-08 [1] CRAN (R 3.6.0)                    
+##  RefManageR      1.2.12  2019-04-03 [1] CRAN (R 3.6.0)                    
+##  rlang           0.4.3   2020-01-24 [1] CRAN (R 3.6.2)                    
+##  rmarkdown       2.1     2020-01-20 [1] CRAN (R 3.6.0)                    
+##  sessioninfo   * 1.1.1   2018-11-05 [1] CRAN (R 3.6.0)                    
+##  stringi         1.4.5   2020-01-11 [1] CRAN (R 3.6.0)                    
+##  stringr         1.4.0   2019-02-10 [1] CRAN (R 3.6.0)                    
+##  withr           2.1.2   2018-03-15 [1] CRAN (R 3.6.0)                    
+##  xfun            0.12    2020-01-13 [1] CRAN (R 3.6.0)                    
+##  xml2            1.2.2   2019-08-09 [1] CRAN (R 3.6.0)                    
+##  yaml            2.2.0   2018-07-25 [1] CRAN (R 3.6.0)                    
 ## 
-## [1] /Library/Frameworks/R.framework/Versions/3.5/Resources/library&lt;/code&gt;&lt;/pre&gt;
+## [1] /Library/Frameworks/R.framework/Versions/3.6/Resources/library&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;div class=&#34;footnotes&#34;&gt;
 &lt;hr /&gt;
 &lt;ol&gt;
-&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;Using &lt;a href=&#34;https://www.google.com/flights&#34;&gt;Google flights&lt;/a&gt; for the search.&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;Using &lt;a href=&#34;https://www.google.com/flights&#34;&gt;Google flights&lt;/a&gt; for the search.&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;
 </description>
@@ -217,8 +541,8 @@ URL: &lt;a href=&#34;https://github.com/rstudio/blogdown&#34;&gt;https://github.
 &lt;p&gt;If you drop by in Baltimore, you should go visit Cocina Luchadoras! Their food is deliciously awesome. It starts with handmade tortillas. You use tortillas for many things including tacos. A good tortilla can boost the flavor in a taco, and the ones at Cocina Luchadoras are outstanding! Then there’s the filling which can range from pork (&lt;em&gt;al pastor&lt;/em&gt;) to different types of vegetables. And while you wait, you get to experience a women’s empowerment museum with all the arts and crafts they have there about how women are really strong! You also get to meet many interesting patrons and make new friends if you wish to do so. Even if you are not in Baltimore, you should follow them on &lt;a href=&#34;https://www.instagram.com/cocinaluchadoras/&#34;&gt;Instagram&lt;/a&gt; or &lt;a href=&#34;https://www.facebook.com/cocinaluchadoras/&#34;&gt;Facebook&lt;/a&gt; for great art and food pictures (or &lt;a href=&#34;https://mobile.twitter.com/cocinaluchadora&#34;&gt;Twitter&lt;/a&gt;, but they don’t post images there, just links to Instagram).&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;http://lcolladotor.github.io/post/2019-02-03-the-power-of-tapping-into-your-community-for-support_files/2019-02-02%2016.00.13.jpg&#34; width=&#34;600&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
-&lt;div id=&#34;acknowledgements&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Acknowledgements&lt;/h3&gt;
+&lt;div id=&#34;acknowledgments&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Acknowledgments&lt;/h3&gt;
 &lt;p&gt;Thanks &lt;a href=&#34;https://twitter.com/EpiRen/status/1091844480112775168&#34;&gt;EpiRen&lt;/a&gt;!&lt;/p&gt;
 &lt;p&gt;Thanks Baltimore Sun staff and the Baltimore Police!&lt;/p&gt;
 &lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Thanks to the &lt;a href=&#34;https://twitter.com/baltimoresun?ref_src=twsrc%5Etfw&#34;&gt;@baltimoresun&lt;/a&gt; for getting the word out about this hate crime threat against &lt;a href=&#34;https://twitter.com/CocinaLuchadora?ref_src=twsrc%5Etfw&#34;&gt;@CocinaLuchadora&lt;/a&gt;! 🇲🇽🇺🇸&lt;a href=&#34;https://t.co/38oY5XDAK8&#34;&gt;https://t.co/38oY5XDAK8&lt;/a&gt;&lt;br&gt;&lt;br&gt;By &lt;a href=&#34;https://twitter.com/LillianEReed?ref_src=twsrc%5Etfw&#34;&gt;@LillianEReed&lt;/a&gt; with contributions by &lt;a href=&#34;https://twitter.com/_ThaliaJuarez?ref_src=twsrc%5Etfw&#34;&gt;@_ThaliaJuarez&lt;/a&gt; and &lt;a href=&#34;https://twitter.com/cdrentz?ref_src=twsrc%5Etfw&#34;&gt;@cdrentz&lt;/a&gt;&lt;br&gt;&lt;br&gt;Thanks &lt;a href=&#34;https://twitter.com/christinezhang?ref_src=twsrc%5Etfw&#34;&gt;@christinezhang&lt;/a&gt;!&lt;br&gt;&lt;br&gt;Thanks again &lt;a href=&#34;https://twitter.com/BaltimorePolice?ref_src=twsrc%5Etfw&#34;&gt;@BaltimorePolice&lt;/a&gt; for investigating! &lt;a href=&#34;https://t.co/rvXlHZBWj0&#34;&gt;https://t.co/rvXlHZBWj0&lt;/a&gt;&lt;/p&gt;&amp;mdash; 🇲🇽 Dr. Leonardo Collado-Torres (@fellgernon) &lt;a href=&#34;https://twitter.com/fellgernon/status/1091466386868748288?ref_src=twsrc%5Etfw&#34;&gt;February 1, 2019&lt;/a&gt;&lt;/blockquote&gt;
@@ -226,20 +550,20 @@ URL: &lt;a href=&#34;https://github.com/rstudio/blogdown&#34;&gt;https://github.
 
 &lt;p&gt;This blog post was made possible thanks to:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;em&gt;&lt;a href=&#34;https://bioconductor.org/packages/3.8/BiocStyle&#34;&gt;BiocStyle&lt;/a&gt;&lt;/em&gt; &lt;a id=&#39;cite-Oles_2018&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://github.com/Bioconductor/BiocStyle&#39;&gt;Oleś, Morgan, and Huber, 2018&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;a href=&#34;https://bioconductor.org/packages/3.10/BiocStyle&#34;&gt;BiocStyle&lt;/a&gt;&lt;/em&gt; &lt;a id=&#39;cite-Oles_2020&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://github.com/Bioconductor/BiocStyle&#39;&gt;Oleś, Morgan, and Huber, 2020&lt;/a&gt;)&lt;/li&gt;
 &lt;li&gt;&lt;em&gt;&lt;a href=&#34;https://CRAN.R-project.org/package=blogdown&#34;&gt;blogdown&lt;/a&gt;&lt;/em&gt; &lt;a id=&#39;cite-Xie_2017&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://github.com/rstudio/blogdown&#39;&gt;Xie, Hill, and Thomas, 2017&lt;/a&gt;)&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;&lt;a href=&#34;https://CRAN.R-project.org/package=knitcitations&#34;&gt;knitcitations&lt;/a&gt;&lt;/em&gt; &lt;a id=&#39;cite-Boettiger_2017&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://CRAN.R-project.org/package=knitcitations&#39;&gt;Boettiger, 2017&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;a href=&#34;https://CRAN.R-project.org/package=knitcitations&#34;&gt;knitcitations&lt;/a&gt;&lt;/em&gt; &lt;a id=&#39;cite-Boettiger_2019&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://CRAN.R-project.org/package=knitcitations&#39;&gt;Boettiger, 2019&lt;/a&gt;)&lt;/li&gt;
 &lt;li&gt;&lt;em&gt;&lt;a href=&#34;https://CRAN.R-project.org/package=sessioninfo&#34;&gt;sessioninfo&lt;/a&gt;&lt;/em&gt; &lt;a id=&#39;cite-Csardi_2018&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://CRAN.R-project.org/package=sessioninfo&#39;&gt;Csárdi, core, Wickham, Chang, et al., 2018&lt;/a&gt;)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div id=&#34;references&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;References&lt;/h3&gt;
 &lt;p&gt;
-&lt;a id=&#39;bib-Boettiger_2017&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-Boettiger_2017&#34;&gt;[1]&lt;/a&gt;&lt;cite&gt;
+&lt;a id=&#39;bib-Boettiger_2019&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-Boettiger_2019&#34;&gt;[1]&lt;/a&gt;&lt;cite&gt;
 C. Boettiger.
 &lt;em&gt;knitcitations: Citations for ‘Knitr’ Markdown Files&lt;/em&gt;.
-R package version 1.0.8.
-2017.
+R package version 1.0.10.
+2019.
 URL: &lt;a href=&#34;https://CRAN.R-project.org/package=knitcitations&#34;&gt;https://CRAN.R-project.org/package=knitcitations&lt;/a&gt;.&lt;/cite&gt;
 &lt;/p&gt;
 &lt;p&gt;
@@ -251,16 +575,16 @@ R package version 1.1.1.
 URL: &lt;a href=&#34;https://CRAN.R-project.org/package=sessioninfo&#34;&gt;https://CRAN.R-project.org/package=sessioninfo&lt;/a&gt;.&lt;/cite&gt;
 &lt;/p&gt;
 &lt;p&gt;
-&lt;a id=&#39;bib-Oles_2018&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-Oles_2018&#34;&gt;[3]&lt;/a&gt;&lt;cite&gt;
-A. Oleś, M. Morgan and W. Huber.
+&lt;a id=&#39;bib-Oles_2020&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-Oles_2020&#34;&gt;[3]&lt;/a&gt;&lt;cite&gt;
+A. Oleś, M. Morgan, and W. Huber.
 &lt;em&gt;BiocStyle: Standard styles for vignettes and other Bioconductor documents&lt;/em&gt;.
-R package version 2.10.0.
-2018.
+R package version 2.14.4.
+2020.
 URL: &lt;a href=&#34;https://github.com/Bioconductor/BiocStyle&#34;&gt;https://github.com/Bioconductor/BiocStyle&lt;/a&gt;.&lt;/cite&gt;
 &lt;/p&gt;
 &lt;p&gt;
 &lt;a id=&#39;bib-Xie_2017&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-Xie_2017&#34;&gt;[4]&lt;/a&gt;&lt;cite&gt;
-Y. Xie, A. P. Hill and A. Thomas.
+Y. Xie, A. P. Hill, and A. Thomas.
 &lt;em&gt;blogdown: Creating Websites with R Markdown&lt;/em&gt;.
 ISBN 978-0815363729.
 Boca Raton, Florida: Chapman and Hall/CRC, 2017.
@@ -271,57 +595,60 @@ URL: &lt;a href=&#34;https://github.com/rstudio/blogdown&#34;&gt;https://github.
 &lt;h3&gt;Reproducibility&lt;/h3&gt;
 &lt;pre&gt;&lt;code&gt;## ─ Session info ───────────────────────────────────────────────────────────────────────────────────────────────────────
 ##  setting  value                       
-##  version  R version 3.5.1 (2018-07-02)
-##  os       macOS Mojave 10.14.2        
+##  version  R version 3.6.2 (2019-12-12)
+##  os       macOS Catalina 10.15.2      
 ##  system   x86_64, darwin15.6.0        
 ##  ui       X11                         
 ##  language (EN)                        
 ##  collate  en_US.UTF-8                 
 ##  ctype    en_US.UTF-8                 
 ##  tz       America/New_York            
-##  date     2019-02-04                  
+##  date     2020-02-12                  
 ## 
 ## ─ Packages ───────────────────────────────────────────────────────────────────────────────────────────────────────────
 ##  package       * version date       lib source                            
-##  assertthat      0.2.0   2017-04-11 [1] CRAN (R 3.5.0)                    
-##  bibtex          0.4.2   2017-06-30 [1] CRAN (R 3.5.0)                    
-##  BiocManager     1.30.4  2018-11-13 [1] CRAN (R 3.5.0)                    
-##  BiocStyle     * 2.10.0  2018-10-30 [1] Bioconductor                      
-##  blogdown        0.10    2019-01-09 [1] CRAN (R 3.5.1)                    
-##  bookdown        0.9     2018-12-21 [1] CRAN (R 3.5.0)                    
-##  cli             1.0.1   2018-09-25 [1] CRAN (R 3.5.0)                    
-##  colorout      * 1.2-0   2018-05-03 [1] Github (jalvesaq/colorout@c42088d)
-##  crayon          1.3.4   2017-09-16 [1] CRAN (R 3.5.0)                    
-##  digest          0.6.18  2018-10-10 [1] CRAN (R 3.5.0)                    
-##  evaluate        0.12    2018-10-09 [1] CRAN (R 3.5.0)                    
-##  htmltools       0.3.6   2017-04-28 [1] CRAN (R 3.5.0)                    
-##  httr            1.4.0   2018-12-11 [1] CRAN (R 3.5.0)                    
-##  jsonlite        1.6     2018-12-07 [1] CRAN (R 3.5.0)                    
-##  knitcitations * 1.0.8   2017-07-04 [1] CRAN (R 3.5.0)                    
-##  knitr           1.21    2018-12-10 [1] CRAN (R 3.5.1)                    
-##  lubridate       1.7.4   2018-04-11 [1] CRAN (R 3.5.0)                    
-##  magrittr        1.5     2014-11-22 [1] CRAN (R 3.5.0)                    
-##  plyr            1.8.4   2016-06-08 [1] CRAN (R 3.5.0)                    
-##  R6              2.3.0   2018-10-04 [1] CRAN (R 3.5.0)                    
-##  Rcpp            1.0.0   2018-11-07 [1] CRAN (R 3.5.0)                    
-##  RefManageR      1.2.0   2018-04-25 [1] CRAN (R 3.5.0)                    
-##  rmarkdown       1.11    2018-12-08 [1] CRAN (R 3.5.0)                    
-##  sessioninfo   * 1.1.1   2018-11-05 [1] CRAN (R 3.5.0)                    
-##  stringi         1.2.4   2018-07-20 [1] CRAN (R 3.5.0)                    
-##  stringr         1.3.1   2018-05-10 [1] CRAN (R 3.5.0)                    
-##  withr           2.1.2   2018-03-15 [1] CRAN (R 3.5.0)                    
-##  xfun            0.4     2018-10-23 [1] CRAN (R 3.5.0)                    
-##  xml2            1.2.0   2018-01-24 [1] CRAN (R 3.5.0)                    
-##  yaml            2.2.0   2018-07-25 [1] CRAN (R 3.5.0)                    
+##  assertthat      0.2.1   2019-03-21 [1] CRAN (R 3.6.0)                    
+##  bibtex          0.4.2.2 2020-01-02 [1] CRAN (R 3.6.0)                    
+##  BiocManager     1.30.10 2019-11-16 [1] CRAN (R 3.6.1)                    
+##  BiocStyle     * 2.14.4  2020-01-09 [1] Bioconductor                      
+##  blogdown        0.17    2019-11-13 [1] CRAN (R 3.6.1)                    
+##  bookdown        0.17    2020-01-11 [1] CRAN (R 3.6.0)                    
+##  cli             2.0.1   2020-01-08 [1] CRAN (R 3.6.0)                    
+##  colorout      * 1.2-1   2019-05-07 [1] Github (jalvesaq/colorout@7ea9440)
+##  crayon          1.3.4   2017-09-16 [1] CRAN (R 3.6.0)                    
+##  digest          0.6.23  2019-11-23 [1] CRAN (R 3.6.0)                    
+##  evaluate        0.14    2019-05-28 [1] CRAN (R 3.6.0)                    
+##  fansi           0.4.1   2020-01-08 [1] CRAN (R 3.6.0)                    
+##  glue            1.3.1   2019-03-12 [1] CRAN (R 3.6.0)                    
+##  htmltools       0.4.0   2019-10-04 [1] CRAN (R 3.6.0)                    
+##  httr            1.4.1   2019-08-05 [1] CRAN (R 3.6.0)                    
+##  jsonlite        1.6     2018-12-07 [1] CRAN (R 3.6.0)                    
+##  knitcitations * 1.0.10  2019-09-15 [1] CRAN (R 3.6.0)                    
+##  knitr           1.27    2020-01-16 [1] CRAN (R 3.6.0)                    
+##  lubridate       1.7.4   2018-04-11 [1] CRAN (R 3.6.0)                    
+##  magrittr        1.5     2014-11-22 [1] CRAN (R 3.6.0)                    
+##  plyr            1.8.5   2019-12-10 [1] CRAN (R 3.6.0)                    
+##  R6              2.4.1   2019-11-12 [1] CRAN (R 3.6.1)                    
+##  Rcpp            1.0.3   2019-11-08 [1] CRAN (R 3.6.0)                    
+##  RefManageR      1.2.12  2019-04-03 [1] CRAN (R 3.6.0)                    
+##  rlang           0.4.3   2020-01-24 [1] CRAN (R 3.6.2)                    
+##  rmarkdown       2.1     2020-01-20 [1] CRAN (R 3.6.0)                    
+##  sessioninfo   * 1.1.1   2018-11-05 [1] CRAN (R 3.6.0)                    
+##  stringi         1.4.5   2020-01-11 [1] CRAN (R 3.6.0)                    
+##  stringr         1.4.0   2019-02-10 [1] CRAN (R 3.6.0)                    
+##  withr           2.1.2   2018-03-15 [1] CRAN (R 3.6.0)                    
+##  xfun            0.12    2020-01-13 [1] CRAN (R 3.6.0)                    
+##  xml2            1.2.2   2019-08-09 [1] CRAN (R 3.6.0)                    
+##  yaml            2.2.0   2018-07-25 [1] CRAN (R 3.6.0)                    
 ## 
-## [1] /Library/Frameworks/R.framework/Versions/3.5devel/Resources/library&lt;/code&gt;&lt;/pre&gt;
+## [1] /Library/Frameworks/R.framework/Versions/3.6/Resources/library&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;div class=&#34;footnotes&#34;&gt;
 &lt;hr /&gt;
 &lt;ol&gt;
-&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;Threats to burn down here business.&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li id=&#34;fn2&#34;&gt;&lt;p&gt;Yes, thanks to Marie Kondo my clothes are neatly organized.&lt;a href=&#34;#fnref2&#34; class=&#34;footnote-back&#34;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li id=&#34;fn3&#34;&gt;&lt;p&gt;The city council? The state congress? Mayor? Governor? I don’t know.&lt;a href=&#34;#fnref3&#34; class=&#34;footnote-back&#34;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;Threats to burn down here business.&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn2&#34;&gt;&lt;p&gt;Yes, thanks to Marie Kondo my clothes are neatly organized.&lt;a href=&#34;#fnref2&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn3&#34;&gt;&lt;p&gt;The city council? The state congress? Mayor? Governor? I don’t know.&lt;a href=&#34;#fnref3&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;
 </description>
@@ -338,28 +665,22 @@ URL: &lt;a href=&#34;https://github.com/rstudio/blogdown&#34;&gt;https://github.
 &lt;p&gt;I can’t tell you how many times I’ve started to write this post in my mind since May 2018. Today I’m finally typing it on the computer. This will be a rather long post that ties in several threads. I’ll talk about Cold Spring Harbor’s Biology of Genomes conference and its relationship to my undergrad in Mexico. I’ll also introduce you to Aldo Barrientos (1987-2011) who was was my undergrad classmate. Then I’ll tell you about myself and how regardless of your situation, privileged or not, you should ask for help and get to know the people around you. Finally, I want to highlight that many other Mexican researchers are doing great work and would love to be invited to talk about their work. Or simply, the opportunity to compete for scholarships and grants.&lt;/p&gt;
 &lt;div id=&#34;cshl-and-lcg-unam&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;CSHL and LCG-UNAM&lt;/h3&gt;
-&lt;p&gt;This past May I was selected to give a talk at &lt;a href=&#34;http://meetings.cshl.edu/Genome18&#34;&gt;Biology of Genomes 2018&lt;/a&gt; (BOG) at &lt;a href=&#34;https://www.cshl.edu/&#34;&gt;Cold Spring Harbor Laboratory&lt;/a&gt; (CSHL). This was my first time being there and I had plenty of time to reflect before my talk&lt;a href=&#34;#fn1&#34; class=&#34;footnoteRef&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;. For me, attending BOG was like a dream come true so I was blown away when I was selected to present at BOG.&lt;/p&gt;
-&lt;p&gt;I first heard about the BOG conference when I was studying my undergrad in Mexico at &lt;a href=&#34;http://www.lcg.unam.mx/es/about&#34;&gt;LCG-UNAM&lt;/a&gt;. My class has a history with the conference too. Basically, part of the class was meeting to discuss what optional courses to create for our fourth year, and well, some miscommunication happened among us. This created a rift in the group and was one of my motivations for focusing on communication as well as giving back. The former lead to me being elected as class president and the latter lead to me volunteering to teach R courses later on my undergrad&lt;a href=&#34;#fn2&#34; class=&#34;footnoteRef&#34; id=&#34;fnref2&#34;&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;This past May I was selected to give a talk at &lt;a href=&#34;http://meetings.cshl.edu/Genome18&#34;&gt;Biology of Genomes 2018&lt;/a&gt; (BOG) at &lt;a href=&#34;https://www.cshl.edu/&#34;&gt;Cold Spring Harbor Laboratory&lt;/a&gt; (CSHL). This was my first time being there and I had plenty of time to reflect before my talk&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;. For me, attending BOG was like a dream come true so I was blown away when I was selected to present at BOG.&lt;/p&gt;
+&lt;p&gt;I first heard about the BOG conference when I was studying my undergrad in Mexico at &lt;a href=&#34;http://www.lcg.unam.mx/es/about&#34;&gt;LCG-UNAM&lt;/a&gt;. My class has a history with the conference too. Basically, part of the class was meeting to discuss what optional courses to create for our fourth year, and well, some miscommunication happened among us. This created a rift in the group and was one of my motivations for focusing on communication as well as giving back. The former lead to me being elected as class president and the latter lead to me volunteering to teach R courses later on my undergrad&lt;a href=&#34;#fn2&#34; class=&#34;footnote-ref&#34; id=&#34;fnref2&#34;&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;As BOG18 went underway, some of my fellow junior presenters started their talks by mentioning why CSHL was special to them. Following their cue, I wrote some notes just before my presentation.&lt;/p&gt;
-&lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;http://lcolladotor.github.io/post/2018-11-06-a-knot-of-threads-from-cshl-to-lcg-unam-to-aldo-barrientos-to-diversity-scholarship-opportunities_files/2018-11-06%2021.21.51.jpg&#34; width=&#34;400&#34; /&gt;
-
-&lt;/div&gt;
-&lt;p&gt;I really wanted to give a shoutout to all my LCG-UNAM classmates. I also thought of Aldo Barrientos and how it could have been him at BOG. This got me nervous, but I really wanted to do it. I also wanted this to be short and professional. You can see how it turned out for yourself&lt;a href=&#34;#fn3&#34; class=&#34;footnoteRef&#34; id=&#34;fnref3&#34;&gt;&lt;sup&gt;3&lt;/sup&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://lcolladotor.github.io/post/2018-11-06-a-knot-of-threads-from-cshl-to-lcg-unam-to-aldo-barrientos-to-diversity-scholarship-opportunities_files/2018-11-06%2021.21.51.jpg&#34; width=&#34;400&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;I really wanted to give a shoutout to all my LCG-UNAM classmates. I also thought of Aldo Barrientos and how it could have been him at BOG. This got me nervous, but I really wanted to do it. I also wanted this to be short and professional. You can see how it turned out for yourself&lt;a href=&#34;#fn3&#34; class=&#34;footnote-ref&#34; id=&#34;fnref3&#34;&gt;&lt;sup&gt;3&lt;/sup&gt;&lt;/a&gt;.&lt;/p&gt;
 &lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/SRGkibDQgIc&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;
 &lt;/iframe&gt;
 &lt;/div&gt;
 &lt;div id=&#34;aldo-barrientos&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Aldo Barrientos&lt;/h3&gt;
 &lt;p&gt;It’s time for me to tell you more about Aldo Barrientos, my LCG-UNAM classmate. I won’t attempt to tell you his whole story since I think that others could write a much more detailed one that myself. I hope they do and if they are made public, I’ll share them from this blog post.&lt;/p&gt;
-&lt;p&gt;Aldo came from a low income family in Mexico: I believe that his father was a construction worker&lt;a href=&#34;#fn4&#34; class=&#34;footnoteRef&#34; id=&#34;fnref4&#34;&gt;&lt;sup&gt;4&lt;/sup&gt;&lt;/a&gt;. He was smart and advanced through school successfully. He took the entry exam for LCG-UNAM like many people did in 2005. Eventually only around 10-15 percent of the applicants were admitted to this undergrad program. The school was free (25 Mexican cents per year), but it involved relocating to a new city. UNAM has some scholarship programs, but they are not enough. Aldo found a way like he always did. For example, he sold candy and juice to his classmates during lunch break. For reasons that I don’t remember, Aldo didn’t complete his undergrad in 2009 but was about to in 2011.&lt;/p&gt;
+&lt;p&gt;Aldo came from a low income family in Mexico: I believe that his father was a construction worker&lt;a href=&#34;#fn4&#34; class=&#34;footnote-ref&#34; id=&#34;fnref4&#34;&gt;&lt;sup&gt;4&lt;/sup&gt;&lt;/a&gt;. He was smart and advanced through school successfully. He took the entry exam for LCG-UNAM like many people did in 2005. Eventually only around 10-15 percent of the applicants were admitted to this undergrad program. The school was free (25 Mexican cents per year), but it involved relocating to a new city. UNAM has some scholarship programs, but they are not enough. Aldo found a way like he always did. For example, he sold candy and juice to his classmates during lunch break. For reasons that I don’t remember, Aldo didn’t complete his undergrad in 2009 but was about to in 2011.&lt;/p&gt;
 &lt;p&gt;I remember Aldo as a very joyful person who was always smiling and joking with the rest of us. He had the &lt;em&gt;best&lt;/em&gt; dancing skills of anyone at my undergrad. He proved them time and time again, for example winning a dance contest at a party in my house and wearing the Pumas UNAM puma costume in our graduation party and dancing with everyone.&lt;/p&gt;
-&lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;http://lcolladotor.github.io/post/2018-11-06-a-knot-of-threads-from-cshl-to-lcg-unam-to-aldo-barrientos-to-diversity-scholarship-opportunities_files/goyo.jpg&#34; width=&#34;400&#34; /&gt;
-
-&lt;/div&gt;
+&lt;p&gt;&lt;img src=&#34;http://lcolladotor.github.io/post/2018-11-06-a-knot-of-threads-from-cshl-to-lcg-unam-to-aldo-barrientos-to-diversity-scholarship-opportunities_files/goyo.jpg&#34; width=&#34;400&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://sk.pinterest.com/pin/170714642102216698/&#34;&gt;Image source&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;His path was cut abruptly in 2011. He was stabbed multiple times while waiting for someone. We all knew about this. It’s still unclear to me how everything happened in the following months. But I remember being told that he tried seeing a doctor before going back to his home. One day in 2011, we all started to learn about how grave his situation had turned. I didn’t know what to do&lt;a href=&#34;#fn5&#34; class=&#34;footnoteRef&#34; id=&#34;fnref5&#34;&gt;&lt;sup&gt;5&lt;/sup&gt;&lt;/a&gt; and I talked to David Romero, director (dean?) of CCG-UNAM back then. He guided me and others and we were trying to coordinate ways to help Aldo, but by the time we got to his home it was too late. I regret that we weren’t able to help Aldo earlier.&lt;/p&gt;
+&lt;p&gt;His path was cut abruptly in 2011. He was stabbed multiple times while waiting for someone. We all knew about this. It’s still unclear to me how everything happened in the following months. But I remember being told that he tried seeing a doctor before going back to his home. One day in 2011, we all started to learn about how grave his situation had turned. I didn’t know what to do&lt;a href=&#34;#fn5&#34; class=&#34;footnote-ref&#34; id=&#34;fnref5&#34;&gt;&lt;sup&gt;5&lt;/sup&gt;&lt;/a&gt; and I talked to David Romero, director (dean?) of CCG-UNAM back then. He guided me and others and we were trying to coordinate ways to help Aldo, but by the time we got to his home it was too late. I regret that we weren’t able to help Aldo earlier.&lt;/p&gt;
 &lt;p&gt;I still have some emails from 2011 when we were talking about doing something to honour him. We never did as a class, though LCG-UNAM did acknowledge him. Maybe one day we will do an event to remember him.&lt;/p&gt;
 &lt;p&gt;Aldo faced more challenges that myself and other classmates. Yet I believe that he would have kept solving them one by one; he would have gotten his undergrad degree and had he chosen to stay in academia, then present his research findings at conferences like BOG.&lt;/p&gt;
 &lt;/div&gt;
@@ -369,38 +690,35 @@ URL: &lt;a href=&#34;https://github.com/rstudio/blogdown&#34;&gt;https://github.
 &lt;p&gt;Still, even with my privileged position it has been a hard fought battle to get to where I am now. I think that a mistake others do is that they assume that they are entitled to something given their privilege instead of working for that thing. This can apply to visas and the like where you still &lt;a href=&#34;http://lcolladotor.github.io/2018/09/19/problems-with-an-article-from-the-baltimore-sun-covering-dr-mahoney-steel-s-immigration-issues/&#34;&gt;have to apply for them in time&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Along my way I have hesitated many times what to do and have sought guidance from others. Also along my way, I’ve tried to get to know others in my surroundings. Now that I look back I realize that many people were at my position or in junior positions have kept working towards their career goals and advanced in them. So, if you can, get to know others and learn from them. They could be the future Full Professors with Tenure, future Senior Software Engineers or other titles you look up to.&lt;/p&gt;
 &lt;p&gt;Here’s an incomplete version of my timeline (&lt;a href=&#34;/misc/timeline.pdf&#34;&gt;PDF version&lt;/a&gt;). I think that it’s pretty hard to list everyone who has helped you along the way. For example, I’m not mentioning my Ph.D. classmates from whom I learned many things. But it will give you a more detailed picture of the amount of people that have helped me.&lt;/p&gt;
-&lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;http://lcolladotor.github.io/post/2018-11-06-a-knot-of-threads-from-cshl-to-lcg-unam-to-aldo-barrientos-to-diversity-scholarship-opportunities_files/timeline.png&#34; /&gt;
-
-&lt;/div&gt;
+&lt;p&gt;&lt;img src=&#34;http://lcolladotor.github.io/post/2018-11-06-a-knot-of-threads-from-cshl-to-lcg-unam-to-aldo-barrientos-to-diversity-scholarship-opportunities_files/timeline.png&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;invite-lcg-unam-alumni&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Invite LCG-UNAM alumni&lt;/h3&gt;
 &lt;p&gt;Like I said at the beginning of my BOG18 talk, I’m not sure if I’m the first LCG-UNAM alumni to present at BOG but I know for sure that I won’t be the last one. That’s because I’m really proud of my classmates and all the great work they are doing. It’s also easy to go beyond my class to other LCG-UNAM alumni and then even go beyond and extend this to Mexican researchers.&lt;/p&gt;
 &lt;p&gt;Taken from my timeline, here are a few that I mentioned there (links are to their Twitter profiles):&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://twitter.com/mariaGTAC&#34;&gt;Maria Gutierrez-Arcelus&lt;/a&gt;: LCG-UNAM; Ph.D. at University of Geneva Medical School; Postdoc Harvard University&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://twitter.com/mgschiavon&#34;&gt;Mariana Gómez-Schiavon&lt;/a&gt;: Ph.D. Duke University; postdoc UCSF&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://twitter.com/sur_hp&#34;&gt;Sur Herrera-Paredes&lt;/a&gt;: Ph.D. University of North Carolina; postdoc Standford&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://twitter.com/malacopa_genome&#34;&gt;Fernando Rabanal Mor&lt;/a&gt;: Ph.D. Gregor Mendel Institute; postdoc MPI for Developmental Biology&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://twitter.com/caralvar88&#34;&gt;Carlos Vargas&lt;/a&gt;: Winter Genomics, MS and Ph.D. Universitat de Valencia&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://twitter.com/RanitaRed&#34;&gt;Mariana Reyes&lt;/a&gt;: MS and Ph.D. Universitat de Valencia&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://twitter.com/kazenojigoku&#34;&gt;Atahualpa Castillo&lt;/a&gt;: Ph.D. and postdoc University of Bath&lt;/li&gt;
-&lt;li&gt;Jimena Mónzon (Ph.D. Univeristy of Bath; Oxford’s Parkinson Disease Centre Career Development Fellow)&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://twitter.com/licloona1487&#34;&gt;Alejandra Zayas&lt;/a&gt;: Ph.D. IBT-UNAM&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://twitter.com/AV_GonzalezS&#34;&gt;Adriana Verenisse Gonzalez Sandoval&lt;/a&gt;: Ph.D. University of Bath; postdoc Stanford&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://twitter.com/daniela_oaks&#34;&gt;Daniela Robles&lt;/a&gt;: Ph.D. Wellcome Trust Sanger Institute; Faculty LIIGH-UNAM&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://twitter.com/lbolanos68&#34;&gt;Luis Bolaños&lt;/a&gt;: Ph.D. CCG-UNAM; postdoc Oregon State University&lt;/li&gt;
-&lt;li&gt;Rodrigo García: MS and Ph.D. Universitat de Valencia&lt;/li&gt;
-&lt;li&gt;Renan Escalante-Chong: Ph.D. Harvard postdoc MIT; Immuneering Corporation&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://twitter.com/mariaGTAC&#34;&gt;Maria Gutierrez-Arcelus&lt;/a&gt;: LCG-UNAM; Ph.D. at University of Geneva Medical School; Postdoc Harvard University&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://twitter.com/mgschiavon&#34;&gt;Mariana Gómez-Schiavon&lt;/a&gt;: Ph.D. Duke University; postdoc UCSF&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://twitter.com/sur_hp&#34;&gt;Sur Herrera-Paredes&lt;/a&gt;: Ph.D. University of North Carolina; postdoc Standford&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://twitter.com/malacopa_genome&#34;&gt;Fernando Rabanal Mor&lt;/a&gt;: Ph.D. Gregor Mendel Institute; postdoc MPI for Developmental Biology&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://twitter.com/caralvar88&#34;&gt;Carlos Vargas&lt;/a&gt;: Winter Genomics, MS and Ph.D. Universitat de Valencia&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://twitter.com/RanitaRed&#34;&gt;Mariana Reyes&lt;/a&gt;: MS and Ph.D. Universitat de Valencia&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://twitter.com/kazenojigoku&#34;&gt;Atahualpa Castillo&lt;/a&gt;: Ph.D. and postdoc University of Bath&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Jimena Mónzon (Ph.D. Univeristy of Bath; Oxford’s Parkinson Disease Centre Career Development Fellow)&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://twitter.com/licloona1487&#34;&gt;Alejandra Zayas&lt;/a&gt;: Ph.D. IBT-UNAM&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://twitter.com/AV_GonzalezS&#34;&gt;Adriana Verenisse Gonzalez Sandoval&lt;/a&gt;: Ph.D. University of Bath; postdoc Stanford&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://twitter.com/daniela_oaks&#34;&gt;Daniela Robles&lt;/a&gt;: Ph.D. Wellcome Trust Sanger Institute; Faculty LIIGH-UNAM&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://twitter.com/lbolanos68&#34;&gt;Luis Bolaños&lt;/a&gt;: Ph.D. CCG-UNAM; postdoc Oregon State University&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Rodrigo García: MS and Ph.D. Universitat de Valencia&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Renan Escalante-Chong: Ph.D. Harvard postdoc MIT; Immuneering Corporation&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Gianella Garcia Hughes: Ph.D. UT Southwestern&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://twitter.com/garbanyo&#34;&gt;Adrian Cantú&lt;/a&gt;: LCG-UNAM; MS IBT-UNAM; INMEGEN; Ph.D. San Diego State University&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://twitter.com/yinayiyi&#34;&gt;Ana Georgina (Yina) Cobian&lt;/a&gt;: MS IBT-UNAM, Ph.D. San Diego State University&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://twitter.com/fa7gen&#34;&gt;Fernando Riveros-McKay Aguilera&lt;/a&gt;: Winter Genomics, Ph.D. Wellcome Trust Sanger Institute&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://twitter.com/garbanyo&#34;&gt;Adrian Cantú&lt;/a&gt;: LCG-UNAM; MS IBT-UNAM; INMEGEN; Ph.D. San Diego State University&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://twitter.com/yinayiyi&#34;&gt;Ana Georgina (Yina) Cobian&lt;/a&gt;: MS IBT-UNAM, Ph.D. San Diego State University&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://twitter.com/fa7gen&#34;&gt;Fernando Riveros-McKay Aguilera&lt;/a&gt;: Winter Genomics, Ph.D. Wellcome Trust Sanger Institute&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://twitter.com/tatinhawk&#34;&gt;Martín Del Castillo Velasco Herrera&lt;/a&gt;: Winter Genomics, Ph.D. Wellcome Trust Sanger Institute&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://twitter.com/AleMedinaRivera&#34;&gt;Alejandra Medina-Rivera&lt;/a&gt;: LCG-UNAM; Ph.D. CCG-UNAM; postdoc SickKids Toronto; Faculty LIIGH-UNAM&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://twitter.com/areyesq&#34;&gt;Alejandro Reyes&lt;/a&gt;: LCG-UNAM; Ph.D. EMBL; postdoc Harvard&lt;/li&gt;
-&lt;li&gt;Víctor Moreno Mayar: LCG-UNAM; Ph.D. and postdoc Natural History Museum of Denmark&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://twitter.com/areyesq&#34;&gt;Alejandro Reyes&lt;/a&gt;: LCG-UNAM; Ph.D. EMBL; postdoc Harvard&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Víctor Moreno Mayar: LCG-UNAM; Ph.D. and postdoc Natural History Museum of Denmark&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;José Reyes: LCG-UNAM, Ph.D. Harvard&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;For the full list of LCG-UNAM alumni, check &lt;a href=&#34;http://www.lcg.unam.mx/es/titulados&#34; class=&#34;uri&#34;&gt;http://www.lcg.unam.mx/es/titulados&lt;/a&gt;. There are 257 listed as of October 25, 2018.&lt;/p&gt;
@@ -423,29 +741,49 @@ URL: &lt;a href=&#34;https://github.com/rstudio/blogdown&#34;&gt;https://github.
 
 &lt;p&gt;In Mexico, Day of the Dead was just last week (November 2nd) and Aldo’s birthday would have been a few weeks ago on October 27th. It was time to finally write this blog post. I hope that you take something positive from it.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div id=&#34;acknowledgements&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Acknowledgements&lt;/h3&gt;
+&lt;div id=&#34;acknowledgments&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Acknowledgments&lt;/h3&gt;
 &lt;p&gt;This blog post was made possible thanks to:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;em&gt;&lt;a href=&#34;https://bioconductor.org/packages/3.9/BiocStyle&#34;&gt;BiocStyle&lt;/a&gt;&lt;/em&gt; &lt;a id=&#39;cite-Oles_2018&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://github.com/Bioconductor/BiocStyle&#39;&gt;Oleś, Morgan, and Huber, 2018&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;a href=&#34;https://bioconductor.org/packages/3.10/BiocStyle&#34;&gt;BiocStyle&lt;/a&gt;&lt;/em&gt; &lt;a id=&#39;cite-Oles_2020&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://github.com/Bioconductor/BiocStyle&#39;&gt;Oleś, Morgan, and Huber, 2020&lt;/a&gt;)&lt;/li&gt;
 &lt;li&gt;&lt;em&gt;&lt;a href=&#34;https://CRAN.R-project.org/package=blogdown&#34;&gt;blogdown&lt;/a&gt;&lt;/em&gt; &lt;a id=&#39;cite-Xie_2017&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://github.com/rstudio/blogdown&#39;&gt;Xie, Hill, and Thomas, 2017&lt;/a&gt;)&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;&lt;a href=&#34;https://CRAN.R-project.org/package=knitcitations&#34;&gt;knitcitations&lt;/a&gt;&lt;/em&gt; &lt;a id=&#39;cite-Boettiger_2017&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://CRAN.R-project.org/package=knitcitations&#39;&gt;Boettiger, 2017&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;a href=&#34;https://CRAN.R-project.org/package=knitcitations&#34;&gt;knitcitations&lt;/a&gt;&lt;/em&gt; &lt;a id=&#39;cite-Boettiger_2019&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://CRAN.R-project.org/package=knitcitations&#39;&gt;Boettiger, 2019&lt;/a&gt;)&lt;/li&gt;
 &lt;li&gt;&lt;em&gt;&lt;a href=&#34;https://CRAN.R-project.org/package=sessioninfo&#34;&gt;sessioninfo&lt;/a&gt;&lt;/em&gt; &lt;a id=&#39;cite-Csardi_2018&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://CRAN.R-project.org/package=sessioninfo&#39;&gt;Csárdi, core, Wickham, Chang, et al., 2018&lt;/a&gt;)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div id=&#34;references&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;References&lt;/h3&gt;
 &lt;p&gt;
-&lt;a id=&#39;bib-Boettiger_2017&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-Boettiger_2017&#34;&gt;[1]&lt;/a&gt;&lt;cite&gt; C. Boettiger. &lt;em&gt;knitcitations: Citations for ‘Knitr’ Markdown Files&lt;/em&gt;. R package version 1.0.8. 2017. URL: &lt;a href=&#34;https://CRAN.R-project.org/package=knitcitations&#34;&gt;https://CRAN.R-project.org/package=knitcitations&lt;/a&gt;.&lt;/cite&gt;
+&lt;a id=&#39;bib-Boettiger_2019&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-Boettiger_2019&#34;&gt;[1]&lt;/a&gt;&lt;cite&gt;
+C. Boettiger.
+&lt;em&gt;knitcitations: Citations for ‘Knitr’ Markdown Files&lt;/em&gt;.
+R package version 1.0.10.
+2019.
+URL: &lt;a href=&#34;https://CRAN.R-project.org/package=knitcitations&#34;&gt;https://CRAN.R-project.org/package=knitcitations&lt;/a&gt;.&lt;/cite&gt;
 &lt;/p&gt;
 &lt;p&gt;
-&lt;a id=&#39;bib-Csardi_2018&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-Csardi_2018&#34;&gt;[2]&lt;/a&gt;&lt;cite&gt; G. Csárdi, R. core, H. Wickham, W. Chang, et al. &lt;em&gt;sessioninfo: R Session Information&lt;/em&gt;. R package version 1.1.1. 2018. URL: &lt;a href=&#34;https://CRAN.R-project.org/package=sessioninfo&#34;&gt;https://CRAN.R-project.org/package=sessioninfo&lt;/a&gt;.&lt;/cite&gt;
+&lt;a id=&#39;bib-Csardi_2018&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-Csardi_2018&#34;&gt;[2]&lt;/a&gt;&lt;cite&gt;
+G. Csárdi, R. core, H. Wickham, W. Chang, et al.
+&lt;em&gt;sessioninfo: R Session Information&lt;/em&gt;.
+R package version 1.1.1.
+2018.
+URL: &lt;a href=&#34;https://CRAN.R-project.org/package=sessioninfo&#34;&gt;https://CRAN.R-project.org/package=sessioninfo&lt;/a&gt;.&lt;/cite&gt;
 &lt;/p&gt;
 &lt;p&gt;
-&lt;a id=&#39;bib-Oles_2018&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-Oles_2018&#34;&gt;[3]&lt;/a&gt;&lt;cite&gt; A. Oleś, M. Morgan and W. Huber. &lt;em&gt;BiocStyle: Standard styles for vignettes and other Bioconductor documents&lt;/em&gt;. R package version 2.11.0. 2018. URL: &lt;a href=&#34;https://github.com/Bioconductor/BiocStyle&#34;&gt;https://github.com/Bioconductor/BiocStyle&lt;/a&gt;.&lt;/cite&gt;
+&lt;a id=&#39;bib-Oles_2020&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-Oles_2020&#34;&gt;[3]&lt;/a&gt;&lt;cite&gt;
+A. Oleś, M. Morgan, and W. Huber.
+&lt;em&gt;BiocStyle: Standard styles for vignettes and other Bioconductor documents&lt;/em&gt;.
+R package version 2.14.4.
+2020.
+URL: &lt;a href=&#34;https://github.com/Bioconductor/BiocStyle&#34;&gt;https://github.com/Bioconductor/BiocStyle&lt;/a&gt;.&lt;/cite&gt;
 &lt;/p&gt;
 &lt;p&gt;
-&lt;a id=&#39;bib-Xie_2017&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-Xie_2017&#34;&gt;[4]&lt;/a&gt;&lt;cite&gt; Y. Xie, A. P. Hill and A. Thomas. &lt;em&gt;blogdown: Creating Websites with R Markdown&lt;/em&gt;. ISBN 978-0815363729. Boca Raton, Florida: Chapman and Hall/CRC, 2017. URL: &lt;a href=&#34;https://github.com/rstudio/blogdown&#34;&gt;https://github.com/rstudio/blogdown&lt;/a&gt;.&lt;/cite&gt;
+&lt;a id=&#39;bib-Xie_2017&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-Xie_2017&#34;&gt;[4]&lt;/a&gt;&lt;cite&gt;
+Y. Xie, A. P. Hill, and A. Thomas.
+&lt;em&gt;blogdown: Creating Websites with R Markdown&lt;/em&gt;.
+ISBN 978-0815363729.
+Boca Raton, Florida: Chapman and Hall/CRC, 2017.
+URL: &lt;a href=&#34;https://github.com/rstudio/blogdown&#34;&gt;https://github.com/rstudio/blogdown&lt;/a&gt;.&lt;/cite&gt;
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;reproducibility&#34; class=&#34;section level3&#34;&gt;
@@ -472,75 +810,65 @@ ggplot(df, aes(y, date)) +
                breaks = date_breaks(&amp;#39;months&amp;#39;),
                date_labels = &amp;quot;%Y-%m&amp;quot;, expand=c(0,30)) +   theme(axis.text.y=element_text(angle=-180))
 dev.off()&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## Registered S3 methods overwritten by &amp;#39;ggplot2&amp;#39;:
-##   method         from 
-##   [.quosures     rlang
-##   c.quosures     rlang
-##   print.quosures rlang&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## Registered S3 method overwritten by &amp;#39;dplyr&amp;#39;:
-##   method               from  
-##   as.data.frame.tbl_df tibble&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## ─ Session info ───────────────────────────────────────────────────────────────────────────────────────────────────────
-##  setting  value                                             
-##  version  R Under development (unstable) (2018-11-02 r75540)
-##  os       macOS Mojave 10.14.1                              
-##  system   x86_64, darwin15.6.0                              
-##  ui       X11                                               
-##  language (EN)                                              
-##  collate  en_US.UTF-8                                       
-##  ctype    en_US.UTF-8                                       
-##  tz       America/New_York                                  
-##  date     2018-11-09                                        
+##  setting  value                       
+##  version  R version 3.6.2 (2019-12-12)
+##  os       macOS Catalina 10.15.2      
+##  system   x86_64, darwin15.6.0        
+##  ui       X11                         
+##  language (EN)                        
+##  collate  en_US.UTF-8                 
+##  ctype    en_US.UTF-8                 
+##  tz       America/New_York            
+##  date     2020-02-12                  
 ## 
 ## ─ Packages ───────────────────────────────────────────────────────────────────────────────────────────────────────────
 ##  package       * version date       lib source                            
-##  assertthat      0.2.0   2017-04-11 [1] CRAN (R 3.6.0)                    
-##  backports       1.1.2   2017-12-13 [1] CRAN (R 3.6.0)                    
-##  bibtex          0.4.2   2017-06-30 [1] CRAN (R 3.6.0)                    
-##  bindr           0.1.1   2018-03-13 [1] CRAN (R 3.6.0)                    
-##  bindrcpp        0.2.2   2018-03-29 [1] CRAN (R 3.6.0)                    
-##  BiocManager     1.30.3  2018-10-10 [1] CRAN (R 3.6.0)                    
-##  BiocStyle     * 2.11.0  2018-10-30 [1] Bioconductor                      
-##  blogdown        0.9     2018-10-23 [1] CRAN (R 3.6.0)                    
-##  bookdown        0.7     2018-02-18 [1] CRAN (R 3.6.0)                    
-##  cli             1.0.1   2018-09-25 [1] CRAN (R 3.6.0)                    
-##  colorout      * 1.2-0   2018-11-02 [1] Github (jalvesaq/colorout@cc5fbfa)
-##  colorspace      1.3-2   2016-12-14 [1] CRAN (R 3.6.0)                    
+##  assertthat      0.2.1   2019-03-21 [1] CRAN (R 3.6.0)                    
+##  bibtex          0.4.2.2 2020-01-02 [1] CRAN (R 3.6.0)                    
+##  BiocManager     1.30.10 2019-11-16 [1] CRAN (R 3.6.1)                    
+##  BiocStyle     * 2.14.4  2020-01-09 [1] Bioconductor                      
+##  blogdown        0.17    2019-11-13 [1] CRAN (R 3.6.1)                    
+##  bookdown        0.17    2020-01-11 [1] CRAN (R 3.6.0)                    
+##  cli             2.0.1   2020-01-08 [1] CRAN (R 3.6.0)                    
+##  colorout      * 1.2-1   2019-05-07 [1] Github (jalvesaq/colorout@7ea9440)
+##  colorspace      1.4-1   2019-03-18 [1] CRAN (R 3.6.0)                    
 ##  crayon          1.3.4   2017-09-16 [1] CRAN (R 3.6.0)                    
-##  digest          0.6.18  2018-10-10 [1] CRAN (R 3.6.0)                    
-##  dplyr           0.7.7   2018-10-16 [1] CRAN (R 3.6.0)                    
-##  evaluate        0.12    2018-10-09 [1] CRAN (R 3.6.0)                    
-##  ggplot2       * 3.1.0   2018-10-25 [1] CRAN (R 3.6.0)                    
-##  glue            1.3.0   2018-07-17 [1] CRAN (R 3.6.0)                    
-##  gtable          0.2.0   2016-02-26 [1] CRAN (R 3.6.0)                    
-##  htmltools       0.3.6   2017-04-28 [1] CRAN (R 3.6.0)                    
-##  httr            1.3.1   2017-08-20 [1] CRAN (R 3.6.0)                    
-##  jsonlite        1.5     2017-06-01 [1] CRAN (R 3.6.0)                    
-##  knitcitations * 1.0.8   2017-07-04 [1] CRAN (R 3.6.0)                    
-##  knitr           1.20    2018-02-20 [1] CRAN (R 3.6.0)                    
-##  lazyeval        0.2.1   2017-10-29 [1] CRAN (R 3.6.0)                    
+##  digest          0.6.23  2019-11-23 [1] CRAN (R 3.6.0)                    
+##  dplyr           0.8.3   2019-07-04 [1] CRAN (R 3.6.0)                    
+##  evaluate        0.14    2019-05-28 [1] CRAN (R 3.6.0)                    
+##  fansi           0.4.1   2020-01-08 [1] CRAN (R 3.6.0)                    
+##  ggplot2       * 3.2.1   2019-08-10 [1] CRAN (R 3.6.0)                    
+##  glue            1.3.1   2019-03-12 [1] CRAN (R 3.6.0)                    
+##  gtable          0.3.0   2019-03-25 [1] CRAN (R 3.6.0)                    
+##  htmltools       0.4.0   2019-10-04 [1] CRAN (R 3.6.0)                    
+##  httr            1.4.1   2019-08-05 [1] CRAN (R 3.6.0)                    
+##  jsonlite        1.6     2018-12-07 [1] CRAN (R 3.6.0)                    
+##  knitcitations * 1.0.10  2019-09-15 [1] CRAN (R 3.6.0)                    
+##  knitr           1.27    2020-01-16 [1] CRAN (R 3.6.0)                    
+##  lazyeval        0.2.2   2019-03-15 [1] CRAN (R 3.6.0)                    
+##  lifecycle       0.1.0   2019-08-01 [1] CRAN (R 3.6.0)                    
 ##  lubridate       1.7.4   2018-04-11 [1] CRAN (R 3.6.0)                    
 ##  magrittr        1.5     2014-11-22 [1] CRAN (R 3.6.0)                    
 ##  munsell         0.5.0   2018-06-12 [1] CRAN (R 3.6.0)                    
-##  pillar          1.3.0   2018-07-14 [1] CRAN (R 3.6.0)                    
-##  pkgconfig       2.0.2   2018-08-16 [1] CRAN (R 3.6.0)                    
-##  plyr            1.8.4   2016-06-08 [1] CRAN (R 3.6.0)                    
-##  purrr           0.2.5   2018-05-29 [1] CRAN (R 3.6.0)                    
-##  R6              2.3.0   2018-10-04 [1] CRAN (R 3.6.0)                    
-##  Rcpp            1.0.0   2018-11-07 [1] CRAN (R 3.6.0)                    
-##  RefManageR      1.2.0   2018-04-25 [1] CRAN (R 3.6.0)                    
-##  rlang           0.3.0.1 2018-10-25 [1] CRAN (R 3.6.0)                    
-##  rmarkdown       1.10    2018-06-11 [1] CRAN (R 3.6.0)                    
-##  rprojroot       1.3-2   2018-01-03 [1] CRAN (R 3.6.0)                    
-##  scales        * 1.0.0   2018-08-09 [1] CRAN (R 3.6.0)                    
+##  pillar          1.4.3   2019-12-20 [1] CRAN (R 3.6.0)                    
+##  pkgconfig       2.0.3   2019-09-22 [1] CRAN (R 3.6.1)                    
+##  plyr            1.8.5   2019-12-10 [1] CRAN (R 3.6.0)                    
+##  purrr           0.3.3   2019-10-18 [1] CRAN (R 3.6.0)                    
+##  R6              2.4.1   2019-11-12 [1] CRAN (R 3.6.1)                    
+##  Rcpp            1.0.3   2019-11-08 [1] CRAN (R 3.6.0)                    
+##  RefManageR      1.2.12  2019-04-03 [1] CRAN (R 3.6.0)                    
+##  rlang           0.4.3   2020-01-24 [1] CRAN (R 3.6.2)                    
+##  rmarkdown       2.1     2020-01-20 [1] CRAN (R 3.6.0)                    
+##  scales        * 1.1.0   2019-11-18 [1] CRAN (R 3.6.1)                    
 ##  sessioninfo   * 1.1.1   2018-11-05 [1] CRAN (R 3.6.0)                    
-##  stringi         1.2.4   2018-07-20 [1] CRAN (R 3.6.0)                    
-##  stringr         1.3.1   2018-05-10 [1] CRAN (R 3.6.0)                    
-##  tibble          1.4.2   2018-01-22 [1] CRAN (R 3.6.0)                    
+##  stringi         1.4.5   2020-01-11 [1] CRAN (R 3.6.0)                    
+##  stringr         1.4.0   2019-02-10 [1] CRAN (R 3.6.0)                    
+##  tibble          2.1.3   2019-06-06 [1] CRAN (R 3.6.0)                    
 ##  tidyselect      0.2.5   2018-10-11 [1] CRAN (R 3.6.0)                    
 ##  withr           2.1.2   2018-03-15 [1] CRAN (R 3.6.0)                    
-##  xfun            0.4     2018-10-23 [1] CRAN (R 3.6.0)                    
-##  xml2            1.2.0   2018-01-24 [1] CRAN (R 3.6.0)                    
+##  xfun            0.12    2020-01-13 [1] CRAN (R 3.6.0)                    
+##  xml2            1.2.2   2019-08-09 [1] CRAN (R 3.6.0)                    
 ##  yaml            2.2.0   2018-07-25 [1] CRAN (R 3.6.0)                    
 ## 
 ## [1] /Library/Frameworks/R.framework/Versions/3.6/Resources/library&lt;/code&gt;&lt;/pre&gt;
@@ -560,11 +888,11 @@ dev.off()&lt;/code&gt;&lt;/pre&gt;
 &lt;div class=&#34;footnotes&#34;&gt;
 &lt;hr /&gt;
 &lt;ol&gt;
-&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;Mine was the very last one of the conference.&lt;a href=&#34;#fnref1&#34;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li id=&#34;fn2&#34;&gt;&lt;p&gt;Which then lead to my current career. See more at my &lt;a href=&#34;https://twitter.com/fellgernon/status/1023665229882961922&#34;&gt;keynote&lt;/a&gt; for the “Latin American R/BioConductor Developers Workshop 2018”.&lt;a href=&#34;#fnref2&#34;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li id=&#34;fn3&#34;&gt;&lt;p&gt;My scientific talk was about the BrainSeq Phase II project by the &lt;a href=&#34;https://www.libd.org/&#34;&gt;Lieber Institute for Brain Development&lt;/a&gt;. It’s now available as a bioRxiv pre-print: &lt;a href=&#34;https://www.biorxiv.org/content/early/2018/09/26/426213&#34;&gt;426213&lt;/a&gt;. It took a while to finish this project, which contributed to my delay in making this blog post.&lt;a href=&#34;#fnref3&#34;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li id=&#34;fn4&#34;&gt;&lt;p&gt;Previous versions of my post incorrectly said that he was a farmer.&lt;a href=&#34;#fnref4&#34;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li id=&#34;fn5&#34;&gt;&lt;p&gt;I believe that others asked me since I was or had been the class representative.&lt;a href=&#34;#fnref5&#34;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;Mine was the very last one of the conference.&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn2&#34;&gt;&lt;p&gt;Which then lead to my current career. See more at my &lt;a href=&#34;https://twitter.com/fellgernon/status/1023665229882961922&#34;&gt;keynote&lt;/a&gt; for the “Latin American R/BioConductor Developers Workshop 2018”.&lt;a href=&#34;#fnref2&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn3&#34;&gt;&lt;p&gt;My scientific talk was about the BrainSeq Phase II project by the &lt;a href=&#34;https://www.libd.org/&#34;&gt;Lieber Institute for Brain Development&lt;/a&gt;. It’s now available as a bioRxiv pre-print: &lt;a href=&#34;https://www.biorxiv.org/content/early/2018/09/26/426213&#34;&gt;426213&lt;/a&gt;. It took a while to finish this project, which contributed to my delay in making this blog post.&lt;a href=&#34;#fnref3&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn4&#34;&gt;&lt;p&gt;Previous versions of my post incorrectly said that he was a farmer.&lt;a href=&#34;#fnref4&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn5&#34;&gt;&lt;p&gt;I believe that others asked me since I was or had been the class representative.&lt;a href=&#34;#fnref5&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;
 </description>
@@ -579,7 +907,8 @@ dev.off()&lt;/code&gt;&lt;/pre&gt;
 
 
 &lt;p&gt;Today I attended the special panel discussion event at JHSPH called &lt;a href=&#34;http://hopkinshumanitarianhealth.org/news-events/events/separated-child-separation-at-the-border-a-health-and-human-rights-perspect&#34;&gt;“Separated: Children Separation at the Border A Health and Human Rights Perspective”&lt;/a&gt;. It got my mind racing and here’s an idea. It’s likely (definitely) incomplete, but maybe it’ll get others to think on related ideas.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://lcolladotor.github.io/post/2018-09-17-what-about-a-lawyer-like-app-as-the-mininum-help-for-defandants-in-immigration-cases_files/ChildSepBorder.jpg&#34; width=&#34;500&#34; /&gt; &lt;a href=&#34;http://hopkinshumanitarianhealth.org/news-events/events/separated-child-separation-at-the-border-a-health-and-human-rights-perspect&#34;&gt;Image source&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://lcolladotor.github.io/post/2018-09-17-what-about-a-lawyer-like-app-as-the-mininum-help-for-defandants-in-immigration-cases_files/ChildSepBorder.jpg&#34; width=&#34;500&#34; /&gt;
+&lt;a href=&#34;http://hopkinshumanitarianhealth.org/news-events/events/separated-child-separation-at-the-border-a-health-and-human-rights-perspect&#34;&gt;Image source&lt;/a&gt;&lt;/p&gt;
 &lt;div id=&#34;panel-summary&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Panel summary&lt;/h3&gt;
 &lt;p&gt;The panel was composed by:&lt;/p&gt;
@@ -594,16 +923,16 @@ dev.off()&lt;/code&gt;&lt;/pre&gt;
 &lt;li&gt;Child separation is just one of the consequences of the current’s administration immigration policies implemented and enforced by the Department of Justice (ultimately headed by Jeff Sessions, the US Attorney General).&lt;/li&gt;
 &lt;li&gt;The US is the only country (to the panel’s members knowledge) with a child separation policy.&lt;/li&gt;
 &lt;li&gt;Due to empathy many individuals across political lines reacted against child separation.&lt;/li&gt;
-&lt;li&gt;The US immigration system won’t really change much even if Democrats get elected. Obama did deport over 2 million individuals, though he prioritized &lt;em&gt;criminals&lt;/em&gt;&lt;a href=&#34;#fn1&#34; class=&#34;footnoteRef&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;Arrested immigrants are not required by law to have representation (a lawyer) provided by the government&lt;a href=&#34;#fn2&#34; class=&#34;footnoteRef&#34; id=&#34;fnref2&#34;&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;The US immigration system won’t really change much even if Democrats get elected. Obama did deport over 2 million individuals, though he prioritized &lt;em&gt;criminals&lt;/em&gt;&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Arrested immigrants are not required by law to have representation (a lawyer) provided by the government&lt;a href=&#34;#fn2&#34; class=&#34;footnote-ref&#34; id=&#34;fnref2&#34;&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;.&lt;/li&gt;
 &lt;li&gt;Minors (say 3 year old children) with no lawyers are being highlighted in the media.&lt;/li&gt;
-&lt;li&gt;Immigration cases where the defendants have lawyers drastically improve&lt;a href=&#34;#fn3&#34; class=&#34;footnoteRef&#34; id=&#34;fnref3&#34;&gt;&lt;sup&gt;3&lt;/sup&gt;&lt;/a&gt; the odds for the defendants.&lt;/li&gt;
+&lt;li&gt;Immigration cases where the defendants have lawyers drastically improve&lt;a href=&#34;#fn3&#34; class=&#34;footnote-ref&#34; id=&#34;fnref3&#34;&gt;&lt;sup&gt;3&lt;/sup&gt;&lt;/a&gt; the odds for the defendants.&lt;/li&gt;
 &lt;li&gt;Immigration judges are human.&lt;/li&gt;
 &lt;li&gt;Immigration judges typically used to (or maybe still do) try to give time for a minor to get a lawyer.&lt;/li&gt;
-&lt;li&gt;Immigration judges are &lt;em&gt;alledgely&lt;/em&gt;&lt;a href=&#34;#fn4&#34; class=&#34;footnoteRef&#34; id=&#34;fnref4&#34;&gt;&lt;sup&gt;4&lt;/sup&gt;&lt;/a&gt; being pressured to meet quotas in the range of 700 to 1,000 cases by year under the current administration. Thus judges sometimes have to close cases in a couple of hours.&lt;/li&gt;
+&lt;li&gt;Immigration judges are &lt;em&gt;alledgely&lt;/em&gt;&lt;a href=&#34;#fn4&#34; class=&#34;footnote-ref&#34; id=&#34;fnref4&#34;&gt;&lt;sup&gt;4&lt;/sup&gt;&lt;/a&gt; being pressured to meet quotas in the range of 700 to 1,000 cases by year under the current administration. Thus judges sometimes have to close cases in a couple of hours.&lt;/li&gt;
 &lt;li&gt;Immigration judges now basically have 2 options for closing a case: order deportation or (I’m missing the correct term) &lt;em&gt;free&lt;/em&gt; the defendant.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;At the end the panel members highlighted that &lt;em&gt;we&lt;/em&gt; should take some type of action&lt;a href=&#34;#fn5&#34; class=&#34;footnoteRef&#34; id=&#34;fnref5&#34;&gt;&lt;sup&gt;5&lt;/sup&gt;&lt;/a&gt; but that we should consider the consequences of our suggested policy changes. They also mentioned that we should take advantage of this moment (child separation got everyone’s attention) to raise the profile of the other problems with the current immigration policies.&lt;/p&gt;
+&lt;p&gt;At the end the panel members highlighted that &lt;em&gt;we&lt;/em&gt; should take some type of action&lt;a href=&#34;#fn5&#34; class=&#34;footnote-ref&#34; id=&#34;fnref5&#34;&gt;&lt;sup&gt;5&lt;/sup&gt;&lt;/a&gt; but that we should consider the consequences of our suggested policy changes. They also mentioned that we should take advantage of this moment (child separation got everyone’s attention) to raise the profile of the other problems with the current immigration policies.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;my-way-of-taking-action-heres-an-idea&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;My way of taking action: here’s an idea&lt;/h3&gt;
@@ -626,7 +955,7 @@ dev.off()&lt;/code&gt;&lt;/pre&gt;
 &lt;li&gt;State where the hearing occurred.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Then using machine learning (maybe with deep learning methods) process the text and try to determine potential suggestions an actual defendant’s lawyer would give to its defendant or respond to the judge/government’s lawyer. It might not always get things right, but I imagine that it would be better than the current state of affairs.&lt;/p&gt;
-&lt;p&gt;The automatic lawyer would need then to work as say a phone app that listens to what others are saying in the room. Say have 3 icons with one per person present (judge, defendant, gov’s lawyer). Then the defendant presses each button when each person is talking. The app then shows some 1 to say 3 suggested responses (with translations)&lt;a href=&#34;#fn6&#34; class=&#34;footnoteRef&#34; id=&#34;fnref6&#34;&gt;&lt;sup&gt;6&lt;/sup&gt;&lt;/a&gt; and responds for the defendant in English once the defendant chooses an option (or goes with the top one).&lt;/p&gt;
+&lt;p&gt;The automatic lawyer would need then to work as say a phone app that listens to what others are saying in the room. Say have 3 icons with one per person present (judge, defendant, gov’s lawyer). Then the defendant presses each button when each person is talking. The app then shows some 1 to say 3 suggested responses (with translations)&lt;a href=&#34;#fn6&#34; class=&#34;footnote-ref&#34; id=&#34;fnref6&#34;&gt;&lt;sup&gt;6&lt;/sup&gt;&lt;/a&gt; and responds for the defendant in English once the defendant chooses an option (or goes with the top one).&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;implementing-an-initial-version-of-the-app&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Implementing an initial version of the app&lt;/h3&gt;
@@ -645,10 +974,7 @@ dev.off()&lt;/code&gt;&lt;/pre&gt;
 &lt;li&gt;Category information for the court hearing (maybe cases can be grouped into a few categories)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;then I imagine that the app would be able to have more personalized experience, like re-adjust the suggestions based on which court you are located at and adapt the translations to the Spanish version the defendant is most familiar with (we say &lt;em&gt;buddy&lt;/em&gt; in so many different ways as shown below).&lt;/p&gt;
-&lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;http://lcolladotor.github.io/post/2018-09-17-what-about-a-lawyer-like-app-as-the-mininum-help-for-defandants-in-immigration-cases_files/bromap.png&#34; width=&#34;500&#34; /&gt;
-
-&lt;/div&gt;
+&lt;p&gt;&lt;img src=&#34;http://lcolladotor.github.io/post/2018-09-17-what-about-a-lawyer-like-app-as-the-mininum-help-for-defandants-in-immigration-cases_files/bromap.png&#34; width=&#34;500&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.facebook.com/pictoline/photos/a.1611821172410355.1073741828.1598399590419180/1623937737865365/?type=1&amp;amp;fref=nf&#34;&gt;Image source&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;The app could also be connected to remote human immigration lawyers than can intervene remotely when the suggestions algorithm doensn’t know what to do. Maybe this could be part of some social service that immigration lawyers (regardless of their personal political preferences) could do as some elective during their formation.&lt;/p&gt;
 &lt;/div&gt;
@@ -666,97 +992,132 @@ dev.off()&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;This idea has potentially many flaws because like any system, people on both sides will try to game it. This is where having a large set of transcripts would be useful as well as continuous updates to the algorithm such that gaming the system actually becomes hard.&lt;/p&gt;
 &lt;p&gt;As you can see, this is just an idea, or a collection of them around one theme. It would need serious work to implement.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div id=&#34;acknowledgements&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Acknowledgements&lt;/h3&gt;
+&lt;div id=&#34;acknowledgments&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Acknowledgments&lt;/h3&gt;
 &lt;p&gt;Do you want to listen to the whole panel discussion? From this tweet it looks like the recording will be available online:&lt;/p&gt;
 &lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Thank you &lt;a href=&#34;https://twitter.com/ColleenKraft?ref_src=twsrc%5Etfw&#34;&gt;@ColleenKraft&lt;/a&gt; (&lt;a href=&#34;https://twitter.com/AmerAcadPeds?ref_src=twsrc%5Etfw&#34;&gt;@AmerAcadPeds&lt;/a&gt;), &lt;a href=&#34;https://twitter.com/EricSchwartzRI?ref_src=twsrc%5Etfw&#34;&gt;@EricSchwartzRI&lt;/a&gt; (&lt;a href=&#34;https://twitter.com/RefugeesIntl?ref_src=twsrc%5Etfw&#34;&gt;@RefugeesIntl&lt;/a&gt;), George Escobar (CASA de Maryland) &amp;amp; &lt;a href=&#34;https://twitter.com/pbspiegel?ref_src=twsrc%5Etfw&#34;&gt;@pbspiegel&lt;/a&gt; (&lt;a href=&#34;https://twitter.com/Humanit_Health?ref_src=twsrc%5Etfw&#34;&gt;@Humanit_Health&lt;/a&gt;) for participating in today&amp;#39;s panel. A recorded version of the talk will be available on the &lt;a href=&#34;https://twitter.com/Humanit_Health?ref_src=twsrc%5Etfw&#34;&gt;@Humanit_Health&lt;/a&gt; website: &lt;a href=&#34;https://t.co/nXAvI5KJkm&#34;&gt;https://t.co/nXAvI5KJkm&lt;/a&gt;&lt;/p&gt;&amp;mdash; JHU Public Health (@JohnsHopkinsSPH) &lt;a href=&#34;https://twitter.com/JohnsHopkinsSPH/status/1041732455865171972?ref_src=twsrc%5Etfw&#34;&gt;September 17, 2018&lt;/a&gt;&lt;/blockquote&gt;
 &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
 
 &lt;p&gt;This blog post was made possible thanks to:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;em&gt;&lt;a href=&#34;https://bioconductor.org/packages/3.8/BiocStyle&#34;&gt;BiocStyle&lt;/a&gt;&lt;/em&gt; &lt;a id=&#39;cite-Oles_2018&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://github.com/Bioconductor/BiocStyle&#39;&gt;Oleś, Morgan, and Huber, 2018&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;a href=&#34;https://bioconductor.org/packages/3.10/BiocStyle&#34;&gt;BiocStyle&lt;/a&gt;&lt;/em&gt; &lt;a id=&#39;cite-Oles_2020&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://github.com/Bioconductor/BiocStyle&#39;&gt;Oleś, Morgan, and Huber, 2020&lt;/a&gt;)&lt;/li&gt;
 &lt;li&gt;&lt;em&gt;&lt;a href=&#34;https://CRAN.R-project.org/package=blogdown&#34;&gt;blogdown&lt;/a&gt;&lt;/em&gt; &lt;a id=&#39;cite-Xie_2017&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://github.com/rstudio/blogdown&#39;&gt;Xie, Hill, and Thomas, 2017&lt;/a&gt;)&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;&lt;a href=&#34;https://CRAN.R-project.org/package=devtools&#34;&gt;devtools&lt;/a&gt;&lt;/em&gt; &lt;a id=&#39;cite-Wickham_2018&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://CRAN.R-project.org/package=devtools&#39;&gt;Wickham, Hester, and Chang, 2018&lt;/a&gt;)&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;&lt;a href=&#34;https://CRAN.R-project.org/package=knitcitations&#34;&gt;knitcitations&lt;/a&gt;&lt;/em&gt; &lt;a id=&#39;cite-Boettiger_2017&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://CRAN.R-project.org/package=knitcitations&#39;&gt;Boettiger, 2017&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;a href=&#34;https://CRAN.R-project.org/package=devtools&#34;&gt;devtools&lt;/a&gt;&lt;/em&gt; &lt;a id=&#39;cite-Wickham_2019&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://CRAN.R-project.org/package=devtools&#39;&gt;Wickham, Hester, and Chang, 2019&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;a href=&#34;https://CRAN.R-project.org/package=knitcitations&#34;&gt;knitcitations&lt;/a&gt;&lt;/em&gt; &lt;a id=&#39;cite-Boettiger_2019&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://CRAN.R-project.org/package=knitcitations&#39;&gt;Boettiger, 2019&lt;/a&gt;)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div id=&#34;references&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;References&lt;/h3&gt;
 &lt;p&gt;
-&lt;a id=&#39;bib-Boettiger_2017&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-Boettiger_2017&#34;&gt;[1]&lt;/a&gt;&lt;cite&gt; C. Boettiger. &lt;em&gt;knitcitations: Citations for ‘Knitr’ Markdown Files&lt;/em&gt;. R package version 1.0.8. 2017. URL: &lt;a href=&#34;https://CRAN.R-project.org/package=knitcitations&#34;&gt;https://CRAN.R-project.org/package=knitcitations&lt;/a&gt;.&lt;/cite&gt;
+&lt;a id=&#39;bib-Boettiger_2019&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-Boettiger_2019&#34;&gt;[1]&lt;/a&gt;&lt;cite&gt;
+C. Boettiger.
+&lt;em&gt;knitcitations: Citations for ‘Knitr’ Markdown Files&lt;/em&gt;.
+R package version 1.0.10.
+2019.
+URL: &lt;a href=&#34;https://CRAN.R-project.org/package=knitcitations&#34;&gt;https://CRAN.R-project.org/package=knitcitations&lt;/a&gt;.&lt;/cite&gt;
 &lt;/p&gt;
 &lt;p&gt;
-&lt;a id=&#39;bib-Oles_2018&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-Oles_2018&#34;&gt;[2]&lt;/a&gt;&lt;cite&gt; A. Oleś, M. Morgan and W. Huber. &lt;em&gt;BiocStyle: Standard styles for vignettes and other Bioconductor documents&lt;/em&gt;. R package version 2.9.6. 2018. URL: &lt;a href=&#34;https://github.com/Bioconductor/BiocStyle&#34;&gt;https://github.com/Bioconductor/BiocStyle&lt;/a&gt;.&lt;/cite&gt;
+&lt;a id=&#39;bib-Oles_2020&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-Oles_2020&#34;&gt;[2]&lt;/a&gt;&lt;cite&gt;
+A. Oleś, M. Morgan, and W. Huber.
+&lt;em&gt;BiocStyle: Standard styles for vignettes and other Bioconductor documents&lt;/em&gt;.
+R package version 2.14.4.
+2020.
+URL: &lt;a href=&#34;https://github.com/Bioconductor/BiocStyle&#34;&gt;https://github.com/Bioconductor/BiocStyle&lt;/a&gt;.&lt;/cite&gt;
 &lt;/p&gt;
 &lt;p&gt;
-&lt;a id=&#39;bib-Wickham_2018&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-Wickham_2018&#34;&gt;[3]&lt;/a&gt;&lt;cite&gt; H. Wickham, J. Hester and W. Chang. &lt;em&gt;devtools: Tools to Make Developing R Packages Easier&lt;/em&gt;. R package version 1.13.6. 2018. URL: &lt;a href=&#34;https://CRAN.R-project.org/package=devtools&#34;&gt;https://CRAN.R-project.org/package=devtools&lt;/a&gt;.&lt;/cite&gt;
+&lt;a id=&#39;bib-Wickham_2019&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-Wickham_2019&#34;&gt;[3]&lt;/a&gt;&lt;cite&gt;
+H. Wickham, J. Hester, and W. Chang.
+&lt;em&gt;devtools: Tools to Make Developing R Packages Easier&lt;/em&gt;.
+R package version 2.2.1.
+2019.
+URL: &lt;a href=&#34;https://CRAN.R-project.org/package=devtools&#34;&gt;https://CRAN.R-project.org/package=devtools&lt;/a&gt;.&lt;/cite&gt;
 &lt;/p&gt;
 &lt;p&gt;
-&lt;a id=&#39;bib-Xie_2017&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-Xie_2017&#34;&gt;[4]&lt;/a&gt;&lt;cite&gt; Y. Xie, A. P. Hill and A. Thomas. &lt;em&gt;blogdown: Creating Websites with R Markdown&lt;/em&gt;. ISBN 978-0815363729. Boca Raton, Florida: Chapman and Hall/CRC, 2017. URL: &lt;a href=&#34;https://github.com/rstudio/blogdown&#34;&gt;https://github.com/rstudio/blogdown&lt;/a&gt;.&lt;/cite&gt;
+&lt;a id=&#39;bib-Xie_2017&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-Xie_2017&#34;&gt;[4]&lt;/a&gt;&lt;cite&gt;
+Y. Xie, A. P. Hill, and A. Thomas.
+&lt;em&gt;blogdown: Creating Websites with R Markdown&lt;/em&gt;.
+ISBN 978-0815363729.
+Boca Raton, Florida: Chapman and Hall/CRC, 2017.
+URL: &lt;a href=&#34;https://github.com/rstudio/blogdown&#34;&gt;https://github.com/rstudio/blogdown&lt;/a&gt;.&lt;/cite&gt;
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;reproducibility&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Reproducibility&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;## Session info ----------------------------------------------------------------------------------------------------------&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;##  setting  value                       
-##  version  R version 3.5.1 (2018-07-02)
+&lt;pre&gt;&lt;code&gt;## ─ Session info ───────────────────────────────────────────────────────────────────────────────────────────────────────
+##  setting  value                       
+##  version  R version 3.6.2 (2019-12-12)
+##  os       macOS Catalina 10.15.2      
 ##  system   x86_64, darwin15.6.0        
 ##  ui       X11                         
 ##  language (EN)                        
 ##  collate  en_US.UTF-8                 
+##  ctype    en_US.UTF-8                 
 ##  tz       America/New_York            
-##  date     2018-09-17&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## Packages --------------------------------------------------------------------------------------------------------------&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;##  package       * version date       source                            
-##  backports       1.1.2   2017-12-13 cran (@1.1.2)                     
-##  base          * 3.5.1   2018-07-09 local                             
-##  bibtex          0.4.2   2017-06-30 CRAN (R 3.5.0)                    
-##  BiocManager     1.30.2  2018-08-24 CRAN (R 3.5.0)                    
-##  BiocStyle     * 2.9.6   2018-08-19 Bioconductor                      
-##  blogdown        0.8     2018-07-15 CRAN (R 3.5.0)                    
-##  bookdown        0.7     2018-02-18 CRAN (R 3.5.0)                    
-##  colorout      * 1.2-0   2018-05-03 Github (jalvesaq/colorout@c42088d)
-##  compiler        3.5.1   2018-07-09 local                             
-##  datasets      * 3.5.1   2018-07-09 local                             
-##  devtools      * 1.13.6  2018-06-27 CRAN (R 3.5.0)                    
-##  digest          0.6.16  2018-08-22 CRAN (R 3.5.0)                    
-##  evaluate        0.11    2018-07-17 CRAN (R 3.5.0)                    
-##  graphics      * 3.5.1   2018-07-09 local                             
-##  grDevices     * 3.5.1   2018-07-09 local                             
-##  htmltools       0.3.6   2017-04-28 cran (@0.3.6)                     
-##  httr            1.3.1   2017-08-20 CRAN (R 3.5.0)                    
-##  jsonlite        1.5     2017-06-01 CRAN (R 3.5.0)                    
-##  knitcitations * 1.0.8   2017-07-04 CRAN (R 3.5.0)                    
-##  knitr           1.20    2018-02-20 cran (@1.20)                      
-##  lubridate       1.7.4   2018-04-11 CRAN (R 3.5.0)                    
-##  magrittr        1.5     2014-11-22 cran (@1.5)                       
-##  memoise         1.1.0   2017-04-21 CRAN (R 3.5.0)                    
-##  methods       * 3.5.1   2018-07-09 local                             
-##  plyr            1.8.4   2016-06-08 cran (@1.8.4)                     
-##  R6              2.2.2   2017-06-17 CRAN (R 3.5.0)                    
-##  Rcpp            0.12.18 2018-07-23 CRAN (R 3.5.1)                    
-##  RefManageR      1.2.0   2018-04-25 CRAN (R 3.5.0)                    
-##  rmarkdown       1.10    2018-06-11 CRAN (R 3.5.0)                    
-##  rprojroot       1.3-2   2018-01-03 cran (@1.3-2)                     
-##  stats         * 3.5.1   2018-07-09 local                             
-##  stringi         1.2.4   2018-07-20 CRAN (R 3.5.0)                    
-##  stringr         1.3.1   2018-05-10 CRAN (R 3.5.0)                    
-##  tools           3.5.1   2018-07-09 local                             
-##  utils         * 3.5.1   2018-07-09 local                             
-##  withr           2.1.2   2018-03-15 CRAN (R 3.5.0)                    
-##  xfun            0.3     2018-07-06 CRAN (R 3.5.0)                    
-##  xml2            1.2.0   2018-01-24 CRAN (R 3.5.0)                    
-##  yaml            2.2.0   2018-07-25 CRAN (R 3.5.0)&lt;/code&gt;&lt;/pre&gt;
+##  date     2020-02-12                  
+## 
+## ─ Packages ───────────────────────────────────────────────────────────────────────────────────────────────────────────
+##  package       * version date       lib source                            
+##  assertthat      0.2.1   2019-03-21 [1] CRAN (R 3.6.0)                    
+##  backports       1.1.5   2019-10-02 [1] CRAN (R 3.6.0)                    
+##  bibtex          0.4.2.2 2020-01-02 [1] CRAN (R 3.6.0)                    
+##  BiocManager     1.30.10 2019-11-16 [1] CRAN (R 3.6.1)                    
+##  BiocStyle     * 2.14.4  2020-01-09 [1] Bioconductor                      
+##  blogdown        0.17    2019-11-13 [1] CRAN (R 3.6.1)                    
+##  bookdown        0.17    2020-01-11 [1] CRAN (R 3.6.0)                    
+##  callr           3.4.1   2020-01-24 [1] CRAN (R 3.6.2)                    
+##  cli             2.0.1   2020-01-08 [1] CRAN (R 3.6.0)                    
+##  colorout      * 1.2-1   2019-05-07 [1] Github (jalvesaq/colorout@7ea9440)
+##  crayon          1.3.4   2017-09-16 [1] CRAN (R 3.6.0)                    
+##  desc            1.2.0   2018-05-01 [1] CRAN (R 3.6.0)                    
+##  devtools      * 2.2.1   2019-09-24 [1] CRAN (R 3.6.1)                    
+##  digest          0.6.23  2019-11-23 [1] CRAN (R 3.6.0)                    
+##  ellipsis        0.3.0   2019-09-20 [1] CRAN (R 3.6.0)                    
+##  evaluate        0.14    2019-05-28 [1] CRAN (R 3.6.0)                    
+##  fansi           0.4.1   2020-01-08 [1] CRAN (R 3.6.0)                    
+##  fs              1.3.1   2019-05-06 [1] CRAN (R 3.6.0)                    
+##  glue            1.3.1   2019-03-12 [1] CRAN (R 3.6.0)                    
+##  htmltools       0.4.0   2019-10-04 [1] CRAN (R 3.6.0)                    
+##  httr            1.4.1   2019-08-05 [1] CRAN (R 3.6.0)                    
+##  jsonlite        1.6     2018-12-07 [1] CRAN (R 3.6.0)                    
+##  knitcitations * 1.0.10  2019-09-15 [1] CRAN (R 3.6.0)                    
+##  knitr           1.27    2020-01-16 [1] CRAN (R 3.6.0)                    
+##  lubridate       1.7.4   2018-04-11 [1] CRAN (R 3.6.0)                    
+##  magrittr        1.5     2014-11-22 [1] CRAN (R 3.6.0)                    
+##  memoise         1.1.0   2017-04-21 [1] CRAN (R 3.6.0)                    
+##  pkgbuild        1.0.6   2019-10-09 [1] CRAN (R 3.6.0)                    
+##  pkgload         1.0.2   2018-10-29 [1] CRAN (R 3.6.0)                    
+##  plyr            1.8.5   2019-12-10 [1] CRAN (R 3.6.0)                    
+##  prettyunits     1.1.1   2020-01-24 [1] CRAN (R 3.6.2)                    
+##  processx        3.4.1   2019-07-18 [1] CRAN (R 3.6.0)                    
+##  ps              1.3.0   2018-12-21 [1] CRAN (R 3.6.0)                    
+##  R6              2.4.1   2019-11-12 [1] CRAN (R 3.6.1)                    
+##  Rcpp            1.0.3   2019-11-08 [1] CRAN (R 3.6.0)                    
+##  RefManageR      1.2.12  2019-04-03 [1] CRAN (R 3.6.0)                    
+##  remotes         2.1.0   2019-06-24 [1] CRAN (R 3.6.0)                    
+##  rlang           0.4.3   2020-01-24 [1] CRAN (R 3.6.2)                    
+##  rmarkdown       2.1     2020-01-20 [1] CRAN (R 3.6.0)                    
+##  rprojroot       1.3-2   2018-01-03 [1] CRAN (R 3.6.0)                    
+##  sessioninfo     1.1.1   2018-11-05 [1] CRAN (R 3.6.0)                    
+##  stringi         1.4.5   2020-01-11 [1] CRAN (R 3.6.0)                    
+##  stringr         1.4.0   2019-02-10 [1] CRAN (R 3.6.0)                    
+##  testthat        2.3.1   2019-12-01 [1] CRAN (R 3.6.0)                    
+##  usethis       * 1.5.1   2019-07-04 [1] CRAN (R 3.6.0)                    
+##  withr           2.1.2   2018-03-15 [1] CRAN (R 3.6.0)                    
+##  xfun            0.12    2020-01-13 [1] CRAN (R 3.6.0)                    
+##  xml2            1.2.2   2019-08-09 [1] CRAN (R 3.6.0)                    
+##  yaml            2.2.0   2018-07-25 [1] CRAN (R 3.6.0)                    
+## 
+## [1] /Library/Frameworks/R.framework/Versions/3.6/Resources/library&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;div class=&#34;footnotes&#34;&gt;
 &lt;hr /&gt;
 &lt;ol&gt;
-&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;George Escobar mentioned that they protested the fact that a DUI labeled someone as a criminal, but well, Trump has gone beyond DUIs arrested many individuals with no criminal history.&lt;a href=&#34;#fnref1&#34;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li id=&#34;fn2&#34;&gt;&lt;p&gt;George Escobar highlighted that one path of action is to convince local governments to fund/provide lawyers to these individuals.&lt;a href=&#34;#fnref2&#34;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li id=&#34;fn3&#34;&gt;&lt;p&gt;I don’t know by how much.&lt;a href=&#34;#fnref3&#34;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li id=&#34;fn4&#34;&gt;&lt;p&gt;Information has leaked about this but I guess that it’s not completely public info.&lt;a href=&#34;#fnref4&#34;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li id=&#34;fn5&#34;&gt;&lt;p&gt;Could be with your vote, helping members in your community that are affected, improving how we translate research into terms everyone understands, improving the education about the violent reality many are trying to escape by coming to the US, approaching local governments, etc.&lt;a href=&#34;#fnref5&#34;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li id=&#34;fn6&#34;&gt;&lt;p&gt;The app could show the text but also should &lt;em&gt;read&lt;/em&gt; the translations since very young children will very likely not know how to read. I think that the app should never assume that the defendant knows how to read.&lt;a href=&#34;#fnref6&#34;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;George Escobar mentioned that they protested the fact that a DUI labeled someone as a criminal, but well, Trump has gone beyond DUIs arrested many individuals with no criminal history.&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn2&#34;&gt;&lt;p&gt;George Escobar highlighted that one path of action is to convince local governments to fund/provide lawyers to these individuals.&lt;a href=&#34;#fnref2&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn3&#34;&gt;&lt;p&gt;I don’t know by how much.&lt;a href=&#34;#fnref3&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn4&#34;&gt;&lt;p&gt;Information has leaked about this but I guess that it’s not completely public info.&lt;a href=&#34;#fnref4&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn5&#34;&gt;&lt;p&gt;Could be with your vote, helping members in your community that are affected, improving how we translate research into terms everyone understands, improving the education about the violent reality many are trying to escape by coming to the US, approaching local governments, etc.&lt;a href=&#34;#fnref5&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn6&#34;&gt;&lt;p&gt;The app could show the text but also should &lt;em&gt;read&lt;/em&gt; the translations since very young children will very likely not know how to read. I think that the app should never assume that the defendant knows how to read.&lt;a href=&#34;#fnref6&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;
 </description>
@@ -778,28 +1139,19 @@ dev.off()&lt;/code&gt;&lt;/pre&gt;
 &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
 
 &lt;p&gt;My job was to give the first keynote to pump up everyone at the workshop. So I had a bit of trouble sleeping and woke up remembering a dream. If you know me, I &lt;em&gt;never&lt;/em&gt; dream: or never remember my dreams. It was a dream of my grandmother Mercedes Vides Tovar.&lt;/p&gt;
-&lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;http://lcolladotor.github.io/post/2018-07-30-harrassment-diversity-in-science-and-inspiraton-from-my-grandmother_files/2018-07-30%2018.15.38.jpg&#34; width=&#34;400&#34; /&gt;
-
-&lt;/div&gt;
+&lt;p&gt;&lt;img src=&#34;http://lcolladotor.github.io/post/2018-07-30-harrassment-diversity-in-science-and-inspiraton-from-my-grandmother_files/2018-07-30%2018.15.38.jpg&#34; width=&#34;400&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;grandma&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Grandma&lt;/h3&gt;
 &lt;p&gt;I have many things from my grandparents in me, like Juan’s joviality, Rosa’s love, Rolando’s tenacity to overcome tough moments. Or so I like to think. But my grandma, &lt;em&gt;Abue&lt;/em&gt;, has always been an academic inspiration. She overcame many challenges in her life. She studied at the university to become a doctor, even without total family support (to avoid details). She was a trailblazer in the field of Epidemiology. She had to flee her native country leaving everything behind. She studied at the &lt;a href=&#34;https://www.pasteur.fr/en&#34;&gt;Institut Pasteur&lt;/a&gt; in Paris, France while caring for 3 adolescents as a single mom. She studied in a time when &lt;a href=&#34;https://twitter.com/search?q=womeninstem&#34;&gt;WomenInSTEM&lt;/a&gt; had to disguise themselves up as men and were the targets of jokes all the time. Rolando, her classmate at the university, has told me a handful of these &lt;em&gt;jokes&lt;/em&gt;: I wouldn’t be the only one to call many of them harassment. She left academia to start her own business in public health. She was the main health supervisor in the first international conference my dad organized early in his career (which helped him launch it): I was the 6 year old in charge of delivering the gifts in the closing ceremony ^^. She would answer my phone calls when I first started French school and my dad was busy at work: thanks to their time in Paris my dad fell in love with the French way of teaching math.&lt;/p&gt;
-&lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;http://lcolladotor.github.io/post/2018-07-30-harrassment-diversity-in-science-and-inspiraton-from-my-grandmother_files/2018-07-30%2018.41.52.jpg&#34; width=&#34;400&#34; /&gt;
-
-&lt;/div&gt;
+&lt;p&gt;&lt;img src=&#34;http://lcolladotor.github.io/post/2018-07-30-harrassment-diversity-in-science-and-inspiraton-from-my-grandmother_files/2018-07-30%2018.41.52.jpg&#34; width=&#34;400&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;I actually don’t know much more. She passed away when I was 13 after a years long battle with disease. Google tells me that she is a co-author of at least three titles in the field of Public Health:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;1968 &lt;a href=&#34;http://saludpublica.mx/index.php/spm/article/download/3327/3212&#34;&gt;Organización del servicio social de los pasantes de Odontología en México&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;1970 &lt;a href=&#34;http://saludpublica.mx/index.php/spm/article/viewFile/2346/2234&#34;&gt;Situación epidemiológica de la frontera norte de México y programa de vigilancia&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;1972 &lt;a href=&#34;http://saludpublica.mx/index.php/spm/article/download/1874/1822&#34;&gt;Proyecto de organización y funcionamiento de los laboratorios de salud pública en los estados de la frontera norte&lt;/a&gt;: also, she’s the sole author.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;http://lcolladotor.github.io/post/2018-07-30-harrassment-diversity-in-science-and-inspiraton-from-my-grandmother_files/2018-07-30%2017.22.57.jpg&#34; width=&#34;400&#34; /&gt;
-
-&lt;/div&gt;
+&lt;p&gt;&lt;img src=&#34;http://lcolladotor.github.io/post/2018-07-30-harrassment-diversity-in-science-and-inspiraton-from-my-grandmother_files/2018-07-30%2017.22.57.jpg&#34; width=&#34;400&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;I did inherit her souvenirs from her trips (my dad also loves them) and something that is precious to me: a medal with her name. I’ve looked at that medal next to my bed in Mexico many times. I would look at it, search for inspiration, then try harder to solve whatever academic problem I had.&lt;/p&gt;
 &lt;p&gt;In my dream there was a moment where I was sitting next to her (me in my current adult form) and we were revising many of our shared moments. She was explaining to me things she couldn’t explain before because I wouldn’t have understood them. She also pumped me up before my day and wished me luck for my talk. I think that I delivered ^^&lt;/p&gt;
 &lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;es&#34; dir=&#34;ltr&#34;&gt;&lt;a href=&#34;https://twitter.com/CDSBMexico?ref_src=twsrc%5Etfw&#34;&gt;@CDSBMexico&lt;/a&gt; &lt;a href=&#34;https://twitter.com/fellgernon?ref_src=twsrc%5Etfw&#34;&gt;@fellgernon&lt;/a&gt; dio una charla inspiradora &amp;lt;3 &lt;a href=&#34;https://twitter.com/hashtag/collaboration?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#collaboration&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/rstats?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#rstats&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/TIBs2018?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#TIBs2018&lt;/a&gt; &lt;a href=&#34;https://twitter.com/nnb_unam?ref_src=twsrc%5Etfw&#34;&gt;@nnb_unam&lt;/a&gt;&lt;/p&gt;&amp;mdash; Semiramis (@semiramis_cj) &lt;a href=&#34;https://twitter.com/semiramis_cj/status/1023953817187090435?ref_src=twsrc%5Etfw&#34;&gt;July 30, 2018&lt;/a&gt;&lt;/blockquote&gt;
@@ -849,79 +1201,109 @@ dev.off()&lt;/code&gt;&lt;/pre&gt;
 &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
 
 &lt;/div&gt;
-&lt;div id=&#34;acknowledgements&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Acknowledgements&lt;/h3&gt;
+&lt;div id=&#34;acknowledgments&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Acknowledgments&lt;/h3&gt;
 &lt;p&gt;This blog post was made possible thanks to:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;em&gt;&lt;a href=&#34;https://CRAN.R-project.org/package=blogdown&#34;&gt;blogdown&lt;/a&gt;&lt;/em&gt; &lt;a id=&#39;cite-Xie_2017&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://github.com/rstudio/blogdown&#39;&gt;Xie, Hill, and Thomas, 2017&lt;/a&gt;)&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;&lt;a href=&#34;https://CRAN.R-project.org/package=devtools&#34;&gt;devtools&lt;/a&gt;&lt;/em&gt; &lt;a id=&#39;cite-Wickham_2018&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://CRAN.R-project.org/package=devtools&#39;&gt;Wickham, Hester, and Chang, 2018&lt;/a&gt;)&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;&lt;a href=&#34;https://CRAN.R-project.org/package=knitcitations&#34;&gt;knitcitations&lt;/a&gt;&lt;/em&gt; &lt;a id=&#39;cite-Boettiger_2017&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://CRAN.R-project.org/package=knitcitations&#39;&gt;Boettiger, 2017&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;a href=&#34;https://CRAN.R-project.org/package=devtools&#34;&gt;devtools&lt;/a&gt;&lt;/em&gt; &lt;a id=&#39;cite-Wickham_2019&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://CRAN.R-project.org/package=devtools&#39;&gt;Wickham, Hester, and Chang, 2019&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;a href=&#34;https://CRAN.R-project.org/package=knitcitations&#34;&gt;knitcitations&lt;/a&gt;&lt;/em&gt; &lt;a id=&#39;cite-Boettiger_2019&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://CRAN.R-project.org/package=knitcitations&#39;&gt;Boettiger, 2019&lt;/a&gt;)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div id=&#34;references&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;References&lt;/h3&gt;
 &lt;p&gt;
-&lt;a id=&#39;bib-Boettiger_2017&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-Boettiger_2017&#34;&gt;[1]&lt;/a&gt;&lt;cite&gt; C. Boettiger. &lt;em&gt;knitcitations: Citations for ‘Knitr’ Markdown Files&lt;/em&gt;. R package version 1.0.8. 2017. URL: &lt;a href=&#34;https://CRAN.R-project.org/package=knitcitations&#34;&gt;https://CRAN.R-project.org/package=knitcitations&lt;/a&gt;.&lt;/cite&gt;
+&lt;a id=&#39;bib-Boettiger_2019&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-Boettiger_2019&#34;&gt;[1]&lt;/a&gt;&lt;cite&gt;
+C. Boettiger.
+&lt;em&gt;knitcitations: Citations for ‘Knitr’ Markdown Files&lt;/em&gt;.
+R package version 1.0.10.
+2019.
+URL: &lt;a href=&#34;https://CRAN.R-project.org/package=knitcitations&#34;&gt;https://CRAN.R-project.org/package=knitcitations&lt;/a&gt;.&lt;/cite&gt;
 &lt;/p&gt;
 &lt;p&gt;
-&lt;a id=&#39;bib-Wickham_2018&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-Wickham_2018&#34;&gt;[2]&lt;/a&gt;&lt;cite&gt; H. Wickham, J. Hester and W. Chang. &lt;em&gt;devtools: Tools to Make Developing R Packages Easier&lt;/em&gt;. R package version 1.13.6. 2018. URL: &lt;a href=&#34;https://CRAN.R-project.org/package=devtools&#34;&gt;https://CRAN.R-project.org/package=devtools&lt;/a&gt;.&lt;/cite&gt;
+&lt;a id=&#39;bib-Wickham_2019&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-Wickham_2019&#34;&gt;[2]&lt;/a&gt;&lt;cite&gt;
+H. Wickham, J. Hester, and W. Chang.
+&lt;em&gt;devtools: Tools to Make Developing R Packages Easier&lt;/em&gt;.
+R package version 2.2.1.
+2019.
+URL: &lt;a href=&#34;https://CRAN.R-project.org/package=devtools&#34;&gt;https://CRAN.R-project.org/package=devtools&lt;/a&gt;.&lt;/cite&gt;
 &lt;/p&gt;
 &lt;p&gt;
-&lt;a id=&#39;bib-Xie_2017&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-Xie_2017&#34;&gt;[3]&lt;/a&gt;&lt;cite&gt; Y. Xie, A. P. Hill and A. Thomas. &lt;em&gt;blogdown: Creating Websites with R Markdown&lt;/em&gt;. ISBN 978-0815363729. Boca Raton, Florida: Chapman and Hall/CRC, 2017. URL: &lt;a href=&#34;https://github.com/rstudio/blogdown&#34;&gt;https://github.com/rstudio/blogdown&lt;/a&gt;.&lt;/cite&gt;
+&lt;a id=&#39;bib-Xie_2017&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-Xie_2017&#34;&gt;[3]&lt;/a&gt;&lt;cite&gt;
+Y. Xie, A. P. Hill, and A. Thomas.
+&lt;em&gt;blogdown: Creating Websites with R Markdown&lt;/em&gt;.
+ISBN 978-0815363729.
+Boca Raton, Florida: Chapman and Hall/CRC, 2017.
+URL: &lt;a href=&#34;https://github.com/rstudio/blogdown&#34;&gt;https://github.com/rstudio/blogdown&lt;/a&gt;.&lt;/cite&gt;
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;reproducibility&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Reproducibility&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;## Session info ----------------------------------------------------------------------------------------------------------&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;##  setting  value                       
-##  version  R version 3.5.1 (2018-07-02)
+&lt;pre&gt;&lt;code&gt;## ─ Session info ───────────────────────────────────────────────────────────────────────────────────────────────────────
+##  setting  value                       
+##  version  R version 3.6.2 (2019-12-12)
+##  os       macOS Catalina 10.15.2      
 ##  system   x86_64, darwin15.6.0        
 ##  ui       X11                         
 ##  language (EN)                        
 ##  collate  en_US.UTF-8                 
+##  ctype    en_US.UTF-8                 
 ##  tz       America/New_York            
-##  date     2018-09-21&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## Packages --------------------------------------------------------------------------------------------------------------&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;##  package       * version date       source                            
-##  backports       1.1.2   2017-12-13 cran (@1.1.2)                     
-##  base          * 3.5.1   2018-07-09 local                             
-##  bibtex          0.4.2   2017-06-30 CRAN (R 3.5.0)                    
-##  BiocManager     1.30.2  2018-08-24 CRAN (R 3.5.0)                    
-##  BiocStyle     * 2.9.6   2018-08-19 Bioconductor                      
-##  blogdown        0.8     2018-07-15 CRAN (R 3.5.0)                    
-##  bookdown        0.7     2018-02-18 CRAN (R 3.5.0)                    
-##  colorout      * 1.2-0   2018-05-03 Github (jalvesaq/colorout@c42088d)
-##  compiler        3.5.1   2018-07-09 local                             
-##  datasets      * 3.5.1   2018-07-09 local                             
-##  devtools      * 1.13.6  2018-06-27 CRAN (R 3.5.0)                    
-##  digest          0.6.17  2018-09-12 CRAN (R 3.5.1)                    
-##  evaluate        0.11    2018-07-17 CRAN (R 3.5.0)                    
-##  graphics      * 3.5.1   2018-07-09 local                             
-##  grDevices     * 3.5.1   2018-07-09 local                             
-##  htmltools       0.3.6   2017-04-28 cran (@0.3.6)                     
-##  httr            1.3.1   2017-08-20 CRAN (R 3.5.0)                    
-##  jsonlite        1.5     2017-06-01 CRAN (R 3.5.0)                    
-##  knitcitations * 1.0.8   2017-07-04 CRAN (R 3.5.0)                    
-##  knitr           1.20    2018-02-20 cran (@1.20)                      
-##  lubridate       1.7.4   2018-04-11 CRAN (R 3.5.0)                    
-##  magrittr        1.5     2014-11-22 cran (@1.5)                       
-##  memoise         1.1.0   2017-04-21 CRAN (R 3.5.0)                    
-##  methods       * 3.5.1   2018-07-09 local                             
-##  plyr            1.8.4   2016-06-08 cran (@1.8.4)                     
-##  R6              2.2.2   2017-06-17 CRAN (R 3.5.0)                    
-##  Rcpp            0.12.18 2018-07-23 CRAN (R 3.5.1)                    
-##  RefManageR      1.2.0   2018-04-25 CRAN (R 3.5.0)                    
-##  rmarkdown       1.10    2018-06-11 CRAN (R 3.5.0)                    
-##  rprojroot       1.3-2   2018-01-03 cran (@1.3-2)                     
-##  stats         * 3.5.1   2018-07-09 local                             
-##  stringi         1.2.4   2018-07-20 CRAN (R 3.5.0)                    
-##  stringr         1.3.1   2018-05-10 CRAN (R 3.5.0)                    
-##  tools           3.5.1   2018-07-09 local                             
-##  utils         * 3.5.1   2018-07-09 local                             
-##  withr           2.1.2   2018-03-15 CRAN (R 3.5.0)                    
-##  xfun            0.3     2018-07-06 CRAN (R 3.5.0)                    
-##  xml2            1.2.0   2018-01-24 CRAN (R 3.5.0)                    
-##  yaml            2.2.0   2018-07-25 CRAN (R 3.5.0)&lt;/code&gt;&lt;/pre&gt;
+##  date     2020-02-12                  
+## 
+## ─ Packages ───────────────────────────────────────────────────────────────────────────────────────────────────────────
+##  package       * version date       lib source                            
+##  assertthat      0.2.1   2019-03-21 [1] CRAN (R 3.6.0)                    
+##  backports       1.1.5   2019-10-02 [1] CRAN (R 3.6.0)                    
+##  bibtex          0.4.2.2 2020-01-02 [1] CRAN (R 3.6.0)                    
+##  BiocManager     1.30.10 2019-11-16 [1] CRAN (R 3.6.1)                    
+##  BiocStyle     * 2.14.4  2020-01-09 [1] Bioconductor                      
+##  blogdown        0.17    2019-11-13 [1] CRAN (R 3.6.1)                    
+##  bookdown        0.17    2020-01-11 [1] CRAN (R 3.6.0)                    
+##  callr           3.4.1   2020-01-24 [1] CRAN (R 3.6.2)                    
+##  cli             2.0.1   2020-01-08 [1] CRAN (R 3.6.0)                    
+##  colorout      * 1.2-1   2019-05-07 [1] Github (jalvesaq/colorout@7ea9440)
+##  crayon          1.3.4   2017-09-16 [1] CRAN (R 3.6.0)                    
+##  desc            1.2.0   2018-05-01 [1] CRAN (R 3.6.0)                    
+##  devtools      * 2.2.1   2019-09-24 [1] CRAN (R 3.6.1)                    
+##  digest          0.6.23  2019-11-23 [1] CRAN (R 3.6.0)                    
+##  ellipsis        0.3.0   2019-09-20 [1] CRAN (R 3.6.0)                    
+##  evaluate        0.14    2019-05-28 [1] CRAN (R 3.6.0)                    
+##  fansi           0.4.1   2020-01-08 [1] CRAN (R 3.6.0)                    
+##  fs              1.3.1   2019-05-06 [1] CRAN (R 3.6.0)                    
+##  glue            1.3.1   2019-03-12 [1] CRAN (R 3.6.0)                    
+##  htmltools       0.4.0   2019-10-04 [1] CRAN (R 3.6.0)                    
+##  httr            1.4.1   2019-08-05 [1] CRAN (R 3.6.0)                    
+##  jsonlite        1.6     2018-12-07 [1] CRAN (R 3.6.0)                    
+##  knitcitations * 1.0.10  2019-09-15 [1] CRAN (R 3.6.0)                    
+##  knitr           1.27    2020-01-16 [1] CRAN (R 3.6.0)                    
+##  lubridate       1.7.4   2018-04-11 [1] CRAN (R 3.6.0)                    
+##  magrittr        1.5     2014-11-22 [1] CRAN (R 3.6.0)                    
+##  memoise         1.1.0   2017-04-21 [1] CRAN (R 3.6.0)                    
+##  pkgbuild        1.0.6   2019-10-09 [1] CRAN (R 3.6.0)                    
+##  pkgload         1.0.2   2018-10-29 [1] CRAN (R 3.6.0)                    
+##  plyr            1.8.5   2019-12-10 [1] CRAN (R 3.6.0)                    
+##  prettyunits     1.1.1   2020-01-24 [1] CRAN (R 3.6.2)                    
+##  processx        3.4.1   2019-07-18 [1] CRAN (R 3.6.0)                    
+##  ps              1.3.0   2018-12-21 [1] CRAN (R 3.6.0)                    
+##  R6              2.4.1   2019-11-12 [1] CRAN (R 3.6.1)                    
+##  Rcpp            1.0.3   2019-11-08 [1] CRAN (R 3.6.0)                    
+##  RefManageR      1.2.12  2019-04-03 [1] CRAN (R 3.6.0)                    
+##  remotes         2.1.0   2019-06-24 [1] CRAN (R 3.6.0)                    
+##  rlang           0.4.3   2020-01-24 [1] CRAN (R 3.6.2)                    
+##  rmarkdown       2.1     2020-01-20 [1] CRAN (R 3.6.0)                    
+##  rprojroot       1.3-2   2018-01-03 [1] CRAN (R 3.6.0)                    
+##  sessioninfo     1.1.1   2018-11-05 [1] CRAN (R 3.6.0)                    
+##  stringi         1.4.5   2020-01-11 [1] CRAN (R 3.6.0)                    
+##  stringr         1.4.0   2019-02-10 [1] CRAN (R 3.6.0)                    
+##  testthat        2.3.1   2019-12-01 [1] CRAN (R 3.6.0)                    
+##  usethis       * 1.5.1   2019-07-04 [1] CRAN (R 3.6.0)                    
+##  withr           2.1.2   2018-03-15 [1] CRAN (R 3.6.0)                    
+##  xfun            0.12    2020-01-13 [1] CRAN (R 3.6.0)                    
+##  xml2            1.2.2   2019-08-09 [1] CRAN (R 3.6.0)                    
+##  yaml            2.2.0   2018-07-25 [1] CRAN (R 3.6.0)                    
+## 
+## [1] /Library/Frameworks/R.framework/Versions/3.6/Resources/library&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 </description>
     </item>

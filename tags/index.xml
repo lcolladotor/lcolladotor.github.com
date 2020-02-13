@@ -5,7 +5,7 @@
     <link>/tags/</link>
       <atom:link href=http://lcolladotor.github.io/tags/index.xml rel="self" type="application/rss+xml" />
     <description>Tags</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2011-2020 Leonardo Collado Torres under (CC) BY-NC-SA 4.0. All thoughts and opinions here are my own. Icon is the [R logo](https://www.r-project.org/logo/) modified</copyright><lastBuildDate>Mon, 03 Feb 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2011-2020 Leonardo Collado Torres under (CC) BY-NC-SA 4.0. All thoughts and opinions here are my own. Icon is the [R logo](https://www.r-project.org/logo/) modified</copyright><lastBuildDate>Wed, 12 Feb 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
       <title>Tags</title>
@@ -15,8 +15,40 @@
     <item>
       <title>Academia</title>
       <link>/tags/academia/</link>
-      <pubDate>Mon, 03 Feb 2020 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 12 Feb 2020 00:00:00 +0000</pubDate>
       <guid>/tags/academia/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Diversity</title>
+      <link>/tags/diversity/</link>
+      <pubDate>Wed, 12 Feb 2020 00:00:00 +0000</pubDate>
+      <guid>/tags/diversity/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Help</title>
+      <link>/tags/help/</link>
+      <pubDate>Wed, 12 Feb 2020 00:00:00 +0000</pubDate>
+      <guid>/tags/help/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>rstats</title>
+      <link>/tags/rstats/</link>
+      <pubDate>Wed, 12 Feb 2020 00:00:00 +0000</pubDate>
+      <guid>/tags/rstats/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Teaching</title>
+      <link>/tags/teaching/</link>
+      <pubDate>Wed, 12 Feb 2020 00:00:00 +0000</pubDate>
+      <guid>/tags/teaching/</guid>
       <description></description>
     </item>
     
@@ -41,14 +73,6 @@
       <link>/tags/bioconductor/</link>
       <pubDate>Wed, 18 Sep 2019 00:00:00 +0000</pubDate>
       <guid>/tags/bioconductor/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>rstats</title>
-      <link>/tags/rstats/</link>
-      <pubDate>Wed, 18 Sep 2019 00:00:00 +0000</pubDate>
-      <guid>/tags/rstats/</guid>
       <description></description>
     </item>
     
@@ -141,14 +165,6 @@
     </item>
     
     <item>
-      <title>Diversity</title>
-      <link>/tags/diversity/</link>
-      <pubDate>Thu, 28 Feb 2019 00:00:00 +0000</pubDate>
-      <guid>/tags/diversity/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Baltimore</title>
       <link>/tags/baltimore/</link>
       <pubDate>Tue, 12 Feb 2019 00:00:00 +0000</pubDate>
@@ -185,14 +201,6 @@
       <link>/tags/computing/</link>
       <pubDate>Mon, 12 Nov 2018 00:00:00 +0000</pubDate>
       <guid>/tags/computing/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Help</title>
-      <link>/tags/help/</link>
-      <pubDate>Mon, 12 Nov 2018 00:00:00 +0000</pubDate>
-      <guid>/tags/help/</guid>
       <description></description>
     </item>
     
@@ -297,14 +305,6 @@
       <link>/tags/ropensci/</link>
       <pubDate>Fri, 27 Apr 2018 00:00:00 +0000</pubDate>
       <guid>/tags/ropensci/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Teaching</title>
-      <link>/tags/teaching/</link>
-      <pubDate>Thu, 19 Apr 2018 00:00:00 +0000</pubDate>
-      <guid>/tags/teaching/</guid>
       <description></description>
     </item>
     

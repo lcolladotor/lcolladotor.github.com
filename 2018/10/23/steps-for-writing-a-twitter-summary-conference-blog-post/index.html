@@ -281,7 +281,7 @@ Save links of tweets you want to highlight in your post. Use a hugo-powered blog
     
       <meta property="article:published_time" content="2018-10-23T00:00:00&#43;00:00">
     
-    <meta property="article:modified_time" content="2018-10-24T10:12:25-04:00">
+    <meta property="article:modified_time" content="2020-02-12T22:50:46-05:00">
   
 
   
@@ -310,7 +310,7 @@ Save links of tweets you want to highlight in your post. Use a hugo-powered blog
   "headline": "Steps for writing a Twitter summary conference blog post",
   
   "datePublished": "2018-10-23T00:00:00Z",
-  "dateModified": "2018-10-24T10:12:25-04:00",
+  "dateModified": "2020-02-12T22:50:46-05:00",
   
   "author": {
     "@type": "Person",
@@ -747,7 +747,7 @@ Save links of tweets you want to highlight in your post. Use a hugo-powered blog
           Last updated on
       
     
-    Wed, Oct 24, 2018
+    Wed, Feb 12, 2020
   </span>
   
 
@@ -802,10 +802,10 @@ Save links of tweets you want to highlight in your post. Use a hugo-powered blog
       
 
 
-<p>I recently wrote several blog posts with many tweets<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a> as a way of taking notes during the <a href="http://www.ashg.org/2018meeting/">American Society of Human Genetics 2018 conference</a>. A few friends asked me how I did this <em>so fast</em>. The process can be summarized into the following main steps.</p>
+<p>I recently wrote several blog posts with many tweets<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a> as a way of taking notes during the <a href="http://www.ashg.org/2018meeting/">American Society of Human Genetics 2018 conference</a>. A few friends asked me how I did this <em>so fast</em>. The process can be summarized into the following main steps.</p>
 <ol style="list-style-type: decimal">
 <li>Save links of tweets you want to highlight in your post.</li>
-<li>Use a <a href="https://gohugo.io/"><code>hugo</code></a>-powered blog to obtain the code for embedding tweets easily<a href="#fn2" class="footnoteRef" id="fnref2"><sup>2</sup></a>.</li>
+<li>Use a <a href="https://gohugo.io/"><code>hugo</code></a>-powered blog to obtain the code for embedding tweets easily<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a>.</li>
 <li>Proofread, edit and post.</li>
 </ol>
 <div id="my-steps-detailed" class="section level3">
@@ -816,31 +816,19 @@ Save links of tweets you want to highlight in your post. Use a hugo-powered blog
 <li><p>Create a Google doc or some other simple text file you can access easily from your phone and laptop.</p></li>
 <li><p>While in a presentation, check the <em>latest</em> tweets for the given hashtag. <a href="https://twitter.com/search?f=tweets&amp;vertical=default&amp;q=%23ASHG18">ASGH18 example</a>.</p></li>
 </ol>
-<div class="figure">
-<img src="http://lcolladotor.github.io/post/2018-10-23-steps-for-writing-a-twitter-summary-conference-blog-post_files/Screen%20Shot%202018-10-23%20at%2010.53.44%20PM.png" width="400" />
-
-</div>
+<p><img src="http://lcolladotor.github.io/post/2018-10-23-steps-for-writing-a-twitter-summary-conference-blog-post_files/Screen%20Shot%202018-10-23%20at%2010.53.44%20PM.png" width="400" /></p>
 <ol start="4" style="list-style-type: decimal">
 <li>Copy the link of any tweet you find interesting. If there are none for the session you are in, consider writing some tweets yourself with the conference hashtag!</li>
 </ol>
-<div class="figure">
-<img src="http://lcolladotor.github.io/post/2018-10-23-steps-for-writing-a-twitter-summary-conference-blog-post_files/Screen%20Shot%202018-10-23%20at%2011.12.23%20PM.png" width="500" />
-
-</div>
+<p><img src="http://lcolladotor.github.io/post/2018-10-23-steps-for-writing-a-twitter-summary-conference-blog-post_files/Screen%20Shot%202018-10-23%20at%2011.12.23%20PM.png" width="500" /></p>
 <ol start="5" style="list-style-type: decimal">
 <li>Paste the link into your Google doc.</li>
 </ol>
-<div class="figure">
-<img src="http://lcolladotor.github.io/post/2018-10-23-steps-for-writing-a-twitter-summary-conference-blog-post_files/Screen%20Shot%202018-10-23%20at%2011.10.53%20PM.png" width="500" />
-
-</div>
+<p><img src="http://lcolladotor.github.io/post/2018-10-23-steps-for-writing-a-twitter-summary-conference-blog-post_files/Screen%20Shot%202018-10-23%20at%2011.10.53%20PM.png" width="500" /></p>
 <ol start="6" style="list-style-type: decimal">
 <li>Once the day is over, copy-paste the contents of your Google doc into a text editor that has the ability to find and replace using regular expressions. For example, <a href="https://macromates.com/">TextMate</a>.</li>
 </ol>
-<div class="figure">
-<img src="http://lcolladotor.github.io/post/2018-10-23-steps-for-writing-a-twitter-summary-conference-blog-post_files/Screen%20Shot%202018-10-23%20at%2011.15.18%20PM.png" width="500" />
-
-</div>
+<p><img src="http://lcolladotor.github.io/post/2018-10-23-steps-for-writing-a-twitter-summary-conference-blog-post_files/Screen%20Shot%202018-10-23%20at%2011.15.18%20PM.png" width="500" /></p>
 <ol start="7" style="list-style-type: decimal">
 <li>Find and replace to create the syntax for embedding tweets. I’ll cover more of this in detail in the next section.</li>
 </ol>
@@ -848,23 +836,14 @@ Save links of tweets you want to highlight in your post. Use a hugo-powered blog
 <pre class="r"><code>https://twitter.com/.*/status/</code></pre>
 <p>and replace by:</p>
 <pre class="r"><code>\n`r blogdown::shortcode(&quot;tweet&quot;, &quot;</code></pre>
-<div class="figure">
-<img src="http://lcolladotor.github.io/post/2018-10-23-steps-for-writing-a-twitter-summary-conference-blog-post_files/Screen%20Shot%202018-10-23%20at%2011.17.03%20PM.png" width="500" />
-
-</div>
+<p><img src="http://lcolladotor.github.io/post/2018-10-23-steps-for-writing-a-twitter-summary-conference-blog-post_files/Screen%20Shot%202018-10-23%20at%2011.17.03%20PM.png" width="500" /></p>
 <p>Then find:</p>
 <pre class="r"><code>\?s=[0-9]*</code></pre>
 <p>and replace by:</p>
 <pre class="r"><code>&quot;)`\n</code></pre>
-<div class="figure">
-<img src="http://lcolladotor.github.io/post/2018-10-23-steps-for-writing-a-twitter-summary-conference-blog-post_files/Screen%20Shot%202018-10-23%20at%2011.17.58%20PM.png" width="500" />
-
-</div>
+<p><img src="http://lcolladotor.github.io/post/2018-10-23-steps-for-writing-a-twitter-summary-conference-blog-post_files/Screen%20Shot%202018-10-23%20at%2011.17.58%20PM.png" width="500" /></p>
 <p>Our file now looks like this:</p>
-<div class="figure">
-<img src="http://lcolladotor.github.io/post/2018-10-23-steps-for-writing-a-twitter-summary-conference-blog-post_files/Screen%20Shot%202018-10-23%20at%2011.18.07%20PM.png" width="500" />
-
-</div>
+<p><img src="http://lcolladotor.github.io/post/2018-10-23-steps-for-writing-a-twitter-summary-conference-blog-post_files/Screen%20Shot%202018-10-23%20at%2011.18.07%20PM.png" width="500" /></p>
 <ol start="8" style="list-style-type: decimal">
 <li><p>Add any comments you wish, format the headings and proofread.</p></li>
 <li><p>Make it public and tweet about your post with the conference hashtag!</p></li>
@@ -873,20 +852,14 @@ Save links of tweets you want to highlight in your post. Use a hugo-powered blog
 </div>
 <div id="quick-embedding" class="section level3">
 <h3>Quick embedding</h3>
-<p>Note that my blog is powered by <em><a href="https://CRAN.R-project.org/package=blogdown">blogdown</a></em> <a id='cite-Xie_2017'></a>(<a href='https://github.com/rstudio/blogdown'>Xie, Hill, and Thomas, 2017</a>) which has the function <code>blogdown::shortcode()</code> for embedding tweets. For example, <code>blogdown::shortcode(&quot;tweet&quot;, &quot;1054380320533950464&quot;)</code> generates the <code>hugo</code> syntax code which then <code>hugo</code> renders into the tweet itself.</p>
+<p>Note that my blog is powered by <em><a href="https://CRAN.R-project.org/package=blogdown">blogdown</a></em> <a id='cite-Xie_2017'></a>(<a href='https://github.com/rstudio/blogdown'>Xie, Hill, and Thomas, 2017</a>) which has the function <code>blogdown::shortcode()</code> for embedding tweets. For example, <code>blogdown::shortcode("tweet", "1054380320533950464")</code> generates the <code>hugo</code> syntax code which then <code>hugo</code> renders into the tweet itself.</p>
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">I just completed my <a href="https://twitter.com/hashtag/ASHG18?src=hash&amp;ref_src=twsrc%5Etfw">#ASHG18</a> survey <a href="https://twitter.com/GeneticsSociety?ref_src=twsrc%5Etfw">@GeneticsSociety</a>. Took a few minutes and most of my feedback wouldn&#39;t stand out. Except that I did use a box to suggest having a webinar with role playing scenarios that exemplify how the code of conduct can be used to diffuse harassment <a href="https://twitter.com/jsdron?ref_src=twsrc%5Etfw">@jsdron</a> <a href="https://t.co/AKZdnGCr25">pic.twitter.com/AKZdnGCr25</a></p>&mdash; 🇲🇽 Dr. Leonardo Collado-Torres (@fellgernon) <a href="https://twitter.com/fellgernon/status/1054380320533950464?ref_src=twsrc%5Etfw">October 22, 2018</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 <p>As an alternative, we can use Twitter itself by copy-pasting the code for embedding the tweet directly from the Twitter app/website. On the top right side menu on the tweet itself, select <em>Embed Tweet</em></p>
-<div class="figure">
-<img src="http://lcolladotor.github.io/post/2018-10-23-steps-for-writing-a-twitter-summary-conference-blog-post_files/Screen%20Shot%202018-10-23%20at%2011.04.03%20PM.png" width="500" />
-
-</div>
+<p><img src="http://lcolladotor.github.io/post/2018-10-23-steps-for-writing-a-twitter-summary-conference-blog-post_files/Screen%20Shot%202018-10-23%20at%2011.04.03%20PM.png" width="500" /></p>
 <p>then copy-paste the HTML code into your post.</p>
-<div class="figure">
-<img src="http://lcolladotor.github.io/post/2018-10-23-steps-for-writing-a-twitter-summary-conference-blog-post_files/Screen%20Shot%202018-10-23%20at%2011.04.28%20PM.png" width="500" />
-
-</div>
+<p><img src="http://lcolladotor.github.io/post/2018-10-23-steps-for-writing-a-twitter-summary-conference-blog-post_files/Screen%20Shot%202018-10-23%20at%2011.04.28%20PM.png" width="500" /></p>
 <p>Here’s the code:</p>
 <pre><code>&lt;blockquote class=&quot;twitter-tweet&quot; data-lang=&quot;en&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;I just completed my &lt;a href=&quot;https://twitter.com/hashtag/ASHG18?src=hash&amp;amp;ref_src=twsrc%5Etfw&quot;&gt;#ASHG18&lt;/a&gt; survey &lt;a href=&quot;https://twitter.com/GeneticsSociety?ref_src=twsrc%5Etfw&quot;&gt;@GeneticsSociety&lt;/a&gt;. Took a few minutes and most of my feedback wouldn&amp;#39;t stand out. Except that I did use a box to suggest having a webinar with role playing scenarios that exemplify how the code of conduct can be used to diffuse harassment &lt;a href=&quot;https://twitter.com/jsdron?ref_src=twsrc%5Etfw&quot;&gt;@jsdron&lt;/a&gt; &lt;a href=&quot;https://t.co/AKZdnGCr25&quot;&gt;pic.twitter.com/AKZdnGCr25&lt;/a&gt;&lt;/p&gt;&amp;mdash; 🇲🇽 Dr. Leonardo Collado-Torres (@fellgernon) &lt;a href=&quot;https://twitter.com/fellgernon/status/1054380320533950464?ref_src=twsrc%5Etfw&quot;&gt;October 22, 2018&lt;/a&gt;&lt;/blockquote&gt;
 &lt;script async src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;</code></pre>
@@ -916,86 +889,108 @@ I just completed my <a href="https://twitter.com/hashtag/ASHG18?src=hash&amp;ref
 <li><a href="http://www.rladiesnyc.org/">R-Ladies NYC</a></li>
 </ul>
 </div>
-<div id="acknowledgements" class="section level3">
-<h3>Acknowledgements</h3>
+<div id="acknowledgments" class="section level3">
+<h3>Acknowledgments</h3>
 <p>This blog post was made possible thanks to:</p>
 <ul>
-<li><em><a href="http://bioconductor.org/packages/BiocStyle">BiocStyle</a></em> <a id='cite-Oles_2018'></a>(<a href='https://github.com/Bioconductor/BiocStyle'>Oleś, Morgan, and Huber, 2018</a>)</li>
+<li><em><a href="https://bioconductor.org/packages/3.10/BiocStyle">BiocStyle</a></em> <a id='cite-Oles_2020'></a>(<a href='https://github.com/Bioconductor/BiocStyle'>Oleś, Morgan, and Huber, 2020</a>)</li>
 <li><em><a href="https://CRAN.R-project.org/package=blogdown">blogdown</a></em> (<a href='https://github.com/rstudio/blogdown'>Xie, Hill, and Thomas, 2017</a>)</li>
-<li><em><a href="https://CRAN.R-project.org/package=knitcitations">knitcitations</a></em> <a id='cite-Boettiger_2017'></a>(<a href='https://CRAN.R-project.org/package=knitcitations'>Boettiger, 2017</a>)</li>
-<li><em><a href="https://CRAN.R-project.org/package=sessioninfo">sessioninfo</a></em> <a id='cite-Csardi_2018'></a>(<a href='https://github.com/r-lib/sessioninfo#readme'>Csárdi, core, Wickham, Chang, et al., 2018</a>)</li>
+<li><em><a href="https://CRAN.R-project.org/package=knitcitations">knitcitations</a></em> <a id='cite-Boettiger_2019'></a>(<a href='https://CRAN.R-project.org/package=knitcitations'>Boettiger, 2019</a>)</li>
+<li><em><a href="https://CRAN.R-project.org/package=sessioninfo">sessioninfo</a></em> <a id='cite-Csardi_2018'></a>(<a href='https://CRAN.R-project.org/package=sessioninfo'>Csárdi, core, Wickham, Chang, et al., 2018</a>)</li>
 </ul>
 </div>
 <div id="references" class="section level3">
 <h3>References</h3>
 <p>
-<a id='bib-Boettiger_2017'></a><a href="#cite-Boettiger_2017">[1]</a><cite> C. Boettiger. <em>knitcitations: Citations for ‘Knitr’ Markdown Files</em>. R package version 1.0.8. 2017. URL: <a href="https://CRAN.R-project.org/package=knitcitations">https://CRAN.R-project.org/package=knitcitations</a>.</cite>
+<a id='bib-Boettiger_2019'></a><a href="#cite-Boettiger_2019">[1]</a><cite>
+C. Boettiger.
+<em>knitcitations: Citations for ‘Knitr’ Markdown Files</em>.
+R package version 1.0.10.
+2019.
+URL: <a href="https://CRAN.R-project.org/package=knitcitations">https://CRAN.R-project.org/package=knitcitations</a>.</cite>
 </p>
 <p>
-<a id='bib-Csardi_2018'></a><a href="#cite-Csardi_2018">[2]</a><cite> G. Csárdi, R. core, H. Wickham, W. Chang, et al. <em>sessioninfo: R Session Information</em>. R package version 1.1.0.9000. 2018. URL: <a href="https://github.com/r-lib/sessioninfo#readme">https://github.com/r-lib/sessioninfo#readme</a>.</cite>
+<a id='bib-Csardi_2018'></a><a href="#cite-Csardi_2018">[2]</a><cite>
+G. Csárdi, R. core, H. Wickham, W. Chang, et al.
+<em>sessioninfo: R Session Information</em>.
+R package version 1.1.1.
+2018.
+URL: <a href="https://CRAN.R-project.org/package=sessioninfo">https://CRAN.R-project.org/package=sessioninfo</a>.</cite>
 </p>
 <p>
-<a id='bib-Oles_2018'></a><a href="#cite-Oles_2018">[3]</a><cite> A. Oleś, M. Morgan and W. Huber. <em>BiocStyle: Standard styles for vignettes and other Bioconductor documents</em>. R package version 2.8.2. 2018. URL: <a href="https://github.com/Bioconductor/BiocStyle">https://github.com/Bioconductor/BiocStyle</a>.</cite>
+<a id='bib-Oles_2020'></a><a href="#cite-Oles_2020">[3]</a><cite>
+A. Oleś, M. Morgan, and W. Huber.
+<em>BiocStyle: Standard styles for vignettes and other Bioconductor documents</em>.
+R package version 2.14.4.
+2020.
+URL: <a href="https://github.com/Bioconductor/BiocStyle">https://github.com/Bioconductor/BiocStyle</a>.</cite>
 </p>
 <p>
-<a id='bib-Xie_2017'></a><a href="#cite-Xie_2017">[4]</a><cite> Y. Xie, A. P. Hill and A. Thomas. <em>blogdown: Creating Websites with R Markdown</em>. ISBN 978-0815363729. Boca Raton, Florida: Chapman and Hall/CRC, 2017. URL: <a href="https://github.com/rstudio/blogdown">https://github.com/rstudio/blogdown</a>.</cite>
+<a id='bib-Xie_2017'></a><a href="#cite-Xie_2017">[4]</a><cite>
+Y. Xie, A. P. Hill, and A. Thomas.
+<em>blogdown: Creating Websites with R Markdown</em>.
+ISBN 978-0815363729.
+Boca Raton, Florida: Chapman and Hall/CRC, 2017.
+URL: <a href="https://github.com/rstudio/blogdown">https://github.com/rstudio/blogdown</a>.</cite>
 </p>
 </div>
 <div id="reproducibility" class="section level3">
 <h3>Reproducibility</h3>
 <pre><code>## ─ Session info ───────────────────────────────────────────────────────────────────────────────────────────────────────
-##  setting  value                                      
-##  version  R version 3.5.1 Patched (2018-10-14 r75439)
-##  os       macOS High Sierra 10.13.6                  
-##  system   x86_64, darwin15.6.0                       
-##  ui       X11                                        
-##  language (EN)                                       
-##  collate  en_US.UTF-8                                
-##  ctype    en_US.UTF-8                                
-##  tz       America/New_York                           
-##  date     2018-10-24                                 
+##  setting  value                       
+##  version  R version 3.6.2 (2019-12-12)
+##  os       macOS Catalina 10.15.2      
+##  system   x86_64, darwin15.6.0        
+##  ui       X11                         
+##  language (EN)                        
+##  collate  en_US.UTF-8                 
+##  ctype    en_US.UTF-8                 
+##  tz       America/New_York            
+##  date     2020-02-12                  
 ## 
 ## ─ Packages ───────────────────────────────────────────────────────────────────────────────────────────────────────────
-##  package       * version    date       lib source                            
-##  assertthat      0.2.0      2017-04-11 [1] CRAN (R 3.5.0)                    
-##  backports       1.1.2      2017-12-13 [1] CRAN (R 3.5.0)                    
-##  bibtex          0.4.2      2017-06-30 [1] CRAN (R 3.5.0)                    
-##  BiocStyle     * 2.8.2      2018-05-30 [1] Bioconductor                      
-##  blogdown        0.8        2018-07-15 [1] CRAN (R 3.5.0)                    
-##  bookdown        0.7        2018-02-18 [1] CRAN (R 3.5.0)                    
-##  cli             1.0.1      2018-09-25 [1] CRAN (R 3.5.0)                    
-##  colorout      * 1.2-0      2018-05-03 [1] Github (jalvesaq/colorout@c42088d)
-##  crayon          1.3.4      2017-09-16 [1] CRAN (R 3.5.0)                    
-##  digest          0.6.18     2018-10-10 [1] CRAN (R 3.5.0)                    
-##  evaluate        0.12       2018-10-09 [1] CRAN (R 3.5.0)                    
-##  htmltools       0.3.6      2017-04-28 [1] CRAN (R 3.5.0)                    
-##  httr            1.3.1      2017-08-20 [1] CRAN (R 3.5.0)                    
-##  jsonlite        1.5        2017-06-01 [1] CRAN (R 3.5.0)                    
-##  knitcitations * 1.0.8      2017-07-04 [1] CRAN (R 3.5.0)                    
-##  knitr           1.20       2018-02-20 [1] CRAN (R 3.5.0)                    
-##  lubridate       1.7.4      2018-04-11 [1] CRAN (R 3.5.0)                    
-##  magrittr        1.5        2014-11-22 [1] CRAN (R 3.5.0)                    
-##  plyr            1.8.4      2016-06-08 [1] CRAN (R 3.5.0)                    
-##  R6              2.3.0      2018-10-04 [1] CRAN (R 3.5.0)                    
-##  Rcpp            0.12.19    2018-10-01 [1] CRAN (R 3.5.1)                    
-##  RefManageR      1.2.0      2018-04-25 [1] CRAN (R 3.5.0)                    
-##  rmarkdown       1.10       2018-06-11 [1] CRAN (R 3.5.0)                    
-##  rprojroot       1.3-2      2018-01-03 [1] CRAN (R 3.5.0)                    
-##  sessioninfo   * 1.1.0.9000 2018-10-02 [1] Github (r-lib/sessioninfo@4f91fad)
-##  stringi         1.2.4      2018-07-20 [1] CRAN (R 3.5.0)                    
-##  stringr         1.3.1      2018-05-10 [1] CRAN (R 3.5.0)                    
-##  withr           2.1.2      2018-03-15 [1] CRAN (R 3.5.0)                    
-##  xfun            0.3        2018-07-06 [1] CRAN (R 3.5.0)                    
-##  xml2            1.2.0      2018-01-24 [1] CRAN (R 3.5.0)                    
-##  yaml            2.2.0      2018-07-25 [1] CRAN (R 3.5.0)                    
+##  package       * version date       lib source                            
+##  assertthat      0.2.1   2019-03-21 [1] CRAN (R 3.6.0)                    
+##  bibtex          0.4.2.2 2020-01-02 [1] CRAN (R 3.6.0)                    
+##  BiocManager     1.30.10 2019-11-16 [1] CRAN (R 3.6.1)                    
+##  BiocStyle     * 2.14.4  2020-01-09 [1] Bioconductor                      
+##  blogdown        0.17    2019-11-13 [1] CRAN (R 3.6.1)                    
+##  bookdown        0.17    2020-01-11 [1] CRAN (R 3.6.0)                    
+##  cli             2.0.1   2020-01-08 [1] CRAN (R 3.6.0)                    
+##  colorout      * 1.2-1   2019-05-07 [1] Github (jalvesaq/colorout@7ea9440)
+##  crayon          1.3.4   2017-09-16 [1] CRAN (R 3.6.0)                    
+##  digest          0.6.23  2019-11-23 [1] CRAN (R 3.6.0)                    
+##  evaluate        0.14    2019-05-28 [1] CRAN (R 3.6.0)                    
+##  fansi           0.4.1   2020-01-08 [1] CRAN (R 3.6.0)                    
+##  glue            1.3.1   2019-03-12 [1] CRAN (R 3.6.0)                    
+##  htmltools       0.4.0   2019-10-04 [1] CRAN (R 3.6.0)                    
+##  httr            1.4.1   2019-08-05 [1] CRAN (R 3.6.0)                    
+##  jsonlite        1.6     2018-12-07 [1] CRAN (R 3.6.0)                    
+##  knitcitations * 1.0.10  2019-09-15 [1] CRAN (R 3.6.0)                    
+##  knitr           1.27    2020-01-16 [1] CRAN (R 3.6.0)                    
+##  lubridate       1.7.4   2018-04-11 [1] CRAN (R 3.6.0)                    
+##  magrittr        1.5     2014-11-22 [1] CRAN (R 3.6.0)                    
+##  plyr            1.8.5   2019-12-10 [1] CRAN (R 3.6.0)                    
+##  R6              2.4.1   2019-11-12 [1] CRAN (R 3.6.1)                    
+##  Rcpp            1.0.3   2019-11-08 [1] CRAN (R 3.6.0)                    
+##  RefManageR      1.2.12  2019-04-03 [1] CRAN (R 3.6.0)                    
+##  rlang           0.4.3   2020-01-24 [1] CRAN (R 3.6.2)                    
+##  rmarkdown       2.1     2020-01-20 [1] CRAN (R 3.6.0)                    
+##  sessioninfo   * 1.1.1   2018-11-05 [1] CRAN (R 3.6.0)                    
+##  stringi         1.4.5   2020-01-11 [1] CRAN (R 3.6.0)                    
+##  stringr         1.4.0   2019-02-10 [1] CRAN (R 3.6.0)                    
+##  withr           2.1.2   2018-03-15 [1] CRAN (R 3.6.0)                    
+##  xfun            0.12    2020-01-13 [1] CRAN (R 3.6.0)                    
+##  xml2            1.2.2   2019-08-09 [1] CRAN (R 3.6.0)                    
+##  yaml            2.2.0   2018-07-25 [1] CRAN (R 3.6.0)                    
 ## 
-## [1] /Library/Frameworks/R.framework/Versions/3.5/Resources/library</code></pre>
+## [1] /Library/Frameworks/R.framework/Versions/3.6/Resources/library</code></pre>
 </div>
 <div class="footnotes">
 <hr />
 <ol>
-<li id="fn1"><p><a href="http://lcolladotor.github.io/2018/10/16/ashg18-tweet-summary-day-1/#.W8gWEBNKg0o">ASHG18 day 1 post</a>, <a href="http://lcolladotor.github.io/2018/10/17/ashg18-tweet-summary-day-2/#.W8ggNxNKg0o">day 2</a>, <a href="http://lcolladotor.github.io/2018/10/18/ashg18-tweet-summary-day-3/#.W8mYLxNKg0o">day 3</a>, <a href="http://lcolladotor.github.io/2018/10/19/ashg18-tweet-summary-day-4/#.W8qdTRNKg0o">day 4</a> and <a href="http://lcolladotor.github.io/2018/10/20/ashg18-tweet-summary-day-5/#.W8t2vhNKg0o">day 5</a>.<a href="#fnref1">↩</a></p></li>
-<li id="fn2"><p>Or any other tool that can get you the embedding code, including the Twitter page itself.<a href="#fnref2">↩</a></p></li>
+<li id="fn1"><p><a href="http://lcolladotor.github.io/2018/10/16/ashg18-tweet-summary-day-1/#.W8gWEBNKg0o">ASHG18 day 1 post</a>, <a href="http://lcolladotor.github.io/2018/10/17/ashg18-tweet-summary-day-2/#.W8ggNxNKg0o">day 2</a>, <a href="http://lcolladotor.github.io/2018/10/18/ashg18-tweet-summary-day-3/#.W8mYLxNKg0o">day 3</a>, <a href="http://lcolladotor.github.io/2018/10/19/ashg18-tweet-summary-day-4/#.W8qdTRNKg0o">day 4</a> and <a href="http://lcolladotor.github.io/2018/10/20/ashg18-tweet-summary-day-5/#.W8t2vhNKg0o">day 5</a>.<a href="#fnref1" class="footnote-back">↩︎</a></p></li>
+<li id="fn2"><p>Or any other tool that can get you the embedding code, including the Twitter page itself.<a href="#fnref2" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
 
