@@ -1,27 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Projects on L. Collado-Torres</title>
+    <title>Projects | L. Collado-Torres</title>
     <link>/project/</link>
-    <description>Recent content in Projects on L. Collado-Torres</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>&amp;copy; 2011-{year} Leonardo Collado Torres under (CC) BY-NC-SA 4.0. All thoughts and opinions here are my own. Icon is the [R logo](https://www.r-project.org/logo/) modified</copyright>
-    <lastBuildDate>Thu, 03 Aug 2017 00:00:00 -0400</lastBuildDate>
-    <atom:link href="http://lcolladotor.github.io/project/" rel="self" type="application/rss+xml" />
+      <atom:link href=http://lcolladotor.github.io/project/index.xml rel="self" type="application/rss+xml" />
+    <description>Projects</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2011-2020 Leonardo Collado Torres under (CC) BY-NC-SA 4.0. All thoughts and opinions here are my own. Icon is the [R logo](https://www.r-project.org/logo/) modified</copyright><lastBuildDate>Thu, 03 Aug 2017 00:00:00 -0400</lastBuildDate>
+    <image>
+      <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
+      <title>Projects</title>
+      <link>/project/</link>
+    </image>
     
     <item>
       <title>BrainSEQ™ Consortium</title>
       <link>/project/brainseq/</link>
       <pubDate>Thu, 03 Aug 2017 00:00:00 -0400</pubDate>
-      
       <guid>/project/brainseq/</guid>
       <description>&lt;p&gt;The Lieber Institute and pharmaceutical companies AstraZeneca, Astellas, Eli Lilly and Company, Lundbeck, Johnson &amp;amp; Johnson, Pfizer Inc. and Roche are participating in an early-stage research consortium BrainSEQ™, with the goal of expanding knowledge around the genetic contribution to brain disorders in the hope of identifying potential new treatment options.&lt;/p&gt;
-
 &lt;ul&gt;
 &lt;li&gt;Utilizing LIBD’s unprecedented brain tissue repository to generate and analyze genomic data related to neuropsychiatric disorders.&lt;/li&gt;
 &lt;li&gt;Making data freely available to scientists worldwide.&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;p&gt;As part of the BrainSeq Consortium I have analyzed parts of Phase I and II data, either for the publications describing those phases or for re-analyses of the same data.&lt;/p&gt;
 </description>
     </item>
@@ -30,11 +30,10 @@
       <title>recount2</title>
       <link>/project/recount2/</link>
       <pubDate>Mon, 20 Jun 2016 00:00:00 -0400</pubDate>
-      
       <guid>/project/recount2/</guid>
       <description>&lt;p&gt;In 2015 we re-processed all the human RNA-seq that was publicly available at the time in an effort to improve the usability of this complex type of data and to facilitate developing new bioinformatic and biostatistical methods. Via &lt;code&gt;recount2&lt;/code&gt; we have democratized the access to this rich data and this project has lead to many different publications by the &lt;code&gt;recount2&lt;/code&gt; team and other researchers.&lt;/p&gt;
-
-&lt;p&gt;More recently, we are working on a subset of brain samples from &lt;code&gt;recount2&lt;/code&gt; for the &lt;code&gt;recount-brain&lt;/code&gt; project lead by &lt;a href=&#34;/authors/arazmara/&#34;&gt;Ashkaun Razmara&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;More recently, we are working on a subset of brain samples from &lt;code&gt;recount2&lt;/code&gt; for the &lt;code&gt;recount-brain&lt;/code&gt; project lead by 
+&lt;a href=&#34;/authors/arazmara/&#34;&gt;Ashkaun Razmara&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     
@@ -42,9 +41,10 @@
       <title>derfinder</title>
       <link>/project/derfinder/</link>
       <pubDate>Fri, 19 Apr 2013 00:00:00 -0400</pubDate>
-      
       <guid>/project/derfinder/</guid>
-      <description>&lt;p&gt;The goal of my Ph.D. with &lt;a href=&#34;http://jtleek.com/&#34; target=&#34;_blank&#34;&gt;Jeff Leek&lt;/a&gt; and &lt;a href=&#34;http://aejaffe.com/&#34; target=&#34;_blank&#34;&gt;Andrew Jaffe&lt;/a&gt; at JHBSPH was to develop statistical methods and software that enable researchers to differentiate the sources of variation observed in RNA-seq while minimizing the dependance on known annotation. This allows researchers to correct for technological variation and study the biological variation driving their phenotype of interest. This work lead to the development of the &lt;code&gt;derfinder&lt;/code&gt; and &lt;code&gt;regionReport&lt;/code&gt; Bioconductor packages. We then applied these methods to further our understanding of neuropsychiatric disorders using the Lieber Institute for Brain Development human brains collection.&lt;/p&gt;
+      <description>&lt;p&gt;The goal of my Ph.D. with 
+&lt;a href=&#34;http://jtleek.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Jeff Leek&lt;/a&gt; and 
+&lt;a href=&#34;http://aejaffe.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Andrew Jaffe&lt;/a&gt; at JHBSPH was to develop statistical methods and software that enable researchers to differentiate the sources of variation observed in RNA-seq while minimizing the dependance on known annotation. This allows researchers to correct for technological variation and study the biological variation driving their phenotype of interest. This work lead to the development of the &lt;code&gt;derfinder&lt;/code&gt; and &lt;code&gt;regionReport&lt;/code&gt; Bioconductor packages. We then applied these methods to further our understanding of neuropsychiatric disorders using the Lieber Institute for Brain Development human brains collection.&lt;/p&gt;
 </description>
     </item>
     

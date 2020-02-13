@@ -1,19 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Categories on L. Collado-Torres</title>
+    <title>Categories | L. Collado-Torres</title>
     <link>/categories/</link>
-    <description>Recent content in Categories on L. Collado-Torres</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>&amp;copy; 2011-{year} Leonardo Collado Torres under (CC) BY-NC-SA 4.0. All thoughts and opinions here are my own. Icon is the [R logo](https://www.r-project.org/logo/) modified</copyright>
-    <lastBuildDate>Mon, 03 Feb 2020 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://lcolladotor.github.io/categories/" rel="self" type="application/rss+xml" />
+      <atom:link href=http://lcolladotor.github.io/categories/index.xml rel="self" type="application/rss+xml" />
+    <description>Categories</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2011-2020 Leonardo Collado Torres under (CC) BY-NC-SA 4.0. All thoughts and opinions here are my own. Icon is the [R logo](https://www.r-project.org/logo/) modified</copyright><lastBuildDate>Mon, 03 Feb 2020 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
+      <title>Categories</title>
+      <link>/categories/</link>
+    </image>
     
     <item>
       <title>Conference</title>
       <link>/categories/conference/</link>
       <pubDate>Mon, 03 Feb 2020 00:00:00 +0000</pubDate>
-      
       <guid>/categories/conference/</guid>
       <description></description>
     </item>
@@ -22,7 +24,6 @@
       <title>rstats</title>
       <link>/categories/rstats/</link>
       <pubDate>Mon, 03 Feb 2020 00:00:00 +0000</pubDate>
-      
       <guid>/categories/rstats/</guid>
       <description></description>
     </item>
@@ -31,7 +32,6 @@
       <title>Web</title>
       <link>/categories/web/</link>
       <pubDate>Wed, 10 Apr 2019 00:00:00 +0000</pubDate>
-      
       <guid>/categories/web/</guid>
       <description></description>
     </item>
@@ -40,7 +40,6 @@
       <title>Science</title>
       <link>/categories/science/</link>
       <pubDate>Tue, 02 Apr 2019 00:00:00 +0000</pubDate>
-      
       <guid>/categories/science/</guid>
       <description></description>
     </item>
@@ -49,7 +48,6 @@
       <title>UNAM</title>
       <link>/categories/unam/</link>
       <pubDate>Thu, 28 Feb 2019 00:00:00 +0000</pubDate>
-      
       <guid>/categories/unam/</guid>
       <description></description>
     </item>
@@ -58,7 +56,6 @@
       <title>Misc</title>
       <link>/categories/misc/</link>
       <pubDate>Tue, 12 Feb 2019 00:00:00 +0000</pubDate>
-      
       <guid>/categories/misc/</guid>
       <description></description>
     </item>
@@ -67,7 +64,6 @@
       <title>Computing</title>
       <link>/categories/computing/</link>
       <pubDate>Mon, 12 Nov 2018 00:00:00 +0000</pubDate>
-      
       <guid>/categories/computing/</guid>
       <description></description>
     </item>
@@ -76,7 +72,6 @@
       <title>Ideas</title>
       <link>/categories/ideas/</link>
       <pubDate>Mon, 17 Sep 2018 00:00:00 +0000</pubDate>
-      
       <guid>/categories/ideas/</guid>
       <description></description>
     </item>
@@ -85,7 +80,6 @@
       <title>LIBD</title>
       <link>/categories/libd/</link>
       <pubDate>Fri, 20 Jan 2017 00:00:00 +0000</pubDate>
-      
       <guid>/categories/libd/</guid>
       <description></description>
     </item>
@@ -94,7 +88,6 @@
       <title>Fun</title>
       <link>/categories/fun/</link>
       <pubDate>Wed, 20 Nov 2013 00:00:00 +0000</pubDate>
-      
       <guid>/categories/fun/</guid>
       <description></description>
     </item>
@@ -103,7 +96,6 @@
       <title>JHU Biostat</title>
       <link>/categories/jhu-biostat/</link>
       <pubDate>Wed, 20 Nov 2013 00:00:00 +0000</pubDate>
-      
       <guid>/categories/jhu-biostat/</guid>
       <description></description>
     </item>
@@ -112,7 +104,6 @@
       <title>Paper comments</title>
       <link>/categories/paper-comments/</link>
       <pubDate>Thu, 28 Mar 2013 00:00:00 +0000</pubDate>
-      
       <guid>/categories/paper-comments/</guid>
       <description></description>
     </item>

@@ -1,19 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Joo Heon Shin on L. Collado-Torres</title>
+    <title>Joo Heon Shin | L. Collado-Torres</title>
     <link>/authors/joo-heon-shin/</link>
-    <description>Recent content in Joo Heon Shin on L. Collado-Torres</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>&amp;copy; 2011-{year} Leonardo Collado Torres under (CC) BY-NC-SA 4.0. All thoughts and opinions here are my own. Icon is the [R logo](https://www.r-project.org/logo/) modified</copyright>
-    <lastBuildDate>Thu, 26 Sep 2019 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://lcolladotor.github.io/authors/joo-heon-shin/" rel="self" type="application/rss+xml" />
+      <atom:link href=http://lcolladotor.github.io/authors/joo-heon-shin/index.xml rel="self" type="application/rss+xml" />
+    <description>Joo Heon Shin</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2011-2020 Leonardo Collado Torres under (CC) BY-NC-SA 4.0. All thoughts and opinions here are my own. Icon is the [R logo](https://www.r-project.org/logo/) modified</copyright><lastBuildDate>Thu, 26 Sep 2019 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
+      <title>Joo Heon Shin</title>
+      <link>/authors/joo-heon-shin/</link>
+    </image>
     
     <item>
       <title>Divergent neuronal DNA methylation patterns across human cortical development reveal critical periods and a unique role of CpH methylation</title>
       <link>/publication/dnam_mcph_neuron_glia/</link>
       <pubDate>Thu, 26 Sep 2019 00:00:00 +0000</pubDate>
-      
       <guid>/publication/dnam_mcph_neuron_glia/</guid>
       <description>&lt;!-- More detail can easily be written here using *Markdown* and $\rm \LaTeX$ math code. --&gt;
 </description>
@@ -23,7 +25,6 @@
       <title>Integrated DNA methylation and gene expression profiling across multiple brain regions implicate novel genes in Alzheimer&#39;s disease</title>
       <link>/publication/dnam_alzheimer/</link>
       <pubDate>Sat, 02 Feb 2019 00:00:00 +0000</pubDate>
-      
       <guid>/publication/dnam_alzheimer/</guid>
       <description>&lt;!-- More detail can easily be written here using *Markdown* and $\rm \LaTeX$ math code. --&gt;
 </description>
@@ -33,7 +34,6 @@
       <title>Dissecting transcriptomic signatures of neuronal differentiation and maturation using iPSCs</title>
       <link>/publication/libdstemcell/</link>
       <pubDate>Tue, 31 Jul 2018 00:00:00 +0000</pubDate>
-      
       <guid>/publication/libdstemcell/</guid>
       <description>&lt;!-- More detail can easily be written here using *Markdown* and $\rm \LaTeX$ math code. --&gt;
 </description>

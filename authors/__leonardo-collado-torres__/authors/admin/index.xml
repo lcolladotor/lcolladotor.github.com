@@ -1,19 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>[__Leonardo Collado-Torres__](/authors/admin) on L. Collado-Torres</title>
+    <title>[__Leonardo Collado-Torres__](/authors/admin) | L. Collado-Torres</title>
     <link>/authors/__leonardo-collado-torres__/authors/admin/</link>
-    <description>Recent content in [__Leonardo Collado-Torres__](/authors/admin) on L. Collado-Torres</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>&amp;copy; 2011-{year} Leonardo Collado Torres under (CC) BY-NC-SA 4.0. All thoughts and opinions here are my own. Icon is the [R logo](https://www.r-project.org/logo/) modified</copyright>
-    <lastBuildDate>Wed, 30 Oct 2019 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://lcolladotor.github.io/authors/__leonardo-collado-torres__/authors/admin/" rel="self" type="application/rss+xml" />
+      <atom:link href=http://lcolladotor.github.io/authors/__leonardo-collado-torres__/authors/admin/index.xml rel="self" type="application/rss+xml" />
+    <description>[__Leonardo Collado-Torres__](/authors/admin)</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2011-2020 Leonardo Collado Torres under (CC) BY-NC-SA 4.0. All thoughts and opinions here are my own. Icon is the [R logo](https://www.r-project.org/logo/) modified</copyright><lastBuildDate>Wed, 30 Oct 2019 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
+      <title>[__Leonardo Collado-Torres__](/authors/admin)</title>
+      <link>/authors/__leonardo-collado-torres__/authors/admin/</link>
+    </image>
     
     <item>
       <title>Characterizing the dynamic and functional DNA methylation landscape in the developing human cortex</title>
       <link>/publication/kira_prenatal/</link>
       <pubDate>Wed, 30 Oct 2019 00:00:00 +0000</pubDate>
-      
       <guid>/publication/kira_prenatal/</guid>
       <description>&lt;!-- More detail can easily be written here using *Markdown* and $\rm \LaTeX$ math code. --&gt;
 </description>
@@ -23,7 +25,6 @@
       <title>Comprehensive assessment of multiple biases in small RNA sequencing reveals significant differences in the performance of widely used methods</title>
       <link>/publication/mirna_kit_comp/</link>
       <pubDate>Fri, 21 Jun 2019 00:00:00 +0000</pubDate>
-      
       <guid>/publication/mirna_kit_comp/</guid>
       <description>&lt;!-- More detail can easily be written here using *Markdown* and $\rm \LaTeX$ math code. --&gt;
 </description>
@@ -33,7 +34,6 @@
       <title>Recounting the FANTOM Cage Associated Transcriptome</title>
       <link>/publication/fantomrecount2/</link>
       <pubDate>Thu, 13 Jun 2019 00:00:00 +0000</pubDate>
-      
       <guid>/publication/fantomrecount2/</guid>
       <description>&lt;!-- More detail can easily be written here using *Markdown* and $\rm \LaTeX$ math code. --&gt;
 </description>
@@ -43,7 +43,6 @@
       <title>Regional heterogeneity in gene expression, regulation, and coherence in the frontal cortex and hippocampus across development and schizophrenia</title>
       <link>/publication/bsp2/</link>
       <pubDate>Tue, 04 Jun 2019 00:00:00 +0000</pubDate>
-      
       <guid>/publication/bsp2/</guid>
       <description>&lt;!-- More detail can easily be written here using *Markdown* and $\rm \LaTeX$ math code. --&gt;
 </description>
@@ -53,7 +52,6 @@
       <title>Integrated Transcriptomic and Proteomic Analysis of Primary Human Umbilical Vein Endothelial Cells</title>
       <link>/publication/recount_proteomics/</link>
       <pubDate>Sun, 14 Apr 2019 00:00:00 +0000</pubDate>
-      
       <guid>/publication/recount_proteomics/</guid>
       <description>&lt;!-- More detail can easily be written here using *Markdown* and $\rm \LaTeX$ math code. --&gt;
 </description>
@@ -63,7 +61,6 @@
       <title>Regulatory sites for known and novel splicing in human basal ganglia are enriched for disease-relevant information</title>
       <link>/publication/basalganglia/</link>
       <pubDate>Thu, 28 Mar 2019 00:00:00 +0000</pubDate>
-      
       <guid>/publication/basalganglia/</guid>
       <description>&lt;!-- More detail can easily be written here using *Markdown* and $\rm \LaTeX$ math code. --&gt;
 </description>
@@ -73,7 +70,6 @@
       <title>Integrated DNA methylation and gene expression profiling across multiple brain regions implicate novel genes in Alzheimer&#39;s disease</title>
       <link>/publication/dnam_alzheimer/</link>
       <pubDate>Sat, 02 Feb 2019 00:00:00 +0000</pubDate>
-      
       <guid>/publication/dnam_alzheimer/</guid>
       <description>&lt;!-- More detail can easily be written here using *Markdown* and $\rm \LaTeX$ math code. --&gt;
 </description>
@@ -83,7 +79,6 @@
       <title>Incomplete annotation of OMIM genes is likely to be limiting the diagnostic yield of genetic testing, particularly for neurogenetic disorders</title>
       <link>/publication/omimderfinder/</link>
       <pubDate>Wed, 19 Dec 2018 00:00:00 +0000</pubDate>
-      
       <guid>/publication/omimderfinder/</guid>
       <description>&lt;!-- More detail can easily be written here using *Markdown* and $\rm \LaTeX$ math code. --&gt;
 </description>
@@ -93,7 +88,6 @@
       <title>Non-coding Class Switch Recombination-Related Transcription in Human Normal and Pathological Immune Responses</title>
       <link>/publication/nccsr/</link>
       <pubDate>Wed, 21 Nov 2018 00:00:00 +0000</pubDate>
-      
       <guid>/publication/nccsr/</guid>
       <description>&lt;!-- More detail can easily be written here using *Markdown* and $\rm \LaTeX$ math code. --&gt;
 </description>
@@ -103,7 +97,6 @@
       <title>Dissecting transcriptomic signatures of neuronal differentiation and maturation using iPSCs</title>
       <link>/publication/libdstemcell/</link>
       <pubDate>Tue, 31 Jul 2018 00:00:00 +0000</pubDate>
-      
       <guid>/publication/libdstemcell/</guid>
       <description>&lt;!-- More detail can easily be written here using *Markdown* and $\rm \LaTeX$ math code. --&gt;
 </description>

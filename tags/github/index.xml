@@ -1,68 +1,67 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>github on L. Collado-Torres</title>
+    <title>github | L. Collado-Torres</title>
     <link>/tags/github/</link>
-    <description>Recent content in github on L. Collado-Torres</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>&amp;copy; 2011-{year} Leonardo Collado Torres under (CC) BY-NC-SA 4.0. All thoughts and opinions here are my own. Icon is the [R logo](https://www.r-project.org/logo/) modified</copyright>
-    <lastBuildDate>Thu, 09 May 2013 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://lcolladotor.github.io/tags/github/" rel="self" type="application/rss+xml" />
+      <atom:link href=http://lcolladotor.github.io/tags/github/index.xml rel="self" type="application/rss+xml" />
+    <description>github</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2011-2020 Leonardo Collado Torres under (CC) BY-NC-SA 4.0. All thoughts and opinions here are my own. Icon is the [R logo](https://www.r-project.org/logo/) modified</copyright><lastBuildDate>Thu, 09 May 2013 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
+      <title>github</title>
+      <link>/tags/github/</link>
+    </image>
     
     <item>
       <title>Reading an R file from GitHub</title>
       <link>/2013/05/09/reading-an-r-file-from-github/</link>
       <pubDate>Thu, 09 May 2013 00:00:00 +0000</pubDate>
-      
       <guid>/2013/05/09/reading-an-r-file-from-github/</guid>
-      <description>&lt;p&gt;&lt;p&gt;Lets say that I want to read in &lt;a href=&#34;https://github.com/lcolladotor/ballgownR-devel/blob/master/ballgownR/R/infoGene.R&#34;&gt;this R file&lt;/a&gt; from GitHub into R.&lt;/p&gt;
+      <description>&lt;p&gt;Lets say that I want to read in &lt;a href=&#34;https://github.com/lcolladotor/ballgownR-devel/blob/master/ballgownR/R/infoGene.R&#34;&gt;this R file&lt;/a&gt; from GitHub into R.&lt;/p&gt;
 &lt;p&gt;The first thing you have to do is locate the raw file. You can do so by clicking on the &lt;strong&gt;Raw&lt;/strong&gt; button in GitHub. In this case it&amp;#8217;s &lt;a href=&#34;https://raw.github.com/lcolladotor/ballgownR-devel/master/ballgownR/R/infoGene.R&#34;&gt;&lt;a href=&#34;https://raw.github.com/lcolladotor/ballgownR-devel/master/ballgownR/R/infoGene.R&#34;&gt;https://raw.github.com/lcolladotor/ballgownR-devel/master/ballgownR/R/infoGene.R&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;One would think that using &lt;code&gt;source()&lt;/code&gt; would work, but it doesn&amp;#8217;t as shown below:&lt;/p&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;source(&amp;quot;https://raw.github.com/lcolladotor/ballgownR-devel/master/ballgownR/R/infoGene.R&amp;quot;)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;## Warning: unsupported URL scheme
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;## Error: cannot open the connection
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;p&gt;However, thanks again to Hadley Wickham you can do so by using the &lt;code&gt;devtools&lt;/code&gt; (&lt;span class=&#34;showtooltip&#34; title=&#34;Wickham H and Chang W (2013). devtools: Tools to make developing R code easier. R package version 1.2.&#34;&gt;&lt;a href=&#34;http://CRAN.R-project.org/package=devtools&#34;&gt;Wickham &amp;amp; Chang, 2013&lt;/a&gt;&lt;/span&gt; ) package.&lt;/p&gt;
-&lt;p&gt;Here is how it works:&lt;/p&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;library(devtools)
+&lt;p&gt;One would think that using &lt;code&gt;source()&lt;/code&gt; would work, but it doesn&amp;#8217;t as shown below:&lt;/p&gt;
+```r
+source(&#34;https://raw.github.com/lcolladotor/ballgownR-devel/master/ballgownR/R/infoGene.R&#34;)
+```
+```r
+## Warning: unsupported URL scheme
+```
+```r
+## Error: cannot open the connection
+```
+&lt;p&gt;However, thanks again to Hadley Wickham you can do so by using the &lt;code&gt;devtools&lt;/code&gt; (&lt;span class=&#34;showtooltip&#34; title=&#34;Wickham H and Chang W (2013). devtools: Tools to make developing R code easier. R package version 1.2.&#34;&gt;&lt;a href=&#34;http://CRAN.R-project.org/package=devtools&#34;&gt;Wickham &amp;amp; Chang, 2013&lt;/a&gt;&lt;/span&gt; ) package.&lt;/p&gt;
+&lt;p&gt;Here is how it works:&lt;/p&gt;
+```r
+library(devtools)
 library(roxygen2)
 ## Needed because this file has roxygen2 comments. Otherwise you get a
 ## &#39;could not find function &#39;digest&#39;&#39; error
-source_url(&amp;quot;https://raw.github.com/lcolladotor/ballgownR-devel/master/ballgownR/R/infoGene.R&amp;quot;)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;## SHA-1 hash of file is 6c32a620799eded5d6ff0997a184843d7964724a
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;## Note that you can specify the SHA-1 hash to be very specific about
+source_url(&#34;https://raw.github.com/lcolladotor/ballgownR-devel/master/ballgownR/R/infoGene.R&#34;)
+```
+```r
+## SHA-1 hash of file is 6c32a620799eded5d6ff0997a184843d7964724a
+```
+```r
+## Note that you can specify the SHA-1 hash to be very specific about
 ## which version of the file you want to read in.
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;p&gt;We can then check that &lt;code&gt;infoGene&lt;/code&gt; has actually been sourced:&lt;/p&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;&amp;quot;infoGene&amp;quot; %in% ls()
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;## [1] TRUE
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;p&gt;That&amp;#8217;s it! Enjoy!&lt;/p&gt;
+```
+&lt;p&gt;We can then check that &lt;code&gt;infoGene&lt;/code&gt; has actually been sourced:&lt;/p&gt;
+```r
+&#34;infoGene&#34; %in% ls()
+```
+```r
+## [1] TRUE
+```
+&lt;p&gt;That&amp;#8217;s it! Enjoy!&lt;/p&gt;
 &lt;p&gt;Citations made with &lt;code&gt;knitcitations&lt;/code&gt; (&lt;span class=&#34;showtooltip&#34; title=&#34;Boettiger C (2013). knitcitations: Citations for knitr markdown files. R package version 0.4-6.&#34;&gt;&lt;a href=&#34;https://github.com/cboettig/knitcitations&#34;&gt;Boettiger, 2013&lt;/a&gt;&lt;/span&gt; ).&lt;/p&gt;
 &lt;ul&gt;&lt;li&gt;Hadley Wickham, Winston Chang, (2013) devtools: Tools to make developing R code easier. &lt;a href=&#34;http://CRAN.R-project.org/package=devtools&#34;&gt;&lt;a href=&#34;http://CRAN.R-project.org/package=devtools&#34;&gt;http://CRAN.R-project.org/package=devtools&lt;/a&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Carl Boettiger, (2013) knitcitations: Citations for knitr markdown files. &lt;a href=&#34;https://github.com/cboettig/knitcitations&#34;&gt;&lt;a href=&#34;https://github.com/cboettig/knitcitations&#34;&gt;https://github.com/cboettig/knitcitations&lt;/a&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;p&gt;Reproducibility&lt;/p&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;sessionInfo()
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;## R version 3.0.0 (2013-04-03)
+&lt;/ul&gt;&lt;p&gt;Reproducibility&lt;/p&gt;
+```r
+sessionInfo()
+```
+```r
+## R version 3.0.0 (2013-04-03)
 ## Platform: x86_64-apple-darwin10.8.0 (64-bit)
 ## 
 ## locale:
@@ -79,7 +78,7 @@ source_url(&amp;quot;https://raw.github.com/lcolladotor/ballgownR-devel/master/b
 ##  [1] brew_1.0-6     evaluate_0.4.3 formatR_0.7    httr_0.2      
 ##  [5] memoise_0.1    parallel_3.0.0 RCurl_1.95-4.1 stringr_0.6.2 
 ##  [9] tools_3.0.0    whisker_0.3-2  XML_3.95-0.2   xtable_1.7-1
-&lt;/code&gt;&lt;/pre&gt;
+```
 </description>
     </item>
     

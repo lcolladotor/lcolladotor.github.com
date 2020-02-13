@@ -1,19 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Academia on L. Collado-Torres</title>
+    <title>Academia | L. Collado-Torres</title>
     <link>/tags/academia/</link>
-    <description>Recent content in Academia on L. Collado-Torres</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>&amp;copy; 2011-{year} Leonardo Collado Torres under (CC) BY-NC-SA 4.0. All thoughts and opinions here are my own. Icon is the [R logo](https://www.r-project.org/logo/) modified</copyright>
-    <lastBuildDate>Mon, 03 Feb 2020 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://lcolladotor.github.io/tags/academia/" rel="self" type="application/rss+xml" />
+      <atom:link href=http://lcolladotor.github.io/tags/academia/index.xml rel="self" type="application/rss+xml" />
+    <description>Academia</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2011-2020 Leonardo Collado Torres under (CC) BY-NC-SA 4.0. All thoughts and opinions here are my own. Icon is the [R logo](https://www.r-project.org/logo/) modified</copyright><lastBuildDate>Mon, 03 Feb 2020 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
+      <title>Academia</title>
+      <link>/tags/academia/</link>
+    </image>
     
     <item>
       <title>Conference feelings: from newbie to sponsor</title>
       <link>/2020/02/03/conference-feelings-from-newbie-to-sponsor/</link>
       <pubDate>Mon, 03 Feb 2020 00:00:00 +0000</pubDate>
-      
       <guid>/2020/02/03/conference-feelings-from-newbie-to-sponsor/</guid>
       <description>
 
@@ -180,7 +182,6 @@ URL: &lt;a href=&#34;https://github.com/rstudio/blogdown&#34;&gt;https://github.
       <title>The evolution of my academic career as seen through posters and talks thanks to hugo academic 4.1</title>
       <link>/2019/04/10/the-evolution-of-my-academic-career-as-seen-through-posters-and-talks-thanks-to-hugo-academic-4-1/</link>
       <pubDate>Wed, 10 Apr 2019 00:00:00 +0000</pubDate>
-      
       <guid>/2019/04/10/the-evolution-of-my-academic-career-as-seen-through-posters-and-talks-thanks-to-hugo-academic-4-1/</guid>
       <description>
 
@@ -430,7 +431,6 @@ URL: &lt;a href=&#34;https://github.com/rstudio/blogdown&#34;&gt;https://github.
       <title>How to write academic documents with GoogleDocs</title>
       <link>/2019/04/02/how-to-write-academic-documents-with-googledocs/</link>
       <pubDate>Tue, 02 Apr 2019 00:00:00 +0000</pubDate>
-      
       <guid>/2019/04/02/how-to-write-academic-documents-with-googledocs/</guid>
       <description>
 
@@ -481,12 +481,12 @@ URL: &lt;a href=&#34;https://github.com/rstudio/blogdown&#34;&gt;https://github.
 &lt;p&gt;For more details, check the &lt;a href=&#34;https://f1000.com/work/#/faq/google-docs-add-on&#34;&gt;FAQs&lt;/a&gt;.&lt;/p&gt;
 
 &lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
-  &lt;iframe src=&#34;//player.vimeo.com/video/153753002&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+  &lt;iframe src=&#34;https://player.vimeo.com/video/153753002&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;vimeo video&#34; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
  &lt;/div&gt;
 
 
 &lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
-  &lt;iframe src=&#34;//player.vimeo.com/video/141798183&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+  &lt;iframe src=&#34;https://player.vimeo.com/video/141798183&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;vimeo video&#34; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
  &lt;/div&gt;
 
 &lt;/div&gt;
@@ -680,7 +680,6 @@ URL: &lt;a href=&#34;https://github.com/rstudio/blogdown&#34;&gt;https://github.
       <title>A knot of threads: from CSHL to LCG-UNAM to Aldo Barrientos to diversity scholarship opportunities</title>
       <link>/2018/11/06/a-knot-of-threads-from-cshl-to-lcg-unam-to-aldo-barrientos-to-diversity-scholarship-opportunities/</link>
       <pubDate>Tue, 06 Nov 2018 00:00:00 +0000</pubDate>
-      
       <guid>/2018/11/06/a-knot-of-threads-from-cshl-to-lcg-unam-to-aldo-barrientos-to-diversity-scholarship-opportunities/</guid>
       <description>
 
@@ -924,7 +923,6 @@ dev.off()&lt;/code&gt;&lt;/pre&gt;
       <title>Why I applied to join SNI: the Mexican National Researchers registry</title>
       <link>/2018/09/29/why-i-applied-to-join-sni-the-mexican-national-researchers-registry/</link>
       <pubDate>Sat, 29 Sep 2018 00:00:00 +0000</pubDate>
-      
       <guid>/2018/09/29/why-i-applied-to-join-sni-the-mexican-national-researchers-registry/</guid>
       <description>
 
@@ -1068,7 +1066,6 @@ dev.off()&lt;/code&gt;&lt;/pre&gt;
       <title>Problems with an article from the Baltimore Sun covering Dr. Mahoney-Steel’s immigration issues</title>
       <link>/2018/09/19/problems-with-an-article-from-the-baltimore-sun-covering-dr-mahoney-steel-s-immigration-issues/</link>
       <pubDate>Wed, 19 Sep 2018 00:00:00 +0000</pubDate>
-      
       <guid>/2018/09/19/problems-with-an-article-from-the-baltimore-sun-covering-dr-mahoney-steel-s-immigration-issues/</guid>
       <description>
 
@@ -1168,7 +1165,6 @@ dev.off()&lt;/code&gt;&lt;/pre&gt;
       <title>Harassment, diversity in science and inspiration from my grandmother</title>
       <link>/2018/07/30/harassment-diversity-in-science-and-inspiration-from-my-grandmother/</link>
       <pubDate>Mon, 30 Jul 2018 00:00:00 +0000</pubDate>
-      
       <guid>/2018/07/30/harassment-diversity-in-science-and-inspiration-from-my-grandmother/</guid>
       <description>
 
@@ -1333,7 +1329,6 @@ dev.off()&lt;/code&gt;&lt;/pre&gt;
       <title>SciLifeLab Prize: you still have time to participate! </title>
       <link>/2018/06/20/scilifelab-prize-you-still-have-time-to-participate/</link>
       <pubDate>Wed, 20 Jun 2018 00:00:00 +0000</pubDate>
-      
       <guid>/2018/06/20/scilifelab-prize-you-still-have-time-to-participate/</guid>
       <description>
 
@@ -1487,7 +1482,6 @@ Figure 1: Overview of the data available in recount2. Reads aligned to the refer
       <title>Using Slack for Academic Departmental Communication</title>
       <link>/2018/06/19/using-slack-for-academic-departmental-communication/</link>
       <pubDate>Tue, 19 Jun 2018 00:00:00 +0000</pubDate>
-      
       <guid>/2018/06/19/using-slack-for-academic-departmental-communication/</guid>
       <description>
 
@@ -1611,7 +1605,6 @@ Figure 1: Overview of the data available in recount2. Reads aligned to the refer
       <title>Mindfulness</title>
       <link>/2018/06/11/mindfulness/</link>
       <pubDate>Mon, 11 Jun 2018 00:00:00 +0000</pubDate>
-      
       <guid>/2018/06/11/mindfulness/</guid>
       <description>
 
@@ -1728,17 +1721,15 @@ through the practice of meditation and other training.&lt;/code&gt;&lt;/pre&gt;
       <title>Have you been &#39;relative stupid&#39;?</title>
       <link>/2013/03/31/have-you-been-relative-stupid/</link>
       <pubDate>Sun, 31 Mar 2013 00:00:00 +0000</pubDate>
-      
       <guid>/2013/03/31/have-you-been-relative-stupid/</guid>
       <description>&lt;p&gt;I enjoyed reading &amp;#8220;&lt;a href=&#34;http://jcs.biologists.org/content/121/11/1771.full&#34;&gt;The importance of stupidity in scientific research&lt;/a&gt;&#34; by Martin A. Schwartz which I learned existed through &lt;a href=&#34;https://twitter.com/hmason&#34;&gt;@hmason&lt;/a&gt; and &lt;a href=&#34;https://twitter.com/simplystats&#34;&gt;@simplystats&lt;/a&gt;. &lt;/p&gt;
 &lt;p&gt;I found the point of how it&amp;#8217;s normal to feel stupid in academia and specially in Ph.D. programs to be illuminating. But Schwartz clarifies that there are other kinds of stupid:&lt;/p&gt;
-
 &lt;blockquote&gt;
 &lt;p&gt;we don&amp;#8217;t do a good enough job of teaching our students how to be productively stupid – that is, if we don&amp;#8217;t feel stupid it means we&amp;#8217;re not really trying. I&amp;#8217;m not talking about &#39;relative stupidity&amp;#8217;, in which the other students in the class actually read the material, think about it and ace the exam, whereas you don&amp;#8217;t. I&amp;#8217;m also not talking about bright people who might be working in areas that don&amp;#8217;t match their talents. Science involves confronting our `absolute stupidity&amp;#8217;. &lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;I don&amp;#8217;t know about you, but I have certainly been &amp;#8216;relative stupid&amp;#8217; at times. &lt;/p&gt;
 &lt;p&gt;And yes, we have to confront our &amp;#8216;absolute stupidity&amp;#8217;. But to me, graduate school is also about learning how to be super efficient with your time. That implies being highly organized, learning how to canalize your distractions, and finding sources of constant motivation. For example, I now read more stats/R/research blogs as part of my set of distractions and have considerably decreased how many sport news I read. &lt;/p&gt;
 &lt;p&gt;I also struggle with the internal challenge of doing great at school, but then also &amp;#8216;having a life&amp;#8217;. So yes, at times I have been &amp;#8216;relative stupid&amp;#8217; but also had a great time. After all, I no longer need to &amp;#8216;ace&amp;#8217; all my exams.&lt;/p&gt;
-&lt;/blockquote&gt;
 </description>
     </item>
     
@@ -1746,7 +1737,6 @@ through the practice of meditation and other training.&lt;/code&gt;&lt;/pre&gt;
       <title>Learning about social networks through an interactive presentation</title>
       <link>/2012/09/28/learning-about-social-networks-through-an-interactive/</link>
       <pubDate>Fri, 28 Sep 2012 00:00:00 +0000</pubDate>
-      
       <guid>/2012/09/28/learning-about-social-networks-through-an-interactive/</guid>
       <description>&lt;p&gt;During this week&amp;#8217;s &lt;a href=&#34;http://www.biostat.jhsph.edu/~zhwu/2012journal.html&#34;&gt;journal club meeting&lt;/a&gt; Hilary Parker (&lt;a href=&#34;http://www.biostat.jhsph.edu/~hiparker/&#34;&gt;homepage&lt;/a&gt;, &lt;a href=&#34;http://hilaryparker.com/&#34;&gt;blog&lt;/a&gt;) led the session on &amp;#8220;Identifying influential and susceptible members of social networks&amp;#8221;. Were there some speakers or why did she &amp;#8220;lead the session&amp;#8221;? By this I mean that Hilary tried a very different (and interesting) format this time. Instead of giving a talk, not a formal one like at seminars, she prepared a short presentation (publicly available &lt;a href=&#34;https://docs.google.com/presentation/d/1wlZvL8z_8bOau2ZQkvxLtOuFwEVoTeOrJeQ9dO7vATs/edit#slide=id.p&#34;&gt;here&lt;/a&gt;) that begins showing a 20 minute video. This video is by the author of the paper where he presents the key points of his research at another conference. The goal of this format was to get us to speed and hopefully provoke enough discussion to make the meeting highly interactive. Plus the author does a great job in his presentation.&lt;/p&gt;
 &lt;p&gt;Now, given that it&amp;#8217;s a biostat journal club, Hilary included some slides to explain the general Cox Proportional Hazard model before showing some of details used in the paper in question. &lt;/p&gt;

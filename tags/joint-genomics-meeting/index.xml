@@ -1,22 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Joint Genomics Meeting on L. Collado-Torres</title>
+    <title>Joint Genomics Meeting | L. Collado-Torres</title>
     <link>/tags/joint-genomics-meeting/</link>
-    <description>Recent content in Joint Genomics Meeting on L. Collado-Torres</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>&amp;copy; 2011-{year} Leonardo Collado Torres under (CC) BY-NC-SA 4.0. All thoughts and opinions here are my own. Icon is the [R logo](https://www.r-project.org/logo/) modified</copyright>
-    <lastBuildDate>Thu, 29 Nov 2018 16:24:05 -0500</lastBuildDate>
-    <atom:link href="http://lcolladotor.github.io/tags/joint-genomics-meeting/" rel="self" type="application/rss+xml" />
+      <atom:link href=http://lcolladotor.github.io/tags/joint-genomics-meeting/index.xml rel="self" type="application/rss+xml" />
+    <description>Joint Genomics Meeting</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2011-2020 Leonardo Collado Torres under (CC) BY-NC-SA 4.0. All thoughts and opinions here are my own. Icon is the [R logo](https://www.r-project.org/logo/) modified</copyright><lastBuildDate>Thu, 29 Nov 2018 16:24:05 -0500</lastBuildDate>
+    <image>
+      <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
+      <title>Joint Genomics Meeting</title>
+      <link>/tags/joint-genomics-meeting/</link>
+    </image>
     
     <item>
       <title>Reproducible RNA-seq analysis with recount2 and recount-brain</title>
       <link>/talk/jgm2018/</link>
       <pubDate>Thu, 29 Nov 2018 16:24:05 -0500</pubDate>
-      
       <guid>/talk/jgm2018/</guid>
       <description>&lt;script async class=&#34;speakerdeck-embed&#34; data-id=&#34;8f272bd80133466eb490d2100cecc0cd&#34; data-ratio=&#34;1.77777777777778&#34; src=&#34;//speakerdeck.com/assets/embed.js&#34;&gt;&lt;/script&gt;
-
 &lt;!--
 
 &lt;div class=&#34;alert alert-note&#34;&gt;
@@ -43,10 +44,8 @@ Further talk details can easily be added to this page using *Markdown* and $\rm 
       <title>dbFinder</title>
       <link>/talk/dbfinder2015/</link>
       <pubDate>Sun, 01 Nov 2015 00:00:00 -0400</pubDate>
-      
       <guid>/talk/dbfinder2015/</guid>
       <description>&lt;script async class=&#34;speakerdeck-embed&#34; data-id=&#34;1ef1214612674c5dbfecc38224aadb8b&#34; data-ratio=&#34;1.33333333333333&#34; src=&#34;//speakerdeck.com/assets/embed.js&#34;&gt;&lt;/script&gt;
-
 &lt;!--
 
 &lt;div class=&#34;alert alert-note&#34;&gt;
@@ -73,10 +72,8 @@ Further talk details can easily be added to this page using *Markdown* and $\rm 
       <title>Does mapping simulated RNA-seq reads provide information?</title>
       <link>/talk/mapping2015/</link>
       <pubDate>Thu, 19 Feb 2015 10:00:00 -0500</pubDate>
-      
       <guid>/talk/mapping2015/</guid>
       <description>&lt;script async class=&#34;speakerdeck-embed&#34; data-id=&#34;2836d84d9e264ad3aac223d04ae1a7d3&#34; data-ratio=&#34;1.33333333333333&#34; src=&#34;//speakerdeck.com/assets/embed.js&#34;&gt;&lt;/script&gt;
-
 &lt;!--
 
 &lt;div class=&#34;alert alert-note&#34;&gt;
@@ -103,10 +100,8 @@ Further talk details can easily be added to this page using *Markdown* and $\rm 
       <title>Fast differential expression analysis annotation-agnostic across groups with biological replicates</title>
       <link>/talk/jgm2013/</link>
       <pubDate>Mon, 07 Oct 2013 16:24:05 -0400</pubDate>
-      
       <guid>/talk/jgm2013/</guid>
       <description>&lt;script async class=&#34;speakerdeck-embed&#34; data-id=&#34;37c7645119174995b3c1e9fcb0bfafca&#34; data-ratio=&#34;1.33333333333333&#34; src=&#34;//speakerdeck.com/assets/embed.js&#34;&gt;&lt;/script&gt;
-
 &lt;!--
 
 &lt;div class=&#34;alert alert-note&#34;&gt;

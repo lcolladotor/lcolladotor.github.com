@@ -1,19 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Help on L. Collado-Torres</title>
+    <title>Help | L. Collado-Torres</title>
     <link>/tags/help/</link>
-    <description>Recent content in Help on L. Collado-Torres</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>&amp;copy; 2011-{year} Leonardo Collado Torres under (CC) BY-NC-SA 4.0. All thoughts and opinions here are my own. Icon is the [R logo](https://www.r-project.org/logo/) modified</copyright>
-    <lastBuildDate>Mon, 12 Nov 2018 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://lcolladotor.github.io/tags/help/" rel="self" type="application/rss+xml" />
+      <atom:link href=http://lcolladotor.github.io/tags/help/index.xml rel="self" type="application/rss+xml" />
+    <description>Help</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2011-2020 Leonardo Collado Torres under (CC) BY-NC-SA 4.0. All thoughts and opinions here are my own. Icon is the [R logo](https://www.r-project.org/logo/) modified</copyright><lastBuildDate>Mon, 12 Nov 2018 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
+      <title>Help</title>
+      <link>/tags/help/</link>
+    </image>
     
     <item>
       <title>Asking for help is challenging but is typically worth it</title>
       <link>/2018/11/12/asking-for-help-is-challenging-but-is-typically-worth-it/</link>
       <pubDate>Mon, 12 Nov 2018 00:00:00 +0000</pubDate>
-      
       <guid>/2018/11/12/asking-for-help-is-challenging-but-is-typically-worth-it/</guid>
       <description>
 
@@ -182,7 +184,6 @@ URL: &lt;a href=&#34;https://github.com/rstudio/blogdown&#34;&gt;https://github.
       <title>Using Slack for Academic Departmental Communication</title>
       <link>/2018/06/19/using-slack-for-academic-departmental-communication/</link>
       <pubDate>Tue, 19 Jun 2018 00:00:00 +0000</pubDate>
-      
       <guid>/2018/06/19/using-slack-for-academic-departmental-communication/</guid>
       <description>
 
@@ -306,16 +307,12 @@ URL: &lt;a href=&#34;https://github.com/rstudio/blogdown&#34;&gt;https://github.
       <title>Updating R</title>
       <link>/2017/05/04/updating-r/</link>
       <pubDate>Thu, 04 May 2017 00:00:00 +0000</pubDate>
-      
       <guid>/2017/05/04/updating-r/</guid>
-      <description>
-
-&lt;p&gt;As you might know by now, the latest R version was recently released (R 3.4.0). That means that you are &lt;em&gt;highly&lt;/em&gt; encouraged to update your R installation. There are several ways to do this some of which are documented in these other blog posts: &lt;a href=&#34;https://www.r-statistics.com/2013/03/updating-r-from-r-on-windows-using-the-installr-package/&#34; target=&#34;_blank&#34;&gt;Tal Galili, 2013&lt;/a&gt;, &lt;a href=&#34;https://www.datascienceriot.com/how-to-upgrade-r-without-losing-your-packages/kris/&#34; target=&#34;_blank&#34;&gt;Kris Eberwein, 2015&lt;/a&gt;. You would think that it&amp;rsquo;s just a matter of downloading the latest R installer for your OS, installing it, and continuing your analysis. The reality is a bit more complicated. The following short steps will make your life easier.&lt;/p&gt;
-
+      <description>&lt;p&gt;As you might know by now, the latest R version was recently released (R 3.4.0). That means that you are &lt;em&gt;highly&lt;/em&gt; encouraged to update your R installation. There are several ways to do this some of which are documented in these other blog posts: 
+&lt;a href=&#34;https://www.r-statistics.com/2013/03/updating-r-from-r-on-windows-using-the-installr-package/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Tal Galili, 2013&lt;/a&gt;, 
+&lt;a href=&#34;https://www.datascienceriot.com/how-to-upgrade-r-without-losing-your-packages/kris/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Kris Eberwein, 2015&lt;/a&gt;. You would think that it&amp;rsquo;s just a matter of downloading the latest R installer for your OS, installing it, and continuing your analysis. The reality is a bit more complicated. The following short steps will make your life easier.&lt;/p&gt;
 &lt;h2 id=&#34;save-your-list-of-currently-installed-packages&#34;&gt;Save your list of currently installed packages&lt;/h2&gt;
-
 &lt;p&gt;If you want to continue using R with all the packages you previously had installed, the best way is to save the list of packages you currently have before installing a new R version. You can do so with these lines of code:&lt;/p&gt;
-
 &lt;pre&gt;&lt;code&gt;## Change accordingly
 list_dir &amp;lt;- &#39;/Users/lcollado/Dropbox/Computing/R&#39;
 
@@ -334,15 +331,12 @@ length(installed)
 
 ## [1] 611
 &lt;/code&gt;&lt;/pre&gt;
-
 &lt;h2 id=&#34;install-latest-r&#34;&gt;Install latest R&lt;/h2&gt;
-
-&lt;p&gt;Ok, now you have a list of installed packages. It&amp;rsquo;s like a restore point. Next, you need to get the latest R installer for your OS from &lt;a href=&#34;https://cran.r-project.org/&#34; target=&#34;_blank&#34;&gt;CRAN&lt;/a&gt; and install the latest R. For example, for a Mac that would be &lt;a href=&#34;https://cran.r-project.org/bin/macosx/R-3.4.0.pkg&#34; target=&#34;_blank&#34;&gt;R-3.4.0.pkg&lt;/a&gt;. Install it as usual.&lt;/p&gt;
-
+&lt;p&gt;Ok, now you have a list of installed packages. It&amp;rsquo;s like a restore point. Next, you need to get the latest R installer for your OS from 
+&lt;a href=&#34;https://cran.r-project.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CRAN&lt;/a&gt; and install the latest R. For example, for a Mac that would be 
+&lt;a href=&#34;https://cran.r-project.org/bin/macosx/R-3.4.0.pkg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;R-3.4.0.pkg&lt;/a&gt;. Install it as usual.&lt;/p&gt;
 &lt;h2 id=&#34;restore-your-packages&#34;&gt;Restore your packages&lt;/h2&gt;
-
 &lt;p&gt;By now you have a new R version installed but without all your favorite packages. So, how do you install them? You just need to open your latest list of installed packages and install them. Now, I&amp;rsquo;m a Bioconductor user which means that some of my packages are not on CRAN. But the following code will work for you even if all the packages you use are from CRAN.&lt;/p&gt;
-
 &lt;pre&gt;&lt;code&gt;## Change accordingly
 list_dir &amp;lt;- &#39;/Users/lcollado/Dropbox/Computing/R&#39;
 
@@ -357,43 +351,31 @@ head(installed)
 
 ## [1] &amp;quot;abind&amp;quot;   &amp;quot;acepack&amp;quot; &amp;quot;ada&amp;quot;     &amp;quot;AER&amp;quot;     &amp;quot;affy&amp;quot;    &amp;quot;affyio&amp;quot;
 &lt;/code&gt;&lt;/pre&gt;
-
 &lt;p&gt;Next, get the list of current R packages you have installed. Every new R installation comes with a few of them (the &lt;em&gt;base&lt;/em&gt; packages). You don&amp;rsquo;t need to install those.&lt;/p&gt;
-
 &lt;pre&gt;&lt;code&gt;current &amp;lt;- dir(.libPaths())
 &lt;/code&gt;&lt;/pre&gt;
-
 &lt;p&gt;Finally, install the missing packages&lt;/p&gt;
-
 &lt;pre&gt;&lt;code&gt;## For Bioconductor and CRAN packages
 install.packages(&amp;quot;BiocManager&amp;quot;)
 BiocManager::install(installed[!installed %in% current])
 &lt;/code&gt;&lt;/pre&gt;
-
 &lt;p&gt;and now you can continue on with your analysis 😄 You didn&amp;rsquo;t even need to figure out the best order to install the packages!&lt;/p&gt;
-
 &lt;h2 id=&#34;github-packages&#34;&gt;GitHub packages&lt;/h2&gt;
-
 &lt;p&gt;Some of your favorite R packages might only exist via GitHub. This list is likely short since most packages get distributed via CRAN. But if that&amp;rsquo;s the case, you can see which packages are missing by running:&lt;/p&gt;
-
 &lt;pre&gt;&lt;code&gt;## Check which packages are missing
 current_post_installation &amp;lt;- dir(.libPaths())
 installed[!installed %in% current_post_installation]
 &lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;For example, in my case I use the &lt;a href=&#34;https://github.com/jalvesaq/colorout&#34; target=&#34;_blank&#34;&gt;colorout&lt;/a&gt; package which lives only in GitHub. I have to install that one manually:&lt;/p&gt;
-
+&lt;p&gt;For example, in my case I use the 
+&lt;a href=&#34;https://github.com/jalvesaq/colorout&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;colorout&lt;/a&gt; package which lives only in GitHub. I have to install that one manually:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;install.packages(&#39;devtools&#39;)
 library(&#39;devtools&#39;)
 install_github(&amp;quot;jalvesaq/colorout&amp;quot;)
 &lt;/code&gt;&lt;/pre&gt;
-
 &lt;p&gt;Other times a package might not be compiling for the new R version or might no longer be supported (defunct).&lt;/p&gt;
-
 &lt;h2 id=&#34;misc-for-bioconductor-developers&#34;&gt;Misc for Bioconductor developers&lt;/h2&gt;
-
-&lt;p&gt;If you are a Bioconductor developer or are planning on becoming one, then you need 2 versions of R at all times. One R for the bioc-release branch and another one for the bioc-devel branch. Sometimes it&amp;rsquo;s the same R version sometimes it&amp;rsquo;s not depending on the month of the year. Right now, Bioc-release (3.5) uses R 3.4.0 and Bioc-devel (3.6) also uses R 3.4.0. &lt;a href=&#34;http://r.research.att.com/&#34; target=&#34;_blank&#34;&gt;R Switch&lt;/a&gt; for Mac users will be your friend. I can&amp;rsquo;t find the old bioc-devel mailing list thread where I first learned this, but the idea is to download the latest R tar ball, change the name from 3.4 to something else (3.4devel in my case), put it back together into a tar ball and then use this tar ball to install a second R version.&lt;/p&gt;
-
+&lt;p&gt;If you are a Bioconductor developer or are planning on becoming one, then you need 2 versions of R at all times. One R for the bioc-release branch and another one for the bioc-devel branch. Sometimes it&amp;rsquo;s the same R version sometimes it&amp;rsquo;s not depending on the month of the year. Right now, Bioc-release (3.5) uses R 3.4.0 and Bioc-devel (3.6) also uses R 3.4.0. 
+&lt;a href=&#34;http://r.research.att.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;R Switch&lt;/a&gt; for Mac users will be your friend. I can&amp;rsquo;t find the old bioc-devel mailing list thread where I first learned this, but the idea is to download the latest R tar ball, change the name from 3.4 to something else (3.4devel in my case), put it back together into a tar ball and then use this tar ball to install a second R version.&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;## Download latest R tarball
 wget http://r.research.att.com/el-capitan/R-3.4-branch/R-3.4-branch-el-capitan-sa-x86_64.tar.gz
 
@@ -409,15 +391,11 @@ tar -cvzf Rlib.tgz Library
 ## Install it
 sudo tar fvxz Rlib.tgz -C /
 &lt;/code&gt;&lt;/pre&gt;
-
 &lt;p&gt;There you go:&lt;/p&gt;
-
-&lt;p&gt;&lt;center&gt;
+&lt;center&gt;
 &lt;img alt = &#39;Rswitch&#39; width=&#39;400&#39; src=&#39;http://lcolladotor.github.io/figs/2017-05-04-updateR/rswitch.png&#39; /&gt;
-&lt;/center&gt;&lt;/p&gt;
-
+&lt;/center&gt;
 &lt;h3 id=&#34;reproducibility&#34;&gt;Reproducibility&lt;/h3&gt;
-
 &lt;pre&gt;&lt;code&gt;## Reproducibility info
 library(&#39;devtools&#39;)
 options(width = 120)
@@ -448,10 +426,11 @@ session_info()
 ##  stringr         1.2.0   2017-02-18 cran (@1.2.0) 
 ##  withr           1.0.2   2016-06-20 CRAN (R 3.4.0)
 &lt;/code&gt;&lt;/pre&gt;
-
 &lt;h3 id=&#34;want-more&#34;&gt;Want more?&lt;/h3&gt;
-
-&lt;p&gt;Check other &lt;a href=&#34;https://twitter.com/jhubiostat&#34; target=&#34;_blank&#34;&gt;@jhubiostat&lt;/a&gt; student and alumni blogs at &lt;a href=&#34;http://bmorebiostat.com/&#34; target=&#34;_blank&#34;&gt;Bmore Biostats&lt;/a&gt; as well as topics on &lt;a href=&#34;https://twitter.com/search?q=%23rstats&#34; target=&#34;_blank&#34;&gt;#rstats&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Check other 
+&lt;a href=&#34;https://twitter.com/jhubiostat&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;@jhubiostat&lt;/a&gt; student and alumni blogs at 
+&lt;a href=&#34;http://bmorebiostat.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Bmore Biostats&lt;/a&gt; as well as topics on 
+&lt;a href=&#34;https://twitter.com/search?q=%23rstats&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;#rstats&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     
@@ -459,28 +438,23 @@ session_info()
       <title>How to ask for help for Bioconductor packages</title>
       <link>/2017/03/06/how-to-ask-for-help-for-bioconductor-packages/</link>
       <pubDate>Mon, 06 Mar 2017 00:00:00 +0000</pubDate>
-      
       <guid>/2017/03/06/how-to-ask-for-help-for-bioconductor-packages/</guid>
-      <description>
-
-&lt;div class=&#34;alert alert-note&#34;&gt;
+      <description>&lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
-    tl;dr Please post your question at the Bioconductor support website &lt;a href=&#34;https://support.bioconductor.org/&#34; target=&#34;_blank&#34;&gt;https://support.bioconductor.org/&lt;/a&gt; and check the posting guide &lt;a href=&#34;http://www.bioconductor.org/help/support/posting-guide/&#34; target=&#34;_blank&#34;&gt;http://www.bioconductor.org/help/support/posting-guide/&lt;/a&gt;. It&amp;rsquo;s important that you provide reproducible code and information about your R session.
+    tl;dr Please post your question at the Bioconductor support website &lt;a href=&#34;https://support.bioconductor.org/&#34;&gt;https://support.bioconductor.org/&lt;/a&gt; and check the posting guide &lt;a href=&#34;http://www.bioconductor.org/help/support/posting-guide/&#34;&gt;http://www.bioconductor.org/help/support/posting-guide/&lt;/a&gt;. It&amp;rsquo;s important that you provide reproducible code and information about your R session.
   &lt;/div&gt;
 &lt;/div&gt;
-
-&lt;p&gt;Recently I have been getting more questions about several packages I maintain. It&amp;rsquo;s great to see more interest from users, but at the same time most questions lack the information I need to help the users. I have also gotten most of the questions via email, which is why I am writing this post. As of today, I will no longer answer questions related to my Bioconductor packages via personal emails. This might sound harsh, but hopefully the rest of this post will convince you that it&amp;rsquo;s the best thing to do. You might also be interested in the basics of using &lt;a href=&#34;http://bioconductor.org/packages/release/bioc/vignettes/derfinder/inst/doc/derfinder-quickstart.html#basics&#34; target=&#34;_blank&#34;&gt;derfinder&lt;/a&gt;, &lt;a href=&#34;http://bioconductor.org/packages/release/bioc/vignettes/regionReport/inst/doc/regionReport.html#basics&#34; target=&#34;_blank&#34;&gt;regionReport&lt;/a&gt; or &lt;a href=&#34;http://bioconductor.org/packages/release/bioc/vignettes/recount/inst/doc/recount-quickstart.html#basics&#34; target=&#34;_blank&#34;&gt;recount&lt;/a&gt;, among others.&lt;/p&gt;
-
-&lt;p&gt;The Bioconductor project is a community project and it benefits from users interacting in public venues. When a user asks a question at the &lt;a href=&#34;https://support.bioconductor.org/&#34; target=&#34;_blank&#34;&gt;Bioconductor support website&lt;/a&gt;, they are providing information that future users might be interested in. That is, the user (&lt;strong&gt;U1&lt;/strong&gt;) is contributing information to the overall documentation around the Bioconductor package they are asking a question about. Ideally, a new user (&lt;strong&gt;U2&lt;/strong&gt;) can then read through the question U1 wrote, check the solution, and move on. This is one of the main reasons why we (developers) want questions to be well documented. There are a couple of quick things that U1 can check that will make their question much more useful to the community.&lt;/p&gt;
-
-&lt;p&gt;&lt;center&gt;
+&lt;p&gt;Recently I have been getting more questions about several packages I maintain. It&amp;rsquo;s great to see more interest from users, but at the same time most questions lack the information I need to help the users. I have also gotten most of the questions via email, which is why I am writing this post. As of today, I will no longer answer questions related to my Bioconductor packages via personal emails. This might sound harsh, but hopefully the rest of this post will convince you that it&amp;rsquo;s the best thing to do. You might also be interested in the basics of using 
+&lt;a href=&#34;http://bioconductor.org/packages/release/bioc/vignettes/derfinder/inst/doc/derfinder-quickstart.html#basics&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;derfinder&lt;/a&gt;, 
+&lt;a href=&#34;http://bioconductor.org/packages/release/bioc/vignettes/regionReport/inst/doc/regionReport.html#basics&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;regionReport&lt;/a&gt; or 
+&lt;a href=&#34;http://bioconductor.org/packages/release/bioc/vignettes/recount/inst/doc/recount-quickstart.html#basics&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;recount&lt;/a&gt;, among others.&lt;/p&gt;
+&lt;p&gt;The Bioconductor project is a community project and it benefits from users interacting in public venues. When a user asks a question at the 
+&lt;a href=&#34;https://support.bioconductor.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Bioconductor support website&lt;/a&gt;, they are providing information that future users might be interested in. That is, the user (&lt;strong&gt;U1&lt;/strong&gt;) is contributing information to the overall documentation around the Bioconductor package they are asking a question about. Ideally, a new user (&lt;strong&gt;U2&lt;/strong&gt;) can then read through the question U1 wrote, check the solution, and move on. This is one of the main reasons why we (developers) want questions to be well documented. There are a couple of quick things that U1 can check that will make their question much more useful to the community.&lt;/p&gt;
+&lt;center&gt;
 &lt;a href=&#34;http://www.bioconductor.org/help/support/posting-guide/&#34;&gt;&lt;img alt = &#39;shinycsv landing&#39; width=&#39;600&#39; src=&#39;http://lcolladotor.github.io/figs/2017-03-06-bioc-support/question.png&#39; /&gt;&lt;/a&gt;
-&lt;/center&gt;&lt;/p&gt;
-
+&lt;/center&gt;
 &lt;h2 id=&#34;session-information&#34;&gt;Session information&lt;/h2&gt;
-
 &lt;p&gt;One of the strengths of Bioconductor is that all the packages have vignettes and lots of documentation. The packages are also checked regularly and must pass some tests. That also means that packages can change frequently, at least more frequently than CRAN packages. There&amp;rsquo;s also the added complexity that at any given point in time there is a release branch and a development branch. This means that there are many variables and saying that you are using the &amp;ldquo;latest version&amp;rdquo; doesn&amp;rsquo;t mean much to the developer. All of this information and more is part of the &lt;em&gt;R session information&lt;/em&gt;. That is why I and others request users to post their session information. It&amp;rsquo;s very easy to get, simply run the following code:&lt;/p&gt;
-
 &lt;pre&gt;&lt;code&gt;## Install devtools if needed
 # install.packages(&#39;devtools&#39;)
 
@@ -489,34 +463,29 @@ library(&#39;devtools&#39;)
 options(width = 120)
 session_info()
 &lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;The output might be too long to post in the &lt;a href=&#34;https://support.bioconductor.org/&#34; target=&#34;_blank&#34;&gt;Bioconductor support website&lt;/a&gt;. The easy solution is to save the information you want displayed in a &lt;a href=&#34;https://gist.github.com/&#34; target=&#34;_blank&#34;&gt;gist&lt;/a&gt;. Then simply add the gist link in your question. Note that you need to have the link under &amp;ldquo;text&amp;rdquo; formatting and not &amp;ldquo;code&amp;rdquo;.&lt;/p&gt;
-
+&lt;p&gt;The output might be too long to post in the 
+&lt;a href=&#34;https://support.bioconductor.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Bioconductor support website&lt;/a&gt;. The easy solution is to save the information you want displayed in a 
+&lt;a href=&#34;https://gist.github.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;gist&lt;/a&gt;. Then simply add the gist link in your question. Note that you need to have the link under &amp;ldquo;text&amp;rdquo; formatting and not &amp;ldquo;code&amp;rdquo;.&lt;/p&gt;
 &lt;h2 id=&#34;code-to-reproduce-the-error&#34;&gt;Code to reproduce the error&lt;/h2&gt;
-
 &lt;p&gt;If U1 includes the session information, their question will be pretty good, but not ideal yet. Many of the questions I&amp;rsquo;ve been asked do not include code for me to figure out the exact steps of what they were doing. A lot of times I can infer pieces of what they were doing from their description of the problem. But doing so takes quite a bit of my time and effort, and is still not perfect. Now imagine that U2 is reading through the question: they would probably get lost!&lt;/p&gt;
-
 &lt;p&gt;There is a wide range of things that U1 could have done. To help the developer, the best thing is for the user to include the code that lead to the error. The code should include how the data was loaded, so that the developer can run it themselves and check in more detail what went wrong. This means providing a small subset of the data or using some publicly available data.&lt;/p&gt;
-
 &lt;p&gt;I realize that writing code that reproduces the error is not easy. But it helps a lot for learning more about R and Bioconductor. I can tell you that I went through the same process, and in my experience you can find out what you are doing wrong by writing the reproducible code.&lt;/p&gt;
-
 &lt;h2 id=&#34;extra&#34;&gt;Extra&lt;/h2&gt;
-
 &lt;p&gt;Here are some other tips that are useful.&lt;/p&gt;
-
 &lt;ul&gt;
 &lt;li&gt;If you run &lt;code&gt;traceback()&lt;/code&gt; immediately after getting the error and include the output in your question, that would be great. It makes it easier to check at what point the code failed and produced the error.&lt;/li&gt;
-&lt;li&gt;Recently when I ask questions myself, I include the &amp;ldquo;non-evaluated code&amp;rdquo; (clean code in your script) and &amp;ldquo;evaluated code&amp;rdquo; (think of the R console: a mix of code and output). The non-evaluated code makes it easier for others to copy-paste the code into their R session without having to deal with any formatting issues (&lt;a href=&#34;https://github.com/leekgroup/recount/issues/8#issue-210124094&#34; target=&#34;_blank&#34;&gt;example&lt;/a&gt;).&lt;/li&gt;
+&lt;li&gt;Recently when I ask questions myself, I include the &amp;ldquo;non-evaluated code&amp;rdquo; (clean code in your script) and &amp;ldquo;evaluated code&amp;rdquo; (think of the R console: a mix of code and output). The non-evaluated code makes it easier for others to copy-paste the code into their R session without having to deal with any formatting issues (
+&lt;a href=&#34;https://github.com/leekgroup/recount/issues/8#issue-210124094&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;example&lt;/a&gt;).&lt;/li&gt;
 &lt;li&gt;If you encounter a new error, post a new question instead of &amp;ldquo;replying&amp;rdquo; to the first one.&lt;/li&gt;
 &lt;li&gt;Introduce yourself.&lt;/li&gt;
 &lt;li&gt;Be polite.&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;p&gt;By now you should be ready to post some great questions! Thanks for contributing to the Bioconductor community.&lt;/p&gt;
-
 &lt;h3 id=&#34;want-more&#34;&gt;Want more?&lt;/h3&gt;
-
-&lt;p&gt;Check other &lt;a href=&#34;https://twitter.com/jhubiostat&#34; target=&#34;_blank&#34;&gt;@jhubiostat&lt;/a&gt; student and alumni blogs at &lt;a href=&#34;http://bmorebiostat.com/&#34; target=&#34;_blank&#34;&gt;Bmore Biostats&lt;/a&gt; as well as topics on &lt;a href=&#34;https://twitter.com/search?q=%23rstats&#34; target=&#34;_blank&#34;&gt;#rstats&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Check other 
+&lt;a href=&#34;https://twitter.com/jhubiostat&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;@jhubiostat&lt;/a&gt; student and alumni blogs at 
+&lt;a href=&#34;http://bmorebiostat.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Bmore Biostats&lt;/a&gt; as well as topics on 
+&lt;a href=&#34;https://twitter.com/search?q=%23rstats&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;#rstats&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     
@@ -524,29 +493,19 @@ session_info()
       <title>Use hidden advanced arguments for user-friendly functions</title>
       <link>/2014/12/11/dots/</link>
       <pubDate>Thu, 11 Dec 2014 00:00:00 +0000</pubDate>
-      
       <guid>/2014/12/11/dots/</guid>
-      <description>
-
-&lt;h2 id=&#34;as-a-user&#34;&gt;As a user&lt;/h2&gt;
-
-&lt;p&gt;Imagine that you are starting to learn how to use a specific &lt;code&gt;R&lt;/code&gt; package, lets call it &lt;code&gt;foo&lt;/code&gt;. You will look at the vignette (if there is one), use &lt;code&gt;help(package = foo)&lt;/code&gt;, or look at the reference manual (for example, &lt;a href=&#34;http://cran.r-project.org/web/packages/devtools/devtools.pdf&#34; target=&#34;_blank&#34;&gt;devtools&amp;rsquo; ref man&lt;/a&gt;). Eventually, you will open the help page for the function(s) you are interested in using.&lt;/p&gt;
-
+      <description>&lt;h2 id=&#34;as-a-user&#34;&gt;As a user&lt;/h2&gt;
+&lt;p&gt;Imagine that you are starting to learn how to use a specific &lt;code&gt;R&lt;/code&gt; package, lets call it &lt;code&gt;foo&lt;/code&gt;. You will look at the vignette (if there is one), use &lt;code&gt;help(package = foo)&lt;/code&gt;, or look at the reference manual (for example, 
+&lt;a href=&#34;http://cran.r-project.org/web/packages/devtools/devtools.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;devtools&amp;rsquo; ref man&lt;/a&gt;). Eventually, you will open the help page for the function(s) you are interested in using.&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;?function_I_want_to_use
 &lt;/code&gt;&lt;/pre&gt;
-
 &lt;p&gt;In many packages, there is a main use case that is addressed by the package. A common strategy is to export a main function. That function will likely have a long list of arguments. So as a new user, you are suddenly exposed to a complicated help page and you will want to figure out which arguments you need to use.&lt;/p&gt;
-
 &lt;h2 id=&#34;as-a-developer&#34;&gt;As a developer&lt;/h2&gt;
-
 &lt;p&gt;From the developer&amp;rsquo;s side, you want to give users control over several details. Each detail you want the user to control involves one more argument in your function. Sooner rather than later, you will have a long list of arguments. This increases the learning curve for new users of your package, and can potentially scare them away. That is contradictory of another goal you have as a developer: you want to get people to use your package.&lt;/p&gt;
-
-&lt;p&gt;Lets say that you are developing the function &lt;code&gt;use_me()&lt;/code&gt;. If the details you want the users to control are actually arguments of other functions used inside &lt;code&gt;use_me()&lt;/code&gt;, then you can simplify your function by using the &lt;code&gt;...&lt;/code&gt; argument. This argument is very well explained at &lt;a href=&#34;http://www.burns-stat.com/the-three-dots-construct-in-r/&#34; target=&#34;_blank&#34;&gt;The three-dots construct in R&lt;/a&gt; &lt;a id=&#39;cite-greycite20763&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;http://www.burns-stat.com/the-three-dots-construct-in-r/&#39;&gt;Burns, 2013&lt;/a&gt;). It is very useful and can greatly simplify your life as a developer. Plus, it reduces the length of your help pages, thus making your package more user friendly.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://lcolladotor.github.io/figs/2014-12-11-dots/unnamed-chunk-2-1.png&#34; alt=&#34;center&#34; /&gt;&lt;/p&gt;
-
+&lt;p&gt;Lets say that you are developing the function &lt;code&gt;use_me()&lt;/code&gt;. If the details you want the users to control are actually arguments of other functions used inside &lt;code&gt;use_me()&lt;/code&gt;, then you can simplify your function by using the &lt;code&gt;...&lt;/code&gt; argument. This argument is very well explained at 
+&lt;a href=&#34;http://www.burns-stat.com/the-three-dots-construct-in-r/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;The three-dots construct in R&lt;/a&gt; &lt;a id=&#39;cite-greycite20763&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;http://www.burns-stat.com/the-three-dots-construct-in-r/&#39;&gt;Burns, 2013&lt;/a&gt;). It is very useful and can greatly simplify your life as a developer. Plus, it reduces the length of your help pages, thus making your package more user friendly.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://lcolladotor.github.io/figs/2014-12-11-dots/unnamed-chunk-2-1.png&#34; alt=&#34;center&#34;&gt;&lt;/p&gt;
 &lt;p&gt;However, if some of the details in &lt;code&gt;use_me()&lt;/code&gt; are not arguments to other functions, then the common strategy is to write two functions. One is a low level function with arguments for all the details which might or might not export. Then, you write a second function that is a wrapper for the low level function and pre-specifies values for all the details. See the next minimal example:&lt;/p&gt;
-
 &lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;# Don&#39;t export this function
 .use_me &amp;lt;- function(arg1, arg2, verbose = TRUE) {
     if(verbose) message(paste(Sys.time(), &#39;working&#39;))
@@ -561,23 +520,16 @@ use_me &amp;lt;- function(arg1, ...) {
 ## Lets see it in action
 use_me(1:3)
 &lt;/code&gt;&lt;/pre&gt;
-
 &lt;pre&gt;&lt;code&gt;## 2014-12-11 17:03:32 working
 &lt;/code&gt;&lt;/pre&gt;
-
 &lt;pre&gt;&lt;code&gt;## [1] 1 2 3
 &lt;/code&gt;&lt;/pre&gt;
-
 &lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;use_me(-1:1, verbose = FALSE)
 &lt;/code&gt;&lt;/pre&gt;
-
 &lt;pre&gt;&lt;code&gt;## [1] 0 0 1
 &lt;/code&gt;&lt;/pre&gt;
-
 &lt;p&gt;In this example, the help page for &lt;code&gt;use_me()&lt;/code&gt; is fairly short and friendly. You don&amp;rsquo;t expect users to be interested in changing &lt;code&gt;arg2&lt;/code&gt; much. Surely you could make it so the non-exported function &lt;code&gt;.use_me()&lt;/code&gt; sets a default value for &lt;code&gt;arg2&lt;/code&gt;.&lt;/p&gt;
-
 &lt;p&gt;Another strategy is to specify inside &lt;code&gt;use_me()&lt;/code&gt; the default values for all the arguments you want to use while keeping the list of visible arguments short. That is, maintain the user friendliness of your functions while also giving them control over all the details. That is what you can do using &lt;code&gt;dots()&lt;/code&gt; from &lt;code&gt;dots&lt;/code&gt; &lt;a id=&#39;cite-dots&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://github.com/lcolladotor/dots&#39;&gt;Collado-Torres, 2014&lt;/a&gt;). &lt;code&gt;dots()&lt;/code&gt; is a very simple function that checks if &lt;code&gt;...&lt;/code&gt; has a specific argument, and if absent, it returns a default value. It can be seen in action below:&lt;/p&gt;
-
 &lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;library(&#39;dots&#39;)
 use_me_dots &amp;lt;- function(arg1, ...) {
     ## Default hidden arguments
@@ -590,31 +542,21 @@ use_me_dots &amp;lt;- function(arg1, ...) {
 }
 use_me_dots(1:3)
 &lt;/code&gt;&lt;/pre&gt;
-
 &lt;pre&gt;&lt;code&gt;## 2014-12-11 17:03:32 working
 &lt;/code&gt;&lt;/pre&gt;
-
 &lt;pre&gt;&lt;code&gt;## [1] 1 2 3
 &lt;/code&gt;&lt;/pre&gt;
-
 &lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;use_me_dots(-1:1, verbose = FALSE)
 &lt;/code&gt;&lt;/pre&gt;
-
 &lt;pre&gt;&lt;code&gt;## [1] 0 0 1
 &lt;/code&gt;&lt;/pre&gt;
-
 &lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;use_me_dots(-1:1, verbose = FALSE, arg2 = 5)
 &lt;/code&gt;&lt;/pre&gt;
-
 &lt;pre&gt;&lt;code&gt;## [1] 5 5 5
 &lt;/code&gt;&lt;/pre&gt;
-
 &lt;p&gt;&lt;code&gt;dots&lt;/code&gt; is my solution to the problem of keeping functions user friendly while giving them control over all the details. The idea is that experienced users will be able to find what the advanced arguments are. While they could find them from the code itself, I do recommend describing the advanced arguments in a vignette targeted for these users.&lt;/p&gt;
-
 &lt;h2 id=&#34;complications&#34;&gt;Complications&lt;/h2&gt;
-
 &lt;p&gt;Now, while &lt;code&gt;...&lt;/code&gt; is great, you might run into problems when &lt;code&gt;use_me()&lt;/code&gt; calls two functions that have different arguments and that don&amp;rsquo;t have the &lt;code&gt;...&lt;/code&gt; argument. Such a scenario is illustrated below.&lt;/p&gt;
-
 &lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;status &amp;lt;- function(arg3, status = TRUE) {
     if(status) print(arg3)
     return(invisible(NULL))
@@ -628,24 +570,17 @@ use_me_again &amp;lt;- function(arg1, ...) {
 ## Seems to work
 x &amp;lt;- use_me_again(1)
 &lt;/code&gt;&lt;/pre&gt;
-
 &lt;pre&gt;&lt;code&gt;## 2014-12-11 17:03:32 working
 &lt;/code&gt;&lt;/pre&gt;
-
 &lt;pre&gt;&lt;code&gt;## [1] 1
 &lt;/code&gt;&lt;/pre&gt;
-
 &lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;## But nope, it doesn&#39;t
 use_me_again(1, verbose = FALSE, status = FALSE)
 &lt;/code&gt;&lt;/pre&gt;
-
 &lt;pre&gt;&lt;code&gt;## Error in .use_me(arg1, 0, ...): unused argument (status = FALSE)
 &lt;/code&gt;&lt;/pre&gt;
-
 &lt;p&gt;This scenario can happen when you are using functions from other packages. It&amp;rsquo;s happened to me in cases where the main function does have a &lt;code&gt;...&lt;/code&gt; argument but uses several internal functions that don&amp;rsquo;t use it.&lt;/p&gt;
-
 &lt;p&gt;In such situations, you might want to use &lt;code&gt;formal_call()&lt;/code&gt; from &lt;code&gt;dots&lt;/code&gt;. It figures out which are the arguments formally used by the function of interest and drops out un-used arguments from &lt;code&gt;...&lt;/code&gt;, thus avoiding this type of problem.&lt;/p&gt;
-
 &lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;use_me_fixed &amp;lt;- function(arg1, ...) {
     res &amp;lt;- formalCall(.use_me, arg1 = arg1, arg2 = 0, ...)
     formal_call(status, arg3 = res, ...)
@@ -655,56 +590,47 @@ use_me_again(1, verbose = FALSE, status = FALSE)
 ## Works now!
 use_me_fixed(1, verbose = FALSE, status = FALSE)
 &lt;/code&gt;&lt;/pre&gt;
-
 &lt;pre&gt;&lt;code&gt;## [1] 1
 &lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;For a more complicated example, see the &lt;a href=&#34;http://lcolladotor.github.io/dots/dots.html#Complex_example&#34; target=&#34;_blank&#34;&gt;dots complex example in the vignette&lt;/a&gt;.&lt;/p&gt;
-
+&lt;p&gt;For a more complicated example, see the 
+&lt;a href=&#34;http://lcolladotor.github.io/dots/dots.html#Complex_example&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;dots complex example in the vignette&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id=&#34;conclusions&#34;&gt;Conclusions&lt;/h2&gt;
-
-&lt;p&gt;As a developer, it is possible to keep your functions user friendly while giving experienced users the option to control the fine tuning arguments which you don&amp;rsquo;t expect most users will want to tweak. My solution to this problem is implemented in &lt;a href=&#34;https://github.com/lcolladotor/dots&#34; target=&#34;_blank&#34;&gt;dots&lt;/a&gt; (check it&amp;rsquo;s &lt;a href=&#34;http://lcolladotor.github.io/dots/&#34; target=&#34;_blank&#34;&gt;vignette&lt;/a&gt;). I&amp;rsquo;d love to hear what you think about it! I am specially interested on what users think about the idea of hidden advanced arguments (documented in an advanced users vignette).&lt;/p&gt;
-
-&lt;p&gt;I might try to get &lt;code&gt;dots&lt;/code&gt; into a repository: probably in &lt;a href=&#34;http://www.bioconductor.org/&#34; target=&#34;_blank&#34;&gt;Bioconductor&lt;/a&gt; since most of the &lt;code&gt;dots&lt;/code&gt; code was first implemented for &lt;a href=&#34;http://www.bioconductor.org/packages/release/bioc/html/derfinder.html&#34; target=&#34;_blank&#34;&gt;derfinder&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;PS I just found a similar function to &lt;code&gt;dots()&lt;/code&gt;. It&amp;rsquo;s &lt;code&gt;berryFunctions::owa()&lt;/code&gt; and you can find its &lt;a href=&#34;https://github.com/BerryBoessenkool/berryFunctions/blob/master/R/owa.r&#34; target=&#34;_blank&#34;&gt;code here&lt;/a&gt;.&lt;/p&gt;
-
+&lt;p&gt;As a developer, it is possible to keep your functions user friendly while giving experienced users the option to control the fine tuning arguments which you don&amp;rsquo;t expect most users will want to tweak. My solution to this problem is implemented in 
+&lt;a href=&#34;https://github.com/lcolladotor/dots&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;dots&lt;/a&gt; (check it&amp;rsquo;s 
+&lt;a href=&#34;http://lcolladotor.github.io/dots/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;vignette&lt;/a&gt;). I&amp;rsquo;d love to hear what you think about it! I am specially interested on what users think about the idea of hidden advanced arguments (documented in an advanced users vignette).&lt;/p&gt;
+&lt;p&gt;I might try to get &lt;code&gt;dots&lt;/code&gt; into a repository: probably in 
+&lt;a href=&#34;http://www.bioconductor.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Bioconductor&lt;/a&gt; since most of the &lt;code&gt;dots&lt;/code&gt; code was first implemented for 
+&lt;a href=&#34;http://www.bioconductor.org/packages/release/bioc/html/derfinder.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;derfinder&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;PS I just found a similar function to &lt;code&gt;dots()&lt;/code&gt;. It&amp;rsquo;s &lt;code&gt;berryFunctions::owa()&lt;/code&gt; and you can find its 
+&lt;a href=&#34;https://github.com/BerryBoessenkool/berryFunctions/blob/master/R/owa.r&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;code here&lt;/a&gt;.&lt;/p&gt;
 &lt;h3 id=&#34;references&#34;&gt;References&lt;/h3&gt;
-
 &lt;p&gt;Citations made with &lt;code&gt;knitcitations&lt;/code&gt; &lt;a id=&#39;cite-knitcitations&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://github.com/cboettig/knitcitations&#39;&gt;Boettiger, 2014&lt;/a&gt;).&lt;/p&gt;
-
 &lt;p&gt;&lt;a id=&#39;bib-knitcitations&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-knitcitations&#34;&gt;[1]&lt;/a&gt;&lt;cite&gt;
 C. Boettiger.
 &lt;em&gt;knitcitations: Citations for knitr markdown files&lt;/em&gt;.
 R package version 1.0.4.
 2014.
 URL: &lt;a href=&#34;https://github.com/cboettig/knitcitations&#34;&gt;https://github.com/cboettig/knitcitations&lt;/a&gt;.&lt;/cite&gt;&lt;/p&gt;
-
 &lt;p&gt;&lt;a id=&#39;bib-greycite20763&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-greycite20763&#34;&gt;[2]&lt;/a&gt;&lt;cite&gt;
 P. Burns.
 &lt;em&gt;The three-dots construct in R - Burns Statistics&lt;/em&gt;.
 &lt;a href=&#34;http://www.burns-stat.com/the-three-dots-construct-in-r/&#34;&gt;http://www.burns-stat.com/the-three-dots-construct-in-r/&lt;/a&gt;.
 2013.
 URL: &lt;a href=&#34;http://www.burns-stat.com/the-three-dots-construct-in-r/&#34;&gt;http://www.burns-stat.com/the-three-dots-construct-in-r/&lt;/a&gt;.&lt;/cite&gt;&lt;/p&gt;
-
 &lt;p&gt;&lt;a id=&#39;bib-dots&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-dots&#34;&gt;[3]&lt;/a&gt;&lt;cite&gt;
 L. Collado-Torres.
 &lt;em&gt;dots: Simplifying function calls&lt;/em&gt;.
 R package version 1.0.0.
 2014.
 URL: &lt;a href=&#34;https://github.com/lcolladotor/dots&#34;&gt;https://github.com/lcolladotor/dots&lt;/a&gt;.&lt;/cite&gt;&lt;/p&gt;
-
 &lt;h3 id=&#34;reproducibility&#34;&gt;Reproducibility&lt;/h3&gt;
-
 &lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;## Reproducibility info
 library(&#39;devtools&#39;)
 options(width = 120)
 session_info()
 &lt;/code&gt;&lt;/pre&gt;
-
 &lt;pre&gt;&lt;code&gt;## Session info-----------------------------------------------------------------------------------------------------------
 &lt;/code&gt;&lt;/pre&gt;
-
 &lt;pre&gt;&lt;code&gt;##  setting  value                                             
 ##  version  R Under development (unstable) (2014-11-01 r66923)
 ##  system   x86_64, darwin10.8.0                              
@@ -713,10 +639,8 @@ session_info()
 ##  collate  en_US.UTF-8                                       
 ##  tz       America/New_York
 &lt;/code&gt;&lt;/pre&gt;
-
 &lt;pre&gt;&lt;code&gt;## Packages---------------------------------------------------------------------------------------------------------------
 &lt;/code&gt;&lt;/pre&gt;
-
 &lt;pre&gt;&lt;code&gt;##  package       * version  date       source                                 
 ##  bibtex          0.3.6    2013-07-29 CRAN (R 3.2.0)                         
 ##  devtools      * 1.6.1    2014-10-07 CRAN (R 3.2.0)                         
@@ -739,11 +663,11 @@ session_info()
 ##  stringr         0.6.2    2012-12-06 CRAN (R 3.2.0)                         
 ##  XML             3.98.1.1 2013-06-20 CRAN (R 3.2.0)
 &lt;/code&gt;&lt;/pre&gt;
-
 &lt;h3 id=&#34;want-more&#34;&gt;Want more?&lt;/h3&gt;
-
-&lt;p&gt;Check other &lt;a href=&#34;https://twitter.com/jhubiostat&#34; target=&#34;_blank&#34;&gt;@jhubiostat&lt;/a&gt; student blogs at &lt;a href=&#34;http://bmorebiostat.com/&#34; target=&#34;_blank&#34;&gt;Bmore Biostats&lt;/a&gt; as well as topics on &lt;a href=&#34;https://twitter.com/search?q=%23rstats&#34; target=&#34;_blank&#34;&gt;#rstats&lt;/a&gt;.&lt;/p&gt;
-
+&lt;p&gt;Check other 
+&lt;a href=&#34;https://twitter.com/jhubiostat&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;@jhubiostat&lt;/a&gt; student blogs at 
+&lt;a href=&#34;http://bmorebiostat.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Bmore Biostats&lt;/a&gt; as well as topics on 
+&lt;a href=&#34;https://twitter.com/search?q=%23rstats&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;#rstats&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;I wrote &lt;code&gt;dots&lt;/code&gt; a month ago and the post itself today during our bi-weekly blog meeting.&lt;/p&gt;
 </description>
     </item>
@@ -752,39 +676,24 @@ session_info()
       <title>Trying to reduce the memory overhead when using mclapply</title>
       <link>/2013/11/14/reducing-memory-overhead-when-using-mclapply/</link>
       <pubDate>Thu, 14 Nov 2013 00:00:00 +0000</pubDate>
-      
       <guid>/2013/11/14/reducing-memory-overhead-when-using-mclapply/</guid>
-      <description>
-
-&lt;p&gt;I am currently trying to understand how to reduce the memory used by &lt;code&gt;mclapply&lt;/code&gt;. This function is rather complicated and others have explained the differences versus &lt;code&gt;parLapply&lt;/code&gt; (&lt;span class=&#34;showtooltip&#34; title=&#34;A\_Skelton73 (2013). &#39;understanding the differences between mclapply and parLapply in R.&#39; .&#34;&gt;&lt;a href=&#34;http://stackoverflow.com/questions/17196261/understanding-the-differences-between-mclapply-and-parlapply-in-r&#34;&gt;A_Skelton73, 2013&lt;/a&gt;&lt;/span&gt;; &lt;span class=&#34;showtooltip&#34; title=&#34;lockedoff (2012). &#39;Using mclapply, foreach, or something else in [r] to operate on an object in parallel?&#39; .&#34;&gt;&lt;a href=&#34;http://stackoverflow.com/questions/11036702/using-mclapply-foreach-or-something-else-in-r-to-operate-on-an-object-in-par&#34;&gt;lockedoff, 2012&lt;/a&gt;&lt;/span&gt; ) and also made it clear that in &lt;code&gt;mclapply&lt;/code&gt;  each job does not know if the others are running out of memory and thus cannot trigger &lt;code&gt;gc&lt;/code&gt; (&lt;span class=&#34;showtooltip&#34; title=&#34;(2013). &#39; [R-sig-hpc] mclapply: rm intermediate objects and returning   memory .&#39; .&#34;&gt;&lt;a href=&#34;https://mailman.stat.ethz.ch/pipermail/r-sig-hpc/2012-October/001534.html&#34;&gt;Urbanek, 2012&lt;/a&gt;&lt;/span&gt;).&lt;/p&gt;
-
+      <description>&lt;p&gt;I am currently trying to understand how to reduce the memory used by &lt;code&gt;mclapply&lt;/code&gt;. This function is rather complicated and others have explained the differences versus &lt;code&gt;parLapply&lt;/code&gt; (&lt;span class=&#34;showtooltip&#34; title=&#34;A\_Skelton73 (2013). &#39;understanding the differences between mclapply and parLapply in R.&#39; .&#34;&gt;&lt;a href=&#34;http://stackoverflow.com/questions/17196261/understanding-the-differences-between-mclapply-and-parlapply-in-r&#34;&gt;A_Skelton73, 2013&lt;/a&gt;&lt;/span&gt;; &lt;span class=&#34;showtooltip&#34; title=&#34;lockedoff (2012). &#39;Using mclapply, foreach, or something else in [r] to operate on an object in parallel?&#39; .&#34;&gt;&lt;a href=&#34;http://stackoverflow.com/questions/11036702/using-mclapply-foreach-or-something-else-in-r-to-operate-on-an-object-in-par&#34;&gt;lockedoff, 2012&lt;/a&gt;&lt;/span&gt; ) and also made it clear that in &lt;code&gt;mclapply&lt;/code&gt;  each job does not know if the others are running out of memory and thus cannot trigger &lt;code&gt;gc&lt;/code&gt; (&lt;span class=&#34;showtooltip&#34; title=&#34;(2013). &#39; [R-sig-hpc] mclapply: rm intermediate objects and returning	memory .&#39; .&#34;&gt;&lt;a href=&#34;https://mailman.stat.ethz.ch/pipermail/r-sig-hpc/2012-October/001534.html&#34;&gt;Urbanek, 2012&lt;/a&gt;&lt;/span&gt;).&lt;/p&gt;
 &lt;p&gt;While I still struggle to understand all the details of &lt;code&gt;mclapply&lt;/code&gt;, I can successfully use it to reduce computation time at the expense of a very high memory load. I am still looking for tips on how to reduce this memory load.&lt;/p&gt;
-
 &lt;p&gt;Here is what I have done.&lt;/p&gt;
-
 &lt;h2 id=&#34;problem-setting&#34;&gt;Problem setting&lt;/h2&gt;
-
 &lt;p&gt;I have a large data set on the form of a data.frame. I want to apply a function that works using subsets of the data.frame without the need for communication between the chunks, and I want to apply the function fast. In other words, I can safely split the matrix and speed the computation process using &lt;code&gt;mclapply&lt;/code&gt;.&lt;/p&gt;
-
 &lt;p&gt;While this works, I would like to minimize memory consumption.&lt;/p&gt;
-
 &lt;h2 id=&#34;toy-data&#34;&gt;Toy data&lt;/h2&gt;
-
 &lt;p&gt;Here is just some toy data for the example.&lt;/p&gt;
-
 &lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;## The real data set is much larger than this
 set.seed(20131113)
 data &amp;lt;- data.frame(matrix(rnorm(1e+05), ncol = 10))
 dim(data)
 &lt;/code&gt;&lt;/pre&gt;
-
 &lt;pre&gt;&lt;code&gt;## [1] 10000    10
 &lt;/code&gt;&lt;/pre&gt;
-
 &lt;h2 id=&#34;approach-1&#34;&gt;Approach 1&lt;/h2&gt;
-
 &lt;p&gt;The first approach I have used is to pre-split the data and then use &lt;code&gt;mclapply&lt;/code&gt; over the split data. For illustrative purposes, lets say that the function I want to apply is just &lt;code&gt;rowMeans&lt;/code&gt;.&lt;/p&gt;
-
 &lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;## Pre-split the data
 dataSplit &amp;lt;- split(data, rep(1:10, each = 1000))
 
@@ -792,26 +701,18 @@ dataSplit &amp;lt;- split(data, rep(1:10, each = 1000))
 library(&amp;quot;parallel&amp;quot;)
 res1 &amp;lt;- mclapply(dataSplit, rowMeans, mc.cores = 2)
 &lt;/code&gt;&lt;/pre&gt;
-
 &lt;p&gt;This gets the job done, but because my real &lt;code&gt;dataSplit&lt;/code&gt; is much larger in memory, using say 8-10 cores blows up the memory.&lt;/p&gt;
-
 &lt;h3 id=&#34;best-way-to-pre-split&#34;&gt;Best way to pre-split?&lt;/h3&gt;
-
 &lt;p&gt;If I know that if I am using \( n \) number of cores (in this example \( n=2 \) ) and the data set has \( m \) rows, then one option for approach #1 is to split the data into \( n \) chunks each of size \( m / n \) (rounding if needed).&lt;/p&gt;
-
 &lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;## Pre-split the data into m/n chunks
 dataSplit1b &amp;lt;- split(data, rep(1:2, each = 5000))
 
 ## Approach 1b
 res1b &amp;lt;- mclapply(dataSplit1b, rowMeans, mc.cores = 2)
 &lt;/code&gt;&lt;/pre&gt;
-
 &lt;p&gt;The memory needed is then in part determined by the chunksize (1000 vs 5000 shown above). One excellent suggestion (via Ben) is to reduce the memory load using this approach is to just smaller chunks. However, the runtime of the function I want to apply (&lt;code&gt;rowMeans&lt;/code&gt; in the example) is not very sensible to the chunksize used, thus using very small chunks is not ideal as it increases computation time. Finding the sweet point is tricky, but using chunksizes of \(m / (2n) \) could certainly help memory wise without majorly affecting computation time.&lt;/p&gt;
-
 &lt;h2 id=&#34;approach-2&#34;&gt;Approach 2&lt;/h2&gt;
-
 &lt;p&gt;One suggestion (via Roger) is to use an environment in order to minimize copying (and thus memory load) while using &lt;code&gt;mclapply&lt;/code&gt; over a set of indexes.&lt;/p&gt;
-
 &lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;## Save the split data in an environment
 my.env &amp;lt;- new.env()
 my.env$data1 &amp;lt;- dataSplit1b[[1]]
@@ -831,14 +732,10 @@ res2 &amp;lt;- mclapply(index, applyMyFun, env = my.env, mc.cores = 2)
 ## Same result?
 identical(res1b, res2)
 &lt;/code&gt;&lt;/pre&gt;
-
 &lt;pre&gt;&lt;code&gt;## [1] TRUE
 &lt;/code&gt;&lt;/pre&gt;
-
 &lt;h2 id=&#34;approach-3&#34;&gt;Approach 3&lt;/h2&gt;
-
 &lt;p&gt;Another suggestion (via Roger) is to save the data chunks and load them individually inside the function that I pass to &lt;code&gt;mclapply&lt;/code&gt;. This does not seem ideal in terms of having to create the temporary chunk data files. But I would expect this method to have the lowest memory footprint.&lt;/p&gt;
-
 &lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;## Save the chunks
 for (i in names(dataSplit1b)) {
     chunk &amp;lt;- dataSplit1b[[i]]
@@ -858,20 +755,15 @@ res3 &amp;lt;- mclapply(index, applyMyFun2, mc.cores = 2)
 ## Same result?
 identical(res1b, res3)
 &lt;/code&gt;&lt;/pre&gt;
-
 &lt;pre&gt;&lt;code&gt;## [1] TRUE
 &lt;/code&gt;&lt;/pre&gt;
-
 &lt;h2 id=&#34;computation-time-comparison&#34;&gt;Computation time comparison&lt;/h2&gt;
-
 &lt;p&gt;Computation time wise, approaches 2 and 3 do not seem very different. Approach 1b seems a tiny bit faster. [Edit: the order of the best approach might change slightly if you re-run this code]&lt;/p&gt;
-
 &lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;library(&amp;quot;microbenchmark&amp;quot;)
 micro &amp;lt;- microbenchmark(mclapply(dataSplit1b, rowMeans, mc.cores = 2), mclapply(index, 
     applyMyFun, env = my.env, mc.cores = 2), mclapply(index, applyMyFun2, mc.cores = 2))
 micro
 &lt;/code&gt;&lt;/pre&gt;
-
 &lt;pre&gt;&lt;code&gt;## Unit: milliseconds
 ##                                                     expr   min    lq
 ##            mclapply(dataSplit1b, rowMeans, mc.cores = 2) 17.43 19.97
@@ -882,53 +774,41 @@ micro
 ##   20.60 23.92 43.67   100
 ##   24.56 28.39 46.99   100
 &lt;/code&gt;&lt;/pre&gt;
-
 &lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;library(&amp;quot;ggplot2&amp;quot;)
 autoplot(micro)
 &lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://lcolladotor.github.io/figs/2013-11-14-Reducing-memory-overhead-when-using-mclapply/compTime.png&#34; alt=&#34;center&#34; /&gt;&lt;/p&gt;
-
+&lt;p&gt;&lt;img src=&#34;http://lcolladotor.github.io/figs/2013-11-14-Reducing-memory-overhead-when-using-mclapply/compTime.png&#34; alt=&#34;center&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;memory-wise-comparison&#34;&gt;Memory wise comparison&lt;/h2&gt;
-
-&lt;p&gt;Relying on the cluster tools for calculating the maximum memory used, I ran each approach (1b, 2, and 3) ten times each using 2 cores using the scripts available in &lt;a href=&#34;https://gist.github.com/lcolladotor/7462753&#34; target=&#34;_blank&#34;&gt;this gist&lt;/a&gt;. The maximum memory used showed no variability (within an approach) and the results are that approach 1b used 1.224G RAM, approach 2 used 1.176G RAM, and approach 3 used 1.177G RAM. Not a huge difference. Due to having to write and then load, approach 3 was slower than the other two.&lt;/p&gt;
-
+&lt;p&gt;Relying on the cluster tools for calculating the maximum memory used, I ran each approach (1b, 2, and 3) ten times each using 2 cores using the scripts available in 
+&lt;a href=&#34;https://gist.github.com/lcolladotor/7462753&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;this gist&lt;/a&gt;. The maximum memory used showed no variability (within an approach) and the results are that approach 1b used 1.224G RAM, approach 2 used 1.176G RAM, and approach 3 used 1.177G RAM. Not a huge difference. Due to having to write and then load, approach 3 was slower than the other two.&lt;/p&gt;
 &lt;p&gt;Re-doing the previous test but using 20 cores lead to very similar wall clock computation times between all three approaches and to approaches 1b and 2 for 2 cores. This is due to the nature of the example, aka &lt;code&gt;rowMeans&lt;/code&gt; is fast even with the larger chunks. Approach 1b used 7.728G RAM, approach 2 used 7.674G RAM, and approach 3 used 7.690G RAM. Hm&amp;hellip;&lt;/p&gt;
-
 &lt;p&gt;Using 20 cores with previously created data files (either the split data for approaches 1b and 2, or the chunk files for approach 3) has a very different memory footprint. Approach 1b used in average 6.0744G RAM, approach 2 used 4.2647G RAM
 , and approach 3 used 2.6545G RAM.&lt;/p&gt;
-
 &lt;h3 id=&#34;edit&#34;&gt;Edit&lt;/h3&gt;
-
 &lt;p&gt;Ryan from (&lt;span class=&#34;showtooltip&#34; title=&#34;(2013). &#39; [Bioc-devel] Trying to reduce the memory overhead when using mclapply .&#39; .&#34;&gt;&lt;a href=&#34;https://stat.ethz.ch/pipermail/bioc-devel/2013-November/004930.html&#34;&gt;Ryan 2013&lt;/a&gt;&lt;/span&gt;) contributed a fourth approach which used 6.794G RAM when starting from scratch with 20 cores. This approach definitely beats the other ones under the condition of starting from scratch. Note that just creating the &lt;code&gt;data&lt;/code&gt; object uses 558.938M RAM: multiplied by 20 it would be around 10.92G RAM.&lt;/p&gt;
-
 &lt;h2 id=&#34;conclusions&#34;&gt;Conclusions&lt;/h2&gt;
-
 &lt;p&gt;Using 2 or 20 cores, approach 2 beat by a very small margin approaches 3 and 1b in terms of memory usage. However, all approaches failed in terms of not having the memory blow up as you increase the number of cores when starting from scratch.&lt;/p&gt;
-
 &lt;p&gt;If a lower memory option is used for splitting the data and creating the chunk files, approach 3 seems like the winner in terms of memory usage. So in pure terms of lowering the memory load on &lt;code&gt;mclapply&lt;/code&gt; approach 3 wins, although you still need to create the chunk files and do so without much memory usage.&lt;/p&gt;
-
 &lt;p&gt;If you have any ideas or suggestions, please let me know! Thank you!&lt;/p&gt;
-
 &lt;h3 id=&#34;references&#34;&gt;References&lt;/h3&gt;
-
 &lt;p&gt;Citations made with &lt;code&gt;knitcitations&lt;/code&gt; (&lt;span class=&#34;showtooltip&#34; title=&#34;Boettiger C (2013). knitcitations: Citations for knitr markdown files. R package version 0.4-7.&#34;&gt;&lt;a href=&#34;http://CRAN.R-project.org/package=knitcitations&#34;&gt;Boettiger, 2013&lt;/a&gt;&lt;/span&gt;).&lt;/p&gt;
-
 &lt;ul&gt;
-&lt;li&gt;A_Skelton73,   (2013) understanding the differences between mclapply and parLapply in R.  &lt;em&gt;understanding the differences between mclapply and parLapply in R - Stack Overflow&lt;/em&gt;  &lt;a href=&#34;http://stackoverflow.com/questions/17196261/understanding-the-differences-between-mclapply-and-parlapply-in-r&#34; target=&#34;_blank&#34;&gt;http://stackoverflow.com/questions/17196261/understanding-the-differences-between-mclapply-and-parlapply-in-r&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;lockedoff,   (2012) Using mclapply, foreach, or something else in [r] to operate on an object in parallel?.  &lt;em&gt;Using mclapply, foreach, or something else in [r] to operate on an object in parallel? - Stack Overflow&lt;/em&gt;  &lt;a href=&#34;http://stackoverflow.com/questions/11036702/using-mclapply-foreach-or-something-else-in-r-to-operate-on-an-object-in-par&#34; target=&#34;_blank&#34;&gt;http://stackoverflow.com/questions/11036702/using-mclapply-foreach-or-something-else-in-r-to-operate-on-an-object-in-par&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;[R-sig-hpc] mclapply: rm intermediate objects and returning memory
-.  &lt;a href=&#34;https://mailman.stat.ethz.ch/pipermail/r-sig-hpc/2012-October/001534.html&#34; target=&#34;_blank&#34;&gt;https://mailman.stat.ethz.ch/pipermail/r-sig-hpc/2012-October/001534.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;A_Skelton73,   (2013) understanding the differences between mclapply and parLapply in R.  &lt;em&gt;understanding the differences between mclapply and parLapply in R - Stack Overflow&lt;/em&gt;  
+&lt;a href=&#34;http://stackoverflow.com/questions/17196261/understanding-the-differences-between-mclapply-and-parlapply-in-r&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;http://stackoverflow.com/questions/17196261/understanding-the-differences-between-mclapply-and-parlapply-in-r&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;lockedoff,   (2012) Using mclapply, foreach, or something else in [r] to operate on an object in parallel?.  &lt;em&gt;Using mclapply, foreach, or something else in [r] to operate on an object in parallel? - Stack Overflow&lt;/em&gt;  
+&lt;a href=&#34;http://stackoverflow.com/questions/11036702/using-mclapply-foreach-or-something-else-in-r-to-operate-on-an-object-in-par&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;http://stackoverflow.com/questions/11036702/using-mclapply-foreach-or-something-else-in-r-to-operate-on-an-object-in-par&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;[R-sig-hpc] mclapply: rm intermediate objects and returning	memory
+.  
+&lt;a href=&#34;https://mailman.stat.ethz.ch/pipermail/r-sig-hpc/2012-October/001534.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://mailman.stat.ethz.ch/pipermail/r-sig-hpc/2012-October/001534.html&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;[Bioc-devel] Trying to reduce the memory overhead when using mclapply
-.  &lt;a href=&#34;https://stat.ethz.ch/pipermail/bioc-devel/2013-November/004930.html&#34; target=&#34;_blank&#34;&gt;https://stat.ethz.ch/pipermail/bioc-devel/2013-November/004930.html&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Carl Boettiger,   (2013) knitcitations: Citations for knitr markdown files.  &lt;a href=&#34;http://CRAN.R-project.org/package=knitcitations&#34; target=&#34;_blank&#34;&gt;http://CRAN.R-project.org/package=knitcitations&lt;/a&gt;&lt;/li&gt;
+.  
+&lt;a href=&#34;https://stat.ethz.ch/pipermail/bioc-devel/2013-November/004930.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://stat.ethz.ch/pipermail/bioc-devel/2013-November/004930.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Carl Boettiger,   (2013) knitcitations: Citations for knitr markdown files.  
+&lt;a href=&#34;http://CRAN.R-project.org/package=knitcitations&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;http://CRAN.R-project.org/package=knitcitations&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;h3 id=&#34;reproducibility&#34;&gt;Reproducibility&lt;/h3&gt;
-
 &lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;sessionInfo()
 &lt;/code&gt;&lt;/pre&gt;
-
 &lt;pre&gt;&lt;code&gt;## R version 3.0.2 (2013-09-25)
 ## Platform: x86_64-apple-darwin10.8.0 (64-bit)
 ## 
@@ -953,14 +833,12 @@ autoplot(micro)
 ## [19] stringr_0.6.2      tools_3.0.2        XML_3.95-0.2      
 ## [22] xtable_1.7-1
 &lt;/code&gt;&lt;/pre&gt;
-
 &lt;h3 id=&#34;scripts&#34;&gt;Scripts&lt;/h3&gt;
-
-&lt;p&gt;The scripts are available in &lt;a href=&#34;https://gist.github.com/lcolladotor/7462753&#34; target=&#34;_blank&#34;&gt;this gist&lt;/a&gt;. The main one is &lt;code&gt;testApproach.R&lt;/code&gt; while the other ones are just job-submitters.&lt;/p&gt;
-
+&lt;p&gt;The scripts are available in 
+&lt;a href=&#34;https://gist.github.com/lcolladotor/7462753&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;this gist&lt;/a&gt;. The main one is &lt;code&gt;testApproach.R&lt;/code&gt; while the other ones are just job-submitters.&lt;/p&gt;
 &lt;script src=&#34;https://gist.github.com/lcolladotor/7462753.js&#34;&gt;&lt;/script&gt;
-
-&lt;p&gt;Check other topics on &lt;a href=&#34;https://twitter.com/search?q=%23rstats&#34; target=&#34;_blank&#34;&gt;#rstats&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Check other topics on 
+&lt;a href=&#34;https://twitter.com/search?q=%23rstats&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;#rstats&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     

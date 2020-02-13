@@ -1,19 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>LCG on L. Collado-Torres</title>
+    <title>LCG | L. Collado-Torres</title>
     <link>/tags/lcg/</link>
-    <description>Recent content in LCG on L. Collado-Torres</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>&amp;copy; 2011-{year} Leonardo Collado Torres under (CC) BY-NC-SA 4.0. All thoughts and opinions here are my own. Icon is the [R logo](https://www.r-project.org/logo/) modified</copyright>
-    <lastBuildDate>Tue, 06 Nov 2018 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://lcolladotor.github.io/tags/lcg/" rel="self" type="application/rss+xml" />
+      <atom:link href=http://lcolladotor.github.io/tags/lcg/index.xml rel="self" type="application/rss+xml" />
+    <description>LCG</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2011-2020 Leonardo Collado Torres under (CC) BY-NC-SA 4.0. All thoughts and opinions here are my own. Icon is the [R logo](https://www.r-project.org/logo/) modified</copyright><lastBuildDate>Tue, 06 Nov 2018 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
+      <title>LCG</title>
+      <link>/tags/lcg/</link>
+    </image>
     
     <item>
       <title>A knot of threads: from CSHL to LCG-UNAM to Aldo Barrientos to diversity scholarship opportunities</title>
       <link>/2018/11/06/a-knot-of-threads-from-cshl-to-lcg-unam-to-aldo-barrientos-to-diversity-scholarship-opportunities/</link>
       <pubDate>Tue, 06 Nov 2018 00:00:00 +0000</pubDate>
-      
       <guid>/2018/11/06/a-knot-of-threads-from-cshl-to-lcg-unam-to-aldo-barrientos-to-diversity-scholarship-opportunities/</guid>
       <description>
 
@@ -257,10 +259,8 @@ dev.off()&lt;/code&gt;&lt;/pre&gt;
       <title>From learning to using to teaching to developing R</title>
       <link>/talk/cdsbmexico2018/</link>
       <pubDate>Mon, 30 Jul 2018 10:00:00 -0400</pubDate>
-      
       <guid>/talk/cdsbmexico2018/</guid>
       <description>&lt;script async class=&#34;speakerdeck-embed&#34; data-slide=&#34;1&#34; data-id=&#34;711408b758884ca2bf0bb950ce0ba0ed&#34; data-ratio=&#34;1.77777777777778&#34; src=&#34;//speakerdeck.com/assets/embed.js&#34;&gt;&lt;/script&gt;
-
 &lt;!--
 
 &lt;div class=&#34;alert alert-note&#34;&gt;
@@ -287,10 +287,8 @@ Further talk details can easily be added to this page using *Markdown* and $\rm 
       <title>Reproducible RNA-seq analysis with recount2 and recount-brain</title>
       <link>/talk/lcg2018/</link>
       <pubDate>Wed, 30 May 2018 13:00:00 -0400</pubDate>
-      
       <guid>/talk/lcg2018/</guid>
       <description>&lt;script async class=&#34;speakerdeck-embed&#34; data-id=&#34;c6fe30adcbac4761a8808deb8d0ebeef&#34; data-ratio=&#34;1.77777777777778&#34; src=&#34;//speakerdeck.com/assets/embed.js&#34;&gt;&lt;/script&gt;
-
 &lt;!--
 
 &lt;div class=&#34;alert alert-note&#34;&gt;
@@ -317,29 +315,31 @@ Further talk details can easily be added to this page using *Markdown* and $\rm 
       <title>Federico Sánchez Rodríguez 1950-2016</title>
       <link>/2016/04/04/federicosanchez/</link>
       <pubDate>Mon, 04 Apr 2016 00:00:00 +0000</pubDate>
-      
       <guid>/2016/04/04/federicosanchez/</guid>
-      <description>&lt;p&gt;&lt;center&gt;
+      <description>&lt;center&gt;
 &lt;a href=&#39;http://www.imagechef.com/ic/ribbon/&#39;&gt;&lt;img alt = &#39;Federico Sanchez Ribbon&#39; height=&#39;300&#39; src=&#39;http://lcolladotor.github.io/figs/2016-04-04-FedericoSanchez/Fede-Ribbon.jpg&#39; /&gt;&lt;/a&gt;
-&lt;/center&gt;&lt;/p&gt;
-
-&lt;p&gt;Today the &lt;a href=&#34;https://www.unam.mx/&#34; target=&#34;_blank&#34;&gt;UNAM&lt;/a&gt; community at large mourns the passing of Federico Sánchez Rodríguez. He got his bachelor&amp;rsquo;s degree from the &lt;a href=&#34;http://www.quimica.unam.mx/&#34; target=&#34;_blank&#34;&gt;School of Chemistry - UNAM&lt;/a&gt;, masters and PhD degrees from &lt;a href=&#34;http://www.biomedicas.unam.mx/&#34; target=&#34;_blank&#34;&gt;Biomedicas - UNAM&lt;/a&gt;, postdoc from &lt;a href=&#34;https://www.ucsf.edu/&#34; target=&#34;_blank&#34;&gt;UCSF&lt;/a&gt;, was a member of CIFN-UNAM now called &lt;a href=&#34;http://www.ccg.unam.mx/en&#34; target=&#34;_blank&#34;&gt;CCG-UNAM&lt;/a&gt; (it&amp;rsquo;s his affiliation in &lt;a href=&#34;http://www.jbc.org/content/258/20/12618.full.pdf+html&#34; target=&#34;_blank&#34;&gt;this&lt;/a&gt; 1983 paper), and worked most of his career at &lt;a href=&#34;http://ibt.unam.mx/&#34; target=&#34;_blank&#34;&gt;IBT-UNAM&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;center&gt;
+&lt;/center&gt;
+&lt;p&gt;Today the 
+&lt;a href=&#34;https://www.unam.mx/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;UNAM&lt;/a&gt; community at large mourns the passing of Federico Sánchez Rodríguez. He got his bachelor&amp;rsquo;s degree from the 
+&lt;a href=&#34;http://www.quimica.unam.mx/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;School of Chemistry - UNAM&lt;/a&gt;, masters and PhD degrees from 
+&lt;a href=&#34;http://www.biomedicas.unam.mx/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Biomedicas - UNAM&lt;/a&gt;, postdoc from 
+&lt;a href=&#34;https://www.ucsf.edu/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;UCSF&lt;/a&gt;, was a member of CIFN-UNAM now called 
+&lt;a href=&#34;http://www.ccg.unam.mx/en&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CCG-UNAM&lt;/a&gt; (it&amp;rsquo;s his affiliation in 
+&lt;a href=&#34;http://www.jbc.org/content/258/20/12618.full.pdf&amp;#43;html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;this&lt;/a&gt; 1983 paper), and worked most of his career at 
+&lt;a href=&#34;http://ibt.unam.mx/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;IBT-UNAM&lt;/a&gt;.&lt;/p&gt;
+&lt;center&gt;
 &lt;a href=&#39;http://www.ibt.unam.mx/server/PRG.base?tipo:doc,dir:PRG.curriculum,par:federico&#39;&gt;&lt;img alt = &#39;Federico Sanchez homepage&#39; height=&#39;227&#39; src=&#39;http://www.ibt.unam.mx/img/fot/federico.gif&#39; /&gt;&lt;/a&gt;
-&lt;/center&gt;&lt;/p&gt;
-
-&lt;p&gt;I&amp;rsquo;m sure that he made many friends, trained many students at all levels, and had a highly productive academic career as evidenced on his &lt;a href=&#34;http://www.ibt.unam.mx/server/PRG.base?tipo:doc,dir:PRG.curriculum,par:federico&#34; target=&#34;_blank&#34;&gt;homepage&lt;/a&gt; where he lists many papers, patents, etc. A &lt;a href=&#34;http://www.ncbi.nlm.nih.gov/pubmed/?term=S%C3%A1nchez%20F%5BAuthor%5D&amp;amp;cauthor=true&amp;amp;cauthor_uid=26911872&#34; target=&#34;_blank&#34;&gt;PubMed author search&lt;/a&gt; includes his papers but be careful to not confuse him with other authors that shared his name.&lt;/p&gt;
-
-&lt;p&gt;I&amp;rsquo;ll remember Federico fondly for the time we shared at &lt;a href=&#34;http://www.lcg.unam.mx/es/about&#34; target=&#34;_blank&#34;&gt;LCG-UNAM&lt;/a&gt;. He was a great teacher and motivated me to ask as many questions as I could think of. My background in biology was weaker than my classmates, and I loved to ask questions of the sort: if X biolgical process is possible, could Y happen in the cell? He let my imagination run wild. Federico was very supportive of an elective class a few of us organized in our 4th year. You could always tell that he fed off the energy of enthusiastic students. He was always there if you needed some advice. At the end of my time at LCG-UNAM, he enjoyed how I argued against other members of the LCG academic committee. He always supported me in my non-traditional choices. Federico knew many things about plants, but also about the best food, the best drinks, and was always eager to share his knowledge with you.&lt;/p&gt;
-
-&lt;p&gt;In one of my last interactions with him at &lt;em&gt;FedeFest&lt;/em&gt; in August 2014, I asked him a question in the style that I used to during class. I asked him how would he evaluate results from single-cell sequencing and verify that the results were indeed biogical and not technical. A month later, I sent him &lt;a href=&#34;http://genomebiology.biomedcentral.com/articles/10.1186/s13059-014-0452-9&#34; target=&#34;_blank&#34;&gt;this paper&lt;/a&gt;.&lt;/p&gt;
-
+&lt;/center&gt;
+&lt;p&gt;I&amp;rsquo;m sure that he made many friends, trained many students at all levels, and had a highly productive academic career as evidenced on his 
+&lt;a href=&#34;http://www.ibt.unam.mx/server/PRG.base?tipo:doc,dir:PRG.curriculum,par:federico&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;homepage&lt;/a&gt; where he lists many papers, patents, etc. A 
+&lt;a href=&#34;http://www.ncbi.nlm.nih.gov/pubmed/?term=S%C3%A1nchez%20F%5BAuthor%5D&amp;amp;cauthor=true&amp;amp;cauthor_uid=26911872&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;PubMed author search&lt;/a&gt; includes his papers but be careful to not confuse him with other authors that shared his name.&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;ll remember Federico fondly for the time we shared at 
+&lt;a href=&#34;http://www.lcg.unam.mx/es/about&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;LCG-UNAM&lt;/a&gt;. He was a great teacher and motivated me to ask as many questions as I could think of. My background in biology was weaker than my classmates, and I loved to ask questions of the sort: if X biolgical process is possible, could Y happen in the cell? He let my imagination run wild. Federico was very supportive of an elective class a few of us organized in our 4th year. You could always tell that he fed off the energy of enthusiastic students. He was always there if you needed some advice. At the end of my time at LCG-UNAM, he enjoyed how I argued against other members of the LCG academic committee. He always supported me in my non-traditional choices. Federico knew many things about plants, but also about the best food, the best drinks, and was always eager to share his knowledge with you.&lt;/p&gt;
+&lt;p&gt;In one of my last interactions with him at &lt;em&gt;FedeFest&lt;/em&gt; in August 2014, I asked him a question in the style that I used to during class. I asked him how would he evaluate results from single-cell sequencing and verify that the results were indeed biogical and not technical. A month later, I sent him 
+&lt;a href=&#34;http://genomebiology.biomedcentral.com/articles/10.1186/s13059-014-0452-9&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;this paper&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Fede, I will always remember you fondly.&lt;/p&gt;
-
 &lt;p&gt;Best,
 Leonardo&lt;/p&gt;
-
 &lt;p&gt;LCG-UNAM 2005-2009&lt;/p&gt;
 </description>
     </item>
@@ -348,25 +348,24 @@ Leonardo&lt;/p&gt;
       <title>LCG-UNAM 11 years ago</title>
       <link>/2016/03/10/lcgunam/</link>
       <pubDate>Thu, 10 Mar 2016 00:00:00 +0000</pubDate>
-      
       <guid>/2016/03/10/lcgunam/</guid>
-      <description>
-
-&lt;p&gt;This has been a busy week. I just flew in last night from &lt;a href=&#34;https://twitter.com/hashtag/enar2016&#34; target=&#34;_blank&#34;&gt;#ENAR2016&lt;/a&gt; and I&amp;rsquo;m getting ready for a postdoc interview tomorrow, which means that I&amp;rsquo;m also flying today. On the flight back from &lt;a href=&#34;https://twitter.com/hashtag/enar2016&#34; target=&#34;_blank&#34;&gt;#ENAR2016&lt;/a&gt; I started reading a book my friend &lt;a href=&#34;https://twitter.com/StrictlyStat&#34; target=&#34;_blank&#34;&gt;John Muschelli&lt;/a&gt; bought for me. It&amp;rsquo;s called &lt;strong&gt;The Happiness Advantage&lt;/strong&gt; by Shawn Anchor and so far I&amp;rsquo;m loving it. There are several things that it talks about that I&amp;rsquo;ve done in the past, but maybe not in the past year. Anyhow, I&amp;rsquo;ll probably talk about it in a separate blog post.&lt;/p&gt;
-
-&lt;p&gt;&lt;center&gt;
+      <description>&lt;p&gt;This has been a busy week. I just flew in last night from 
+&lt;a href=&#34;https://twitter.com/hashtag/enar2016&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;#ENAR2016&lt;/a&gt; and I&amp;rsquo;m getting ready for a postdoc interview tomorrow, which means that I&amp;rsquo;m also flying today. On the flight back from 
+&lt;a href=&#34;https://twitter.com/hashtag/enar2016&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;#ENAR2016&lt;/a&gt; I started reading a book my friend 
+&lt;a href=&#34;https://twitter.com/StrictlyStat&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;John Muschelli&lt;/a&gt; bought for me. It&amp;rsquo;s called &lt;strong&gt;The Happiness Advantage&lt;/strong&gt; by Shawn Anchor and so far I&amp;rsquo;m loving it. There are several things that it talks about that I&amp;rsquo;ve done in the past, but maybe not in the past year. Anyhow, I&amp;rsquo;ll probably talk about it in a separate blog post.&lt;/p&gt;
+&lt;center&gt;
 &lt;a href=&#39;http://www.amazon.com/Happiness-Advantage-Principles-Performance-Paperback/dp/B00BR9RW4U/ref=sr_1_2?ie=UTF8&amp;qid=1457631904&amp;sr=8-2&amp;keywords=the+happiness+advantage&#39;&gt;&lt;img alt = &#39;Happiness Advantage&#39; height=&#39;346&#39; src=&#39;http://ecx.images-amazon.com/images/I/41g4uexkAfL._SY344_BO1,204,203,200_.jpg&#39; /&gt;&lt;/a&gt;
-&lt;/center&gt;&lt;/p&gt;
-
-&lt;p&gt;But coincidentally, a friend of mine from undergrad just shared with me the following YouTube video. Watching it made me very happy! We definitely had a blast during undergrad. The person that talks about Boston is &lt;a href=&#34;https://en.wikipedia.org/wiki/Frederick_Bieber&#34; target=&#34;_blank&#34;&gt;Frederick Bieber&lt;/a&gt; (he&amp;rsquo;s kinda hard to google due to his last name) who at the time worked with 5 of my classmates.&lt;/p&gt;
-
+&lt;/center&gt;
+&lt;p&gt;But coincidentally, a friend of mine from undergrad just shared with me the following YouTube video. Watching it made me very happy! We definitely had a blast during undergrad. The person that talks about Boston is 
+&lt;a href=&#34;https://en.wikipedia.org/wiki/Frederick_Bieber&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Frederick Bieber&lt;/a&gt; (he&amp;rsquo;s kinda hard to google due to his last name) who at the time worked with 5 of my classmates.&lt;/p&gt;
 &lt;iframe width=&#34;853&#34; height=&#34;480&#34; src=&#34;https://www.youtube.com/embed/joIyVyIbRuk&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;p&gt;My undergrad class from &lt;a href=&#34;http://www.lcg.unam.mx/es/about&#34; target=&#34;_blank&#34;&gt;LCG-UNAM&lt;/a&gt; (link is in English) was the 3rd one (yup, still guinea pigs) and the only one to start off with 40 students. Some left to study other degrees, most of us continue to work in academia getting our master&amp;rsquo;s, PhDs, postdocs done; others have chosen different career paths, and sadly one of us already passed away. But I bet we can all say that 2005-2009 were good and &lt;em&gt;happy&lt;/em&gt; years.&lt;/p&gt;
-
+&lt;p&gt;My undergrad class from 
+&lt;a href=&#34;http://www.lcg.unam.mx/es/about&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;LCG-UNAM&lt;/a&gt; (link is in English) was the 3rd one (yup, still guinea pigs) and the only one to start off with 40 students. Some left to study other degrees, most of us continue to work in academia getting our master&amp;rsquo;s, PhDs, postdocs done; others have chosen different career paths, and sadly one of us already passed away. But I bet we can all say that 2005-2009 were good and &lt;em&gt;happy&lt;/em&gt; years.&lt;/p&gt;
 &lt;h3 id=&#34;want-more&#34;&gt;Want more?&lt;/h3&gt;
-
-&lt;p&gt;Check other &lt;a href=&#34;https://twitter.com/jhubiostat&#34; target=&#34;_blank&#34;&gt;@jhubiostat&lt;/a&gt; student blogs at &lt;a href=&#34;http://bmorebiostat.com/&#34; target=&#34;_blank&#34;&gt;Bmore Biostats&lt;/a&gt; as well as topics on &lt;a href=&#34;https://twitter.com/search?q=%23rstats&#34; target=&#34;_blank&#34;&gt;#rstats&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Check other 
+&lt;a href=&#34;https://twitter.com/jhubiostat&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;@jhubiostat&lt;/a&gt; student blogs at 
+&lt;a href=&#34;http://bmorebiostat.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Bmore Biostats&lt;/a&gt; as well as topics on 
+&lt;a href=&#34;https://twitter.com/search?q=%23rstats&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;#rstats&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     
@@ -374,10 +373,8 @@ Leonardo&lt;/p&gt;
       <title>Fast differential expression analysis annotation-agnostic across groups with biological replicates</title>
       <link>/talk/lcg2014/</link>
       <pubDate>Sun, 05 Jan 2014 00:00:00 -0500</pubDate>
-      
       <guid>/talk/lcg2014/</guid>
       <description>&lt;script async class=&#34;speakerdeck-embed&#34; data-id=&#34;86e4159fb96e409a8842f73ab4c7d820&#34; data-ratio=&#34;1.33333333333333&#34; src=&#34;//speakerdeck.com/assets/embed.js&#34;&gt;&lt;/script&gt;
-
 &lt;!--
 
 &lt;div class=&#34;alert alert-note&#34;&gt;
@@ -404,64 +401,44 @@ Further talk details can easily be added to this page using *Markdown* and $\rm 
       <title>Keeping in touch (ENAR2014?) and philosophical questions regarding México&#39;s future in genomics</title>
       <link>/2013/06/12/keeping-in-touch-enar2014-and-philosophical/</link>
       <pubDate>Wed, 12 Jun 2013 00:00:00 +0000</pubDate>
-      
       <guid>/2013/06/12/keeping-in-touch-enar2014-and-philosophical/</guid>
       <description>&lt;p&gt;The following text is an email I sent to several of my friends from the &lt;a href=&#34;http://www.lcg.unam.mx/about&#34;&gt;LCG undergraduate program &lt;/a&gt;I studied. There I talk about keeping in touch, I invite them to &lt;a href=&#34;http://www.enar.org/meetings.cfm&#34;&gt;ENAR 2014&lt;/a&gt;, and also talk about some philosophical questions regarding our future. &lt;/p&gt;
 &lt;p&gt;I&amp;#8217;m posting it here because I don&amp;#8217;t mind sharing these thoughts and because I don&amp;#8217;t have the current email addresses of many former LCG students.&lt;br/&gt;&lt;br/&gt;Enjoy&lt;/p&gt;
+&lt;p&gt;
+&lt;/p&gt;
 &lt;p&gt;Hola a todos,&lt;/p&gt;
-
 &lt;p&gt;Les escribo por el gusto de mantener el contacto, por razones académicas, y también por un rollo filosófico / a futuro.&lt;/p&gt;
-
 &lt;p class=&#34;p2&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Contacto&lt;/strong&gt;&lt;/p&gt;
-
 &lt;p&gt;Como ya les dije, me da mucho gusto escribirles. Cuando lo hago sé que generalmente resulta en mails largos, así que intentando ser corto, siento que hoy termina el ciclo de personas que conocí en la LCG. Digo, hoy se gradua la 7ma generación y realmente no conozco las nuevas. Fueron años muy buenos los que viví con todos allá en Cuerna y ojalá podamos mantener cierto vínculo a través de los años. Sé que cuesta. Por ejemplo, no tengo los correos de algunos (o no los encontré vía google), otros los intenté adivinar vía &lt;a href=&#34;http://www.lcg.unam.mx/titulados&#34;&gt;&lt;span class=&#34;s1&#34;&gt;&lt;a href=&#34;http://www.lcg.unam.mx/titulados&#34;&gt;http://www.lcg.unam.mx/titulados&lt;/a&gt;&lt;/span&gt;&lt;/a&gt; y la regla de 8 caracteres, y solo pocos lo siguen teniendo en su página de Facebook (por rollos de seguridad). También soy bastante malo para escribir regularmente (ya sea vía email o mis blogs: &lt;a href=&#34;http://fellgernon.tumblr.com/&#34;&gt;&lt;span class=&#34;s1&#34;&gt;académico&lt;/span&gt;&lt;/a&gt; &amp;amp; &lt;span class=&#34;s1&#34;&gt;más personal&lt;/span&gt;).&lt;/p&gt;
-
 &lt;p&gt;Este año en especial he disfrutado (y seguiré disfrutando) mucho de ver a algunos aunque sea un par de horas =)&lt;/p&gt;
-
 &lt;p&gt;También me gusta mucho cuando me piden ayuda sobre algo, aunque sea lento en contestar :P&lt;/p&gt;
-
 &lt;p class=&#34;p2&#34;&gt;&lt;/p&gt;
-
 &lt;p&gt;&lt;strong&gt;ENAR 2014&lt;/strong&gt;&lt;/p&gt;
-
 &lt;p&gt;De lo académico, les quiero avisar que en 2014 van a organizar acá en Baltimore el congreso ENAR (Eastern North American Regional) en marzo del 2014. Es un congreso de bioestadística con una buena parte enfocada a la genómica. Y bueno, muchas cosas hechas en R. Mi jefe está organizando un par de las sesiones así que si tienen sugerencias de quienes invitar avísenme. Ustedes mismos ^_&lt;em&gt;^ &lt;/em&gt;(hay un buen número de pláticas por alumnos de posgrado &amp;amp; postdocs), sus jefes, etc. En fin, tal vez les interese el congreso.&lt;/p&gt;
-
 &lt;p&gt;De 2014 no hay mucha info aún &lt;a href=&#34;http://www.enar.org/meetings.cfm&#34;&gt;&lt;span class=&#34;s1&#34;&gt;&lt;a href=&#34;http://www.enar.org/meetings.cfm&#34;&gt;http://www.enar.org/meetings.cfm&lt;/a&gt;&lt;/span&gt;&lt;/a&gt;, pero allí pueden ver lo que pasó en otros años.&lt;/p&gt;
-
 &lt;p class=&#34;p2&#34;&gt;&lt;/p&gt;
-
 &lt;p&gt;&lt;strong&gt;Rollos filosóficos&lt;/strong&gt;&lt;/p&gt;
-
 &lt;p&gt;El rollo filosófico / a futuro tiene que ver con:&lt;/p&gt;
 &lt;ol class=&#34;ol1&#34;&gt;&lt;li class=&#34;li1&#34;&gt;¿Qué condiciones piden para trabajar en México?&lt;/li&gt;
 &lt;li class=&#34;li1&#34;&gt;¿Cómo crear un vínculo más fuerte entre egresados LCG?&lt;/li&gt;
 &lt;li class=&#34;li1&#34;&gt;¿A qué dedicarse? ¿Academia? ¿Industria? ¿Otra cosa?&lt;/li&gt;
 &lt;/ol&gt;&lt;p&gt;Del punto (1) lo he platicado con algunos pero creo que es un tema interesante y muy variado. Hay aspectos que tal vez están fuera de nuestro alcance como la seguridad, y hay otros como el ambiente de trabajo y de la ciencia. El rollo de plazas y los esfuerzos de algunos por crear espacios: CCG tiene algunas ahorita, Palacios &amp;amp; Dávila están haciendo un plan grande para repatriar ex-LCGs, el INMEGEN &amp;amp; el CINVESTAV han estado creciendo, o la idea de hacer un plan nosotros. Ojo, a penas me enteré que para tener plaza de investigador en la UNAM te piden tener un postdoc de 2 años: el chiste es que tengas publicaciones &amp;amp; hayas demostrado que la puedes hacer en la ciencia.&lt;/p&gt;
-
 &lt;p&gt;¿Sacrificas potencial académico trabajando en México? Dicho de otra forma, ¿cómo te afecta: el rollo del idioma, el de competir en condiciones que parecen ser más difíciles, o el de tener menos colaboradores cerca para crecer con su crítica &amp;amp; datos de última tecnología? O irse fuera de México (no hay por que ser mártir) y sentirse a gusto con esa decisión. Siempre hay formas de colaborar.&lt;/p&gt;
-
 &lt;p&gt;Del punto (2) yo opino que puede ser a través de comentar artículos con gente ex-LCG involucrada (algo así &lt;a href=&#34;http://fellgernon.tumblr.com/post/45152484977/commenting-scientific-papers#.UbjBemTF1d8&#34;&gt;&lt;span class=&#34;s1&#34;&gt;describí aquí&lt;/span&gt;&lt;/a&gt;), o tal vez vía &lt;a href=&#34;http://masciencia.org/&#34;&gt;&lt;span class=&#34;s1&#34;&gt;Más Ciencia por México&lt;/span&gt;&lt;/a&gt; (no los logré convencer en esto de comentar artículos). Digo, también ayudaría que &lt;a href=&#34;http://www.lcg.unam.mx/titulados&#34;&gt;&lt;span class=&#34;s1&#34;&gt;&lt;a href=&#34;http://www.lcg.unam.mx/titulados&#34;&gt;http://www.lcg.unam.mx/titulados&lt;/a&gt;&lt;/span&gt;&lt;/a&gt; tenga ligas a las páginas actuales de cada quien.&lt;/p&gt;
-
 &lt;p&gt;Del (3), en mi opinión cubre también todo el rollo de si queremos vivir con &amp;#8220;soft-money&amp;#8221; a través del ciclo de donativos (el pay-line es 10% en EUA ahorita por lo de sequester), de la libertad académica (¿es una realidad o una forma de cautivarnos?), y también depende del tipo de industria. Otra forma de ver este punto es ¿cual es el nivel de estrés con el que estamos dispuestos a vivir? ¿A qué aspiramos? &lt;/p&gt;
-
 &lt;p class=&#34;p2&#34;&gt;&lt;/p&gt;
-
 &lt;p class=&#34;p2&#34;&gt;&lt;/p&gt;
 &lt;p&gt;En fin, dan ganas de organizar alguna reunión de ex-LCGs!! Mientras, a seguir con estudios &amp;amp; disfrutar la chamba (investigación o lo que estén haciendo).&lt;/p&gt;
-
 &lt;p class=&#34;p2&#34;&gt;&lt;/p&gt;
-
 &lt;p&gt;Si me preguntan que busco con este correo, es simple:&lt;/p&gt;
 &lt;ul class=&#34;ul1&#34;&gt;&lt;li class=&#34;li1&#34;&gt;Mantener el contacto&lt;/li&gt;
 &lt;li class=&#34;li1&#34;&gt;Invitarlos a ENAR 2014&lt;/li&gt;
 &lt;li class=&#34;li1&#34;&gt;Promover discusión en estos temas filosóficos / a futuro&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p class=&#34;p2&#34;&gt;&lt;/p&gt;
-
 &lt;p&gt;Saludos,&lt;/p&gt;
 &lt;p&gt;Leo&lt;/p&gt;
-
 &lt;p&gt;PD Perdón, terminó siendo un mail largo :P&lt;/p&gt;</description>
     </item>
     
@@ -469,7 +446,6 @@ Further talk details can easily be added to this page using *Markdown* and $\rm 
       <title>Commenting scientific papers</title>
       <link>/2013/03/11/commenting-scientific-papers/</link>
       <pubDate>Mon, 11 Mar 2013 00:00:00 +0000</pubDate>
-      
       <guid>/2013/03/11/commenting-scientific-papers/</guid>
       <description>&lt;p&gt;I&amp;#8217;ve been thinking about commenting papers in blog posts. I did a &lt;a href=&#34;http://fellgernon.tumblr.com/tagged/Paper%20comments#.UT534NHF0W8&#34;&gt;few some long time ago&lt;/a&gt;, but now I&amp;#8217;m thinking of doing this activity more systematically. There are several reasons why I&amp;#8217;m thinking of doing this, say for 1 paper a week. It has the obvious advantage of forcing me to read a paper in depth per week. At the same time, I want to learn more from others. See what I like in other papers and maybe avoid some mistakes. There are two main lines of papers that I would be posting about. Anything that is somewhat close to my research (genomics, RNA-seq, biostatistics, bioconductor, visualization) and anything done by my undergrad peers from &lt;a href=&#34;http://www.lcg.unam.mx/&#34;&gt;LCG-UNAM&lt;/a&gt;. I don&amp;#8217;t think that there is a compilation of papers from LCG students despite many of us doing research all over the globe —Mexico, US, Canada, Denmark, France, England, Germany, Switzerland, Austria, Australia to name a few countries. Maybe compiling a list of papers with contributions from LCG students is a task for &lt;a href=&#34;http://masciencia.org/&#34;&gt;Más Ciencia por México&lt;/a&gt; which seeks to promote science in Mexico. But I would be happy to learn what others are doing and in a way keep in touch academically. &lt;/p&gt;
 &lt;p&gt;Another reason in favor is that blogging helps me practice my English. And writing helps me organize my ideas.&lt;/p&gt;
@@ -487,10 +463,9 @@ Further talk details can easily be added to this page using *Markdown* and $\rm 
       <title>Introduction to R and Biostatistics (2012 version)</title>
       <link>/talk/introbiostats2012/</link>
       <pubDate>Mon, 12 Nov 2012 16:29:18 -0500</pubDate>
-      
       <guid>/talk/introbiostats2012/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;http://lcolladotor.github.io/2012/11/12/introduction-to-r-and-biostatistics-2012-version/&#34; target=&#34;_blank&#34;&gt;Blog post describing this talk&lt;/a&gt;&lt;/p&gt;
-
+      <description>&lt;p&gt;
+&lt;a href=&#34;http://lcolladotor.github.io/2012/11/12/introduction-to-r-and-biostatistics-2012-version/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Blog post describing this talk&lt;/a&gt;&lt;/p&gt;
 &lt;!--
 
 &lt;div class=&#34;alert alert-note&#34;&gt;
@@ -517,7 +492,6 @@ Further talk details can easily be added to this page using *Markdown* and $\rm 
       <title>Introduction to R and Biostatistics (2012 version): presentation</title>
       <link>/2012/11/12/introduction-to-r-and-biostatistics-2012-version/</link>
       <pubDate>Mon, 12 Nov 2012 00:00:00 +0000</pubDate>
-      
       <guid>/2012/11/12/introduction-to-r-and-biostatistics-2012-version/</guid>
       <description>&lt;p&gt;To follow my &lt;a href=&#34;http://fellgernon.tumblr.com/post/34677935591/introducing-r-and-biostatistics-to-first-year-lcg#.UKFlW-Oe918&#34;&gt;Introducing R and Biostatistics to first year LCG students (2012 version)&lt;/a&gt; post,  you can now find the presentation online from my site either in &lt;a href=&#34;http://www.biostat.jhsph.edu/~lcollado/lcg/introR2012/intro_R_Biostat_LCG_2012_slides.html&#34;&gt;presentation format&lt;/a&gt;, in a &lt;a href=&#34;http://www.biostat.jhsph.edu/~lcollado/lcg/introR2012/intro_R_Biostat_LCG_2012.html&#34;&gt;single webpage format&lt;/a&gt;, or the &lt;a href=&#34;http://www.biostat.jhsph.edu/~lcollado/lcg/introR2012/intro_R_Biostat_LCG_2012.Rmd&#34;&gt;raw Rmd file&lt;/a&gt;. To prove the point that publishing to &lt;a href=&#34;http://rpubs.com/&#34;&gt;RPubs&lt;/a&gt; is super easy, you can also find the &lt;a href=&#34;http://rpubs.com/lcollado/2618&#34;&gt;single webpage format over there&lt;/a&gt;. I also like how you can comment and share in RPubs.&lt;/p&gt;
 &lt;p&gt;One of the challenges of giving a presentation to first year students is finding the balance between introducing them to cool things you are doing in your work and actually giving a talk that they can follow. I thought about this and ended dropping anything related to my work.&lt;/p&gt;
@@ -537,11 +511,10 @@ Further talk details can easily be added to this page using *Markdown* and $\rm 
       <title>Introducing R and Biostatistics to first year LCG students (2012 version)</title>
       <link>/2012/10/30/introducing-r-and-biostatistics-to-first-year-lcg/</link>
       <pubDate>Tue, 30 Oct 2012 00:00:00 +0000</pubDate>
-      
       <guid>/2012/10/30/introducing-r-and-biostatistics-to-first-year-lcg/</guid>
-      <description>&lt;p&gt;&lt;p&gt;On Friday November 9th I&amp;#8217;ll be giving a talk to the first year students from the Undergraduate Program on Genomic Sciences (LCG in Spanish) during their &amp;#8220;Seminar 1: Introduction to Bioinformatics&amp;#8221; course. It&amp;#8217;s just like I did a year ago as I documented in my post &lt;a href=&#34;http://fellgernon.tumblr.com/post/13739343319/introducing-biostatistics-to-first-year-lcg-students#.UJBq6Wl25FQ&#34;&gt;Introducing Biostatistics to first year LCG students&lt;/a&gt;.&lt;/p&gt;
+      <description>&lt;p&gt;On Friday November 9th I&amp;#8217;ll be giving a talk to the first year students from the Undergraduate Program on Genomic Sciences (LCG in Spanish) during their &amp;#8220;Seminar 1: Introduction to Bioinformatics&amp;#8221; course. It&amp;#8217;s just like I did a year ago as I documented in my post &lt;a href=&#34;http://fellgernon.tumblr.com/post/13739343319/introducing-biostatistics-to-first-year-lcg-students#.UJBq6Wl25FQ&#34;&gt;Introducing Biostatistics to first year LCG students&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Well, this time I&amp;#8217;ll change things a bit. I&amp;#8217;m allowed to require the students to read 2-3 papers before my talk to introduce them to my field. I&amp;#8217;ll do so, but in a more peculiar way by requiring them to listen in to a few videos I selected. So, without further ado here are the three required &amp;#8220;papers&amp;#8221;:&lt;/p&gt;
-&lt;p&gt;Here is &amp;#8220;&lt;strong&gt;paper 1&lt;/strong&gt;&amp;rdquo; (~30 minutes). The goal is to introduce you to the basic workings of R and also to great sources of R videos.&lt;/p&gt;
+&lt;p&gt;Here is &amp;#8220;&lt;strong&gt;paper 1&lt;/strong&gt;&#34; (~30 minutes). The goal is to introduce you to the basic workings of R and also to great sources of R videos.&lt;/p&gt;
 &lt;p&gt;First, learn to install R (watch it in full screen).&lt;/p&gt;
 &lt;p&gt;&lt;iframe frameborder=&#34;0&#34; height=&#34;305&#34; src=&#34;http://www.screenr.com/embed/kzT8&#34; width=&#34;500&#34;&gt;&lt;/iframe&gt;&lt;/p&gt;
 &lt;p&gt;Or you can also watch any of the two following videos:&lt;/p&gt;
@@ -567,12 +540,12 @@ Further talk details can easily be added to this page using *Markdown* and $\rm 
 &lt;p&gt;&lt;iframe frameborder=&#34;0&#34; height=&#34;396&#34; src=&#34;http://www.screenr.com/embed/Fps8&#34; width=&#34;500&#34;&gt;&lt;/iframe&gt;&lt;/p&gt;
 &lt;p&gt;If you are more curious regarding the origins of R check the next video (not part of &amp;#8220;paper 1&amp;#8221;).&lt;/p&gt;
 &lt;p&gt;&lt;iframe frameborder=&#34;0&#34; height=&#34;281&#34; src=&#34;http://www.youtube.com/embed/kzxHxFHW6hs&#34; width=&#34;500&#34;&gt;&lt;/iframe&gt;&lt;/p&gt;
-&lt;p&gt;Next, &amp;#8220;&lt;strong&gt;paper 2&lt;/strong&gt;&amp;rdquo; (~39 minutes). The goal here is to get a feeling of how you can use R to create plots.&lt;/p&gt;
+&lt;p&gt;Next, &amp;#8220;&lt;strong&gt;paper 2&lt;/strong&gt;&#34; (~39 minutes). The goal here is to get a feeling of how you can use R to create plots.&lt;/p&gt;
 &lt;p&gt;First start with this demonstration of the basic R plotting tools (called &amp;#8220;base graphics&amp;#8221;). It does in enough level of detail of how the basic plotting system works and how you can customize the colors, layout, etc. For the purpose of getting used to the tool, I recommend that you follow this video using RStudio. Also, you&amp;#8217;ll want to watch it in 720p.&lt;/p&gt;
 &lt;p&gt;&lt;iframe frameborder=&#34;0&#34; height=&#34;281&#34; src=&#34;http://www.youtube.com/embed/4KLfzsj-qkE&#34; width=&#34;500&#34;&gt;&lt;/iframe&gt;&lt;/p&gt;
 &lt;p&gt;Now check the demo for plotting with the &lt;em&gt;lattice&lt;/em&gt; package. This is more advanced, but it should also be more illustrative of the power you have with R. Plus it shows how we can expand the functionality of R by using packages contributed to the community and freely available for us to use.&lt;/p&gt;
 &lt;p&gt;&lt;iframe frameborder=&#34;0&#34; height=&#34;281&#34; src=&#34;http://www.youtube.com/embed/6VP5JBq1g7g&#34; width=&#34;500&#34;&gt;&lt;/iframe&gt;&lt;/p&gt;
-&lt;p&gt;Finally, &amp;#8220;&lt;strong&gt;paper 3&lt;/strong&gt;&amp;rdquo; (~28 minutes). This is the first lecture from a course by Brian Caffo in which he goes over the definition and overall motivation behind Biostatistics. It should be much more fun to watch than reading a review paper in the area.&lt;/p&gt;
+&lt;p&gt;Finally, &amp;#8220;&lt;strong&gt;paper 3&lt;/strong&gt;&#34; (~28 minutes). This is the first lecture from a course by Brian Caffo in which he goes over the definition and overall motivation behind Biostatistics. It should be much more fun to watch than reading a review paper in the area.&lt;/p&gt;
 &lt;p&gt;&lt;iframe frameborder=&#34;0&#34; height=&#34;281&#34; src=&#34;http://www.youtube.com/embed/jkUqDVtpKs4&#34; width=&#34;500&#34;&gt;&lt;/iframe&gt;&lt;/p&gt;
 &lt;p&gt;Now, for those motivated to learn more, I recommend some of my own posts summarizing  information that can be useful to you.&lt;/p&gt;
 &lt;ul&gt;&lt;li&gt;&lt;a href=&#34;http://fellgernon.tumblr.com/post/32688589475/jhsph-biostat-through-coursera#.UJBzBml25FQ&#34;&gt;JHSPH-Biostat through Coursera&lt;/a&gt; and &lt;a href=&#34;http://fellgernon.tumblr.com/post/33114381084/an-online-bioinformatics-curriculum#.UJBy92l25FQ&#34;&gt;An Online Bioinformatics Curriculum&lt;/a&gt;&lt;/li&gt;
@@ -585,7 +558,7 @@ Further talk details can easily be added to this page using *Markdown* and $\rm 
 &lt;ul&gt;&lt;li&gt;&lt;a href=&#34;http://www.twotorials.com/&#34;&gt;&lt;a href=&#34;http://www.twotorials.com/&#34;&gt;http://www.twotorials.com/&lt;/a&gt;&lt;/a&gt; by &lt;a href=&#34;http://www.kaiseredu.org/tutorials-and-presentations/bios/anthony-damico.aspx&#34;&gt;Anthony Damico&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://www.youtube.com/user/rdpeng?feature=results_main&#34;&gt;Youtube videos&lt;/a&gt; by &lt;a href=&#34;http://www.biostat.jhsph.edu/~rpeng/&#34;&gt;Roger Peng&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://www.youtube.com/user/bcaffo?feature=results_main&#34;&gt;Youtube videos&lt;/a&gt; by &lt;a href=&#34;http://www.bcaffo.com/&#34;&gt;Brian Caffo&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/p&gt;
+&lt;/ul&gt;
 </description>
     </item>
     
@@ -593,15 +566,13 @@ Further talk details can easily be added to this page using *Markdown* and $\rm 
       <title>Introducing Biostatistics to first year LCG students</title>
       <link>/2011/12/04/introducing-biostatistics-to-first-year-lcg-students/</link>
       <pubDate>Sun, 04 Dec 2011 00:00:00 +0000</pubDate>
-      
       <guid>/2011/12/04/introducing-biostatistics-to-first-year-lcg-students/</guid>
       <description>&lt;p&gt;Around two weeks ago I gave a talk via skype to the first year students from the &lt;a href=&#34;http://www.lcg.unam.mx/about&#34;&gt;Undergraduate Program on Genomic Sciences&lt;/a&gt; (LCG in Spanish) from the National Autonomous University of Mexico (UNAM in Spanish). The talk was under the context of the &lt;em&gt;Introduction to Bioinformatics Seminar Series&lt;/em&gt; whose goal is to familiarize the new students with the bioinformatics world. It used to be a course heavy on exploring database websites, some basic theory, and lots of new concepts and algorithm names. Like, what is BLAST? This year, the course involved several talks from former students (like myself) on their experience and current job (most of us are in graduate school).&lt;/p&gt;
 &lt;p&gt;In my case, I was invited to talk about Biostatistics and R as I was one of the first LCG students to learn and teach R to other students (including PhD students ^^): &lt;a href=&#34;http://www.lcg.unam.mx/~lcollado/R/&#34;&gt;12 hour intro to R and Bioconductor&lt;/a&gt;, &lt;a href=&#34;http://www.lcg.unam.mx/~lcollado/E/&#34;&gt;R in an intro to statistics course&lt;/a&gt;, a &lt;a href=&#34;http://www.lcg.unam.mx/~lcollado/B/&#34;&gt;full course on Bioconductor&lt;/a&gt;. &lt;/p&gt;
 &lt;p&gt;I had a lot of fun preparing my talk as I tried to portray the three main currents in Biostatistics in a way that would be understandable, basic concepts such as a P-value, some basic R code (the students knew the super basics only), and doing so in a way that I would also pass how I see things. A key part for any bioinformatician, as I see it, is to have a good basic toolset. That&amp;#8217;s why I tried to pass on many tips to these young students. Also, I do like to go back to the philosophy of science and whether we need hypothesis nowadays or just models based on the data. I definitely had to cover the topic of communication as I strongly believe that any researcher has to be able to communicate with a biostastician if they want their help in analyzing their data. Also, a biostatistician is not a stastistician, meaning that they have to understand the underlying biological question. I tried emphasizing this point with the students and I attempted to motivate them to take a basic stastistics and probability course (2 preferably). After all, biostatistics is key nowadays in science since biology has gone high-throughput.&lt;/p&gt;
 &lt;p&gt;Giving the talk through skype was definitely a new experience for me. The best is to be in the classroom as you miss a lot of the interaction with the students. For instance, I didn&amp;#8217;t always know who as asking the question and frequently I had to ask them to repeat it louder. Plus, I chose to share my desktop with them instead of having them watch at my face all the time. I guess it wasn&amp;#8217;t easy for them to just watch a screen with a background voice for 2 hours :P But well, I hoped they liked it as much as I liked preparing it.&lt;/p&gt;
 &lt;p&gt;If you are interested in the talk, I uploaded the &lt;a href=&#34;https://docs.google.com/open?id=0B-mxZfuflcuONmY1MGI3ZjEtN2JjNy00MDNiLTk0NmMtYjdiNDAwNTZmNGNj&#34;&gt;PDF file&lt;/a&gt;, the associated &lt;a href=&#34;https://docs.google.com/open?id=0B-mxZfuflcuOZTkxMDUzY2ItNmMzYi00ZDcyLTgyMTQtMWI5YzJmN2IzZjUw&#34;&gt;R file&lt;/a&gt; and the master &lt;a href=&#34;https://docs.google.com/open?id=0B-mxZfuflcuOYTY3OTQ4NjUtZTFkOC00MGQ5LThiMzgtNDQ2ZjY2NmZlY2Zi&#34;&gt;Rnw file&lt;/a&gt; to Google Docs. The Rnw file can be useful if you are learning how to write Beamer presentations using Sweave and LaTeX.&lt;/p&gt;
-
-&lt;p&gt;&lt;p&gt;Finally, I was asked to prepare two short questions so that the teachers can evaluate the students. As a bonus for any of them reading my blog ^^ (I did portray blogs as an excellent way to update yourself) here they are:&lt;/p&gt;
+&lt;p&gt;Finally, I was asked to prepare two short questions so that the teachers can evaluate the students. As a bonus for any of them reading my blog ^^ (I did portray blogs as an excellent way to update yourself) here they are:&lt;/p&gt;
 &lt;ol&gt;&lt;li&gt;Argue why you need to learn (at least basic) Biostatistics and why it&amp;#8217;s useful nowadays to analyze biological data.&lt;/li&gt;
 &lt;li&gt;Based on the data from your recent experiment, you construct a 95% confidence interval (frequentist approach) for the mean of your variable of interest. What is the probability that the true mean of the distribution is contained in the confidence interval.&lt;/li&gt;
 &lt;li&gt;Bonus: list 5 basic R plotting functions&lt;/li&gt;
@@ -609,7 +580,7 @@ Further talk details can easily be added to this page using *Markdown* and $\rm 
 &lt;ol&gt;&lt;li&gt;You need to learn the basics (at least) of Biostatistics in order to be able to communicate with your biostatistician collaborator, and to analyze your own data specially by performing exploratory data analyses (EDA). Also, biological experiments nowadays generate a lot of data as biology has gone high-throughput. Biostatistics is specially useful in order to analyze all this data.&lt;/li&gt;
 &lt;li&gt;0 or 1 and you cannot know which is the case for your specific dataset.&lt;/li&gt;
 &lt;li&gt;I mentioned: plot, hist, boxplot, qqplot, qqnorm, lines, points, abline, legend&lt;/li&gt;
-&lt;/ol&gt;&lt;/p&gt;
+&lt;/ol&gt;
 </description>
     </item>
     
@@ -617,12 +588,10 @@ Further talk details can easily be added to this page using *Markdown* and $\rm 
       <title>Introduction to R and Biostatistics</title>
       <link>/talk/introbiostats2011/</link>
       <pubDate>Fri, 18 Nov 2011 16:29:18 -0500</pubDate>
-      
       <guid>/talk/introbiostats2011/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;http://lcolladotor.github.io/2011/12/04/introducing-biostatistics-to-first-year-lcg-students/&#34; target=&#34;_blank&#34;&gt;Blog post describing this talk&lt;/a&gt;&lt;/p&gt;
-
+      <description>&lt;p&gt;
+&lt;a href=&#34;http://lcolladotor.github.io/2011/12/04/introducing-biostatistics-to-first-year-lcg-students/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Blog post describing this talk&lt;/a&gt;&lt;/p&gt;
 &lt;script async class=&#34;speakerdeck-embed&#34; data-id=&#34;464d2cce929a4682adddccf1d4560ce8&#34; data-ratio=&#34;1.33333333333333&#34; src=&#34;//speakerdeck.com/assets/embed.js&#34;&gt;&lt;/script&gt;
-
 &lt;!--
 
 &lt;div class=&#34;alert alert-note&#34;&gt;
@@ -649,7 +618,6 @@ Further talk details can easily be added to this page using *Markdown* and $\rm 
       <title>Interspecies interactions that result in Bacillus subtilis forming biofilms are mediated mainly by members of its own genus</title>
       <link>/publication/bsubtilis/</link>
       <pubDate>Thu, 10 Nov 2011 17:13:40 -0500</pubDate>
-      
       <guid>/publication/bsubtilis/</guid>
       <description>&lt;!-- More detail can easily be written here using *Markdown* and $\rm \LaTeX$ math code. --&gt;
 </description>
@@ -659,10 +627,36 @@ Further talk details can easily be added to this page using *Markdown* and $\rm 
       <title>Introduction to using Bioconductor for High Throughput Sequencing Analysis</title>
       <link>/talk/nnb2010/</link>
       <pubDate>Thu, 19 Aug 2010 16:01:25 -0400</pubDate>
-      
       <guid>/talk/nnb2010/</guid>
       <description>&lt;script async class=&#34;speakerdeck-embed&#34; data-id=&#34;40788fe5d7554eb593cc6d1d938d7781&#34; data-ratio=&#34;1.33333333333333&#34; src=&#34;//speakerdeck.com/assets/embed.js&#34;&gt;&lt;/script&gt;
+&lt;!--
 
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Click on the &lt;strong&gt;Slides&lt;/strong&gt; button above to view the built-in slides feature.
+  &lt;/div&gt;
+&lt;/div&gt;
+
+
+
+Slides can be added in a few ways:
+
+- **Create** slides using Academic&#39;s *Slides* feature and link using `url_slides` parameter in the front matter of the talk file
+- **Upload** an existing slide deck to `static/` and link using `url_slides` parameter in the front matter of the talk file
+- **Embed** your slides (e.g. Google Slides) or presentation video on this page using [shortcodes](https://sourcethemes.com/academic/docs/writing-markdown-latex/).
+
+Further talk details can easily be added to this page using *Markdown* and $\rm \LaTeX$ math code.
+
+--&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Bacteriófagos: analizando su diversidad</title>
+      <link>/talk/fagos2008/</link>
+      <pubDate>Thu, 04 Dec 2008 00:00:00 -0500</pubDate>
+      <guid>/talk/fagos2008/</guid>
+      <description>&lt;script async class=&#34;speakerdeck-embed&#34; data-id=&#34;732afb05a0e24a33948734b33816d4f8&#34; data-ratio=&#34;1.33333333333333&#34; src=&#34;//speakerdeck.com/assets/embed.js&#34;&gt;&lt;/script&gt;
 &lt;!--
 
 &lt;div class=&#34;alert alert-note&#34;&gt;

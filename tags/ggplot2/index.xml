@@ -1,26 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>ggplot2 on L. Collado-Torres</title>
+    <title>ggplot2 | L. Collado-Torres</title>
     <link>/tags/ggplot2/</link>
-    <description>Recent content in ggplot2 on L. Collado-Torres</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>&amp;copy; 2011-{year} Leonardo Collado Torres under (CC) BY-NC-SA 4.0. All thoughts and opinions here are my own. Icon is the [R logo](https://www.r-project.org/logo/) modified</copyright>
-    <lastBuildDate>Fri, 21 Jun 2013 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://lcolladotor.github.io/tags/ggplot2/" rel="self" type="application/rss+xml" />
+      <atom:link href=http://lcolladotor.github.io/tags/ggplot2/index.xml rel="self" type="application/rss+xml" />
+    <description>ggplot2</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2011-2020 Leonardo Collado Torres under (CC) BY-NC-SA 4.0. All thoughts and opinions here are my own. Icon is the [R logo](https://www.r-project.org/logo/) modified</copyright><lastBuildDate>Fri, 21 Jun 2013 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
+      <title>ggplot2</title>
+      <link>/tags/ggplot2/</link>
+    </image>
     
     <item>
       <title>ggplot Tutorial</title>
       <link>/2013/06/21/ggplot-tutorial/</link>
       <pubDate>Fri, 21 Jun 2013 00:00:00 +0000</pubDate>
-      
       <guid>/2013/06/21/ggplot-tutorial/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;http://www.ceb-institute.org/bbs/wp-content/uploads/2011/09/handout_ggplot2.pdf&#34;&gt;ggplot Tutorial&lt;/a&gt;&lt;br/&gt;&lt;p&gt;I liked the &lt;a href=&#34;http://www.ceb-institute.org/bbs/wp-content/uploads/2011/09/handout_ggplot2.pdf&#34;&gt;following ggplot2 tutorial&lt;/a&gt; which is featured in Gabriela de Queiroz&amp;#8217;s blog called &lt;a href=&#34;http://unbiasedestimator.tumblr.com/&#34;&gt;unbiasedestimator&lt;/a&gt;. The tutorial looks very neatly presented and I&amp;#8217;m sure that it will be very helpful to anyone just getting started with ggplot2 before they jump into &lt;a href=&#34;http://ggplot2.org/book/&#34;&gt;ggplot2: Elegant Graphics for Data Analysis&lt;/a&gt; by Hadley Wickham or &lt;a href=&#34;http://shop.oreilly.com/product/0636920023135.do&#34;&gt;R Graphics Cookbook&lt;/a&gt; by Winston Chang.&lt;/p&gt;
+      <description>&lt;p&gt;&lt;a href=&#34;http://www.ceb-institute.org/bbs/wp-content/uploads/2011/09/handout_ggplot2.pdf&#34;&gt;ggplot Tutorial&lt;/a&gt;&lt;br/&gt;&lt;p&gt;I liked the &lt;a href=&#34;http://www.ceb-institute.org/bbs/wp-content/uploads/2011/09/handout_ggplot2.pdf&#34;&gt;following ggplot2 tutorial&lt;/a&gt; which is featured in Gabriela de Queiroz’s blog called &lt;a href=&#34;http://unbiasedestimator.tumblr.com/&#34;&gt;unbiasedestimator&lt;/a&gt;. The tutorial looks very neatly presented and I’m sure that it will be very helpful to anyone just getting started with ggplot2 before they jump into &lt;a href=&#34;http://ggplot2.org/book/&#34;&gt;ggplot2: Elegant Graphics for Data Analysis&lt;/a&gt; by Hadley Wickham or &lt;a href=&#34;http://shop.oreilly.com/product/0636920023135.do&#34;&gt;R Graphics Cookbook&lt;/a&gt; by Winston Chang.&lt;/p&gt;&lt;/p&gt;
 &lt;p&gt;&lt;span&gt;The tutorial is very nicely formatted with code in bold highlighting  parts that change something in the plot. Overall, the tutorial explains how to use qplot() although it does have a longer example using ggplot() to make survival curves.&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;Check it out!&lt;/p&gt;&lt;/p&gt;
-
+&lt;p&gt;Check it out!&lt;/p&gt;
 &lt;p&gt;&lt;a class=&#34;tumblr_blog&#34; href=&#34;http://unbiasedestimator.tumblr.com/post/26148780483/ggplot-tutorial&#34;&gt;unbiasedestimator&lt;/a&gt;:&lt;/p&gt;
-
 &lt;blockquote&gt;
 &lt;p&gt;Good tutorial about the R package.&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;“ggplot2 is an R package for producing statistical, or data, graphics, but it is unlike most other graphics packages because it has a deep underlying grammar. [..]”&lt;/em&gt;&lt;/p&gt;

@@ -1,23 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Math on L. Collado-Torres</title>
+    <title>Math | L. Collado-Torres</title>
     <link>/tags/math/</link>
-    <description>Recent content in Math on L. Collado-Torres</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>&amp;copy; 2011-{year} Leonardo Collado Torres under (CC) BY-NC-SA 4.0. All thoughts and opinions here are my own. Icon is the [R logo](https://www.r-project.org/logo/) modified</copyright>
-    <lastBuildDate>Sat, 28 Apr 2012 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://lcolladotor.github.io/tags/math/" rel="self" type="application/rss+xml" />
+      <atom:link href=http://lcolladotor.github.io/tags/math/index.xml rel="self" type="application/rss+xml" />
+    <description>Math</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2011-2020 Leonardo Collado Torres under (CC) BY-NC-SA 4.0. All thoughts and opinions here are my own. Icon is the [R logo](https://www.r-project.org/logo/) modified</copyright><lastBuildDate>Sat, 28 Apr 2012 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
+      <title>Math</title>
+      <link>/tags/math/</link>
+    </image>
     
     <item>
       <title>Pi</title>
       <link>/2012/04/28/pi/</link>
       <pubDate>Sat, 28 Apr 2012 00:00:00 +0000</pubDate>
-      
       <guid>/2012/04/28/pi/</guid>
       <description>&lt;p&gt;&lt;img height=&#34;500&#34; src=&#34;http://www.fastcodesign.com/multisite_files/codesign/imagecache/inline-zoom/post-inline/4million2.jpg&#34; width=&#34;500&#34;/&gt;&lt;/p&gt;
 &lt;p&gt;More &lt;a href=&#34;http://www.fastcodesign.com/1669614/what-pi-looks-like-to-4-million-decimal-places-as-pixel-art&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
-
 &lt;p&gt;(Saw it from a fb friend).&lt;/p&gt;
 </description>
     </item>

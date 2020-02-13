@@ -1,19 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>3 on L. Collado-Torres</title>
+    <title>3 | L. Collado-Torres</title>
     <link>/publication_types/3/</link>
-    <description>Recent content in 3 on L. Collado-Torres</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>&amp;copy; 2011-{year} Leonardo Collado Torres under (CC) BY-NC-SA 4.0. All thoughts and opinions here are my own. Icon is the [R logo](https://www.r-project.org/logo/) modified</copyright>
-    <lastBuildDate>Wed, 30 Oct 2019 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://lcolladotor.github.io/publication_types/3/" rel="self" type="application/rss+xml" />
+      <atom:link href=http://lcolladotor.github.io/publication_types/3/index.xml rel="self" type="application/rss+xml" />
+    <description>3</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2011-2020 Leonardo Collado Torres under (CC) BY-NC-SA 4.0. All thoughts and opinions here are my own. Icon is the [R logo](https://www.r-project.org/logo/) modified</copyright><lastBuildDate>Wed, 30 Oct 2019 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
+      <title>3</title>
+      <link>/publication_types/3/</link>
+    </image>
     
     <item>
       <title>Characterizing the dynamic and functional DNA methylation landscape in the developing human cortex</title>
       <link>/publication/kira_prenatal/</link>
       <pubDate>Wed, 30 Oct 2019 00:00:00 +0000</pubDate>
-      
       <guid>/publication/kira_prenatal/</guid>
       <description>&lt;!-- More detail can easily be written here using *Markdown* and $\rm \LaTeX$ math code. --&gt;
 </description>
@@ -23,7 +25,6 @@
       <title>Recounting the FANTOM Cage Associated Transcriptome</title>
       <link>/publication/fantomrecount2/</link>
       <pubDate>Thu, 13 Jun 2019 00:00:00 +0000</pubDate>
-      
       <guid>/publication/fantomrecount2/</guid>
       <description>&lt;!-- More detail can easily be written here using *Markdown* and $\rm \LaTeX$ math code. --&gt;
 </description>
@@ -33,7 +34,6 @@
       <title>recount-brain: a curated repository of human brain RNA-seq datasets metadata</title>
       <link>/publication/recount_brain/</link>
       <pubDate>Wed, 24 Apr 2019 16:45:43 -0500</pubDate>
-      
       <guid>/publication/recount_brain/</guid>
       <description>&lt;!-- More detail can easily be written here using *Markdown* and $\rm \LaTeX$ math code. --&gt;
 </description>
@@ -43,7 +43,6 @@
       <title>Regulatory sites for known and novel splicing in human basal ganglia are enriched for disease-relevant information</title>
       <link>/publication/basalganglia/</link>
       <pubDate>Thu, 28 Mar 2019 00:00:00 +0000</pubDate>
-      
       <guid>/publication/basalganglia/</guid>
       <description>&lt;!-- More detail can easily be written here using *Markdown* and $\rm \LaTeX$ math code. --&gt;
 </description>
@@ -53,7 +52,6 @@
       <title>Incomplete annotation of OMIM genes is likely to be limiting the diagnostic yield of genetic testing, particularly for neurogenetic disorders</title>
       <link>/publication/omimderfinder/</link>
       <pubDate>Wed, 19 Dec 2018 00:00:00 +0000</pubDate>
-      
       <guid>/publication/omimderfinder/</guid>
       <description>&lt;!-- More detail can easily be written here using *Markdown* and $\rm \LaTeX$ math code. --&gt;
 </description>
@@ -63,7 +61,6 @@
       <title>Dissecting transcriptomic signatures of neuronal differentiation and maturation using iPSCs</title>
       <link>/publication/libdstemcell/</link>
       <pubDate>Tue, 31 Jul 2018 00:00:00 +0000</pubDate>
-      
       <guid>/publication/libdstemcell/</guid>
       <description>&lt;!-- More detail can easily be written here using *Markdown* and $\rm \LaTeX$ math code. --&gt;
 </description>
@@ -73,7 +70,6 @@
       <title>RNA-seq transcript quantification from reduced-representation data in recount2</title>
       <link>/publication/recount_tx/</link>
       <pubDate>Fri, 12 Jan 2018 16:45:43 -0500</pubDate>
-      
       <guid>/publication/recount_tx/</guid>
       <description>&lt;!-- More detail can easily be written here using *Markdown* and $\rm \LaTeX$ math code. --&gt;
 </description>

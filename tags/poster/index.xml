@@ -1,19 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Poster on L. Collado-Torres</title>
+    <title>Poster | L. Collado-Torres</title>
     <link>/tags/poster/</link>
-    <description>Recent content in Poster on L. Collado-Torres</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>&amp;copy; 2011-{year} Leonardo Collado Torres under (CC) BY-NC-SA 4.0. All thoughts and opinions here are my own. Icon is the [R logo](https://www.r-project.org/logo/) modified</copyright>
-    <lastBuildDate>Wed, 08 May 2019 14:00:00 +0000</lastBuildDate>
-    <atom:link href="http://lcolladotor.github.io/tags/poster/" rel="self" type="application/rss+xml" />
+      <atom:link href=http://lcolladotor.github.io/tags/poster/index.xml rel="self" type="application/rss+xml" />
+    <description>Poster</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2011-2020 Leonardo Collado Torres under (CC) BY-NC-SA 4.0. All thoughts and opinions here are my own. Icon is the [R logo](https://www.r-project.org/logo/) modified</copyright><lastBuildDate>Wed, 08 May 2019 14:00:00 +0000</lastBuildDate>
+    <image>
+      <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
+      <title>Poster</title>
+      <link>/tags/poster/</link>
+    </image>
     
     <item>
       <title>recount-brain: a curated repository of human brain RNA-seq datasets metadata</title>
       <link>/publication/poster2019bog/</link>
       <pubDate>Wed, 08 May 2019 14:00:00 +0000</pubDate>
-      
       <guid>/publication/poster2019bog/</guid>
       <description>&lt;!-- More detail can easily be written here using *Markdown* and $\rm \LaTeX$ math code. --&gt;
 </description>
@@ -23,7 +25,6 @@
       <title>Regional heterogeneity in gene expression, regulation and coherence in hippocampus and dorsolateral prefrontal cortex across development and in schizophrenia</title>
       <link>/publication/poster2018ashg/</link>
       <pubDate>Tue, 16 Oct 2018 16:52:21 -0500</pubDate>
-      
       <guid>/publication/poster2018ashg/</guid>
       <description>&lt;!-- More detail can easily be written here using *Markdown* and $\rm \LaTeX$ math code. --&gt;
 </description>
@@ -33,7 +34,6 @@
       <title>BrainSeq Phase II: schizophrenia-associated expression differences between the hippocampus and the dorsolateral prefrontal cortex</title>
       <link>/publication/poster2018sages/</link>
       <pubDate>Fri, 01 Jun 2018 16:52:21 -0500</pubDate>
-      
       <guid>/publication/poster2018sages/</guid>
       <description>&lt;!-- More detail can easily be written here using *Markdown* and $\rm \LaTeX$ math code. --&gt;
 </description>
@@ -43,7 +43,6 @@
       <title>Getting started with recount2 and accessing it via R</title>
       <link>/publication/poster2017idies/</link>
       <pubDate>Fri, 20 Oct 2017 16:52:21 -0500</pubDate>
-      
       <guid>/publication/poster2017idies/</guid>
       <description>&lt;!-- More detail can easily be written here using *Markdown* and $\rm \LaTeX$ math code. --&gt;
 </description>
@@ -53,7 +52,6 @@
       <title>Annotation-agnostic RNA-seq differential expression analysis software</title>
       <link>/publication/poster2015/</link>
       <pubDate>Mon, 19 Oct 2015 16:52:21 -0500</pubDate>
-      
       <guid>/publication/poster2015/</guid>
       <description>&lt;!-- More detail can easily be written here using *Markdown* and $\rm \LaTeX$ math code. --&gt;
 </description>
@@ -63,7 +61,6 @@
       <title>Fast Annotation-Agnostic Differential Expression Analysis</title>
       <link>/publication/poster2014enar/</link>
       <pubDate>Wed, 19 Mar 2014 16:52:21 -0500</pubDate>
-      
       <guid>/publication/poster2014enar/</guid>
       <description>&lt;!-- More detail can easily be written here using *Markdown* and $\rm \LaTeX$ math code. --&gt;
 </description>
@@ -73,7 +70,6 @@
       <title>Fast Annotation-Agnostic Differential Expression Analysis</title>
       <link>/publication/poster2013gbs/</link>
       <pubDate>Sat, 19 Oct 2013 16:52:21 -0500</pubDate>
-      
       <guid>/publication/poster2013gbs/</guid>
       <description>&lt;!-- More detail can easily be written here using *Markdown* and $\rm \LaTeX$ math code. --&gt;
 </description>
@@ -83,7 +79,6 @@
       <title>Differential expression RNA-seq analysis with a large data set from brain samples</title>
       <link>/publication/poster2013retreat/</link>
       <pubDate>Fri, 19 Apr 2013 16:52:21 -0500</pubDate>
-      
       <guid>/publication/poster2013retreat/</guid>
       <description>&lt;!-- More detail can easily be written here using *Markdown* and $\rm \LaTeX$ math code. --&gt;
 </description>
@@ -93,7 +88,6 @@
       <title>Global Analysis of Transcription Start Sites and Transcription Units in Bacterial Genomes</title>
       <link>/publication/poster2010/</link>
       <pubDate>Tue, 19 Oct 2010 16:52:21 -0500</pubDate>
-      
       <guid>/publication/poster2010/</guid>
       <description>&lt;!-- More detail can easily be written here using *Markdown* and $\rm \LaTeX$ math code. --&gt;
 </description>
@@ -103,7 +97,6 @@
       <title>Global Analysis of Transcription Start Sites and Transcription Units in Bacterial Genomes</title>
       <link>/publication/poster2010bioc/</link>
       <pubDate>Sun, 25 Jul 2010 16:52:21 -0500</pubDate>
-      
       <guid>/publication/poster2010bioc/</guid>
       <description>&lt;!-- More detail can easily be written here using *Markdown* and $\rm \LaTeX$ math code. --&gt;
 </description>

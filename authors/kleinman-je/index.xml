@@ -1,19 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Kleinman JE on L. Collado-Torres</title>
+    <title>Kleinman JE | L. Collado-Torres</title>
     <link>/authors/kleinman-je/</link>
-    <description>Recent content in Kleinman JE on L. Collado-Torres</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>&amp;copy; 2011-{year} Leonardo Collado Torres under (CC) BY-NC-SA 4.0. All thoughts and opinions here are my own. Icon is the [R logo](https://www.r-project.org/logo/) modified</copyright>
-    <lastBuildDate>Thu, 26 Jul 2018 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://lcolladotor.github.io/authors/kleinman-je/" rel="self" type="application/rss+xml" />
+      <atom:link href=http://lcolladotor.github.io/authors/kleinman-je/index.xml rel="self" type="application/rss+xml" />
+    <description>Kleinman JE</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2011-2020 Leonardo Collado Torres under (CC) BY-NC-SA 4.0. All thoughts and opinions here are my own. Icon is the [R logo](https://www.r-project.org/logo/) modified</copyright><lastBuildDate>Thu, 26 Jul 2018 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
+      <title>Kleinman JE</title>
+      <link>/authors/kleinman-je/</link>
+    </image>
     
     <item>
       <title>Developmental and genetic regulation of the human cortex transcriptome illuminate schizophrenia pathogenesis</title>
       <link>/publication/bsp1/</link>
       <pubDate>Thu, 26 Jul 2018 00:00:00 +0000</pubDate>
-      
       <guid>/publication/bsp1/</guid>
       <description>&lt;!-- More detail can easily be written here using *Markdown* and $\rm \LaTeX$ math code. --&gt;
 </description>
@@ -23,7 +25,6 @@
       <title>Developmental regulation of human cortex transcription and its clinical relevance at single base resolution</title>
       <link>/publication/brainders/</link>
       <pubDate>Fri, 19 Dec 2014 17:17:48 -0500</pubDate>
-      
       <guid>/publication/brainders/</guid>
       <description>&lt;!-- More detail can easily be written here using *Markdown* and $\rm \LaTeX$ math code. --&gt;
 </description>

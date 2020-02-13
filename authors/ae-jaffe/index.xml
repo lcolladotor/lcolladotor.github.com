@@ -1,19 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>AE Jaffe on L. Collado-Torres</title>
+    <title>AE Jaffe | L. Collado-Torres</title>
     <link>/authors/ae-jaffe/</link>
-    <description>Recent content in AE Jaffe on L. Collado-Torres</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>&amp;copy; 2011-{year} Leonardo Collado Torres under (CC) BY-NC-SA 4.0. All thoughts and opinions here are my own. Icon is the [R logo](https://www.r-project.org/logo/) modified</copyright>
-    <lastBuildDate>Thu, 24 Aug 2017 16:45:43 -0500</lastBuildDate>
-    <atom:link href="http://lcolladotor.github.io/authors/ae-jaffe/" rel="self" type="application/rss+xml" />
+      <atom:link href=http://lcolladotor.github.io/authors/ae-jaffe/index.xml rel="self" type="application/rss+xml" />
+    <description>AE Jaffe</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2011-2020 Leonardo Collado Torres under (CC) BY-NC-SA 4.0. All thoughts and opinions here are my own. Icon is the [R logo](https://www.r-project.org/logo/) modified</copyright><lastBuildDate>Thu, 24 Aug 2017 16:45:43 -0500</lastBuildDate>
+    <image>
+      <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
+      <title>AE Jaffe</title>
+      <link>/authors/ae-jaffe/</link>
+    </image>
     
     <item>
       <title>recount workflow: Accessing over 70,000 human RNA-seq samples with Bioconductor [version 1; referees: 1 approved, 2 approved with reservations]</title>
       <link>/publication/recountworkflow/</link>
       <pubDate>Thu, 24 Aug 2017 16:45:43 -0500</pubDate>
-      
       <guid>/publication/recountworkflow/</guid>
       <description>&lt;!-- More detail can easily be written here using *Markdown* and $\rm \LaTeX$ math code. --&gt;
 </description>
@@ -23,7 +25,6 @@
       <title>Altered expression of histamine signaling genes in autism spectrum disorder</title>
       <link>/publication/histamine/</link>
       <pubDate>Tue, 09 May 2017 16:45:43 -0500</pubDate>
-      
       <guid>/publication/histamine/</guid>
       <description>&lt;!-- More detail can easily be written here using *Markdown* and $\rm \LaTeX$ math code. --&gt;
 </description>
@@ -33,7 +34,6 @@
       <title>Reproducible RNA-seq analysis using recount2</title>
       <link>/publication/recount/</link>
       <pubDate>Tue, 11 Apr 2017 16:45:43 -0500</pubDate>
-      
       <guid>/publication/recount/</guid>
       <description>&lt;!-- More detail can easily be written here using *Markdown* and $\rm \LaTeX$ math code. --&gt;
 </description>
@@ -43,7 +43,6 @@
       <title>Human splicing diversity and the extent of unannotated splice junctions across human RNA-seq samples on the Sequence Read Archive</title>
       <link>/publication/intropolis/</link>
       <pubDate>Fri, 30 Dec 2016 17:44:49 -0500</pubDate>
-      
       <guid>/publication/intropolis/</guid>
       <description>&lt;!-- More detail can easily be written here using *Markdown* and $\rm \LaTeX$ math code. --&gt;
 </description>
@@ -53,7 +52,6 @@
       <title>Flexible expressed region analysis for RNA-seq with derfinder</title>
       <link>/publication/derfinder/</link>
       <pubDate>Thu, 15 Sep 2016 00:00:00 +0000</pubDate>
-      
       <guid>/publication/derfinder/</guid>
       <description>&lt;!-- More detail can easily be written here using *Markdown* and $\rm \LaTeX$ math code. --&gt;
 </description>
@@ -63,7 +61,6 @@
       <title>Rail-RNA: Scalable analysis of RNA-seq splicing and coverage</title>
       <link>/publication/rail/</link>
       <pubDate>Sat, 03 Sep 2016 17:27:55 -0500</pubDate>
-      
       <guid>/publication/rail/</guid>
       <description>&lt;!-- More detail can easily be written here using *Markdown* and $\rm \LaTeX$ math code. --&gt;
 </description>
@@ -73,7 +70,6 @@
       <title>regionReport: Interactive reports for region-level and feature-level genomic analyses</title>
       <link>/publication/regionreport/</link>
       <pubDate>Wed, 29 Jun 2016 17:21:58 -0500</pubDate>
-      
       <guid>/publication/regionreport/</guid>
       <description>&lt;!-- More detail can easily be written here using *Markdown* and $\rm \LaTeX$ math code. --&gt;
 </description>
@@ -83,7 +79,6 @@
       <title>Measurement, Summary, and Methodological Variation in RNA-sequencing in Statistical Analysis of Next Generation Sequencing Data</title>
       <link>/publication/rnaseqbook/</link>
       <pubDate>Tue, 17 Jun 2014 16:42:24 -0500</pubDate>
-      
       <guid>/publication/rnaseqbook/</guid>
       <description>&lt;!-- More detail can easily be written here using *Markdown* and $\rm \LaTeX$ math code. --&gt;
 </description>

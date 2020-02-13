@@ -1,19 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Authors on L. Collado-Torres</title>
+    <title>Authors | L. Collado-Torres</title>
     <link>/authors/</link>
-    <description>Recent content in Authors on L. Collado-Torres</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>&amp;copy; 2011-{year} Leonardo Collado Torres under (CC) BY-NC-SA 4.0. All thoughts and opinions here are my own. Icon is the [R logo](https://www.r-project.org/logo/) modified</copyright>
-    <lastBuildDate>Wed, 30 Oct 2019 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://lcolladotor.github.io/authors/" rel="self" type="application/rss+xml" />
+      <atom:link href=http://lcolladotor.github.io/authors/index.xml rel="self" type="application/rss+xml" />
+    <description>Authors</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2011-2020 Leonardo Collado Torres under (CC) BY-NC-SA 4.0. All thoughts and opinions here are my own. Icon is the [R logo](https://www.r-project.org/logo/) modified</copyright><lastBuildDate>Wed, 30 Oct 2019 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
+      <title>Authors</title>
+      <link>/authors/</link>
+    </image>
     
     <item>
       <title>[__Leonardo Collado-Torres__](/authors/admin)</title>
       <link>/authors/__leonardo-collado-torres__/authors/admin/</link>
       <pubDate>Wed, 30 Oct 2019 00:00:00 +0000</pubDate>
-      
       <guid>/authors/__leonardo-collado-torres__/authors/admin/</guid>
       <description></description>
     </item>
@@ -22,7 +24,6 @@
       <title>Alexander S Szalay</title>
       <link>/authors/alexander-s-szalay/</link>
       <pubDate>Wed, 30 Oct 2019 00:00:00 +0000</pubDate>
-      
       <guid>/authors/alexander-s-szalay/</guid>
       <description></description>
     </item>
@@ -31,7 +32,6 @@
       <title>Amanda J Price</title>
       <link>/authors/amanda-j-price/</link>
       <pubDate>Wed, 30 Oct 2019 00:00:00 +0000</pubDate>
-      
       <guid>/authors/amanda-j-price/</guid>
       <description></description>
     </item>
@@ -40,7 +40,6 @@
       <title>Andrew E Jaffe &amp;dagger;</title>
       <link>/authors/andrew-e-jaffe-dagger/</link>
       <pubDate>Wed, 30 Oct 2019 00:00:00 +0000</pubDate>
-      
       <guid>/authors/andrew-e-jaffe-dagger/</guid>
       <description></description>
     </item>
@@ -49,7 +48,6 @@
       <title>Daniel R Weinberger</title>
       <link>/authors/daniel-r-weinberger/</link>
       <pubDate>Wed, 30 Oct 2019 00:00:00 +0000</pubDate>
-      
       <guid>/authors/daniel-r-weinberger/</guid>
       <description></description>
     </item>
@@ -58,7 +56,6 @@
       <title>Joel E Kleinman</title>
       <link>/authors/joel-e-kleinman/</link>
       <pubDate>Wed, 30 Oct 2019 00:00:00 +0000</pubDate>
-      
       <guid>/authors/joel-e-kleinman/</guid>
       <description></description>
     </item>
@@ -67,7 +64,6 @@
       <title>Kira A Perzel Mandell</title>
       <link>/authors/kira-a-perzel-mandell/</link>
       <pubDate>Wed, 30 Oct 2019 00:00:00 +0000</pubDate>
-      
       <guid>/authors/kira-a-perzel-mandell/</guid>
       <description></description>
     </item>
@@ -76,7 +72,6 @@
       <title>Nicholas J Eagles</title>
       <link>/authors/nicholas-j-eagles/</link>
       <pubDate>Wed, 30 Oct 2019 00:00:00 +0000</pubDate>
-      
       <guid>/authors/nicholas-j-eagles/</guid>
       <description></description>
     </item>
@@ -85,7 +80,6 @@
       <title>Ran Tao</title>
       <link>/authors/ran-tao/</link>
       <pubDate>Wed, 30 Oct 2019 00:00:00 +0000</pubDate>
-      
       <guid>/authors/ran-tao/</guid>
       <description></description>
     </item>
@@ -94,7 +88,6 @@
       <title>Richard Wilton</title>
       <link>/authors/richard-wilton/</link>
       <pubDate>Wed, 30 Oct 2019 00:00:00 +0000</pubDate>
-      
       <guid>/authors/richard-wilton/</guid>
       <description></description>
     </item>
@@ -103,7 +96,6 @@
       <title>Thomas M Hyde</title>
       <link>/authors/thomas-m-hyde/</link>
       <pubDate>Wed, 30 Oct 2019 00:00:00 +0000</pubDate>
-      
       <guid>/authors/thomas-m-hyde/</guid>
       <description></description>
     </item>
@@ -112,7 +104,6 @@
       <title>[__Leonardo Collado-Torres__](/authors/admin) __*__</title>
       <link>/authors/__leonardo-collado-torres__/authors/admin-____/</link>
       <pubDate>Thu, 26 Sep 2019 00:00:00 +0000</pubDate>
-      
       <guid>/authors/__leonardo-collado-torres__/authors/admin-____/</guid>
       <description></description>
     </item>
@@ -121,7 +112,6 @@
       <title>__Amanda J. Price__ __*__</title>
       <link>/authors/__amanda-j.-price__-____/</link>
       <pubDate>Thu, 26 Sep 2019 00:00:00 +0000</pubDate>
-      
       <guid>/authors/__amanda-j.-price__-____/</guid>
       <description></description>
     </item>
@@ -130,7 +120,6 @@
       <title>Daniel R. Weinberger</title>
       <link>/authors/daniel-r.-weinberger/</link>
       <pubDate>Thu, 26 Sep 2019 00:00:00 +0000</pubDate>
-      
       <guid>/authors/daniel-r.-weinberger/</guid>
       <description></description>
     </item>
@@ -139,9 +128,1926 @@
       <title>Emily E. Burke</title>
       <link>/authors/emily-e.-burke/</link>
       <pubDate>Thu, 26 Sep 2019 00:00:00 +0000</pubDate>
-      
       <guid>/authors/emily-e.-burke/</guid>
       <description></description>
+    </item>
+    
+    <item>
+      <title>Joel E. Kleinman</title>
+      <link>/authors/joel-e.-kleinman/</link>
+      <pubDate>Thu, 26 Sep 2019 00:00:00 +0000</pubDate>
+      <guid>/authors/joel-e.-kleinman/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Joo Heon Shin</title>
+      <link>/authors/joo-heon-shin/</link>
+      <pubDate>Thu, 26 Sep 2019 00:00:00 +0000</pubDate>
+      <guid>/authors/joo-heon-shin/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Liang Ma</title>
+      <link>/authors/liang-ma/</link>
+      <pubDate>Thu, 26 Sep 2019 00:00:00 +0000</pubDate>
+      <guid>/authors/liang-ma/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Nikolay A. Ivanov</title>
+      <link>/authors/nikolay-a.-ivanov/</link>
+      <pubDate>Thu, 26 Sep 2019 00:00:00 +0000</pubDate>
+      <guid>/authors/nikolay-a.-ivanov/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Thomas M. Hyde</title>
+      <link>/authors/thomas-m.-hyde/</link>
+      <pubDate>Thu, 26 Sep 2019 00:00:00 +0000</pubDate>
+      <guid>/authors/thomas-m.-hyde/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Wei Xia</title>
+      <link>/authors/wei-xia/</link>
+      <pubDate>Thu, 26 Sep 2019 00:00:00 +0000</pubDate>
+      <guid>/authors/wei-xia/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Yankai Jia</title>
+      <link>/authors/yankai-jia/</link>
+      <pubDate>Thu, 26 Sep 2019 00:00:00 +0000</pubDate>
+      <guid>/authors/yankai-jia/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title> Courtney Williams</title>
+      <link>/authors/courtney-williams/</link>
+      <pubDate>Fri, 21 Jun 2019 00:00:00 +0000</pubDate>
+      <guid>/authors/courtney-williams/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Alan J. Cross</title>
+      <link>/authors/alan-j.-cross/</link>
+      <pubDate>Fri, 21 Jun 2019 00:00:00 +0000</pubDate>
+      <guid>/authors/alan-j.-cross/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Anandita Rajpurohit __*__</title>
+      <link>/authors/anandita-rajpurohit-____/</link>
+      <pubDate>Fri, 21 Jun 2019 00:00:00 +0000</pubDate>
+      <guid>/authors/anandita-rajpurohit-____/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Andrew E. Jaffe</title>
+      <link>/authors/andrew-e.-jaffe/</link>
+      <pubDate>Fri, 21 Jun 2019 00:00:00 +0000</pubDate>
+      <guid>/authors/andrew-e.-jaffe/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Carrie Wright __*__</title>
+      <link>/authors/carrie-wright-____/</link>
+      <pubDate>Fri, 21 Jun 2019 00:00:00 +0000</pubDate>
+      <guid>/authors/carrie-wright-____/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Daniel R. Weinberger  &amp;dagger;</title>
+      <link>/authors/daniel-r.-weinberger-dagger/</link>
+      <pubDate>Fri, 21 Jun 2019 00:00:00 +0000</pubDate>
+      <guid>/authors/daniel-r.-weinberger-dagger/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Joo Heon Shin  &amp;dagger;</title>
+      <link>/authors/joo-heon-shin-dagger/</link>
+      <pubDate>Fri, 21 Jun 2019 00:00:00 +0000</pubDate>
+      <guid>/authors/joo-heon-shin-dagger/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Martha Kimos</title>
+      <link>/authors/martha-kimos/</link>
+      <pubDate>Fri, 21 Jun 2019 00:00:00 +0000</pubDate>
+      <guid>/authors/martha-kimos/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Nicholas J. Brandon</title>
+      <link>/authors/nicholas-j.-brandon/</link>
+      <pubDate>Fri, 21 Jun 2019 00:00:00 +0000</pubDate>
+      <guid>/authors/nicholas-j.-brandon/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Aleksey Stupnikov</title>
+      <link>/authors/aleksey-stupnikov/</link>
+      <pubDate>Thu, 13 Jun 2019 00:00:00 +0000</pubDate>
+      <guid>/authors/aleksey-stupnikov/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Alexander Favorov</title>
+      <link>/authors/alexander-favorov/</link>
+      <pubDate>Thu, 13 Jun 2019 00:00:00 +0000</pubDate>
+      <guid>/authors/alexander-favorov/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Andrew E Jaffe</title>
+      <link>/authors/andrew-e-jaffe/</link>
+      <pubDate>Thu, 13 Jun 2019 00:00:00 +0000</pubDate>
+      <guid>/authors/andrew-e-jaffe/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ben Langmead &amp;dagger;</title>
+      <link>/authors/ben-langmead-dagger/</link>
+      <pubDate>Thu, 13 Jun 2019 00:00:00 +0000</pubDate>
+      <guid>/authors/ben-langmead-dagger/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Chi-Wai Yip</title>
+      <link>/authors/chi-wai-yip/</link>
+      <pubDate>Thu, 13 Jun 2019 00:00:00 +0000</pubDate>
+      <guid>/authors/chi-wai-yip/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Christopher Wilks</title>
+      <link>/authors/christopher-wilks/</link>
+      <pubDate>Thu, 13 Jun 2019 00:00:00 +0000</pubDate>
+      <guid>/authors/christopher-wilks/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Chung-Chau Hon</title>
+      <link>/authors/chung-chau-hon/</link>
+      <pubDate>Thu, 13 Jun 2019 00:00:00 +0000</pubDate>
+      <guid>/authors/chung-chau-hon/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Diego Fernando Sanchez __*__</title>
+      <link>/authors/diego-fernando-sanchez-____/</link>
+      <pubDate>Thu, 13 Jun 2019 00:00:00 +0000</pubDate>
+      <guid>/authors/diego-fernando-sanchez-____/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Eddie-Luidy Imada __*__</title>
+      <link>/authors/eddie-luidy-imada-____/</link>
+      <pubDate>Thu, 13 Jun 2019 00:00:00 +0000</pubDate>
+      <guid>/authors/eddie-luidy-imada-____/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>FANTOM consortium</title>
+      <link>/authors/fantom-consortium/</link>
+      <pubDate>Thu, 13 Jun 2019 00:00:00 +0000</pubDate>
+      <guid>/authors/fantom-consortium/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Francisco Lobo-Pereira</title>
+      <link>/authors/francisco-lobo-pereira/</link>
+      <pubDate>Thu, 13 Jun 2019 00:00:00 +0000</pubDate>
+      <guid>/authors/francisco-lobo-pereira/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Gloria R Franco</title>
+      <link>/authors/gloria-r-franco/</link>
+      <pubDate>Thu, 13 Jun 2019 00:00:00 +0000</pubDate>
+      <guid>/authors/gloria-r-franco/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Harukazu Suzuki</title>
+      <link>/authors/harukazu-suzuki/</link>
+      <pubDate>Thu, 13 Jun 2019 00:00:00 +0000</pubDate>
+      <guid>/authors/harukazu-suzuki/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Jay W Shin</title>
+      <link>/authors/jay-w-shin/</link>
+      <pubDate>Thu, 13 Jun 2019 00:00:00 +0000</pubDate>
+      <guid>/authors/jay-w-shin/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Jeffrey T Leek</title>
+      <link>/authors/jeffrey-t-leek/</link>
+      <pubDate>Thu, 13 Jun 2019 00:00:00 +0000</pubDate>
+      <guid>/authors/jeffrey-t-leek/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Kayoko Yasuzawa</title>
+      <link>/authors/kayoko-yasuzawa/</link>
+      <pubDate>Thu, 13 Jun 2019 00:00:00 +0000</pubDate>
+      <guid>/authors/kayoko-yasuzawa/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Luigi Marchionni &amp;dagger;</title>
+      <link>/authors/luigi-marchionni-dagger/</link>
+      <pubDate>Thu, 13 Jun 2019 00:00:00 +0000</pubDate>
+      <guid>/authors/luigi-marchionni-dagger/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Masayoshi Itoh</title>
+      <link>/authors/masayoshi-itoh/</link>
+      <pubDate>Thu, 13 Jun 2019 00:00:00 +0000</pubDate>
+      <guid>/authors/masayoshi-itoh/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Michiel JL de Hoon</title>
+      <link>/authors/michiel-jl-de-hoon/</link>
+      <pubDate>Thu, 13 Jun 2019 00:00:00 +0000</pubDate>
+      <guid>/authors/michiel-jl-de-hoon/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Naoto Kondo</title>
+      <link>/authors/naoto-kondo/</link>
+      <pubDate>Thu, 13 Jun 2019 00:00:00 +0000</pubDate>
+      <guid>/authors/naoto-kondo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Piero Carninci</title>
+      <link>/authors/piero-carninci/</link>
+      <pubDate>Thu, 13 Jun 2019 00:00:00 +0000</pubDate>
+      <guid>/authors/piero-carninci/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Takeya Kasukawa</title>
+      <link>/authors/takeya-kasukawa/</link>
+      <pubDate>Thu, 13 Jun 2019 00:00:00 +0000</pubDate>
+      <guid>/authors/takeya-kasukawa/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tejasvi Matam</title>
+      <link>/authors/tejasvi-matam/</link>
+      <pubDate>Thu, 13 Jun 2019 00:00:00 +0000</pubDate>
+      <guid>/authors/tejasvi-matam/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Wikum Dinalankara</title>
+      <link>/authors/wikum-dinalankara/</link>
+      <pubDate>Thu, 13 Jun 2019 00:00:00 +0000</pubDate>
+      <guid>/authors/wikum-dinalankara/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Amy Deep-Soboslay</title>
+      <link>/authors/amy-deep-soboslay/</link>
+      <pubDate>Tue, 04 Jun 2019 00:00:00 +0000</pubDate>
+      <guid>/authors/amy-deep-soboslay/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Amy Peterson</title>
+      <link>/authors/amy-peterson/</link>
+      <pubDate>Tue, 04 Jun 2019 00:00:00 +0000</pubDate>
+      <guid>/authors/amy-peterson/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Anandita Rajpurohit</title>
+      <link>/authors/anandita-rajpurohit/</link>
+      <pubDate>Tue, 04 Jun 2019 00:00:00 +0000</pubDate>
+      <guid>/authors/anandita-rajpurohit/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>BrainSeq Consortium</title>
+      <link>/authors/brainseq-consortium/</link>
+      <pubDate>Tue, 04 Jun 2019 00:00:00 +0000</pubDate>
+      <guid>/authors/brainseq-consortium/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Cristian Valencia</title>
+      <link>/authors/cristian-valencia/</link>
+      <pubDate>Tue, 04 Jun 2019 00:00:00 +0000</pubDate>
+      <guid>/authors/cristian-valencia/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Daniel R Weinberger &amp;dagger;</title>
+      <link>/authors/daniel-r-weinberger-dagger/</link>
+      <pubDate>Tue, 04 Jun 2019 00:00:00 +0000</pubDate>
+      <guid>/authors/daniel-r-weinberger-dagger/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Emily E Burke</title>
+      <link>/authors/emily-e-burke/</link>
+      <pubDate>Tue, 04 Jun 2019 00:00:00 +0000</pubDate>
+      <guid>/authors/emily-e-burke/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>JooHeon Shin</title>
+      <link>/authors/jooheon-shin/</link>
+      <pubDate>Tue, 04 Jun 2019 00:00:00 +0000</pubDate>
+      <guid>/authors/jooheon-shin/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Richard E Straub</title>
+      <link>/authors/richard-e-straub/</link>
+      <pubDate>Tue, 04 Jun 2019 00:00:00 +0000</pubDate>
+      <guid>/authors/richard-e-straub/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Stephen A Semick</title>
+      <link>/authors/stephen-a-semick/</link>
+      <pubDate>Tue, 04 Jun 2019 00:00:00 +0000</pubDate>
+      <guid>/authors/stephen-a-semick/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>William S Ulrich</title>
+      <link>/authors/william-s-ulrich/</link>
+      <pubDate>Tue, 04 Jun 2019 00:00:00 +0000</pubDate>
+      <guid>/authors/william-s-ulrich/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/authors/admin/</link>
+      <pubDate>Wed, 08 May 2019 14:00:00 +0000</pubDate>
+      <guid>/authors/admin/</guid>
+      <description>&lt;p&gt;At the Lieber Institute for Brain Development, I am part of the Data Science team whose goals include better understanding and characterizing genomics signatures in the human brain. We use high-throughput technologies such as DNA methylation and RNA sequencing. I help mentor other team members, provide support for LIBD projects and I am advancing my academic career as part of 
+&lt;a href=&#34;http://aejaffe.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Andrew Jaffe&lt;/a&gt;&amp;lsquo;s lab.&lt;/p&gt;
+&lt;p&gt;As a quick background, I graduated from the 
+&lt;a href=&#34;http://www.lcg.unam.mx/about&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Undergraduate Program on Genomic Sciences&lt;/a&gt; from the National Autonomous University of Mexico (
+&lt;a href=&#34;http://unam.mx/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;UNAM&lt;/a&gt;) in 2009 and worked for two years at Winter Genomics analyzing high-throughput sequencing data. I then got a PhD in the 
+&lt;a href=&#34;http://www.jhsph.edu/departments/biostatistics/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Department of Biostatistics&lt;/a&gt; at 
+&lt;a href=&#34;http://www.jhsph.edu/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Johns Hopkins Bloomberg School of Public Health&lt;/a&gt; thanks to a 
+&lt;a href=&#34;http://www.conacyt.gob.mx/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CONACyT scholarship&lt;/a&gt; awarded in 2011. I worked with 
+&lt;a href=&#34;http://jtleek.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Jeff Leek&lt;/a&gt; and Andrew Jaffe in developing 
+&lt;a href=&#34;http://bioconductor.org/packages/derfinder&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;derfinder&lt;/a&gt;, 
+&lt;a href=&#34;http://bioconductor.org/packages/regionReport&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;regionReport&lt;/a&gt;, 
+&lt;a href=&#34;http://bioconductor.org/packages/recount&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;recount&lt;/a&gt; as well as other applied projects.&lt;/p&gt;
+&lt;p&gt;Every day I use 
+&lt;a href=&#34;http://cran.r-project.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;R&lt;/a&gt; and 
+&lt;a href=&#34;http://www.bioconductor.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Bioconductor&lt;/a&gt;. Occasionally I blog about them and other tools. I&amp;rsquo;m a co-founder of the 
+&lt;a href=&#34;http://LieberInstitute.github.io/rstatsclub/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;LIBD rstats club&lt;/a&gt; and the 
+&lt;a href=&#34;https://comunidadbioinfo.github.io&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CDSBMexico&lt;/a&gt; community of R and Bioconductor developers in Latin America.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/authors/arazmara/</link>
+      <pubDate>Wed, 24 Apr 2019 16:45:43 -0500</pubDate>
+      <guid>/authors/arazmara/</guid>
+      <description>&lt;p&gt;I mentored Ashkaun Razmara in 2017-2018 while he was visiting the Johns Hopkins Bloomberg School of Public Health. Check his website for more information about him.&lt;/p&gt;
+&lt;p&gt;Ashkaun is the lead author of the &lt;code&gt;recount-brain&lt;/code&gt; project which you can read in more detail at 
+&lt;a href=&#34;http://LieberInstitute.github.io/recount-brain/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/recount_brain.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;!-- ![](http://ghchart.rshah.org/DA2536/Ashkaunr.svg) --&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>[__L Collado-Torres__](/authors/admin) &amp;dagger;</title>
+      <link>/authors/__l-collado-torres__/authors/admin-dagger/</link>
+      <pubDate>Wed, 24 Apr 2019 16:45:43 -0500</pubDate>
+      <guid>/authors/__l-collado-torres__/authors/admin-dagger/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Davis S</title>
+      <link>/authors/davis-s/</link>
+      <pubDate>Wed, 24 Apr 2019 16:45:43 -0500</pubDate>
+      <guid>/authors/davis-s/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ellis SE</title>
+      <link>/authors/ellis-se/</link>
+      <pubDate>Wed, 24 Apr 2019 16:45:43 -0500</pubDate>
+      <guid>/authors/ellis-se/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Jaffe AE</title>
+      <link>/authors/jaffe-ae/</link>
+      <pubDate>Wed, 24 Apr 2019 16:45:43 -0500</pubDate>
+      <guid>/authors/jaffe-ae/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Leek JT</title>
+      <link>/authors/leek-jt/</link>
+      <pubDate>Wed, 24 Apr 2019 16:45:43 -0500</pubDate>
+      <guid>/authors/leek-jt/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Sokolowski DJ</title>
+      <link>/authors/sokolowski-dj/</link>
+      <pubDate>Wed, 24 Apr 2019 16:45:43 -0500</pubDate>
+      <guid>/authors/sokolowski-dj/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Wilson MD</title>
+      <link>/authors/wilson-md/</link>
+      <pubDate>Wed, 24 Apr 2019 16:45:43 -0500</pubDate>
+      <guid>/authors/wilson-md/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Akhilesh Pandey &amp;dagger;</title>
+      <link>/authors/akhilesh-pandey-dagger/</link>
+      <pubDate>Sun, 14 Apr 2019 00:00:00 +0000</pubDate>
+      <guid>/authors/akhilesh-pandey-dagger/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Anil K Madugundu</title>
+      <link>/authors/anil-k-madugundu/</link>
+      <pubDate>Sun, 14 Apr 2019 00:00:00 +0000</pubDate>
+      <guid>/authors/anil-k-madugundu/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ben Langmead</title>
+      <link>/authors/ben-langmead/</link>
+      <pubDate>Sun, 14 Apr 2019 00:00:00 +0000</pubDate>
+      <guid>/authors/ben-langmead/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Chan Hyun Na</title>
+      <link>/authors/chan-hyun-na/</link>
+      <pubDate>Sun, 14 Apr 2019 00:00:00 +0000</pubDate>
+      <guid>/authors/chan-hyun-na/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Kathleen H. Burns</title>
+      <link>/authors/kathleen-h.-burns/</link>
+      <pubDate>Sun, 14 Apr 2019 00:00:00 +0000</pubDate>
+      <guid>/authors/kathleen-h.-burns/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Kwang Pyo Kim</title>
+      <link>/authors/kwang-pyo-kim/</link>
+      <pubDate>Sun, 14 Apr 2019 00:00:00 +0000</pubDate>
+      <guid>/authors/kwang-pyo-kim/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Marc K. Halushka</title>
+      <link>/authors/marc-k.-halushka/</link>
+      <pubDate>Sun, 14 Apr 2019 00:00:00 +0000</pubDate>
+      <guid>/authors/marc-k.-halushka/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Min-Sik Kim</title>
+      <link>/authors/min-sik-kim/</link>
+      <pubDate>Sun, 14 Apr 2019 00:00:00 +0000</pubDate>
+      <guid>/authors/min-sik-kim/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Raja Sekhar Nirujogi</title>
+      <link>/authors/raja-sekhar-nirujogi/</link>
+      <pubDate>Sun, 14 Apr 2019 00:00:00 +0000</pubDate>
+      <guid>/authors/raja-sekhar-nirujogi/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Santosh Renuse</title>
+      <link>/authors/santosh-renuse/</link>
+      <pubDate>Sun, 14 Apr 2019 00:00:00 +0000</pubDate>
+      <guid>/authors/santosh-renuse/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Shannon E. Ellis</title>
+      <link>/authors/shannon-e.-ellis/</link>
+      <pubDate>Sun, 14 Apr 2019 00:00:00 +0000</pubDate>
+      <guid>/authors/shannon-e.-ellis/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Adaikalavan Ramasamy</title>
+      <link>/authors/adaikalavan-ramasamy/</link>
+      <pubDate>Thu, 28 Mar 2019 00:00:00 +0000</pubDate>
+      <guid>/authors/adaikalavan-ramasamy/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Andrew Thomason</title>
+      <link>/authors/andrew-thomason/</link>
+      <pubDate>Thu, 28 Mar 2019 00:00:00 +0000</pubDate>
+      <guid>/authors/andrew-thomason/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Colin Smith</title>
+      <link>/authors/colin-smith/</link>
+      <pubDate>Thu, 28 Mar 2019 00:00:00 +0000</pubDate>
+      <guid>/authors/colin-smith/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Daniah Trabzuni</title>
+      <link>/authors/daniah-trabzuni/</link>
+      <pubDate>Thu, 28 Mar 2019 00:00:00 +0000</pubDate>
+      <guid>/authors/daniah-trabzuni/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>David Zhang</title>
+      <link>/authors/david-zhang/</link>
+      <pubDate>Thu, 28 Mar 2019 00:00:00 +0000</pubDate>
+      <guid>/authors/david-zhang/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Jana Vandrovcova</title>
+      <link>/authors/jana-vandrovcova/</link>
+      <pubDate>Thu, 28 Mar 2019 00:00:00 +0000</pubDate>
+      <guid>/authors/jana-vandrovcova/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>John Hardy</title>
+      <link>/authors/john-hardy/</link>
+      <pubDate>Thu, 28 Mar 2019 00:00:00 +0000</pubDate>
+      <guid>/authors/john-hardy/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Juan Botía __*__</title>
+      <link>/authors/juan-botia-____/</link>
+      <pubDate>Thu, 28 Mar 2019 00:00:00 +0000</pubDate>
+      <guid>/authors/juan-botia-____/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Karishma D’Sa __*__</title>
+      <link>/authors/karishma-dsa-____/</link>
+      <pubDate>Thu, 28 Mar 2019 00:00:00 +0000</pubDate>
+      <guid>/authors/karishma-dsa-____/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Kerrin S. Small</title>
+      <link>/authors/kerrin-s.-small/</link>
+      <pubDate>Thu, 28 Mar 2019 00:00:00 +0000</pubDate>
+      <guid>/authors/kerrin-s.-small/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Michael E. Weale &amp;dagger;</title>
+      <link>/authors/michael-e.-weale-dagger/</link>
+      <pubDate>Thu, 28 Mar 2019 00:00:00 +0000</pubDate>
+      <guid>/authors/michael-e.-weale-dagger/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Mike A. Nalls</title>
+      <link>/authors/mike-a.-nalls/</link>
+      <pubDate>Thu, 28 Mar 2019 00:00:00 +0000</pubDate>
+      <guid>/authors/mike-a.-nalls/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Mina Ryten &amp;dagger;</title>
+      <link>/authors/mina-ryten-dagger/</link>
+      <pubDate>Thu, 28 Mar 2019 00:00:00 +0000</pubDate>
+      <guid>/authors/mina-ryten-dagger/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Pedro Quijada Leyton</title>
+      <link>/authors/pedro-quijada-leyton/</link>
+      <pubDate>Thu, 28 Mar 2019 00:00:00 +0000</pubDate>
+      <guid>/authors/pedro-quijada-leyton/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Regina H. Reynolds</title>
+      <link>/authors/regina-h.-reynolds/</link>
+      <pubDate>Thu, 28 Mar 2019 00:00:00 +0000</pubDate>
+      <guid>/authors/regina-h.-reynolds/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Sarah A. Gagliano</title>
+      <link>/authors/sarah-a.-gagliano/</link>
+      <pubDate>Thu, 28 Mar 2019 00:00:00 +0000</pubDate>
+      <guid>/authors/sarah-a.-gagliano/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Sebastian Guelfi __*__</title>
+      <link>/authors/sebastian-guelfi-____/</link>
+      <pubDate>Thu, 28 Mar 2019 00:00:00 +0000</pubDate>
+      <guid>/authors/sebastian-guelfi-____/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>UK Brain Expression Consortium</title>
+      <link>/authors/uk-brain-expression-consortium/</link>
+      <pubDate>Thu, 28 Mar 2019 00:00:00 +0000</pubDate>
+      <guid>/authors/uk-brain-expression-consortium/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>James Weiss</title>
+      <link>/authors/james-weiss/</link>
+      <pubDate>Sat, 02 Feb 2019 00:00:00 +0000</pubDate>
+      <guid>/authors/james-weiss/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Rahul A Bharadwaj</title>
+      <link>/authors/rahul-a-bharadwaj/</link>
+      <pubDate>Sat, 02 Feb 2019 00:00:00 +0000</pubDate>
+      <guid>/authors/rahul-a-bharadwaj/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Venkata S Mattay &amp;dagger;</title>
+      <link>/authors/venkata-s-mattay-dagger/</link>
+      <pubDate>Sat, 02 Feb 2019 00:00:00 +0000</pubDate>
+      <guid>/authors/venkata-s-mattay-dagger/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Beatrice Costa</title>
+      <link>/authors/beatrice-costa/</link>
+      <pubDate>Wed, 19 Dec 2018 00:00:00 +0000</pubDate>
+      <guid>/authors/beatrice-costa/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>David Zhang __*__</title>
+      <link>/authors/david-zhang-____/</link>
+      <pubDate>Wed, 19 Dec 2018 00:00:00 +0000</pubDate>
+      <guid>/authors/david-zhang-____/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Juan Botia</title>
+      <link>/authors/juan-botia/</link>
+      <pubDate>Wed, 19 Dec 2018 00:00:00 +0000</pubDate>
+      <guid>/authors/juan-botia/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Karishma D&#39;Sa</title>
+      <link>/authors/karishma-dsa/</link>
+      <pubDate>Wed, 19 Dec 2018 00:00:00 +0000</pubDate>
+      <guid>/authors/karishma-dsa/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Mina Ryten</title>
+      <link>/authors/mina-ryten/</link>
+      <pubDate>Wed, 19 Dec 2018 00:00:00 +0000</pubDate>
+      <guid>/authors/mina-ryten/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Regina H Reynolds</title>
+      <link>/authors/regina-h-reynolds/</link>
+      <pubDate>Wed, 19 Dec 2018 00:00:00 +0000</pubDate>
+      <guid>/authors/regina-h-reynolds/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Sonia Garcia Ruiz</title>
+      <link>/authors/sonia-garcia-ruiz/</link>
+      <pubDate>Wed, 19 Dec 2018 00:00:00 +0000</pubDate>
+      <guid>/authors/sonia-garcia-ruiz/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Thomas Courtin</title>
+      <link>/authors/thomas-courtin/</link>
+      <pubDate>Wed, 19 Dec 2018 00:00:00 +0000</pubDate>
+      <guid>/authors/thomas-courtin/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Wenfei Liu</title>
+      <link>/authors/wenfei-liu/</link>
+      <pubDate>Wed, 19 Dec 2018 00:00:00 +0000</pubDate>
+      <guid>/authors/wenfei-liu/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Helena Kuri-Magaña</title>
+      <link>/authors/helena-kuri-magana/</link>
+      <pubDate>Wed, 21 Nov 2018 00:00:00 +0000</pubDate>
+      <guid>/authors/helena-kuri-magana/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Humberto Valdovinos-Torres</title>
+      <link>/authors/humberto-valdovinos-torres/</link>
+      <pubDate>Wed, 21 Nov 2018 00:00:00 +0000</pubDate>
+      <guid>/authors/humberto-valdovinos-torres/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Jesús Martínez-Barnetche</title>
+      <link>/authors/jesus-martinez-barnetche/</link>
+      <pubDate>Wed, 21 Nov 2018 00:00:00 +0000</pubDate>
+      <guid>/authors/jesus-martinez-barnetche/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Juan M Téllez-Sosa</title>
+      <link>/authors/juan-m-tellez-sosa/</link>
+      <pubDate>Wed, 21 Nov 2018 00:00:00 +0000</pubDate>
+      <guid>/authors/juan-m-tellez-sosa/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Laura C Bonifaz-Alfonzo</title>
+      <link>/authors/laura-c-bonifaz-alfonzo/</link>
+      <pubDate>Wed, 21 Nov 2018 00:00:00 +0000</pubDate>
+      <guid>/authors/laura-c-bonifaz-alfonzo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Marbella Ovilla-Muñoz</title>
+      <link>/authors/marbella-ovilla-munoz/</link>
+      <pubDate>Wed, 21 Nov 2018 00:00:00 +0000</pubDate>
+      <guid>/authors/marbella-ovilla-munoz/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>__Collado-Torres L__</title>
+      <link>/authors/__collado-torres-l__/</link>
+      <pubDate>Tue, 21 Aug 2018 00:00:00 +0000</pubDate>
+      <guid>/authors/__collado-torres-l__/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Bierut LJ</title>
+      <link>/authors/bierut-lj/</link>
+      <pubDate>Tue, 21 Aug 2018 00:00:00 +0000</pubDate>
+      <guid>/authors/bierut-lj/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Deep-Soboslay A</title>
+      <link>/authors/deep-soboslay-a/</link>
+      <pubDate>Tue, 21 Aug 2018 00:00:00 +0000</pubDate>
+      <guid>/authors/deep-soboslay-a/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Hancock DB</title>
+      <link>/authors/hancock-db/</link>
+      <pubDate>Tue, 21 Aug 2018 00:00:00 +0000</pubDate>
+      <guid>/authors/hancock-db/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Huestis MA</title>
+      <link>/authors/huestis-ma/</link>
+      <pubDate>Tue, 21 Aug 2018 00:00:00 +0000</pubDate>
+      <guid>/authors/huestis-ma/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Hyde TM</title>
+      <link>/authors/hyde-tm/</link>
+      <pubDate>Tue, 21 Aug 2018 00:00:00 +0000</pubDate>
+      <guid>/authors/hyde-tm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Jaffe AE &amp;dagger;</title>
+      <link>/authors/jaffe-ae-dagger/</link>
+      <pubDate>Tue, 21 Aug 2018 00:00:00 +0000</pubDate>
+      <guid>/authors/jaffe-ae-dagger/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Johnson EO</title>
+      <link>/authors/johnson-eo/</link>
+      <pubDate>Tue, 21 Aug 2018 00:00:00 +0000</pubDate>
+      <guid>/authors/johnson-eo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Kleinman JE &amp;dagger;</title>
+      <link>/authors/kleinman-je-dagger/</link>
+      <pubDate>Tue, 21 Aug 2018 00:00:00 +0000</pubDate>
+      <guid>/authors/kleinman-je-dagger/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Maher BS</title>
+      <link>/authors/maher-bs/</link>
+      <pubDate>Tue, 21 Aug 2018 00:00:00 +0000</pubDate>
+      <guid>/authors/maher-bs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Markunas CA</title>
+      <link>/authors/markunas-ca/</link>
+      <pubDate>Tue, 21 Aug 2018 00:00:00 +0000</pubDate>
+      <guid>/authors/markunas-ca/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Semick SA</title>
+      <link>/authors/semick-sa/</link>
+      <pubDate>Tue, 21 Aug 2018 00:00:00 +0000</pubDate>
+      <guid>/authors/semick-sa/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Shin JH</title>
+      <link>/authors/shin-jh/</link>
+      <pubDate>Tue, 21 Aug 2018 00:00:00 +0000</pubDate>
+      <guid>/authors/shin-jh/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tao R</title>
+      <link>/authors/tao-r/</link>
+      <pubDate>Tue, 21 Aug 2018 00:00:00 +0000</pubDate>
+      <guid>/authors/tao-r/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Weinberger DR</title>
+      <link>/authors/weinberger-dr/</link>
+      <pubDate>Tue, 21 Aug 2018 00:00:00 +0000</pubDate>
+      <guid>/authors/weinberger-dr/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Alan J Cross</title>
+      <link>/authors/alan-j-cross/</link>
+      <pubDate>Tue, 31 Jul 2018 00:00:00 +0000</pubDate>
+      <guid>/authors/alan-j-cross/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Alana Lescure</title>
+      <link>/authors/alana-lescure/</link>
+      <pubDate>Tue, 31 Jul 2018 00:00:00 +0000</pubDate>
+      <guid>/authors/alana-lescure/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Amritha Jaishankar</title>
+      <link>/authors/amritha-jaishankar/</link>
+      <pubDate>Tue, 31 Jul 2018 00:00:00 +0000</pubDate>
+      <guid>/authors/amritha-jaishankar/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>BaDoi N Phan</title>
+      <link>/authors/badoi-n-phan/</link>
+      <pubDate>Tue, 31 Jul 2018 00:00:00 +0000</pubDate>
+      <guid>/authors/badoi-n-phan/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Brady J Maher</title>
+      <link>/authors/brady-j-maher/</link>
+      <pubDate>Tue, 31 Jul 2018 00:00:00 +0000</pubDate>
+      <guid>/authors/brady-j-maher/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Daniel J Hiler</title>
+      <link>/authors/daniel-j-hiler/</link>
+      <pubDate>Tue, 31 Jul 2018 00:00:00 +0000</pubDate>
+      <guid>/authors/daniel-j-hiler/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Daniel J Hoeppner</title>
+      <link>/authors/daniel-j-hoeppner/</link>
+      <pubDate>Tue, 31 Jul 2018 00:00:00 +0000</pubDate>
+      <guid>/authors/daniel-j-hoeppner/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Emily E Burke __*__</title>
+      <link>/authors/emily-e-burke-____/</link>
+      <pubDate>Tue, 31 Jul 2018 00:00:00 +0000</pubDate>
+      <guid>/authors/emily-e-burke-____/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Gregory R Hamersky</title>
+      <link>/authors/gregory-r-hamersky/</link>
+      <pubDate>Tue, 31 Jul 2018 00:00:00 +0000</pubDate>
+      <guid>/authors/gregory-r-hamersky/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Huei-Ying Chen</title>
+      <link>/authors/huei-ying-chen/</link>
+      <pubDate>Tue, 31 Jul 2018 00:00:00 +0000</pubDate>
+      <guid>/authors/huei-ying-chen/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>James C Barrow</title>
+      <link>/authors/james-c-barrow/</link>
+      <pubDate>Tue, 31 Jul 2018 00:00:00 +0000</pubDate>
+      <guid>/authors/james-c-barrow/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Joshua G Chenoweth __*__</title>
+      <link>/authors/joshua-g-chenoweth-____/</link>
+      <pubDate>Tue, 31 Jul 2018 00:00:00 +0000</pubDate>
+      <guid>/authors/joshua-g-chenoweth-____/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>José A Apud</title>
+      <link>/authors/jose-a-apud/</link>
+      <pubDate>Tue, 31 Jul 2018 00:00:00 +0000</pubDate>
+      <guid>/authors/jose-a-apud/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Kamel Shibbani</title>
+      <link>/authors/kamel-shibbani/</link>
+      <pubDate>Tue, 31 Jul 2018 00:00:00 +0000</pubDate>
+      <guid>/authors/kamel-shibbani/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Karen F Berman</title>
+      <link>/authors/karen-f-berman/</link>
+      <pubDate>Tue, 31 Jul 2018 00:00:00 +0000</pubDate>
+      <guid>/authors/karen-f-berman/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Keri Martinowich</title>
+      <link>/authors/keri-martinowich/</link>
+      <pubDate>Tue, 31 Jul 2018 00:00:00 +0000</pubDate>
+      <guid>/authors/keri-martinowich/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Nick J Brandon</title>
+      <link>/authors/nick-j-brandon/</link>
+      <pubDate>Tue, 31 Jul 2018 00:00:00 +0000</pubDate>
+      <guid>/authors/nick-j-brandon/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Nicola Micali</title>
+      <link>/authors/nicola-micali/</link>
+      <pubDate>Tue, 31 Jul 2018 00:00:00 +0000</pubDate>
+      <guid>/authors/nicola-micali/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Roland Bürli</title>
+      <link>/authors/roland-burli/</link>
+      <pubDate>Tue, 31 Jul 2018 00:00:00 +0000</pubDate>
+      <guid>/authors/roland-burli/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ronald DG McKay &amp;dagger;</title>
+      <link>/authors/ronald-dg-mckay-dagger/</link>
+      <pubDate>Tue, 31 Jul 2018 00:00:00 +0000</pubDate>
+      <guid>/authors/ronald-dg-mckay-dagger/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Stephanie Cerceo Page</title>
+      <link>/authors/stephanie-cerceo-page/</link>
+      <pubDate>Tue, 31 Jul 2018 00:00:00 +0000</pubDate>
+      <guid>/authors/stephanie-cerceo-page/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Suel Kee Kim</title>
+      <link>/authors/suel-kee-kim/</link>
+      <pubDate>Tue, 31 Jul 2018 00:00:00 +0000</pubDate>
+      <guid>/authors/suel-kee-kim/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Yanhong Wang</title>
+      <link>/authors/yanhong-wang/</link>
+      <pubDate>Tue, 31 Jul 2018 00:00:00 +0000</pubDate>
+      <guid>/authors/yanhong-wang/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Brandon NJ</title>
+      <link>/authors/brandon-nj/</link>
+      <pubDate>Thu, 26 Jul 2018 00:00:00 +0000</pubDate>
+      <guid>/authors/brandon-nj/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Chen Q</title>
+      <link>/authors/chen-q/</link>
+      <pubDate>Thu, 26 Jul 2018 00:00:00 +0000</pubDate>
+      <guid>/authors/chen-q/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Colantuoni C</title>
+      <link>/authors/colantuoni-c/</link>
+      <pubDate>Thu, 26 Jul 2018 00:00:00 +0000</pubDate>
+      <guid>/authors/colantuoni-c/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Cross AJ</title>
+      <link>/authors/cross-aj/</link>
+      <pubDate>Thu, 26 Jul 2018 00:00:00 +0000</pubDate>
+      <guid>/authors/cross-aj/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Gao Y</title>
+      <link>/authors/gao-y/</link>
+      <pubDate>Thu, 26 Jul 2018 00:00:00 +0000</pubDate>
+      <guid>/authors/gao-y/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Kam-Thong T</title>
+      <link>/authors/kam-thong-t/</link>
+      <pubDate>Thu, 26 Jul 2018 00:00:00 +0000</pubDate>
+      <guid>/authors/kam-thong-t/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Kleinman JE</title>
+      <link>/authors/kleinman-je/</link>
+      <pubDate>Thu, 26 Jul 2018 00:00:00 +0000</pubDate>
+      <guid>/authors/kleinman-je/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Maher BJ</title>
+      <link>/authors/maher-bj/</link>
+      <pubDate>Thu, 26 Jul 2018 00:00:00 +0000</pubDate>
+      <guid>/authors/maher-bj/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Quan J</title>
+      <link>/authors/quan-j/</link>
+      <pubDate>Thu, 26 Jul 2018 00:00:00 +0000</pubDate>
+      <guid>/authors/quan-j/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Straub R</title>
+      <link>/authors/straub-r/</link>
+      <pubDate>Thu, 26 Jul 2018 00:00:00 +0000</pubDate>
+      <guid>/authors/straub-r/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>The BrainSeq Consortium</title>
+      <link>/authors/the-brainseq-consortium/</link>
+      <pubDate>Thu, 26 Jul 2018 00:00:00 +0000</pubDate>
+      <guid>/authors/the-brainseq-consortium/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ulrich WS</title>
+      <link>/authors/ulrich-ws/</link>
+      <pubDate>Thu, 26 Jul 2018 00:00:00 +0000</pubDate>
+      <guid>/authors/ulrich-ws/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Xi HS</title>
+      <link>/authors/xi-hs/</link>
+      <pubDate>Thu, 26 Jul 2018 00:00:00 +0000</pubDate>
+      <guid>/authors/xi-hs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Shannon SE</title>
+      <link>/authors/shannon-se/</link>
+      <pubDate>Mon, 05 Mar 2018 16:45:43 -0500</pubDate>
+      <guid>/authors/shannon-se/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Fu J</title>
+      <link>/authors/fu-j/</link>
+      <pubDate>Fri, 12 Jan 2018 16:45:43 -0500</pubDate>
+      <guid>/authors/fu-j/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Kammers K</title>
+      <link>/authors/kammers-k/</link>
+      <pubDate>Fri, 12 Jan 2018 16:45:43 -0500</pubDate>
+      <guid>/authors/kammers-k/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Nellore A</title>
+      <link>/authors/nellore-a/</link>
+      <pubDate>Fri, 12 Jan 2018 16:45:43 -0500</pubDate>
+      <guid>/authors/nellore-a/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Taub MA</title>
+      <link>/authors/taub-ma/</link>
+      <pubDate>Fri, 12 Jan 2018 16:45:43 -0500</pubDate>
+      <guid>/authors/taub-ma/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>A Nellore</title>
+      <link>/authors/a-nellore/</link>
+      <pubDate>Thu, 24 Aug 2017 16:45:43 -0500</pubDate>
+      <guid>/authors/a-nellore/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>AE Jaffe</title>
+      <link>/authors/ae-jaffe/</link>
+      <pubDate>Thu, 24 Aug 2017 16:45:43 -0500</pubDate>
+      <guid>/authors/ae-jaffe/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>[__L Collado-Torres__](/authors/admin)</title>
+      <link>/authors/__l-collado-torres__/authors/admin/</link>
+      <pubDate>Tue, 09 May 2017 16:45:43 -0500</pubDate>
+      <guid>/authors/__l-collado-torres__/authors/admin/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>A Deep-Soboslay</title>
+      <link>/authors/a-deep-soboslay/</link>
+      <pubDate>Tue, 09 May 2017 16:45:43 -0500</pubDate>
+      <guid>/authors/a-deep-soboslay/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>A Rajpurohit</title>
+      <link>/authors/a-rajpurohit/</link>
+      <pubDate>Tue, 09 May 2017 16:45:43 -0500</pubDate>
+      <guid>/authors/a-rajpurohit/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>AJ Cross</title>
+      <link>/authors/aj-cross/</link>
+      <pubDate>Tue, 09 May 2017 16:45:43 -0500</pubDate>
+      <guid>/authors/aj-cross/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>C Wright</title>
+      <link>/authors/c-wright/</link>
+      <pubDate>Tue, 09 May 2017 16:45:43 -0500</pubDate>
+      <guid>/authors/c-wright/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>DR Weinberger</title>
+      <link>/authors/dr-weinberger/</link>
+      <pubDate>Tue, 09 May 2017 16:45:43 -0500</pubDate>
+      <guid>/authors/dr-weinberger/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>JE Kleinman</title>
+      <link>/authors/je-kleinman/</link>
+      <pubDate>Tue, 09 May 2017 16:45:43 -0500</pubDate>
+      <guid>/authors/je-kleinman/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>JH Shin</title>
+      <link>/authors/jh-shin/</link>
+      <pubDate>Tue, 09 May 2017 16:45:43 -0500</pubDate>
+      <guid>/authors/jh-shin/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>NJ Brandon</title>
+      <link>/authors/nj-brandon/</link>
+      <pubDate>Tue, 09 May 2017 16:45:43 -0500</pubDate>
+      <guid>/authors/nj-brandon/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>TM Hyde</title>
+      <link>/authors/tm-hyde/</link>
+      <pubDate>Tue, 09 May 2017 16:45:43 -0500</pubDate>
+      <guid>/authors/tm-hyde/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>[__L Collado-Torres__](/authors/admin) __*__</title>
+      <link>/authors/__l-collado-torres__/authors/admin-____/</link>
+      <pubDate>Tue, 11 Apr 2017 16:45:43 -0500</pubDate>
+      <guid>/authors/__l-collado-torres__/authors/admin-____/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>A Nellore __*__</title>
+      <link>/authors/a-nellore-____/</link>
+      <pubDate>Tue, 11 Apr 2017 16:45:43 -0500</pubDate>
+      <guid>/authors/a-nellore-____/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>B Langmead</title>
+      <link>/authors/b-langmead/</link>
+      <pubDate>Tue, 11 Apr 2017 16:45:43 -0500</pubDate>
+      <guid>/authors/b-langmead/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>JT Leek</title>
+      <link>/authors/jt-leek/</link>
+      <pubDate>Tue, 11 Apr 2017 16:45:43 -0500</pubDate>
+      <guid>/authors/jt-leek/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>K Kammers</title>
+      <link>/authors/k-kammers/</link>
+      <pubDate>Tue, 11 Apr 2017 16:45:43 -0500</pubDate>
+      <guid>/authors/k-kammers/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>KD Hansen</title>
+      <link>/authors/kd-hansen/</link>
+      <pubDate>Tue, 11 Apr 2017 16:45:43 -0500</pubDate>
+      <guid>/authors/kd-hansen/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>MA Taub</title>
+      <link>/authors/ma-taub/</link>
+      <pubDate>Tue, 11 Apr 2017 16:45:43 -0500</pubDate>
+      <guid>/authors/ma-taub/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>SE Ellis</title>
+      <link>/authors/se-ellis/</link>
+      <pubDate>Tue, 11 Apr 2017 16:45:43 -0500</pubDate>
+      <guid>/authors/se-ellis/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>J Alquicira-Hernández</title>
+      <link>/authors/j-alquicira-hernandez/</link>
+      <pubDate>Fri, 30 Dec 2016 17:44:49 -0500</pubDate>
+      <guid>/authors/j-alquicira-hernandez/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>JP Fortin</title>
+      <link>/authors/jp-fortin/</link>
+      <pubDate>Fri, 30 Dec 2016 17:44:49 -0500</pubDate>
+      <guid>/authors/jp-fortin/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>N Karbhari</title>
+      <link>/authors/n-karbhari/</link>
+      <pubDate>Fri, 30 Dec 2016 17:44:49 -0500</pubDate>
+      <guid>/authors/n-karbhari/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>RA Phillips</title>
+      <link>/authors/ra-phillips/</link>
+      <pubDate>Fri, 30 Dec 2016 17:44:49 -0500</pubDate>
+      <guid>/authors/ra-phillips/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>S Wang</title>
+      <link>/authors/s-wang/</link>
+      <pubDate>Fri, 30 Dec 2016 17:44:49 -0500</pubDate>
+      <guid>/authors/s-wang/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>AC Frazee</title>
+      <link>/authors/ac-frazee/</link>
+      <pubDate>Thu, 15 Sep 2016 00:00:00 +0000</pubDate>
+      <guid>/authors/ac-frazee/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>C Wilks</title>
+      <link>/authors/c-wilks/</link>
+      <pubDate>Thu, 15 Sep 2016 00:00:00 +0000</pubDate>
+      <guid>/authors/c-wilks/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>MI Love</title>
+      <link>/authors/mi-love/</link>
+      <pubDate>Thu, 15 Sep 2016 00:00:00 +0000</pubDate>
+      <guid>/authors/mi-love/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>RA Irizarry</title>
+      <link>/authors/ra-irizarry/</link>
+      <pubDate>Thu, 15 Sep 2016 00:00:00 +0000</pubDate>
+      <guid>/authors/ra-irizarry/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>J Morton</title>
+      <link>/authors/j-morton/</link>
+      <pubDate>Sat, 03 Sep 2016 17:27:55 -0500</pubDate>
+      <guid>/authors/j-morton/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>J Pritt</title>
+      <link>/authors/j-pritt/</link>
+      <pubDate>Sat, 03 Sep 2016 17:27:55 -0500</pubDate>
+      <guid>/authors/j-pritt/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Jia Y</title>
+      <link>/authors/jia-y/</link>
+      <pubDate>Fri, 19 Dec 2014 17:17:48 -0500</pubDate>
+      <guid>/authors/jia-y/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Li C</title>
+      <link>/authors/li-c/</link>
+      <pubDate>Fri, 19 Dec 2014 17:17:48 -0500</pubDate>
+      <guid>/authors/li-c/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Shin J</title>
+      <link>/authors/shin-j/</link>
+      <pubDate>Fri, 19 Dec 2014 17:17:48 -0500</pubDate>
+      <guid>/authors/shin-j/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>L Collado-Torres</title>
+      <link>/authors/l-collado-torres/</link>
+      <pubDate>Tue, 17 Jun 2014 16:42:24 -0500</pubDate>
+      <guid>/authors/l-collado-torres/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Klepac-Ceraj V</title>
+      <link>/authors/klepac-ceraj-v/</link>
+      <pubDate>Thu, 10 Nov 2011 17:13:40 -0500</pubDate>
+      <guid>/authors/klepac-ceraj-v/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Kolter R</title>
+      <link>/authors/kolter-r/</link>
+      <pubDate>Thu, 10 Nov 2011 17:13:40 -0500</pubDate>
+      <guid>/authors/kolter-r/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Losick R</title>
+      <link>/authors/losick-r/</link>
+      <pubDate>Thu, 10 Nov 2011 17:13:40 -0500</pubDate>
+      <guid>/authors/losick-r/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Powers GE</title>
+      <link>/authors/powers-ge/</link>
+      <pubDate>Thu, 10 Nov 2011 17:13:40 -0500</pubDate>
+      <guid>/authors/powers-ge/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Shank EA</title>
+      <link>/authors/shank-ea/</link>
+      <pubDate>Thu, 10 Nov 2011 17:13:40 -0500</pubDate>
+      <guid>/authors/shank-ea/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Alquicira-Hernández K</title>
+      <link>/authors/alquicira-hernandez-k/</link>
+      <pubDate>Wed, 19 Jan 2011 16:58:16 -0500</pubDate>
+      <guid>/authors/alquicira-hernandez-k/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Alquicira-Hernández S</title>
+      <link>/authors/alquicira-hernandez-s/</link>
+      <pubDate>Wed, 19 Jan 2011 16:58:16 -0500</pubDate>
+      <guid>/authors/alquicira-hernandez-s/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Bonavides-Martínez C</title>
+      <link>/authors/bonavides-martinez-c/</link>
+      <pubDate>Wed, 19 Jan 2011 16:58:16 -0500</pubDate>
+      <guid>/authors/bonavides-martinez-c/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Collado-Vides J</title>
+      <link>/authors/collado-vides-j/</link>
+      <pubDate>Wed, 19 Jan 2011 16:58:16 -0500</pubDate>
+      <guid>/authors/collado-vides-j/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Gama-Castro S</title>
+      <link>/authors/gama-castro-s/</link>
+      <pubDate>Wed, 19 Jan 2011 16:58:16 -0500</pubDate>
+      <guid>/authors/gama-castro-s/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>García-Sotelo JS</title>
+      <link>/authors/garcia-sotelo-js/</link>
+      <pubDate>Wed, 19 Jan 2011 16:58:16 -0500</pubDate>
+      <guid>/authors/garcia-sotelo-js/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Grande R</title>
+      <link>/authors/grande-r/</link>
+      <pubDate>Wed, 19 Jan 2011 16:58:16 -0500</pubDate>
+      <guid>/authors/grande-r/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Huerta AM</title>
+      <link>/authors/huerta-am/</link>
+      <pubDate>Wed, 19 Jan 2011 16:58:16 -0500</pubDate>
+      <guid>/authors/huerta-am/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Jimenez-Jacinto V</title>
+      <link>/authors/jimenez-jacinto-v/</link>
+      <pubDate>Wed, 19 Jan 2011 16:58:16 -0500</pubDate>
+      <guid>/authors/jimenez-jacinto-v/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>López-Fuentes A</title>
+      <link>/authors/lopez-fuentes-a/</link>
+      <pubDate>Wed, 19 Jan 2011 16:58:16 -0500</pubDate>
+      <guid>/authors/lopez-fuentes-a/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Martínez-Adame R</title>
+      <link>/authors/martinez-adame-r/</link>
+      <pubDate>Wed, 19 Jan 2011 16:58:16 -0500</pubDate>
+      <guid>/authors/martinez-adame-r/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Martínez-Flores I</title>
+      <link>/authors/martinez-flores-i/</link>
+      <pubDate>Wed, 19 Jan 2011 16:58:16 -0500</pubDate>
+      <guid>/authors/martinez-flores-i/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Medina-Rivera A</title>
+      <link>/authors/medina-rivera-a/</link>
+      <pubDate>Wed, 19 Jan 2011 16:58:16 -0500</pubDate>
+      <guid>/authors/medina-rivera-a/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Mendoza-Vargas A</title>
+      <link>/authors/mendoza-vargas-a/</link>
+      <pubDate>Wed, 19 Jan 2011 16:58:16 -0500</pubDate>
+      <guid>/authors/mendoza-vargas-a/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Miranda-Ríos J</title>
+      <link>/authors/miranda-rios-j/</link>
+      <pubDate>Wed, 19 Jan 2011 16:58:16 -0500</pubDate>
+      <guid>/authors/miranda-rios-j/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Morett E</title>
+      <link>/authors/morett-e/</link>
+      <pubDate>Wed, 19 Jan 2011 16:58:16 -0500</pubDate>
+      <guid>/authors/morett-e/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Muñiz-Rascado L</title>
+      <link>/authors/muniz-rascado-l/</link>
+      <pubDate>Wed, 19 Jan 2011 16:58:16 -0500</pubDate>
+      <guid>/authors/muniz-rascado-l/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Olvera L</title>
+      <link>/authors/olvera-l/</link>
+      <pubDate>Wed, 19 Jan 2011 16:58:16 -0500</pubDate>
+      <guid>/authors/olvera-l/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Olvera M</title>
+      <link>/authors/olvera-m/</link>
+      <pubDate>Wed, 19 Jan 2011 16:58:16 -0500</pubDate>
+      <guid>/authors/olvera-m/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Peralta-Gil M</title>
+      <link>/authors/peralta-gil-m/</link>
+      <pubDate>Wed, 19 Jan 2011 16:58:16 -0500</pubDate>
+      <guid>/authors/peralta-gil-m/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Porrón-Sotelo L</title>
+      <link>/authors/porron-sotelo-l/</link>
+      <pubDate>Wed, 19 Jan 2011 16:58:16 -0500</pubDate>
+      <guid>/authors/porron-sotelo-l/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Salgado H</title>
+      <link>/authors/salgado-h/</link>
+      <pubDate>Wed, 19 Jan 2011 16:58:16 -0500</pubDate>
+      <guid>/authors/salgado-h/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Santos-Zavaleta A</title>
+      <link>/authors/santos-zavaleta-a/</link>
+      <pubDate>Wed, 19 Jan 2011 16:58:16 -0500</pubDate>
+      <guid>/authors/santos-zavaleta-a/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Solano-Lira H</title>
+      <link>/authors/solano-lira-h/</link>
+      <pubDate>Wed, 19 Jan 2011 16:58:16 -0500</pubDate>
+      <guid>/authors/solano-lira-h/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Taboada B</title>
+      <link>/authors/taboada-b/</link>
+      <pubDate>Wed, 19 Jan 2011 16:58:16 -0500</pubDate>
+      <guid>/authors/taboada-b/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Vega-Alvarado L</title>
+      <link>/authors/vega-alvarado-l/</link>
+      <pubDate>Wed, 19 Jan 2011 16:58:16 -0500</pubDate>
+      <guid>/authors/vega-alvarado-l/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Weiss V</title>
+      <link>/authors/weiss-v/</link>
+      <pubDate>Wed, 19 Jan 2011 16:58:16 -0500</pubDate>
+      <guid>/authors/weiss-v/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/authors/apeterson/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/authors/apeterson/</guid>
+      <description>&lt;p&gt;Along with Andrew Jaffe, I co-mentored Amy Peterson in 2017-2018. Check her website for more information about her.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;Amy&amp;rsquo;s MPH capstone presentation&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;img src=&#34;/img/amy_mph.jpg&#34; alt=&#34;&#34;&gt;&lt;/td&gt;
+&lt;td&gt;&lt;img src=&#34;/img/amy_mph2.jpg&#34; alt=&#34;&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Here are some of projects she did with me (taken from her website):&lt;/p&gt;
+&lt;h3 id=&#34;projects&#34;&gt;Projects&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Worked in collaboration with 
+&lt;a href=&#34;http://www.ucl.ac.uk/ukpdc/research-groups/neurogenomics-group/mina-ryten&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Mina Ryten&lt;/a&gt;&amp;lsquo;s lab at 
+&lt;a href=&#34;https://www.ucl.ac.uk/ion/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;University College London&amp;rsquo;s Institute of Neurology&lt;/a&gt; to analyze 
+&lt;a href=&#34;https://www.gtexportal.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Genotype-Tissue Expression (GTEx)&lt;/a&gt; project data to explore gene expression variability across brain regions
+&lt;ul&gt;
+&lt;li&gt;Analyzed GTEx brain samples from 
+&lt;a href=&#34;http://bioconductor.org/packages/recount&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;recount2&lt;/a&gt; using 
+&lt;a href=&#34;https://github.com/LieberInstitute/recount.bwtool&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;recount.bwtool&lt;/a&gt; with 
+&lt;a href=&#34;https://jhpce.jhu.edu&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;JHPCE&lt;/a&gt;, a high-performance computing environment&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Capstone: Applying Statistical Correction for Brain Tissue Degradation to Gene Expression in Schizophrenia
+&lt;ul&gt;
+&lt;li&gt;Analyzed postmortem human brain RNA-sequencing data in 
+&lt;a href=&#34;https://cran.r-project.org&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;R&lt;/a&gt; using 
+&lt;a href=&#34;https://www.bioconductor.org&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Bioconductor&lt;/a&gt; packages with 
+&lt;a href=&#34;https://jhpce.jhu.edu&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;JHPCE&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;presentations&#34;&gt;Presentations&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;MPH Capstone Presentation &amp;ldquo;Applying Statistical Correction for Brain Tissue RNA Degradation to Gene Expression Differences in Schizophrenia&amp;rdquo; (May 4, 2018) 
+&lt;a href=&#34;https://speakerdeck.com/apeterson/rna-quality-degradation&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;slides&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Presented &amp;ldquo;Postmortem Human Brain RNA-seq Analyses with Public and Private Data&amp;rdquo; at Delta Omega Poster Competition at JHPSH [PDF](&lt;a href=&#34;http://amy-peterson.github.io/files/Peterson&#34;&gt;http://amy-peterson.github.io/files/Peterson&lt;/a&gt; Poster.pdf) (February 28, 2018).&lt;/li&gt;
+&lt;li&gt;Presented &amp;ldquo;Expression Profiles in GTEx Data&amp;rdquo; at the 
+&lt;a href=&#34;http://jtleek.com/members.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Leekgroup&lt;/a&gt; meeting (February 19, 2018) 
+&lt;a href=&#34;https://speakerdeck.com/apeterson/expression-profiles-in-gtex-data&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;slides&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;http://ghchart.rshah.org/DA2536/amy-peterson.svg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+</description>
     </item>
     
   </channel>

@@ -1,19 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Genomics on L. Collado-Torres</title>
+    <title>Genomics | L. Collado-Torres</title>
     <link>/tags/genomics/</link>
-    <description>Recent content in Genomics on L. Collado-Torres</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>&amp;copy; 2011-{year} Leonardo Collado Torres under (CC) BY-NC-SA 4.0. All thoughts and opinions here are my own. Icon is the [R logo](https://www.r-project.org/logo/) modified</copyright>
-    <lastBuildDate>Wed, 20 Jun 2018 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://lcolladotor.github.io/tags/genomics/" rel="self" type="application/rss+xml" />
+      <atom:link href=http://lcolladotor.github.io/tags/genomics/index.xml rel="self" type="application/rss+xml" />
+    <description>Genomics</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2011-2020 Leonardo Collado Torres under (CC) BY-NC-SA 4.0. All thoughts and opinions here are my own. Icon is the [R logo](https://www.r-project.org/logo/) modified</copyright><lastBuildDate>Wed, 20 Jun 2018 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
+      <title>Genomics</title>
+      <link>/tags/genomics/</link>
+    </image>
     
     <item>
       <title>SciLifeLab Prize: you still have time to participate! </title>
       <link>/2018/06/20/scilifelab-prize-you-still-have-time-to-participate/</link>
       <pubDate>Wed, 20 Jun 2018 00:00:00 +0000</pubDate>
-      
       <guid>/2018/06/20/scilifelab-prize-you-still-have-time-to-participate/</guid>
       <description>
 
@@ -167,64 +169,44 @@ Figure 1: Overview of the data available in recount2. Reads aligned to the refer
       <title>Keeping in touch (ENAR2014?) and philosophical questions regarding México&#39;s future in genomics</title>
       <link>/2013/06/12/keeping-in-touch-enar2014-and-philosophical/</link>
       <pubDate>Wed, 12 Jun 2013 00:00:00 +0000</pubDate>
-      
       <guid>/2013/06/12/keeping-in-touch-enar2014-and-philosophical/</guid>
       <description>&lt;p&gt;The following text is an email I sent to several of my friends from the &lt;a href=&#34;http://www.lcg.unam.mx/about&#34;&gt;LCG undergraduate program &lt;/a&gt;I studied. There I talk about keeping in touch, I invite them to &lt;a href=&#34;http://www.enar.org/meetings.cfm&#34;&gt;ENAR 2014&lt;/a&gt;, and also talk about some philosophical questions regarding our future. &lt;/p&gt;
 &lt;p&gt;I&amp;#8217;m posting it here because I don&amp;#8217;t mind sharing these thoughts and because I don&amp;#8217;t have the current email addresses of many former LCG students.&lt;br/&gt;&lt;br/&gt;Enjoy&lt;/p&gt;
+&lt;p&gt;
+&lt;/p&gt;
 &lt;p&gt;Hola a todos,&lt;/p&gt;
-
 &lt;p&gt;Les escribo por el gusto de mantener el contacto, por razones académicas, y también por un rollo filosófico / a futuro.&lt;/p&gt;
-
 &lt;p class=&#34;p2&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Contacto&lt;/strong&gt;&lt;/p&gt;
-
 &lt;p&gt;Como ya les dije, me da mucho gusto escribirles. Cuando lo hago sé que generalmente resulta en mails largos, así que intentando ser corto, siento que hoy termina el ciclo de personas que conocí en la LCG. Digo, hoy se gradua la 7ma generación y realmente no conozco las nuevas. Fueron años muy buenos los que viví con todos allá en Cuerna y ojalá podamos mantener cierto vínculo a través de los años. Sé que cuesta. Por ejemplo, no tengo los correos de algunos (o no los encontré vía google), otros los intenté adivinar vía &lt;a href=&#34;http://www.lcg.unam.mx/titulados&#34;&gt;&lt;span class=&#34;s1&#34;&gt;&lt;a href=&#34;http://www.lcg.unam.mx/titulados&#34;&gt;http://www.lcg.unam.mx/titulados&lt;/a&gt;&lt;/span&gt;&lt;/a&gt; y la regla de 8 caracteres, y solo pocos lo siguen teniendo en su página de Facebook (por rollos de seguridad). También soy bastante malo para escribir regularmente (ya sea vía email o mis blogs: &lt;a href=&#34;http://fellgernon.tumblr.com/&#34;&gt;&lt;span class=&#34;s1&#34;&gt;académico&lt;/span&gt;&lt;/a&gt; &amp;amp; &lt;span class=&#34;s1&#34;&gt;más personal&lt;/span&gt;).&lt;/p&gt;
-
 &lt;p&gt;Este año en especial he disfrutado (y seguiré disfrutando) mucho de ver a algunos aunque sea un par de horas =)&lt;/p&gt;
-
 &lt;p&gt;También me gusta mucho cuando me piden ayuda sobre algo, aunque sea lento en contestar :P&lt;/p&gt;
-
 &lt;p class=&#34;p2&#34;&gt;&lt;/p&gt;
-
 &lt;p&gt;&lt;strong&gt;ENAR 2014&lt;/strong&gt;&lt;/p&gt;
-
 &lt;p&gt;De lo académico, les quiero avisar que en 2014 van a organizar acá en Baltimore el congreso ENAR (Eastern North American Regional) en marzo del 2014. Es un congreso de bioestadística con una buena parte enfocada a la genómica. Y bueno, muchas cosas hechas en R. Mi jefe está organizando un par de las sesiones así que si tienen sugerencias de quienes invitar avísenme. Ustedes mismos ^_&lt;em&gt;^ &lt;/em&gt;(hay un buen número de pláticas por alumnos de posgrado &amp;amp; postdocs), sus jefes, etc. En fin, tal vez les interese el congreso.&lt;/p&gt;
-
 &lt;p&gt;De 2014 no hay mucha info aún &lt;a href=&#34;http://www.enar.org/meetings.cfm&#34;&gt;&lt;span class=&#34;s1&#34;&gt;&lt;a href=&#34;http://www.enar.org/meetings.cfm&#34;&gt;http://www.enar.org/meetings.cfm&lt;/a&gt;&lt;/span&gt;&lt;/a&gt;, pero allí pueden ver lo que pasó en otros años.&lt;/p&gt;
-
 &lt;p class=&#34;p2&#34;&gt;&lt;/p&gt;
-
 &lt;p&gt;&lt;strong&gt;Rollos filosóficos&lt;/strong&gt;&lt;/p&gt;
-
 &lt;p&gt;El rollo filosófico / a futuro tiene que ver con:&lt;/p&gt;
 &lt;ol class=&#34;ol1&#34;&gt;&lt;li class=&#34;li1&#34;&gt;¿Qué condiciones piden para trabajar en México?&lt;/li&gt;
 &lt;li class=&#34;li1&#34;&gt;¿Cómo crear un vínculo más fuerte entre egresados LCG?&lt;/li&gt;
 &lt;li class=&#34;li1&#34;&gt;¿A qué dedicarse? ¿Academia? ¿Industria? ¿Otra cosa?&lt;/li&gt;
 &lt;/ol&gt;&lt;p&gt;Del punto (1) lo he platicado con algunos pero creo que es un tema interesante y muy variado. Hay aspectos que tal vez están fuera de nuestro alcance como la seguridad, y hay otros como el ambiente de trabajo y de la ciencia. El rollo de plazas y los esfuerzos de algunos por crear espacios: CCG tiene algunas ahorita, Palacios &amp;amp; Dávila están haciendo un plan grande para repatriar ex-LCGs, el INMEGEN &amp;amp; el CINVESTAV han estado creciendo, o la idea de hacer un plan nosotros. Ojo, a penas me enteré que para tener plaza de investigador en la UNAM te piden tener un postdoc de 2 años: el chiste es que tengas publicaciones &amp;amp; hayas demostrado que la puedes hacer en la ciencia.&lt;/p&gt;
-
 &lt;p&gt;¿Sacrificas potencial académico trabajando en México? Dicho de otra forma, ¿cómo te afecta: el rollo del idioma, el de competir en condiciones que parecen ser más difíciles, o el de tener menos colaboradores cerca para crecer con su crítica &amp;amp; datos de última tecnología? O irse fuera de México (no hay por que ser mártir) y sentirse a gusto con esa decisión. Siempre hay formas de colaborar.&lt;/p&gt;
-
 &lt;p&gt;Del punto (2) yo opino que puede ser a través de comentar artículos con gente ex-LCG involucrada (algo así &lt;a href=&#34;http://fellgernon.tumblr.com/post/45152484977/commenting-scientific-papers#.UbjBemTF1d8&#34;&gt;&lt;span class=&#34;s1&#34;&gt;describí aquí&lt;/span&gt;&lt;/a&gt;), o tal vez vía &lt;a href=&#34;http://masciencia.org/&#34;&gt;&lt;span class=&#34;s1&#34;&gt;Más Ciencia por México&lt;/span&gt;&lt;/a&gt; (no los logré convencer en esto de comentar artículos). Digo, también ayudaría que &lt;a href=&#34;http://www.lcg.unam.mx/titulados&#34;&gt;&lt;span class=&#34;s1&#34;&gt;&lt;a href=&#34;http://www.lcg.unam.mx/titulados&#34;&gt;http://www.lcg.unam.mx/titulados&lt;/a&gt;&lt;/span&gt;&lt;/a&gt; tenga ligas a las páginas actuales de cada quien.&lt;/p&gt;
-
 &lt;p&gt;Del (3), en mi opinión cubre también todo el rollo de si queremos vivir con &amp;#8220;soft-money&amp;#8221; a través del ciclo de donativos (el pay-line es 10% en EUA ahorita por lo de sequester), de la libertad académica (¿es una realidad o una forma de cautivarnos?), y también depende del tipo de industria. Otra forma de ver este punto es ¿cual es el nivel de estrés con el que estamos dispuestos a vivir? ¿A qué aspiramos? &lt;/p&gt;
-
 &lt;p class=&#34;p2&#34;&gt;&lt;/p&gt;
-
 &lt;p class=&#34;p2&#34;&gt;&lt;/p&gt;
 &lt;p&gt;En fin, dan ganas de organizar alguna reunión de ex-LCGs!! Mientras, a seguir con estudios &amp;amp; disfrutar la chamba (investigación o lo que estén haciendo).&lt;/p&gt;
-
 &lt;p class=&#34;p2&#34;&gt;&lt;/p&gt;
-
 &lt;p&gt;Si me preguntan que busco con este correo, es simple:&lt;/p&gt;
 &lt;ul class=&#34;ul1&#34;&gt;&lt;li class=&#34;li1&#34;&gt;Mantener el contacto&lt;/li&gt;
 &lt;li class=&#34;li1&#34;&gt;Invitarlos a ENAR 2014&lt;/li&gt;
 &lt;li class=&#34;li1&#34;&gt;Promover discusión en estos temas filosóficos / a futuro&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p class=&#34;p2&#34;&gt;&lt;/p&gt;
-
 &lt;p&gt;Saludos,&lt;/p&gt;
 &lt;p&gt;Leo&lt;/p&gt;
-
 &lt;p&gt;PD Perdón, terminó siendo un mail largo :P&lt;/p&gt;</description>
     </item>
     
@@ -232,7 +214,6 @@ Figure 1: Overview of the data available in recount2. Reads aligned to the refer
       <title>Beware of mis-assembled genomes: still valid today!</title>
       <link>/2012/01/26/beware-of-mis-assembled-genomes-still-valid-today/</link>
       <pubDate>Thu, 26 Jan 2012 00:00:00 +0000</pubDate>
-      
       <guid>/2012/01/26/beware-of-mis-assembled-genomes-still-valid-today/</guid>
       <description>&lt;p&gt;I&amp;#8217;ve been recently impressed by Steven Salzberg talk as &lt;a href=&#34;http://fellgernon.tumblr.com/post/16468048496/extensive-comments-and-review-about-the-recent-bake-off#.TyAz0OPOzIw&#34;&gt;you might have noticed&lt;/a&gt;, and browing &lt;a href=&#34;http://bioinformatics.igm.jhmi.edu/salzberg/&#34;&gt;his home page&lt;/a&gt; I stumbled upon his opinion piece (also by James Yorke): &lt;a href=&#34;http://cbcb.umd.edu/papers/Mis-assembledGenomesReprint.pdf&#34;&gt;Beware of mis-assembled genomes&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;It&amp;#8217;s a short note published in 2005, but damn, can anyone deny that it fits perfectly for today&amp;#8217;s state of the art in the de &lt;em&gt;novo&lt;/em&gt; genome assembly field? I bet no one will. For instance, it&amp;#8217;s a solid statement to say:&lt;/p&gt;
@@ -240,7 +221,6 @@ Figure 1: Overview of the data available in recount2. Reads aligned to the refer
 &lt;p&gt;He didn&amp;#8217;t add a &amp;#8220;will always be&amp;#8221; or &amp;#8220;will be for at least 7 years more&amp;#8221; now that we are in 2012, but it feels like this will be the case until we can get accurate (and cheap) reads that span even the longest repeat. Well, maybe we don&amp;#8217;t need such huge reads as people have been able to find large genome duplications. &lt;/p&gt;
 &lt;p&gt;And as I said in my &lt;a href=&#34;http://fellgernon.tumblr.com/post/16468048496/extensive-comments-and-review-about-the-recent-bake-off#.TyAz0OPOzIw&#34;&gt;previous post&lt;/a&gt;, I&amp;#8217;m still surprised by how careless the human genome assembly was carried out as they didn&amp;#8217;t track their own steps. I was hoping that wasn&amp;#8217;t the case, but clearly it is:&lt;/p&gt;
 &gt; Indeed, many of the original assemblies of parts of the human genome were done in the mid- and late-1990s, and are now lost.
-
 &lt;p&gt;I&amp;#8217;m also impressed by how accurate Steven and James&amp;#8217; prediction was when they forsaw that people were going to be misled in judging assembly quality by contigs size without taking into account mis-assemblies. &lt;/p&gt;
 &lt;p&gt;They also called upon the bioinformatics community to take action in evaluating genome assemblies. Due to the amount of data nowadays, it feels like a inhuman (well, incluster as infeasible by high power clusters :P, well, incomputable is the correct term) task. But with some funding, I bet Salzberg and colleagues could find a way to do so. At least partially. Yet, as with anything, you need motivation, and I&amp;#8217;m note sure they are motivated to clean up the mess. &lt;/p&gt;
 </description>
@@ -250,7 +230,6 @@ Figure 1: Overview of the data available in recount2. Reads aligned to the refer
       <title>Extensive comments and review about the recent bake-off of de novo genome assemblers &#34;GAGE&#34;</title>
       <link>/2012/01/25/extensive-comments-and-review-about-the-recent-bake-off/</link>
       <pubDate>Wed, 25 Jan 2012 00:00:00 +0000</pubDate>
-      
       <guid>/2012/01/25/extensive-comments-and-review-about-the-recent-bake-off/</guid>
       <description>&lt;p&gt;During this week&amp;#8217;s Genomics seminar at the Genome Cafe in the Biostats department, &lt;a href=&#34;http://scholar.google.com/citations?user=sUVeH-4AAAAJ&amp;amp;hl=en&#34;&gt;Steven Salzberg&lt;/a&gt; gave a talk on his team new published paper: &lt;a href=&#34;http://www.ncbi.nlm.nih.gov/pubmed/22147368&#34;&gt;GAGE: A critical evaluation of genome assemblies and assembly algorithms.&lt;/a&gt; I worked on a few assembly projects during my time at &lt;a href=&#34;http://www.wintergenomics.com/&#34;&gt;Winter Genomics&lt;/a&gt;, but that was not the main reason why I was immediately submerged into his talk. I think that it was due to his bold comments since comparing genome assemblers is a, hmm&amp;#8230;, delicate issue. I really like the confidence he has on his work and the way he projects it when he talks. It might be too preachy for some, but I like it. Plus it helps that I completely agreed on two key points that differentiate GAGE from it&amp;#8217;s competitors: &lt;a href=&#34;http://cnag.bsc.es/&#34;&gt;dnGASP&lt;/a&gt; and &lt;a href=&#34;http://assemblathon.org/&#34;&gt;Assemblathon&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;First, GAGE uses real data sets instead of simulated ones. I know that some might argue that a given data set can have specific properties that are not general or that it&amp;#8217;s biased to a certain assembler. It also feels a bit funny, because I started out assembling simulated data too. It certainly had its uses as I learnt a lot. But once you encounter a real data set you learn how complicated things can be, and it can be quite messy as no one gives you perfectly clean data. I haven&amp;#8217;t read much about GAGE&amp;#8217;s competitors, but regardless of how they simulate their data, I completely agree with Steven that GAGE has the advantage by using four real data sets. Plus, they were quite sensible when choosing the four data sets as they are Illumina data (the most common) with frequently used read sizes and library types. Note that even the bacterial genome have more than one replicon. &lt;/p&gt;
@@ -258,11 +237,9 @@ Figure 1: Overview of the data available in recount2. Reads aligned to the refer
 &lt;p&gt;Another important difference between GAGE and say Assemblaton, is that the for GAGE an in-house team ran the assemblers instead of asking the authors of each program to fine tune their results. If you had asked me a year ago, I would surely had supported the idea of asking the authors to run their programs. After all, even if you read all the documentation it&amp;#8217;s the authors who know the best tricks on how to use their assemblers (or should be very good users). Yet, I can see the point that in reality it&amp;#8217;s not the authors who run their code for each application. It&amp;#8217;s a person or team of bioinformaticians (or a biologist struggling to death with UNIX) that has read the manual &amp;amp; papers (hopefully) from a few tools and decided which is his favorite one. During this process they probably ran a few of the assemblers with a small parameter scan and compared the results. The GAGE pipeline is very similar and hence feels much real. They obviously did this process in a more rigorous way and made sure the conditions allowed comparing the assemblers.&lt;/p&gt;
 &lt;p&gt;One of the steps common to all of their &lt;em&gt;recipes&lt;/em&gt; was to run &lt;a href=&#34;http://www.ncbi.nlm.nih.gov/pubmed/21114842&#34;&gt;Quake: quality-aware detection and correction of sequencing errors.&lt;/a&gt; I didn&amp;#8217;t know about this specific tool before, but I did know about the idea. Basically, you plot the distribution of the k-mers multiplicity from your data and do something to those that are possible errors (those k-mers that are unique or have very low multiplicity compared to the expected value); most commonly you try to correct them and if you can&amp;#8217;t, you discard them. That&amp;#8217;s a very broad explanation and I&amp;#8217;m sure that interested readers will download the original paper. &lt;/p&gt;
 &lt;p&gt;Anyhow, the point is that they cleaned the data sets prior to using any assembler. I couldn&amp;#8217;t agree more to the sentence:&lt;/p&gt;
-
 &lt;blockquote&gt;
 &lt;p&gt;High-quality data can produce dramatic differences in the results&lt;/p&gt;
 &lt;/blockquote&gt;
-
 &lt;p&gt;Running some kind of preprocessing cleaning tool should help, but you can&amp;#8217;t do miracles with crappy data. &lt;/p&gt;
 &lt;p&gt;This post is getting huge, so I&amp;#8217;ll jump to some points I&amp;#8217;d like to highlight though it&amp;#8217;ll still be very long.&lt;/p&gt;
 &lt;p&gt;First, I&amp;#8217;m amazed by the simple concept that is &amp;#8220;N50 corrected&amp;#8221;. It does look complicated to calculate, but the idea of splitting contigs when an error (at least a 5 bp indel) is found (they have Sanger-sequence reference genomes for 3 of them) before calculating the N50 size is just great. It&amp;#8217;s simple and very effective. By using this statistic and comparing it to the original N50 size you can clearly detect &lt;em&gt;aggressive&lt;/em&gt; assemblers that don&amp;#8217;t mind adding errors vs highly conservative ones. Then, comparing &amp;#8220;N50 corrected&amp;#8221; vs the number of errors (as in figure 6) is VERY informative. I just love that figure!&lt;/p&gt;
@@ -270,7 +247,6 @@ Figure 1: Overview of the data available in recount2. Reads aligned to the refer
 &lt;p&gt;Second, no matter which assembler you use, your result is going to contain lots of errors. There is no way around it, it&amp;#8217;s a fact! Hm&amp;#8230; unless you want tiny contigs (very conservative assemblers) which aren&amp;#8217;t really useful. I think that it&amp;#8217;ll be important to stress this out to consumers of the technology instead of fueling their wild dreams of high-quality finished (not draft) de novo assemblies. &lt;/p&gt;
 &lt;p&gt;Third, de &lt;em&gt;novo&lt;/em&gt; genome assembly (specially for large genomes) is still a complicated endeavor. You shouldn&amp;#8217;t take it lightly!&lt;/p&gt;
 &lt;p&gt;As you might have noticed, I found this paper (and the talk) to be very stimulating and interesting. And as I forgot to do so during the talk, &lt;strong&gt;thank you Salzberg et al. for taking a huge step in the right direction&lt;/strong&gt;. It&amp;#8217;ll surely help those working on the field and that at some point asked themselves:&lt;/p&gt;
-
 &lt;blockquote&gt;
 &lt;ul&gt;
 &lt;li&gt;What will an assembly based on short reads look like?&lt;/li&gt;
@@ -278,8 +254,7 @@ Figure 1: Overview of the data available in recount2. Reads aligned to the refer
 &lt;li&gt;What parameters should be used when running the software?&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/blockquote&gt;
-
-&lt;p&gt;&lt;p&gt;A couple more notes:&lt;/p&gt;
+&lt;p&gt;A couple more notes:&lt;/p&gt;
 &lt;ul&gt;&lt;li&gt;It&amp;#8217;s sad, but &lt;a href=&#34;http://www.ebi.ac.uk/~zerbino/velvet/&#34;&gt;Velvet&lt;/a&gt; didn&amp;#8217;t perform as well as I hoped. I had been convinced for a while that it is one of the best assemblers out there. Plus I&amp;#8217;m surprised that it couldn&amp;#8217;t run on a 256&amp;#160;GB machine for the bumble bee data set.&lt;/li&gt;
 &lt;li&gt;Take a look at the E-size statistic on the methods section of the paper. It&amp;#8217;s interesting that it correlates well with N50 size. At times, I haven&amp;#8217;t been too eager to select a best assembly on N50 size as it might not be one of the longest assemblies and I felt like I was wasting data. But it is a very reasonable summary statistic for such a hard problem.&lt;/li&gt;
 &lt;li&gt;I&amp;#8217;m still curious on whether gap-closers like &lt;a href=&#34;http://www.ncbi.nlm.nih.gov/sites/entrez/20388197?dopt=Abstract&amp;amp;holding=f1000,f1000m,isrctn&#34;&gt;IMAGE: Iterative Mapping and Assembly for Gap Elimination&lt;/a&gt; (I don&amp;#8217;t know why they didn&amp;#8217;t include the name on their paper title &amp;gt;.&amp;lt;) correctly increase scaffold/contig length by &lt;a href=&#34;http://genomebiology.com/2010/11/4/R41/figure/F1&#34;&gt;re-assembling local &lt;em&gt;border&lt;/em&gt; paired-reads&lt;/a&gt;.&lt;/li&gt;
@@ -287,7 +262,7 @@ Figure 1: Overview of the data available in recount2. Reads aligned to the refer
 &lt;li&gt;&lt;a href=&#34;http://www.nature.com/news/2011/110323/full/471425a.html&#34;&gt;Here is a news commentary &lt;/a&gt;which talks about the three competitors.&lt;/li&gt;
 &lt;li&gt;I found it funny when Salzberg declared a winner in the talk, but it&amp;#8217;s surely takes some guts to do so and I agree that it had to be done after such a rigorous comparison (or &amp;#8220;bake-off&amp;#8221; ^_^).&lt;/li&gt;
 &lt;li&gt;From the advice section in Genomics 2011 (&lt;a href=&#34;http://fellgernon.tumblr.com/post/16368703139/commenting-genomics-in-2011#.Tx922ePOzIw&#34;&gt;check my long post about it&lt;/a&gt;), &amp;#8220;Published is better than perfect&amp;#8221;. Results from a bake-off like GAGE are going to change quickly since new updates are released quickly, but they are very helpful!!!&lt;/li&gt;
-&lt;/ul&gt;&lt;/p&gt;
+&lt;/ul&gt;
 </description>
     </item>
     
@@ -295,14 +270,11 @@ Figure 1: Overview of the data available in recount2. Reads aligned to the refer
       <title>Commenting: Genomics in 2011</title>
       <link>/2012/01/23/commenting-genomics-in-2011/</link>
       <pubDate>Mon, 23 Jan 2012 00:00:00 +0000</pubDate>
-      
       <guid>/2012/01/23/commenting-genomics-in-2011/</guid>
       <description>&lt;p&gt;Today is my first day of classes and &lt;a href=&#34;http://scholar.google.com/citations?hl=en&amp;amp;user=8XOPyM4AAAAJ&amp;amp;oi=sra&#34;&gt;Kasper&lt;/a&gt; couldn&amp;#8217;t have had a better timing to share the link to &lt;a href=&#34;http://genomebiology.com/2011/12/12/137&#34;&gt;Genomics in 2011: challenges and opportunities&lt;/a&gt;. There, the Editorial Board members of Genome Biology gave their opinion on: important 2011 papers, influential people for their careers, advice to young scientists, top challenges in their field, and unlimited money projects. I felt identified several times and as:&lt;/p&gt;
-
 &lt;blockquote&gt;
 &lt;p&gt;I think one of the most important skills in research is the ability to communicate ideas. [&amp;#8230;] practicing both writing skills and oral presentation skills.&lt;/p&gt;
 &lt;/blockquote&gt;
-
 &lt;p&gt;here I am sharing my view on the paper.&lt;/p&gt;
 &lt;p&gt;Overall the paper is a good read and I enjoyed most of it, so I highly recommend reading it.&lt;/p&gt;
 &lt;p&gt;The top papers section is quite broad and it felt to me like a huge abstract on many papers. Now I want to read the paper on &amp;#8220;phenologs&amp;#8221;, a concept that seems very simple and natural, and has helped understand a bit more what genes do (functional genomics).&lt;/p&gt;
@@ -317,26 +289,19 @@ Figure 1: Overview of the data available in recount2. Reads aligned to the refer
 &gt; * you need to appreciate the biology as much as, if not more than, the statistical method or computer science
 &gt; * The success of our field is ultimately measured by the impact we can have on our understanding of biology
 &gt; * I would say it&amp;#8217;s the ability to understand both the experimental and the computational sciences. [&amp;#8230;] I would learn the key principles in computational biology or at the very least the linguistics, and vice versa.
-
 &lt;p&gt;I hadn&amp;#8217;t taken consciousness of the fact that the amount of computing you can do (per dollar) is doubling every year while the size of genomic databases is going up by a factor of 10. I knew something was off and that we are getting more data, but I didn&amp;#8217;t know the ratio. Plus, I have to agree with the comment that cloud computing is not going to be the solution though I&amp;#8217;m not sure if:&lt;/p&gt;
-
 &lt;blockquote&gt;
 &lt;p&gt;The only solution is to discover fundamentally better algorithms for processing these databases.&lt;/p&gt;
 &lt;/blockquote&gt;
-
 &lt;p&gt;Sure, we need better algorithms, but I think that it&amp;#8217;s fair to ask for cleaner and higher-quality data. This doesn&amp;#8217;t mean that the data format has to be simpler, as:&lt;/p&gt;
-
 &lt;blockquote&gt;
 &lt;p&gt;Far too often, enough biological details are abstracted away so that the solution loses its biological relevance.&lt;/p&gt;
 &lt;/blockquote&gt;
-
 &lt;p&gt;Sad, but true.&lt;/p&gt;
 &lt;p&gt;I do agree with:&lt;/p&gt;
-
 &lt;blockquote&gt;
 &lt;p&gt;Another challenge is to educate people about genomics and to tone down the natural hype of the genomics field.&lt;/p&gt;
 &lt;/blockquote&gt;
-
 &lt;p&gt;Just as with any discipline, it&amp;#8217;s not easy to explain your field to a random person and it&amp;#8217;s a harder job when someone exaggerates a set of results.&lt;/p&gt;
 &lt;p&gt;The argument that RO1 NIH grants are not built for young genomics scientists is interesting and I do hope that it changes soon. Though I don&amp;#8217;t have a clue as to how the following is going to happen:&lt;/p&gt;
 &gt; the last challenge is to transform the academic review system in our institutions&lt;/p&gt;

@@ -1,19 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>pdf on L. Collado-Torres</title>
+    <title>pdf | L. Collado-Torres</title>
     <link>/tags/pdf/</link>
-    <description>Recent content in pdf on L. Collado-Torres</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>&amp;copy; 2011-{year} Leonardo Collado Torres under (CC) BY-NC-SA 4.0. All thoughts and opinions here are my own. Icon is the [R logo](https://www.r-project.org/logo/) modified</copyright>
-    <lastBuildDate>Wed, 05 Dec 2012 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://lcolladotor.github.io/tags/pdf/" rel="self" type="application/rss+xml" />
+      <atom:link href=http://lcolladotor.github.io/tags/pdf/index.xml rel="self" type="application/rss+xml" />
+    <description>pdf</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2011-2020 Leonardo Collado Torres under (CC) BY-NC-SA 4.0. All thoughts and opinions here are my own. Icon is the [R logo](https://www.r-project.org/logo/) modified</copyright><lastBuildDate>Wed, 05 Dec 2012 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
+      <title>pdf</title>
+      <link>/tags/pdf/</link>
+    </image>
     
     <item>
       <title>Adding youtube videos in pdfs, html reports and html presentations</title>
       <link>/2012/12/05/adding-youtube-videos-in-pdfs-html-reports/</link>
       <pubDate>Wed, 05 Dec 2012 00:00:00 +0000</pubDate>
-      
       <guid>/2012/12/05/adding-youtube-videos-in-pdfs-html-reports/</guid>
       <description>&lt;p&gt;I got a question today on how to add a video to a beamer pdf presentation. Well, I had never done it, but I got curious enough to google around for a bit and here is the end product.&lt;/p&gt;
 &lt;p&gt;One way of doing it is using the &lt;a href=&#34;http://www.ctan.org/pkg/media9&#34;&gt;media9&lt;/a&gt; tex package. For this to work you need to have the latest version of texlive (or miktex). Then, it&amp;#8217;s quite straight forward to include the video. The issue is that you have to open the pdf with Acrobat Reader 10+ (9 something works. I think that it&amp;#8217;s 9.4.1+ but well, the point is that you need an updated version). You will also need a live web connection to actually show the video. An alternative (if you have the video file) is to convert it to swf and embed it. &lt;/p&gt;

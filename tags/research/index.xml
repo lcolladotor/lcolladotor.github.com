@@ -1,19 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Research on L. Collado-Torres</title>
+    <title>Research | L. Collado-Torres</title>
     <link>/tags/research/</link>
-    <description>Recent content in Research on L. Collado-Torres</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>&amp;copy; 2011-{year} Leonardo Collado Torres under (CC) BY-NC-SA 4.0. All thoughts and opinions here are my own. Icon is the [R logo](https://www.r-project.org/logo/) modified</copyright>
-    <lastBuildDate>Wed, 20 Jun 2018 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://lcolladotor.github.io/tags/research/" rel="self" type="application/rss+xml" />
+      <atom:link href=http://lcolladotor.github.io/tags/research/index.xml rel="self" type="application/rss+xml" />
+    <description>Research</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2011-2020 Leonardo Collado Torres under (CC) BY-NC-SA 4.0. All thoughts and opinions here are my own. Icon is the [R logo](https://www.r-project.org/logo/) modified</copyright><lastBuildDate>Wed, 20 Jun 2018 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
+      <title>Research</title>
+      <link>/tags/research/</link>
+    </image>
     
     <item>
       <title>SciLifeLab Prize: you still have time to participate! </title>
       <link>/2018/06/20/scilifelab-prize-you-still-have-time-to-participate/</link>
       <pubDate>Wed, 20 Jun 2018 00:00:00 +0000</pubDate>
-      
       <guid>/2018/06/20/scilifelab-prize-you-still-have-time-to-participate/</guid>
       <description>
 
@@ -167,9 +169,8 @@ Figure 1: Overview of the data available in recount2. Reads aligned to the refer
       <title>LIBD video</title>
       <link>/2013/07/17/starting-this-week-ill-be-doing-my-research-with/</link>
       <pubDate>Wed, 17 Jul 2013 00:00:00 +0000</pubDate>
-      
       <guid>/2013/07/17/starting-this-week-ill-be-doing-my-research-with/</guid>
-      <description>&lt;p&gt;&lt;iframe src=&#34;http://player.vimeo.com/video/47201742&#34; width=&#34;400&#34; height=&#34;300&#34; frameborder=&#34;0&#34;&gt;&lt;/iframe&gt;&lt;br/&gt;&lt;p&gt;Starting this week, I&amp;#8217;ll be doing my research with the Lieber Institute for Brain Development (&lt;a href=&#34;http://www.libd.org/&#34;&gt;LIBD&lt;/a&gt;) as &lt;a href=&#34;http://www.libd.org/contact/staff-directory?query=jaffe&#34;&gt;Andrew Jaffe&lt;/a&gt;&amp;rsquo;s first Ph.D. student there. My main advisor will continue to be &lt;a href=&#34;http://www.biostat.jhsph.edu/~jleek/&#34;&gt;Jeff Leek&lt;/a&gt; which is great for me. I&amp;#8217;ll have access to massive data sets at Lieber and will face the challenge of integrative genomics. That will be fun, exciting and challenging!&lt;br/&gt;&lt;br/&gt;Here&amp;#8217;s a short video explaining what the LIBD is about and why Baltimore is a growing city.&lt;/p&gt;&lt;/p&gt;
+      <description>&lt;iframe src=&#34;http://player.vimeo.com/video/47201742&#34; width=&#34;400&#34; height=&#34;300&#34; frameborder=&#34;0&#34;&gt;&lt;/iframe&gt;&lt;br/&gt;&lt;p&gt;Starting this week, I&amp;#8217;ll be doing my research with the Lieber Institute for Brain Development (&lt;a href=&#34;http://www.libd.org/&#34;&gt;LIBD&lt;/a&gt;) as &lt;a href=&#34;http://www.libd.org/contact/staff-directory?query=jaffe&#34;&gt;Andrew Jaffe&lt;/a&gt;&#39;s first Ph.D. student there. My main advisor will continue to be &lt;a href=&#34;http://www.biostat.jhsph.edu/~jleek/&#34;&gt;Jeff Leek&lt;/a&gt; which is great for me. I&amp;#8217;ll have access to massive data sets at Lieber and will face the challenge of integrative genomics. That will be fun, exciting and challenging!&lt;br/&gt;&lt;br/&gt;Here&amp;#8217;s a short video explaining what the LIBD is about and why Baltimore is a growing city.&lt;/p&gt;
 </description>
     </item>
     
@@ -177,7 +178,6 @@ Figure 1: Overview of the data available in recount2. Reads aligned to the refer
       <title>Great commentary on sequestration&#39;s impact on research! National media should talk about this and YOU should read it!!!</title>
       <link>/2013/03/28/great-commentary-on-sequestrations-impact-on-research/</link>
       <pubDate>Thu, 28 Mar 2013 00:00:00 +0000</pubDate>
-      
       <guid>/2013/03/28/great-commentary-on-sequestrations-impact-on-research/</guid>
       <description>&lt;p&gt;Today &lt;a href=&#34;http://www.biostat.jhsph.edu/%7Ejleek/&#34;&gt;Jeffrey T. Leek&lt;/a&gt; and &lt;a href=&#34;http://en.wikipedia.org/wiki/Steven_Salzberg&#34;&gt;Steven L. Salzberg&lt;/a&gt; published a paper commentary in Genome Biology today titled “&lt;a href=&#34;http://genomebiology.com/2013/14/3/109&#34;&gt;Sequestration: inadvertently killing biomedical research to score political points&lt;/a&gt;” (&lt;span class=&#34;showtooltip&#34; title=&#34;Leek J and Salzberg S (2013). Sequestration: Inadvertently  Killing Biomedical Research to Score Political Points. _Genome  Biology_, *14*. ISSN 1465-6906,   http://dx.doi.org/10.1186/gb-2013-14-3-109.&#34;&gt;&lt;a href=&#34;http://dx.doi.org/10.1186/gb-2013-14-3-109&#34;&gt;Leek &amp;amp; Salzberg, 2013&lt;/a&gt;&lt;/span&gt;) which I think is a &lt;strong&gt;must read for anyone&lt;/strong&gt;. Seriously!&lt;/p&gt;
 &lt;p&gt;I do not mean &lt;em&gt;anyone involved in research&lt;/em&gt;, or all scientists. I mean, this commentary should be in the &lt;strong&gt;national media&lt;/strong&gt;. &lt;strong&gt;Why&lt;/strong&gt;?&lt;/p&gt;
@@ -185,15 +185,13 @@ Figure 1: Overview of the data available in recount2. Reads aligned to the refer
 &lt;p&gt;The main reason why &lt;strong&gt;you&lt;/strong&gt; should be reading this commentary is that the consequences of the &amp;#8216;sequester&amp;#8217; are going to affect &lt;strong&gt;you&lt;/strong&gt;. So if you are interested in your future and the well-being of those who you care for, then you should read it. And if you don&amp;#8217;t know what the sequester is and how it will impact research, well, that&amp;#8217;s another reason why you should read this commentary. Plus you might want to look at this (serious) comic from &lt;code&gt;PhD comics&lt;/code&gt; (&lt;span class=&#34;showtooltip&#34; title=&#34;Cham J (2013). U.S. Budget Sequestration Explained.   http://www.phdcomics.com/comics.php?f=1561.&#34;&gt;&lt;a href=&#34;http://www.phdcomics.com/comics.php?f=1561&#34;&gt;© Cham, 2013&lt;/a&gt;&lt;/span&gt;) to get an overall idea. Note that it was published before sequestration hit in.&lt;/p&gt;
 &lt;p&gt;&lt;img alt=&#34;PhD comic on the sequester&#34; src=&#34;http://www.phdcomics.com/comics/archive/phd021513s.gif&#34;/&gt;&lt;/p&gt;
 &lt;p&gt;Going back to the commentary piece by Leek and Salzberg, I can imagine someone refuting like this:&lt;/p&gt;
-
 &lt;blockquote&gt;
 &lt;p&gt;Hey, but I don&amp;#8217;t live in the United States so it doesn&amp;#8217;t affect me.&lt;/p&gt;
 &lt;/blockquote&gt;
-
 &lt;p&gt;That is true in a sense because you will likely be affected by your own country&amp;#8217;s policies more directly, and specially in policy topics that have short term impact. Nevertheless, any breakthrough made by U.S.-based research for the most part (aka, when politics doesn&amp;#8217;t get in the way) will reach you. After all, Leek and Salzberg cite (&lt;span class=&#34;showtooltip&#34; title=&#34;(2013). The Sequester Is Going to Devastate U.S. Science Research  for Decades.   http://www.theatlantic.com/politics/archive/2013/03/the-sequester-is-going-to-devastate-us-science-research-for-decades/273925/  [Online. last-accessed: 2013-03-28 03:33:46].   http://www.theatlantic.com/politics/archive/2013/03/the-sequester-is-going-to-devastate-us-science-research-for-decades/273925/.&#34;&gt;&lt;a href=&#34;http://www.theatlantic.com/politics/archive/2013/03/the-sequester-is-going-to-devastate-us-science-research-for-decades/273925/&#34;&gt;Alivisatos et al in The Atlantic, 2013&lt;/a&gt;&lt;/span&gt;) where the following statement is made:&lt;/p&gt;
-
 &lt;blockquote&gt;
-&lt;p&gt;&lt;p&gt;Nobel Prize-winning economist Robert Solow has &lt;a href=&#34;http://magazine.amstat.org/blog/2011/03/01/econgrowthmar11/&#34;&gt;calculated&lt;/a&gt; that over the past half century, more than half of the growth in our nation&amp;#8217;s GDP has been rooted in scientific discoveries – the kinds of fundamental, mission-driven research that we do at the labs.&lt;/p&gt;
+&lt;p&gt;Nobel Prize-winning economist Robert Solow has &lt;a href=&#34;http://magazine.amstat.org/blog/2011/03/01/econgrowthmar11/&#34;&gt;calculated&lt;/a&gt; that over the past half century, more than half of the growth in our nation&amp;#8217;s GDP has been rooted in scientific discoveries – the kinds of fundamental, mission-driven research that we do at the labs.&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;The claim that it affects other countries is just a generalization of the previous result and what I would consider some common sense. If this is not enough to attract your interest, then you should take a look at Salzberg&amp;#8217;s previous comment “&lt;a href=&#34;http://genome.fieldofscience.com/2013/03/a-breakthrough-cure-for-acute-leukemia.html&#34;&gt;A breakthrough cure for acute leukemia?&lt;/a&gt;” that is a showcase example of successful biomedical research funded by the same institutions being hit by sequestration.&lt;/p&gt;
 &lt;p&gt;I hope to have convinced you to read Leek and Salzberg&amp;#8217;s commentary by now. So let me talk a little bit about the things that I liked the most.&lt;/p&gt;
 &lt;p&gt;Most of all, I like the tone they used because this is not a silly matter and while it may sound as alarming as &lt;a href=&#34;http://en.wikipedia.org/wiki/The_Boy_Who_Cried_Wolf&#34;&gt;the boy who cried wolf&lt;/a&gt;, the reality is that the wolf does exist and will visit you. So while no visible effects have been seen from the sequester this month, that doesn&amp;#8217;t mean that you can just ignore this problem. It is like when you throw a stone in calm water: just a few small ripples are seen at the beginning, but they reach far away. In other words, it will take some time to actually feel the negative effects.&lt;/p&gt;
@@ -208,8 +206,7 @@ Figure 1: Overview of the data available in recount2. Reads aligned to the refer
 &lt;li&gt;Yihui Xie, (2013) knitr: A general-purpose package for dynamic report generation in R. &lt;a href=&#34;http://CRAN.R-project.org/package=knitr&#34;&gt;&lt;a href=&#34;http://CRAN.R-project.org/package=knitr&#34;&gt;http://CRAN.R-project.org/package=knitr&lt;/a&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Jorge Cham, U.S. Budget Sequestration Explained. &lt;a href=&#34;http://www.phdcomics.com/comics.php?f=1561&#34;&gt;&lt;a href=&#34;http://www.phdcomics.com/comics.php?f=1561&#34;&gt;http://www.phdcomics.com/comics.php?f=1561&lt;/a&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Jeffrey T Leek, Steven L Salzberg, (2013) Sequestration: Inadvertently Killing Biomedical Research to Score Political Points. &lt;em&gt;Genome Biology&lt;/em&gt; &lt;strong&gt;14&lt;/strong&gt; &lt;a href=&#34;http://dx.doi.org/10.1186/gb-2013-14-3-109&#34;&gt;10.1186/gb-2013-14-3-109&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;/ul&gt;
 </description>
     </item>
     
@@ -217,7 +214,6 @@ Figure 1: Overview of the data available in recount2. Reads aligned to the refer
       <title>Got acknowledged in a paper ^^</title>
       <link>/2012/10/31/got-acknowledged-in-a-paper-s4/</link>
       <pubDate>Wed, 31 Oct 2012 00:00:00 +0000</pubDate>
-      
       <guid>/2012/10/31/got-acknowledged-in-a-paper-s4/</guid>
       <description>&lt;p&gt;During the weekend while I was talking with a friend and former colleague, I realized that my name was mentioned in the acknowledgements section of a paper :) I haven&amp;#8217;t been much in touch with what&amp;#8217;s been happening back home, so this was a nice surprise.&lt;/p&gt;
 &lt;p&gt;The paper is: &lt;a href=&#34;http://www.biomedcentral.com/1471-2164/13/385&#34;&gt;Genetic changes during a laboratory adaptive evolution process that allowed fast growth in glucose to an &lt;em&gt;Escherichia coli&lt;/em&gt; strain lacking the major glucose transport system&lt;/a&gt; by Aguilar&lt;em&gt; et al&lt;/em&gt;. It was published in BMC Genomics in 2012.&lt;/p&gt;

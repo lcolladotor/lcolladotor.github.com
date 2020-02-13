@@ -1,19 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Prediction on L. Collado-Torres</title>
+    <title>Prediction | L. Collado-Torres</title>
     <link>/tags/prediction/</link>
-    <description>Recent content in Prediction on L. Collado-Torres</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>&amp;copy; 2011-{year} Leonardo Collado Torres under (CC) BY-NC-SA 4.0. All thoughts and opinions here are my own. Icon is the [R logo](https://www.r-project.org/logo/) modified</copyright>
-    <lastBuildDate>Mon, 17 Sep 2018 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://lcolladotor.github.io/tags/prediction/" rel="self" type="application/rss+xml" />
+      <atom:link href=http://lcolladotor.github.io/tags/prediction/index.xml rel="self" type="application/rss+xml" />
+    <description>Prediction</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2011-2020 Leonardo Collado Torres under (CC) BY-NC-SA 4.0. All thoughts and opinions here are my own. Icon is the [R logo](https://www.r-project.org/logo/) modified</copyright><lastBuildDate>Mon, 17 Sep 2018 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
+      <title>Prediction</title>
+      <link>/tags/prediction/</link>
+    </image>
     
     <item>
       <title>What about a lawyer-like app as the minimum help for defendants in immigration cases?</title>
       <link>/2018/09/17/what-about-a-lawyer-like-app-as-the-mininum-help-for-defandants-in-immigration-cases/</link>
       <pubDate>Mon, 17 Sep 2018 00:00:00 +0000</pubDate>
-      
       <guid>/2018/09/17/what-about-a-lawyer-like-app-as-the-mininum-help-for-defandants-in-immigration-cases/</guid>
       <description>
 
@@ -206,7 +208,6 @@
       <title>Predicting who will win a NFL match at half time</title>
       <link>/2013/03/23/predicting-who-will-win-a-nfl-match-at-half-time/</link>
       <pubDate>Sat, 23 Mar 2013 00:00:00 +0000</pubDate>
-      
       <guid>/2013/03/23/predicting-who-will-win-a-nfl-match-at-half-time/</guid>
       <description>&lt;p&gt;It was great to have a little break, &lt;em&gt;Spring break&lt;/em&gt;, although the weather didn&amp;#8217;t feel like spring at all! During the early part of the break I worked on my final project for Jeff Leek&amp;#8217;s data analysis class, which we call 140.753 here. Continuing &lt;a href=&#34;http://fellgernon.tumblr.com/tagged/jhsph753#.UU44Y1vF2c4&#34;&gt;my previous posts on the topic&lt;/a&gt;, this time I&amp;#8217;ll share the results of my final project.&lt;/p&gt;
 &lt;p&gt;At the beginning of the course, we had to submit a project plan (more like a proposal) and &lt;a href=&#34;https://github.com/lcolladotor/lcollado753/blob/master/hw/projectplan/lcollado_projectplan.pdf&#34;&gt;in mine&lt;/a&gt; I announced my interest to look into some sports data. At the time I included a few links to Brian Burke&amp;#8217;s Advanced NFL Stats site (&lt;span class=&#34;showtooltip&#34; title=&#34;(2013). Advanced NFL Stats.   http://www.advancednflstats.com/ [Online. last-accessed:  2013-03-23 23:28:38].  http://www.advancednflstats.com/.&#34;&gt;&lt;a href=&#34;http://www.advancednflstats.com/&#34;&gt;Burke&lt;/a&gt;&lt;/span&gt;). At the time I didn&amp;#8217;t know that Burke&amp;#8217;s site described in detail a lot of the information I would end up using.&lt;/p&gt;
@@ -216,7 +217,6 @@
 &lt;p&gt;Basically, I summarized the play-by-play data for all NFL games from 2002 to 2012 seasons as provided by Burke (&lt;span class=&#34;showtooltip&#34; title=&#34;(2010). Advanced NFL Stats: Play-by-Play Data.   http://www.advancednflstats.com/2010/04/play-by-play-data.html  [Online. last-accessed: 2013-03-24 00:08:20].   http://www.advancednflstats.com/2010/04/play-by-play-data.html.&#34;&gt;&lt;a href=&#34;http://www.advancednflstats.com/2010/04/play-by-play-data.html&#34;&gt;Burke, 2010&lt;/a&gt;&lt;/span&gt;). I used some of the variables Burke uses (&lt;span class=&#34;showtooltip&#34; title=&#34;(2009). Advanced NFL Stats: How the Model Works-A Detailed  Example Part 1.   http://www.advancednflstats.com/2009/01/how-model-works-detailed-example.html  [Online. last-accessed: 2013-03-24 00:08:21].   http://www.advancednflstats.com/2009/01/how-model-works-detailed-example.html.&#34;&gt;&lt;a href=&#34;http://www.advancednflstats.com/2009/01/how-model-works-detailed-example.html&#34;&gt;Burke, 2009&lt;/a&gt;&lt;/span&gt;) and some others like the score difference, who starts the second half, and the game day winning percentages of both teams. After exploring the data, I discarded the years 2002 to 2005. Then, I trained a model using the 2006 to 2011 data and did some quick model selection. Note that I&amp;#8217;m not doing the adjustment by opponent the way Burke did it (&lt;span class=&#34;showtooltip&#34; title=&#34;(2009). Advanced NFL Stats: How the Model Works-A Detailed  Example Part 2.   http://www.advancednflstats.com/2009/01/how-model-works-detailed-example-part-2.html  [Online. last-accessed: 2013-03-24 00:08:23].   http://www.advancednflstats.com/2009/01/how-model-works-detailed-example-part-2.html.&#34;&gt;&lt;a href=&#34;http://www.advancednflstats.com/2009/01/how-model-works-detailed-example-part-2.html&#34;&gt;Burke, 2009-2&lt;/a&gt;&lt;/span&gt;) in part because I was running out of time, but also because the model already uses the current game winning percentages of both teams to consider the two team&amp;#8217;s strength. I evaluated the model using the 2012 data and after seeing that it worked decently enough, I trained a second model using the data from 2006 to 2012 so it can be used for the 2013 season. These two trained models are the ones available in the shiny app I made.&lt;/p&gt;
 &lt;p&gt;In the report, I didn&amp;#8217;t include ROCs—a big miss—so here they go. The code I will show below is heavily based on a post on GLMs (&lt;span class=&#34;showtooltip&#34; title=&#34;denishaine (2013). Veterinary Epidemiologic Research: GLM  \ Evaluating Logistic Regression Models (part 3).   http://denishaine.wordpress.com/2013/03/19/veterinary-epidemiologic-research-glm-evaluating-logistic-regression-models-part-3/  [Online. last-accessed: 2013-03-23 22:51:49].   http://denishaine.wordpress.com/2013/03/19/veterinary-epidemiologic-research-glm-evaluating-logistic-regression-models-part-3/.&#34;&gt;&lt;a href=&#34;http://denishaine.wordpress.com/2013/03/19/veterinary-epidemiologic-research-glm-evaluating-logistic-regression-models-part-3/&#34;&gt;denishaine, 2013&lt;/a&gt;&lt;/span&gt;). The code below is written in a way that you can easily reproduce it if you have cloned my repository for the 140.753 class (&lt;span class=&#34;showtooltip&#34; title=&#34;lcolladotor (2013). lcollado753.   https://github.com/lcolladotor/lcollado753 [Online.  last-accessed: 2013-03-21 02:23:49].   https://github.com/lcolladotor/lcollado753/tree/master/final/nfl_half.&#34;&gt;&lt;a href=&#34;https://github.com/lcolladotor/lcollado753/tree/master/final/nfl_half&#34;&gt;lcollado753&lt;/a&gt;&lt;/span&gt;).&lt;/p&gt;
 &lt;p&gt;First, some setup steps.&lt;/p&gt;
-
 &lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;## Specify the directory where you cloned the lcollado753 repo
 maindir &amp;lt;- &amp;quot;whereYouClonedTheRepo&amp;quot;
 ## Load packages needed
@@ -228,9 +228,7 @@ library(ggplot2)
 ## and the 2nd one used data from 2006 to 2012.
 load(paste0(maindir, &amp;quot;/lcollado753/final/nfl_half/EDA/model/fits.Rdata&amp;quot;))
 &lt;/code&gt;&lt;/pre&gt;
-
 &lt;p&gt;Next, I make the ROCs for both trained models using the data that they were trained on. They should be quite good since it uses the same data to build the model that it will then try to predict.&lt;/p&gt;
-
 &lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;## Make the ROC plots
 
 ## Simple list where I&#39;ll store all the results so I can compare the ROC plots later on
@@ -263,19 +261,15 @@ for(i in 1:2) {
 	print(unlist(performance(pred.fn, &amp;quot;auc&amp;quot;)@y.values))
 }
 &lt;/code&gt;&lt;/pre&gt;
-
 &lt;p&gt;&lt;img alt=&#34;plot of chunk ROC&#34; src=&#34;http://i.imgur.com/b1FS2ml.png&#34;/&gt;&lt;/p&gt;
 ```r
 ## [1] 0.8506
 ```
 &lt;p&gt;&lt;img alt=&#34;plot of chunk ROC&#34; src=&#34;http://i.imgur.com/f2UOySy.png&#34;/&gt;&lt;/p&gt;
-
 &lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;## [1] 0.8513
 &lt;/code&gt;&lt;/pre&gt;
-
 &lt;p&gt;Both ROC plots look pretty similar (well, the data sets are very similar!) and have relatively high AUC values.&lt;/p&gt;
 &lt;p&gt;Next, I make the ROC plot using the model trained with the data from 2006 to 2011 to predict the outcomes for the 2012 games.&lt;/p&gt;
-
 &lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;## Load 2012 data
 load(paste0(maindir, &amp;quot;/lcollado753/final/nfl_half/data/pred/info2012.Rdata&amp;quot;))
 
@@ -295,17 +289,13 @@ all &amp;lt;- c(all, list(toPlot))
 ## Make the plot
 ggplot(toPlot) + geom_line(aes(x=fpr, y=tpr)) + geom_abline(intercept=0, slope=1, colour=&amp;quot;orange&amp;quot;) + ylab(&amp;quot;Sensitivity&amp;quot;) + xlab(&amp;quot;1 - Specificity&amp;quot;) + ggtitle(&amp;quot;Model trained 2006-2011 predicting 2012&amp;quot;)
 &lt;/code&gt;&lt;/pre&gt;
-
 &lt;p&gt;&lt;img alt=&#34;plot of chunk pred2012&#34; src=&#34;http://i.imgur.com/DDcsW7W.png&#34;/&gt;&lt;/p&gt;
-
 &lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;## Print the AUC value
 print(unlist(performance(pred.fn, &amp;quot;auc&amp;quot;)@y.values))
 ## [1] 0.816
 &lt;/code&gt;&lt;/pre&gt;
-
 &lt;p&gt;The steps in the curve are more visible since it is using less data. It also seems to be a little less good than the other two, as expected. This is clear when comparing the AUC values.&lt;/p&gt;
 &lt;p&gt;Finally, I plot all curves in the same picture to visually compare them.&lt;/p&gt;
-
 &lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;names(all) &amp;lt;- c(&amp;quot;train2011&amp;quot;, &amp;quot;train2012&amp;quot;, &amp;quot;pred2012&amp;quot;)
 for(i in 1:3) {
 	all[[i]] &amp;lt;- cbind(all[[i]], rep(names(all)[i], nrow(all[[i]])))
@@ -315,8 +305,7 @@ all &amp;lt;- do.call(rbind, all)
 
 ggplot(all) + geom_line(aes(x=fpr, y=tpr, colour=set)) + geom_abline(intercept=0, slope=1, colour=&amp;quot;orange&amp;quot;) + ylab(&amp;quot;Sensitivity&amp;quot;) + xlab(&amp;quot;1 - Specificity&amp;quot;) + ggtitle(&amp;quot;Comparing ROCs&amp;quot;)
 &lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;p&gt;&lt;img alt=&#34;plot of chunk allInOne&#34; src=&#34;http://i.imgur.com/tUVfgfs.png&#34;/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;plot of chunk allInOne&#34; src=&#34;http://i.imgur.com/tUVfgfs.png&#34;/&gt;&lt;/p&gt;
 &lt;p&gt;Both ROCs with the trained data (train2011, train2012) are nearly identical and both are slightly superior to the one predicting the 2012 games.&lt;/p&gt;
 &lt;p&gt;Overall I am happy with the results and while some things can certainly be improved, I look forward to the NFL 2013 season. Also, remember that Burke publishes his winning estimated probabilities from week 4 onward (&lt;span class=&#34;showtooltip&#34; title=&#34;BURKE BB (2013). Brian Burke - The Fifth Down Blog -  NYTimes.com.   http://fifthdown.blogs.nytimes.com/author/brian-burke/ [Online.  last-accessed: 2013-03-24 00:26:32].   http://fifthdown.blogs.nytimes.com/author/brian-burke/.&#34;&gt;&lt;a href=&#34;http://fifthdown.blogs.nytimes.com/author/brian-burke/&#34;&gt;The Fifth Down Blog&lt;/a&gt;&lt;/span&gt;). So you might be interested on comparing the probability at half time versus his estimated probability which is calculated before the game starts. I mean, maybe you could use the difference between the two to have an idea of how unexpected the first half was. After all, if a game falls outside the pattern it might be worth watching.&lt;/p&gt;
 &lt;p&gt;Citations made with &lt;code&gt;knitcitations&lt;/code&gt; (&lt;span class=&#34;showtooltip&#34; title=&#34;Boettiger C (2013). _knitcitations: Citations for knitr markdown  files_. R package version 0.4-4,   https://github.com/cboettig/knitcitations.&#34;&gt;&lt;a href=&#34;https://github.com/cboettig/knitcitations&#34;&gt;Boettiger, 2013&lt;/a&gt;&lt;/span&gt;).&lt;/p&gt;
@@ -329,7 +318,7 @@ ggplot(all) + geom_line(aes(x=fpr, y=tpr, colour=set)) + geom_abline(intercept=0
 &lt;li&gt;By BURKE, Brian Burke - The Fifth Down Blog - NYTimes.com. &lt;em&gt;The Fifth Down Â» Brian Burke&lt;/em&gt; &lt;a href=&#34;http://fifthdown.blogs.nytimes.com/author/brian-burke/&#34;&gt;&lt;a href=&#34;http://fifthdown.blogs.nytimes.com/author/brian-burke/&#34;&gt;http://fifthdown.blogs.nytimes.com/author/brian-burke/&lt;/a&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Carl Boettiger, knitcitations: Citations for knitr markdown files. &lt;a href=&#34;https://github.com/cboettig/knitcitations&#34;&gt;&lt;a href=&#34;https://github.com/cboettig/knitcitations&#34;&gt;https://github.com/cboettig/knitcitations&lt;/a&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;RStudio , Inc. , (2013) shiny: Web Application Framework for R. &lt;a href=&#34;http://CRAN.R-project.org/package=shiny&#34;&gt;&lt;a href=&#34;http://CRAN.R-project.org/package=shiny&#34;&gt;http://CRAN.R-project.org/package=shiny&lt;/a&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/p&gt;
+&lt;/ul&gt;
 </description>
     </item>
     

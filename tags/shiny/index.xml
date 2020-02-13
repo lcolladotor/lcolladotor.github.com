@@ -1,61 +1,50 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>shiny on L. Collado-Torres</title>
+    <title>shiny | L. Collado-Torres</title>
     <link>/tags/shiny/</link>
-    <description>Recent content in shiny on L. Collado-Torres</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>&amp;copy; 2011-{year} Leonardo Collado Torres under (CC) BY-NC-SA 4.0. All thoughts and opinions here are my own. Icon is the [R logo](https://www.r-project.org/logo/) modified</copyright>
-    <lastBuildDate>Fri, 20 Jan 2017 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://lcolladotor.github.io/tags/shiny/" rel="self" type="application/rss+xml" />
+      <atom:link href=http://lcolladotor.github.io/tags/shiny/index.xml rel="self" type="application/rss+xml" />
+    <description>shiny</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2011-2020 Leonardo Collado Torres under (CC) BY-NC-SA 4.0. All thoughts and opinions here are my own. Icon is the [R logo](https://www.r-project.org/logo/) modified</copyright><lastBuildDate>Fri, 20 Jan 2017 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
+      <title>shiny</title>
+      <link>/tags/shiny/</link>
+    </image>
     
     <item>
       <title>Easily explore a table with shinycsv</title>
       <link>/2017/01/20/easily-explore-a-table-with-shinycsv/</link>
       <pubDate>Fri, 20 Jan 2017 00:00:00 +0000</pubDate>
-      
       <guid>/2017/01/20/easily-explore-a-table-with-shinycsv/</guid>
-      <description>
-
-&lt;p&gt;Have you ever had to explore a table with data? I believe the answer is &lt;em&gt;yes&lt;/em&gt; for most people that work at a computer or even just use it for communicating with their friends and family. Tables of data pop up everywhere, for example in personal finance. Websites like &lt;a href=&#34;https://www.mint.com/&#34; target=&#34;_blank&#34;&gt;Mint.com&lt;/a&gt; allow you to download your transactions in a &lt;a href=&#34;https://en.wikipedia.org/wiki/Comma-separated_values&#34; target=&#34;_blank&#34;&gt;CSV&lt;/a&gt; file called &lt;code&gt;transactions.csv&lt;/code&gt;. CSV is one of the many formats for storing tables and most likely when you try to open the &lt;code&gt;transactions.csv&lt;/code&gt; file, it will open with Excel. Now, can you make a quick figure of one of your columns in your table?&lt;/p&gt;
-
+      <description>&lt;p&gt;Have you ever had to explore a table with data? I believe the answer is &lt;em&gt;yes&lt;/em&gt; for most people that work at a computer or even just use it for communicating with their friends and family. Tables of data pop up everywhere, for example in personal finance. Websites like 
+&lt;a href=&#34;https://www.mint.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Mint.com&lt;/a&gt; allow you to download your transactions in a 
+&lt;a href=&#34;https://en.wikipedia.org/wiki/Comma-separated_values&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CSV&lt;/a&gt; file called &lt;code&gt;transactions.csv&lt;/code&gt;. CSV is one of the many formats for storing tables and most likely when you try to open the &lt;code&gt;transactions.csv&lt;/code&gt; file, it will open with Excel. Now, can you make a quick figure of one of your columns in your table?&lt;/p&gt;
 &lt;p&gt;Some will answer yes, others no. The basic issue is that it&amp;rsquo;s not &lt;em&gt;super&lt;/em&gt; easy to explore your data in Excel or similar programs. Wait, shouldn&amp;rsquo;t it be easy? 😕&lt;/p&gt;
-
 &lt;p&gt;What if you want to subset your data and want to re-make the plot? How about getting some simple statistics like the mean or frequency of some categories for a given variable? 😨 These are some of the immediate tasks that are helpful when exploring data. Visually, making figures with two variables is also very common.&lt;/p&gt;
-
 &lt;p&gt;Programmers and experts in Excel, Stata, &lt;code&gt;R&lt;/code&gt; among other options can perform these data explorations. It might take them a little bit of time to write the code or remember it or use the user interface menu of their program of choice. But what about everyone else?&lt;/p&gt;
-
-&lt;p&gt;At the &lt;a href=&#34;http://www.libd.org/&#34; target=&#34;_blank&#34;&gt;Lieber Institute for Brain Development&lt;/a&gt; where I work, it&amp;rsquo;s common for us to exchange data in tables, and thus explore data. That&amp;rsquo;s why we created &lt;code&gt;shinycsv&lt;/code&gt; &lt;a id=&#39;cite-shinycsv&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://github.com/LieberInstitute/shinycsv&#39;&gt;Collado-Torres, Semick, and Jaffe, 2016&lt;/a&gt;). It&amp;rsquo;s an R package &lt;a id=&#39;cite-cran&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://www.R-project.org/&#39;&gt;R Core Team, 2016&lt;/a&gt;) that contains a &lt;code&gt;shiny&lt;/code&gt; &lt;a id=&#39;cite-shiny&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://CRAN.R-project.org/package=shiny&#39;&gt;Chang, Cheng, Allaire, Xie, et al., 2017&lt;/a&gt;) application that allows users to interactively explore a table.&lt;/p&gt;
-
-&lt;p&gt;Installing &lt;code&gt;R&lt;/code&gt; is a pretty high bar, that&amp;rsquo;s why we are hosting this application at &lt;a href=&#34;https://jhubiostatistics.shinyapps.io/shinycsv/&#34; target=&#34;_blank&#34;&gt;https://jhubiostatistics.shinyapps.io/shinycsv/&lt;/a&gt;. Try it out!&lt;/p&gt;
-
-&lt;p&gt;&lt;center&gt;
+&lt;p&gt;At the 
+&lt;a href=&#34;http://www.libd.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Lieber Institute for Brain Development&lt;/a&gt; where I work, it&amp;rsquo;s common for us to exchange data in tables, and thus explore data. That&amp;rsquo;s why we created &lt;code&gt;shinycsv&lt;/code&gt; &lt;a id=&#39;cite-shinycsv&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://github.com/LieberInstitute/shinycsv&#39;&gt;Collado-Torres, Semick, and Jaffe, 2016&lt;/a&gt;). It&amp;rsquo;s an R package &lt;a id=&#39;cite-cran&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://www.R-project.org/&#39;&gt;R Core Team, 2016&lt;/a&gt;) that contains a &lt;code&gt;shiny&lt;/code&gt; &lt;a id=&#39;cite-shiny&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://CRAN.R-project.org/package=shiny&#39;&gt;Chang, Cheng, Allaire, Xie, et al., 2017&lt;/a&gt;) application that allows users to interactively explore a table.&lt;/p&gt;
+&lt;p&gt;Installing &lt;code&gt;R&lt;/code&gt; is a pretty high bar, that&amp;rsquo;s why we are hosting this application at &lt;a href=&#34;https://jhubiostatistics.shinyapps.io/shinycsv/&#34;&gt;https://jhubiostatistics.shinyapps.io/shinycsv/&lt;/a&gt;. Try it out!&lt;/p&gt;
+&lt;center&gt;
 &lt;a href=&#34;https://jhubiostatistics.shinyapps.io/shinycsv/&#34;&gt;&lt;img alt = &#39;shinycsv landing&#39; width=&#39;600&#39; src=&#39;http://lcolladotor.github.io/figs/2017-01-20-shinycsv/landing.png&#39; /&gt;&lt;/a&gt;
-&lt;/center&gt;&lt;/p&gt;
-
+&lt;/center&gt;
 &lt;h2 id=&#34;shinycsv-application&#34;&gt;shinycsv application&lt;/h2&gt;
-
 &lt;p&gt;The application includes data about cars to demonstrate what it can do. It&amp;rsquo;s a small data set that is commonly used for demonstration purposes. Anyhow, in the application you&amp;rsquo;ll notice a few tabs.&lt;/p&gt;
-
-&lt;p&gt;The application shows the &lt;strong&gt;&lt;em&gt;raw data&lt;/em&gt;&lt;/strong&gt; in an interactive table that allows you to subset the observations by some criteria, search in the table, and sort in different ways. The &lt;strong&gt;&lt;em&gt;raw summary&lt;/em&gt;&lt;/strong&gt; tab shows quick statistical summaries which depend on the variable type (numerical, categorical, etc). If you interacted with the table in &lt;em&gt;raw data&lt;/em&gt; then the summaries at &lt;em&gt;raw summary&lt;/em&gt; will be based on the subset you selected.&lt;/p&gt;
-
-&lt;p&gt;The &lt;strong&gt;&lt;em&gt;one variable&lt;/em&gt;&lt;/strong&gt; and &lt;strong&gt;&lt;em&gt;two variables&lt;/em&gt;&lt;/strong&gt; tabs are for making figures based on one or two variables at a time. The code in &lt;code&gt;shinycsv&lt;/code&gt; tries to guess what&amp;rsquo;s the best figure for a given type of variable and in case that you are interested in learning R, it also shows the exact code you can use to reproduce the figure in your computer. We added this feature to excite users about learning R. And it&amp;rsquo;s useful for advanced users too that might want to customize the resulting figures. Hm&amp;hellip;, you don&amp;rsquo;t like the colors we chose for the figure? Well go to &lt;strong&gt;&lt;em&gt;plot colors&lt;/em&gt;&lt;/strong&gt;, choose another color, and come back to see your new figure with the color of your choosing. 😄&lt;/p&gt;
-
+&lt;p&gt;The application shows the &lt;em&gt;&lt;strong&gt;raw data&lt;/strong&gt;&lt;/em&gt; in an interactive table that allows you to subset the observations by some criteria, search in the table, and sort in different ways. The &lt;em&gt;&lt;strong&gt;raw summary&lt;/strong&gt;&lt;/em&gt; tab shows quick statistical summaries which depend on the variable type (numerical, categorical, etc). If you interacted with the table in &lt;em&gt;raw data&lt;/em&gt; then the summaries at &lt;em&gt;raw summary&lt;/em&gt; will be based on the subset you selected.&lt;/p&gt;
+&lt;p&gt;The &lt;em&gt;&lt;strong&gt;one variable&lt;/strong&gt;&lt;/em&gt; and &lt;em&gt;&lt;strong&gt;two variables&lt;/strong&gt;&lt;/em&gt; tabs are for making figures based on one or two variables at a time. The code in &lt;code&gt;shinycsv&lt;/code&gt; tries to guess what&amp;rsquo;s the best figure for a given type of variable and in case that you are interested in learning R, it also shows the exact code you can use to reproduce the figure in your computer. We added this feature to excite users about learning R. And it&amp;rsquo;s useful for advanced users too that might want to customize the resulting figures. Hm&amp;hellip;, you don&amp;rsquo;t like the colors we chose for the figure? Well go to &lt;em&gt;&lt;strong&gt;plot colors&lt;/strong&gt;&lt;/em&gt;, choose another color, and come back to see your new figure with the color of your choosing. 😄&lt;/p&gt;
 &lt;p&gt;Hm&amp;hellip; but what if you don&amp;rsquo;t have a CSV file? Well, &lt;code&gt;shinycsv&lt;/code&gt; can handle many different tables thanks to &lt;code&gt;rio&lt;/code&gt; &lt;a id=&#39;cite-rio&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;#bib-rio&#39;&gt;Chan, Chan, Leeper, and Becker, 2016&lt;/a&gt;). Even Excel sheets! 😉&lt;/p&gt;
-
-&lt;p&gt;So, go ahead and test it out! We&amp;rsquo;ll be glad to hear your feedback at &lt;a href=&#34;https://github.com/LieberInstitute/shinycsv/issues&#34; target=&#34;_blank&#34;&gt;LieberInstitute/shinycsv&lt;/a&gt;.&lt;/p&gt;
-
+&lt;p&gt;So, go ahead and test it out! We&amp;rsquo;ll be glad to hear your feedback at 
+&lt;a href=&#34;https://github.com/LieberInstitute/shinycsv/issues&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;LieberInstitute/shinycsv&lt;/a&gt;.&lt;/p&gt;
 &lt;h3 id=&#34;notes&#34;&gt;Notes&lt;/h3&gt;
-
 &lt;ul&gt;
 &lt;li&gt;Note that when I referred to tables earlier, I referred to square tables with different variables (age, height, weight, etc) as columns as observations as rows. That is, Excel files with a single sheet with no comments or figures inside the Excel file.&lt;/li&gt;
-&lt;li&gt;Are you interested in learning more about &lt;code&gt;R&lt;/code&gt; and &lt;code&gt;shiny&lt;/code&gt;? Maybe you&amp;rsquo;ll want to take a look at the &lt;a href=&#34;https://jhubiostatistics.shinyapps.io/shinycsv-showcase/&#34; target=&#34;_blank&#34;&gt;showcase mode version of the application&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Are you interested in learning more about &lt;code&gt;R&lt;/code&gt; and &lt;code&gt;shiny&lt;/code&gt;? Maybe you&amp;rsquo;ll want to take a look at the 
+&lt;a href=&#34;https://jhubiostatistics.shinyapps.io/shinycsv-showcase/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;showcase mode version of the application&lt;/a&gt;.&lt;/li&gt;
 &lt;li&gt;If you use &lt;code&gt;shinycsv::explore()&lt;/code&gt; locally, the file size limit is increased to 500 MB. Although at that point you might want to consider using &lt;code&gt;R&lt;/code&gt; or another programming language.&lt;/li&gt;
 &lt;li&gt;What about casting variables? If you want to have fine control about casting the variables, save your data in a RData file. Sure, this requires an R user.&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;h3 id=&#34;reproducibility&#34;&gt;Reproducibility&lt;/h3&gt;
-
 &lt;pre&gt;&lt;code&gt;## Reproducibility info
 library(&#39;devtools&#39;)
 options(width = 120)
@@ -97,48 +86,42 @@ session_info()
 ##  withr           1.0.2    2016-06-20 CRAN (R 3.4.0)
 ##  XML             3.98-1.5 2016-11-10 CRAN (R 3.4.0)
 &lt;/code&gt;&lt;/pre&gt;
-
 &lt;h3 id=&#34;references&#34;&gt;References&lt;/h3&gt;
-
 &lt;p&gt;Citations made with &lt;code&gt;knitcitations&lt;/code&gt; &lt;a id=&#39;cite-knitcitations&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://CRAN.R-project.org/package=knitcitations&#39;&gt;Boettiger, 2015&lt;/a&gt;).&lt;/p&gt;
-
 &lt;p&gt;&lt;a id=&#39;bib-knitcitations&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-knitcitations&#34;&gt;[1]&lt;/a&gt;&lt;cite&gt;
 C. Boettiger.
 &lt;em&gt;knitcitations: Citations for &#39;Knitr&#39; Markdown Files&lt;/em&gt;.
 R package version 1.0.7.
 2015.
 URL: &lt;a href=&#34;https://CRAN.R-project.org/package=knitcitations&#34;&gt;https://CRAN.R-project.org/package=knitcitations&lt;/a&gt;.&lt;/cite&gt;&lt;/p&gt;
-
 &lt;p&gt;&lt;a id=&#39;bib-rio&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-rio&#34;&gt;[2]&lt;/a&gt;&lt;cite&gt;
 C. Chan, G. C. Chan, T. J. Leeper and J. Becker.
 &lt;em&gt;rio: A Swiss-army knife for data file I/O&lt;/em&gt;.
 R package version 0.4.16.
 2016.&lt;/cite&gt;&lt;/p&gt;
-
 &lt;p&gt;&lt;a id=&#39;bib-shiny&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-shiny&#34;&gt;[3]&lt;/a&gt;&lt;cite&gt;
 W. Chang, J. Cheng, J. Allaire, Y. Xie, et al.
 &lt;em&gt;shiny: Web Application Framework for R&lt;/em&gt;.
 R package version 1.0.0.
 2017.
 URL: &lt;a href=&#34;https://CRAN.R-project.org/package=shiny&#34;&gt;https://CRAN.R-project.org/package=shiny&lt;/a&gt;.&lt;/cite&gt;&lt;/p&gt;
-
 &lt;p&gt;&lt;a id=&#39;bib-shinycsv&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-shinycsv&#34;&gt;[4]&lt;/a&gt;&lt;cite&gt;
 L. Collado-Torres, S. Semick and A. E. Jaffe.
 &lt;em&gt;shinycsv: Explore a table interactively in a shiny application&lt;/em&gt;.
 R package version 0.99.7.
 2016.
 URL: &lt;a href=&#34;https://github.com/LieberInstitute/shinycsv&#34;&gt;https://github.com/LieberInstitute/shinycsv&lt;/a&gt;.&lt;/cite&gt;&lt;/p&gt;
-
 &lt;p&gt;&lt;a id=&#39;bib-cran&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-cran&#34;&gt;[5]&lt;/a&gt;&lt;cite&gt;
 R Core Team.
 &lt;em&gt;R: A Language and Environment for Statistical Computing&lt;/em&gt;.
 R Foundation for Statistical Computing.
 Vienna, Austria, 2016.
 URL: &lt;a href=&#34;https://www.R-project.org/&#34;&gt;https://www.R-project.org/&lt;/a&gt;.&lt;/cite&gt;&lt;/p&gt;
-
 &lt;h3 id=&#34;want-more&#34;&gt;Want more?&lt;/h3&gt;
-
-&lt;p&gt;Check other &lt;a href=&#34;https://twitter.com/jhubiostat&#34; target=&#34;_blank&#34;&gt;@jhubiostat&lt;/a&gt; student blogs at &lt;a href=&#34;http://bmorebiostat.com/&#34; target=&#34;_blank&#34;&gt;Bmore Biostats&lt;/a&gt; as well as topics on &lt;a href=&#34;https://twitter.com/search?q=%23rstats&#34; target=&#34;_blank&#34;&gt;#rstats&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Check other 
+&lt;a href=&#34;https://twitter.com/jhubiostat&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;@jhubiostat&lt;/a&gt; student blogs at 
+&lt;a href=&#34;http://bmorebiostat.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Bmore Biostats&lt;/a&gt; as well as topics on 
+&lt;a href=&#34;https://twitter.com/search?q=%23rstats&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;#rstats&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     
@@ -146,18 +129,11 @@ URL: &lt;a href=&#34;https://www.R-project.org/&#34;&gt;https://www.R-project.or
       <title>Finding possible class schedules</title>
       <link>/2016/08/02/materias/</link>
       <pubDate>Tue, 02 Aug 2016 00:00:00 +0000</pubDate>
-      
       <guid>/2016/08/02/materias/</guid>
-      <description>
-
-&lt;p&gt;Over the weekend my brother wanted to figure out his class schedule for the next semester. He is a veterinary medicine and zootechnology student at UNAM. For this upcoming semester there is a set of classes he has to take and each has 8 or so instructor options. The website where he finds the class times lists about 8 pre-constructed class schedules. So he normally finds one he likes quite a bit, and then manually starts checking if he can change X instructor for Y for a given class. He does this based on the referalls and information he has gathered about the instructors, plus he factors in whether it&amp;rsquo;d be an overall better schedule. For example, he might prefer to have a packed Tuesday if that means that he can leave early on Friday and avoid classes on Saturday.&lt;/p&gt;
-
+      <description>&lt;p&gt;Over the weekend my brother wanted to figure out his class schedule for the next semester. He is a veterinary medicine and zootechnology student at UNAM. For this upcoming semester there is a set of classes he has to take and each has 8 or so instructor options. The website where he finds the class times lists about 8 pre-constructed class schedules. So he normally finds one he likes quite a bit, and then manually starts checking if he can change X instructor for Y for a given class. He does this based on the referalls and information he has gathered about the instructors, plus he factors in whether it&amp;rsquo;d be an overall better schedule. For example, he might prefer to have a packed Tuesday if that means that he can leave early on Friday and avoid classes on Saturday.&lt;/p&gt;
 &lt;p&gt;The problem is that it&amp;rsquo;s very easy to make a mistake. You (well he) gets all excited thinking that he&amp;rsquo;s found the perfect schedule. Only to then realize that there is a conflict between two classes. Or that the practical portion of a class is in a location one hour away from the university, meaning that the schedule he has selected won&amp;rsquo;t work. This process is very frustrating.&lt;/p&gt;
-
 &lt;p&gt;I was watching him and I started to think if I could help him with some code. Turns out that it was straightforward to write some code to find which options are valid. Once I wrote a test case, it took us like half an hour to fill out the data. I know that tomorrow is when he and his classmates start registering for classes, so this information might help his classmates.&lt;/p&gt;
-
 &lt;p&gt;First, I define some helper functions. These are rather straightforward but I&amp;rsquo;ll be using them later on. For example, &lt;code&gt;dias()&lt;/code&gt; is just there for typing less.&lt;/p&gt;
-
 &lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;## Helper functions
 dias &amp;lt;- function(d, i) {
     paste0(d, i)
@@ -171,9 +147,7 @@ extract_names &amp;lt;- function(m, p) {
     names(m)[p]
 }
 &lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Next comes the input information. I organized it in a set of nested &lt;code&gt;list&lt;/code&gt; objects. The schedule is stored as a character vector. For example, Lucia Eliana&amp;rsquo;s class meets on Wednesdays (&lt;strong&gt;M&lt;/strong&gt;iercoles in Spanish) from 9 to 11 am. I only keep the starting hours (9 and 10 am) because otherwise the code won&amp;rsquo;t detect valid opitons that include another class that starts at 11 am. For classes that are 1 hour away from the university, we included 1 hour before and 1 hour after the class.&lt;/p&gt;
-
+&lt;p&gt;Next comes the input information. I organized it in a set of nested &lt;code&gt;list&lt;/code&gt; objects. The schedule is stored as a character vector. For example, Lucia Eliana&amp;rsquo;s class meets on Wednesdays (__M__iercoles in Spanish) from 9 to 11 am. I only keep the starting hours (9 and 10 am) because otherwise the code won&amp;rsquo;t detect valid opitons that include another class that starts at 11 am. For classes that are 1 hour away from the university, we included 1 hour before and 1 hour after the class.&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;## Input class/prof info and schedule
 materias &amp;lt;- list(
     repro = list(
@@ -237,40 +211,30 @@ materias &amp;lt;- list(
     )
 )
 &lt;/code&gt;&lt;/pre&gt;
-
 &lt;p&gt;Now that the input information is complete, I use &lt;code&gt;expand.grid()&lt;/code&gt; to find out all the different possible options.&lt;/p&gt;
-
 &lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;## Get all the options
 options &amp;lt;- expand.grid(lapply(materias, function(x) { seq_len(length(x))}))
 dim(options)
 &lt;/code&gt;&lt;/pre&gt;
-
 &lt;pre&gt;&lt;code&gt;## [1] 81000     5
 &lt;/code&gt;&lt;/pre&gt;
-
 &lt;p&gt;There&amp;rsquo;s 81,00 of them including the classes that meet on Saturday. You can see why it&amp;rsquo;s a frustrating process to find which combination of classes work when doing this manually.&lt;/p&gt;
-
 &lt;p&gt;Next, I explore all these options to find those that are valid, meaning that none of the classes overlap. I do this by finding which options have no duplicated hours from the character vectors defined earlier. Nothing fancy.&lt;/p&gt;
-
 &lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;valid &amp;lt;- apply(options, 1, function(input) {
     info &amp;lt;- mapply(extract, materias, input)
     !any(duplicated(unlist(info)))
 })
 &lt;/code&gt;&lt;/pre&gt;
-
 &lt;p&gt;Now that I have the valid options, I can find the names of the instructors for them. There&amp;rsquo;s 2,847 valid schedules in the end, out of the 81,000. That&amp;rsquo;s 3.5 percent!&lt;/p&gt;
-
 &lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;valid_prof &amp;lt;- apply(options[valid, ], 1, function(input) {
     mapply(extract_names, materias, input)
 })
 ncol(valid_prof)
 &lt;/code&gt;&lt;/pre&gt;
-
 &lt;pre&gt;&lt;code&gt;## [1] 2847
 &lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;You can search the interactive version &lt;a href=&#34;https://lcolladotor.shinyapps.io/materias/&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt; to select only the options with a given instructor. For example, in my brother&amp;rsquo;s case there are 30 valid options once he decided to prioritize two instructors as shown in the non-interactive table below.&lt;/p&gt;
-
+&lt;p&gt;You can search the interactive version 
+&lt;a href=&#34;https://lcolladotor.shinyapps.io/materias/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt; to select only the options with a given instructor. For example, in my brother&amp;rsquo;s case there are 30 valid options once he decided to prioritize two instructors as shown in the non-interactive table below.&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;## Ideally, this code would create an interactive table, but it doesn&#39;t work for some reason:
 #library(&#39;DT&#39;)
 #datatable(t(valid_prof), options = list(pagingType=&#39;full_numbers&#39;, pageLength=10), rownames = FALSE)
@@ -279,7 +243,6 @@ rownames(valid_prof) &amp;lt;- seq_len(nrow(valid_prof))
 top_options &amp;lt;- valid_prof[valid_prof[, 1] == &#39;lucia eliana&#39; &amp;amp; valid_prof[, 2] %in% c(&#39;isaac reyes&#39;, &#39;isaac reyes 2&#39;), ]
 kable(top_options, format = &#39;markdown&#39;, row.names = TRUE)
 &lt;/code&gt;&lt;/pre&gt;
-
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -291,7 +254,6 @@ kable(top_options, format = &#39;markdown&#39;, row.names = TRUE)
 &lt;th align=&#34;left&#34;&gt;diagnosticas&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
-
 &lt;tbody&gt;
 &lt;tr&gt;
 &lt;td align=&#34;left&#34;&gt;5&lt;/td&gt;
@@ -301,7 +263,6 @@ kable(top_options, format = &#39;markdown&#39;, row.names = TRUE)
 &lt;td align=&#34;left&#34;&gt;cintli martinez&lt;/td&gt;
 &lt;td align=&#34;left&#34;&gt;1701&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td align=&#34;left&#34;&gt;11&lt;/td&gt;
 &lt;td align=&#34;left&#34;&gt;lucia eliana&lt;/td&gt;
@@ -310,7 +271,6 @@ kable(top_options, format = &#39;markdown&#39;, row.names = TRUE)
 &lt;td align=&#34;left&#34;&gt;cintli martinez&lt;/td&gt;
 &lt;td align=&#34;left&#34;&gt;1701&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td align=&#34;left&#34;&gt;14&lt;/td&gt;
 &lt;td align=&#34;left&#34;&gt;lucia eliana&lt;/td&gt;
@@ -319,7 +279,6 @@ kable(top_options, format = &#39;markdown&#39;, row.names = TRUE)
 &lt;td align=&#34;left&#34;&gt;cintli martinez&lt;/td&gt;
 &lt;td align=&#34;left&#34;&gt;1701&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td align=&#34;left&#34;&gt;19&lt;/td&gt;
 &lt;td align=&#34;left&#34;&gt;lucia eliana&lt;/td&gt;
@@ -328,7 +287,6 @@ kable(top_options, format = &#39;markdown&#39;, row.names = TRUE)
 &lt;td align=&#34;left&#34;&gt;cintli martinez&lt;/td&gt;
 &lt;td align=&#34;left&#34;&gt;1701&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td align=&#34;left&#34;&gt;25&lt;/td&gt;
 &lt;td align=&#34;left&#34;&gt;lucia eliana&lt;/td&gt;
@@ -337,7 +295,6 @@ kable(top_options, format = &#39;markdown&#39;, row.names = TRUE)
 &lt;td align=&#34;left&#34;&gt;cintli martinez&lt;/td&gt;
 &lt;td align=&#34;left&#34;&gt;1701&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td align=&#34;left&#34;&gt;31&lt;/td&gt;
 &lt;td align=&#34;left&#34;&gt;lucia eliana&lt;/td&gt;
@@ -346,7 +303,6 @@ kable(top_options, format = &#39;markdown&#39;, row.names = TRUE)
 &lt;td align=&#34;left&#34;&gt;cintli martinez&lt;/td&gt;
 &lt;td align=&#34;left&#34;&gt;1701&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td align=&#34;left&#34;&gt;37&lt;/td&gt;
 &lt;td align=&#34;left&#34;&gt;lucia eliana&lt;/td&gt;
@@ -355,7 +311,6 @@ kable(top_options, format = &#39;markdown&#39;, row.names = TRUE)
 &lt;td align=&#34;left&#34;&gt;cintli martinez&lt;/td&gt;
 &lt;td align=&#34;left&#34;&gt;1701&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td align=&#34;left&#34;&gt;46&lt;/td&gt;
 &lt;td align=&#34;left&#34;&gt;lucia eliana&lt;/td&gt;
@@ -364,7 +319,6 @@ kable(top_options, format = &#39;markdown&#39;, row.names = TRUE)
 &lt;td align=&#34;left&#34;&gt;osvaldo froylan&lt;/td&gt;
 &lt;td align=&#34;left&#34;&gt;1701&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td align=&#34;left&#34;&gt;50&lt;/td&gt;
 &lt;td align=&#34;left&#34;&gt;lucia eliana&lt;/td&gt;
@@ -373,7 +327,6 @@ kable(top_options, format = &#39;markdown&#39;, row.names = TRUE)
 &lt;td align=&#34;left&#34;&gt;osvaldo froylan&lt;/td&gt;
 &lt;td align=&#34;left&#34;&gt;1701&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td align=&#34;left&#34;&gt;58&lt;/td&gt;
 &lt;td align=&#34;left&#34;&gt;lucia eliana&lt;/td&gt;
@@ -382,7 +335,6 @@ kable(top_options, format = &#39;markdown&#39;, row.names = TRUE)
 &lt;td align=&#34;left&#34;&gt;osvaldo froylan&lt;/td&gt;
 &lt;td align=&#34;left&#34;&gt;1701&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td align=&#34;left&#34;&gt;67&lt;/td&gt;
 &lt;td align=&#34;left&#34;&gt;lucia eliana&lt;/td&gt;
@@ -391,7 +343,6 @@ kable(top_options, format = &#39;markdown&#39;, row.names = TRUE)
 &lt;td align=&#34;left&#34;&gt;osvaldo froylan&lt;/td&gt;
 &lt;td align=&#34;left&#34;&gt;1701&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td align=&#34;left&#34;&gt;76&lt;/td&gt;
 &lt;td align=&#34;left&#34;&gt;lucia eliana&lt;/td&gt;
@@ -400,7 +351,6 @@ kable(top_options, format = &#39;markdown&#39;, row.names = TRUE)
 &lt;td align=&#34;left&#34;&gt;osvaldo froylan&lt;/td&gt;
 &lt;td align=&#34;left&#34;&gt;1701&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td align=&#34;left&#34;&gt;85&lt;/td&gt;
 &lt;td align=&#34;left&#34;&gt;lucia eliana&lt;/td&gt;
@@ -409,7 +359,6 @@ kable(top_options, format = &#39;markdown&#39;, row.names = TRUE)
 &lt;td align=&#34;left&#34;&gt;osvaldo froylan&lt;/td&gt;
 &lt;td align=&#34;left&#34;&gt;1701&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td align=&#34;left&#34;&gt;123&lt;/td&gt;
 &lt;td align=&#34;left&#34;&gt;lucia eliana&lt;/td&gt;
@@ -418,7 +367,6 @@ kable(top_options, format = &#39;markdown&#39;, row.names = TRUE)
 &lt;td align=&#34;left&#34;&gt;guadarrama 01&lt;/td&gt;
 &lt;td align=&#34;left&#34;&gt;1701&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td align=&#34;left&#34;&gt;130&lt;/td&gt;
 &lt;td align=&#34;left&#34;&gt;lucia eliana&lt;/td&gt;
@@ -427,7 +375,6 @@ kable(top_options, format = &#39;markdown&#39;, row.names = TRUE)
 &lt;td align=&#34;left&#34;&gt;guadarrama 01&lt;/td&gt;
 &lt;td align=&#34;left&#34;&gt;1701&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td align=&#34;left&#34;&gt;134&lt;/td&gt;
 &lt;td align=&#34;left&#34;&gt;lucia eliana&lt;/td&gt;
@@ -436,7 +383,6 @@ kable(top_options, format = &#39;markdown&#39;, row.names = TRUE)
 &lt;td align=&#34;left&#34;&gt;guadarrama 01&lt;/td&gt;
 &lt;td align=&#34;left&#34;&gt;1701&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td align=&#34;left&#34;&gt;137&lt;/td&gt;
 &lt;td align=&#34;left&#34;&gt;lucia eliana&lt;/td&gt;
@@ -445,7 +391,6 @@ kable(top_options, format = &#39;markdown&#39;, row.names = TRUE)
 &lt;td align=&#34;left&#34;&gt;guadarrama 01&lt;/td&gt;
 &lt;td align=&#34;left&#34;&gt;1701&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td align=&#34;left&#34;&gt;144&lt;/td&gt;
 &lt;td align=&#34;left&#34;&gt;lucia eliana&lt;/td&gt;
@@ -454,7 +399,6 @@ kable(top_options, format = &#39;markdown&#39;, row.names = TRUE)
 &lt;td align=&#34;left&#34;&gt;guadarrama 01&lt;/td&gt;
 &lt;td align=&#34;left&#34;&gt;1701&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td align=&#34;left&#34;&gt;151&lt;/td&gt;
 &lt;td align=&#34;left&#34;&gt;lucia eliana&lt;/td&gt;
@@ -463,7 +407,6 @@ kable(top_options, format = &#39;markdown&#39;, row.names = TRUE)
 &lt;td align=&#34;left&#34;&gt;guadarrama 01&lt;/td&gt;
 &lt;td align=&#34;left&#34;&gt;1701&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td align=&#34;left&#34;&gt;158&lt;/td&gt;
 &lt;td align=&#34;left&#34;&gt;lucia eliana&lt;/td&gt;
@@ -472,7 +415,6 @@ kable(top_options, format = &#39;markdown&#39;, row.names = TRUE)
 &lt;td align=&#34;left&#34;&gt;guadarrama 01&lt;/td&gt;
 &lt;td align=&#34;left&#34;&gt;1701&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td align=&#34;left&#34;&gt;209&lt;/td&gt;
 &lt;td align=&#34;left&#34;&gt;lucia eliana&lt;/td&gt;
@@ -481,7 +423,6 @@ kable(top_options, format = &#39;markdown&#39;, row.names = TRUE)
 &lt;td align=&#34;left&#34;&gt;guadarrama 05&lt;/td&gt;
 &lt;td align=&#34;left&#34;&gt;1701&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td align=&#34;left&#34;&gt;217&lt;/td&gt;
 &lt;td align=&#34;left&#34;&gt;lucia eliana&lt;/td&gt;
@@ -490,7 +431,6 @@ kable(top_options, format = &#39;markdown&#39;, row.names = TRUE)
 &lt;td align=&#34;left&#34;&gt;guadarrama 05&lt;/td&gt;
 &lt;td align=&#34;left&#34;&gt;1701&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td align=&#34;left&#34;&gt;222&lt;/td&gt;
 &lt;td align=&#34;left&#34;&gt;lucia eliana&lt;/td&gt;
@@ -499,7 +439,6 @@ kable(top_options, format = &#39;markdown&#39;, row.names = TRUE)
 &lt;td align=&#34;left&#34;&gt;guadarrama 05&lt;/td&gt;
 &lt;td align=&#34;left&#34;&gt;1701&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td align=&#34;left&#34;&gt;232&lt;/td&gt;
 &lt;td align=&#34;left&#34;&gt;lucia eliana&lt;/td&gt;
@@ -508,7 +447,6 @@ kable(top_options, format = &#39;markdown&#39;, row.names = TRUE)
 &lt;td align=&#34;left&#34;&gt;guadarrama 05&lt;/td&gt;
 &lt;td align=&#34;left&#34;&gt;1701&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td align=&#34;left&#34;&gt;242&lt;/td&gt;
 &lt;td align=&#34;left&#34;&gt;lucia eliana&lt;/td&gt;
@@ -517,7 +455,6 @@ kable(top_options, format = &#39;markdown&#39;, row.names = TRUE)
 &lt;td align=&#34;left&#34;&gt;guadarrama 05&lt;/td&gt;
 &lt;td align=&#34;left&#34;&gt;1701&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td align=&#34;left&#34;&gt;252&lt;/td&gt;
 &lt;td align=&#34;left&#34;&gt;lucia eliana&lt;/td&gt;
@@ -526,7 +463,6 @@ kable(top_options, format = &#39;markdown&#39;, row.names = TRUE)
 &lt;td align=&#34;left&#34;&gt;guadarrama 05&lt;/td&gt;
 &lt;td align=&#34;left&#34;&gt;1701&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td align=&#34;left&#34;&gt;872&lt;/td&gt;
 &lt;td align=&#34;left&#34;&gt;lucia eliana&lt;/td&gt;
@@ -535,7 +471,6 @@ kable(top_options, format = &#39;markdown&#39;, row.names = TRUE)
 &lt;td align=&#34;left&#34;&gt;guadarrama 05&lt;/td&gt;
 &lt;td align=&#34;left&#34;&gt;1704&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td align=&#34;left&#34;&gt;885&lt;/td&gt;
 &lt;td align=&#34;left&#34;&gt;lucia eliana&lt;/td&gt;
@@ -544,7 +479,6 @@ kable(top_options, format = &#39;markdown&#39;, row.names = TRUE)
 &lt;td align=&#34;left&#34;&gt;guadarrama 05&lt;/td&gt;
 &lt;td align=&#34;left&#34;&gt;1704&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td align=&#34;left&#34;&gt;894&lt;/td&gt;
 &lt;td align=&#34;left&#34;&gt;lucia eliana&lt;/td&gt;
@@ -553,7 +487,6 @@ kable(top_options, format = &#39;markdown&#39;, row.names = TRUE)
 &lt;td align=&#34;left&#34;&gt;guadarrama 05&lt;/td&gt;
 &lt;td align=&#34;left&#34;&gt;1704&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td align=&#34;left&#34;&gt;903&lt;/td&gt;
 &lt;td align=&#34;left&#34;&gt;lucia eliana&lt;/td&gt;
@@ -564,17 +497,13 @@ kable(top_options, format = &#39;markdown&#39;, row.names = TRUE)
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-
 &lt;h3 id=&#34;reproducibility&#34;&gt;Reproducibility&lt;/h3&gt;
-
 &lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;## Reproducibility info
 library(&#39;devtools&#39;)
 session_info()
 &lt;/code&gt;&lt;/pre&gt;
-
 &lt;pre&gt;&lt;code&gt;## Session info --------------------------------------------------------------
 &lt;/code&gt;&lt;/pre&gt;
-
 &lt;pre&gt;&lt;code&gt;##  setting  value                       
 ##  version  R version 3.3.0 (2016-05-03)
 ##  system   x86_64, mingw32             
@@ -584,10 +513,8 @@ session_info()
 ##  tz       America/Mexico_City         
 ##  date     2016-08-02
 &lt;/code&gt;&lt;/pre&gt;
-
 &lt;pre&gt;&lt;code&gt;## Packages ------------------------------------------------------------------
 &lt;/code&gt;&lt;/pre&gt;
-
 &lt;pre&gt;&lt;code&gt;##  package   * version date       source        
 ##  devtools  * 1.12.0  2016-06-24 CRAN (R 3.3.1)
 ##  digest      0.6.9   2016-01-08 CRAN (R 3.3.0)
@@ -602,10 +529,11 @@ session_info()
 ##  stringr     1.0.0   2015-04-30 CRAN (R 3.3.0)
 ##  withr       1.0.2   2016-06-20 CRAN (R 3.3.1)
 &lt;/code&gt;&lt;/pre&gt;
-
 &lt;h3 id=&#34;want-more&#34;&gt;Want more?&lt;/h3&gt;
-
-&lt;p&gt;Check other &lt;a href=&#34;https://twitter.com/jhubiostat&#34; target=&#34;_blank&#34;&gt;@jhubiostat&lt;/a&gt; student blogs at &lt;a href=&#34;http://bmorebiostat.com/&#34; target=&#34;_blank&#34;&gt;Bmore Biostats&lt;/a&gt; as well as topics on &lt;a href=&#34;https://twitter.com/search?q=%23rstats&#34; target=&#34;_blank&#34;&gt;#rstats&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Check other 
+&lt;a href=&#34;https://twitter.com/jhubiostat&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;@jhubiostat&lt;/a&gt; student blogs at 
+&lt;a href=&#34;http://bmorebiostat.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Bmore Biostats&lt;/a&gt; as well as topics on 
+&lt;a href=&#34;https://twitter.com/search?q=%23rstats&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;#rstats&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     
@@ -613,87 +541,92 @@ session_info()
       <title>Concerns that can deter potential orders for developing Shiny apps</title>
       <link>/2014/06/10/shiny-orders/</link>
       <pubDate>Tue, 10 Jun 2014 00:00:00 +0000</pubDate>
-      
       <guid>/2014/06/10/shiny-orders/</guid>
-      <description>
-
-&lt;p&gt;A few weeks ago I was invited to a meeting where a group was interested in exploring options for replacing their contract with a propriety software. They invited me because they saw some resemblances between a &lt;a href=&#34;http://shiny.rstudio.com/&#34; target=&#34;_blank&#34;&gt;Shiny&lt;/a&gt; application I made and the features they need. It is a relatively small project and it seemed feasible to implement, but well, some details could have been tricky to code. During the meeting I explained what &lt;a href=&#34;http://shiny.rstudio.com/&#34; target=&#34;_blank&#34;&gt;Shiny&lt;/a&gt; is, showcased some of the &lt;a href=&#34;http://shiny.rstudio.com/&#34; target=&#34;_blank&#34;&gt;Shiny&lt;/a&gt; apps I&amp;rsquo;ve made, and proposed some options including a simple site password.&lt;/p&gt;
-
+      <description>&lt;p&gt;A few weeks ago I was invited to a meeting where a group was interested in exploring options for replacing their contract with a propriety software. They invited me because they saw some resemblances between a 
+&lt;a href=&#34;http://shiny.rstudio.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Shiny&lt;/a&gt; application I made and the features they need. It is a relatively small project and it seemed feasible to implement, but well, some details could have been tricky to code. During the meeting I explained what 
+&lt;a href=&#34;http://shiny.rstudio.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Shiny&lt;/a&gt; is, showcased some of the 
+&lt;a href=&#34;http://shiny.rstudio.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Shiny&lt;/a&gt; apps I&amp;rsquo;ve made, and proposed some options including a simple site password.&lt;/p&gt;
 &lt;p&gt;A few days after the meeting, they raised three concerns.&lt;/p&gt;
-
 &lt;ol&gt;
 &lt;li&gt;Privacy and security of their data. Specially with distribution of the site password.&lt;/li&gt;
 &lt;li&gt;Technical support. They wanted something more than community support.&lt;/li&gt;
 &lt;li&gt;Continuity of the project. Specially since their team might lack the technical expertise to support and modify the Shiny app after it is built.&lt;/li&gt;
 &lt;/ol&gt;
-
-&lt;p&gt;These are all valid concerns and they are not something I have dealt with or been concerned with other &lt;a href=&#34;http://shiny.rstudio.com/&#34; target=&#34;_blank&#34;&gt;Shiny&lt;/a&gt; apps I have deployed. Thus, I ended up finding more information and writing up a long reply which I am modifying into a post format here. If you identify other ways to approach these concerns that I missed, share the knowledge please!&lt;/p&gt;
-
+&lt;p&gt;These are all valid concerns and they are not something I have dealt with or been concerned with other 
+&lt;a href=&#34;http://shiny.rstudio.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Shiny&lt;/a&gt; apps I have deployed. Thus, I ended up finding more information and writing up a long reply which I am modifying into a post format here. If you identify other ways to approach these concerns that I missed, share the knowledge please!&lt;/p&gt;
 &lt;h2 id=&#34;shiny-overview&#34;&gt;Shiny overview&lt;/h2&gt;
-
-&lt;p&gt;&lt;center&gt;
+&lt;center&gt;
 &lt;a href=&#34;http://lcolladotor.github.io/figs/2014-06-10-shiny-orders/HelloShiny.png&#34;&gt;&lt;img src=&#34;http://lcolladotor.github.io/figs/2014-06-10-shiny-orders/HelloShiny.png&#34; alt=&#34;Workflow&#34; style=&#34;width: 458px;&#34;/&gt;&lt;/a&gt;
-&lt;/center&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://shiny.rstudio.com/&#34; target=&#34;_blank&#34;&gt;Shiny&lt;/a&gt; is an &lt;code&gt;R&lt;/code&gt; package that allows creating web applications with &lt;code&gt;R&lt;/code&gt;. A user opens the app on their browser, specifies a given set of inputs, these are transmitted to an &lt;code&gt;R&lt;/code&gt; session, some code is evaluated with the input options, output is produced and transmitted back to the browser. Because it is so easy to use and useful, it has been very popular. That is the gist of it!&lt;/p&gt;
-
+&lt;/center&gt;
+&lt;p&gt;
+&lt;a href=&#34;http://shiny.rstudio.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Shiny&lt;/a&gt; is an &lt;code&gt;R&lt;/code&gt; package that allows creating web applications with &lt;code&gt;R&lt;/code&gt;. A user opens the app on their browser, specifies a given set of inputs, these are transmitted to an &lt;code&gt;R&lt;/code&gt; session, some code is evaluated with the input options, output is produced and transmitted back to the browser. Because it is so easy to use and useful, it has been very popular. That is the gist of it!&lt;/p&gt;
 &lt;h2 id=&#34;deploying-a-shiny-app&#34;&gt;Deploying a Shiny app&lt;/h2&gt;
-
-&lt;p&gt;Once you develop a &lt;a href=&#34;http://shiny.rstudio.com/&#34; target=&#34;_blank&#34;&gt;Shiny&lt;/a&gt; app, you have to deploy it on a server so users can access it through their browsers. Here I describe several options to do so.&lt;/p&gt;
-
-&lt;p&gt;The application itself needs &amp;ldquo;Shiny Server&amp;rdquo; to run. An implementation of Shiny Server is free via &lt;a href=&#34;http://shinyapps.io/&#34; target=&#34;_blank&#34;&gt;ShinyApps&lt;/a&gt; (&lt;strong&gt;option 1&lt;/strong&gt;) or if you have your own server you can install the open source version of Shiny Server (&lt;strong&gt;option 2&lt;/strong&gt;). Alternatively, you can pay for Shiny Server Pro and also install it in your own server (&lt;strong&gt;option 3&lt;/strong&gt;). Note that glimmer.rstudio.com is previous version of &lt;a href=&#34;http://shinyapps.io/&#34; target=&#34;_blank&#34;&gt;ShinyApps&lt;/a&gt; and you can no longer get accounts on this server.&lt;/p&gt;
-
-&lt;p&gt;Option 1 has the advantage of being completely free and that there is no need to pay for your own server. It does rely on &lt;a href=&#34;http://shinyapps.io/&#34; target=&#34;_blank&#34;&gt;ShinyApps&lt;/a&gt; being online, which should not be a main problem since it is hosted on the cloud. Meaning that it is supposed to be robust.&lt;/p&gt;
-
+&lt;p&gt;Once you develop a 
+&lt;a href=&#34;http://shiny.rstudio.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Shiny&lt;/a&gt; app, you have to deploy it on a server so users can access it through their browsers. Here I describe several options to do so.&lt;/p&gt;
+&lt;p&gt;The application itself needs &amp;ldquo;Shiny Server&amp;rdquo; to run. An implementation of Shiny Server is free via 
+&lt;a href=&#34;http://shinyapps.io/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ShinyApps&lt;/a&gt; (&lt;strong&gt;option 1&lt;/strong&gt;) or if you have your own server you can install the open source version of Shiny Server (&lt;strong&gt;option 2&lt;/strong&gt;). Alternatively, you can pay for Shiny Server Pro and also install it in your own server (&lt;strong&gt;option 3&lt;/strong&gt;). Note that glimmer.rstudio.com is previous version of 
+&lt;a href=&#34;http://shinyapps.io/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ShinyApps&lt;/a&gt; and you can no longer get accounts on this server.&lt;/p&gt;
+&lt;p&gt;Option 1 has the advantage of being completely free and that there is no need to pay for your own server. It does rely on 
+&lt;a href=&#34;http://shinyapps.io/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ShinyApps&lt;/a&gt; being online, which should not be a main problem since it is hosted on the cloud. Meaning that it is supposed to be robust.&lt;/p&gt;
 &lt;p&gt;Option 2 has the advantage of having technical support for the server (not the app) from whoever is providing the server (could be a company or the school). However, you need to have someone capable of installing Shiny Server and updating it whenever it&amp;rsquo;s necessary to do so.&lt;/p&gt;
-
-&lt;p&gt;Option 3 allows you to have high level password security (via SSL) to any Shiny app you host. Plus &lt;a href=&#34;http://www.rstudio.com/&#34; target=&#34;_blank&#34;&gt;RStudio&lt;/a&gt; provides technical support for Shiny. The server technical support would still have to come from whoever is providing the server. The main disadvantage is that this option is very expensive (even with the academic pricing discount).&lt;/p&gt;
-
+&lt;p&gt;Option 3 allows you to have high level password security (via SSL) to any Shiny app you host. Plus 
+&lt;a href=&#34;http://www.rstudio.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;RStudio&lt;/a&gt; provides technical support for Shiny. The server technical support would still have to come from whoever is providing the server. The main disadvantage is that this option is very expensive (even with the academic pricing discount).&lt;/p&gt;
 &lt;p&gt;Here is some information you might be interested on checking about Shiny:&lt;/p&gt;
-
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.rstudio.com/shiny/&#34; target=&#34;_blank&#34;&gt;Main site for Shiny&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.rstudio.com/shiny/server/&#34; target=&#34;_blank&#34;&gt;Description for Shiny Server and Shiny Server Pro&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.rstudio.com/shiny/commercial/academic-pricing&#34; target=&#34;_blank&#34;&gt;Academic pricing for Shiny Server Pro&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.rstudio.com/shiny/hosted/&#34; target=&#34;_blank&#34;&gt;Description of ShinyApps&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://shiny.rstudio.com/&#34; target=&#34;_blank&#34;&gt;Site for learning how to code a web app using Shiny&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://shiny.rstudio.com/gallery/&#34; target=&#34;_blank&#34;&gt;Examples of Shiny apps&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;http://www.rstudio.com/shiny/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Main site for Shiny&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;http://www.rstudio.com/shiny/server/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Description for Shiny Server and Shiny Server Pro&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;http://www.rstudio.com/shiny/commercial/academic-pricing&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Academic pricing for Shiny Server Pro&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;http://www.rstudio.com/shiny/hosted/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Description of ShinyApps&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;http://shiny.rstudio.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Site for learning how to code a web app using Shiny&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;http://shiny.rstudio.com/gallery/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Examples of Shiny apps&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;h2 id=&#34;concerns&#34;&gt;Concerns&lt;/h2&gt;
-
 &lt;h3 id=&#34;privacy&#34;&gt;Privacy&lt;/h3&gt;
-
-&lt;p&gt;Privacy issues in terms of password sharing can be limited by changing the password frequently. Privacy in terms of protection versus hacking is a different subject and I could implement something like &lt;a href=&#34;http://spark.rstudio.com/withr/authentication/&#34; target=&#34;_blank&#34;&gt;this demo&lt;/a&gt; (username: withr, password: 12345678) as described in this &lt;a href=&#34;http://withr.me/blog/2014/02/14/encrypt-users-password-with-md5-for-you-shiny-app/&#34; target=&#34;_blank&#34;&gt;blog post&lt;/a&gt;. However, if you want further protection vs hacking, you would need Shiny Server Pro. &lt;a href=&#34;http://shiny.rstudio.com/gallery/authentication-and-database.html&#34; target=&#34;_blank&#34;&gt;Here is a demo&lt;/a&gt; of the security provided by Shiny Server Pro  (with multiple users too). I understand that hacking was not the main concern you had, but well, as I said password-sharing can be mitigated by frequent changes to the app site.&lt;/p&gt;
-
+&lt;p&gt;Privacy issues in terms of password sharing can be limited by changing the password frequently. Privacy in terms of protection versus hacking is a different subject and I could implement something like 
+&lt;a href=&#34;http://spark.rstudio.com/withr/authentication/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;this demo&lt;/a&gt; (username: withr, password: 12345678) as described in this 
+&lt;a href=&#34;http://withr.me/blog/2014/02/14/encrypt-users-password-with-md5-for-you-shiny-app/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;blog post&lt;/a&gt;. However, if you want further protection vs hacking, you would need Shiny Server Pro. 
+&lt;a href=&#34;http://shiny.rstudio.com/gallery/authentication-and-database.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Here is a demo&lt;/a&gt; of the security provided by Shiny Server Pro  (with multiple users too). I understand that hacking was not the main concern you had, but well, as I said password-sharing can be mitigated by frequent changes to the app site.&lt;/p&gt;
 &lt;h3 id=&#34;technical-support&#34;&gt;Technical support&lt;/h3&gt;
-
 &lt;p&gt;I mostly answered the different options regarding technical support when I described the three options for deploying a Shiny app. As for getting support from IT, they would need to learn how to use Shiny.&lt;/p&gt;
-
 &lt;h3 id=&#34;continuity&#34;&gt;Continuity&lt;/h3&gt;
-
-&lt;p&gt;Shiny is one of the most important projects for &lt;a href=&#34;http://www.rstudio.com/&#34; target=&#34;_blank&#34;&gt;RStudio&lt;/a&gt; so they invest a lot in it, the community provides great answers very quickly, and a lot of people are learning how to use it. If you need an R programmer later on instead of a student, you could describe the job at &lt;a href=&#34;http://www.r-users.com/&#34; target=&#34;_blank&#34;&gt;R Users&lt;/a&gt; and employ someone that way. As far as the Biostats department is concerned, I know that several students are using Shiny and some have even published Shiny Apps in the academic literature. Here are some examples:&lt;/p&gt;
-
+&lt;p&gt;Shiny is one of the most important projects for 
+&lt;a href=&#34;http://www.rstudio.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;RStudio&lt;/a&gt; so they invest a lot in it, the community provides great answers very quickly, and a lot of people are learning how to use it. If you need an R programmer later on instead of a student, you could describe the job at 
+&lt;a href=&#34;http://www.r-users.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;R Users&lt;/a&gt; and employ someone that way. As far as the Biostats department is concerned, I know that several students are using Shiny and some have even published Shiny Apps in the academic literature. Here are some examples:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://spark.rstudio.com/mrosenblum/interAdapt/&#34; target=&#34;_blank&#34;&gt;interAdapt&lt;/a&gt; is a Shiny app written by Aaron Fisher (Biostats student) and published &lt;a href=&#34;http://biostats.bepress.com/jhubiostat/paper262/&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;shinymethyl, a shiny application developed by Jean-Philippe Fortin described &lt;a href=&#34;http://shinymethyl.com/&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt; with a &lt;a href=&#34;http://spark.rstudio.com/jfortin/shinyMethyl/&#34; target=&#34;_blank&#34;&gt;demo here&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://alyssafrazee.shinyapps.io/committees/&#34; target=&#34;_blank&#34;&gt;committees&lt;/a&gt; is a Shiny app made by Alyssa Frazee for verifying your school oral and/or defense committees. It&amp;rsquo;s described in &lt;a href=&#34;http://alyssafrazee.com/committee-checker-2.html&#34; target=&#34;_blank&#34;&gt;this post&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://muschellij2.shinyapps.io/ENAR_2014&#34; target=&#34;_blank&#34;&gt;ENAR 2014&lt;/a&gt; is a Shiny app made by John Muschelli for the ENAR2014 conference which allowed you to quickly identify talks you might be interested in. It&amp;rsquo;s described in &lt;a href=&#34;http://hopstat.wordpress.com/2014/03/12/enar-2014-searcher-enar2014/&#34; target=&#34;_blank&#34;&gt;this post&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;http://spark.rstudio.com/mrosenblum/interAdapt/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;interAdapt&lt;/a&gt; is a Shiny app written by Aaron Fisher (Biostats student) and published 
+&lt;a href=&#34;http://biostats.bepress.com/jhubiostat/paper262/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;shinymethyl, a shiny application developed by Jean-Philippe Fortin described 
+&lt;a href=&#34;http://shinymethyl.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt; with a 
+&lt;a href=&#34;http://spark.rstudio.com/jfortin/shinyMethyl/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;demo here&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://alyssafrazee.shinyapps.io/committees/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;committees&lt;/a&gt; is a Shiny app made by Alyssa Frazee for verifying your school oral and/or defense committees. It&amp;rsquo;s described in 
+&lt;a href=&#34;http://alyssafrazee.com/committee-checker-2.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;this post&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://muschellij2.shinyapps.io/ENAR_2014&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ENAR 2014&lt;/a&gt; is a Shiny app made by John Muschelli for the ENAR2014 conference which allowed you to quickly identify talks you might be interested in. It&amp;rsquo;s described in 
+&lt;a href=&#34;http://hopstat.wordpress.com/2014/03/12/enar-2014-searcher-enar2014/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;this post&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;h3 id=&#34;branding&#34;&gt;Branding&lt;/h3&gt;
-
-&lt;p&gt;Regarding branding, a Shiny App can be embedded on a website. For illustrating this, I embedded two apps I made &lt;a href=&#34;http://www.biostat.jhsph.edu/~lcollado/testShiny.html&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
-
+&lt;p&gt;Regarding branding, a Shiny App can be embedded on a website. For illustrating this, I embedded two apps I made 
+&lt;a href=&#34;http://www.biostat.jhsph.edu/~lcollado/testShiny.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id=&#34;conclusions&#34;&gt;Conclusions&lt;/h2&gt;
-
-&lt;p&gt;In the end, this group decided to use something else instead of a &lt;a href=&#34;http://shiny.rstudio.com/&#34; target=&#34;_blank&#34;&gt;Shiny&lt;/a&gt; app for now. I do not know exactly why they made that decision, but I can see that their concerns are probably shared with other potential &lt;a href=&#34;http://shiny.rstudio.com/&#34; target=&#34;_blank&#34;&gt;Shiny&lt;/a&gt; users. These concerns are a challenge &lt;a href=&#34;http://www.rstudio.com/&#34; target=&#34;_blank&#34;&gt;RStudio&lt;/a&gt; must be dealing with and I am curious to know how they would have approached them.&lt;/p&gt;
-
+&lt;p&gt;In the end, this group decided to use something else instead of a 
+&lt;a href=&#34;http://shiny.rstudio.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Shiny&lt;/a&gt; app for now. I do not know exactly why they made that decision, but I can see that their concerns are probably shared with other potential 
+&lt;a href=&#34;http://shiny.rstudio.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Shiny&lt;/a&gt; users. These concerns are a challenge 
+&lt;a href=&#34;http://www.rstudio.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;RStudio&lt;/a&gt; must be dealing with and I am curious to know how they would have approached them.&lt;/p&gt;
 &lt;h4 id=&#34;want-more&#34;&gt;Want more?&lt;/h4&gt;
-
-&lt;p&gt;Check other &lt;a href=&#34;https://twitter.com/jhubiostat&#34; target=&#34;_blank&#34;&gt;@jhubiostat&lt;/a&gt; student blogs at &lt;a href=&#34;http://bmorebiostat.com/&#34; target=&#34;_blank&#34;&gt;Bmore Biostats&lt;/a&gt; as well as topics on &lt;a href=&#34;https://twitter.com/search?q=%23rstats&#34; target=&#34;_blank&#34;&gt;#rstats&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;This post is part of the summer 2014 &lt;a href=&#34;http://bmorebiostat.com/&#34; target=&#34;_blank&#34;&gt;Bmore Biostats&lt;/a&gt;&amp;rsquo; iron blogger challenge.&lt;/p&gt;
+&lt;p&gt;Check other 
+&lt;a href=&#34;https://twitter.com/jhubiostat&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;@jhubiostat&lt;/a&gt; student blogs at 
+&lt;a href=&#34;http://bmorebiostat.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Bmore Biostats&lt;/a&gt; as well as topics on 
+&lt;a href=&#34;https://twitter.com/search?q=%23rstats&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;#rstats&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;This post is part of the summer 2014 
+&lt;a href=&#34;http://bmorebiostat.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Bmore Biostats&lt;/a&gt;&amp;rsquo; iron blogger challenge.&lt;/p&gt;
 </description>
     </item>
     
@@ -701,32 +634,23 @@ session_info()
       <title>Simple mortgage calculator</title>
       <link>/2014/04/22/mortgage-calculator-flexible-payments/</link>
       <pubDate>Tue, 22 Apr 2014 00:00:00 +0000</pubDate>
-      
       <guid>/2014/04/22/mortgage-calculator-flexible-payments/</guid>
-      <description>
-
-&lt;p&gt;Have you ever thought of borrowing some money? A common case is when you have to borrow money for buying a house, which is called a mortgage. Wikipedia (&lt;span class=&#34;showtooltip&#34; title=&#34;(2014). &#39;Mortgage loan - Wikipedia, the free encyclopedia.&#39; .&#34;&gt;&lt;a href=&#34;http://en.wikipedia.org/wiki/Mortgage_loan&#34;&gt;&amp;lsquo;Mortgage loan&amp;rsquo; entry&lt;/a&gt;&lt;/span&gt;) goes into much more detail about the definition than what I&amp;rsquo;ll cover.&lt;/p&gt;
-
+      <description>&lt;p&gt;Have you ever thought of borrowing some money? A common case is when you have to borrow money for buying a house, which is called a mortgage. Wikipedia (&lt;span class=&#34;showtooltip&#34; title=&#34;(2014). &#39;Mortgage loan - Wikipedia, the free encyclopedia.&#39; .&#34;&gt;&lt;a href=&#34;http://en.wikipedia.org/wiki/Mortgage_loan&#34;&gt;&#39;Mortgage loan&amp;rsquo; entry&lt;/a&gt;&lt;/span&gt;) goes into much more detail about the definition than what I&amp;rsquo;ll cover.&lt;/p&gt;
 &lt;p&gt;One of the aspects you have to evaluate when considering a loan such as a mortgage is how much interest you will be charged and how long the loan will be. Those two determine your monthly payment.&lt;/p&gt;
-
 &lt;h2 id=&#34;comparing-loans&#34;&gt;Comparing loans&lt;/h2&gt;
-
-&lt;p&gt;That is, given the loan amount, you can compare different loans that offer different rates and/or loan lengths. There are many tools out there that allow you to do so and are generally called mortgage calculators. Although the more detailed term is amortization calculator. From wikipedia(&lt;span class=&#34;showtooltip&#34; title=&#34;(2014). &#39;Amortization calculator - Wikipedia, the free encyclopedia.&#39; .&#34;&gt;&lt;a href=&#34;http://en.wikipedia.org/wiki/Amortization_calculator&#34;&gt;&amp;lsquo;Amortization calculator&amp;rsquo; entry&lt;/a&gt;&lt;/span&gt;) we find the so called annuity formula which helps you calculate your monthly payment.&lt;/p&gt;
-
-&lt;p&gt;Several such mortgage calculators have been features in &lt;a href=&#34;http://www.r-bloggers.com/&#34; target=&#34;_blank&#34;&gt;R Bloggers&lt;/a&gt; before such as (&lt;span class=&#34;showtooltip&#34; title=&#34;C (2010). &#39;Mortgage Calculator (and Amortization Charts) with R.&#39; .&#34;&gt;&lt;a href=&#34;http://www.r-chart.com/2010/11/mortgage-calculator-and-amortization.html&#34;&gt;C, 2010&lt;/a&gt;&lt;/span&gt;) and (&lt;span class=&#34;showtooltip&#34; title=&#34;BioStatMatt (2014). &#39;Mortgage Refinance Calculator | BioStatMatt.&#39; .&#34;&gt;&lt;a href=&#34;http://biostatmatt.com/archives/1908&#34;&gt;BioStatMatt&lt;/a&gt;&lt;/span&gt;). Plus there are many other alternatives on the web.&lt;/p&gt;
-
+&lt;p&gt;That is, given the loan amount, you can compare different loans that offer different rates and/or loan lengths. There are many tools out there that allow you to do so and are generally called mortgage calculators. Although the more detailed term is amortization calculator. From wikipedia(&lt;span class=&#34;showtooltip&#34; title=&#34;(2014). &#39;Amortization calculator - Wikipedia, the free encyclopedia.&#39; .&#34;&gt;&lt;a href=&#34;http://en.wikipedia.org/wiki/Amortization_calculator&#34;&gt;&#39;Amortization calculator&amp;rsquo; entry&lt;/a&gt;&lt;/span&gt;) we find the so called annuity formula which helps you calculate your monthly payment.&lt;/p&gt;
+&lt;p&gt;Several such mortgage calculators have been features in 
+&lt;a href=&#34;http://www.r-bloggers.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;R Bloggers&lt;/a&gt; before such as (&lt;span class=&#34;showtooltip&#34; title=&#34;C (2010). &#39;Mortgage Calculator (and Amortization Charts) with R.&#39; .&#34;&gt;&lt;a href=&#34;http://www.r-chart.com/2010/11/mortgage-calculator-and-amortization.html&#34;&gt;C, 2010&lt;/a&gt;&lt;/span&gt;) and (&lt;span class=&#34;showtooltip&#34; title=&#34;BioStatMatt (2014). &#39;Mortgage Refinance Calculator | BioStatMatt.&#39; .&#34;&gt;&lt;a href=&#34;http://biostatmatt.com/archives/1908&#34;&gt;BioStatMatt&lt;/a&gt;&lt;/span&gt;). Plus there are many other alternatives on the web.&lt;/p&gt;
 &lt;h2 id=&#34;my-use-case&#34;&gt;My use case&lt;/h2&gt;
-
 &lt;p&gt;However, a month or so ago I got curious about comparing some loans which had a different twist than normal. Given some circumstances, I wanted to compare some loans where the loaner is willing to receive payments every few months yet with interests being compounded (that is, calculated) on a different time frame. Obviously, the easiest would be to compound interest at the same frequency as payments are made. Plus, probably most banks would not offer such flexible loans.&lt;/p&gt;
-
 &lt;p&gt;Digging around, I did find modifications to the annuity formula that allow non-monthly payments (&lt;span class=&#34;showtooltip&#34; title=&#34;(2014). &#39;Compound Interest Calculator.&#39; .&#34;&gt;&lt;a href=&#34;http://www.calculator.net/compound-interest-calculator.html&#34;&gt;Compound Interest Formula&lt;/a&gt;&lt;/span&gt;) and (&lt;span class=&#34;showtooltip&#34; title=&#34;(2014). &#39;Compound Interest.&#39; .&#34;&gt;&lt;a href=&#34;http://math.about.com/library/weekly/aa042002a.htm&#34;&gt;What is compound interest?&lt;/a&gt;&lt;/span&gt;).&lt;/p&gt;
-
 &lt;h2 id=&#34;shiny-app&#34;&gt;shiny app&lt;/h2&gt;
-
-&lt;p&gt;Being interested in &lt;code&gt;R&lt;/code&gt; code, &lt;a href=&#34;http://www.rstudio.com/shiny/&#34; target=&#34;_blank&#34;&gt;shiny&lt;/a&gt; (&lt;span class=&#34;showtooltip&#34; title=&#34;RStudio and Inc. (2014). shiny: Web Application Framework for R. R package version 0.9.1.&#34;&gt;&lt;a href=&#34;http://CRAN.R-project.org/package=shiny&#34;&gt;RStudio Inc.&lt;/a&gt;&lt;/span&gt;) apps and trying out integrating &lt;a href=&#34;http://rcharts.io/&#34; target=&#34;_blank&#34;&gt;rCharts&lt;/a&gt; (&lt;span class=&#34;showtooltip&#34; title=&#34;Vaidyanathan R (2013). rCharts: Interactive Charts using Polycharts.js. R package version 0.4.2.&#34;&gt;&lt;a href=&#34;&#34;&gt;Vaidyanathan, 2013&lt;/a&gt;&lt;/span&gt;) with shiny, I ended up coding my own mortgage calculator which you can find &lt;a href=&#34;http://glimmer.rstudio.com/lcolladotor/mortgage/&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt; (&lt;span class=&#34;showtooltip&#34; title=&#34;(2014). &#39;Simple Mortgage Calculator.&#39; .&#34;&gt;&lt;a href=&#34;http://glimmer.rstudio.com/lcolladotor/mortgage/&#34;&gt;Simple Mortage Calculator&lt;/a&gt;&lt;/span&gt;). The code is publicly available at &lt;a href=&#34;https://github.com/lcolladotor/mortgage&#34; target=&#34;_blank&#34;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
-
+&lt;p&gt;Being interested in &lt;code&gt;R&lt;/code&gt; code, 
+&lt;a href=&#34;http://www.rstudio.com/shiny/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;shiny&lt;/a&gt; (&lt;span class=&#34;showtooltip&#34; title=&#34;RStudio and Inc. (2014). shiny: Web Application Framework for R. R package version 0.9.1.&#34;&gt;&lt;a href=&#34;http://CRAN.R-project.org/package=shiny&#34;&gt;RStudio Inc.&lt;/a&gt;&lt;/span&gt;) apps and trying out integrating 
+&lt;a href=&#34;http://rcharts.io/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;rCharts&lt;/a&gt; (&lt;span class=&#34;showtooltip&#34; title=&#34;Vaidyanathan R (2013). rCharts: Interactive Charts using Polycharts.js. R package version 0.4.2.&#34;&gt;&lt;a href=&#34;&#34;&gt;Vaidyanathan, 2013&lt;/a&gt;&lt;/span&gt;) with shiny, I ended up coding my own mortgage calculator which you can find 
+&lt;a href=&#34;http://glimmer.rstudio.com/lcolladotor/mortgage/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt; (&lt;span class=&#34;showtooltip&#34; title=&#34;(2014). &#39;Simple Mortgage Calculator.&#39; .&#34;&gt;&lt;a href=&#34;http://glimmer.rstudio.com/lcolladotor/mortgage/&#34;&gt;Simple Mortage Calculator&lt;/a&gt;&lt;/span&gt;). The code is publicly available at 
+&lt;a href=&#34;https://github.com/lcolladotor/mortgage&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;It has a couple of simple inputs:&lt;/p&gt;
-
 &lt;ul&gt;
 &lt;li&gt;Amount to borrow&lt;/li&gt;
 &lt;li&gt;Interest rate&lt;/li&gt;
@@ -735,53 +659,50 @@ session_info()
 &lt;li&gt;How frequently interests are compounded&lt;/li&gt;
 &lt;li&gt;Month of the first payment&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;p&gt;The option to begin the loan now but accept the first payment much later is there also because of the complicated use case I had in mind. Again, that is a feature a bank will most likely not offer. But it&amp;rsquo;s something I needed to take into consideration.&lt;/p&gt;
-
 &lt;p&gt;Going back to the app, I tried explaining all the inputs as much as possible. The output is relatively straight forward.&lt;/p&gt;
-
 &lt;p&gt;First, there is a line with focus D3 interactive plot (&lt;span class=&#34;showtooltip&#34; title=&#34;Partners N (2014). &#39;Line Chart With View Finder - NVD3.&#39; .&#34;&gt;&lt;a href=&#34;http://nvd3.org//examples/lineWithFocus.html&#34;&gt;Line Chart with View Finder&lt;/a&gt;&lt;/span&gt;) which shows the principal (the amount you owe) over months as well as how much you&amp;rsquo;ve paid already. The bottom panel allows you to zoom into a specific time range as shown below.&lt;/p&gt;
-
-&lt;p&gt;&lt;center&gt;
+&lt;center&gt;
 &lt;a href=&#34;http://lcolladotor.github.io/figs/2014-04-22-mortgage-calculator-flexible-payments/lineWithFocus.png&#34;&gt;&lt;img src=&#34;http://lcolladotor.github.io/figs/2014-04-22-mortgage-calculator-flexible-payments/lineWithFocus.png&#34; alt=&#34;Workflow&#34; style=&#34;width: 775px;&#34;/&gt;&lt;/a&gt;
-&lt;/center&gt;&lt;/p&gt;
-
+&lt;/center&gt;
 &lt;p&gt;Next, the information is shown in more detail as an interactive data table (&lt;span class=&#34;showtooltip&#34; title=&#34;(2014). &#39;DataTables (table plug-in for jQuery).&#39; .&#34;&gt;&lt;a href=&#34;https://datatables.net/&#34;&gt;DataTables&lt;/a&gt;&lt;/span&gt;) 12 months at a time. The interactive part makes it very easy to search for a specific month and look at the state of the loan.&lt;/p&gt;
-
 &lt;p&gt;Finally, you can download the amortization table in CSV format for your records.&lt;/p&gt;
-
-&lt;p&gt;PS You can also access the app via shinyapps at this &lt;a href=&#34;https://lcolladotor.shinyapps.io/mortgage2/&#34; target=&#34;_blank&#34;&gt;url&lt;/a&gt;. It is the first time I&amp;rsquo;ve deployed an app there as I wanted to test shinyapps out.&lt;/p&gt;
-
+&lt;p&gt;PS You can also access the app via shinyapps at this 
+&lt;a href=&#34;https://lcolladotor.shinyapps.io/mortgage2/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;url&lt;/a&gt;. It is the first time I&amp;rsquo;ve deployed an app there as I wanted to test shinyapps out.&lt;/p&gt;
 &lt;h2 id=&#34;conclusions&#34;&gt;Conclusions&lt;/h2&gt;
-
-&lt;p&gt;The experience of coding the &lt;a href=&#34;http://glimmer.rstudio.com/lcolladotor/mortgage/&#34; target=&#34;_blank&#34;&gt;shiny app&lt;/a&gt; (&lt;span class=&#34;showtooltip&#34; title=&#34;(2014). &#39;Simple Mortgage Calculator.&#39; .&#34;&gt;&lt;a href=&#34;http://glimmer.rstudio.com/lcolladotor/mortgage/&#34;&gt;Simple Mortage Calculator&lt;/a&gt;&lt;/span&gt;) was interesting as I did learn a couple of new things. The same was true for figuring out the calculations for the more flexible options.&lt;/p&gt;
-
+&lt;p&gt;The experience of coding the 
+&lt;a href=&#34;http://glimmer.rstudio.com/lcolladotor/mortgage/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;shiny app&lt;/a&gt; (&lt;span class=&#34;showtooltip&#34; title=&#34;(2014). &#39;Simple Mortgage Calculator.&#39; .&#34;&gt;&lt;a href=&#34;http://glimmer.rstudio.com/lcolladotor/mortgage/&#34;&gt;Simple Mortage Calculator&lt;/a&gt;&lt;/span&gt;) was interesting as I did learn a couple of new things. The same was true for figuring out the calculations for the more flexible options.&lt;/p&gt;
 &lt;p&gt;Finally, but not least, the shiny app was useful for my use case and was informative for comparing different loan options. Hopefully it will be useful for other users!&lt;/p&gt;
-
 &lt;h3 id=&#34;references&#34;&gt;References&lt;/h3&gt;
-
 &lt;p&gt;Citations made with &lt;code&gt;knitcitations&lt;/code&gt; (&lt;span class=&#34;showtooltip&#34; title=&#34;Boettiger C (2014). knitcitations: Citations for knitr markdown files. R package version 0.5-0.&#34;&gt;&lt;a href=&#34;http://CRAN.R-project.org/package=knitcitations&#34;&gt;Boettiger, 2014&lt;/a&gt;&lt;/span&gt;).&lt;/p&gt;
-
 &lt;ul&gt;
-&lt;li&gt;Mortgage loan - Wikipedia, the free encyclopedia.  &lt;em&gt;Wikipedia&lt;/em&gt;  &lt;a href=&#34;http://en.wikipedia.org/wiki/Mortgage_loan&#34; target=&#34;_blank&#34;&gt;http://en.wikipedia.org/wiki/Mortgage_loan&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Amortization calculator - Wikipedia, the free encyclopedia.  &lt;em&gt;Wikipedia&lt;/em&gt;  &lt;a href=&#34;http://en.wikipedia.org/wiki/Amortization_calculator&#34; target=&#34;_blank&#34;&gt;http://en.wikipedia.org/wiki/Amortization_calculator&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;C,   (2010) Mortgage Calculator (and Amortization Charts) with R.  &lt;em&gt;R-Chart&lt;/em&gt;  &lt;a href=&#34;http://www.r-chart.com/2010/11/mortgage-calculator-and-amortization.html&#34; target=&#34;_blank&#34;&gt;http://www.r-chart.com/2010/11/mortgage-calculator-and-amortization.html&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;BioStatMatt,  Mortgage Refinance Calculator | BioStatMatt.  &lt;em&gt;BioStatMatt&lt;/em&gt;  &lt;a href=&#34;http://biostatmatt.com/archives/1908&#34; target=&#34;_blank&#34;&gt;http://biostatmatt.com/archives/1908&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Compound Interest Calculator.  &lt;a href=&#34;http://www.calculator.net/compound-interest-calculator.html&#34; target=&#34;_blank&#34;&gt;http://www.calculator.net/compound-interest-calculator.html&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Compound Interest.  &lt;a href=&#34;http://math.about.com/library/weekly/aa042002a.htm&#34; target=&#34;_blank&#34;&gt;http://math.about.com/library/weekly/aa042002a.htm&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Simple Mortgage Calculator.  &lt;a href=&#34;http://glimmer.rstudio.com/lcolladotor/mortgage/&#34; target=&#34;_blank&#34;&gt;http://glimmer.rstudio.com/lcolladotor/mortgage/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Novus Partners,  Line Chart With View Finder - NVD3.  &lt;a href=&#34;http://nvd3.org//examples/lineWithFocus.html&#34; target=&#34;_blank&#34;&gt;http://nvd3.org//examples/lineWithFocus.html&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;DataTables (table plug-in for jQuery).  &lt;em&gt;DataTables (jQuery plug-in)&lt;/em&gt;  &lt;a href=&#34;https://datatables.net/&#34; target=&#34;_blank&#34;&gt;https://datatables.net/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Carl Boettiger,   (2014) knitcitations: Citations for knitr markdown files.  &lt;a href=&#34;http://CRAN.R-project.org/package=knitcitations&#34; target=&#34;_blank&#34;&gt;http://CRAN.R-project.org/package=knitcitations&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Mortgage loan - Wikipedia, the free encyclopedia.  &lt;em&gt;Wikipedia&lt;/em&gt;  
+&lt;a href=&#34;http://en.wikipedia.org/wiki/Mortgage_loan&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;http://en.wikipedia.org/wiki/Mortgage_loan&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Amortization calculator - Wikipedia, the free encyclopedia.  &lt;em&gt;Wikipedia&lt;/em&gt;  
+&lt;a href=&#34;http://en.wikipedia.org/wiki/Amortization_calculator&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;http://en.wikipedia.org/wiki/Amortization_calculator&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;C,   (2010) Mortgage Calculator (and Amortization Charts) with R.  &lt;em&gt;R-Chart&lt;/em&gt;  
+&lt;a href=&#34;http://www.r-chart.com/2010/11/mortgage-calculator-and-amortization.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;http://www.r-chart.com/2010/11/mortgage-calculator-and-amortization.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;BioStatMatt,  Mortgage Refinance Calculator | BioStatMatt.  &lt;em&gt;BioStatMatt&lt;/em&gt;  
+&lt;a href=&#34;http://biostatmatt.com/archives/1908&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;http://biostatmatt.com/archives/1908&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Compound Interest Calculator.  
+&lt;a href=&#34;http://www.calculator.net/compound-interest-calculator.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;http://www.calculator.net/compound-interest-calculator.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Compound Interest.  
+&lt;a href=&#34;http://math.about.com/library/weekly/aa042002a.htm&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;http://math.about.com/library/weekly/aa042002a.htm&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Simple Mortgage Calculator.  
+&lt;a href=&#34;http://glimmer.rstudio.com/lcolladotor/mortgage/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;http://glimmer.rstudio.com/lcolladotor/mortgage/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Novus Partners,  Line Chart With View Finder - NVD3.  
+&lt;a href=&#34;http://nvd3.org//examples/lineWithFocus.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;http://nvd3.org//examples/lineWithFocus.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;DataTables (table plug-in for jQuery).  &lt;em&gt;DataTables (jQuery plug-in)&lt;/em&gt;  
+&lt;a href=&#34;https://datatables.net/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://datatables.net/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Carl Boettiger,   (2014) knitcitations: Citations for knitr markdown files.  
+&lt;a href=&#34;http://CRAN.R-project.org/package=knitcitations&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;http://CRAN.R-project.org/package=knitcitations&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Ramnath Vaidyanathan,   (2013) rCharts: Interactive Charts using Polycharts.js.&lt;/li&gt;
-&lt;li&gt;RStudio , Inc. ,   (2014) shiny: Web Application Framework for R.  &lt;a href=&#34;http://CRAN.R-project.org/package=shiny&#34; target=&#34;_blank&#34;&gt;http://CRAN.R-project.org/package=shiny&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;RStudio , Inc. ,   (2014) shiny: Web Application Framework for R.  
+&lt;a href=&#34;http://CRAN.R-project.org/package=shiny&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;http://CRAN.R-project.org/package=shiny&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;h3 id=&#34;reproducibility&#34;&gt;Reproducibility&lt;/h3&gt;
-
 &lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;sessionInfo()
 &lt;/code&gt;&lt;/pre&gt;
-
 &lt;pre&gt;&lt;code&gt;## R version 3.1.0 (2014-04-10)
 ## Platform: x86_64-apple-darwin10.8.0 (64-bit)
 ## 
@@ -799,8 +720,10 @@ session_info()
 ##  [5] httr_0.3        RCurl_1.95-4.1  stringr_0.6.2   tools_3.1.0    
 ##  [9] XML_3.98-1.1    xtable_1.7-3
 &lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Check other &lt;a href=&#34;https://twitter.com/jhubiostat&#34; target=&#34;_blank&#34;&gt;@jhubiostat&lt;/a&gt; student blogs at &lt;a href=&#34;http://bmorebiostat.com/&#34; target=&#34;_blank&#34;&gt;Bmore Biostats&lt;/a&gt; as well as topics on &lt;a href=&#34;https://twitter.com/search?q=%23rstats&#34; target=&#34;_blank&#34;&gt;#rstats&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Check other 
+&lt;a href=&#34;https://twitter.com/jhubiostat&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;@jhubiostat&lt;/a&gt; student blogs at 
+&lt;a href=&#34;http://bmorebiostat.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Bmore Biostats&lt;/a&gt; as well as topics on 
+&lt;a href=&#34;https://twitter.com/search?q=%23rstats&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;#rstats&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     

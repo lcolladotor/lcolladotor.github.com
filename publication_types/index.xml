@@ -1,19 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Publication_types on L. Collado-Torres</title>
+    <title>Publication_types | L. Collado-Torres</title>
     <link>/publication_types/</link>
-    <description>Recent content in Publication_types on L. Collado-Torres</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>&amp;copy; 2011-{year} Leonardo Collado Torres under (CC) BY-NC-SA 4.0. All thoughts and opinions here are my own. Icon is the [R logo](https://www.r-project.org/logo/) modified</copyright>
-    <lastBuildDate>Wed, 30 Oct 2019 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://lcolladotor.github.io/publication_types/" rel="self" type="application/rss+xml" />
+      <atom:link href=http://lcolladotor.github.io/publication_types/index.xml rel="self" type="application/rss+xml" />
+    <description>Publication_types</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2011-2020 Leonardo Collado Torres under (CC) BY-NC-SA 4.0. All thoughts and opinions here are my own. Icon is the [R logo](https://www.r-project.org/logo/) modified</copyright><lastBuildDate>Wed, 30 Oct 2019 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
+      <title>Publication_types</title>
+      <link>/publication_types/</link>
+    </image>
     
     <item>
       <title>3</title>
       <link>/publication_types/3/</link>
       <pubDate>Wed, 30 Oct 2019 00:00:00 +0000</pubDate>
-      
       <guid>/publication_types/3/</guid>
       <description></description>
     </item>
@@ -22,7 +24,6 @@
       <title>2</title>
       <link>/publication_types/2/</link>
       <pubDate>Thu, 26 Sep 2019 00:00:00 +0000</pubDate>
-      
       <guid>/publication_types/2/</guid>
       <description></description>
     </item>
@@ -31,7 +32,6 @@
       <title>0</title>
       <link>/publication_types/0/</link>
       <pubDate>Wed, 08 May 2019 14:00:00 +0000</pubDate>
-      
       <guid>/publication_types/0/</guid>
       <description></description>
     </item>
@@ -40,7 +40,6 @@
       <title>6</title>
       <link>/publication_types/6/</link>
       <pubDate>Tue, 17 Jun 2014 16:42:24 -0500</pubDate>
-      
       <guid>/publication_types/6/</guid>
       <description></description>
     </item>

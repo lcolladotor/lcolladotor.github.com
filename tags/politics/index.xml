@@ -1,19 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>politics on L. Collado-Torres</title>
+    <title>politics | L. Collado-Torres</title>
     <link>/tags/politics/</link>
-    <description>Recent content in politics on L. Collado-Torres</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>&amp;copy; 2011-{year} Leonardo Collado Torres under (CC) BY-NC-SA 4.0. All thoughts and opinions here are my own. Icon is the [R logo](https://www.r-project.org/logo/) modified</copyright>
-    <lastBuildDate>Sun, 03 Feb 2019 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://lcolladotor.github.io/tags/politics/" rel="self" type="application/rss+xml" />
+      <atom:link href=http://lcolladotor.github.io/tags/politics/index.xml rel="self" type="application/rss+xml" />
+    <description>politics</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2011-2020 Leonardo Collado Torres under (CC) BY-NC-SA 4.0. All thoughts and opinions here are my own. Icon is the [R logo](https://www.r-project.org/logo/) modified</copyright><lastBuildDate>Sun, 03 Feb 2019 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
+      <title>politics</title>
+      <link>/tags/politics/</link>
+    </image>
     
     <item>
       <title>The power of tapping into your community for support</title>
       <link>/2019/02/03/the-power-of-tapping-into-your-community-for-support/</link>
       <pubDate>Sun, 03 Feb 2019 00:00:00 +0000</pubDate>
-      
       <guid>/2019/02/03/the-power-of-tapping-into-your-community-for-support/</guid>
       <description>
 
@@ -162,7 +164,6 @@ URL: &lt;a href=&#34;https://github.com/rstudio/blogdown&#34;&gt;https://github.
       <title>Problems with an article from the Baltimore Sun covering Dr. Mahoney-Steel’s immigration issues</title>
       <link>/2018/09/19/problems-with-an-article-from-the-baltimore-sun-covering-dr-mahoney-steel-s-immigration-issues/</link>
       <pubDate>Wed, 19 Sep 2018 00:00:00 +0000</pubDate>
-      
       <guid>/2018/09/19/problems-with-an-article-from-the-baltimore-sun-covering-dr-mahoney-steel-s-immigration-issues/</guid>
       <description>
 
@@ -262,7 +263,6 @@ URL: &lt;a href=&#34;https://github.com/rstudio/blogdown&#34;&gt;https://github.
       <title>What about a lawyer-like app as the minimum help for defendants in immigration cases?</title>
       <link>/2018/09/17/what-about-a-lawyer-like-app-as-the-mininum-help-for-defandants-in-immigration-cases/</link>
       <pubDate>Mon, 17 Sep 2018 00:00:00 +0000</pubDate>
-      
       <guid>/2018/09/17/what-about-a-lawyer-like-app-as-the-mininum-help-for-defandants-in-immigration-cases/</guid>
       <description>
 
@@ -455,49 +455,32 @@ URL: &lt;a href=&#34;https://github.com/rstudio/blogdown&#34;&gt;https://github.
       <title>An alternative to the Mexico-US wall where the US would gain millions of dollars</title>
       <link>/2017/01/25/an-alternative-to-the-mexico-us-wall-where-the-us-would-gain-millions-of-dollars/</link>
       <pubDate>Wed, 25 Jan 2017 02:00:00 +0000</pubDate>
-      
       <guid>/2017/01/25/an-alternative-to-the-mexico-us-wall-where-the-us-would-gain-millions-of-dollars/</guid>
-      <description>
-
-&lt;div class=&#34;alert alert-note&#34;&gt;
+      <description>&lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
     tl;dr There is a 600 million to 2 billion USD annual market related to crossing the Mexico-US border. Allow temporary work visas (say 3 years) to take over this market and use the money to boost the US Border Patrol to build a wall of eyes, not a physical wall.
   &lt;/div&gt;
 &lt;/div&gt;
-
 &lt;p&gt;President Trump of the United States of America,&lt;/p&gt;
-
 &lt;p&gt;cc President Peña Nieto of the United Mexican States&lt;/p&gt;
-
 &lt;p&gt;Today, Wednesday January 25th 2017, you are expected to announce your plans about building a wall between the United States and Mexico. I am opposed to building that wall but I also believe that providing alternatives is important when disagreeing. With that in mind, let me expose an alternative to your physical wall.&lt;/p&gt;
-
-&lt;p&gt;Mexico has a net immigration rate of -1.7 migrants per 1,000 and a population of 123,166,749 individuals&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt; which means that about 209,000 people leave Mexico every year. The Department of Homeland Security 2014 report&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34;&gt;2&lt;/a&gt;&lt;/sup&gt; shows that 350,177 out of 679,996 (51%) total aliens apprehended are from Mexico (52% reported elsewhere&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:3&#34;&gt;&lt;a href=&#34;#fn:3&#34;&gt;3&lt;/a&gt;&lt;/sup&gt;,&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:4&#34;&gt;&lt;a href=&#34;#fn:4&#34;&gt;4&lt;/a&gt;&lt;/sup&gt;). Many of the illegal immigrants pay people for helping them cross the Mexico-US border also known as &lt;em&gt;coyotes&lt;/em&gt;. Some informal surveys put the cost of a &lt;em&gt;coyote&lt;/em&gt; between 3,000 and 20,000 US dollars&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:5&#34;&gt;&lt;a href=&#34;#fn:5&#34;&gt;5&lt;/a&gt;&lt;/sup&gt;,&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:6&#34;&gt;&lt;a href=&#34;#fn:6&#34;&gt;6&lt;/a&gt;&lt;/sup&gt;. That means that there is an annual market worth about 627 to 1,050 million US dollars. This market exists and has been steady for years now. A physical wall in the Mexico-US border might not stop the illegal immigration to the US. Loss of jobs in Mexico directly related to your policies might even prompt more people to leave Mexico&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:7&#34;&gt;&lt;a href=&#34;#fn:7&#34;&gt;7&lt;/a&gt;&lt;/sup&gt;. I believe that the high volume of people crossing the Mexico-US border makes it easier for drug cartels to hide and transport drugs. That is, it makes it harder for the US Border Patrol Agents to find who is transporting drugs and the track down the routes they use.&lt;/p&gt;
-
+&lt;p&gt;Mexico has a net immigration rate of -1.7 migrants per 1,000 and a population of 123,166,749 individuals&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt; which means that about 209,000 people leave Mexico every year. The Department of Homeland Security 2014 report&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt; shows that 350,177 out of 679,996 (51%) total aliens apprehended are from Mexico (52% reported elsewhere&lt;sup id=&#34;fnref:3&#34;&gt;&lt;a href=&#34;#fn:3&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;3&lt;/a&gt;&lt;/sup&gt;,&lt;sup id=&#34;fnref:4&#34;&gt;&lt;a href=&#34;#fn:4&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;4&lt;/a&gt;&lt;/sup&gt;). Many of the illegal immigrants pay people for helping them cross the Mexico-US border also known as &lt;em&gt;coyotes&lt;/em&gt;. Some informal surveys put the cost of a &lt;em&gt;coyote&lt;/em&gt; between 3,000 and 20,000 US dollars&lt;sup id=&#34;fnref:5&#34;&gt;&lt;a href=&#34;#fn:5&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;5&lt;/a&gt;&lt;/sup&gt;,&lt;sup id=&#34;fnref:6&#34;&gt;&lt;a href=&#34;#fn:6&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;6&lt;/a&gt;&lt;/sup&gt;. That means that there is an annual market worth about 627 to 1,050 million US dollars. This market exists and has been steady for years now. A physical wall in the Mexico-US border might not stop the illegal immigration to the US. Loss of jobs in Mexico directly related to your policies might even prompt more people to leave Mexico&lt;sup id=&#34;fnref:7&#34;&gt;&lt;a href=&#34;#fn:7&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;7&lt;/a&gt;&lt;/sup&gt;. I believe that the high volume of people crossing the Mexico-US border makes it easier for drug cartels to hide and transport drugs. That is, it makes it harder for the US Border Patrol Agents to find who is transporting drugs and the track down the routes they use.&lt;/p&gt;
 &lt;p&gt;So, what if the US took over this multi million dollar market? I have had the opportunity to visit countries that offer temporary work visas (ranging from 6 months to 3 years). The people interested in these visas have to pay a fee, pass a background check and sometimes go through health screenings. I believe that these immigrants pay the fee because it allows them to legally migrate, work for a while, save some money, and then go back to their home countries. From an immigrant&amp;rsquo;s perspective, it must be very appealing to pay the same amount of money it cost to migrate safely and legally (for temporary work) than to attempt to cross the border illegally with the risk of dying in the process or getting kidnapped. Additionally, I think that temporary workers would feel much safer to go out of their homes while in the US, spending some of their hard earned money in the process and stimulating the local economy. They would be more likely to get a regular job where they would pay income taxes instead of getting payed &lt;em&gt;under the table&lt;/em&gt; and dodging the IRS. Furthermore, having the opportunity to legally go back home and visit family would be a huge advantage from an immigrant&amp;rsquo;s perspective.&lt;/p&gt;
-
-&lt;p&gt;While writing this letter I realized that the idea of &lt;em&gt;immigration tariffs&lt;/em&gt; is not new&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:8&#34;&gt;&lt;a href=&#34;#fn:8&#34;&gt;8&lt;/a&gt;&lt;/sup&gt;,&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:9&#34;&gt;&lt;a href=&#34;#fn:9&#34;&gt;9&lt;/a&gt;&lt;/sup&gt;,&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:10&#34;&gt;&lt;a href=&#34;#fn:10&#34;&gt;10&lt;/a&gt;&lt;/sup&gt;,&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:11&#34;&gt;&lt;a href=&#34;#fn:11&#34;&gt;11&lt;/a&gt;&lt;/sup&gt;. However, I have not heard it being discussed recently and simply ask that you consider it.&lt;/p&gt;
-
-&lt;p&gt;To try to convince you that &lt;em&gt;immigration tariffs&lt;/em&gt; are an interesting alternative, consider what your government could do with an additional 600 to 1,000 million US dollars a year &amp;ndash; or multiply those numbers by two to get 1.2 to 2 billions USD a year by taking into account that about 50% of illegal immigrants are Mexicans. The average Border Patrol Agent self-reported salary is 80,250 USD a year&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:12&#34;&gt;&lt;a href=&#34;#fn:12&#34;&gt;12&lt;/a&gt;&lt;/sup&gt;. The actual salaries range from 21,616 to 157,257 USD as of January 2017&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:13&#34;&gt;&lt;a href=&#34;#fn:13&#34;&gt;13&lt;/a&gt;&lt;/sup&gt; depending on the &lt;em&gt;grade&lt;/em&gt; and &lt;em&gt;level&lt;/em&gt; as well as other options&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:14&#34;&gt;&lt;a href=&#34;#fn:14&#34;&gt;14&lt;/a&gt;&lt;/sup&gt;. In 2016, there were nearly 20,000 border patrol agents in the US&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:15&#34;&gt;&lt;a href=&#34;#fn:15&#34;&gt;15&lt;/a&gt;&lt;/sup&gt;. That means that you could decide to increase the number of Border Patrol Agents by 10,000 (50%) for about 803 million USD or increase the number of Agents by 5,000 while increasing their salaries by 10% for about 602 million USD. Why do I bring up the number of Agents? Because that would mean that you are building a &lt;strong&gt;&lt;em&gt;wall&lt;/em&gt; of eyes&lt;/strong&gt; in the Mexico-US border. I believe that under this scenario, you and your public relations team could convince your supporters that you delivered on your campaign promise of building a wall. It would just be a different kind of wall. The extra Border Patrol Agents and/or happier Agents (due to their increased salary) along with fewer attempts to cross the border (because immigrants would be interested in paying the &lt;em&gt;immigration tariff&lt;/em&gt;) would make them more efficient in their jobs. Some of them could be dedicated to making sure no one overstays their temporary work visa. Also note that by law, you &lt;em&gt;have&lt;/em&gt; to be a US citizen to become a Border Patrol Agent&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:16&#34;&gt;&lt;a href=&#34;#fn:16&#34;&gt;16&lt;/a&gt;&lt;/sup&gt;, so you would be increasing US jobs by 5 to 10 thousand under this scenario. That is more than the 700 jobs you claim to have saved from moving to Mexico from the US by cancelling the plans to build a factory in Mexico&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:17&#34;&gt;&lt;a href=&#34;#fn:17&#34;&gt;17&lt;/a&gt;&lt;/sup&gt;. I also imagine that this scenario would boost bus and airplane ticket sales.&lt;/p&gt;
-
-&lt;p&gt;I am of the opinion that &lt;em&gt;immigration tariffs&lt;/em&gt; would allow many individuals to have hope that they can improve their economic situation for them and their families. It would also translate &lt;em&gt;hope&lt;/em&gt; into a specific monetary goal. As of yesterday, 3,000 USD is about 64,000 MXN&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:18&#34;&gt;&lt;a href=&#34;#fn:18&#34;&gt;18&lt;/a&gt;&lt;/sup&gt; that translates to 800 days of minimum wage salary in Mexico&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:19&#34;&gt;&lt;a href=&#34;#fn:19&#34;&gt;19&lt;/a&gt;&lt;/sup&gt;. Saving that amount of money would take over 2 years if the person didn&amp;rsquo;t spend any of their income! While ideally the &lt;em&gt;immigration tariff&lt;/em&gt; would be lower than 3,000 USD, ultimately there would be a threshold that opens doors to more economic opportunity. So, Peña Nieto and Mexico have the challenge of showing that Mexicans can stay in Mexico and improve their economical situation if they can save that amount of money to start a small business, advance their education, among other options.&lt;/p&gt;
-
+&lt;p&gt;While writing this letter I realized that the idea of &lt;em&gt;immigration tariffs&lt;/em&gt; is not new&lt;sup id=&#34;fnref:8&#34;&gt;&lt;a href=&#34;#fn:8&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;8&lt;/a&gt;&lt;/sup&gt;,&lt;sup id=&#34;fnref:9&#34;&gt;&lt;a href=&#34;#fn:9&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;9&lt;/a&gt;&lt;/sup&gt;,&lt;sup id=&#34;fnref:10&#34;&gt;&lt;a href=&#34;#fn:10&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;10&lt;/a&gt;&lt;/sup&gt;,&lt;sup id=&#34;fnref:11&#34;&gt;&lt;a href=&#34;#fn:11&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;11&lt;/a&gt;&lt;/sup&gt;. However, I have not heard it being discussed recently and simply ask that you consider it.&lt;/p&gt;
+&lt;p&gt;To try to convince you that &lt;em&gt;immigration tariffs&lt;/em&gt; are an interesting alternative, consider what your government could do with an additional 600 to 1,000 million US dollars a year &amp;ndash; or multiply those numbers by two to get 1.2 to 2 billions USD a year by taking into account that about 50% of illegal immigrants are Mexicans. The average Border Patrol Agent self-reported salary is 80,250 USD a year&lt;sup id=&#34;fnref:12&#34;&gt;&lt;a href=&#34;#fn:12&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;12&lt;/a&gt;&lt;/sup&gt;. The actual salaries range from 21,616 to 157,257 USD as of January 2017&lt;sup id=&#34;fnref:13&#34;&gt;&lt;a href=&#34;#fn:13&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;13&lt;/a&gt;&lt;/sup&gt; depending on the &lt;em&gt;grade&lt;/em&gt; and &lt;em&gt;level&lt;/em&gt; as well as other options&lt;sup id=&#34;fnref:14&#34;&gt;&lt;a href=&#34;#fn:14&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;14&lt;/a&gt;&lt;/sup&gt;. In 2016, there were nearly 20,000 border patrol agents in the US&lt;sup id=&#34;fnref:15&#34;&gt;&lt;a href=&#34;#fn:15&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;15&lt;/a&gt;&lt;/sup&gt;. That means that you could decide to increase the number of Border Patrol Agents by 10,000 (50%) for about 803 million USD or increase the number of Agents by 5,000 while increasing their salaries by 10% for about 602 million USD. Why do I bring up the number of Agents? Because that would mean that you are building a &lt;strong&gt;&lt;em&gt;wall&lt;/em&gt; of eyes&lt;/strong&gt; in the Mexico-US border. I believe that under this scenario, you and your public relations team could convince your supporters that you delivered on your campaign promise of building a wall. It would just be a different kind of wall. The extra Border Patrol Agents and/or happier Agents (due to their increased salary) along with fewer attempts to cross the border (because immigrants would be interested in paying the &lt;em&gt;immigration tariff&lt;/em&gt;) would make them more efficient in their jobs. Some of them could be dedicated to making sure no one overstays their temporary work visa. Also note that by law, you &lt;em&gt;have&lt;/em&gt; to be a US citizen to become a Border Patrol Agent&lt;sup id=&#34;fnref:16&#34;&gt;&lt;a href=&#34;#fn:16&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;16&lt;/a&gt;&lt;/sup&gt;, so you would be increasing US jobs by 5 to 10 thousand under this scenario. That is more than the 700 jobs you claim to have saved from moving to Mexico from the US by cancelling the plans to build a factory in Mexico&lt;sup id=&#34;fnref:17&#34;&gt;&lt;a href=&#34;#fn:17&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;17&lt;/a&gt;&lt;/sup&gt;. I also imagine that this scenario would boost bus and airplane ticket sales.&lt;/p&gt;
+&lt;p&gt;I am of the opinion that &lt;em&gt;immigration tariffs&lt;/em&gt; would allow many individuals to have hope that they can improve their economic situation for them and their families. It would also translate &lt;em&gt;hope&lt;/em&gt; into a specific monetary goal. As of yesterday, 3,000 USD is about 64,000 MXN&lt;sup id=&#34;fnref:18&#34;&gt;&lt;a href=&#34;#fn:18&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;18&lt;/a&gt;&lt;/sup&gt; that translates to 800 days of minimum wage salary in Mexico&lt;sup id=&#34;fnref:19&#34;&gt;&lt;a href=&#34;#fn:19&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;19&lt;/a&gt;&lt;/sup&gt;. Saving that amount of money would take over 2 years if the person didn&amp;rsquo;t spend any of their income! While ideally the &lt;em&gt;immigration tariff&lt;/em&gt; would be lower than 3,000 USD, ultimately there would be a threshold that opens doors to more economic opportunity. So, Peña Nieto and Mexico have the challenge of showing that Mexicans can stay in Mexico and improve their economical situation if they can save that amount of money to start a small business, advance their education, among other options.&lt;/p&gt;
 &lt;p&gt;Migration involves two sides and as presidents of two countries of &lt;em&gt;united states&lt;/em&gt; (American and Mexican, respectively) I encourage you to keep thinking how to &lt;em&gt;unitedly&lt;/em&gt; address migration and take over the multi million dollar market that &lt;em&gt;coyotes&lt;/em&gt; currently control.&lt;/p&gt;
-
 &lt;p&gt;Best,
 Leonardo&lt;/p&gt;
-
-&lt;p&gt;&lt;center&gt;
+&lt;center&gt;
 &lt;a href=&#34;https://en.wikipedia.org/wiki/Mexican_Americans&#34;&gt;&lt;img alt = &#39;Mexican American flag&#39; width=&#39;700&#39; src=&#39;https://upload.wikimedia.org/wikipedia/en/3/32/Mexican_American_Flag.PNG&#39; /&gt;&lt;/a&gt;
-&lt;/center&gt;&lt;/p&gt;
-
+&lt;/center&gt;
 &lt;div class=&#34;alert alert-warning&#34;&gt;
   &lt;div&gt;
     This open letter is my opinion only and not that of my employer or other people I know.
   &lt;/div&gt;
 &lt;/div&gt;
-
 &lt;h3 id=&#34;calculations-used&#34;&gt;Calculations used&lt;/h3&gt;
-
 &lt;pre&gt;&lt;code&gt;## Mexican immigrants per year
 round(-1.7 * 123.166749) * 1000
 
@@ -543,59 +526,73 @@ round(800 / 365.25, 1)
 
 ## [1] 2.2
 &lt;/code&gt;&lt;/pre&gt;
-
 &lt;p&gt;I finally wrote this open letter after my poll a few weeks ago:&lt;/p&gt;
-
 &lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;I&amp;#39;m thinking of writing an open letter to &lt;a href=&#34;https://twitter.com/realDonaldTrump?ref_src=twsrc%5Etfw&#34;&gt;@realDonaldTrump&lt;/a&gt; about an alternative solution to the USA-Mexico wall. Would you do it?&lt;/p&gt;&amp;mdash; 🇲🇽 Dr. Leonardo Collado-Torres (@fellgernon) &lt;a href=&#34;https://twitter.com/fellgernon/status/817608772000608256?ref_src=twsrc%5Etfw&#34;&gt;January 7, 2017&lt;/a&gt;&lt;/blockquote&gt;
 &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
 
-
 &lt;h3 id=&#34;references&#34;&gt;References&lt;/h3&gt;
-&lt;div class=&#34;footnotes&#34;&gt;
-
-&lt;hr /&gt;
-
+&lt;section class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
+&lt;hr&gt;
 &lt;ol&gt;
-&lt;li id=&#34;fn:1&#34;&gt;&lt;a href=&#34;https://www.cia.gov/library/PUBLICATIONS/the-world-factbook/geos/mx.html&#34; target=&#34;_blank&#34;&gt;https://www.cia.gov/library/PUBLICATIONS/the-world-factbook/geos/mx.html&lt;/a&gt;
- &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:1&#34;&gt;&lt;sup&gt;^&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li id=&#34;fn:2&#34;&gt;&lt;a href=&#34;https://www.dhs.gov/sites/default/files/publications/ois_yb_2014.pdf&#34; target=&#34;_blank&#34;&gt;https://www.dhs.gov/sites/default/files/publications/ois_yb_2014.pdf&lt;/a&gt;
- &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:2&#34;&gt;&lt;sup&gt;^&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li id=&#34;fn:3&#34;&gt;&lt;a href=&#34;http://www.pewresearch.org/fact-tank/2016/11/03/5-facts-about-illegal-immigration-in-the-u-s/&#34; target=&#34;_blank&#34;&gt;http://www.pewresearch.org/fact-tank/2016/11/03/5-facts-about-illegal-immigration-in-the-u-s/&lt;/a&gt;
- &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:3&#34;&gt;&lt;sup&gt;^&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li id=&#34;fn:4&#34;&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Illegal_immigration_to_the_United_States&#34; target=&#34;_blank&#34;&gt;https://en.wikipedia.org/wiki/Illegal_immigration_to_the_United_States&lt;/a&gt;
- &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:4&#34;&gt;&lt;sup&gt;^&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li id=&#34;fn:5&#34;&gt;&lt;a href=&#34;http://www.univision.com/noticias/inmigracion/el-costo-del-cruce-indocumentado-a-estados-unidos-varia-entre-3-mil-y-20-mil-dolares&#34; target=&#34;_blank&#34;&gt;http://www.univision.com/noticias/inmigracion/el-costo-del-cruce-indocumentado-a-estados-unidos-varia-entre-3-mil-y-20-mil-dolares&lt;/a&gt;
- &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:5&#34;&gt;&lt;sup&gt;^&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li id=&#34;fn:6&#34;&gt;&lt;a href=&#34;https://www.bloomberg.com/news/articles/2013-01-20/coming-to-america-its-going-to-cost-you&#34; target=&#34;_blank&#34;&gt;https://www.bloomberg.com/news/articles/2013-01-20/coming-to-america-its-going-to-cost-you&lt;/a&gt;
- &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:6&#34;&gt;&lt;sup&gt;^&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li id=&#34;fn:7&#34;&gt;&lt;a href=&#34;http://www.jornada.unam.mx/ultimas/2017/01/06/cancelacion-de-ford-dejara-a-miles-sin-empleo&#34; target=&#34;_blank&#34;&gt;http://www.jornada.unam.mx/ultimas/2017/01/06/cancelacion-de-ford-dejara-a-miles-sin-empleo&lt;/a&gt;
- &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:7&#34;&gt;&lt;sup&gt;^&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li id=&#34;fn:8&#34;&gt;&lt;a href=&#34;https://openborders.info/immigration-tariffs/&#34; target=&#34;_blank&#34;&gt;https://openborders.info/immigration-tariffs/&lt;/a&gt;
- &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:8&#34;&gt;&lt;sup&gt;^&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li id=&#34;fn:9&#34;&gt;&lt;a href=&#34;http://theconversation.com/tariffs-could-fix-both-immigration-policy-and-people-smuggling-40972&#34; target=&#34;_blank&#34;&gt;http://theconversation.com/tariffs-could-fix-both-immigration-policy-and-people-smuggling-40972&lt;/a&gt;
- &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:9&#34;&gt;&lt;sup&gt;^&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li id=&#34;fn:10&#34;&gt;&lt;a href=&#34;https://cei.org/onpoint/conservative-case-immigration-tariffs&#34; target=&#34;_blank&#34;&gt;https://cei.org/onpoint/conservative-case-immigration-tariffs&lt;/a&gt;
- &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:10&#34;&gt;&lt;sup&gt;^&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li id=&#34;fn:11&#34;&gt;&lt;a href=&#34;https://www.brookings.edu/book/brain-gain/&#34; target=&#34;_blank&#34;&gt;https://www.brookings.edu/book/brain-gain/&lt;/a&gt;
- &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:11&#34;&gt;&lt;sup&gt;^&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li id=&#34;fn:12&#34;&gt;&lt;a href=&#34;https://www.glassdoor.com/Salary/US-Customs-and-Border-Protection-Salaries-E41481.htm&#34; target=&#34;_blank&#34;&gt;https://www.glassdoor.com/Salary/US-Customs-and-Border-Protection-Salaries-E41481.htm&lt;/a&gt;
- &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:12&#34;&gt;&lt;sup&gt;^&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li id=&#34;fn:13&#34;&gt;&lt;a href=&#34;https://www.opm.gov/policy-data-oversight/pay-leave/salaries-wages/salary-tables/pdf/2017/LR.pdf&#34; target=&#34;_blank&#34;&gt;https://www.opm.gov/policy-data-oversight/pay-leave/salaries-wages/salary-tables/pdf/2017/LR.pdf&lt;/a&gt;
- &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:13&#34;&gt;&lt;sup&gt;^&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li id=&#34;fn:14&#34;&gt;&lt;a href=&#34;http://work.chron.com/salary-law-enforcement-border-patrol-person-3148.html&#34; target=&#34;_blank&#34;&gt;http://work.chron.com/salary-law-enforcement-border-patrol-person-3148.html&lt;/a&gt;
- &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:14&#34;&gt;&lt;sup&gt;^&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li id=&#34;fn:15&#34;&gt;&lt;a href=&#34;https://www.cbp.gov/sites/default/files/assets/documents/2017-Jan/USBP%20Stats%20FY2016%20sector%20profile.pdf&#34; target=&#34;_blank&#34;&gt;https://www.cbp.gov/sites/default/files/assets/documents/2017-Jan/USBP%20Stats%20FY2016%20sector%20profile.pdf&lt;/a&gt;
- &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:15&#34;&gt;&lt;sup&gt;^&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li id=&#34;fn:16&#34;&gt;&lt;a href=&#34;http://www.criminaljusticedegreeschools.com/criminal-justice-careers/border-patrol-agent/&#34; target=&#34;_blank&#34;&gt;http://www.criminaljusticedegreeschools.com/criminal-justice-careers/border-patrol-agent/&lt;/a&gt;
- &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:16&#34;&gt;&lt;sup&gt;^&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li id=&#34;fn:17&#34;&gt;&lt;a href=&#34;http://www.foxnews.com/politics/2017/01/03/ford-to-scrap-mexico-plant-invest-in-michigan-due-to-trump-policies.html&#34; target=&#34;_blank&#34;&gt;http://www.foxnews.com/politics/2017/01/03/ford-to-scrap-mexico-plant-invest-in-michigan-due-to-trump-policies.html&lt;/a&gt;
- &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:17&#34;&gt;&lt;sup&gt;^&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li id=&#34;fn:18&#34;&gt;&lt;a href=&#34;http://www.banxico.org.mx/portal-mercado-cambiario/&#34; target=&#34;_blank&#34;&gt;http://www.banxico.org.mx/portal-mercado-cambiario/&lt;/a&gt;
- &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:18&#34;&gt;&lt;sup&gt;^&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li id=&#34;fn:19&#34;&gt;&lt;a href=&#34;http://www.sat.gob.mx/informacion_fiscal/tablas_indicadores/Paginas/salarios_minimos.aspx&#34; target=&#34;_blank&#34;&gt;http://www.sat.gob.mx/informacion_fiscal/tablas_indicadores/Paginas/salarios_minimos.aspx&lt;/a&gt;
- &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:19&#34;&gt;&lt;sup&gt;^&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li id=&#34;fn:1&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.cia.gov/library/PUBLICATIONS/the-world-factbook/geos/mx.html&#34;&gt;https://www.cia.gov/library/PUBLICATIONS/the-world-factbook/geos/mx.html&lt;/a&gt; &lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:2&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.dhs.gov/sites/default/files/publications/ois_yb_2014.pdf&#34;&gt;https://www.dhs.gov/sites/default/files/publications/ois_yb_2014.pdf&lt;/a&gt; &lt;a href=&#34;#fnref:2&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:3&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;&lt;a href=&#34;http://www.pewresearch.org/fact-tank/2016/11/03/5-facts-about-illegal-immigration-in-the-u-s/&#34;&gt;http://www.pewresearch.org/fact-tank/2016/11/03/5-facts-about-illegal-immigration-in-the-u-s/&lt;/a&gt; &lt;a href=&#34;#fnref:3&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:4&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Illegal_immigration_to_the_United_States&#34;&gt;https://en.wikipedia.org/wiki/Illegal_immigration_to_the_United_States&lt;/a&gt; &lt;a href=&#34;#fnref:4&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:5&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;&lt;a href=&#34;http://www.univision.com/noticias/inmigracion/el-costo-del-cruce-indocumentado-a-estados-unidos-varia-entre-3-mil-y-20-mil-dolares&#34;&gt;http://www.univision.com/noticias/inmigracion/el-costo-del-cruce-indocumentado-a-estados-unidos-varia-entre-3-mil-y-20-mil-dolares&lt;/a&gt; &lt;a href=&#34;#fnref:5&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:6&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.bloomberg.com/news/articles/2013-01-20/coming-to-america-its-going-to-cost-you&#34;&gt;https://www.bloomberg.com/news/articles/2013-01-20/coming-to-america-its-going-to-cost-you&lt;/a&gt; &lt;a href=&#34;#fnref:6&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:7&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;&lt;a href=&#34;http://www.jornada.unam.mx/ultimas/2017/01/06/cancelacion-de-ford-dejara-a-miles-sin-empleo&#34;&gt;http://www.jornada.unam.mx/ultimas/2017/01/06/cancelacion-de-ford-dejara-a-miles-sin-empleo&lt;/a&gt; &lt;a href=&#34;#fnref:7&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:8&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;&lt;a href=&#34;https://openborders.info/immigration-tariffs/&#34;&gt;https://openborders.info/immigration-tariffs/&lt;/a&gt; &lt;a href=&#34;#fnref:8&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:9&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;&lt;a href=&#34;http://theconversation.com/tariffs-could-fix-both-immigration-policy-and-people-smuggling-40972&#34;&gt;http://theconversation.com/tariffs-could-fix-both-immigration-policy-and-people-smuggling-40972&lt;/a&gt; &lt;a href=&#34;#fnref:9&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:10&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;&lt;a href=&#34;https://cei.org/onpoint/conservative-case-immigration-tariffs&#34;&gt;https://cei.org/onpoint/conservative-case-immigration-tariffs&lt;/a&gt; &lt;a href=&#34;#fnref:10&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:11&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.brookings.edu/book/brain-gain/&#34;&gt;https://www.brookings.edu/book/brain-gain/&lt;/a&gt; &lt;a href=&#34;#fnref:11&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:12&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.glassdoor.com/Salary/US-Customs-and-Border-Protection-Salaries-E41481.htm&#34;&gt;https://www.glassdoor.com/Salary/US-Customs-and-Border-Protection-Salaries-E41481.htm&lt;/a&gt; &lt;a href=&#34;#fnref:12&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:13&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.opm.gov/policy-data-oversight/pay-leave/salaries-wages/salary-tables/pdf/2017/LR.pdf&#34;&gt;https://www.opm.gov/policy-data-oversight/pay-leave/salaries-wages/salary-tables/pdf/2017/LR.pdf&lt;/a&gt; &lt;a href=&#34;#fnref:13&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:14&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;&lt;a href=&#34;http://work.chron.com/salary-law-enforcement-border-patrol-person-3148.html&#34;&gt;http://work.chron.com/salary-law-enforcement-border-patrol-person-3148.html&lt;/a&gt; &lt;a href=&#34;#fnref:14&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:15&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.cbp.gov/sites/default/files/assets/documents/2017-Jan/USBP%20Stats%20FY2016%20sector%20profile.pdf&#34;&gt;https://www.cbp.gov/sites/default/files/assets/documents/2017-Jan/USBP%20Stats%20FY2016%20sector%20profile.pdf&lt;/a&gt; &lt;a href=&#34;#fnref:15&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:16&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;&lt;a href=&#34;http://www.criminaljusticedegreeschools.com/criminal-justice-careers/border-patrol-agent/&#34;&gt;http://www.criminaljusticedegreeschools.com/criminal-justice-careers/border-patrol-agent/&lt;/a&gt; &lt;a href=&#34;#fnref:16&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:17&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;&lt;a href=&#34;http://www.foxnews.com/politics/2017/01/03/ford-to-scrap-mexico-plant-invest-in-michigan-due-to-trump-policies.html&#34;&gt;http://www.foxnews.com/politics/2017/01/03/ford-to-scrap-mexico-plant-invest-in-michigan-due-to-trump-policies.html&lt;/a&gt; &lt;a href=&#34;#fnref:17&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:18&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;&lt;a href=&#34;http://www.banxico.org.mx/portal-mercado-cambiario/&#34;&gt;http://www.banxico.org.mx/portal-mercado-cambiario/&lt;/a&gt; &lt;a href=&#34;#fnref:18&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:19&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;&lt;a href=&#34;http://www.sat.gob.mx/informacion_fiscal/tablas_indicadores/Paginas/salarios_minimos.aspx&#34;&gt;http://www.sat.gob.mx/informacion_fiscal/tablas_indicadores/Paginas/salarios_minimos.aspx&lt;/a&gt; &lt;a href=&#34;#fnref:19&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ol&gt;
-&lt;/div&gt;
+&lt;/section&gt;
 </description>
     </item>
     

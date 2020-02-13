@@ -1,24 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Fun on L. Collado-Torres</title>
+    <title>Fun | L. Collado-Torres</title>
     <link>/categories/fun/</link>
-    <description>Recent content in Fun on L. Collado-Torres</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>&amp;copy; 2011-{year} Leonardo Collado Torres under (CC) BY-NC-SA 4.0. All thoughts and opinions here are my own. Icon is the [R logo](https://www.r-project.org/logo/) modified</copyright>
-    <lastBuildDate>Wed, 20 Nov 2013 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://lcolladotor.github.io/categories/fun/" rel="self" type="application/rss+xml" />
+      <atom:link href=http://lcolladotor.github.io/categories/fun/index.xml rel="self" type="application/rss+xml" />
+    <description>Fun</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2011-2020 Leonardo Collado Torres under (CC) BY-NC-SA 4.0. All thoughts and opinions here are my own. Icon is the [R logo](https://www.r-project.org/logo/) modified</copyright><lastBuildDate>Wed, 20 Nov 2013 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
+      <title>Fun</title>
+      <link>/categories/fun/</link>
+    </image>
     
     <item>
       <title>Third Student Cultural Mixer</title>
       <link>/2013/11/20/studentmixer3/</link>
       <pubDate>Wed, 20 Nov 2013 00:00:00 +0000</pubDate>
-      
       <guid>/2013/11/20/studentmixer3/</guid>
-      <description>&lt;p&gt;&lt;center&gt;
+      <description>&lt;center&gt;
 &lt;a href=&#34;http://lcolladotor.github.io/figs/2013-11-20-StudentMixer3/ad-03_v1.png&#34;&gt;&lt;img src=&#34;http://lcolladotor.github.io/figs/2013-11-20-StudentMixer3/ad-03_v1.png&#34; alt=&#34;Workflow&#34; style=&#34;width: 612px;&#34;/&gt;&lt;/a&gt;
-&lt;/center&gt;&lt;/p&gt;
-
+&lt;/center&gt;
 &lt;p&gt;Note: the Fall event will be student and post doc only while the Spring event will be open to the whole department. This is to smooth the integration process for the new students. A survey showed that at least some first year students would be more likely to either attend or present if it&amp;rsquo;s a student-only event.&lt;/p&gt;
 </description>
     </item>
@@ -27,7 +28,6 @@
       <title>Epi vs Biostat Kickball match Spring 2013</title>
       <link>/2013/04/24/epi-vs-biostat-kickball-match-spring-2013/</link>
       <pubDate>Wed, 24 Apr 2013 00:00:00 +0000</pubDate>
-      
       <guid>/2013/04/24/epi-vs-biostat-kickball-match-spring-2013/</guid>
       <description>&lt;p&gt;This past Saturday the Epi and Biostat troops met for another fun kickball match. Obviously Biostat beat Epi, yup I know: again! This time the score was 15-8 (according to our bookkeeper and captain John) or 12-8 (according to some in Epi).&lt;/p&gt;
 &lt;p&gt;There was a hint of a surprise at the beginning when Epi scored two runs in the top of the first inning. However, the tide changed back with a homerun by Rumen. Sadly, one of the Epi players got injured and carried out of the court in that play. Rumen also pulled his quad with the big hit and was limited for the rest of the match.&lt;/p&gt;
@@ -44,24 +44,19 @@
       <title>&#34;Do analytics really tell the whole story?&#34;</title>
       <link>/2013/03/31/do-analytics-really-tell-the-whole-story/</link>
       <pubDate>Sun, 31 Mar 2013 00:00:00 +0000</pubDate>
-      
       <guid>/2013/03/31/do-analytics-really-tell-the-whole-story/</guid>
       <description>&lt;p&gt;&amp;#8220;&lt;a href=&#34;http://www.packers.com/news-and-events/article-1/Do-analytics-really-tell-the-whole-story/86248baa-e8ec-4772-a0df-7693676812be?campaign=FB130330&#34;&gt;Do analytics really tell the whole story?&lt;/a&gt;&#34; by Vic Ketchman explores how analytics is used nowadays in the NFL draft. The entry point is the &#34;Moneyball&#34; movie and Ketchman&amp;#8217;s piece is mainly a digested interview to Tony Villiotti from draftmetrics.com&lt;/p&gt;
 &lt;p&gt;According to him:&lt;/p&gt;
-
 &lt;blockquote&gt;
 &lt;p&gt;What is analytics? It’s the accumulation of meaningful patterns in data, for the purpose of using that data to predict future results.&lt;/p&gt;
 &lt;/blockquote&gt;
-
 &lt;p&gt;I&amp;#8217;m not a fan of the wording used, but well, the point they make is that they use data to predict the future.&lt;/p&gt;
 &lt;p&gt;My main issue with this article is that after the previous quote Ketchman pretty much describes some of the data. Description of the data—in my opinion—is part of what we call EDA: Exploratory Data Analysis. &lt;span&gt;The data is interesting, but there are really not many predictions made.&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;I&amp;#8217;m also concerned by how some of the data is presented. For example, is the 37.1 percent rate of starts by first-round picks really different form 35.5 for the teams with losing records? Plus, it&amp;#8217;s data from only a single year! So I think that it&amp;#8217;s not enough to actually answer any question.&lt;/p&gt;
 &lt;p&gt;To end my comment, Ketchman asks:&lt;/p&gt;
-
 &lt;blockquote&gt;
 &lt;p&gt;How do you like those analytics?&lt;/p&gt;
 &lt;/blockquote&gt;
-
 &lt;p&gt;I don&amp;#8217;t like them much. Sure, some of numbers presented are interesting but the &amp;#8216;analytics&amp;#8217; are far from being great. &lt;span&gt;Though I bet Villiotti has more interesting results that are only seen by the NFL teams.&lt;/span&gt;&lt;/p&gt;
 </description>
     </item>
@@ -70,13 +65,11 @@
       <title>New Citi ThankYou ballon TV commercial looks like a ripoff of Hello Kitty in Space</title>
       <link>/2013/03/27/new-citi-thankyou-ballon-tv-commercial-looks-like-a/</link>
       <pubDate>Wed, 27 Mar 2013 00:00:00 +0000</pubDate>
-      
       <guid>/2013/03/27/new-citi-thankyou-ballon-tv-commercial-looks-like-a/</guid>
       <description>&lt;p&gt;I don&amp;#8217;t know about you, but I think that this new &amp;#8220;Citi ThankYou Cards&amp;#8221; TV commercial is trying to ride the popularity train from the &amp;#8220;HELLO KITTY IN SPACE&amp;#8221; video.&lt;/p&gt;
 &lt;p&gt;&lt;iframe frameborder=&#34;0&#34; height=&#34;315&#34; src=&#34;http://www.youtube.com/embed/5qZQ0POmpkM?rel=0&#34; width=&#34;560&#34;&gt;&lt;/iframe&gt;&lt;/p&gt;
 &lt;p&gt;&lt;iframe frameborder=&#34;0&#34; height=&#34;315&#34; src=&#34;http://www.youtube.com/embed/5REsCTG4-Gg?rel=0&#34; width=&#34;560&#34;&gt;&lt;/iframe&gt;&lt;/p&gt;
 &lt;p&gt;Hm&amp;#8230; it looks like a ripoff, smells like a ripoff, tastes like a ripoff&amp;#8230; is it a ripoff?&lt;/p&gt;
-
 &lt;p&gt;Maybe it&amp;#8217;s just flattery, maybe it&amp;#8217;s imitation, or maybe it&amp;#8217;s copyright infringement. What do you think?&lt;/p&gt;
 </description>
     </item>
@@ -85,10 +78,9 @@
       <title>02/27/12 PHD comic: &#39;Inspired by true events&#39;</title>
       <link>/2012/10/03/02-27-12-phd-comic-inspired-by-true-events/</link>
       <pubDate>Wed, 03 Oct 2012 00:00:00 +0000</pubDate>
-      
       <guid>/2012/10/03/02-27-12-phd-comic-inspired-by-true-events/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;http://www.phdcomics.com/comics.php?f=1474&#34;&gt;02/27/12 PHD comic: &amp;lsquo;Inspired by true events&amp;rsquo;&lt;/a&gt;&lt;br/&gt;&lt;p&gt;&lt;img height=&#34;217&#34; src=&#34;http://www.phdcomics.com/comics/archive/phd022712s.gif&#34; width=&#34;500&#34;/&gt;&lt;/p&gt;
-Totally what happened to me on Monday night! (whenever I saved this post as a draft :P, but it&amp;#8217;s happening again now)&lt;/p&gt;
+      <description>&lt;p&gt;&lt;a href=&#34;http://www.phdcomics.com/comics.php?f=1474&#34;&gt;02/27/12 PHD comic: &amp;lsquo;Inspired by true events&#39;&lt;/a&gt;&lt;br/&gt;&lt;p&gt;&lt;img height=&#34;217&#34; src=&#34;http://www.phdcomics.com/comics/archive/phd022712s.gif&#34; width=&#34;500&#34;/&gt;&lt;/p&gt;
+Totally what happened to me on Monday night! (whenever I saved this post as a draft :P, but it’s happening again now)&lt;/p&gt;
 </description>
     </item>
     
@@ -96,22 +88,19 @@ Totally what happened to me on Monday night! (whenever I saved this post as a dr
       <title>Homepage photos: which cheek you show says something?</title>
       <link>/2012/08/30/homepage-photos-which-cheek-you-show-says-something/</link>
       <pubDate>Thu, 30 Aug 2012 00:00:00 +0000</pubDate>
-      
       <guid>/2012/08/30/homepage-photos-which-cheek-you-show-says-something/</guid>
       <description>&lt;p&gt;John Bohannon wrote &lt;a href=&#34;http://news.sciencemag.org/sciencenow/2012/08/scientists-photos-reveal-their.html&#34;&gt;Scientists&amp;#8217; Photos Reveal Their Inner Mr. Spock&lt;/a&gt; which I found funny in a science-curious kind of way. I hadn&amp;#8217;t thought about the message you could be sending depending on which cheek you show. I had only noticed that people like to show more serious-looking photos of themselves and sometimes make it an obviously funny one. I have to say too that some of the pages from my co-workers don&amp;#8217;t even show a picture. I guess that&amp;#8217;s a more recent trend to make it more &amp;#8220;professional&amp;#8221; looking. Dunno.&lt;/p&gt;
 &lt;p&gt;I have to guess that dead center-looking pictures are rare. At least when you look at &lt;a href=&#34;http://www.psy.gla.ac.uk/staff/index.php?id=RJ002&#34;&gt;Rachael Jack&amp;#8217;s one&lt;/a&gt; it stands out. It reminds me of passport pictures. For my &lt;a href=&#34;http://www.biostat.jhsph.edu/~lcollado/index.html#.UD-xBmie5us&#34;&gt;new academic site&lt;/a&gt; I choose one that doesn&amp;#8217;t look serious, I wanted a fun one! Plus I make it obvious which country I&amp;#8217;m from ^^.&lt;/p&gt;
 &lt;p&gt;For some reason this doesn&amp;#8217;t surprise me:&lt;/p&gt;
-&gt; &lt;p&gt;&lt;span&gt;while English language and literature scholars showed the left cheek and engineers showed the right, psychologists were more difficult to categorize. &lt;/span&gt;&lt;/p&gt;
-</description>
+&gt; &lt;p&gt;&lt;span&gt;while English language and literature scholars showed the left cheek and engineers showed the right, psychologists were more difficult to categorize. &lt;/span&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>05/9/12 PHD comic: &#39;Grad Stereogram&#39;</title>
       <link>/2012/05/10/05-9-12-phd-comic-grad-stereogram/</link>
       <pubDate>Thu, 10 May 2012 00:00:00 +0000</pubDate>
-      
       <guid>/2012/05/10/05-9-12-phd-comic-grad-stereogram/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;http://www.phdcomics.com/comics.php?f=1493&#34;&gt;05/9/12 PHD comic: &amp;lsquo;Grad Stereogram&amp;rsquo;&lt;/a&gt;&lt;br/&gt;&lt;p&gt;Is there really something hidden in the pic? I couldn&amp;#8217;t see it :P I guessed that there shouldn&amp;#8217;t be anything from the text, but just in case I checked. &lt;/p&gt;&lt;/p&gt;
+      <description>&lt;p&gt;&lt;a href=&#34;http://www.phdcomics.com/comics.php?f=1493&#34;&gt;05/9/12 PHD comic: &amp;lsquo;Grad Stereogram&#39;&lt;/a&gt;&lt;br/&gt;&lt;p&gt;Is there really something hidden in the pic? I couldn’t see it :P I guessed that there shouldn’t be anything from the text, but just in case I checked. &lt;/p&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -119,11 +108,9 @@ Totally what happened to me on Monday night! (whenever I saved this post as a dr
       <title>Pi</title>
       <link>/2012/04/28/pi/</link>
       <pubDate>Sat, 28 Apr 2012 00:00:00 +0000</pubDate>
-      
       <guid>/2012/04/28/pi/</guid>
       <description>&lt;p&gt;&lt;img height=&#34;500&#34; src=&#34;http://www.fastcodesign.com/multisite_files/codesign/imagecache/inline-zoom/post-inline/4million2.jpg&#34; width=&#34;500&#34;/&gt;&lt;/p&gt;
 &lt;p&gt;More &lt;a href=&#34;http://www.fastcodesign.com/1669614/what-pi-looks-like-to-4-million-decimal-places-as-pixel-art&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
-
 &lt;p&gt;(Saw it from a fb friend).&lt;/p&gt;
 </description>
     </item>
@@ -132,7 +119,6 @@ Totally what happened to me on Monday night! (whenever I saved this post as a dr
       <title>PhD Comics about beers!</title>
       <link>/2012/03/08/i-love-the-i-went-to-have-a-few-beers-with-my/</link>
       <pubDate>Thu, 08 Mar 2012 00:00:00 +0000</pubDate>
-      
       <guid>/2012/03/08/i-love-the-i-went-to-have-a-few-beers-with-my/</guid>
       <description>&lt;p&gt;&lt;img height=&#34;989&#34; src=&#34;http://www.phdcomics.com/comics/archive/phd030712s.gif&#34; width=&#34;700&#34;/&gt;&lt;/p&gt;
 &lt;p&gt;I love the &amp;#8220;I went to have a few beers with my friends&amp;#8221;!&lt;/p&gt;

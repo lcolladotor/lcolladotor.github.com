@@ -1,22 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Reproducibility on L. Collado-Torres</title>
+    <title>Reproducibility | L. Collado-Torres</title>
     <link>/tags/reproducibility/</link>
-    <description>Recent content in Reproducibility on L. Collado-Torres</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>&amp;copy; 2011-{year} Leonardo Collado Torres under (CC) BY-NC-SA 4.0. All thoughts and opinions here are my own. Icon is the [R logo](https://www.r-project.org/logo/) modified</copyright>
-    <lastBuildDate>Sat, 24 Jun 2017 08:30:00 -0400</lastBuildDate>
-    <atom:link href="http://lcolladotor.github.io/tags/reproducibility/" rel="self" type="application/rss+xml" />
+      <atom:link href=http://lcolladotor.github.io/tags/reproducibility/index.xml rel="self" type="application/rss+xml" />
+    <description>Reproducibility</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2011-2020 Leonardo Collado Torres under (CC) BY-NC-SA 4.0. All thoughts and opinions here are my own. Icon is the [R logo](https://www.r-project.org/logo/) modified</copyright><lastBuildDate>Sat, 24 Jun 2017 08:30:00 -0400</lastBuildDate>
+    <image>
+      <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
+      <title>Reproducibility</title>
+      <link>/tags/reproducibility/</link>
+    </image>
     
     <item>
       <title>Reproducible Research and Bioinformatics</title>
       <link>/talk/reproducibility2017/</link>
       <pubDate>Sat, 24 Jun 2017 08:30:00 -0400</pubDate>
-      
       <guid>/talk/reproducibility2017/</guid>
       <description>&lt;script async class=&#34;speakerdeck-embed&#34; data-id=&#34;c2dcb6f805fc41348f16e7ae34dd3569&#34; data-ratio=&#34;1.29456384323641&#34; src=&#34;//speakerdeck.com/assets/embed.js&#34;&gt;&lt;/script&gt;
-
 &lt;!--
 
 &lt;div class=&#34;alert alert-note&#34;&gt;

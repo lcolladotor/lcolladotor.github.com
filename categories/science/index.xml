@@ -1,19 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Science on L. Collado-Torres</title>
+    <title>Science | L. Collado-Torres</title>
     <link>/categories/science/</link>
-    <description>Recent content in Science on L. Collado-Torres</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>&amp;copy; 2011-{year} Leonardo Collado Torres under (CC) BY-NC-SA 4.0. All thoughts and opinions here are my own. Icon is the [R logo](https://www.r-project.org/logo/) modified</copyright>
-    <lastBuildDate>Tue, 02 Apr 2019 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://lcolladotor.github.io/categories/science/" rel="self" type="application/rss+xml" />
+      <atom:link href=http://lcolladotor.github.io/categories/science/index.xml rel="self" type="application/rss+xml" />
+    <description>Science</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2011-2020 Leonardo Collado Torres under (CC) BY-NC-SA 4.0. All thoughts and opinions here are my own. Icon is the [R logo](https://www.r-project.org/logo/) modified</copyright><lastBuildDate>Tue, 02 Apr 2019 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
+      <title>Science</title>
+      <link>/categories/science/</link>
+    </image>
     
     <item>
       <title>How to write academic documents with GoogleDocs</title>
       <link>/2019/04/02/how-to-write-academic-documents-with-googledocs/</link>
       <pubDate>Tue, 02 Apr 2019 00:00:00 +0000</pubDate>
-      
       <guid>/2019/04/02/how-to-write-academic-documents-with-googledocs/</guid>
       <description>
 
@@ -64,12 +66,12 @@
 &lt;p&gt;For more details, check the &lt;a href=&#34;https://f1000.com/work/#/faq/google-docs-add-on&#34;&gt;FAQs&lt;/a&gt;.&lt;/p&gt;
 
 &lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
-  &lt;iframe src=&#34;//player.vimeo.com/video/153753002&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+  &lt;iframe src=&#34;https://player.vimeo.com/video/153753002&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;vimeo video&#34; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
  &lt;/div&gt;
 
 
 &lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
-  &lt;iframe src=&#34;//player.vimeo.com/video/141798183&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+  &lt;iframe src=&#34;https://player.vimeo.com/video/141798183&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;vimeo video&#34; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
  &lt;/div&gt;
 
 &lt;/div&gt;
@@ -263,7 +265,6 @@ URL: &lt;a href=&#34;https://github.com/rstudio/blogdown&#34;&gt;https://github.
       <title>Why I applied to join SNI: the Mexican National Researchers registry</title>
       <link>/2018/09/29/why-i-applied-to-join-sni-the-mexican-national-researchers-registry/</link>
       <pubDate>Sat, 29 Sep 2018 00:00:00 +0000</pubDate>
-      
       <guid>/2018/09/29/why-i-applied-to-join-sni-the-mexican-national-researchers-registry/</guid>
       <description>
 
@@ -407,7 +408,6 @@ URL: &lt;a href=&#34;https://github.com/rstudio/blogdown&#34;&gt;https://github.
       <title>Harassment, diversity in science and inspiration from my grandmother</title>
       <link>/2018/07/30/harassment-diversity-in-science-and-inspiration-from-my-grandmother/</link>
       <pubDate>Mon, 30 Jul 2018 00:00:00 +0000</pubDate>
-      
       <guid>/2018/07/30/harassment-diversity-in-science-and-inspiration-from-my-grandmother/</guid>
       <description>
 
@@ -572,7 +572,6 @@ URL: &lt;a href=&#34;https://github.com/rstudio/blogdown&#34;&gt;https://github.
       <title>SciLifeLab Prize: you still have time to participate! </title>
       <link>/2018/06/20/scilifelab-prize-you-still-have-time-to-participate/</link>
       <pubDate>Wed, 20 Jun 2018 00:00:00 +0000</pubDate>
-      
       <guid>/2018/06/20/scilifelab-prize-you-still-have-time-to-participate/</guid>
       <description>
 
@@ -726,64 +725,44 @@ Figure 1: Overview of the data available in recount2. Reads aligned to the refer
       <title>Keeping in touch (ENAR2014?) and philosophical questions regarding México&#39;s future in genomics</title>
       <link>/2013/06/12/keeping-in-touch-enar2014-and-philosophical/</link>
       <pubDate>Wed, 12 Jun 2013 00:00:00 +0000</pubDate>
-      
       <guid>/2013/06/12/keeping-in-touch-enar2014-and-philosophical/</guid>
       <description>&lt;p&gt;The following text is an email I sent to several of my friends from the &lt;a href=&#34;http://www.lcg.unam.mx/about&#34;&gt;LCG undergraduate program &lt;/a&gt;I studied. There I talk about keeping in touch, I invite them to &lt;a href=&#34;http://www.enar.org/meetings.cfm&#34;&gt;ENAR 2014&lt;/a&gt;, and also talk about some philosophical questions regarding our future. &lt;/p&gt;
 &lt;p&gt;I&amp;#8217;m posting it here because I don&amp;#8217;t mind sharing these thoughts and because I don&amp;#8217;t have the current email addresses of many former LCG students.&lt;br/&gt;&lt;br/&gt;Enjoy&lt;/p&gt;
+&lt;p&gt;
+&lt;/p&gt;
 &lt;p&gt;Hola a todos,&lt;/p&gt;
-
 &lt;p&gt;Les escribo por el gusto de mantener el contacto, por razones académicas, y también por un rollo filosófico / a futuro.&lt;/p&gt;
-
 &lt;p class=&#34;p2&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Contacto&lt;/strong&gt;&lt;/p&gt;
-
 &lt;p&gt;Como ya les dije, me da mucho gusto escribirles. Cuando lo hago sé que generalmente resulta en mails largos, así que intentando ser corto, siento que hoy termina el ciclo de personas que conocí en la LCG. Digo, hoy se gradua la 7ma generación y realmente no conozco las nuevas. Fueron años muy buenos los que viví con todos allá en Cuerna y ojalá podamos mantener cierto vínculo a través de los años. Sé que cuesta. Por ejemplo, no tengo los correos de algunos (o no los encontré vía google), otros los intenté adivinar vía &lt;a href=&#34;http://www.lcg.unam.mx/titulados&#34;&gt;&lt;span class=&#34;s1&#34;&gt;&lt;a href=&#34;http://www.lcg.unam.mx/titulados&#34;&gt;http://www.lcg.unam.mx/titulados&lt;/a&gt;&lt;/span&gt;&lt;/a&gt; y la regla de 8 caracteres, y solo pocos lo siguen teniendo en su página de Facebook (por rollos de seguridad). También soy bastante malo para escribir regularmente (ya sea vía email o mis blogs: &lt;a href=&#34;http://fellgernon.tumblr.com/&#34;&gt;&lt;span class=&#34;s1&#34;&gt;académico&lt;/span&gt;&lt;/a&gt; &amp;amp; &lt;span class=&#34;s1&#34;&gt;más personal&lt;/span&gt;).&lt;/p&gt;
-
 &lt;p&gt;Este año en especial he disfrutado (y seguiré disfrutando) mucho de ver a algunos aunque sea un par de horas =)&lt;/p&gt;
-
 &lt;p&gt;También me gusta mucho cuando me piden ayuda sobre algo, aunque sea lento en contestar :P&lt;/p&gt;
-
 &lt;p class=&#34;p2&#34;&gt;&lt;/p&gt;
-
 &lt;p&gt;&lt;strong&gt;ENAR 2014&lt;/strong&gt;&lt;/p&gt;
-
 &lt;p&gt;De lo académico, les quiero avisar que en 2014 van a organizar acá en Baltimore el congreso ENAR (Eastern North American Regional) en marzo del 2014. Es un congreso de bioestadística con una buena parte enfocada a la genómica. Y bueno, muchas cosas hechas en R. Mi jefe está organizando un par de las sesiones así que si tienen sugerencias de quienes invitar avísenme. Ustedes mismos ^_&lt;em&gt;^ &lt;/em&gt;(hay un buen número de pláticas por alumnos de posgrado &amp;amp; postdocs), sus jefes, etc. En fin, tal vez les interese el congreso.&lt;/p&gt;
-
 &lt;p&gt;De 2014 no hay mucha info aún &lt;a href=&#34;http://www.enar.org/meetings.cfm&#34;&gt;&lt;span class=&#34;s1&#34;&gt;&lt;a href=&#34;http://www.enar.org/meetings.cfm&#34;&gt;http://www.enar.org/meetings.cfm&lt;/a&gt;&lt;/span&gt;&lt;/a&gt;, pero allí pueden ver lo que pasó en otros años.&lt;/p&gt;
-
 &lt;p class=&#34;p2&#34;&gt;&lt;/p&gt;
-
 &lt;p&gt;&lt;strong&gt;Rollos filosóficos&lt;/strong&gt;&lt;/p&gt;
-
 &lt;p&gt;El rollo filosófico / a futuro tiene que ver con:&lt;/p&gt;
 &lt;ol class=&#34;ol1&#34;&gt;&lt;li class=&#34;li1&#34;&gt;¿Qué condiciones piden para trabajar en México?&lt;/li&gt;
 &lt;li class=&#34;li1&#34;&gt;¿Cómo crear un vínculo más fuerte entre egresados LCG?&lt;/li&gt;
 &lt;li class=&#34;li1&#34;&gt;¿A qué dedicarse? ¿Academia? ¿Industria? ¿Otra cosa?&lt;/li&gt;
 &lt;/ol&gt;&lt;p&gt;Del punto (1) lo he platicado con algunos pero creo que es un tema interesante y muy variado. Hay aspectos que tal vez están fuera de nuestro alcance como la seguridad, y hay otros como el ambiente de trabajo y de la ciencia. El rollo de plazas y los esfuerzos de algunos por crear espacios: CCG tiene algunas ahorita, Palacios &amp;amp; Dávila están haciendo un plan grande para repatriar ex-LCGs, el INMEGEN &amp;amp; el CINVESTAV han estado creciendo, o la idea de hacer un plan nosotros. Ojo, a penas me enteré que para tener plaza de investigador en la UNAM te piden tener un postdoc de 2 años: el chiste es que tengas publicaciones &amp;amp; hayas demostrado que la puedes hacer en la ciencia.&lt;/p&gt;
-
 &lt;p&gt;¿Sacrificas potencial académico trabajando en México? Dicho de otra forma, ¿cómo te afecta: el rollo del idioma, el de competir en condiciones que parecen ser más difíciles, o el de tener menos colaboradores cerca para crecer con su crítica &amp;amp; datos de última tecnología? O irse fuera de México (no hay por que ser mártir) y sentirse a gusto con esa decisión. Siempre hay formas de colaborar.&lt;/p&gt;
-
 &lt;p&gt;Del punto (2) yo opino que puede ser a través de comentar artículos con gente ex-LCG involucrada (algo así &lt;a href=&#34;http://fellgernon.tumblr.com/post/45152484977/commenting-scientific-papers#.UbjBemTF1d8&#34;&gt;&lt;span class=&#34;s1&#34;&gt;describí aquí&lt;/span&gt;&lt;/a&gt;), o tal vez vía &lt;a href=&#34;http://masciencia.org/&#34;&gt;&lt;span class=&#34;s1&#34;&gt;Más Ciencia por México&lt;/span&gt;&lt;/a&gt; (no los logré convencer en esto de comentar artículos). Digo, también ayudaría que &lt;a href=&#34;http://www.lcg.unam.mx/titulados&#34;&gt;&lt;span class=&#34;s1&#34;&gt;&lt;a href=&#34;http://www.lcg.unam.mx/titulados&#34;&gt;http://www.lcg.unam.mx/titulados&lt;/a&gt;&lt;/span&gt;&lt;/a&gt; tenga ligas a las páginas actuales de cada quien.&lt;/p&gt;
-
 &lt;p&gt;Del (3), en mi opinión cubre también todo el rollo de si queremos vivir con &amp;#8220;soft-money&amp;#8221; a través del ciclo de donativos (el pay-line es 10% en EUA ahorita por lo de sequester), de la libertad académica (¿es una realidad o una forma de cautivarnos?), y también depende del tipo de industria. Otra forma de ver este punto es ¿cual es el nivel de estrés con el que estamos dispuestos a vivir? ¿A qué aspiramos? &lt;/p&gt;
-
 &lt;p class=&#34;p2&#34;&gt;&lt;/p&gt;
-
 &lt;p class=&#34;p2&#34;&gt;&lt;/p&gt;
 &lt;p&gt;En fin, dan ganas de organizar alguna reunión de ex-LCGs!! Mientras, a seguir con estudios &amp;amp; disfrutar la chamba (investigación o lo que estén haciendo).&lt;/p&gt;
-
 &lt;p class=&#34;p2&#34;&gt;&lt;/p&gt;
-
 &lt;p&gt;Si me preguntan que busco con este correo, es simple:&lt;/p&gt;
 &lt;ul class=&#34;ul1&#34;&gt;&lt;li class=&#34;li1&#34;&gt;Mantener el contacto&lt;/li&gt;
 &lt;li class=&#34;li1&#34;&gt;Invitarlos a ENAR 2014&lt;/li&gt;
 &lt;li class=&#34;li1&#34;&gt;Promover discusión en estos temas filosóficos / a futuro&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p class=&#34;p2&#34;&gt;&lt;/p&gt;
-
 &lt;p&gt;Saludos,&lt;/p&gt;
 &lt;p&gt;Leo&lt;/p&gt;
-
 &lt;p&gt;PD Perdón, terminó siendo un mail largo :P&lt;/p&gt;</description>
     </item>
     
@@ -791,17 +770,15 @@ Figure 1: Overview of the data available in recount2. Reads aligned to the refer
       <title>Have you been &#39;relative stupid&#39;?</title>
       <link>/2013/03/31/have-you-been-relative-stupid/</link>
       <pubDate>Sun, 31 Mar 2013 00:00:00 +0000</pubDate>
-      
       <guid>/2013/03/31/have-you-been-relative-stupid/</guid>
       <description>&lt;p&gt;I enjoyed reading &amp;#8220;&lt;a href=&#34;http://jcs.biologists.org/content/121/11/1771.full&#34;&gt;The importance of stupidity in scientific research&lt;/a&gt;&#34; by Martin A. Schwartz which I learned existed through &lt;a href=&#34;https://twitter.com/hmason&#34;&gt;@hmason&lt;/a&gt; and &lt;a href=&#34;https://twitter.com/simplystats&#34;&gt;@simplystats&lt;/a&gt;. &lt;/p&gt;
 &lt;p&gt;I found the point of how it&amp;#8217;s normal to feel stupid in academia and specially in Ph.D. programs to be illuminating. But Schwartz clarifies that there are other kinds of stupid:&lt;/p&gt;
-
 &lt;blockquote&gt;
 &lt;p&gt;we don&amp;#8217;t do a good enough job of teaching our students how to be productively stupid – that is, if we don&amp;#8217;t feel stupid it means we&amp;#8217;re not really trying. I&amp;#8217;m not talking about &#39;relative stupidity&amp;#8217;, in which the other students in the class actually read the material, think about it and ace the exam, whereas you don&amp;#8217;t. I&amp;#8217;m also not talking about bright people who might be working in areas that don&amp;#8217;t match their talents. Science involves confronting our `absolute stupidity&amp;#8217;. &lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;I don&amp;#8217;t know about you, but I have certainly been &amp;#8216;relative stupid&amp;#8217; at times. &lt;/p&gt;
 &lt;p&gt;And yes, we have to confront our &amp;#8216;absolute stupidity&amp;#8217;. But to me, graduate school is also about learning how to be super efficient with your time. That implies being highly organized, learning how to canalize your distractions, and finding sources of constant motivation. For example, I now read more stats/R/research blogs as part of my set of distractions and have considerably decreased how many sport news I read. &lt;/p&gt;
 &lt;p&gt;I also struggle with the internal challenge of doing great at school, but then also &amp;#8216;having a life&amp;#8217;. So yes, at times I have been &amp;#8216;relative stupid&amp;#8217; but also had a great time. After all, I no longer need to &amp;#8216;ace&amp;#8217; all my exams.&lt;/p&gt;
-&lt;/blockquote&gt;
 </description>
     </item>
     
@@ -809,7 +786,6 @@ Figure 1: Overview of the data available in recount2. Reads aligned to the refer
       <title>Great commentary on sequestration&#39;s impact on research! National media should talk about this and YOU should read it!!!</title>
       <link>/2013/03/28/great-commentary-on-sequestrations-impact-on-research/</link>
       <pubDate>Thu, 28 Mar 2013 00:00:00 +0000</pubDate>
-      
       <guid>/2013/03/28/great-commentary-on-sequestrations-impact-on-research/</guid>
       <description>&lt;p&gt;Today &lt;a href=&#34;http://www.biostat.jhsph.edu/%7Ejleek/&#34;&gt;Jeffrey T. Leek&lt;/a&gt; and &lt;a href=&#34;http://en.wikipedia.org/wiki/Steven_Salzberg&#34;&gt;Steven L. Salzberg&lt;/a&gt; published a paper commentary in Genome Biology today titled “&lt;a href=&#34;http://genomebiology.com/2013/14/3/109&#34;&gt;Sequestration: inadvertently killing biomedical research to score political points&lt;/a&gt;” (&lt;span class=&#34;showtooltip&#34; title=&#34;Leek J and Salzberg S (2013). Sequestration: Inadvertently  Killing Biomedical Research to Score Political Points. _Genome  Biology_, *14*. ISSN 1465-6906,   http://dx.doi.org/10.1186/gb-2013-14-3-109.&#34;&gt;&lt;a href=&#34;http://dx.doi.org/10.1186/gb-2013-14-3-109&#34;&gt;Leek &amp;amp; Salzberg, 2013&lt;/a&gt;&lt;/span&gt;) which I think is a &lt;strong&gt;must read for anyone&lt;/strong&gt;. Seriously!&lt;/p&gt;
 &lt;p&gt;I do not mean &lt;em&gt;anyone involved in research&lt;/em&gt;, or all scientists. I mean, this commentary should be in the &lt;strong&gt;national media&lt;/strong&gt;. &lt;strong&gt;Why&lt;/strong&gt;?&lt;/p&gt;
@@ -817,15 +793,13 @@ Figure 1: Overview of the data available in recount2. Reads aligned to the refer
 &lt;p&gt;The main reason why &lt;strong&gt;you&lt;/strong&gt; should be reading this commentary is that the consequences of the &amp;#8216;sequester&amp;#8217; are going to affect &lt;strong&gt;you&lt;/strong&gt;. So if you are interested in your future and the well-being of those who you care for, then you should read it. And if you don&amp;#8217;t know what the sequester is and how it will impact research, well, that&amp;#8217;s another reason why you should read this commentary. Plus you might want to look at this (serious) comic from &lt;code&gt;PhD comics&lt;/code&gt; (&lt;span class=&#34;showtooltip&#34; title=&#34;Cham J (2013). U.S. Budget Sequestration Explained.   http://www.phdcomics.com/comics.php?f=1561.&#34;&gt;&lt;a href=&#34;http://www.phdcomics.com/comics.php?f=1561&#34;&gt;© Cham, 2013&lt;/a&gt;&lt;/span&gt;) to get an overall idea. Note that it was published before sequestration hit in.&lt;/p&gt;
 &lt;p&gt;&lt;img alt=&#34;PhD comic on the sequester&#34; src=&#34;http://www.phdcomics.com/comics/archive/phd021513s.gif&#34;/&gt;&lt;/p&gt;
 &lt;p&gt;Going back to the commentary piece by Leek and Salzberg, I can imagine someone refuting like this:&lt;/p&gt;
-
 &lt;blockquote&gt;
 &lt;p&gt;Hey, but I don&amp;#8217;t live in the United States so it doesn&amp;#8217;t affect me.&lt;/p&gt;
 &lt;/blockquote&gt;
-
 &lt;p&gt;That is true in a sense because you will likely be affected by your own country&amp;#8217;s policies more directly, and specially in policy topics that have short term impact. Nevertheless, any breakthrough made by U.S.-based research for the most part (aka, when politics doesn&amp;#8217;t get in the way) will reach you. After all, Leek and Salzberg cite (&lt;span class=&#34;showtooltip&#34; title=&#34;(2013). The Sequester Is Going to Devastate U.S. Science Research  for Decades.   http://www.theatlantic.com/politics/archive/2013/03/the-sequester-is-going-to-devastate-us-science-research-for-decades/273925/  [Online. last-accessed: 2013-03-28 03:33:46].   http://www.theatlantic.com/politics/archive/2013/03/the-sequester-is-going-to-devastate-us-science-research-for-decades/273925/.&#34;&gt;&lt;a href=&#34;http://www.theatlantic.com/politics/archive/2013/03/the-sequester-is-going-to-devastate-us-science-research-for-decades/273925/&#34;&gt;Alivisatos et al in The Atlantic, 2013&lt;/a&gt;&lt;/span&gt;) where the following statement is made:&lt;/p&gt;
-
 &lt;blockquote&gt;
-&lt;p&gt;&lt;p&gt;Nobel Prize-winning economist Robert Solow has &lt;a href=&#34;http://magazine.amstat.org/blog/2011/03/01/econgrowthmar11/&#34;&gt;calculated&lt;/a&gt; that over the past half century, more than half of the growth in our nation&amp;#8217;s GDP has been rooted in scientific discoveries – the kinds of fundamental, mission-driven research that we do at the labs.&lt;/p&gt;
+&lt;p&gt;Nobel Prize-winning economist Robert Solow has &lt;a href=&#34;http://magazine.amstat.org/blog/2011/03/01/econgrowthmar11/&#34;&gt;calculated&lt;/a&gt; that over the past half century, more than half of the growth in our nation&amp;#8217;s GDP has been rooted in scientific discoveries – the kinds of fundamental, mission-driven research that we do at the labs.&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;The claim that it affects other countries is just a generalization of the previous result and what I would consider some common sense. If this is not enough to attract your interest, then you should take a look at Salzberg&amp;#8217;s previous comment “&lt;a href=&#34;http://genome.fieldofscience.com/2013/03/a-breakthrough-cure-for-acute-leukemia.html&#34;&gt;A breakthrough cure for acute leukemia?&lt;/a&gt;” that is a showcase example of successful biomedical research funded by the same institutions being hit by sequestration.&lt;/p&gt;
 &lt;p&gt;I hope to have convinced you to read Leek and Salzberg&amp;#8217;s commentary by now. So let me talk a little bit about the things that I liked the most.&lt;/p&gt;
 &lt;p&gt;Most of all, I like the tone they used because this is not a silly matter and while it may sound as alarming as &lt;a href=&#34;http://en.wikipedia.org/wiki/The_Boy_Who_Cried_Wolf&#34;&gt;the boy who cried wolf&lt;/a&gt;, the reality is that the wolf does exist and will visit you. So while no visible effects have been seen from the sequester this month, that doesn&amp;#8217;t mean that you can just ignore this problem. It is like when you throw a stone in calm water: just a few small ripples are seen at the beginning, but they reach far away. In other words, it will take some time to actually feel the negative effects.&lt;/p&gt;
@@ -840,8 +814,7 @@ Figure 1: Overview of the data available in recount2. Reads aligned to the refer
 &lt;li&gt;Yihui Xie, (2013) knitr: A general-purpose package for dynamic report generation in R. &lt;a href=&#34;http://CRAN.R-project.org/package=knitr&#34;&gt;&lt;a href=&#34;http://CRAN.R-project.org/package=knitr&#34;&gt;http://CRAN.R-project.org/package=knitr&lt;/a&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Jorge Cham, U.S. Budget Sequestration Explained. &lt;a href=&#34;http://www.phdcomics.com/comics.php?f=1561&#34;&gt;&lt;a href=&#34;http://www.phdcomics.com/comics.php?f=1561&#34;&gt;http://www.phdcomics.com/comics.php?f=1561&lt;/a&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Jeffrey T Leek, Steven L Salzberg, (2013) Sequestration: Inadvertently Killing Biomedical Research to Score Political Points. &lt;em&gt;Genome Biology&lt;/em&gt; &lt;strong&gt;14&lt;/strong&gt; &lt;a href=&#34;http://dx.doi.org/10.1186/gb-2013-14-3-109&#34;&gt;10.1186/gb-2013-14-3-109&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;/ul&gt;
 </description>
     </item>
     
@@ -849,7 +822,6 @@ Figure 1: Overview of the data available in recount2. Reads aligned to the refer
       <title>Got acknowledged in a paper ^^</title>
       <link>/2012/10/31/got-acknowledged-in-a-paper-s4/</link>
       <pubDate>Wed, 31 Oct 2012 00:00:00 +0000</pubDate>
-      
       <guid>/2012/10/31/got-acknowledged-in-a-paper-s4/</guid>
       <description>&lt;p&gt;During the weekend while I was talking with a friend and former colleague, I realized that my name was mentioned in the acknowledgements section of a paper :) I haven&amp;#8217;t been much in touch with what&amp;#8217;s been happening back home, so this was a nice surprise.&lt;/p&gt;
 &lt;p&gt;The paper is: &lt;a href=&#34;http://www.biomedcentral.com/1471-2164/13/385&#34;&gt;Genetic changes during a laboratory adaptive evolution process that allowed fast growth in glucose to an &lt;em&gt;Escherichia coli&lt;/em&gt; strain lacking the major glucose transport system&lt;/a&gt; by Aguilar&lt;em&gt; et al&lt;/em&gt;. It was published in BMC Genomics in 2012.&lt;/p&gt;
@@ -860,7 +832,6 @@ Figure 1: Overview of the data available in recount2. Reads aligned to the refer
       <title>An Online Bioinformatics Curriculum</title>
       <link>/2012/10/07/an-online-bioinformatics-curriculum/</link>
       <pubDate>Sun, 07 Oct 2012 00:00:00 +0000</pubDate>
-      
       <guid>/2012/10/07/an-online-bioinformatics-curriculum/</guid>
       <description>&lt;p&gt;Last week I talked about online courses in my &lt;a href=&#34;http://fellgernon.tumblr.com/post/32688589475/jhsph-biostat-through-coursera#.UHH1Q_l26lo&#34;&gt;JHSPH-Biostat through Coursera&lt;/a&gt; post. Now I&amp;#8217;m back to comment on &lt;strong&gt;&lt;a href=&#34;http://www.ploscompbiol.org/article/info:doi/10.1371/journal.pcbi.1002632&#34;&gt;An Online Bioinformatics Curriculum&lt;/a&gt;&lt;/strong&gt; by David B. Searls. &lt;a href=&#34;http://labs.bio.unc.edu/Dangl/people/individuals/Sur.html&#34;&gt;Sur Herrera&lt;/a&gt; pointed out this paper to me, and I have to say that if you are considering learning bioinformatics online it will be very useful to you. David Searls first goes through a history recap of online (free) courses. Notably, in the last year Coursera and other startups offered their first courses. MIT has also evolved and now offers &lt;a href=&#34;http://mitx.mit.edu/&#34;&gt;MITx&lt;/a&gt; courses, where MIT does give certificates. For example, I&amp;#8217;m a bit interested in the &lt;a href=&#34;https://www.edx.org/courses/MITx/6.00x/2012_Fall/about&#34;&gt;Introduction to Computer Science and Programming 6.00x&lt;/a&gt; course. It aims to cover a wide variety of topics which can be nice for a review/learning and is Python-based. &lt;/p&gt;
 &lt;p&gt;The main body of David Searls&amp;#8217; paper is a huge list of summaries for the main courses out there for bioinformaticians. He covers several tracks depending on what subarea of bioinformatics you are interested in. For each summary, he recommends an specific course to take along with the main reasons why he prefers it over other options. If you have ever looked into OCW, Coursera, etc; you know this is a great resource. After all, there are lots of options for some courses like calculus and it can be a time drain to look through them before deciding which to take. This summary is the best part of the paper.&lt;/p&gt;
@@ -872,7 +843,6 @@ Figure 1: Overview of the data available in recount2. Reads aligned to the refer
       <title>Learning about social networks through an interactive presentation</title>
       <link>/2012/09/28/learning-about-social-networks-through-an-interactive/</link>
       <pubDate>Fri, 28 Sep 2012 00:00:00 +0000</pubDate>
-      
       <guid>/2012/09/28/learning-about-social-networks-through-an-interactive/</guid>
       <description>&lt;p&gt;During this week&amp;#8217;s &lt;a href=&#34;http://www.biostat.jhsph.edu/~zhwu/2012journal.html&#34;&gt;journal club meeting&lt;/a&gt; Hilary Parker (&lt;a href=&#34;http://www.biostat.jhsph.edu/~hiparker/&#34;&gt;homepage&lt;/a&gt;, &lt;a href=&#34;http://hilaryparker.com/&#34;&gt;blog&lt;/a&gt;) led the session on &amp;#8220;Identifying influential and susceptible members of social networks&amp;#8221;. Were there some speakers or why did she &amp;#8220;lead the session&amp;#8221;? By this I mean that Hilary tried a very different (and interesting) format this time. Instead of giving a talk, not a formal one like at seminars, she prepared a short presentation (publicly available &lt;a href=&#34;https://docs.google.com/presentation/d/1wlZvL8z_8bOau2ZQkvxLtOuFwEVoTeOrJeQ9dO7vATs/edit#slide=id.p&#34;&gt;here&lt;/a&gt;) that begins showing a 20 minute video. This video is by the author of the paper where he presents the key points of his research at another conference. The goal of this format was to get us to speed and hopefully provoke enough discussion to make the meeting highly interactive. Plus the author does a great job in his presentation.&lt;/p&gt;
 &lt;p&gt;Now, given that it&amp;#8217;s a biostat journal club, Hilary included some slides to explain the general Cox Proportional Hazard model before showing some of details used in the paper in question. &lt;/p&gt;
@@ -892,12 +862,10 @@ Figure 1: Overview of the data available in recount2. Reads aligned to the refer
       <title>Is science cool?</title>
       <link>/2012/08/27/is-science-cool/</link>
       <pubDate>Mon, 27 Aug 2012 00:00:00 +0000</pubDate>
-      
       <guid>/2012/08/27/is-science-cool/</guid>
       <description>&lt;p&gt;Adam Ruben shares his answer to whether science is cool or not. Since &amp;#8220;cool&amp;#8221; depends on the current trends, this question is set on the recent landing of Curiosity. It&amp;#8217;s the landrover that recently landed on Mars and has been sending some pictures back. &lt;/p&gt;
 &lt;p&gt;Anyhow, check his answer &lt;a href=&#34;http://sciencecareers.sciencemag.org/career_magazine/previous_issues/articles/2012_08_24/caredit.a1200095&#34;&gt;here&lt;/a&gt;. I liked this part:&lt;/p&gt;
 &gt; &lt;p&gt;&lt;span&gt;If the Mars landing draws students to science, it won’t be because they witnessed science doing something cool. It’ll be because they witnessed science doing something human, something genuine, something legitimately appealing on its own merits. Something scientific.&lt;/span&gt;&lt;/p&gt;
-
 &lt;p&gt;&lt;img height=&#34;500&#34; src=&#34;http://www.sciencemag.org/sites/default/files/styles/article_main_large/public/images/20120824_sci_tattoo_Large2.jpg?itok=2YZjjKxZ&amp;c=51fb542122567392ab5e85ed6388a89f&#34; width=&#34;500&#34;/&gt;&lt;/p&gt;
 &lt;p&gt;Picture taken from his commentary piece.&lt;/p&gt;
 </description>
@@ -907,10 +875,8 @@ Figure 1: Overview of the data available in recount2. Reads aligned to the refer
       <title>Pollination video</title>
       <link>/2012/03/01/great-video-thank-you-aunt-for-sending-it-to-me/</link>
       <pubDate>Thu, 01 Mar 2012 00:00:00 +0000</pubDate>
-      
       <guid>/2012/03/01/great-video-thank-you-aunt-for-sending-it-to-me/</guid>
       <description>&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;//www.youtube.com/embed/xHkq1edcbk4&#34; frameborder=&#34;0&#34;&gt;&lt;/iframe&gt;
-
 &lt;p&gt;Great video! Thank you aunt for sending it to me =)&lt;/p&gt;
 </description>
     </item>
