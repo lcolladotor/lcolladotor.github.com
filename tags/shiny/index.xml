@@ -5,12 +5,364 @@
     <link>/tags/shiny/</link>
       <atom:link href=http://lcolladotor.github.io/tags/shiny/index.xml rel="self" type="application/rss+xml" />
     <description>shiny</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2011-2020 Leonardo Collado Torres under (CC) BY-NC-SA 4.0. All thoughts and opinions here are my own. Icon is the [R logo](https://www.r-project.org/logo/) modified</copyright><lastBuildDate>Fri, 20 Jan 2017 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2011-2020 Leonardo Collado Torres under (CC) BY-NC-SA 4.0. All thoughts and opinions here are my own. Icon is the [R logo](https://www.r-project.org/logo/) modified</copyright><lastBuildDate>Sat, 29 Feb 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
       <title>shiny</title>
       <link>/tags/shiny/</link>
     </image>
+    
+    <item>
+      <title>Diving together into the unknown world of spatial transcriptomics</title>
+      <link>/2020/02/29/diving-together-into-the-unknown-world-of-spatial-transcriptomics/</link>
+      <pubDate>Sat, 29 Feb 2020 00:00:00 +0000</pubDate>
+      <guid>/2020/02/29/diving-together-into-the-unknown-world-of-spatial-transcriptomics/</guid>
+      <description>
+
+
+&lt;p&gt;Yesterday was an extremely exciting day for me and my colleagues. We finished a project we had been working on and shared it with the world. Meaning, it’s done and we can relax for a little bit while we wait for feedback from our peers.&lt;/p&gt;
+&lt;p&gt;But this was not any project, at least not for me. Why do you ask? In general terms, it involved an analysis that you could not search on Google and find the answer for. That is, it involved diving into the unknown!&lt;/p&gt;
+&lt;iframe src=&#34;https://giphy.com/embed/5dY4XX5ZCvjZ3AENUu&#34; width=&#34;480&#34; height=&#34;201&#34; frameBorder=&#34;0&#34; class=&#34;giphy-embed&#34; allowFullScreen&gt;
+&lt;/iframe&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://giphy.com/gifs/disneystudios-disney-frozen-2-5dY4XX5ZCvjZ3AENUu&#34;&gt;via GIPHY&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;The unknown is scary and as the lyrics say:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;I’ve had my adventure, I don’t need something new
+I’m afraid of what I’m risking if I follow you
+Into the unknown&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;All of us have been building our careers with other types of data and/or experiments, and taking on a new type of data knowing we had an &lt;a href=&#34;https://www.biospace.com/article/10x-genomics-begins-shipments-of-visium-spatial-gene-expression-solution/&#34;&gt;early access advantage&lt;/a&gt; over others was quite the challenge. I don’t know about my co-authors, but maybe some of them shared thoughts like mine that were along the lines: can I do this? can I make it work? do my analysis choices make sense? what will experts think of doing once they have access to this data? All while racing against time, even if it was just an illusion in our minds.&lt;/p&gt;
+&lt;p&gt;But it’s not my first adventure and I’ve picked up skills and confidence along the way. In particular, I’ve written &lt;a href=&#34;https://bioconductor.org&#34;&gt;Bioconductor&lt;/a&gt; R packages, dealt with &lt;code&gt;pkgdown&lt;/code&gt;/&lt;code&gt;travis&lt;/code&gt; issues like &lt;a href=&#34;https://github.com/r-lib/pkgdown/issues/1206&#34;&gt;#1206&lt;/a&gt;, made &lt;em&gt;&lt;a href=&#34;https://CRAN.R-project.org/package=shiny&#34;&gt;shiny&lt;/a&gt;&lt;/em&gt; web applications, analyzed large RNA-seq data, &lt;a href=&#34;http://lcolladotor.github.io/2019/04/02/how-to-write-academic-documents-with-googledocs/#.XlnnqJNKg0o&#34;&gt;written papers using GoogleDocs&lt;/a&gt;, gotten better at asking for help, among other skills.&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;It&amp;#39;s Thurs but here&amp;#39;s the &amp;quot;more&amp;quot; I promised &lt;a href=&#34;https://t.co/4gahvWDbWE&#34;&gt;https://t.co/4gahvWDbWE&lt;/a&gt; &lt;a href=&#34;https://twitter.com/travisci?ref_src=twsrc%5Etfw&#34;&gt;@travisci&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/pkgdown?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#pkgdown&lt;/a&gt;&lt;br&gt;&lt;br&gt;+my fam of &lt;a href=&#34;https://twitter.com/hashtag/rstats?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#rstats&lt;/a&gt; issues today &lt;a href=&#34;https://t.co/iGFfHLtasM&#34;&gt;https://t.co/iGFfHLtasM&lt;/a&gt; &lt;a href=&#34;https://t.co/M8DZEHryJZ&#34;&gt;https://t.co/M8DZEHryJZ&lt;/a&gt; &lt;a href=&#34;https://t.co/FU8qq3f5p6&#34;&gt;https://t.co/FU8qq3f5p6&lt;/a&gt;&lt;br&gt;&lt;br&gt;I&amp;#39;m the pest that visits your GH issues here &amp;amp; there😅Nah, I put lots of 👨🏾‍💻into them!😊 &lt;a href=&#34;https://t.co/1G0nd5ZwUJ&#34;&gt;https://t.co/1G0nd5ZwUJ&lt;/a&gt;&lt;/p&gt;&amp;mdash; 🇲🇽 Dr. Leonardo Collado-Torres (@fellgernon) &lt;a href=&#34;https://twitter.com/fellgernon/status/1233186931590123522?ref_src=twsrc%5Etfw&#34;&gt;February 28, 2020&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;I’ve also gotten more comfortable with the idea that I can’t do it all. Others will shortly develop new methods for this type of data, or proper infrastructure to handle this data, or faster visualizations, and so goes on the list. But I’m proud and really happy to say that we built quite the robust prototype. Plus maybe we’ll be involved in shaping this future.&lt;/p&gt;
+&lt;p&gt;And you noticed that I mentioned &lt;em&gt;we&lt;/em&gt;. That’s because I have been learning over the years how to foster collaborations. This particular project involved working with two other members of my workplace who are awesome and that I didn’t know that well. It also involved a new collaboration with someone I’ve known for a while now (we initially met through Twitter in 2014) but hadn’t had the chance to work with. Thus we dove into the unknown together 👩‍🚀🧑‍🚀.&lt;/p&gt;
+&lt;iframe src=&#34;https://giphy.com/embed/Ph0nUfRpbMcQvA7ue8&#34; width=&#34;480&#34; height=&#34;199&#34; frameBorder=&#34;0&#34; class=&#34;giphy-embed&#34; allowFullScreen&gt;
+&lt;/iframe&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://giphy.com/gifs/disneystudios-disney-frozen-2-Ph0nUfRpbMcQvA7ue8&#34;&gt;via GIPHY&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;I feel like we complemented each other quite well and all I can confidently say that our new adventure so far has been very stimulating, even it cost me some sleep.&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Woke up at 3:30 am dreaming about code 👨🏻‍💻 😴 and on an off till 5:30. Gave up and went to work early... hopefully I can remember the dreams 😅&lt;a href=&#34;https://twitter.com/hashtag/CodeWhileDreaming?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#CodeWhileDreaming&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/RestFuelsIdeas?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#RestFuelsIdeas&lt;/a&gt; &lt;a href=&#34;https://t.co/h0mYHAaL5W&#34;&gt;pic.twitter.com/h0mYHAaL5W&lt;/a&gt;&lt;/p&gt;&amp;mdash; 🇲🇽 Dr. Leonardo Collado-Torres (@fellgernon) &lt;a href=&#34;https://twitter.com/fellgernon/status/1230107491372912641?ref_src=twsrc%5Etfw&#34;&gt;February 19, 2020&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+
+&lt;div id=&#34;spatial-transcriptomics&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Spatial transcriptomics&lt;/h3&gt;
+&lt;p&gt;So, where does &lt;em&gt;spatial transcriptomics&lt;/em&gt; come into play and what does it mean? I work with gene &lt;em&gt;activity&lt;/em&gt; data which we formally refer to as &lt;em&gt;gene expression&lt;/em&gt; 🧬. That is, we measure 🔍🧮 the activity levels of genes for a particular biological condition or tissue sample. For several years now (about since 2007-2009) we have been able to measure many genes from a tissue sample, called bulk RNA-sequencing and abbreviated as RNA-seq.&lt;/p&gt;
+&lt;p&gt;That’s great! But biology is complicated and a single tissue sample is composed of multiple cells of various types. For example, in the brain there are cells that send signals around (neurons) and others that give structure to the brain. That is why technologies for measuring the gene expression at the single cell level were developed, abbreviated as scRNA-seq. scRNA-seq has been used widely to study mouse brains to live tissue samples.&lt;/p&gt;
+&lt;p&gt;In recent years I’ve been working with data from the human brain 🧠. The &lt;a href=&#34;http://libd.org&#34;&gt;Lieber Institute for Brain Development&lt;/a&gt; has about two thousand brain samples. To preserve them for years to come, the brains are frozen 🥶. Cells are a bit fragile and freezing them breaks them. This fact has made it challenging to study data from frozen human brains. Several of my colleagues work on adapting research protocols to handle frozen human brain tissue. The research field overall has been able to generate single nucleus RNA sequencing (snRNA-seq) data and we are all generating some more.&lt;/p&gt;
+&lt;p&gt;snRNA-seq and scRNA-seq are great because you can measure what genes (pieces of the cell) are active, classify them into groups, and use prior knowledge to label these groups. However, you lose information about what part of the tissue they come from. That’s where technologies for &lt;em&gt;spatial transcriptomics&lt;/em&gt;, that is, measuring gene expression 🧬 as close a possible to the single cell level yet retaining spatial coordinates are being actively developed. Thus, you end up with two main sources of data: the gene expression measurements but also images from the tissue (&lt;em&gt;histology&lt;/em&gt; information). &lt;a href=&#34;https://doi.org/10.1038/s41386-019-0484-7&#34;&gt;My coworkers anticipated&lt;/a&gt; what could these technologies be used for and what type of research questions they help us answer.&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;oh hey, that&amp;#39;s us! stay tuned for a biorxiv preprint!  &lt;a href=&#34;https://twitter.com/LieberInstitute?ref_src=twsrc%5Etfw&#34;&gt;@LieberInstitute&lt;/a&gt; &lt;a href=&#34;https://twitter.com/martinowk?ref_src=twsrc%5Etfw&#34;&gt;@martinowk&lt;/a&gt; &lt;a href=&#34;https://twitter.com/kr_maynard?ref_src=twsrc%5Etfw&#34;&gt;@kr_maynard&lt;/a&gt; &lt;a href=&#34;https://twitter.com/fellgernon?ref_src=twsrc%5Etfw&#34;&gt;@fellgernon&lt;/a&gt; &lt;a href=&#34;https://twitter.com/stephaniehicks?ref_src=twsrc%5Etfw&#34;&gt;@stephaniehicks&lt;/a&gt; &lt;a href=&#34;https://twitter.com/lmwebr?ref_src=twsrc%5Etfw&#34;&gt;@lmwebr&lt;/a&gt; &lt;a href=&#34;https://t.co/uYpwQu52pS&#34;&gt;https://t.co/uYpwQu52pS&lt;/a&gt;&lt;/p&gt;&amp;mdash; Andrew Jaffe (@andrewejaffe) &lt;a href=&#34;https://twitter.com/andrewejaffe/status/1232009768006344704?ref_src=twsrc%5Etfw&#34;&gt;February 24, 2020&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+
+&lt;/div&gt;
+&lt;div id=&#34;our-projects-history&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Our project’s history&lt;/h3&gt;
+&lt;p&gt;My coworkers got early access to a specific new type of spatial transcriptomics technology called &lt;a href=&#34;https://wp.10xgenomics.com/spatial-transcriptomics/&#34;&gt;Visium from the 10x Genomics company&lt;/a&gt; and started piloting it on human brain tissue. They recruited me to their project in early November 2019 (11th) and I recruited more colleagues in early December (4th). Today on February 28th 2020 we made public our research advances, code, and software we built for this project.&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;How do you keep your documentation concise, friendly, and updated, and stop it from exploding into a giant tangled word mess of multiple files spread across GitHub repos? Asking for a friend.&lt;/p&gt;&amp;mdash; Monica Gerber (@mwgerber) &lt;a href=&#34;https://twitter.com/mwgerber/status/1232468210886144000?ref_src=twsrc%5Etfw&#34;&gt;February 26, 2020&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;Given that we have many potential websites others can find us through, we decided to unify as much as possible the documentation even if that meant repeating it. The basic start of our documentation is included further below.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;spatiallibd&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;&lt;code&gt;spatialLIBD&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;http://research.libd.org/spatialLIBD/reference/figures/logo.png&#34; align=&#34;right&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Welcome to the &lt;code&gt;spatialLIBD&lt;/code&gt; project! It is composed of:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;a &lt;a href=&#34;https://shiny.rstudio.com/&#34;&gt;shiny&lt;/a&gt; web application that we are hosting at &lt;a href=&#34;http://spatial.libd.org/spatialLIBD/&#34;&gt;spatial.libd.org/spatialLIBD/&lt;/a&gt; that can handle a &lt;a href=&#34;https://github.com/LieberInstitute/spatialLIBD/issues/2&#34;&gt;limited&lt;/a&gt; set of concurrent users,&lt;/li&gt;
+&lt;li&gt;a Bioconductor package at &lt;a href=&#34;http://bioconductor.org/packages/spatialLIBD&#34;&gt;bioconductor.org/packages/spatialLIBD&lt;/a&gt; (or from &lt;a href=&#34;http://research.libd.org/spatialLIBD/&#34;&gt;here&lt;/a&gt;) that lets you analyze the data and run a local version of our web application (with our data or yours),&lt;/li&gt;
+&lt;li&gt;and a &lt;a href=&#34;https://www.biorxiv.org/content/10.1101/2020.02.28.969931v1&#34;&gt;research article&lt;/a&gt; with the scientific knowledge we drew from this dataset. The analysis code for our project is available &lt;a href=&#34;https://github.com/LieberInstitute/HumanPilot/&#34;&gt;here&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The web application allows you to browse the LIBD human dorsolateral pre-frontal cortex (DLPFC) spatial transcriptomics data generated with the 10x Genomics Visium platform. Through the &lt;a href=&#34;https://bioconductor.org/packages/spatialLIBD&#34;&gt;R/Bioconductor package&lt;/a&gt; you can also download the data as well as visualize your own datasets using this web application. Please check the &lt;a href=&#34;https://www.biorxiv.org/search/maynard%252Bcollado%252Bweber%252Bhicks%252Bmartinowich%252Bjaffe&#34;&gt;bioRxiv pre-print&lt;/a&gt; for more details about this project.&lt;/p&gt;
+If you tweet about this website, the data or the R package please use the &lt;code&gt;#spatialLIBD&lt;/code&gt; hashtag. You can find previous tweets that way as shown &lt;a href=&#34;https://twitter.com/search?q=%23spatialLIBD&amp;src=typed_query&#34;&gt;here&lt;/a&gt;. Thank you! &lt;a href=&#34;https://twitter.com/intent/tweet?button_hashtag=spatialLIBD&amp;ref_src=twsrc%5Etfw&#34; class=&#34;twitter-hashtag-button&#34; data-show-count=&#34;false&#34;&gt;Tweet #spatialLIBD&lt;/a&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;/div&gt;
+&lt;div id=&#34;study-design&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Study design&lt;/h3&gt;
+&lt;p&gt;As a quick overview, the data presented here is from portion of the DLPFC that spans six neuronal layers plus white matter (&lt;strong&gt;A&lt;/strong&gt;) for a total of three subjects with two pairs of spatially adjacent replicates (&lt;strong&gt;B&lt;/strong&gt;). Each dissection of DLPFC was designed to span all six layers plus white matter (&lt;strong&gt;C&lt;/strong&gt;). Using this web application you can explore the expression of known genes such as &lt;em&gt;SNAP25&lt;/em&gt; (&lt;strong&gt;D&lt;/strong&gt;, a neuronal gene), &lt;em&gt;MOBP&lt;/em&gt; (&lt;strong&gt;E&lt;/strong&gt;, an oligodendrocyte gene), and known layer markers from mouse studies such as &lt;em&gt;PCP4&lt;/em&gt; (&lt;strong&gt;F&lt;/strong&gt;, a known layer 5 marker gene).&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://research.libd.org/spatialLIBD/reference/figures/paper_figure1.jpg&#34; align=&#34;center&#34; width=&#34;800px&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;shiny-website-mirrors&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Shiny website mirrors&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://spatial.libd.org/spatialLIBD&#34;&gt;Main shiny application website&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://jhubiostatistics.shinyapps.io/spatialLIBD/&#34;&gt;Shinyapps&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://jhubiostatistics.shinyapps.io/spatialLIBD_mirror01/&#34;&gt;Shinyapps Mirror 1&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://jhubiostatistics.shinyapps.io/spatialLIBD_mirror02/&#34;&gt;Shinyapps Mirror 2&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;rbioconductor-package&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;R/Bioconductor package&lt;/h3&gt;
+&lt;p&gt;The &lt;code&gt;spatialLIBD&lt;/code&gt; package contains functions for:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Accessing the spatial transcriptomics data from the LIBD Human Pilot project (&lt;a href=&#34;https://github.com/LieberInstitute/HumanPilot&#34;&gt;code on GitHub&lt;/a&gt;) generated with the Visium platform from 10x Genomics. The data is retrieved from &lt;a href=&#34;http://bioconductor.org/&#34;&gt;Bioconductor&lt;/a&gt;’s &lt;code&gt;ExperimentHub&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Visualizing the spot-level spatial gene expression data and clusters.&lt;/li&gt;
+&lt;li&gt;Inspecting the data interactively either on your computer or through &lt;a href=&#34;http://spatial.libd.org/spatialLIBD/&#34;&gt;spatial.libd.org/spatialLIBD/&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;For more details, please check the &lt;a href=&#34;http://lieberinstitute.github.io/spatialLIBD&#34;&gt;documentation website&lt;/a&gt; or the Bioconductor package landing page &lt;a href=&#34;https://bioconductor.org/packages/spatialLIBD&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;installation-instructions&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Installation instructions&lt;/h3&gt;
+&lt;p&gt;Get the latest stable &lt;code&gt;R&lt;/code&gt; release from &lt;a href=&#34;http://cran.r-project.org/&#34;&gt;CRAN&lt;/a&gt;. Then install &lt;code&gt;spatialLIBD&lt;/code&gt; using from &lt;a href=&#34;http://bioconductor.org/&#34;&gt;Bioconductor&lt;/a&gt; the following code:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;if (!requireNamespace(&amp;quot;BiocManager&amp;quot;, quietly = TRUE))
+    install.packages(&amp;quot;BiocManager&amp;quot;)
+
+BiocManager::install(&amp;quot;spatialLIBD&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;access-the-data&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Access the data&lt;/h3&gt;
+&lt;p&gt;Through the &lt;code&gt;spatialLIBD&lt;/code&gt; package you can access the processed data in it’s final R format. However, we also provide a table of links so you can download the raw data we received from 10x Genomics.&lt;/p&gt;
+&lt;div id=&#34;processed-data&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Processed data&lt;/h4&gt;
+&lt;p&gt;Using &lt;code&gt;spatialLIBD&lt;/code&gt; you can access the Human DLPFC spatial transcriptomics data from the 10x Genomics Visium platform. For example, this is the code you can use to access the layer-level data. For more details, check the help file for &lt;code&gt;fetch_data()&lt;/code&gt;.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;## Load the package
+library(&amp;#39;spatialLIBD&amp;#39;)
+
+## Download the spot-level data
+sce &amp;lt;- fetch_data(type = &amp;#39;sce&amp;#39;)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Loading objects:
+##   sce&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;## This is a SingleCellExperiment object
+sce&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## class: SingleCellExperiment 
+## dim: 33538 47681 
+## metadata(1): image
+## assays(2): counts logcounts
+## rownames(33538): ENSG00000243485 ENSG00000237613 ... ENSG00000277475
+##   ENSG00000268674
+## rowData names(9): source type ... gene_search is_top_hvg
+## colnames(47681): AAACAACGAATAGTTC-1 AAACAAGTATCTCCCA-1 ...
+##   TTGTTTCCATACAACT-1 TTGTTTGTGTAAATTC-1
+## colData names(73): barcode sample_name ... pseudobulk_UMAP_spatial
+##   markers_UMAP_spatial
+## reducedDimNames(6): PCA TSNE_perplexity50 ... TSNE_perplexity80
+##   UMAP_neighbors15
+## spikeNames(0):
+## altExpNames(0):&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;## Note the memory size
+pryr::object_size(sce)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## 2.08 GB&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;## Remake the logo image with histology information
+sce_image_clus(
+    sce = sce,
+    clustervar = &amp;#39;layer_guess_reordered&amp;#39;,
+    sampleid = &amp;#39;151673&amp;#39;,
+    colors = libd_layer_colors,
+    ... = &amp;#39; DLPFC Human Brain Layers\nMade with github.com/LieberInstitute/spatialLIBD&amp;#39;
+)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;http://lcolladotor.github.io/post/2020-02-29-diving-together-into-the-unknown-world-of-spatial-transcriptomics_files/figure-html/access_data-1.png&#34; width=&#34;864&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;citation&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Citation&lt;/h3&gt;
+&lt;p&gt;Below is the citation output from using &lt;code&gt;citation(&#39;spatialLIBD&#39;)&lt;/code&gt; in R. Please
+run this yourself to check for any updates on how to cite &lt;strong&gt;spatialLIBD&lt;/strong&gt;.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;citation(&amp;#39;spatialLIBD&amp;#39;)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## 
+## Collado-Torres L, Maynard KR, Jaffe AE (2020). _LIBD Visium spatial
+## transcriptomics human pilot data inspector_. doi:
+## 10.18129/B9.bioc.spatialLIBD (URL:
+## https://doi.org/10.18129/B9.bioc.spatialLIBD),
+## https://github.com/LieberInstitute/spatialLIBD - R package version
+## 0.99.9, &amp;lt;URL: http://www.bioconductor.org/packages/spatialLIBD&amp;gt;.
+## 
+## Maynard KR, Collado-Torres L, Weber LM, Uytingco C, Barry BK, Williams
+## SR, II JLC, Tran MN, Besich Z, Tippani M, Chew J, Yin Y, Kleinman JE,
+## Hyde TM, Rao N, Hicks SC, Martinowich K, Jaffe AE (2020).
+## &amp;quot;Transcriptome-scale spatial gene expression in the human dorsolateral
+## prefrontal cortex.&amp;quot; _bioRxiv_. doi: 10.1101/2020.02.28.969931 (URL:
+## https://doi.org/10.1101/2020.02.28.969931), &amp;lt;URL:
+## https://www.biorxiv.org/content/10.1101/2020.02.28.969931v1&amp;gt;.
+## 
+## To see these entries in BibTeX format, use &amp;#39;print(&amp;lt;citation&amp;gt;,
+## bibtex=TRUE)&amp;#39;, &amp;#39;toBibtex(.)&amp;#39;, or set
+## &amp;#39;options(citation.bibtex.max=999)&amp;#39;.&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Please note that the &lt;code&gt;spatialLIBD&lt;/code&gt; was only made possible thanks to many other R and bioinformatics software authors. We have cited their work either in the pre-print or the vignette of the R package.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.libd.org/&#34;&gt;&lt;img src=&#34;http://aejaffe.com/media/LIBD_logo.jpg&#34; width=&#34;250px&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;closing-remarks&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Closing remarks&lt;/h3&gt;
+&lt;p&gt;Overall, this project has everything that I like: R code, a Bioconductor package, challenging and interest biological data, excellent collaborator team, open communication, and so on.&lt;/p&gt;
+&lt;p&gt;Now, these are early days of the 10x Genomics Visium platform and there’s much we and others want to learn. So if you have the chance to hear anyone in our team talk more in detail about the project or you simply want to chat with them, here are some opportunities for you to do so as we’d love to collaborate with you or even hire you. Check &lt;a href=&#34;https://twitter.com/stephaniehicks/status/1229448057462382597?s=20&#34;&gt;Stephanie’s tweet&lt;/a&gt; and the &lt;a href=&#34;https://www.libd.org/careers&#34;&gt;LIBD career website&lt;/a&gt; for more details or simply get in touch with us.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Kristen R Maynard and me will present a &lt;a href=&#34;https://www.the-scientist.com/&#34;&gt;The Scientist&lt;/a&gt; webinar on March 19th&lt;/li&gt;
+&lt;li&gt;Keri Martinowich will be at &lt;a href=&#34;https://twitter.com/VirginiaNeuro/status/1214256625290240000&#34;&gt;CVCSN 2020&lt;/a&gt; March 26-27th&lt;/li&gt;
+&lt;li&gt;I’ll present a seminar at &lt;a href=&#34;https://twitter.com/LIIGH_UNAM&#34;&gt;LIIGH-UNAM&lt;/a&gt; on March 30th&lt;/li&gt;
+&lt;li&gt;Kristen R Maynard will be at the 2020 Single Cell Symposium on April 20th&lt;/li&gt;
+&lt;li&gt;Likely Andrew E Jaffe and others will be at &lt;a href=&#34;https://meetings.cshl.edu/meetings.aspx?meet=GENOME&amp;amp;year=20&#34;&gt;The Biology of Genomes 2020&lt;/a&gt; May 5-9th&lt;/li&gt;
+&lt;li&gt;Stephanie Hicks will present at &lt;a href=&#34;https://twitter.com/erum2020_conf&#34;&gt;eRum 2020&lt;/a&gt; May 27-30&lt;/li&gt;
+&lt;li&gt;Likely some of us will attend &lt;a href=&#34;https://bioc2020.bioconductor.org/&#34;&gt;BioC2020&lt;/a&gt; July 29-31&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;http://lcolladotor.github.io/post/2020-02-29-diving-together-into-the-unknown-world-of-spatial-transcriptomics_files/IMG_3284.jpg&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Finally, here’s the pre-print twitter thread:&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;🔥off the press! 👀 our &lt;a href=&#34;https://twitter.com/biorxivpreprint?ref_src=twsrc%5Etfw&#34;&gt;@biorxivpreprint&lt;/a&gt; on human 🧠brain &lt;a href=&#34;https://twitter.com/LieberInstitute?ref_src=twsrc%5Etfw&#34;&gt;@LieberInstitute&lt;/a&gt; spatial 🌌🔬transcriptomics data 🧬using Visium &lt;a href=&#34;https://twitter.com/10xGenomics?ref_src=twsrc%5Etfw&#34;&gt;@10xGenomics&lt;/a&gt;🎉&lt;a href=&#34;https://twitter.com/hashtag/spatialLIBD?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#spatialLIBD&lt;/a&gt;&lt;br&gt;&lt;br&gt;🔍&lt;a href=&#34;https://t.co/RTW0VscUKR&#34;&gt;https://t.co/RTW0VscUKR&lt;/a&gt; &lt;br&gt;👩🏾‍💻&lt;a href=&#34;https://t.co/bsg04XKONr&#34;&gt;https://t.co/bsg04XKONr&lt;/a&gt;&lt;br&gt;📚&lt;a href=&#34;https://t.co/FJDOOzrAJ6&#34;&gt;https://t.co/FJDOOzrAJ6&lt;/a&gt;&lt;br&gt;📦&lt;a href=&#34;https://t.co/Au5jwADGhY&#34;&gt;https://t.co/Au5jwADGhY&lt;/a&gt;&lt;a href=&#34;https://t.co/PiWEDN9q2N&#34;&gt;https://t.co/PiWEDN9q2N&lt;/a&gt; &lt;a href=&#34;https://t.co/aWy0yLlR50&#34;&gt;pic.twitter.com/aWy0yLlR50&lt;/a&gt;&lt;/p&gt;&amp;mdash; 🇲🇽 Dr. Leonardo Collado-Torres (@fellgernon) &lt;a href=&#34;https://twitter.com/fellgernon/status/1233661576433061888?ref_src=twsrc%5Etfw&#34;&gt;February 29, 2020&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;Thank you for getting this far!&lt;/p&gt;
+&lt;iframe src=&#34;https://giphy.com/embed/26FxykLpuDxQiFbnG&#34; width=&#34;480&#34; height=&#34;256&#34; frameBorder=&#34;0&#34; class=&#34;giphy-embed&#34; allowFullScreen&gt;
+&lt;/iframe&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://giphy.com/gifs/veep-26FxykLpuDxQiFbnG&#34;&gt;via GIPHY&lt;/a&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;references&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;References&lt;/h3&gt;
+&lt;/div&gt;
+&lt;div id=&#34;reproducibility&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Reproducibility&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;## ─ Session info ───────────────────────────────────────────────────────────────────────────────────────────────────────
+##  setting  value                       
+##  version  R version 3.6.2 (2019-12-12)
+##  os       macOS Catalina 10.15.2      
+##  system   x86_64, darwin15.6.0        
+##  ui       X11                         
+##  language (EN)                        
+##  collate  en_US.UTF-8                 
+##  ctype    en_US.UTF-8                 
+##  tz       America/New_York            
+##  date     2020-02-29                  
+## 
+## ─ Packages ───────────────────────────────────────────────────────────────────────────────────────────────────────────
+##  package                * version  date       lib source                                      
+##  AnnotationDbi            1.48.0   2019-10-29 [1] Bioconductor                                
+##  AnnotationHub            2.18.0   2019-10-29 [1] Bioconductor                                
+##  assertthat               0.2.1    2019-03-21 [1] CRAN (R 3.6.0)                              
+##  attempt                  0.3.0    2019-04-08 [1] CRAN (R 3.6.0)                              
+##  backports                1.1.5    2019-10-02 [1] CRAN (R 3.6.0)                              
+##  beeswarm                 0.2.3    2016-04-25 [1] CRAN (R 3.6.0)                              
+##  bibtex                   0.4.2.2  2020-01-02 [1] CRAN (R 3.6.0)                              
+##  Biobase                * 2.46.0   2019-10-29 [1] Bioconductor                                
+##  BiocFileCache            1.10.2   2019-11-08 [1] Bioconductor                                
+##  BiocGenerics           * 0.32.0   2019-10-29 [1] Bioconductor                                
+##  BiocManager              1.30.10  2019-11-16 [1] CRAN (R 3.6.1)                              
+##  BiocNeighbors            1.4.1    2019-11-01 [1] Bioconductor                                
+##  BiocParallel           * 1.20.1   2019-12-21 [1] Bioconductor                                
+##  BiocSingular             1.2.2    2020-02-14 [1] Bioconductor                                
+##  BiocStyle              * 2.14.4   2020-01-09 [1] Bioconductor                                
+##  BiocVersion              3.10.1   2019-06-06 [1] Bioconductor                                
+##  bit                      1.1-15.2 2020-02-10 [1] CRAN (R 3.6.0)                              
+##  bit64                    0.9-7    2017-05-08 [1] CRAN (R 3.6.0)                              
+##  bitops                   1.0-6    2013-08-17 [1] CRAN (R 3.6.0)                              
+##  blob                     1.2.1    2020-01-20 [1] CRAN (R 3.6.0)                              
+##  blogdown                 0.17     2019-11-13 [1] CRAN (R 3.6.1)                              
+##  bookdown                 0.17     2020-01-11 [1] CRAN (R 3.6.0)                              
+##  cli                      2.0.1    2020-01-08 [1] CRAN (R 3.6.0)                              
+##  codetools                0.2-16   2018-12-24 [1] CRAN (R 3.6.2)                              
+##  colorout               * 1.2-1    2019-05-07 [1] Github (jalvesaq/colorout@7ea9440)          
+##  colorspace               1.4-1    2019-03-18 [1] CRAN (R 3.6.0)                              
+##  cowplot                  1.0.0    2019-07-11 [1] CRAN (R 3.6.0)                              
+##  crayon                   1.3.4    2017-09-16 [1] CRAN (R 3.6.0)                              
+##  curl                     4.3      2019-12-02 [1] CRAN (R 3.6.0)                              
+##  data.table               1.12.8   2019-12-09 [1] CRAN (R 3.6.1)                              
+##  DBI                      1.1.0    2019-12-15 [1] CRAN (R 3.6.0)                              
+##  dbplyr                   1.4.2    2019-06-17 [1] CRAN (R 3.6.0)                              
+##  DelayedArray           * 0.12.2   2020-01-06 [1] Bioconductor                                
+##  DelayedMatrixStats       1.8.0    2019-10-29 [1] Bioconductor                                
+##  desc                     1.2.0    2018-05-01 [1] CRAN (R 3.6.0)                              
+##  digest                   0.6.25   2020-02-23 [1] CRAN (R 3.6.0)                              
+##  dotCall64                1.0-0    2018-07-30 [1] CRAN (R 3.6.0)                              
+##  dplyr                    0.8.4    2020-01-31 [1] CRAN (R 3.6.0)                              
+##  DT                       0.12     2020-02-05 [1] CRAN (R 3.6.0)                              
+##  evaluate                 0.14     2019-05-28 [1] CRAN (R 3.6.0)                              
+##  ExperimentHub            1.12.0   2019-10-29 [1] Bioconductor                                
+##  fansi                    0.4.1    2020-01-08 [1] CRAN (R 3.6.0)                              
+##  farver                   2.0.3    2020-01-16 [1] CRAN (R 3.6.0)                              
+##  fastmap                  1.0.1    2019-10-08 [1] CRAN (R 3.6.0)                              
+##  fields                   10.3     2020-02-04 [1] CRAN (R 3.6.0)                              
+##  fs                       1.3.1    2019-05-06 [1] CRAN (R 3.6.0)                              
+##  GenomeInfoDb           * 1.22.0   2019-10-29 [1] Bioconductor                                
+##  GenomeInfoDbData         1.2.2    2019-10-31 [1] Bioconductor                                
+##  GenomicRanges          * 1.38.0   2019-10-29 [1] Bioconductor                                
+##  ggbeeswarm               0.6.0    2017-08-07 [1] CRAN (R 3.6.0)                              
+##  ggplot2                  3.2.1    2019-08-10 [1] CRAN (R 3.6.0)                              
+##  glue                     1.3.1    2019-03-12 [1] CRAN (R 3.6.0)                              
+##  golem                    0.1      2019-08-05 [1] CRAN (R 3.6.0)                              
+##  gridExtra                2.3      2017-09-09 [1] CRAN (R 3.6.0)                              
+##  gtable                   0.3.0    2019-03-25 [1] CRAN (R 3.6.0)                              
+##  htmltools                0.4.0    2019-10-04 [1] CRAN (R 3.6.0)                              
+##  htmlwidgets              1.5.1    2019-10-08 [1] CRAN (R 3.6.0)                              
+##  httpuv                   1.5.2    2019-09-11 [1] CRAN (R 3.6.0)                              
+##  httr                     1.4.1    2019-08-05 [1] CRAN (R 3.6.0)                              
+##  interactiveDisplayBase   1.24.0   2019-10-29 [1] Bioconductor                                
+##  IRanges                * 2.20.2   2020-01-13 [1] Bioconductor                                
+##  irlba                    2.3.3    2019-02-05 [1] CRAN (R 3.6.0)                              
+##  jsonlite                 1.6.1    2020-02-02 [1] CRAN (R 3.6.0)                              
+##  knitcitations          * 1.0.10   2019-09-15 [1] CRAN (R 3.6.0)                              
+##  knitr                    1.27     2020-01-16 [1] CRAN (R 3.6.0)                              
+##  labeling                 0.3      2014-08-23 [1] CRAN (R 3.6.0)                              
+##  later                    1.0.0    2019-10-04 [1] CRAN (R 3.6.0)                              
+##  lattice                  0.20-38  2018-11-04 [1] CRAN (R 3.6.2)                              
+##  lazyeval                 0.2.2    2019-03-15 [1] CRAN (R 3.6.0)                              
+##  lifecycle                0.1.0    2019-08-01 [1] CRAN (R 3.6.0)                              
+##  lubridate                1.7.4    2018-04-11 [1] CRAN (R 3.6.0)                              
+##  magrittr                 1.5      2014-11-22 [1] CRAN (R 3.6.0)                              
+##  maps                     3.3.0    2018-04-03 [1] CRAN (R 3.6.0)                              
+##  Matrix                   1.2-18   2019-11-27 [1] CRAN (R 3.6.2)                              
+##  matrixStats            * 0.55.0   2019-09-07 [1] CRAN (R 3.6.0)                              
+##  memoise                  1.1.0    2017-04-21 [1] CRAN (R 3.6.0)                              
+##  mime                     0.9      2020-02-04 [1] CRAN (R 3.6.0)                              
+##  munsell                  0.5.0    2018-06-12 [1] CRAN (R 3.6.0)                              
+##  pillar                   1.4.3    2019-12-20 [1] CRAN (R 3.6.0)                              
+##  pkgconfig                2.0.3    2019-09-22 [1] CRAN (R 3.6.1)                              
+##  pkgload                  1.0.2    2018-10-29 [1] CRAN (R 3.6.0)                              
+##  plotly                   4.9.2    2020-02-12 [1] CRAN (R 3.6.0)                              
+##  plyr                     1.8.5    2019-12-10 [1] CRAN (R 3.6.0)                              
+##  png                      0.1-7    2013-12-03 [1] CRAN (R 3.6.0)                              
+##  Polychrome               1.2.4    2020-02-03 [1] CRAN (R 3.6.0)                              
+##  promises                 1.1.0    2019-10-04 [1] CRAN (R 3.6.0)                              
+##  pryr                     0.1.4    2018-02-18 [1] CRAN (R 3.6.0)                              
+##  purrr                    0.3.3    2019-10-18 [1] CRAN (R 3.6.0)                              
+##  R6                       2.4.1    2019-11-12 [1] CRAN (R 3.6.1)                              
+##  rappdirs                 0.3.1    2016-03-28 [1] CRAN (R 3.6.0)                              
+##  RColorBrewer             1.1-2    2014-12-07 [1] CRAN (R 3.6.0)                              
+##  Rcpp                     1.0.3    2019-11-08 [1] CRAN (R 3.6.0)                              
+##  RCurl                    1.98-1.1 2020-01-19 [1] CRAN (R 3.6.0)                              
+##  RefManageR               1.2.12   2019-04-03 [1] CRAN (R 3.6.0)                              
+##  rlang                    0.4.4    2020-01-28 [1] CRAN (R 3.6.0)                              
+##  rmarkdown                2.1      2020-01-20 [1] CRAN (R 3.6.0)                              
+##  roxygen2                 7.0.2    2019-12-02 [1] CRAN (R 3.6.0)                              
+##  rprojroot                1.3-2    2018-01-03 [1] CRAN (R 3.6.0)                              
+##  RSQLite                  2.2.0    2020-01-07 [1] CRAN (R 3.6.0)                              
+##  rstudioapi               0.11     2020-02-07 [1] CRAN (R 3.6.0)                              
+##  rsvd                     1.0.3    2020-02-17 [1] CRAN (R 3.6.0)                              
+##  S4Vectors              * 0.24.3   2020-01-18 [1] Bioconductor                                
+##  scales                   1.1.0    2019-11-18 [1] CRAN (R 3.6.1)                              
+##  scater                   1.14.6   2019-12-16 [1] Bioconductor                                
+##  scatterplot3d            0.3-41   2018-03-14 [1] CRAN (R 3.6.0)                              
+##  sessioninfo            * 1.1.1    2018-11-05 [1] CRAN (R 3.6.0)                              
+##  shiny                    1.4.0    2019-10-10 [1] CRAN (R 3.6.0)                              
+##  shinyWidgets             0.5.0    2019-11-18 [1] CRAN (R 3.6.0)                              
+##  SingleCellExperiment   * 1.8.0    2019-10-29 [1] Bioconductor                                
+##  spam                     2.5-1    2019-12-12 [1] CRAN (R 3.6.0)                              
+##  spatialLIBD            * 0.99.9   2020-02-29 [1] Github (LieberInstitute/spatialLIBD@572e2a0)
+##  stringi                  1.4.6    2020-02-17 [1] CRAN (R 3.6.0)                              
+##  stringr                  1.4.0    2019-02-10 [1] CRAN (R 3.6.0)                              
+##  SummarizedExperiment   * 1.16.1   2019-12-19 [1] Bioconductor                                
+##  testthat                 2.3.1    2019-12-01 [1] CRAN (R 3.6.0)                              
+##  tibble                   2.1.3    2019-06-06 [1] CRAN (R 3.6.0)                              
+##  tidyr                    1.0.2    2020-01-24 [1] CRAN (R 3.6.2)                              
+##  tidyselect               1.0.0    2020-01-27 [1] CRAN (R 3.6.0)                              
+##  usethis                  1.5.1    2019-07-04 [1] CRAN (R 3.6.0)                              
+##  vctrs                    0.2.3    2020-02-20 [1] CRAN (R 3.6.0)                              
+##  vipor                    0.4.5    2017-03-22 [1] CRAN (R 3.6.0)                              
+##  viridis                  0.5.1    2018-03-29 [1] CRAN (R 3.6.0)                              
+##  viridisLite              0.3.0    2018-02-01 [1] CRAN (R 3.6.0)                              
+##  withr                    2.1.2    2018-03-15 [1] CRAN (R 3.6.0)                              
+##  xfun                     0.12     2020-01-13 [1] CRAN (R 3.6.0)                              
+##  xml2                     1.2.2    2019-08-09 [1] CRAN (R 3.6.0)                              
+##  xtable                   1.8-4    2019-04-21 [1] CRAN (R 3.6.0)                              
+##  XVector                  0.26.0   2019-10-29 [1] Bioconductor                                
+##  yaml                     2.2.1    2020-02-01 [1] CRAN (R 3.6.0)                              
+##  yesno                    0.1.0    2018-04-14 [1] CRAN (R 3.6.0)                              
+##  zlibbioc                 1.32.0   2019-10-29 [1] Bioconductor                                
+## 
+## [1] /Library/Frameworks/R.framework/Versions/3.6/Resources/library&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+</description>
+    </item>
     
     <item>
       <title>Easily explore a table with shinycsv</title>

@@ -5,7 +5,7 @@
     <link>/categories/</link>
       <atom:link href=http://lcolladotor.github.io/categories/index.xml rel="self" type="application/rss+xml" />
     <description>Categories</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2011-2020 Leonardo Collado Torres under (CC) BY-NC-SA 4.0. All thoughts and opinions here are my own. Icon is the [R logo](https://www.r-project.org/logo/) modified</copyright><lastBuildDate>Wed, 12 Feb 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2011-2020 Leonardo Collado Torres under (CC) BY-NC-SA 4.0. All thoughts and opinions here are my own. Icon is the [R logo](https://www.r-project.org/logo/) modified</copyright><lastBuildDate>Sat, 29 Feb 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
       <title>Categories</title>
@@ -13,18 +13,26 @@
     </image>
     
     <item>
-      <title>Ideas</title>
-      <link>/categories/ideas/</link>
-      <pubDate>Wed, 12 Feb 2020 00:00:00 +0000</pubDate>
-      <guid>/categories/ideas/</guid>
+      <title>rstats</title>
+      <link>/categories/rstats/</link>
+      <pubDate>Sat, 29 Feb 2020 00:00:00 +0000</pubDate>
+      <guid>/categories/rstats/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>rstats</title>
-      <link>/categories/rstats/</link>
+      <title>Science</title>
+      <link>/categories/science/</link>
+      <pubDate>Sat, 29 Feb 2020 00:00:00 +0000</pubDate>
+      <guid>/categories/science/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ideas</title>
+      <link>/categories/ideas/</link>
       <pubDate>Wed, 12 Feb 2020 00:00:00 +0000</pubDate>
-      <guid>/categories/rstats/</guid>
+      <guid>/categories/ideas/</guid>
       <description></description>
     </item>
     
@@ -41,14 +49,6 @@
       <link>/categories/web/</link>
       <pubDate>Wed, 10 Apr 2019 00:00:00 +0000</pubDate>
       <guid>/categories/web/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Science</title>
-      <link>/categories/science/</link>
-      <pubDate>Tue, 02 Apr 2019 00:00:00 +0000</pubDate>
-      <guid>/categories/science/</guid>
       <description></description>
     </item>
     

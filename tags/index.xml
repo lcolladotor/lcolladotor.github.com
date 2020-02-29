@@ -5,7 +5,7 @@
     <link>/tags/</link>
       <atom:link href=http://lcolladotor.github.io/tags/index.xml rel="self" type="application/rss+xml" />
     <description>Tags</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2011-2020 Leonardo Collado Torres under (CC) BY-NC-SA 4.0. All thoughts and opinions here are my own. Icon is the [R logo](https://www.r-project.org/logo/) modified</copyright><lastBuildDate>Wed, 12 Feb 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2011-2020 Leonardo Collado Torres under (CC) BY-NC-SA 4.0. All thoughts and opinions here are my own. Icon is the [R logo](https://www.r-project.org/logo/) modified</copyright><lastBuildDate>Sat, 29 Feb 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
       <title>Tags</title>
@@ -15,8 +15,48 @@
     <item>
       <title>Academia</title>
       <link>/tags/academia/</link>
-      <pubDate>Wed, 12 Feb 2020 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 29 Feb 2020 00:00:00 +0000</pubDate>
       <guid>/tags/academia/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Genomics</title>
+      <link>/tags/genomics/</link>
+      <pubDate>Sat, 29 Feb 2020 00:00:00 +0000</pubDate>
+      <guid>/tags/genomics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Networking</title>
+      <link>/tags/networking/</link>
+      <pubDate>Sat, 29 Feb 2020 00:00:00 +0000</pubDate>
+      <guid>/tags/networking/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>rstats</title>
+      <link>/tags/rstats/</link>
+      <pubDate>Sat, 29 Feb 2020 00:00:00 +0000</pubDate>
+      <guid>/tags/rstats/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>shiny</title>
+      <link>/tags/shiny/</link>
+      <pubDate>Sat, 29 Feb 2020 00:00:00 +0000</pubDate>
+      <guid>/tags/shiny/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Statistics</title>
+      <link>/tags/statistics/</link>
+      <pubDate>Sat, 29 Feb 2020 00:00:00 +0000</pubDate>
+      <guid>/tags/statistics/</guid>
       <description></description>
     </item>
     
@@ -33,14 +73,6 @@
       <link>/tags/help/</link>
       <pubDate>Wed, 12 Feb 2020 00:00:00 +0000</pubDate>
       <guid>/tags/help/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>rstats</title>
-      <link>/tags/rstats/</link>
-      <pubDate>Wed, 12 Feb 2020 00:00:00 +0000</pubDate>
-      <guid>/tags/rstats/</guid>
       <description></description>
     </item>
     
@@ -285,14 +317,6 @@
     </item>
     
     <item>
-      <title>Genomics</title>
-      <link>/tags/genomics/</link>
-      <pubDate>Wed, 20 Jun 2018 00:00:00 +0000</pubDate>
-      <guid>/tags/genomics/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Research</title>
       <link>/tags/research/</link>
       <pubDate>Wed, 20 Jun 2018 00:00:00 +0000</pubDate>
@@ -321,14 +345,6 @@
       <link>/tags/histamine/</link>
       <pubDate>Tue, 09 May 2017 16:45:43 -0500</pubDate>
       <guid>/tags/histamine/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>shiny</title>
-      <link>/tags/shiny/</link>
-      <pubDate>Fri, 20 Jan 2017 00:00:00 +0000</pubDate>
-      <guid>/tags/shiny/</guid>
       <description></description>
     </item>
     
@@ -617,14 +633,6 @@
       <link>/tags/industry/</link>
       <pubDate>Fri, 28 Sep 2012 00:00:00 +0000</pubDate>
       <guid>/tags/industry/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Statistics</title>
-      <link>/tags/statistics/</link>
-      <pubDate>Thu, 16 Aug 2012 00:00:00 +0000</pubDate>
-      <guid>/tags/statistics/</guid>
       <description></description>
     </item>
     
