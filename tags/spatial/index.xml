@@ -5,18 +5,66 @@
     <link>/tags/spatial/</link>
       <atom:link href=http://lcolladotor.github.io/tags/spatial/index.xml rel="self" type="application/rss+xml" />
     <description>spatial</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2011-2020 Leonardo Collado Torres under (CC) BY-NC-SA 4.0. All thoughts and opinions here are my own. The icon was designed by [Mauricio Guzmán](https://www.linkedin.com/in/mauricio-guzman-6529b551/) and is inspired by [Huichol culture](https://en.wikipedia.org/wiki/Huichol); it represents my community building interests</copyright><lastBuildDate>Fri, 28 Feb 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2011-2020. All thoughts and opinions here are my own. The icon was designed by [Mauricio Guzmán](https://www.linkedin.com/in/mauricio-guzman-6529b551/) and is inspired by [Huichol culture](https://en.wikipedia.org/wiki/Huichol); it represents my community building interests</copyright><lastBuildDate>Wed, 29 Jul 2020 13:00:00 -0500</lastBuildDate>
     <image>
-      <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
+      <url>/images/icon_hu2b32c4ab415f12f472f73c7b0301b0d1_19400_512x512_fill_lanczos_center_2.png</url>
       <title>spatial</title>
       <link>/tags/spatial/</link>
     </image>
     
     <item>
       <title>Transcriptome-scale spatial gene expression in the human dorsolateral prefrontal cortex</title>
-      <link>/publication/spatiallibd/</link>
+      <link>/publication/poster2020bioc/</link>
+      <pubDate>Wed, 29 Jul 2020 13:00:00 -0500</pubDate>
+      <guid>/publication/poster2020bioc/</guid>
+      <description>&lt;!-- More detail can easily be written here using *Markdown* and $\rm \LaTeX$ math code. --&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Transcriptome-Scale Spatial Gene Expression in the Human Dorsolateral Prefrontal Cortex</title>
+      <link>/talk/scientist2020/</link>
+      <pubDate>Thu, 19 Mar 2020 14:30:00 -0400</pubDate>
+      <guid>/talk/scientist2020/</guid>
+      <description>&lt;script async class=&#34;speakerdeck-embed&#34; data-id=&#34;eeea5f07627b469cb2adeaf9872b5558&#34; data-ratio=&#34;1.33333333333333&#34; src=&#34;//speakerdeck.com/assets/embed.js&#34;&gt;&lt;/script&gt;
+&lt;!--
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Click on the &lt;strong&gt;Slides&lt;/strong&gt; button above to view the built-in slides feature.
+  &lt;/div&gt;
+&lt;/div&gt;
+
+
+
+Slides can be added in a few ways:
+
+- **Create** slides using Academic&#39;s *Slides* feature and link using `url_slides` parameter in the front matter of the talk file
+- **Upload** an existing slide deck to `static/` and link using `url_slides` parameter in the front matter of the talk file
+- **Embed** your slides (e.g. Google Slides) or presentation video on this page using [shortcodes](https://sourcethemes.com/academic/docs/writing-markdown-latex/).
+
+Further talk details can easily be added to this page using *Markdown* and $\rm \LaTeX$ math code.
+
+--&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>spatial</title>
+      <link>/project/spatial/</link>
+      <pubDate>Sat, 29 Feb 2020 00:00:00 -0500</pubDate>
+      <guid>/project/spatial/</guid>
+      <description>&lt;p&gt;In 2020 we published the 
+&lt;a href=&#34;https://www.biorxiv.org/content/10.1101/2020.02.28.969931v1&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;first pre-print&lt;/a&gt; using the 10x Genomics Visium platform for spatial transcriptomics. For this project we created the 
+&lt;a href=&#34;https://bioconductor.org/packages/spatialLIBD&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;spatialLIBD&lt;/code&gt;&lt;/a&gt; Bioconductor package and started developing new analytical methods for this type of data.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Transcriptome-scale spatial gene expression in the human dorsolateral prefrontal cortex</title>
+      <link>/publication/preprint_spatiallibd/</link>
       <pubDate>Fri, 28 Feb 2020 00:00:00 +0000</pubDate>
-      <guid>/publication/spatiallibd/</guid>
+      <guid>/publication/preprint_spatiallibd/</guid>
       <description>&lt;!--
 
 &lt;div class=&#34;alert alert-note&#34;&gt;

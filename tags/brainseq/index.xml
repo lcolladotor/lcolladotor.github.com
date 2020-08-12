@@ -5,18 +5,27 @@
     <link>/tags/brainseq/</link>
       <atom:link href=http://lcolladotor.github.io/tags/brainseq/index.xml rel="self" type="application/rss+xml" />
     <description>BrainSeq</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2011-2020 Leonardo Collado Torres under (CC) BY-NC-SA 4.0. All thoughts and opinions here are my own. The icon was designed by [Mauricio Guzmán](https://www.linkedin.com/in/mauricio-guzman-6529b551/) and is inspired by [Huichol culture](https://en.wikipedia.org/wiki/Huichol); it represents my community building interests</copyright><lastBuildDate>Mon, 16 Mar 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2011-2020. All thoughts and opinions here are my own. The icon was designed by [Mauricio Guzmán](https://www.linkedin.com/in/mauricio-guzman-6529b551/) and is inspired by [Huichol culture](https://en.wikipedia.org/wiki/Huichol); it represents my community building interests</copyright><lastBuildDate>Wed, 24 Jun 2020 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
+      <url>/images/icon_hu2b32c4ab415f12f472f73c7b0301b0d1_19400_512x512_fill_lanczos_center_2.png</url>
       <title>BrainSeq</title>
       <link>/tags/brainseq/</link>
     </image>
     
     <item>
+      <title>SynGAP isoforms differentially regulate synaptic plasticity and dendritic development</title>
+      <link>/publication/2020-06_syngap/</link>
+      <pubDate>Wed, 24 Jun 2020 00:00:00 +0000</pubDate>
+      <guid>/publication/2020-06_syngap/</guid>
+      <description>&lt;!-- More detail can easily be written here using *Markdown* and $\rm \LaTeX$ math code. --&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Profiling gene expression in the human dentate gyrus granule cell layer reveals insights into schizophrenia and its genetic risk</title>
-      <link>/publication/dglcm/</link>
+      <link>/publication/2020-03_dglcm/</link>
       <pubDate>Mon, 16 Mar 2020 00:00:00 +0000</pubDate>
-      <guid>/publication/dglcm/</guid>
+      <guid>/publication/2020-03_dglcm/</guid>
       <description>&lt;!--
 
 &lt;div class=&#34;alert alert-note&#34;&gt;
@@ -40,10 +49,66 @@ Supplementary notes can be added here, including [code and math](https://sourcet
     </item>
     
     <item>
+      <title>Regional heterogeneity in gene expression, regulation and coherence in hippocampus and dorsolateral prefrontal cortex across development and in schizophrenia</title>
+      <link>/talk/ashg2019/</link>
+      <pubDate>Tue, 15 Oct 2019 00:00:00 -0400</pubDate>
+      <guid>/talk/ashg2019/</guid>
+      <description>&lt;script async class=&#34;speakerdeck-embed&#34; data-id=&#34;15751a5ad1c045d0af6dd8b47752bb50&#34; data-ratio=&#34;1.77777777777778&#34; src=&#34;//speakerdeck.com/assets/embed.js&#34;&gt;&lt;/script&gt;
+&lt;!--
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Click on the &lt;strong&gt;Slides&lt;/strong&gt; button above to view the built-in slides feature.
+  &lt;/div&gt;
+&lt;/div&gt;
+
+
+
+Slides can be added in a few ways:
+
+- **Create** slides using Academic&#39;s *Slides* feature and link using `url_slides` parameter in the front matter of the talk file
+- **Upload** an existing slide deck to `static/` and link using `url_slides` parameter in the front matter of the talk file
+- **Embed** your slides (e.g. Google Slides) or presentation video on this page using [shortcodes](https://sourcethemes.com/academic/docs/writing-markdown-latex/).
+
+Further talk details can easily be added to this page using *Markdown* and $\rm \LaTeX$ math code.
+
+--&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Analyzing BrainSeq Phase II and generating the recount-brain resource</title>
+      <link>/talk/liigh2019/</link>
+      <pubDate>Mon, 05 Aug 2019 00:00:00 -0400</pubDate>
+      <guid>/talk/liigh2019/</guid>
+      <description>&lt;script async class=&#34;speakerdeck-embed&#34; data-id=&#34;80bcac8852a24f57b7a9218d8a1f1897&#34; data-ratio=&#34;1.77777777777778&#34; src=&#34;//speakerdeck.com/assets/embed.js&#34;&gt;&lt;/script&gt;
+&lt;!--
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Click on the &lt;strong&gt;Slides&lt;/strong&gt; button above to view the built-in slides feature.
+  &lt;/div&gt;
+&lt;/div&gt;
+
+
+
+Slides can be added in a few ways:
+
+- **Create** slides using Academic&#39;s *Slides* feature and link using `url_slides` parameter in the front matter of the talk file
+- **Upload** an existing slide deck to `static/` and link using `url_slides` parameter in the front matter of the talk file
+- **Embed** your slides (e.g. Google Slides) or presentation video on this page using [shortcodes](https://sourcethemes.com/academic/docs/writing-markdown-latex/).
+
+Further talk details can easily be added to this page using *Markdown* and $\rm \LaTeX$ math code.
+
+--&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Regional heterogeneity in gene expression, regulation, and coherence in the frontal cortex and hippocampus across development and schizophrenia</title>
-      <link>/publication/bsp2/</link>
+      <link>/publication/2019-06_bsp2/</link>
       <pubDate>Tue, 04 Jun 2019 00:00:00 +0000</pubDate>
-      <guid>/publication/bsp2/</guid>
+      <guid>/publication/2019-06_bsp2/</guid>
       <description>&lt;!-- More detail can easily be written here using *Markdown* and $\rm \LaTeX$ math code. --&gt;
 </description>
     </item>
@@ -87,18 +152,18 @@ Further talk details can easily be added to this page using *Markdown* and $\rm 
     
     <item>
       <title>Developmental effects of maternal smoking during pregnancy on the human frontal cortex transcriptome</title>
-      <link>/publication/maternalsmoking/</link>
+      <link>/publication/2018-08_maternalsmoking/</link>
       <pubDate>Tue, 21 Aug 2018 00:00:00 +0000</pubDate>
-      <guid>/publication/maternalsmoking/</guid>
+      <guid>/publication/2018-08_maternalsmoking/</guid>
       <description>&lt;!-- More detail can easily be written here using *Markdown* and $\rm \LaTeX$ math code. --&gt;
 </description>
     </item>
     
     <item>
       <title>Developmental and genetic regulation of the human cortex transcriptome illuminate schizophrenia pathogenesis</title>
-      <link>/publication/bsp1/</link>
+      <link>/publication/2018-07_bsp1/</link>
       <pubDate>Thu, 26 Jul 2018 00:00:00 +0000</pubDate>
-      <guid>/publication/bsp1/</guid>
+      <guid>/publication/2018-07_bsp1/</guid>
       <description>&lt;!-- More detail can easily be written here using *Markdown* and $\rm \LaTeX$ math code. --&gt;
 </description>
     </item>

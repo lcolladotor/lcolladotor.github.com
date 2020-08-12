@@ -5,9 +5,9 @@
     <link>/tags/graphics/</link>
       <atom:link href=http://lcolladotor.github.io/tags/graphics/index.xml rel="self" type="application/rss+xml" />
     <description>Graphics</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2011-2020 Leonardo Collado Torres under (CC) BY-NC-SA 4.0. All thoughts and opinions here are my own. The icon was designed by [Mauricio Guzmán](https://www.linkedin.com/in/mauricio-guzman-6529b551/) and is inspired by [Huichol culture](https://en.wikipedia.org/wiki/Huichol); it represents my community building interests</copyright><lastBuildDate>Fri, 21 Nov 2014 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2011-2020. All thoughts and opinions here are my own. The icon was designed by [Mauricio Guzmán](https://www.linkedin.com/in/mauricio-guzman-6529b551/) and is inspired by [Huichol culture](https://en.wikipedia.org/wiki/Huichol); it represents my community building interests</copyright><lastBuildDate>Fri, 21 Nov 2014 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
+      <url>/images/icon_hu2b32c4ab415f12f472f73c7b0301b0d1_19400_512x512_fill_lanczos_center_2.png</url>
       <title>Graphics</title>
       <link>/tags/graphics/</link>
     </image>
@@ -19,7 +19,7 @@
       <guid>/2014/11/21/add-logo-in-r/</guid>
       <description>&lt;p&gt;&lt;em&gt;This is a guest post by 
 &lt;a href=&#34;http://www.biostat.jhsph.edu/~prpatil/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Prasad Patil&lt;/a&gt; that answers the question: how to put a shape in the margin of an R plot?&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;The help page for &lt;strong&gt;R&lt;/strong&gt;&amp;lsquo;s &lt;code&gt;par()&lt;/code&gt; function is a somewhat impenetrable list
+&lt;p&gt;The help page for &lt;strong&gt;R&lt;/strong&gt;&amp;rsquo;s &lt;code&gt;par()&lt;/code&gt; function is a somewhat impenetrable list
 of abbreviations that allow you to manipulate anything and everything
 in the plotting device. You may have used this function in the past
 to create an array of plots (using &lt;code&gt;mfrow&lt;/code&gt; or &lt;code&gt;mfcol&lt;/code&gt;) or to set margins
@@ -60,7 +60,7 @@ itself, but we used the established axes to estimate them and plot outside
 the plotting region.&lt;/p&gt;
 &lt;h2 id=&#34;images-outside-the-plot&#34;&gt;Images outside the plot&lt;/h2&gt;
 &lt;p&gt;Now let&amp;rsquo;s say we want to &lt;strong&gt;add a logo&lt;/strong&gt; or other external image in the margin
-of our plot. We will use &lt;strong&gt;R&lt;/strong&gt;&amp;lsquo;s &lt;code&gt;png&lt;/code&gt; library to load a PNG image and
+of our plot. We will use &lt;strong&gt;R&lt;/strong&gt;&amp;rsquo;s &lt;code&gt;png&lt;/code&gt; library to load a PNG image and
 &lt;code&gt;rasterImage()&lt;/code&gt; to plot it:&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;## If needed: install.packages(&amp;quot;png&amp;quot;)
 library(png)

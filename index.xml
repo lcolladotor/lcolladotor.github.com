@@ -5,12 +5,197 @@
     <link>/</link>
       <atom:link href=http://lcolladotor.github.io/index.xml rel="self" type="application/rss+xml" />
     <description>L. Collado-Torres</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2011-2020 Leonardo Collado Torres under (CC) BY-NC-SA 4.0. All thoughts and opinions here are my own. The icon was designed by [Mauricio Guzmán](https://www.linkedin.com/in/mauricio-guzman-6529b551/) and is inspired by [Huichol culture](https://en.wikipedia.org/wiki/Huichol); it represents my community building interests</copyright>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2011-2020. All thoughts and opinions here are my own. The icon was designed by [Mauricio Guzmán](https://www.linkedin.com/in/mauricio-guzman-6529b551/) and is inspired by [Huichol culture](https://en.wikipedia.org/wiki/Huichol); it represents my community building interests</copyright><lastBuildDate>Tue, 04 Aug 2020 00:00:00 -0400</lastBuildDate>
     <image>
-      <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
+      <url>/images/icon_hu2b32c4ab415f12f472f73c7b0301b0d1_19400_512x512_fill_lanczos_center_2.png</url>
       <title>L. Collado-Torres</title>
       <link>/</link>
     </image>
+    
+    <item>
+      <title>Promoting the next wave of R/Bioconductor developers in Latin America starting in Mexico</title>
+      <link>/talk/jsm2020/</link>
+      <pubDate>Tue, 04 Aug 2020 00:00:00 -0400</pubDate>
+      <guid>/talk/jsm2020/</guid>
+      <description>&lt;script async class=&#34;speakerdeck-embed&#34; data-id=&#34;dd8d3c5793c646c983af37cb1f3b4d2f&#34; data-ratio=&#34;1.77777777777778&#34; src=&#34;//speakerdeck.com/assets/embed.js&#34;&gt;&lt;/script&gt;
+&lt;!--
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Click on the &lt;strong&gt;Slides&lt;/strong&gt; button above to view the built-in slides feature.
+  &lt;/div&gt;
+&lt;/div&gt;
+
+
+
+Slides can be added in a few ways:
+
+- **Create** slides using Academic&#39;s *Slides* feature and link using `url_slides` parameter in the front matter of the talk file
+- **Upload** an existing slide deck to `static/` and link using `url_slides` parameter in the front matter of the talk file
+- **Embed** your slides (e.g. Google Slides) or presentation video on this page using [shortcodes](https://sourcethemes.com/academic/docs/writing-markdown-latex/).
+
+Further talk details can easily be added to this page using *Markdown* and $\rm \LaTeX$ math code.
+
+--&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Launch of CDSB2020</title>
+      <link>/talk/cdsb2020/</link>
+      <pubDate>Mon, 03 Aug 2020 00:00:00 -0400</pubDate>
+      <guid>/talk/cdsb2020/</guid>
+      <description>&lt;script async class=&#34;speakerdeck-embed&#34; data-id=&#34;1747a6072c204f33839148fba20f69ee&#34; data-ratio=&#34;1.77777777777778&#34; src=&#34;//speakerdeck.com/assets/embed.js&#34;&gt;&lt;/script&gt;
+&lt;!--
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Click on the &lt;strong&gt;Slides&lt;/strong&gt; button above to view the built-in slides feature.
+  &lt;/div&gt;
+&lt;/div&gt;
+
+
+
+Slides can be added in a few ways:
+
+- **Create** slides using Academic&#39;s *Slides* feature and link using `url_slides` parameter in the front matter of the talk file
+- **Upload** an existing slide deck to `static/` and link using `url_slides` parameter in the front matter of the talk file
+- **Embed** your slides (e.g. Google Slides) or presentation video on this page using [shortcodes](https://sourcethemes.com/academic/docs/writing-markdown-latex/).
+
+Further talk details can easily be added to this page using *Markdown* and $\rm \LaTeX$ math code.
+
+--&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Transcriptome-scale spatial gene expression in the human dorsolateral prefrontal cortex</title>
+      <link>/publication/poster2020bioc/</link>
+      <pubDate>Wed, 29 Jul 2020 13:00:00 -0500</pubDate>
+      <guid>/publication/poster2020bioc/</guid>
+      <description>&lt;!-- More detail can easily be written here using *Markdown* and $\rm \LaTeX$ math code. --&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>BioC2020 Birds of a Feather on the CDSB community</title>
+      <link>/talk/bioc2020cdsb/</link>
+      <pubDate>Wed, 29 Jul 2020 00:00:00 -0400</pubDate>
+      <guid>/talk/bioc2020cdsb/</guid>
+      <description>&lt;script async class=&#34;speakerdeck-embed&#34; data-id=&#34;0b60a70c962f4d85a53f6e71b163094a&#34; data-ratio=&#34;1.77777777777778&#34; src=&#34;//speakerdeck.com/assets/embed.js&#34;&gt;&lt;/script&gt;
+&lt;!--
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Click on the &lt;strong&gt;Slides&lt;/strong&gt; button above to view the built-in slides feature.
+  &lt;/div&gt;
+&lt;/div&gt;
+
+
+
+Slides can be added in a few ways:
+
+- **Create** slides using Academic&#39;s *Slides* feature and link using `url_slides` parameter in the front matter of the talk file
+- **Upload** an existing slide deck to `static/` and link using `url_slides` parameter in the front matter of the talk file
+- **Embed** your slides (e.g. Google Slides) or presentation video on this page using [shortcodes](https://sourcethemes.com/academic/docs/writing-markdown-latex/).
+
+Further talk details can easily be added to this page using *Markdown* and $\rm \LaTeX$ math code.
+
+--&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>BioC2020 recount workshop</title>
+      <link>/talk/bioc2020/</link>
+      <pubDate>Mon, 27 Jul 2020 00:00:00 -0400</pubDate>
+      <guid>/talk/bioc2020/</guid>
+      <description>&lt;script async class=&#34;speakerdeck-embed&#34; data-id=&#34;78092f5c558242f1aa3085d9abc9c061&#34; data-ratio=&#34;1.77777777777778&#34; src=&#34;//speakerdeck.com/assets/embed.js&#34;&gt;&lt;/script&gt;
+&lt;!--
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Click on the &lt;strong&gt;Slides&lt;/strong&gt; button above to view the built-in slides feature.
+  &lt;/div&gt;
+&lt;/div&gt;
+
+
+
+Slides can be added in a few ways:
+
+- **Create** slides using Academic&#39;s *Slides* feature and link using `url_slides` parameter in the front matter of the talk file
+- **Upload** an existing slide deck to `static/` and link using `url_slides` parameter in the front matter of the talk file
+- **Embed** your slides (e.g. Google Slides) or presentation video on this page using [shortcodes](https://sourcethemes.com/academic/docs/writing-markdown-latex/).
+
+Further talk details can easily be added to this page using *Markdown* and $\rm \LaTeX$ math code.
+
+--&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Characterizing the dynamic and functional DNA methylation landscape in the developing human cortex</title>
+      <link>/publication/2020-07_kira_prenatal/</link>
+      <pubDate>Wed, 15 Jul 2020 00:00:00 +0000</pubDate>
+      <guid>/publication/2020-07_kira_prenatal/</guid>
+      <description>&lt;!-- More detail can easily be written here using *Markdown* and $\rm \LaTeX$ math code. --&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>SynGAP isoforms differentially regulate synaptic plasticity and dendritic development</title>
+      <link>/publication/2020-06_syngap/</link>
+      <pubDate>Wed, 24 Jun 2020 00:00:00 +0000</pubDate>
+      <guid>/publication/2020-06_syngap/</guid>
+      <description>&lt;!-- More detail can easily be written here using *Markdown* and $\rm \LaTeX$ math code. --&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Programmatic access to bacterial regulatory networks with regutools</title>
+      <link>/publication/2020-06_regutools/</link>
+      <pubDate>Tue, 23 Jun 2020 00:00:00 +0000</pubDate>
+      <guid>/publication/2020-06_regutools/</guid>
+      <description>&lt;!-- More detail can easily be written here using *Markdown* and $\rm \LaTeX$ math code. --&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Incomplete annotation has a disproportionate impact on our understanding of Mendelian and complex neurogenetic disorders</title>
+      <link>/publication/2020-06_omimderfinder/</link>
+      <pubDate>Wed, 10 Jun 2020 00:00:00 +0000</pubDate>
+      <guid>/publication/2020-06_omimderfinder/</guid>
+      <description>&lt;!-- More detail can easily be written here using *Markdown* and $\rm \LaTeX$ math code. --&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Transcriptome-Scale Spatial Gene Expression in the Human Dorsolateral Prefrontal Cortex</title>
+      <link>/talk/scientist2020/</link>
+      <pubDate>Thu, 19 Mar 2020 14:30:00 -0400</pubDate>
+      <guid>/talk/scientist2020/</guid>
+      <description>&lt;script async class=&#34;speakerdeck-embed&#34; data-id=&#34;eeea5f07627b469cb2adeaf9872b5558&#34; data-ratio=&#34;1.33333333333333&#34; src=&#34;//speakerdeck.com/assets/embed.js&#34;&gt;&lt;/script&gt;
+&lt;!--
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Click on the &lt;strong&gt;Slides&lt;/strong&gt; button above to view the built-in slides feature.
+  &lt;/div&gt;
+&lt;/div&gt;
+
+
+
+Slides can be added in a few ways:
+
+- **Create** slides using Academic&#39;s *Slides* feature and link using `url_slides` parameter in the front matter of the talk file
+- **Upload** an existing slide deck to `static/` and link using `url_slides` parameter in the front matter of the talk file
+- **Embed** your slides (e.g. Google Slides) or presentation video on this page using [shortcodes](https://sourcethemes.com/academic/docs/writing-markdown-latex/).
+
+Further talk details can easily be added to this page using *Markdown* and $\rm \LaTeX$ math code.
+
+--&gt;
+</description>
+    </item>
     
     <item>
       <title>You just committed a large file and can&#39;t push to GitHub</title>
@@ -450,9 +635,9 @@ URL: &lt;a href=&#34;https://github.com/rstudio/blogdown&#34;&gt;https://github.
     
     <item>
       <title>Profiling gene expression in the human dentate gyrus granule cell layer reveals insights into schizophrenia and its genetic risk</title>
-      <link>/publication/dglcm/</link>
+      <link>/publication/2020-03_dglcm/</link>
       <pubDate>Mon, 16 Mar 2020 00:00:00 +0000</pubDate>
-      <guid>/publication/dglcm/</guid>
+      <guid>/publication/2020-03_dglcm/</guid>
       <description>&lt;!--
 
 &lt;div class=&#34;alert alert-note&#34;&gt;
@@ -637,6 +822,17 @@ URL: &lt;a href=&#34;https://github.com/rstudio/blogdown&#34;&gt;https://github.
 ## 
 ## [1] /Library/Frameworks/R.framework/Versions/3.6/Resources/library&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>spatial</title>
+      <link>/project/spatial/</link>
+      <pubDate>Sat, 29 Feb 2020 00:00:00 -0500</pubDate>
+      <guid>/project/spatial/</guid>
+      <description>&lt;p&gt;In 2020 we published the 
+&lt;a href=&#34;https://www.biorxiv.org/content/10.1101/2020.02.28.969931v1&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;first pre-print&lt;/a&gt; using the 10x Genomics Visium platform for spatial transcriptomics. For this project we created the 
+&lt;a href=&#34;https://bioconductor.org/packages/spatialLIBD&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;spatialLIBD&lt;/code&gt;&lt;/a&gt; Bioconductor package and started developing new analytical methods for this type of data.&lt;/p&gt;
 </description>
     </item>
     
@@ -994,9 +1190,9 @@ run this yourself to check for any updates on how to cite &lt;strong&gt;spatialL
     
     <item>
       <title>Transcriptome-scale spatial gene expression in the human dorsolateral prefrontal cortex</title>
-      <link>/publication/spatiallibd/</link>
+      <link>/publication/preprint_spatiallibd/</link>
       <pubDate>Fri, 28 Feb 2020 00:00:00 +0000</pubDate>
-      <guid>/publication/spatiallibd/</guid>
+      <guid>/publication/preprint_spatiallibd/</guid>
       <description>&lt;!--
 
 &lt;div class=&#34;alert alert-note&#34;&gt;
@@ -1021,19 +1217,47 @@ Supplementary notes can be added here, including [code and math](https://sourcet
     
     <item>
       <title>Regulatory sites for splicing in human basal ganglia are enriched for disease-relevant information</title>
-      <link>/publication/basalganglia/</link>
+      <link>/publication/2020-02_basalganglia/</link>
       <pubDate>Tue, 25 Feb 2020 00:00:00 +0000</pubDate>
-      <guid>/publication/basalganglia/</guid>
+      <guid>/publication/2020-02_basalganglia/</guid>
       <description>&lt;!-- More detail can easily be written here using *Markdown* and $\rm \LaTeX$ math code. --&gt;
 </description>
     </item>
     
     <item>
       <title>Recounting the FANTOM CAGE–Associated Transcriptome</title>
-      <link>/publication/fantomrecount2/</link>
+      <link>/publication/2020-02_fantomrecount2/</link>
       <pubDate>Thu, 20 Feb 2020 00:00:00 +0000</pubDate>
-      <guid>/publication/fantomrecount2/</guid>
+      <guid>/publication/2020-02_fantomrecount2/</guid>
       <description>&lt;!-- More detail can easily be written here using *Markdown* and $\rm \LaTeX$ math code. --&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Jaffelab: learn from our search history</title>
+      <link>/talk/libd2020learn/</link>
+      <pubDate>Wed, 12 Feb 2020 00:00:00 -0500</pubDate>
+      <guid>/talk/libd2020learn/</guid>
+      <description>&lt;script async class=&#34;speakerdeck-embed&#34; data-id=&#34;a99280d748df4a88bf328e1bcaa8e95b&#34; data-ratio=&#34;1.29456384323641&#34; src=&#34;//speakerdeck.com/assets/embed.js&#34;&gt;&lt;/script&gt;
+&lt;!--
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Click on the &lt;strong&gt;Slides&lt;/strong&gt; button above to view the built-in slides feature.
+  &lt;/div&gt;
+&lt;/div&gt;
+
+
+
+Slides can be added in a few ways:
+
+- **Create** slides using Academic&#39;s *Slides* feature and link using `url_slides` parameter in the front matter of the talk file
+- **Upload** an existing slide deck to `static/` and link using `url_slides` parameter in the front matter of the talk file
+- **Embed** your slides (e.g. Google Slides) or presentation video on this page using [shortcodes](https://sourcethemes.com/academic/docs/writing-markdown-latex/).
+
+Further talk details can easily be added to this page using *Markdown* and $\rm \LaTeX$ math code.
+
+--&gt;
 </description>
     </item>
     
@@ -1526,27 +1750,46 @@ URL: &lt;a href=&#34;https://github.com/rstudio/blogdown&#34;&gt;https://github.
     
     <item>
       <title>Dissecting transcriptomic signatures of neuronal differentiation and maturation using iPSCs</title>
-      <link>/publication/libdstemcell/</link>
+      <link>/publication/2020-01_libdstemcell/</link>
       <pubDate>Thu, 23 Jan 2020 00:00:00 +0000</pubDate>
-      <guid>/publication/libdstemcell/</guid>
+      <guid>/publication/2020-01_libdstemcell/</guid>
       <description>&lt;!-- More detail can easily be written here using *Markdown* and $\rm \LaTeX$ math code. --&gt;
 </description>
     </item>
     
     <item>
-      <title>Characterizing the dynamic and functional DNA methylation landscape in the developing human cortex</title>
-      <link>/publication/kira_prenatal/</link>
-      <pubDate>Wed, 30 Oct 2019 00:00:00 +0000</pubDate>
-      <guid>/publication/kira_prenatal/</guid>
-      <description>&lt;!-- More detail can easily be written here using *Markdown* and $\rm \LaTeX$ math code. --&gt;
+      <title>Regional heterogeneity in gene expression, regulation and coherence in hippocampus and dorsolateral prefrontal cortex across development and in schizophrenia</title>
+      <link>/talk/ashg2019/</link>
+      <pubDate>Tue, 15 Oct 2019 00:00:00 -0400</pubDate>
+      <guid>/talk/ashg2019/</guid>
+      <description>&lt;script async class=&#34;speakerdeck-embed&#34; data-id=&#34;15751a5ad1c045d0af6dd8b47752bb50&#34; data-ratio=&#34;1.77777777777778&#34; src=&#34;//speakerdeck.com/assets/embed.js&#34;&gt;&lt;/script&gt;
+&lt;!--
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Click on the &lt;strong&gt;Slides&lt;/strong&gt; button above to view the built-in slides feature.
+  &lt;/div&gt;
+&lt;/div&gt;
+
+
+
+Slides can be added in a few ways:
+
+- **Create** slides using Academic&#39;s *Slides* feature and link using `url_slides` parameter in the front matter of the talk file
+- **Upload** an existing slide deck to `static/` and link using `url_slides` parameter in the front matter of the talk file
+- **Embed** your slides (e.g. Google Slides) or presentation video on this page using [shortcodes](https://sourcethemes.com/academic/docs/writing-markdown-latex/).
+
+Further talk details can easily be added to this page using *Markdown* and $\rm \LaTeX$ math code.
+
+--&gt;
 </description>
     </item>
     
     <item>
       <title>Divergent neuronal DNA methylation patterns across human cortical development reveal critical periods and a unique role of CpH methylation</title>
-      <link>/publication/dnam_mcph_neuron_glia/</link>
+      <link>/publication/2019-09_dnam_mcph_neuron_glia/</link>
       <pubDate>Thu, 26 Sep 2019 00:00:00 +0000</pubDate>
-      <guid>/publication/dnam_mcph_neuron_glia/</guid>
+      <guid>/publication/2019-09_dnam_mcph_neuron_glia/</guid>
       <description>&lt;!-- More detail can easily be written here using *Markdown* and $\rm \LaTeX$ math code. --&gt;
 </description>
     </item>
@@ -1927,19 +2170,131 @@ URL: &lt;a href=&#34;https://github.com/rstudio/blogdown&#34;&gt;https://github.
     </item>
     
     <item>
+      <title>Analyzing BrainSeq Phase II and generating the recount-brain resource</title>
+      <link>/talk/liigh2019/</link>
+      <pubDate>Mon, 05 Aug 2019 00:00:00 -0400</pubDate>
+      <guid>/talk/liigh2019/</guid>
+      <description>&lt;script async class=&#34;speakerdeck-embed&#34; data-id=&#34;80bcac8852a24f57b7a9218d8a1f1897&#34; data-ratio=&#34;1.77777777777778&#34; src=&#34;//speakerdeck.com/assets/embed.js&#34;&gt;&lt;/script&gt;
+&lt;!--
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Click on the &lt;strong&gt;Slides&lt;/strong&gt; button above to view the built-in slides feature.
+  &lt;/div&gt;
+&lt;/div&gt;
+
+
+
+Slides can be added in a few ways:
+
+- **Create** slides using Academic&#39;s *Slides* feature and link using `url_slides` parameter in the front matter of the talk file
+- **Upload** an existing slide deck to `static/` and link using `url_slides` parameter in the front matter of the talk file
+- **Embed** your slides (e.g. Google Slides) or presentation video on this page using [shortcodes](https://sourcethemes.com/academic/docs/writing-markdown-latex/).
+
+Further talk details can easily be added to this page using *Markdown* and $\rm \LaTeX$ math code.
+
+--&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Launch of CDSB2019</title>
+      <link>/talk/cdsb2019/</link>
+      <pubDate>Mon, 29 Jul 2019 00:00:00 -0400</pubDate>
+      <guid>/talk/cdsb2019/</guid>
+      <description>&lt;script async class=&#34;speakerdeck-embed&#34; data-id=&#34;b9dd0405a013420682e7d850ab439326&#34; data-ratio=&#34;1.77777777777778&#34; src=&#34;//speakerdeck.com/assets/embed.js&#34;&gt;&lt;/script&gt;
+&lt;!--
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Click on the &lt;strong&gt;Slides&lt;/strong&gt; button above to view the built-in slides feature.
+  &lt;/div&gt;
+&lt;/div&gt;
+
+
+
+Slides can be added in a few ways:
+
+- **Create** slides using Academic&#39;s *Slides* feature and link using `url_slides` parameter in the front matter of the talk file
+- **Upload** an existing slide deck to `static/` and link using `url_slides` parameter in the front matter of the talk file
+- **Embed** your slides (e.g. Google Slides) or presentation video on this page using [shortcodes](https://sourcethemes.com/academic/docs/writing-markdown-latex/).
+
+Further talk details can easily be added to this page using *Markdown* and $\rm \LaTeX$ math code.
+
+--&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>BioC2019 recount workshop</title>
+      <link>/talk/bioc2019/</link>
+      <pubDate>Wed, 26 Jun 2019 00:00:00 -0400</pubDate>
+      <guid>/talk/bioc2019/</guid>
+      <description>&lt;script async class=&#34;speakerdeck-embed&#34; data-id=&#34;5a8737f52b384a3c8820b55a04ccd6ce&#34; data-ratio=&#34;1.77777777777778&#34; src=&#34;//speakerdeck.com/assets/embed.js&#34;&gt;&lt;/script&gt;
+&lt;!--
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Click on the &lt;strong&gt;Slides&lt;/strong&gt; button above to view the built-in slides feature.
+  &lt;/div&gt;
+&lt;/div&gt;
+
+
+
+Slides can be added in a few ways:
+
+- **Create** slides using Academic&#39;s *Slides* feature and link using `url_slides` parameter in the front matter of the talk file
+- **Upload** an existing slide deck to `static/` and link using `url_slides` parameter in the front matter of the talk file
+- **Embed** your slides (e.g. Google Slides) or presentation video on this page using [shortcodes](https://sourcethemes.com/academic/docs/writing-markdown-latex/).
+
+Further talk details can easily be added to this page using *Markdown* and $\rm \LaTeX$ math code.
+
+--&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>BioC2019: CDSB updates</title>
+      <link>/talk/bioc2019cdsb/</link>
+      <pubDate>Mon, 24 Jun 2019 00:00:00 -0400</pubDate>
+      <guid>/talk/bioc2019cdsb/</guid>
+      <description>&lt;script async class=&#34;speakerdeck-embed&#34; data-id=&#34;6cd9d87ca11f47eb99fcb9ba8605d462&#34; data-ratio=&#34;1.77777777777778&#34; src=&#34;//speakerdeck.com/assets/embed.js&#34;&gt;&lt;/script&gt;
+&lt;!--
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Click on the &lt;strong&gt;Slides&lt;/strong&gt; button above to view the built-in slides feature.
+  &lt;/div&gt;
+&lt;/div&gt;
+
+
+
+Slides can be added in a few ways:
+
+- **Create** slides using Academic&#39;s *Slides* feature and link using `url_slides` parameter in the front matter of the talk file
+- **Upload** an existing slide deck to `static/` and link using `url_slides` parameter in the front matter of the talk file
+- **Embed** your slides (e.g. Google Slides) or presentation video on this page using [shortcodes](https://sourcethemes.com/academic/docs/writing-markdown-latex/).
+
+Further talk details can easily be added to this page using *Markdown* and $\rm \LaTeX$ math code.
+
+--&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Comprehensive assessment of multiple biases in small RNA sequencing reveals significant differences in the performance of widely used methods</title>
-      <link>/publication/mirna_kit_comp/</link>
+      <link>/publication/2019-06_mirna_kit_comp/</link>
       <pubDate>Fri, 21 Jun 2019 00:00:00 +0000</pubDate>
-      <guid>/publication/mirna_kit_comp/</guid>
+      <guid>/publication/2019-06_mirna_kit_comp/</guid>
       <description>&lt;!-- More detail can easily be written here using *Markdown* and $\rm \LaTeX$ math code. --&gt;
 </description>
     </item>
     
     <item>
       <title>Regional heterogeneity in gene expression, regulation, and coherence in the frontal cortex and hippocampus across development and schizophrenia</title>
-      <link>/publication/bsp2/</link>
+      <link>/publication/2019-06_bsp2/</link>
       <pubDate>Tue, 04 Jun 2019 00:00:00 +0000</pubDate>
-      <guid>/publication/bsp2/</guid>
+      <guid>/publication/2019-06_bsp2/</guid>
       <description>&lt;!-- More detail can easily be written here using *Markdown* and $\rm \LaTeX$ math code. --&gt;
 </description>
     </item>
@@ -1955,18 +2310,18 @@ URL: &lt;a href=&#34;https://github.com/rstudio/blogdown&#34;&gt;https://github.
     
     <item>
       <title>recount-brain: a curated repository of human brain RNA-seq datasets metadata</title>
-      <link>/publication/recount_brain/</link>
+      <link>/publication/preprint_recount_brain/</link>
       <pubDate>Wed, 24 Apr 2019 16:45:43 -0500</pubDate>
-      <guid>/publication/recount_brain/</guid>
+      <guid>/publication/preprint_recount_brain/</guid>
       <description>&lt;!-- More detail can easily be written here using *Markdown* and $\rm \LaTeX$ math code. --&gt;
 </description>
     </item>
     
     <item>
       <title>Integrated Transcriptomic and Proteomic Analysis of Primary Human Umbilical Vein Endothelial Cells</title>
-      <link>/publication/recount_proteomics/</link>
+      <link>/publication/2019-04_recount_proteomics/</link>
       <pubDate>Sun, 14 Apr 2019 00:00:00 +0000</pubDate>
-      <guid>/publication/recount_proteomics/</guid>
+      <guid>/publication/2019-04_recount_proteomics/</guid>
       <description>&lt;!-- More detail can easily be written here using *Markdown* and $\rm \LaTeX$ math code. --&gt;
 </description>
     </item>
@@ -2973,9 +3328,9 @@ URL: &lt;a href=&#34;https://github.com/rstudio/blogdown&#34;&gt;https://github.
     
     <item>
       <title>Integrated DNA methylation and gene expression profiling across multiple brain regions implicate novel genes in Alzheimer&#39;s disease</title>
-      <link>/publication/dnam_alzheimer/</link>
+      <link>/publication/2019-02_dnam_alzheimer/</link>
       <pubDate>Sat, 02 Feb 2019 00:00:00 +0000</pubDate>
-      <guid>/publication/dnam_alzheimer/</guid>
+      <guid>/publication/2019-02_dnam_alzheimer/</guid>
       <description>&lt;!-- More detail can easily be written here using *Markdown* and $\rm \LaTeX$ math code. --&gt;
 </description>
     </item>
@@ -3009,15 +3364,6 @@ Further talk details can easily be added to this page using *Markdown* and $\rm 
     </item>
     
     <item>
-      <title>Incomplete annotation of OMIM genes is likely to be limiting the diagnostic yield of genetic testing, particularly for neurogenetic disorders</title>
-      <link>/publication/omimderfinder/</link>
-      <pubDate>Wed, 19 Dec 2018 00:00:00 +0000</pubDate>
-      <guid>/publication/omimderfinder/</guid>
-      <description>&lt;!-- More detail can easily be written here using *Markdown* and $\rm \LaTeX$ math code. --&gt;
-</description>
-    </item>
-    
-    <item>
       <title>Reproducible RNA-seq analysis with recount2 and recount-brain</title>
       <link>/talk/jgm2018/</link>
       <pubDate>Thu, 29 Nov 2018 16:24:05 -0500</pubDate>
@@ -3047,9 +3393,9 @@ Further talk details can easily be added to this page using *Markdown* and $\rm 
     
     <item>
       <title>Non-coding Class Switch Recombination-Related Transcription in Human Normal and Pathological Immune Responses</title>
-      <link>/publication/nccsr/</link>
+      <link>/publication/2018-11_nccsr/</link>
       <pubDate>Wed, 21 Nov 2018 00:00:00 +0000</pubDate>
-      <guid>/publication/nccsr/</guid>
+      <guid>/publication/2018-11_nccsr/</guid>
       <description>&lt;!-- More detail can easily be written here using *Markdown* and $\rm \LaTeX$ math code. --&gt;
 </description>
     </item>
@@ -4028,7 +4374,7 @@ URL: &lt;a href=&#34;https://github.com/rstudio/blogdown&#34;&gt;https://github.
 &lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Leaving mid-session from a center seat &lt;a href=&#34;https://twitter.com/hashtag/ASHG18?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#ASHG18&lt;/a&gt; &lt;a href=&#34;https://t.co/WTMMOQaJLo&#34;&gt;pic.twitter.com/WTMMOQaJLo&lt;/a&gt;&lt;/p&gt;&amp;mdash; Robin F. Chan (@robinfchan) &lt;a href=&#34;https://twitter.com/robinfchan/status/1053320437814325248?ref_src=twsrc%5Etfw&#34;&gt;October 19, 2018&lt;/a&gt;&lt;/blockquote&gt;
 &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
 
-&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;This got fixed super fast! Thanks for addressing the problem so quickly, &lt;a href=&#34;https://twitter.com/GeneticsSociety?ref_src=twsrc%5Etfw&#34;&gt;@GeneticsSociety&lt;/a&gt;! &lt;a href=&#34;https://twitter.com/hashtag/ASHG18?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#ASHG18&lt;/a&gt; &lt;a href=&#34;https://t.co/2sNJJypGje&#34;&gt;https://t.co/2sNJJypGje&lt;/a&gt;&lt;/p&gt;&amp;mdash; Jedidiah Carlson (@JedMSP) &lt;a href=&#34;https://twitter.com/JedMSP/status/1053353588146155520?ref_src=twsrc%5Etfw&#34;&gt;October 19, 2018&lt;/a&gt;&lt;/blockquote&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;This got fixed super fast! Thanks for addressing the problem so quickly, &lt;a href=&#34;https://twitter.com/GeneticsSociety?ref_src=twsrc%5Etfw&#34;&gt;@GeneticsSociety&lt;/a&gt;! &lt;a href=&#34;https://twitter.com/hashtag/ASHG18?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#ASHG18&lt;/a&gt; &lt;a href=&#34;https://t.co/2sNJJypGje&#34;&gt;https://t.co/2sNJJypGje&lt;/a&gt;&lt;/p&gt;&amp;mdash; ☂️edidiah Carlson 🐊 (@JedMSP) &lt;a href=&#34;https://twitter.com/JedMSP/status/1053353588146155520?ref_src=twsrc%5Etfw&#34;&gt;October 19, 2018&lt;/a&gt;&lt;/blockquote&gt;
 &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
 
 &lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;I can&amp;#39;t attend the &lt;a href=&#34;https://twitter.com/hashtag/ASHG18?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#ASHG18&lt;/a&gt; Membership Forum. If you can, please propose that &lt;a href=&#34;https://twitter.com/GeneticsSociety?ref_src=twsrc%5Etfw&#34;&gt;@GeneticsSociety&lt;/a&gt; appoint an awards nomination committee who will solicit or write nominations for worthy and overlooked members of our community. &lt;a href=&#34;https://twitter.com/nelsondl?ref_src=twsrc%5Etfw&#34;&gt;@nelsondl&lt;/a&gt; &lt;a href=&#34;https://twitter.com/NancyGenetics?ref_src=twsrc%5Etfw&#34;&gt;@NancyGenetics&lt;/a&gt; &lt;a href=&#34;https://twitter.com/splon?ref_src=twsrc%5Etfw&#34;&gt;@splon&lt;/a&gt;&lt;/p&gt;&amp;mdash; Michael Hoffman (@michaelhoffman) &lt;a href=&#34;https://twitter.com/michaelhoffman/status/1053356648247418881?ref_src=twsrc%5Etfw&#34;&gt;October 19, 2018&lt;/a&gt;&lt;/blockquote&gt;
@@ -4369,7 +4715,7 @@ URL: &lt;a href=&#34;https://github.com/rstudio/blogdown&#34;&gt;https://github.
 &lt;/div&gt;
 &lt;div id=&#34;diversity&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Diversity&lt;/h3&gt;
-&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;The diversity of participants we see at &lt;a href=&#34;https://twitter.com/hashtag/ASHG18?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#ASHG18&lt;/a&gt;, shows how different we are, yet similar and genetically the same as &lt;a href=&#34;https://twitter.com/hashtag/Human?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#Human&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/HumanGenetics?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#HumanGenetics&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/UnityinDiversity?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#UnityinDiversity&lt;/a&gt;&lt;/p&gt;&amp;mdash; Swarkar Sharma (@sawerkar) &lt;a href=&#34;https://twitter.com/sawerkar/status/1052956621477896192?ref_src=twsrc%5Etfw&#34;&gt;October 18, 2018&lt;/a&gt;&lt;/blockquote&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;The diversity of participants we see at &lt;a href=&#34;https://twitter.com/hashtag/ASHG18?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#ASHG18&lt;/a&gt;, shows how different we are, yet similar and genetically the same as &lt;a href=&#34;https://twitter.com/hashtag/Human?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#Human&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/HumanGenetics?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#HumanGenetics&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/UnityinDiversity?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#UnityinDiversity&lt;/a&gt;&lt;/p&gt;&amp;mdash; Dr. Swarkar Sharma (@sawerkar) &lt;a href=&#34;https://twitter.com/sawerkar/status/1052956621477896192?ref_src=twsrc%5Etfw&#34;&gt;October 18, 2018&lt;/a&gt;&lt;/blockquote&gt;
 &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
 
 &lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;.&lt;a href=&#34;https://twitter.com/simon_r_myers?ref_src=twsrc%5Etfw&#34;&gt;@simon_r_myers&lt;/a&gt; standing in for Sinan Shi in session 43 because speaker couldn’t get his visa. Hearing this far too much 😞 &lt;a href=&#34;https://twitter.com/hashtag/ASHG18?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#ASHG18&lt;/a&gt;&lt;/p&gt;&amp;mdash; Brooke LaFlamme (@Brooke_LaFlamme) &lt;a href=&#34;https://twitter.com/Brooke_LaFlamme/status/1052968546945228801?ref_src=twsrc%5Etfw&#34;&gt;October 18, 2018&lt;/a&gt;&lt;/blockquote&gt;
@@ -4398,7 +4744,7 @@ URL: &lt;a href=&#34;https://github.com/rstudio/blogdown&#34;&gt;https://github.
 &lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;*takes a big ol&amp;#39; bite of beef jerky* REMEMBER FOLKS, TAKIN&amp;#39; PHOTOGRAPHS O&amp;#39; SOMEONE ELSE&amp;#39;S SLIDES WITHOUT PERMISSION IS A BREACH OF PROFESSIONAL ETHICS &lt;a href=&#34;https://twitter.com/hashtag/ASHG18?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#ASHG18&lt;/a&gt; &lt;a href=&#34;https://t.co/CG0Y1pCvQ1&#34;&gt;https://t.co/CG0Y1pCvQ1&lt;/a&gt;&lt;/p&gt;&amp;mdash; The Sheriff of ASHG (@genome_sheriff) &lt;a href=&#34;https://twitter.com/genome_sheriff/status/1052970283533889536?ref_src=twsrc%5Etfw&#34;&gt;October 18, 2018&lt;/a&gt;&lt;/blockquote&gt;
 &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
 
-&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;&lt;a href=&#34;https://twitter.com/hashtag/ashg18?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#ashg18&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/ASHGtrainee?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#ASHGtrainee&lt;/a&gt; For presenters, this might be helpful especially for the big rooms:&lt;a href=&#34;https://t.co/KVuIXRytYW&#34;&gt;https://t.co/KVuIXRytYW&lt;/a&gt;&lt;/p&gt;&amp;mdash; Alon Goren (@alon_goren) &lt;a href=&#34;https://twitter.com/alon_goren/status/1052990699166035968?ref_src=twsrc%5Etfw&#34;&gt;October 18, 2018&lt;/a&gt;&lt;/blockquote&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;&lt;a href=&#34;https://twitter.com/hashtag/ashg18?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#ashg18&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/ASHGtrainee?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#ASHGtrainee&lt;/a&gt; For presenters, this might be helpful especially for the big rooms:&lt;a href=&#34;https://t.co/KVuIXRytYW&#34;&gt;https://t.co/KVuIXRytYW&lt;/a&gt;&lt;/p&gt;&amp;mdash; Alon Goren, Black Lives Matter (@alon_goren) &lt;a href=&#34;https://twitter.com/alon_goren/status/1052990699166035968?ref_src=twsrc%5Etfw&#34;&gt;October 18, 2018&lt;/a&gt;&lt;/blockquote&gt;
 &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
 
 &lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Maybe too soon to say this, but &lt;a href=&#34;https://twitter.com/genome_sheriff?ref_src=twsrc%5Etfw&#34;&gt;@genome_sheriff&lt;/a&gt; is the best emoji-based wild west hyperbole novelty account I&amp;#39;ve ever seen at a genetics conference &lt;a href=&#34;https://twitter.com/hashtag/ashg18?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#ashg18&lt;/a&gt;&lt;/p&gt;&amp;mdash; Erick Loomis (@ErickLoomis) &lt;a href=&#34;https://twitter.com/ErickLoomis/status/1053000667969683458?ref_src=twsrc%5Etfw&#34;&gt;October 18, 2018&lt;/a&gt;&lt;/blockquote&gt;
@@ -5041,7 +5387,7 @@ URL: &lt;a href=&#34;https://github.com/rstudio/blogdown&#34;&gt;https://github.
 &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
 
 &lt;p&gt;mentioned pLl method&lt;/p&gt;
-&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;“&lt;a href=&#34;https://twitter.com/ksamocha?ref_src=twsrc%5Etfw&#34;&gt;@ksamocha&lt;/a&gt; does everything”.  &lt;a href=&#34;https://twitter.com/hashtag/ASHG18?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#ASHG18&lt;/a&gt;&lt;/p&gt;&amp;mdash; Eugene Gardner (@EugenomeUK) &lt;a href=&#34;https://twitter.com/EugenomeUK/status/1052371239644196865?ref_src=twsrc%5Etfw&#34;&gt;October 17, 2018&lt;/a&gt;&lt;/blockquote&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;“&lt;a href=&#34;https://twitter.com/ksamocha?ref_src=twsrc%5Etfw&#34;&gt;@ksamocha&lt;/a&gt; does everything”.  &lt;a href=&#34;https://twitter.com/hashtag/ASHG18?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#ASHG18&lt;/a&gt;&lt;/p&gt;&amp;mdash; Eugene Gardner (@DrGeneUK) &lt;a href=&#34;https://twitter.com/DrGeneUK/status/1052371239644196865?ref_src=twsrc%5Etfw&#34;&gt;October 17, 2018&lt;/a&gt;&lt;/blockquote&gt;
 &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
 
 &lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;&lt;a href=&#34;https://twitter.com/hashtag/ASHG18?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#ASHG18&lt;/a&gt; JK: pLI probability of loss of function, can now see strong signals in data&lt;/p&gt;&amp;mdash; John Thompson (@Single_Molecule) &lt;a href=&#34;https://twitter.com/Single_Molecule/status/1052371262071169024?ref_src=twsrc%5Etfw&#34;&gt;October 17, 2018&lt;/a&gt;&lt;/blockquote&gt;
@@ -5930,18 +6276,18 @@ URL: &lt;a href=&#34;https://github.com/rstudio/blogdown&#34;&gt;https://github.
     
     <item>
       <title>Developmental effects of maternal smoking during pregnancy on the human frontal cortex transcriptome</title>
-      <link>/publication/maternalsmoking/</link>
+      <link>/publication/2018-08_maternalsmoking/</link>
       <pubDate>Tue, 21 Aug 2018 00:00:00 +0000</pubDate>
-      <guid>/publication/maternalsmoking/</guid>
+      <guid>/publication/2018-08_maternalsmoking/</guid>
       <description>&lt;!-- More detail can easily be written here using *Markdown* and $\rm \LaTeX$ math code. --&gt;
 </description>
     </item>
     
     <item>
       <title>From learning to using to teaching to developing R</title>
-      <link>/talk/cdsbmexico2018/</link>
+      <link>/talk/cdsb2018/</link>
       <pubDate>Mon, 30 Jul 2018 10:00:00 -0400</pubDate>
-      <guid>/talk/cdsbmexico2018/</guid>
+      <guid>/talk/cdsb2018/</guid>
       <description>&lt;script async class=&#34;speakerdeck-embed&#34; data-slide=&#34;1&#34; data-id=&#34;711408b758884ca2bf0bb950ce0ba0ed&#34; data-ratio=&#34;1.77777777777778&#34; src=&#34;//speakerdeck.com/assets/embed.js&#34;&gt;&lt;/script&gt;
 &lt;!--
 
@@ -6152,9 +6498,9 @@ URL: &lt;a href=&#34;https://github.com/rstudio/blogdown&#34;&gt;https://github.
     
     <item>
       <title>Developmental and genetic regulation of the human cortex transcriptome illuminate schizophrenia pathogenesis</title>
-      <link>/publication/bsp1/</link>
+      <link>/publication/2018-07_bsp1/</link>
       <pubDate>Thu, 26 Jul 2018 00:00:00 +0000</pubDate>
-      <guid>/publication/bsp1/</guid>
+      <guid>/publication/2018-07_bsp1/</guid>
       <description>&lt;!-- More detail can easily be written here using *Markdown* and $\rm \LaTeX$ math code. --&gt;
 </description>
     </item>
@@ -7315,9 +7661,9 @@ URL: &lt;a href=&#34;https://github.com/rstudio/blogdown&#34;&gt;https://github.
     
     <item>
       <title>Improving the value of public RNA-seq expression data by phenotype prediction</title>
-      <link>/publication/rnaseq_prediction/</link>
+      <link>/publication/2018-03_rnaseq_prediction/</link>
       <pubDate>Mon, 05 Mar 2018 16:45:43 -0500</pubDate>
-      <guid>/publication/rnaseq_prediction/</guid>
+      <guid>/publication/2018-03_rnaseq_prediction/</guid>
       <description>&lt;!-- More detail can easily be written here using *Markdown* and $\rm \LaTeX$ math code. --&gt;
 </description>
     </item>
@@ -7454,9 +7800,9 @@ bibliography(style = &amp;#39;html&amp;#39;)&lt;/code&gt;&lt;/pre&gt;
     
     <item>
       <title>RNA-seq transcript quantification from reduced-representation data in recount2</title>
-      <link>/publication/recount_tx/</link>
+      <link>/publication/preprint_recount_tx/</link>
       <pubDate>Fri, 12 Jan 2018 16:45:43 -0500</pubDate>
-      <guid>/publication/recount_tx/</guid>
+      <guid>/publication/preprint_recount_tx/</guid>
       <description>&lt;!-- More detail can easily be written here using *Markdown* and $\rm \LaTeX$ math code. --&gt;
 </description>
     </item>
@@ -7472,9 +7818,9 @@ bibliography(style = &amp;#39;html&amp;#39;)&lt;/code&gt;&lt;/pre&gt;
     
     <item>
       <title>recount workflow: Accessing over 70,000 human RNA-seq samples with Bioconductor [version 1; referees: 1 approved, 2 approved with reservations]</title>
-      <link>/publication/recountworkflow/</link>
+      <link>/publication/2017-08_recountworkflow/</link>
       <pubDate>Thu, 24 Aug 2017 16:45:43 -0500</pubDate>
-      <guid>/publication/recountworkflow/</guid>
+      <guid>/publication/2017-08_recountworkflow/</guid>
       <description>&lt;!-- More detail can easily be written here using *Markdown* and $\rm \LaTeX$ math code. --&gt;
 </description>
     </item>
@@ -7634,9 +7980,9 @@ Further talk details can easily be added to this page using *Markdown* and $\rm 
     
     <item>
       <title>Altered expression of histamine signaling genes in autism spectrum disorder</title>
-      <link>/publication/histamine/</link>
+      <link>/publication/2017-05_histamine/</link>
       <pubDate>Tue, 09 May 2017 16:45:43 -0500</pubDate>
-      <guid>/publication/histamine/</guid>
+      <guid>/publication/2017-05_histamine/</guid>
       <description>&lt;!-- More detail can easily be written here using *Markdown* and $\rm \LaTeX$ math code. --&gt;
 </description>
     </item>
@@ -7774,9 +8120,9 @@ session_info()
     
     <item>
       <title>Reproducible RNA-seq analysis using recount2</title>
-      <link>/publication/recount/</link>
+      <link>/publication/2017-04_recount/</link>
       <pubDate>Tue, 11 Apr 2017 16:45:43 -0500</pubDate>
-      <guid>/publication/recount/</guid>
+      <guid>/publication/2017-04_recount/</guid>
       <description>&lt;!-- More detail can easily be written here using *Markdown* and $\rm \LaTeX$ math code. --&gt;
 </description>
     </item>
@@ -8096,9 +8442,9 @@ URL: &lt;a href=&#34;https://www.R-project.org/&#34;&gt;https://www.R-project.or
     
     <item>
       <title>Human splicing diversity and the extent of unannotated splice junctions across human RNA-seq samples on the Sequence Read Archive</title>
-      <link>/publication/intropolis/</link>
+      <link>/publication/2016-12_intropolis/</link>
       <pubDate>Fri, 30 Dec 2016 17:44:49 -0500</pubDate>
-      <guid>/publication/intropolis/</guid>
+      <guid>/publication/2016-12_intropolis/</guid>
       <description>&lt;!-- More detail can easily be written here using *Markdown* and $\rm \LaTeX$ math code. --&gt;
 </description>
     </item>
@@ -8189,18 +8535,18 @@ Further talk details can easily be added to this page using *Markdown* and $\rm 
     
     <item>
       <title>Flexible expressed region analysis for RNA-seq with derfinder</title>
-      <link>/publication/derfinder/</link>
-      <pubDate>Thu, 15 Sep 2016 00:00:00 +0000</pubDate>
-      <guid>/publication/derfinder/</guid>
+      <link>/publication/2016-09_derfinder/</link>
+      <pubDate>Mon, 26 Sep 2016 00:00:00 +0000</pubDate>
+      <guid>/publication/2016-09_derfinder/</guid>
       <description>&lt;!-- More detail can easily be written here using *Markdown* and $\rm \LaTeX$ math code. --&gt;
 </description>
     </item>
     
     <item>
       <title>Rail-RNA: Scalable analysis of RNA-seq splicing and coverage</title>
-      <link>/publication/rail/</link>
+      <link>/publication/2016-09_rail/</link>
       <pubDate>Sat, 03 Sep 2016 17:27:55 -0500</pubDate>
-      <guid>/publication/rail/</guid>
+      <guid>/publication/2016-09_rail/</guid>
       <description>&lt;!-- More detail can easily be written here using *Markdown* and $\rm \LaTeX$ math code. --&gt;
 </description>
     </item>
@@ -8619,9 +8965,9 @@ session_info()
     
     <item>
       <title>regionReport: Interactive reports for region-level and feature-level genomic analyses</title>
-      <link>/publication/regionreport/</link>
+      <link>/publication/2016-06_regionreport/</link>
       <pubDate>Wed, 29 Jun 2016 17:21:58 -0500</pubDate>
-      <guid>/publication/regionreport/</guid>
+      <guid>/publication/2016-06_regionreport/</guid>
       <description>&lt;!-- More detail can easily be written here using *Markdown* and $\rm \LaTeX$ math code. --&gt;
 </description>
     </item>
@@ -9555,9 +9901,9 @@ URL: &lt;a href=&#34;http://www.mortgagecalculator.org/&#34;&gt;http://www.mortg
     
     <item>
       <title>Developmental regulation of human cortex transcription and its clinical relevance at single base resolution</title>
-      <link>/publication/brainders/</link>
+      <link>/publication/2014-12_brainders/</link>
       <pubDate>Fri, 19 Dec 2014 17:17:48 -0500</pubDate>
-      <guid>/publication/brainders/</guid>
+      <guid>/publication/2014-12_brainders/</guid>
       <description>&lt;!-- More detail can easily be written here using *Markdown* and $\rm \LaTeX$ math code. --&gt;
 </description>
     </item>
@@ -9779,7 +10125,7 @@ session_info()
       <guid>/2014/11/21/add-logo-in-r/</guid>
       <description>&lt;p&gt;&lt;em&gt;This is a guest post by 
 &lt;a href=&#34;http://www.biostat.jhsph.edu/~prpatil/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Prasad Patil&lt;/a&gt; that answers the question: how to put a shape in the margin of an R plot?&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;The help page for &lt;strong&gt;R&lt;/strong&gt;&amp;lsquo;s &lt;code&gt;par()&lt;/code&gt; function is a somewhat impenetrable list
+&lt;p&gt;The help page for &lt;strong&gt;R&lt;/strong&gt;&amp;rsquo;s &lt;code&gt;par()&lt;/code&gt; function is a somewhat impenetrable list
 of abbreviations that allow you to manipulate anything and everything
 in the plotting device. You may have used this function in the past
 to create an array of plots (using &lt;code&gt;mfrow&lt;/code&gt; or &lt;code&gt;mfcol&lt;/code&gt;) or to set margins
@@ -9820,7 +10166,7 @@ itself, but we used the established axes to estimate them and plot outside
 the plotting region.&lt;/p&gt;
 &lt;h2 id=&#34;images-outside-the-plot&#34;&gt;Images outside the plot&lt;/h2&gt;
 &lt;p&gt;Now let&amp;rsquo;s say we want to &lt;strong&gt;add a logo&lt;/strong&gt; or other external image in the margin
-of our plot. We will use &lt;strong&gt;R&lt;/strong&gt;&amp;lsquo;s &lt;code&gt;png&lt;/code&gt; library to load a PNG image and
+of our plot. We will use &lt;strong&gt;R&lt;/strong&gt;&amp;rsquo;s &lt;code&gt;png&lt;/code&gt; library to load a PNG image and
 &lt;code&gt;rasterImage()&lt;/code&gt; to plot it:&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;## If needed: install.packages(&amp;quot;png&amp;quot;)
 library(png)
@@ -9990,9 +10336,9 @@ Further talk details can easily be added to this page using *Markdown* and $\rm 
     
     <item>
       <title>Measurement, Summary, and Methodological Variation in RNA-sequencing in Statistical Analysis of Next Generation Sequencing Data</title>
-      <link>/publication/rnaseqbook/</link>
+      <link>/publication/2014-06_rnaseqbook/</link>
       <pubDate>Tue, 17 Jun 2014 16:42:24 -0500</pubDate>
-      <guid>/publication/rnaseqbook/</guid>
+      <guid>/publication/2014-06_rnaseqbook/</guid>
       <description>&lt;!-- More detail can easily be written here using *Markdown* and $\rm \LaTeX$ math code. --&gt;
 </description>
     </item>
@@ -10241,12 +10587,12 @@ Further talk details can easily be added to this page using *Markdown* and $\rm 
 &lt;a href=&#34;https://twitter.com/diegovalle/status/433619946434596864&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt; and 
 &lt;a href=&#34;https://twitter.com/ramnath_vaidya/status/433813747593801728&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;) and via 
 &lt;a href=&#34;https://github.com/ramnathv/rMaps/issues/6&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;GitHub&lt;/a&gt;. After sharing 
-&lt;a href=&#34;https://github.com/diegovalle&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;@diegovalle&lt;/a&gt;&amp;lsquo;s work with my friends, it turned out that some old friends already knew him (
+&lt;a href=&#34;https://github.com/diegovalle&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;@diegovalle&lt;/a&gt;&amp;rsquo;s work with my friends, it turned out that some old friends already knew him (
 &lt;a href=&#34;https://twitter.com/unRob/status/433675310542749696&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt; and high school friends). Another friend was interested in additional features and I suggested her to contact 
 &lt;a href=&#34;https://github.com/diegovalle&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;@diegovalle&lt;/a&gt; via Twitter: he quickly replied as you can see 
 &lt;a href=&#34;https://twitter.com/diegovalle/status/434444498341347328&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Beyond how impressive &lt;code&gt;rMaps&lt;/code&gt; and 
-&lt;a href=&#34;https://github.com/diegovalle&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;@diegovalle&lt;/a&gt;&amp;lsquo;s work on mexican data are, I was amazed by the willingness to help each other and how great people easily connected. I believe this is one of the great features of both GitHub and Twitter where you can share your code, ask questions, try to answer them, meet people working with your tools, etc. You can even offer to PayPal a beer like 
+&lt;a href=&#34;https://github.com/diegovalle&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;@diegovalle&lt;/a&gt;&amp;rsquo;s work on mexican data are, I was amazed by the willingness to help each other and how great people easily connected. I believe this is one of the great features of both GitHub and Twitter where you can share your code, ask questions, try to answer them, meet people working with your tools, etc. You can even offer to PayPal a beer like 
 &lt;a href=&#34;https://github.com/tyokota&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;@tyokota&lt;/a&gt; did.&lt;/p&gt;
 &lt;p&gt;After all their great work, now someone like me (aka, without knowing javascript, Datamaps, etc) can walk you through an example of making an interactive choropleth map showing the homicides rates in Mexico from 1997 to 2013.&lt;/p&gt;
 &lt;h2 id=&#34;homicides-rates-in-mexico-1997-2013&#34;&gt;Homicides rates in Mexico 1997-2013&lt;/h2&gt;
@@ -10395,7 +10741,7 @@ height=500px
 &lt;a href=&#34;https://github.com/ramnathv&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Ramnath&lt;/a&gt; which is shown 
 &lt;a href=&#34;https://github.com/ramnathv/rMaps/issues/6#issuecomment-34946041&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;. I also figured out the trick of hosting the 
 &lt;a href=&#34;http://en.wikipedia.org/wiki/TopoJSON&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;topojson&lt;/a&gt; file at Dropbox from 
-&lt;a href=&#34;https://github.com/tyokota&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;@tyokota&lt;/a&gt;&amp;lsquo;s 
+&lt;a href=&#34;https://github.com/tyokota&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;@tyokota&lt;/a&gt;&amp;rsquo;s 
 &lt;a href=&#34;https://github.com/tyokota/custom-map/blob/master/custom-map.Rmd&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;code&lt;/a&gt; as I was running into &lt;em&gt;Access-Control-Allow-Origin&lt;/em&gt; errors when hosting it in my academic website. Finally, but not least, 
 &lt;a href=&#34;https://github.com/ramnathv&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Ramnath&lt;/a&gt; appropriately insists that all of this would not be possible without libraries such as 
 &lt;a href=&#34;https://github.com/markmarkoh/datamaps&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Datamaps&lt;/a&gt;.&lt;/p&gt;
@@ -13648,18 +13994,18 @@ Further talk details can easily be added to this page using *Markdown* and $\rm 
     
     <item>
       <title>Interspecies interactions that result in Bacillus subtilis forming biofilms are mediated mainly by members of its own genus</title>
-      <link>/publication/bsubtilis/</link>
+      <link>/publication/2011-11_bsubtilis/</link>
       <pubDate>Thu, 10 Nov 2011 17:13:40 -0500</pubDate>
-      <guid>/publication/bsubtilis/</guid>
+      <guid>/publication/2011-11_bsubtilis/</guid>
       <description>&lt;!-- More detail can easily be written here using *Markdown* and $\rm \LaTeX$ math code. --&gt;
 </description>
     </item>
     
     <item>
       <title>RegulonDB version 7.0: transcriptional regulation of Escherichia coli K-12 integrated within genetic sensory response units (Gensor Units)</title>
-      <link>/publication/regulondbv7/</link>
+      <link>/publication/2011-01_regulondbv7/</link>
       <pubDate>Wed, 19 Jan 2011 16:58:16 -0500</pubDate>
-      <guid>/publication/regulondbv7/</guid>
+      <guid>/publication/2011-01_regulondbv7/</guid>
       <description>&lt;!-- More detail can easily be written here using *Markdown* and $\rm \LaTeX$ math code. --&gt;
 </description>
     </item>

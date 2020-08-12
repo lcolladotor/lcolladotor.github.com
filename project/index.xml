@@ -5,12 +5,23 @@
     <link>/project/</link>
       <atom:link href=http://lcolladotor.github.io/project/index.xml rel="self" type="application/rss+xml" />
     <description>Projects</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2011-2020 Leonardo Collado Torres under (CC) BY-NC-SA 4.0. All thoughts and opinions here are my own. The icon was designed by [Mauricio Guzmán](https://www.linkedin.com/in/mauricio-guzman-6529b551/) and is inspired by [Huichol culture](https://en.wikipedia.org/wiki/Huichol); it represents my community building interests</copyright><lastBuildDate>Thu, 03 Aug 2017 00:00:00 -0400</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2011-2020. All thoughts and opinions here are my own. The icon was designed by [Mauricio Guzmán](https://www.linkedin.com/in/mauricio-guzman-6529b551/) and is inspired by [Huichol culture](https://en.wikipedia.org/wiki/Huichol); it represents my community building interests</copyright><lastBuildDate>Sat, 29 Feb 2020 00:00:00 -0500</lastBuildDate>
     <image>
-      <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
+      <url>/images/icon_hu2b32c4ab415f12f472f73c7b0301b0d1_19400_512x512_fill_lanczos_center_2.png</url>
       <title>Projects</title>
       <link>/project/</link>
     </image>
+    
+    <item>
+      <title>spatial</title>
+      <link>/project/spatial/</link>
+      <pubDate>Sat, 29 Feb 2020 00:00:00 -0500</pubDate>
+      <guid>/project/spatial/</guid>
+      <description>&lt;p&gt;In 2020 we published the 
+&lt;a href=&#34;https://www.biorxiv.org/content/10.1101/2020.02.28.969931v1&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;first pre-print&lt;/a&gt; using the 10x Genomics Visium platform for spatial transcriptomics. For this project we created the 
+&lt;a href=&#34;https://bioconductor.org/packages/spatialLIBD&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;spatialLIBD&lt;/code&gt;&lt;/a&gt; Bioconductor package and started developing new analytical methods for this type of data.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>BrainSEQ™ Consortium</title>

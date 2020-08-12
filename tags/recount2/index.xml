@@ -5,28 +5,84 @@
     <link>/tags/recount2/</link>
       <atom:link href=http://lcolladotor.github.io/tags/recount2/index.xml rel="self" type="application/rss+xml" />
     <description>recount2</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2011-2020 Leonardo Collado Torres under (CC) BY-NC-SA 4.0. All thoughts and opinions here are my own. The icon was designed by [Mauricio Guzmán](https://www.linkedin.com/in/mauricio-guzman-6529b551/) and is inspired by [Huichol culture](https://en.wikipedia.org/wiki/Huichol); it represents my community building interests</copyright><lastBuildDate>Tue, 25 Feb 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2011-2020. All thoughts and opinions here are my own. The icon was designed by [Mauricio Guzmán](https://www.linkedin.com/in/mauricio-guzman-6529b551/) and is inspired by [Huichol culture](https://en.wikipedia.org/wiki/Huichol); it represents my community building interests</copyright><lastBuildDate>Mon, 27 Jul 2020 00:00:00 -0400</lastBuildDate>
     <image>
-      <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
+      <url>/images/icon_hu2b32c4ab415f12f472f73c7b0301b0d1_19400_512x512_fill_lanczos_center_2.png</url>
       <title>recount2</title>
       <link>/tags/recount2/</link>
     </image>
     
     <item>
+      <title>BioC2020 recount workshop</title>
+      <link>/talk/bioc2020/</link>
+      <pubDate>Mon, 27 Jul 2020 00:00:00 -0400</pubDate>
+      <guid>/talk/bioc2020/</guid>
+      <description>&lt;script async class=&#34;speakerdeck-embed&#34; data-id=&#34;78092f5c558242f1aa3085d9abc9c061&#34; data-ratio=&#34;1.77777777777778&#34; src=&#34;//speakerdeck.com/assets/embed.js&#34;&gt;&lt;/script&gt;
+&lt;!--
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Click on the &lt;strong&gt;Slides&lt;/strong&gt; button above to view the built-in slides feature.
+  &lt;/div&gt;
+&lt;/div&gt;
+
+
+
+Slides can be added in a few ways:
+
+- **Create** slides using Academic&#39;s *Slides* feature and link using `url_slides` parameter in the front matter of the talk file
+- **Upload** an existing slide deck to `static/` and link using `url_slides` parameter in the front matter of the talk file
+- **Embed** your slides (e.g. Google Slides) or presentation video on this page using [shortcodes](https://sourcethemes.com/academic/docs/writing-markdown-latex/).
+
+Further talk details can easily be added to this page using *Markdown* and $\rm \LaTeX$ math code.
+
+--&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Regulatory sites for splicing in human basal ganglia are enriched for disease-relevant information</title>
-      <link>/publication/basalganglia/</link>
+      <link>/publication/2020-02_basalganglia/</link>
       <pubDate>Tue, 25 Feb 2020 00:00:00 +0000</pubDate>
-      <guid>/publication/basalganglia/</guid>
+      <guid>/publication/2020-02_basalganglia/</guid>
       <description>&lt;!-- More detail can easily be written here using *Markdown* and $\rm \LaTeX$ math code. --&gt;
 </description>
     </item>
     
     <item>
       <title>Recounting the FANTOM CAGE–Associated Transcriptome</title>
-      <link>/publication/fantomrecount2/</link>
+      <link>/publication/2020-02_fantomrecount2/</link>
       <pubDate>Thu, 20 Feb 2020 00:00:00 +0000</pubDate>
-      <guid>/publication/fantomrecount2/</guid>
+      <guid>/publication/2020-02_fantomrecount2/</guid>
       <description>&lt;!-- More detail can easily be written here using *Markdown* and $\rm \LaTeX$ math code. --&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>BioC2019 recount workshop</title>
+      <link>/talk/bioc2019/</link>
+      <pubDate>Wed, 26 Jun 2019 00:00:00 -0400</pubDate>
+      <guid>/talk/bioc2019/</guid>
+      <description>&lt;script async class=&#34;speakerdeck-embed&#34; data-id=&#34;5a8737f52b384a3c8820b55a04ccd6ce&#34; data-ratio=&#34;1.77777777777778&#34; src=&#34;//speakerdeck.com/assets/embed.js&#34;&gt;&lt;/script&gt;
+&lt;!--
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Click on the &lt;strong&gt;Slides&lt;/strong&gt; button above to view the built-in slides feature.
+  &lt;/div&gt;
+&lt;/div&gt;
+
+
+
+Slides can be added in a few ways:
+
+- **Create** slides using Academic&#39;s *Slides* feature and link using `url_slides` parameter in the front matter of the talk file
+- **Upload** an existing slide deck to `static/` and link using `url_slides` parameter in the front matter of the talk file
+- **Embed** your slides (e.g. Google Slides) or presentation video on this page using [shortcodes](https://sourcethemes.com/academic/docs/writing-markdown-latex/).
+
+Further talk details can easily be added to this page using *Markdown* and $\rm \LaTeX$ math code.
+
+--&gt;
 </description>
     </item>
     
@@ -41,18 +97,18 @@
     
     <item>
       <title>recount-brain: a curated repository of human brain RNA-seq datasets metadata</title>
-      <link>/publication/recount_brain/</link>
+      <link>/publication/preprint_recount_brain/</link>
       <pubDate>Wed, 24 Apr 2019 16:45:43 -0500</pubDate>
-      <guid>/publication/recount_brain/</guid>
+      <guid>/publication/preprint_recount_brain/</guid>
       <description>&lt;!-- More detail can easily be written here using *Markdown* and $\rm \LaTeX$ math code. --&gt;
 </description>
     </item>
     
     <item>
       <title>Integrated Transcriptomic and Proteomic Analysis of Primary Human Umbilical Vein Endothelial Cells</title>
-      <link>/publication/recount_proteomics/</link>
+      <link>/publication/2019-04_recount_proteomics/</link>
       <pubDate>Sun, 14 Apr 2019 00:00:00 +0000</pubDate>
-      <guid>/publication/recount_proteomics/</guid>
+      <guid>/publication/2019-04_recount_proteomics/</guid>
       <description>&lt;!-- More detail can easily be written here using *Markdown* and $\rm \LaTeX$ math code. --&gt;
 </description>
     </item>
@@ -115,18 +171,18 @@ Further talk details can easily be added to this page using *Markdown* and $\rm 
     
     <item>
       <title>Non-coding Class Switch Recombination-Related Transcription in Human Normal and Pathological Immune Responses</title>
-      <link>/publication/nccsr/</link>
+      <link>/publication/2018-11_nccsr/</link>
       <pubDate>Wed, 21 Nov 2018 00:00:00 +0000</pubDate>
-      <guid>/publication/nccsr/</guid>
+      <guid>/publication/2018-11_nccsr/</guid>
       <description>&lt;!-- More detail can easily be written here using *Markdown* and $\rm \LaTeX$ math code. --&gt;
 </description>
     </item>
     
     <item>
       <title>From learning to using to teaching to developing R</title>
-      <link>/talk/cdsbmexico2018/</link>
+      <link>/talk/cdsb2018/</link>
       <pubDate>Mon, 30 Jul 2018 10:00:00 -0400</pubDate>
-      <guid>/talk/cdsbmexico2018/</guid>
+      <guid>/talk/cdsb2018/</guid>
       <description>&lt;script async class=&#34;speakerdeck-embed&#34; data-slide=&#34;1&#34; data-id=&#34;711408b758884ca2bf0bb950ce0ba0ed&#34; data-ratio=&#34;1.77777777777778&#34; src=&#34;//speakerdeck.com/assets/embed.js&#34;&gt;&lt;/script&gt;
 &lt;!--
 
@@ -208,18 +264,18 @@ Further talk details can easily be added to this page using *Markdown* and $\rm 
     
     <item>
       <title>Improving the value of public RNA-seq expression data by phenotype prediction</title>
-      <link>/publication/rnaseq_prediction/</link>
+      <link>/publication/2018-03_rnaseq_prediction/</link>
       <pubDate>Mon, 05 Mar 2018 16:45:43 -0500</pubDate>
-      <guid>/publication/rnaseq_prediction/</guid>
+      <guid>/publication/2018-03_rnaseq_prediction/</guid>
       <description>&lt;!-- More detail can easily be written here using *Markdown* and $\rm \LaTeX$ math code. --&gt;
 </description>
     </item>
     
     <item>
       <title>RNA-seq transcript quantification from reduced-representation data in recount2</title>
-      <link>/publication/recount_tx/</link>
+      <link>/publication/preprint_recount_tx/</link>
       <pubDate>Fri, 12 Jan 2018 16:45:43 -0500</pubDate>
-      <guid>/publication/recount_tx/</guid>
+      <guid>/publication/preprint_recount_tx/</guid>
       <description>&lt;!-- More detail can easily be written here using *Markdown* and $\rm \LaTeX$ math code. --&gt;
 </description>
     </item>
@@ -235,9 +291,9 @@ Further talk details can easily be added to this page using *Markdown* and $\rm 
     
     <item>
       <title>recount workflow: Accessing over 70,000 human RNA-seq samples with Bioconductor [version 1; referees: 1 approved, 2 approved with reservations]</title>
-      <link>/publication/recountworkflow/</link>
+      <link>/publication/2017-08_recountworkflow/</link>
       <pubDate>Thu, 24 Aug 2017 16:45:43 -0500</pubDate>
-      <guid>/publication/recountworkflow/</guid>
+      <guid>/publication/2017-08_recountworkflow/</guid>
       <description>&lt;!-- More detail can easily be written here using *Markdown* and $\rm \LaTeX$ math code. --&gt;
 </description>
     </item>
@@ -327,18 +383,18 @@ Further talk details can easily be added to this page using *Markdown* and $\rm 
     
     <item>
       <title>Reproducible RNA-seq analysis using recount2</title>
-      <link>/publication/recount/</link>
+      <link>/publication/2017-04_recount/</link>
       <pubDate>Tue, 11 Apr 2017 16:45:43 -0500</pubDate>
-      <guid>/publication/recount/</guid>
+      <guid>/publication/2017-04_recount/</guid>
       <description>&lt;!-- More detail can easily be written here using *Markdown* and $\rm \LaTeX$ math code. --&gt;
 </description>
     </item>
     
     <item>
       <title>Human splicing diversity and the extent of unannotated splice junctions across human RNA-seq samples on the Sequence Read Archive</title>
-      <link>/publication/intropolis/</link>
+      <link>/publication/2016-12_intropolis/</link>
       <pubDate>Fri, 30 Dec 2016 17:44:49 -0500</pubDate>
-      <guid>/publication/intropolis/</guid>
+      <guid>/publication/2016-12_intropolis/</guid>
       <description>&lt;!-- More detail can easily be written here using *Markdown* and $\rm \LaTeX$ math code. --&gt;
 </description>
     </item>

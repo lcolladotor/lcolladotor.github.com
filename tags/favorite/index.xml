@@ -5,19 +5,47 @@
     <link>/tags/favorite/</link>
       <atom:link href=http://lcolladotor.github.io/tags/favorite/index.xml rel="self" type="application/rss+xml" />
     <description>Favorite</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2011-2020 Leonardo Collado Torres under (CC) BY-NC-SA 4.0. All thoughts and opinions here are my own. The icon was designed by [Mauricio Guzmán](https://www.linkedin.com/in/mauricio-guzman-6529b551/) and is inspired by [Huichol culture](https://en.wikipedia.org/wiki/Huichol); it represents my community building interests</copyright><lastBuildDate>Mon, 30 Jul 2018 10:00:00 -0400</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2011-2020. All thoughts and opinions here are my own. The icon was designed by [Mauricio Guzmán](https://www.linkedin.com/in/mauricio-guzman-6529b551/) and is inspired by [Huichol culture](https://en.wikipedia.org/wiki/Huichol); it represents my community building interests</copyright><lastBuildDate>Tue, 04 Aug 2020 00:00:00 -0400</lastBuildDate>
     <image>
-      <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
+      <url>/images/icon_hu2b32c4ab415f12f472f73c7b0301b0d1_19400_512x512_fill_lanczos_center_2.png</url>
       <title>Favorite</title>
       <link>/tags/favorite/</link>
     </image>
     
     <item>
-      <title>From learning to using to teaching to developing R</title>
-      <link>/talk/cdsbmexico2018/</link>
-      <pubDate>Mon, 30 Jul 2018 10:00:00 -0400</pubDate>
-      <guid>/talk/cdsbmexico2018/</guid>
-      <description>&lt;script async class=&#34;speakerdeck-embed&#34; data-slide=&#34;1&#34; data-id=&#34;711408b758884ca2bf0bb950ce0ba0ed&#34; data-ratio=&#34;1.77777777777778&#34; src=&#34;//speakerdeck.com/assets/embed.js&#34;&gt;&lt;/script&gt;
+      <title>Promoting the next wave of R/Bioconductor developers in Latin America starting in Mexico</title>
+      <link>/talk/jsm2020/</link>
+      <pubDate>Tue, 04 Aug 2020 00:00:00 -0400</pubDate>
+      <guid>/talk/jsm2020/</guid>
+      <description>&lt;script async class=&#34;speakerdeck-embed&#34; data-id=&#34;dd8d3c5793c646c983af37cb1f3b4d2f&#34; data-ratio=&#34;1.77777777777778&#34; src=&#34;//speakerdeck.com/assets/embed.js&#34;&gt;&lt;/script&gt;
+&lt;!--
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Click on the &lt;strong&gt;Slides&lt;/strong&gt; button above to view the built-in slides feature.
+  &lt;/div&gt;
+&lt;/div&gt;
+
+
+
+Slides can be added in a few ways:
+
+- **Create** slides using Academic&#39;s *Slides* feature and link using `url_slides` parameter in the front matter of the talk file
+- **Upload** an existing slide deck to `static/` and link using `url_slides` parameter in the front matter of the talk file
+- **Embed** your slides (e.g. Google Slides) or presentation video on this page using [shortcodes](https://sourcethemes.com/academic/docs/writing-markdown-latex/).
+
+Further talk details can easily be added to this page using *Markdown* and $\rm \LaTeX$ math code.
+
+--&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Transcriptome-Scale Spatial Gene Expression in the Human Dorsolateral Prefrontal Cortex</title>
+      <link>/talk/scientist2020/</link>
+      <pubDate>Thu, 19 Mar 2020 14:30:00 -0400</pubDate>
+      <guid>/talk/scientist2020/</guid>
+      <description>&lt;script async class=&#34;speakerdeck-embed&#34; data-id=&#34;eeea5f07627b469cb2adeaf9872b5558&#34; data-ratio=&#34;1.33333333333333&#34; src=&#34;//speakerdeck.com/assets/embed.js&#34;&gt;&lt;/script&gt;
 &lt;!--
 
 &lt;div class=&#34;alert alert-note&#34;&gt;
