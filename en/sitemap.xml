@@ -3,6 +3,86 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/tags/academia/</loc>
+    <lastmod>2020-09-21T12:04:15-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/</loc>
+    <lastmod>2020-09-21T12:04:15-04:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="/es/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/categories/"
+                />
+  </url>
+  
+  <url>
+    <loc>/tags/industry/</loc>
+    <lastmod>2020-09-21T12:04:15-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/</loc>
+    <lastmod>2020-09-21T12:04:15-04:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="/es/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/"
+                />
+  </url>
+  
+  <url>
+    <loc>/categories/libd/</loc>
+    <lastmod>2020-09-21T12:04:15-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/</loc>
+    <lastmod>2020-09-21T12:04:15-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/rstats/</loc>
+    <lastmod>2020-09-21T12:04:15-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/rstats/</loc>
+    <lastmod>2020-09-21T12:04:15-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
+    <lastmod>2020-09-21T12:04:15-04:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="/es/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/tags/"
+                />
+  </url>
+  
+  <url>
+    <loc>/2020/09/21/the-start-of-a-new-phase-for-me/</loc>
+    <lastmod>2020-09-21T12:04:15-04:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/authors/</loc>
     <lastmod>2020-08-04T00:00:00-04:00</lastmod>
     <xhtml:link
@@ -28,21 +108,6 @@
   </url>
   
   <url>
-    <loc>/</loc>
-    <lastmod>2020-08-04T00:00:00-04:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="/es/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/"
-                />
-  </url>
-  
-  <url>
     <loc>/authors/admin/</loc>
     <lastmod>2020-08-04T00:00:00-04:00</lastmod>
     <xhtml:link
@@ -60,21 +125,6 @@
   <url>
     <loc>/talk/jsm2020/</loc>
     <lastmod>2020-08-04T00:00:00-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/</loc>
-    <lastmod>2020-08-04T00:00:00-04:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="/es/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/tags/"
-                />
   </url>
   
   <url>
@@ -358,21 +408,6 @@
   </url>
   
   <url>
-    <loc>/categories/</loc>
-    <lastmod>2020-03-18T08:39:21-04:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="/es/categories/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/categories/"
-                />
-  </url>
-  
-  <url>
     <loc>/categories/computing/</loc>
     <lastmod>2020-03-18T08:39:21-04:00</lastmod>
   </url>
@@ -388,18 +423,8 @@
   </url>
   
   <url>
-    <loc>/post/</loc>
-    <lastmod>2020-03-18T08:39:21-04:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/2020/03/18/you-just-committed-a-large-file-and-can-t-push-to-github/</loc>
     <lastmod>2020-03-18T08:39:21-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/academia/</loc>
-    <lastmod>2020-03-16T23:19:01-04:00</lastmod>
   </url>
   
   <url>
@@ -453,11 +478,6 @@
   </url>
   
   <url>
-    <loc>/tags/industry/</loc>
-    <lastmod>2020-03-16T23:19:01-04:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/authors/joy-ukaigwe/</loc>
     <lastmod>2020-03-16T00:00:00+00:00</lastmod>
   </url>
@@ -475,11 +495,6 @@
   <url>
     <loc>/authors/kristen-r-maynard/</loc>
     <lastmod>2020-03-16T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/categories/libd/</loc>
-    <lastmod>2020-03-16T23:19:01-04:00</lastmod>
   </url>
   
   <url>
@@ -514,16 +529,6 @@
   
   <url>
     <loc>/2020/03/16/research-scientist-an-academic-career-launch-pad/</loc>
-    <lastmod>2020-03-16T23:19:01-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/rstats/</loc>
-    <lastmod>2020-03-16T23:19:01-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/categories/rstats/</loc>
     <lastmod>2020-03-16T23:19:01-04:00</lastmod>
   </url>
   
