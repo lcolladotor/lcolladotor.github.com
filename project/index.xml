@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Projects | L. Collado-Torres</title>
-    <link>/project/</link>
-      <atom:link href=http://lcolladotor.github.io/project/index.xml rel="self" type="application/rss+xml" />
+    <link>https://lcolladotor.github.io/project/</link>
+      <atom:link href="https://lcolladotor.github.io/project/index.xml" rel="self" type="application/rss+xml" />
     <description>Projects</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2011-2020. All thoughts and opinions here are my own. The icon was designed by [Mauricio Guzmán](https://www.linkedin.com/in/mauricio-guzman-6529b551/) and is inspired by [Huichol culture](https://en.wikipedia.org/wiki/Huichol); it represents my community building interests</copyright><lastBuildDate>Sat, 29 Feb 2020 00:00:00 -0500</lastBuildDate>
     <image>
-      <url>/images/icon_hu2b32c4ab415f12f472f73c7b0301b0d1_19400_512x512_fill_lanczos_center_2.png</url>
+      <url>https://lcolladotor.github.io/images/icon_hu2b32c4ab415f12f472f73c7b0301b0d1_19400_512x512_fill_lanczos_center_2.png</url>
       <title>Projects</title>
-      <link>/project/</link>
+      <link>https://lcolladotor.github.io/project/</link>
     </image>
     
     <item>
       <title>spatial</title>
-      <link>/project/spatial/</link>
+      <link>https://lcolladotor.github.io/project/spatial/</link>
       <pubDate>Sat, 29 Feb 2020 00:00:00 -0500</pubDate>
-      <guid>/project/spatial/</guid>
+      <guid>https://lcolladotor.github.io/project/spatial/</guid>
       <description>&lt;p&gt;In 2020 we published the 
 &lt;a href=&#34;https://www.biorxiv.org/content/10.1101/2020.02.28.969931v1&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;first pre-print&lt;/a&gt; using the 10x Genomics Visium platform for spatial transcriptomics. For this project we created the 
 &lt;a href=&#34;https://bioconductor.org/packages/spatialLIBD&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;spatialLIBD&lt;/code&gt;&lt;/a&gt; Bioconductor package and started developing new analytical methods for this type of data.&lt;/p&gt;
@@ -25,9 +25,9 @@
     
     <item>
       <title>BrainSEQ™ Consortium</title>
-      <link>/project/brainseq/</link>
+      <link>https://lcolladotor.github.io/project/brainseq/</link>
       <pubDate>Thu, 03 Aug 2017 00:00:00 -0400</pubDate>
-      <guid>/project/brainseq/</guid>
+      <guid>https://lcolladotor.github.io/project/brainseq/</guid>
       <description>&lt;p&gt;The Lieber Institute and pharmaceutical companies AstraZeneca, Astellas, Eli Lilly and Company, Lundbeck, Johnson &amp;amp; Johnson, Pfizer Inc. and Roche are participating in an early-stage research consortium BrainSEQ™, with the goal of expanding knowledge around the genetic contribution to brain disorders in the hope of identifying potential new treatment options.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Utilizing LIBD’s unprecedented brain tissue repository to generate and analyze genomic data related to neuropsychiatric disorders.&lt;/li&gt;
@@ -39,20 +39,20 @@
     
     <item>
       <title>recount2</title>
-      <link>/project/recount2/</link>
+      <link>https://lcolladotor.github.io/project/recount2/</link>
       <pubDate>Mon, 20 Jun 2016 00:00:00 -0400</pubDate>
-      <guid>/project/recount2/</guid>
+      <guid>https://lcolladotor.github.io/project/recount2/</guid>
       <description>&lt;p&gt;In 2015 we re-processed all the human RNA-seq that was publicly available at the time in an effort to improve the usability of this complex type of data and to facilitate developing new bioinformatic and biostatistical methods. Via &lt;code&gt;recount2&lt;/code&gt; we have democratized the access to this rich data and this project has lead to many different publications by the &lt;code&gt;recount2&lt;/code&gt; team and other researchers.&lt;/p&gt;
 &lt;p&gt;More recently, we are working on a subset of brain samples from &lt;code&gt;recount2&lt;/code&gt; for the &lt;code&gt;recount-brain&lt;/code&gt; project lead by 
-&lt;a href=&#34;/authors/arazmara/&#34;&gt;Ashkaun Razmara&lt;/a&gt;.&lt;/p&gt;
+&lt;a href=&#34;https://lcolladotor.github.io/authors/arazmara/&#34;&gt;Ashkaun Razmara&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>derfinder</title>
-      <link>/project/derfinder/</link>
+      <link>https://lcolladotor.github.io/project/derfinder/</link>
       <pubDate>Fri, 19 Apr 2013 00:00:00 -0400</pubDate>
-      <guid>/project/derfinder/</guid>
+      <guid>https://lcolladotor.github.io/project/derfinder/</guid>
       <description>&lt;p&gt;The goal of my Ph.D. with 
 &lt;a href=&#34;http://jtleek.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Jeff Leek&lt;/a&gt; and 
 &lt;a href=&#34;http://aejaffe.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Andrew Jaffe&lt;/a&gt; at JHBSPH was to develop statistical methods and software that enable researchers to differentiate the sources of variation observed in RNA-seq while minimizing the dependance on known annotation. This allows researchers to correct for technological variation and study the biological variation driving their phenotype of interest. This work lead to the development of the &lt;code&gt;derfinder&lt;/code&gt; and &lt;code&gt;regionReport&lt;/code&gt; Bioconductor packages. We then applied these methods to further our understanding of neuropsychiatric disorders using the Lieber Institute for Brain Development human brains collection.&lt;/p&gt;
