@@ -5,12 +5,184 @@
     <link>https://lcolladotor.github.io/tags/bioconductor/</link>
       <atom:link href="https://lcolladotor.github.io/tags/bioconductor/index.xml" rel="self" type="application/rss+xml" />
     <description>Bioconductor</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2011-2020. All thoughts and opinions here are my own. The icon was designed by [Mauricio Guzmán](https://www.linkedin.com/in/mauricio-guzman-6529b551/) and is inspired by [Huichol culture](https://en.wikipedia.org/wiki/Huichol); it represents my community building interests</copyright><lastBuildDate>Mon, 16 Mar 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2011-2020. All thoughts and opinions here are my own. The icon was designed by [Mauricio Guzmán](https://www.linkedin.com/in/mauricio-guzman-6529b551/) and is inspired by [Huichol culture](https://en.wikipedia.org/wiki/Huichol); it represents my community building interests</copyright><lastBuildDate>Tue, 03 Nov 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://lcolladotor.github.io/images/icon_hu2b32c4ab415f12f472f73c7b0301b0d1_19400_512x512_fill_lanczos_center_2.png</url>
       <title>Bioconductor</title>
       <link>https://lcolladotor.github.io/tags/bioconductor/</link>
     </image>
+    
+    <item>
+      <title>Cleaning up my R packages and config files</title>
+      <link>https://lcolladotor.github.io/2020/11/03/cleaning-up-my-r-packages-and-config-files/</link>
+      <pubDate>Tue, 03 Nov 2020 00:00:00 +0000</pubDate>
+      <guid>https://lcolladotor.github.io/2020/11/03/cleaning-up-my-r-packages-and-config-files/</guid>
+      <description>
+&lt;script src=&#34;https://lcolladotor.github.io/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;https://lcolladotor.github.io/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;https://lcolladotor.github.io/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
+
+
+&lt;p&gt;Today was an unusual day at work given the US Elections. This meant that I had fewer meetings than what I’ve had lately. Earlier in the day I noticed an email announcing that the Bioconductor 3.13 docker image had been released for the next 6 month development cycle, which was a reminder of the recent &lt;a href=&#34;http://bioconductor.org/news/bioc_3_12_release/&#34;&gt;Bioconductor 3.12 release&lt;/a&gt;. This prompted me to start updating my R packages.&lt;/p&gt;
+&lt;p&gt;In the past, I’ve updated all my currently installed R packages using the framework I described in a &lt;a href=&#34;http://lcolladotor.github.io/2017/05/04/updating-r/#.X6ICiIhKguU&#34;&gt;2017 blog post&lt;/a&gt;. I remember seeing a tweet by &lt;a href=&#34;https://twitter.com/hadleywickham&#34;&gt;Hadley Wickham&lt;/a&gt; not so long ago &lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt; that for him, a new R version was an opportunity to start with a clean slate. I like having everything I need ready to use, but well, my list of installed R packages was getting pretty long. Given that 4 year windows of time are in our minds, it felt like a good opportunity to clean my house. Or well, my R packages.&lt;/p&gt;
+&lt;p&gt;Thus, I started writing down which are the packages I want to have installed. At this point for me, that includes several R/Bioconductor packages I’ve made and their dependencies in case I need to work on them to resolve bugs or add new features. My R packages already use many of my favorite R packages, so I took advantage of this in order to avoid having to list every single R package I like using. In order to achieve this, I used the &lt;code&gt;dependencies = TRUE&lt;/code&gt; argument that you can use with &lt;em&gt;&lt;a href=&#34;https://CRAN.R-project.org/package=remotes&#34;&gt;remotes&lt;/a&gt;&lt;/em&gt; and &lt;em&gt;&lt;a href=&#34;https://CRAN.R-project.org/package=BiocManager&#34;&gt;BiocManager&lt;/a&gt;&lt;/em&gt;.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;## Install from scratch
+if (!requireNamespace(&amp;quot;remotes&amp;quot;, quietly = TRUE))
+    install.packages(&amp;quot;remotes&amp;quot;)
+remotes::install_cran(&amp;quot;BiocManager&amp;quot;)
+BiocManager::version()
+
+## Rprofile packages
+remotes::install_github(c(
+    &amp;quot;jalvesaq/colorout&amp;quot;
+))
+remotes::install_cran(c(
+    &amp;quot;devtools&amp;quot;,
+    &amp;quot;usethis&amp;quot;
+))
+
+## Main packages
+BiocManager::install(c(
+    &amp;quot;biocthis&amp;quot;,
+    &amp;quot;brainflowprobes&amp;quot;,
+    &amp;quot;derfinder&amp;quot;,
+    &amp;quot;derfinderPlot&amp;quot;,
+    &amp;quot;GenomicState&amp;quot;,
+    &amp;quot;megadepth&amp;quot;,
+    &amp;quot;recount&amp;quot;,
+    &amp;quot;recountWorkflow&amp;quot;,
+    &amp;quot;recount3&amp;quot;,
+    &amp;quot;regutools&amp;quot;,
+    &amp;quot;regionReport&amp;quot;,
+    &amp;quot;spatialLIBD&amp;quot;
+), dependencies = TRUE, update = FALSE)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Once I had my main packages, I started adding some from LIBD, some from CRAN, and other ones from Bioconductor. You can see the full list at my team’s website under &lt;a href=&#34;https://lcolladotor.github.io/bioc_team_ds/config-files.html#r-packages&#34;&gt;Config files: R setup; R packages&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I was curious about how these changes affected my list of installed R packages and used my older &lt;a href=&#34;http://lcolladotor.github.io/2017/05/04/updating-r/#.X6ICiIhKguU&#34;&gt;2017 blog post&lt;/a&gt; code to check this. That resulted in &lt;a href=&#34;https://gist.github.com/lcolladotor/d0af9b22e3806af196233655dce54fde&#34;&gt;this list&lt;/a&gt; which shows 423 installed R packages and 589 that I used to have installed. I suspect that several of them will come back. For example, I needed to install &lt;em&gt;&lt;a href=&#34;https://CRAN.R-project.org/package=blogdown&#34;&gt;blogdown&lt;/a&gt;&lt;/em&gt; to work on this blog post. Some of the 423 packages are new, like &lt;em&gt;&lt;a href=&#34;https://github.com/gadenbuie/rsthemes&#34;&gt;rsthemes&lt;/a&gt;&lt;/em&gt; which we recently learned about at the LIBD rstats club.&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Today &lt;a href=&#34;https://twitter.com/lcolladotor?ref_src=twsrc%5Etfw&#34;&gt;@lcolladotor&lt;/a&gt; went over new &lt;a href=&#34;https://twitter.com/rstudio?ref_src=twsrc%5Etfw&#34;&gt;@rstudio&lt;/a&gt; &amp;amp; &lt;a href=&#34;https://twitter.com/Bioconductor?ref_src=twsrc%5Etfw&#34;&gt;@Bioconductor&lt;/a&gt; developments that was started by tweets by &lt;a href=&#34;https://twitter.com/apreshill?ref_src=twsrc%5Etfw&#34;&gt;@apreshill&lt;/a&gt; &amp;amp; &lt;a href=&#34;https://twitter.com/grrrck?ref_src=twsrc%5Etfw&#34;&gt;@grrrck&lt;/a&gt; + new &lt;a href=&#34;https://twitter.com/hashtag/rstats?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#rstats&lt;/a&gt; 📦s &lt;a href=&#34;https://twitter.com/hashtag/recount3?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#recount3&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/megadepth?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#megadepth&lt;/a&gt; involving &lt;a href=&#34;https://twitter.com/chrisnwilks?ref_src=twsrc%5Etfw&#34;&gt;@chrisnwilks&lt;/a&gt; &lt;a href=&#34;https://twitter.com/dyzhang32?ref_src=twsrc%5Etfw&#34;&gt;@dyzhang32&lt;/a&gt; et al&lt;br&gt;&lt;br&gt;📹&lt;a href=&#34;https://t.co/E0DZ9Ej5qV&#34;&gt;https://t.co/E0DZ9Ej5qV&lt;/a&gt;&lt;br&gt;📓 &lt;a href=&#34;https://t.co/FnDvcUmyUO&#34;&gt;https://t.co/FnDvcUmyUO&lt;/a&gt;&lt;br&gt;👀&lt;a href=&#34;https://t.co/mEbQirhkF6&#34;&gt;https://t.co/mEbQirhkF6&lt;/a&gt; &lt;a href=&#34;https://t.co/BWByp9W7Wh&#34;&gt;pic.twitter.com/BWByp9W7Wh&lt;/a&gt;&lt;/p&gt;&amp;mdash; LIBD rstats club (@LIBDrstats) &lt;a href=&#34;https://twitter.com/LIBDrstats/status/1312187753371561984?ref_src=twsrc%5Etfw&#34;&gt;October 3, 2020&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+
+&lt;div id=&#34;config-files&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Config files&lt;/h3&gt;
+&lt;p&gt;Since I was doing all this work on both my macOS and Windows laptops for my R setup, I also went ahead and cleaned up a bit my configuration files. I have several of them with settings that I recommend others to use. That’s why I wrote a little “chapter” about them on my &lt;a href=&#34;https://lcolladotor.github.io/bioc_team_ds/config-files.html#config-files&#34;&gt;team’s website&lt;/a&gt;. The list includes:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Software I use (including R and RStudio)&lt;/li&gt;
+&lt;li&gt;R packages&lt;/li&gt;
+&lt;li&gt;R configuration files such as &lt;code&gt;~/.Rprofile&lt;/code&gt; and &lt;code&gt;~/.Renviron&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Git configuration files &lt;code&gt;~/.gitconfig&lt;/code&gt; and &lt;code&gt;~/.gitignore_global&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;JHPCE (linux) configuration files such as &lt;code&gt;~/.bashrc&lt;/code&gt;, &lt;code&gt;~/.inputrc&lt;/code&gt;, &lt;code&gt;~/.bash_profile&lt;/code&gt; and &lt;code&gt;~/.sge_request&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;wrapping-up&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Wrapping up&lt;/h3&gt;
+&lt;p&gt;I’m hoping that all this information will be useful to both current and new team members, but it could be useful also to you. Though you might need to adapt some things. Earlier on in my career I learned from how others use configuration files to speed up their work or make their work experience more enjoyable. I’m still learning, but now I have a decent bag of tricks to share too.&lt;/p&gt;
+&lt;p&gt;Have fun!&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://lcolladotor.github.io/2020-11-03-cleaning-up-my-r-packages-and-config-files/index.en_files/Bag-of-Tricks-1.jpg&#34; width=&#34;400&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://criticalhitgamingsupplies.com/product/bag-of-tricks/&#34;&gt;Image source&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;acknowledgments&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Acknowledgments&lt;/h3&gt;
+&lt;p&gt;This blog post was made possible thanks to:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;&lt;a href=&#34;https://bioconductor.org/packages/3.12/BiocStyle&#34;&gt;BiocStyle&lt;/a&gt;&lt;/em&gt; &lt;a id=&#39;cite-Oles_2020&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://github.com/Bioconductor/BiocStyle&#39;&gt;Oles, Morgan, and Huber, 2020&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;a href=&#34;https://CRAN.R-project.org/package=blogdown&#34;&gt;blogdown&lt;/a&gt;&lt;/em&gt; &lt;a id=&#39;cite-Xie_2017&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://github.com/rstudio/blogdown&#39;&gt;Xie, Hill, and Thomas, 2017&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;a href=&#34;https://CRAN.R-project.org/package=knitcitations&#34;&gt;knitcitations&lt;/a&gt;&lt;/em&gt; &lt;a id=&#39;cite-Boettiger_2020&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://github.com/cboettig/knitcitations&#39;&gt;Boettiger, 2020&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;a href=&#34;https://CRAN.R-project.org/package=sessioninfo&#34;&gt;sessioninfo&lt;/a&gt;&lt;/em&gt; &lt;a id=&#39;cite-Csardi_2018&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://CRAN.R-project.org/package=sessioninfo&#39;&gt;Csárdi, core, Wickham, Chang, et al., 2018&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;references&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;References&lt;/h3&gt;
+&lt;p&gt;
+&lt;a id=&#39;bib-Boettiger_2020&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-Boettiger_2020&#34;&gt;[1]&lt;/a&gt;&lt;cite&gt;
+C. Boettiger.
+&lt;em&gt;knitcitations: Citations for ‘Knitr’ Markdown Files&lt;/em&gt;.
+R package version 1.0.10.
+2020.
+URL: &lt;a href=&#34;https://github.com/cboettig/knitcitations&#34;&gt;https://github.com/cboettig/knitcitations&lt;/a&gt;.&lt;/cite&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;a id=&#39;bib-Csardi_2018&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-Csardi_2018&#34;&gt;[2]&lt;/a&gt;&lt;cite&gt;
+G. CsÃ¡rdi, R. core, H. Wickham, W. Chang, et al.
+&lt;em&gt;sessioninfo: R Session Information&lt;/em&gt;.
+R package version 1.1.1.
+2018.
+URL: &lt;a href=&#34;https://CRAN.R-project.org/package=sessioninfo&#34;&gt;https://CRAN.R-project.org/package=sessioninfo&lt;/a&gt;.&lt;/cite&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;a id=&#39;bib-Oles_2020&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-Oles_2020&#34;&gt;[3]&lt;/a&gt;&lt;cite&gt;
+A. Oles, M. Morgan, and W. Huber.
+&lt;em&gt;BiocStyle: Standard styles for vignettes and other Bioconductor documents&lt;/em&gt;.
+R package version 2.18.0.
+2020.
+URL: &lt;a href=&#34;https://github.com/Bioconductor/BiocStyle&#34;&gt;https://github.com/Bioconductor/BiocStyle&lt;/a&gt;.&lt;/cite&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;a id=&#39;bib-Xie_2017&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-Xie_2017&#34;&gt;[4]&lt;/a&gt;&lt;cite&gt;
+Y. Xie, A. P. Hill, and A. Thomas.
+&lt;em&gt;blogdown: Creating Websites with R Markdown&lt;/em&gt;.
+ISBN 978-0815363729.
+Boca Raton, Florida: Chapman and Hall/CRC, 2017.
+URL: &lt;a href=&#34;https://github.com/rstudio/blogdown&#34;&gt;https://github.com/rstudio/blogdown&lt;/a&gt;.&lt;/cite&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;reproducibility&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Reproducibility&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;## - Session info -------------------------------------------------------------------------------------------------------
+##  setting  value                       
+##  version  R version 4.0.3 (2020-10-10)
+##  os       Windows 10 x64              
+##  system   x86_64, mingw32             
+##  ui       RTerm                       
+##  language (EN)                        
+##  collate  English_United States.1252  
+##  ctype    English_United States.1252  
+##  tz       America/New_York            
+##  date     2020-11-03                  
+## 
+## - Packages -----------------------------------------------------------------------------------------------------------
+##  package       * version date       lib source                                 
+##  assertthat      0.2.1   2019-03-21 [1] CRAN (R 4.0.3)                         
+##  BiocManager     1.30.10 2019-11-16 [1] CRAN (R 4.0.3)                         
+##  BiocStyle     * 2.18.0  2020-10-27 [1] Bioconductor                           
+##  blogdown        0.21    2020-10-11 [1] CRAN (R 4.0.3)                         
+##  bookdown        0.21    2020-10-13 [1] CRAN (R 4.0.3)                         
+##  cli             2.1.0   2020-10-12 [1] CRAN (R 4.0.3)                         
+##  crayon          1.3.4   2017-09-16 [1] CRAN (R 4.0.3)                         
+##  digest          0.6.27  2020-10-24 [1] CRAN (R 4.0.3)                         
+##  evaluate        0.14    2019-05-28 [1] CRAN (R 4.0.3)                         
+##  fansi           0.4.1   2020-01-08 [1] CRAN (R 4.0.3)                         
+##  generics        0.1.0   2020-10-31 [1] CRAN (R 4.0.3)                         
+##  glue            1.4.2   2020-08-27 [1] CRAN (R 4.0.3)                         
+##  htmltools       0.5.0   2020-06-16 [1] CRAN (R 4.0.3)                         
+##  httr            1.4.2   2020-07-20 [1] CRAN (R 4.0.3)                         
+##  jsonlite        1.7.1   2020-09-07 [1] CRAN (R 4.0.3)                         
+##  knitcitations * 1.0.10  2020-11-03 [1] Github (cboettig/knitcitations@ea5d202)
+##  knitr           1.30    2020-09-22 [1] CRAN (R 4.0.3)                         
+##  lubridate       1.7.9   2020-06-08 [1] CRAN (R 4.0.3)                         
+##  magrittr        1.5     2014-11-22 [1] CRAN (R 4.0.3)                         
+##  plyr            1.8.6   2020-03-03 [1] CRAN (R 4.0.3)                         
+##  R6              2.5.0   2020-10-28 [1] CRAN (R 4.0.3)                         
+##  Rcpp            1.0.5   2020-07-06 [1] CRAN (R 4.0.3)                         
+##  RefManageR      1.3.0   2020-11-03 [1] Github (ropensci/RefManageR@ab8fe60)   
+##  rlang           0.4.8   2020-10-08 [1] CRAN (R 4.0.3)                         
+##  rmarkdown       2.5     2020-10-21 [1] CRAN (R 4.0.3)                         
+##  sessioninfo   * 1.1.1   2018-11-05 [1] CRAN (R 4.0.3)                         
+##  stringi         1.5.3   2020-09-09 [1] CRAN (R 4.0.3)                         
+##  stringr         1.4.0   2019-02-10 [1] CRAN (R 4.0.3)                         
+##  withr           2.3.0   2020-09-22 [1] CRAN (R 4.0.3)                         
+##  xfun            0.19    2020-10-30 [1] CRAN (R 4.0.3)                         
+##  xml2            1.3.2   2020-04-23 [1] CRAN (R 4.0.3)                         
+##  yaml            2.2.1   2020-02-01 [1] CRAN (R 4.0.3)                         
+## 
+## [1] D:/R/R-4.0.3/library&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div class=&#34;footnotes&#34;&gt;
+&lt;hr /&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;I couldn’t find the tweet right now.&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</description>
+    </item>
     
     <item>
       <title>Research Scientist: an academic career launch pad</title>

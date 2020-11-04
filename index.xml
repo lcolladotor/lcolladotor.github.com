@@ -5,12 +5,184 @@
     <link>https://lcolladotor.github.io/</link>
       <atom:link href="https://lcolladotor.github.io/index.xml" rel="self" type="application/rss+xml" />
     <description>L. Collado-Torres</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2011-2020. All thoughts and opinions here are my own. The icon was designed by [Mauricio Guzmán](https://www.linkedin.com/in/mauricio-guzman-6529b551/) and is inspired by [Huichol culture](https://en.wikipedia.org/wiki/Huichol); it represents my community building interests</copyright><lastBuildDate>Mon, 21 Sep 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2011-2020. All thoughts and opinions here are my own. The icon was designed by [Mauricio Guzmán](https://www.linkedin.com/in/mauricio-guzman-6529b551/) and is inspired by [Huichol culture](https://en.wikipedia.org/wiki/Huichol); it represents my community building interests</copyright><lastBuildDate>Tue, 03 Nov 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://lcolladotor.github.io/images/icon_hu2b32c4ab415f12f472f73c7b0301b0d1_19400_512x512_fill_lanczos_center_2.png</url>
       <title>L. Collado-Torres</title>
       <link>https://lcolladotor.github.io/</link>
     </image>
+    
+    <item>
+      <title>Cleaning up my R packages and config files</title>
+      <link>https://lcolladotor.github.io/2020/11/03/cleaning-up-my-r-packages-and-config-files/</link>
+      <pubDate>Tue, 03 Nov 2020 00:00:00 +0000</pubDate>
+      <guid>https://lcolladotor.github.io/2020/11/03/cleaning-up-my-r-packages-and-config-files/</guid>
+      <description>
+&lt;script src=&#34;https://lcolladotor.github.io/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;https://lcolladotor.github.io/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;https://lcolladotor.github.io/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
+
+
+&lt;p&gt;Today was an unusual day at work given the US Elections. This meant that I had fewer meetings than what I’ve had lately. Earlier in the day I noticed an email announcing that the Bioconductor 3.13 docker image had been released for the next 6 month development cycle, which was a reminder of the recent &lt;a href=&#34;http://bioconductor.org/news/bioc_3_12_release/&#34;&gt;Bioconductor 3.12 release&lt;/a&gt;. This prompted me to start updating my R packages.&lt;/p&gt;
+&lt;p&gt;In the past, I’ve updated all my currently installed R packages using the framework I described in a &lt;a href=&#34;http://lcolladotor.github.io/2017/05/04/updating-r/#.X6ICiIhKguU&#34;&gt;2017 blog post&lt;/a&gt;. I remember seeing a tweet by &lt;a href=&#34;https://twitter.com/hadleywickham&#34;&gt;Hadley Wickham&lt;/a&gt; not so long ago &lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt; that for him, a new R version was an opportunity to start with a clean slate. I like having everything I need ready to use, but well, my list of installed R packages was getting pretty long. Given that 4 year windows of time are in our minds, it felt like a good opportunity to clean my house. Or well, my R packages.&lt;/p&gt;
+&lt;p&gt;Thus, I started writing down which are the packages I want to have installed. At this point for me, that includes several R/Bioconductor packages I’ve made and their dependencies in case I need to work on them to resolve bugs or add new features. My R packages already use many of my favorite R packages, so I took advantage of this in order to avoid having to list every single R package I like using. In order to achieve this, I used the &lt;code&gt;dependencies = TRUE&lt;/code&gt; argument that you can use with &lt;em&gt;&lt;a href=&#34;https://CRAN.R-project.org/package=remotes&#34;&gt;remotes&lt;/a&gt;&lt;/em&gt; and &lt;em&gt;&lt;a href=&#34;https://CRAN.R-project.org/package=BiocManager&#34;&gt;BiocManager&lt;/a&gt;&lt;/em&gt;.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;## Install from scratch
+if (!requireNamespace(&amp;quot;remotes&amp;quot;, quietly = TRUE))
+    install.packages(&amp;quot;remotes&amp;quot;)
+remotes::install_cran(&amp;quot;BiocManager&amp;quot;)
+BiocManager::version()
+
+## Rprofile packages
+remotes::install_github(c(
+    &amp;quot;jalvesaq/colorout&amp;quot;
+))
+remotes::install_cran(c(
+    &amp;quot;devtools&amp;quot;,
+    &amp;quot;usethis&amp;quot;
+))
+
+## Main packages
+BiocManager::install(c(
+    &amp;quot;biocthis&amp;quot;,
+    &amp;quot;brainflowprobes&amp;quot;,
+    &amp;quot;derfinder&amp;quot;,
+    &amp;quot;derfinderPlot&amp;quot;,
+    &amp;quot;GenomicState&amp;quot;,
+    &amp;quot;megadepth&amp;quot;,
+    &amp;quot;recount&amp;quot;,
+    &amp;quot;recountWorkflow&amp;quot;,
+    &amp;quot;recount3&amp;quot;,
+    &amp;quot;regutools&amp;quot;,
+    &amp;quot;regionReport&amp;quot;,
+    &amp;quot;spatialLIBD&amp;quot;
+), dependencies = TRUE, update = FALSE)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Once I had my main packages, I started adding some from LIBD, some from CRAN, and other ones from Bioconductor. You can see the full list at my team’s website under &lt;a href=&#34;https://lcolladotor.github.io/bioc_team_ds/config-files.html#r-packages&#34;&gt;Config files: R setup; R packages&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I was curious about how these changes affected my list of installed R packages and used my older &lt;a href=&#34;http://lcolladotor.github.io/2017/05/04/updating-r/#.X6ICiIhKguU&#34;&gt;2017 blog post&lt;/a&gt; code to check this. That resulted in &lt;a href=&#34;https://gist.github.com/lcolladotor/d0af9b22e3806af196233655dce54fde&#34;&gt;this list&lt;/a&gt; which shows 423 installed R packages and 589 that I used to have installed. I suspect that several of them will come back. For example, I needed to install &lt;em&gt;&lt;a href=&#34;https://CRAN.R-project.org/package=blogdown&#34;&gt;blogdown&lt;/a&gt;&lt;/em&gt; to work on this blog post. Some of the 423 packages are new, like &lt;em&gt;&lt;a href=&#34;https://github.com/gadenbuie/rsthemes&#34;&gt;rsthemes&lt;/a&gt;&lt;/em&gt; which we recently learned about at the LIBD rstats club.&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Today &lt;a href=&#34;https://twitter.com/lcolladotor?ref_src=twsrc%5Etfw&#34;&gt;@lcolladotor&lt;/a&gt; went over new &lt;a href=&#34;https://twitter.com/rstudio?ref_src=twsrc%5Etfw&#34;&gt;@rstudio&lt;/a&gt; &amp;amp; &lt;a href=&#34;https://twitter.com/Bioconductor?ref_src=twsrc%5Etfw&#34;&gt;@Bioconductor&lt;/a&gt; developments that was started by tweets by &lt;a href=&#34;https://twitter.com/apreshill?ref_src=twsrc%5Etfw&#34;&gt;@apreshill&lt;/a&gt; &amp;amp; &lt;a href=&#34;https://twitter.com/grrrck?ref_src=twsrc%5Etfw&#34;&gt;@grrrck&lt;/a&gt; + new &lt;a href=&#34;https://twitter.com/hashtag/rstats?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#rstats&lt;/a&gt; 📦s &lt;a href=&#34;https://twitter.com/hashtag/recount3?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#recount3&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/megadepth?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#megadepth&lt;/a&gt; involving &lt;a href=&#34;https://twitter.com/chrisnwilks?ref_src=twsrc%5Etfw&#34;&gt;@chrisnwilks&lt;/a&gt; &lt;a href=&#34;https://twitter.com/dyzhang32?ref_src=twsrc%5Etfw&#34;&gt;@dyzhang32&lt;/a&gt; et al&lt;br&gt;&lt;br&gt;📹&lt;a href=&#34;https://t.co/E0DZ9Ej5qV&#34;&gt;https://t.co/E0DZ9Ej5qV&lt;/a&gt;&lt;br&gt;📓 &lt;a href=&#34;https://t.co/FnDvcUmyUO&#34;&gt;https://t.co/FnDvcUmyUO&lt;/a&gt;&lt;br&gt;👀&lt;a href=&#34;https://t.co/mEbQirhkF6&#34;&gt;https://t.co/mEbQirhkF6&lt;/a&gt; &lt;a href=&#34;https://t.co/BWByp9W7Wh&#34;&gt;pic.twitter.com/BWByp9W7Wh&lt;/a&gt;&lt;/p&gt;&amp;mdash; LIBD rstats club (@LIBDrstats) &lt;a href=&#34;https://twitter.com/LIBDrstats/status/1312187753371561984?ref_src=twsrc%5Etfw&#34;&gt;October 3, 2020&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+
+&lt;div id=&#34;config-files&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Config files&lt;/h3&gt;
+&lt;p&gt;Since I was doing all this work on both my macOS and Windows laptops for my R setup, I also went ahead and cleaned up a bit my configuration files. I have several of them with settings that I recommend others to use. That’s why I wrote a little “chapter” about them on my &lt;a href=&#34;https://lcolladotor.github.io/bioc_team_ds/config-files.html#config-files&#34;&gt;team’s website&lt;/a&gt;. The list includes:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Software I use (including R and RStudio)&lt;/li&gt;
+&lt;li&gt;R packages&lt;/li&gt;
+&lt;li&gt;R configuration files such as &lt;code&gt;~/.Rprofile&lt;/code&gt; and &lt;code&gt;~/.Renviron&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Git configuration files &lt;code&gt;~/.gitconfig&lt;/code&gt; and &lt;code&gt;~/.gitignore_global&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;JHPCE (linux) configuration files such as &lt;code&gt;~/.bashrc&lt;/code&gt;, &lt;code&gt;~/.inputrc&lt;/code&gt;, &lt;code&gt;~/.bash_profile&lt;/code&gt; and &lt;code&gt;~/.sge_request&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;wrapping-up&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Wrapping up&lt;/h3&gt;
+&lt;p&gt;I’m hoping that all this information will be useful to both current and new team members, but it could be useful also to you. Though you might need to adapt some things. Earlier on in my career I learned from how others use configuration files to speed up their work or make their work experience more enjoyable. I’m still learning, but now I have a decent bag of tricks to share too.&lt;/p&gt;
+&lt;p&gt;Have fun!&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://lcolladotor.github.io/2020-11-03-cleaning-up-my-r-packages-and-config-files/index.en_files/Bag-of-Tricks-1.jpg&#34; width=&#34;400&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://criticalhitgamingsupplies.com/product/bag-of-tricks/&#34;&gt;Image source&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;acknowledgments&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Acknowledgments&lt;/h3&gt;
+&lt;p&gt;This blog post was made possible thanks to:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;&lt;a href=&#34;https://bioconductor.org/packages/3.12/BiocStyle&#34;&gt;BiocStyle&lt;/a&gt;&lt;/em&gt; &lt;a id=&#39;cite-Oles_2020&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://github.com/Bioconductor/BiocStyle&#39;&gt;Oles, Morgan, and Huber, 2020&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;a href=&#34;https://CRAN.R-project.org/package=blogdown&#34;&gt;blogdown&lt;/a&gt;&lt;/em&gt; &lt;a id=&#39;cite-Xie_2017&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://github.com/rstudio/blogdown&#39;&gt;Xie, Hill, and Thomas, 2017&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;a href=&#34;https://CRAN.R-project.org/package=knitcitations&#34;&gt;knitcitations&lt;/a&gt;&lt;/em&gt; &lt;a id=&#39;cite-Boettiger_2020&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://github.com/cboettig/knitcitations&#39;&gt;Boettiger, 2020&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;a href=&#34;https://CRAN.R-project.org/package=sessioninfo&#34;&gt;sessioninfo&lt;/a&gt;&lt;/em&gt; &lt;a id=&#39;cite-Csardi_2018&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://CRAN.R-project.org/package=sessioninfo&#39;&gt;Csárdi, core, Wickham, Chang, et al., 2018&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;references&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;References&lt;/h3&gt;
+&lt;p&gt;
+&lt;a id=&#39;bib-Boettiger_2020&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-Boettiger_2020&#34;&gt;[1]&lt;/a&gt;&lt;cite&gt;
+C. Boettiger.
+&lt;em&gt;knitcitations: Citations for ‘Knitr’ Markdown Files&lt;/em&gt;.
+R package version 1.0.10.
+2020.
+URL: &lt;a href=&#34;https://github.com/cboettig/knitcitations&#34;&gt;https://github.com/cboettig/knitcitations&lt;/a&gt;.&lt;/cite&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;a id=&#39;bib-Csardi_2018&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-Csardi_2018&#34;&gt;[2]&lt;/a&gt;&lt;cite&gt;
+G. CsÃ¡rdi, R. core, H. Wickham, W. Chang, et al.
+&lt;em&gt;sessioninfo: R Session Information&lt;/em&gt;.
+R package version 1.1.1.
+2018.
+URL: &lt;a href=&#34;https://CRAN.R-project.org/package=sessioninfo&#34;&gt;https://CRAN.R-project.org/package=sessioninfo&lt;/a&gt;.&lt;/cite&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;a id=&#39;bib-Oles_2020&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-Oles_2020&#34;&gt;[3]&lt;/a&gt;&lt;cite&gt;
+A. Oles, M. Morgan, and W. Huber.
+&lt;em&gt;BiocStyle: Standard styles for vignettes and other Bioconductor documents&lt;/em&gt;.
+R package version 2.18.0.
+2020.
+URL: &lt;a href=&#34;https://github.com/Bioconductor/BiocStyle&#34;&gt;https://github.com/Bioconductor/BiocStyle&lt;/a&gt;.&lt;/cite&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;a id=&#39;bib-Xie_2017&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-Xie_2017&#34;&gt;[4]&lt;/a&gt;&lt;cite&gt;
+Y. Xie, A. P. Hill, and A. Thomas.
+&lt;em&gt;blogdown: Creating Websites with R Markdown&lt;/em&gt;.
+ISBN 978-0815363729.
+Boca Raton, Florida: Chapman and Hall/CRC, 2017.
+URL: &lt;a href=&#34;https://github.com/rstudio/blogdown&#34;&gt;https://github.com/rstudio/blogdown&lt;/a&gt;.&lt;/cite&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;reproducibility&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Reproducibility&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;## - Session info -------------------------------------------------------------------------------------------------------
+##  setting  value                       
+##  version  R version 4.0.3 (2020-10-10)
+##  os       Windows 10 x64              
+##  system   x86_64, mingw32             
+##  ui       RTerm                       
+##  language (EN)                        
+##  collate  English_United States.1252  
+##  ctype    English_United States.1252  
+##  tz       America/New_York            
+##  date     2020-11-03                  
+## 
+## - Packages -----------------------------------------------------------------------------------------------------------
+##  package       * version date       lib source                                 
+##  assertthat      0.2.1   2019-03-21 [1] CRAN (R 4.0.3)                         
+##  BiocManager     1.30.10 2019-11-16 [1] CRAN (R 4.0.3)                         
+##  BiocStyle     * 2.18.0  2020-10-27 [1] Bioconductor                           
+##  blogdown        0.21    2020-10-11 [1] CRAN (R 4.0.3)                         
+##  bookdown        0.21    2020-10-13 [1] CRAN (R 4.0.3)                         
+##  cli             2.1.0   2020-10-12 [1] CRAN (R 4.0.3)                         
+##  crayon          1.3.4   2017-09-16 [1] CRAN (R 4.0.3)                         
+##  digest          0.6.27  2020-10-24 [1] CRAN (R 4.0.3)                         
+##  evaluate        0.14    2019-05-28 [1] CRAN (R 4.0.3)                         
+##  fansi           0.4.1   2020-01-08 [1] CRAN (R 4.0.3)                         
+##  generics        0.1.0   2020-10-31 [1] CRAN (R 4.0.3)                         
+##  glue            1.4.2   2020-08-27 [1] CRAN (R 4.0.3)                         
+##  htmltools       0.5.0   2020-06-16 [1] CRAN (R 4.0.3)                         
+##  httr            1.4.2   2020-07-20 [1] CRAN (R 4.0.3)                         
+##  jsonlite        1.7.1   2020-09-07 [1] CRAN (R 4.0.3)                         
+##  knitcitations * 1.0.10  2020-11-03 [1] Github (cboettig/knitcitations@ea5d202)
+##  knitr           1.30    2020-09-22 [1] CRAN (R 4.0.3)                         
+##  lubridate       1.7.9   2020-06-08 [1] CRAN (R 4.0.3)                         
+##  magrittr        1.5     2014-11-22 [1] CRAN (R 4.0.3)                         
+##  plyr            1.8.6   2020-03-03 [1] CRAN (R 4.0.3)                         
+##  R6              2.5.0   2020-10-28 [1] CRAN (R 4.0.3)                         
+##  Rcpp            1.0.5   2020-07-06 [1] CRAN (R 4.0.3)                         
+##  RefManageR      1.3.0   2020-11-03 [1] Github (ropensci/RefManageR@ab8fe60)   
+##  rlang           0.4.8   2020-10-08 [1] CRAN (R 4.0.3)                         
+##  rmarkdown       2.5     2020-10-21 [1] CRAN (R 4.0.3)                         
+##  sessioninfo   * 1.1.1   2018-11-05 [1] CRAN (R 4.0.3)                         
+##  stringi         1.5.3   2020-09-09 [1] CRAN (R 4.0.3)                         
+##  stringr         1.4.0   2019-02-10 [1] CRAN (R 4.0.3)                         
+##  withr           2.3.0   2020-09-22 [1] CRAN (R 4.0.3)                         
+##  xfun            0.19    2020-10-30 [1] CRAN (R 4.0.3)                         
+##  xml2            1.3.2   2020-04-23 [1] CRAN (R 4.0.3)                         
+##  yaml            2.2.1   2020-02-01 [1] CRAN (R 4.0.3)                         
+## 
+## [1] D:/R/R-4.0.3/library&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div class=&#34;footnotes&#34;&gt;
+&lt;hr /&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;I couldn’t find the tweet right now.&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</description>
+    </item>
     
     <item>
       <title>The start of a new phase for me</title>
@@ -2770,12 +2942,12 @@ URL: &lt;a href=&#34;https://github.com/rstudio/blogdown&#34;&gt;https://github.
 
 &lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
   &lt;iframe src=&#34;https://player.vimeo.com/video/153753002&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;vimeo video&#34; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
- &lt;/div&gt;
+&lt;/div&gt;
 
 
 &lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
   &lt;iframe src=&#34;https://player.vimeo.com/video/141798183&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;vimeo video&#34; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
- &lt;/div&gt;
+&lt;/div&gt;
 
 &lt;/div&gt;
 &lt;/div&gt;
@@ -3929,7 +4101,7 @@ dev.off()&lt;/code&gt;&lt;/pre&gt;
 &lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;My good old friend Leo sharing very interesting experiences of his path through academic life, public university system in &lt;a href=&#34;https://twitter.com/hashtag/Mexico?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#Mexico&lt;/a&gt;, and remembering a very special person who taught us a ton of life lessons. &lt;a href=&#34;https://t.co/nHAiob30jn&#34;&gt;https://t.co/nHAiob30jn&lt;/a&gt;&lt;/p&gt;&amp;mdash; Luis Bolaños (@lbolanos68) &lt;a href=&#34;https://twitter.com/lbolanos68/status/1060038817774657536?ref_src=twsrc%5Etfw&#34;&gt;November 7, 2018&lt;/a&gt;&lt;/blockquote&gt;
 &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
 
-&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;I&amp;#39;m reading this with tears in my eyes and joy in my heart. I&amp;#39;m so grateful and proud of my friend Leo. I&amp;#39;m so proud of all my classmates! Love you all! Love you Aldo &amp;lt;3 &lt;a href=&#34;https://t.co/ifOK9ASPmy&#34;&gt;https://t.co/ifOK9ASPmy&lt;/a&gt;&lt;/p&gt;&amp;mdash; Mariana ReyesPrieto. (@RanitaRed) &lt;a href=&#34;https://twitter.com/RanitaRed/status/1060116424415436800?ref_src=twsrc%5Etfw&#34;&gt;November 7, 2018&lt;/a&gt;&lt;/blockquote&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;I&amp;#39;m reading this with tears in my eyes and joy in my heart. I&amp;#39;m so grateful and proud of my friend Leo. I&amp;#39;m so proud of all my classmates! Love you all! Love you Aldo &amp;lt;3 &lt;a href=&#34;https://t.co/ifOK9ASPmy&#34;&gt;https://t.co/ifOK9ASPmy&lt;/a&gt;&lt;/p&gt;&amp;mdash; Mariana ReyesPrieto. (@mreyespri) &lt;a href=&#34;https://twitter.com/mreyespri/status/1060116424415436800?ref_src=twsrc%5Etfw&#34;&gt;November 7, 2018&lt;/a&gt;&lt;/blockquote&gt;
 &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
 
 &lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Beautiful and inspiring!! Thanks Leo for writing this, for honoring Aldo and being the voice of many (including myself) who feel lucky and grateful for being a LCG alumni! &lt;a href=&#34;https://t.co/hDyKKThj8B&#34;&gt;https://t.co/hDyKKThj8B&lt;/a&gt;&lt;/p&gt;&amp;mdash; paleogenomics (@paleogenomics) &lt;a href=&#34;https://twitter.com/paleogenomics/status/1060355174546505729?ref_src=twsrc%5Etfw&#34;&gt;November 8, 2018&lt;/a&gt;&lt;/blockquote&gt;
@@ -4202,16 +4374,16 @@ URL: &lt;a href=&#34;https://github.com/rstudio/blogdown&#34;&gt;https://github.
 &lt;h3&gt;20 BC 10:30 am&lt;/h3&gt;
 &lt;div id=&#34;stephanie-kravitz&#34; class=&#34;section level4&#34;&gt;
 &lt;h4&gt;Stephanie Kravitz&lt;/h4&gt;
-&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;&lt;a href=&#34;https://twitter.com/snkravitz?ref_src=twsrc%5Etfw&#34;&gt;@snkravitz&lt;/a&gt; Our textbook model of gene expression is that each parental allele is expressed equally. That is, biallelic expression. However, both genetic and epigenetic mechanisms can lead to monoallelic expression; one or mostly one allele is expressed instead of both.&lt;br&gt; &lt;a href=&#34;https://twitter.com/hashtag/ASHG18?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#ASHG18&lt;/a&gt;&lt;/p&gt;&amp;mdash; Aaron Quinlan (@aaronquinlan) &lt;a href=&#34;https://twitter.com/aaronquinlan/status/1053700571121610752?ref_src=twsrc%5Etfw&#34;&gt;October 20, 2018&lt;/a&gt;&lt;/blockquote&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;&lt;a href=&#34;https://twitter.com/snkravitz?ref_src=twsrc%5Etfw&#34;&gt;@snkravitz&lt;/a&gt; Our textbook model of gene expression is that each parental allele is expressed equally. That is, biallelic expression. However, both genetic and epigenetic mechanisms can lead to monoallelic expression; one or mostly one allele is expressed instead of both.&lt;br&gt; &lt;a href=&#34;https://twitter.com/hashtag/ASHG18?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#ASHG18&lt;/a&gt;&lt;/p&gt;&amp;mdash; Aaron Nov 4 Quinlan (@aaronquinlan) &lt;a href=&#34;https://twitter.com/aaronquinlan/status/1053700571121610752?ref_src=twsrc%5Etfw&#34;&gt;October 20, 2018&lt;/a&gt;&lt;/blockquote&gt;
 &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
 
-&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;&lt;a href=&#34;https://twitter.com/snkravitz?ref_src=twsrc%5Etfw&#34;&gt;@snkravitz&lt;/a&gt; Her goal is to identify autosomal genes that exhibit monoallelic expression.&lt;a href=&#34;https://twitter.com/hashtag/ASHG18?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#ASHG18&lt;/a&gt;&lt;/p&gt;&amp;mdash; Aaron Quinlan (@aaronquinlan) &lt;a href=&#34;https://twitter.com/aaronquinlan/status/1053700970616504320?ref_src=twsrc%5Etfw&#34;&gt;October 20, 2018&lt;/a&gt;&lt;/blockquote&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;&lt;a href=&#34;https://twitter.com/snkravitz?ref_src=twsrc%5Etfw&#34;&gt;@snkravitz&lt;/a&gt; Her goal is to identify autosomal genes that exhibit monoallelic expression.&lt;a href=&#34;https://twitter.com/hashtag/ASHG18?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#ASHG18&lt;/a&gt;&lt;/p&gt;&amp;mdash; Aaron Nov 4 Quinlan (@aaronquinlan) &lt;a href=&#34;https://twitter.com/aaronquinlan/status/1053700970616504320?ref_src=twsrc%5Etfw&#34;&gt;October 20, 2018&lt;/a&gt;&lt;/blockquote&gt;
 &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
 
-&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;&lt;a href=&#34;https://twitter.com/snkravitz?ref_src=twsrc%5Etfw&#34;&gt;@snkravitz&lt;/a&gt; Low madRD indicates biallelic expression. High madRD indicates monoallelic expression. madRD robustly distinguishes genes on the X from autosomal.&lt;a href=&#34;https://twitter.com/hashtag/ASHG18?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#ASHG18&lt;/a&gt;&lt;/p&gt;&amp;mdash; Aaron Quinlan (@aaronquinlan) &lt;a href=&#34;https://twitter.com/aaronquinlan/status/1053702240412651521?ref_src=twsrc%5Etfw&#34;&gt;October 20, 2018&lt;/a&gt;&lt;/blockquote&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;&lt;a href=&#34;https://twitter.com/snkravitz?ref_src=twsrc%5Etfw&#34;&gt;@snkravitz&lt;/a&gt; Low madRD indicates biallelic expression. High madRD indicates monoallelic expression. madRD robustly distinguishes genes on the X from autosomal.&lt;a href=&#34;https://twitter.com/hashtag/ASHG18?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#ASHG18&lt;/a&gt;&lt;/p&gt;&amp;mdash; Aaron Nov 4 Quinlan (@aaronquinlan) &lt;a href=&#34;https://twitter.com/aaronquinlan/status/1053702240412651521?ref_src=twsrc%5Etfw&#34;&gt;October 20, 2018&lt;/a&gt;&lt;/blockquote&gt;
 &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
 
-&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;&lt;a href=&#34;https://twitter.com/snkravitz?ref_src=twsrc%5Etfw&#34;&gt;@snkravitz&lt;/a&gt; Goal is to build a map of tissue-specific genes that exhibit monoallelic expression. Distinguish genetic (e.g., eQTL) and epigenetic effects. &lt;br&gt;How does allelic expression modulate the penetrance of disease alleles?&lt;a href=&#34;https://twitter.com/hashtag/ASHG18?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#ASHG18&lt;/a&gt;&lt;/p&gt;&amp;mdash; Aaron Quinlan (@aaronquinlan) &lt;a href=&#34;https://twitter.com/aaronquinlan/status/1053703467091423232?ref_src=twsrc%5Etfw&#34;&gt;October 20, 2018&lt;/a&gt;&lt;/blockquote&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;&lt;a href=&#34;https://twitter.com/snkravitz?ref_src=twsrc%5Etfw&#34;&gt;@snkravitz&lt;/a&gt; Goal is to build a map of tissue-specific genes that exhibit monoallelic expression. Distinguish genetic (e.g., eQTL) and epigenetic effects. &lt;br&gt;How does allelic expression modulate the penetrance of disease alleles?&lt;a href=&#34;https://twitter.com/hashtag/ASHG18?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#ASHG18&lt;/a&gt;&lt;/p&gt;&amp;mdash; Aaron Nov 4 Quinlan (@aaronquinlan) &lt;a href=&#34;https://twitter.com/aaronquinlan/status/1053703467091423232?ref_src=twsrc%5Etfw&#34;&gt;October 20, 2018&lt;/a&gt;&lt;/blockquote&gt;
 &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
 
 &lt;/div&gt;
@@ -4281,7 +4453,7 @@ URL: &lt;a href=&#34;https://github.com/rstudio/blogdown&#34;&gt;https://github.
 &lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;LOL I&amp;#39;m not typing that equation &lt;a href=&#34;https://twitter.com/hashtag/ASHG18?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#ASHG18&lt;/a&gt;&lt;/p&gt;&amp;mdash; Michael Hoffman (@michaelhoffman) &lt;a href=&#34;https://twitter.com/michaelhoffman/status/1053693247418073088?ref_src=twsrc%5Etfw&#34;&gt;October 20, 2018&lt;/a&gt;&lt;/blockquote&gt;
 &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
 
-&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;It is so fun seeing big, confident smiles on the faces of trainees after giving a great talk. The best.&lt;a href=&#34;https://twitter.com/hashtag/ASHG18?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#ASHG18&lt;/a&gt;&lt;/p&gt;&amp;mdash; Aaron Quinlan (@aaronquinlan) &lt;a href=&#34;https://twitter.com/aaronquinlan/status/1053698711216214016?ref_src=twsrc%5Etfw&#34;&gt;October 20, 2018&lt;/a&gt;&lt;/blockquote&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;It is so fun seeing big, confident smiles on the faces of trainees after giving a great talk. The best.&lt;a href=&#34;https://twitter.com/hashtag/ASHG18?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#ASHG18&lt;/a&gt;&lt;/p&gt;&amp;mdash; Aaron Nov 4 Quinlan (@aaronquinlan) &lt;a href=&#34;https://twitter.com/aaronquinlan/status/1053698711216214016?ref_src=twsrc%5Etfw&#34;&gt;October 20, 2018&lt;/a&gt;&lt;/blockquote&gt;
 &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
 
 &lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;From Ambrose Wonkam on genetic medicine research in Africa, to &lt;a href=&#34;https://twitter.com/genetisaur?ref_src=twsrc%5Etfw&#34;&gt;@genetisaur&lt;/a&gt; &amp;amp; @barbara_dutty on probs calculating PRS with euro data in non-euro’s, and Azeez Butali’s cleft palate GWAS, one main &lt;a href=&#34;https://twitter.com/hashtag/ashg18?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#ashg18&lt;/a&gt; takeway is the value of genomic research in African populations &lt;a href=&#34;https://twitter.com/AfSHGenetics?ref_src=twsrc%5Etfw&#34;&gt;@AfSHGenetics&lt;/a&gt;&lt;/p&gt;&amp;mdash; Sarah Spendlove (@spendlove_sarah) &lt;a href=&#34;https://twitter.com/spendlove_sarah/status/1053699388881592320?ref_src=twsrc%5Etfw&#34;&gt;October 20, 2018&lt;/a&gt;&lt;/blockquote&gt;
@@ -4852,7 +5024,7 @@ URL: &lt;a href=&#34;https://github.com/rstudio/blogdown&#34;&gt;https://github.
 &lt;/div&gt;
 &lt;div id=&#34;diversity&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Diversity&lt;/h3&gt;
-&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;The diversity of participants we see at &lt;a href=&#34;https://twitter.com/hashtag/ASHG18?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#ASHG18&lt;/a&gt;, shows how different we are, yet similar and genetically the same as &lt;a href=&#34;https://twitter.com/hashtag/Human?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#Human&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/HumanGenetics?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#HumanGenetics&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/UnityinDiversity?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#UnityinDiversity&lt;/a&gt;&lt;/p&gt;&amp;mdash; Dr. Swarkar Sharma (@sawerkar) &lt;a href=&#34;https://twitter.com/sawerkar/status/1052956621477896192?ref_src=twsrc%5Etfw&#34;&gt;October 18, 2018&lt;/a&gt;&lt;/blockquote&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;The diversity of participants we see at &lt;a href=&#34;https://twitter.com/hashtag/ASHG18?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#ASHG18&lt;/a&gt;, shows how different we are, yet similar and genetically the same as &lt;a href=&#34;https://twitter.com/hashtag/Human?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#Human&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/HumanGenetics?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#HumanGenetics&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/UnityinDiversity?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#UnityinDiversity&lt;/a&gt;&lt;/p&gt;&amp;mdash; Swarkar Sharma, Ph.D. (@sawerkar) &lt;a href=&#34;https://twitter.com/sawerkar/status/1052956621477896192?ref_src=twsrc%5Etfw&#34;&gt;October 18, 2018&lt;/a&gt;&lt;/blockquote&gt;
 &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
 
 &lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;.&lt;a href=&#34;https://twitter.com/simon_r_myers?ref_src=twsrc%5Etfw&#34;&gt;@simon_r_myers&lt;/a&gt; standing in for Sinan Shi in session 43 because speaker couldn’t get his visa. Hearing this far too much 😞 &lt;a href=&#34;https://twitter.com/hashtag/ASHG18?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#ASHG18&lt;/a&gt;&lt;/p&gt;&amp;mdash; Brooke LaFlamme (@Brooke_LaFlamme) &lt;a href=&#34;https://twitter.com/Brooke_LaFlamme/status/1052968546945228801?ref_src=twsrc%5Etfw&#34;&gt;October 18, 2018&lt;/a&gt;&lt;/blockquote&gt;
@@ -5042,7 +5214,7 @@ URL: &lt;a href=&#34;https://github.com/rstudio/blogdown&#34;&gt;https://github.
 &lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Don&amp;#39;t get distracted by the sexiness of genetic science! (Maile Taualii) &lt;a href=&#34;https://twitter.com/hashtag/silentgenomes?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#silentgenomes&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/ASHG18?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#ASHG18&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/indigenomics?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#indigenomics&lt;/a&gt;&lt;/p&gt;&amp;mdash; Nanibaa&amp;#39; Garrison (@NanibaaGarrison) &lt;a href=&#34;https://twitter.com/NanibaaGarrison/status/1052617666555338754?ref_src=twsrc%5Etfw&#34;&gt;October 17, 2018&lt;/a&gt;&lt;/blockquote&gt;
 &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
 
-&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;&lt;a href=&#34;https://twitter.com/hashtag/ASHG18?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#ASHG18&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/silentgenomes?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#silentgenomes&lt;/a&gt; Maile directly addressing the &amp;quot;residue&amp;quot; of colonialism that is linked to culturally sustainable biomedical research today!&lt;/p&gt;&amp;mdash; Keolu Fox (@KeoluFox) &lt;a href=&#34;https://twitter.com/KeoluFox/status/1052617774818713601?ref_src=twsrc%5Etfw&#34;&gt;October 17, 2018&lt;/a&gt;&lt;/blockquote&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;&lt;a href=&#34;https://twitter.com/hashtag/ASHG18?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#ASHG18&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/silentgenomes?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#silentgenomes&lt;/a&gt; Maile directly addressing the &amp;quot;residue&amp;quot; of colonialism that is linked to culturally sustainable biomedical research today!&lt;/p&gt;&amp;mdash; Dr./Prof. Keolu Fox (@KeoluFox) &lt;a href=&#34;https://twitter.com/KeoluFox/status/1052617774818713601?ref_src=twsrc%5Etfw&#34;&gt;October 17, 2018&lt;/a&gt;&lt;/blockquote&gt;
 &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
 
 &lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Taualii: take-home messages &lt;br&gt;1. There is no easy solution &lt;br&gt;2. Ignorance isn’t an excuse &lt;br&gt;3. Understand what is at risk &lt;br&gt;Think about whether your work is going to benefit the generations to come &lt;a href=&#34;https://twitter.com/hashtag/SilentGenomes?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#SilentGenomes&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/IndiGenomics?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#IndiGenomics&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/ASHG18?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#ASHG18&lt;/a&gt;&lt;/p&gt;&amp;mdash; Brooke LaFlamme (@Brooke_LaFlamme) &lt;a href=&#34;https://twitter.com/Brooke_LaFlamme/status/1052618174028378112?ref_src=twsrc%5Etfw&#34;&gt;October 17, 2018&lt;/a&gt;&lt;/blockquote&gt;
@@ -5102,7 +5274,7 @@ URL: &lt;a href=&#34;https://github.com/rstudio/blogdown&#34;&gt;https://github.
 &lt;h3&gt;6C 11:30 am&lt;/h3&gt;
 &lt;div id=&#34;kelly-east&#34; class=&#34;section level4&#34;&gt;
 &lt;h4&gt;Kelly East&lt;/h4&gt;
-&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Kelly East of &lt;a href=&#34;https://twitter.com/hudsonalpha?ref_src=twsrc%5Etfw&#34;&gt;@hudsonalpha&lt;/a&gt;: data from Concert Genetics suggest on average, 10 new genetic testing products enter the market every day. &lt;a href=&#34;https://twitter.com/hashtag/ASHG18?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#ASHG18&lt;/a&gt;&lt;/p&gt;&amp;mdash; Chris Gunter (@girlscientist) &lt;a href=&#34;https://twitter.com/girlscientist/status/1052628766739054592?ref_src=twsrc%5Etfw&#34;&gt;October 17, 2018&lt;/a&gt;&lt;/blockquote&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Kelly East of &lt;a href=&#34;https://twitter.com/hudsonalpha?ref_src=twsrc%5Etfw&#34;&gt;@hudsonalpha&lt;/a&gt;: data from Concert Genetics suggest on average, 10 new genetic testing products enter the market every day. &lt;a href=&#34;https://twitter.com/hashtag/ASHG18?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#ASHG18&lt;/a&gt;&lt;/p&gt;&amp;mdash; Chris Gunter #VOTE (@girlscientist) &lt;a href=&#34;https://twitter.com/girlscientist/status/1052628766739054592?ref_src=twsrc%5Etfw&#34;&gt;October 17, 2018&lt;/a&gt;&lt;/blockquote&gt;
 &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
 
 &lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;KE discussing how medical genetic testing is rapidly expanding both in types of tests and patients being tested. We don’t have enough genetic providers to handle this, and the ones we do have aren’t uniformly distributed. &lt;a href=&#34;https://twitter.com/hashtag/ASHG18?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#ASHG18&lt;/a&gt;&lt;/p&gt;&amp;mdash; Avery Davis Bell PhD (@averydavisbell) &lt;a href=&#34;https://twitter.com/averydavisbell/status/1052628958330552320?ref_src=twsrc%5Etfw&#34;&gt;October 17, 2018&lt;/a&gt;&lt;/blockquote&gt;
@@ -5112,7 +5284,7 @@ URL: &lt;a href=&#34;https://github.com/rstudio/blogdown&#34;&gt;https://github.
 &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
 
 (others made better tweets!)&lt;/p&gt;
-&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;K East: how do we bring more genetics services to everyone? 1. Make more providers. 2. Increase capacity of existing genetics providers. Or 3, her favorite: Train other healthcare providers to do genetics. &lt;a href=&#34;https://twitter.com/hashtag/ASHG18?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#ASHG18&lt;/a&gt;&lt;/p&gt;&amp;mdash; Chris Gunter (@girlscientist) &lt;a href=&#34;https://twitter.com/girlscientist/status/1052630028364599296?ref_src=twsrc%5Etfw&#34;&gt;October 17, 2018&lt;/a&gt;&lt;/blockquote&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;K East: how do we bring more genetics services to everyone? 1. Make more providers. 2. Increase capacity of existing genetics providers. Or 3, her favorite: Train other healthcare providers to do genetics. &lt;a href=&#34;https://twitter.com/hashtag/ASHG18?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#ASHG18&lt;/a&gt;&lt;/p&gt;&amp;mdash; Chris Gunter #VOTE (@girlscientist) &lt;a href=&#34;https://twitter.com/girlscientist/status/1052630028364599296?ref_src=twsrc%5Etfw&#34;&gt;October 17, 2018&lt;/a&gt;&lt;/blockquote&gt;
 &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
 
 &lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Solution to this KE is advocating is training non-genetic healthcare providers to do the genetics to help patients who will never make it to a genetic counselor. Many providers already interested in genetics. &lt;a href=&#34;https://twitter.com/hashtag/ASHG18?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#ASHG18&lt;/a&gt;&lt;/p&gt;&amp;mdash; Avery Davis Bell PhD (@averydavisbell) &lt;a href=&#34;https://twitter.com/averydavisbell/status/1052630250918567937?ref_src=twsrc%5Etfw&#34;&gt;October 17, 2018&lt;/a&gt;&lt;/blockquote&gt;
@@ -5142,7 +5314,7 @@ URL: &lt;a href=&#34;https://github.com/rstudio/blogdown&#34;&gt;https://github.
 &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
 
 &lt;p&gt;35,000 page views on DNA awareness day3. 23andMe did a survey study in March 2018&lt;/p&gt;
-&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Chris Gunter: your paper is a nucleus for a larger &lt;a href=&#34;https://twitter.com/hashtag/scicomm?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#scicomm&lt;/a&gt; ecosystem &lt;a href=&#34;https://twitter.com/hashtag/ASHG18?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#ASHG18&lt;/a&gt;&lt;/p&gt;&amp;mdash; Kathryn Vaillancourt (@MoleculeMind) &lt;a href=&#34;https://twitter.com/MoleculeMind/status/1052636686025256960?ref_src=twsrc%5Etfw&#34;&gt;October 17, 2018&lt;/a&gt;&lt;/blockquote&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Chris Gunter: your paper is a nucleus for a larger &lt;a href=&#34;https://twitter.com/hashtag/scicomm?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#scicomm&lt;/a&gt; ecosystem &lt;a href=&#34;https://twitter.com/hashtag/ASHG18?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#ASHG18&lt;/a&gt;&lt;/p&gt;&amp;mdash; Kathryn Vaillancourt is writing all the things (@MoleculeMind) &lt;a href=&#34;https://twitter.com/MoleculeMind/status/1052636686025256960?ref_src=twsrc%5Etfw&#34;&gt;October 17, 2018&lt;/a&gt;&lt;/blockquote&gt;
 &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
 
 &lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Science literacy does NOT equal support for science. New framework: Science ENGAGEMENT -- a two-way street. &lt;a href=&#34;https://twitter.com/girlscientist?ref_src=twsrc%5Etfw&#34;&gt;@girlscientist&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/ASHG18?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#ASHG18&lt;/a&gt;&lt;/p&gt;&amp;mdash; Cincy Kids Genomics (@CincyKidsGenomX) &lt;a href=&#34;https://twitter.com/CincyKidsGenomX/status/1052638967663800320?ref_src=twsrc%5Etfw&#34;&gt;October 17, 2018&lt;/a&gt;&lt;/blockquote&gt;
@@ -5163,7 +5335,7 @@ URL: &lt;a href=&#34;https://github.com/rstudio/blogdown&#34;&gt;https://github.
 &lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Hmm, I get the point that a republican scientist might have an easier time communicating with a republican audience. But it also felt discouraging to me. Well, I guess that you should always try to be aware of your audience and try your best to connect with them. &lt;a href=&#34;https://twitter.com/hashtag/ASHG18?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#ASHG18&lt;/a&gt;&lt;/p&gt;&amp;mdash; 🇲🇽 Leonardo Collado-Torres (@lcolladotor) &lt;a href=&#34;https://twitter.com/lcolladotor/status/1052643639267012613?ref_src=twsrc%5Etfw&#34;&gt;October 17, 2018&lt;/a&gt;&lt;/blockquote&gt;
 &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
 
-&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Beth Tuck: &lt;a href=&#34;https://twitter.com/genome_gov?ref_src=twsrc%5Etfw&#34;&gt;@genome_gov&lt;/a&gt; would love to have everyone as partners for DNA Day 2019. Check out their site at &lt;a href=&#34;https://t.co/DQUWzVO5bB&#34;&gt;https://t.co/DQUWzVO5bB&lt;/a&gt;, of their Pinterest, or Twitter, or Facebook, or suggest something new! &lt;a href=&#34;https://twitter.com/hashtag/ASHG18?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#ASHG18&lt;/a&gt;&lt;/p&gt;&amp;mdash; Chris Gunter (@girlscientist) &lt;a href=&#34;https://twitter.com/girlscientist/status/1052620297155829760?ref_src=twsrc%5Etfw&#34;&gt;October 17, 2018&lt;/a&gt;&lt;/blockquote&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Beth Tuck: &lt;a href=&#34;https://twitter.com/genome_gov?ref_src=twsrc%5Etfw&#34;&gt;@genome_gov&lt;/a&gt; would love to have everyone as partners for DNA Day 2019. Check out their site at &lt;a href=&#34;https://t.co/DQUWzVO5bB&#34;&gt;https://t.co/DQUWzVO5bB&lt;/a&gt;, of their Pinterest, or Twitter, or Facebook, or suggest something new! &lt;a href=&#34;https://twitter.com/hashtag/ASHG18?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#ASHG18&lt;/a&gt;&lt;/p&gt;&amp;mdash; Chris Gunter #VOTE (@girlscientist) &lt;a href=&#34;https://twitter.com/girlscientist/status/1052620297155829760?ref_src=twsrc%5Etfw&#34;&gt;October 17, 2018&lt;/a&gt;&lt;/blockquote&gt;
 &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
 
 &lt;/div&gt;
@@ -6495,7 +6667,7 @@ Further talk details can easily be added to this page using *Markdown* and $\rm 
 &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
 
 &lt;p&gt;I couldn’t be there, but I wasn’t the only one excited following what has happening online thanks to tweets from many including &lt;a href=&#34;https://twitter.com/mandyfmejia&#34;&gt;Mandy Mejia&lt;/a&gt; and &lt;a href=&#34;https://twitter.com/michaelhoffman&#34;&gt;Michael Hoffman&lt;/a&gt;.&lt;/p&gt;
-&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;THIS IS ACTUALLY HAPPENING. Now in CC-West Ballroom A. &lt;a href=&#34;https://twitter.com/hashtag/JSM2018?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#JSM2018&lt;/a&gt; &lt;a href=&#34;https://t.co/Pw9zdlhi02&#34;&gt;pic.twitter.com/Pw9zdlhi02&lt;/a&gt;&lt;/p&gt;&amp;mdash; Mandy Mejia, PhD (@mandyfmejia) &lt;a href=&#34;https://twitter.com/mandyfmejia/status/1024042337033285632?ref_src=twsrc%5Etfw&#34;&gt;July 30, 2018&lt;/a&gt;&lt;/blockquote&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;THIS IS ACTUALLY HAPPENING. Now in CC-West Ballroom A. &lt;a href=&#34;https://twitter.com/hashtag/JSM2018?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#JSM2018&lt;/a&gt; &lt;a href=&#34;https://t.co/Pw9zdlhi02&#34;&gt;pic.twitter.com/Pw9zdlhi02&lt;/a&gt;&lt;/p&gt;&amp;mdash; Mandy is recruiting a stats-neuro grad student! (@mandyfmejia) &lt;a href=&#34;https://twitter.com/mandyfmejia/status/1024042337033285632?ref_src=twsrc%5Etfw&#34;&gt;July 30, 2018&lt;/a&gt;&lt;/blockquote&gt;
 &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
 
 &lt;/div&gt;
@@ -8809,254 +8981,254 @@ kable(top_options, format = &#39;markdown&#39;, row.names = TRUE)
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
-&lt;th align=&#34;left&#34;&gt;&lt;/th&gt;
-&lt;th align=&#34;left&#34;&gt;repro&lt;/th&gt;
-&lt;th align=&#34;left&#34;&gt;economia&lt;/th&gt;
-&lt;th align=&#34;left&#34;&gt;bacterianas&lt;/th&gt;
-&lt;th align=&#34;left&#34;&gt;parasitarias&lt;/th&gt;
-&lt;th align=&#34;left&#34;&gt;diagnosticas&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;repro&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;economia&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;bacterianas&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;parasitarias&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;diagnosticas&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
-&lt;td align=&#34;left&#34;&gt;5&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;lucia eliana&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;isaac reyes 2&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;jose luis gutierrez&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;cintli martinez&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;1701&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;5&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;lucia eliana&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;isaac reyes 2&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;jose luis gutierrez&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;cintli martinez&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;1701&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td align=&#34;left&#34;&gt;11&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;lucia eliana&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;isaac reyes 2&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;rodrigo mena&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;cintli martinez&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;1701&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;11&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;lucia eliana&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;isaac reyes 2&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;rodrigo mena&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;cintli martinez&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;1701&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td align=&#34;left&#34;&gt;14&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;lucia eliana&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;isaac reyes 2&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;beatriz arellano&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;cintli martinez&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;1701&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;14&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;lucia eliana&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;isaac reyes 2&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;beatriz arellano&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;cintli martinez&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;1701&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td align=&#34;left&#34;&gt;19&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;lucia eliana&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;isaac reyes 2&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;ramirez ortega&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;cintli martinez&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;1701&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;19&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;lucia eliana&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;isaac reyes 2&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;ramirez ortega&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;cintli martinez&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;1701&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td align=&#34;left&#34;&gt;25&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;lucia eliana&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;isaac reyes 2&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;de la pena&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;cintli martinez&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;1701&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;25&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;lucia eliana&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;isaac reyes 2&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;de la pena&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;cintli martinez&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;1701&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td align=&#34;left&#34;&gt;31&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;lucia eliana&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;isaac reyes 2&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;efren diaz aparicio&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;cintli martinez&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;1701&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;31&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;lucia eliana&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;isaac reyes 2&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;efren diaz aparicio&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;cintli martinez&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;1701&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td align=&#34;left&#34;&gt;37&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;lucia eliana&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;isaac reyes 2&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;lucia del carmen favila&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;cintli martinez&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;1701&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;37&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;lucia eliana&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;isaac reyes 2&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;lucia del carmen favila&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;cintli martinez&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;1701&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td align=&#34;left&#34;&gt;46&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;lucia eliana&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;isaac reyes 2&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;jose luis gutierrez&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;osvaldo froylan&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;1701&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;46&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;lucia eliana&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;isaac reyes 2&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;jose luis gutierrez&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;osvaldo froylan&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;1701&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td align=&#34;left&#34;&gt;50&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;lucia eliana&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;isaac reyes 2&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;beatriz arellano&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;osvaldo froylan&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;1701&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;50&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;lucia eliana&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;isaac reyes 2&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;beatriz arellano&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;osvaldo froylan&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;1701&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td align=&#34;left&#34;&gt;58&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;lucia eliana&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;isaac reyes 2&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;ramirez ortega&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;osvaldo froylan&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;1701&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;58&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;lucia eliana&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;isaac reyes 2&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;ramirez ortega&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;osvaldo froylan&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;1701&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td align=&#34;left&#34;&gt;67&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;lucia eliana&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;isaac reyes 2&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;de la pena&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;osvaldo froylan&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;1701&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;67&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;lucia eliana&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;isaac reyes 2&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;de la pena&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;osvaldo froylan&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;1701&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td align=&#34;left&#34;&gt;76&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;lucia eliana&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;isaac reyes 2&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;efren diaz aparicio&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;osvaldo froylan&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;1701&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;76&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;lucia eliana&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;isaac reyes 2&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;efren diaz aparicio&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;osvaldo froylan&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;1701&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td align=&#34;left&#34;&gt;85&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;lucia eliana&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;isaac reyes 2&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;lucia del carmen favila&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;osvaldo froylan&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;1701&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;85&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;lucia eliana&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;isaac reyes 2&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;lucia del carmen favila&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;osvaldo froylan&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;1701&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td align=&#34;left&#34;&gt;123&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;lucia eliana&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;isaac reyes 2&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;jose luis gutierrez&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;guadarrama 01&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;1701&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;123&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;lucia eliana&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;isaac reyes 2&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;jose luis gutierrez&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;guadarrama 01&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;1701&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td align=&#34;left&#34;&gt;130&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;lucia eliana&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;isaac reyes 2&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;rodrigo mena&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;guadarrama 01&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;1701&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;130&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;lucia eliana&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;isaac reyes 2&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;rodrigo mena&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;guadarrama 01&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;1701&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td align=&#34;left&#34;&gt;134&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;lucia eliana&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;isaac reyes 2&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;beatriz arellano&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;guadarrama 01&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;1701&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;134&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;lucia eliana&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;isaac reyes 2&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;beatriz arellano&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;guadarrama 01&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;1701&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td align=&#34;left&#34;&gt;137&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;lucia eliana&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;isaac reyes 2&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;de la pena, ramirez ortega&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;guadarrama 01&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;1701&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;137&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;lucia eliana&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;isaac reyes 2&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;de la pena, ramirez ortega&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;guadarrama 01&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;1701&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td align=&#34;left&#34;&gt;144&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;lucia eliana&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;isaac reyes 2&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;de la pena&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;guadarrama 01&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;1701&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;144&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;lucia eliana&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;isaac reyes 2&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;de la pena&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;guadarrama 01&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;1701&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td align=&#34;left&#34;&gt;151&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;lucia eliana&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;isaac reyes 2&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;efren diaz aparicio&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;guadarrama 01&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;1701&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;151&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;lucia eliana&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;isaac reyes 2&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;efren diaz aparicio&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;guadarrama 01&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;1701&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td align=&#34;left&#34;&gt;158&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;lucia eliana&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;isaac reyes 2&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;lucia del carmen favila&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;guadarrama 01&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;1701&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;158&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;lucia eliana&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;isaac reyes 2&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;lucia del carmen favila&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;guadarrama 01&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;1701&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td align=&#34;left&#34;&gt;209&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;lucia eliana&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;isaac reyes 2&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;jose luis gutierrez&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;guadarrama 05&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;1701&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;209&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;lucia eliana&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;isaac reyes 2&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;jose luis gutierrez&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;guadarrama 05&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;1701&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td align=&#34;left&#34;&gt;217&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;lucia eliana&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;isaac reyes 2&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;rodrigo mena&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;guadarrama 05&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;1701&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;217&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;lucia eliana&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;isaac reyes 2&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;rodrigo mena&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;guadarrama 05&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;1701&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td align=&#34;left&#34;&gt;222&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;lucia eliana&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;isaac reyes 2&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;de la pena, ramirez ortega&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;guadarrama 05&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;1701&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;222&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;lucia eliana&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;isaac reyes 2&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;de la pena, ramirez ortega&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;guadarrama 05&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;1701&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td align=&#34;left&#34;&gt;232&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;lucia eliana&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;isaac reyes 2&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;de la pena&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;guadarrama 05&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;1701&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;232&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;lucia eliana&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;isaac reyes 2&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;de la pena&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;guadarrama 05&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;1701&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td align=&#34;left&#34;&gt;242&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;lucia eliana&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;isaac reyes 2&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;efren diaz aparicio&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;guadarrama 05&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;1701&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;242&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;lucia eliana&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;isaac reyes 2&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;efren diaz aparicio&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;guadarrama 05&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;1701&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td align=&#34;left&#34;&gt;252&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;lucia eliana&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;isaac reyes 2&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;lucia del carmen favila&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;guadarrama 05&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;1701&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;252&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;lucia eliana&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;isaac reyes 2&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;lucia del carmen favila&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;guadarrama 05&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;1701&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td align=&#34;left&#34;&gt;872&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;lucia eliana&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;isaac reyes 2&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;jose luis gutierrez&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;guadarrama 05&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;1704&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;872&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;lucia eliana&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;isaac reyes 2&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;jose luis gutierrez&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;guadarrama 05&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;1704&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td align=&#34;left&#34;&gt;885&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;lucia eliana&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;isaac reyes 2&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;de la pena&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;guadarrama 05&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;1704&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;885&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;lucia eliana&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;isaac reyes 2&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;de la pena&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;guadarrama 05&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;1704&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td align=&#34;left&#34;&gt;894&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;lucia eliana&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;isaac reyes 2&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;efren diaz aparicio&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;guadarrama 05&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;1704&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;894&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;lucia eliana&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;isaac reyes 2&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;efren diaz aparicio&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;guadarrama 05&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;1704&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td align=&#34;left&#34;&gt;903&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;lucia eliana&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;isaac reyes 2&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;lucia del carmen favila&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;guadarrama 05&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;1704&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;903&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;lucia eliana&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;isaac reyes 2&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;lucia del carmen favila&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;guadarrama 05&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;1704&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
@@ -9550,7 +9722,7 @@ Further talk details can easily be added to this page using *Markdown* and $\rm 
       <guid>https://lcolladotor.github.io/2015/07/07/rmarkdown/</guid>
       <description>&lt;p&gt;A couple weeks ago I was given the opportunity to teach a 1 hr 30 min slot of an introduction to &lt;code&gt;R&lt;/code&gt; course. In the past, I&amp;rsquo;ve taught lectures for similar courses, and I ended up asking myself what would be the best short topic to teach and how to teach it.&lt;/p&gt;
 &lt;h2 id=&#34;best-short-topic&#34;&gt;Best short topic&lt;/h2&gt;
-&lt;p&gt;There are two ways to answer the first question, one boring and one more interesting. The boring answer is that the course instructor selected the topic. The interesting one goes like this. I have taken short &lt;code&gt;R&lt;/code&gt; courses before and taught others, and it&amp;rsquo;s always overwhelming for the students. You get to cover many concepts, get familiarized with &lt;code&gt;R&lt;/code&gt;&#39;s syntax, and in the end without lots of practice it&amp;rsquo;s very challenging to retain much of the information. I think that students love it when they learn how to do something simple that could be the first building block for many of their projects. In parallel, I think that one of the coolest &lt;code&gt;R&lt;/code&gt; topics you can learn in an hour is how to create reproducible documents with &lt;code&gt;rmarkdown&lt;/code&gt; &lt;a id=&#39;cite-rmarkdown&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;http://CRAN.R-project.org/package=rmarkdown&#39;&gt;Allaire, Cheng, Xie, McPherson, et al., 2015&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;There are two ways to answer the first question, one boring and one more interesting. The boring answer is that the course instructor selected the topic. The interesting one goes like this. I have taken short &lt;code&gt;R&lt;/code&gt; courses before and taught others, and it&amp;rsquo;s always overwhelming for the students. You get to cover many concepts, get familiarized with &lt;code&gt;R&lt;/code&gt;&amp;rsquo;s syntax, and in the end without lots of practice it&amp;rsquo;s very challenging to retain much of the information. I think that students love it when they learn how to do something simple that could be the first building block for many of their projects. In parallel, I think that one of the coolest &lt;code&gt;R&lt;/code&gt; topics you can learn in an hour is how to create reproducible documents with &lt;code&gt;rmarkdown&lt;/code&gt; &lt;a id=&#39;cite-rmarkdown&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;http://CRAN.R-project.org/package=rmarkdown&#39;&gt;Allaire, Cheng, Xie, McPherson, et al., 2015&lt;/a&gt;).&lt;/p&gt;
 &lt;p&gt;Learning how to use a single function, &lt;code&gt;render()&lt;/code&gt; in this case, is as simple as it gets. And using the 
 &lt;a href=&#34;http://www.rstudio.com/products/rstudio/#Desktop&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;RStudio Desktop&lt;/a&gt; is even simpler. Of course, it can easily get complicated. For example, on a new computer you need to install all the LaTeX dependencies if you want to create PDF files. That task can take some time and maybe scare away some new users. But PDF files are really a plus in this case since you can start creating HTML and Word documents. Other complications arise when a user is interested in more control over formatting the file, but like I said earlier, all you need is a simple building block and &lt;code&gt;rmarkdown&lt;/code&gt; is clearly one of them.&lt;/p&gt;
 &lt;p&gt;This is why the final answer to the first question was teaching how to use &lt;code&gt;rmarkdown&lt;/code&gt; to create reproducible reports (HTML, Word files) using &lt;code&gt;R&lt;/code&gt;.&lt;/p&gt;
@@ -10079,7 +10251,7 @@ Further talk details can easily be added to this page using *Markdown* and $\rm 
       <guid>https://lcolladotor.github.io/2014/12/11/dots/</guid>
       <description>&lt;h2 id=&#34;as-a-user&#34;&gt;As a user&lt;/h2&gt;
 &lt;p&gt;Imagine that you are starting to learn how to use a specific &lt;code&gt;R&lt;/code&gt; package, lets call it &lt;code&gt;foo&lt;/code&gt;. You will look at the vignette (if there is one), use &lt;code&gt;help(package = foo)&lt;/code&gt;, or look at the reference manual (for example, 
-&lt;a href=&#34;http://cran.r-project.org/web/packages/devtools/devtools.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;devtools&amp;rsquo; ref man&lt;/a&gt;). Eventually, you will open the help page for the function(s) you are interested in using.&lt;/p&gt;
+&lt;a href=&#34;http://cran.r-project.org/web/packages/devtools/devtools.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;devtools&#39; ref man&lt;/a&gt;). Eventually, you will open the help page for the function(s) you are interested in using.&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;?function_I_want_to_use
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;In many packages, there is a main use case that is addressed by the package. A common strategy is to export a main function. That function will likely have a long list of arguments. So as a new user, you are suddenly exposed to a complicated help page and you will want to figure out which arguments you need to use.&lt;/p&gt;
@@ -10569,7 +10741,7 @@ Further talk details can easily be added to this page using *Markdown* and $\rm 
 &lt;a href=&#34;http://bmorebiostat.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Bmore Biostats&lt;/a&gt; as well as topics on 
 &lt;a href=&#34;https://twitter.com/search?q=%23rstats&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;#rstats&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;This post is part of the summer 2014 
-&lt;a href=&#34;http://bmorebiostat.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Bmore Biostats&lt;/a&gt;&amp;rsquo; iron blogger challenge.&lt;/p&gt;
+&lt;a href=&#34;http://bmorebiostat.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Bmore Biostats&lt;/a&gt;&#39; iron blogger challenge.&lt;/p&gt;
 </description>
     </item>
     
@@ -10578,10 +10750,10 @@ Further talk details can easily be added to this page using *Markdown* and $\rm 
       <link>https://lcolladotor.github.io/2014/04/22/mortgage-calculator-flexible-payments/</link>
       <pubDate>Tue, 22 Apr 2014 00:00:00 +0000</pubDate>
       <guid>https://lcolladotor.github.io/2014/04/22/mortgage-calculator-flexible-payments/</guid>
-      <description>&lt;p&gt;Have you ever thought of borrowing some money? A common case is when you have to borrow money for buying a house, which is called a mortgage. Wikipedia (&lt;span class=&#34;showtooltip&#34; title=&#34;(2014). &#39;Mortgage loan - Wikipedia, the free encyclopedia.&#39; .&#34;&gt;&lt;a href=&#34;http://en.wikipedia.org/wiki/Mortgage_loan&#34;&gt;&#39;Mortgage loan&amp;rsquo; entry&lt;/a&gt;&lt;/span&gt;) goes into much more detail about the definition than what I&amp;rsquo;ll cover.&lt;/p&gt;
+      <description>&lt;p&gt;Have you ever thought of borrowing some money? A common case is when you have to borrow money for buying a house, which is called a mortgage. Wikipedia (&lt;span class=&#34;showtooltip&#34; title=&#34;(2014). &#39;Mortgage loan - Wikipedia, the free encyclopedia.&#39; .&#34;&gt;&lt;a href=&#34;http://en.wikipedia.org/wiki/Mortgage_loan&#34;&gt;&amp;lsquo;Mortgage loan&amp;rsquo; entry&lt;/a&gt;&lt;/span&gt;) goes into much more detail about the definition than what I&amp;rsquo;ll cover.&lt;/p&gt;
 &lt;p&gt;One of the aspects you have to evaluate when considering a loan such as a mortgage is how much interest you will be charged and how long the loan will be. Those two determine your monthly payment.&lt;/p&gt;
 &lt;h2 id=&#34;comparing-loans&#34;&gt;Comparing loans&lt;/h2&gt;
-&lt;p&gt;That is, given the loan amount, you can compare different loans that offer different rates and/or loan lengths. There are many tools out there that allow you to do so and are generally called mortgage calculators. Although the more detailed term is amortization calculator. From wikipedia(&lt;span class=&#34;showtooltip&#34; title=&#34;(2014). &#39;Amortization calculator - Wikipedia, the free encyclopedia.&#39; .&#34;&gt;&lt;a href=&#34;http://en.wikipedia.org/wiki/Amortization_calculator&#34;&gt;&#39;Amortization calculator&amp;rsquo; entry&lt;/a&gt;&lt;/span&gt;) we find the so called annuity formula which helps you calculate your monthly payment.&lt;/p&gt;
+&lt;p&gt;That is, given the loan amount, you can compare different loans that offer different rates and/or loan lengths. There are many tools out there that allow you to do so and are generally called mortgage calculators. Although the more detailed term is amortization calculator. From wikipedia(&lt;span class=&#34;showtooltip&#34; title=&#34;(2014). &#39;Amortization calculator - Wikipedia, the free encyclopedia.&#39; .&#34;&gt;&lt;a href=&#34;http://en.wikipedia.org/wiki/Amortization_calculator&#34;&gt;&amp;lsquo;Amortization calculator&amp;rsquo; entry&lt;/a&gt;&lt;/span&gt;) we find the so called annuity formula which helps you calculate your monthly payment.&lt;/p&gt;
 &lt;p&gt;Several such mortgage calculators have been features in 
 &lt;a href=&#34;http://www.r-bloggers.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;R Bloggers&lt;/a&gt; before such as (&lt;span class=&#34;showtooltip&#34; title=&#34;C (2010). &#39;Mortgage Calculator (and Amortization Charts) with R.&#39; .&#34;&gt;&lt;a href=&#34;http://www.r-chart.com/2010/11/mortgage-calculator-and-amortization.html&#34;&gt;C, 2010&lt;/a&gt;&lt;/span&gt;) and (&lt;span class=&#34;showtooltip&#34; title=&#34;BioStatMatt (2014). &#39;Mortgage Refinance Calculator | BioStatMatt.&#39; .&#34;&gt;&lt;a href=&#34;http://biostatmatt.com/archives/1908&#34;&gt;BioStatMatt&lt;/a&gt;&lt;/span&gt;). Plus there are many other alternatives on the web.&lt;/p&gt;
 &lt;h2 id=&#34;my-use-case&#34;&gt;My use case&lt;/h2&gt;
@@ -11864,7 +12036,7 @@ jekyll serve
 &lt;a href=&#34;http://disqus.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Disqus&lt;/a&gt; for comments and 
 &lt;a href=&#34;http://www.google.com/analytics&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Google Analytics&lt;/a&gt; for tracking visits. Since I was also using 
 &lt;a href=&#34;http://disqus.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Disqus&lt;/a&gt; for my Tumblr blog, I used 
-&lt;a href=&#34;http://disqus.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Disqus&lt;/a&gt;&amp;rsquo; tools to migrate the comments. Finally, I use 
+&lt;a href=&#34;http://disqus.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Disqus&lt;/a&gt;&#39; tools to migrate the comments. Finally, I use 
 &lt;a href=&#34;http://feedburner.google.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;FeedBurner&lt;/a&gt; for my RSS feed, which I was able to update to the new 
 &lt;a href=&#34;http://lcolladotor.github.io/rss.xml&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;RSS generated by Fellgernon Bit @ GitHub&lt;/a&gt;. Thus, the subscribers to 
 &lt;a href=&#34;http://feeds.feedburner.com/FellgernonBit&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;feeds.feedburner.com/FellgernonBit&lt;/a&gt; didn&amp;rsquo;t have to change anything.&lt;/p&gt;
@@ -13508,7 +13680,7 @@ plot(y ~ jitter(x), data = df, col = df$col,
       <link>https://lcolladotor.github.io/2012/10/03/02-27-12-phd-comic-inspired-by-true-events/</link>
       <pubDate>Wed, 03 Oct 2012 00:00:00 +0000</pubDate>
       <guid>https://lcolladotor.github.io/2012/10/03/02-27-12-phd-comic-inspired-by-true-events/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;http://www.phdcomics.com/comics.php?f=1474&#34;&gt;02/27/12 PHD comic: &amp;lsquo;Inspired by true events&#39;&lt;/a&gt;&lt;br/&gt;&lt;p&gt;&lt;img height=&#34;217&#34; src=&#34;http://www.phdcomics.com/comics/archive/phd022712s.gif&#34; width=&#34;500&#34;/&gt;&lt;/p&gt;
+      <description>&lt;p&gt;&lt;a href=&#34;http://www.phdcomics.com/comics.php?f=1474&#34;&gt;02/27/12 PHD comic: &amp;lsquo;Inspired by true events&amp;rsquo;&lt;/a&gt;&lt;br/&gt;&lt;p&gt;&lt;img height=&#34;217&#34; src=&#34;http://www.phdcomics.com/comics/archive/phd022712s.gif&#34; width=&#34;500&#34;/&gt;&lt;/p&gt;
 Totally what happened to me on Monday night! (whenever I saved this post as a draft :P, but it’s happening again now)&lt;/p&gt;
 </description>
     </item>
@@ -13817,7 +13989,7 @@ Further talk details can easily be added to this page using *Markdown* and $\rm 
       <link>https://lcolladotor.github.io/2012/05/10/05-9-12-phd-comic-grad-stereogram/</link>
       <pubDate>Thu, 10 May 2012 00:00:00 +0000</pubDate>
       <guid>https://lcolladotor.github.io/2012/05/10/05-9-12-phd-comic-grad-stereogram/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;http://www.phdcomics.com/comics.php?f=1493&#34;&gt;05/9/12 PHD comic: &amp;lsquo;Grad Stereogram&#39;&lt;/a&gt;&lt;br/&gt;&lt;p&gt;Is there really something hidden in the pic? I couldn’t see it :P I guessed that there shouldn’t be anything from the text, but just in case I checked. &lt;/p&gt;&lt;/p&gt;
+      <description>&lt;p&gt;&lt;a href=&#34;http://www.phdcomics.com/comics.php?f=1493&#34;&gt;05/9/12 PHD comic: &amp;lsquo;Grad Stereogram&amp;rsquo;&lt;/a&gt;&lt;br/&gt;&lt;p&gt;Is there really something hidden in the pic? I couldn’t see it :P I guessed that there shouldn’t be anything from the text, but just in case I checked. &lt;/p&gt;&lt;/p&gt;
 </description>
     </item>
     
