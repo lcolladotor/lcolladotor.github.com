@@ -5,7 +5,7 @@
     <link>https://lcolladotor.github.io/tags/bioconductor/</link>
       <atom:link href="https://lcolladotor.github.io/tags/bioconductor/index.xml" rel="self" type="application/rss+xml" />
     <description>Bioconductor</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2011-2020. All thoughts and opinions here are my own. The icon was designed by [Mauricio Guzmán](https://www.linkedin.com/in/mauricio-guzman-6529b551/) and is inspired by [Huichol culture](https://en.wikipedia.org/wiki/Huichol); it represents my community building interests</copyright><lastBuildDate>Tue, 03 Nov 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2011-2021. All thoughts and opinions here are my own. The icon was designed by [Mauricio Guzmán](https://www.linkedin.com/in/mauricio-guzman-6529b551/) and is inspired by [Huichol culture](https://en.wikipedia.org/wiki/Huichol); it represents my community building interests</copyright><lastBuildDate>Tue, 03 Nov 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://lcolladotor.github.io/images/icon_hu2b32c4ab415f12f472f73c7b0301b0d1_19400_512x512_fill_lanczos_center_2.png</url>
       <title>Bioconductor</title>
@@ -1339,9 +1339,9 @@ session_info()
     
     <item>
       <title>Are you doing parallel computations in R? Then use BiocParallel</title>
-      <link>https://lcolladotor.github.io/2016/03/07/biocparallel/</link>
+      <link>https://lcolladotor.github.io/2016/03/07/BiocParallel/</link>
       <pubDate>Mon, 07 Mar 2016 00:00:00 +0000</pubDate>
-      <guid>https://lcolladotor.github.io/2016/03/07/biocparallel/</guid>
+      <guid>https://lcolladotor.github.io/2016/03/07/BiocParallel/</guid>
       <description>&lt;p&gt;It&amp;rsquo;s the morning of the first day of oral conferences at 
 &lt;a href=&#34;https://twitter.com/search?q=%23ENAR2016&amp;amp;src=tyah&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;#ENAR2016&lt;/a&gt;. I feel like I have a 
 &lt;a href=&#34;https://en.wiktionary.org/wiki/Spidey-sense&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;spidey sense&lt;/a&gt; since I woke up 3 min after an email from Jeff Leek; just a funny coincidence. Anyhow, I promised Valerie Obenchain at 
@@ -1583,9 +1583,9 @@ R package version 1.4.3.
     
     <item>
       <title>Where do I start using Bioconductor?</title>
-      <link>https://lcolladotor.github.io/2014/10/16/startbioc/</link>
+      <link>https://lcolladotor.github.io/2014/10/16/startBioC/</link>
       <pubDate>Thu, 16 Oct 2014 00:00:00 +0000</pubDate>
-      <guid>https://lcolladotor.github.io/2014/10/16/startbioc/</guid>
+      <guid>https://lcolladotor.github.io/2014/10/16/startBioC/</guid>
       <description>&lt;p&gt;I was recently asked &lt;em&gt;where do I get started with Bioconductor?&lt;/em&gt; and thought this would be a good short post.&lt;/p&gt;
 &lt;h2 id=&#34;what-is-bioc&#34;&gt;What is BioC?&lt;/h2&gt;
 &lt;p&gt;Briefly, Bioconductor &lt;a id=&#39;cite-bioc&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;http://genomebiology.com/2004/5/10/R80&#39;&gt;Gentleman, Carey, Bates, and others, 2004&lt;/a&gt;) is an open source project that hosts a wide range of tools for analyzing biological data with &lt;code&gt;R&lt;/code&gt; &lt;a id=&#39;cite-R&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;http://www.R-project.org/&#39;&gt;R Core Team, 2014&lt;/a&gt;). These analysis tools are bundled into packages which are designed to answer specific questions or to provide key infrastructure. If this sounds like something you are interested in, visit 
@@ -1772,9 +1772,9 @@ URL: &lt;a href=&#34;http://www.R-project.org/&#34;&gt;http://www.R-project.org/
     
     <item>
       <title>Introducing Biostatistics to first year LCG students</title>
-      <link>https://lcolladotor.github.io/2011/12/04/introducing-biostatistics-to-first-year-lcg-students/</link>
+      <link>https://lcolladotor.github.io/2011/12/04/Introducing-Biostatistics-to-first-year-LCG-students/</link>
       <pubDate>Sun, 04 Dec 2011 00:00:00 +0000</pubDate>
-      <guid>https://lcolladotor.github.io/2011/12/04/introducing-biostatistics-to-first-year-lcg-students/</guid>
+      <guid>https://lcolladotor.github.io/2011/12/04/Introducing-Biostatistics-to-first-year-LCG-students/</guid>
       <description>&lt;p&gt;Around two weeks ago I gave a talk via skype to the first year students from the &lt;a href=&#34;http://www.lcg.unam.mx/about&#34;&gt;Undergraduate Program on Genomic Sciences&lt;/a&gt; (LCG in Spanish) from the National Autonomous University of Mexico (UNAM in Spanish). The talk was under the context of the &lt;em&gt;Introduction to Bioinformatics Seminar Series&lt;/em&gt; whose goal is to familiarize the new students with the bioinformatics world. It used to be a course heavy on exploring database websites, some basic theory, and lots of new concepts and algorithm names. Like, what is BLAST? This year, the course involved several talks from former students (like myself) on their experience and current job (most of us are in graduate school).&lt;/p&gt;
 &lt;p&gt;In my case, I was invited to talk about Biostatistics and R as I was one of the first LCG students to learn and teach R to other students (including PhD students ^^): &lt;a href=&#34;http://www.lcg.unam.mx/~lcollado/R/&#34;&gt;12 hour intro to R and Bioconductor&lt;/a&gt;, &lt;a href=&#34;http://www.lcg.unam.mx/~lcollado/E/&#34;&gt;R in an intro to statistics course&lt;/a&gt;, a &lt;a href=&#34;http://www.lcg.unam.mx/~lcollado/B/&#34;&gt;full course on Bioconductor&lt;/a&gt;. &lt;/p&gt;
 &lt;p&gt;I had a lot of fun preparing my talk as I tried to portray the three main currents in Biostatistics in a way that would be understandable, basic concepts such as a P-value, some basic R code (the students knew the super basics only), and doing so in a way that I would also pass how I see things. A key part for any bioinformatician, as I see it, is to have a good basic toolset. That&amp;#8217;s why I tried to pass on many tips to these young students. Also, I do like to go back to the philosophy of science and whether we need hypothesis nowadays or just models based on the data. I definitely had to cover the topic of communication as I strongly believe that any researcher has to be able to communicate with a biostastician if they want their help in analyzing their data. Also, a biostatistician is not a stastistician, meaning that they have to understand the underlying biological question. I tried emphasizing this point with the students and I attempted to motivate them to take a basic stastistics and probability course (2 preferably). After all, biostatistics is key nowadays in science since biology has gone high-throughput.&lt;/p&gt;

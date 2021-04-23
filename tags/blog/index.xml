@@ -5,7 +5,7 @@
     <link>https://lcolladotor.github.io/tags/blog/</link>
       <atom:link href="https://lcolladotor.github.io/tags/blog/index.xml" rel="self" type="application/rss+xml" />
     <description>Blog</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2011-2020. All thoughts and opinions here are my own. The icon was designed by [Mauricio Guzmán](https://www.linkedin.com/in/mauricio-guzman-6529b551/) and is inspired by [Huichol culture](https://en.wikipedia.org/wiki/Huichol); it represents my community building interests</copyright><lastBuildDate>Tue, 23 Oct 2018 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2011-2021. All thoughts and opinions here are my own. The icon was designed by [Mauricio Guzmán](https://www.linkedin.com/in/mauricio-guzman-6529b551/) and is inspired by [Huichol culture](https://en.wikipedia.org/wiki/Huichol); it represents my community building interests</copyright><lastBuildDate>Tue, 23 Oct 2018 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://lcolladotor.github.io/images/icon_hu2b32c4ab415f12f472f73c7b0301b0d1_19400_512x512_fill_lanczos_center_2.png</url>
       <title>Blog</title>
@@ -701,9 +701,9 @@ bibliography(style = &amp;#39;html&amp;#39;)&lt;/code&gt;&lt;/pre&gt;
     
     <item>
       <title>Creating your Jekyll-Bootstrap powered blog for R blogging</title>
-      <link>https://lcolladotor.github.io/2013/11/09/new-fellgernon-bit-setup-in-github/</link>
+      <link>https://lcolladotor.github.io/2013/11/09/new-Fellgernon-Bit-setup-in-Github/</link>
       <pubDate>Sat, 09 Nov 2013 00:00:00 +0000</pubDate>
-      <guid>https://lcolladotor.github.io/2013/11/09/new-fellgernon-bit-setup-in-github/</guid>
+      <guid>https://lcolladotor.github.io/2013/11/09/new-Fellgernon-Bit-setup-in-Github/</guid>
       <description>&lt;p&gt;As you might have noticed, I recently decided to move &lt;code&gt;Fellgernon Bit&lt;/code&gt; from 
 &lt;a href=&#34;http://bit.ly/FellgernonBit&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Tumblr&lt;/a&gt; to 
 &lt;a href=&#34;http://bit.ly/FellBit&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;GitHub&lt;/a&gt;. There are a couple of reasons why I made this change.&lt;/p&gt;
@@ -1092,9 +1092,9 @@ sudo gem install nokogiri
     
     <item>
       <title>Analyzing SimplyStatistics visits info</title>
-      <link>https://lcolladotor.github.io/2013/03/09/analyzing-simplystatistics-visits-info/</link>
+      <link>https://lcolladotor.github.io/2013/03/09/Analyzing-SimplyStatistics-visits-info/</link>
       <pubDate>Sat, 09 Mar 2013 00:00:00 +0000</pubDate>
-      <guid>https://lcolladotor.github.io/2013/03/09/analyzing-simplystatistics-visits-info/</guid>
+      <guid>https://lcolladotor.github.io/2013/03/09/Analyzing-SimplyStatistics-visits-info/</guid>
       <description>&lt;p&gt;Recently we had to analyze the data of the number of visits per day to &lt;a href=&#34;http://simplystatistics.org/&#34;&gt;SimplyStatistics.org&lt;/a&gt;. There were two goals:&lt;/p&gt;
 &lt;ol&gt;&lt;li&gt;Estimate the fraction of visitors retained after a spike in the number of visitors&lt;/li&gt;
 &lt;li&gt;Identify (if any) any factors that influence the fraction estimated in 1.&lt;/li&gt;
