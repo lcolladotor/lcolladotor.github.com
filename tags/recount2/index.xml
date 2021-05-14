@@ -5,7 +5,7 @@
     <link>https://lcolladotor.github.io/tags/recount2/</link>
       <atom:link href="https://lcolladotor.github.io/tags/recount2/index.xml" rel="self" type="application/rss+xml" />
     <description>recount2</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2011-2021. All thoughts and opinions here are my own. The icon was designed by [Mauricio Guzmán](https://www.linkedin.com/in/mauricio-guzman-6529b551/) and is inspired by [Huichol culture](https://en.wikipedia.org/wiki/Huichol); it represents my community building interests</copyright><lastBuildDate>Mon, 27 Jul 2020 00:00:00 -0400</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2011-2021. All thoughts and opinions here are my own. The icon was designed by [Mauricio Guzmán](https://www.linkedin.com/in/mauricio-guzman-6529b551/) and is inspired by [Huichol culture](https://en.wikipedia.org/wiki/Huichol); it represents my community building interests</copyright><lastBuildDate>Mon, 29 Mar 2021 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://lcolladotor.github.io/images/icon_hu2b32c4ab415f12f472f73c7b0301b0d1_19400_512x512_fill_lanczos_center_2.png</url>
       <title>recount2</title>
@@ -13,30 +13,38 @@
     </image>
     
     <item>
+      <title>Detection of pathogenic splicing events from RNA-sequencing data using dasper</title>
+      <link>https://lcolladotor.github.io/publication/preprint_dasper/</link>
+      <pubDate>Mon, 29 Mar 2021 00:00:00 +0000</pubDate>
+      <guid>https://lcolladotor.github.io/publication/preprint_dasper/</guid>
+      <description>&lt;!--
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Click the &lt;em&gt;Cite&lt;/em&gt; button above to demo the feature to enable visitors to import publication metadata into their reference management software.
+  &lt;/div&gt;
+&lt;/div&gt;
+
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Click the &lt;em&gt;Slides&lt;/em&gt; button above to demo Academic&amp;rsquo;s Markdown slides feature.
+  &lt;/div&gt;
+&lt;/div&gt;
+
+
+Supplementary notes can be added here, including [code and math](https://sourcethemes.com/academic/docs/writing-markdown-latex/).
+--&gt;&lt;blockquote&gt;
+&lt;/blockquote&gt;
+</description>
+    </item>
+    
+    <item>
       <title>BioC2020 recount workshop</title>
       <link>https://lcolladotor.github.io/talk/bioc2020/</link>
       <pubDate>Mon, 27 Jul 2020 00:00:00 -0400</pubDate>
       <guid>https://lcolladotor.github.io/talk/bioc2020/</guid>
       <description>&lt;script async class=&#34;speakerdeck-embed&#34; data-id=&#34;78092f5c558242f1aa3085d9abc9c061&#34; data-ratio=&#34;1.77777777777778&#34; src=&#34;//speakerdeck.com/assets/embed.js&#34;&gt;&lt;/script&gt;
-&lt;!--
-
-&lt;div class=&#34;alert alert-note&#34;&gt;
-  &lt;div&gt;
-    Click on the &lt;strong&gt;Slides&lt;/strong&gt; button above to view the built-in slides feature.
-  &lt;/div&gt;
-&lt;/div&gt;
-
-
-
-Slides can be added in a few ways:
-
-- **Create** slides using Academic&#39;s *Slides* feature and link using `url_slides` parameter in the front matter of the talk file
-- **Upload** an existing slide deck to `static/` and link using `url_slides` parameter in the front matter of the talk file
-- **Embed** your slides (e.g. Google Slides) or presentation video on this page using [shortcodes](https://sourcethemes.com/academic/docs/writing-markdown-latex/).
-
-Further talk details can easily be added to this page using *Markdown* and $\rm \LaTeX$ math code.
-
---&gt;
 </description>
     </item>
     
@@ -64,25 +72,6 @@ Further talk details can easily be added to this page using *Markdown* and $\rm 
       <pubDate>Wed, 26 Jun 2019 00:00:00 -0400</pubDate>
       <guid>https://lcolladotor.github.io/talk/bioc2019/</guid>
       <description>&lt;script async class=&#34;speakerdeck-embed&#34; data-id=&#34;5a8737f52b384a3c8820b55a04ccd6ce&#34; data-ratio=&#34;1.77777777777778&#34; src=&#34;//speakerdeck.com/assets/embed.js&#34;&gt;&lt;/script&gt;
-&lt;!--
-
-&lt;div class=&#34;alert alert-note&#34;&gt;
-  &lt;div&gt;
-    Click on the &lt;strong&gt;Slides&lt;/strong&gt; button above to view the built-in slides feature.
-  &lt;/div&gt;
-&lt;/div&gt;
-
-
-
-Slides can be added in a few ways:
-
-- **Create** slides using Academic&#39;s *Slides* feature and link using `url_slides` parameter in the front matter of the talk file
-- **Upload** an existing slide deck to `static/` and link using `url_slides` parameter in the front matter of the talk file
-- **Embed** your slides (e.g. Google Slides) or presentation video on this page using [shortcodes](https://sourcethemes.com/academic/docs/writing-markdown-latex/).
-
-Further talk details can easily be added to this page using *Markdown* and $\rm \LaTeX$ math code.
-
---&gt;
 </description>
     </item>
     
@@ -119,25 +108,6 @@ Further talk details can easily be added to this page using *Markdown* and $\rm 
       <pubDate>Sat, 05 Jan 2019 16:24:05 -0500</pubDate>
       <guid>https://lcolladotor.github.io/talk/psb2019/</guid>
       <description>&lt;script async class=&#34;speakerdeck-embed&#34; data-id=&#34;bf4e85ff27ba4f9c93ad234d89411000&#34; data-ratio=&#34;1.77777777777778&#34; src=&#34;//speakerdeck.com/assets/embed.js&#34;&gt;&lt;/script&gt;
-&lt;!--
-
-&lt;div class=&#34;alert alert-note&#34;&gt;
-  &lt;div&gt;
-    Click on the &lt;strong&gt;Slides&lt;/strong&gt; button above to view the built-in slides feature.
-  &lt;/div&gt;
-&lt;/div&gt;
-
-
-
-Slides can be added in a few ways:
-
-- **Create** slides using Academic&#39;s *Slides* feature and link using `url_slides` parameter in the front matter of the talk file
-- **Upload** an existing slide deck to `static/` and link using `url_slides` parameter in the front matter of the talk file
-- **Embed** your slides (e.g. Google Slides) or presentation video on this page using [shortcodes](https://sourcethemes.com/academic/docs/writing-markdown-latex/).
-
-Further talk details can easily be added to this page using *Markdown* and $\rm \LaTeX$ math code.
-
---&gt;
 </description>
     </item>
     
@@ -147,25 +117,6 @@ Further talk details can easily be added to this page using *Markdown* and $\rm 
       <pubDate>Thu, 29 Nov 2018 16:24:05 -0500</pubDate>
       <guid>https://lcolladotor.github.io/talk/jgm2018/</guid>
       <description>&lt;script async class=&#34;speakerdeck-embed&#34; data-id=&#34;8f272bd80133466eb490d2100cecc0cd&#34; data-ratio=&#34;1.77777777777778&#34; src=&#34;//speakerdeck.com/assets/embed.js&#34;&gt;&lt;/script&gt;
-&lt;!--
-
-&lt;div class=&#34;alert alert-note&#34;&gt;
-  &lt;div&gt;
-    Click on the &lt;strong&gt;Slides&lt;/strong&gt; button above to view the built-in slides feature.
-  &lt;/div&gt;
-&lt;/div&gt;
-
-
-
-Slides can be added in a few ways:
-
-- **Create** slides using Academic&#39;s *Slides* feature and link using `url_slides` parameter in the front matter of the talk file
-- **Upload** an existing slide deck to `static/` and link using `url_slides` parameter in the front matter of the talk file
-- **Embed** your slides (e.g. Google Slides) or presentation video on this page using [shortcodes](https://sourcethemes.com/academic/docs/writing-markdown-latex/).
-
-Further talk details can easily be added to this page using *Markdown* and $\rm \LaTeX$ math code.
-
---&gt;
 </description>
     </item>
     
@@ -184,25 +135,6 @@ Further talk details can easily be added to this page using *Markdown* and $\rm 
       <pubDate>Mon, 30 Jul 2018 10:00:00 -0400</pubDate>
       <guid>https://lcolladotor.github.io/talk/cdsb2018/</guid>
       <description>&lt;script async class=&#34;speakerdeck-embed&#34; data-slide=&#34;1&#34; data-id=&#34;711408b758884ca2bf0bb950ce0ba0ed&#34; data-ratio=&#34;1.77777777777778&#34; src=&#34;//speakerdeck.com/assets/embed.js&#34;&gt;&lt;/script&gt;
-&lt;!--
-
-&lt;div class=&#34;alert alert-note&#34;&gt;
-  &lt;div&gt;
-    Click on the &lt;strong&gt;Slides&lt;/strong&gt; button above to view the built-in slides feature.
-  &lt;/div&gt;
-&lt;/div&gt;
-
-
-
-Slides can be added in a few ways:
-
-- **Create** slides using Academic&#39;s *Slides* feature and link using `url_slides` parameter in the front matter of the talk file
-- **Upload** an existing slide deck to `static/` and link using `url_slides` parameter in the front matter of the talk file
-- **Embed** your slides (e.g. Google Slides) or presentation video on this page using [shortcodes](https://sourcethemes.com/academic/docs/writing-markdown-latex/).
-
-Further talk details can easily be added to this page using *Markdown* and $\rm \LaTeX$ math code.
-
---&gt;
 </description>
     </item>
     
@@ -212,25 +144,6 @@ Further talk details can easily be added to this page using *Markdown* and $\rm 
       <pubDate>Wed, 30 May 2018 13:00:00 -0400</pubDate>
       <guid>https://lcolladotor.github.io/talk/lcg2018/</guid>
       <description>&lt;script async class=&#34;speakerdeck-embed&#34; data-id=&#34;c6fe30adcbac4761a8808deb8d0ebeef&#34; data-ratio=&#34;1.77777777777778&#34; src=&#34;//speakerdeck.com/assets/embed.js&#34;&gt;&lt;/script&gt;
-&lt;!--
-
-&lt;div class=&#34;alert alert-note&#34;&gt;
-  &lt;div&gt;
-    Click on the &lt;strong&gt;Slides&lt;/strong&gt; button above to view the built-in slides feature.
-  &lt;/div&gt;
-&lt;/div&gt;
-
-
-
-Slides can be added in a few ways:
-
-- **Create** slides using Academic&#39;s *Slides* feature and link using `url_slides` parameter in the front matter of the talk file
-- **Upload** an existing slide deck to `static/` and link using `url_slides` parameter in the front matter of the talk file
-- **Embed** your slides (e.g. Google Slides) or presentation video on this page using [shortcodes](https://sourcethemes.com/academic/docs/writing-markdown-latex/).
-
-Further talk details can easily be added to this page using *Markdown* and $\rm \LaTeX$ math code.
-
---&gt;
 </description>
     </item>
     
@@ -240,25 +153,6 @@ Further talk details can easily be added to this page using *Markdown* and $\rm 
       <pubDate>Tue, 17 Apr 2018 11:00:00 -0400</pubDate>
       <guid>https://lcolladotor.github.io/talk/dennisdal2018/</guid>
       <description>&lt;script async class=&#34;speakerdeck-embed&#34; data-id=&#34;ec1d1e5529e44550b48c74c924d6f52a&#34; data-ratio=&#34;1.77777777777778&#34; src=&#34;//speakerdeck.com/assets/embed.js&#34;&gt;&lt;/script&gt;
-&lt;!--
-
-&lt;div class=&#34;alert alert-note&#34;&gt;
-  &lt;div&gt;
-    Click on the &lt;strong&gt;Slides&lt;/strong&gt; button above to view the built-in slides feature.
-  &lt;/div&gt;
-&lt;/div&gt;
-
-
-
-Slides can be added in a few ways:
-
-- **Create** slides using Academic&#39;s *Slides* feature and link using `url_slides` parameter in the front matter of the talk file
-- **Upload** an existing slide deck to `static/` and link using `url_slides` parameter in the front matter of the talk file
-- **Embed** your slides (e.g. Google Slides) or presentation video on this page using [shortcodes](https://sourcethemes.com/academic/docs/writing-markdown-latex/).
-
-Further talk details can easily be added to this page using *Markdown* and $\rm \LaTeX$ math code.
-
---&gt;
 </description>
     </item>
     
@@ -304,25 +198,6 @@ Further talk details can easily be added to this page using *Markdown* and $\rm 
       <pubDate>Thu, 27 Jul 2017 13:30:00 -0400</pubDate>
       <guid>https://lcolladotor.github.io/talk/bioc2017/</guid>
       <description>&lt;script async class=&#34;speakerdeck-embed&#34; data-id=&#34;7d2ab9486f174ef5a8a8134bf60cab74&#34; data-ratio=&#34;1.77777777777778&#34; src=&#34;//speakerdeck.com/assets/embed.js&#34;&gt;&lt;/script&gt;
-&lt;!--
-
-&lt;div class=&#34;alert alert-note&#34;&gt;
-  &lt;div&gt;
-    Click on the &lt;strong&gt;Slides&lt;/strong&gt; button above to view the built-in slides feature.
-  &lt;/div&gt;
-&lt;/div&gt;
-
-
-
-Slides can be added in a few ways:
-
-- **Create** slides using Academic&#39;s *Slides* feature and link using `url_slides` parameter in the front matter of the talk file
-- **Upload** an existing slide deck to `static/` and link using `url_slides` parameter in the front matter of the talk file
-- **Embed** your slides (e.g. Google Slides) or presentation video on this page using [shortcodes](https://sourcethemes.com/academic/docs/writing-markdown-latex/).
-
-Further talk details can easily be added to this page using *Markdown* and $\rm \LaTeX$ math code.
-
---&gt;
 </description>
     </item>
     
@@ -332,25 +207,6 @@ Further talk details can easily be added to this page using *Markdown* and $\rm 
       <pubDate>Tue, 27 Jun 2017 13:30:00 -0400</pubDate>
       <guid>https://lcolladotor.github.io/talk/icsa2017/</guid>
       <description>&lt;script async class=&#34;speakerdeck-embed&#34; data-id=&#34;19261ec55356439bb1742241fe29aee9&#34; data-ratio=&#34;1.77777777777778&#34; src=&#34;//speakerdeck.com/assets/embed.js&#34;&gt;&lt;/script&gt;
-&lt;!--
-
-&lt;div class=&#34;alert alert-note&#34;&gt;
-  &lt;div&gt;
-    Click on the &lt;strong&gt;Slides&lt;/strong&gt; button above to view the built-in slides feature.
-  &lt;/div&gt;
-&lt;/div&gt;
-
-
-
-Slides can be added in a few ways:
-
-- **Create** slides using Academic&#39;s *Slides* feature and link using `url_slides` parameter in the front matter of the talk file
-- **Upload** an existing slide deck to `static/` and link using `url_slides` parameter in the front matter of the talk file
-- **Embed** your slides (e.g. Google Slides) or presentation video on this page using [shortcodes](https://sourcethemes.com/academic/docs/writing-markdown-latex/).
-
-Further talk details can easily be added to this page using *Markdown* and $\rm \LaTeX$ math code.
-
---&gt;
 </description>
     </item>
     
@@ -359,26 +215,7 @@ Further talk details can easily be added to this page using *Markdown* and $\rm 
       <link>https://lcolladotor.github.io/talk/sobp2017/</link>
       <pubDate>Sat, 20 May 2017 12:30:00 -0400</pubDate>
       <guid>https://lcolladotor.github.io/talk/sobp2017/</guid>
-      <description>&lt;!--
-
-&lt;div class=&#34;alert alert-note&#34;&gt;
-  &lt;div&gt;
-    Click on the &lt;strong&gt;Slides&lt;/strong&gt; button above to view the built-in slides feature.
-  &lt;/div&gt;
-&lt;/div&gt;
-
-
-
-Slides can be added in a few ways:
-
-- **Create** slides using Academic&#39;s *Slides* feature and link using `url_slides` parameter in the front matter of the talk file
-- **Upload** an existing slide deck to `static/` and link using `url_slides` parameter in the front matter of the talk file
-- **Embed** your slides (e.g. Google Slides) or presentation video on this page using [shortcodes](https://sourcethemes.com/academic/docs/writing-markdown-latex/).
-
-Further talk details can easily be added to this page using *Markdown* and $\rm \LaTeX$ math code.
-
---&gt;
-</description>
+      <description></description>
     </item>
     
     <item>
@@ -405,25 +242,6 @@ Further talk details can easily be added to this page using *Markdown* and $\rm 
       <pubDate>Mon, 26 Dec 2016 08:30:00 -0500</pubDate>
       <guid>https://lcolladotor.github.io/talk/kandahar2016/</guid>
       <description>&lt;script async class=&#34;speakerdeck-embed&#34; data-id=&#34;4476a6dd694d4fe59de7e8c48dbde7dd&#34; data-ratio=&#34;1.29456384323641&#34; src=&#34;//speakerdeck.com/assets/embed.js&#34;&gt;&lt;/script&gt;
-&lt;!--
-
-&lt;div class=&#34;alert alert-note&#34;&gt;
-  &lt;div&gt;
-    Click on the &lt;strong&gt;Slides&lt;/strong&gt; button above to view the built-in slides feature.
-  &lt;/div&gt;
-&lt;/div&gt;
-
-
-
-Slides can be added in a few ways:
-
-- **Create** slides using Academic&#39;s *Slides* feature and link using `url_slides` parameter in the front matter of the talk file
-- **Upload** an existing slide deck to `static/` and link using `url_slides` parameter in the front matter of the talk file
-- **Embed** your slides (e.g. Google Slides) or presentation video on this page using [shortcodes](https://sourcethemes.com/academic/docs/writing-markdown-latex/).
-
-Further talk details can easily be added to this page using *Markdown* and $\rm \LaTeX$ math code.
-
---&gt;
 </description>
     </item>
     
@@ -433,25 +251,6 @@ Further talk details can easily be added to this page using *Markdown* and $\rm 
       <pubDate>Wed, 26 Oct 2016 00:00:00 -0400</pubDate>
       <guid>https://lcolladotor.github.io/talk/genomeeting2016/</guid>
       <description>&lt;script async class=&#34;speakerdeck-embed&#34; data-id=&#34;8720fc701f444e8789f83ac225cd2077&#34; data-ratio=&#34;1.33333333333333&#34; src=&#34;//speakerdeck.com/assets/embed.js&#34;&gt;&lt;/script&gt;
-&lt;!--
-
-&lt;div class=&#34;alert alert-note&#34;&gt;
-  &lt;div&gt;
-    Click on the &lt;strong&gt;Slides&lt;/strong&gt; button above to view the built-in slides feature.
-  &lt;/div&gt;
-&lt;/div&gt;
-
-
-
-Slides can be added in a few ways:
-
-- **Create** slides using Academic&#39;s *Slides* feature and link using `url_slides` parameter in the front matter of the talk file
-- **Upload** an existing slide deck to `static/` and link using `url_slides` parameter in the front matter of the talk file
-- **Embed** your slides (e.g. Google Slides) or presentation video on this page using [shortcodes](https://sourcethemes.com/academic/docs/writing-markdown-latex/).
-
-Further talk details can easily be added to this page using *Markdown* and $\rm \LaTeX$ math code.
-
---&gt;
 </description>
     </item>
     
@@ -461,25 +260,6 @@ Further talk details can easily be added to this page using *Markdown* and $\rm 
       <pubDate>Sat, 15 Oct 2016 00:00:00 -0400</pubDate>
       <guid>https://lcolladotor.github.io/talk/sacnas2016/</guid>
       <description>&lt;script async class=&#34;speakerdeck-embed&#34; data-id=&#34;3142109c2c474ad7b4e872af4195ab3d&#34; data-ratio=&#34;1.33333333333333&#34; src=&#34;//speakerdeck.com/assets/embed.js&#34;&gt;&lt;/script&gt;
-&lt;!--
-
-&lt;div class=&#34;alert alert-note&#34;&gt;
-  &lt;div&gt;
-    Click on the &lt;strong&gt;Slides&lt;/strong&gt; button above to view the built-in slides feature.
-  &lt;/div&gt;
-&lt;/div&gt;
-
-
-
-Slides can be added in a few ways:
-
-- **Create** slides using Academic&#39;s *Slides* feature and link using `url_slides` parameter in the front matter of the talk file
-- **Upload** an existing slide deck to `static/` and link using `url_slides` parameter in the front matter of the talk file
-- **Embed** your slides (e.g. Google Slides) or presentation video on this page using [shortcodes](https://sourcethemes.com/academic/docs/writing-markdown-latex/).
-
-Further talk details can easily be added to this page using *Markdown* and $\rm \LaTeX$ math code.
-
---&gt;
 </description>
     </item>
     
@@ -489,25 +269,6 @@ Further talk details can easily be added to this page using *Markdown* and $\rm 
       <pubDate>Mon, 20 Jun 2016 00:00:00 -0400</pubDate>
       <guid>https://lcolladotor.github.io/talk/defense2016/</guid>
       <description>&lt;script async class=&#34;speakerdeck-embed&#34; data-id=&#34;4a1f552e66004fa58018b66a1ee3ecfd&#34; data-ratio=&#34;1.33333333333333&#34; src=&#34;//speakerdeck.com/assets/embed.js&#34;&gt;&lt;/script&gt;
-&lt;!--
-
-&lt;div class=&#34;alert alert-note&#34;&gt;
-  &lt;div&gt;
-    Click on the &lt;strong&gt;Slides&lt;/strong&gt; button above to view the built-in slides feature.
-  &lt;/div&gt;
-&lt;/div&gt;
-
-
-
-Slides can be added in a few ways:
-
-- **Create** slides using Academic&#39;s *Slides* feature and link using `url_slides` parameter in the front matter of the talk file
-- **Upload** an existing slide deck to `static/` and link using `url_slides` parameter in the front matter of the talk file
-- **Embed** your slides (e.g. Google Slides) or presentation video on this page using [shortcodes](https://sourcethemes.com/academic/docs/writing-markdown-latex/).
-
-Further talk details can easily be added to this page using *Markdown* and $\rm \LaTeX$ math code.
-
---&gt;
 </description>
     </item>
     
