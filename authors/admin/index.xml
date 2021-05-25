@@ -5,12 +5,39 @@
     <link>https://lcolladotor.github.io/authors/admin/</link>
       <atom:link href="https://lcolladotor.github.io/authors/admin/index.xml" rel="self" type="application/rss+xml" />
     <description>Leonardo Collado-Torres</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2011-2021. All thoughts and opinions here are my own. The icon was designed by [Mauricio Guzmán](https://www.linkedin.com/in/mauricio-guzman-6529b551/) and is inspired by [Huichol culture](https://en.wikipedia.org/wiki/Huichol); it represents my community building interests</copyright><lastBuildDate>Sat, 01 May 2021 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2011-2021. All thoughts and opinions here are my own. The icon was designed by [Mauricio Guzmán](https://www.linkedin.com/in/mauricio-guzman-6529b551/) and is inspired by [Huichol culture](https://en.wikipedia.org/wiki/Huichol); it represents my community building interests</copyright><lastBuildDate>Sun, 23 May 2021 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://lcolladotor.github.io/images/icon_hu2b32c4ab415f12f472f73c7b0301b0d1_19400_512x512_fill_lanczos_center_2.png</url>
       <title>Leonardo Collado-Torres</title>
       <link>https://lcolladotor.github.io/authors/admin/</link>
     </image>
+    
+    <item>
+      <title>recount3: summaries and queries for large-scale RNA-seq expression and splicing</title>
+      <link>https://lcolladotor.github.io/publication/preprint_recount3/</link>
+      <pubDate>Sun, 23 May 2021 00:00:00 +0000</pubDate>
+      <guid>https://lcolladotor.github.io/publication/preprint_recount3/</guid>
+      <description>&lt;!--
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Click the &lt;em&gt;Cite&lt;/em&gt; button above to demo the feature to enable visitors to import publication metadata into their reference management software.
+  &lt;/div&gt;
+&lt;/div&gt;
+
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Click the &lt;em&gt;Slides&lt;/em&gt; button above to demo Academic&amp;rsquo;s Markdown slides feature.
+  &lt;/div&gt;
+&lt;/div&gt;
+
+
+Supplementary notes can be added here, including [code and math](https://sourcethemes.com/academic/docs/writing-markdown-latex/).
+--&gt;&lt;blockquote&gt;
+&lt;/blockquote&gt;
+</description>
+    </item>
     
     <item>
       <title>SPEAQeasy: a scalable pipeline for expression analysis and quantification for R/Bioconductor-powered RNA-seq analyses</title>
@@ -590,11 +617,29 @@ Supplementary notes can be added here, including [code and math](https://sourcet
     </item>
     
     <item>
+      <title>Developmental effects of maternal smoking during pregnancy on the human frontal cortex transcriptome</title>
+      <link>https://lcolladotor.github.io/publication/2018-08_maternalsmoking/</link>
+      <pubDate>Tue, 21 Aug 2018 00:00:00 +0000</pubDate>
+      <guid>https://lcolladotor.github.io/publication/2018-08_maternalsmoking/</guid>
+      <description>&lt;!-- More detail can easily be written here using *Markdown* and $\rm \LaTeX$ math code. --&gt;
+</description>
+    </item>
+    
+    <item>
       <title>From learning to using to teaching to developing R</title>
       <link>https://lcolladotor.github.io/talk/cdsb2018/</link>
       <pubDate>Mon, 30 Jul 2018 10:00:00 -0400</pubDate>
       <guid>https://lcolladotor.github.io/talk/cdsb2018/</guid>
       <description>&lt;script async class=&#34;speakerdeck-embed&#34; data-slide=&#34;1&#34; data-id=&#34;711408b758884ca2bf0bb950ce0ba0ed&#34; data-ratio=&#34;1.77777777777778&#34; src=&#34;//speakerdeck.com/assets/embed.js&#34;&gt;&lt;/script&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Developmental and genetic regulation of the human cortex transcriptome illuminate schizophrenia pathogenesis</title>
+      <link>https://lcolladotor.github.io/publication/2018-07_bsp1/</link>
+      <pubDate>Thu, 26 Jul 2018 00:00:00 +0000</pubDate>
+      <guid>https://lcolladotor.github.io/publication/2018-07_bsp1/</guid>
+      <description>&lt;!-- More detail can easily be written here using *Markdown* and $\rm \LaTeX$ math code. --&gt;
 </description>
     </item>
     
@@ -640,6 +685,24 @@ Supplementary notes can be added here, including [code and math](https://sourcet
       <pubDate>Tue, 17 Apr 2018 11:00:00 -0400</pubDate>
       <guid>https://lcolladotor.github.io/talk/dennisdal2018/</guid>
       <description>&lt;script async class=&#34;speakerdeck-embed&#34; data-id=&#34;ec1d1e5529e44550b48c74c924d6f52a&#34; data-ratio=&#34;1.77777777777778&#34; src=&#34;//speakerdeck.com/assets/embed.js&#34;&gt;&lt;/script&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Improving the value of public RNA-seq expression data by phenotype prediction</title>
+      <link>https://lcolladotor.github.io/publication/2018-03_rnaseq_prediction/</link>
+      <pubDate>Mon, 05 Mar 2018 16:45:43 -0500</pubDate>
+      <guid>https://lcolladotor.github.io/publication/2018-03_rnaseq_prediction/</guid>
+      <description>&lt;!-- More detail can easily be written here using *Markdown* and $\rm \LaTeX$ math code. --&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>RNA-seq transcript quantification from reduced-representation data in recount2</title>
+      <link>https://lcolladotor.github.io/publication/preprint_recount_tx/</link>
+      <pubDate>Fri, 12 Jan 2018 16:45:43 -0500</pubDate>
+      <guid>https://lcolladotor.github.io/publication/preprint_recount_tx/</guid>
+      <description>&lt;!-- More detail can easily be written here using *Markdown* and $\rm \LaTeX$ math code. --&gt;
 </description>
     </item>
     
@@ -795,6 +858,15 @@ Supplementary notes can be added here, including [code and math](https://sourcet
     </item>
     
     <item>
+      <title>Developmental regulation of human cortex transcription and its clinical relevance at single base resolution</title>
+      <link>https://lcolladotor.github.io/publication/2014-12_brainders/</link>
+      <pubDate>Fri, 19 Dec 2014 17:17:48 -0500</pubDate>
+      <guid>https://lcolladotor.github.io/publication/2014-12_brainders/</guid>
+      <description>&lt;!-- More detail can easily be written here using *Markdown* and $\rm \LaTeX$ math code. --&gt;
+</description>
+    </item>
+    
+    <item>
       <title>derfinder tutorial</title>
       <link>https://lcolladotor.github.io/talk/dertutor2014/</link>
       <pubDate>Fri, 19 Dec 2014 16:19:21 -0500</pubDate>
@@ -943,6 +1015,24 @@ Supplementary notes can be added here, including [code and math](https://sourcet
       <description>&lt;p&gt;
 &lt;a href=&#34;http://lcolladotor.github.io/2011/12/04/introducing-biostatistics-to-first-year-lcg-students/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Blog post describing this talk&lt;/a&gt;&lt;/p&gt;
 &lt;script async class=&#34;speakerdeck-embed&#34; data-id=&#34;464d2cce929a4682adddccf1d4560ce8&#34; data-ratio=&#34;1.33333333333333&#34; src=&#34;//speakerdeck.com/assets/embed.js&#34;&gt;&lt;/script&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Interspecies interactions that result in Bacillus subtilis forming biofilms are mediated mainly by members of its own genus</title>
+      <link>https://lcolladotor.github.io/publication/2011-11_bsubtilis/</link>
+      <pubDate>Thu, 10 Nov 2011 17:13:40 -0500</pubDate>
+      <guid>https://lcolladotor.github.io/publication/2011-11_bsubtilis/</guid>
+      <description>&lt;!-- More detail can easily be written here using *Markdown* and $\rm \LaTeX$ math code. --&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>RegulonDB version 7.0: transcriptional regulation of Escherichia coli K-12 integrated within genetic sensory response units (Gensor Units)</title>
+      <link>https://lcolladotor.github.io/publication/2011-01_regulondbv7/</link>
+      <pubDate>Wed, 19 Jan 2011 16:58:16 -0500</pubDate>
+      <guid>https://lcolladotor.github.io/publication/2011-01_regulondbv7/</guid>
+      <description>&lt;!-- More detail can easily be written here using *Markdown* and $\rm \LaTeX$ math code. --&gt;
 </description>
     </item>
     
