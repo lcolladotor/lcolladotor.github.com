@@ -1540,7 +1540,7 @@ If you tweet about this website, the data or the R package please use the &lt;co
 &lt;/div&gt;
 &lt;div id=&#34;installation-instructions&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Installation instructions&lt;/h3&gt;
-&lt;p&gt;Get the latest stable &lt;code&gt;R&lt;/code&gt; release from &lt;a href=&#34;http://cran.r-project.org/&#34;&gt;CRAN&lt;/a&gt;. Then install &lt;code&gt;spatialLIBD&lt;/code&gt; using from &lt;a href=&#34;http://bioconductor.org/&#34;&gt;Bioconductor&lt;/a&gt; the following code:&lt;/p&gt;
+&lt;p&gt;Get the latest stable &lt;code&gt;R&lt;/code&gt; release from &lt;a href=&#34;http://cran.r-project.org/&#34;&gt;CRAN&lt;/a&gt;. Then install &lt;code&gt;spatialLIBD&lt;/code&gt; from &lt;a href=&#34;http://bioconductor.org/&#34;&gt;Bioconductor&lt;/a&gt; using the following code:&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;if (!requireNamespace(&amp;quot;BiocManager&amp;quot;, quietly = TRUE))
     install.packages(&amp;quot;BiocManager&amp;quot;)
 
