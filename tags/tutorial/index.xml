@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>tutorial | L. Collado-Torres</title>
-    <link>http://lcolladotor.github.io/tags/tutorial/</link>
-      <atom:link href="http://lcolladotor.github.io/tags/tutorial/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://lcolladotor.github.io/tags/tutorial/</link>
+      <atom:link href="https://lcolladotor.github.io/tags/tutorial/index.xml" rel="self" type="application/rss+xml" />
     <description>tutorial</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2011-2022. All thoughts and opinions here are my own. The icon was designed by [Mauricio Guzmán](https://www.linkedin.com/in/mauricio-guzman-6529b551/) and is inspired by [Huichol culture](https://en.wikipedia.org/wiki/Huichol); it represents my community building interests</copyright><lastBuildDate>Wed, 18 Sep 2019 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>http://lcolladotor.github.io/images/icon_hu2b32c4ab415f12f472f73c7b0301b0d1_19400_512x512_fill_lanczos_center_3.png</url>
+      <url>https://lcolladotor.github.io/images/icon_hu2b32c4ab415f12f472f73c7b0301b0d1_19400_512x512_fill_lanczos_center_3.png</url>
       <title>tutorial</title>
-      <link>http://lcolladotor.github.io/tags/tutorial/</link>
+      <link>https://lcolladotor.github.io/tags/tutorial/</link>
     </image>
     
     <item>
       <title>Windows user space issues with installing R packages</title>
-      <link>http://lcolladotor.github.io/2019/09/18/windows-user-space-issues-with-installing-r-packages/</link>
+      <link>https://lcolladotor.github.io/2019/09/18/windows-user-space-issues-with-installing-r-packages/</link>
       <pubDate>Wed, 18 Sep 2019 00:00:00 +0000</pubDate>
-      <guid>http://lcolladotor.github.io/2019/09/18/windows-user-space-issues-with-installing-r-packages/</guid>
+      <guid>https://lcolladotor.github.io/2019/09/18/windows-user-space-issues-with-installing-r-packages/</guid>
       <description>
 
 
@@ -389,9 +389,9 @@ URL: &lt;a href=&#34;https://github.com/rstudio/blogdown&#34;&gt;https://github.
     
     <item>
       <title>How to write academic documents with GoogleDocs</title>
-      <link>http://lcolladotor.github.io/2019/04/02/how-to-write-academic-documents-with-googledocs/</link>
+      <link>https://lcolladotor.github.io/2019/04/02/how-to-write-academic-documents-with-googledocs/</link>
       <pubDate>Tue, 02 Apr 2019 00:00:00 +0000</pubDate>
-      <guid>http://lcolladotor.github.io/2019/04/02/how-to-write-academic-documents-with-googledocs/</guid>
+      <guid>https://lcolladotor.github.io/2019/04/02/how-to-write-academic-documents-with-googledocs/</guid>
       <description>
 
 
@@ -641,9 +641,9 @@ URL: &lt;a href=&#34;https://github.com/rstudio/blogdown&#34;&gt;https://github.
     
     <item>
       <title>ggplot Tutorial</title>
-      <link>http://lcolladotor.github.io/2013/06/21/ggplot-Tutorial/</link>
+      <link>https://lcolladotor.github.io/2013/06/21/ggplot-Tutorial/</link>
       <pubDate>Fri, 21 Jun 2013 00:00:00 +0000</pubDate>
-      <guid>http://lcolladotor.github.io/2013/06/21/ggplot-Tutorial/</guid>
+      <guid>https://lcolladotor.github.io/2013/06/21/ggplot-Tutorial/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;http://www.ceb-institute.org/bbs/wp-content/uploads/2011/09/handout_ggplot2.pdf&#34;&gt;ggplot Tutorial&lt;/a&gt;&lt;br/&gt;&lt;p&gt;I liked the &lt;a href=&#34;http://www.ceb-institute.org/bbs/wp-content/uploads/2011/09/handout_ggplot2.pdf&#34;&gt;following ggplot2 tutorial&lt;/a&gt; which is featured in Gabriela de Queiroz’s blog called &lt;a href=&#34;http://unbiasedestimator.tumblr.com/&#34;&gt;unbiasedestimator&lt;/a&gt;. The tutorial looks very neatly presented and I’m sure that it will be very helpful to anyone just getting started with ggplot2 before they jump into &lt;a href=&#34;http://ggplot2.org/book/&#34;&gt;ggplot2: Elegant Graphics for Data Analysis&lt;/a&gt; by Hadley Wickham or &lt;a href=&#34;http://shop.oreilly.com/product/0636920023135.do&#34;&gt;R Graphics Cookbook&lt;/a&gt; by Winston Chang.&lt;/p&gt;&lt;/p&gt;
 &lt;p&gt;&lt;span&gt;The tutorial is very nicely formatted with code in bold highlighting  parts that change something in the plot. Overall, the tutorial explains how to use qplot() although it does have a longer example using ggplot() to make survival curves.&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;Check it out!&lt;/p&gt;

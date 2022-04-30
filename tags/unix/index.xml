@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>UNIX | L. Collado-Torres</title>
-    <link>http://lcolladotor.github.io/tags/unix/</link>
-      <atom:link href="http://lcolladotor.github.io/tags/unix/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://lcolladotor.github.io/tags/unix/</link>
+      <atom:link href="https://lcolladotor.github.io/tags/unix/index.xml" rel="self" type="application/rss+xml" />
     <description>UNIX</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2011-2022. All thoughts and opinions here are my own. The icon was designed by [Mauricio Guzmán](https://www.linkedin.com/in/mauricio-guzman-6529b551/) and is inspired by [Huichol culture](https://en.wikipedia.org/wiki/Huichol); it represents my community building interests</copyright><lastBuildDate>Wed, 07 Nov 2012 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>http://lcolladotor.github.io/images/icon_hu2b32c4ab415f12f472f73c7b0301b0d1_19400_512x512_fill_lanczos_center_3.png</url>
+      <url>https://lcolladotor.github.io/images/icon_hu2b32c4ab415f12f472f73c7b0301b0d1_19400_512x512_fill_lanczos_center_3.png</url>
       <title>UNIX</title>
-      <link>http://lcolladotor.github.io/tags/unix/</link>
+      <link>https://lcolladotor.github.io/tags/unix/</link>
     </image>
     
     <item>
       <title>me: Bad rm, don&#39;t delete stuff I didn&#39;t want to delete! (rm: well, I do what you tell me to do!)</title>
-      <link>http://lcolladotor.github.io/2012/11/07/me-bad-rm-dont-delete-stuff-i-didnt-want-to-delete/</link>
+      <link>https://lcolladotor.github.io/2012/11/07/me-bad-rm-dont-delete-stuff-i-didnt-want-to-delete/</link>
       <pubDate>Wed, 07 Nov 2012 00:00:00 +0000</pubDate>
-      <guid>http://lcolladotor.github.io/2012/11/07/me-bad-rm-dont-delete-stuff-i-didnt-want-to-delete/</guid>
+      <guid>https://lcolladotor.github.io/2012/11/07/me-bad-rm-dont-delete-stuff-i-didnt-want-to-delete/</guid>
       <description>&lt;p&gt;When Sandy was in town at some point I started doing some of my research work, but I shouldn&amp;#8217;t have. I basically did a silly mistake and erased files that take a long time to compute.&lt;/p&gt;
 &lt;p&gt;Prior to being here, I had an alias in my bash profile like this:&lt;/p&gt;
 &lt;p&gt;alias rm=&amp;#8217;rm -i&amp;#8217;&lt;/p&gt;

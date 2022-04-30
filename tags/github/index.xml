@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>github | L. Collado-Torres</title>
-    <link>http://lcolladotor.github.io/tags/github/</link>
-      <atom:link href="http://lcolladotor.github.io/tags/github/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://lcolladotor.github.io/tags/github/</link>
+      <atom:link href="https://lcolladotor.github.io/tags/github/index.xml" rel="self" type="application/rss+xml" />
     <description>github</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2011-2022. All thoughts and opinions here are my own. The icon was designed by [Mauricio Guzmán](https://www.linkedin.com/in/mauricio-guzman-6529b551/) and is inspired by [Huichol culture](https://en.wikipedia.org/wiki/Huichol); it represents my community building interests</copyright><lastBuildDate>Wed, 18 Mar 2020 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>http://lcolladotor.github.io/images/icon_hu2b32c4ab415f12f472f73c7b0301b0d1_19400_512x512_fill_lanczos_center_3.png</url>
+      <url>https://lcolladotor.github.io/images/icon_hu2b32c4ab415f12f472f73c7b0301b0d1_19400_512x512_fill_lanczos_center_3.png</url>
       <title>github</title>
-      <link>http://lcolladotor.github.io/tags/github/</link>
+      <link>https://lcolladotor.github.io/tags/github/</link>
     </image>
     
     <item>
       <title>You just committed a large file and can&#39;t push to GitHub</title>
-      <link>http://lcolladotor.github.io/2020/03/18/you-just-committed-a-large-file-and-can-t-push-to-github/</link>
+      <link>https://lcolladotor.github.io/2020/03/18/you-just-committed-a-large-file-and-can-t-push-to-github/</link>
       <pubDate>Wed, 18 Mar 2020 00:00:00 +0000</pubDate>
-      <guid>http://lcolladotor.github.io/2020/03/18/you-just-committed-a-large-file-and-can-t-push-to-github/</guid>
+      <guid>https://lcolladotor.github.io/2020/03/18/you-just-committed-a-large-file-and-can-t-push-to-github/</guid>
       <description>
 
 
@@ -26,7 +26,7 @@
   &lt;/div&gt;
 &lt;/div&gt;
 &lt;/p&gt;
-&lt;p&gt;The data me and my colleagues work with is typically too big for our personal computers, so we use a high performance computing environment (cluster) and mostly interact with it through the command line terminal. As you might know, I’m a big fan of version control and I use &lt;a href=&#34;https://git-scm.com/&#34;&gt;&lt;code&gt;git&lt;/code&gt;&lt;/a&gt; plus &lt;a href=&#34;https://github.com/&#34;&gt;GitHub&lt;/a&gt; for sharing our code &lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;. That’s why I’ve been advocating others to use it for a while and when they do, they run to me if they have some issues. A while back, my former student &lt;a href=&#34;http://lcolladotor.github.io/authors/apeterson/&#34;&gt;Amy Peterson&lt;/a&gt; wrote a blog post titled &lt;a href=&#34;http://research.libd.org/rstatsclub/post/git-to-know-git/&#34;&gt;git to know git: an 8 minute introduction&lt;/a&gt; which is useful if you are getting started. Amy also links to the excellent &lt;a href=&#34;https://happygitwithr.com/&#34;&gt;Happy Git and GitHub for the useR&lt;/a&gt; book.&lt;/p&gt;
+&lt;p&gt;The data me and my colleagues work with is typically too big for our personal computers, so we use a high performance computing environment (cluster) and mostly interact with it through the command line terminal. As you might know, I’m a big fan of version control and I use &lt;a href=&#34;https://git-scm.com/&#34;&gt;&lt;code&gt;git&lt;/code&gt;&lt;/a&gt; plus &lt;a href=&#34;https://github.com/&#34;&gt;GitHub&lt;/a&gt; for sharing our code &lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;. That’s why I’ve been advocating others to use it for a while and when they do, they run to me if they have some issues. A while back, my former student &lt;a href=&#34;https://lcolladotor.github.io/authors/apeterson/&#34;&gt;Amy Peterson&lt;/a&gt; wrote a blog post titled &lt;a href=&#34;http://research.libd.org/rstatsclub/post/git-to-know-git/&#34;&gt;git to know git: an 8 minute introduction&lt;/a&gt; which is useful if you are getting started. Amy also links to the excellent &lt;a href=&#34;https://happygitwithr.com/&#34;&gt;Happy Git and GitHub for the useR&lt;/a&gt; book.&lt;/p&gt;
 &lt;div id=&#34;recurrent-problem-you-just-commited-a-large-file-and-cant-push-to-github&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Recurrent problem: you just commited a large file and can’t push to GitHub&lt;/h3&gt;
 &lt;p&gt;One situation that I’ve frequently helped others with is when they use &lt;code&gt;git add *&lt;/code&gt; or &lt;code&gt;git add .&lt;/code&gt; and version control &lt;em&gt;every&lt;/em&gt; file in their project. They then do a commit such as &lt;code&gt;git commit -m &#34;added all files&#34;&lt;/code&gt; and run &lt;code&gt;git push&lt;/code&gt; to sync their files to GitHub. But oops, GitHub complains that you are trying to commit files larger than 50 Mb and even grinds to a halt if they are larger than 100 Mb. Which given that we work with large data, happens frequently (even a PDF file can be that big!).&lt;/p&gt;
@@ -450,9 +450,9 @@ URL: &lt;a href=&#34;https://github.com/rstudio/blogdown&#34;&gt;https://github.
     
     <item>
       <title>Reading an R file from GitHub</title>
-      <link>http://lcolladotor.github.io/2013/05/09/Reading-an-R-file-from-GitHub/</link>
+      <link>https://lcolladotor.github.io/2013/05/09/Reading-an-R-file-from-GitHub/</link>
       <pubDate>Thu, 09 May 2013 00:00:00 +0000</pubDate>
-      <guid>http://lcolladotor.github.io/2013/05/09/Reading-an-R-file-from-GitHub/</guid>
+      <guid>https://lcolladotor.github.io/2013/05/09/Reading-an-R-file-from-GitHub/</guid>
       <description>&lt;p&gt;Lets say that I want to read in &lt;a href=&#34;https://github.com/lcolladotor/ballgownR-devel/blob/master/ballgownR/R/infoGene.R&#34;&gt;this R file&lt;/a&gt; from GitHub into R.&lt;/p&gt;
 &lt;p&gt;The first thing you have to do is locate the raw file. You can do so by clicking on the &lt;strong&gt;Raw&lt;/strong&gt; button in GitHub. In this case it&amp;#8217;s &lt;a href=&#34;https://raw.github.com/lcolladotor/ballgownR-devel/master/ballgownR/R/infoGene.R&#34;&gt;&lt;a href=&#34;https://raw.github.com/lcolladotor/ballgownR-devel/master/ballgownR/R/infoGene.R&#34;&gt;https://raw.github.com/lcolladotor/ballgownR-devel/master/ballgownR/R/infoGene.R&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;One would think that using &lt;code&gt;source()&lt;/code&gt; would work, but it doesn&amp;#8217;t as shown below:&lt;/p&gt;

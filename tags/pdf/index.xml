@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>pdf | L. Collado-Torres</title>
-    <link>http://lcolladotor.github.io/tags/pdf/</link>
-      <atom:link href="http://lcolladotor.github.io/tags/pdf/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://lcolladotor.github.io/tags/pdf/</link>
+      <atom:link href="https://lcolladotor.github.io/tags/pdf/index.xml" rel="self" type="application/rss+xml" />
     <description>pdf</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2011-2022. All thoughts and opinions here are my own. The icon was designed by [Mauricio Guzmán](https://www.linkedin.com/in/mauricio-guzman-6529b551/) and is inspired by [Huichol culture](https://en.wikipedia.org/wiki/Huichol); it represents my community building interests</copyright><lastBuildDate>Wed, 05 Dec 2012 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>http://lcolladotor.github.io/images/icon_hu2b32c4ab415f12f472f73c7b0301b0d1_19400_512x512_fill_lanczos_center_3.png</url>
+      <url>https://lcolladotor.github.io/images/icon_hu2b32c4ab415f12f472f73c7b0301b0d1_19400_512x512_fill_lanczos_center_3.png</url>
       <title>pdf</title>
-      <link>http://lcolladotor.github.io/tags/pdf/</link>
+      <link>https://lcolladotor.github.io/tags/pdf/</link>
     </image>
     
     <item>
       <title>Adding youtube videos in pdfs, html reports and html presentations</title>
-      <link>http://lcolladotor.github.io/2012/12/05/adding-youtube-videos-in-pdfs-html-reports/</link>
+      <link>https://lcolladotor.github.io/2012/12/05/adding-youtube-videos-in-pdfs-html-reports/</link>
       <pubDate>Wed, 05 Dec 2012 00:00:00 +0000</pubDate>
-      <guid>http://lcolladotor.github.io/2012/12/05/adding-youtube-videos-in-pdfs-html-reports/</guid>
+      <guid>https://lcolladotor.github.io/2012/12/05/adding-youtube-videos-in-pdfs-html-reports/</guid>
       <description>&lt;p&gt;I got a question today on how to add a video to a beamer pdf presentation. Well, I had never done it, but I got curious enough to google around for a bit and here is the end product.&lt;/p&gt;
 &lt;p&gt;One way of doing it is using the &lt;a href=&#34;http://www.ctan.org/pkg/media9&#34;&gt;media9&lt;/a&gt; tex package. For this to work you need to have the latest version of texlive (or miktex). Then, it&amp;#8217;s quite straight forward to include the video. The issue is that you have to open the pdf with Acrobat Reader 10+ (9 something works. I think that it&amp;#8217;s 9.4.1+ but well, the point is that you need an updated version). You will also need a live web connection to actually show the video. An alternative (if you have the video file) is to convert it to swf and embed it. &lt;/p&gt;
 &lt;p&gt;Here is my &lt;a href=&#34;http://www.biostat.jhsph.edu/~lcollado/misc/video_in_beamer/video.tex&#34;&gt;tex&lt;/a&gt; example file with the corresponding &lt;a href=&#34;http://www.biostat.jhsph.edu/~lcollado/misc/video_in_beamer/video.pdf&#34;&gt;pdf&lt;/a&gt; output compiled using pdflatex. Remember that you need Acrobat Reader to actually see the video in the pdf.&lt;/p&gt;

@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Fun | L. Collado-Torres</title>
-    <link>http://lcolladotor.github.io/tags/fun/</link>
-      <atom:link href="http://lcolladotor.github.io/tags/fun/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://lcolladotor.github.io/tags/fun/</link>
+      <atom:link href="https://lcolladotor.github.io/tags/fun/index.xml" rel="self" type="application/rss+xml" />
     <description>Fun</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2011-2022. All thoughts and opinions here are my own. The icon was designed by [Mauricio Guzmán](https://www.linkedin.com/in/mauricio-guzman-6529b551/) and is inspired by [Huichol culture](https://en.wikipedia.org/wiki/Huichol); it represents my community building interests</copyright><lastBuildDate>Thu, 10 Mar 2016 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>http://lcolladotor.github.io/images/icon_hu2b32c4ab415f12f472f73c7b0301b0d1_19400_512x512_fill_lanczos_center_3.png</url>
+      <url>https://lcolladotor.github.io/images/icon_hu2b32c4ab415f12f472f73c7b0301b0d1_19400_512x512_fill_lanczos_center_3.png</url>
       <title>Fun</title>
-      <link>http://lcolladotor.github.io/tags/fun/</link>
+      <link>https://lcolladotor.github.io/tags/fun/</link>
     </image>
     
     <item>
       <title>LCG-UNAM 11 years ago</title>
-      <link>http://lcolladotor.github.io/2016/03/10/LCGUNAM/</link>
+      <link>https://lcolladotor.github.io/2016/03/10/LCGUNAM/</link>
       <pubDate>Thu, 10 Mar 2016 00:00:00 +0000</pubDate>
-      <guid>http://lcolladotor.github.io/2016/03/10/LCGUNAM/</guid>
+      <guid>https://lcolladotor.github.io/2016/03/10/LCGUNAM/</guid>
       <description>&lt;p&gt;This has been a busy week. I just flew in last night from 
 &lt;a href=&#34;https://twitter.com/hashtag/enar2016&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;#ENAR2016&lt;/a&gt; and I&amp;rsquo;m getting ready for a postdoc interview tomorrow, which means that I&amp;rsquo;m also flying today. On the flight back from 
 &lt;a href=&#34;https://twitter.com/hashtag/enar2016&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;#ENAR2016&lt;/a&gt; I started reading a book my friend 
@@ -39,9 +39,9 @@
     
     <item>
       <title>Automatically coloring your R output in the terminal using colorout</title>
-      <link>http://lcolladotor.github.io/2014/02/17/colorout/</link>
+      <link>https://lcolladotor.github.io/2014/02/17/colorout/</link>
       <pubDate>Mon, 17 Feb 2014 00:00:00 +0000</pubDate>
-      <guid>http://lcolladotor.github.io/2014/02/17/colorout/</guid>
+      <guid>https://lcolladotor.github.io/2014/02/17/colorout/</guid>
       <description>&lt;p&gt;Thanks to Alyssa Frazee I just learned about the &lt;code&gt;colorout&lt;/code&gt; package (&lt;span class=&#34;showtooltip&#34; title=&#34;Aquino J (2013). colorout: Colorize R output on terminal emulators. R package version 1.0-2.&#34;&gt;&lt;a href=&#34;http://www.lepem.ufc.br/jaa/colorout.html&#34;&gt;Aquino, 2013&lt;/a&gt;&lt;/span&gt;). It modifies &lt;code&gt;R&lt;/code&gt; so that the output is in different colors, making it much more pleasant to use &lt;code&gt;R&lt;/code&gt; in the terminal.&lt;/p&gt;
 &lt;p&gt;Do note that &lt;code&gt;colorout&lt;/code&gt; is not available from CRAN, but you can easily install by following the instructions on the &lt;code&gt;colorout&lt;/code&gt; site (&lt;span class=&#34;showtooltip&#34; title=&#34;(2014). &#39;colorout.&#39; .&#34;&gt;&lt;a href=&#34;http://www.lepem.ufc.br/jaa/colorout.html&#34;&gt;Official site&lt;/a&gt;&lt;/span&gt;) reproduced below:&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;download.file(&amp;quot;http://www.lepem.ufc.br/jaa/colorout_1.0-2.tar.gz&amp;quot;, destfile = &amp;quot;colorout_1.0-2.tar.gz&amp;quot;)
@@ -96,9 +96,9 @@ if (Sys.getenv(&amp;quot;TERM&amp;quot;) == &amp;quot;xterm-256color&amp;quot;) 
     
     <item>
       <title>rMaps released</title>
-      <link>http://lcolladotor.github.io/2014/02/10/rMaps-released/</link>
+      <link>https://lcolladotor.github.io/2014/02/10/rMaps-released/</link>
       <pubDate>Mon, 10 Feb 2014 00:00:00 +0000</pubDate>
-      <guid>http://lcolladotor.github.io/2014/02/10/rMaps-released/</guid>
+      <guid>https://lcolladotor.github.io/2014/02/10/rMaps-released/</guid>
       <description>&lt;p&gt;
 &lt;a href=&#34;https://github.com/ramnathv&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Ramnath Vaidyanathan&lt;/a&gt; just released his new &lt;code&gt;R&lt;/code&gt; interactive package, &lt;code&gt;rMaps&lt;/code&gt; (&lt;span class=&#34;showtooltip&#34; title=&#34;Vaidyanathan R (2014). rMaps: Interactive Maps from R. R package version 0.1.&#34;&gt;&lt;a href=&#34;&#34;&gt;Vaidyanathan, 2014&lt;/a&gt;&lt;/span&gt;). The packages relies on the development version of his widely known &lt;code&gt;rCharts&lt;/code&gt; package (&lt;span class=&#34;showtooltip&#34; title=&#34;Vaidyanathan R (2013). rCharts: Interactive Charts using Polycharts.js. R package version 0.4.2.&#34;&gt;&lt;a href=&#34;&#34;&gt;Vaidyanathan, 2013&lt;/a&gt;&lt;/span&gt;) as well as javascript libraries that specialize in maps. If you don&amp;rsquo;t know Ramnath, he is one of the most active &lt;code&gt;R&lt;/code&gt; developers out there!! You can see that from his 
 &lt;a href=&#34;https://github.com/ramnathv&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;GitHub profile&lt;/a&gt;.&lt;/p&gt;
@@ -165,9 +165,9 @@ map
     
     <item>
       <title>Third Student Cultural Mixer</title>
-      <link>http://lcolladotor.github.io/2013/11/20/StudentMixer3/</link>
+      <link>https://lcolladotor.github.io/2013/11/20/StudentMixer3/</link>
       <pubDate>Wed, 20 Nov 2013 00:00:00 +0000</pubDate>
-      <guid>http://lcolladotor.github.io/2013/11/20/StudentMixer3/</guid>
+      <guid>https://lcolladotor.github.io/2013/11/20/StudentMixer3/</guid>
       <description>&lt;center&gt;
 &lt;a href=&#34;http://lcolladotor.github.io/figs/2013-11-20-StudentMixer3/ad-03_v1.png&#34;&gt;&lt;img src=&#34;http://lcolladotor.github.io/figs/2013-11-20-StudentMixer3/ad-03_v1.png&#34; alt=&#34;Workflow&#34; style=&#34;width: 612px;&#34;/&gt;&lt;/a&gt;
 &lt;/center&gt;
@@ -177,9 +177,9 @@ map
     
     <item>
       <title>Epi vs Biostat Kickball match Spring 2013</title>
-      <link>http://lcolladotor.github.io/2013/04/24/Epi-vs-Biostat-Kickball-match-Spring-2013/</link>
+      <link>https://lcolladotor.github.io/2013/04/24/Epi-vs-Biostat-Kickball-match-Spring-2013/</link>
       <pubDate>Wed, 24 Apr 2013 00:00:00 +0000</pubDate>
-      <guid>http://lcolladotor.github.io/2013/04/24/Epi-vs-Biostat-Kickball-match-Spring-2013/</guid>
+      <guid>https://lcolladotor.github.io/2013/04/24/Epi-vs-Biostat-Kickball-match-Spring-2013/</guid>
       <description>&lt;p&gt;This past Saturday the Epi and Biostat troops met for another fun kickball match. Obviously Biostat beat Epi, yup I know: again! This time the score was 15-8 (according to our bookkeeper and captain John) or 12-8 (according to some in Epi).&lt;/p&gt;
 &lt;p&gt;There was a hint of a surprise at the beginning when Epi scored two runs in the top of the first inning. However, the tide changed back with a homerun by Rumen. Sadly, one of the Epi players got injured and carried out of the court in that play. Rumen also pulled his quad with the big hit and was limited for the rest of the match.&lt;/p&gt;
 &lt;p&gt;From that inning on forth we saw both teams having fun kicking the ball as far as we could or aim for in between the defensive lines. There were plenty of sacrifice hits, some occasional errors, but overall we had a lot of fun!&lt;/p&gt;
@@ -193,9 +193,9 @@ map
     
     <item>
       <title>Second cultural mixer today!</title>
-      <link>http://lcolladotor.github.io/2013/02/15/Second-cultural-mixer-today/</link>
+      <link>https://lcolladotor.github.io/2013/02/15/Second-cultural-mixer-today/</link>
       <pubDate>Fri, 15 Feb 2013 00:00:00 +0000</pubDate>
-      <guid>http://lcolladotor.github.io/2013/02/15/Second-cultural-mixer-today/</guid>
+      <guid>https://lcolladotor.github.io/2013/02/15/Second-cultural-mixer-today/</guid>
       <description>&lt;img src=&#34;http://24.media.tumblr.com/f55efedc3ca5189bcc1600941f7ef56c/tumblr_mi58wrDjuB1qgn8kjo1_500.png&#34;&gt;
 </description>
     </item>
