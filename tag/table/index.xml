@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>table | L. Collado-Torres</title>
+    <link>https://lcolladotor.github.io/tag/table/</link>
+      <atom:link href="https://lcolladotor.github.io/tag/table/index.xml" rel="self" type="application/rss+xml" />
+    <description>table</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Fri, 20 Jan 2017 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://lcolladotor.github.io/media/icon_hu2b32c4ab415f12f472f73c7b0301b0d1_19400_512x512_fill_lanczos_center_3.png</url>
+      <title>table</title>
+      <link>https://lcolladotor.github.io/tag/table/</link>
+    </image>
+    
+    <item>
+      <title>Easily explore a table with shinycsv</title>
+      <link>https://lcolladotor.github.io/2017/01/20/easily-explore-a-table-with-shinycsv/</link>
+      <pubDate>Fri, 20 Jan 2017 00:00:00 +0000</pubDate>
+      <guid>https://lcolladotor.github.io/2017/01/20/easily-explore-a-table-with-shinycsv/</guid>
+      <description>&lt;p&gt;Have you ever had to explore a table with data? I believe the answer is &lt;em&gt;yes&lt;/em&gt; for most people that work at a computer or even just use it for communicating with their friends and family. Tables of data pop up everywhere, for example in personal finance. Websites like &lt;a href=&#34;https://www.mint.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Mint.com&lt;/a&gt; allow you to download your transactions in a &lt;a href=&#34;https://en.wikipedia.org/wiki/Comma-separated_values&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CSV&lt;/a&gt; file called &lt;code&gt;transactions.csv&lt;/code&gt;. CSV is one of the many formats for storing tables and most likely when you try to open the &lt;code&gt;transactions.csv&lt;/code&gt; file, it will open with Excel. Now, can you make a quick figure of one of your columns in your table?&lt;/p&gt;
+&lt;p&gt;Some will answer yes, others no. The basic issue is that it&amp;rsquo;s not &lt;em&gt;super&lt;/em&gt; easy to explore your data in Excel or similar programs. Wait, shouldn&amp;rsquo;t it be easy? 😕&lt;/p&gt;
+&lt;p&gt;What if you want to subset your data and want to re-make the plot? How about getting some simple statistics like the mean or frequency of some categories for a given variable? 😨 These are some of the immediate tasks that are helpful when exploring data. Visually, making figures with two variables is also very common.&lt;/p&gt;
+&lt;p&gt;Programmers and experts in Excel, Stata, &lt;code&gt;R&lt;/code&gt; among other options can perform these data explorations. It might take them a little bit of time to write the code or remember it or use the user interface menu of their program of choice. But what about everyone else?&lt;/p&gt;
+&lt;p&gt;At the &lt;a href=&#34;http://www.libd.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Lieber Institute for Brain Development&lt;/a&gt; where I work, it&amp;rsquo;s common for us to exchange data in tables, and thus explore data. That&amp;rsquo;s why we created &lt;code&gt;shinycsv&lt;/code&gt; &lt;a id=&#39;cite-shinycsv&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://github.com/LieberInstitute/shinycsv&#39;&gt;Collado-Torres, Semick, and Jaffe, 2016&lt;/a&gt;). It&amp;rsquo;s an R package &lt;a id=&#39;cite-cran&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://www.R-project.org/&#39;&gt;R Core Team, 2016&lt;/a&gt;) that contains a &lt;code&gt;shiny&lt;/code&gt; &lt;a id=&#39;cite-shiny&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://CRAN.R-project.org/package=shiny&#39;&gt;Chang, Cheng, Allaire, Xie, et al., 2017&lt;/a&gt;) application that allows users to interactively explore a table.&lt;/p&gt;
+&lt;p&gt;Installing &lt;code&gt;R&lt;/code&gt; is a pretty high bar, that&amp;rsquo;s why we are hosting this application at &lt;a href=&#34;https://jhubiostatistics.shinyapps.io/shinycsv/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://jhubiostatistics.shinyapps.io/shinycsv/&lt;/a&gt;. Try it out!&lt;/p&gt;
+&lt;center&gt;
+&lt;a href=&#34;https://jhubiostatistics.shinyapps.io/shinycsv/&#34;&gt;&lt;img alt = &#39;shinycsv landing&#39; width=&#39;600&#39; src=&#39;http://lcolladotor.github.io/figs/2017-01-20-shinycsv/landing.png&#39; /&gt;&lt;/a&gt;
+&lt;/center&gt;
+&lt;h2 id=&#34;shinycsv-application&#34;&gt;shinycsv application&lt;/h2&gt;
+&lt;p&gt;The application includes data about cars to demonstrate what it can do. It&amp;rsquo;s a small data set that is commonly used for demonstration purposes. Anyhow, in the application you&amp;rsquo;ll notice a few tabs.&lt;/p&gt;
+&lt;p&gt;The application shows the &lt;em&gt;&lt;strong&gt;raw data&lt;/strong&gt;&lt;/em&gt; in an interactive table that allows you to subset the observations by some criteria, search in the table, and sort in different ways. The &lt;em&gt;&lt;strong&gt;raw summary&lt;/strong&gt;&lt;/em&gt; tab shows quick statistical summaries which depend on the variable type (numerical, categorical, etc). If you interacted with the table in &lt;em&gt;raw data&lt;/em&gt; then the summaries at &lt;em&gt;raw summary&lt;/em&gt; will be based on the subset you selected.&lt;/p&gt;
+&lt;p&gt;The &lt;em&gt;&lt;strong&gt;one variable&lt;/strong&gt;&lt;/em&gt; and &lt;em&gt;&lt;strong&gt;two variables&lt;/strong&gt;&lt;/em&gt; tabs are for making figures based on one or two variables at a time. The code in &lt;code&gt;shinycsv&lt;/code&gt; tries to guess what&amp;rsquo;s the best figure for a given type of variable and in case that you are interested in learning R, it also shows the exact code you can use to reproduce the figure in your computer. We added this feature to excite users about learning R. And it&amp;rsquo;s useful for advanced users too that might want to customize the resulting figures. Hm&amp;hellip;, you don&amp;rsquo;t like the colors we chose for the figure? Well go to &lt;em&gt;&lt;strong&gt;plot colors&lt;/strong&gt;&lt;/em&gt;, choose another color, and come back to see your new figure with the color of your choosing. 😄&lt;/p&gt;
+&lt;p&gt;Hm&amp;hellip; but what if you don&amp;rsquo;t have a CSV file? Well, &lt;code&gt;shinycsv&lt;/code&gt; can handle many different tables thanks to &lt;code&gt;rio&lt;/code&gt; &lt;a id=&#39;cite-rio&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;#bib-rio&#39;&gt;Chan, Chan, Leeper, and Becker, 2016&lt;/a&gt;). Even Excel sheets! 😉&lt;/p&gt;
+&lt;p&gt;So, go ahead and test it out! We&amp;rsquo;ll be glad to hear your feedback at &lt;a href=&#34;https://github.com/LieberInstitute/shinycsv/issues&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;LieberInstitute/shinycsv&lt;/a&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;notes&#34;&gt;Notes&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Note that when I referred to tables earlier, I referred to square tables with different variables (age, height, weight, etc) as columns as observations as rows. That is, Excel files with a single sheet with no comments or figures inside the Excel file.&lt;/li&gt;
+&lt;li&gt;Are you interested in learning more about &lt;code&gt;R&lt;/code&gt; and &lt;code&gt;shiny&lt;/code&gt;? Maybe you&amp;rsquo;ll want to take a look at the &lt;a href=&#34;https://jhubiostatistics.shinyapps.io/shinycsv-showcase/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;showcase mode version of the application&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;If you use &lt;code&gt;shinycsv::explore()&lt;/code&gt; locally, the file size limit is increased to 500 MB. Although at that point you might want to consider using &lt;code&gt;R&lt;/code&gt; or another programming language.&lt;/li&gt;
+&lt;li&gt;What about casting variables? If you want to have fine control about casting the variables, save your data in a RData file. Sure, this requires an R user.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;reproducibility&#34;&gt;Reproducibility&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;## Reproducibility info
+library(&#39;devtools&#39;)
+options(width = 120)
+session_info()
+
+## Session info -----------------------------------------------------------------------------------------------------------
+
+##  setting  value                                             
+##  version  R Under development (unstable) (2016-10-26 r71594)
+##  system   x86_64, darwin13.4.0                              
+##  ui       X11                                               
+##  language (EN)                                              
+##  collate  en_US.UTF-8                                       
+##  tz       America/New_York                                  
+##  date     2017-01-20
+
+## Packages ---------------------------------------------------------------------------------------------------------------
+
+##  package       * version  date       source        
+##  bibtex          0.4.0    2014-12-31 CRAN (R 3.4.0)
+##  bitops          1.0-6    2013-08-17 CRAN (R 3.4.0)
+##  devtools      * 1.12.0   2016-12-05 CRAN (R 3.4.0)
+##  digest          0.6.11   2017-01-03 CRAN (R 3.4.0)
+##  evaluate        0.10     2016-10-11 CRAN (R 3.4.0)
+##  httr            1.2.1    2016-07-03 CRAN (R 3.4.0)
+##  knitcitations * 1.0.7    2015-10-28 CRAN (R 3.4.0)
+##  knitr         * 1.15.1   2016-11-22 CRAN (R 3.4.0)
+##  lubridate       1.6.0    2016-09-13 CRAN (R 3.4.0)
+##  magrittr        1.5      2014-11-22 CRAN (R 3.4.0)
+##  memoise         1.0.0    2016-01-29 CRAN (R 3.4.0)
+##  plyr            1.8.4    2016-06-08 CRAN (R 3.4.0)
+##  R6              2.2.0    2016-10-05 CRAN (R 3.4.0)
+##  Rcpp            0.12.9   2017-01-14 CRAN (R 3.4.0)
+##  RCurl           1.95-4.8 2016-03-01 CRAN (R 3.4.0)
+##  RefManageR      0.13.1   2016-11-13 CRAN (R 3.4.0)
+##  RJSONIO         1.3-0    2014-07-28 CRAN (R 3.4.0)
+##  stringi         1.1.2    2016-10-01 CRAN (R 3.4.0)
+##  stringr         1.1.0    2016-08-19 CRAN (R 3.4.0)
+##  withr           1.0.2    2016-06-20 CRAN (R 3.4.0)
+##  XML             3.98-1.5 2016-11-10 CRAN (R 3.4.0)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;references&#34;&gt;References&lt;/h3&gt;
+&lt;p&gt;Citations made with &lt;code&gt;knitcitations&lt;/code&gt; &lt;a id=&#39;cite-knitcitations&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://CRAN.R-project.org/package=knitcitations&#39;&gt;Boettiger, 2015&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;&lt;a id=&#39;bib-knitcitations&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-knitcitations&#34;&gt;[1]&lt;/a&gt;&lt;cite&gt;
+C. Boettiger.
+&lt;em&gt;knitcitations: Citations for &#39;Knitr&#39; Markdown Files&lt;/em&gt;.
+R package version 1.0.7.
+2015.
+URL: &lt;a href=&#34;https://CRAN.R-project.org/package=knitcitations&#34;&gt;https://CRAN.R-project.org/package=knitcitations&lt;/a&gt;.&lt;/cite&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a id=&#39;bib-rio&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-rio&#34;&gt;[2]&lt;/a&gt;&lt;cite&gt;
+C. Chan, G. C. Chan, T. J. Leeper and J. Becker.
+&lt;em&gt;rio: A Swiss-army knife for data file I/O&lt;/em&gt;.
+R package version 0.4.16.
+2016.&lt;/cite&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a id=&#39;bib-shiny&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-shiny&#34;&gt;[3]&lt;/a&gt;&lt;cite&gt;
+W. Chang, J. Cheng, J. Allaire, Y. Xie, et al.
+&lt;em&gt;shiny: Web Application Framework for R&lt;/em&gt;.
+R package version 1.0.0.
+2017.
+URL: &lt;a href=&#34;https://CRAN.R-project.org/package=shiny&#34;&gt;https://CRAN.R-project.org/package=shiny&lt;/a&gt;.&lt;/cite&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a id=&#39;bib-shinycsv&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-shinycsv&#34;&gt;[4]&lt;/a&gt;&lt;cite&gt;
+L. Collado-Torres, S. Semick and A. E. Jaffe.
+&lt;em&gt;shinycsv: Explore a table interactively in a shiny application&lt;/em&gt;.
+R package version 0.99.7.
+2016.
+URL: &lt;a href=&#34;https://github.com/LieberInstitute/shinycsv&#34;&gt;https://github.com/LieberInstitute/shinycsv&lt;/a&gt;.&lt;/cite&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a id=&#39;bib-cran&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-cran&#34;&gt;[5]&lt;/a&gt;&lt;cite&gt;
+R Core Team.
+&lt;em&gt;R: A Language and Environment for Statistical Computing&lt;/em&gt;.
+R Foundation for Statistical Computing.
+Vienna, Austria, 2016.
+URL: &lt;a href=&#34;https://www.R-project.org/&#34;&gt;https://www.R-project.org/&lt;/a&gt;.&lt;/cite&gt;&lt;/p&gt;
+&lt;h3 id=&#34;want-more&#34;&gt;Want more?&lt;/h3&gt;
+&lt;p&gt;Check other &lt;a href=&#34;https://twitter.com/jhubiostat&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;@jhubiostat&lt;/a&gt; student blogs at &lt;a href=&#34;http://bmorebiostat.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Bmore Biostats&lt;/a&gt; as well as topics on &lt;a href=&#34;https://twitter.com/search?q=%23rstats&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;#rstats&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

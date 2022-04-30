@@ -1,0 +1,998 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>shiny | L. Collado-Torres</title>
+    <link>https://lcolladotor.github.io/tag/shiny/</link>
+      <atom:link href="https://lcolladotor.github.io/tag/shiny/index.xml" rel="self" type="application/rss+xml" />
+    <description>shiny</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sat, 29 Feb 2020 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://lcolladotor.github.io/media/icon_hu2b32c4ab415f12f472f73c7b0301b0d1_19400_512x512_fill_lanczos_center_3.png</url>
+      <title>shiny</title>
+      <link>https://lcolladotor.github.io/tag/shiny/</link>
+    </image>
+    
+    <item>
+      <title>Diving together into the unknown world of spatial transcriptomics</title>
+      <link>https://lcolladotor.github.io/2020/02/29/diving-together-into-the-unknown-world-of-spatial-transcriptomics/</link>
+      <pubDate>Sat, 29 Feb 2020 00:00:00 +0000</pubDate>
+      <guid>https://lcolladotor.github.io/2020/02/29/diving-together-into-the-unknown-world-of-spatial-transcriptomics/</guid>
+      <description>
+
+
+&lt;p&gt;Yesterday was an extremely exciting day for me and my colleagues. We finished a project we had been working on and shared it with the world. Meaning, it’s done and we can relax for a little bit while we wait for feedback from our peers.&lt;/p&gt;
+&lt;p&gt;But this was not any project, at least not for me. Why do you ask? In general terms, it involved an analysis that you could not search on Google and find the answer for. That is, it involved diving into the unknown!&lt;/p&gt;
+&lt;iframe src=&#34;https://giphy.com/embed/5dY4XX5ZCvjZ3AENUu&#34; width=&#34;480&#34; height=&#34;201&#34; frameBorder=&#34;0&#34; class=&#34;giphy-embed&#34; allowFullScreen&gt;
+&lt;/iframe&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://giphy.com/gifs/disneystudios-disney-frozen-2-5dY4XX5ZCvjZ3AENUu&#34;&gt;via GIPHY&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;The unknown is scary and as the lyrics say:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;I’ve had my adventure, I don’t need something new
+I’m afraid of what I’m risking if I follow you
+Into the unknown&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;All of us have been building our careers with other types of data and/or experiments, and taking on a new type of data knowing we had an &lt;a href=&#34;https://www.biospace.com/article/10x-genomics-begins-shipments-of-visium-spatial-gene-expression-solution/&#34;&gt;early access advantage&lt;/a&gt; over others was quite the challenge. I don’t know about my co-authors, but maybe some of them shared thoughts like mine that were along the lines: can I do this? can I make it work? do my analysis choices make sense? what will experts think of doing once they have access to this data? All while racing against time, even if it was just an illusion in our minds.&lt;/p&gt;
+&lt;p&gt;But it’s not my first adventure and I’ve picked up skills and confidence along the way. In particular, I’ve written &lt;a href=&#34;https://bioconductor.org&#34;&gt;Bioconductor&lt;/a&gt; R packages, dealt with &lt;code&gt;pkgdown&lt;/code&gt;/&lt;code&gt;travis&lt;/code&gt; issues like &lt;a href=&#34;https://github.com/r-lib/pkgdown/issues/1206&#34;&gt;#1206&lt;/a&gt;, made &lt;em&gt;&lt;a href=&#34;https://CRAN.R-project.org/package=shiny&#34;&gt;shiny&lt;/a&gt;&lt;/em&gt; web applications, analyzed large RNA-seq data, &lt;a href=&#34;http://lcolladotor.github.io/2019/04/02/how-to-write-academic-documents-with-googledocs/#.XlnnqJNKg0o&#34;&gt;written papers using GoogleDocs&lt;/a&gt;, gotten better at asking for help, among other skills.&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;It&amp;#39;s Thurs but here&amp;#39;s the &amp;quot;more&amp;quot; I promised &lt;a href=&#34;https://t.co/4gahvWDbWE&#34;&gt;https://t.co/4gahvWDbWE&lt;/a&gt; &lt;a href=&#34;https://twitter.com/travisci?ref_src=twsrc%5Etfw&#34;&gt;@travisci&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/pkgdown?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#pkgdown&lt;/a&gt;&lt;br&gt;&lt;br&gt;+my fam of &lt;a href=&#34;https://twitter.com/hashtag/rstats?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#rstats&lt;/a&gt; issues today &lt;a href=&#34;https://t.co/iGFfHLtasM&#34;&gt;https://t.co/iGFfHLtasM&lt;/a&gt; &lt;a href=&#34;https://t.co/M8DZEHryJZ&#34;&gt;https://t.co/M8DZEHryJZ&lt;/a&gt; &lt;a href=&#34;https://t.co/FU8qq3f5p6&#34;&gt;https://t.co/FU8qq3f5p6&lt;/a&gt;&lt;br&gt;&lt;br&gt;I&amp;#39;m the pest that visits your GH issues here &amp;amp; there😅Nah, I put lots of 👨🏾‍💻into them!😊 &lt;a href=&#34;https://t.co/1G0nd5ZwUJ&#34;&gt;https://t.co/1G0nd5ZwUJ&lt;/a&gt;&lt;/p&gt;&amp;mdash; 🇲🇽 Leonardo Collado-Torres (@lcolladotor) &lt;a href=&#34;https://twitter.com/lcolladotor/status/1233186931590123522?ref_src=twsrc%5Etfw&#34;&gt;February 28, 2020&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;I’ve also gotten more comfortable with the idea that I can’t do it all. Others will shortly develop new methods for this type of data, or proper infrastructure to handle this data, or faster visualizations, and so goes on the list. But I’m proud and really happy to say that we built quite the robust prototype. Plus maybe we’ll be involved in shaping this future.&lt;/p&gt;
+&lt;p&gt;And you noticed that I mentioned &lt;em&gt;we&lt;/em&gt;. That’s because I have been learning over the years how to foster collaborations. This particular project involved working with two other members of my workplace who are awesome and that I didn’t know that well. It also involved a new collaboration with someone I’ve known for a while now (we initially met through Twitter in 2014) but hadn’t had the chance to work with. Thus we dove into the unknown together 👩‍🚀🧑‍🚀.&lt;/p&gt;
+&lt;iframe src=&#34;https://giphy.com/embed/Ph0nUfRpbMcQvA7ue8&#34; width=&#34;480&#34; height=&#34;199&#34; frameBorder=&#34;0&#34; class=&#34;giphy-embed&#34; allowFullScreen&gt;
+&lt;/iframe&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://giphy.com/gifs/disneystudios-disney-frozen-2-Ph0nUfRpbMcQvA7ue8&#34;&gt;via GIPHY&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;I feel like we complemented each other quite well and all I can confidently say that our new adventure so far has been very stimulating, even it cost me some sleep.&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Woke up at 3:30 am dreaming about code 👨🏻‍💻 😴 and on an off till 5:30. Gave up and went to work early... hopefully I can remember the dreams 😅&lt;a href=&#34;https://twitter.com/hashtag/CodeWhileDreaming?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#CodeWhileDreaming&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/RestFuelsIdeas?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#RestFuelsIdeas&lt;/a&gt; &lt;a href=&#34;https://t.co/h0mYHAaL5W&#34;&gt;pic.twitter.com/h0mYHAaL5W&lt;/a&gt;&lt;/p&gt;&amp;mdash; 🇲🇽 Leonardo Collado-Torres (@lcolladotor) &lt;a href=&#34;https://twitter.com/lcolladotor/status/1230107491372912641?ref_src=twsrc%5Etfw&#34;&gt;February 19, 2020&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+
+&lt;div id=&#34;spatial-transcriptomics&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Spatial transcriptomics&lt;/h3&gt;
+&lt;p&gt;So, where does &lt;em&gt;spatial transcriptomics&lt;/em&gt; come into play and what does it mean? I work with gene &lt;em&gt;activity&lt;/em&gt; data which we formally refer to as &lt;em&gt;gene expression&lt;/em&gt; 🧬. That is, we measure 🔍🧮 the activity levels of genes for a particular biological condition or tissue sample. For several years now (about since 2007-2009) we have been able to measure many genes from a tissue sample, called bulk RNA-sequencing and abbreviated as RNA-seq.&lt;/p&gt;
+&lt;p&gt;That’s great! But biology is complicated and a single tissue sample is composed of multiple cells of various types. For example, in the brain there are cells that send signals around (neurons) and others that give structure to the brain. That is why technologies for measuring the gene expression at the single cell level were developed, abbreviated as scRNA-seq. scRNA-seq has been used widely to study mouse brains to live tissue samples.&lt;/p&gt;
+&lt;p&gt;In recent years I’ve been working with data from the human brain 🧠. The &lt;a href=&#34;http://libd.org&#34;&gt;Lieber Institute for Brain Development&lt;/a&gt; has about two thousand brain samples. To preserve them for years to come, the brains are frozen 🥶. Cells are a bit fragile and freezing them breaks them. This fact has made it challenging to study data from frozen human brains. Several of my colleagues work on adapting research protocols to handle frozen human brain tissue. The research field overall has been able to generate single nucleus RNA sequencing (snRNA-seq) data and we are all generating some more.&lt;/p&gt;
+&lt;p&gt;snRNA-seq and scRNA-seq are great because you can measure what genes (pieces of the cell) are active, classify them into groups, and use prior knowledge to label these groups. However, you lose information about what part of the tissue they come from. That’s where technologies for &lt;em&gt;spatial transcriptomics&lt;/em&gt;, that is, measuring gene expression 🧬 as close a possible to the single cell level yet retaining spatial coordinates are being actively developed. Thus, you end up with two main sources of data: the gene expression measurements but also images from the tissue (&lt;em&gt;histology&lt;/em&gt; information). &lt;a href=&#34;https://doi.org/10.1038/s41386-019-0484-7&#34;&gt;My coworkers anticipated&lt;/a&gt; what could these technologies be used for and what type of research questions they help us answer.&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;oh hey, that&amp;#39;s us! stay tuned for a biorxiv preprint!  &lt;a href=&#34;https://twitter.com/LieberInstitute?ref_src=twsrc%5Etfw&#34;&gt;@LieberInstitute&lt;/a&gt; &lt;a href=&#34;https://twitter.com/martinowk?ref_src=twsrc%5Etfw&#34;&gt;@martinowk&lt;/a&gt; &lt;a href=&#34;https://twitter.com/kr_maynard?ref_src=twsrc%5Etfw&#34;&gt;@kr_maynard&lt;/a&gt; &lt;a href=&#34;https://twitter.com/fellgernon?ref_src=twsrc%5Etfw&#34;&gt;@fellgernon&lt;/a&gt; &lt;a href=&#34;https://twitter.com/stephaniehicks?ref_src=twsrc%5Etfw&#34;&gt;@stephaniehicks&lt;/a&gt; &lt;a href=&#34;https://twitter.com/lmwebr?ref_src=twsrc%5Etfw&#34;&gt;@lmwebr&lt;/a&gt; &lt;a href=&#34;https://t.co/uYpwQu52pS&#34;&gt;https://t.co/uYpwQu52pS&lt;/a&gt;&lt;/p&gt;&amp;mdash; Andrew Jaffe (@andrewejaffe) &lt;a href=&#34;https://twitter.com/andrewejaffe/status/1232009768006344704?ref_src=twsrc%5Etfw&#34;&gt;February 24, 2020&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+
+&lt;/div&gt;
+&lt;div id=&#34;our-projects-history&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Our project’s history&lt;/h3&gt;
+&lt;p&gt;My coworkers got early access to a specific new type of spatial transcriptomics technology called &lt;a href=&#34;https://wp.10xgenomics.com/spatial-transcriptomics/&#34;&gt;Visium from the 10x Genomics company&lt;/a&gt; and started piloting it on human brain tissue. They recruited me to their project in early November 2019 (11th) and I recruited more colleagues in early December (4th). Today on February 28th 2020 we made public our research advances, code, and software we built for this project.&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;How do you keep your documentation concise, friendly, and updated, and stop it from exploding into a giant tangled word mess of multiple files spread across GitHub repos? Asking for a friend.&lt;/p&gt;&amp;mdash; Monica Gerber (@mwgerber) &lt;a href=&#34;https://twitter.com/mwgerber/status/1232468210886144000?ref_src=twsrc%5Etfw&#34;&gt;February 26, 2020&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;Given that we have many potential websites others can find us through, we decided to unify as much as possible the documentation even if that meant repeating it. The basic start of our documentation is included further below.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;spatiallibd&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;&lt;code&gt;spatialLIBD&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;http://research.libd.org/spatialLIBD/reference/figures/logo.png&#34; align=&#34;right&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Welcome to the &lt;code&gt;spatialLIBD&lt;/code&gt; project! It is composed of:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;a &lt;a href=&#34;https://shiny.rstudio.com/&#34;&gt;shiny&lt;/a&gt; web application that we are hosting at &lt;a href=&#34;http://spatial.libd.org/spatialLIBD/&#34;&gt;spatial.libd.org/spatialLIBD/&lt;/a&gt; that can handle a &lt;a href=&#34;https://github.com/LieberInstitute/spatialLIBD/issues/2&#34;&gt;limited&lt;/a&gt; set of concurrent users,&lt;/li&gt;
+&lt;li&gt;a Bioconductor package at &lt;a href=&#34;http://bioconductor.org/packages/spatialLIBD&#34;&gt;bioconductor.org/packages/spatialLIBD&lt;/a&gt; (or from &lt;a href=&#34;http://research.libd.org/spatialLIBD/&#34;&gt;here&lt;/a&gt;) that lets you analyze the data and run a local version of our web application (with our data or yours),&lt;/li&gt;
+&lt;li&gt;and a &lt;a href=&#34;https://www.biorxiv.org/content/10.1101/2020.02.28.969931v1&#34;&gt;research article&lt;/a&gt; with the scientific knowledge we drew from this dataset. The analysis code for our project is available &lt;a href=&#34;https://github.com/LieberInstitute/HumanPilot/&#34;&gt;here&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The web application allows you to browse the LIBD human dorsolateral pre-frontal cortex (DLPFC) spatial transcriptomics data generated with the 10x Genomics Visium platform. Through the &lt;a href=&#34;https://bioconductor.org/packages/spatialLIBD&#34;&gt;R/Bioconductor package&lt;/a&gt; you can also download the data as well as visualize your own datasets using this web application. Please check the &lt;a href=&#34;https://www.biorxiv.org/search/maynard%252Bcollado%252Bweber%252Bhicks%252Bmartinowich%252Bjaffe&#34;&gt;bioRxiv pre-print&lt;/a&gt; for more details about this project.&lt;/p&gt;
+If you tweet about this website, the data or the R package please use the &lt;code&gt;#spatialLIBD&lt;/code&gt; hashtag. You can find previous tweets that way as shown &lt;a href=&#34;https://twitter.com/search?q=%23spatialLIBD&amp;src=typed_query&#34;&gt;here&lt;/a&gt;. Thank you! &lt;a href=&#34;https://twitter.com/intent/tweet?button_hashtag=spatialLIBD&amp;ref_src=twsrc%5Etfw&#34; class=&#34;twitter-hashtag-button&#34; data-show-count=&#34;false&#34;&gt;Tweet #spatialLIBD&lt;/a&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;/div&gt;
+&lt;div id=&#34;study-design&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Study design&lt;/h3&gt;
+&lt;p&gt;As a quick overview, the data presented here is from portion of the DLPFC that spans six neuronal layers plus white matter (&lt;strong&gt;A&lt;/strong&gt;) for a total of three subjects with two pairs of spatially adjacent replicates (&lt;strong&gt;B&lt;/strong&gt;). Each dissection of DLPFC was designed to span all six layers plus white matter (&lt;strong&gt;C&lt;/strong&gt;). Using this web application you can explore the expression of known genes such as &lt;em&gt;SNAP25&lt;/em&gt; (&lt;strong&gt;D&lt;/strong&gt;, a neuronal gene), &lt;em&gt;MOBP&lt;/em&gt; (&lt;strong&gt;E&lt;/strong&gt;, an oligodendrocyte gene), and known layer markers from mouse studies such as &lt;em&gt;PCP4&lt;/em&gt; (&lt;strong&gt;F&lt;/strong&gt;, a known layer 5 marker gene).&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://research.libd.org/spatialLIBD/reference/figures/paper_figure1.jpg&#34; align=&#34;center&#34; width=&#34;800px&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;shiny-website-mirrors&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Shiny website mirrors&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://spatial.libd.org/spatialLIBD&#34;&gt;Main shiny application website&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://jhubiostatistics.shinyapps.io/spatialLIBD/&#34;&gt;Shinyapps&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://jhubiostatistics.shinyapps.io/spatialLIBD_mirror01/&#34;&gt;Shinyapps Mirror 1&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://jhubiostatistics.shinyapps.io/spatialLIBD_mirror02/&#34;&gt;Shinyapps Mirror 2&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;rbioconductor-package&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;R/Bioconductor package&lt;/h3&gt;
+&lt;p&gt;The &lt;code&gt;spatialLIBD&lt;/code&gt; package contains functions for:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Accessing the spatial transcriptomics data from the LIBD Human Pilot project (&lt;a href=&#34;https://github.com/LieberInstitute/HumanPilot&#34;&gt;code on GitHub&lt;/a&gt;) generated with the Visium platform from 10x Genomics. The data is retrieved from &lt;a href=&#34;http://bioconductor.org/&#34;&gt;Bioconductor&lt;/a&gt;’s &lt;code&gt;ExperimentHub&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Visualizing the spot-level spatial gene expression data and clusters.&lt;/li&gt;
+&lt;li&gt;Inspecting the data interactively either on your computer or through &lt;a href=&#34;http://spatial.libd.org/spatialLIBD/&#34;&gt;spatial.libd.org/spatialLIBD/&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;For more details, please check the &lt;a href=&#34;http://lieberinstitute.github.io/spatialLIBD&#34;&gt;documentation website&lt;/a&gt; or the Bioconductor package landing page &lt;a href=&#34;https://bioconductor.org/packages/spatialLIBD&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;installation-instructions&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Installation instructions&lt;/h3&gt;
+&lt;p&gt;Get the latest stable &lt;code&gt;R&lt;/code&gt; release from &lt;a href=&#34;http://cran.r-project.org/&#34;&gt;CRAN&lt;/a&gt;. Then install &lt;code&gt;spatialLIBD&lt;/code&gt; from &lt;a href=&#34;http://bioconductor.org/&#34;&gt;Bioconductor&lt;/a&gt; using the following code:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;if (!requireNamespace(&amp;quot;BiocManager&amp;quot;, quietly = TRUE))
+    install.packages(&amp;quot;BiocManager&amp;quot;)
+
+BiocManager::install(&amp;quot;spatialLIBD&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;access-the-data&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Access the data&lt;/h3&gt;
+&lt;p&gt;Through the &lt;code&gt;spatialLIBD&lt;/code&gt; package you can access the processed data in it’s final R format. However, we also provide a table of links so you can download the raw data we received from 10x Genomics.&lt;/p&gt;
+&lt;div id=&#34;processed-data&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Processed data&lt;/h4&gt;
+&lt;p&gt;Using &lt;code&gt;spatialLIBD&lt;/code&gt; you can access the Human DLPFC spatial transcriptomics data from the 10x Genomics Visium platform. For example, this is the code you can use to access the layer-level data. For more details, check the help file for &lt;code&gt;fetch_data()&lt;/code&gt;.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;## Load the package
+library(&amp;#39;spatialLIBD&amp;#39;)
+
+## Download the spot-level data
+sce &amp;lt;- fetch_data(type = &amp;#39;sce&amp;#39;)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Loading objects:
+##   sce&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;## This is a SingleCellExperiment object
+sce&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## class: SingleCellExperiment 
+## dim: 33538 47681 
+## metadata(1): image
+## assays(2): counts logcounts
+## rownames(33538): ENSG00000243485 ENSG00000237613 ... ENSG00000277475
+##   ENSG00000268674
+## rowData names(9): source type ... gene_search is_top_hvg
+## colnames(47681): AAACAACGAATAGTTC-1 AAACAAGTATCTCCCA-1 ...
+##   TTGTTTCCATACAACT-1 TTGTTTGTGTAAATTC-1
+## colData names(73): barcode sample_name ... pseudobulk_UMAP_spatial
+##   markers_UMAP_spatial
+## reducedDimNames(6): PCA TSNE_perplexity50 ... TSNE_perplexity80
+##   UMAP_neighbors15
+## spikeNames(0):
+## altExpNames(0):&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;## Note the memory size
+pryr::object_size(sce)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## 2.08 GB&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;## Remake the logo image with histology information
+sce_image_clus(
+    sce = sce,
+    clustervar = &amp;#39;layer_guess_reordered&amp;#39;,
+    sampleid = &amp;#39;151673&amp;#39;,
+    colors = libd_layer_colors,
+    ... = &amp;#39; DLPFC Human Brain Layers\nMade with github.com/LieberInstitute/spatialLIBD&amp;#39;
+)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;http://lcolladotor.github.io/post/2020-02-29-diving-together-into-the-unknown-world-of-spatial-transcriptomics_files/figure-html/access_data-1.png&#34; width=&#34;864&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;citation&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Citation&lt;/h3&gt;
+&lt;p&gt;Below is the citation output from using &lt;code&gt;citation(&#39;spatialLIBD&#39;)&lt;/code&gt; in R. Please
+run this yourself to check for any updates on how to cite &lt;strong&gt;spatialLIBD&lt;/strong&gt;.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;citation(&amp;#39;spatialLIBD&amp;#39;)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## 
+## Collado-Torres L, Maynard KR, Jaffe AE (2020). _LIBD Visium spatial
+## transcriptomics human pilot data inspector_. doi:
+## 10.18129/B9.bioc.spatialLIBD (URL:
+## https://doi.org/10.18129/B9.bioc.spatialLIBD),
+## https://github.com/LieberInstitute/spatialLIBD - R package version
+## 0.99.9, &amp;lt;URL: http://www.bioconductor.org/packages/spatialLIBD&amp;gt;.
+## 
+## Maynard KR, Collado-Torres L, Weber LM, Uytingco C, Barry BK, Williams
+## SR, II JLC, Tran MN, Besich Z, Tippani M, Chew J, Yin Y, Kleinman JE,
+## Hyde TM, Rao N, Hicks SC, Martinowich K, Jaffe AE (2020).
+## &amp;quot;Transcriptome-scale spatial gene expression in the human dorsolateral
+## prefrontal cortex.&amp;quot; _bioRxiv_. doi: 10.1101/2020.02.28.969931 (URL:
+## https://doi.org/10.1101/2020.02.28.969931), &amp;lt;URL:
+## https://www.biorxiv.org/content/10.1101/2020.02.28.969931v1&amp;gt;.
+## 
+## To see these entries in BibTeX format, use &amp;#39;print(&amp;lt;citation&amp;gt;,
+## bibtex=TRUE)&amp;#39;, &amp;#39;toBibtex(.)&amp;#39;, or set
+## &amp;#39;options(citation.bibtex.max=999)&amp;#39;.&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Please note that the &lt;code&gt;spatialLIBD&lt;/code&gt; was only made possible thanks to many other R and bioinformatics software authors. We have cited their work either in the pre-print or the vignette of the R package.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.libd.org/&#34;&gt;&lt;img src=&#34;http://lcolladotor.github.io/media/LIBD_logo.jpg&#34; width=&#34;250px&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;closing-remarks&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Closing remarks&lt;/h3&gt;
+&lt;p&gt;Overall, this project has everything that I like: R code, a Bioconductor package, challenging and interest biological data, excellent collaborator team, open communication, and so on.&lt;/p&gt;
+&lt;p&gt;Now, these are early days of the 10x Genomics Visium platform and there’s much we and others want to learn. So if you have the chance to hear anyone in our team talk more in detail about the project or you simply want to chat with them, here are some opportunities for you to do so as we’d love to collaborate with you or even hire you. Check &lt;a href=&#34;https://twitter.com/stephaniehicks/status/1229448057462382597?s=20&#34;&gt;Stephanie’s tweet&lt;/a&gt; and the &lt;a href=&#34;https://www.libd.org/careers&#34;&gt;LIBD career website&lt;/a&gt; for more details or simply get in touch with us.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Kristen R Maynard and me will present a &lt;a href=&#34;https://www.the-scientist.com/&#34;&gt;The Scientist&lt;/a&gt; webinar on March 19th&lt;/li&gt;
+&lt;li&gt;Keri Martinowich will be at &lt;a href=&#34;https://twitter.com/VirginiaNeuro/status/1214256625290240000&#34;&gt;CVCSN 2020&lt;/a&gt; March 26-27th&lt;/li&gt;
+&lt;li&gt;I’ll present a seminar at &lt;a href=&#34;https://twitter.com/LIIGH_UNAM&#34;&gt;LIIGH-UNAM&lt;/a&gt; on March 30th&lt;/li&gt;
+&lt;li&gt;Kristen R Maynard will be at the 2020 Single Cell Symposium on April 20th&lt;/li&gt;
+&lt;li&gt;Likely Andrew E Jaffe and others will be at &lt;a href=&#34;https://meetings.cshl.edu/meetings.aspx?meet=GENOME&amp;amp;year=20&#34;&gt;The Biology of Genomes 2020&lt;/a&gt; May 5-9th&lt;/li&gt;
+&lt;li&gt;Stephanie Hicks will present at &lt;a href=&#34;https://twitter.com/erum2020_conf&#34;&gt;eRum 2020&lt;/a&gt; May 27-30&lt;/li&gt;
+&lt;li&gt;Likely some of us will attend &lt;a href=&#34;https://bioc2020.bioconductor.org/&#34;&gt;BioC2020&lt;/a&gt; July 29-31&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;http://lcolladotor.github.io/post/2020-02-29-diving-together-into-the-unknown-world-of-spatial-transcriptomics_files/IMG_3284.jpg&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Finally, here’s the pre-print twitter thread:&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;🔥off the press! 👀 our &lt;a href=&#34;https://twitter.com/biorxivpreprint?ref_src=twsrc%5Etfw&#34;&gt;@biorxivpreprint&lt;/a&gt; on human 🧠brain &lt;a href=&#34;https://twitter.com/LieberInstitute?ref_src=twsrc%5Etfw&#34;&gt;@LieberInstitute&lt;/a&gt; spatial 🌌🔬transcriptomics data 🧬using Visium &lt;a href=&#34;https://twitter.com/10xGenomics?ref_src=twsrc%5Etfw&#34;&gt;@10xGenomics&lt;/a&gt;🎉&lt;a href=&#34;https://twitter.com/hashtag/spatialLIBD?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#spatialLIBD&lt;/a&gt;&lt;br&gt;&lt;br&gt;🔍&lt;a href=&#34;https://t.co/RTW0VscUKR&#34;&gt;https://t.co/RTW0VscUKR&lt;/a&gt; &lt;br&gt;👩🏾‍💻&lt;a href=&#34;https://t.co/bsg04XKONr&#34;&gt;https://t.co/bsg04XKONr&lt;/a&gt;&lt;br&gt;📚&lt;a href=&#34;https://t.co/FJDOOzrAJ6&#34;&gt;https://t.co/FJDOOzrAJ6&lt;/a&gt;&lt;br&gt;📦&lt;a href=&#34;https://t.co/Au5jwADGhY&#34;&gt;https://t.co/Au5jwADGhY&lt;/a&gt;&lt;a href=&#34;https://t.co/PiWEDN9q2N&#34;&gt;https://t.co/PiWEDN9q2N&lt;/a&gt; &lt;a href=&#34;https://t.co/aWy0yLlR50&#34;&gt;pic.twitter.com/aWy0yLlR50&lt;/a&gt;&lt;/p&gt;&amp;mdash; 🇲🇽 Leonardo Collado-Torres (@lcolladotor) &lt;a href=&#34;https://twitter.com/lcolladotor/status/1233661576433061888?ref_src=twsrc%5Etfw&#34;&gt;February 29, 2020&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;Thank you for getting this far!&lt;/p&gt;
+&lt;iframe src=&#34;https://giphy.com/embed/26FxykLpuDxQiFbnG&#34; width=&#34;480&#34; height=&#34;256&#34; frameBorder=&#34;0&#34; class=&#34;giphy-embed&#34; allowFullScreen&gt;
+&lt;/iframe&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://giphy.com/gifs/veep-26FxykLpuDxQiFbnG&#34;&gt;via GIPHY&lt;/a&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;references&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;References&lt;/h3&gt;
+&lt;/div&gt;
+&lt;div id=&#34;reproducibility&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Reproducibility&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;## ─ Session info ───────────────────────────────────────────────────────────────────────────────────────────────────────
+##  setting  value                       
+##  version  R version 3.6.2 (2019-12-12)
+##  os       macOS Catalina 10.15.2      
+##  system   x86_64, darwin15.6.0        
+##  ui       X11                         
+##  language (EN)                        
+##  collate  en_US.UTF-8                 
+##  ctype    en_US.UTF-8                 
+##  tz       America/New_York            
+##  date     2020-02-29                  
+## 
+## ─ Packages ───────────────────────────────────────────────────────────────────────────────────────────────────────────
+##  package                * version  date       lib source                                      
+##  AnnotationDbi            1.48.0   2019-10-29 [1] Bioconductor                                
+##  AnnotationHub            2.18.0   2019-10-29 [1] Bioconductor                                
+##  assertthat               0.2.1    2019-03-21 [1] CRAN (R 3.6.0)                              
+##  attempt                  0.3.0    2019-04-08 [1] CRAN (R 3.6.0)                              
+##  backports                1.1.5    2019-10-02 [1] CRAN (R 3.6.0)                              
+##  beeswarm                 0.2.3    2016-04-25 [1] CRAN (R 3.6.0)                              
+##  bibtex                   0.4.2.2  2020-01-02 [1] CRAN (R 3.6.0)                              
+##  Biobase                * 2.46.0   2019-10-29 [1] Bioconductor                                
+##  BiocFileCache            1.10.2   2019-11-08 [1] Bioconductor                                
+##  BiocGenerics           * 0.32.0   2019-10-29 [1] Bioconductor                                
+##  BiocManager              1.30.10  2019-11-16 [1] CRAN (R 3.6.1)                              
+##  BiocNeighbors            1.4.1    2019-11-01 [1] Bioconductor                                
+##  BiocParallel           * 1.20.1   2019-12-21 [1] Bioconductor                                
+##  BiocSingular             1.2.2    2020-02-14 [1] Bioconductor                                
+##  BiocStyle              * 2.14.4   2020-01-09 [1] Bioconductor                                
+##  BiocVersion              3.10.1   2019-06-06 [1] Bioconductor                                
+##  bit                      1.1-15.2 2020-02-10 [1] CRAN (R 3.6.0)                              
+##  bit64                    0.9-7    2017-05-08 [1] CRAN (R 3.6.0)                              
+##  bitops                   1.0-6    2013-08-17 [1] CRAN (R 3.6.0)                              
+##  blob                     1.2.1    2020-01-20 [1] CRAN (R 3.6.0)                              
+##  blogdown                 0.17     2019-11-13 [1] CRAN (R 3.6.1)                              
+##  bookdown                 0.17     2020-01-11 [1] CRAN (R 3.6.0)                              
+##  cli                      2.0.1    2020-01-08 [1] CRAN (R 3.6.0)                              
+##  codetools                0.2-16   2018-12-24 [1] CRAN (R 3.6.2)                              
+##  colorout               * 1.2-1    2019-05-07 [1] Github (jalvesaq/colorout@7ea9440)          
+##  colorspace               1.4-1    2019-03-18 [1] CRAN (R 3.6.0)                              
+##  cowplot                  1.0.0    2019-07-11 [1] CRAN (R 3.6.0)                              
+##  crayon                   1.3.4    2017-09-16 [1] CRAN (R 3.6.0)                              
+##  curl                     4.3      2019-12-02 [1] CRAN (R 3.6.0)                              
+##  data.table               1.12.8   2019-12-09 [1] CRAN (R 3.6.1)                              
+##  DBI                      1.1.0    2019-12-15 [1] CRAN (R 3.6.0)                              
+##  dbplyr                   1.4.2    2019-06-17 [1] CRAN (R 3.6.0)                              
+##  DelayedArray           * 0.12.2   2020-01-06 [1] Bioconductor                                
+##  DelayedMatrixStats       1.8.0    2019-10-29 [1] Bioconductor                                
+##  desc                     1.2.0    2018-05-01 [1] CRAN (R 3.6.0)                              
+##  digest                   0.6.25   2020-02-23 [1] CRAN (R 3.6.0)                              
+##  dotCall64                1.0-0    2018-07-30 [1] CRAN (R 3.6.0)                              
+##  dplyr                    0.8.4    2020-01-31 [1] CRAN (R 3.6.0)                              
+##  DT                       0.12     2020-02-05 [1] CRAN (R 3.6.0)                              
+##  evaluate                 0.14     2019-05-28 [1] CRAN (R 3.6.0)                              
+##  ExperimentHub            1.12.0   2019-10-29 [1] Bioconductor                                
+##  fansi                    0.4.1    2020-01-08 [1] CRAN (R 3.6.0)                              
+##  farver                   2.0.3    2020-01-16 [1] CRAN (R 3.6.0)                              
+##  fastmap                  1.0.1    2019-10-08 [1] CRAN (R 3.6.0)                              
+##  fields                   10.3     2020-02-04 [1] CRAN (R 3.6.0)                              
+##  fs                       1.3.1    2019-05-06 [1] CRAN (R 3.6.0)                              
+##  GenomeInfoDb           * 1.22.0   2019-10-29 [1] Bioconductor                                
+##  GenomeInfoDbData         1.2.2    2019-10-31 [1] Bioconductor                                
+##  GenomicRanges          * 1.38.0   2019-10-29 [1] Bioconductor                                
+##  ggbeeswarm               0.6.0    2017-08-07 [1] CRAN (R 3.6.0)                              
+##  ggplot2                  3.2.1    2019-08-10 [1] CRAN (R 3.6.0)                              
+##  glue                     1.3.1    2019-03-12 [1] CRAN (R 3.6.0)                              
+##  golem                    0.1      2019-08-05 [1] CRAN (R 3.6.0)                              
+##  gridExtra                2.3      2017-09-09 [1] CRAN (R 3.6.0)                              
+##  gtable                   0.3.0    2019-03-25 [1] CRAN (R 3.6.0)                              
+##  htmltools                0.4.0    2019-10-04 [1] CRAN (R 3.6.0)                              
+##  htmlwidgets              1.5.1    2019-10-08 [1] CRAN (R 3.6.0)                              
+##  httpuv                   1.5.2    2019-09-11 [1] CRAN (R 3.6.0)                              
+##  httr                     1.4.1    2019-08-05 [1] CRAN (R 3.6.0)                              
+##  interactiveDisplayBase   1.24.0   2019-10-29 [1] Bioconductor                                
+##  IRanges                * 2.20.2   2020-01-13 [1] Bioconductor                                
+##  irlba                    2.3.3    2019-02-05 [1] CRAN (R 3.6.0)                              
+##  jsonlite                 1.6.1    2020-02-02 [1] CRAN (R 3.6.0)                              
+##  knitcitations          * 1.0.10   2019-09-15 [1] CRAN (R 3.6.0)                              
+##  knitr                    1.27     2020-01-16 [1] CRAN (R 3.6.0)                              
+##  labeling                 0.3      2014-08-23 [1] CRAN (R 3.6.0)                              
+##  later                    1.0.0    2019-10-04 [1] CRAN (R 3.6.0)                              
+##  lattice                  0.20-38  2018-11-04 [1] CRAN (R 3.6.2)                              
+##  lazyeval                 0.2.2    2019-03-15 [1] CRAN (R 3.6.0)                              
+##  lifecycle                0.1.0    2019-08-01 [1] CRAN (R 3.6.0)                              
+##  lubridate                1.7.4    2018-04-11 [1] CRAN (R 3.6.0)                              
+##  magrittr                 1.5      2014-11-22 [1] CRAN (R 3.6.0)                              
+##  maps                     3.3.0    2018-04-03 [1] CRAN (R 3.6.0)                              
+##  Matrix                   1.2-18   2019-11-27 [1] CRAN (R 3.6.2)                              
+##  matrixStats            * 0.55.0   2019-09-07 [1] CRAN (R 3.6.0)                              
+##  memoise                  1.1.0    2017-04-21 [1] CRAN (R 3.6.0)                              
+##  mime                     0.9      2020-02-04 [1] CRAN (R 3.6.0)                              
+##  munsell                  0.5.0    2018-06-12 [1] CRAN (R 3.6.0)                              
+##  pillar                   1.4.3    2019-12-20 [1] CRAN (R 3.6.0)                              
+##  pkgconfig                2.0.3    2019-09-22 [1] CRAN (R 3.6.1)                              
+##  pkgload                  1.0.2    2018-10-29 [1] CRAN (R 3.6.0)                              
+##  plotly                   4.9.2    2020-02-12 [1] CRAN (R 3.6.0)                              
+##  plyr                     1.8.5    2019-12-10 [1] CRAN (R 3.6.0)                              
+##  png                      0.1-7    2013-12-03 [1] CRAN (R 3.6.0)                              
+##  Polychrome               1.2.4    2020-02-03 [1] CRAN (R 3.6.0)                              
+##  promises                 1.1.0    2019-10-04 [1] CRAN (R 3.6.0)                              
+##  pryr                     0.1.4    2018-02-18 [1] CRAN (R 3.6.0)                              
+##  purrr                    0.3.3    2019-10-18 [1] CRAN (R 3.6.0)                              
+##  R6                       2.4.1    2019-11-12 [1] CRAN (R 3.6.1)                              
+##  rappdirs                 0.3.1    2016-03-28 [1] CRAN (R 3.6.0)                              
+##  RColorBrewer             1.1-2    2014-12-07 [1] CRAN (R 3.6.0)                              
+##  Rcpp                     1.0.3    2019-11-08 [1] CRAN (R 3.6.0)                              
+##  RCurl                    1.98-1.1 2020-01-19 [1] CRAN (R 3.6.0)                              
+##  RefManageR               1.2.12   2019-04-03 [1] CRAN (R 3.6.0)                              
+##  rlang                    0.4.4    2020-01-28 [1] CRAN (R 3.6.0)                              
+##  rmarkdown                2.1      2020-01-20 [1] CRAN (R 3.6.0)                              
+##  roxygen2                 7.0.2    2019-12-02 [1] CRAN (R 3.6.0)                              
+##  rprojroot                1.3-2    2018-01-03 [1] CRAN (R 3.6.0)                              
+##  RSQLite                  2.2.0    2020-01-07 [1] CRAN (R 3.6.0)                              
+##  rstudioapi               0.11     2020-02-07 [1] CRAN (R 3.6.0)                              
+##  rsvd                     1.0.3    2020-02-17 [1] CRAN (R 3.6.0)                              
+##  S4Vectors              * 0.24.3   2020-01-18 [1] Bioconductor                                
+##  scales                   1.1.0    2019-11-18 [1] CRAN (R 3.6.1)                              
+##  scater                   1.14.6   2019-12-16 [1] Bioconductor                                
+##  scatterplot3d            0.3-41   2018-03-14 [1] CRAN (R 3.6.0)                              
+##  sessioninfo            * 1.1.1    2018-11-05 [1] CRAN (R 3.6.0)                              
+##  shiny                    1.4.0    2019-10-10 [1] CRAN (R 3.6.0)                              
+##  shinyWidgets             0.5.0    2019-11-18 [1] CRAN (R 3.6.0)                              
+##  SingleCellExperiment   * 1.8.0    2019-10-29 [1] Bioconductor                                
+##  spam                     2.5-1    2019-12-12 [1] CRAN (R 3.6.0)                              
+##  spatialLIBD            * 0.99.9   2020-02-29 [1] Github (LieberInstitute/spatialLIBD@572e2a0)
+##  stringi                  1.4.6    2020-02-17 [1] CRAN (R 3.6.0)                              
+##  stringr                  1.4.0    2019-02-10 [1] CRAN (R 3.6.0)                              
+##  SummarizedExperiment   * 1.16.1   2019-12-19 [1] Bioconductor                                
+##  testthat                 2.3.1    2019-12-01 [1] CRAN (R 3.6.0)                              
+##  tibble                   2.1.3    2019-06-06 [1] CRAN (R 3.6.0)                              
+##  tidyr                    1.0.2    2020-01-24 [1] CRAN (R 3.6.2)                              
+##  tidyselect               1.0.0    2020-01-27 [1] CRAN (R 3.6.0)                              
+##  usethis                  1.5.1    2019-07-04 [1] CRAN (R 3.6.0)                              
+##  vctrs                    0.2.3    2020-02-20 [1] CRAN (R 3.6.0)                              
+##  vipor                    0.4.5    2017-03-22 [1] CRAN (R 3.6.0)                              
+##  viridis                  0.5.1    2018-03-29 [1] CRAN (R 3.6.0)                              
+##  viridisLite              0.3.0    2018-02-01 [1] CRAN (R 3.6.0)                              
+##  withr                    2.1.2    2018-03-15 [1] CRAN (R 3.6.0)                              
+##  xfun                     0.12     2020-01-13 [1] CRAN (R 3.6.0)                              
+##  xml2                     1.2.2    2019-08-09 [1] CRAN (R 3.6.0)                              
+##  xtable                   1.8-4    2019-04-21 [1] CRAN (R 3.6.0)                              
+##  XVector                  0.26.0   2019-10-29 [1] Bioconductor                                
+##  yaml                     2.2.1    2020-02-01 [1] CRAN (R 3.6.0)                              
+##  yesno                    0.1.0    2018-04-14 [1] CRAN (R 3.6.0)                              
+##  zlibbioc                 1.32.0   2019-10-29 [1] Bioconductor                                
+## 
+## [1] /Library/Frameworks/R.framework/Versions/3.6/Resources/library&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Easily explore a table with shinycsv</title>
+      <link>https://lcolladotor.github.io/2017/01/20/easily-explore-a-table-with-shinycsv/</link>
+      <pubDate>Fri, 20 Jan 2017 00:00:00 +0000</pubDate>
+      <guid>https://lcolladotor.github.io/2017/01/20/easily-explore-a-table-with-shinycsv/</guid>
+      <description>&lt;p&gt;Have you ever had to explore a table with data? I believe the answer is &lt;em&gt;yes&lt;/em&gt; for most people that work at a computer or even just use it for communicating with their friends and family. Tables of data pop up everywhere, for example in personal finance. Websites like &lt;a href=&#34;https://www.mint.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Mint.com&lt;/a&gt; allow you to download your transactions in a &lt;a href=&#34;https://en.wikipedia.org/wiki/Comma-separated_values&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CSV&lt;/a&gt; file called &lt;code&gt;transactions.csv&lt;/code&gt;. CSV is one of the many formats for storing tables and most likely when you try to open the &lt;code&gt;transactions.csv&lt;/code&gt; file, it will open with Excel. Now, can you make a quick figure of one of your columns in your table?&lt;/p&gt;
+&lt;p&gt;Some will answer yes, others no. The basic issue is that it&amp;rsquo;s not &lt;em&gt;super&lt;/em&gt; easy to explore your data in Excel or similar programs. Wait, shouldn&amp;rsquo;t it be easy? 😕&lt;/p&gt;
+&lt;p&gt;What if you want to subset your data and want to re-make the plot? How about getting some simple statistics like the mean or frequency of some categories for a given variable? 😨 These are some of the immediate tasks that are helpful when exploring data. Visually, making figures with two variables is also very common.&lt;/p&gt;
+&lt;p&gt;Programmers and experts in Excel, Stata, &lt;code&gt;R&lt;/code&gt; among other options can perform these data explorations. It might take them a little bit of time to write the code or remember it or use the user interface menu of their program of choice. But what about everyone else?&lt;/p&gt;
+&lt;p&gt;At the &lt;a href=&#34;http://www.libd.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Lieber Institute for Brain Development&lt;/a&gt; where I work, it&amp;rsquo;s common for us to exchange data in tables, and thus explore data. That&amp;rsquo;s why we created &lt;code&gt;shinycsv&lt;/code&gt; &lt;a id=&#39;cite-shinycsv&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://github.com/LieberInstitute/shinycsv&#39;&gt;Collado-Torres, Semick, and Jaffe, 2016&lt;/a&gt;). It&amp;rsquo;s an R package &lt;a id=&#39;cite-cran&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://www.R-project.org/&#39;&gt;R Core Team, 2016&lt;/a&gt;) that contains a &lt;code&gt;shiny&lt;/code&gt; &lt;a id=&#39;cite-shiny&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://CRAN.R-project.org/package=shiny&#39;&gt;Chang, Cheng, Allaire, Xie, et al., 2017&lt;/a&gt;) application that allows users to interactively explore a table.&lt;/p&gt;
+&lt;p&gt;Installing &lt;code&gt;R&lt;/code&gt; is a pretty high bar, that&amp;rsquo;s why we are hosting this application at &lt;a href=&#34;https://jhubiostatistics.shinyapps.io/shinycsv/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://jhubiostatistics.shinyapps.io/shinycsv/&lt;/a&gt;. Try it out!&lt;/p&gt;
+&lt;center&gt;
+&lt;a href=&#34;https://jhubiostatistics.shinyapps.io/shinycsv/&#34;&gt;&lt;img alt = &#39;shinycsv landing&#39; width=&#39;600&#39; src=&#39;http://lcolladotor.github.io/figs/2017-01-20-shinycsv/landing.png&#39; /&gt;&lt;/a&gt;
+&lt;/center&gt;
+&lt;h2 id=&#34;shinycsv-application&#34;&gt;shinycsv application&lt;/h2&gt;
+&lt;p&gt;The application includes data about cars to demonstrate what it can do. It&amp;rsquo;s a small data set that is commonly used for demonstration purposes. Anyhow, in the application you&amp;rsquo;ll notice a few tabs.&lt;/p&gt;
+&lt;p&gt;The application shows the &lt;em&gt;&lt;strong&gt;raw data&lt;/strong&gt;&lt;/em&gt; in an interactive table that allows you to subset the observations by some criteria, search in the table, and sort in different ways. The &lt;em&gt;&lt;strong&gt;raw summary&lt;/strong&gt;&lt;/em&gt; tab shows quick statistical summaries which depend on the variable type (numerical, categorical, etc). If you interacted with the table in &lt;em&gt;raw data&lt;/em&gt; then the summaries at &lt;em&gt;raw summary&lt;/em&gt; will be based on the subset you selected.&lt;/p&gt;
+&lt;p&gt;The &lt;em&gt;&lt;strong&gt;one variable&lt;/strong&gt;&lt;/em&gt; and &lt;em&gt;&lt;strong&gt;two variables&lt;/strong&gt;&lt;/em&gt; tabs are for making figures based on one or two variables at a time. The code in &lt;code&gt;shinycsv&lt;/code&gt; tries to guess what&amp;rsquo;s the best figure for a given type of variable and in case that you are interested in learning R, it also shows the exact code you can use to reproduce the figure in your computer. We added this feature to excite users about learning R. And it&amp;rsquo;s useful for advanced users too that might want to customize the resulting figures. Hm&amp;hellip;, you don&amp;rsquo;t like the colors we chose for the figure? Well go to &lt;em&gt;&lt;strong&gt;plot colors&lt;/strong&gt;&lt;/em&gt;, choose another color, and come back to see your new figure with the color of your choosing. 😄&lt;/p&gt;
+&lt;p&gt;Hm&amp;hellip; but what if you don&amp;rsquo;t have a CSV file? Well, &lt;code&gt;shinycsv&lt;/code&gt; can handle many different tables thanks to &lt;code&gt;rio&lt;/code&gt; &lt;a id=&#39;cite-rio&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;#bib-rio&#39;&gt;Chan, Chan, Leeper, and Becker, 2016&lt;/a&gt;). Even Excel sheets! 😉&lt;/p&gt;
+&lt;p&gt;So, go ahead and test it out! We&amp;rsquo;ll be glad to hear your feedback at &lt;a href=&#34;https://github.com/LieberInstitute/shinycsv/issues&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;LieberInstitute/shinycsv&lt;/a&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;notes&#34;&gt;Notes&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Note that when I referred to tables earlier, I referred to square tables with different variables (age, height, weight, etc) as columns as observations as rows. That is, Excel files with a single sheet with no comments or figures inside the Excel file.&lt;/li&gt;
+&lt;li&gt;Are you interested in learning more about &lt;code&gt;R&lt;/code&gt; and &lt;code&gt;shiny&lt;/code&gt;? Maybe you&amp;rsquo;ll want to take a look at the &lt;a href=&#34;https://jhubiostatistics.shinyapps.io/shinycsv-showcase/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;showcase mode version of the application&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;If you use &lt;code&gt;shinycsv::explore()&lt;/code&gt; locally, the file size limit is increased to 500 MB. Although at that point you might want to consider using &lt;code&gt;R&lt;/code&gt; or another programming language.&lt;/li&gt;
+&lt;li&gt;What about casting variables? If you want to have fine control about casting the variables, save your data in a RData file. Sure, this requires an R user.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;reproducibility&#34;&gt;Reproducibility&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;## Reproducibility info
+library(&#39;devtools&#39;)
+options(width = 120)
+session_info()
+
+## Session info -----------------------------------------------------------------------------------------------------------
+
+##  setting  value                                             
+##  version  R Under development (unstable) (2016-10-26 r71594)
+##  system   x86_64, darwin13.4.0                              
+##  ui       X11                                               
+##  language (EN)                                              
+##  collate  en_US.UTF-8                                       
+##  tz       America/New_York                                  
+##  date     2017-01-20
+
+## Packages ---------------------------------------------------------------------------------------------------------------
+
+##  package       * version  date       source        
+##  bibtex          0.4.0    2014-12-31 CRAN (R 3.4.0)
+##  bitops          1.0-6    2013-08-17 CRAN (R 3.4.0)
+##  devtools      * 1.12.0   2016-12-05 CRAN (R 3.4.0)
+##  digest          0.6.11   2017-01-03 CRAN (R 3.4.0)
+##  evaluate        0.10     2016-10-11 CRAN (R 3.4.0)
+##  httr            1.2.1    2016-07-03 CRAN (R 3.4.0)
+##  knitcitations * 1.0.7    2015-10-28 CRAN (R 3.4.0)
+##  knitr         * 1.15.1   2016-11-22 CRAN (R 3.4.0)
+##  lubridate       1.6.0    2016-09-13 CRAN (R 3.4.0)
+##  magrittr        1.5      2014-11-22 CRAN (R 3.4.0)
+##  memoise         1.0.0    2016-01-29 CRAN (R 3.4.0)
+##  plyr            1.8.4    2016-06-08 CRAN (R 3.4.0)
+##  R6              2.2.0    2016-10-05 CRAN (R 3.4.0)
+##  Rcpp            0.12.9   2017-01-14 CRAN (R 3.4.0)
+##  RCurl           1.95-4.8 2016-03-01 CRAN (R 3.4.0)
+##  RefManageR      0.13.1   2016-11-13 CRAN (R 3.4.0)
+##  RJSONIO         1.3-0    2014-07-28 CRAN (R 3.4.0)
+##  stringi         1.1.2    2016-10-01 CRAN (R 3.4.0)
+##  stringr         1.1.0    2016-08-19 CRAN (R 3.4.0)
+##  withr           1.0.2    2016-06-20 CRAN (R 3.4.0)
+##  XML             3.98-1.5 2016-11-10 CRAN (R 3.4.0)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;references&#34;&gt;References&lt;/h3&gt;
+&lt;p&gt;Citations made with &lt;code&gt;knitcitations&lt;/code&gt; &lt;a id=&#39;cite-knitcitations&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://CRAN.R-project.org/package=knitcitations&#39;&gt;Boettiger, 2015&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;&lt;a id=&#39;bib-knitcitations&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-knitcitations&#34;&gt;[1]&lt;/a&gt;&lt;cite&gt;
+C. Boettiger.
+&lt;em&gt;knitcitations: Citations for &#39;Knitr&#39; Markdown Files&lt;/em&gt;.
+R package version 1.0.7.
+2015.
+URL: &lt;a href=&#34;https://CRAN.R-project.org/package=knitcitations&#34;&gt;https://CRAN.R-project.org/package=knitcitations&lt;/a&gt;.&lt;/cite&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a id=&#39;bib-rio&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-rio&#34;&gt;[2]&lt;/a&gt;&lt;cite&gt;
+C. Chan, G. C. Chan, T. J. Leeper and J. Becker.
+&lt;em&gt;rio: A Swiss-army knife for data file I/O&lt;/em&gt;.
+R package version 0.4.16.
+2016.&lt;/cite&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a id=&#39;bib-shiny&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-shiny&#34;&gt;[3]&lt;/a&gt;&lt;cite&gt;
+W. Chang, J. Cheng, J. Allaire, Y. Xie, et al.
+&lt;em&gt;shiny: Web Application Framework for R&lt;/em&gt;.
+R package version 1.0.0.
+2017.
+URL: &lt;a href=&#34;https://CRAN.R-project.org/package=shiny&#34;&gt;https://CRAN.R-project.org/package=shiny&lt;/a&gt;.&lt;/cite&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a id=&#39;bib-shinycsv&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-shinycsv&#34;&gt;[4]&lt;/a&gt;&lt;cite&gt;
+L. Collado-Torres, S. Semick and A. E. Jaffe.
+&lt;em&gt;shinycsv: Explore a table interactively in a shiny application&lt;/em&gt;.
+R package version 0.99.7.
+2016.
+URL: &lt;a href=&#34;https://github.com/LieberInstitute/shinycsv&#34;&gt;https://github.com/LieberInstitute/shinycsv&lt;/a&gt;.&lt;/cite&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a id=&#39;bib-cran&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-cran&#34;&gt;[5]&lt;/a&gt;&lt;cite&gt;
+R Core Team.
+&lt;em&gt;R: A Language and Environment for Statistical Computing&lt;/em&gt;.
+R Foundation for Statistical Computing.
+Vienna, Austria, 2016.
+URL: &lt;a href=&#34;https://www.R-project.org/&#34;&gt;https://www.R-project.org/&lt;/a&gt;.&lt;/cite&gt;&lt;/p&gt;
+&lt;h3 id=&#34;want-more&#34;&gt;Want more?&lt;/h3&gt;
+&lt;p&gt;Check other &lt;a href=&#34;https://twitter.com/jhubiostat&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;@jhubiostat&lt;/a&gt; student blogs at &lt;a href=&#34;http://bmorebiostat.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Bmore Biostats&lt;/a&gt; as well as topics on &lt;a href=&#34;https://twitter.com/search?q=%23rstats&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;#rstats&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Finding possible class schedules</title>
+      <link>https://lcolladotor.github.io/2016/08/02/materias/</link>
+      <pubDate>Tue, 02 Aug 2016 00:00:00 +0000</pubDate>
+      <guid>https://lcolladotor.github.io/2016/08/02/materias/</guid>
+      <description>&lt;p&gt;Over the weekend my brother wanted to figure out his class schedule for the next semester. He is a veterinary medicine and zootechnology student at UNAM. For this upcoming semester there is a set of classes he has to take and each has 8 or so instructor options. The website where he finds the class times lists about 8 pre-constructed class schedules. So he normally finds one he likes quite a bit, and then manually starts checking if he can change X instructor for Y for a given class. He does this based on the referalls and information he has gathered about the instructors, plus he factors in whether it&amp;rsquo;d be an overall better schedule. For example, he might prefer to have a packed Tuesday if that means that he can leave early on Friday and avoid classes on Saturday.&lt;/p&gt;
+&lt;p&gt;The problem is that it&amp;rsquo;s very easy to make a mistake. You (well he) gets all excited thinking that he&amp;rsquo;s found the perfect schedule. Only to then realize that there is a conflict between two classes. Or that the practical portion of a class is in a location one hour away from the university, meaning that the schedule he has selected won&amp;rsquo;t work. This process is very frustrating.&lt;/p&gt;
+&lt;p&gt;I was watching him and I started to think if I could help him with some code. Turns out that it was straightforward to write some code to find which options are valid. Once I wrote a test case, it took us like half an hour to fill out the data. I know that tomorrow is when he and his classmates start registering for classes, so this information might help his classmates.&lt;/p&gt;
+&lt;p&gt;First, I define some helper functions. These are rather straightforward but I&amp;rsquo;ll be using them later on. For example, &lt;code&gt;dias()&lt;/code&gt; is just there for typing less.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## Helper functions&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;dias&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;function&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;d&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nf&#34;&gt;paste0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;d&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;extract&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;function&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;m&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;p&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;m[[p]]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;extract_names&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;function&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;m&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;p&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nf&#34;&gt;names&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;m&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;[p]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Next comes the input information. I organized it in a set of nested &lt;code&gt;list&lt;/code&gt; objects. The schedule is stored as a character vector. For example, Lucia Eliana&amp;rsquo;s class meets on Wednesdays (__M__iercoles in Spanish) from 9 to 11 am. I only keep the starting hours (9 and 10 am) because otherwise the code won&amp;rsquo;t detect valid opitons that include another class that starts at 11 am. For classes that are 1 hour away from the university, we included 1 hour before and 1 hour after the class.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## Input class/prof info and schedule&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;materias&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;list&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;repro&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;list&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;s&#34;&gt;&amp;#39;lucia eliana&amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;dias&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;m&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;9&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;10&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;dias&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;j&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;9&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;10&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;dias&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;v&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;8&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;13&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)),&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;s&#34;&gt;&amp;#39;esquivel lacroix&amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;dias&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;l&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;14&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;15&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;dias&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;ma&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;12&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;18&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;dias&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;m&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;14&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;15&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)),&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;s&#34;&gt;&amp;#39;ismael porras&amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;dias&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;l&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;9&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;10&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;dias&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;m&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;8&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;14&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;dias&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;j&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;9&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;10&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)),&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;s&#34;&gt;&amp;#39;esquivel lacroix 2&amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;dias&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;l&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;14&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;15&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;dias&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;m&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;14&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;15&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;dias&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;v&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;12&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;18&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)),&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;s&#34;&gt;&amp;#39;salvador galina&amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;dias&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;ma&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;8&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;13&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;dias&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;j&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;9&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;10&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;dias&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;v&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;9&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;10&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)),&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;s&#34;&gt;&amp;#39;alberto balcazar&amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;dias&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;l&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;15&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;16&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;dias&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;j&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;12&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;18&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;dias&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;v&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;14&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;15&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)),&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;s&#34;&gt;&amp;#39;ana myriam boeta&amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;dias&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;l&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;8&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;13&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;dias&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;m&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;10&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;11&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;dias&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;v&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;9&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;10&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)),&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;s&#34;&gt;&amp;#39;rafael eduardo paz&amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;dias&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;l&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;11&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;17&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;dias&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;j&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;14&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;15&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;dias&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;v&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;16&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;17&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)),&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;s&#34;&gt;&amp;#39;juan heberth&amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;dias&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;ma&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;9&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;10&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;dias&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;m&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;11&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;17&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;dias&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;v&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;11&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;12&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)),&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;s&#34;&gt;&amp;#39;vicente octavio mejia&amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;dias&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;ma&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;8&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;17&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;),&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;economia&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;list&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;s&#34;&gt;&amp;#39;valentin efren espinoza&amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;dias&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;l&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;8&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;10&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;dias&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;ma&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;9&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;11&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)),&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;s&#34;&gt;&amp;#39;maria del pilar velazquez&amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;dias&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;l&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;16&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;18&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;dias&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;m&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;16&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;18&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)),&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;s&#34;&gt;&amp;#39;arturo alonso pesado&amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;dias&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;l&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;11&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;13&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;dias&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;j&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;11&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;13&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)),&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;s&#34;&gt;&amp;#39;laura mendez&amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;dias&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;ma&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;13&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;15&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;dias&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;m&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;18&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;20&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)),&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;s&#34;&gt;&amp;#39;laura mendez 2&amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;dias&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;j&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;11&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;13&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;dias&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;v&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;11&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;13&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)),&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;s&#34;&gt;&amp;#39;manuela garcia&amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;dias&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;l&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;17&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;19&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;dias&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;v&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;16&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;18&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)),&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;s&#34;&gt;&amp;#39;francisco alejandro&amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;dias&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;ma&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;7&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;9&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;dias&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;j&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;7&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;9&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)),&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;s&#34;&gt;&amp;#39;isaac reyes&amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;dias&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;m&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;13&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;15&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;dias&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;v&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;13&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;15&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)),&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;s&#34;&gt;&amp;#39;jose luis tinoco&amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;dias&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;ma&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;12&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;14&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;dias&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;m&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;9&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;11&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)),&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;s&#34;&gt;&amp;#39;isaac reyes 2&amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;dias&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;l&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;14&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;16&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;dias&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;ma&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;14&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;16&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;),&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;bacterianas&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;list&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;s&#34;&gt;&amp;#39;jose luis gutierrez&amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;dias&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;s&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;8&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;11&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;s&#34;&gt;&amp;#39;rodrigo mena&amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;dias&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;ma&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;18&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;19&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;dias&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;j&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;18&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;19&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)),&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;s&#34;&gt;&amp;#39;beatriz arellano&amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;dias&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;l&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;7&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;8&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;dias&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;ma&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;10&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;11&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)),&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;s&#34;&gt;&amp;#39;de la pena, ramirez ortega&amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;dias&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;j&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;18&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;19&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;dias&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;v&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;18&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;19&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)),&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;s&#34;&gt;&amp;#39;ramirez ortega&amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;dias&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;m&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;7&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;8&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;dias&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;j&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;7&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;8&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)),&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;s&#34;&gt;&amp;#39;rodrigo mena 2&amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;dias&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;ma&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;16&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;17&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;dias&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;m&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;16&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;17&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)),&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;s&#34;&gt;&amp;#39;de la pena&amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;dias&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;s&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;8&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;11&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;s&#34;&gt;&amp;#39;efren diaz aparicio&amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;dias&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;s&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;8&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;11&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;s&#34;&gt;&amp;#39;lucia del carmen favila&amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;dias&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;s&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;8&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;11&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;),&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;parasitarias&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;list&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;s&#34;&gt;&amp;#39;cintli martinez&amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;dias&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;j&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;16&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;17&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;dias&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;v&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;18&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;20&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)),&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;s&#34;&gt;&amp;#39;osvaldo froylan&amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;dias&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;ma&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;18&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;19&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;dias&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;j&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;18&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;20&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)),&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;s&#34;&gt;&amp;#39;maria quintero, agustin perez&amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;dias&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;ma&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;13&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;14&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;dias&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;m&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;7&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;9&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)),&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;s&#34;&gt;&amp;#39;maria quintero&amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;dias&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;m&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;16&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;18&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;dias&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;j&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;16&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;17&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)),&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;s&#34;&gt;&amp;#39;evangelina romero&amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;dias&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;ma&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;7&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;8&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;dias&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;v&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;7&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;9&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)),&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;s&#34;&gt;&amp;#39;guadarrama 01&amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;dias&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;m&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;7&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;8&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;dias&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;j&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;11&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;13&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)),&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;s&#34;&gt;&amp;#39;guadarrama 03&amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;dias&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;ma&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;13&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;15&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;dias&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;v&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;7&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;8&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)),&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;s&#34;&gt;&amp;#39;guadarrama 04&amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;dias&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;l&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;16&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;17&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;dias&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;ma&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;18&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;20&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)),&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;s&#34;&gt;&amp;#39;guadarrama 05&amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;dias&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;l&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;7&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;9&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;dias&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;j&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;7&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;8&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;),&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;diagnosticas&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;list&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;s&#34;&gt;&amp;#39;1701&amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;dias&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;l&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;11&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;13&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;dias&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;m&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;11&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;16&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)),&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;s&#34;&gt;&amp;#39;1702&amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;dias&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;j&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;13&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;15&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;dias&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;v&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;13&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;18&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)),&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;s&#34;&gt;&amp;#39;1703&amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;dias&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;ma&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;7&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;9&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;dias&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;v&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;8&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;13&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)),&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;s&#34;&gt;&amp;#39;1704&amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;dias&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;l&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;18&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;20&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;dias&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;j&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;13&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;18&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)),&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;s&#34;&gt;&amp;#39;1705&amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;dias&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;l&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;11&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;13&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;dias&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;m&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;7&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;11&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)),&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;s&#34;&gt;&amp;#39;1706&amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;dias&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;ma&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;15&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;17&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;dias&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;m&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;15&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;19&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)),&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;s&#34;&gt;&amp;#39;1707&amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;dias&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;ma&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;10&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;12&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;dias&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;j&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;10&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;15&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)),&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;s&#34;&gt;&amp;#39;1708&amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;dias&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;l&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;18&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;20&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;dias&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;ma&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;15&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;19&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)),&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;s&#34;&gt;&amp;#39;1709&amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;dias&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;l&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;11&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;13&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;dias&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;j&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;8&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;13&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)),&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;s&#34;&gt;&amp;#39;1711&amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;dias&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;j&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;13&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;15&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;dias&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;v&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;10&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;13&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Now that the input information is complete, I use &lt;code&gt;expand.grid()&lt;/code&gt; to find out all the different possible options.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## Get all the options&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;options&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;expand.grid&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;lapply&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;materias&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;function&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;seq_len&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;length&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))}))&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nf&#34;&gt;dim&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;options&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;## [1] 81000     5
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;There&amp;rsquo;s 81,00 of them including the classes that meet on Saturday. You can see why it&amp;rsquo;s a frustrating process to find which combination of classes work when doing this manually.&lt;/p&gt;
+&lt;p&gt;Next, I explore all these options to find those that are valid, meaning that none of the classes overlap. I do this by finding which options have no duplicated hours from the character vectors defined earlier. Nothing fancy.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;valid&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;apply&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;options&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;function&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;input&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;info&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;mapply&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;extract&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;materias&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;input&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;o&#34;&gt;!&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;any&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;duplicated&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;unlist&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;info&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)))&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;})&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Now that I have the valid options, I can find the names of the instructors for them. There&amp;rsquo;s 2,847 valid schedules in the end, out of the 81,000. That&amp;rsquo;s 3.5 percent!&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;valid_prof&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;apply&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;options[valid&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;function&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;input&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nf&#34;&gt;mapply&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;extract_names&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;materias&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;input&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;})&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nf&#34;&gt;ncol&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;valid_prof&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;## [1] 2847
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;You can search the interactive version &lt;a href=&#34;https://lcolladotor.shinyapps.io/materias/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt; to select only the options with a given instructor. For example, in my brother&amp;rsquo;s case there are 30 valid options once he decided to prioritize two instructors as shown in the non-interactive table below.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## Ideally, this code would create an interactive table, but it doesn&amp;#39;t work for some reason:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#library(&amp;#39;DT&amp;#39;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#datatable(t(valid_prof), options = list(pagingType=&amp;#39;full_numbers&amp;#39;, pageLength=10), rownames = FALSE)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;valid_prof&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;t&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;valid_prof&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nf&#34;&gt;rownames&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;valid_prof&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;seq_len&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;nrow&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;valid_prof&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;top_options&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;valid_prof[valid_prof[&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#39;lucia eliana&amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;valid_prof[&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;%in%&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;isaac reyes&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#39;isaac reyes 2&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nf&#34;&gt;kable&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;top_options&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;format&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#39;markdown&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;row.names&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;TRUE&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;repro&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;economia&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;bacterianas&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;parasitarias&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;diagnosticas&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;5&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;lucia eliana&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;isaac reyes 2&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;jose luis gutierrez&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;cintli martinez&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;1701&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;11&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;lucia eliana&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;isaac reyes 2&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;rodrigo mena&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;cintli martinez&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;1701&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;14&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;lucia eliana&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;isaac reyes 2&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;beatriz arellano&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;cintli martinez&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;1701&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;19&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;lucia eliana&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;isaac reyes 2&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;ramirez ortega&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;cintli martinez&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;1701&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;25&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;lucia eliana&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;isaac reyes 2&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;de la pena&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;cintli martinez&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;1701&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;31&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;lucia eliana&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;isaac reyes 2&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;efren diaz aparicio&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;cintli martinez&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;1701&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;37&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;lucia eliana&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;isaac reyes 2&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;lucia del carmen favila&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;cintli martinez&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;1701&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;46&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;lucia eliana&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;isaac reyes 2&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;jose luis gutierrez&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;osvaldo froylan&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;1701&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;50&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;lucia eliana&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;isaac reyes 2&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;beatriz arellano&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;osvaldo froylan&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;1701&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;58&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;lucia eliana&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;isaac reyes 2&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;ramirez ortega&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;osvaldo froylan&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;1701&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;67&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;lucia eliana&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;isaac reyes 2&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;de la pena&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;osvaldo froylan&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;1701&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;76&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;lucia eliana&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;isaac reyes 2&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;efren diaz aparicio&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;osvaldo froylan&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;1701&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;85&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;lucia eliana&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;isaac reyes 2&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;lucia del carmen favila&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;osvaldo froylan&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;1701&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;123&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;lucia eliana&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;isaac reyes 2&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;jose luis gutierrez&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;guadarrama 01&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;1701&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;130&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;lucia eliana&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;isaac reyes 2&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;rodrigo mena&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;guadarrama 01&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;1701&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;134&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;lucia eliana&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;isaac reyes 2&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;beatriz arellano&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;guadarrama 01&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;1701&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;137&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;lucia eliana&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;isaac reyes 2&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;de la pena, ramirez ortega&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;guadarrama 01&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;1701&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;144&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;lucia eliana&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;isaac reyes 2&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;de la pena&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;guadarrama 01&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;1701&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;151&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;lucia eliana&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;isaac reyes 2&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;efren diaz aparicio&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;guadarrama 01&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;1701&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;158&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;lucia eliana&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;isaac reyes 2&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;lucia del carmen favila&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;guadarrama 01&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;1701&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;209&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;lucia eliana&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;isaac reyes 2&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;jose luis gutierrez&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;guadarrama 05&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;1701&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;217&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;lucia eliana&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;isaac reyes 2&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;rodrigo mena&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;guadarrama 05&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;1701&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;222&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;lucia eliana&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;isaac reyes 2&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;de la pena, ramirez ortega&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;guadarrama 05&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;1701&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;232&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;lucia eliana&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;isaac reyes 2&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;de la pena&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;guadarrama 05&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;1701&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;242&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;lucia eliana&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;isaac reyes 2&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;efren diaz aparicio&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;guadarrama 05&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;1701&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;252&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;lucia eliana&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;isaac reyes 2&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;lucia del carmen favila&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;guadarrama 05&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;1701&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;872&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;lucia eliana&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;isaac reyes 2&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;jose luis gutierrez&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;guadarrama 05&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;1704&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;885&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;lucia eliana&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;isaac reyes 2&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;de la pena&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;guadarrama 05&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;1704&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;894&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;lucia eliana&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;isaac reyes 2&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;efren diaz aparicio&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;guadarrama 05&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;1704&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;903&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;lucia eliana&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;isaac reyes 2&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;lucia del carmen favila&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;guadarrama 05&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;1704&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;reproducibility&#34;&gt;Reproducibility&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## Reproducibility info&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nf&#34;&gt;library&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;devtools&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nf&#34;&gt;session_info&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;## Session info --------------------------------------------------------------
+&lt;/code&gt;&lt;/pre&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;##  setting  value                       
+##  version  R version 3.3.0 (2016-05-03)
+##  system   x86_64, mingw32             
+##  ui       RStudio (0.99.902)          
+##  language (EN)                        
+##  collate  English_United States.1252  
+##  tz       America/Mexico_City         
+##  date     2016-08-02
+&lt;/code&gt;&lt;/pre&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;## Packages ------------------------------------------------------------------
+&lt;/code&gt;&lt;/pre&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;##  package   * version date       source        
+##  devtools  * 1.12.0  2016-06-24 CRAN (R 3.3.1)
+##  digest      0.6.9   2016-01-08 CRAN (R 3.3.0)
+##  evaluate    0.9     2016-04-29 CRAN (R 3.3.0)
+##  formatR     1.4     2016-05-09 CRAN (R 3.3.0)
+##  highr       0.6     2016-05-09 CRAN (R 3.3.0)
+##  knitr     * 1.13    2016-05-09 CRAN (R 3.3.0)
+##  magrittr    1.5     2014-11-22 CRAN (R 3.3.0)
+##  memoise     1.0.0   2016-01-29 CRAN (R 3.3.0)
+##  rsconnect   0.4.3   2016-05-02 CRAN (R 3.3.0)
+##  stringi     1.1.1   2016-05-27 CRAN (R 3.3.0)
+##  stringr     1.0.0   2015-04-30 CRAN (R 3.3.0)
+##  withr       1.0.2   2016-06-20 CRAN (R 3.3.1)
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;want-more&#34;&gt;Want more?&lt;/h3&gt;
+&lt;p&gt;Check other &lt;a href=&#34;https://twitter.com/jhubiostat&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;@jhubiostat&lt;/a&gt; student blogs at &lt;a href=&#34;http://bmorebiostat.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Bmore Biostats&lt;/a&gt; as well as topics on &lt;a href=&#34;https://twitter.com/search?q=%23rstats&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;#rstats&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Concerns that can deter potential orders for developing Shiny apps</title>
+      <link>https://lcolladotor.github.io/2014/06/10/shiny-orders/</link>
+      <pubDate>Tue, 10 Jun 2014 00:00:00 +0000</pubDate>
+      <guid>https://lcolladotor.github.io/2014/06/10/shiny-orders/</guid>
+      <description>&lt;p&gt;A few weeks ago I was invited to a meeting where a group was interested in exploring options for replacing their contract with a propriety software. They invited me because they saw some resemblances between a &lt;a href=&#34;http://shiny.rstudio.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Shiny&lt;/a&gt; application I made and the features they need. It is a relatively small project and it seemed feasible to implement, but well, some details could have been tricky to code. During the meeting I explained what &lt;a href=&#34;http://shiny.rstudio.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Shiny&lt;/a&gt; is, showcased some of the &lt;a href=&#34;http://shiny.rstudio.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Shiny&lt;/a&gt; apps I&amp;rsquo;ve made, and proposed some options including a simple site password.&lt;/p&gt;
+&lt;p&gt;A few days after the meeting, they raised three concerns.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Privacy and security of their data. Specially with distribution of the site password.&lt;/li&gt;
+&lt;li&gt;Technical support. They wanted something more than community support.&lt;/li&gt;
+&lt;li&gt;Continuity of the project. Specially since their team might lack the technical expertise to support and modify the Shiny app after it is built.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;These are all valid concerns and they are not something I have dealt with or been concerned with other &lt;a href=&#34;http://shiny.rstudio.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Shiny&lt;/a&gt; apps I have deployed. Thus, I ended up finding more information and writing up a long reply which I am modifying into a post format here. If you identify other ways to approach these concerns that I missed, share the knowledge please!&lt;/p&gt;
+&lt;h2 id=&#34;shiny-overview&#34;&gt;Shiny overview&lt;/h2&gt;
+&lt;center&gt;
+&lt;a href=&#34;http://lcolladotor.github.io/figs/2014-06-10-shiny-orders/HelloShiny.png&#34;&gt;&lt;img src=&#34;http://lcolladotor.github.io/figs/2014-06-10-shiny-orders/HelloShiny.png&#34; alt=&#34;Workflow&#34; style=&#34;width: 458px;&#34;/&gt;&lt;/a&gt;
+&lt;/center&gt;
+&lt;p&gt;&lt;a href=&#34;http://shiny.rstudio.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Shiny&lt;/a&gt; is an &lt;code&gt;R&lt;/code&gt; package that allows creating web applications with &lt;code&gt;R&lt;/code&gt;. A user opens the app on their browser, specifies a given set of inputs, these are transmitted to an &lt;code&gt;R&lt;/code&gt; session, some code is evaluated with the input options, output is produced and transmitted back to the browser. Because it is so easy to use and useful, it has been very popular. That is the gist of it!&lt;/p&gt;
+&lt;h2 id=&#34;deploying-a-shiny-app&#34;&gt;Deploying a Shiny app&lt;/h2&gt;
+&lt;p&gt;Once you develop a &lt;a href=&#34;http://shiny.rstudio.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Shiny&lt;/a&gt; app, you have to deploy it on a server so users can access it through their browsers. Here I describe several options to do so.&lt;/p&gt;
+&lt;p&gt;The application itself needs &amp;ldquo;Shiny Server&amp;rdquo; to run. An implementation of Shiny Server is free via &lt;a href=&#34;http://shinyapps.io/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ShinyApps&lt;/a&gt; (&lt;strong&gt;option 1&lt;/strong&gt;) or if you have your own server you can install the open source version of Shiny Server (&lt;strong&gt;option 2&lt;/strong&gt;). Alternatively, you can pay for Shiny Server Pro and also install it in your own server (&lt;strong&gt;option 3&lt;/strong&gt;). Note that glimmer.rstudio.com is previous version of &lt;a href=&#34;http://shinyapps.io/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ShinyApps&lt;/a&gt; and you can no longer get accounts on this server.&lt;/p&gt;
+&lt;p&gt;Option 1 has the advantage of being completely free and that there is no need to pay for your own server. It does rely on &lt;a href=&#34;http://shinyapps.io/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ShinyApps&lt;/a&gt; being online, which should not be a main problem since it is hosted on the cloud. Meaning that it is supposed to be robust.&lt;/p&gt;
+&lt;p&gt;Option 2 has the advantage of having technical support for the server (not the app) from whoever is providing the server (could be a company or the school). However, you need to have someone capable of installing Shiny Server and updating it whenever it&amp;rsquo;s necessary to do so.&lt;/p&gt;
+&lt;p&gt;Option 3 allows you to have high level password security (via SSL) to any Shiny app you host. Plus &lt;a href=&#34;http://www.rstudio.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;RStudio&lt;/a&gt; provides technical support for Shiny. The server technical support would still have to come from whoever is providing the server. The main disadvantage is that this option is very expensive (even with the academic pricing discount).&lt;/p&gt;
+&lt;p&gt;Here is some information you might be interested on checking about Shiny:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.rstudio.com/shiny/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Main site for Shiny&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.rstudio.com/shiny/server/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Description for Shiny Server and Shiny Server Pro&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.rstudio.com/shiny/commercial/academic-pricing&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Academic pricing for Shiny Server Pro&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.rstudio.com/shiny/hosted/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Description of ShinyApps&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://shiny.rstudio.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Site for learning how to code a web app using Shiny&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://shiny.rstudio.com/gallery/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Examples of Shiny apps&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;concerns&#34;&gt;Concerns&lt;/h2&gt;
+&lt;h3 id=&#34;privacy&#34;&gt;Privacy&lt;/h3&gt;
+&lt;p&gt;Privacy issues in terms of password sharing can be limited by changing the password frequently. Privacy in terms of protection versus hacking is a different subject and I could implement something like &lt;a href=&#34;http://spark.rstudio.com/withr/authentication/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;this demo&lt;/a&gt; (username: withr, password: 12345678) as described in this &lt;a href=&#34;http://withr.me/blog/2014/02/14/encrypt-users-password-with-md5-for-you-shiny-app/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;blog post&lt;/a&gt;. However, if you want further protection vs hacking, you would need Shiny Server Pro. &lt;a href=&#34;http://shiny.rstudio.com/gallery/authentication-and-database.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Here is a demo&lt;/a&gt; of the security provided by Shiny Server Pro  (with multiple users too). I understand that hacking was not the main concern you had, but well, as I said password-sharing can be mitigated by frequent changes to the app site.&lt;/p&gt;
+&lt;h3 id=&#34;technical-support&#34;&gt;Technical support&lt;/h3&gt;
+&lt;p&gt;I mostly answered the different options regarding technical support when I described the three options for deploying a Shiny app. As for getting support from IT, they would need to learn how to use Shiny.&lt;/p&gt;
+&lt;h3 id=&#34;continuity&#34;&gt;Continuity&lt;/h3&gt;
+&lt;p&gt;Shiny is one of the most important projects for &lt;a href=&#34;http://www.rstudio.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;RStudio&lt;/a&gt; so they invest a lot in it, the community provides great answers very quickly, and a lot of people are learning how to use it. If you need an R programmer later on instead of a student, you could describe the job at &lt;a href=&#34;http://www.r-users.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;R Users&lt;/a&gt; and employ someone that way. As far as the Biostats department is concerned, I know that several students are using Shiny and some have even published Shiny Apps in the academic literature. Here are some examples:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://spark.rstudio.com/mrosenblum/interAdapt/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;interAdapt&lt;/a&gt; is a Shiny app written by Aaron Fisher (Biostats student) and published &lt;a href=&#34;http://biostats.bepress.com/jhubiostat/paper262/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;shinymethyl, a shiny application developed by Jean-Philippe Fortin described &lt;a href=&#34;http://shinymethyl.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt; with a &lt;a href=&#34;http://spark.rstudio.com/jfortin/shinyMethyl/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;demo here&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://alyssafrazee.shinyapps.io/committees/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;committees&lt;/a&gt; is a Shiny app made by Alyssa Frazee for verifying your school oral and/or defense committees. It&amp;rsquo;s described in &lt;a href=&#34;http://alyssafrazee.com/committee-checker-2.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;this post&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://muschellij2.shinyapps.io/ENAR_2014&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ENAR 2014&lt;/a&gt; is a Shiny app made by John Muschelli for the ENAR2014 conference which allowed you to quickly identify talks you might be interested in. It&amp;rsquo;s described in &lt;a href=&#34;http://hopstat.wordpress.com/2014/03/12/enar-2014-searcher-enar2014/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;this post&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;branding&#34;&gt;Branding&lt;/h3&gt;
+&lt;p&gt;Regarding branding, a Shiny App can be embedded on a website. For illustrating this, I embedded two apps I made &lt;a href=&#34;http://www.biostat.jhsph.edu/~lcollado/testShiny.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;conclusions&#34;&gt;Conclusions&lt;/h2&gt;
+&lt;p&gt;In the end, this group decided to use something else instead of a &lt;a href=&#34;http://shiny.rstudio.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Shiny&lt;/a&gt; app for now. I do not know exactly why they made that decision, but I can see that their concerns are probably shared with other potential &lt;a href=&#34;http://shiny.rstudio.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Shiny&lt;/a&gt; users. These concerns are a challenge &lt;a href=&#34;http://www.rstudio.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;RStudio&lt;/a&gt; must be dealing with and I am curious to know how they would have approached them.&lt;/p&gt;
+&lt;h4 id=&#34;want-more&#34;&gt;Want more?&lt;/h4&gt;
+&lt;p&gt;Check other &lt;a href=&#34;https://twitter.com/jhubiostat&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;@jhubiostat&lt;/a&gt; student blogs at &lt;a href=&#34;http://bmorebiostat.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Bmore Biostats&lt;/a&gt; as well as topics on &lt;a href=&#34;https://twitter.com/search?q=%23rstats&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;#rstats&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;This post is part of the summer 2014 &lt;a href=&#34;http://bmorebiostat.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Bmore Biostats&lt;/a&gt;&amp;rsquo; iron blogger challenge.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Simple mortgage calculator</title>
+      <link>https://lcolladotor.github.io/2014/04/22/mortgage-calculator-flexible-payments/</link>
+      <pubDate>Tue, 22 Apr 2014 00:00:00 +0000</pubDate>
+      <guid>https://lcolladotor.github.io/2014/04/22/mortgage-calculator-flexible-payments/</guid>
+      <description>&lt;p&gt;Have you ever thought of borrowing some money? A common case is when you have to borrow money for buying a house, which is called a mortgage. Wikipedia (&lt;span class=&#34;showtooltip&#34; title=&#34;(2014). &#39;Mortgage loan - Wikipedia, the free encyclopedia.&#39; .&#34;&gt;&lt;a href=&#34;http://en.wikipedia.org/wiki/Mortgage_loan&#34;&gt;&amp;lsquo;Mortgage loan&amp;rsquo; entry&lt;/a&gt;&lt;/span&gt;) goes into much more detail about the definition than what I&amp;rsquo;ll cover.&lt;/p&gt;
+&lt;p&gt;One of the aspects you have to evaluate when considering a loan such as a mortgage is how much interest you will be charged and how long the loan will be. Those two determine your monthly payment.&lt;/p&gt;
+&lt;h2 id=&#34;comparing-loans&#34;&gt;Comparing loans&lt;/h2&gt;
+&lt;p&gt;That is, given the loan amount, you can compare different loans that offer different rates and/or loan lengths. There are many tools out there that allow you to do so and are generally called mortgage calculators. Although the more detailed term is amortization calculator. From wikipedia(&lt;span class=&#34;showtooltip&#34; title=&#34;(2014). &#39;Amortization calculator - Wikipedia, the free encyclopedia.&#39; .&#34;&gt;&lt;a href=&#34;http://en.wikipedia.org/wiki/Amortization_calculator&#34;&gt;&amp;lsquo;Amortization calculator&amp;rsquo; entry&lt;/a&gt;&lt;/span&gt;) we find the so called annuity formula which helps you calculate your monthly payment.&lt;/p&gt;
+&lt;p&gt;Several such mortgage calculators have been features in &lt;a href=&#34;http://www.r-bloggers.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;R Bloggers&lt;/a&gt; before such as (&lt;span class=&#34;showtooltip&#34; title=&#34;C (2010). &#39;Mortgage Calculator (and Amortization Charts) with R.&#39; .&#34;&gt;&lt;a href=&#34;http://www.r-chart.com/2010/11/mortgage-calculator-and-amortization.html&#34;&gt;C, 2010&lt;/a&gt;&lt;/span&gt;) and (&lt;span class=&#34;showtooltip&#34; title=&#34;BioStatMatt (2014). &#39;Mortgage Refinance Calculator | BioStatMatt.&#39; .&#34;&gt;&lt;a href=&#34;http://biostatmatt.com/archives/1908&#34;&gt;BioStatMatt&lt;/a&gt;&lt;/span&gt;). Plus there are many other alternatives on the web.&lt;/p&gt;
+&lt;h2 id=&#34;my-use-case&#34;&gt;My use case&lt;/h2&gt;
+&lt;p&gt;However, a month or so ago I got curious about comparing some loans which had a different twist than normal. Given some circumstances, I wanted to compare some loans where the loaner is willing to receive payments every few months yet with interests being compounded (that is, calculated) on a different time frame. Obviously, the easiest would be to compound interest at the same frequency as payments are made. Plus, probably most banks would not offer such flexible loans.&lt;/p&gt;
+&lt;p&gt;Digging around, I did find modifications to the annuity formula that allow non-monthly payments (&lt;span class=&#34;showtooltip&#34; title=&#34;(2014). &#39;Compound Interest Calculator.&#39; .&#34;&gt;&lt;a href=&#34;http://www.calculator.net/compound-interest-calculator.html&#34;&gt;Compound Interest Formula&lt;/a&gt;&lt;/span&gt;) and (&lt;span class=&#34;showtooltip&#34; title=&#34;(2014). &#39;Compound Interest.&#39; .&#34;&gt;&lt;a href=&#34;http://math.about.com/library/weekly/aa042002a.htm&#34;&gt;What is compound interest?&lt;/a&gt;&lt;/span&gt;).&lt;/p&gt;
+&lt;h2 id=&#34;shiny-app&#34;&gt;shiny app&lt;/h2&gt;
+&lt;p&gt;Being interested in &lt;code&gt;R&lt;/code&gt; code, &lt;a href=&#34;http://www.rstudio.com/shiny/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;shiny&lt;/a&gt; (&lt;span class=&#34;showtooltip&#34; title=&#34;RStudio and Inc. (2014). shiny: Web Application Framework for R. R package version 0.9.1.&#34;&gt;&lt;a href=&#34;http://CRAN.R-project.org/package=shiny&#34;&gt;RStudio Inc.&lt;/a&gt;&lt;/span&gt;) apps and trying out integrating &lt;a href=&#34;http://rcharts.io/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;rCharts&lt;/a&gt; (&lt;span class=&#34;showtooltip&#34; title=&#34;Vaidyanathan R (2013). rCharts: Interactive Charts using Polycharts.js. R package version 0.4.2.&#34;&gt;&lt;a href=&#34;&#34;&gt;Vaidyanathan, 2013&lt;/a&gt;&lt;/span&gt;) with shiny, I ended up coding my own mortgage calculator which you can find &lt;a href=&#34;http://glimmer.rstudio.com/lcolladotor/mortgage/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt; (&lt;span class=&#34;showtooltip&#34; title=&#34;(2014). &#39;Simple Mortgage Calculator.&#39; .&#34;&gt;&lt;a href=&#34;http://glimmer.rstudio.com/lcolladotor/mortgage/&#34;&gt;Simple Mortage Calculator&lt;/a&gt;&lt;/span&gt;). The code is publicly available at &lt;a href=&#34;https://github.com/lcolladotor/mortgage&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;It has a couple of simple inputs:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Amount to borrow&lt;/li&gt;
+&lt;li&gt;Interest rate&lt;/li&gt;
+&lt;li&gt;Loan duration&lt;/li&gt;
+&lt;li&gt;Payment frequency&lt;/li&gt;
+&lt;li&gt;How frequently interests are compounded&lt;/li&gt;
+&lt;li&gt;Month of the first payment&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The option to begin the loan now but accept the first payment much later is there also because of the complicated use case I had in mind. Again, that is a feature a bank will most likely not offer. But it&amp;rsquo;s something I needed to take into consideration.&lt;/p&gt;
+&lt;p&gt;Going back to the app, I tried explaining all the inputs as much as possible. The output is relatively straight forward.&lt;/p&gt;
+&lt;p&gt;First, there is a line with focus D3 interactive plot (&lt;span class=&#34;showtooltip&#34; title=&#34;Partners N (2014). &#39;Line Chart With View Finder - NVD3.&#39; .&#34;&gt;&lt;a href=&#34;http://nvd3.org//examples/lineWithFocus.html&#34;&gt;Line Chart with View Finder&lt;/a&gt;&lt;/span&gt;) which shows the principal (the amount you owe) over months as well as how much you&amp;rsquo;ve paid already. The bottom panel allows you to zoom into a specific time range as shown below.&lt;/p&gt;
+&lt;center&gt;
+&lt;a href=&#34;http://lcolladotor.github.io/figs/2014-04-22-mortgage-calculator-flexible-payments/lineWithFocus.png&#34;&gt;&lt;img src=&#34;http://lcolladotor.github.io/figs/2014-04-22-mortgage-calculator-flexible-payments/lineWithFocus.png&#34; alt=&#34;Workflow&#34; style=&#34;width: 775px;&#34;/&gt;&lt;/a&gt;
+&lt;/center&gt;
+&lt;p&gt;Next, the information is shown in more detail as an interactive data table (&lt;span class=&#34;showtooltip&#34; title=&#34;(2014). &#39;DataTables (table plug-in for jQuery).&#39; .&#34;&gt;&lt;a href=&#34;https://datatables.net/&#34;&gt;DataTables&lt;/a&gt;&lt;/span&gt;) 12 months at a time. The interactive part makes it very easy to search for a specific month and look at the state of the loan.&lt;/p&gt;
+&lt;p&gt;Finally, you can download the amortization table in CSV format for your records.&lt;/p&gt;
+&lt;p&gt;PS You can also access the app via shinyapps at this &lt;a href=&#34;https://lcolladotor.shinyapps.io/mortgage2/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;url&lt;/a&gt;. It is the first time I&amp;rsquo;ve deployed an app there as I wanted to test shinyapps out.&lt;/p&gt;
+&lt;h2 id=&#34;conclusions&#34;&gt;Conclusions&lt;/h2&gt;
+&lt;p&gt;The experience of coding the &lt;a href=&#34;http://glimmer.rstudio.com/lcolladotor/mortgage/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;shiny app&lt;/a&gt; (&lt;span class=&#34;showtooltip&#34; title=&#34;(2014). &#39;Simple Mortgage Calculator.&#39; .&#34;&gt;&lt;a href=&#34;http://glimmer.rstudio.com/lcolladotor/mortgage/&#34;&gt;Simple Mortage Calculator&lt;/a&gt;&lt;/span&gt;) was interesting as I did learn a couple of new things. The same was true for figuring out the calculations for the more flexible options.&lt;/p&gt;
+&lt;p&gt;Finally, but not least, the shiny app was useful for my use case and was informative for comparing different loan options. Hopefully it will be useful for other users!&lt;/p&gt;
+&lt;h3 id=&#34;references&#34;&gt;References&lt;/h3&gt;
+&lt;p&gt;Citations made with &lt;code&gt;knitcitations&lt;/code&gt; (&lt;span class=&#34;showtooltip&#34; title=&#34;Boettiger C (2014). knitcitations: Citations for knitr markdown files. R package version 0.5-0.&#34;&gt;&lt;a href=&#34;http://CRAN.R-project.org/package=knitcitations&#34;&gt;Boettiger, 2014&lt;/a&gt;&lt;/span&gt;).&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Mortgage loan - Wikipedia, the free encyclopedia.  &lt;em&gt;Wikipedia&lt;/em&gt;  &lt;a href=&#34;http://en.wikipedia.org/wiki/Mortgage_loan&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;http://en.wikipedia.org/wiki/Mortgage_loan&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Amortization calculator - Wikipedia, the free encyclopedia.  &lt;em&gt;Wikipedia&lt;/em&gt;  &lt;a href=&#34;http://en.wikipedia.org/wiki/Amortization_calculator&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;http://en.wikipedia.org/wiki/Amortization_calculator&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;C,   (2010) Mortgage Calculator (and Amortization Charts) with R.  &lt;em&gt;R-Chart&lt;/em&gt;  &lt;a href=&#34;http://www.r-chart.com/2010/11/mortgage-calculator-and-amortization.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;http://www.r-chart.com/2010/11/mortgage-calculator-and-amortization.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;BioStatMatt,  Mortgage Refinance Calculator | BioStatMatt.  &lt;em&gt;BioStatMatt&lt;/em&gt;  &lt;a href=&#34;http://biostatmatt.com/archives/1908&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;http://biostatmatt.com/archives/1908&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Compound Interest Calculator.  &lt;a href=&#34;http://www.calculator.net/compound-interest-calculator.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;http://www.calculator.net/compound-interest-calculator.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Compound Interest.  &lt;a href=&#34;http://math.about.com/library/weekly/aa042002a.htm&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;http://math.about.com/library/weekly/aa042002a.htm&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Simple Mortgage Calculator.  &lt;a href=&#34;http://glimmer.rstudio.com/lcolladotor/mortgage/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;http://glimmer.rstudio.com/lcolladotor/mortgage/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Novus Partners,  Line Chart With View Finder - NVD3.  &lt;a href=&#34;http://nvd3.org//examples/lineWithFocus.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;http://nvd3.org//examples/lineWithFocus.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;DataTables (table plug-in for jQuery).  &lt;em&gt;DataTables (jQuery plug-in)&lt;/em&gt;  &lt;a href=&#34;https://datatables.net/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://datatables.net/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Carl Boettiger,   (2014) knitcitations: Citations for knitr markdown files.  &lt;a href=&#34;http://CRAN.R-project.org/package=knitcitations&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;http://CRAN.R-project.org/package=knitcitations&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Ramnath Vaidyanathan,   (2013) rCharts: Interactive Charts using Polycharts.js.&lt;/li&gt;
+&lt;li&gt;RStudio , Inc. ,   (2014) shiny: Web Application Framework for R.  &lt;a href=&#34;http://CRAN.R-project.org/package=shiny&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;http://CRAN.R-project.org/package=shiny&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;reproducibility&#34;&gt;Reproducibility&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nf&#34;&gt;sessionInfo&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;## R version 3.1.0 (2014-04-10)
+## Platform: x86_64-apple-darwin10.8.0 (64-bit)
+## 
+## locale:
+## [1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8
+## 
+## attached base packages:
+## [1] stats     graphics  grDevices utils     datasets  methods   base     
+## 
+## other attached packages:
+## [1] knitcitations_0.5-0 bibtex_0.3-6        knitr_1.5.27       
+## 
+## loaded via a namespace (and not attached):
+##  [1] codetools_0.2-8 digest_0.6.4    evaluate_0.5.3  formatR_0.10   
+##  [5] httr_0.3        RCurl_1.95-4.1  stringr_0.6.2   tools_3.1.0    
+##  [9] XML_3.98-1.1    xtable_1.7-3
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Check other &lt;a href=&#34;https://twitter.com/jhubiostat&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;@jhubiostat&lt;/a&gt; student blogs at &lt;a href=&#34;http://bmorebiostat.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Bmore Biostats&lt;/a&gt; as well as topics on &lt;a href=&#34;https://twitter.com/search?q=%23rstats&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;#rstats&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

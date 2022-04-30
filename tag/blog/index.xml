@@ -1,0 +1,1058 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blog | L. Collado-Torres</title>
+    <link>https://lcolladotor.github.io/tag/blog/</link>
+      <atom:link href="https://lcolladotor.github.io/tag/blog/index.xml" rel="self" type="application/rss+xml" />
+    <description>Blog</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Tue, 23 Oct 2018 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://lcolladotor.github.io/media/icon_hu2b32c4ab415f12f472f73c7b0301b0d1_19400_512x512_fill_lanczos_center_3.png</url>
+      <title>Blog</title>
+      <link>https://lcolladotor.github.io/tag/blog/</link>
+    </image>
+    
+    <item>
+      <title>Steps for writing a Twitter summary conference blog post</title>
+      <link>https://lcolladotor.github.io/2018/10/23/steps-for-writing-a-twitter-summary-conference-blog-post/</link>
+      <pubDate>Tue, 23 Oct 2018 00:00:00 +0000</pubDate>
+      <guid>https://lcolladotor.github.io/2018/10/23/steps-for-writing-a-twitter-summary-conference-blog-post/</guid>
+      <description>
+
+
+&lt;p&gt;I recently wrote several blog posts with many tweets&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt; as a way of taking notes during the &lt;a href=&#34;http://www.ashg.org/2018meeting/&#34;&gt;American Society of Human Genetics 2018 conference&lt;/a&gt;. A few friends asked me how I did this &lt;em&gt;so fast&lt;/em&gt;. The process can be summarized into the following main steps.&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Save links of tweets you want to highlight in your post.&lt;/li&gt;
+&lt;li&gt;Use a &lt;a href=&#34;https://gohugo.io/&#34;&gt;&lt;code&gt;hugo&lt;/code&gt;&lt;/a&gt;-powered blog to obtain the code for embedding tweets easily&lt;a href=&#34;#fn2&#34; class=&#34;footnote-ref&#34; id=&#34;fnref2&#34;&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Proofread, edit and post.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div id=&#34;my-steps-detailed&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;My steps detailed&lt;/h3&gt;
+&lt;p&gt;Here’s the actual process I used.&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;p&gt;Identify the conference Twitter hashtag. In my recent case, that was &lt;a href=&#34;https://twitter.com/search?q=%23ASHG18&#34;&gt;ASHG18&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Create a Google doc or some other simple text file you can access easily from your phone and laptop.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;While in a presentation, check the &lt;em&gt;latest&lt;/em&gt; tweets for the given hashtag. &lt;a href=&#34;https://twitter.com/search?f=tweets&amp;amp;vertical=default&amp;amp;q=%23ASHG18&#34;&gt;ASGH18 example&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&#34;http://lcolladotor.github.io/post/2018-10-23-steps-for-writing-a-twitter-summary-conference-blog-post_files/Screen%20Shot%202018-10-23%20at%2010.53.44%20PM.png&#34; width=&#34;400&#34; /&gt;&lt;/p&gt;
+&lt;ol start=&#34;4&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Copy the link of any tweet you find interesting. If there are none for the session you are in, consider writing some tweets yourself with the conference hashtag!&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&#34;http://lcolladotor.github.io/post/2018-10-23-steps-for-writing-a-twitter-summary-conference-blog-post_files/Screen%20Shot%202018-10-23%20at%2011.12.23%20PM.png&#34; width=&#34;500&#34; /&gt;&lt;/p&gt;
+&lt;ol start=&#34;5&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Paste the link into your Google doc.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&#34;http://lcolladotor.github.io/post/2018-10-23-steps-for-writing-a-twitter-summary-conference-blog-post_files/Screen%20Shot%202018-10-23%20at%2011.10.53%20PM.png&#34; width=&#34;500&#34; /&gt;&lt;/p&gt;
+&lt;ol start=&#34;6&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Once the day is over, copy-paste the contents of your Google doc into a text editor that has the ability to find and replace using regular expressions. For example, &lt;a href=&#34;https://macromates.com/&#34;&gt;TextMate&lt;/a&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&#34;http://lcolladotor.github.io/post/2018-10-23-steps-for-writing-a-twitter-summary-conference-blog-post_files/Screen%20Shot%202018-10-23%20at%2011.15.18%20PM.png&#34; width=&#34;500&#34; /&gt;&lt;/p&gt;
+&lt;ol start=&#34;7&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Find and replace to create the syntax for embedding tweets. I’ll cover more of this in detail in the next section.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Find:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;https://twitter.com/.*/status/&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;and replace by:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;\n`r blogdown::shortcode(&amp;quot;tweet&amp;quot;, &amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;http://lcolladotor.github.io/post/2018-10-23-steps-for-writing-a-twitter-summary-conference-blog-post_files/Screen%20Shot%202018-10-23%20at%2011.17.03%20PM.png&#34; width=&#34;500&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Then find:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;\?s=[0-9]*&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;and replace by:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;&amp;quot;)`\n&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;http://lcolladotor.github.io/post/2018-10-23-steps-for-writing-a-twitter-summary-conference-blog-post_files/Screen%20Shot%202018-10-23%20at%2011.17.58%20PM.png&#34; width=&#34;500&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Our file now looks like this:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://lcolladotor.github.io/post/2018-10-23-steps-for-writing-a-twitter-summary-conference-blog-post_files/Screen%20Shot%202018-10-23%20at%2011.18.07%20PM.png&#34; width=&#34;500&#34; /&gt;&lt;/p&gt;
+&lt;ol start=&#34;8&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;p&gt;Add any comments you wish, format the headings and proofread.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Make it public and tweet about your post with the conference hashtag!&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;And you are done! 🙌🏽🎉&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;quick-embedding&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Quick embedding&lt;/h3&gt;
+&lt;p&gt;Note that my blog is powered by &lt;em&gt;&lt;a href=&#34;https://CRAN.R-project.org/package=blogdown&#34;&gt;blogdown&lt;/a&gt;&lt;/em&gt; &lt;a id=&#39;cite-Xie_2017&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://github.com/rstudio/blogdown&#39;&gt;Xie, Hill, and Thomas, 2017&lt;/a&gt;) which has the function &lt;code&gt;blogdown::shortcode()&lt;/code&gt; for embedding tweets. For example, &lt;code&gt;blogdown::shortcode(&#34;tweet&#34;, &#34;1054380320533950464&#34;)&lt;/code&gt; generates the &lt;code&gt;hugo&lt;/code&gt; syntax code which then &lt;code&gt;hugo&lt;/code&gt; renders into the tweet itself.&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;I just completed my &lt;a href=&#34;https://twitter.com/hashtag/ASHG18?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#ASHG18&lt;/a&gt; survey &lt;a href=&#34;https://twitter.com/GeneticsSociety?ref_src=twsrc%5Etfw&#34;&gt;@GeneticsSociety&lt;/a&gt;. Took a few minutes and most of my feedback wouldn&amp;#39;t stand out. Except that I did use a box to suggest having a webinar with role playing scenarios that exemplify how the code of conduct can be used to diffuse harassment &lt;a href=&#34;https://twitter.com/jsdron?ref_src=twsrc%5Etfw&#34;&gt;@jsdron&lt;/a&gt; &lt;a href=&#34;https://t.co/AKZdnGCr25&#34;&gt;pic.twitter.com/AKZdnGCr25&lt;/a&gt;&lt;/p&gt;&amp;mdash; 🇲🇽 Leonardo Collado-Torres (@lcolladotor) &lt;a href=&#34;https://twitter.com/lcolladotor/status/1054380320533950464?ref_src=twsrc%5Etfw&#34;&gt;October 22, 2018&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;As an alternative, we can use Twitter itself by copy-pasting the code for embedding the tweet directly from the Twitter app/website. On the top right side menu on the tweet itself, select &lt;em&gt;Embed Tweet&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://lcolladotor.github.io/post/2018-10-23-steps-for-writing-a-twitter-summary-conference-blog-post_files/Screen%20Shot%202018-10-23%20at%2011.04.03%20PM.png&#34; width=&#34;500&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;then copy-paste the HTML code into your post.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://lcolladotor.github.io/post/2018-10-23-steps-for-writing-a-twitter-summary-conference-blog-post_files/Screen%20Shot%202018-10-23%20at%2011.04.28%20PM.png&#34; width=&#34;500&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Here’s the code:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;blockquote class=&amp;quot;twitter-tweet&amp;quot; data-lang=&amp;quot;en&amp;quot;&amp;gt;&amp;lt;p lang=&amp;quot;en&amp;quot; dir=&amp;quot;ltr&amp;quot;&amp;gt;I just completed my &amp;lt;a href=&amp;quot;https://twitter.com/hashtag/ASHG18?src=hash&amp;amp;amp;ref_src=twsrc%5Etfw&amp;quot;&amp;gt;#ASHG18&amp;lt;/a&amp;gt; survey &amp;lt;a href=&amp;quot;https://twitter.com/GeneticsSociety?ref_src=twsrc%5Etfw&amp;quot;&amp;gt;@GeneticsSociety&amp;lt;/a&amp;gt;. Took a few minutes and most of my feedback wouldn&amp;amp;#39;t stand out. Except that I did use a box to suggest having a webinar with role playing scenarios that exemplify how the code of conduct can be used to diffuse harassment &amp;lt;a href=&amp;quot;https://twitter.com/jsdron?ref_src=twsrc%5Etfw&amp;quot;&amp;gt;@jsdron&amp;lt;/a&amp;gt; &amp;lt;a href=&amp;quot;https://t.co/AKZdnGCr25&amp;quot;&amp;gt;pic.twitter.com/AKZdnGCr25&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;&amp;amp;mdash; 🇲🇽 Dr. Leonardo Collado-Torres (@fellgernon) &amp;lt;a href=&amp;quot;https://twitter.com/lcolladotor/status/1054380320533950464?ref_src=twsrc%5Etfw&amp;quot;&amp;gt;October 22, 2018&amp;lt;/a&amp;gt;&amp;lt;/blockquote&amp;gt;
+&amp;lt;script async src=&amp;quot;https://platform.twitter.com/widgets.js&amp;quot; charset=&amp;quot;utf-8&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;and here is how it looks:&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;en&#34;&gt;
+&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;
+I just completed my &lt;a href=&#34;https://twitter.com/hashtag/ASHG18?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#ASHG18&lt;/a&gt; survey &lt;a href=&#34;https://twitter.com/GeneticsSociety?ref_src=twsrc%5Etfw&#34;&gt;&lt;span class=&#34;citation&#34;&gt;@GeneticsSociety&lt;/span&gt;&lt;/a&gt;. Took a few minutes and most of my feedback wouldn&#39;t stand out. Except that I did use a box to suggest having a webinar with role playing scenarios that exemplify how the code of conduct can be used to diffuse harassment &lt;a href=&#34;https://twitter.com/jsdron?ref_src=twsrc%5Etfw&#34;&gt;&lt;span class=&#34;citation&#34;&gt;@jsdron&lt;/span&gt;&lt;/a&gt; &lt;a href=&#34;https://t.co/AKZdnGCr25&#34;&gt;pic.twitter.com/AKZdnGCr25&lt;/a&gt;
+&lt;/p&gt;
+— 🇲🇽 Dr. Leonardo Collado-Torres (&lt;span class=&#34;citation&#34;&gt;@fellgernon&lt;/span&gt;) &lt;a href=&#34;https://twitter.com/lcolladotor/status/1054380320533950464?ref_src=twsrc%5Etfw&#34;&gt;October 22, 2018&lt;/a&gt;
+&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;p&gt;There might be other ways of doing this that are specific to your blog platform.&lt;/p&gt;
+&lt;p&gt;I also imagine that it should be possible to &lt;em&gt;bookmark&lt;/em&gt; the tweets on Twitter and then use an R package to extract your bookmarked tweets from the past 24 hours in order to simplify the process. Maybe this can be done with &lt;em&gt;&lt;a href=&#34;https://CRAN.R-project.org/package=rtweet&#34;&gt;rtweet&lt;/a&gt;&lt;/em&gt; although I haven’t dived into it.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;new-to-blogdown&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;New to &lt;code&gt;blogdown&lt;/code&gt;?&lt;/h3&gt;
+&lt;p&gt;Check:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.emilyzabor.com/tutorials/rmarkdown_websites_tutorial.html#blogs&#34;&gt;Emily Zabor’s website tutorial&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;The &lt;em&gt;&lt;a href=&#34;https://CRAN.R-project.org/package=blogdown&#34;&gt;blogdown&lt;/a&gt;&lt;/em&gt; (&lt;a href=&#39;https://github.com/rstudio/blogdown&#39;&gt;Xie, Hill, and Thomas, 2017&lt;/a&gt;) &lt;a href=&#34;https://bookdown.org/yihui/blogdown/&#34;&gt;book&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://alison.rbind.io/post/up-and-running-with-blogdown/&#34;&gt;Alison Presmanes Hill’s blogdown introduction&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Also, ask around. You might belong to a group or know someone that is willing to host a guest post in their &lt;code&gt;blogdown&lt;/code&gt; blog. For example:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://research.libd.org/rstatsclub/#.W8_pgBNKg0o&#34;&gt;LIBD rstats club&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://rladies-baltimore.github.io/&#34;&gt;R-Ladies Baltimore&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.rladiesnyc.org/&#34;&gt;R-Ladies NYC&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;acknowledgments&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Acknowledgments&lt;/h3&gt;
+&lt;p&gt;This blog post was made possible thanks to:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;&lt;a href=&#34;https://bioconductor.org/packages/3.10/BiocStyle&#34;&gt;BiocStyle&lt;/a&gt;&lt;/em&gt; &lt;a id=&#39;cite-Oles_2020&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://github.com/Bioconductor/BiocStyle&#39;&gt;Oleś, Morgan, and Huber, 2020&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;a href=&#34;https://CRAN.R-project.org/package=blogdown&#34;&gt;blogdown&lt;/a&gt;&lt;/em&gt; (&lt;a href=&#39;https://github.com/rstudio/blogdown&#39;&gt;Xie, Hill, and Thomas, 2017&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;a href=&#34;https://CRAN.R-project.org/package=knitcitations&#34;&gt;knitcitations&lt;/a&gt;&lt;/em&gt; &lt;a id=&#39;cite-Boettiger_2019&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://CRAN.R-project.org/package=knitcitations&#39;&gt;Boettiger, 2019&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;a href=&#34;https://CRAN.R-project.org/package=sessioninfo&#34;&gt;sessioninfo&lt;/a&gt;&lt;/em&gt; &lt;a id=&#39;cite-Csardi_2018&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://CRAN.R-project.org/package=sessioninfo&#39;&gt;Csárdi, core, Wickham, Chang, et al., 2018&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;references&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;References&lt;/h3&gt;
+&lt;p&gt;
+&lt;a id=&#39;bib-Boettiger_2019&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-Boettiger_2019&#34;&gt;[1]&lt;/a&gt;&lt;cite&gt;
+C. Boettiger.
+&lt;em&gt;knitcitations: Citations for ‘Knitr’ Markdown Files&lt;/em&gt;.
+R package version 1.0.10.
+2019.
+URL: &lt;a href=&#34;https://CRAN.R-project.org/package=knitcitations&#34;&gt;https://CRAN.R-project.org/package=knitcitations&lt;/a&gt;.&lt;/cite&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;a id=&#39;bib-Csardi_2018&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-Csardi_2018&#34;&gt;[2]&lt;/a&gt;&lt;cite&gt;
+G. Csárdi, R. core, H. Wickham, W. Chang, et al.
+&lt;em&gt;sessioninfo: R Session Information&lt;/em&gt;.
+R package version 1.1.1.
+2018.
+URL: &lt;a href=&#34;https://CRAN.R-project.org/package=sessioninfo&#34;&gt;https://CRAN.R-project.org/package=sessioninfo&lt;/a&gt;.&lt;/cite&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;a id=&#39;bib-Oles_2020&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-Oles_2020&#34;&gt;[3]&lt;/a&gt;&lt;cite&gt;
+A. Oleś, M. Morgan, and W. Huber.
+&lt;em&gt;BiocStyle: Standard styles for vignettes and other Bioconductor documents&lt;/em&gt;.
+R package version 2.14.4.
+2020.
+URL: &lt;a href=&#34;https://github.com/Bioconductor/BiocStyle&#34;&gt;https://github.com/Bioconductor/BiocStyle&lt;/a&gt;.&lt;/cite&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;a id=&#39;bib-Xie_2017&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-Xie_2017&#34;&gt;[4]&lt;/a&gt;&lt;cite&gt;
+Y. Xie, A. P. Hill, and A. Thomas.
+&lt;em&gt;blogdown: Creating Websites with R Markdown&lt;/em&gt;.
+ISBN 978-0815363729.
+Boca Raton, Florida: Chapman and Hall/CRC, 2017.
+URL: &lt;a href=&#34;https://github.com/rstudio/blogdown&#34;&gt;https://github.com/rstudio/blogdown&lt;/a&gt;.&lt;/cite&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;reproducibility&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Reproducibility&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;## ─ Session info ───────────────────────────────────────────────────────────────────────────────────────────────────────
+##  setting  value                       
+##  version  R version 3.6.2 (2019-12-12)
+##  os       macOS Catalina 10.15.2      
+##  system   x86_64, darwin15.6.0        
+##  ui       X11                         
+##  language (EN)                        
+##  collate  en_US.UTF-8                 
+##  ctype    en_US.UTF-8                 
+##  tz       America/New_York            
+##  date     2020-02-12                  
+## 
+## ─ Packages ───────────────────────────────────────────────────────────────────────────────────────────────────────────
+##  package       * version date       lib source                            
+##  assertthat      0.2.1   2019-03-21 [1] CRAN (R 3.6.0)                    
+##  bibtex          0.4.2.2 2020-01-02 [1] CRAN (R 3.6.0)                    
+##  BiocManager     1.30.10 2019-11-16 [1] CRAN (R 3.6.1)                    
+##  BiocStyle     * 2.14.4  2020-01-09 [1] Bioconductor                      
+##  blogdown        0.17    2019-11-13 [1] CRAN (R 3.6.1)                    
+##  bookdown        0.17    2020-01-11 [1] CRAN (R 3.6.0)                    
+##  cli             2.0.1   2020-01-08 [1] CRAN (R 3.6.0)                    
+##  colorout      * 1.2-1   2019-05-07 [1] Github (jalvesaq/colorout@7ea9440)
+##  crayon          1.3.4   2017-09-16 [1] CRAN (R 3.6.0)                    
+##  digest          0.6.23  2019-11-23 [1] CRAN (R 3.6.0)                    
+##  evaluate        0.14    2019-05-28 [1] CRAN (R 3.6.0)                    
+##  fansi           0.4.1   2020-01-08 [1] CRAN (R 3.6.0)                    
+##  glue            1.3.1   2019-03-12 [1] CRAN (R 3.6.0)                    
+##  htmltools       0.4.0   2019-10-04 [1] CRAN (R 3.6.0)                    
+##  httr            1.4.1   2019-08-05 [1] CRAN (R 3.6.0)                    
+##  jsonlite        1.6     2018-12-07 [1] CRAN (R 3.6.0)                    
+##  knitcitations * 1.0.10  2019-09-15 [1] CRAN (R 3.6.0)                    
+##  knitr           1.27    2020-01-16 [1] CRAN (R 3.6.0)                    
+##  lubridate       1.7.4   2018-04-11 [1] CRAN (R 3.6.0)                    
+##  magrittr        1.5     2014-11-22 [1] CRAN (R 3.6.0)                    
+##  plyr            1.8.5   2019-12-10 [1] CRAN (R 3.6.0)                    
+##  R6              2.4.1   2019-11-12 [1] CRAN (R 3.6.1)                    
+##  Rcpp            1.0.3   2019-11-08 [1] CRAN (R 3.6.0)                    
+##  RefManageR      1.2.12  2019-04-03 [1] CRAN (R 3.6.0)                    
+##  rlang           0.4.3   2020-01-24 [1] CRAN (R 3.6.2)                    
+##  rmarkdown       2.1     2020-01-20 [1] CRAN (R 3.6.0)                    
+##  sessioninfo   * 1.1.1   2018-11-05 [1] CRAN (R 3.6.0)                    
+##  stringi         1.4.5   2020-01-11 [1] CRAN (R 3.6.0)                    
+##  stringr         1.4.0   2019-02-10 [1] CRAN (R 3.6.0)                    
+##  withr           2.1.2   2018-03-15 [1] CRAN (R 3.6.0)                    
+##  xfun            0.12    2020-01-13 [1] CRAN (R 3.6.0)                    
+##  xml2            1.2.2   2019-08-09 [1] CRAN (R 3.6.0)                    
+##  yaml            2.2.0   2018-07-25 [1] CRAN (R 3.6.0)                    
+## 
+## [1] /Library/Frameworks/R.framework/Versions/3.6/Resources/library&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div class=&#34;footnotes&#34;&gt;
+&lt;hr /&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;&lt;a href=&#34;http://lcolladotor.github.io/2018/10/16/ashg18-tweet-summary-day-1/#.W8gWEBNKg0o&#34;&gt;ASHG18 day 1 post&lt;/a&gt;, &lt;a href=&#34;http://lcolladotor.github.io/2018/10/17/ashg18-tweet-summary-day-2/#.W8ggNxNKg0o&#34;&gt;day 2&lt;/a&gt;, &lt;a href=&#34;http://lcolladotor.github.io/2018/10/18/ashg18-tweet-summary-day-3/#.W8mYLxNKg0o&#34;&gt;day 3&lt;/a&gt;, &lt;a href=&#34;http://lcolladotor.github.io/2018/10/19/ashg18-tweet-summary-day-4/#.W8qdTRNKg0o&#34;&gt;day 4&lt;/a&gt; and &lt;a href=&#34;http://lcolladotor.github.io/2018/10/20/ashg18-tweet-summary-day-5/#.W8t2vhNKg0o&#34;&gt;day 5&lt;/a&gt;.&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn2&#34;&gt;&lt;p&gt;Or any other tool that can get you the embedding code, including the Twitter page itself.&lt;a href=&#34;#fnref2&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>blogdown archetype (template)</title>
+      <link>https://lcolladotor.github.io/2018/03/08/blogdown-archetype-template/</link>
+      <pubDate>Thu, 08 Mar 2018 00:00:00 +0000</pubDate>
+      <guid>https://lcolladotor.github.io/2018/03/08/blogdown-archetype-template/</guid>
+      <description>
+
+
+&lt;p&gt;In a recent blog post I &lt;a href=&#34;http://lcolladotor.github.io/2018/02/17/r-markdown-blog-template/#.WqDOdpPwa50&#34;&gt;wrote about having a template&lt;/a&gt; for &lt;em&gt;&lt;a href=&#34;https://CRAN.R-project.org/package=blogdown&#34;&gt;blogdown&lt;/a&gt;&lt;/em&gt; posts. I wanted to know if it was possible to do this and make my life (and others hopefully) easier for writing new blog posts that are ready to go with the features I frequently re-use.&lt;/p&gt;
+&lt;p&gt;In my case, I like using &lt;em&gt;&lt;a href=&#34;https://bioconductor.org/packages/3.10/BiocStyle&#34;&gt;BiocStyle&lt;/a&gt;&lt;/em&gt; &lt;a id=&#39;cite-Oles_2020&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://github.com/Bioconductor/BiocStyle&#39;&gt;Oleś, Morgan, and Huber, 2020&lt;/a&gt;) for functions such as &lt;code&gt;CRANpkg()&lt;/code&gt;, &lt;code&gt;Biocpkg()&lt;/code&gt; and &lt;code&gt;Githubpkg()&lt;/code&gt;. I also like using &lt;em&gt;&lt;a href=&#34;https://CRAN.R-project.org/package=knitcitations&#34;&gt;knitcitations&lt;/a&gt;&lt;/em&gt; &lt;a id=&#39;cite-Boettiger_2019&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://CRAN.R-project.org/package=knitcitations&#39;&gt;Boettiger, 2019&lt;/a&gt;) for citing with &lt;code&gt;citep()&lt;/code&gt; packages or papers; I use &lt;code&gt;citation()&lt;/code&gt; and &lt;code&gt;bib_metadata()&lt;/code&gt; to get the necessary information, respectively. Furthermore, I prefer &lt;code&gt;devtools::session_info()&lt;/code&gt; &lt;a id=&#39;cite-Wickham_2019&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://CRAN.R-project.org/package=devtools&#39;&gt;Wickham, Hester, and Chang, 2019&lt;/a&gt;) over &lt;code&gt;sessionInfo()&lt;/code&gt; since it provides information of where you got the package, which becomes specially relevant when using packages from GitHub. Finally, I like thanking the creators of the tools I use, which in this case is &lt;em&gt;&lt;a href=&#34;https://CRAN.R-project.org/package=blogdown&#34;&gt;blogdown&lt;/a&gt;&lt;/em&gt; &lt;a id=&#39;cite-Xie_2017&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://github.com/rstudio/blogdown&#39;&gt;Xie, Hill, and Thomas, 2017&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;I also like reminding myself how to do some common tasks. Basically, the equivalent of the new R Markdown file you get when using RStudio. In my case, I want to remind myself of the YAML options I frequently use (toc, fig height and width) or how to add screenshots.&lt;/p&gt;
+&lt;p&gt;My &lt;a href=&#34;http://lcolladotor.github.io/2018/02/17/r-markdown-blog-template/#.WqDOdpPwa50&#34;&gt;first post&lt;/a&gt; on this topic is actually rather messy. That’s because at that time:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;I didn’t know about &lt;a href=&#34;https://gohugo.io/content-management/archetypes/&#34;&gt;hugo archetypes&lt;/a&gt; which are &lt;em&gt;template&lt;/em&gt; files,&lt;/li&gt;
+&lt;li&gt;I hadn’t even thought of making the &lt;a href=&#34;http://lcolladotor.github.io/2018/03/07/blogdown-insert-image-addin/#.WqDRmpPwa50&#34;&gt;Insert Image addin&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I went down the rabbit hole of archetypes and &lt;em&gt;&lt;a href=&#34;https://CRAN.R-project.org/package=blogdown&#34;&gt;blogdown&lt;/a&gt;&lt;/em&gt;, reported an &lt;a href=&#34;https://github.com/rstudio/blogdown/issues/261&#34;&gt;issue resulated to this topic&lt;/a&gt; that was in the way of using archetypes for &lt;code&gt;.Rmd&lt;/code&gt; posts. After some encouragement by Yihui Xie, I ended up fixing this issues in &lt;a href=&#34;https://github.com/rstudio/blogdown/pull/263&#34;&gt;my first pull request&lt;/a&gt; &lt;em&gt;ever&lt;/em&gt; to an RStudio package. The PR also added the &lt;code&gt;Archetype&lt;/code&gt; option to the &lt;em&gt;New Post&lt;/em&gt; RStudio addin (which I used right now ^^).&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://lcolladotor.github.io/post/2018-03-08-blogdown-archetype-template_files/Screen Shot 2018-03-08 at 1.05.13 AM.png&#34; alt=&#34;new post addin with archetype option&#34; width=&#34;400&#34;/&gt;&lt;/p&gt;
+&lt;div id=&#34;creating-my-blogdown-archetype-template&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Creating my &lt;em&gt;&lt;a href=&#34;https://CRAN.R-project.org/package=blogdown&#34;&gt;blogdown&lt;/a&gt;&lt;/em&gt; archetype (template)&lt;/h3&gt;
+&lt;p&gt;To make my archetype (template) for blog posts I looked at the GitHub repo for the theme I’m using. It contains an &lt;code&gt;archetypes&lt;/code&gt; directory with several files. I just looked at the one called &lt;code&gt;post.md&lt;/code&gt; (check it &lt;a href=&#34;https://github.com/gcushen/hugo-academic/blob/master/archetypes/post.md&#34;&gt;here&lt;/a&gt;) and copied it from &lt;code&gt;themes/hugo-academic/archetypes/post.md&lt;/code&gt; to &lt;code&gt;archetypes/post.md&lt;/code&gt;. Next I added my favorite R code below the last &lt;code&gt;+++&lt;/code&gt; mark. You can check out the final version &lt;a href=&#34;https://github.com/lcolladotor/hugoblog/blob/master/archetypes/post.md&#34;&gt;here&lt;/a&gt;. Below I display the version at the time of writing this blog post (I’m using a &lt;code&gt;.txt&lt;/code&gt; extension otherwise the embedded gist doesn’t look good, but you want it to end in &lt;code&gt;.md&lt;/code&gt;).&lt;/p&gt;
+&lt;script src=&#34;https://gist.github.com/lcolladotor/c3e141e033306299d0946a76e71f2967.js&#34;&gt;&lt;/script&gt;
+&lt;p&gt;I couldn’t get the archetype to respect some of the YAML that &lt;em&gt;&lt;a href=&#34;https://CRAN.R-project.org/package=blogdown&#34;&gt;blogdown&lt;/a&gt;&lt;/em&gt; adds, but well, that’s a single copy-paste I have to do now (if I actually decide to use the custom YAML options which are only for &lt;code&gt;.Rmd&lt;/code&gt; posts).&lt;/p&gt;
+&lt;p&gt;I encourage you to make your own &lt;em&gt;&lt;a href=&#34;https://CRAN.R-project.org/package=blogdown&#34;&gt;blogdown&lt;/a&gt;&lt;/em&gt; archetype (template). At least it should remind you to include reproducibility information which matters whenever any R code is involved.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;acknowledgments&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Acknowledgments&lt;/h3&gt;
+&lt;p&gt;This blog post was made possible thanks to:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;&lt;a href=&#34;https://bioconductor.org/packages/3.10/BiocStyle&#34;&gt;BiocStyle&lt;/a&gt;&lt;/em&gt; (&lt;a href=&#39;https://github.com/Bioconductor/BiocStyle&#39;&gt;Oleś, Morgan, and Huber, 2020&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;a href=&#34;https://CRAN.R-project.org/package=blogdown&#34;&gt;blogdown&lt;/a&gt;&lt;/em&gt; (&lt;a href=&#39;https://github.com/rstudio/blogdown&#39;&gt;Xie, Hill, and Thomas, 2017&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;a href=&#34;https://CRAN.R-project.org/package=devtools&#34;&gt;devtools&lt;/a&gt;&lt;/em&gt; (&lt;a href=&#39;https://CRAN.R-project.org/package=devtools&#39;&gt;Wickham, Hester, and Chang, 2019&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;a href=&#34;https://CRAN.R-project.org/package=knitcitations&#34;&gt;knitcitations&lt;/a&gt;&lt;/em&gt; (&lt;a href=&#39;https://CRAN.R-project.org/package=knitcitations&#39;&gt;Boettiger, 2019&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Yihui Xie also talked about my first PR in &lt;a href=&#34;https://yihui.name/en/2018/02/bite-sized-pull-requests/&#34;&gt;his blog&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;references&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;References&lt;/h3&gt;
+&lt;p&gt;
+&lt;a id=&#39;bib-Boettiger_2019&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-Boettiger_2019&#34;&gt;[1]&lt;/a&gt;&lt;cite&gt;
+C. Boettiger.
+&lt;em&gt;knitcitations: Citations for ‘Knitr’ Markdown Files&lt;/em&gt;.
+R package version 1.0.10.
+2019.
+URL: &lt;a href=&#34;https://CRAN.R-project.org/package=knitcitations&#34;&gt;https://CRAN.R-project.org/package=knitcitations&lt;/a&gt;.&lt;/cite&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;a id=&#39;bib-Oles_2020&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-Oles_2020&#34;&gt;[2]&lt;/a&gt;&lt;cite&gt;
+A. Oleś, M. Morgan, and W. Huber.
+&lt;em&gt;BiocStyle: Standard styles for vignettes and other Bioconductor documents&lt;/em&gt;.
+R package version 2.14.4.
+2020.
+URL: &lt;a href=&#34;https://github.com/Bioconductor/BiocStyle&#34;&gt;https://github.com/Bioconductor/BiocStyle&lt;/a&gt;.&lt;/cite&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;a id=&#39;bib-Wickham_2019&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-Wickham_2019&#34;&gt;[3]&lt;/a&gt;&lt;cite&gt;
+H. Wickham, J. Hester, and W. Chang.
+&lt;em&gt;devtools: Tools to Make Developing R Packages Easier&lt;/em&gt;.
+R package version 2.2.1.
+2019.
+URL: &lt;a href=&#34;https://CRAN.R-project.org/package=devtools&#34;&gt;https://CRAN.R-project.org/package=devtools&lt;/a&gt;.&lt;/cite&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;a id=&#39;bib-Xie_2017&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-Xie_2017&#34;&gt;[4]&lt;/a&gt;&lt;cite&gt;
+Y. Xie, A. P. Hill, and A. Thomas.
+&lt;em&gt;blogdown: Creating Websites with R Markdown&lt;/em&gt;.
+ISBN 978-0815363729.
+Boca Raton, Florida: Chapman and Hall/CRC, 2017.
+URL: &lt;a href=&#34;https://github.com/rstudio/blogdown&#34;&gt;https://github.com/rstudio/blogdown&lt;/a&gt;.&lt;/cite&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;reproducibility&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Reproducibility&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;## ─ Session info ───────────────────────────────────────────────────────────────────────────────────────────────────────
+##  setting  value                       
+##  version  R version 3.6.2 (2019-12-12)
+##  os       macOS Catalina 10.15.2      
+##  system   x86_64, darwin15.6.0        
+##  ui       X11                         
+##  language (EN)                        
+##  collate  en_US.UTF-8                 
+##  ctype    en_US.UTF-8                 
+##  tz       America/New_York            
+##  date     2020-02-12                  
+## 
+## ─ Packages ───────────────────────────────────────────────────────────────────────────────────────────────────────────
+##  package       * version date       lib source                            
+##  assertthat      0.2.1   2019-03-21 [1] CRAN (R 3.6.0)                    
+##  backports       1.1.5   2019-10-02 [1] CRAN (R 3.6.0)                    
+##  bibtex          0.4.2.2 2020-01-02 [1] CRAN (R 3.6.0)                    
+##  BiocManager     1.30.10 2019-11-16 [1] CRAN (R 3.6.1)                    
+##  BiocStyle     * 2.14.4  2020-01-09 [1] Bioconductor                      
+##  blogdown        0.17    2019-11-13 [1] CRAN (R 3.6.1)                    
+##  bookdown        0.17    2020-01-11 [1] CRAN (R 3.6.0)                    
+##  callr           3.4.1   2020-01-24 [1] CRAN (R 3.6.2)                    
+##  cli             2.0.1   2020-01-08 [1] CRAN (R 3.6.0)                    
+##  colorout      * 1.2-1   2019-05-07 [1] Github (jalvesaq/colorout@7ea9440)
+##  crayon          1.3.4   2017-09-16 [1] CRAN (R 3.6.0)                    
+##  desc            1.2.0   2018-05-01 [1] CRAN (R 3.6.0)                    
+##  devtools      * 2.2.1   2019-09-24 [1] CRAN (R 3.6.1)                    
+##  digest          0.6.23  2019-11-23 [1] CRAN (R 3.6.0)                    
+##  ellipsis        0.3.0   2019-09-20 [1] CRAN (R 3.6.0)                    
+##  evaluate        0.14    2019-05-28 [1] CRAN (R 3.6.0)                    
+##  fansi           0.4.1   2020-01-08 [1] CRAN (R 3.6.0)                    
+##  fs              1.3.1   2019-05-06 [1] CRAN (R 3.6.0)                    
+##  glue            1.3.1   2019-03-12 [1] CRAN (R 3.6.0)                    
+##  htmltools       0.4.0   2019-10-04 [1] CRAN (R 3.6.0)                    
+##  httr            1.4.1   2019-08-05 [1] CRAN (R 3.6.0)                    
+##  jsonlite        1.6     2018-12-07 [1] CRAN (R 3.6.0)                    
+##  knitcitations * 1.0.10  2019-09-15 [1] CRAN (R 3.6.0)                    
+##  knitr           1.27    2020-01-16 [1] CRAN (R 3.6.0)                    
+##  lubridate       1.7.4   2018-04-11 [1] CRAN (R 3.6.0)                    
+##  magrittr        1.5     2014-11-22 [1] CRAN (R 3.6.0)                    
+##  memoise         1.1.0   2017-04-21 [1] CRAN (R 3.6.0)                    
+##  pkgbuild        1.0.6   2019-10-09 [1] CRAN (R 3.6.0)                    
+##  pkgload         1.0.2   2018-10-29 [1] CRAN (R 3.6.0)                    
+##  plyr            1.8.5   2019-12-10 [1] CRAN (R 3.6.0)                    
+##  prettyunits     1.1.1   2020-01-24 [1] CRAN (R 3.6.2)                    
+##  processx        3.4.1   2019-07-18 [1] CRAN (R 3.6.0)                    
+##  ps              1.3.0   2018-12-21 [1] CRAN (R 3.6.0)                    
+##  R6              2.4.1   2019-11-12 [1] CRAN (R 3.6.1)                    
+##  Rcpp            1.0.3   2019-11-08 [1] CRAN (R 3.6.0)                    
+##  RefManageR      1.2.12  2019-04-03 [1] CRAN (R 3.6.0)                    
+##  remotes         2.1.0   2019-06-24 [1] CRAN (R 3.6.0)                    
+##  rlang           0.4.3   2020-01-24 [1] CRAN (R 3.6.2)                    
+##  rmarkdown       2.1     2020-01-20 [1] CRAN (R 3.6.0)                    
+##  rprojroot       1.3-2   2018-01-03 [1] CRAN (R 3.6.0)                    
+##  sessioninfo     1.1.1   2018-11-05 [1] CRAN (R 3.6.0)                    
+##  stringi         1.4.5   2020-01-11 [1] CRAN (R 3.6.0)                    
+##  stringr         1.4.0   2019-02-10 [1] CRAN (R 3.6.0)                    
+##  testthat        2.3.1   2019-12-01 [1] CRAN (R 3.6.0)                    
+##  usethis       * 1.5.1   2019-07-04 [1] CRAN (R 3.6.0)                    
+##  withr           2.1.2   2018-03-15 [1] CRAN (R 3.6.0)                    
+##  xfun            0.12    2020-01-13 [1] CRAN (R 3.6.0)                    
+##  xml2            1.2.2   2019-08-09 [1] CRAN (R 3.6.0)                    
+##  yaml            2.2.0   2018-07-25 [1] CRAN (R 3.6.0)                    
+## 
+## [1] /Library/Frameworks/R.framework/Versions/3.6/Resources/library&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>blogdown Insert Image addin</title>
+      <link>https://lcolladotor.github.io/2018/03/07/blogdown-insert-image-addin/</link>
+      <pubDate>Wed, 07 Mar 2018 00:00:00 +0000</pubDate>
+      <guid>https://lcolladotor.github.io/2018/03/07/blogdown-insert-image-addin/</guid>
+      <description>
+
+
+&lt;p&gt;Have you ever tried inserting an image into a &lt;em&gt;&lt;a href=&#34;https://CRAN.R-project.org/package=blogdown&#34;&gt;blogdown&lt;/a&gt;&lt;/em&gt; post? Maybe you have, or maybe you tried and gave up. Lets first review the &lt;em&gt;hard&lt;/em&gt; way before getting to the solution I contributed.&lt;/p&gt;
+&lt;div id=&#34;the-hard-way&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;The &lt;em&gt;hard&lt;/em&gt; way&lt;/h3&gt;
+&lt;p&gt;The process involves copying the target image to the static directory that corresponds to the &lt;em&gt;&lt;a href=&#34;https://CRAN.R-project.org/package=blogdown&#34;&gt;blogdown&lt;/a&gt;&lt;/em&gt; post. Lets say that your post is called &lt;code&gt;2018-03-07-my-new-post.Rmd&lt;/code&gt; and lives at &lt;code&gt;content/post/&lt;/code&gt;, so it’s full path is &lt;code&gt;content/post/2018-03-07-my-new-post.Rmd&lt;/code&gt;. When you run the RStudio &lt;em&gt;&lt;a href=&#34;https://CRAN.R-project.org/package=blogdown&#34;&gt;blogdown&lt;/a&gt;&lt;/em&gt; addin &lt;em&gt;Serve Site&lt;/em&gt;, behind curtains the directory &lt;code&gt;static/post/2018-03-07-my-new-post_files&lt;/code&gt; is created and inside it you can find the images made by your R code: likely at &lt;code&gt;static/post/2018-03-07-my-new-post_files/figure_html&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;So far everything is working! But now you want to add a screenshot or some other image to your blog post. Lets say that your image is &lt;code&gt;~/Desktop/screenshot.jpg&lt;/code&gt;. Your &lt;code&gt;~/Desktop&lt;/code&gt; directory is not part of your &lt;em&gt;&lt;a href=&#34;https://CRAN.R-project.org/package=blogdown&#34;&gt;blogdown&lt;/a&gt;&lt;/em&gt; directory and well, simply put, your website won’t find the image. We need to put it in a location that will be made public by &lt;code&gt;hugo&lt;/code&gt;. That is, we need to put it inside &lt;code&gt;static/post/2018-03-07-my-new-post_files&lt;/code&gt; (or anywhere inside &lt;code&gt;static&lt;/code&gt;, but we like to keep things tidy!).&lt;/p&gt;
+&lt;p&gt;Ok, so we copy our screenshot file &lt;code&gt;~/Desktop/screenshot.jpg&lt;/code&gt; and save it as &lt;code&gt;static/post/2018-03-07-my-new-post_files/screenshot.jpg&lt;/code&gt;. The next time we render our site and publish it, the figure will be available in the web. But it’s still not part of our &lt;em&gt;&lt;a href=&#34;https://CRAN.R-project.org/package=blogdown&#34;&gt;blogdown&lt;/a&gt;&lt;/em&gt; post.&lt;/p&gt;
+&lt;p&gt;So we need to use either the Markdown or HTML syntax for adding the image. Maybe your initial thought is to use:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;![](screenshot.jpg)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Except that &lt;strong&gt;will not&lt;/strong&gt; work. We need to use almost all the path (just remove &lt;code&gt;static&lt;/code&gt;) as shown below:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;![](/post/2018-03-07-my-new-post_files/screenshot.jpg)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;If you want to edit the height or width, then you need to use the HTML syntax. Something like:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;img alt = &amp;#39;my new screenshot&amp;#39; width=&amp;#39;200&amp;#39; src=&amp;#39;/post/2018-03-07-my-new-post_files/screenshot.jpg&amp;#39; /&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;div id=&#34;hard-way-notes&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;&lt;em&gt;hard way&lt;/em&gt; notes&lt;/h4&gt;
+&lt;p&gt;You could have also used &lt;code&gt;knitr::include_graphics()&lt;/code&gt; and let &lt;em&gt;&lt;a href=&#34;https://CRAN.R-project.org/package=blogdown&#34;&gt;blogdown&lt;/a&gt;&lt;/em&gt; copy it to the final location in &lt;code&gt;static&lt;/code&gt; and link to it appropriately. However, you would have to keep your original images organized in a way that won’t bother &lt;code&gt;hugo&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Another option that I used for a while, even in the days when my blog was based on Jekyll, is to render the figures yourself and copy the directory with the figures, plus mess around with how they are linked from R. Details &lt;a href=&#34;https://github.com/lcolladotor/markdown-redcarpet.tmbundle/commit/f043c056ff620299843e9d8ea34144f478aa7965&#34;&gt;here&lt;/a&gt;. Not something I recommend doing now.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;insert-image-addin-aka-the-easy-way&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;&lt;em&gt;Insert Image&lt;/em&gt; addin: aka, the &lt;em&gt;easy&lt;/em&gt; way&lt;/h3&gt;
+&lt;p&gt;If you are using &lt;em&gt;&lt;a href=&#34;https://CRAN.R-project.org/package=blogdown&#34;&gt;blogdown&lt;/a&gt;&lt;/em&gt;, you most likely (you &lt;em&gt;should&lt;/em&gt; if you can) are using &lt;a href=&#34;https://www.rstudio.com/products/rstudio/download/&#34;&gt;RStudio&lt;/a&gt; and the great &lt;em&gt;&lt;a href=&#34;https://CRAN.R-project.org/package=blogdown&#34;&gt;blogdown&lt;/a&gt;&lt;/em&gt; addins: &lt;em&gt;New Post&lt;/em&gt; and &lt;em&gt;Serve Site&lt;/em&gt;. I just recently started using them in the past few days and looking at the code I realized that it should be possible to make an addin that lets you:&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;select a target image,&lt;/li&gt;
+&lt;li&gt;copies the target image to the appropriate location under &lt;code&gt;static&lt;/code&gt;,&lt;/li&gt;
+&lt;li&gt;gives you the correct code for linking the image.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Yihui Xie &lt;a href=&#34;https://github.com/rstudio/blogdown/issues/269&#34;&gt;loved the idea&lt;/a&gt; (I think it’s fair to say that ^^) and helped me polish it in the &lt;a href=&#34;https://github.com/rstudio/blogdown/pull/272&#34;&gt;pull request&lt;/a&gt; that implements it. He then refined the code even &lt;a href=&#34;https://github.com/rstudio/blogdown/commit/7355a94edc62dd9ffe3792c1103f1536b9c67406&#34;&gt;more&lt;/a&gt;!&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;features-of-the-insert-image-addin&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Features of the &lt;em&gt;Insert Image&lt;/em&gt; addin&lt;/h3&gt;
+&lt;p&gt;The final features, at least as implemented in &lt;em&gt;&lt;a href=&#34;https://CRAN.R-project.org/package=blogdown&#34;&gt;blogdown&lt;/a&gt;&lt;/em&gt; version 0.5.7 are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Select an image from anywhere in your computer.&lt;/li&gt;
+&lt;li&gt;Automatically generate a candidate final location for your image under &lt;code&gt;static&lt;/code&gt;, which you can edit. Useful if you want to rename the final figure.&lt;/li&gt;
+&lt;li&gt;Allow specifying the alternate description of the image (&lt;code&gt;alt&lt;/code&gt;), height and width.&lt;/li&gt;
+&lt;li&gt;If the target image file exists, a dynamic menu shows up that asks you whether to overwrite it or not.&lt;/li&gt;
+&lt;li&gt;The final syntax is Markdown unless a width or height are used, in which case it uses HTML code.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Yihui Xie &lt;a href=&#34;https://github.com/rstudio/blogdown/pull/272&#34;&gt;hinted&lt;/a&gt; at other possible future features, which maybe you can help implement.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;using-the-insert-image-addin&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Using the &lt;em&gt;Insert Image&lt;/em&gt; addin&lt;/h3&gt;
+&lt;div id=&#34;step-1-install-appropriate-blogdown-version&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Step 1: install appropriate &lt;em&gt;&lt;a href=&#34;https://github.com/rstudio/blogdown&#34;&gt;blogdown&lt;/a&gt;&lt;/em&gt; version&lt;/h4&gt;
+&lt;p&gt;First of all, at the time of writing this post, you need the development version of &lt;em&gt;&lt;a href=&#34;https://github.com/rstudio/blogdown&#34;&gt;blogdown&lt;/a&gt;&lt;/em&gt;. You can install it with:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;## Check if you have version 0.5.7 or newer
+## I actually used version 0.5.9 for this blog post
+packageVersion(&amp;#39;blogdown&amp;#39;)
+
+## If not, then get it!
+##### If necessary:
+## install.packages(&amp;#39;devtools&amp;#39;)
+devtools::install_github(&amp;#39;rstudio/blogdown&amp;#39;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;You also need an up to date version of &lt;a href=&#34;https://www.rstudio.com/products/rstudio/download/&#34;&gt;RStudio&lt;/a&gt; and I recommend also using &lt;a href=&#34;https://cran.r-project.org/&#34;&gt;R 3.4.x&lt;/a&gt; (or newer if you are reading this in the future). Re-start RStudio so it loads the new version of &lt;em&gt;&lt;a href=&#34;https://github.com/rstudio/blogdown&#34;&gt;blogdown&lt;/a&gt;&lt;/em&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;step-2-open-the-insert-image-addin&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Step 2: open the &lt;em&gt;Insert Image&lt;/em&gt; addin&lt;/h4&gt;
+&lt;p&gt;Second, go to the &lt;em&gt;Addins&lt;/em&gt; menu in the top section of the RStudio window and select the &lt;em&gt;Insert Image&lt;/em&gt; &lt;em&gt;&lt;a href=&#34;https://github.com/rstudio/blogdown&#34;&gt;blogdown&lt;/a&gt;&lt;/em&gt; addin.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://lcolladotor.github.io/post/2018-03-07-blogdown-insert-image-addin_files/Screen Shot 2018-03-07 at 11.47.37 PM.png&#34; alt=&#34;insert image addin screenshot&#34; width=&#34;400&#34;/&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;step-3-choose-figure-and-inputs&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Step 3: choose figure and inputs&lt;/h4&gt;
+&lt;p&gt;So far the &lt;em&gt;Insert Image&lt;/em&gt; addin looks like this:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://lcolladotor.github.io/post/2018-03-07-blogdown-insert-image-addin_files/Screen Shot 2018-03-07 at 11.58.44 PM.png&#34; alt=&#34;addin without input&#34; width=&#34;400&#34;/&gt;&lt;/p&gt;
+&lt;p&gt;So lets go head and select an image we want to upload. In my case, I chose an image that already exists.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://lcolladotor.github.io/post/2018-03-07-blogdown-insert-image-addin_files/Screen Shot 2018-03-08 at 12.00.01 AM.png&#34; alt=&#34;&#34; width=&#34;400&#34;/&gt;&lt;/p&gt;
+&lt;p&gt;You can rename the figure if you want, and if it doesn’t exist, the &lt;em&gt;overwrite&lt;/em&gt; option goes away.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://lcolladotor.github.io/post/2018-03-07-blogdown-insert-image-addin_files/Screen Shot 2018-03-08 at 12.01.06 AM.png&#34; alt=&#34;modified image file&#34; width=&#34;400&#34;/&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;step-4-hit-done&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Step 4: hit done!&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&#34;http://lcolladotor.github.io/post/2018-03-07-blogdown-insert-image-addin_files/Screen Shot 2018-03-08 at 12.02.28 AM.png&#34; alt=&#34;hit go&#34; width=&#34;400&#34;/&gt;&lt;/p&gt;
+&lt;p&gt;Lets go ahead and click &lt;code&gt;done&lt;/code&gt;! Our text window in RStudio will insert the appropriate code for linking the image. In this case, it’s the following code:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;img src=&amp;quot;/post/2018-03-07-blogdown-insert-image-addin_files/screenshot.png&amp;quot; alt=&amp;quot;final image&amp;quot; width=&amp;quot;400&amp;quot;/&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;and this is the image:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://lcolladotor.github.io/post/2018-03-07-blogdown-insert-image-addin_files/screenshot.png&#34; alt=&#34;final image&#34; width=&#34;400&#34;/&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;optional-step-5&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Optional step 5&lt;/h4&gt;
+&lt;p&gt;Now use the &lt;em&gt;Serve Site&lt;/em&gt; addin and check if you like your images. You might want to change the height/widths or alternate text. You could also wrap the HTML/Markdown code around it for linking to a website.&lt;/p&gt;
+&lt;p&gt;You can also delete your original images, if for example, they are cluttering your &lt;code&gt;~/Desktop&lt;/code&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;conclusions&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Conclusions&lt;/h3&gt;
+&lt;p&gt;I hope that you will find this new addin as useful as I’m finding it, or even more. Plus hopefully this blog post gives you an idea of the difficulties before this addin existed. Also, I want to thank Yihui Xie for guiding me, I’ve learnt quite a bit recently. Though I will still use &lt;code&gt;&amp;lt;-&lt;/code&gt; assignment operator for my own code hehe.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;acknowledgments&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Acknowledgments&lt;/h3&gt;
+&lt;p&gt;This blog post was made possible thanks to:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;&lt;a href=&#34;https://bioconductor.org/packages/3.10/BiocStyle&#34;&gt;BiocStyle&lt;/a&gt;&lt;/em&gt; &lt;a id=&#39;cite-Oles_2020&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://github.com/Bioconductor/BiocStyle&#39;&gt;Oleś, Morgan, and Huber, 2020&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;a href=&#34;https://CRAN.R-project.org/package=blogdown&#34;&gt;blogdown&lt;/a&gt;&lt;/em&gt; &lt;a id=&#39;cite-Xie_2017&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://github.com/rstudio/blogdown&#39;&gt;Xie, Hill, and Thomas, 2017&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;a href=&#34;https://CRAN.R-project.org/package=devtools&#34;&gt;devtools&lt;/a&gt;&lt;/em&gt; &lt;a id=&#39;cite-Wickham_2019&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://CRAN.R-project.org/package=devtools&#39;&gt;Wickham, Hester, and Chang, 2019&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;a href=&#34;https://CRAN.R-project.org/package=knitcitations&#34;&gt;knitcitations&lt;/a&gt;&lt;/em&gt; &lt;a id=&#39;cite-Boettiger_2019&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://CRAN.R-project.org/package=knitcitations&#39;&gt;Boettiger, 2019&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;as well as Yihui Xie’s help and encouragement in the &lt;a href=&#34;https://yihui.name/en/2018/02/bite-sized-pull-requests/&#34;&gt;form of a signed sticker&lt;/a&gt; and the &lt;em&gt;Great Hacker&lt;/em&gt; title ^^. He also wrote &lt;a href=&#34;https://yihui.name/en/2018/03/second-pull-request/&#34;&gt;a blog post&lt;/a&gt; about the &lt;em&gt;Insert Image&lt;/em&gt; addin.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://lcolladotor.github.io/post/2018-03-07-blogdown-insert-image-addin_files/Screen Shot 2018-03-08 at 12.12.07 AM.png&#34; alt=&#34;great hacker signed sticker&#34; width=&#34;400&#34;/&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;references&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;References&lt;/h3&gt;
+&lt;p&gt;
+&lt;a id=&#39;bib-Boettiger_2019&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-Boettiger_2019&#34;&gt;[1]&lt;/a&gt;&lt;cite&gt;
+C. Boettiger.
+&lt;em&gt;knitcitations: Citations for ‘Knitr’ Markdown Files&lt;/em&gt;.
+R package version 1.0.10.
+2019.
+URL: &lt;a href=&#34;https://CRAN.R-project.org/package=knitcitations&#34;&gt;https://CRAN.R-project.org/package=knitcitations&lt;/a&gt;.&lt;/cite&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;a id=&#39;bib-Oles_2020&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-Oles_2020&#34;&gt;[2]&lt;/a&gt;&lt;cite&gt;
+A. Oleś, M. Morgan, and W. Huber.
+&lt;em&gt;BiocStyle: Standard styles for vignettes and other Bioconductor documents&lt;/em&gt;.
+R package version 2.14.4.
+2020.
+URL: &lt;a href=&#34;https://github.com/Bioconductor/BiocStyle&#34;&gt;https://github.com/Bioconductor/BiocStyle&lt;/a&gt;.&lt;/cite&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;a id=&#39;bib-Wickham_2019&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-Wickham_2019&#34;&gt;[3]&lt;/a&gt;&lt;cite&gt;
+H. Wickham, J. Hester, and W. Chang.
+&lt;em&gt;devtools: Tools to Make Developing R Packages Easier&lt;/em&gt;.
+R package version 2.2.1.
+2019.
+URL: &lt;a href=&#34;https://CRAN.R-project.org/package=devtools&#34;&gt;https://CRAN.R-project.org/package=devtools&lt;/a&gt;.&lt;/cite&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;a id=&#39;bib-Xie_2017&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-Xie_2017&#34;&gt;[4]&lt;/a&gt;&lt;cite&gt;
+Y. Xie, A. P. Hill, and A. Thomas.
+&lt;em&gt;blogdown: Creating Websites with R Markdown&lt;/em&gt;.
+ISBN 978-0815363729.
+Boca Raton, Florida: Chapman and Hall/CRC, 2017.
+URL: &lt;a href=&#34;https://github.com/rstudio/blogdown&#34;&gt;https://github.com/rstudio/blogdown&lt;/a&gt;.&lt;/cite&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;reproducibility&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Reproducibility&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;## ─ Session info ───────────────────────────────────────────────────────────────────────────────────────────────────────
+##  setting  value                       
+##  version  R version 3.6.2 (2019-12-12)
+##  os       macOS Catalina 10.15.2      
+##  system   x86_64, darwin15.6.0        
+##  ui       X11                         
+##  language (EN)                        
+##  collate  en_US.UTF-8                 
+##  ctype    en_US.UTF-8                 
+##  tz       America/New_York            
+##  date     2020-02-12                  
+## 
+## ─ Packages ───────────────────────────────────────────────────────────────────────────────────────────────────────────
+##  package       * version date       lib source                            
+##  assertthat      0.2.1   2019-03-21 [1] CRAN (R 3.6.0)                    
+##  backports       1.1.5   2019-10-02 [1] CRAN (R 3.6.0)                    
+##  bibtex          0.4.2.2 2020-01-02 [1] CRAN (R 3.6.0)                    
+##  BiocManager     1.30.10 2019-11-16 [1] CRAN (R 3.6.1)                    
+##  BiocStyle     * 2.14.4  2020-01-09 [1] Bioconductor                      
+##  blogdown        0.17    2019-11-13 [1] CRAN (R 3.6.1)                    
+##  bookdown        0.17    2020-01-11 [1] CRAN (R 3.6.0)                    
+##  callr           3.4.1   2020-01-24 [1] CRAN (R 3.6.2)                    
+##  cli             2.0.1   2020-01-08 [1] CRAN (R 3.6.0)                    
+##  colorout      * 1.2-1   2019-05-07 [1] Github (jalvesaq/colorout@7ea9440)
+##  crayon          1.3.4   2017-09-16 [1] CRAN (R 3.6.0)                    
+##  desc            1.2.0   2018-05-01 [1] CRAN (R 3.6.0)                    
+##  devtools      * 2.2.1   2019-09-24 [1] CRAN (R 3.6.1)                    
+##  digest          0.6.23  2019-11-23 [1] CRAN (R 3.6.0)                    
+##  ellipsis        0.3.0   2019-09-20 [1] CRAN (R 3.6.0)                    
+##  evaluate        0.14    2019-05-28 [1] CRAN (R 3.6.0)                    
+##  fansi           0.4.1   2020-01-08 [1] CRAN (R 3.6.0)                    
+##  fs              1.3.1   2019-05-06 [1] CRAN (R 3.6.0)                    
+##  glue            1.3.1   2019-03-12 [1] CRAN (R 3.6.0)                    
+##  htmltools       0.4.0   2019-10-04 [1] CRAN (R 3.6.0)                    
+##  httr            1.4.1   2019-08-05 [1] CRAN (R 3.6.0)                    
+##  jsonlite        1.6     2018-12-07 [1] CRAN (R 3.6.0)                    
+##  knitcitations * 1.0.10  2019-09-15 [1] CRAN (R 3.6.0)                    
+##  knitr           1.27    2020-01-16 [1] CRAN (R 3.6.0)                    
+##  lubridate       1.7.4   2018-04-11 [1] CRAN (R 3.6.0)                    
+##  magrittr        1.5     2014-11-22 [1] CRAN (R 3.6.0)                    
+##  memoise         1.1.0   2017-04-21 [1] CRAN (R 3.6.0)                    
+##  pkgbuild        1.0.6   2019-10-09 [1] CRAN (R 3.6.0)                    
+##  pkgload         1.0.2   2018-10-29 [1] CRAN (R 3.6.0)                    
+##  plyr            1.8.5   2019-12-10 [1] CRAN (R 3.6.0)                    
+##  prettyunits     1.1.1   2020-01-24 [1] CRAN (R 3.6.2)                    
+##  processx        3.4.1   2019-07-18 [1] CRAN (R 3.6.0)                    
+##  ps              1.3.0   2018-12-21 [1] CRAN (R 3.6.0)                    
+##  R6              2.4.1   2019-11-12 [1] CRAN (R 3.6.1)                    
+##  Rcpp            1.0.3   2019-11-08 [1] CRAN (R 3.6.0)                    
+##  RefManageR      1.2.12  2019-04-03 [1] CRAN (R 3.6.0)                    
+##  remotes         2.1.0   2019-06-24 [1] CRAN (R 3.6.0)                    
+##  rlang           0.4.3   2020-01-24 [1] CRAN (R 3.6.2)                    
+##  rmarkdown       2.1     2020-01-20 [1] CRAN (R 3.6.0)                    
+##  rprojroot       1.3-2   2018-01-03 [1] CRAN (R 3.6.0)                    
+##  sessioninfo     1.1.1   2018-11-05 [1] CRAN (R 3.6.0)                    
+##  stringi         1.4.5   2020-01-11 [1] CRAN (R 3.6.0)                    
+##  stringr         1.4.0   2019-02-10 [1] CRAN (R 3.6.0)                    
+##  testthat        2.3.1   2019-12-01 [1] CRAN (R 3.6.0)                    
+##  usethis       * 1.5.1   2019-07-04 [1] CRAN (R 3.6.0)                    
+##  withr           2.1.2   2018-03-15 [1] CRAN (R 3.6.0)                    
+##  xfun            0.12    2020-01-13 [1] CRAN (R 3.6.0)                    
+##  xml2            1.2.2   2019-08-09 [1] CRAN (R 3.6.0)                    
+##  yaml            2.2.0   2018-07-25 [1] CRAN (R 3.6.0)                    
+## 
+## [1] /Library/Frameworks/R.framework/Versions/3.6/Resources/library&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>R markdown blog template</title>
+      <link>https://lcolladotor.github.io/2018/02/17/r-markdown-blog-template/</link>
+      <pubDate>Sat, 17 Feb 2018 00:00:00 +0000</pubDate>
+      <guid>https://lcolladotor.github.io/2018/02/17/r-markdown-blog-template/</guid>
+      <description>
+
+
+&lt;p&gt;This blog post is mostly for myself but maybe it’s useful to others. It contains my current R markdown blog template. I initially posted this as a question at &lt;a href=&#34;https://stackoverflow.com/questions/48844340/is-it-possible-to-create-a-rmd-file-template-for-the-blogdown-new-post-addin&#34;&gt;StackOverflow&lt;/a&gt;. Then I read how much a burden we put in &lt;a href=&#34;https://yihui.name/en/2018/02/career-crisis/&#34;&gt;Yihui Xie&lt;/a&gt; and decided that my current setup (copy-pasting) works just fine. In any case using &lt;code&gt;blogdown&lt;/code&gt; with the RStudio IDE is much simpler than what I used to do in the past with &lt;a href=&#34;http://lcolladotor.github.io/2013/11/09/new-Fellgernon-Bit-setup-in-Github/&#34;&gt;jekyll&lt;/a&gt; or with even my prior &lt;a href=&#34;https://github.com/rstudio/blogdown/issues/42&#34;&gt;setup with blogdown&lt;/a&gt;.&lt;/p&gt;
+&lt;div id=&#34;bibliography-setup&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Bibliography setup&lt;/h3&gt;
+&lt;p&gt;First I define the citation information I’ll need. By the way, I used &lt;a href=&#34;https://yihui.name/knitr/faq/&#34;&gt;FAQ 7&lt;/a&gt; for showing the R code chunk.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;    ```{r bibsetup, echo=FALSE, message=FALSE, warning=FALSE}
+    ## Load knitcitations with a clean bibliography
+    library(&amp;#39;knitcitations&amp;#39;)
+    cleanbib()
+    cite_options(hyperlink = &amp;#39;to.doc&amp;#39;, citation_format = &amp;#39;text&amp;#39;, style = &amp;#39;html&amp;#39;)
+    
+    bib &amp;lt;- c(&amp;#39;knitcitations&amp;#39; = citation(&amp;#39;knitcitations&amp;#39;),
+             &amp;#39;blogdown&amp;#39; = citation(&amp;#39;blogdown&amp;#39;)[2])
+    ```&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;post-content&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Post content&lt;/h3&gt;
+&lt;p&gt;This is where I typically start to edit since the bibliography chunk is hidden.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;r-image&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;R image&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;    ```{r &amp;#39;plot&amp;#39;}
+    ## This will create the /post/*_files/ directory
+    ## where you can later copy the non-R images you want to use
+    ## in the blog post
+    plot(1:10, 10:1)
+    ```&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;http://lcolladotor.github.io/post/2018-02-17-r-markdown-blog-template_files/figure-html/plot-1.png&#34; width=&#34;480&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Note that I modified the YAML portion of the post to set the figure width and height. You can also include a table of contents if you want, though it affects the summary of the post. Check the &lt;a href=&#34;https://bookdown.org/yihui/blogdown/output-format.html&#34;&gt;output format&lt;/a&gt; section of the &lt;code&gt;blogdown&lt;/code&gt; book for more details &lt;a id=&#39;cite-Xie_2017&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://github.com/rstudio/blogdown&#39;&gt;Xie, Hill, and Thomas, 2017&lt;/a&gt;), including differences between &lt;code&gt;.Rmd&lt;/code&gt; and &lt;code&gt;.Rmarkdown&lt;/code&gt; files. Note that you can also use a &lt;code&gt;_output.yml&lt;/code&gt; file as described there.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;output:
+  blogdown::html_page:
+    toc: no
+    fig_width: 5
+    fig_height: 5&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;custom-image-syntax&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Custom image syntax&lt;/h3&gt;
+&lt;p&gt;Here I remind myself of different ways I can include external images. Check &lt;a href=&#34;https://github.com/rstudio/blogdown/issues/239&#34;&gt;blogdown issue 239&lt;/a&gt; for some background information.&lt;/p&gt;
+&lt;p&gt;Markdown syntax for custom image:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;![](/post/2018-02-17-r-markdown-blog-template_files/LIBD.jpg)&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;figure&#34;&gt;
+&lt;img src=&#34;http://lcolladotor.github.io/post/2018-02-17-r-markdown-blog-template_files/LIBD.jpg&#34; /&gt;
+
+&lt;/div&gt;
+&lt;p&gt;HTML syntax for centering image, including a link, and re-sizing the image to a fix width of 200 px.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;center&amp;gt;
+&amp;lt;a href=&amp;quot;http://lcolladotor.github.io/&amp;quot;&amp;gt;&amp;lt;img alt = &amp;#39;some website&amp;#39; width=&amp;#39;200&amp;#39; src=&amp;#39;/post/2018-02-17-r-markdown-blog-template_files/LIBD.jpg&amp;#39; /&amp;gt;&amp;lt;/a&amp;gt;
+&amp;lt;/center&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;center&gt;
+&lt;a href=&#34;http://lcolladotor.github.io/&#34;&gt;&lt;img alt = &#39;some website&#39; width=&#39;200&#39; src=&#39;http://lcolladotor.github.io/post/2018-02-17-r-markdown-blog-template_files/LIBD.jpg&#39; /&gt;&lt;/a&gt;
+&lt;/center&gt;
+&lt;/div&gt;
+&lt;div id=&#34;reproducibility&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Reproducibility&lt;/h3&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;## Reproducibility info
+library(&amp;#39;devtools&amp;#39;)
+options(width = 120)
+session_info()&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Session info ----------------------------------------------------------------------------------------------------------&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##  setting  value                       
+##  version  R version 3.4.3 (2017-11-30)
+##  system   x86_64, darwin15.6.0        
+##  ui       X11                         
+##  language (EN)                        
+##  collate  en_US.UTF-8                 
+##  tz       America/New_York            
+##  date     2018-03-10&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Packages --------------------------------------------------------------------------------------------------------------&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##  package       * version date       source                               
+##  backports       1.1.2   2017-12-13 CRAN (R 3.4.3)                       
+##  base          * 3.4.3   2017-12-07 local                                
+##  bibtex          0.4.2   2017-06-30 CRAN (R 3.4.1)                       
+##  blogdown        0.5.10  2018-03-10 Github (lcolladotor/blogdown@471b086)
+##  bookdown        0.7     2018-02-18 cran (@0.7)                          
+##  colorout      * 1.2-0   2018-02-19 Github (jalvesaq/colorout@2f01173)   
+##  compiler        3.4.3   2017-12-07 local                                
+##  datasets      * 3.4.3   2017-12-07 local                                
+##  devtools      * 1.13.5  2018-02-18 CRAN (R 3.4.3)                       
+##  digest          0.6.15  2018-01-28 CRAN (R 3.4.3)                       
+##  evaluate        0.10.1  2017-06-24 CRAN (R 3.4.1)                       
+##  graphics      * 3.4.3   2017-12-07 local                                
+##  grDevices     * 3.4.3   2017-12-07 local                                
+##  htmltools       0.3.6   2017-04-28 CRAN (R 3.4.0)                       
+##  httr            1.3.1   2017-08-20 CRAN (R 3.4.1)                       
+##  jsonlite        1.5     2017-06-01 CRAN (R 3.4.0)                       
+##  knitcitations * 1.0.8   2017-07-04 CRAN (R 3.4.1)                       
+##  knitr           1.20    2018-02-20 cran (@1.20)                         
+##  lubridate       1.7.3   2018-02-27 CRAN (R 3.4.3)                       
+##  magrittr        1.5     2014-11-22 CRAN (R 3.4.0)                       
+##  memoise         1.1.0   2017-04-21 CRAN (R 3.4.0)                       
+##  methods       * 3.4.3   2017-12-07 local                                
+##  plyr            1.8.4   2016-06-08 CRAN (R 3.4.0)                       
+##  R6              2.2.2   2017-06-17 CRAN (R 3.4.0)                       
+##  Rcpp            0.12.15 2018-01-20 CRAN (R 3.4.3)                       
+##  RefManageR      0.14.20 2017-08-17 CRAN (R 3.4.1)                       
+##  rmarkdown       1.9     2018-03-01 cran (@1.9)                          
+##  rprojroot       1.3-2   2018-01-03 CRAN (R 3.4.3)                       
+##  stats         * 3.4.3   2017-12-07 local                                
+##  stringi         1.1.6   2017-11-17 CRAN (R 3.4.2)                       
+##  stringr         1.3.0   2018-02-19 cran (@1.3.0)                        
+##  tools           3.4.3   2017-12-07 local                                
+##  utils         * 3.4.3   2017-12-07 local                                
+##  withr           2.1.1   2017-12-19 CRAN (R 3.4.3)                       
+##  xfun            0.1     2018-01-22 CRAN (R 3.4.3)                       
+##  xml2            1.2.0   2018-01-24 CRAN (R 3.4.3)                       
+##  yaml            2.1.18  2018-03-08 cran (@2.1.18)&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;references&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;References&lt;/h3&gt;
+&lt;p&gt;Citations made with &lt;code&gt;knitcitations&lt;/code&gt; &lt;a id=&#39;cite-Boettiger_2017&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://CRAN.R-project.org/package=knitcitations&#39;&gt;Boettiger, 2017&lt;/a&gt;) and blog built using &lt;code&gt;blogdown&lt;/code&gt; (&lt;a href=&#39;https://github.com/rstudio/blogdown&#39;&gt;Xie, Hill, and Thomas, 2017&lt;/a&gt;).&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;## Chunk normaly with options:  results = &amp;#39;asis&amp;#39;, echo = FALSE, cache = FALSE
+## Print bibliography
+bibliography(style = &amp;#39;html&amp;#39;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;
+&lt;a id=&#39;bib-Boettiger_2017&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-Boettiger_2017&#34;&gt;[1]&lt;/a&gt;&lt;cite&gt; C. Boettiger. &lt;em&gt;knitcitations: Citations for ‘Knitr’ Markdown Files&lt;/em&gt;. R package version 1.0.8. 2017. URL: &lt;a href=&#34;https://CRAN.R-project.org/package=knitcitations&#34;&gt;https://CRAN.R-project.org/package=knitcitations&lt;/a&gt;.&lt;/cite&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;a id=&#39;bib-Xie_2017&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-Xie_2017&#34;&gt;[2]&lt;/a&gt;&lt;cite&gt; Y. Xie, A. P. Hill and A. Thomas. &lt;em&gt;blogdown: Creating Websites with R Markdown&lt;/em&gt;. ISBN 978-0815363729. Boca Raton, Florida: Chapman and Hall/CRC, 2017. URL: &lt;a href=&#34;https://github.com/rstudio/blogdown&#34;&gt;https://github.com/rstudio/blogdown&lt;/a&gt;.&lt;/cite&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Creating your Jekyll-Bootstrap powered blog for R blogging</title>
+      <link>https://lcolladotor.github.io/2013/11/09/new-Fellgernon-Bit-setup-in-Github/</link>
+      <pubDate>Sat, 09 Nov 2013 00:00:00 +0000</pubDate>
+      <guid>https://lcolladotor.github.io/2013/11/09/new-Fellgernon-Bit-setup-in-Github/</guid>
+      <description>&lt;p&gt;As you might have noticed, I recently decided to move &lt;code&gt;Fellgernon Bit&lt;/code&gt; from &lt;a href=&#34;http://bit.ly/FellgernonBit&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Tumblr&lt;/a&gt; to &lt;a href=&#34;http://bit.ly/FellBit&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;GitHub&lt;/a&gt;. There are a couple of reasons why I made this change.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;I wanted a more professional-looking blog.
+&lt;ul&gt;
+&lt;li&gt;There are not many R blogs on Tumblr, and well, long text posts are not really meant for Tumblr.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Better code highlighting.
+&lt;ul&gt;
+&lt;li&gt;I had enabled R code highlighting using the highlighting instructions from Jeffrey Horner (&lt;span class=&#34;showtooltip&#34; title=&#34;@jeffreyhorner (2013). &#39;Blog with R Markdown and tumblr: Part I.&#39; .&#34;&gt;&lt;a href=&#34;http://jeffreyhorner.tumblr.com/post/25804518110/blog-with-r-markdown-and-tumblr-part-i&#34;&gt;Horner, Part I&lt;/a&gt;&lt;/span&gt;). The instructions are great! I guess I just got lazy to tweak the CSS of my Tumblr blog to fix some things I didn&amp;rsquo;t like.&lt;/li&gt;
+&lt;li&gt;I also want to be able to highlight code from other languages, like &lt;code&gt;bash&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Make it easier to embed any HTML code.
+&lt;ul&gt;
+&lt;li&gt;Yes, you can write posts at Tumblr in pure HTML but sometimes things break as Tumblr doesn&amp;rsquo;t like them.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Easier process of writing posts using Rmd files.
+&lt;ul&gt;
+&lt;li&gt;The steps in Horner&amp;rsquo;s guide (&lt;span class=&#34;showtooltip&#34; title=&#34;@jeffreyhorner (2013). &#39;Blog with R Markdown and tumblr: Part II.&#39; .&#34;&gt;&lt;a href=&#34;http://jeffreyhorner.tumblr.com/post/25943954723/blog-with-r-markdown-and-tumblr-part-ii&#34;&gt;Horner, Part II&lt;/a&gt;&lt;/span&gt;) are quite involved. Instead of those steps, I was just knitting my posts and then manually copying the html code in the &lt;code&gt;body&lt;/code&gt; tags, then pasting it in Tumblr.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Easy way to host figures and link to them.
+&lt;ul&gt;
+&lt;li&gt;I have previously hosted pictures through Picasa Web Albums, but with the push towards Google Plus they made it harder to embed solo pictures (you can embed Google+ posts though).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;I had also previously heard about &lt;a href=&#34;http://jekyllrb.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Jekyll&lt;/a&gt;-powered blogs, specially thanks to Yihui Xie&amp;rsquo;s blog (&lt;span class=&#34;showtooltip&#34; title=&#34;Xie Y (2013). &#39;Statistics, R, Graphics and Fun | Yihui Xie.&#39; .&#34;&gt;&lt;a href=&#34;http://yihui.name/en/&#34;&gt;Xie, English version&lt;/a&gt;&lt;/span&gt;). At the time when I first learned about this type of blog it seemed challenging so I never dedicated the time to really learn about it. What ended up movitivating me to do so was our new student bloggers group &lt;a href=&#34;https://twitter.com/jhubiostat&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;@jhubiostat&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Let me describe how I set up &lt;a href=&#34;http://bit.ly/FellBit&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Fellgernon Bit @ GitHub&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;setting-up-fellgernon-bit--githubhttpbitlyfellbit&#34;&gt;Setting up &lt;a href=&#34;http://bit.ly/FellBit&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Fellgernon Bit @ GitHub&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id=&#34;creating-the-jekyll-bootstrap-blog&#34;&gt;Creating the Jekyll-Bootstrap blog&lt;/h3&gt;
+&lt;p&gt;My main guide to setup the blog comes from a post by J. Fisher (&lt;span class=&#34;showtooltip&#34; title=&#34;Fisher JC (2012). &#39;Blog with Knitr and Jekyll.&#39; .&#34;&gt;&lt;a href=&#34;http://jfisher-usgs.github.io/r/2012/07/03/knitr-jekyll/&#34;&gt;Fisher, 2012&lt;/a&gt;&lt;/span&gt;) which points to another of his posts (&lt;span class=&#34;showtooltip&#34; title=&#34;Fisher JC (2012). &#39;Jekyll Build on Windows.&#39; .&#34;&gt;&lt;a href=&#34;http://jfisher-usgs.github.io/lessons/2012/05/30/jekyll-build-on-windows/&#34;&gt;Fisher, 2012b&lt;/a&gt;&lt;/span&gt;).&lt;/p&gt;
+&lt;h4 id=&#34;install-jekyll&#34;&gt;Install Jekyll&lt;/h4&gt;
+&lt;p&gt;Before doing anything, I first had to install &lt;a href=&#34;http://jekyllrb.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Jekyll&lt;/a&gt;. To do so I recommend checking the installation documentation (&lt;span class=&#34;showtooltip&#34; title=&#34;(2013). &#39;Installation.&#39; .&#34;&gt;&lt;a href=&#34;http://jekyllrb.com/docs/installation/&#34;&gt;Jekyll Installation&lt;/a&gt;&lt;/span&gt;).&lt;/p&gt;
+&lt;p&gt;To install &lt;a href=&#34;http://jekyllrb.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Jekyll&lt;/a&gt;, I needed to have &lt;a href=&#34;https://www.ruby-lang.org/en/downloads/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Ruby&lt;/a&gt; and &lt;a href=&#34;http://rubygems.org/pages/download&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;RubyGems&lt;/a&gt;. Since I use &lt;a href=&#34;http://www.macports.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;MacPorts&lt;/a&gt; these are the steps I used:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## Update MacPorts, can take a while!!&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo port selfupdate
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo port upgrade outdated
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## Search for Ruby and install it&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## I think that Jekyll needs 1.9+ since I had 1.8 already installed&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;port search ruby
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo port install ruby19
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## Set as default version&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo port &lt;span class=&#34;k&#34;&gt;select&lt;/span&gt; --set ruby ruby19
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## Check which version you have&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ruby --version
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## I manually set mine to be ruby1.9&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; /opt/local/bin
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo ln -s ruby1.9 ruby
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ruby --version 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## This is mine:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## ruby 1.9.3p448 (2013-06-27 revision 41675) [x86_64-darwin12]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;With Ruby in place, I could then install jekyll.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo gem install jekyll
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Note that you can also do this after initializing the blog.&lt;/p&gt;
+&lt;h3 id=&#34;initialize-blog&#34;&gt;Initialize blog&lt;/h3&gt;
+&lt;p&gt;Following the instructions (&lt;span class=&#34;showtooltip&#34; title=&#34;Fisher JC (2012). &#39;Jekyll Build on Windows.&#39; .&#34;&gt;&lt;a href=&#34;http://jfisher-usgs.github.io/lessons/2012/05/30/jekyll-build-on-windows/&#34;&gt;Fisher, 2012b&lt;/a&gt;&lt;/span&gt;) I then acquired all the setup files for &lt;a href=&#34;http://jekyllbootstrap.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Jekyll-Bootstrap&lt;/a&gt;. The installation instructions are quite straight forward as you will see (&lt;span class=&#34;showtooltip&#34; title=&#34;(2013). &#39;Jekyll Quick Start | ruhoh universal static blog generator.&#39; .&#34;&gt;&lt;a href=&#34;http://jekyllbootstrap.com/usage/jekyll-quick-start.html&#34;&gt;JB Quick Start&lt;/a&gt;&lt;/span&gt;).&lt;/p&gt;
+&lt;p&gt;First, I created the &lt;code&gt;lcolladotor.github.com&lt;/code&gt; repository on GitHub. As my GitHub username is &lt;code&gt;lcolladotor&lt;/code&gt;, by default GitHub will consider the &lt;code&gt;lcolladotor.github.com&lt;/code&gt; repository as a GitHub pages repository and publish it. Thus creating &lt;a href=&#34;http://lcolladotor.github.io/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;lcolladotor.github.io/&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Once the repository was created, I added the Jekyll-Bootstrap files.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## Initialize repo with Jekyll-Bootstrap files&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git clone https://github.com/plusjade/jekyll-bootstrap.git lcolladotor.github.com
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; lcolladotor.github.com/
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git remote set-url origin git@github.com:lcolladotor/lcolladotor.github.com.git
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git push -u origin master
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;change-theme-to-twitter-20&#34;&gt;Change theme to Twitter-2.0&lt;/h3&gt;
+&lt;p&gt;Jekyll-Bootstrap includes several themes (&lt;span class=&#34;showtooltip&#34; title=&#34;(2013). &#39;Using Themes | ruhoh universal static blog generator.&#39; .&#34;&gt;&lt;a href=&#34;http://jekyllbootstrap.com/usage/jekyll-theming.html&#34;&gt;JB Themes&lt;/a&gt;&lt;/span&gt;) which you check on their &lt;a href=&#34;http://themes.jekyllbootstrap.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;theme explorer&lt;/a&gt;. I think that &lt;a href=&#34;http://jfisher-usgs.github.io/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;J. Fisher&amp;rsquo;s blog&lt;/a&gt; looks good with Twitter-2.0 and decided to follow his lead. Furthermore, he has customized a few things (check &lt;a href=&#34;https://github.com/jfisher-usgs/jfisher-usgs.github.com/commits/master&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;his blog&amp;rsquo;s history&lt;/a&gt;) which I just plan on using.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## Install Twitter-2.0 theme&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;rake theme:install &lt;span class=&#34;nv&#34;&gt;git&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;https://github.com/gdagley/theme-twitter-2.0&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;code-highlighting&#34;&gt;Code highlighting&lt;/h3&gt;
+&lt;p&gt;The default Jekyll highlighting setup uses &lt;a href=&#34;http://pygments.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;pygments&lt;/a&gt;. I am basing my statement on the documentation for the &lt;em&gt;highlight&lt;/em&gt; argument in &lt;code&gt;?knitr::render_jekyll&lt;/code&gt;:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;which code highlighting engine to use: for pygments, the Liquid syntax is used (default approach Jekyll)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;So I installed Pygments.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## Install Pygments, assuming you have Python installed&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;curl -O http://python-distribute.org/distribute_setup.py
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo python distribute_setup.py
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo easy_install Pygments
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Note that (&lt;span class=&#34;showtooltip&#34; title=&#34;Fisher JC (2012). &#39;Jekyll Build on Windows.&#39; .&#34;&gt;&lt;a href=&#34;http://jfisher-usgs.github.io/lessons/2012/05/30/jekyll-build-on-windows/&#34;&gt;Fisher, 2012b&lt;/a&gt;&lt;/span&gt;) details some other steps. I basically copied his &lt;a href=&#34;https://github.com/jfisher-usgs/jfisher-usgs.github.com/blob/master/assets/themes/twitter-2.0/css/syntax.css&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;syntax.css&lt;/a&gt; file and saved it as &lt;code&gt;/assets/themes/twitter-2.0/css/syntax.css&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Note that you do have to add to &lt;code&gt;_includes/themes/twitter-2.0/default.html&lt;/code&gt; the following line:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-{html}&#34; data-lang=&#34;{html}&#34;&gt;&amp;lt;link href=&amp;#34;/assets/themes/twitter-2.0/css/syntax.css&amp;#34; rel=&amp;#34;stylesheet&amp;#34; type=&amp;#34;text/css&amp;#34;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;As you can see &lt;a href=&#34;https://github.com/lcolladotor/lcolladotor.github.com/blob/master/_includes/themes/twitter-2.0/default.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;on my own file&lt;/a&gt; in line 23 (currently) I am using a Liquid syntax instead of specifying the full path.&lt;/p&gt;
+&lt;h3 id=&#34;import-posts&#34;&gt;Import posts&lt;/h3&gt;
+&lt;p&gt;Next I had to import my posts from Tumblr. Jekyll has a varied set of tools that allow you to quickly import posts which I recommend using if you are migrating your blog (&lt;span class=&#34;showtooltip&#34; title=&#34;(2013). &#39;Blog migrations.&#39; .&#34;&gt;&lt;a href=&#34;http://jekyllrb.com/docs/migrations/&#34;&gt;Blog Migrations&lt;/a&gt;&lt;/span&gt;).&lt;/p&gt;
+&lt;p&gt;The Tumblr importer allows you to either import them into HTML format or Markdown format. I first tried Markdown, but ran into some problems. So I decided to import them into HTML format, and rename them to Markdown.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## Install importing tools&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo gem install jekyll-import --pre
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## Import the posts&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; ~/
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;mkdir tmp
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/opt/local/bin/ruby1.9 -rubygems -e &lt;span class=&#34;s1&#34;&gt;&amp;#39;require &amp;#34;jekyll/jekyll-import/tumblr&amp;#34;; JekyllImport::Tumblr.process(&amp;#34;http://fellgernon.tumblr.com&amp;#34;, &amp;#34;html&amp;#34;, true, false, false)&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## There is a post that the converter didn&amp;#39;t like, so I had to set to &amp;#34;private&amp;#34; mode&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## Rename from HTML to Markdown&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; _posts/tumblr/
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; i in *html&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;do&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$i&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;filename&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;basename &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$i&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;filename2&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;filename&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;%.*&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$filename2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; mv &lt;span class=&#34;nv&#34;&gt;$i&lt;/span&gt; &lt;span class=&#34;si&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;filename2&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;.md&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;done&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## Move the posts to _posts&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;mv ~/tmp/_posts/tumblr/*md ~/WhereYouHaveYourLocalGitRepoCopy/lcollado.github.com/_posts/
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;I then had to do some manual edits on the posts, specially for code chunks. For example, &lt;a href=&#34;https://raw.github.com/lcolladotor/lcolladotor.github.com/master/_posts/2013-05-09-reading-an-r-file-from-github.md&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;this post&lt;/a&gt; has R chunks which I had to surround by:&lt;/p&gt;
+&lt;script src=&#34;https://gist.github.com/lcolladotor/7388043.js&#34;&gt;&lt;/script&gt;
+&lt;p&gt;To complete the posts, I made sure the YAML front matter was correct and defined categories since I only had tags in Tumblr.&lt;/p&gt;
+&lt;h3 id=&#34;viewing-your-blog-locally&#34;&gt;Viewing your blog locally&lt;/h3&gt;
+&lt;p&gt;Once you have the posts, you can use Jekyll to view your blog locally.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## Go to your directory&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;~/WhereYouHaveYourLocalGitRepoCopy/lcollado.github.com/
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## Generate the static view of your blog&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;jekyll serve
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;In my case, &lt;code&gt;jekyll serve&lt;/code&gt; prompted a couple of errors which I had to go to the posts and edit. For example, some HTML tag that I opened but didn&amp;rsquo;t close. Stuff like that.&lt;/p&gt;
+&lt;p&gt;Once you run the previous command, you can then view your site on your browser at http://localhost:4000/&lt;/p&gt;
+&lt;h3 id=&#34;customizing&#34;&gt;Customizing&lt;/h3&gt;
+&lt;p&gt;The very first thing you must change is the _config.yml file. The file you copied from Jekyll-Bootstrap includes instructions on how to do so. If you learn by example, take a peek at &lt;a href=&#34;https://github.com/lcolladotor/lcolladotor.github.com/blob/master/_config.yml&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;mine&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;In my case, I use &lt;a href=&#34;http://disqus.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Disqus&lt;/a&gt; for comments and &lt;a href=&#34;http://www.google.com/analytics&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Google Analytics&lt;/a&gt; for tracking visits. Since I was also using &lt;a href=&#34;http://disqus.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Disqus&lt;/a&gt; for my Tumblr blog, I used &lt;a href=&#34;http://disqus.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Disqus&lt;/a&gt;&amp;rsquo; tools to migrate the comments. Finally, I use &lt;a href=&#34;http://feedburner.google.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;FeedBurner&lt;/a&gt; for my RSS feed, which I was able to update to the new &lt;a href=&#34;http://lcolladotor.github.io/rss.xml&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;RSS generated by Fellgernon Bit @ GitHub&lt;/a&gt;. Thus, the subscribers to &lt;a href=&#34;http://feeds.feedburner.com/FellgernonBit&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;feeds.feedburner.com/FellgernonBit&lt;/a&gt; didn&amp;rsquo;t have to change anything.&lt;/p&gt;
+&lt;p&gt;I also added &lt;a href=&#34;https://www.addthis.com/get/smart-layers#.Un5oIpTF2Ql&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;AddThis Smart Layers&lt;/a&gt; with &lt;a href=&#34;https://bitly.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;bit.ly&lt;/a&gt; shortening to the site and a &lt;a href=&#34;http://www.clustrmaps.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ClustrMap&lt;/a&gt; as you can see in &lt;a href=&#34;https://github.com/lcolladotor/lcolladotor.github.com/blob/master/_layouts/page.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;_layouts/page.html&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;As for math, I am currently using the rdiscount flavor of Markdown and loading the MathJax script as you can see in &lt;a href=&#34;https://github.com/lcolladotor/lcolladotor.github.com/blob/master/_layouts/default.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;_layouts/default.html&lt;/a&gt;. However, note that we shoudn&amp;rsquo;t ask too much power out of Markdown for math (&lt;span class=&#34;showtooltip&#34; title=&#34;Xie Y (2013). &#39;Markdown or LaTeX? | Yihui Xie.&#39; .&#34;&gt;&lt;a href=&#34;http://yihui.name/en/2013/10/markdown-or-latex/&#34;&gt;Xie, 2013&lt;/a&gt;&lt;/span&gt;).&lt;/p&gt;
+&lt;p&gt;To use rdiscount locally, I also had to install it. I have also tried out kramdown.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## Markdown flavors&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo gem install rdiscount
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo gem install kramdown
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## I don&amp;#39;t remember why I also installed this:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo gem install nokogiri
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;I then customized the index and added other pages:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/lcolladotor/lcolladotor.github.com/blob/master/index.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;index.html&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;Used code from Jason Fisher to add the pagination.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/lcolladotor/lcolladotor.github.com/blob/master/about.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;about.html&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;Simple description&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/lcolladotor/lcolladotor.github.com/blob/master/_includes/themes/twitter-2.0/default.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;_includes/themes/twitter-2.0/default.html&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;I added a CSS drop down menu (constructed with &lt;a href=&#34;http://cssmenumaker.com/builder/1044267&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CSS Menu Maker&lt;/a&gt;) with the blogs I follow. For this I also had to modify &lt;a href=&#34;https://github.com/lcolladotor/lcolladotor.github.com/commit/15e03fdc317399b37521f130269adf3e7da7efb3&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;_assets/themes/twitter-2.0/css/style.css&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;I modified the footer to mention that my posts are under the Creative Commons License version 3 BY-NC-SA. An idea I took from Yihui Xie&amp;rsquo;s blog.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Since I am interested in getting my blog to be a part of &lt;a href=&#34;http://www.r-bloggers.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;R-bloggers&lt;/a&gt;, I created an RSS specific for the posts under the &lt;code&gt;rstats&lt;/code&gt; category to comply with their requirements (&lt;span class=&#34;showtooltip&#34; title=&#34;Galili T (2013). &#39;add your blog!&#39; .&#34;&gt;&lt;a href=&#34;http://www.r-bloggers.com/add-your-blog/&#34;&gt;Add your blog!&lt;/a&gt;&lt;/span&gt;).&lt;/p&gt;
+&lt;p&gt;For the category-specific RSS I used &lt;code&gt;feed.category.xml&lt;/code&gt; (&lt;span class=&#34;showtooltip&#34; title=&#34;(2013). &#39;jekyll-rss-feeds.&#39; .&#34;&gt;&lt;a href=&#34;https://github.com/snaptortoise/jekyll-rss-feeds&#34;&gt;Jekyll RSS Feed Templates&lt;/a&gt;&lt;/span&gt;) and created &lt;a href=&#34;https://github.com/lcolladotor/lcolladotor.github.com/blob/master/rss-rstats.xml&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;rss-rstats.xml&lt;/a&gt; [see &lt;a href=&#34;https://github.com/lcolladotor/lcolladotor.github.com/blob/master/atom-rstats.xml&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;atom-rstats.xml&lt;/a&gt; if you prefer Atom RSS] which is then processed and converted to &lt;a href=&#34;http://feeds.feedburner.com/FellgernonBit-rstats&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;feeds.feedburner.com/FellgernonBit-rstats&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Note that I use &lt;a href=&#34;http://feedburner.google.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;FeedBurner&lt;/a&gt; to then create &lt;a href=&#34;https://twitter.com/lcolladotor&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Twitter updates&lt;/a&gt; linking to back to the posts. Also, for the rstats one I add the &lt;a href=&#34;https://twitter.com/search?q=%23rstats&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;#rstats&lt;/a&gt; hashtag to the post.&lt;/p&gt;
+&lt;h3 id=&#34;writing-an-r-post&#34;&gt;Writing an R post&lt;/h3&gt;
+&lt;p&gt;J. Fisher again explains in detail how to blog using Knitr and Jekyll (&lt;span class=&#34;showtooltip&#34; title=&#34;Fisher JC (2012). &#39;Blog with Knitr and Jekyll.&#39; .&#34;&gt;&lt;a href=&#34;http://jfisher-usgs.github.io/r/2012/07/03/knitr-jekyll/&#34;&gt;Fisher, 2012&lt;/a&gt;&lt;/span&gt;). Since I use &lt;a href=&#34;https://github.com/textmate/textmate&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;TextMate2&lt;/a&gt; as my text editor, I went ahead and modified his code and created a command to do so.&lt;/p&gt;
+&lt;p&gt;Basically, I modified the &lt;code&gt;knit&lt;/code&gt; command from the &lt;code&gt;SWeave&lt;/code&gt; TextMate bundle and added J. Fisher&amp;rsquo;s code. I saved it under the &lt;code&gt;Menu Actions&lt;/code&gt; of the &lt;code&gt;SWeave&lt;/code&gt; bundle and linked it to &lt;code&gt;alt + e&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;For this to work, I use Google Chrome with the &lt;a href=&#34;https://chrome.google.com/webstore/detail/jmchmkecamhbiokiopfpnfgbidieafmd&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Markdown Preview&lt;/a&gt; extension installed.&lt;/p&gt;
+&lt;p&gt;This is the &lt;a href=&#34;https://gist.github.com/lcolladotor/7388033&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;code for the TextMate command&lt;/a&gt;. You could certainly make it much more concise and drop things, but I like to see a quick preview of the post. However, I still recommend using &lt;code&gt;jekyll serve&lt;/code&gt; for a final thorough preview of the post before pushing it to GitHub.&lt;/p&gt;
+&lt;script src=&#34;https://gist.github.com/lcolladotor/7388033.js&#34;&gt;&lt;/script&gt;
+&lt;h3 id=&#34;things-i-might-add&#34;&gt;Things I might add&lt;/h3&gt;
+&lt;p&gt;Carl Boettiger has a great site &amp;ndash;specially the &lt;a href=&#34;http://carlboettiger.info/lab-notebook.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Lab Notebook&lt;/a&gt; part&amp;ndash; and he describes all the tools he used for making it (&lt;span class=&#34;showtooltip&#34; title=&#34;Boettiger C (2013). &#39;About this site.&#39; .&#34;&gt;&lt;a href=&#34;http://carlboettiger.info/README.html&#34;&gt;Boettiger, 2013&lt;/a&gt;&lt;/span&gt;). One of the features I would like to add to my site is the &lt;code&gt;history&lt;/code&gt; button on the right sidebar he has on his posts which link to the GitHub history of the post. For example check &lt;a href=&#34;http://carlboettiger.info/2013/09/25/mozilla-software-review.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;this post&lt;/a&gt; and its &lt;a href=&#34;https://github.com/cboettig/labnotebook/commits/master/_posts/2013-09-25-mozilla-software-review.md&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;history&lt;/a&gt;. I think that it can be very useful for those interested in any edits made to the posts. For example, I had to fix a couple of things on one of my recent posts as you can see &lt;a href=&#34;https://github.com/lcolladotor/lcolladotor.github.com/commits/master/_posts/2013-11-07-bmorebiostats.md&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Looking around, I found the code needed for this to work in Carl&amp;rsquo;s repository: &lt;a href=&#34;https://github.com/cboettig/labnotebook/blob/master/_includes/sidebar.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;_includes/sidebar.html&lt;/a&gt;, &lt;a href=&#34;https://github.com/cboettig/labnotebook/tree/master/_plugins/jekyll-labnotebook-plugins&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;_plugins/jekyll-labnotebook-plugins&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;However, GitHub currently does not support Jekyll plugins. Meaning that if you use any plugins, you have to create the site locally and then push it to GitHub instead of just pushing the new posts and letting GitHub handle creating the site. It&amp;rsquo;s not a huge deal, but for now I&amp;rsquo;ll rely on GitHub and keep things simple for me.&lt;/p&gt;
+&lt;h2 id=&#34;if-i-were-to-do-it-again&#34;&gt;If I were to do it again&lt;/h2&gt;
+&lt;p&gt;Once you install Jekyll, I think the easiest way to set up your own blog is to fork another person&amp;rsquo;s blog&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/jfisher-usgs/jfisher-usgs.github.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;J. Fisher&amp;rsquo;s&lt;/a&gt;,&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/yihui/en&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Yihui Xie&amp;rsquo;s&lt;/a&gt;,&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/cboettig/labnotebook&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Carl Boettiger&amp;rsquo;s&lt;/a&gt;,&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/lcolladotor/lcolladotor.github.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;mine&lt;/a&gt;,&lt;/li&gt;
+&lt;li&gt;or someone else blog you like.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Then delete their posts, give attribution, and customize things like the blog title and other things you would have to customize on any blogging platform (RSS, comments provider, etc).&lt;/p&gt;
+&lt;p&gt;Obviously Jekyll gives you much more control over your site, but at the same time, you must also dedicate enough time to learn what to change and make sure that things don&amp;rsquo;t break.&lt;/p&gt;
+&lt;h3 id=&#34;post-template&#34;&gt;Post template&lt;/h3&gt;
+&lt;p&gt;To finish describing my setup, &lt;a href=&#34;https://gist.github.com/lcolladotor/7387745&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here is my post template&lt;/a&gt;.&lt;/p&gt;
+&lt;script src=&#34;https://gist.github.com/lcolladotor/7387745.js&#34;&gt;&lt;/script&gt;
+&lt;h2 id=&#34;wrap-up&#34;&gt;Wrap up&lt;/h2&gt;
+&lt;p&gt;I hope that you will find some of this information useful if you are thinking of starting your &lt;code&gt;R&lt;/code&gt; blog powered by Jekyll-Bootstrap and hosted by GitHub.&lt;/p&gt;
+&lt;p&gt;Note that since the blog is hosted in GitHub, others can send you pull requests to fix things and/or create guest posts. Just as easily you can make it a multi-author blog by changing the collaborators setting of the GitHub repository.&lt;/p&gt;
+&lt;p&gt;This wouldn&amp;rsquo;t have been possible without J. Fisher&amp;rsquo;s posts and many other resources available online.&lt;/p&gt;
+&lt;h3 id=&#34;references&#34;&gt;References&lt;/h3&gt;
+&lt;p&gt;Citations made with &lt;code&gt;knitcitations&lt;/code&gt; (&lt;span class=&#34;showtooltip&#34; title=&#34;Boettiger C (2013). knitcitations: Citations for knitr markdown files. R package version 0.4-7.&#34;&gt;&lt;a href=&#34;http://CRAN.R-project.org/package=knitcitations&#34;&gt;Boettiger, 2013b&lt;/a&gt;&lt;/span&gt;).&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;@jeffreyhorner,  Blog with R Markdown and tumblr: Part I.  &lt;em&gt;Jeffrey Horner&lt;/em&gt;  &lt;a href=&#34;http://jeffreyhorner.tumblr.com/post/25804518110/blog-with-r-markdown-and-tumblr-part-i&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;http://jeffreyhorner.tumblr.com/post/25804518110/blog-with-r-markdown-and-tumblr-part-i&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;@jeffreyhorner,  Blog with R Markdown and tumblr: Part II.  &lt;em&gt;Jeffrey Horner&lt;/em&gt;  &lt;a href=&#34;http://jeffreyhorner.tumblr.com/post/25943954723/blog-with-r-markdown-and-tumblr-part-ii&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;http://jeffreyhorner.tumblr.com/post/25943954723/blog-with-r-markdown-and-tumblr-part-ii&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Yihui Xie,  Statistics, R, Graphics and Fun | Yihui Xie.  &lt;a href=&#34;http://yihui.name/en/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;http://yihui.name/en/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Jason Fisher,   (2012) Blog with Knitr and Jekyll.  &lt;a href=&#34;http://jfisher-usgs.github.io/r/2012/07/03/knitr-jekyll/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;http://jfisher-usgs.github.io/r/2012/07/03/knitr-jekyll/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Jason Fisher,   (2012) Jekyll Build on Windows.  &lt;a href=&#34;http://jfisher-usgs.github.io/lessons/2012/05/30/jekyll-build-on-windows/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;http://jfisher-usgs.github.io/lessons/2012/05/30/jekyll-build-on-windows/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Installation.  &lt;em&gt;Jekyll â¢ Simple, blog-aware, static sites&lt;/em&gt;  &lt;a href=&#34;http://jekyllrb.com/docs/installation/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;http://jekyllrb.com/docs/installation/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Jekyll Quick Start | ruhoh universal static blog generator.  &lt;a href=&#34;http://jekyllbootstrap.com/usage/jekyll-quick-start.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;http://jekyllbootstrap.com/usage/jekyll-quick-start.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Using Themes | ruhoh universal static blog generator.  &lt;a href=&#34;http://jekyllbootstrap.com/usage/jekyll-theming.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;http://jekyllbootstrap.com/usage/jekyll-theming.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Blog migrations.  &lt;em&gt;Jekyll â¢ Simple, blog-aware, static sites&lt;/em&gt;  &lt;a href=&#34;http://jekyllrb.com/docs/migrations/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;http://jekyllrb.com/docs/migrations/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Tal Galili,  add your blog!.  &lt;em&gt;R-bloggers&lt;/em&gt;  &lt;a href=&#34;http://www.r-bloggers.com/add-your-blog/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;http://www.r-bloggers.com/add-your-blog/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;jekyll-rss-feeds.  &lt;em&gt;GitHub&lt;/em&gt;  &lt;a href=&#34;https://github.com/snaptortoise/jekyll-rss-feeds&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://github.com/snaptortoise/jekyll-rss-feeds&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Yihui Xie,   (2013) Markdown or LaTeX? | Yihui Xie.  &lt;a href=&#34;http://yihui.name/en/2013/10/markdown-or-latex/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;http://yihui.name/en/2013/10/markdown-or-latex/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Carl Boettiger,   (2013) About this site.  &lt;em&gt;Lab Notebook&lt;/em&gt;  &lt;a href=&#34;http://carlboettiger.info/README.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;http://carlboettiger.info/README.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Carl Boettiger,   (2013) knitcitations: Citations for knitr markdown files.  &lt;a href=&#34;http://CRAN.R-project.org/package=knitcitations&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;http://CRAN.R-project.org/package=knitcitations&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;reproducibility&#34;&gt;Reproducibility&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nf&#34;&gt;sessionInfo&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;## R version 3.0.2 (2013-09-25)
+## Platform: x86_64-apple-darwin10.8.0 (64-bit)
+## 
+## locale:
+## [1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8
+## 
+## attached base packages:
+## [1] stats     graphics  grDevices utils     datasets  methods   base     
+## 
+## other attached packages:
+## [1] knitcitations_0.4-7 bibtex_0.3-6        knitr_1.5          
+## 
+## loaded via a namespace (and not attached):
+##  [1] codetools_0.2-8 digest_0.6.4    evaluate_0.5.1  formatR_0.10   
+##  [5] httr_0.2        RCurl_1.95-4.1  stringr_0.6.2   tools_3.0.2    
+##  [9] XML_3.95-0.2    xtable_1.7-1
+&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    
+    <item>
+      <title>Bmore Biostats is born!</title>
+      <link>https://lcolladotor.github.io/2013/11/07/bmorebiostats/</link>
+      <pubDate>Thu, 07 Nov 2013 00:00:00 +0000</pubDate>
+      <guid>https://lcolladotor.github.io/2013/11/07/bmorebiostats/</guid>
+      <description>&lt;p&gt;In recent weeks, I have met with a group of students &lt;a href=&#34;https://twitter.com/jhubiostat&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;@jhubiostat&lt;/a&gt; interested in blogging about their research, tutorials, pieces of R code, among plenty of other subjects. Within this group we had the idea to aggregate our blogs so it would be easier for others to follow us and to easily promote our own blogs to a much larger audience. Basically, do what &lt;a href=&#34;http://www.r-bloggers.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;R-bloggers&lt;/a&gt; does but focused on blogs from students at Johns Hopkins Biostatistics. Ideally, once a student publishes a new post, our site would pick it up and promote it.&lt;/p&gt;
+&lt;p&gt;A quick search revealed that making such a site was technically possible via several &lt;a href=&#34;http://wordpress.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;WordPress&lt;/a&gt; plugins available. We initally tried doing so via a wordpress.com account and quickly noticed that we needed a self-hosted wordpress account.&lt;/p&gt;
+&lt;h3 id=&#34;paperli&#34;&gt;paper.li&lt;/h3&gt;
+&lt;p&gt;In the meantime, we also explored the possibility of creating a &lt;em&gt;paper&lt;/em&gt; using &lt;a href=&#34;http://paper.li/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;paper.li&lt;/a&gt; which resulted in the &lt;a href=&#34;bit.ly/BmoreBiostats&#34;&gt;BmoreBiostats paper&lt;/a&gt;. The free version allows you to select up to 25 RSS feeds (among other sources) as the source of new content that you either publish&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;in the morning and afternoon,&lt;/li&gt;
+&lt;li&gt;daily,&lt;/li&gt;
+&lt;li&gt;weekly.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;This platform offers several options for promoting new content which we implemented. It can create posts to Twitter (see below), Facebook and LinkedIn.&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p&gt;New posts from students &lt;a href=&#34;https://twitter.com/jhubiostat&#34;&gt;@jhubiostat&lt;/a&gt; &lt;a href=&#34;http://t.co/jnHXs7qRPJ&#34;&gt;http://t.co/jnHXs7qRPJ&lt;/a&gt;&lt;/p&gt;&amp;mdash; bmorebiostats (@bmorebiostats) &lt;a href=&#34;https://twitter.com/bmorebiostats/statuses/398439067689689088&#34;&gt;November 7, 2013&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;//platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;p&gt;You can also embed it on a webpage just like &lt;a href=&#34;http://www.biostat.jhsph.edu/~lcollado/BmoreBiostats.html#.UnxMX5TF2Qn&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;I did in my own website&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The drawbacks are that customization is limited, specially if you do not like how it looks. It also does not provide you with a RSS feed. However, I did manage to get that to work via Facebook as you can notice &lt;a href=&#34;http://feeds.feedburner.com/BmoreBiostatsPaper&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;We have also heard some comments about paper.li been associated with spammers. I agree with this if you set the paper to be published either twice per day or daily. Weekly wise, I do not see it as a spam generator. However, this is in contradiction with the original goal of promoting posts as soon as they are made, and &lt;strong&gt;only&lt;/strong&gt; when there are new posts.&lt;/p&gt;
+&lt;p&gt;Nevertheless, in my opinion, the paper.li alternative can work well as a weekly summary of the posts. Something like the &lt;a href=&#34;http://simplystatistics.org/?s=sunday&amp;#43;data&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Sunday data/statistics link roundoup&lt;/a&gt;s at &lt;a href=&#34;http://simplystatistics.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;SimplyStatistics&lt;/a&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;planetakicom&#34;&gt;planetaki.com&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;http://biostat.jhsph.edu/~jmuschel/index.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;John&lt;/a&gt; found this resource and implemented a &lt;a href=&#34;http://www.planetaki.com/bmorestattest#start&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;quick test&lt;/a&gt;. It looks very simple, yet it includes full length posts and was very easy to setup. Note that the material there is deleted after 7 days since they assume that you check it more than once per week. We saw this as a potential negative feature, plus there is no native support for social media.&lt;/p&gt;
+&lt;h3 id=&#34;bmorebiostatcom&#34;&gt;bmorebiostat.com&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;http://mandymejia.wordpress.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Amanda&lt;/a&gt; and &lt;a href=&#34;http://jfortinbiostats.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Jean-Philippe&lt;/a&gt; [thanks for trying out Wordpress__.com__!] figured out the WordPress solution, got us a hosted service and reserved the domain &lt;a href=&#34;http://bmorebiostat.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;bmorebiostat.com&lt;/a&gt;. Then it was just a matter of choosing a plugin to do the job: we are using &lt;a href=&#34;http://wordpress.org/plugins/feedwordpress/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;FeedWordPress&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;We split the work and some tweaked the layout and added nice pictures of the &lt;a href=&#34;http://bmorebiostat.com/contributors/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;six founding blog authors&lt;/a&gt;. Thanks to what I learnt making &lt;a href=&#34;http://bit.ly/FellBit&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Fellgernon Bit&lt;/a&gt; I added the social features: &lt;a href=&#34;http://www.addthis.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;AddThis&lt;/a&gt; Smart Layers, connections to social media, &lt;a href=&#34;http://disqus.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Disqus&lt;/a&gt; comments (they will not be used much), and &lt;a href=&#34;http://feedburner.google.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;FeedBurner&lt;/a&gt; RSS feeds.&lt;/p&gt;
+&lt;p&gt;I like how the site looks and it fully achieves our initial goal. Yay!&lt;/p&gt;
+&lt;p&gt;Currently, &lt;a href=&#34;bit.ly/BmoreBiostat&#34;&gt;BmoreBiostats&lt;/a&gt; is set up in a way that only the beginning of each post is shown. We can also set it up to contain full posts, but then the &lt;code&gt;R&lt;/code&gt; code highlighting needs to be polished out.&lt;/p&gt;
+&lt;h3 id=&#34;current-implementation&#34;&gt;Current implementation&lt;/h3&gt;
+&lt;p&gt;The full current workflow is illustrated below:&lt;/p&gt;
+&lt;center&gt;
+&lt;a href=&#34;http://lcolladotor.github.io/figs/2013-11-07-bmorebiostats/BmoreBiostats-schema.png&#34;&gt;&lt;img src=&#34;http://lcolladotor.github.io/figs/2013-11-07-bmorebiostats/BmoreBiostats-schema.png&#34; alt=&#34;Workflow&#34; style=&#34;width: 900px;&#34;/&gt;&lt;/a&gt;
+&lt;/center&gt;
+&lt;p&gt;As a group we are now thinking of dropping the paper.li route. Well, the only option we might use is the weekly one. One strong argument in favor of dropping the paper.li route is that one site avoids any dilution given by having two. Furthermore, we do not want to be seen as spammers although some shameless self-promotion is not so bad either (something I learnt from &lt;a href=&#34;https://twitter.com/hspter&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;@hspter&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;I guess that I am the only one still in favor of weekly summaries and using the feature of embeding the paper in a website (like &lt;a href=&#34;http://www.biostat.jhsph.edu/~lcollado/BmoreBiostats.html#.UnxMX5TF2Qn&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;). To minimize the dilution, all the paper.li links point to &lt;a href=&#34;http://bmorebiostat.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;bmorebiostat.com&lt;/a&gt;. You can also argue that there might be some interested only on the weekly summaries. Aka, we are just giving others options!&lt;/p&gt;
+&lt;p&gt;Maybe I am just reluctant to delete the &lt;a href=&#34;bit.ly/BmoreBiostats&#34;&gt;BmoreBiostats paper&lt;/a&gt; so soon after I finally completed it. However, some of the work involved is not going down the drain since the social media accounts needed for the paper are now being used by &lt;a href=&#34;http://bmorebiostat.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;bmorebiostat.com&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Note that we do not see much of a problem with the fact that &lt;a href=&#34;http://bmorebiostat.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;bmorebiostat.com&lt;/a&gt; involves monthly fees as we are hoping to get some department support (cross fingers!).&lt;/p&gt;
+&lt;h3 id=&#34;going-forward&#34;&gt;Going forward&lt;/h3&gt;
+&lt;p&gt;We are very excited that we have implemented the aggregator of student blogs from Johns Hopkins Biostatistics. We believe that it will be helpful to others including prosprective students. Now that the aggregator is practically finished, we can now move unto writing exciting posts!&lt;/p&gt;
+&lt;p&gt;If you are a student &lt;a href=&#34;https://twitter.com/jhubiostat&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;@jhubiostat&lt;/a&gt; &amp;ndash;or a former student&amp;ndash; and you have a Biostatistics blog that you want to add to &lt;a href=&#34;http://bmorebiostat.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;bmorebiostat.com&lt;/a&gt;, let us know! If you are a current student &lt;a href=&#34;https://twitter.com/jhubiostat&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;@jhubiostat&lt;/a&gt; and need help getting started, contact us!&lt;/p&gt;
+&lt;p&gt;Be sure to follow us! Here is a hint why:&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p&gt;It seems clear that &lt;a href=&#34;https://twitter.com/jhubiostat&#34;&gt;@jhubiostat&lt;/a&gt; is just dominating all the social media &lt;a href=&#34;https://twitter.com/bmorebiostats&#34;&gt;@bmorebiostats&lt;/a&gt;&lt;/p&gt;&amp;mdash; Simply Statistics (@simplystats) &lt;a href=&#34;https://twitter.com/simplystats/statuses/398625668851716096&#34;&gt;November 8, 2013&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;//platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Analyzing SimplyStatistics visits info</title>
+      <link>https://lcolladotor.github.io/2013/03/09/Analyzing-SimplyStatistics-visits-info/</link>
+      <pubDate>Sat, 09 Mar 2013 00:00:00 +0000</pubDate>
+      <guid>https://lcolladotor.github.io/2013/03/09/Analyzing-SimplyStatistics-visits-info/</guid>
+      <description>&lt;p&gt;Recently we had to analyze the data of the number of visits per day to &lt;a href=&#34;http://simplystatistics.org/&#34;&gt;SimplyStatistics.org&lt;/a&gt;. There were two goals:&lt;/p&gt;
+&lt;ol&gt;&lt;li&gt;Estimate the fraction of visitors retained after a spike in the number of visitors&lt;/li&gt;
+&lt;li&gt;Identify (if any) any factors that influence the fraction estimated in 1.&lt;/li&gt;
+&lt;/ol&gt;&lt;p&gt;For me it was a fun project in part because I like SimplyStatistics but also because I think that finding the answers to the questions would be interesting and help understand the readers of that blog.&lt;/p&gt;
+&lt;p&gt;Sadly, I didn&amp;#8217;t work on it much. We had lots of stuff due that week, but well, I&amp;#8217;m happy enough with the analysis I did. My own report is hosted &lt;a href=&#34;https://github.com/lcolladotor/lcollado753/tree/master/hw/data-analysis-02&#34;&gt;here&lt;/a&gt; and &lt;a href=&#34;https://github.com/lcolladotor/lcollado753/blob/master/hw/data-analysis-02/report/data_02_lcollado.pdf&#34; target=&#34;_blank&#34;&gt;this is the pdf file of the report itself&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Half joking with other students, I said that I basically did t-tests. Hopefully I can work on changing this tendency with the pile of recommended books I&amp;#8217;ve been acquiring but not really reading through. Except for the &lt;a href=&#34;http://bit.ly/13MyHwt&#34;&gt;ggplot2: Elegant Graphics for Data Analysis&lt;/a&gt; and the &lt;a href=&#34;http://oreil.ly/Yk8xtl&#34;&gt;R Graphics Cookbook&lt;/a&gt;. Sounds like spring break will be fun :P&lt;/p&gt;
+&lt;p&gt;Kind of related to this, &lt;a href=&#34;http://bit.ly/13MypWw&#34;&gt;Jeff Leek announced yesterday that he is going to  compile a list of student blogs that have something to do with statistics and data&lt;/a&gt;. He added a link to my blog which is why I saw a large peak of Fellgernon Bit&amp;#8217;s visitor data. After all, when doing the data analysis described above I played around with the data from Fellgernon Bit and now know that at a minimum posting drives visitor&amp;#8217;s into sites (which sounds obvious, but maybe you get random traffic) —see &lt;a href=&#34;https://github.com/lcolladotor/lcollado753/blob/master/hw/data-analysis-02/report/data_02_lcollado.pdf&#34;&gt;fig 1 of the report&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;image&#34; src=&#34;http://media.tumblr.com/f5ce3511fb8d6899a613e348a846dcc8/tumblr_inline_mjf4iavs4A1qz4rgp.png&#34;/&gt;&lt;/p&gt;
+&lt;p&gt;Had Jeff done so before, I could have a point estimate (but without being able to say something about the uncertainty of it) that SimplyStatistics has 142 visitors that read the posts AND click on the links. Maybe using the info from &lt;a href=&#34;http://bit.ly/12vVmbp&#34;&gt;Hilary&amp;#8217;s&lt;/a&gt; and &lt;a href=&#34;http://bit.ly/13MyyZS&#34;&gt;Alyssa&amp;#8217;s&lt;/a&gt; blogs we could have an estimate with some measure of uncertainty, but only for March 8th.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Correctly synching AddThis and Google Analytics social stats</title>
+      <link>https://lcolladotor.github.io/2012/01/27/correctly-synching-addthis-and-google-analytics-social/</link>
+      <pubDate>Fri, 27 Jan 2012 00:00:00 +0000</pubDate>
+      <guid>https://lcolladotor.github.io/2012/01/27/correctly-synching-addthis-and-google-analytics-social/</guid>
+      <description>&lt;p&gt;As a minor addition to my previous posts about setting up a blog, I want to detail a bit more how to synchronize your &lt;a href=&#34;http://www.addthis.com/analytics&#34;&gt;AddThis social sharing statistics&lt;/a&gt; (AddThis Analytics) with &lt;a href=&#34;http://www.google.com/analytics/&#34;&gt;Google Analytics&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The &lt;a href=&#34;http://www.addthis.com/help/google-analytics-integration#social&#34;&gt;main help file explaining how to do&lt;/a&gt; so has been a bit confusing for me. Though, in part that&amp;#8217;s because I didn&amp;#8217;t read it completely. Plus there were a few things I didn&amp;#8217;t know.&lt;/p&gt;
+&lt;p&gt;First, Google Analytics (GA) has two ways in which you can add it to your site: synchronous and asynchronous. There are a few posts around, &lt;a href=&#34;http://blog.httpwatch.com/2010/07/29/asynchronous-google-analytics-is-better-but-not-faster/&#34;&gt;like this one&lt;/a&gt;, explaining the difference. Basically, the asynchronous mode is supposed to give your site faster load times (negligible normally) and most importantly more complete data in cases where people close your site before it finishes loading.&lt;/p&gt;
+&lt;p&gt;I prefer the asynchronous mode, and the recommendation is to include the script tage before the end of the head tag. In a few cases in Tumblr&amp;#8217;s free blog themes, this script is included at the bottom of the html code. So, you might be interested in changing this otherwise the great advantage of the asynchronous mode is lost: the page has to load entirely to report stuff to GA.&lt;/p&gt;
+&lt;p&gt;Once you do so, note how the AddThis manual has a note that the AddThis script has to go after the GA script. I didn&amp;#8217;t read this the first time and I was quite puzzled when no social events were showing up in the GA report.&lt;/p&gt;
+&lt;p&gt;Next, compared to ShareThis, AddThis social events will be shown in your GA report as &amp;#8220;facebook&amp;#8221;, &amp;#8220;twitter&amp;#8221;, etc instead of &amp;#8220;ShareThis: facebook&amp;#8221; (or something like that). That&amp;#8217;s only true if you included the &amp;#8220;data_ga_social&amp;#160;: true&amp;#8221; part in the code. Otherwise GA will only shown under the &amp;#8220;Social&amp;#8221; tab the Google +1 clicks. &lt;/p&gt;
+&lt;p&gt;In short: use the GA asynchronous code before the end of the head tag. Add the AddThis script tags below it. Happy social sync :)&lt;/p&gt;
+&lt;p&gt;I have to say that so far I like the AddThis Analytics way more than Google Analytics for the social stats. Part of it is the &amp;#8220;viral lift&amp;#8221; percent that AddThis shows. The other part is that it seems to contain more data. Though it might be because I just fixed the sync.&lt;/p&gt;
+&lt;p&gt;You might want to read the:&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;a href=&#34;http://www.addthis.com/blog/2011/10/28/addthis-integrates-with-google-social-plugin-analytics/#.Tx9Ms-POzIw&#34;&gt;AddThis GA sync announcement at AddThis.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.addthis.com/blog/2011/09/13/add-google-social-tracking/#.Tx9Mt-POzIw&#34;&gt;Another AddThis tip about how to do the sync&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://analytics.blogspot.com/2011/10/optimize-engagement-with-addthis-and.html&#34;&gt;The post on GA&amp;#8217;s blog explaining a tiny bit about the difference between ShareThis and AddThis sync to GA.&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Make it easy for your visitors to suscribe with a burnt RSS feed</title>
+      <link>https://lcolladotor.github.io/2011/11/30/make-it-easy-for-your-visitors-to-suscribe-with-a-burnt/</link>
+      <pubDate>Wed, 30 Nov 2011 00:00:00 +0000</pubDate>
+      <guid>https://lcolladotor.github.io/2011/11/30/make-it-easy-for-your-visitors-to-suscribe-with-a-burnt/</guid>
+      <description>&lt;p&gt;Recently I talked about &lt;a href=&#34;http://fellgernon.tumblr.com/post/13070638939/setting-up-your-blog&#34;&gt;how to set up your own blog&lt;/a&gt; and now I&amp;#8217;m going to continue by emphasizing the importance of an &lt;a href=&#34;http://en.wikipedia.org/wiki/RSS&#34;&gt;RSS feed&lt;/a&gt;. What is it? Basically it is a unique format in which content from frequently updated sites (like a blog) is &lt;a href=&#34;http://en.wikipedia.org/wiki/Web_syndication&#34;&gt;syndicated&lt;/a&gt;. Web syndication allows you to share the content of your site (blog) to many different sites automatically. This is specially useful for people who are interested in following your blog. Sure, you can let them type your blog&amp;#8217;s site each time or simply allow them to receive updates on their email, feed reader (I recommend &lt;a href=&#34;http://www.google.com/reader&#34;&gt;Google Reader&lt;/a&gt;), etc. After all, you don&amp;#8217;t want your followers to have to remember to visit your site every time if there is an easier option out there. Sure, you already made your blog social but that was meant to facilitate comments and sharing of your blog&amp;#8217;s content by it&amp;#8217;s visitors. While publishing your blog to Twitter will get initial visitors into the blog, an RSS feed will complete the job when they suscribe to it.&lt;/p&gt;
+&lt;p&gt;Blogging platforms will normally create an RSS feed for your blog. Yet, this is a plain XML file which is just a pain to read. However, the good news is that you can &lt;em&gt;burn&lt;/em&gt; your feed which makes it pretty. That&amp;#8217;s where &lt;a href=&#34;http://feedburner.google.com&#34;&gt;FeedBurner&lt;/a&gt; comes into play. &lt;/p&gt;
+&lt;p&gt;To use it, you simply have to give it your RSS feed XML url and choose a name. For example, the RSS feed XML url for Fellgernon Bit is &lt;a href=&#34;http://fellgernon.tumblr.com/rss&#34;&gt;&lt;a href=&#34;http://fellgernon.tumblr.com/rss&#34;&gt;http://fellgernon.tumblr.com/rss&lt;/a&gt;&lt;/a&gt; which is rather ugly, but looks much better with FeedBurner at &lt;a href=&#34;http://feeds.feedburner.com/FellgernonBit&#34;&gt;&lt;a href=&#34;http://feeds.feedburner.com/FellgernonBit&#34;&gt;http://feeds.feedburner.com/FellgernonBit&lt;/a&gt;&lt;/a&gt; The content is readable and FeedBurner allows your visitors to suscribe using a wide variety of tools with a few clicks.&lt;/p&gt;
+&lt;p&gt;This is not the end, as you can create lots of interesting gadgets through FeedBurner. For example, you can add a link with the number of suscribers (as counted through FeedBurner):&lt;/p&gt;
+&lt;p&gt;&lt;img height=&#34;26&#34; src=&#34;http://feeds.feedburner.com/~fc/FellgernonBit?bg=CC0033&amp;amp;fg=444444&amp;amp;anim=0&#34; width=&#34;88&#34;/&gt;&lt;/p&gt;
+&lt;p&gt;To do so, enter the FeedBurner page for your blog then click on the &amp;#8220;Publicize&amp;#8221; tab and go to &amp;#8220;FeedCount&amp;#8221;. There you&amp;#8217;ll have several options (like choosing the color, type, etc) and you&amp;#8217;ll get a piece of html code that creates the link:&lt;/p&gt;
+&lt;p&gt;&amp;lt;p&amp;gt;&amp;lt;a href=&amp;#8221;http://feeds.feedburner.com/FellgernonBit&amp;#8221;&amp;gt;&amp;lt;img src=&amp;#8221;http://feeds.feedburner.com/~fc/FellgernonBit?bg=CC0033&amp;amp;amp;fg=444444&amp;amp;amp;anim=0&amp;#8221; height=&amp;#8221;26&amp;#8221; width=&amp;#8221;88&amp;#8221; style=&amp;#8221;border:0&amp;#8221; alt=&amp;#8221;&amp;#8221; /&amp;gt;&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;&lt;/p&gt;
+&lt;p&gt;Now simply paste it in the html file of your blog wherever you want it to appear.&lt;/p&gt;
+&lt;p&gt;FeedBurner offers other options, statistics, etc but I think that one of the most important one is BuzzBoost (again under the Publicize tab). This allows you to show the most recent entries of your blog in other sites you own. Friends might also want to link your blog. In my case, I&amp;#8217;m using it show the most recent posts from &lt;a href=&#34;http://salmoblog.org&#34;&gt;salmoblog.org&lt;/a&gt; as I want to publicize it, plus I&amp;#8217;m part of the contributors there. As with FeedCount, BuzzBoost has several options and will give you an html code. Here is the code for Fellgernon Bit:&lt;/p&gt;
+&lt;p&gt;&amp;lt;script src=&amp;#8221;http://feeds.feedburner.com/FellgernonBit?format=sigpro&amp;#8221; type=&amp;#8221;text/javascript&amp;#8221; &amp;gt;&amp;lt;/script&amp;gt;&amp;lt;noscript&amp;gt;&amp;lt;p&amp;gt;Subscribe to RSS headline updates from: &amp;lt;a href=&amp;#8221;http://feeds.feedburner.com/FellgernonBit&amp;#8221;&amp;gt;&amp;lt;/a&amp;gt;&amp;lt;br/&amp;gt;Powered by FeedBurner&amp;lt;/p&amp;gt; &amp;lt;/noscript&amp;gt;&lt;/p&gt;
+&lt;p&gt;In the end, if you make your blog it&amp;#8217;s worth the extra minutes to configure your RSS feed and make it easy for your visitors to suscribe to it. Plus, you can use FeedBurner to make it nice looking and add some cool gadgets if you want.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Setting up your blog</title>
+      <link>https://lcolladotor.github.io/2011/11/20/setting-up-your-blog/</link>
+      <pubDate>Sun, 20 Nov 2011 00:00:00 +0000</pubDate>
+      <guid>https://lcolladotor.github.io/2011/11/20/setting-up-your-blog/</guid>
+      <description>&lt;p&gt;Now that I&amp;#8217;ve spent time re-doing Fellgernon Bit, I thought it&amp;#8217;d be a good time my experience on setting up a socially-connected blog.&lt;/p&gt;
+&lt;p&gt;First of all, you need to choose a blog platform. There are some around like Blogger and WordPress that are widely used and were some of the first platforms. In my case though, I really like how easy http://www.tumblr.com/ is to use. &lt;/p&gt;
+&lt;p&gt;Once you register and have the default blog, go to the customize menu from the Tumblr dashboard and browse the Free Themes. I ended up choosing the &lt;a href=&#34;http://simplethingstheme.tumblr.com/&#34;&gt;Simple Things&lt;/a&gt; theme because I liked the way it looks and it already included some things I wanted like the Google+ button, Facebook and Twitter sharing. This theme also has several easy options so you can easily link your blog to &lt;a href=&#34;http://www.google.com/analytics/&#34;&gt;Google Analytics&lt;/a&gt;. &lt;/p&gt;
+&lt;p&gt;One of the very nice gadgets this theme has (as other Tumblr themes) is an easy to customize &lt;a href=&#34;http://disqus.com/dashboard/&#34;&gt;Disqus&lt;/a&gt; account. What is this? Basically, it&amp;#8217;s a system for comments. If the visitor registers at Disqus they can choose to share their comments via the main social networks, which is something that I liked. An alternative is the Facebook Social Plugin, but I don&amp;#8217;t like because only facebook-users can comment. I know this sounds strange to many of you, but I don&amp;#8217;t think that everyone has a fb account and with newer alternatives I believe they&amp;#8217;ll lose some of their current userbase. Anyhow, with Disqus visitors can use their Twitter, Fb, Google, OpenId, &amp;#8230; accounts to identify themselves and they can easily have their comments appear in the social networks.&lt;/p&gt;
+&lt;p&gt;One of the cool things Disqus offers is an easy to install widget where visitors can see the top commenters, recent comments, and most discussed threads (or only of the three). To set it up, go to the Admin window and then go to the Tools tab and click on Code.&lt;/p&gt;
+&lt;p&gt;As you might have noticed, you will have to modify the html file from your theme if you want to connect it and/or add widgets. Don&amp;#8217;t be afraid and just follow the simple instructions all these widgets give you.&lt;/p&gt;
+&lt;p&gt;Once you have your comment system set up, you might be interested in adding more social networks for your visitors to share your posts on. That&amp;#8217;s where &lt;a href=&#34;http://sharethis.com/&#34;&gt;ShareThis&lt;/a&gt; becomes quite handy. Note that ShareThis allows you to add Twitter, Fb, Google+ so even if the theme you chose doesn&amp;#8217;t come socially-connected you can do it through ShareThis. In my case, I only added the ShareThis button which pretty much allows visitors to use the whole system of social networks. &lt;/p&gt;
+&lt;p&gt;This theme (and other Tumblr themes) allow you to link the RSS feed of your blog with &lt;a href=&#34;http://feedburner.google.com&#34;&gt;FeedBurner&lt;/a&gt; which definitely makes your RSS feed look nicer and easy to subscribe to with tools like &lt;a href=&#34;http://www.google.com/reader&#34;&gt;Google Reader&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Another cool widget to add to your blog is a Tag Cloud. This is probably the easiest widget to add and this &lt;a href=&#34;http://oobly.com/2011/08/05/how-to-get-display-a-post-tag-cloud-widget-in-your-tumblr-blog_387/&#34;&gt;excellent post&lt;/a&gt; describes all the steps you will want to follow. The only difficult part can be choosing where to add the code in the html file. In my case, I simply looked for the RSS tag and added it below. The &lt;a href=&#34;http://www.w3schools.com/tags/tag_div.asp&#34;&gt;div html&lt;/a&gt; tags can be useful when you are adding widgets.&lt;/p&gt;
+&lt;p&gt;To top your blog off, a must-have widget is &lt;a href=&#34;http://www.linkwithin.com/&#34;&gt;LinkWithin&lt;/a&gt;. Basically, it adds 3-5 links to older posts from your blog which definitely helps keep your older posts in the loop. Otherwise they are simply lost in the eternity of the &lt;em&gt;archive&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Finally, don&amp;#8217;t forget to change the settings of your blog from the Tumblr dashboard. You can make so every new post is automatically posted on your Twitter and Fb accounts (I hope they add Google+ soon). &lt;/p&gt;
+&lt;p&gt;This might all seem like a lot of work, but it&amp;#8217;s much quicker to do if you know what you are looking for. And I hope that it&amp;#8217;ll be useful to you.&lt;/p&gt;
+&lt;p&gt;Happy social-blogging!&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
