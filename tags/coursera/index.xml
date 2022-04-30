@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Coursera | L. Collado-Torres</title>
-    <link>https://lcolladotor.github.io/tags/coursera/</link>
-      <atom:link href="https://lcolladotor.github.io/tags/coursera/index.xml" rel="self" type="application/rss+xml" />
+    <link>http://lcolladotor.github.io/tags/coursera/</link>
+      <atom:link href="http://lcolladotor.github.io/tags/coursera/index.xml" rel="self" type="application/rss+xml" />
     <description>Coursera</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2011-2021. All thoughts and opinions here are my own. The icon was designed by [Mauricio Guzmán](https://www.linkedin.com/in/mauricio-guzman-6529b551/) and is inspired by [Huichol culture](https://en.wikipedia.org/wiki/Huichol); it represents my community building interests</copyright><lastBuildDate>Thu, 21 Mar 2013 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2011-2022. All thoughts and opinions here are my own. The icon was designed by [Mauricio Guzmán](https://www.linkedin.com/in/mauricio-guzman-6529b551/) and is inspired by [Huichol culture](https://en.wikipedia.org/wiki/Huichol); it represents my community building interests</copyright><lastBuildDate>Thu, 21 Mar 2013 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://lcolladotor.github.io/images/icon_hu2b32c4ab415f12f472f73c7b0301b0d1_19400_512x512_fill_lanczos_center_2.png</url>
+      <url>http://lcolladotor.github.io/images/icon_hu2b32c4ab415f12f472f73c7b0301b0d1_19400_512x512_fill_lanczos_center_3.png</url>
       <title>Coursera</title>
-      <link>https://lcolladotor.github.io/tags/coursera/</link>
+      <link>http://lcolladotor.github.io/tags/coursera/</link>
     </image>
     
     <item>
       <title>&#34;I am a writer&#34; exercise</title>
-      <link>https://lcolladotor.github.io/2013/03/21/I-am-a-writer-exercise/</link>
+      <link>http://lcolladotor.github.io/2013/03/21/I-am-a-writer-exercise/</link>
       <pubDate>Thu, 21 Mar 2013 00:00:00 +0000</pubDate>
-      <guid>https://lcolladotor.github.io/2013/03/21/I-am-a-writer-exercise/</guid>
+      <guid>http://lcolladotor.github.io/2013/03/21/I-am-a-writer-exercise/</guid>
       <description>&lt;p&gt;I do not have a clear memory of when I started to write or in which language it was. My first written words might have been in English since I lived in Boston (USA) three years during my early childhood. By age five I was back in Mexico and that is where I am sure I wrote my first full homeworks. During elementary school, I changed languages once more—this time to French. By middle school, I started to be interested in two new types of languages. One was mathematics which I liked, but which I didn&amp;#8217;t consider till much later. The other was related to computers as I learnt the very basics of HTML—that&amp;#8217;s all I know so far. In college—having reverted back to Spanish and English—and in my current stage in graduate school, I am a writer because I write—I mainly typeset using &lt;code&gt;LaTeX&lt;/code&gt;—my homeworks, code in &lt;code&gt;R&lt;/code&gt;, and summarize findings in reports. For the past year, I have been using &lt;a href=&#34;http://fellgernon.tumblr.com/&#34;&gt;Fellgernon Bit&lt;/a&gt; to practice writing and hopefully improve my skills. Furthermore, for me the process of writing helps me clarify my thoughts and organize them before attempting to communicate them. Sometimes it works, others it doesn&amp;#8217;t. Finally, I am a writer because it is crucial in the academic environment to be able to communicate through the printed word. This is tricky because sometimes you want to be very short, direct but not leave anything important out, like when emailing a professor. Other times, you have to be very precise and clear yet tell an interesting story such as when writing a scientific report.&lt;/p&gt;
 &lt;p&gt;Overall, I consider myself a writer in training and would like to improve. But as with everything, practice is key. That&amp;#8217;s a big part of why I blog and why I&amp;#8217;m enrolled in this course.&lt;/p&gt;
 </description>
@@ -24,9 +24,9 @@
     
     <item>
       <title>And so begins English Composition I</title>
-      <link>https://lcolladotor.github.io/2013/03/21/And-so-begins-English-Composition-I/</link>
+      <link>http://lcolladotor.github.io/2013/03/21/And-so-begins-English-Composition-I/</link>
       <pubDate>Thu, 21 Mar 2013 00:00:00 +0000</pubDate>
-      <guid>https://lcolladotor.github.io/2013/03/21/And-so-begins-English-Composition-I/</guid>
+      <guid>http://lcolladotor.github.io/2013/03/21/And-so-begins-English-Composition-I/</guid>
       <description>&lt;p&gt;This week started the English Composition I: Achieving Expertise course (&lt;span class=&#34;showtooltip&#34; title=&#34;(2013). Coursera.  https://www.coursera.org/ [Online.  last-accessed: 2013-03-21 03:47:13].   https://www.coursera.org/course/composition.&#34;&gt;&lt;a href=&#34;https://www.coursera.org/course/composition&#34;&gt;Comer, 2013&lt;/a&gt;&lt;/span&gt;) that I have been looking forward to.&lt;/p&gt;
 &lt;p&gt;I am not sure yet how long I will last, but I hope to enjoy it as much as I can. Plus, it should help me with my posting and other writing areas. While I last in the course, I plan to publish my writings in the blog too. So you will hopefully see me be more active here.&lt;/p&gt;
 &lt;p&gt;As it is important to cite when writing, I have also figured out how to do so automatically in Rmd files. For that I learnt how to use &lt;strong&gt;knitcitations&lt;/strong&gt; from the GitHub instructions (&lt;span class=&#34;showtooltip&#34; title=&#34;cboettig (2013). knitcitations.   https://github.com/cboettig/knitcitations [Online. last-accessed:  2013-03-21 03:19:44].   https://github.com/cboettig/knitcitations.&#34;&gt;&lt;a href=&#34;https://github.com/cboettig/knitcitations&#34;&gt;knitcitations&lt;/a&gt;&lt;/span&gt;) and a explanatory post (&lt;span class=&#34;showtooltip&#34; title=&#34;Boettiger C (2013). knitcitations.   http://www.carlboettiger.info/2012/05/30/knitcitations.html  [Online. last-accessed: 2013-03-21 02:15:41].   http://www.carlboettiger.info/2012/05/30/knitcitations.html.&#34;&gt;&lt;a href=&#34;http://www.carlboettiger.info/2012/05/30/knitcitations.html&#34;&gt;Boettiger, 2013&lt;/a&gt;&lt;/span&gt;).&lt;/p&gt;
@@ -53,9 +53,9 @@ mycitep &amp;lt;- function(x, short, year=substr(date(), 21, 24), tooltip=TRUE) 
     
     <item>
       <title>An Online Bioinformatics Curriculum</title>
-      <link>https://lcolladotor.github.io/2012/10/07/an-online-bioinformatics-curriculum/</link>
+      <link>http://lcolladotor.github.io/2012/10/07/an-online-bioinformatics-curriculum/</link>
       <pubDate>Sun, 07 Oct 2012 00:00:00 +0000</pubDate>
-      <guid>https://lcolladotor.github.io/2012/10/07/an-online-bioinformatics-curriculum/</guid>
+      <guid>http://lcolladotor.github.io/2012/10/07/an-online-bioinformatics-curriculum/</guid>
       <description>&lt;p&gt;Last week I talked about online courses in my &lt;a href=&#34;http://fellgernon.tumblr.com/post/32688589475/jhsph-biostat-through-coursera#.UHH1Q_l26lo&#34;&gt;JHSPH-Biostat through Coursera&lt;/a&gt; post. Now I&amp;#8217;m back to comment on &lt;strong&gt;&lt;a href=&#34;http://www.ploscompbiol.org/article/info:doi/10.1371/journal.pcbi.1002632&#34;&gt;An Online Bioinformatics Curriculum&lt;/a&gt;&lt;/strong&gt; by David B. Searls. &lt;a href=&#34;http://labs.bio.unc.edu/Dangl/people/individuals/Sur.html&#34;&gt;Sur Herrera&lt;/a&gt; pointed out this paper to me, and I have to say that if you are considering learning bioinformatics online it will be very useful to you. David Searls first goes through a history recap of online (free) courses. Notably, in the last year Coursera and other startups offered their first courses. MIT has also evolved and now offers &lt;a href=&#34;http://mitx.mit.edu/&#34;&gt;MITx&lt;/a&gt; courses, where MIT does give certificates. For example, I&amp;#8217;m a bit interested in the &lt;a href=&#34;https://www.edx.org/courses/MITx/6.00x/2012_Fall/about&#34;&gt;Introduction to Computer Science and Programming 6.00x&lt;/a&gt; course. It aims to cover a wide variety of topics which can be nice for a review/learning and is Python-based. &lt;/p&gt;
 &lt;p&gt;The main body of David Searls&amp;#8217; paper is a huge list of summaries for the main courses out there for bioinformaticians. He covers several tracks depending on what subarea of bioinformatics you are interested in. For each summary, he recommends an specific course to take along with the main reasons why he prefers it over other options. If you have ever looked into OCW, Coursera, etc; you know this is a great resource. After all, there are lots of options for some courses like calculus and it can be a time drain to look through them before deciding which to take. This summary is the best part of the paper.&lt;/p&gt;
 &lt;p&gt;David Searls ends it with a conclusion section and some tips on how to make the best of the available resources. How far can free online education go? Well, obviously for informatics it can go almost all the way compared to wet lab biology. Plus, you have to be organized/dedicated/motivated and a good self-learner. Even with all that, you still need good ideas to use as learning projects. If you are looking for one, I would take a look &lt;a href=&#34;http://simplystatistics.org/post/18493330661/statistics-project-ideas-for-students&#34;&gt;here&lt;/a&gt; and &lt;a href=&#34;http://simplystatistics.org/post/32881133740/statistics-project-ideas-for-students-part-2&#34;&gt;here&lt;/a&gt; where Jeff Leek lists some of his project suggestions.&lt;/p&gt;
@@ -64,9 +64,9 @@ mycitep &amp;lt;- function(x, short, year=substr(date(), 21, 24), tooltip=TRUE) 
     
     <item>
       <title>JHSPH-Biostat through Coursera</title>
-      <link>https://lcolladotor.github.io/2012/10/01/JHSPH-Biostat-through-Coursera/</link>
+      <link>http://lcolladotor.github.io/2012/10/01/JHSPH-Biostat-through-Coursera/</link>
       <pubDate>Mon, 01 Oct 2012 00:00:00 +0000</pubDate>
-      <guid>https://lcolladotor.github.io/2012/10/01/JHSPH-Biostat-through-Coursera/</guid>
+      <guid>http://lcolladotor.github.io/2012/10/01/JHSPH-Biostat-through-Coursera/</guid>
       <description>&lt;p&gt;Have you heard of online education? If you are in the US or Mexico I&amp;#8217;m sure that you have seen some ads about online universities. Well, that&amp;#8217;s not the type of education I&amp;#8217;m talking about. I&amp;#8217;m talking about free high-quality education. &lt;/p&gt;
 &lt;p&gt;For some years, the top option has been the &lt;strong&gt;O&lt;/strong&gt;pen &lt;strong&gt;C&lt;/strong&gt;ourse&lt;strong&gt;w&lt;/strong&gt;are (OCW) organized under the &lt;a href=&#34;http://www.ocwconsortium.org/&#34;&gt;Open Courseware Consortium&lt;/a&gt; (OCWC). Back in 2009 I was pushed my undergrad (LCG-UNAM) to design and teach OCW-compliant courses. I even taught a &lt;a href=&#34;http://www.lcg.unam.mx/~lcollado/B/index_en.html&#34;&gt;course on R/Bioconductor&lt;/a&gt; and thought of it as a pilot OCW course. The first seven classes were video recorded. But that project hit a wall because many of the biology professors used slides that heavily relied on copyrighted material. For OCW courses you have to own the copyright of the material that you use (or get permission), so just the idea of having to re-do all the diagrams and figures was overwhelming. This hasn&amp;#8217;t stopped some big universities like &lt;a href=&#34;http://ocw.mit.edu/index.htm&#34;&gt;MIT from publishing OCW-compliant courses&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Recently there&amp;#8217;s been talk of the new horse in the race: &lt;a href=&#34;https://www.coursera.org/&#34;&gt;Coursera&lt;/a&gt;. What is it? Well, &lt;a href=&#34;https://www.coursera.org/about&#34;&gt;according to themselves&lt;/a&gt;:&lt;/p&gt;

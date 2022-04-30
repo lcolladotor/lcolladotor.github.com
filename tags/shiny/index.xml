@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>shiny | L. Collado-Torres</title>
-    <link>https://lcolladotor.github.io/tags/shiny/</link>
-      <atom:link href="https://lcolladotor.github.io/tags/shiny/index.xml" rel="self" type="application/rss+xml" />
+    <link>http://lcolladotor.github.io/tags/shiny/</link>
+      <atom:link href="http://lcolladotor.github.io/tags/shiny/index.xml" rel="self" type="application/rss+xml" />
     <description>shiny</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2011-2021. All thoughts and opinions here are my own. The icon was designed by [Mauricio Guzmán](https://www.linkedin.com/in/mauricio-guzman-6529b551/) and is inspired by [Huichol culture](https://en.wikipedia.org/wiki/Huichol); it represents my community building interests</copyright><lastBuildDate>Sat, 29 Feb 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2011-2022. All thoughts and opinions here are my own. The icon was designed by [Mauricio Guzmán](https://www.linkedin.com/in/mauricio-guzman-6529b551/) and is inspired by [Huichol culture](https://en.wikipedia.org/wiki/Huichol); it represents my community building interests</copyright><lastBuildDate>Sat, 29 Feb 2020 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://lcolladotor.github.io/images/icon_hu2b32c4ab415f12f472f73c7b0301b0d1_19400_512x512_fill_lanczos_center_2.png</url>
+      <url>http://lcolladotor.github.io/images/icon_hu2b32c4ab415f12f472f73c7b0301b0d1_19400_512x512_fill_lanczos_center_3.png</url>
       <title>shiny</title>
-      <link>https://lcolladotor.github.io/tags/shiny/</link>
+      <link>http://lcolladotor.github.io/tags/shiny/</link>
     </image>
     
     <item>
       <title>Diving together into the unknown world of spatial transcriptomics</title>
-      <link>https://lcolladotor.github.io/2020/02/29/diving-together-into-the-unknown-world-of-spatial-transcriptomics/</link>
+      <link>http://lcolladotor.github.io/2020/02/29/diving-together-into-the-unknown-world-of-spatial-transcriptomics/</link>
       <pubDate>Sat, 29 Feb 2020 00:00:00 +0000</pubDate>
-      <guid>https://lcolladotor.github.io/2020/02/29/diving-together-into-the-unknown-world-of-spatial-transcriptomics/</guid>
+      <guid>http://lcolladotor.github.io/2020/02/29/diving-together-into-the-unknown-world-of-spatial-transcriptomics/</guid>
       <description>
 
 
@@ -366,9 +366,9 @@ run this yourself to check for any updates on how to cite &lt;strong&gt;spatialL
     
     <item>
       <title>Easily explore a table with shinycsv</title>
-      <link>https://lcolladotor.github.io/2017/01/20/easily-explore-a-table-with-shinycsv/</link>
+      <link>http://lcolladotor.github.io/2017/01/20/easily-explore-a-table-with-shinycsv/</link>
       <pubDate>Fri, 20 Jan 2017 00:00:00 +0000</pubDate>
-      <guid>https://lcolladotor.github.io/2017/01/20/easily-explore-a-table-with-shinycsv/</guid>
+      <guid>http://lcolladotor.github.io/2017/01/20/easily-explore-a-table-with-shinycsv/</guid>
       <description>&lt;p&gt;Have you ever had to explore a table with data? I believe the answer is &lt;em&gt;yes&lt;/em&gt; for most people that work at a computer or even just use it for communicating with their friends and family. Tables of data pop up everywhere, for example in personal finance. Websites like 
 &lt;a href=&#34;https://www.mint.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Mint.com&lt;/a&gt; allow you to download your transactions in a 
 &lt;a href=&#34;https://en.wikipedia.org/wiki/Comma-separated_values&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CSV&lt;/a&gt; file called &lt;code&gt;transactions.csv&lt;/code&gt;. CSV is one of the many formats for storing tables and most likely when you try to open the &lt;code&gt;transactions.csv&lt;/code&gt; file, it will open with Excel. Now, can you make a quick figure of one of your columns in your table?&lt;/p&gt;
@@ -377,7 +377,8 @@ run this yourself to check for any updates on how to cite &lt;strong&gt;spatialL
 &lt;p&gt;Programmers and experts in Excel, Stata, &lt;code&gt;R&lt;/code&gt; among other options can perform these data explorations. It might take them a little bit of time to write the code or remember it or use the user interface menu of their program of choice. But what about everyone else?&lt;/p&gt;
 &lt;p&gt;At the 
 &lt;a href=&#34;http://www.libd.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Lieber Institute for Brain Development&lt;/a&gt; where I work, it&amp;rsquo;s common for us to exchange data in tables, and thus explore data. That&amp;rsquo;s why we created &lt;code&gt;shinycsv&lt;/code&gt; &lt;a id=&#39;cite-shinycsv&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://github.com/LieberInstitute/shinycsv&#39;&gt;Collado-Torres, Semick, and Jaffe, 2016&lt;/a&gt;). It&amp;rsquo;s an R package &lt;a id=&#39;cite-cran&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://www.R-project.org/&#39;&gt;R Core Team, 2016&lt;/a&gt;) that contains a &lt;code&gt;shiny&lt;/code&gt; &lt;a id=&#39;cite-shiny&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://CRAN.R-project.org/package=shiny&#39;&gt;Chang, Cheng, Allaire, Xie, et al., 2017&lt;/a&gt;) application that allows users to interactively explore a table.&lt;/p&gt;
-&lt;p&gt;Installing &lt;code&gt;R&lt;/code&gt; is a pretty high bar, that&amp;rsquo;s why we are hosting this application at &lt;a href=&#34;https://jhubiostatistics.shinyapps.io/shinycsv/&#34;&gt;https://jhubiostatistics.shinyapps.io/shinycsv/&lt;/a&gt;. Try it out!&lt;/p&gt;
+&lt;p&gt;Installing &lt;code&gt;R&lt;/code&gt; is a pretty high bar, that&amp;rsquo;s why we are hosting this application at 
+&lt;a href=&#34;https://jhubiostatistics.shinyapps.io/shinycsv/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://jhubiostatistics.shinyapps.io/shinycsv/&lt;/a&gt;. Try it out!&lt;/p&gt;
 &lt;center&gt;
 &lt;a href=&#34;https://jhubiostatistics.shinyapps.io/shinycsv/&#34;&gt;&lt;img alt = &#39;shinycsv landing&#39; width=&#39;600&#39; src=&#39;http://lcolladotor.github.io/figs/2017-01-20-shinycsv/landing.png&#39; /&gt;&lt;/a&gt;
 &lt;/center&gt;
@@ -479,9 +480,9 @@ URL: &lt;a href=&#34;https://www.R-project.org/&#34;&gt;https://www.R-project.or
     
     <item>
       <title>Finding possible class schedules</title>
-      <link>https://lcolladotor.github.io/2016/08/02/materias/</link>
+      <link>http://lcolladotor.github.io/2016/08/02/materias/</link>
       <pubDate>Tue, 02 Aug 2016 00:00:00 +0000</pubDate>
-      <guid>https://lcolladotor.github.io/2016/08/02/materias/</guid>
+      <guid>http://lcolladotor.github.io/2016/08/02/materias/</guid>
       <description>&lt;p&gt;Over the weekend my brother wanted to figure out his class schedule for the next semester. He is a veterinary medicine and zootechnology student at UNAM. For this upcoming semester there is a set of classes he has to take and each has 8 or so instructor options. The website where he finds the class times lists about 8 pre-constructed class schedules. So he normally finds one he likes quite a bit, and then manually starts checking if he can change X instructor for Y for a given class. He does this based on the referalls and information he has gathered about the instructors, plus he factors in whether it&amp;rsquo;d be an overall better schedule. For example, he might prefer to have a packed Tuesday if that means that he can leave early on Friday and avoid classes on Saturday.&lt;/p&gt;
 &lt;p&gt;The problem is that it&amp;rsquo;s very easy to make a mistake. You (well he) gets all excited thinking that he&amp;rsquo;s found the perfect schedule. Only to then realize that there is a conflict between two classes. Or that the practical portion of a class is in a location one hour away from the university, meaning that the schedule he has selected won&amp;rsquo;t work. This process is very frustrating.&lt;/p&gt;
 &lt;p&gt;I was watching him and I started to think if I could help him with some code. Turns out that it was straightforward to write some code to find which options are valid. Once I wrote a test case, it took us like half an hour to fill out the data. I know that tomorrow is when he and his classmates start registering for classes, so this information might help his classmates.&lt;/p&gt;
@@ -891,9 +892,9 @@ session_info()
     
     <item>
       <title>Concerns that can deter potential orders for developing Shiny apps</title>
-      <link>https://lcolladotor.github.io/2014/06/10/shiny-orders/</link>
+      <link>http://lcolladotor.github.io/2014/06/10/shiny-orders/</link>
       <pubDate>Tue, 10 Jun 2014 00:00:00 +0000</pubDate>
-      <guid>https://lcolladotor.github.io/2014/06/10/shiny-orders/</guid>
+      <guid>http://lcolladotor.github.io/2014/06/10/shiny-orders/</guid>
       <description>&lt;p&gt;A few weeks ago I was invited to a meeting where a group was interested in exploring options for replacing their contract with a propriety software. They invited me because they saw some resemblances between a 
 &lt;a href=&#34;http://shiny.rstudio.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Shiny&lt;/a&gt; application I made and the features they need. It is a relatively small project and it seemed feasible to implement, but well, some details could have been tricky to code. During the meeting I explained what 
 &lt;a href=&#34;http://shiny.rstudio.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Shiny&lt;/a&gt; is, showcased some of the 
@@ -978,15 +979,15 @@ session_info()
 &lt;a href=&#34;http://bmorebiostat.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Bmore Biostats&lt;/a&gt; as well as topics on 
 &lt;a href=&#34;https://twitter.com/search?q=%23rstats&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;#rstats&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;This post is part of the summer 2014 
-&lt;a href=&#34;http://bmorebiostat.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Bmore Biostats&lt;/a&gt;&#39; iron blogger challenge.&lt;/p&gt;
+&lt;a href=&#34;http://bmorebiostat.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Bmore Biostats&lt;/a&gt;&amp;rsquo; iron blogger challenge.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Simple mortgage calculator</title>
-      <link>https://lcolladotor.github.io/2014/04/22/mortgage-calculator-flexible-payments/</link>
+      <link>http://lcolladotor.github.io/2014/04/22/mortgage-calculator-flexible-payments/</link>
       <pubDate>Tue, 22 Apr 2014 00:00:00 +0000</pubDate>
-      <guid>https://lcolladotor.github.io/2014/04/22/mortgage-calculator-flexible-payments/</guid>
+      <guid>http://lcolladotor.github.io/2014/04/22/mortgage-calculator-flexible-payments/</guid>
       <description>&lt;p&gt;Have you ever thought of borrowing some money? A common case is when you have to borrow money for buying a house, which is called a mortgage. Wikipedia (&lt;span class=&#34;showtooltip&#34; title=&#34;(2014). &#39;Mortgage loan - Wikipedia, the free encyclopedia.&#39; .&#34;&gt;&lt;a href=&#34;http://en.wikipedia.org/wiki/Mortgage_loan&#34;&gt;&amp;lsquo;Mortgage loan&amp;rsquo; entry&lt;/a&gt;&lt;/span&gt;) goes into much more detail about the definition than what I&amp;rsquo;ll cover.&lt;/p&gt;
 &lt;p&gt;One of the aspects you have to evaluate when considering a loan such as a mortgage is how much interest you will be charged and how long the loan will be. Those two determine your monthly payment.&lt;/p&gt;
 &lt;h2 id=&#34;comparing-loans&#34;&gt;Comparing loans&lt;/h2&gt;

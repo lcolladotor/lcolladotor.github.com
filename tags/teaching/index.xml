@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Teaching | L. Collado-Torres</title>
-    <link>https://lcolladotor.github.io/tags/teaching/</link>
-      <atom:link href="https://lcolladotor.github.io/tags/teaching/index.xml" rel="self" type="application/rss+xml" />
+    <link>http://lcolladotor.github.io/tags/teaching/</link>
+      <atom:link href="http://lcolladotor.github.io/tags/teaching/index.xml" rel="self" type="application/rss+xml" />
     <description>Teaching</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2011-2021. All thoughts and opinions here are my own. The icon was designed by [Mauricio Guzmán](https://www.linkedin.com/in/mauricio-guzman-6529b551/) and is inspired by [Huichol culture](https://en.wikipedia.org/wiki/Huichol); it represents my community building interests</copyright><lastBuildDate>Mon, 16 Mar 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2011-2022. All thoughts and opinions here are my own. The icon was designed by [Mauricio Guzmán](https://www.linkedin.com/in/mauricio-guzman-6529b551/) and is inspired by [Huichol culture](https://en.wikipedia.org/wiki/Huichol); it represents my community building interests</copyright><lastBuildDate>Mon, 16 Mar 2020 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://lcolladotor.github.io/images/icon_hu2b32c4ab415f12f472f73c7b0301b0d1_19400_512x512_fill_lanczos_center_2.png</url>
+      <url>http://lcolladotor.github.io/images/icon_hu2b32c4ab415f12f472f73c7b0301b0d1_19400_512x512_fill_lanczos_center_3.png</url>
       <title>Teaching</title>
-      <link>https://lcolladotor.github.io/tags/teaching/</link>
+      <link>http://lcolladotor.github.io/tags/teaching/</link>
     </image>
     
     <item>
       <title>Research Scientist: an academic career launch pad</title>
-      <link>https://lcolladotor.github.io/2020/03/16/research-scientist-an-academic-career-launch-pad/</link>
+      <link>http://lcolladotor.github.io/2020/03/16/research-scientist-an-academic-career-launch-pad/</link>
       <pubDate>Mon, 16 Mar 2020 00:00:00 +0000</pubDate>
-      <guid>https://lcolladotor.github.io/2020/03/16/research-scientist-an-academic-career-launch-pad/</guid>
+      <guid>http://lcolladotor.github.io/2020/03/16/research-scientist-an-academic-career-launch-pad/</guid>
       <description>
 
 
@@ -179,9 +179,9 @@ URL: &lt;a href=&#34;https://github.com/rstudio/blogdown&#34;&gt;https://github.
     
     <item>
       <title>Learning from our search history</title>
-      <link>https://lcolladotor.github.io/2020/02/12/learning-from-our-search-history/</link>
+      <link>http://lcolladotor.github.io/2020/02/12/learning-from-our-search-history/</link>
       <pubDate>Wed, 12 Feb 2020 00:00:00 +0000</pubDate>
-      <guid>https://lcolladotor.github.io/2020/02/12/learning-from-our-search-history/</guid>
+      <guid>http://lcolladotor.github.io/2020/02/12/learning-from-our-search-history/</guid>
       <description>
 
 
@@ -500,9 +500,9 @@ URL: &lt;a href=&#34;https://github.com/rstudio/blogdown&#34;&gt;https://github.
     
     <item>
       <title>Latin American R/BioConductor Developers Workshop 2018</title>
-      <link>https://lcolladotor.github.io/2018/04/19/latin-american-r-bioconductor-developers-workshop-2018/</link>
+      <link>http://lcolladotor.github.io/2018/04/19/latin-american-r-bioconductor-developers-workshop-2018/</link>
       <pubDate>Thu, 19 Apr 2018 00:00:00 +0000</pubDate>
-      <guid>https://lcolladotor.github.io/2018/04/19/latin-american-r-bioconductor-developers-workshop-2018/</guid>
+      <guid>http://lcolladotor.github.io/2018/04/19/latin-american-r-bioconductor-developers-workshop-2018/</guid>
       <description>
 
 
@@ -571,9 +571,9 @@ URL: &lt;a href=&#34;https://github.com/rstudio/blogdown&#34;&gt;https://github.
     
     <item>
       <title>Teaching a short topic to beginner R users</title>
-      <link>https://lcolladotor.github.io/2015/07/07/rmarkdown/</link>
+      <link>http://lcolladotor.github.io/2015/07/07/rmarkdown/</link>
       <pubDate>Tue, 07 Jul 2015 00:00:00 +0000</pubDate>
-      <guid>https://lcolladotor.github.io/2015/07/07/rmarkdown/</guid>
+      <guid>http://lcolladotor.github.io/2015/07/07/rmarkdown/</guid>
       <description>&lt;p&gt;A couple weeks ago I was given the opportunity to teach a 1 hr 30 min slot of an introduction to &lt;code&gt;R&lt;/code&gt; course. In the past, I&amp;rsquo;ve taught lectures for similar courses, and I ended up asking myself what would be the best short topic to teach and how to teach it.&lt;/p&gt;
 &lt;h2 id=&#34;best-short-topic&#34;&gt;Best short topic&lt;/h2&gt;
 &lt;p&gt;There are two ways to answer the first question, one boring and one more interesting. The boring answer is that the course instructor selected the topic. The interesting one goes like this. I have taken short &lt;code&gt;R&lt;/code&gt; courses before and taught others, and it&amp;rsquo;s always overwhelming for the students. You get to cover many concepts, get familiarized with &lt;code&gt;R&lt;/code&gt;&amp;rsquo;s syntax, and in the end without lots of practice it&amp;rsquo;s very challenging to retain much of the information. I think that students love it when they learn how to do something simple that could be the first building block for many of their projects. In parallel, I think that one of the coolest &lt;code&gt;R&lt;/code&gt; topics you can learn in an hour is how to create reproducible documents with &lt;code&gt;rmarkdown&lt;/code&gt; &lt;a id=&#39;cite-rmarkdown&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;http://CRAN.R-project.org/package=rmarkdown&#39;&gt;Allaire, Cheng, Xie, McPherson, et al., 2015&lt;/a&gt;).&lt;/p&gt;
@@ -628,9 +628,9 @@ URL: &lt;a href=&#34;http://CRAN.R-project.org/package=knitcitations&#34;&gt;htt
     
     <item>
       <title>My strategy for quickly grading homeworks</title>
-      <link>https://lcolladotor.github.io/2013/11/08/fast-grading/</link>
+      <link>http://lcolladotor.github.io/2013/11/08/fast-grading/</link>
       <pubDate>Fri, 08 Nov 2013 00:00:00 +0000</pubDate>
-      <guid>https://lcolladotor.github.io/2013/11/08/fast-grading/</guid>
+      <guid>http://lcolladotor.github.io/2013/11/08/fast-grading/</guid>
       <description>&lt;p&gt;For the past year and a half 
 &lt;a href=&#34;http://www.biostat.jhsph.edu/~lcollado/teaching.html#.Un2BnJTF2Ql&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;I have been a teaching assistant&lt;/a&gt; (TA) for the Statistical Methods in Public Health I to IV (140.621 to 140.624) courses. As part of being a TA for these courses, we have to grade between 30 and 50 homeworks every two weeks or so: four problem sets per eight week terms. For example, I now have to grade 37 homeworks:&lt;/p&gt;
 &lt;center&gt;

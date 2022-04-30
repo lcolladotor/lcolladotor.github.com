@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>LIBD | L. Collado-Torres</title>
-    <link>https://lcolladotor.github.io/categories/libd/</link>
-      <atom:link href="https://lcolladotor.github.io/categories/libd/index.xml" rel="self" type="application/rss+xml" />
+    <link>http://lcolladotor.github.io/categories/libd/</link>
+      <atom:link href="http://lcolladotor.github.io/categories/libd/index.xml" rel="self" type="application/rss+xml" />
     <description>LIBD</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2011-2021. All thoughts and opinions here are my own. The icon was designed by [Mauricio Guzmán](https://www.linkedin.com/in/mauricio-guzman-6529b551/) and is inspired by [Huichol culture](https://en.wikipedia.org/wiki/Huichol); it represents my community building interests</copyright><lastBuildDate>Mon, 21 Sep 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2011-2022. All thoughts and opinions here are my own. The icon was designed by [Mauricio Guzmán](https://www.linkedin.com/in/mauricio-guzman-6529b551/) and is inspired by [Huichol culture](https://en.wikipedia.org/wiki/Huichol); it represents my community building interests</copyright><lastBuildDate>Mon, 21 Sep 2020 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://lcolladotor.github.io/images/icon_hu2b32c4ab415f12f472f73c7b0301b0d1_19400_512x512_fill_lanczos_center_2.png</url>
+      <url>http://lcolladotor.github.io/images/icon_hu2b32c4ab415f12f472f73c7b0301b0d1_19400_512x512_fill_lanczos_center_3.png</url>
       <title>LIBD</title>
-      <link>https://lcolladotor.github.io/categories/libd/</link>
+      <link>http://lcolladotor.github.io/categories/libd/</link>
     </image>
     
     <item>
       <title>The start of a new phase for me</title>
-      <link>https://lcolladotor.github.io/2020/09/21/the-start-of-a-new-phase-for-me/</link>
+      <link>http://lcolladotor.github.io/2020/09/21/the-start-of-a-new-phase-for-me/</link>
       <pubDate>Mon, 21 Sep 2020 00:00:00 +0000</pubDate>
-      <guid>https://lcolladotor.github.io/2020/09/21/the-start-of-a-new-phase-for-me/</guid>
+      <guid>http://lcolladotor.github.io/2020/09/21/the-start-of-a-new-phase-for-me/</guid>
       <description>
 
 
@@ -151,9 +151,9 @@ URL: &lt;a href=&#34;https://github.com/rstudio/blogdown&#34;&gt;https://github.
     
     <item>
       <title>Research Scientist: an academic career launch pad</title>
-      <link>https://lcolladotor.github.io/2020/03/16/research-scientist-an-academic-career-launch-pad/</link>
+      <link>http://lcolladotor.github.io/2020/03/16/research-scientist-an-academic-career-launch-pad/</link>
       <pubDate>Mon, 16 Mar 2020 00:00:00 +0000</pubDate>
-      <guid>https://lcolladotor.github.io/2020/03/16/research-scientist-an-academic-career-launch-pad/</guid>
+      <guid>http://lcolladotor.github.io/2020/03/16/research-scientist-an-academic-career-launch-pad/</guid>
       <description>
 
 
@@ -316,9 +316,9 @@ URL: &lt;a href=&#34;https://github.com/rstudio/blogdown&#34;&gt;https://github.
     
     <item>
       <title>Easily explore a table with shinycsv</title>
-      <link>https://lcolladotor.github.io/2017/01/20/easily-explore-a-table-with-shinycsv/</link>
+      <link>http://lcolladotor.github.io/2017/01/20/easily-explore-a-table-with-shinycsv/</link>
       <pubDate>Fri, 20 Jan 2017 00:00:00 +0000</pubDate>
-      <guid>https://lcolladotor.github.io/2017/01/20/easily-explore-a-table-with-shinycsv/</guid>
+      <guid>http://lcolladotor.github.io/2017/01/20/easily-explore-a-table-with-shinycsv/</guid>
       <description>&lt;p&gt;Have you ever had to explore a table with data? I believe the answer is &lt;em&gt;yes&lt;/em&gt; for most people that work at a computer or even just use it for communicating with their friends and family. Tables of data pop up everywhere, for example in personal finance. Websites like 
 &lt;a href=&#34;https://www.mint.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Mint.com&lt;/a&gt; allow you to download your transactions in a 
 &lt;a href=&#34;https://en.wikipedia.org/wiki/Comma-separated_values&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CSV&lt;/a&gt; file called &lt;code&gt;transactions.csv&lt;/code&gt;. CSV is one of the many formats for storing tables and most likely when you try to open the &lt;code&gt;transactions.csv&lt;/code&gt; file, it will open with Excel. Now, can you make a quick figure of one of your columns in your table?&lt;/p&gt;
@@ -327,7 +327,8 @@ URL: &lt;a href=&#34;https://github.com/rstudio/blogdown&#34;&gt;https://github.
 &lt;p&gt;Programmers and experts in Excel, Stata, &lt;code&gt;R&lt;/code&gt; among other options can perform these data explorations. It might take them a little bit of time to write the code or remember it or use the user interface menu of their program of choice. But what about everyone else?&lt;/p&gt;
 &lt;p&gt;At the 
 &lt;a href=&#34;http://www.libd.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Lieber Institute for Brain Development&lt;/a&gt; where I work, it&amp;rsquo;s common for us to exchange data in tables, and thus explore data. That&amp;rsquo;s why we created &lt;code&gt;shinycsv&lt;/code&gt; &lt;a id=&#39;cite-shinycsv&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://github.com/LieberInstitute/shinycsv&#39;&gt;Collado-Torres, Semick, and Jaffe, 2016&lt;/a&gt;). It&amp;rsquo;s an R package &lt;a id=&#39;cite-cran&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://www.R-project.org/&#39;&gt;R Core Team, 2016&lt;/a&gt;) that contains a &lt;code&gt;shiny&lt;/code&gt; &lt;a id=&#39;cite-shiny&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://CRAN.R-project.org/package=shiny&#39;&gt;Chang, Cheng, Allaire, Xie, et al., 2017&lt;/a&gt;) application that allows users to interactively explore a table.&lt;/p&gt;
-&lt;p&gt;Installing &lt;code&gt;R&lt;/code&gt; is a pretty high bar, that&amp;rsquo;s why we are hosting this application at &lt;a href=&#34;https://jhubiostatistics.shinyapps.io/shinycsv/&#34;&gt;https://jhubiostatistics.shinyapps.io/shinycsv/&lt;/a&gt;. Try it out!&lt;/p&gt;
+&lt;p&gt;Installing &lt;code&gt;R&lt;/code&gt; is a pretty high bar, that&amp;rsquo;s why we are hosting this application at 
+&lt;a href=&#34;https://jhubiostatistics.shinyapps.io/shinycsv/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://jhubiostatistics.shinyapps.io/shinycsv/&lt;/a&gt;. Try it out!&lt;/p&gt;
 &lt;center&gt;
 &lt;a href=&#34;https://jhubiostatistics.shinyapps.io/shinycsv/&#34;&gt;&lt;img alt = &#39;shinycsv landing&#39; width=&#39;600&#39; src=&#39;http://lcolladotor.github.io/figs/2017-01-20-shinycsv/landing.png&#39; /&gt;&lt;/a&gt;
 &lt;/center&gt;
@@ -429,9 +430,9 @@ URL: &lt;a href=&#34;https://www.R-project.org/&#34;&gt;https://www.R-project.or
     
     <item>
       <title>LIBD video</title>
-      <link>https://lcolladotor.github.io/2013/07/17/starting-this-week-ill-be-doing-my-research-with/</link>
+      <link>http://lcolladotor.github.io/2013/07/17/starting-this-week-ill-be-doing-my-research-with/</link>
       <pubDate>Wed, 17 Jul 2013 00:00:00 +0000</pubDate>
-      <guid>https://lcolladotor.github.io/2013/07/17/starting-this-week-ill-be-doing-my-research-with/</guid>
+      <guid>http://lcolladotor.github.io/2013/07/17/starting-this-week-ill-be-doing-my-research-with/</guid>
       <description>&lt;iframe src=&#34;http://player.vimeo.com/video/47201742&#34; width=&#34;400&#34; height=&#34;300&#34; frameborder=&#34;0&#34;&gt;&lt;/iframe&gt;&lt;br/&gt;&lt;p&gt;Starting this week, I&amp;#8217;ll be doing my research with the Lieber Institute for Brain Development (&lt;a href=&#34;http://www.libd.org/&#34;&gt;LIBD&lt;/a&gt;) as &lt;a href=&#34;http://www.libd.org/contact/staff-directory?query=jaffe&#34;&gt;Andrew Jaffe&lt;/a&gt;&#39;s first Ph.D. student there. My main advisor will continue to be &lt;a href=&#34;http://www.biostat.jhsph.edu/~jleek/&#34;&gt;Jeff Leek&lt;/a&gt; which is great for me. I&amp;#8217;ll have access to massive data sets at Lieber and will face the challenge of integrative genomics. That will be fun, exciting and challenging!&lt;br/&gt;&lt;br/&gt;Here&amp;#8217;s a short video explaining what the LIBD is about and why Baltimore is a growing city.&lt;/p&gt;
 </description>
     </item>
