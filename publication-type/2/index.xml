@@ -5,12 +5,168 @@
     <link>https://lcolladotor.github.io/publication-type/2/</link>
       <atom:link href="https://lcolladotor.github.io/publication-type/2/index.xml" rel="self" type="application/rss+xml" />
     <description>2</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sat, 01 May 2021 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Thu, 28 Apr 2022 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://lcolladotor.github.io/media/icon_hu2b32c4ab415f12f472f73c7b0301b0d1_19400_512x512_fill_lanczos_center_3.png</url>
       <title>2</title>
       <link>https://lcolladotor.github.io/publication-type/2/</link>
     </image>
+    
+    <item>
+      <title>SpatialExperiment: infrastructure for spatially resolved transcriptomics data in R using Bioconductor</title>
+      <link>https://lcolladotor.github.io/publication/2022_04_spatialexperiment/</link>
+      <pubDate>Thu, 28 Apr 2022 00:00:00 +0000</pubDate>
+      <guid>https://lcolladotor.github.io/publication/2022_04_spatialexperiment/</guid>
+      <description>&lt;!--
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Click the &lt;em&gt;Cite&lt;/em&gt; button above to demo the feature to enable visitors to import publication metadata into their reference management software.
+  &lt;/div&gt;
+&lt;/div&gt;
+
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Click the &lt;em&gt;Slides&lt;/em&gt; button above to demo Academic&amp;rsquo;s Markdown slides feature.
+  &lt;/div&gt;
+&lt;/div&gt;
+
+
+Supplementary notes can be added here, including [code and math](https://sourcethemes.com/academic/docs/writing-markdown-latex/).
+--&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Are you analyzing spatially-resolved transcriptomics data? Visium from &lt;a href=&#34;https://twitter.com/10xGenomics?ref_src=twsrc%5Etfw&#34;&gt;@10xGenomics&lt;/a&gt;? You might want to use &lt;a href=&#34;https://twitter.com/hashtag/SpatialExperiment?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#SpatialExperiment&lt;/a&gt; which provides a common infrastructure fully compatible with &lt;a href=&#34;https://twitter.com/Bioconductor?ref_src=twsrc%5Etfw&#34;&gt;@Bioconductor&lt;/a&gt;&amp;#39;s ecosystem &lt;a href=&#34;https://twitter.com/hashtag/rstats?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#rstats&lt;/a&gt;&lt;br&gt;&lt;br&gt;More details? Open access paper 📜&lt;a href=&#34;https://t.co/4Y2RN4Wz2z&#34;&gt;https://t.co/4Y2RN4Wz2z&lt;/a&gt; &lt;a href=&#34;https://t.co/49wE5Dv5HF&#34;&gt;https://t.co/49wE5Dv5HF&lt;/a&gt; &lt;a href=&#34;https://t.co/QpI4lvCF2r&#34;&gt;pic.twitter.com/QpI4lvCF2r&lt;/a&gt;&lt;/p&gt;&amp;mdash; 🇲🇽 Leonardo Collado-Torres (@lcolladotor) &lt;a href=&#34;https://twitter.com/lcolladotor/status/1520066354241449988?ref_src=twsrc%5Etfw&#34;&gt;April 29, 2022&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;p&gt;
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/AJFN-eSQyKs&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/VojNV7q3i2s&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Are you working with spatial transcriptomics data such as Visium from &lt;a href=&#34;https://twitter.com/10xGenomics?ref_src=twsrc%5Etfw&#34;&gt;@10xGenomics&lt;/a&gt;? Then you&amp;#39;ll be interested in &lt;a href=&#34;https://twitter.com/hashtag/SpatialExperiment?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#SpatialExperiment&lt;/a&gt; 📦 led by &lt;a href=&#34;https://twitter.com/drighelli?ref_src=twsrc%5Etfw&#34;&gt;@drighelli&lt;/a&gt; &lt;a href=&#34;https://twitter.com/lmwebr?ref_src=twsrc%5Etfw&#34;&gt;@lmwebr&lt;/a&gt; &lt;a href=&#34;https://twitter.com/CrowellHL?ref_src=twsrc%5Etfw&#34;&gt;@CrowellHL&lt;/a&gt; with contributions by &lt;a href=&#34;https://twitter.com/PardoBree?ref_src=twsrc%5Etfw&#34;&gt;@PardoBree&lt;/a&gt; &lt;a href=&#34;https://twitter.com/shazanfar?ref_src=twsrc%5Etfw&#34;&gt;@shazanfar&lt;/a&gt; A Lun &lt;a href=&#34;https://twitter.com/stephaniehicks?ref_src=twsrc%5Etfw&#34;&gt;@stephaniehicks&lt;/a&gt; &lt;a href=&#34;https://twitter.com/drisso1893?ref_src=twsrc%5Etfw&#34;&gt;@drisso1893&lt;/a&gt; 🌟&lt;br&gt;&lt;br&gt;📜 &lt;a href=&#34;https://t.co/r36qlakRJe&#34;&gt;https://t.co/r36qlakRJe&lt;/a&gt; &lt;a href=&#34;https://t.co/cWIiwLFitV&#34;&gt;pic.twitter.com/cWIiwLFitV&lt;/a&gt;&lt;/p&gt;&amp;mdash; 🇲🇽 Leonardo Collado-Torres (@lcolladotor) &lt;a href=&#34;https://twitter.com/lcolladotor/status/1355208674856329218?ref_src=twsrc%5Etfw&#34;&gt;January 29, 2021&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Amygdala and anterior cingulate transcriptomes from individuals with bipolar disorder reveal downregulated neuroimmune and synaptic pathways</title>
+      <link>https://lcolladotor.github.io/publication/2022_03_zandi-amygdala/</link>
+      <pubDate>Tue, 01 Mar 2022 00:00:00 +0000</pubDate>
+      <guid>https://lcolladotor.github.io/publication/2022_03_zandi-amygdala/</guid>
+      <description>&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Zandi doesn&amp;#39;t have an account here, so there&amp;#39;s no Twitter 🧵 on a recent paper he led &lt;a href=&#34;https://twitter.com/jhugeneticepi?ref_src=twsrc%5Etfw&#34;&gt;@jhugeneticepi&lt;/a&gt; &lt;a href=&#34;https://twitter.com/LieberInstitute?ref_src=twsrc%5Etfw&#34;&gt;@LieberInstitute&lt;/a&gt;&lt;a href=&#34;https://twitter.com/hashtag/BipSeq?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#BipSeq&lt;/a&gt;: bulk &lt;a href=&#34;https://twitter.com/hashtag/RNAseq?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#RNAseq&lt;/a&gt; from the amygdala &amp;amp; sACC🧠 from &lt;a href=&#34;https://twitter.com/hashtag/bipolar?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#bipolar&lt;/a&gt; disorder donors&lt;br&gt;&lt;br&gt;💻&lt;a href=&#34;https://t.co/t9JiL6CeJb&#34;&gt;https://t.co/t9JiL6CeJb&lt;/a&gt;&lt;br&gt;📢&lt;a href=&#34;https://t.co/fjRIkrhsTn&#34;&gt;https://t.co/fjRIkrhsTn&lt;/a&gt;&lt;br&gt;📜&lt;a href=&#34;https://t.co/dhdYaQtPLX&#34;&gt;https://t.co/dhdYaQtPLX&lt;/a&gt; &lt;a href=&#34;https://t.co/K8F5gppBTj&#34;&gt;https://t.co/K8F5gppBTj&lt;/a&gt;&lt;/p&gt;&amp;mdash; 🇲🇽 Leonardo Collado-Torres (@lcolladotor) &lt;a href=&#34;https://twitter.com/lcolladotor/status/1520832802660306946?ref_src=twsrc%5Etfw&#34;&gt;May 1, 2022&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;p&gt;&lt;a href=&#34;https://twitter.com/lcolladotor/status/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://twitter.com/lcolladotor/status/&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Genetics and Brain Transcriptomics of Completed Suicide</title>
+      <link>https://lcolladotor.github.io/publication/2022_03_punzi-genetics/</link>
+      <pubDate>Tue, 01 Mar 2022 00:00:00 +0000</pubDate>
+      <guid>https://lcolladotor.github.io/publication/2022_03_punzi-genetics/</guid>
+      <description>&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Lieber Institute researchers examine the &lt;a href=&#34;https://twitter.com/hashtag/genomics?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#genomics&lt;/a&gt; and &lt;a href=&#34;https://twitter.com/hashtag/transcriptomics?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#transcriptomics&lt;/a&gt; of &lt;a href=&#34;https://twitter.com/hashtag/suicide?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#suicide&lt;/a&gt; in the latest edition of the American Journal of Psychiatry. There’s no treatment specific to suicide—but our scientists hope to change that. &lt;a href=&#34;https://t.co/nRHkzL7CxL&#34;&gt;https://t.co/nRHkzL7CxL&lt;/a&gt;&lt;/p&gt;&amp;mdash; Lieber Institute (@LieberInstitute) &lt;a href=&#34;https://twitter.com/LieberInstitute/status/1499442483784155136?ref_src=twsrc%5Etfw&#34;&gt;March 3, 2022&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>recount3: summaries and queries for large-scale RNA-seq expression and splicing</title>
+      <link>https://lcolladotor.github.io/publication/2021_11_recount3/</link>
+      <pubDate>Mon, 29 Nov 2021 00:00:00 +0000</pubDate>
+      <guid>https://lcolladotor.github.io/publication/2021_11_recount3/</guid>
+      <description>&lt;!--
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Click the &lt;em&gt;Cite&lt;/em&gt; button above to demo the feature to enable visitors to import publication metadata into their reference management software.
+  &lt;/div&gt;
+&lt;/div&gt;
+
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Click the &lt;em&gt;Slides&lt;/em&gt; button above to demo Academic&amp;rsquo;s Markdown slides feature.
+  &lt;/div&gt;
+&lt;/div&gt;
+
+
+Supplementary notes can be added here, including [code and math](https://sourcethemes.com/academic/docs/writing-markdown-latex/).
+--&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Check out recount3 now out in Genome Biology! &lt;a href=&#34;https://t.co/aFZWEweFk6&#34;&gt;https://t.co/aFZWEweFk6&lt;/a&gt;… and get the data here: &lt;a href=&#34;https://t.co/DSvfyN7VEv&#34;&gt;https://t.co/DSvfyN7VEv&lt;/a&gt;. 750,000 (!!!) public RNA-seq samples processed and ready for scienceing! Amazing work from &lt;a href=&#34;https://twitter.com/chrisnwilks?ref_src=twsrc%5Etfw&#34;&gt;@chrisnwilks&lt;/a&gt; &lt;a href=&#34;https://twitter.com/BenLangmead?ref_src=twsrc%5Etfw&#34;&gt;@BenLangmead&lt;/a&gt; &lt;a href=&#34;https://twitter.com/KasperDHansen?ref_src=twsrc%5Etfw&#34;&gt;@KasperDHansen&lt;/a&gt;  &lt;a href=&#34;https://twitter.com/lcolladotor?ref_src=twsrc%5Etfw&#34;&gt;@lcolladotor&lt;/a&gt;&lt;/p&gt;&amp;mdash; Jeff Leek (@jtleek) &lt;a href=&#34;https://twitter.com/jtleek/status/1465332392151838727?ref_src=twsrc%5Etfw&#34;&gt;November 29, 2021&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Beyond pleased to have the recount3 preprint out: &lt;a href=&#34;https://t.co/rgYIEayhAQ&#34;&gt;https://t.co/rgYIEayhAQ&lt;/a&gt;. It&amp;#39;s a long time coming, involving total rebuild of our analysis infrastructure and heroic efforts from &lt;a href=&#34;https://twitter.com/chrisnwilks?ref_src=twsrc%5Etfw&#34;&gt;@chrisnwilks&lt;/a&gt;, &lt;a href=&#34;https://twitter.com/lcolladotor?ref_src=twsrc%5Etfw&#34;&gt;@lcolladotor&lt;/a&gt;, &lt;a href=&#34;https://twitter.com/KasperDHansen?ref_src=twsrc%5Etfw&#34;&gt;@KasperDHansen&lt;/a&gt; and others. 1/6&lt;/p&gt;&amp;mdash; Ben Langmead (@BenLangmead) &lt;a href=&#34;https://twitter.com/BenLangmead/status/1396907972211748865?ref_src=twsrc%5Etfw&#34;&gt;May 24, 2021&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/aD2JU-vUv54?t=2287&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+</description>
+    </item>
+    
+    <item>
+      <title>Single-nucleus transcriptome analysis reveals cell-type-specific molecular signatures across reward circuitry in the human brain</title>
+      <link>https://lcolladotor.github.io/publication/2021_10_matt_snrnaseq/</link>
+      <pubDate>Wed, 06 Oct 2021 00:00:00 +0000</pubDate>
+      <guid>https://lcolladotor.github.io/publication/2021_10_matt_snrnaseq/</guid>
+      <description>&lt;!--
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Click the &lt;em&gt;Cite&lt;/em&gt; button above to demo the feature to enable visitors to import publication metadata into their reference management software.
+  &lt;/div&gt;
+&lt;/div&gt;
+
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Click the &lt;em&gt;Slides&lt;/em&gt; button above to demo Academic&amp;rsquo;s Markdown slides feature.
+  &lt;/div&gt;
+&lt;/div&gt;
+
+
+Supplementary notes can be added here, including [code and math](https://sourcethemes.com/academic/docs/writing-markdown-latex/).
+--&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;IT&amp;#39;S FINALLY OUT!! 🧠🧬🤩 Single-nucleus transcriptome analysis reveals cell-type-specific molecular signatures across reward circuitry in the human brain, in &lt;a href=&#34;https://twitter.com/NeuroCellPress?ref_src=twsrc%5Etfw&#34;&gt;@NeuroCellPress&lt;/a&gt; - coauthored with &lt;a href=&#34;https://twitter.com/kr_maynard?ref_src=twsrc%5Etfw&#34;&gt;@kr_maynard&lt;/a&gt;:&lt;a href=&#34;https://t.co/XCcnUQ6o3h&#34;&gt;https://t.co/XCcnUQ6o3h&lt;/a&gt;&lt;/p&gt;&amp;mdash; Matthew N Tran (@mattntran) &lt;a href=&#34;https://twitter.com/mattntran/status/1442509542412128258?ref_src=twsrc%5Etfw&#34;&gt;September 27, 2021&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Dropping our preprint for profiling the single-nucleus transcriptome across the reward circuitry in the human brain, co-authored by &lt;a href=&#34;https://twitter.com/kr_maynard?ref_src=twsrc%5Etfw&#34;&gt;@kr_maynard&lt;/a&gt; and myself! 🧠&lt;a href=&#34;https://t.co/JoNeprGP7X&#34;&gt;https://t.co/JoNeprGP7X&lt;/a&gt;&lt;/p&gt;&amp;mdash; Matthew N Tran (@mattntran) &lt;a href=&#34;https://twitter.com/mattntran/status/1314323646815629312?ref_src=twsrc%5Etfw&#34;&gt;October 8, 2020&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Genome-wide sequencing-based identification of methylation quantitative trait loci and their role in schizophrenia risk</title>
+      <link>https://lcolladotor.github.io/publication/2021_09_kira_wgbs/</link>
+      <pubDate>Thu, 02 Sep 2021 00:00:00 +0000</pubDate>
+      <guid>https://lcolladotor.github.io/publication/2021_09_kira_wgbs/</guid>
+      <description>&lt;!--
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Click the &lt;em&gt;Cite&lt;/em&gt; button above to demo the feature to enable visitors to import publication metadata into their reference management software.
+  &lt;/div&gt;
+&lt;/div&gt;
+
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Click the &lt;em&gt;Slides&lt;/em&gt; button above to demo Academic&amp;rsquo;s Markdown slides feature.
+  &lt;/div&gt;
+&lt;/div&gt;
+
+
+Supplementary notes can be added here, including [code and math](https://sourcethemes.com/academic/docs/writing-markdown-latex/).
+--&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;My latest paper is out in &lt;a href=&#34;https://twitter.com/NatureComms?ref_src=twsrc%5Etfw&#34;&gt;@NatureComms&lt;/a&gt;! We establish a single-base resolution view of the relationship between genetic variation and DNA methylation in the brain, and show how this can be used to better understand GWAS findings for schizophrenia&lt;a href=&#34;https://t.co/8juZlOjyAc&#34;&gt;https://t.co/8juZlOjyAc&lt;/a&gt;&lt;/p&gt;&amp;mdash; Kira PM, PhD (@Kira_P_M) &lt;a href=&#34;https://twitter.com/Kira_P_M/status/1433445829252091911?ref_src=twsrc%5Etfw&#34;&gt;September 2, 2021&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Excited to share the most comprehensive analysis to date of the associations between genetic variation and DNA methylation in the human brain! meQTLs are extensive throughout the genome and can likely be used to further understand GWAS risk variants:&lt;a href=&#34;https://t.co/HGVUhtxPsi&#34;&gt;https://t.co/HGVUhtxPsi&lt;/a&gt;&lt;/p&gt;&amp;mdash; Kira PM, PhD (@Kira_P_M) &lt;a href=&#34;https://twitter.com/Kira_P_M/status/1309474500585689088?ref_src=twsrc%5Etfw&#34;&gt;September 25, 2020&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+</description>
+    </item>
     
     <item>
       <title>SPEAQeasy: a scalable pipeline for expression analysis and quantification for R/Bioconductor-powered RNA-seq analyses</title>
@@ -34,7 +190,10 @@
 
 
 Supplementary notes can be added here, including [code and math](https://sourcethemes.com/academic/docs/writing-markdown-latex/).
---&gt;</description>
+--&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Congrats Nick &lt;a href=&#34;https://t.co/O3u5XRPXy2&#34;&gt;https://t.co/O3u5XRPXy2&lt;/a&gt; for your  &lt;a href=&#34;https://twitter.com/biorxivpreprint?ref_src=twsrc%5Etfw&#34;&gt;@biorxivpreprint&lt;/a&gt; first pre-print! 🙌🏽&lt;br&gt;&lt;br&gt;SPEAQeasy is our &lt;a href=&#34;https://twitter.com/nextflowio?ref_src=twsrc%5Etfw&#34;&gt;@nextflowio&lt;/a&gt; implementation of the &lt;a href=&#34;https://twitter.com/hashtag/RNAseq?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#RNAseq&lt;/a&gt; processing pipeline that produces &lt;a href=&#34;https://twitter.com/Bioconductor?ref_src=twsrc%5Etfw&#34;&gt;@Bioconductor&lt;/a&gt;-friendly &lt;a href=&#34;https://twitter.com/hashtag/rstats?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#rstats&lt;/a&gt; objects that we use at &lt;a href=&#34;https://twitter.com/LieberInstitute?ref_src=twsrc%5Etfw&#34;&gt;@LieberInstitute&lt;/a&gt;&lt;br&gt;&lt;br&gt;📜 &lt;a href=&#34;https://t.co/zKuBRtBCmY&#34;&gt;https://t.co/zKuBRtBCmY&lt;/a&gt; &lt;a href=&#34;https://t.co/F83fXI90eP&#34;&gt;pic.twitter.com/F83fXI90eP&lt;/a&gt;&lt;/p&gt;&amp;mdash; 🇲🇽 Leonardo Collado-Torres (@lcolladotor) &lt;a href=&#34;https://twitter.com/lcolladotor/status/1337637531945496577?ref_src=twsrc%5Etfw&#34;&gt;December 12, 2020&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+</description>
     </item>
     
     <item>
@@ -59,7 +218,10 @@ Supplementary notes can be added here, including [code and math](https://sourcet
 
 
 Supplementary notes can be added here, including [code and math](https://sourcethemes.com/academic/docs/writing-markdown-latex/).
---&gt;</description>
+--&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Published and proofed. Our &lt;a href=&#34;https://twitter.com/neurosciencecu?ref_src=twsrc%5Etfw&#34;&gt;@neurosciencecu&lt;/a&gt; / &lt;a href=&#34;https://twitter.com/LieberInstitute?ref_src=twsrc%5Etfw&#34;&gt;@LieberInstitute&lt;/a&gt; collaboration looks at developmental susceptibility to psychiatric genetic risk among voltage-gated calcium and potassium channel activity pathways&lt;a href=&#34;https://t.co/Qa8i8BTenG&#34;&gt;https://t.co/Qa8i8BTenG&lt;/a&gt;&lt;/p&gt;&amp;mdash; Nicholas Clifton (@NE_Clifton) &lt;a href=&#34;https://twitter.com/NE_Clifton/status/1390590711632961536?ref_src=twsrc%5Etfw&#34;&gt;May 7, 2021&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+</description>
     </item>
     
     <item>
@@ -84,7 +246,10 @@ Supplementary notes can be added here, including [code and math](https://sourcet
 
 
 Supplementary notes can be added here, including [code and math](https://sourcethemes.com/academic/docs/writing-markdown-latex/).
---&gt;</description>
+--&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Megadepth: fast quantification of interval sets w/r/t BigWigs &amp;amp; BAMs. Command-line &amp;amp; Bioconductor interfaces: &lt;a href=&#34;https://t.co/6rq6cFhLtu&#34;&gt;https://t.co/6rq6cFhLtu&lt;/a&gt;. Github: &lt;a href=&#34;https://t.co/vAcWCTrN4P&#34;&gt;https://t.co/vAcWCTrN4P&lt;/a&gt;. Great work, &lt;a href=&#34;https://twitter.com/chrisnwilks?ref_src=twsrc%5Etfw&#34;&gt;@chrisnwilks&lt;/a&gt;, &lt;a href=&#34;https://twitter.com/oyfahmed?ref_src=twsrc%5Etfw&#34;&gt;@oyfahmed&lt;/a&gt;, &lt;a href=&#34;https://twitter.com/lcolladotor?ref_src=twsrc%5Etfw&#34;&gt;@lcolladotor&lt;/a&gt;, &lt;a href=&#34;https://twitter.com/dyzhang32?ref_src=twsrc%5Etfw&#34;&gt;@dyzhang32&lt;/a&gt;, &lt;a href=&#34;https://twitter.com/dnb_hopkins?ref_src=twsrc%5Etfw&#34;&gt;@dnb_hopkins&lt;/a&gt;.  1/2 &lt;a href=&#34;https://t.co/ogcOFYpVN2&#34;&gt;https://t.co/ogcOFYpVN2&lt;/a&gt;&lt;/p&gt;&amp;mdash; Ben Langmead (@BenLangmead) &lt;a href=&#34;https://twitter.com/BenLangmead/status/1340032163618680833?ref_src=twsrc%5Etfw&#34;&gt;December 18, 2020&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+</description>
     </item>
     
     <item>
@@ -109,7 +274,12 @@ Supplementary notes can be added here, including [code and math](https://sourcet
 
 
 Supplementary notes can be added here, including [code and math](https://sourcethemes.com/academic/docs/writing-markdown-latex/).
---&gt;</description>
+--&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;pleased to announce that this paper is now out in &lt;a href=&#34;https://twitter.com/NatureNeuro?ref_src=twsrc%5Etfw&#34;&gt;@NatureNeuro&lt;/a&gt; : &lt;a href=&#34;https://t.co/m5L1YvETzN&#34;&gt;https://t.co/m5L1YvETzN&lt;/a&gt; ! check out full text here: &lt;a href=&#34;https://t.co/zMdMTA5QG4&#34;&gt;https://t.co/zMdMTA5QG4&lt;/a&gt; . congrats to &lt;a href=&#34;https://twitter.com/kr_maynard?ref_src=twsrc%5Etfw&#34;&gt;@kr_maynard&lt;/a&gt;  &lt;a href=&#34;https://twitter.com/lcolladotor?ref_src=twsrc%5Etfw&#34;&gt;@lcolladotor&lt;/a&gt;  &lt;a href=&#34;https://twitter.com/lmwebr?ref_src=twsrc%5Etfw&#34;&gt;@lmwebr&lt;/a&gt; &lt;a href=&#34;https://twitter.com/stephaniehicks?ref_src=twsrc%5Etfw&#34;&gt;@stephaniehicks&lt;/a&gt; and &lt;a href=&#34;https://twitter.com/martinowk?ref_src=twsrc%5Etfw&#34;&gt;@martinowk&lt;/a&gt; and other investigators at &lt;a href=&#34;https://twitter.com/LieberInstitute?ref_src=twsrc%5Etfw&#34;&gt;@LieberInstitute&lt;/a&gt; &amp;amp; &lt;a href=&#34;https://twitter.com/10xGenomics?ref_src=twsrc%5Etfw&#34;&gt;@10xGenomics&lt;/a&gt; &lt;a href=&#34;https://t.co/StYedlFMHc&#34;&gt;https://t.co/StYedlFMHc&lt;/a&gt;&lt;/p&gt;&amp;mdash; Andrew Jaffe (@andrewejaffe) &lt;a href=&#34;https://twitter.com/andrewejaffe/status/1358825640686989313?ref_src=twsrc%5Etfw&#34;&gt;February 8, 2021&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;🔥off the press! 👀 our &lt;a href=&#34;https://twitter.com/biorxivpreprint?ref_src=twsrc%5Etfw&#34;&gt;@biorxivpreprint&lt;/a&gt; on human 🧠brain &lt;a href=&#34;https://twitter.com/LieberInstitute?ref_src=twsrc%5Etfw&#34;&gt;@LieberInstitute&lt;/a&gt; spatial 🌌🔬transcriptomics data 🧬using Visium &lt;a href=&#34;https://twitter.com/10xGenomics?ref_src=twsrc%5Etfw&#34;&gt;@10xGenomics&lt;/a&gt;🎉&lt;a href=&#34;https://twitter.com/hashtag/spatialLIBD?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#spatialLIBD&lt;/a&gt;&lt;br&gt;&lt;br&gt;🔍&lt;a href=&#34;https://t.co/RTW0VscUKR&#34;&gt;https://t.co/RTW0VscUKR&lt;/a&gt; &lt;br&gt;👩🏾‍💻&lt;a href=&#34;https://t.co/bsg04XKONr&#34;&gt;https://t.co/bsg04XKONr&lt;/a&gt;&lt;br&gt;📚&lt;a href=&#34;https://t.co/FJDOOzrAJ6&#34;&gt;https://t.co/FJDOOzrAJ6&lt;/a&gt;&lt;br&gt;📦&lt;a href=&#34;https://t.co/Au5jwADGhY&#34;&gt;https://t.co/Au5jwADGhY&lt;/a&gt;&lt;a href=&#34;https://t.co/PiWEDN9q2N&#34;&gt;https://t.co/PiWEDN9q2N&lt;/a&gt; &lt;a href=&#34;https://t.co/aWy0yLlR50&#34;&gt;pic.twitter.com/aWy0yLlR50&lt;/a&gt;&lt;/p&gt;&amp;mdash; 🇲🇽 Leonardo Collado-Torres (@lcolladotor) &lt;a href=&#34;https://twitter.com/lcolladotor/status/1233661576433061888?ref_src=twsrc%5Etfw&#34;&gt;February 29, 2020&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+</description>
     </item>
     
     <item>
@@ -118,6 +288,8 @@ Supplementary notes can be added here, including [code and math](https://sourcet
       <pubDate>Wed, 15 Jul 2020 00:00:00 +0000</pubDate>
       <guid>https://lcolladotor.github.io/publication/2020-07_kira_prenatal/</guid>
       <description>&lt;!-- More detail can easily be written here using *Markdown* and $\rm \LaTeX$ math code. --&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Congrats &lt;a href=&#34;https://twitter.com/Kira_P_M?ref_src=twsrc%5Etfw&#34;&gt;@Kira_P_M&lt;/a&gt; on your 1st tweet &amp;amp; &lt;a href=&#34;https://twitter.com/biorxivpreprint?ref_src=twsrc%5Etfw&#34;&gt;@biorxivpreprint&lt;/a&gt; 📜 ^_^! + welcome to &lt;a href=&#34;https://twitter.com/hashtag/SciTwitter?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#SciTwitter&lt;/a&gt;🤗&lt;br&gt;&lt;br&gt;👀Check it out if you are interested in &lt;a href=&#34;https://twitter.com/hashtag/DNAm?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#DNAm&lt;/a&gt; from &lt;a href=&#34;https://twitter.com/hashtag/WGBS?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#WGBS&lt;/a&gt; data from the prenatal human brain 🧠 cortex. &lt;br&gt;&lt;br&gt;+ follow Kira from &lt;a href=&#34;https://twitter.com/andrewejaffe?ref_src=twsrc%5Etfw&#34;&gt;@andrewejaffe&lt;/a&gt;&amp;#39;s lab at &lt;a href=&#34;https://twitter.com/LieberInstitute?ref_src=twsrc%5Etfw&#34;&gt;@LieberInstitute&lt;/a&gt;&lt;a href=&#34;https://t.co/lAtvTfpc9A&#34;&gt;https://t.co/lAtvTfpc9A&lt;/a&gt; &lt;a href=&#34;https://t.co/PszVS6HaAO&#34;&gt;pic.twitter.com/PszVS6HaAO&lt;/a&gt;&lt;/p&gt;&amp;mdash; 🇲🇽 Leonardo Collado-Torres (@lcolladotor) &lt;a href=&#34;https://twitter.com/lcolladotor/status/1191792757725024256?ref_src=twsrc%5Etfw&#34;&gt;November 5, 2019&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
 </description>
     </item>
     
@@ -127,6 +299,8 @@ Supplementary notes can be added here, including [code and math](https://sourcet
       <pubDate>Wed, 24 Jun 2020 00:00:00 +0000</pubDate>
       <guid>https://lcolladotor.github.io/publication/2020-06_syngap/</guid>
       <description>&lt;!-- More detail can easily be written here using *Markdown* and $\rm \LaTeX$ math code. --&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Guess what protein is packed so densely into synapses that it looks like early X-mas? Which isoform of this protein is most critical for mental health? Our paper with &lt;a href=&#34;https://twitter.com/yoichi_araki?ref_src=twsrc%5Etfw&#34;&gt;@yoichi_araki&lt;/a&gt; &lt;a href=&#34;https://twitter.com/JooHeonSHIN?ref_src=twsrc%5Etfw&#34;&gt;@JooHeonSHIN&lt;/a&gt; &lt;a href=&#34;https://twitter.com/fellgernon?ref_src=twsrc%5Etfw&#34;&gt;@fellgernon&lt;/a&gt; &lt;a href=&#34;https://twitter.com/andrewejaffe?ref_src=twsrc%5Etfw&#34;&gt;@andrewejaffe&lt;/a&gt; &lt;a href=&#34;https://twitter.com/Dr_Weinberger?ref_src=twsrc%5Etfw&#34;&gt;@Dr_Weinberger&lt;/a&gt; &lt;a href=&#34;https://twitter.com/rhuganir?ref_src=twsrc%5Etfw&#34;&gt;@rhuganir&lt;/a&gt; is finally out! &lt;a href=&#34;https://t.co/z41h6kfi9p&#34;&gt;https://t.co/z41h6kfi9p&lt;/a&gt;&lt;/p&gt;&amp;mdash; Ingie Hong (@Ih_current) &lt;a href=&#34;https://twitter.com/Ih_current/status/1278141200093065221?ref_src=twsrc%5Etfw&#34;&gt;July 1, 2020&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
 </description>
     </item>
     
@@ -136,6 +310,13 @@ Supplementary notes can be added here, including [code and math](https://sourcet
       <pubDate>Tue, 23 Jun 2020 00:00:00 +0000</pubDate>
       <guid>https://lcolladotor.github.io/publication/2020-06_regutools/</guid>
       <description>&lt;!-- More detail can easily be written here using *Markdown* and $\rm \LaTeX$ math code. --&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;The &lt;a href=&#34;https://twitter.com/hashtag/regutools?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#regutools&lt;/a&gt; paper has been published by &lt;a href=&#34;https://twitter.com/OUPBioinfo?ref_src=twsrc%5Etfw&#34;&gt;@OUPBioinfo&lt;/a&gt;. Thanks for your excellent work &lt;a href=&#34;https://twitter.com/BarjonCar?ref_src=twsrc%5Etfw&#34;&gt;@BarjonCar&lt;/a&gt;, &lt;a href=&#34;https://twitter.com/josschavezf1?ref_src=twsrc%5Etfw&#34;&gt;@josschavezf1&lt;/a&gt;, &lt;a href=&#34;https://twitter.com/EmilianoSotel10?ref_src=twsrc%5Etfw&#34;&gt;@EmilianoSotel10&lt;/a&gt;, &lt;a href=&#34;https://twitter.com/fellgernon?ref_src=twsrc%5Etfw&#34;&gt;@fellgernon&lt;/a&gt;, et al. First paper result of our efforts to increase the representation of &lt;a href=&#34;https://twitter.com/hashtag/latam?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#latam&lt;/a&gt; &lt;a href=&#34;https://twitter.com/Bioconductor?ref_src=twsrc%5Etfw&#34;&gt;@Bioconductor&lt;/a&gt; developers. &lt;a href=&#34;https://t.co/By1dEgxtGy&#34;&gt;https://t.co/By1dEgxtGy&lt;/a&gt; &lt;a href=&#34;https://t.co/WWsAYZ7KHM&#34;&gt;https://t.co/WWsAYZ7KHM&lt;/a&gt;&lt;/p&gt;&amp;mdash; Alejandro Reyes (@areyesq) &lt;a href=&#34;https://twitter.com/areyesq/status/1275709948715061250?ref_src=twsrc%5Etfw&#34;&gt;June 24, 2020&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/nIxscHDo61w&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
 </description>
     </item>
     
@@ -145,6 +326,10 @@ Supplementary notes can be added here, including [code and math](https://sourcet
       <pubDate>Wed, 10 Jun 2020 00:00:00 +0000</pubDate>
       <guid>https://lcolladotor.github.io/publication/2020-06_omimderfinder/</guid>
       <description>&lt;!-- More detail can easily be written here using *Markdown* and $\rm \LaTeX$ math code. --&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Occasionally I encounter researchers, who suggest bulk RNA-seq transcriptomics is &amp;quot;sort&amp;quot; of solved, human annotation is &amp;quot;sort&amp;quot; of complete, and it&amp;#39;s probably not worth spending long hours in looking into novel isoforms, splicing events: For them &lt;a href=&#34;https://t.co/6NBYOz9OZP&#34;&gt;https://t.co/6NBYOz9OZP&lt;/a&gt; 1/2 &lt;a href=&#34;https://t.co/9LMAOo24KA&#34;&gt;pic.twitter.com/9LMAOo24KA&lt;/a&gt;&lt;/p&gt;&amp;mdash; Hirak Sarkar (@hrksrkr) &lt;a href=&#34;https://twitter.com/hrksrkr/status/1271453793004199939?ref_src=twsrc%5Etfw&#34;&gt;June 12, 2020&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Welcome to &lt;a href=&#34;https://twitter.com/hashtag/academic?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#academic&lt;/a&gt; twitter David Zhang! 🙌🏽🥳&lt;br&gt;&lt;br&gt;He’s an awesome researcher and excellent at translating ideas into &lt;a href=&#34;https://twitter.com/hashtag/rstats?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#rstats&lt;/a&gt; code as well as beautiful figures! 🤩&lt;br&gt;&lt;br&gt;@DavidZh03027445&lt;br&gt;&lt;br&gt;He is the co-lead author of our recent preprint &lt;a href=&#34;https://t.co/VVr9Qfm6R7&#34;&gt;https://t.co/VVr9Qfm6R7&lt;/a&gt;&lt;br&gt;&lt;br&gt;I bet many PIs will 👀 him!&lt;/p&gt;&amp;mdash; 🇲🇽 Leonardo Collado-Torres (@lcolladotor) &lt;a href=&#34;https://twitter.com/lcolladotor/status/1092883437302833152?ref_src=twsrc%5Etfw&#34;&gt;February 5, 2019&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
 </description>
     </item>
     
@@ -170,7 +355,10 @@ Supplementary notes can be added here, including [code and math](https://sourcet
 
 
 Supplementary notes can be added here, including [code and math](https://sourcethemes.com/academic/docs/writing-markdown-latex/).
---&gt;</description>
+--&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;while we&amp;#39;re all dealing  with this COVID19 outbreak right now, I&amp;#39;m happy to share our latest work on identifying expression quantitative trait loci (eQTLs) and other molecular associations (age + psychiatric diagnoses) in an important cell population in the human brain (1/n) &lt;a href=&#34;https://t.co/FJQcnzvvE7&#34;&gt;https://t.co/FJQcnzvvE7&lt;/a&gt;&lt;/p&gt;&amp;mdash; Andrew Jaffe (@andrewejaffe) &lt;a href=&#34;https://twitter.com/andrewejaffe/status/1239909473008877569?ref_src=twsrc%5Etfw&#34;&gt;March 17, 2020&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+</description>
     </item>
     
     <item>
@@ -179,6 +367,8 @@ Supplementary notes can be added here, including [code and math](https://sourcet
       <pubDate>Tue, 25 Feb 2020 00:00:00 +0000</pubDate>
       <guid>https://lcolladotor.github.io/publication/2020-02_basalganglia/</guid>
       <description>&lt;!-- More detail can easily be written here using *Markdown* and $\rm \LaTeX$ math code. --&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;I&amp;#39;m excited to see 👀 this &lt;a href=&#34;https://twitter.com/hashtag/openaccess?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#openaccess&lt;/a&gt; work published &lt;a href=&#34;https://twitter.com/NatureComms?ref_src=twsrc%5Etfw&#34;&gt;@NatureComms&lt;/a&gt;! Congrats Guelfi @DavidZh03027445 Ryten et al &lt;a href=&#34;https://twitter.com/ucl?ref_src=twsrc%5Etfw&#34;&gt;@ucl&lt;/a&gt;&lt;br&gt;&lt;br&gt;It used &lt;a href=&#34;https://twitter.com/hashtag/derfinder?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#derfinder&lt;/a&gt; to explore the un-annotated 🧬expr + &lt;a href=&#34;https://twitter.com/hashtag/recount2?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#recount2&lt;/a&gt;&amp;#39;s &lt;a href=&#34;https://twitter.com/GTExPortal?ref_src=twsrc%5Etfw&#34;&gt;@GTExPortal&lt;/a&gt; data to validate the findings&lt;br&gt;&lt;br&gt;📜&lt;a href=&#34;https://t.co/RFqJVLaWFc&#34;&gt;https://t.co/RFqJVLaWFc&lt;/a&gt;&lt;a href=&#34;https://t.co/nWatlwDQ6G&#34;&gt;https://t.co/nWatlwDQ6G&lt;/a&gt; &lt;a href=&#34;https://t.co/cE8PIrBiAo&#34;&gt;pic.twitter.com/cE8PIrBiAo&lt;/a&gt;&lt;/p&gt;&amp;mdash; 🇲🇽 Leonardo Collado-Torres (@lcolladotor) &lt;a href=&#34;https://twitter.com/lcolladotor/status/1232310324063170562?ref_src=twsrc%5Etfw&#34;&gt;February 25, 2020&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
 </description>
     </item>
     
@@ -188,6 +378,8 @@ Supplementary notes can be added here, including [code and math](https://sourcet
       <pubDate>Thu, 20 Feb 2020 00:00:00 +0000</pubDate>
       <guid>https://lcolladotor.github.io/publication/2020-02_fantomrecount2/</guid>
       <description>&lt;!-- More detail can easily be written here using *Markdown* and $\rm \LaTeX$ math code. --&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Congrats to Eddie-Luidy &lt;a href=&#34;https://twitter.com/eddieimada?ref_src=twsrc%5Etfw&#34;&gt;@eddieimada&lt;/a&gt; Diego &lt;a href=&#34;https://twitter.com/difersanchez?ref_src=twsrc%5Etfw&#34;&gt;@difersanchez&lt;/a&gt; &amp;amp; Luigi &lt;a href=&#34;https://twitter.com/marchionniLab?ref_src=twsrc%5Etfw&#34;&gt;@marchionniLab&lt;/a&gt; et al for our work published in advance at &lt;a href=&#34;https://twitter.com/genomeresearch?ref_src=twsrc%5Etfw&#34;&gt;@genomeresearch&lt;/a&gt; &lt;a href=&#34;https://t.co/hIKaqs8XAm&#34;&gt;https://t.co/hIKaqs8XAm&lt;/a&gt; 🎉&lt;br&gt;&lt;br&gt;It was powered by &lt;a href=&#34;https://twitter.com/hashtag/recount2?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#recount2&lt;/a&gt;&amp;#39;s BigWig files &lt;a href=&#34;https://t.co/tK6iRfDhDr&#34;&gt;https://t.co/tK6iRfDhDr&lt;/a&gt; &amp;amp; &lt;a href=&#34;https://twitter.com/FANTOM_project?ref_src=twsrc%5Etfw&#34;&gt;@FANTOM_project&lt;/a&gt;&amp;#39;s annotation &lt;a href=&#34;https://twitter.com/hashtag/RNAseq?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#RNAseq&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/rstats?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#rstats&lt;/a&gt; &lt;a href=&#34;https://t.co/MTzZsftpyC&#34;&gt;pic.twitter.com/MTzZsftpyC&lt;/a&gt;&lt;/p&gt;&amp;mdash; 🇲🇽 Leonardo Collado-Torres (@lcolladotor) &lt;a href=&#34;https://twitter.com/lcolladotor/status/1230701645790470150?ref_src=twsrc%5Etfw&#34;&gt;February 21, 2020&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
 </description>
     </item>
     
@@ -197,6 +389,8 @@ Supplementary notes can be added here, including [code and math](https://sourcet
       <pubDate>Thu, 23 Jan 2020 00:00:00 +0000</pubDate>
       <guid>https://lcolladotor.github.io/publication/2020-01_libdstemcell/</guid>
       <description>&lt;!-- More detail can easily be written here using *Markdown* and $\rm \LaTeX$ math code. --&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Congrats to the many &lt;a href=&#34;https://twitter.com/LieberInstitute?ref_src=twsrc%5Etfw&#34;&gt;@LieberInstitute&lt;/a&gt; scientists and &lt;a href=&#34;https://twitter.com/AstraZeneca?ref_src=twsrc%5Etfw&#34;&gt;@AstraZeneca&lt;/a&gt; collaborators on our recent &lt;a href=&#34;https://twitter.com/hashtag/stemcell?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#stemcell&lt;/a&gt; paper in &lt;a href=&#34;https://twitter.com/NatureComms?ref_src=twsrc%5Etfw&#34;&gt;@NatureComms&lt;/a&gt;. Big congrats to Emily Burke and Josh Chenoweth who led this effort!  &lt;a href=&#34;https://t.co/UfMH69rvD5&#34;&gt;https://t.co/UfMH69rvD5&lt;/a&gt; 1/5&lt;/p&gt;&amp;mdash; Andrew Jaffe (@andrewejaffe) &lt;a href=&#34;https://twitter.com/andrewejaffe/status/1220721100730052610?ref_src=twsrc%5Etfw&#34;&gt;January 24, 2020&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
 </description>
     </item>
     
@@ -206,6 +400,10 @@ Supplementary notes can be added here, including [code and math](https://sourcet
       <pubDate>Thu, 26 Sep 2019 00:00:00 +0000</pubDate>
       <guid>https://lcolladotor.github.io/publication/2019-09_dnam_mcph_neuron_glia/</guid>
       <description>&lt;!-- More detail can easily be written here using *Markdown* and $\rm \LaTeX$ math code. --&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;I&amp;#39;m very excited that this paper is out! &lt;a href=&#34;https://t.co/sRqnMZyrQY&#34;&gt;https://t.co/sRqnMZyrQY&lt;/a&gt; To celebrate, here is a twitter summary complete with relevant gifs! &lt;a href=&#34;https://t.co/CKedyVIFF1&#34;&gt;https://t.co/CKedyVIFF1&lt;/a&gt; &lt;a href=&#34;https://t.co/AYm7Idgvim&#34;&gt;pic.twitter.com/AYm7Idgvim&lt;/a&gt;&lt;/p&gt;&amp;mdash; Amanda Price (@ajprice20) &lt;a href=&#34;https://twitter.com/ajprice20/status/1177617132521025536?ref_src=twsrc%5Etfw&#34;&gt;September 27, 2019&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Check out 👀 our new paper lead by Amanda Price &lt;a href=&#34;https://twitter.com/ajprice20?ref_src=twsrc%5Etfw&#34;&gt;@ajprice20&lt;/a&gt; where we explored differences in DNA 🧬 methylation between neurons and glia cells. This was my first project with WGBS data with Andrew Jaffe  &lt;a href=&#34;https://twitter.com/andrewejaffe?ref_src=twsrc%5Etfw&#34;&gt;@andrewejaffe&lt;/a&gt; Nikolay Ivanov @NikolayA_Ivanov and the rest of the (1/3) &lt;a href=&#34;https://twitter.com/hashtag/DNAm?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#DNAm&lt;/a&gt;&lt;/p&gt;&amp;mdash; 🇲🇽 Leonardo Collado-Torres (@lcolladotor) &lt;a href=&#34;https://twitter.com/lcolladotor/status/1177625005364011009?ref_src=twsrc%5Etfw&#34;&gt;September 27, 2019&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
 </description>
     </item>
     
@@ -215,6 +413,8 @@ Supplementary notes can be added here, including [code and math](https://sourcet
       <pubDate>Fri, 21 Jun 2019 00:00:00 +0000</pubDate>
       <guid>https://lcolladotor.github.io/publication/2019-06_mirna_kit_comp/</guid>
       <description>&lt;!-- More detail can easily be written here using *Markdown* and $\rm \LaTeX$ math code. --&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Interested in &lt;a href=&#34;https://twitter.com/hashtag/smallRNA?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#smallRNA&lt;/a&gt;? Check out &lt;a href=&#34;https://twitter.com/LieberInstitute?ref_src=twsrc%5Etfw&#34;&gt;@LieberInstitute&lt;/a&gt;&amp;#39;s new publication &lt;a href=&#34;https://twitter.com/BMC_series?ref_src=twsrc%5Etfw&#34;&gt;@BMC_series&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/BMCGenomics?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#BMCGenomics&lt;/a&gt;! 🎉 We found major differences in commonly used &lt;a href=&#34;https://twitter.com/hashtag/rnaSeq?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#rnaSeq&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/miRNAseq?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#miRNAseq&lt;/a&gt; methods for &lt;a href=&#34;https://twitter.com/hashtag/miRNA?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#miRNA&lt;/a&gt; and &lt;a href=&#34;https://twitter.com/hashtag/isomiR?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#isomiR&lt;/a&gt; quantifications. &lt;a href=&#34;https://t.co/rGTuCAnsOO&#34;&gt;https://t.co/rGTuCAnsOO&lt;/a&gt; &lt;a href=&#34;https://t.co/L9IEnMvGTJ&#34;&gt;pic.twitter.com/L9IEnMvGTJ&lt;/a&gt;&lt;/p&gt;&amp;mdash; mirnas22 (@mirnas22) &lt;a href=&#34;https://twitter.com/mirnas22/status/1146092533304266752?ref_src=twsrc%5Etfw&#34;&gt;July 2, 2019&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
 </description>
     </item>
     
@@ -224,6 +424,8 @@ Supplementary notes can be added here, including [code and math](https://sourcet
       <pubDate>Tue, 04 Jun 2019 00:00:00 +0000</pubDate>
       <guid>https://lcolladotor.github.io/publication/2019-06_bsp2/</guid>
       <description>&lt;!-- More detail can easily be written here using *Markdown* and $\rm \LaTeX$ math code. --&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;I&amp;#39;m thrilled to announce &lt;a href=&#34;https://twitter.com/LieberInstitute?ref_src=twsrc%5Etfw&#34;&gt;@LieberInstitute&lt;/a&gt;&amp;#39;s BrainSeq Phase II paper publication today &lt;a href=&#34;https://t.co/XHjp6CryoG&#34;&gt;https://t.co/XHjp6CryoG&lt;/a&gt; 🎉&lt;a href=&#34;https://twitter.com/NeuroCellPress?ref_src=twsrc%5Etfw&#34;&gt;@NeuroCellPress&lt;/a&gt;&lt;br&gt;Work by &lt;a href=&#34;https://twitter.com/andrewejaffe?ref_src=twsrc%5Etfw&#34;&gt;@andrewejaffe&lt;/a&gt; &lt;a href=&#34;https://twitter.com/Dr_Weinberger?ref_src=twsrc%5Etfw&#34;&gt;@Dr_Weinberger&lt;/a&gt; &lt;a href=&#34;https://twitter.com/amptrsn?ref_src=twsrc%5Etfw&#34;&gt;@amptrsn&lt;/a&gt; &lt;a href=&#34;https://twitter.com/SteveSemick?ref_src=twsrc%5Etfw&#34;&gt;@SteveSemick&lt;/a&gt; &lt;a href=&#34;https://twitter.com/CristianValPe01?ref_src=twsrc%5Etfw&#34;&gt;@CristianValPe01&lt;/a&gt; &lt;a href=&#34;https://twitter.com/ajprice20?ref_src=twsrc%5Etfw&#34;&gt;@ajprice20&lt;/a&gt; et al from the past yrs&lt;a href=&#34;https://twitter.com/biorxivpreprint?ref_src=twsrc%5Etfw&#34;&gt;@biorxivpreprint&lt;/a&gt; &lt;a href=&#34;https://t.co/ptjNrpSgyh&#34;&gt;https://t.co/ptjNrpSgyh&lt;/a&gt; &lt;a href=&#34;https://t.co/An726JOyzD&#34;&gt;pic.twitter.com/An726JOyzD&lt;/a&gt;&lt;/p&gt;&amp;mdash; 🇲🇽 Leonardo Collado-Torres (@lcolladotor) &lt;a href=&#34;https://twitter.com/lcolladotor/status/1135944857707401217?ref_src=twsrc%5Etfw&#34;&gt;June 4, 2019&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
 </description>
     </item>
     
@@ -233,6 +435,8 @@ Supplementary notes can be added here, including [code and math](https://sourcet
       <pubDate>Sun, 14 Apr 2019 00:00:00 +0000</pubDate>
       <guid>https://lcolladotor.github.io/publication/2019-04_recount_proteomics/</guid>
       <description>&lt;!-- More detail can easily be written here using *Markdown* and $\rm \LaTeX$ math code. --&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;I&amp;#39;m glad to see published this project lead by Anil Madugundu in Akhilesh Pandey&amp;#39;s lab&lt;a href=&#34;https://t.co/MF3PGL18et&#34;&gt;https://t.co/MF3PGL18et&lt;/a&gt; &lt;a href=&#34;https://twitter.com/proteomics?ref_src=twsrc%5Etfw&#34;&gt;@proteomics&lt;/a&gt;&lt;br&gt;&lt;br&gt;It was our first &lt;a href=&#34;https://twitter.com/hashtag/recount2?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#recount2&lt;/a&gt; collab w/ &lt;a href=&#34;https://twitter.com/Shannon_E_Ellis?ref_src=twsrc%5Etfw&#34;&gt;@Shannon_E_Ellis&lt;/a&gt; &lt;a href=&#34;https://twitter.com/chrisnwilks?ref_src=twsrc%5Etfw&#34;&gt;@chrisnwilks&lt;/a&gt; &lt;a href=&#34;https://twitter.com/BenLangmead?ref_src=twsrc%5Etfw&#34;&gt;@BenLangmead&lt;/a&gt; where we brainstormed how to use the exon-exon junction data for proteomics &lt;a href=&#34;https://t.co/TI5PWq19Ok&#34;&gt;pic.twitter.com/TI5PWq19Ok&lt;/a&gt;&lt;/p&gt;&amp;mdash; 🇲🇽 Leonardo Collado-Torres (@lcolladotor) &lt;a href=&#34;https://twitter.com/lcolladotor/status/1161647713005395969?ref_src=twsrc%5Etfw&#34;&gt;August 14, 2019&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
 </description>
     </item>
     
@@ -242,6 +446,8 @@ Supplementary notes can be added here, including [code and math](https://sourcet
       <pubDate>Sat, 02 Feb 2019 00:00:00 +0000</pubDate>
       <guid>https://lcolladotor.github.io/publication/2019-02_dnam_alzheimer/</guid>
       <description>&lt;!-- More detail can easily be written here using *Markdown* and $\rm \LaTeX$ math code. --&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Fresh off the press: Integrated DNA methylation and gene expression profling across multiple brain regions implicate novel genes in Alzheimer’s disease&lt;a href=&#34;https://t.co/a35BM6decX&#34;&gt;https://t.co/a35BM6decX&lt;/a&gt;&lt;br&gt;&lt;br&gt;Lead by &lt;a href=&#34;https://twitter.com/SteveSemick?ref_src=twsrc%5Etfw&#34;&gt;@SteveSemick&lt;/a&gt; with all &lt;a href=&#34;https://twitter.com/LieberInstitute?ref_src=twsrc%5Etfw&#34;&gt;@LieberInstitute&lt;/a&gt; co-authors GEO: GSE125895 Code: &lt;a href=&#34;https://t.co/UoXVFShSo6&#34;&gt;https://t.co/UoXVFShSo6&lt;/a&gt; &lt;a href=&#34;https://t.co/5DbfEkq0Fo&#34;&gt;pic.twitter.com/5DbfEkq0Fo&lt;/a&gt;&lt;/p&gt;&amp;mdash; 🇲🇽 Leonardo Collado-Torres (@lcolladotor) &lt;a href=&#34;https://twitter.com/lcolladotor/status/1092463008910053378?ref_src=twsrc%5Etfw&#34;&gt;February 4, 2019&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
 </description>
     </item>
     
@@ -251,6 +457,8 @@ Supplementary notes can be added here, including [code and math](https://sourcet
       <pubDate>Wed, 21 Nov 2018 00:00:00 +0000</pubDate>
       <guid>https://lcolladotor.github.io/publication/2018-11_nccsr/</guid>
       <description>&lt;!-- More detail can easily be written here using *Markdown* and $\rm \LaTeX$ math code. --&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Our paper with &lt;a href=&#34;https://twitter.com/helenakuri?ref_src=twsrc%5Etfw&#34;&gt;@helenakuri&lt;/a&gt; &lt;a href=&#34;https://twitter.com/jmbarnet?ref_src=twsrc%5Etfw&#34;&gt;@jmbarnet&lt;/a&gt; &lt;a href=&#34;https://twitter.com/andrewejaffe?ref_src=twsrc%5Etfw&#34;&gt;@andrewejaffe&lt;/a&gt; on &amp;quot;Non-coding Class Switch Recombination-Related Transcription in Human Normal &amp;amp; Pathological Immune Response&amp;quot; is now published at &lt;a href=&#34;https://twitter.com/FrontImmunol?ref_src=twsrc%5Etfw&#34;&gt;@FrontImmunol&lt;/a&gt; 🎉&lt;a href=&#34;https://t.co/XqNMkkH0Ba&#34;&gt;https://t.co/XqNMkkH0Ba&lt;/a&gt;&lt;a href=&#34;https://twitter.com/LieberInstitute?ref_src=twsrc%5Etfw&#34;&gt;@LieberInstitute&lt;/a&gt; &lt;a href=&#34;https://twitter.com/inspmx?ref_src=twsrc%5Etfw&#34;&gt;@inspmx&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/recount2?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#recount2&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/RNAseq?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#RNAseq&lt;/a&gt; &lt;a href=&#34;https://twitter.com/Conacyt_MX?ref_src=twsrc%5Etfw&#34;&gt;@Conacyt_MX&lt;/a&gt; &lt;a href=&#34;https://t.co/JFHkXC65cw&#34;&gt;https://t.co/JFHkXC65cw&lt;/a&gt;&lt;/p&gt;&amp;mdash; 🇲🇽 Leonardo Collado-Torres (@lcolladotor) &lt;a href=&#34;https://twitter.com/lcolladotor/status/1065309908571164673?ref_src=twsrc%5Etfw&#34;&gt;November 21, 2018&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
 </description>
     </item>
     
@@ -260,6 +468,8 @@ Supplementary notes can be added here, including [code and math](https://sourcet
       <pubDate>Tue, 21 Aug 2018 00:00:00 +0000</pubDate>
       <guid>https://lcolladotor.github.io/publication/2018-08_maternalsmoking/</guid>
       <description>&lt;!-- More detail can easily be written here using *Markdown* and $\rm \LaTeX$ math code. --&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;With BrainSeq Phase I data &lt;a href=&#34;https://t.co/CN8QO1xGlV&#34;&gt;https://t.co/CN8QO1xGlV&lt;/a&gt; you can, among many things, subset it &amp;amp; study the &amp;quot;Developmental effects of maternal smoking during pregnancy on the human frontal cortex transcriptome&amp;quot; as &lt;a href=&#34;https://twitter.com/SteveSemick?ref_src=twsrc%5Etfw&#34;&gt;@SteveSemick&lt;/a&gt; &lt;a href=&#34;https://twitter.com/andrewejaffe?ref_src=twsrc%5Etfw&#34;&gt;@andrewejaffe&lt;/a&gt; &lt;a href=&#34;https://twitter.com/LieberInstitute?ref_src=twsrc%5Etfw&#34;&gt;@LieberInstitute&lt;/a&gt; did &lt;a href=&#34;https://t.co/Hl60FChJgV&#34;&gt;https://t.co/Hl60FChJgV&lt;/a&gt; &lt;a href=&#34;https://t.co/jbaM9McXAs&#34;&gt;pic.twitter.com/jbaM9McXAs&lt;/a&gt;&lt;/p&gt;&amp;mdash; 🇲🇽 Leonardo Collado-Torres (@lcolladotor) &lt;a href=&#34;https://twitter.com/lcolladotor/status/1031904092916989952?ref_src=twsrc%5Etfw&#34;&gt;August 21, 2018&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
 </description>
     </item>
     
@@ -269,6 +479,10 @@ Supplementary notes can be added here, including [code and math](https://sourcet
       <pubDate>Thu, 26 Jul 2018 00:00:00 +0000</pubDate>
       <guid>https://lcolladotor.github.io/publication/2018-07_bsp1/</guid>
       <description>&lt;!-- More detail can easily be written here using *Markdown* and $\rm \LaTeX$ math code. --&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Check out our most recent &lt;a href=&#34;https://twitter.com/LieberInstitute?ref_src=twsrc%5Etfw&#34;&gt;@LieberInstitute&lt;/a&gt; work on eQTLs, DLPFC development and &lt;a href=&#34;https://twitter.com/hashtag/schizophrenia?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#schizophrenia&lt;/a&gt; at &lt;a href=&#34;https://t.co/CN8QO1xGlV&#34;&gt;https://t.co/CN8QO1xGlV&lt;/a&gt; lead by &lt;a href=&#34;https://twitter.com/andrewejaffe?ref_src=twsrc%5Etfw&#34;&gt;@andrewejaffe&lt;/a&gt;. Thanks to &lt;a href=&#34;https://twitter.com/biorxivpreprint?ref_src=twsrc%5Etfw&#34;&gt;@biorxivpreprint&lt;/a&gt; for letting us share our progress &lt;a href=&#34;https://t.co/6Zds7FW4U7&#34;&gt;https://t.co/6Zds7FW4U7&lt;/a&gt; and &lt;a href=&#34;https://twitter.com/NatureNeuro?ref_src=twsrc%5Etfw&#34;&gt;@NatureNeuro&lt;/a&gt; for publishing the final version! &lt;a href=&#34;https://t.co/CKJxoXmAdu&#34;&gt;pic.twitter.com/CKJxoXmAdu&lt;/a&gt;&lt;/p&gt;&amp;mdash; 🇲🇽 Leonardo Collado-Torres (@lcolladotor) &lt;a href=&#34;https://twitter.com/lcolladotor/status/1022526549617201153?ref_src=twsrc%5Etfw&#34;&gt;July 26, 2018&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Most comprehensive eQTL resource in human brain to date, finds half of risk snps for schizophrenia map to nearby expression, including unannotated sequence  &lt;a href=&#34;https://t.co/Q4TGxChb66&#34;&gt;https://t.co/Q4TGxChb66&lt;/a&gt; &lt;a href=&#34;https://twitter.com/LieberInstitute?ref_src=twsrc%5Etfw&#34;&gt;@LieberInstitute&lt;/a&gt; check out browser at &lt;a href=&#34;https://t.co/PdoshZZE5J&#34;&gt;https://t.co/PdoshZZE5J&lt;/a&gt;&lt;/p&gt;&amp;mdash; Andrew Jaffe (@andrewejaffe) &lt;a href=&#34;https://twitter.com/andrewejaffe/status/1022524313822552064?ref_src=twsrc%5Etfw&#34;&gt;July 26, 2018&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
 </description>
     </item>
     
@@ -278,6 +492,10 @@ Supplementary notes can be added here, including [code and math](https://sourcet
       <pubDate>Mon, 05 Mar 2018 16:45:43 -0500</pubDate>
       <guid>https://lcolladotor.github.io/publication/2018-03_rnaseq_prediction/</guid>
       <description>&lt;!-- More detail can easily be written here using *Markdown* and $\rm \LaTeX$ math code. --&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Congrats to &lt;a href=&#34;https://twitter.com/Shannon_E_Ellis?ref_src=twsrc%5Etfw&#34;&gt;@Shannon_E_Ellis&lt;/a&gt; on her work improving the value of public genomic data by phenotype prediction now out at &lt;a href=&#34;https://twitter.com/NAR_Open?ref_src=twsrc%5Etfw&#34;&gt;@NAR_Open&lt;/a&gt;: &lt;a href=&#34;https://t.co/SWQvTuKMxk&#34;&gt;https://t.co/SWQvTuKMxk&lt;/a&gt; you can get the predictions from the recount package: &lt;a href=&#34;https://t.co/y8CDPephE4&#34;&gt;https://t.co/y8CDPephE4&lt;/a&gt; &lt;a href=&#34;https://t.co/jjTQIePKet&#34;&gt;pic.twitter.com/jjTQIePKet&lt;/a&gt;&lt;/p&gt;&amp;mdash; Jeff Leek (@jtleek) &lt;a href=&#34;https://twitter.com/jtleek/status/970710268199297024?ref_src=twsrc%5Etfw&#34;&gt;March 5, 2018&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Access all of &lt;a href=&#34;https://twitter.com/Shannon_E_Ellis?ref_src=twsrc%5Etfw&#34;&gt;@Shannon_E_Ellis&lt;/a&gt;’s predictions by using recount::add_predictions() [with no rse argument] in recount version &amp;gt;= 1.5.9. Great work Shannon! &lt;a href=&#34;https://twitter.com/hashtag/rstats?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#rstats&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/rnaseq?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#rnaseq&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/bioinformatics?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#bioinformatics&lt;/a&gt; &lt;a href=&#34;https://t.co/g0yt90AzSp&#34;&gt;https://t.co/g0yt90AzSp&lt;/a&gt;&lt;/p&gt;&amp;mdash; 🇲🇽 Leonardo Collado-Torres (@lcolladotor) &lt;a href=&#34;https://twitter.com/lcolladotor/status/970899283707924480?ref_src=twsrc%5Etfw&#34;&gt;March 6, 2018&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
 </description>
     </item>
     
@@ -287,6 +505,8 @@ Supplementary notes can be added here, including [code and math](https://sourcet
       <pubDate>Thu, 24 Aug 2017 16:45:43 -0500</pubDate>
       <guid>https://lcolladotor.github.io/publication/2017-08_recountworkflow/</guid>
       <description>&lt;!-- More detail can easily be written here using *Markdown* and $\rm \LaTeX$ math code. --&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Check our new recount workflow paper at &lt;a href=&#34;https://t.co/p0l2IQ9PL7&#34;&gt;https://t.co/p0l2IQ9PL7&lt;/a&gt; with &lt;a href=&#34;https://twitter.com/AbhiNellore?ref_src=twsrc%5Etfw&#34;&gt;@AbhiNellore&lt;/a&gt; &lt;a href=&#34;https://twitter.com/andrewejaffe?ref_src=twsrc%5Etfw&#34;&gt;@andrewejaffe&lt;/a&gt; ^^ &lt;a href=&#34;https://twitter.com/hashtag/rstats?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#rstats&lt;/a&gt; &lt;a href=&#34;https://twitter.com/Bioconductor?ref_src=twsrc%5Etfw&#34;&gt;@Bioconductor&lt;/a&gt; &lt;a href=&#34;https://twitter.com/LieberInstitute?ref_src=twsrc%5Etfw&#34;&gt;@LieberInstitute&lt;/a&gt;&lt;/p&gt;&amp;mdash; 🇲🇽 Leonardo Collado-Torres (@lcolladotor) &lt;a href=&#34;https://twitter.com/lcolladotor/status/900747274862682114?ref_src=twsrc%5Etfw&#34;&gt;August 24, 2017&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
 </description>
     </item>
     
@@ -296,6 +516,8 @@ Supplementary notes can be added here, including [code and math](https://sourcet
       <pubDate>Tue, 09 May 2017 16:45:43 -0500</pubDate>
       <guid>https://lcolladotor.github.io/publication/2017-05_histamine/</guid>
       <description>&lt;!-- More detail can easily be written here using *Markdown* and $\rm \LaTeX$ math code. --&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Check out &lt;a href=&#34;https://twitter.com/LieberInstitute?ref_src=twsrc%5Etfw&#34;&gt;@LieberInstitute&lt;/a&gt;’s new paper about ASD and histamine genes lead by C Wright &lt;a href=&#34;https://t.co/bK33j67iAc&#34;&gt;https://t.co/bK33j67iAc&lt;/a&gt; Made figure 1 with &lt;a href=&#34;https://twitter.com/hashtag/rstats?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#rstats&lt;/a&gt; ^^&lt;/p&gt;&amp;mdash; 🇲🇽 Leonardo Collado-Torres (@lcolladotor) &lt;a href=&#34;https://twitter.com/lcolladotor/status/862329696536723456?ref_src=twsrc%5Etfw&#34;&gt;May 10, 2017&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
 </description>
     </item>
     
@@ -305,6 +527,8 @@ Supplementary notes can be added here, including [code and math](https://sourcet
       <pubDate>Tue, 11 Apr 2017 16:45:43 -0500</pubDate>
       <guid>https://lcolladotor.github.io/publication/2017-04_recount/</guid>
       <description>&lt;!-- More detail can easily be written here using *Markdown* and $\rm \LaTeX$ math code. --&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Interested in public human &lt;a href=&#34;https://twitter.com/hashtag/RNAseq?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#RNAseq&lt;/a&gt; data from over 70,000 samples? Check out the recount2 paper published today!! &lt;a href=&#34;https://t.co/AeOqy0WOK1&#34;&gt;https://t.co/AeOqy0WOK1&lt;/a&gt;&lt;/p&gt;&amp;mdash; 🇲🇽 Leonardo Collado-Torres (@lcolladotor) &lt;a href=&#34;https://twitter.com/lcolladotor/status/851829468817760256?ref_src=twsrc%5Etfw&#34;&gt;April 11, 2017&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
 </description>
     </item>
     
@@ -314,6 +538,8 @@ Supplementary notes can be added here, including [code and math](https://sourcet
       <pubDate>Fri, 30 Dec 2016 17:44:49 -0500</pubDate>
       <guid>https://lcolladotor.github.io/publication/2016-12_intropolis/</guid>
       <description>&lt;!-- More detail can easily be written here using *Markdown* and $\rm \LaTeX$ math code. --&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Human splicing diversity across the Sequence Read Archive  &lt;a href=&#34;https://t.co/wOX5U0Uenm&#34;&gt;https://t.co/wOX5U0Uenm&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/bioRxiv?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#bioRxiv&lt;/a&gt;&lt;/p&gt;&amp;mdash; bioRxiv (@biorxivpreprint) &lt;a href=&#34;https://twitter.com/biorxivpreprint/status/693282574169411584?ref_src=twsrc%5Etfw&#34;&gt;January 30, 2016&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
 </description>
     </item>
     
@@ -323,6 +549,8 @@ Supplementary notes can be added here, including [code and math](https://sourcet
       <pubDate>Mon, 26 Sep 2016 00:00:00 +0000</pubDate>
       <guid>https://lcolladotor.github.io/publication/2016-09_derfinder/</guid>
       <description>&lt;!-- More detail can easily be written here using *Markdown* and $\rm \LaTeX$ math code. --&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;New preprint on derfinder software out! Congrats &lt;a href=&#34;https://twitter.com/fellgernon?ref_src=twsrc%5Etfw&#34;&gt;@fellgernon&lt;/a&gt; &lt;a href=&#34;http://t.co/HTkm2HbNxS&#34;&gt;http://t.co/HTkm2HbNxS&lt;/a&gt;. Also check the software: &lt;a href=&#34;http://t.co/CuEdxaYdyM&#34;&gt;http://t.co/CuEdxaYdyM&lt;/a&gt;&lt;/p&gt;&amp;mdash; Jeff Leek (@jtleek) &lt;a href=&#34;https://twitter.com/jtleek/status/568489985428590593?ref_src=twsrc%5Etfw&#34;&gt;February 19, 2015&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
 </description>
     </item>
     
@@ -332,6 +560,8 @@ Supplementary notes can be added here, including [code and math](https://sourcet
       <pubDate>Sat, 03 Sep 2016 17:27:55 -0500</pubDate>
       <guid>https://lcolladotor.github.io/publication/2016-09_rail/</guid>
       <description>&lt;!-- More detail can easily be written here using *Markdown* and $\rm \LaTeX$ math code. --&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Rail-RNA scalable analysis of splicing &amp;amp; coverage out in Bioinformatics! &lt;a href=&#34;https://t.co/dPjXp1kL2p&#34;&gt;https://t.co/dPjXp1kL2p&lt;/a&gt; great work &lt;a href=&#34;https://twitter.com/AbhiNellore?ref_src=twsrc%5Etfw&#34;&gt;@AbhiNellore&lt;/a&gt; &lt;a href=&#34;https://twitter.com/BenLangmead?ref_src=twsrc%5Etfw&#34;&gt;@BenLangmead&lt;/a&gt;!&lt;/p&gt;&amp;mdash; Jeff Leek (@jtleek) &lt;a href=&#34;https://twitter.com/jtleek/status/773153213042262016?ref_src=twsrc%5Etfw&#34;&gt;September 6, 2016&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
 </description>
     </item>
     
@@ -341,6 +571,8 @@ Supplementary notes can be added here, including [code and math](https://sourcet
       <pubDate>Wed, 29 Jun 2016 17:21:58 -0500</pubDate>
       <guid>https://lcolladotor.github.io/publication/2016-06_regionreport/</guid>
       <description>&lt;!-- More detail can easily be written here using *Markdown* and $\rm \LaTeX$ math code. --&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Checkout &lt;a href=&#34;https://twitter.com/fellgernon?ref_src=twsrc%5Etfw&#34;&gt;@fellgernon&lt;/a&gt;&amp;#39;s regionReport &lt;a href=&#34;http://t.co/d4WUytrPnD&#34;&gt;http://t.co/d4WUytrPnD&lt;/a&gt; (code: &lt;a href=&#34;http://t.co/q46d4RKlYC&#34;&gt;http://t.co/q46d4RKlYC&lt;/a&gt;) for best results, pair w/derfinder, bumphunter ...&lt;/p&gt;&amp;mdash; Jeff Leek (@jtleek) &lt;a href=&#34;https://twitter.com/jtleek/status/577886628636696577?ref_src=twsrc%5Etfw&#34;&gt;March 17, 2015&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
 </description>
     </item>
     
@@ -350,6 +582,8 @@ Supplementary notes can be added here, including [code and math](https://sourcet
       <pubDate>Fri, 19 Dec 2014 17:17:48 -0500</pubDate>
       <guid>https://lcolladotor.github.io/publication/2014-12_brainders/</guid>
       <description>&lt;!-- More detail can easily be written here using *Markdown* and $\rm \LaTeX$ math code. --&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Developmental regulation of human cortex transcription and its clinical relevance at single base resolution &lt;a href=&#34;http://t.co/0R5n6JV9Bk&#34;&gt;http://t.co/0R5n6JV9Bk&lt;/a&gt;&lt;/p&gt;&amp;mdash; Andrew Jaffe (@andrewejaffe) &lt;a href=&#34;https://twitter.com/andrewejaffe/status/544530511536730112?ref_src=twsrc%5Etfw&#34;&gt;December 15, 2014&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
 </description>
     </item>
     

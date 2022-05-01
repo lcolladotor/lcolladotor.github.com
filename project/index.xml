@@ -25,7 +25,7 @@
       <link>https://lcolladotor.github.io/project/spatial/</link>
       <pubDate>Sat, 29 Feb 2020 00:00:00 +0000</pubDate>
       <guid>https://lcolladotor.github.io/project/spatial/</guid>
-      <description>&lt;p&gt;In 2020 we published the &lt;a href=&#34;https://www.biorxiv.org/content/10.1101/2020.02.28.969931v1&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;first pre-print&lt;/a&gt; using the 10x Genomics Visium platform for spatial transcriptomics. For this project we created the &lt;a href=&#34;https://bioconductor.org/packages/spatialLIBD&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;spatialLIBD&lt;/code&gt;&lt;/a&gt; Bioconductor package and started developing new analytical methods for this type of data.&lt;/p&gt;
+      <description>&lt;p&gt;In February 2020 we published the &lt;a href=&#34;https://www.biorxiv.org/content/10.1101/2020.02.28.969931v1&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;first pre-print&lt;/a&gt; using the 10x Genomics Visium platform for spatial transcriptomics. For this project we created the &lt;a href=&#34;https://bioconductor.org/packages/spatialLIBD&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;spatialLIBD&lt;/code&gt;&lt;/a&gt; Bioconductor package and started developing new analytical methods for this type of data. Given that we shared all the data and code when we posted the pre-print, by the time &lt;a href=&#34;https://doi.org/10.1038/s41593-020-00787-0&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;the peer-reviewed publication&lt;/a&gt; was made public in February 2021, others had already used our dataset to develop and showcase their methods. For example, &lt;a href=&#34;http://bioconductor.org/packages/BayesSpace&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;BayesSpace&lt;/code&gt;&lt;/a&gt;&amp;rsquo;s &lt;a href=&#34;https://doi.org/10.1101/2020.09.04.283812&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;pre-print&lt;/a&gt; was posted on September 2020, prior to their own June 2021 &lt;a href=&#34;https://doi.org/10.1038/s41587-021-00935-2&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;peer-reviewed publication&lt;/a&gt;. We are now using &lt;code&gt;BayesSpace&lt;/code&gt; in our projects. This is an example of how open science and open access accelerate science.&lt;/p&gt;
 </description>
     </item>
     
@@ -39,7 +39,7 @@
 &lt;li&gt;Utilizing LIBD’s unprecedented brain tissue repository to generate and analyze genomic data related to neuropsychiatric disorders.&lt;/li&gt;
 &lt;li&gt;Making data freely available to scientists worldwide.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;As part of the BrainSeq Consortium I have analyzed parts of Phase I and II data, either for the publications describing those phases or for re-analyses of the same data.&lt;/p&gt;
+&lt;p&gt;As part of the BrainSEQ Consortium, I have analyzed datasets from Phase I and II , either for the publications describing those phases or for re-analyses of the same data. We then adapted this code base for the BipSeq and MDDSeq projects, among other ones.&lt;/p&gt;
 </description>
     </item>
     

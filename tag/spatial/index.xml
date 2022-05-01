@@ -5,12 +5,52 @@
     <link>https://lcolladotor.github.io/tag/spatial/</link>
       <atom:link href="https://lcolladotor.github.io/tag/spatial/index.xml" rel="self" type="application/rss+xml" />
     <description>spatial</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Thu, 29 Apr 2021 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Thu, 28 Apr 2022 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://lcolladotor.github.io/media/icon_hu2b32c4ab415f12f472f73c7b0301b0d1_19400_512x512_fill_lanczos_center_3.png</url>
       <title>spatial</title>
       <link>https://lcolladotor.github.io/tag/spatial/</link>
     </image>
+    
+    <item>
+      <title>SpatialExperiment: infrastructure for spatially resolved transcriptomics data in R using Bioconductor</title>
+      <link>https://lcolladotor.github.io/publication/2022_04_spatialexperiment/</link>
+      <pubDate>Thu, 28 Apr 2022 00:00:00 +0000</pubDate>
+      <guid>https://lcolladotor.github.io/publication/2022_04_spatialexperiment/</guid>
+      <description>&lt;!--
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Click the &lt;em&gt;Cite&lt;/em&gt; button above to demo the feature to enable visitors to import publication metadata into their reference management software.
+  &lt;/div&gt;
+&lt;/div&gt;
+
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Click the &lt;em&gt;Slides&lt;/em&gt; button above to demo Academic&amp;rsquo;s Markdown slides feature.
+  &lt;/div&gt;
+&lt;/div&gt;
+
+
+Supplementary notes can be added here, including [code and math](https://sourcethemes.com/academic/docs/writing-markdown-latex/).
+--&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Are you analyzing spatially-resolved transcriptomics data? Visium from &lt;a href=&#34;https://twitter.com/10xGenomics?ref_src=twsrc%5Etfw&#34;&gt;@10xGenomics&lt;/a&gt;? You might want to use &lt;a href=&#34;https://twitter.com/hashtag/SpatialExperiment?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#SpatialExperiment&lt;/a&gt; which provides a common infrastructure fully compatible with &lt;a href=&#34;https://twitter.com/Bioconductor?ref_src=twsrc%5Etfw&#34;&gt;@Bioconductor&lt;/a&gt;&amp;#39;s ecosystem &lt;a href=&#34;https://twitter.com/hashtag/rstats?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#rstats&lt;/a&gt;&lt;br&gt;&lt;br&gt;More details? Open access paper 📜&lt;a href=&#34;https://t.co/4Y2RN4Wz2z&#34;&gt;https://t.co/4Y2RN4Wz2z&lt;/a&gt; &lt;a href=&#34;https://t.co/49wE5Dv5HF&#34;&gt;https://t.co/49wE5Dv5HF&lt;/a&gt; &lt;a href=&#34;https://t.co/QpI4lvCF2r&#34;&gt;pic.twitter.com/QpI4lvCF2r&lt;/a&gt;&lt;/p&gt;&amp;mdash; 🇲🇽 Leonardo Collado-Torres (@lcolladotor) &lt;a href=&#34;https://twitter.com/lcolladotor/status/1520066354241449988?ref_src=twsrc%5Etfw&#34;&gt;April 29, 2022&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;p&gt;
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/AJFN-eSQyKs&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/VojNV7q3i2s&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Are you working with spatial transcriptomics data such as Visium from &lt;a href=&#34;https://twitter.com/10xGenomics?ref_src=twsrc%5Etfw&#34;&gt;@10xGenomics&lt;/a&gt;? Then you&amp;#39;ll be interested in &lt;a href=&#34;https://twitter.com/hashtag/SpatialExperiment?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#SpatialExperiment&lt;/a&gt; 📦 led by &lt;a href=&#34;https://twitter.com/drighelli?ref_src=twsrc%5Etfw&#34;&gt;@drighelli&lt;/a&gt; &lt;a href=&#34;https://twitter.com/lmwebr?ref_src=twsrc%5Etfw&#34;&gt;@lmwebr&lt;/a&gt; &lt;a href=&#34;https://twitter.com/CrowellHL?ref_src=twsrc%5Etfw&#34;&gt;@CrowellHL&lt;/a&gt; with contributions by &lt;a href=&#34;https://twitter.com/PardoBree?ref_src=twsrc%5Etfw&#34;&gt;@PardoBree&lt;/a&gt; &lt;a href=&#34;https://twitter.com/shazanfar?ref_src=twsrc%5Etfw&#34;&gt;@shazanfar&lt;/a&gt; A Lun &lt;a href=&#34;https://twitter.com/stephaniehicks?ref_src=twsrc%5Etfw&#34;&gt;@stephaniehicks&lt;/a&gt; &lt;a href=&#34;https://twitter.com/drisso1893?ref_src=twsrc%5Etfw&#34;&gt;@drisso1893&lt;/a&gt; 🌟&lt;br&gt;&lt;br&gt;📜 &lt;a href=&#34;https://t.co/r36qlakRJe&#34;&gt;https://t.co/r36qlakRJe&lt;/a&gt; &lt;a href=&#34;https://t.co/cWIiwLFitV&#34;&gt;pic.twitter.com/cWIiwLFitV&lt;/a&gt;&lt;/p&gt;&amp;mdash; 🇲🇽 Leonardo Collado-Torres (@lcolladotor) &lt;a href=&#34;https://twitter.com/lcolladotor/status/1355208674856329218?ref_src=twsrc%5Etfw&#34;&gt;January 29, 2021&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+</description>
+    </item>
     
     <item>
       <title>spatialLIBD: an R/Bioconductor package to visualize spatially-resolved transcriptomics data</title>
@@ -34,7 +74,20 @@
 
 
 Supplementary notes can be added here, including [code and math](https://sourcethemes.com/academic/docs/writing-markdown-latex/).
---&gt;</description>
+--&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/VojNV7q3i2s&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Our paper describing our package &lt;a href=&#34;https://twitter.com/hashtag/spatialLIBD?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#spatialLIBD&lt;/a&gt; is finally out! 🎉🎉🎉&lt;br&gt;&lt;br&gt;spatialLIBD is an &lt;a href=&#34;https://twitter.com/hashtag/rstats?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#rstats&lt;/a&gt; / &lt;a href=&#34;https://twitter.com/Bioconductor?ref_src=twsrc%5Etfw&#34;&gt;@Bioconductor&lt;/a&gt; package to visualize spatial transcriptomics data.&lt;br&gt;⁰&lt;br&gt;This is especially exciting for me as it is my first paper as a first author 🦑.&lt;a href=&#34;https://t.co/COW013x4GA&#34;&gt;https://t.co/COW013x4GA&lt;/a&gt;&lt;br&gt;&lt;br&gt;1/9 &lt;a href=&#34;https://t.co/xevIUg3IsA&#34;&gt;pic.twitter.com/xevIUg3IsA&lt;/a&gt;&lt;/p&gt;&amp;mdash; Brenda Pardo (@PardoBree) &lt;a href=&#34;https://twitter.com/PardoBree/status/1388253938391175173?ref_src=twsrc%5Etfw&#34;&gt;April 30, 2021&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/LZ2kvCiRVdM&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+</description>
     </item>
     
     <item>
@@ -68,7 +121,12 @@ Supplementary notes can be added here, including [code and math](https://sourcet
 
 
 Supplementary notes can be added here, including [code and math](https://sourcethemes.com/academic/docs/writing-markdown-latex/).
---&gt;</description>
+--&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;pleased to announce that this paper is now out in &lt;a href=&#34;https://twitter.com/NatureNeuro?ref_src=twsrc%5Etfw&#34;&gt;@NatureNeuro&lt;/a&gt; : &lt;a href=&#34;https://t.co/m5L1YvETzN&#34;&gt;https://t.co/m5L1YvETzN&lt;/a&gt; ! check out full text here: &lt;a href=&#34;https://t.co/zMdMTA5QG4&#34;&gt;https://t.co/zMdMTA5QG4&lt;/a&gt; . congrats to &lt;a href=&#34;https://twitter.com/kr_maynard?ref_src=twsrc%5Etfw&#34;&gt;@kr_maynard&lt;/a&gt;  &lt;a href=&#34;https://twitter.com/lcolladotor?ref_src=twsrc%5Etfw&#34;&gt;@lcolladotor&lt;/a&gt;  &lt;a href=&#34;https://twitter.com/lmwebr?ref_src=twsrc%5Etfw&#34;&gt;@lmwebr&lt;/a&gt; &lt;a href=&#34;https://twitter.com/stephaniehicks?ref_src=twsrc%5Etfw&#34;&gt;@stephaniehicks&lt;/a&gt; and &lt;a href=&#34;https://twitter.com/martinowk?ref_src=twsrc%5Etfw&#34;&gt;@martinowk&lt;/a&gt; and other investigators at &lt;a href=&#34;https://twitter.com/LieberInstitute?ref_src=twsrc%5Etfw&#34;&gt;@LieberInstitute&lt;/a&gt; &amp;amp; &lt;a href=&#34;https://twitter.com/10xGenomics?ref_src=twsrc%5Etfw&#34;&gt;@10xGenomics&lt;/a&gt; &lt;a href=&#34;https://t.co/StYedlFMHc&#34;&gt;https://t.co/StYedlFMHc&lt;/a&gt;&lt;/p&gt;&amp;mdash; Andrew Jaffe (@andrewejaffe) &lt;a href=&#34;https://twitter.com/andrewejaffe/status/1358825640686989313?ref_src=twsrc%5Etfw&#34;&gt;February 8, 2021&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;🔥off the press! 👀 our &lt;a href=&#34;https://twitter.com/biorxivpreprint?ref_src=twsrc%5Etfw&#34;&gt;@biorxivpreprint&lt;/a&gt; on human 🧠brain &lt;a href=&#34;https://twitter.com/LieberInstitute?ref_src=twsrc%5Etfw&#34;&gt;@LieberInstitute&lt;/a&gt; spatial 🌌🔬transcriptomics data 🧬using Visium &lt;a href=&#34;https://twitter.com/10xGenomics?ref_src=twsrc%5Etfw&#34;&gt;@10xGenomics&lt;/a&gt;🎉&lt;a href=&#34;https://twitter.com/hashtag/spatialLIBD?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#spatialLIBD&lt;/a&gt;&lt;br&gt;&lt;br&gt;🔍&lt;a href=&#34;https://t.co/RTW0VscUKR&#34;&gt;https://t.co/RTW0VscUKR&lt;/a&gt; &lt;br&gt;👩🏾‍💻&lt;a href=&#34;https://t.co/bsg04XKONr&#34;&gt;https://t.co/bsg04XKONr&lt;/a&gt;&lt;br&gt;📚&lt;a href=&#34;https://t.co/FJDOOzrAJ6&#34;&gt;https://t.co/FJDOOzrAJ6&lt;/a&gt;&lt;br&gt;📦&lt;a href=&#34;https://t.co/Au5jwADGhY&#34;&gt;https://t.co/Au5jwADGhY&lt;/a&gt;&lt;a href=&#34;https://t.co/PiWEDN9q2N&#34;&gt;https://t.co/PiWEDN9q2N&lt;/a&gt; &lt;a href=&#34;https://t.co/aWy0yLlR50&#34;&gt;pic.twitter.com/aWy0yLlR50&lt;/a&gt;&lt;/p&gt;&amp;mdash; 🇲🇽 Leonardo Collado-Torres (@lcolladotor) &lt;a href=&#34;https://twitter.com/lcolladotor/status/1233661576433061888?ref_src=twsrc%5Etfw&#34;&gt;February 29, 2020&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+</description>
     </item>
     
     <item>
@@ -78,31 +136,6 @@ Supplementary notes can be added here, including [code and math](https://sourcet
       <guid>https://lcolladotor.github.io/talk/cdcrug2021/</guid>
       <description>&lt;script async class=&#34;speakerdeck-embed&#34; data-id=&#34;329db23f5f17460da31f45c7695a9f06&#34; data-ratio=&#34;1.33333333333333&#34; src=&#34;//speakerdeck.com/assets/embed.js&#34;&gt;&lt;/script&gt;
 </description>
-    </item>
-    
-    <item>
-      <title>SpatialExperiment: infrastructure for spatially resolved transcriptomics data in R using Bioconductor</title>
-      <link>https://lcolladotor.github.io/publication/preprint_spatialexperiment/</link>
-      <pubDate>Wed, 27 Jan 2021 00:00:00 +0000</pubDate>
-      <guid>https://lcolladotor.github.io/publication/preprint_spatialexperiment/</guid>
-      <description>&lt;!--
-
-&lt;div class=&#34;alert alert-note&#34;&gt;
-  &lt;div&gt;
-    Click the &lt;em&gt;Cite&lt;/em&gt; button above to demo the feature to enable visitors to import publication metadata into their reference management software.
-  &lt;/div&gt;
-&lt;/div&gt;
-
-
-&lt;div class=&#34;alert alert-note&#34;&gt;
-  &lt;div&gt;
-    Click the &lt;em&gt;Slides&lt;/em&gt; button above to demo Academic&amp;rsquo;s Markdown slides feature.
-  &lt;/div&gt;
-&lt;/div&gt;
-
-
-Supplementary notes can be added here, including [code and math](https://sourcethemes.com/academic/docs/writing-markdown-latex/).
---&gt;</description>
     </item>
     
     <item>
@@ -128,7 +161,7 @@ Supplementary notes can be added here, including [code and math](https://sourcet
       <link>https://lcolladotor.github.io/project/spatial/</link>
       <pubDate>Sat, 29 Feb 2020 00:00:00 +0000</pubDate>
       <guid>https://lcolladotor.github.io/project/spatial/</guid>
-      <description>&lt;p&gt;In 2020 we published the &lt;a href=&#34;https://www.biorxiv.org/content/10.1101/2020.02.28.969931v1&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;first pre-print&lt;/a&gt; using the 10x Genomics Visium platform for spatial transcriptomics. For this project we created the &lt;a href=&#34;https://bioconductor.org/packages/spatialLIBD&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;spatialLIBD&lt;/code&gt;&lt;/a&gt; Bioconductor package and started developing new analytical methods for this type of data.&lt;/p&gt;
+      <description>&lt;p&gt;In February 2020 we published the &lt;a href=&#34;https://www.biorxiv.org/content/10.1101/2020.02.28.969931v1&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;first pre-print&lt;/a&gt; using the 10x Genomics Visium platform for spatial transcriptomics. For this project we created the &lt;a href=&#34;https://bioconductor.org/packages/spatialLIBD&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;spatialLIBD&lt;/code&gt;&lt;/a&gt; Bioconductor package and started developing new analytical methods for this type of data. Given that we shared all the data and code when we posted the pre-print, by the time &lt;a href=&#34;https://doi.org/10.1038/s41593-020-00787-0&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;the peer-reviewed publication&lt;/a&gt; was made public in February 2021, others had already used our dataset to develop and showcase their methods. For example, &lt;a href=&#34;http://bioconductor.org/packages/BayesSpace&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;BayesSpace&lt;/code&gt;&lt;/a&gt;&amp;rsquo;s &lt;a href=&#34;https://doi.org/10.1101/2020.09.04.283812&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;pre-print&lt;/a&gt; was posted on September 2020, prior to their own June 2021 &lt;a href=&#34;https://doi.org/10.1038/s41587-021-00935-2&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;peer-reviewed publication&lt;/a&gt;. We are now using &lt;code&gt;BayesSpace&lt;/code&gt; in our projects. This is an example of how open science and open access accelerate science.&lt;/p&gt;
 </description>
     </item>
     
