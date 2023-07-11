@@ -17,78 +17,57 @@
       <link>https://lcolladotor.github.io/2019/04/02/how-to-write-academic-documents-with-googledocs/</link>
       <pubDate>Tue, 02 Apr 2019 00:00:00 +0000</pubDate>
       <guid>https://lcolladotor.github.io/2019/04/02/how-to-write-academic-documents-with-googledocs/</guid>
-      <description>
-
-
-&lt;p&gt;These past months I’ve been mostly working on one &lt;em&gt;huge&lt;/em&gt; project which might be close to an end, hopefully! This project involves a massive manuscript with many supplementary figures and tables. Today we sent it out to other members in our team, and to celebrate, I’m now writing more 😅: though this is a blog post. I’m allowing myself to do so before I dive into the pile of tasks I haven’t completed&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;. So I’m going to share with you the tools I’ve been using since 2018 or so for writing academic documents shared via &lt;a href=&#34;https://docs.google.com/document/u/0/&#34;&gt;Google Docs&lt;/a&gt;. You can use these tools for manuscripts&lt;a href=&#34;#fn2&#34; class=&#34;footnote-ref&#34; id=&#34;fnref2&#34;&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;, capstone projects&lt;a href=&#34;#fn3&#34; class=&#34;footnote-ref&#34; id=&#34;fnref3&#34;&gt;&lt;sup&gt;3&lt;/sup&gt;&lt;/a&gt;, and well, basically any document where you want to do any of the following:&lt;/p&gt;
+      <description>&lt;p&gt;These past months I’ve been mostly working on one &lt;em&gt;huge&lt;/em&gt; project which might be close to an end, hopefully! This project involves a massive manuscript with many supplementary figures and tables. Today we sent it out to other members in our team, and to celebrate, I’m now writing more 😅: though this is a blog post. I’m allowing myself to do so before I dive into the pile of tasks I haven’t completed&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;. So I’m going to share with you the tools I’ve been using since 2018 or so for writing academic documents shared via &lt;a href=&#34;https://docs.google.com/document/u/0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Google Docs&lt;/a&gt;. You can use these tools for manuscripts&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;, capstone projects&lt;sup id=&#34;fnref:3&#34;&gt;&lt;a href=&#34;#fn:3&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;3&lt;/a&gt;&lt;/sup&gt;, and well, basically any document where you want to do any of the following:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Automatic figure/table numbering&lt;/li&gt;
 &lt;li&gt;Insert math equations&lt;/li&gt;
 &lt;li&gt;Cite the literature&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Yes, you can do both with &lt;code&gt;LaTeX&lt;/code&gt; and you can collaborate with others using &lt;a href=&#34;https://www.overleaf.com&#34;&gt;Overleaf&lt;/a&gt;, but it’s really hard to convince others to use &lt;code&gt;LaTeX&lt;/code&gt; in my experience.&lt;/p&gt;
-&lt;div id=&#34;citations&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Citations&lt;/h3&gt;
-&lt;p&gt;There are many tools out there for you to organize the literature items you are reading or keeping tabs on. Some of them are &lt;a href=&#34;https://www.zotero.org/&#34;&gt;Zotero&lt;/a&gt; and &lt;a href=&#34;https://www.mendeley.com/&#34;&gt;Mendeley&lt;/a&gt;, which you might have heard about. The one that I highly recommend for writing documents with Google Docs is &lt;a href=&#34;https://f1000.com/work/&#34;&gt;F1000Workspace&lt;/a&gt;.&lt;/p&gt;
-&lt;div id=&#34;get-an-account&#34; class=&#34;section level4&#34;&gt;
-&lt;h4&gt;Get an account&lt;/h4&gt;
-&lt;p&gt;First, you need to make an account. Worried about paying? Don’t worry, the accounts are &lt;strong&gt;free&lt;/strong&gt;&lt;a href=&#34;#fn4&#34; class=&#34;footnote-ref&#34; id=&#34;fnref4&#34;&gt;&lt;sup&gt;4&lt;/sup&gt;&lt;/a&gt;!&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://lcolladotor.github.io/post/2019-04-02-how-to-write-academic-documents-with-googledocs_files/Screen%20Shot%202019-04-02%20at%205.37.26%20PM.png&#34; width=&#34;600&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Yes, you can do both with &lt;code&gt;LaTeX&lt;/code&gt; and you can collaborate with others using &lt;a href=&#34;https://www.overleaf.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Overleaf&lt;/a&gt;, but it’s really hard to convince others to use &lt;code&gt;LaTeX&lt;/code&gt; in my experience.&lt;/p&gt;
+&lt;h3 id=&#34;citations&#34;&gt;Citations&lt;/h3&gt;
+&lt;p&gt;There are many tools out there for you to organize the literature items you are reading or keeping tabs on. Some of them are &lt;a href=&#34;https://www.zotero.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Zotero&lt;/a&gt; and &lt;a href=&#34;https://www.mendeley.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Mendeley&lt;/a&gt;, which you might have heard about. The one that I highly recommend for writing documents with Google Docs is &lt;a href=&#34;https://f1000.com/work/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;F1000Workspace&lt;/a&gt;.&lt;/p&gt;
+&lt;h4 id=&#34;get-an-account&#34;&gt;Get an account&lt;/h4&gt;
+&lt;p&gt;First, you need to make an account. Worried about paying? Don’t worry, the accounts are &lt;strong&gt;free&lt;/strong&gt;&lt;sup id=&#34;fnref:4&#34;&gt;&lt;a href=&#34;#fn:4&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;4&lt;/a&gt;&lt;/sup&gt;!&lt;/p&gt;
+&lt;img src=&#34;http://lcolladotor.github.io/post/2019-04-02-how-to-write-academic-documents-with-googledocs_files/Screen%20Shot%202019-04-02%20at%205.37.26%20PM.png&#34; width=&#34;600&#34; /&gt;
 &lt;p&gt;I strongly recommend that you use your academic email here if you have one, because I believe that it grants you access for an unlimited free account. Your university might also give you free access.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;start-a-project&#34; class=&#34;section level4&#34;&gt;
-&lt;h4&gt;Start a project&lt;/h4&gt;
+&lt;h4 id=&#34;start-a-project&#34;&gt;Start a project&lt;/h4&gt;
 &lt;p&gt;Once you have your account set up, start a &lt;em&gt;shared project&lt;/em&gt;. I mean, private ones also work, but shared ones allow you to collaborate with others so that your teammembers can also update the citations in your document. For example, we have one called &lt;code&gt;brainseq phase2&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://lcolladotor.github.io/post/2019-04-02-how-to-write-academic-documents-with-googledocs_files/Screen%20Shot%202019-04-02%20at%205.36.15%20PM.png&#34; width=&#34;600&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://lcolladotor.github.io/post/2019-04-02-how-to-write-academic-documents-with-googledocs_files/Screen%20Shot%202019-04-02%20at%205.36.54%20PM.png&#34; width=&#34;600&#34; /&gt;&lt;/p&gt;
+&lt;img src=&#34;http://lcolladotor.github.io/post/2019-04-02-how-to-write-academic-documents-with-googledocs_files/Screen%20Shot%202019-04-02%20at%205.36.15%20PM.png&#34; width=&#34;600&#34; /&gt;
+&lt;img src=&#34;http://lcolladotor.github.io/post/2019-04-02-how-to-write-academic-documents-with-googledocs_files/Screen%20Shot%202019-04-02%20at%205.36.54%20PM.png&#34; width=&#34;600&#34; /&gt;
 &lt;p&gt;Once you open your project page, at the top left you’ll see a big blue button called &lt;code&gt;Import References&lt;/code&gt;. Click on it.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://lcolladotor.github.io/post/2019-04-02-how-to-write-academic-documents-with-googledocs_files/Screen%20Shot%202019-04-02%20at%205.43.57%20PM.png&#34; width=&#34;400&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;As you can see, F1000Workspace allows you to import references from many different sources. I typically import using identifiers, either a &lt;code&gt;DOI&lt;/code&gt; or a &lt;code&gt;PMID&lt;/code&gt; one. They also have a browser add-on that you can use to import references into your library when using websites such as &lt;a href=&#34;https://www.ncbi.nlm.nih.gov/pubmed&#34;&gt;PubMed&lt;/a&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;insert-references-into-a-google-doc&#34; class=&#34;section level4&#34;&gt;
-&lt;h4&gt;Insert references into a Google Doc&lt;/h4&gt;
-&lt;p&gt;On your Google Chrome browser, install the F1000Workspace Google Docs add-on available &lt;a href=&#34;https://chrome.google.com/webstore/detail/f1000/daojhpgpccggokldfgfdmeckecckheej?utm_source=permalink&#34;&gt;here&lt;/a&gt;. Next, open up your Google Doc and you’ll see that &lt;code&gt;F1000&lt;/code&gt; appears in your toolbar. If you click on it, the F1000 interface will open on the right sidebar.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://lcolladotor.github.io/post/2019-04-02-how-to-write-academic-documents-with-googledocs_files/Screen%20Shot%202019-04-02%20at%205.54.46%20PM.png&#34; width=&#34;300&#34; /&gt;&lt;/p&gt;
+&lt;img src=&#34;http://lcolladotor.github.io/post/2019-04-02-how-to-write-academic-documents-with-googledocs_files/Screen%20Shot%202019-04-02%20at%205.43.57%20PM.png&#34; width=&#34;400&#34; /&gt;
+&lt;p&gt;As you can see, F1000Workspace allows you to import references from many different sources. I typically import using identifiers, either a &lt;code&gt;DOI&lt;/code&gt; or a &lt;code&gt;PMID&lt;/code&gt; one. They also have a browser add-on that you can use to import references into your library when using websites such as &lt;a href=&#34;https://www.ncbi.nlm.nih.gov/pubmed&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;PubMed&lt;/a&gt;.&lt;/p&gt;
+&lt;h4 id=&#34;insert-references-into-a-google-doc&#34;&gt;Insert references into a Google Doc&lt;/h4&gt;
+&lt;p&gt;On your Google Chrome browser, install the F1000Workspace Google Docs add-on available &lt;a href=&#34;https://chrome.google.com/webstore/detail/f1000/daojhpgpccggokldfgfdmeckecckheej?utm_source=permalink&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;. Next, open up your Google Doc and you’ll see that &lt;code&gt;F1000&lt;/code&gt; appears in your toolbar. If you click on it, the F1000 interface will open on the right sidebar.&lt;/p&gt;
+&lt;img src=&#34;http://lcolladotor.github.io/post/2019-04-02-how-to-write-academic-documents-with-googledocs_files/Screen%20Shot%202019-04-02%20at%205.54.46%20PM.png&#34; width=&#34;300&#34; /&gt;
 &lt;p&gt;That interface lets you link your Google Doc to a particular F1000Workspace project, which I recommend doing. You can then go to &lt;code&gt;Insert citations&lt;/code&gt; and start searching your project citations. I typically search by name or by the identifier, which is particularly useful if I just added the reference to the project via the identifier on a separate browser tab.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://lcolladotor.github.io/post/2019-04-02-how-to-write-academic-documents-with-googledocs_files/Screen%20Shot%202019-04-02%20at%205.54.10%20PM.png&#34; width=&#34;300&#34; /&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;update-your-documents-bibliography&#34; class=&#34;section level4&#34;&gt;
-&lt;h4&gt;Update your document’s bibliography&lt;/h4&gt;
+&lt;img src=&#34;http://lcolladotor.github.io/post/2019-04-02-how-to-write-academic-documents-with-googledocs_files/Screen%20Shot%202019-04-02%20at%205.54.10%20PM.png&#34; width=&#34;300&#34; /&gt;
+&lt;h4 id=&#34;update-your-documents-bibliography&#34;&gt;Update your document’s bibliography&lt;/h4&gt;
 &lt;p&gt;Lets say that you’ve added a few citations in your document and now want to format them appropriately. In your Google Doc, click on &lt;code&gt;F1000&lt;/code&gt;, then navigate to the &lt;code&gt;Format citations and bibliography&lt;/code&gt; section.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://lcolladotor.github.io/post/2019-04-02-how-to-write-academic-documents-with-googledocs_files/Screen%20Shot%202019-04-02%20at%205.57.12%20PM.png&#34; width=&#34;300&#34; /&gt;&lt;/p&gt;
+&lt;img src=&#34;http://lcolladotor.github.io/post/2019-04-02-how-to-write-academic-documents-with-googledocs_files/Screen%20Shot%202019-04-02%20at%205.57.12%20PM.png&#34; width=&#34;300&#34; /&gt;
 &lt;p&gt;Before you click the big blue button that says &lt;code&gt;Update citations and bibliography&lt;/code&gt; you’ll notice a dropdown menu that lets you choose your favorite citation style (or whichever the journal you want to send your manuscript requires).&lt;/p&gt;
 &lt;p&gt;The end!&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;notes&#34; class=&#34;section level4&#34;&gt;
-&lt;h4&gt;Notes&lt;/h4&gt;
+&lt;h4 id=&#34;notes&#34;&gt;Notes&lt;/h4&gt;
 &lt;p&gt;Well, not really. You’ll likely keep adding many citations as you keep working on your document. One thing that I’ve noticed is that the F1000Workspace add-on has a bit of trouble under “suggesting” mode or when the citation was inserted as a suggestion. So I recommend that you accept the suggestion first, then use “editing” mode for updating your bibliography file. It’s always good to keep an eye on what the add-on is doing so you can notice anything weird and undo it with ctrl + z (cmd + z in macOS).&lt;/p&gt;
 &lt;p&gt;And hey, did you know that F1000Workspace also works with Microsoft Word?&lt;/p&gt;
-&lt;p&gt;For more details, check the &lt;a href=&#34;https://f1000.com/work/#/faq/google-docs-add-on&#34;&gt;FAQs&lt;/a&gt;.&lt;/p&gt;
-
+&lt;p&gt;For more details, check the &lt;a href=&#34;https://f1000.com/work/#/faq/google-docs-add-on&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;FAQs&lt;/a&gt;.&lt;/p&gt;
 &lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
   &lt;iframe src=&#34;https://player.vimeo.com/video/153753002&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;vimeo video&#34; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
 &lt;/div&gt;
-
-
 &lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
   &lt;iframe src=&#34;https://player.vimeo.com/video/141798183&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;vimeo video&#34; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
 &lt;/div&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;automatic-figure-numbering&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Automatic figure numbering&lt;/h3&gt;
-&lt;p&gt;Now that we have figured out citations in Google Docs, lets learn how to cross reference figures, tables, equations, and whatever else you want. This is something that &lt;code&gt;LaTeX&lt;/code&gt; users are familiar with but that you can’t do out of the box in Google Docs or Microsoft Word (as far as I know). Luckily others have made add-ons that solve this problem. The one I use, and so do other 11,197 people as of today, is &lt;code&gt;Cross Reference&lt;/code&gt; available from the &lt;a href=&#34;https://chrome.google.com/webstore/detail/cross-reference/hknkaiempgninehdhkgekoeoilkapgob?utm_source=permalink&#34;&gt;Google Chrome Store&lt;/a&gt; for free.&lt;/p&gt;
+&lt;h3 id=&#34;automatic-figure-numbering&#34;&gt;Automatic figure numbering&lt;/h3&gt;
+&lt;p&gt;Now that we have figured out citations in Google Docs, lets learn how to cross reference figures, tables, equations, and whatever else you want. This is something that &lt;code&gt;LaTeX&lt;/code&gt; users are familiar with but that you can’t do out of the box in Google Docs or Microsoft Word (as far as I know). Luckily others have made add-ons that solve this problem. The one I use, and so do other 11,197 people as of today, is &lt;code&gt;Cross Reference&lt;/code&gt; available from the &lt;a href=&#34;https://chrome.google.com/webstore/detail/cross-reference/hknkaiempgninehdhkgekoeoilkapgob?utm_source=permalink&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Google Chrome Store&lt;/a&gt; for free.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;This add-on allows the user to label equations, figures and tables and refer to them within the text. It now also allows users to create labels for any element. These elements are numbered automatically and references are updated to match. If their order changes, references update to match. If one is removed, references to it are highlighted in red in the text. The text and style of references and labels can be customised.&lt;/p&gt;
 &lt;p&gt;Insert labels and references as hyperlinks. Instead of a URL, add a code recognised by Cross Reference, then an underscore, then your choice of name.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;div id=&#34;configuration&#34; class=&#34;section level4&#34;&gt;
-&lt;h4&gt;Configuration&lt;/h4&gt;
+&lt;h4 id=&#34;configuration&#34;&gt;Configuration&lt;/h4&gt;
 &lt;p&gt;Once you install &lt;code&gt;Cross Reference&lt;/code&gt;, you’ll see it listed under the &lt;code&gt;Add-ons&lt;/code&gt; menu in your Google Doc.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://lcolladotor.github.io/post/2019-04-02-how-to-write-academic-documents-with-googledocs_files/Screen%20Shot%202019-04-02%20at%206.12.03%20PM.png&#34; width=&#34;400&#34; /&gt;&lt;/p&gt;
+&lt;img src=&#34;http://lcolladotor.github.io/post/2019-04-02-how-to-write-academic-documents-with-googledocs_files/Screen%20Shot%202019-04-02%20at%206.12.03%20PM.png&#34; width=&#34;400&#34; /&gt;
 &lt;p&gt;You’ll see all the different types of elements that you have configured with &lt;code&gt;Cross Reference&lt;/code&gt;. Some come out of the box, like &lt;code&gt;Figures&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://lcolladotor.github.io/post/2019-04-02-how-to-write-academic-documents-with-googledocs_files/Screen%20Shot%202019-04-02%20at%206.14.07%20PM.png&#34; width=&#34;300&#34; /&gt;&lt;/p&gt;
+&lt;img src=&#34;http://lcolladotor.github.io/post/2019-04-02-how-to-write-academic-documents-with-googledocs_files/Screen%20Shot%202019-04-02%20at%206.14.07%20PM.png&#34; width=&#34;300&#34; /&gt;
 &lt;p&gt;For every element you have to configure the following:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;The code you will use for the label, here &lt;code&gt;#figur&lt;/code&gt;.&lt;/li&gt;
@@ -99,7 +78,7 @@
 &lt;p&gt;In my documents I typically add configurations for supplementary figures and tables using:&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
-&lt;tr class=&#34;header&#34;&gt;
+&lt;tr&gt;
 &lt;th&gt;type&lt;/th&gt;
 &lt;th&gt;code: label&lt;/th&gt;
 &lt;th&gt;code: reference&lt;/th&gt;
@@ -107,19 +86,19 @@
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;tbody&gt;
-&lt;tr class=&#34;odd&#34;&gt;
+&lt;tr&gt;
 &lt;td&gt;Supplementary Figure&lt;/td&gt;
 &lt;td&gt;&lt;code&gt;#sfigu&lt;/code&gt;&lt;/td&gt;
 &lt;td&gt;&lt;code&gt;#sfi&lt;/code&gt;&lt;/td&gt;
 &lt;td&gt;&lt;code&gt;Figure S&lt;/code&gt;&lt;/td&gt;
 &lt;/tr&gt;
-&lt;tr class=&#34;even&#34;&gt;
+&lt;tr&gt;
 &lt;td&gt;Supplementary Table&lt;/td&gt;
 &lt;td&gt;&lt;code&gt;#stabl&lt;/code&gt;&lt;/td&gt;
 &lt;td&gt;&lt;code&gt;#sta&lt;/code&gt;&lt;/td&gt;
 &lt;td&gt;&lt;code&gt;Table S&lt;/code&gt;&lt;/td&gt;
 &lt;/tr&gt;
-&lt;tr class=&#34;odd&#34;&gt;
+&lt;tr&gt;
 &lt;td&gt;Supplementary File&lt;/td&gt;
 &lt;td&gt;&lt;code&gt;#supfi&lt;/code&gt;&lt;/td&gt;
 &lt;td&gt;&lt;code&gt;#sup&lt;/code&gt;&lt;/td&gt;
@@ -127,138 +106,141 @@
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;/div&gt;
-&lt;div id=&#34;usage&#34; class=&#34;section level4&#34;&gt;
-&lt;h4&gt;Usage&lt;/h4&gt;
+&lt;h4 id=&#34;usage&#34;&gt;Usage&lt;/h4&gt;
 &lt;p&gt;Now that you have configured &lt;code&gt;Cross Reference&lt;/code&gt; you can start using it. Lets say that I want to write the text &lt;code&gt;We did many things (Figure S1)&lt;/code&gt; where &lt;code&gt;Figure S1&lt;/code&gt; links to my overview figure whose description starts &lt;code&gt;Figure S1. Overview of my project&lt;/code&gt;. Since we are talking about the overview figure, lets use &lt;code&gt;_overview&lt;/code&gt; as the unique identifier for this figure. As this is a supplementary figure, the label code is &lt;code&gt;#sfigu&lt;/code&gt; and the reference code is &lt;code&gt;#sfi&lt;/code&gt;. Meaning that we must write the label code once in the figure description using &lt;code&gt;#sfigu_overview&lt;/code&gt; and we can reference to it as many times as we want using &lt;code&gt;#sfi_overview&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;The last tricky part is that you can write whatever you want, lets say &lt;code&gt;hello&lt;/code&gt;, and then you need to create a link (shortcut is cmd + k in macOS) with the correct code (either the reference or the label one). So the text that you would write would be &lt;code&gt;We did many things ([hello](#sfi_overview))&lt;/code&gt; and later on when you describe the overview figure you need &lt;code&gt;[whatever you want](#sfi_overview). Overview of my project&lt;/code&gt; where here I’m using the Markdown syntax for links: &lt;code&gt;[text](link)&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;Once you’ve inserted the links both for the reference and the label, you can then go to &lt;code&gt;Add-ons&lt;/code&gt;, navigate to &lt;code&gt;Cross Reference&lt;/code&gt; and click &lt;code&gt;Update document&lt;/code&gt;. Doing so will change the text you had initially filed in for the correct text. So it will look like this: &lt;code&gt;We did many things ([Figure S1](#sfi_overview))&lt;/code&gt; plus &lt;code&gt;[Figure S1](#sfi_overview). Overview of my project&lt;/code&gt;. Here’s a real case example where my identifier for the first supplementary figure is &lt;code&gt;_rna&lt;/code&gt;, thus the full reference code is &lt;code&gt;#sfi_rna&lt;/code&gt;:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://lcolladotor.github.io/post/2019-04-02-how-to-write-academic-documents-with-googledocs_files/Screen%20Shot%202019-04-02%20at%206.32.29%20PM.png&#34; width=&#34;400&#34; /&gt;&lt;/p&gt;
+&lt;img src=&#34;http://lcolladotor.github.io/post/2019-04-02-how-to-write-academic-documents-with-googledocs_files/Screen%20Shot%202019-04-02%20at%206.32.29%20PM.png&#34; width=&#34;400&#34; /&gt;
 &lt;p&gt;And you are done!&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;notes-1&#34; class=&#34;section level4&#34;&gt;
-&lt;h4&gt;Notes&lt;/h4&gt;
+&lt;h4 id=&#34;notes-1&#34;&gt;Notes&lt;/h4&gt;
 &lt;p&gt;The number used for the item your reference depends on what order the reference codes are listed in the Google Doc. To check that the numbering order is correct (Table S1 appears in the text before Table S2, etc), I recommend opening your google document in two separate tabs. In one tab, you start reading your document from the top. If you encounter items out of order, then on tab two you can switch them around. That way you don’t have to scroll around and waste time, which is a more cumbersome problem as the document gets longer.&lt;/p&gt;
 &lt;p&gt;Overall, this process that takes a bit of time and can break due to a typo. So I highly recommend that you update your cross references as soon as you make a new one, so you can easily trace any typos and fix them easily. If you don’t, then it can become very hard to track down what went wrong.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;equations&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Equations&lt;/h3&gt;
-&lt;p&gt;Finally, lets say that you want to insert equations. You can insert some equations with Google Docs, but you might want more fine control. If you use &lt;code&gt;LaTeX&lt;/code&gt; I recommend the &lt;code&gt;Auto-LaTeX Equations&lt;/code&gt; add-on available from the &lt;a href=&#34;https://chrome.google.com/webstore/detail/auto-latex-equations/iaainhiejkciadlhlodaajgbffkebdog?utm_source=permalink&#34;&gt;Google Chrome Store&lt;/a&gt; for free.&lt;/p&gt;
+&lt;h3 id=&#34;equations&#34;&gt;Equations&lt;/h3&gt;
+&lt;p&gt;Finally, lets say that you want to insert equations. You can insert some equations with Google Docs, but you might want more fine control. If you use &lt;code&gt;LaTeX&lt;/code&gt; I recommend the &lt;code&gt;Auto-LaTeX Equations&lt;/code&gt; add-on available from the &lt;a href=&#34;https://chrome.google.com/webstore/detail/auto-latex-equations/iaainhiejkciadlhlodaajgbffkebdog?utm_source=permalink&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Google Chrome Store&lt;/a&gt; for free.&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;This add-on lets you automatically convert every LaTeX equation in your document into beautiful images! Simply enclose your math equations within &lt;span class=&#34;math display&#34;&gt;\[ ... \]&lt;/span&gt; and click the button in the sidebar, and all of your equations will be rendered in LaTeX!&lt;/p&gt;
+&lt;p&gt;This add-on lets you automatically convert every LaTeX equation in your document into beautiful images! Simply enclose your math equations within $$ &amp;hellip; $$ and click the button in the sidebar, and all of your equations will be rendered in LaTeX!&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;It’s as simple as it sounds. What this add-on does is that it takes your &lt;code&gt;LaTeX&lt;/code&gt; equation code, renders an image with the equation, and then inserts it back into your Google Doc. It also enables you to restore the &lt;code&gt;LaTeX&lt;/code&gt; equation code so you can edit it if you find a typo.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;wrapping-up&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Wrapping up&lt;/h3&gt;
+&lt;h3 id=&#34;wrapping-up&#34;&gt;Wrapping up&lt;/h3&gt;
 &lt;p&gt;I hope that you’ll find this blog post / tutorial useful when writing your own academic documents. These tools have saved me so much time when writing academic documents in collaboration with others. I don’t want to imagine having to re-number all the references manually whenever we added each of the 48 supplementary figures, 17 supplementary tables, and 11 equations to the project we are about to complete 😱.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;acknowledgments&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Acknowledgments&lt;/h3&gt;
+&lt;h3 id=&#34;acknowledgments&#34;&gt;Acknowledgments&lt;/h3&gt;
 &lt;p&gt;The authors of F1000Workspace, Cross Reference and Auto-LaTeX equations add-ons have made my life much easier. THANK YOU!!!&lt;/p&gt;
 &lt;p&gt;This blog post was made possible thanks to:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;em&gt;&lt;a href=&#34;https://bioconductor.org/packages/3.10/BiocStyle&#34;&gt;BiocStyle&lt;/a&gt;&lt;/em&gt; &lt;a id=&#39;cite-Oles_2020&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://github.com/Bioconductor/BiocStyle&#39;&gt;Oleś, Morgan, and Huber, 2020&lt;/a&gt;)&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;&lt;a href=&#34;https://CRAN.R-project.org/package=blogdown&#34;&gt;blogdown&lt;/a&gt;&lt;/em&gt; &lt;a id=&#39;cite-Xie_2017&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://github.com/rstudio/blogdown&#39;&gt;Xie, Hill, and Thomas, 2017&lt;/a&gt;)&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;&lt;a href=&#34;https://CRAN.R-project.org/package=knitcitations&#34;&gt;knitcitations&lt;/a&gt;&lt;/em&gt; &lt;a id=&#39;cite-Boettiger_2019&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://CRAN.R-project.org/package=knitcitations&#39;&gt;Boettiger, 2019&lt;/a&gt;)&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;&lt;a href=&#34;https://CRAN.R-project.org/package=sessioninfo&#34;&gt;sessioninfo&lt;/a&gt;&lt;/em&gt; &lt;a id=&#39;cite-Csardi_2018&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://CRAN.R-project.org/package=sessioninfo&#39;&gt;Csárdi, core, Wickham, Chang, et al., 2018&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;a href=&#34;https://bioconductor.org/packages/3.17/BiocStyle&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;BiocStyle&lt;/a&gt;&lt;/em&gt; &lt;a id=&#39;cite-Oles_2023&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://bioconductor.org/packages/BiocStyle&#39;&gt;Oleś, 2023&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;a href=&#34;https://CRAN.R-project.org/package=blogdown&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;blogdown&lt;/a&gt;&lt;/em&gt; &lt;a id=&#39;cite-Xie_2017&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://bookdown.org/yihui/blogdown/&#39;&gt;Xie, Hill, and Thomas, 2017&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;a href=&#34;https://CRAN.R-project.org/package=knitcitations&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;knitcitations&lt;/a&gt;&lt;/em&gt; &lt;a id=&#39;cite-Boettiger_2021&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://CRAN.R-project.org/package=knitcitations&#39;&gt;Boettiger, 2021&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;a href=&#34;https://CRAN.R-project.org/package=sessioninfo&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;sessioninfo&lt;/a&gt;&lt;/em&gt; &lt;a id=&#39;cite-Wickham_2021&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://CRAN.R-project.org/package=sessioninfo&#39;&gt;Wickham, Chang, Flight, Müller et al., 2021&lt;/a&gt;)&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;references&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;References&lt;/h3&gt;
+&lt;h3 id=&#34;references&#34;&gt;References&lt;/h3&gt;
 &lt;p&gt;
-&lt;a id=&#39;bib-Boettiger_2019&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-Boettiger_2019&#34;&gt;[1]&lt;/a&gt;&lt;cite&gt;
+&lt;a id=&#39;bib-Boettiger_2021&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-Boettiger_2021&#34;&gt;\[1\]&lt;/a&gt;&lt;cite&gt;
 C. Boettiger.
 &lt;em&gt;knitcitations: Citations for ‘Knitr’ Markdown Files&lt;/em&gt;.
-R package version 1.0.10.
-2019.
+R package version 1.0.12.
+2021.
 URL: &lt;a href=&#34;https://CRAN.R-project.org/package=knitcitations&#34;&gt;https://CRAN.R-project.org/package=knitcitations&lt;/a&gt;.&lt;/cite&gt;
 &lt;/p&gt;
 &lt;p&gt;
-&lt;a id=&#39;bib-Csardi_2018&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-Csardi_2018&#34;&gt;[2]&lt;/a&gt;&lt;cite&gt;
-G. Csárdi, R. core, H. Wickham, W. Chang, et al.
+&lt;a id=&#39;bib-Oles_2023&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-Oles_2023&#34;&gt;\[2\]&lt;/a&gt;&lt;cite&gt;
+A. Oleś.
+&lt;em&gt;BiocStyle: Standard styles for vignettes and other Bioconductor documents&lt;/em&gt;.
+R package version 2.28.0.
+2023.
+DOI: &lt;a href=&#34;https://doi.org/10.18129/B9.bioc.BiocStyle&#34;&gt;10.18129/B9.bioc.BiocStyle&lt;/a&gt;.
+URL: &lt;a href=&#34;https://bioconductor.org/packages/BiocStyle&#34;&gt;https://bioconductor.org/packages/BiocStyle&lt;/a&gt;.&lt;/cite&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;a id=&#39;bib-Wickham_2021&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-Wickham_2021&#34;&gt;\[3\]&lt;/a&gt;&lt;cite&gt;
+H. Wickham, W. Chang, R. Flight, K. Müller, et al.
 &lt;em&gt;sessioninfo: R Session Information&lt;/em&gt;.
-R package version 1.1.1.
-2018.
+R package version 1.2.2.
+2021.
 URL: &lt;a href=&#34;https://CRAN.R-project.org/package=sessioninfo&#34;&gt;https://CRAN.R-project.org/package=sessioninfo&lt;/a&gt;.&lt;/cite&gt;
 &lt;/p&gt;
 &lt;p&gt;
-&lt;a id=&#39;bib-Oles_2020&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-Oles_2020&#34;&gt;[3]&lt;/a&gt;&lt;cite&gt;
-A. Oleś, M. Morgan, and W. Huber.
-&lt;em&gt;BiocStyle: Standard styles for vignettes and other Bioconductor documents&lt;/em&gt;.
-R package version 2.14.4.
-2020.
-URL: &lt;a href=&#34;https://github.com/Bioconductor/BiocStyle&#34;&gt;https://github.com/Bioconductor/BiocStyle&lt;/a&gt;.&lt;/cite&gt;
-&lt;/p&gt;
-&lt;p&gt;
-&lt;a id=&#39;bib-Xie_2017&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-Xie_2017&#34;&gt;[4]&lt;/a&gt;&lt;cite&gt;
+&lt;a id=&#39;bib-Xie_2017&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-Xie_2017&#34;&gt;\[4\]&lt;/a&gt;&lt;cite&gt;
 Y. Xie, A. P. Hill, and A. Thomas.
 &lt;em&gt;blogdown: Creating Websites with R Markdown&lt;/em&gt;.
-ISBN 978-0815363729.
 Boca Raton, Florida: Chapman and Hall/CRC, 2017.
-URL: &lt;a href=&#34;https://github.com/rstudio/blogdown&#34;&gt;https://github.com/rstudio/blogdown&lt;/a&gt;.&lt;/cite&gt;
+ISBN: 978-0815363729.
+URL: &lt;a href=&#34;https://bookdown.org/yihui/blogdown/&#34;&gt;https://bookdown.org/yihui/blogdown/&lt;/a&gt;.&lt;/cite&gt;
 &lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;reproducibility&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Reproducibility&lt;/h3&gt;
+&lt;h3 id=&#34;reproducibility&#34;&gt;Reproducibility&lt;/h3&gt;
 &lt;pre&gt;&lt;code&gt;## ─ Session info ───────────────────────────────────────────────────────────────────────────────────────────────────────
-##  setting  value                       
-##  version  R version 3.6.2 (2019-12-12)
-##  os       macOS Catalina 10.15.2      
-##  system   x86_64, darwin15.6.0        
-##  ui       X11                         
-##  language (EN)                        
-##  collate  en_US.UTF-8                 
-##  ctype    en_US.UTF-8                 
-##  tz       America/New_York            
-##  date     2020-02-12                  
+##  setting  value
+##  version  R version 4.3.1 (2023-06-16)
+##  os       macOS Ventura 13.4
+##  system   aarch64, darwin20
+##  ui       X11
+##  language (EN)
+##  collate  en_US.UTF-8
+##  ctype    en_US.UTF-8
+##  tz       America/New_York
+##  date     2023-07-11
+##  pandoc   3.1.5 @ /opt/homebrew/bin/ (via rmarkdown)
 ## 
 ## ─ Packages ───────────────────────────────────────────────────────────────────────────────────────────────────────────
-##  package       * version date       lib source                            
-##  assertthat      0.2.1   2019-03-21 [1] CRAN (R 3.6.0)                    
-##  bibtex          0.4.2.2 2020-01-02 [1] CRAN (R 3.6.0)                    
-##  BiocManager     1.30.10 2019-11-16 [1] CRAN (R 3.6.1)                    
-##  BiocStyle     * 2.14.4  2020-01-09 [1] Bioconductor                      
-##  blogdown        0.17    2019-11-13 [1] CRAN (R 3.6.1)                    
-##  bookdown        0.17    2020-01-11 [1] CRAN (R 3.6.0)                    
-##  cli             2.0.1   2020-01-08 [1] CRAN (R 3.6.0)                    
-##  colorout      * 1.2-1   2019-05-07 [1] Github (jalvesaq/colorout@7ea9440)
-##  crayon          1.3.4   2017-09-16 [1] CRAN (R 3.6.0)                    
-##  digest          0.6.23  2019-11-23 [1] CRAN (R 3.6.0)                    
-##  evaluate        0.14    2019-05-28 [1] CRAN (R 3.6.0)                    
-##  fansi           0.4.1   2020-01-08 [1] CRAN (R 3.6.0)                    
-##  glue            1.3.1   2019-03-12 [1] CRAN (R 3.6.0)                    
-##  htmltools       0.4.0   2019-10-04 [1] CRAN (R 3.6.0)                    
-##  httr            1.4.1   2019-08-05 [1] CRAN (R 3.6.0)                    
-##  jsonlite        1.6     2018-12-07 [1] CRAN (R 3.6.0)                    
-##  knitcitations * 1.0.10  2019-09-15 [1] CRAN (R 3.6.0)                    
-##  knitr           1.27    2020-01-16 [1] CRAN (R 3.6.0)                    
-##  lubridate       1.7.4   2018-04-11 [1] CRAN (R 3.6.0)                    
-##  magrittr        1.5     2014-11-22 [1] CRAN (R 3.6.0)                    
-##  plyr            1.8.5   2019-12-10 [1] CRAN (R 3.6.0)                    
-##  R6              2.4.1   2019-11-12 [1] CRAN (R 3.6.1)                    
-##  Rcpp            1.0.3   2019-11-08 [1] CRAN (R 3.6.0)                    
-##  RefManageR      1.2.12  2019-04-03 [1] CRAN (R 3.6.0)                    
-##  rlang           0.4.3   2020-01-24 [1] CRAN (R 3.6.2)                    
-##  rmarkdown       2.1     2020-01-20 [1] CRAN (R 3.6.0)                    
-##  sessioninfo   * 1.1.1   2018-11-05 [1] CRAN (R 3.6.0)                    
-##  stringi         1.4.5   2020-01-11 [1] CRAN (R 3.6.0)                    
-##  stringr         1.4.0   2019-02-10 [1] CRAN (R 3.6.0)                    
-##  withr           2.1.2   2018-03-15 [1] CRAN (R 3.6.0)                    
-##  xfun            0.12    2020-01-13 [1] CRAN (R 3.6.0)                    
-##  xml2            1.2.2   2019-08-09 [1] CRAN (R 3.6.0)                    
-##  yaml            2.2.0   2018-07-25 [1] CRAN (R 3.6.0)                    
+##  package       * version    date (UTC) lib source
+##  backports       1.4.1      2021-12-13 [1] CRAN (R 4.3.0)
+##  bibtex          0.5.1      2023-01-26 [1] CRAN (R 4.3.0)
+##  BiocManager     1.30.21    2023-06-10 [1] CRAN (R 4.3.0)
+##  BiocStyle     * 2.28.0     2023-04-25 [1] Bioconductor
+##  blogdown        1.18       2023-06-19 [1] CRAN (R 4.3.0)
+##  bookdown        0.34       2023-05-09 [1] CRAN (R 4.3.0)
+##  bslib           0.5.0      2023-06-09 [1] CRAN (R 4.3.0)
+##  cachem          1.0.8      2023-05-01 [1] CRAN (R 4.3.0)
+##  cli             3.6.1      2023-03-23 [1] CRAN (R 4.3.0)
+##  colorout        1.2-2      2023-05-06 [1] Github (jalvesaq/colorout@79931fd)
+##  digest          0.6.31     2022-12-11 [1] CRAN (R 4.3.0)
+##  evaluate        0.21       2023-05-05 [1] CRAN (R 4.3.0)
+##  fastmap         1.1.1      2023-02-24 [1] CRAN (R 4.3.0)
+##  generics        0.1.3      2022-07-05 [1] CRAN (R 4.3.0)
+##  glue            1.6.2      2022-02-24 [1] CRAN (R 4.3.0)
+##  htmltools       0.5.5      2023-03-23 [1] CRAN (R 4.3.0)
+##  httr            1.4.6      2023-05-08 [1] CRAN (R 4.3.0)
+##  jquerylib       0.1.4      2021-04-26 [1] CRAN (R 4.3.0)
+##  jsonlite        1.8.7      2023-06-29 [1] CRAN (R 4.3.0)
+##  knitcitations * 1.0.12     2021-01-10 [1] CRAN (R 4.3.0)
+##  knitr           1.43       2023-05-25 [1] CRAN (R 4.3.0)
+##  lifecycle       1.0.3      2022-10-07 [1] CRAN (R 4.3.0)
+##  lubridate       1.9.2      2023-02-10 [1] CRAN (R 4.3.0)
+##  magrittr        2.0.3      2022-03-30 [1] CRAN (R 4.3.0)
+##  plyr            1.8.8      2022-11-11 [1] CRAN (R 4.3.0)
+##  R6              2.5.1      2021-08-19 [1] CRAN (R 4.3.0)
+##  Rcpp            1.0.10     2023-01-22 [1] CRAN (R 4.3.0)
+##  RefManageR      1.4.0      2022-09-30 [1] CRAN (R 4.3.0)
+##  rlang           1.1.1      2023-04-28 [1] CRAN (R 4.3.0)
+##  rmarkdown       2.23       2023-07-01 [1] CRAN (R 4.3.0)
+##  rstudioapi      0.14       2022-08-22 [1] CRAN (R 4.3.0)
+##  sass            0.4.6.9000 2023-05-06 [1] Github (rstudio/sass@f248fe5)
+##  sessioninfo   * 1.2.2      2021-12-06 [1] CRAN (R 4.3.0)
+##  stringi         1.7.12     2023-01-11 [1] CRAN (R 4.3.0)
+##  stringr         1.5.0      2022-12-02 [1] CRAN (R 4.3.0)
+##  timechange      0.2.0      2023-01-11 [1] CRAN (R 4.3.0)
+##  xfun            0.39       2023-04-20 [1] CRAN (R 4.3.0)
+##  xml2            1.3.4      2023-04-27 [1] CRAN (R 4.3.0)
+##  yaml            2.3.7      2023-01-23 [1] CRAN (R 4.3.0)
 ## 
-## [1] /Library/Frameworks/R.framework/Versions/3.6/Resources/library&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div class=&#34;footnotes&#34;&gt;
-&lt;hr /&gt;
+##  [1] /Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/library
+## 
+## ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
+&lt;hr&gt;
 &lt;ol&gt;
-&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;Including answering some questions on the &lt;a href=&#34;https://support.bioconductor.org/&#34;&gt;Bioconductor support forum&lt;/a&gt;, finishing another manuscript, etc.&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li id=&#34;fn2&#34;&gt;&lt;p&gt;Like this &lt;a href=&#34;https://www.biorxiv.org/content/early/2018/09/26/426213&#34;&gt;one&lt;/a&gt; or this other &lt;a href=&#34;https://www.biorxiv.org/content/early/2018/09/29/428391&#34;&gt;one&lt;/a&gt;.&lt;a href=&#34;#fnref2&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li id=&#34;fn3&#34;&gt;&lt;p&gt;Like my former student &lt;a href=&#34;https://amy-peterson.github.io/&#34;&gt;Amy Peterson&lt;/a&gt; did in 2018.&lt;a href=&#34;#fnref3&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li id=&#34;fn4&#34;&gt;&lt;p&gt;For up to 3 projects.&lt;a href=&#34;#fnref4&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn:1&#34;&gt;
+&lt;p&gt;Including answering some questions on the &lt;a href=&#34;https://support.bioconductor.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Bioconductor support forum&lt;/a&gt;, finishing another manuscript, etc.&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:2&#34;&gt;
+&lt;p&gt;Like this &lt;a href=&#34;https://www.biorxiv.org/content/early/2018/09/26/426213&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;one&lt;/a&gt; or this other &lt;a href=&#34;https://www.biorxiv.org/content/early/2018/09/29/428391&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;one&lt;/a&gt;.&amp;#160;&lt;a href=&#34;#fnref:2&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:3&#34;&gt;
+&lt;p&gt;Like my former student &lt;a href=&#34;https://amy-peterson.github.io/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Amy Peterson&lt;/a&gt; did in 2018.&amp;#160;&lt;a href=&#34;#fnref:3&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:4&#34;&gt;
+&lt;p&gt;For up to 3 projects.&amp;#160;&lt;a href=&#34;#fnref:4&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;
 </description>
@@ -295,31 +277,31 @@ URL: &lt;a href=&#34;https://github.com/rstudio/blogdown&#34;&gt;https://github.
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## Lets check the args of the uploading function&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nf&#34;&gt;args&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;dropbox_save&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;## function (cred, ..., list = character(), file = stop(&amp;#34;&amp;#39;file&amp;#39; must be specified&amp;#34;), 
-##     envir = parent.frame(), precheck = TRUE, verbose = FALSE, 
-##     curl = getCurlHandle(), ext = &amp;#34;.rda&amp;#34;, .opts = list()) 
-## NULL
-&lt;/code&gt;&lt;/pre&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## function (cred, ..., list = character(), file = stop(&amp;#34;&amp;#39;file&amp;#39; must be specified&amp;#34;), 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;##     envir = parent.frame(), precheck = TRUE, verbose = FALSE, 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;##     curl = getCurlHandle(), ext = &amp;#34;.rda&amp;#34;, .opts = list()) 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## NULL
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## Then lets upload it to dropbox on the public folder&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;done&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;dropbox_save&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;dropbox_credentials&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;file&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;public/x&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## The result has some information, like the path of where you upload the&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## file&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nf&#34;&gt;names&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;done&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;##  [1] &amp;#34;revision&amp;#34;     &amp;#34;rev&amp;#34;          &amp;#34;thumb_exists&amp;#34; &amp;#34;bytes&amp;#34;       
-##  [5] &amp;#34;modified&amp;#34;     &amp;#34;client_mtime&amp;#34; &amp;#34;path&amp;#34;         &amp;#34;is_dir&amp;#34;      
-##  [9] &amp;#34;icon&amp;#34;         &amp;#34;root&amp;#34;         &amp;#34;mime_type&amp;#34;    &amp;#34;size&amp;#34;
-&lt;/code&gt;&lt;/pre&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;done&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;path&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;## [1] &amp;#34;/public/x.rda&amp;#34;
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;You can now actually download the &amp;ldquo;x.rda&amp;rdquo; file from &lt;a href=&#34;https://dl.dropboxusercontent.com/u/261002456/x.rda&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;. That&amp;rsquo;s in case that you also wanted to share the file, and is obviously optional.&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;##  [1] &amp;#34;revision&amp;#34;     &amp;#34;rev&amp;#34;          &amp;#34;thumb_exists&amp;#34; &amp;#34;bytes&amp;#34;       
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;##  [5] &amp;#34;modified&amp;#34;     &amp;#34;client_mtime&amp;#34; &amp;#34;path&amp;#34;         &amp;#34;is_dir&amp;#34;      
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;##  [9] &amp;#34;icon&amp;#34;         &amp;#34;root&amp;#34;         &amp;#34;mime_type&amp;#34;    &amp;#34;size&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;done&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;path&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## [1] &amp;#34;/public/x.rda&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;You can now actually download the &amp;ldquo;x.rda&amp;rdquo; file from &lt;a href=&#34;https://dl.dropboxusercontent.com/u/261002456/x.rda&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;. That&amp;rsquo;s in case that you also wanted to share the file, and is obviously optional.&lt;/p&gt;
 &lt;p&gt;Note that you can get the link from withing &lt;code&gt;R&lt;/code&gt; and don&amp;rsquo;t even need to use the Dropbox site.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nf&#34;&gt;dropbox_share&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;dropbox_credentials&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;file&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;public/x.rda&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;## $url
-## [1] &amp;#34;https://db.tt/xzf3huXf&amp;#34;
-## 
-## $expires
-## [1] &amp;#34;Tue, 01 Jan 2030 00:00:00 +0000&amp;#34;
-&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;dropbox_put&#34;&gt;dropbox_put()&lt;/h3&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## $url
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## [1] &amp;#34;https://db.tt/xzf3huXf&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## $expires
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## [1] &amp;#34;Tue, 01 Jan 2030 00:00:00 +0000&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;dropbox_put&#34;&gt;dropbox_put()&lt;/h3&gt;
 &lt;p&gt;What if you want to upload an actual file and not only &lt;code&gt;R&lt;/code&gt; objects? That&amp;rsquo;s where &lt;code&gt;dropbox_put()&lt;/code&gt; shines. Below is an example where we create an image, save it as a pdf file, and upload it to Dropbox.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## Lets create a sample file, in this case a pdf file&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nf&#34;&gt;pdf&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;dropboxFig.pdf&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
@@ -328,19 +310,19 @@ URL: &lt;a href=&#34;https://github.com/rstudio/blogdown&#34;&gt;https://github.
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## Lets check the args for the uploading function&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nf&#34;&gt;args&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;dropbox_put&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;## function (cred, what, filename = what, curl = getCurlHandle(), 
-##     ..., verbose = FALSE, contentType = &amp;#34;application/octet-stream&amp;#34;) 
-## NULL
-&lt;/code&gt;&lt;/pre&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## function (cred, what, filename = what, curl = getCurlHandle(), 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;##     ..., verbose = FALSE, contentType = &amp;#34;application/octet-stream&amp;#34;) 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## NULL
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## Now, lets upload the file&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;done&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;dropbox_put&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;dropbox_credentials&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;what&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;dropboxFig.pdf&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;filename&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;public/dropboxFig.pdf&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## Again, the result contains some information about the file&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nf&#34;&gt;names&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;done&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;##  [1] &amp;#34;revision&amp;#34;     &amp;#34;rev&amp;#34;          &amp;#34;thumb_exists&amp;#34; &amp;#34;bytes&amp;#34;       
-##  [5] &amp;#34;modified&amp;#34;     &amp;#34;client_mtime&amp;#34; &amp;#34;path&amp;#34;         &amp;#34;is_dir&amp;#34;      
-##  [9] &amp;#34;icon&amp;#34;         &amp;#34;root&amp;#34;         &amp;#34;mime_type&amp;#34;    &amp;#34;size&amp;#34;
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;You can view the result &lt;a href=&#34;https://dl.dropboxusercontent.com/u/261002456/dropboxFig.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;##  [1] &amp;#34;revision&amp;#34;     &amp;#34;rev&amp;#34;          &amp;#34;thumb_exists&amp;#34; &amp;#34;bytes&amp;#34;       
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;##  [5] &amp;#34;modified&amp;#34;     &amp;#34;client_mtime&amp;#34; &amp;#34;path&amp;#34;         &amp;#34;is_dir&amp;#34;      
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;##  [9] &amp;#34;icon&amp;#34;         &amp;#34;root&amp;#34;         &amp;#34;mime_type&amp;#34;    &amp;#34;size&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;You can view the result &lt;a href=&#34;https://dl.dropboxusercontent.com/u/261002456/dropboxFig.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id=&#34;google-docs&#34;&gt;Google Docs&lt;/h2&gt;
 &lt;p&gt;From what I found, it seems to me that &lt;code&gt;RGoogleDocs&lt;/code&gt; (&lt;span class=&#34;showtooltip&#34; title=&#34;Lang DT (2014). RGoogleDocs: Primitive interface to Google Documents from R. R package version 0.7-0.&#34;&gt;&lt;a href=&#34;&#34;&gt;Temple Lang&lt;/a&gt;&lt;/span&gt;) is the package you&amp;rsquo;ll want to use for interacting with Google Docs from R. The manual (&lt;span class=&#34;showtooltip&#34; title=&#34;(2014). &#39;An simple R interface to Google Documents.&#39; .&#34;&gt;&lt;a href=&#34;http://www.omegahat.org/RGoogleDocs/run.html&#34;&gt;Temple Lang&lt;/a&gt;&lt;/span&gt;) explains all what you pretty much need to know. You should know though that you can only upload certain types of files.&lt;/p&gt;
 &lt;p&gt;For example, you can upload a text file as shown below.&lt;/p&gt;
@@ -360,11 +342,11 @@ URL: &lt;a href=&#34;https://github.com/rstudio/blogdown&#34;&gt;https://github.
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## Check the args for the uploading function&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nf&#34;&gt;args&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;uploadDoc&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;## function (content, con, name, type = as.character(findType(content)), 
-##     binary = FALSE, asText = FALSE, folder = NULL, replace = TRUE, 
-##     ...) 
-## NULL
-&lt;/code&gt;&lt;/pre&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## function (content, con, name, type = as.character(findType(content)), 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;##     binary = FALSE, asText = FALSE, folder = NULL, replace = TRUE, 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;##     ...) 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## NULL
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## Upload the file&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;done&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;uploadDoc&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;content&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;text&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;con&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;con&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;name&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;testFile.txt&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;type&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;txt&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;You can view the file &lt;a href=&#34;https://docs.google.com/document/d/1QCInrPitTJrmXiyA6TlNuQIEhi344MQl1C3zqqoqAVY/edit?usp=sharing&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
@@ -381,25 +363,25 @@ URL: &lt;a href=&#34;https://github.com/rstudio/blogdown&#34;&gt;https://github.
 &lt;/ul&gt;
 &lt;h3 id=&#34;reproducibility&#34;&gt;Reproducibility&lt;/h3&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nf&#34;&gt;sessionInfo&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;## R version 3.0.2 (2013-09-25)
-## Platform: x86_64-apple-darwin10.8.0 (64-bit)
-## 
-## locale:
-## [1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8
-## 
-## attached base packages:
-## [1] stats     graphics  grDevices utils     datasets  methods   base     
-## 
-## other attached packages:
-##  [1] RGoogleDocs_0.7-0   rDrop_0.3-0         stringr_0.6.2      
-##  [4] plyr_1.8            ROAuth_0.92.0       digest_0.6.4       
-##  [7] RCurl_1.95-4.1      bitops_1.0-6        RJSONIO_1.0-3      
-## [10] knitcitations_0.5-0 bibtex_0.3-6        knitr_1.5          
-## 
-## loaded via a namespace (and not attached):
-## [1] evaluate_0.5.1 formatR_0.10   httr_0.2       tools_3.0.2   
-## [5] XML_3.95-0.2   xtable_1.7-1
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Check other topics on &lt;a href=&#34;https://twitter.com/search?q=%23rstats&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;#rstats&lt;/a&gt;.&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## R version 3.0.2 (2013-09-25)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## Platform: x86_64-apple-darwin10.8.0 (64-bit)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## locale:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## [1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## attached base packages:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## [1] stats     graphics  grDevices utils     datasets  methods   base     
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## other attached packages:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;##  [1] RGoogleDocs_0.7-0   rDrop_0.3-0         stringr_0.6.2      
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;##  [4] plyr_1.8            ROAuth_0.92.0       digest_0.6.4       
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;##  [7] RCurl_1.95-4.1      bitops_1.0-6        RJSONIO_1.0-3      
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## [10] knitcitations_0.5-0 bibtex_0.3-6        knitr_1.5          
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## loaded via a namespace (and not attached):
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## [1] evaluate_0.5.1 formatR_0.10   httr_0.2       tools_3.0.2   
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## [5] XML_3.95-0.2   xtable_1.7-1
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Check other topics on &lt;a href=&#34;https://twitter.com/search?q=%23rstats&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;#rstats&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     

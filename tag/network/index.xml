@@ -67,9 +67,9 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## How are states coded?&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nf&#34;&gt;summary&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;hom&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;state_code&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
-##    1.00    8.75   16.50   16.50   24.20   32.00
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;We have the slight inconvenience that states are coded as integers from 1 to 32 instead of using their names. Using another of the files supplied by &lt;a href=&#34;https://github.com/diegovalle&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;@diegovalle&lt;/a&gt; we can merge the codes. This requires using the &lt;code&gt;foreign&lt;/code&gt; (&lt;span class=&#34;showtooltip&#34; title=&#34;R Core Team (2014). foreign: Read Data Stored by Minitab, S, SAS, SPSS, Stata, Systat, Weka, dBase.... R package version 0.8-59.&#34;&gt;&lt;a href=&#34;http://CRAN.R-project.org/package=foreign&#34;&gt;R Core Team&lt;/a&gt;&lt;/span&gt;) package for loading a &lt;em&gt;dbf&lt;/em&gt; file and then merging both data sets with &lt;code&gt;plyr&lt;/code&gt; (&lt;span class=&#34;showtooltip&#34; title=&#34;Wickham H (2011). &#39;The Split-Apply-Combine Strategy for Data Analysis.&#39; Journal of Statistical Software, 40(1), pp. 1-29. .&#34;&gt;&lt;a href=&#34;http://www.jstatsoft.org/v40/i01/&#34;&gt;Wickham, 2011&lt;/a&gt;&lt;/span&gt;).&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;##    1.00    8.75   16.50   16.50   24.20   32.00
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;We have the slight inconvenience that states are coded as integers from 1 to 32 instead of using their names. Using another of the files supplied by &lt;a href=&#34;https://github.com/diegovalle&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;@diegovalle&lt;/a&gt; we can merge the codes. This requires using the &lt;code&gt;foreign&lt;/code&gt; (&lt;span class=&#34;showtooltip&#34; title=&#34;R Core Team (2014). foreign: Read Data Stored by Minitab, S, SAS, SPSS, Stata, Systat, Weka, dBase.... R package version 0.8-59.&#34;&gt;&lt;a href=&#34;http://CRAN.R-project.org/package=foreign&#34;&gt;R Core Team&lt;/a&gt;&lt;/span&gt;) package for loading a &lt;em&gt;dbf&lt;/em&gt; file and then merging both data sets with &lt;code&gt;plyr&lt;/code&gt; (&lt;span class=&#34;showtooltip&#34; title=&#34;Wickham H (2011). &#39;The Split-Apply-Combine Strategy for Data Analysis.&#39; Journal of Statistical Software, 40(1), pp. 1-29. .&#34;&gt;&lt;a href=&#34;http://www.jstatsoft.org/v40/i01/&#34;&gt;Wickham, 2011&lt;/a&gt;&lt;/span&gt;).&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## Needed for read.dbf&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nf&#34;&gt;library&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;foreign&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
@@ -90,14 +90,14 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## Lets look at the data&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nf&#34;&gt;head&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;hom&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;##   state_code year    type total population   rate           name
-## 1          1 1997 DOLOSOS   355     958126 37.051 Aguascalientes
-## 2          1 1998 DOLOSOS    66     975585  6.765 Aguascalientes
-## 3          1 1999 DOLOSOS    27     992515  2.720 Aguascalientes
-## 4          1 2000 DOLOSOS    14    1009215  1.387 Aguascalientes
-## 5          1 2001 DOLOSOS    22    1026437  2.143 Aguascalientes
-## 6          1 2002 DOLOSOS    26    1044578  2.489 Aguascalientes
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Great! We now have state names under &lt;em&gt;name&lt;/em&gt; and the intentional homicide rate under &lt;em&gt;rate&lt;/em&gt; (in homicides per 100,000) for each specific &lt;em&gt;year&lt;/em&gt;. We can thus proceed to making the interactive choropleth map using the &lt;code&gt;ichoropleth&lt;/code&gt; function described by &lt;a href=&#34;https://github.com/ramnathv&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Ramnath&lt;/a&gt; &lt;a href=&#34;http://rmaps.github.io/blog/posts/animated-choropleths/index.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;. This requires specifying the &lt;a href=&#34;http://en.wikipedia.org/wiki/TopoJSON&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;topojson&lt;/a&gt; file which is specified via &lt;em&gt;dataUrl&lt;/em&gt;, the name of the map specified via &lt;em&gt;scope&lt;/em&gt; and the most tricky part (for me at least) is that we need to specify the &lt;em&gt;setProjection&lt;/em&gt;. These are all properties of the &lt;a href=&#34;https://github.com/markmarkoh/datamaps&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Datamaps&lt;/a&gt; library. In particular, the wiki describes &lt;a href=&#34;https://github.com/markmarkoh/datamaps/blob/master/README.md#using-custom-maps&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;how to use custom maps&lt;/a&gt; but this requires some javascript knowledge.&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;##   state_code year    type total population   rate           name
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## 1          1 1997 DOLOSOS   355     958126 37.051 Aguascalientes
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## 2          1 1998 DOLOSOS    66     975585  6.765 Aguascalientes
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## 3          1 1999 DOLOSOS    27     992515  2.720 Aguascalientes
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## 4          1 2000 DOLOSOS    14    1009215  1.387 Aguascalientes
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## 5          1 2001 DOLOSOS    22    1026437  2.143 Aguascalientes
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## 6          1 2002 DOLOSOS    26    1044578  2.489 Aguascalientes
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Great! We now have state names under &lt;em&gt;name&lt;/em&gt; and the intentional homicide rate under &lt;em&gt;rate&lt;/em&gt; (in homicides per 100,000) for each specific &lt;em&gt;year&lt;/em&gt;. We can thus proceed to making the interactive choropleth map using the &lt;code&gt;ichoropleth&lt;/code&gt; function described by &lt;a href=&#34;https://github.com/ramnathv&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Ramnath&lt;/a&gt; &lt;a href=&#34;http://rmaps.github.io/blog/posts/animated-choropleths/index.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;. This requires specifying the &lt;a href=&#34;http://en.wikipedia.org/wiki/TopoJSON&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;topojson&lt;/a&gt; file which is specified via &lt;em&gt;dataUrl&lt;/em&gt;, the name of the map specified via &lt;em&gt;scope&lt;/em&gt; and the most tricky part (for me at least) is that we need to specify the &lt;em&gt;setProjection&lt;/em&gt;. These are all properties of the &lt;a href=&#34;https://github.com/markmarkoh/datamaps&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Datamaps&lt;/a&gt; library. In particular, the wiki describes &lt;a href=&#34;https://github.com/markmarkoh/datamaps/blob/master/README.md#using-custom-maps&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;how to use custom maps&lt;/a&gt; but this requires some javascript knowledge.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## Make the map&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nf&#34;&gt;library&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;rMaps&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;d1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;ichoropleth&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;rate&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;~&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;data&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;hom&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ncuts&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;9&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;pal&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#39;YlOrRd&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; 
@@ -149,28 +149,28 @@ dBase, &amp;hellip;.  &lt;a href=&#34;http://CRAN.R-project.org/package=foreign&
 &lt;/ul&gt;
 &lt;h3 id=&#34;reproducibility&#34;&gt;Reproducibility&lt;/h3&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nf&#34;&gt;sessionInfo&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;## R version 3.0.2 (2013-09-25)
-## Platform: x86_64-apple-darwin10.8.0 (64-bit)
-## 
-## locale:
-## [1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8
-## 
-## attached base packages:
-## [1] stats     graphics  grDevices utils     datasets  methods   base     
-## 
-## other attached packages:
-## [1] rMaps_0.1.1         plyr_1.8            foreign_0.8-59     
-## [4] dplyr_0.1.1         knitcitations_0.5-0 bibtex_0.3-6       
-## [7] knitr_1.5          
-## 
-## loaded via a namespace (and not attached):
-##  [1] assertthat_0.1     digest_0.6.4       evaluate_0.5.1    
-##  [4] formatR_0.10       grid_3.0.2         httr_0.2          
-##  [7] lattice_0.20-24    rCharts_0.4.2      RColorBrewer_1.0-5
-## [10] Rcpp_0.11.0        RCurl_1.95-4.1     RJSONIO_1.0-3     
-## [13] stringr_0.6.2      tools_3.0.2        whisker_0.3-2     
-## [16] XML_3.95-0.2       xtable_1.7-1       yaml_2.1.10
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Check other topics on &lt;a href=&#34;https://twitter.com/search?q=%23rstats&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;#rstats&lt;/a&gt;.&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## R version 3.0.2 (2013-09-25)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## Platform: x86_64-apple-darwin10.8.0 (64-bit)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## locale:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## [1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## attached base packages:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## [1] stats     graphics  grDevices utils     datasets  methods   base     
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## other attached packages:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## [1] rMaps_0.1.1         plyr_1.8            foreign_0.8-59     
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## [4] dplyr_0.1.1         knitcitations_0.5-0 bibtex_0.3-6       
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## [7] knitr_1.5          
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## loaded via a namespace (and not attached):
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;##  [1] assertthat_0.1     digest_0.6.4       evaluate_0.5.1    
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;##  [4] formatR_0.10       grid_3.0.2         httr_0.2          
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;##  [7] lattice_0.20-24    rCharts_0.4.2      RColorBrewer_1.0-5
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## [10] Rcpp_0.11.0        RCurl_1.95-4.1     RJSONIO_1.0-3     
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## [13] stringr_0.6.2      tools_3.0.2        whisker_0.3-2     
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## [16] XML_3.95-0.2       xtable_1.7-1       yaml_2.1.10
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Check other topics on &lt;a href=&#34;https://twitter.com/search?q=%23rstats&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;#rstats&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     
