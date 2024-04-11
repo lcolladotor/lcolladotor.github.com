@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- This site was created with Wowchemy. https://www.wowchemy.com -->
-<!-- Last Published: February 26, 2024 --><html lang="en-us" >
+<!-- Last Published: April 11, 2024 --><html lang="en-us" >
 
 
 <head>
@@ -1069,7 +1069,7 @@
 </span></span><span class="line"><span class="cl"><span class="c1">## For testing</span>
 </span></span><span class="line"><span class="cl"><span class="c1"># i &lt;- 1</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nf">for</span><span class="p">(</span><span class="n">i</span> <span class="n">in</span> <span class="nf">seq_len</span><span class="p">(</span><span class="nf">length</span><span class="p">(</span><span class="n">f</span><span class="p">)))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl"><span class="kr">for</span><span class="p">(</span><span class="n">i</span> <span class="kr">in</span> <span class="nf">seq_len</span><span class="p">(</span><span class="nf">length</span><span class="p">(</span><span class="n">f</span><span class="p">)))</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">    <span class="n">f_initial</span> <span class="o">&lt;-</span> <span class="nf">file.path</span><span class="p">(</span><span class="n">p_ori</span><span class="p">,</span> <span class="n">f[i]</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">  <span class="n">f_new</span> <span class="o">&lt;-</span> <span class="nf">file.path</span><span class="p">(</span><span class="n">p_new</span><span class="p">,</span> <span class="n">ff[i]</span><span class="p">,</span> <span class="s">&#39;index.md&#39;</span><span class="p">)</span>
@@ -1085,7 +1085,7 @@
 </span></span><span class="line"><span class="cl">  <span class="c1">## on the old version that I hadn&#39;t transfered to the new version.</span>
 </span></span><span class="line"><span class="cl">  <span class="c1">## This typically involved some custom urls whose syntax is now</span>
 </span></span><span class="line"><span class="cl">  <span class="c1">## different.</span>
-</span></span><span class="line"><span class="cl">  <span class="nf">for</span><span class="p">(</span><span class="n">j</span> <span class="n">in</span> <span class="nf">c</span><span class="p">(</span><span class="s">&#39;location&#39;</span><span class="p">,</span> <span class="s">&#39;abstract &#39;</span><span class="p">,</span> <span class="s">&#39;event_url&#39;</span><span class="p">,</span> <span class="s">&#39;url_video&#39;</span><span class="p">,</span> <span class="s">&#39;url_slides&#39;</span><span class="p">,</span> <span class="s">&#39;title&#39;</span><span class="p">,</span> <span class="s">&#39;url_pdf&#39;</span><span class="p">,</span> <span class="s">&#39;event &#39;</span><span class="p">,</span> <span class="s">&#39;math&#39;</span><span class="p">))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">for</span><span class="p">(</span><span class="n">j</span> <span class="kr">in</span> <span class="nf">c</span><span class="p">(</span><span class="s">&#39;location&#39;</span><span class="p">,</span> <span class="s">&#39;abstract &#39;</span><span class="p">,</span> <span class="s">&#39;event_url&#39;</span><span class="p">,</span> <span class="s">&#39;url_video&#39;</span><span class="p">,</span> <span class="s">&#39;url_slides&#39;</span><span class="p">,</span> <span class="s">&#39;title&#39;</span><span class="p">,</span> <span class="s">&#39;url_pdf&#39;</span><span class="p">,</span> <span class="s">&#39;event &#39;</span><span class="p">,</span> <span class="s">&#39;math&#39;</span><span class="p">))</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="c1">## for debugging:</span>
 </span></span><span class="line"><span class="cl">    <span class="c1"># print(j)</span>
 </span></span><span class="line"><span class="cl">    <span class="n">patt</span> <span class="o">&lt;-</span> <span class="nf">paste0</span><span class="p">(</span><span class="s">&#39;^&#39;</span><span class="p">,</span> <span class="n">j</span><span class="p">)</span>
@@ -1107,7 +1107,7 @@
 </span></span><span class="line"><span class="cl">  <span class="c1">## and the end time wasn&#39;t always there</span>
 </span></span><span class="line"><span class="cl">  <span class="n">cont2</span> <span class="o">&lt;-</span> <span class="n">initial</span><span class="nf">[grep</span><span class="p">(</span><span class="s">&#39;^time_end&#39;</span><span class="p">,</span> <span class="n">initial</span><span class="p">)</span><span class="n">]</span>
 </span></span><span class="line"><span class="cl">  <span class="n">cont2</span> <span class="o">&lt;-</span> <span class="nf">gsub</span><span class="p">(</span><span class="s">&#39;time_end&#39;</span><span class="p">,</span> <span class="s">&#39;date_end&#39;</span><span class="p">,</span> <span class="n">cont2</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">  <span class="nf">if</span><span class="p">(</span><span class="nf">length</span><span class="p">(</span><span class="n">cont2</span><span class="p">)</span> <span class="o">==</span> <span class="m">0</span><span class="p">)</span> <span class="n">cont2</span> <span class="o">&lt;-</span> <span class="nf">gsub</span><span class="p">(</span><span class="s">&#39;time_start&#39;</span><span class="p">,</span> <span class="s">&#39;date_end&#39;</span><span class="p">,</span> <span class="n">cont</span><span class="p">)</span> <span class="n">else</span> <span class="n">initial</span><span class="nf">[grep</span><span class="p">(</span><span class="s">&#39;^time_end&#39;</span><span class="p">,</span> <span class="n">initial</span><span class="p">)</span><span class="n">]</span> <span class="o">&lt;-</span> <span class="s">&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">if</span><span class="p">(</span><span class="nf">length</span><span class="p">(</span><span class="n">cont2</span><span class="p">)</span> <span class="o">==</span> <span class="m">0</span><span class="p">)</span> <span class="n">cont2</span> <span class="o">&lt;-</span> <span class="nf">gsub</span><span class="p">(</span><span class="s">&#39;time_start&#39;</span><span class="p">,</span> <span class="s">&#39;date_end&#39;</span><span class="p">,</span> <span class="n">cont</span><span class="p">)</span> <span class="kr">else</span> <span class="n">initial</span><span class="nf">[grep</span><span class="p">(</span><span class="s">&#39;^time_end&#39;</span><span class="p">,</span> <span class="n">initial</span><span class="p">)</span><span class="n">]</span> <span class="o">&lt;-</span> <span class="s">&#34;&#34;</span>
 </span></span><span class="line"><span class="cl">  <span class="n">new</span><span class="nf">[grep</span><span class="p">(</span><span class="s">&#39;^date_end &#39;</span><span class="p">,</span> <span class="n">new</span><span class="p">)</span><span class="n">]</span> <span class="o">&lt;-</span> <span class="n">cont2</span>
 </span></span><span class="line"><span class="cl">  
 </span></span><span class="line"><span class="cl">  <span class="c1">## Similarly, the short version of the abstract now has</span>
@@ -1141,7 +1141,7 @@
 </span></span><span class="line"><span class="cl"><span class="n">ff</span> <span class="o">&lt;-</span> <span class="nf">gsub</span><span class="p">(</span><span class="s">&#39;.md&#39;</span><span class="p">,</span> <span class="s">&#39;&#39;</span><span class="p">,</span> <span class="n">f</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nf">for</span><span class="p">(</span><span class="n">i</span> <span class="n">in</span> <span class="nf">seq_len</span><span class="p">(</span><span class="nf">length</span><span class="p">(</span><span class="n">f</span><span class="p">)))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl"><span class="kr">for</span><span class="p">(</span><span class="n">i</span> <span class="kr">in</span> <span class="nf">seq_len</span><span class="p">(</span><span class="nf">length</span><span class="p">(</span><span class="n">f</span><span class="p">)))</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">  
 </span></span><span class="line"><span class="cl">  
 </span></span><span class="line"><span class="cl">  <span class="c1">## Create the new directories from R</span>
@@ -1158,7 +1158,7 @@
 </span></span><span class="line"><span class="cl">  <span class="n">new</span> <span class="o">&lt;-</span> <span class="nf">readLines</span><span class="p">(</span><span class="n">f_new</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">  
 </span></span><span class="line"><span class="cl">  <span class="c1">## Update tags just like I did for the talks</span>
-</span></span><span class="line"><span class="cl">  <span class="nf">for</span><span class="p">(</span><span class="n">j</span> <span class="n">in</span> <span class="nf">c</span><span class="p">(</span><span class="s">&#39;title &#39;</span><span class="p">,</span> <span class="s">&#39;date &#39;</span><span class="p">,</span> <span class="s">&#39;math &#39;</span><span class="p">,</span> <span class="s">&#39;publication &#39;</span><span class="p">,</span> <span class="s">&#39;abstract &#39;</span><span class="p">,</span> <span class="s">&#39;url_pdf&#39;</span><span class="p">,</span> <span class="s">&#39;url_project&#39;</span><span class="p">,</span> <span class="s">&#39;url_dataset&#39;</span><span class="p">,</span> <span class="s">&#39;url_video&#39;</span><span class="p">,</span> <span class="s">&#39;url_slides&#39;</span><span class="p">,</span> <span class="s">&#39;url_code&#39;</span><span class="p">,</span> <span class="s">&#39;authors &#39;</span><span class="p">))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">for</span><span class="p">(</span><span class="n">j</span> <span class="kr">in</span> <span class="nf">c</span><span class="p">(</span><span class="s">&#39;title &#39;</span><span class="p">,</span> <span class="s">&#39;date &#39;</span><span class="p">,</span> <span class="s">&#39;math &#39;</span><span class="p">,</span> <span class="s">&#39;publication &#39;</span><span class="p">,</span> <span class="s">&#39;abstract &#39;</span><span class="p">,</span> <span class="s">&#39;url_pdf&#39;</span><span class="p">,</span> <span class="s">&#39;url_project&#39;</span><span class="p">,</span> <span class="s">&#39;url_dataset&#39;</span><span class="p">,</span> <span class="s">&#39;url_video&#39;</span><span class="p">,</span> <span class="s">&#39;url_slides&#39;</span><span class="p">,</span> <span class="s">&#39;url_code&#39;</span><span class="p">,</span> <span class="s">&#39;authors &#39;</span><span class="p">))</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="c1">#print(j)</span>
 </span></span><span class="line"><span class="cl">    <span class="n">patt</span> <span class="o">&lt;-</span> <span class="nf">paste0</span><span class="p">(</span><span class="s">&#39;^&#39;</span><span class="p">,</span> <span class="n">j</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">    <span class="n">cont</span> <span class="o">&lt;-</span> <span class="n">initial</span><span class="nf">[grep</span><span class="p">(</span><span class="n">patt</span><span class="p">,</span> <span class="n">initial</span><span class="p">)</span><span class="n">]</span>
@@ -1822,7 +1822,7 @@ URL: <a href="https://bookdown.org/yihui/blogdown/">https://bookdown.org/yihui/b
   
 
 
-<script src="/js/vendor-bundle.min.f64289d8217e08e3afcd597d60836062.js"></script>
+<script src="/js/vendor-bundle.min.938a3a7554cd9f6602290411f64d2617.js"></script>
 
 
 
@@ -1910,7 +1910,7 @@ URL: <a href="https://bookdown.org/yihui/blogdown/">https://bookdown.org/yihui/b
   
 
 
-<script src="/en/js/wowchemy.min.ead4a376bcf2c4714888c770ea9b0040.js"></script>
+<script src="/en/js/wowchemy.min.2945731fa88332cb0ec33cf47d29879f.js"></script>
 
 
 
@@ -1947,7 +1947,7 @@ URL: <a href="https://bookdown.org/yihui/blogdown/">https://bookdown.org/yihui/b
 </div>
 
 
-  <script src="/js/wowchemy-publication.68f8d7090562ca65fc6d3cb3f8f2d2cb.js" type="module"></script>
+  <script src="/js/wowchemy-publication.af9327db0521d4a01354bfc8b77a4324.js" type="module"></script>
 
 
 

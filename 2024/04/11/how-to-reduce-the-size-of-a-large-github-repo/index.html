@@ -1,0 +1,2513 @@
+<!DOCTYPE html>
+<!-- This site was created with Wowchemy. https://www.wowchemy.com -->
+<!-- Last Published: April 11, 2024 --><html lang="en-us" >
+
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  
+  
+    <meta name="generator" content="Wowchemy 5.7.0 for Hugo" />
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  
+
+  
+  
+  
+    
+      
+      <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&family=Karma&family=Mina&display=swap">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&family=Karma&family=Mina&display=swap" media="print" onload="this.media='all'">
+    
+  
+
+  
+  
+
+  
+  
+    
+    <script src="/js/mathjax-config.js"></script>
+  
+
+  
+
+  <link rel="stylesheet" href="/css/vendor-bundle.min.047268c6dd09ad74ba54a0ba71837064.css" media="print" onload="this.media='all'">
+
+  
+  
+  
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.2/css/academicons.min.css" integrity="sha512-KlJCpRsLf+KKu2VQa5vmRuClRFjxc5lXO03ixZt82HZUk41+1I0bD8KBSA0fY290ayMfWYI9udIqeOWSu1/uZg==" crossorigin="anonymous" media="print" onload="this.media='all'">
+    
+
+    
+    
+    
+    
+      
+      
+    
+    
+    
+
+    
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.min.css" integrity="" crossorigin="anonymous" media="print" onload="this.media='all'">
+    
+
+    
+
+    
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+  
+
+  
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/wowchemy.cfa383012e109fa07dd80bafcdf476df.css" />
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+    
+    
+    <link rel="stylesheet" href="/css/libs/chroma/github-light.min.css" title="hl-light" media="print" onload="this.media='all'" >
+    <link rel="stylesheet" href="/css/libs/chroma/dracula.min.css" title="hl-dark" media="print" onload="this.media='all'" disabled>
+  
+
+  
+  
+
+
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3CBVR6GQ07"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+      dataLayer.push(arguments);
+  }
+
+  function trackOutboundLink(url, target) {
+    gtag('event', 'click', {
+         'event_category': 'outbound',
+         'event_label': url,
+         'transport_type': 'beacon',
+         'event_callback': function () {
+           if (target !== '_blank') {
+             document.location = url;
+           }
+         }
+    });
+    console.debug("Outbound link clicked: " + url);
+  }
+
+  function onClickCallback(event) {
+    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
+      return;
+    }
+    trackOutboundLink(event.target, event.target.getAttribute('target'));  
+  }
+
+  gtag('js', new Date());
+  gtag('config', 'G-3CBVR6GQ07', {});
+  gtag('set', {'cookie_flags': 'SameSite=None;Secure'});
+
+  
+  document.addEventListener('click', onClickCallback, false);
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+
+
+
+
+
+  <meta name="author" content="Leonardo Collado-Torres" />
+
+
+
+
+
+  
+
+<meta name="description" content="This work was done by Leo with Erik Nelson and Ryan Miller. Thank you for your time and input!
+Oh ohh! My GitHub repository is huge! 😱 What do I do now?" />
+
+
+
+<link rel="alternate" hreflang="en-us" href="https://lcolladotor.github.io/2024/04/11/how-to-reduce-the-size-of-a-large-github-repo/" />
+<link rel="canonical" href="https://lcolladotor.github.io/2024/04/11/how-to-reduce-the-size-of-a-large-github-repo/" />
+
+
+
+  <link rel="manifest" href="/manifest.webmanifest" />
+
+
+
+<link rel="icon" type="image/png" href="/media/icon_hu2b32c4ab415f12f472f73c7b0301b0d1_19400_32x32_fill_lanczos_center_3.png" />
+<link rel="apple-touch-icon" type="image/png" href="/media/icon_hu2b32c4ab415f12f472f73c7b0301b0d1_19400_180x180_fill_lanczos_center_3.png" />
+
+<meta name="theme-color" content="#FF6771" />
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+<meta property="twitter:card" content="summary" />
+
+  <meta property="twitter:site" content="@lcolladotor" />
+  <meta property="twitter:creator" content="@lcolladotor" />
+<meta property="twitter:image" content="https://lcolladotor.github.io/media/icon_hu2b32c4ab415f12f472f73c7b0301b0d1_19400_512x512_fill_lanczos_center_3.png" />
+<meta property="og:site_name" content="L. Collado-Torres" />
+<meta property="og:url" content="https://lcolladotor.github.io/2024/04/11/how-to-reduce-the-size-of-a-large-github-repo/" />
+<meta property="og:title" content="How to reduce the size of a large GitHub repo | L. Collado-Torres" />
+<meta property="og:description" content="This work was done by Leo with Erik Nelson and Ryan Miller. Thank you for your time and input!
+Oh ohh! My GitHub repository is huge! 😱 What do I do now?" /><meta property="og:image" content="https://lcolladotor.github.io/media/icon_hu2b32c4ab415f12f472f73c7b0301b0d1_19400_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
+
+  
+    <meta
+      property="article:published_time"
+      content="2024-04-11T00:00:00&#43;00:00"
+    />
+  
+  
+    <meta property="article:modified_time" content="2024-04-11T18:14:18-04:00">
+  
+
+
+
+
+
+
+    
+
+
+
+
+
+
+  
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://lcolladotor.github.io/2024/04/11/how-to-reduce-the-size-of-a-large-github-repo/"
+  },
+  "headline": "How to reduce the size of a large GitHub repo",
+  
+  "datePublished": "2024-04-11T00:00:00Z",
+  "dateModified": "2024-04-11T18:14:18-04:00",
+  
+  "author": {
+    "@type": "Person",
+    "name": "Leonardo Collado-Torres"
+  },
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "L. Collado-Torres",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://lcolladotor.github.io/media/icon_hu2b32c4ab415f12f472f73c7b0301b0d1_19400_192x192_fill_lanczos_center_3.png"
+    }
+  },
+  "description": "This work was done by Leo with Erik Nelson and Ryan Miller. Thank you for your time and input!\nOh ohh! My GitHub repository is huge! 😱 What do I do now?"
+}
+</script>
+
+  
+
+  
+
+
+
+
+  
+  
+  
+
+  
+  
+
+  
+
+
+  
+  <title>How to reduce the size of a large GitHub repo | L. Collado-Torres</title>
+
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="dfe4c306398bf5d8baac71470569badc" >
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <script src="/js/wowchemy-init.min.028535d572102c468e4bcd43201c3601.js"></script>
+
+  
+
+
+<aside class="search-modal" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#" aria-label="Close"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search" class="form-control"
+        aria-label="Search...">
+        
+      </div>
+
+      
+      
+
+      
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+
+  <div class="page-header header--fixed">
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+    <div class="container-xl">
+
+      
+      <div class="d-none d-lg-inline-flex">
+        <a class="navbar-brand" href="/">L. Collado-Torres</a>
+      </div>
+      
+
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+      <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+      
+      <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+        <a class="navbar-brand" href="/">L. Collado-Torres</a>
+      </div>
+      
+
+      
+      
+      <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+        
+        <ul class="navbar-nav d-md-inline-flex">
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#about"><span>Home</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#team"><span>Team</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#projects"><span>Projects</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#talks_favorite"><span>Talks</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#publications"><span>Publications</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#blog"><span>Blog</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#teaching"><span>Teaching</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#cv"><span>CV</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#contact"><span>Contact</span></a>
+          </li>
+
+          
+          
+
+        
+
+          
+        </ul>
+      </div>
+
+      <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+
+        
+        
+          
+        
+
+        
+        
+        
+        <li class="nav-item">
+          <a class="nav-link js-search" href="#" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></a>
+        </li>
+        
+
+        
+        
+        
+        <li class="nav-item dropdown theme-dropdown">
+          <a href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-label="Display preferences">
+            <i class="fas fa-moon" aria-hidden="true"></i>
+          </a>
+          <div class="dropdown-menu">
+            <a href="#" class="dropdown-item js-set-theme-light">
+              <span>Light</span>
+            </a>
+            <a href="#" class="dropdown-item js-set-theme-dark">
+              <span>Dark</span>
+            </a>
+            <a href="#" class="dropdown-item js-set-theme-auto">
+              <span>Automatic</span>
+            </a>
+          </div>
+        </li>
+        
+
+        
+        
+
+      </ul>
+
+    </div>
+  </nav>
+</header>
+
+
+  </div>
+
+  <div class="page-body">
+    
+    
+    
+
+    <article class="article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+<div class="article-container pt-3">
+  <h1>How to reduce the size of a large GitHub repo</h1>
+
+  
+
+  
+    
+
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+          Last updated on
+      
+    
+    Thu, Apr 11, 2024
+  </span>
+  
+
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    24 min read
+  </span>
+  
+
+  
+  
+  
+  
+    <span class="middot-divider"></span>
+    <a href="/2024/04/11/how-to-reduce-the-size-of-a-large-github-repo/#disqus_thread"></a>
+  
+
+  
+  
+  <span class="middot-divider"></span>
+  <span class="article-categories">
+    <i class="fas fa-folder mr-1"></i><a href="/category/computing/">Computing</a>, <a href="/category/libd/">LIBD</a>, <a href="/category/rstats/">rstats</a></span>
+  
+
+</div>
+
+    
+
+
+
+
+
+  
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style">
+      <p><em>This work was done by Leo with <a href="https://github.com/Erik-D-Nelson" target="_blank" rel="noopener">Erik Nelson</a> and <a href="https://github.com/RyAMiller" target="_blank" rel="noopener">Ryan Miller</a>. Thank you for your time and input!</em></p>
+<div class="alert alert-note">
+  <div>
+    Oh ohh! My <code>GitHub</code> repository is huge! 😱 What do I do now?
+  </div>
+</div>
+<iframe src="https://giphy.com/embed/0vTOscboHgOyBSuK4r" width="480" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/stickers/GitHub-transparent-0vTOscboHgOyBSuK4r">via GIPHY</a></p>
+<h2 id="our-story">Our story</h2>
+<p>That&rsquo;s how things start. In our case, we had a repository that would download over 22.6 GB of data and use 55.9 GB of disk space.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">% git clone git@github.com:LieberInstitute/spatial_hpc.git
+</span></span><span class="line"><span class="cl">Cloning into <span class="s1">&#39;spatial_hpc&#39;</span>...
+</span></span><span class="line"><span class="cl">remote: Enumerating objects: 18189, <span class="k">done</span>.
+</span></span><span class="line"><span class="cl">remote: Counting objects: 100% <span class="o">(</span>1999/1999<span class="o">)</span>, <span class="k">done</span>.
+</span></span><span class="line"><span class="cl">remote: Compressing objects: 100% <span class="o">(</span>1026/1026<span class="o">)</span>, <span class="k">done</span>.
+</span></span><span class="line"><span class="cl">remote: Total <span class="m">18189</span> <span class="o">(</span>delta 963<span class="o">)</span>, reused <span class="m">1981</span> <span class="o">(</span>delta 950<span class="o">)</span>, pack-reused <span class="m">16190</span>
+</span></span><span class="line"><span class="cl">Receiving objects: 100% <span class="o">(</span>18189/18189<span class="o">)</span>, 22.64 GiB <span class="p">|</span> 12.90 MiB/s, <span class="k">done</span>.
+</span></span><span class="line"><span class="cl">Resolving deltas: 100% <span class="o">(</span>9734/9734<span class="o">)</span>, <span class="k">done</span>.
+</span></span><span class="line"><span class="cl">Updating files: 100% <span class="o">(</span>6667/6667<span class="o">)</span>, <span class="k">done</span>.
+</span></span></code></pre></div><p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="https://lcolladotor.github.io/2024/04/11/how-to-reduce-the-size-of-a-large-github-repo/images/Screenshot_2024-04-11_at_2.13.10_PM.png" alt="Originally the repository used 55.9 GB of disk space" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
+<p>We were able to reduce it such that it now downloads only 5.1 GB of data and takes 12.8 GB of disk space. While this could still be considered large by others, it&rsquo;s much easier to download and tries to balance publicly providing some plots versus none.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">% git clone git@github.com:LieberInstitute/spatial_hpc.git
+</span></span><span class="line"><span class="cl">Cloning into <span class="s1">&#39;spatial_hpc&#39;</span>...
+</span></span><span class="line"><span class="cl">remote: Enumerating objects: 18451, <span class="k">done</span>.
+</span></span><span class="line"><span class="cl">remote: Counting objects: 100% <span class="o">(</span>8112/8112<span class="o">)</span>, <span class="k">done</span>.
+</span></span><span class="line"><span class="cl">remote: Compressing objects: 100% <span class="o">(</span>2851/2851<span class="o">)</span>, <span class="k">done</span>.
+</span></span><span class="line"><span class="cl">remote: Total <span class="m">18451</span> <span class="o">(</span>delta 4129<span class="o">)</span>, reused <span class="m">7963</span> <span class="o">(</span>delta 4006<span class="o">)</span>, pack-reused <span class="m">10339</span>
+</span></span><span class="line"><span class="cl">Receiving objects: 100% <span class="o">(</span>18451/18451<span class="o">)</span>, 5.13 GiB <span class="p">|</span> 11.41 MiB/s, <span class="k">done</span>.
+</span></span><span class="line"><span class="cl">Resolving deltas: 100% <span class="o">(</span>9433/9433<span class="o">)</span>, <span class="k">done</span>.
+</span></span><span class="line"><span class="cl">Updating files: 100% <span class="o">(</span>5784/5784<span class="o">)</span>, <span class="k">done</span>.
+</span></span></code></pre></div><p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="https://lcolladotor.github.io/2024/04/11/how-to-reduce-the-size-of-a-large-github-repo/images/Screenshot_2024-04-11_at_2.13.21_PM.png" alt="Now the repository uses 12.8 GB of disk space" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
+<div class="alert alert-note">
+  <div>
+    How were we able to achieve this? We used <a href="https://rtyley.github.io/bfg-repo-cleaner/" target="_blank" rel="noopener"><code>BFG Repo-Cleaner</code></a> and removed all files over 10 MB except for two files that we wanted to keep.
+  </div>
+</div>
+<h2 id="steps-by-steps">Steps by steps</h2>
+<h3 id="get-your-workspace-ready">Get your workspace ready</h3>
+<p>We mostly work on a high performance computing (HPC) environment, aka a compute cluster, called <a href="https://jhpce.jhu.edu/" target="_blank" rel="noopener">JHPCE</a>. In general for our projects, we have very large files that we do not version control. That is, we ignore them thanks to one or multiple <code>.gitignore</code> files. Given the complexity of differentiating version controlled files from ignored files, my recommendation is to work on your work computer (in my case, a laptop).</p>
+<p>With this in mind, we did a fresh clone of the repository as shown previously.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">% git clone git@github.com:LieberInstitute/spatial_hpc.git
+</span></span><span class="line"><span class="cl">Cloning into <span class="s1">&#39;spatial_hpc&#39;</span>...
+</span></span><span class="line"><span class="cl">remote: Enumerating objects: 18189, <span class="k">done</span>.
+</span></span><span class="line"><span class="cl">remote: Counting objects: 100% <span class="o">(</span>1999/1999<span class="o">)</span>, <span class="k">done</span>.
+</span></span><span class="line"><span class="cl">remote: Compressing objects: 100% <span class="o">(</span>1026/1026<span class="o">)</span>, <span class="k">done</span>.
+</span></span><span class="line"><span class="cl">remote: Total <span class="m">18189</span> <span class="o">(</span>delta 963<span class="o">)</span>, reused <span class="m">1981</span> <span class="o">(</span>delta 950<span class="o">)</span>, pack-reused <span class="m">16190</span>
+</span></span><span class="line"><span class="cl">Receiving objects: 100% <span class="o">(</span>18189/18189<span class="o">)</span>, 22.64 GiB <span class="p">|</span> 12.90 MiB/s, <span class="k">done</span>.
+</span></span><span class="line"><span class="cl">Resolving deltas: 100% <span class="o">(</span>9734/9734<span class="o">)</span>, <span class="k">done</span>.
+</span></span><span class="line"><span class="cl">Updating files: 100% <span class="o">(</span>6667/6667<span class="o">)</span>, <span class="k">done</span>.
+</span></span></code></pre></div><p>This is also the first step that <code>BFG</code> recommends that you do. In general, you want to make sure that you have a pristine copy that you can use as a fallback option in case anything goes wrong, and a working copy.</p>
+<p><a href="https://rtyley.github.io/bfg-repo-cleaner/" target="_blank" rel="noopener">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="https://lcolladotor.github.io/2024/04/11/how-to-reduce-the-size-of-a-large-github-repo/images/Screenshot_2024-04-11_at_2.27.41_PM.png" alt="Make a fresh git clone" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</a></p>
+<div class="alert alert-note">
+  <div>
+    Note that we missed the <code>--mirror</code> option, although as you&rsquo;ll see later, we did need to have a full copy of our files in our computer. So I actually recommend that you <strong>do not use <code>--mirror</code></strong>.
+  </div>
+</div>
+<p>We also downloaded <code>BFG</code>&rsquo;s latest version: currently that is <a href="https://repo1.maven.org/maven2/com/madgag/bfg/1.14.0/bfg-1.14.0.jar" target="_blank" rel="noopener">v1.14.0</a>. This downloads the <code>bfg-1.14.0.jar</code> file. On a macOS computer, you also need to install <code>Java</code> from <a href="https://www.java.com/en/download/" target="_blank" rel="noopener">https://www.java.com/en/download/</a>. As my macOS computer is from the <em>M series system (ARM64)</em>, I did have to download the right version for it instead of the one from the big green button that downloads <code>Java</code> for macOS Intel (incompatible with my computer!).</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="https://lcolladotor.github.io/2024/04/11/how-to-reduce-the-size-of-a-large-github-repo/images/Screenshot_2024-04-11_at_2.24.43_PM.png" alt="Download the right version of Java for your macOS computer" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
+<p>You can then test that it&rsquo;s all working as intended with this command:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">% java -jar ~/Desktop/bfg-1.14.0.jar
+</span></span><span class="line"><span class="cl">bfg 1.14.0
+</span></span><span class="line"><span class="cl">Usage: bfg [options] [&lt;repo&gt;]
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  -b, --strip-blobs-bigger-than &lt;size&gt;
+</span></span><span class="line"><span class="cl">                           strip blobs bigger than X (eg &#39;128K&#39;, &#39;1M&#39;, etc)
+</span></span><span class="line"><span class="cl">  -B, --strip-biggest-blobs NUM
+</span></span><span class="line"><span class="cl">                           strip the top NUM biggest blobs
+</span></span><span class="line"><span class="cl">  -bi, --strip-blobs-with-ids &lt;blob-ids-file&gt;
+</span></span><span class="line"><span class="cl">                           strip blobs with the specified Git object ids
+</span></span><span class="line"><span class="cl">  -D, --delete-files &lt;glob&gt;
+</span></span><span class="line"><span class="cl">                           delete files with the specified names (eg &#39;*.class&#39;, &#39;*.{txt,log}&#39; - matches on file name, not path within repo)
+</span></span><span class="line"><span class="cl">  --delete-folders &lt;glob&gt;  delete folders with the specified names (eg &#39;.svn&#39;, &#39;*-tmp&#39; - matches on folder name, not path within repo)
+</span></span><span class="line"><span class="cl">  --convert-to-git-lfs &lt;value&gt;
+</span></span><span class="line"><span class="cl">                           extract files with the specified names (eg &#39;*.zip&#39; or &#39;*.mp4&#39;) into Git LFS
+</span></span><span class="line"><span class="cl">  -rt, --replace-text &lt;expressions-file&gt;
+</span></span><span class="line"><span class="cl">                           filter content of files, replacing matched text. Match expressions should be listed in the file, one expression per line - by default, each expression is treated as a literal, but &#39;regex:&#39; &amp; &#39;glob:&#39; prefixes are supported, with &#39;==&gt;&#39; to specify a replacement string other than the default of &#39;***REMOVED***&#39;.
+</span></span><span class="line"><span class="cl">  -fi, --filter-content-including &lt;glob&gt;
+</span></span><span class="line"><span class="cl">                           do file-content filtering on files that match the specified expression (eg &#39;*.{txt,properties}&#39;)
+</span></span><span class="line"><span class="cl">  -fe, --filter-content-excluding &lt;glob&gt;
+</span></span><span class="line"><span class="cl">                           don&#39;t do file-content filtering on files that match the specified expression (eg &#39;*.{xml,pdf}&#39;)
+</span></span><span class="line"><span class="cl">  -fs, --filter-content-size-threshold &lt;size&gt;
+</span></span><span class="line"><span class="cl">                           only do file-content filtering on files smaller than &lt;size&gt; (default is 1048576 bytes)
+</span></span><span class="line"><span class="cl">  -p, --protect-blobs-from &lt;refs&gt;
+</span></span><span class="line"><span class="cl">                           protect blobs that appear in the most recent versions of the specified refs (default is &#39;HEAD&#39;)
+</span></span><span class="line"><span class="cl">  --no-blob-protection     allow the BFG to modify even your *latest* commit. Not recommended: you should have already ensured your latest commit is clean.
+</span></span><span class="line"><span class="cl">  --private                treat this repo-rewrite as removing private data (for example: omit old commit ids from commit messages)
+</span></span><span class="line"><span class="cl">  --massive-non-file-objects-sized-up-to &lt;size&gt;
+</span></span><span class="line"><span class="cl">                           increase memory usage to handle over-size Commits, Tags, and Trees that are up to X in size (eg &#39;10M&#39;)
+</span></span><span class="line"><span class="cl">  &lt;repo&gt;                   file path for Git repository to clean
+</span></span></code></pre></div><h3 id="diagnose">Diagnose</h3>
+<p>Once you have <code>BFG</code> installed as well as a working clone (copy) of your <code>GitHub</code> repository, you can proceed to identify large files. Say files larger than 100 MB. That is the strategy that you typically use when you version controlled large files and made other smaller commits, and now cannot <code>git push</code> (upload files) to <code>GitHub</code>. In our case, we had no files over 100 MB.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">% <span class="nb">cd</span> ~/Desktop/spatial_hpc
+</span></span><span class="line"><span class="cl">% java -jar ~/Desktop/bfg-1.14.0.jar --strip-blobs-bigger-than <span class="s1">&#39;100M&#39;</span> .git
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Using repo : /Users/leocollado/Dropbox/Mac/Desktop/spatial_hpc/.git
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Scanning packfile <span class="k">for</span> large blobs: <span class="m">18215</span>
+</span></span><span class="line"><span class="cl">Scanning packfile <span class="k">for</span> large blobs completed in <span class="m">89</span> ms.
+</span></span><span class="line"><span class="cl">Warning : no large blobs matching criteria found in packfiles - does the repo need to be packed?
+</span></span></code></pre></div><p>So we then proceeded to check files over 10 MB (we also checked files over 50 MB but we won&rsquo;t talk about that analysis in this blog post). <code>BFG</code> provides a lot of output as shown below. <code>BFG</code> told us that we had 885 &ldquo;dirty files&rdquo;. These are files over 10 MB (the threshold value we specified) that are present in our latest version on <code>GitHub</code>. It also found &ldquo;clean files&rdquo; over 10 MB, which are files that at some point we had version controlled but then deleted them. So they only exist in the <code>git</code> history in case we need to go back in time, but are not visible from the landing page on <code>GitHub</code> (though you can use <code>GitHub</code> to navigate the <code>git</code> history if you want to).</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">% java -jar ~/Desktop/bfg-1.14.0.jar --strip-blobs-bigger-than <span class="s1">&#39;10M&#39;</span> .git
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Using repo : /Users/leocollado/Dropbox/Mac/Desktop/spatial_hpc/.git
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Scanning packfile <span class="k">for</span> large blobs: <span class="m">18215</span>
+</span></span><span class="line"><span class="cl">Scanning packfile <span class="k">for</span> large blobs completed in <span class="m">91</span> ms.
+</span></span><span class="line"><span class="cl">Found <span class="m">1130</span> blob ids <span class="k">for</span> large blobs - <span class="nv">biggest</span><span class="o">=</span><span class="m">97378037</span> <span class="nv">smallest</span><span class="o">=</span><span class="m">10491618</span>
+</span></span><span class="line"><span class="cl">Total size <span class="o">(</span>unpacked<span class="o">)=</span><span class="m">29298335089</span>
+</span></span><span class="line"><span class="cl">Found <span class="m">6108</span> objects to protect
+</span></span><span class="line"><span class="cl">Found <span class="m">4</span> commit-pointing refs : HEAD, refs/heads/main, refs/remotes/origin/HEAD, refs/remotes/origin/main
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Protected commits
+</span></span><span class="line"><span class="cl">-----------------
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">These are your protected commits, and so their contents will NOT be altered:
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"> * commit f5f9a19e <span class="o">(</span>protected by <span class="s1">&#39;HEAD&#39;</span><span class="o">)</span> - contains <span class="m">885</span> dirty files :
+</span></span><span class="line"><span class="cl">	- code/enrichment_analysis/project_all/score/snRNAseq_aggregated_cpm.tsv <span class="o">(</span>16.4 MB<span class="o">)</span>
+</span></span><span class="line"><span class="cl">	- code/spot_deconvo/cell2location/02_registration_HE_broad_class.log <span class="o">(</span>16.3 MB<span class="o">)</span>
+</span></span><span class="line"><span class="cl">	- ...
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">WARNING: The dirty content above may be removed from other commits, but as
+</span></span><span class="line"><span class="cl">the *protected* commits still use it, it will STILL exist in your repository.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Details of protected dirty content have been recorded here :
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">/Users/leocollado/Dropbox/Mac/Desktop/spatial_hpc/.git.bfg-report/2024-04-11/09-51-45/protected-dirt/
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">If you *really* want this content gone, make a manual commit that removes it,
+</span></span><span class="line"><span class="cl">and <span class="k">then</span> run the BFG on a fresh copy of your repo.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Cleaning
+</span></span><span class="line"><span class="cl">--------
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Found <span class="m">1561</span> commits
+</span></span><span class="line"><span class="cl">Cleaning commits:       100% <span class="o">(</span>1561/1561<span class="o">)</span>
+</span></span><span class="line"><span class="cl">Cleaning commits completed in 1,197 ms.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Updating <span class="m">2</span> Refs
+</span></span><span class="line"><span class="cl">---------------
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	Ref                        Before     After
+</span></span><span class="line"><span class="cl">	----------------------------------------------
+</span></span><span class="line"><span class="cl">	refs/heads/main          <span class="p">|</span> f5f9a19e <span class="p">|</span> ba48bc2c
+</span></span><span class="line"><span class="cl">	refs/remotes/origin/main <span class="p">|</span> f5f9a19e <span class="p">|</span> ba48bc2c
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Updating references:    100% <span class="o">(</span>2/2<span class="o">)</span>
+</span></span><span class="line"><span class="cl">...Ref update completed in <span class="m">12</span> ms.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Commit Tree-Dirt History
+</span></span><span class="line"><span class="cl">------------------------
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	Earliest                                              Latest
+</span></span><span class="line"><span class="cl">	<span class="p">|</span>                                                          <span class="p">|</span>
+</span></span><span class="line"><span class="cl">	..DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="nv">D</span> <span class="o">=</span> dirty commits <span class="o">(</span>file tree fixed<span class="o">)</span>
+</span></span><span class="line"><span class="cl">	<span class="nv">m</span> <span class="o">=</span> modified commits <span class="o">(</span>commit message or parents changed<span class="o">)</span>
+</span></span><span class="line"><span class="cl">	. <span class="o">=</span> clean commits <span class="o">(</span>no changes to file tree<span class="o">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	                        Before     After
+</span></span><span class="line"><span class="cl">	-------------------------------------------
+</span></span><span class="line"><span class="cl">	First modified commit <span class="p">|</span> 545cd363 <span class="p">|</span> fcc2538e
+</span></span><span class="line"><span class="cl">	Last dirty commit     <span class="p">|</span> ead4cbed <span class="p">|</span> 600580dd
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Deleted files
+</span></span><span class="line"><span class="cl">-------------
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	Filename                                                          Git id
+</span></span><span class="line"><span class="cl">	----------------------------------------------------------------------------------------------------------------------------
+</span></span><span class="line"><span class="cl">	02_registration_HE_broad_class.log                              <span class="p">|</span> de11acf2 <span class="o">(</span>12.9 MB<span class="o">)</span>, 33ae1f4d <span class="o">(</span>16.3 MB<span class="o">)</span>
+</span></span><span class="line"><span class="cl">	02_registration_HE_layer.log                                    <span class="p">|</span> ba6d1c7e <span class="o">(</span>19.6 MB<span class="o">)</span>, 279e5354 <span class="o">(</span>19.6 MB<span class="o">)</span>
+</span></span><span class="line"><span class="cl">	2743.png                                                        <span class="p">|</span> c734cb7d <span class="o">(</span>11.3 MB<span class="o">)</span>
+</span></span><span class="line"><span class="cl">	335.png                                                         <span class="p">|</span> 602fc07e <span class="o">(</span>18.8 MB<span class="o">)</span>
+</span></span><span class="line"><span class="cl">	6423.png                                                        <span class="p">|</span> 7071add9 <span class="o">(</span>15.4 MB<span class="o">)</span>
+</span></span><span class="line"><span class="cl">	6432.png                                                        <span class="p">|</span> 9b9d7fa6 <span class="o">(</span>13.2 MB<span class="o">)</span>
+</span></span><span class="line"><span class="cl">	6471.png                                                        <span class="p">|</span> 0f61bfd7 <span class="o">(</span>17.5 MB<span class="o">)</span>
+</span></span><span class="line"><span class="cl">	6522.png                                                        <span class="p">|</span> 573fab2b <span class="o">(</span>19.8 MB<span class="o">)</span>
+</span></span><span class="line"><span class="cl">	8325.png                                                        <span class="p">|</span> 9cf4ff3e <span class="o">(</span>22.0 MB<span class="o">)</span>
+</span></span><span class="line"><span class="cl">	8492.png                                                        <span class="p">|</span> 0a128ff1 <span class="o">(</span>10.2 MB<span class="o">)</span>
+</span></span><span class="line"><span class="cl">	8667.png                                                        <span class="p">|</span> 014ee77a <span class="o">(</span>15.4 MB<span class="o">)</span>
+</span></span><span class="line"><span class="cl">	AC005837.4.pdf                                                  <span class="p">|</span> 0b12e443 <span class="o">(</span>32.4 MB<span class="o">)</span>
+</span></span><span class="line"><span class="cl">	AC106795.2.pdf                                                  <span class="p">|</span> 60dba623 <span class="o">(</span>32.4 MB<span class="o">)</span>, ba037e7f <span class="o">(</span>32.5 MB<span class="o">)</span>
+</span></span><span class="line"><span class="cl">	AC108863.2.pdf                                                  <span class="p">|</span> 56eb980a <span class="o">(</span>32.4 MB<span class="o">)</span>
+</span></span><span class="line"><span class="cl">	ACAP1_DOWN.pdf                                                  <span class="p">|</span> 584afb1f <span class="o">(</span>32.5 MB<span class="o">)</span>
+</span></span><span class="line"><span class="cl">	...
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">In total, <span class="m">5160</span> object ids were changed. Full details are logged here:
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	/Users/leocollado/Dropbox/Mac/Desktop/spatial_hpc/.git.bfg-report/2024-04-11/09-51-45
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">BFG run is complete! When ready, run: git reflog expire --expire<span class="o">=</span>now --all <span class="o">&amp;&amp;</span> git gc --prune<span class="o">=</span>now --aggressive
+</span></span></code></pre></div><p>Among the output of <code>BFG</code> was a CSV file which listed the 885 &ldquo;dirty files&rdquo;.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">% ls -lh /Users/leocollado/Dropbox/Mac/Desktop/spatial_hpc/.git.bfg-report/2024-04-11/09-51-45/protected-dirt/
+</span></span><span class="line"><span class="cl">total 132K
+</span></span><span class="line"><span class="cl">-rw-r--r-- <span class="m">1</span> leocollado staff 132K Apr <span class="m">11</span> 09:51 f5f9a19e-HEAD.csv
+</span></span></code></pre></div><p>With <a href="https://cran.r-project.org/" target="_blank" rel="noopener">R</a>, we can read that CSV file and help us diagnose our situation. We recommend that you inspect <a href="https://github.com/lcolladotor/lcolladotor.github.com/blob/master/2024/04/11/how-to-reduce-the-size-of-a-large-github-repo/f5f9a19e-HEAD.csv" target="_blank" rel="noopener">this CSV file</a>, which will be ordered by file path.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="c1">## Read in the CSV file with R</span>
+</span></span><span class="line"><span class="cl"><span class="n">ten</span> <span class="o">&lt;-</span> <span class="nf">read.csv</span><span class="p">(</span><span class="s">&#34;f5f9a19e-HEAD.csv&#34;</span><span class="p">,</span> <span class="n">header</span> <span class="o">=</span> <span class="kc">FALSE</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">## How many &#34;dirty files&#34; do we have?</span>
+</span></span><span class="line"><span class="cl"><span class="nf">nrow</span><span class="p">(</span><span class="n">ten</span><span class="p">)</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">## [1] 885
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="c1">## What&#39;s the format of this CSV file?</span>
+</span></span><span class="line"><span class="cl"><span class="nf">head</span><span class="p">(</span><span class="n">ten</span><span class="p">)</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">##                                         V1     V2           V3
+</span></span><span class="line"><span class="cl">## 1 e00fd6349fcabdd740b396b230a74f9f0d136f2e DELETE   executable
+</span></span><span class="line"><span class="cl">## 2 33ae1f4da994efaad1538c6d740ac22fb6f0aab4 DELETE regular-file
+</span></span><span class="line"><span class="cl">## 3 279e53549e75b881fb7b063f05211fde529c17fb DELETE regular-file
+</span></span><span class="line"><span class="cl">## 4 8e1c82f0c40758394abfc807a3fcc6094fef329d DELETE regular-file
+</span></span><span class="line"><span class="cl">## 5 f41fa6e0e3e6a25b390aa33a4d4fa3c3b493d97a DELETE regular-file
+</span></span><span class="line"><span class="cl">## 6 89f9bb0104d49d7584d712a8cde2e9a580356291 DELETE regular-file
+</span></span><span class="line"><span class="cl">##                                                                       V4
+</span></span><span class="line"><span class="cl">## 1 code/enrichment_analysis/project_all/score/snRNAseq_aggregated_cpm.tsv
+</span></span><span class="line"><span class="cl">## 2     code/spot_deconvo/cell2location/02_registration_HE_broad_class.log
+</span></span><span class="line"><span class="cl">## 3           code/spot_deconvo/cell2location/02_registration_HE_layer.log
+</span></span><span class="line"><span class="cl">## 4                                plots/02_build_spe/ReferenceMapping.pdf
+</span></span><span class="line"><span class="cl">## 5                           plots/02_build_spe/ReferenceMapping_erik.pdf
+</span></span><span class="line"><span class="cl">## 6                           plots/02_build_spe/prearrangedAllSamples.pdf
+</span></span><span class="line"><span class="cl">##         V5 V6
+</span></span><span class="line"><span class="cl">## 1 17229010 NA
+</span></span><span class="line"><span class="cl">## 2 17115444 NA
+</span></span><span class="line"><span class="cl">## 3 20518064 NA
+</span></span><span class="line"><span class="cl">## 4 54308266 NA
+</span></span><span class="line"><span class="cl">## 5 54308266 NA
+</span></span><span class="line"><span class="cl">## 6 25909369 NA
+</span></span></code></pre></div><p>The fourth column specifies the <code>file path</code> and the fifth column specifies the <code>file size</code> in bytes. Given that this project was organized according to our <a href="https://github.com/LieberInstitute/template_project" target="_blank" rel="noopener"><code>template_project</code></a>, Erik (who has been heavily involved in this project) could easily diagnose whether some of the listed files were important to share or whether they were older exploration results.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="c1">## Sort them by file size if you want to</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># ten &lt;- ten[order(ten$V5, decreasing = TRUE), ]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">## Check file size distribution in MB (1 MB = 1024^2 bytes)</span>
+</span></span><span class="line"><span class="cl"><span class="nf">summary</span><span class="p">(</span><span class="n">ten</span><span class="o">$</span><span class="n">V5</span> <span class="o">/</span> <span class="m">1024</span><span class="n">^2</span><span class="p">)</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+</span></span><span class="line"><span class="cl">##   10.01   19.08   26.12   26.31   32.50   92.87
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">boxplot</span><span class="p">(</span><span class="n">ten</span><span class="o">$</span><span class="n">V5</span> <span class="o">/</span> <span class="m">1024</span><span class="n">^2</span><span class="p">)</span>
+</span></span></code></pre></div><img src="https://lcolladotor.github.io/2024/04/11/how-to-reduce-the-size-of-a-large-github-repo/index.en_files/figure-html/unnamed-chunk-2-1.png" width="672" />
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="c1">## Explore frequency of file sizes rounded to 1 digit</span>
+</span></span><span class="line"><span class="cl"><span class="nf">barplot</span><span class="p">(</span><span class="nf">table</span><span class="p">(</span><span class="nf">round</span><span class="p">(</span><span class="n">ten</span><span class="o">$</span><span class="n">V5</span> <span class="o">/</span> <span class="m">1024</span><span class="n">^2</span><span class="p">,</span> <span class="m">1</span><span class="p">)))</span>
+</span></span></code></pre></div><img src="https://lcolladotor.github.io/2024/04/11/how-to-reduce-the-size-of-a-large-github-repo/index.en_files/figure-html/unnamed-chunk-2-2.png" width="672" />
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="c1">## How much total space do these &#34;dirty files&#34; use?</span>
+</span></span><span class="line"><span class="cl"><span class="nf">sum</span><span class="p">(</span><span class="n">ten</span><span class="o">$</span><span class="n">V5</span> <span class="o">/</span> <span class="m">1024</span><span class="n">^2</span><span class="p">)</span> <span class="c1">## In MB</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">## [1] 23285.45
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">sum</span><span class="p">(</span><span class="n">ten</span><span class="o">$</span><span class="n">V5</span> <span class="o">/</span> <span class="m">1024</span><span class="n">^3</span><span class="p">)</span> <span class="c1">## In GB</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">## [1] 22.73969
+</span></span></code></pre></div><p>A question Erik posed was: is it mostly plots? In general, you could use file extensions if you wanted. But in our case, thanks to <a href="https://github.com/LieberInstitute/template_project" target="_blank" rel="noopener"><code>template_project</code></a>, we can check what is the main directory for each file.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="c1">## Extract main directory from the file paths</span>
+</span></span><span class="line"><span class="cl"><span class="n">x</span> <span class="o">&lt;-</span> <span class="nf">dirname</span><span class="p">(</span><span class="n">ten</span><span class="o">$</span><span class="n">V4</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">x</span> <span class="o">&lt;-</span> <span class="nf">gsub</span><span class="p">(</span><span class="s">&#34;/.*&#34;</span><span class="p">,</span> <span class="s">&#34;&#34;</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">## Explore how many files we have</span>
+</span></span><span class="line"><span class="cl"><span class="nf">table</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">## x
+</span></span><span class="line"><span class="cl">##           code          plots processed-data       raw-data   snRNAseq_hpc 
+</span></span><span class="line"><span class="cl">##              3            505            368              2              7
+</span></span></code></pre></div><p>We could then explore some of the odd cases.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="c1">## Visual inspection determined that we were OK deleting these files</span>
+</span></span><span class="line"><span class="cl"><span class="n">ten[x</span> <span class="o">==</span> <span class="s">&#34;snRNAseq_hpc&#34;</span><span class="p">,</span> <span class="n">]</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">##                                           V1     V2           V3
+</span></span><span class="line"><span class="cl">## 879 f0d8bb12bbadda84ae3e98f431083e61620869b2 DELETE   executable
+</span></span><span class="line"><span class="cl">## 880 68b61e75d861f5d960a96cbdcad7bb5c79a3e747 DELETE regular-file
+</span></span><span class="line"><span class="cl">## 881 f7588d013685ebe907c972afd0aaf0935816df28 DELETE regular-file
+</span></span><span class="line"><span class="cl">## 882 771e792004afef8ed2cc986eb9766b01bad4db4a DELETE regular-file
+</span></span><span class="line"><span class="cl">## 883 204d559465dba1489955d5988a879c6cbb91a5b7 DELETE regular-file
+</span></span><span class="line"><span class="cl">## 884 f5bb06176473e8112d00a1d355ccd048f4dc46c1 DELETE regular-file
+</span></span><span class="line"><span class="cl">## 885 605957a9d3a9b2f2ed8d021dcf2c1482048f4f9a DELETE regular-file
+</span></span><span class="line"><span class="cl">##                                                               V4       V5 V6
+</span></span><span class="line"><span class="cl">## 879                        snRNAseq_hpc/plots/02_qc/qc_plots.pdf 20223555 NA
+</span></span><span class="line"><span class="cl">## 880                               snRNAseq_hpc/plots/QC_auto.pdf 41669358 NA
+</span></span><span class="line"><span class="cl">## 881                           snRNAseq_hpc/plots/QC_semiauto.pdf 16580972 NA
+</span></span><span class="line"><span class="cl">## 882                          snRNAseq_hpc/plots/QC_semiauto2.pdf 33358656 NA
+</span></span><span class="line"><span class="cl">## 883    snRNAseq_hpc/plots/build_sce/UMAP_corrected_by_sample.pdf 18167086 NA
+</span></span><span class="line"><span class="cl">## 884          snRNAseq_hpc/plots/build_sce/UMAPs_unccorrected.pdf 18047630 NA
+</span></span><span class="line"><span class="cl">## 885 snRNAseq_hpc/plots/build_sce/UMAPs_unccorrected_filtered.pdf 16767377 NA
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="c1">## Same thing for these large &#34;code&#34; files (2 logs and one file that is not</span>
+</span></span><span class="line"><span class="cl"><span class="c1">## needed to run the actual code and thus reproduce results)</span>
+</span></span><span class="line"><span class="cl"><span class="n">ten[x</span> <span class="o">==</span> <span class="s">&#34;code&#34;</span><span class="p">,</span> <span class="n">]</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">##                                         V1     V2           V3
+</span></span><span class="line"><span class="cl">## 1 e00fd6349fcabdd740b396b230a74f9f0d136f2e DELETE   executable
+</span></span><span class="line"><span class="cl">## 2 33ae1f4da994efaad1538c6d740ac22fb6f0aab4 DELETE regular-file
+</span></span><span class="line"><span class="cl">## 3 279e53549e75b881fb7b063f05211fde529c17fb DELETE regular-file
+</span></span><span class="line"><span class="cl">##                                                                       V4
+</span></span><span class="line"><span class="cl">## 1 code/enrichment_analysis/project_all/score/snRNAseq_aggregated_cpm.tsv
+</span></span><span class="line"><span class="cl">## 2     code/spot_deconvo/cell2location/02_registration_HE_broad_class.log
+</span></span><span class="line"><span class="cl">## 3           code/spot_deconvo/cell2location/02_registration_HE_layer.log
+</span></span><span class="line"><span class="cl">##         V5 V6
+</span></span><span class="line"><span class="cl">## 1 17229010 NA
+</span></span><span class="line"><span class="cl">## 2 17115444 NA
+</span></span><span class="line"><span class="cl">## 3 20518064 NA
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="c1">## These are important sample information files we do want to keep.</span>
+</span></span><span class="line"><span class="cl"><span class="n">ten[x</span> <span class="o">==</span> <span class="s">&#34;raw-data&#34;</span><span class="p">,</span> <span class="n">]</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">##                                           V1     V2           V3
+</span></span><span class="line"><span class="cl">## 877 f44d0d43bd507c0e33e9267ae1ba00fda71acf66 DELETE regular-file
+</span></span><span class="line"><span class="cl">## 878 a3dd0e6f6056de3c11b4f3804b5ee40b39eabef4 DELETE regular-file
+</span></span><span class="line"><span class="cl">##                                                                                        V4
+</span></span><span class="line"><span class="cl">## 877 raw-data/FASTQ/2022-12-07_NovaSeq_33v_scp/Visium_HPC_Round1-10_092622_Master_SCP.xlsx
+</span></span><span class="line"><span class="cl">## 878                              raw-data/sample_info/Visium_HPC_Round3-8_033022_SCP.xlsx
+</span></span><span class="line"><span class="cl">##           V5 V6
+</span></span><span class="line"><span class="cl">## 877 37226953 NA
+</span></span><span class="line"><span class="cl">## 878 34649463 NA
+</span></span></code></pre></div><h3 id="remove-dirty-files">Remove dirty files</h3>
+<p>Once we have identified which files we no longer want to distribute through <code>GitHub</code>, we can proceed to eliminate them from the <code>git</code> history in our local working copy. Before we can use <code>BFG</code>, we first have to <em>clean</em> these &ldquo;dirty files&rdquo;. The first step is to remove them from the list of version controlled files using the <code>git rm</code> command. However, <strong>we do want to keep a copy of these files</strong>. So we use the <code>--cached</code> option to do so.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="c1">## Change directory to the location of your local copy</span>
+</span></span><span class="line"><span class="cl"><span class="nf">setwd</span><span class="p">(</span><span class="s">&#34;~/Desktop/spatial_hpc/&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">## Create a list of commands</span>
+</span></span><span class="line"><span class="cl"><span class="n">cmds</span> <span class="o">&lt;-</span> <span class="nf">paste0</span><span class="p">(</span><span class="s">&#34;git rm --cached &#34;</span><span class="p">,</span> <span class="n">ten[x</span> <span class="o">!=</span> <span class="s">&#34;raw-data&#34;</span><span class="p">,</span><span class="n">]</span><span class="o">$</span><span class="n">V4</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">## Loop over and execute the commands with system()</span>
+</span></span><span class="line"><span class="cl"><span class="kr">for</span> <span class="p">(</span><span class="n">i</span> <span class="kr">in</span> <span class="nf">seq_along</span><span class="p">(</span><span class="n">cmds</span><span class="p">))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">message</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="s">&#34;: &#34;</span><span class="p">,</span> <span class="nf">Sys.time</span><span class="p">(),</span> <span class="s">&#34; &#34;</span><span class="p">,</span> <span class="n">cmds[i]</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">system</span><span class="p">(</span><span class="n">cmds[i]</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>Here&rsquo;s how one of these commands would look like. We used <code>system()</code> to actually run these commands on my macOS computer.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">cmds[1]</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">## [1] &#34;git rm --cached code/enrichment_analysis/project_all/score/snRNAseq_aggregated_cpm.tsv&#34;
+</span></span></code></pre></div><p>At this point, with <code>git rm</code> we have told <code>git</code> to no longer version control these 880+ files. To avoid the mistake of version controlling them again, we then added them to the main <code>.gitignore</code> file using <code>readLines()</code> and <code>writeLines()</code>.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="c1">## Update our main .gitignore file with the list of files</span>
+</span></span><span class="line"><span class="cl"><span class="c1">## we no longer want to version control.</span>
+</span></span><span class="line"><span class="cl"><span class="n">gitignore</span> <span class="o">&lt;-</span> <span class="nf">readLines</span><span class="p">(</span><span class="s">&#34;.gitignore&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">gitignore</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="n">gitignore</span><span class="p">,</span> <span class="n">ten[x</span> <span class="o">!=</span> <span class="s">&#34;raw-data&#34;</span><span class="p">,</span><span class="n">]</span><span class="o">$</span><span class="n">V4</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nf">writeLines</span><span class="p">(</span><span class="n">gitignore</span><span class="p">,</span> <span class="s">&#34;.gitignore&#34;</span><span class="p">)</span>
+</span></span></code></pre></div><p>At this point, if you use <code>git status</code>, you&rsquo;ll see the long list of files marked for removal from version control.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">% git status
+</span></span><span class="line"><span class="cl">On branch main
+</span></span><span class="line"><span class="cl">Your branch is ahead of <span class="s1">&#39;origin/main&#39;</span> by <span class="m">1</span> commit.
+</span></span><span class="line"><span class="cl">  <span class="o">(</span>use <span class="s2">&#34;git push&#34;</span> to publish your <span class="nb">local</span> commits<span class="o">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Changes to be committed:
+</span></span><span class="line"><span class="cl">  <span class="o">(</span>use <span class="s2">&#34;git restore --staged &lt;file&gt;...&#34;</span> to unstage<span class="o">)</span>
+</span></span><span class="line"><span class="cl">	deleted:    plots/02_build_spe/ReferenceMapping.pdf
+</span></span><span class="line"><span class="cl">	deleted:    plots/02_build_spe/ReferenceMapping_erik.pdf
+</span></span><span class="line"><span class="cl">	deleted:    plots/02_build_spe/prearrangedAllSamples.pdf
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl"><span class="c1">## and many more lines</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">## Note that you should not see any untracked files listed at this step.</span>
+</span></span></code></pre></div><p>Next, you have to make a <code>git commit</code> to finally unprotect these &ldquo;dirty files&rdquo;.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git commit -am <span class="s2">&#34;Unprotecting files over 10 Mb so we can remove them from git history with BFG&#34;</span>
+</span></span></code></pre></div><h3 id="editing-the-git-history">Editing the <code>git</code> history</h3>
+<p>Now that we no longer have &ldquo;dirty files&rdquo; over 10 MB (except for the 2 Excel files we decided to keep), we can now run <code>BFG</code> again. At this point, out of precaution, I did make a full copy of my local clone (copy) of the repository. Though in retrospect, you likely want to do this before you even run <code>BFG</code> the very first time. That&rsquo;s because <code>BFG</code> will detect that it has been used before on a given <code>git</code> repository and <em>will prune repo before proceeding</em> which took about 6 minutes for us.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">% date
+</span></span><span class="line"><span class="cl">Thu Apr <span class="m">11</span> 11:27:06 EDT <span class="m">2024</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">% java -jar ~/Desktop/bfg-1.14.0.jar --strip-blobs-bigger-than <span class="s1">&#39;10M&#39;</span> .git
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Using repo : /Users/leocollado/Dropbox/Mac/Desktop/spatial_hpc/.git
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">This repo has been processed by The BFG before! Will prune repo before proceeding - to avoid unnecessary cleaning work on unused objects...
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">date
+</span></span><span class="line"><span class="cl">Completed prune of old objects - will now proceed with the main job!
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Scanning packfile <span class="k">for</span> large blobs: <span class="m">42927</span>
+</span></span><span class="line"><span class="cl">Scanning packfile <span class="k">for</span> large blobs completed in <span class="m">672</span> ms.
+</span></span><span class="line"><span class="cl">Found <span class="m">1130</span> blob ids <span class="k">for</span> large blobs - <span class="nv">biggest</span><span class="o">=</span><span class="m">97378037</span> <span class="nv">smallest</span><span class="o">=</span><span class="m">10491618</span>
+</span></span><span class="line"><span class="cl">Total size <span class="o">(</span>unpacked<span class="o">)=</span><span class="m">29298335089</span>
+</span></span><span class="line"><span class="cl">Found <span class="m">5225</span> objects to protect
+</span></span><span class="line"><span class="cl">Found <span class="m">4</span> commit-pointing refs : HEAD, refs/heads/main, refs/remotes/origin/HEAD, refs/remotes/origin/main
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Protected commits
+</span></span><span class="line"><span class="cl">-----------------
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">These are your protected commits, and so their contents will NOT be altered:
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"> * commit 3d58fd38 <span class="o">(</span>protected by <span class="s1">&#39;HEAD&#39;</span><span class="o">)</span> - contains <span class="m">2</span> dirty files :
+</span></span><span class="line"><span class="cl">	- raw-data/FASTQ/2022-12-07_NovaSeq_33v_scp/Visium_HPC_Round1-10_092622_Master_SCP.xlsx <span class="o">(</span>35.5 MB<span class="o">)</span>
+</span></span><span class="line"><span class="cl">	- raw-data/sample_info/Visium_HPC_Round3-8_033022_SCP.xlsx <span class="o">(</span>33.0 MB<span class="o">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">WARNING: The dirty content above may be removed from other commits, but as
+</span></span><span class="line"><span class="cl">the *protected* commits still use it, it will STILL exist in your repository.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Details of protected dirty content have been recorded here :
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">/Users/leocollado/Dropbox/Mac/Desktop/spatial_hpc/.git.bfg-report/2024-04-11/11-33-47/protected-dirt/
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">If you *really* want this content gone, make a manual commit that removes it,
+</span></span><span class="line"><span class="cl">and <span class="k">then</span> run the BFG on a fresh copy of your repo.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Cleaning
+</span></span><span class="line"><span class="cl">--------
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Found <span class="m">1563</span> commits
+</span></span><span class="line"><span class="cl">Cleaning commits:       100% <span class="o">(</span>1563/1563<span class="o">)</span>
+</span></span><span class="line"><span class="cl">Cleaning commits completed in 1,390 ms.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Updating <span class="m">1</span> Ref
+</span></span><span class="line"><span class="cl">--------------
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	Ref               Before     After
+</span></span><span class="line"><span class="cl">	-------------------------------------
+</span></span><span class="line"><span class="cl">	refs/heads/main <span class="p">|</span> 3d58fd38 <span class="p">|</span> d598aefb
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Updating references:    100% <span class="o">(</span>1/1<span class="o">)</span>
+</span></span><span class="line"><span class="cl">...Ref update completed in <span class="m">12</span> ms.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Commit Tree-Dirt History
+</span></span><span class="line"><span class="cl">------------------------
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	Earliest                                              Latest
+</span></span><span class="line"><span class="cl">	<span class="p">|</span>                                                          <span class="p">|</span>
+</span></span><span class="line"><span class="cl">	...........................................................D
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="nv">D</span> <span class="o">=</span> dirty commits <span class="o">(</span>file tree fixed<span class="o">)</span>
+</span></span><span class="line"><span class="cl">	<span class="nv">m</span> <span class="o">=</span> modified commits <span class="o">(</span>commit message or parents changed<span class="o">)</span>
+</span></span><span class="line"><span class="cl">	. <span class="o">=</span> clean commits <span class="o">(</span>no changes to file tree<span class="o">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	                        Before     After
+</span></span><span class="line"><span class="cl">	-------------------------------------------
+</span></span><span class="line"><span class="cl">	First modified commit <span class="p">|</span> 0255622c <span class="p">|</span> 35eacffa
+</span></span><span class="line"><span class="cl">	Last dirty commit     <span class="p">|</span> 0255622c <span class="p">|</span> 35eacffa
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Deleted files
+</span></span><span class="line"><span class="cl">-------------
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	Filename                                                          Git id
+</span></span><span class="line"><span class="cl">	----------------------------------------------------------------------------------------------------------------------------
+</span></span><span class="line"><span class="cl">	02_registration_HE_broad_class.log                              <span class="p">|</span> de11acf2 <span class="o">(</span>12.9 MB<span class="o">)</span>, 33ae1f4d <span class="o">(</span>16.3 MB<span class="o">)</span>
+</span></span><span class="line"><span class="cl">	02_registration_HE_layer.log                                    <span class="p">|</span> ba6d1c7e <span class="o">(</span>19.6 MB<span class="o">)</span>, 279e5354 <span class="o">(</span>19.6 MB<span class="o">)</span>
+</span></span><span class="line"><span class="cl">	2743.png                                                        <span class="p">|</span> c734cb7d <span class="o">(</span>11.3 MB<span class="o">)</span>
+</span></span><span class="line"><span class="cl">	335.png                                                         <span class="p">|</span> 602fc07e <span class="o">(</span>18.8 MB<span class="o">)</span>
+</span></span><span class="line"><span class="cl">	6423.png                                                        <span class="p">|</span> 7071add9 <span class="o">(</span>15.4 MB<span class="o">)</span>
+</span></span><span class="line"><span class="cl">	6432.png                                                        <span class="p">|</span> 9b9d7fa6 <span class="o">(</span>13.2 MB<span class="o">)</span>
+</span></span><span class="line"><span class="cl">	6471.png                                                        <span class="p">|</span> 0f61bfd7 <span class="o">(</span>17.5 MB<span class="o">)</span>
+</span></span><span class="line"><span class="cl">	6522.png                                                        <span class="p">|</span> 573fab2b <span class="o">(</span>19.8 MB<span class="o">)</span>
+</span></span><span class="line"><span class="cl">	8325.png                                                        <span class="p">|</span> 9cf4ff3e <span class="o">(</span>22.0 MB<span class="o">)</span>
+</span></span><span class="line"><span class="cl">	8492.png                                                        <span class="p">|</span> 0a128ff1 <span class="o">(</span>10.2 MB<span class="o">)</span>
+</span></span><span class="line"><span class="cl">	8667.png                                                        <span class="p">|</span> 014ee77a <span class="o">(</span>15.4 MB<span class="o">)</span>
+</span></span><span class="line"><span class="cl">	AC005837.4.pdf                                                  <span class="p">|</span> 0b12e443 <span class="o">(</span>32.4 MB<span class="o">)</span>
+</span></span><span class="line"><span class="cl">	AC106795.2.pdf                                                  <span class="p">|</span> 60dba623 <span class="o">(</span>32.4 MB<span class="o">)</span>, ba037e7f <span class="o">(</span>32.5 MB<span class="o">)</span>
+</span></span><span class="line"><span class="cl">	AC108863.2.pdf                                                  <span class="p">|</span> 56eb980a <span class="o">(</span>32.4 MB<span class="o">)</span>
+</span></span><span class="line"><span class="cl">	ACAP1_DOWN.pdf                                                  <span class="p">|</span> 584afb1f <span class="o">(</span>32.5 MB<span class="o">)</span>
+</span></span><span class="line"><span class="cl">	...
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">In total, <span class="m">5168</span> object ids were changed. Full details are logged here:
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	/Users/leocollado/Dropbox/Mac/Desktop/spatial_hpc/.git.bfg-report/2024-04-11/11-33-47
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">BFG run is complete! When ready, run: git reflog expire --expire<span class="o">=</span>now --all <span class="o">&amp;&amp;</span> git gc --prune<span class="o">=</span>now --aggressive
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">% date
+</span></span><span class="line"><span class="cl">Thu Apr <span class="m">11</span> 11:33:49 EDT <span class="m">2024</span>
+</span></span></code></pre></div><p>As we can see on the output above, we do have 2 &ldquo;dirty files&rdquo;, but we knew about them. We can now proceed to run the commands <code>BFG</code> tells us to use to actually edit the <code>git</code> history.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git reflog expire --expire<span class="o">=</span>now --all <span class="o">&amp;&amp;</span> git gc --prune<span class="o">=</span>now --aggressive
+</span></span></code></pre></div><p>We went to get lunch while this was happening, as my recollection was that this step can take a while to run. Though I forgot to time it this time around.</p>
+<h3 id="update-github">Update <code>GitHub</code></h3>
+<p>We now have what we want: a much smaller <code>git</code> repository with only the files we want version controlled. However, it&rsquo;s not on <code>GitHub</code> and also not in our HPC computers (JHPCE for us). So we need to proceed to update <code>GitHub</code> first using <code>git push</code> (upload command). As we are altering the <code>git</code> history, we need to use a <code>git push --force</code> command otherwise <code>GitHub</code> would not let us do alter the history.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">% git push --force
+</span></span><span class="line"><span class="cl">Enumerating objects: 18451, <span class="k">done</span>.
+</span></span><span class="line"><span class="cl">Counting objects: 100% <span class="o">(</span>18451/18451<span class="o">)</span>, <span class="k">done</span>.
+</span></span><span class="line"><span class="cl">Delta compression using up to <span class="m">10</span> threads
+</span></span><span class="line"><span class="cl">Compressing objects: 100% <span class="o">(</span>6684/6684<span class="o">)</span>, <span class="k">done</span>.
+</span></span><span class="line"><span class="cl">remote: fatal: pack exceeds maximum allowed size <span class="o">(</span>2.00 GiB<span class="o">)</span>
+</span></span><span class="line"><span class="cl">error: remote unpack failed: index-pack failed 14.02 MiB/s
+</span></span><span class="line"><span class="cl">To github.com:LieberInstitute/spatial_hpc.git
+</span></span><span class="line"><span class="cl"> ! <span class="o">[</span>remote rejected<span class="o">]</span>   main -&gt; main <span class="o">(</span>failed<span class="o">)</span>
+</span></span><span class="line"><span class="cl">error: failed to push some refs to <span class="s1">&#39;github.com:LieberInstitute/spatial_hpc.git&#39;</span>
+</span></span></code></pre></div><p>However, as you can see, we ran into the 2 GB limit <code>GitHub</code> has for <code>git push</code> commands.</p>
+<p>Google searching the error, we easily found <a href="https://docs.github.com/en/get-started/using-git/troubleshooting-the-2-gb-push-limit" target="_blank" rel="noopener">this excellent documentation page</a>. It didn&rsquo;t exist (or I didn&rsquo;t find it) a few years ago and it was quite straightforward to understand in contrast to previous Stack Overflow answers I remember struggling with back then.</p>
+<p>Looking at <a href="https://github.com/LieberInstitute/spatial_hpc" target="_blank" rel="noopener">our repository on GitHub</a>, we saw that we have a bit over 1,500 commits. So searching every 1,000 commits most likely wasn&rsquo;t going to work for us as the <code>GitHub</code> documentation suggested given that we would most likely run again into the 2 GB upload limit. We decided to roll with 200 commits at a time hoping that this would give us a small enough set of commit IDs to make incremental <code>git push</code>es, but without exceeding the 2 GB upload limit <code>GitHub</code> enforces.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">% git log --oneline --reverse refs/heads/main <span class="p">|</span> awk <span class="s1">&#39;NR % 200 == 0&#39;</span>
+</span></span><span class="line"><span class="cl">d983b009 marker gene plots
+</span></span><span class="line"><span class="cl">df46ec6e log file <span class="k">for</span> BayesSpace rerun k15, long array
+</span></span><span class="line"><span class="cl">066777d0 Added a README.md file and softlinks <span class="k">for</span> round9 <span class="o">(</span>samples 33v-36v<span class="o">)[</span>33v sample <span class="o">(</span>10ul<span class="o">)</span> library MiSeq and NovaSeq,samples 34v-26v NovaSeq<span class="o">]</span>
+</span></span><span class="line"><span class="cl">51ec749f rerun VNS <span class="k">for</span> sample <span class="m">36</span> with more memory
+</span></span><span class="line"><span class="cl">fd032a96 tangram logs 4,5,6
+</span></span><span class="line"><span class="cl">e9e6526f run updated code on sample <span class="m">24</span>
+</span></span><span class="line"><span class="cl">9572195c updated samui image stitching script to remove banding from center of the image and average pixel intensity of the image overlaps
+</span></span></code></pre></div><p>Thanks to the commit messages, Erik and Ryan could easily detect that the commit IDs were ordered by time such that the last commit was one of the most recent ones. We thus proceeded to run each of the <code>git push</code> commands. Note that we used <code>git push --force</code> on our first commit. After this, our repository on <code>GitHub</code> <a href="https://github.com/LieberInstitute/spatial_hpc/tree/d983b009" target="_blank" rel="noopener">listed only 200 commits</a>: what we wanted to do.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">% git push --force origin d983b009:refs/heads/main
+</span></span><span class="line"><span class="cl">Enumerating objects: 2253, <span class="k">done</span>.
+</span></span><span class="line"><span class="cl">Counting objects: 100% <span class="o">(</span>2253/2253<span class="o">)</span>, <span class="k">done</span>.
+</span></span><span class="line"><span class="cl">Delta compression using up to <span class="m">10</span> threads
+</span></span><span class="line"><span class="cl">Compressing objects: 100% <span class="o">(</span>1009/1009<span class="o">)</span>, <span class="k">done</span>.
+</span></span><span class="line"><span class="cl">Writing objects: 100% <span class="o">(</span>2253/2253<span class="o">)</span>, 633.78 MiB <span class="p">|</span> 36.74 MiB/s, <span class="k">done</span>.
+</span></span><span class="line"><span class="cl">Total <span class="m">2253</span> <span class="o">(</span>delta 1176<span class="o">)</span>, reused <span class="m">1987</span> <span class="o">(</span>delta 1085<span class="o">)</span>, pack-reused <span class="m">0</span> <span class="o">(</span>from 0<span class="o">)</span>
+</span></span><span class="line"><span class="cl">remote: Resolving deltas: 100% <span class="o">(</span>1176/1176<span class="o">)</span>, <span class="k">done</span>.
+</span></span><span class="line"><span class="cl">To github.com:LieberInstitute/spatial_hpc.git
+</span></span><span class="line"><span class="cl"> + f5f9a19e...d983b009 d983b009 -&gt; main <span class="o">(</span>forced update<span class="o">)</span>
+</span></span></code></pre></div><p>Some of them got close to the 2 GB limit (like 1.5 GB), but they were all fine.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1">## Commands shown with no output</span>
+</span></span><span class="line"><span class="cl">% git push origin df46ec6e:refs/heads/main
+</span></span><span class="line"><span class="cl">% git push origin 066777d0:refs/heads/main
+</span></span><span class="line"><span class="cl">% git push origin 51ec749f:refs/heads/main
+</span></span><span class="line"><span class="cl">% git push origin fd032a96:refs/heads/main
+</span></span><span class="line"><span class="cl">% git push origin e9e6526f:refs/heads/main
+</span></span><span class="line"><span class="cl">% git push origin 9572195c:refs/heads/main
+</span></span><span class="line"><span class="cl">% git push
+</span></span></code></pre></div><p>Note the last <code>git push</code> we did at the end, which was needed to upload the last left over commits. Also note that this step was fairly simple for us as we only have 1 development branch called <code>main</code> for this project, instead of working across multiple <code>git</code> branches. If you are working with multiple branches, you might have to do quite a bit of extra work.</p>
+<h3 id="updating-hpc-files">Updating HPC files</h3>
+<p>Are we done yet? Close! We have what we want in our local git clone (copy) on my laptop as well as at <code>GitHub</code>, but not in our HPC computers (JHPCE for us). We followed this <a href="https://stackoverflow.com/a/9813888" target="_blank" rel="noopener">Stack Overflow solution</a> to update files at JHPCE:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1">## Log in to your HPC system (JHPCE for us)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">## Navigate to the directory where the data lives at JHPCE</span>
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> /dcs04/lieber/lcolladotor/spatialHPC_LIBD4035/spatial_hpc
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">## Download all files from GitHub to our HPC (JHPCE)</span>
+</span></span><span class="line"><span class="cl">git fetch
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">## Force update the &#34;main&#34; branch</span>
+</span></span><span class="line"><span class="cl">git reset origin/main --hard
+</span></span></code></pre></div><p>At this point, we did run into a warning because I didn&rsquo;t have the permissions to delete one file.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">warning: unable to unlink <span class="s1">&#39;code/enrichment_analysis/project_all/score/snRNAseq_aggregated_cpm.tsv&#39;</span>: Permission denied
+</span></span></code></pre></div><p>As you might already be wondering, <code>git reset origin/main --hard</code> did erase all 880+ files (except the one I didn&rsquo;t have permissions for) over 10 Mb that we deleted from <code>git</code> and <code>GitHub</code>. But we wanted to have them at JHPCE. This is where having a local copy in our laptop becomes handy. We then used <code>rsync</code> to upload back these files to our HPC computers from my laptop.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1">## From your computer (my laptop in this case), upload the local files you have</span>
+</span></span><span class="line"><span class="cl"><span class="c1">## that were deleted from git / GitHub that you want to have in your HPC system</span>
+</span></span><span class="line"><span class="cl">rsync -avhP . lcollado@jhpce-transfer01.jhsph.edu:/dcs04/lieber/lcolladotor/spatialHPC_LIBD4035/spatial_hpc
+</span></span></code></pre></div><p>However, this process broke some file permissions. As we already have a <a href="https://lcolladotor.github.io/bioc_team_ds/organizing-your-work.html#dcs04-scripts" target="_blank" rel="noopener">script for updating permissions</a>, I simply re-ran it at JHPCE with:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1">## Log in to your HPC system (JHPCE for us)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">## Navigate to the directory where the data lives at JHPCE</span>
+</span></span><span class="line"><span class="cl">$ <span class="nb">cd</span> /dcs04/lieber/lcolladotor/spatialHPC_LIBD4035/spatial_hpc
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">## Run script for updating permissions</span>
+</span></span><span class="line"><span class="cl">$ sh /dcs04/lieber/lcolladotor/_jhpce_org_LIBD001/update_permissions_spatialteam.sh .
+</span></span><span class="line"><span class="cl">**** Updating permissions <span class="k">for</span> . ****
+</span></span><span class="line"><span class="cl">Thu Apr <span class="m">11</span> 01:49:01 PM EDT <span class="m">2024</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">**** Note that warning/error messages are expected <span class="k">for</span> files and directories that you are not the owner of.
+</span></span><span class="line"><span class="cl">The expected warning/error messages are:
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;chgrp: changing group of ‘some_JHPCE_file_path’: Operation not permitted&#39;</span>
+</span></span><span class="line"><span class="cl"> or <span class="s1">&#39;chmod: changing permissions of ‘some_JHPCE_file_path’: Operation not permitted&#39;</span>.
+</span></span><span class="line"><span class="cl">If <span class="k">for</span> many files you are not the owner <span class="o">(</span>creator of<span class="o">)</span>, you will get lots of these warning/error messages, this is expected!
+</span></span><span class="line"><span class="cl">Error or warnings with another syntax are likely real. ****
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">You will need to re-run this script anytime you upload files to JHPCE through Cyberduck / WinSCP as they <span class="nb">break</span> the ACLs.
+</span></span><span class="line"><span class="cl">Every new team member on a given project will likely also need to run this script once.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">For more details about setting permissions at JHPCE using ACLs, please check https://lcolladotor.github.io/bioc_team_ds/organizing-your-work.html#setting-jhpce-file-permissions.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">This message will be displayed <span class="k">for</span> <span class="m">90</span> seconds before the script proceeds.
+</span></span><span class="line"><span class="cl">That way you will have <span class="nb">time</span> enough to <span class="nb">read</span> it and/or copy it.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">**** Setting <span class="nb">read</span> <span class="o">(</span>R<span class="o">)</span>, write <span class="o">(</span>W<span class="o">)</span>, and execute <span class="o">(</span>X<span class="o">)</span> permissions <span class="k">for</span> hickslab ****
+</span></span><span class="line"><span class="cl">Thu Apr <span class="m">11</span> 01:50:36 PM EDT <span class="m">2024</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">## truncated output</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">**** Setting the group sticky bit ****
+</span></span><span class="line"><span class="cl">Thu Apr <span class="m">11</span> 03:05:53 PM EDT <span class="m">2024</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">**** Checking the nfs4 <span class="o">(</span>ACLs<span class="o">)</span> settings ****
+</span></span><span class="line"><span class="cl">Thu Apr <span class="m">11</span> 03:07:11 PM EDT <span class="m">2024</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># file: .</span>
+</span></span><span class="line"><span class="cl">A::OWNER@:rwaDxtTcCy
+</span></span><span class="line"><span class="cl">A::GROUP@:rxtcy
+</span></span><span class="line"><span class="cl">A:g:lieber_lcolladotor@cm.cluster:rwaDxtcy
+</span></span><span class="line"><span class="cl">A:g:lieber_marmaypag@cm.cluster:rwaDxtcy
+</span></span><span class="line"><span class="cl">A:g:hickslab@cm.cluster:rxtcy
+</span></span><span class="line"><span class="cl">A::EVERYONE@:rxtcy
+</span></span><span class="line"><span class="cl">A:fdi:OWNER@:rwaDxtTcCy
+</span></span><span class="line"><span class="cl">A:fdi:GROUP@:rwaDxtcy
+</span></span><span class="line"><span class="cl">A:fdig:lieber_lcolladotor@cm.cluster:rwaDxtcy
+</span></span><span class="line"><span class="cl">A:fdig:lieber_marmaypag@cm.cluster:rwaDxtcy
+</span></span><span class="line"><span class="cl">A:fdig:hickslab@cm.cluster:rwaDxtcy
+</span></span><span class="line"><span class="cl">A:fdi:EVERYONE@:tcy
+</span></span></code></pre></div><p>Now everyone else involved in this team project can keep working with the files at JHPCE and <code>GitHub</code>.</p>
+<h3 id="finishing-step">Finishing step</h3>
+<p>Erik will check if any of the 880+ files over 10 MB that we deleted from the <code>git</code> history (and currently have at JHPCE but are <a href="https://github.com/LieberInstitute/spatial_hpc" target="_blank" rel="noopener">not on <code>GitHub</code></a> ) are actually files we should have on <code>GitHub</code>. If so, he&rsquo;ll edit the <a href="https://github.com/LieberInstitute/spatial_hpc/blob/cc25a36304a6ba0db1c709362e984361cb0cbe6f/.gitignore#L5-L887" target="_blank" rel="noopener">main <code>.gitignore</code></a> accordingly (remove them from the main <code>.gitignore</code> ) + then <code>git add</code> them again.</p>
+<h2 id="summary">Summary</h2>
+<p>This whole process took about three and a half hours. I hadn&rsquo;t done something like this in a while so my memory wasn&rsquo;t fresh. That&rsquo;s why I&rsquo;m writing this blog post, so we can have a good guide for the next time we have to do this.</p>
+<p>Here are some main notes:</p>
+<div class="alert alert-note">
+  <div>
+    <ul>
+<li>Announce about a week in advance that no one should be working on the files at your HPC system (JHPCE for us): &ldquo;closed for maintenance ⚠️&rdquo;
+<ul>
+<li>This will give people enough time to plan ahead.</li>
+</ul>
+</li>
+<li>Ask people to run the update permissions script in advance.
+<ul>
+<li>We got lucky this time with encountering only 1 restricted file!</li>
+</ul>
+</li>
+<li>Work on a fresh <code>git clone</code> in your laptop</li>
+<li>Feel free to make a copy on your laptop before you use <code>BFG</code></li>
+<li>Work with people who are very familiar with the contents of the repository.
+<ul>
+<li>They will make crucial decisions on which files to keep or not!!</li>
+</ul>
+</li>
+<li>Allocate plenty of time.
+<ul>
+<li>We spent about 4 hours, but you might want to plan for 4-6 hours.</li>
+</ul>
+</li>
+<li>Don&rsquo;t copy paste more than 1 command into the terminal at a time.
+<ul>
+<li>You might encounter errors not previously documented!</li>
+</ul>
+</li>
+</ul>
+  </div>
+</div>
+<p>Enjoy! Best of luck with navigating similar situations.</p>
+<iframe src="https://giphy.com/embed/YrYcfEyBUZaOBagLJP" width="414" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/cleaner-fabuloso-fabulosobottle-YrYcfEyBUZaOBagLJP">via GIPHY</a></p>
+<h2 id="acknowledgments">Acknowledgments</h2>
+<p>This blog post was made possible thanks to:</p>
+<ul>
+<li><em><a href="https://bioconductor.org/packages/3.18/BiocStyle" target="_blank" rel="noopener">BiocStyle</a></em> <a id='cite-Oles_2023'></a>(<a href='https://bioconductor.org/packages/BiocStyle'>Oleś, 2023</a>)</li>
+<li><em><a href="https://CRAN.R-project.org/package=blogdown" target="_blank" rel="noopener">blogdown</a></em> <a id='cite-Xie_2017'></a>(<a href='https://bookdown.org/yihui/blogdown/'>Xie, Hill, and Thomas, 2017</a>)</li>
+<li><em><a href="https://CRAN.R-project.org/package=knitcitations" target="_blank" rel="noopener">knitcitations</a></em> <a id='cite-Boettiger_2021'></a>(<a href='https://CRAN.R-project.org/package=knitcitations'>Boettiger, 2021</a>)</li>
+<li><em><a href="https://CRAN.R-project.org/package=sessioninfo" target="_blank" rel="noopener">sessioninfo</a></em> <a id='cite-Wickham_2021'></a>(<a href='https://CRAN.R-project.org/package=sessioninfo'>Wickham, Chang, Flight, Müller et al., 2021</a>)</li>
+</ul>
+<h2 id="references">References</h2>
+<p><a id='bib-Boettiger_2021'></a><a href="#cite-Boettiger_2021">[1]</a><cite>
+C. Boettiger.
+<em>knitcitations: Citations for 'Knitr' Markdown Files</em>.
+R package version 1.0.12.
+2021.
+URL: <a href="https://CRAN.R-project.org/package=knitcitations">https://CRAN.R-project.org/package=knitcitations</a>.</cite></p>
+<p><a id='bib-Oles_2023'></a><a href="#cite-Oles_2023">[2]</a><cite>
+A. Oleś.
+<em>BiocStyle: Standard styles for vignettes and other Bioconductor documents</em>.
+R package version 2.30.0.
+2023.
+DOI: <a href="https://doi.org/10.18129/B9.bioc.BiocStyle">10.18129/B9.bioc.BiocStyle</a>.
+URL: <a href="https://bioconductor.org/packages/BiocStyle">https://bioconductor.org/packages/BiocStyle</a>.</cite></p>
+<p><a id='bib-Wickham_2021'></a><a href="#cite-Wickham_2021">[3]</a><cite>
+H. Wickham, W. Chang, R. Flight, K. Müller, et al.
+<em>sessioninfo: R Session Information</em>.
+R package version 1.2.2.
+2021.
+URL: <a href="https://CRAN.R-project.org/package=sessioninfo">https://CRAN.R-project.org/package=sessioninfo</a>.</cite></p>
+<p><a id='bib-Xie_2017'></a><a href="#cite-Xie_2017">[4]</a><cite>
+Y. Xie, A. P. Hill, and A. Thomas.
+<em>blogdown: Creating Websites with R Markdown</em>.
+Boca Raton, Florida: Chapman and Hall/CRC, 2017.
+ISBN: 978-0815363729.
+URL: <a href="https://bookdown.org/yihui/blogdown/">https://bookdown.org/yihui/blogdown/</a>.</cite></p>
+<h2 id="reproducibility">Reproducibility</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="c1">## ─ Session info ───────────────────────────────────────────────────────────────────────────────────────────────────────</span>
+</span></span><span class="line"><span class="cl"><span class="c1">##  setting  value</span>
+</span></span><span class="line"><span class="cl"><span class="c1">##  version  R version 4.3.2 (2023-10-31)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">##  os       macOS Sonoma 14.3.1</span>
+</span></span><span class="line"><span class="cl"><span class="c1">##  system   aarch64, darwin20</span>
+</span></span><span class="line"><span class="cl"><span class="c1">##  ui       X11</span>
+</span></span><span class="line"><span class="cl"><span class="c1">##  language (EN)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">##  collate  en_US.UTF-8</span>
+</span></span><span class="line"><span class="cl"><span class="c1">##  ctype    en_US.UTF-8</span>
+</span></span><span class="line"><span class="cl"><span class="c1">##  tz       America/New_York</span>
+</span></span><span class="line"><span class="cl"><span class="c1">##  date     2024-04-11</span>
+</span></span><span class="line"><span class="cl"><span class="c1">##  pandoc   3.1.12.1 @ /opt/homebrew/bin/ (via rmarkdown)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">## </span>
+</span></span><span class="line"><span class="cl"><span class="c1">## ─ Packages ───────────────────────────────────────────────────────────────────────────────────────────────────────────</span>
+</span></span><span class="line"><span class="cl"><span class="c1">##  package       * version    date (UTC) lib source</span>
+</span></span><span class="line"><span class="cl"><span class="c1">##  backports       1.4.1      2021-12-13 [1] CRAN (R 4.3.0)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">##  bibtex          0.5.1      2023-01-26 [1] CRAN (R 4.3.0)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">##  BiocManager     1.30.22    2023-08-08 [1] CRAN (R 4.3.0)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">##  BiocStyle     * 2.30.0     2023-10-26 [1] Bioconductor</span>
+</span></span><span class="line"><span class="cl"><span class="c1">##  blogdown        1.19       2024-02-01 [1] CRAN (R 4.3.1)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">##  bookdown        0.37       2023-12-01 [1] CRAN (R 4.3.1)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">##  bslib           0.6.1.9001 2024-03-02 [1] Github (rstudio/bslib@243499a)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">##  cachem          1.0.8      2023-05-01 [1] CRAN (R 4.3.0)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">##  cli             3.6.2      2023-12-11 [1] CRAN (R 4.3.1)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">##  colorout      * 1.3-0.2    2024-02-27 [1] Github (jalvesaq/colorout@c6113a2)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">##  digest          0.6.34     2024-01-11 [1] CRAN (R 4.3.1)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">##  evaluate        0.23       2023-11-01 [1] CRAN (R 4.3.1)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">##  fastmap         1.1.1      2023-02-24 [1] CRAN (R 4.3.0)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">##  generics        0.1.3      2022-07-05 [1] CRAN (R 4.3.0)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">##  glue            1.7.0      2024-01-09 [1] CRAN (R 4.3.1)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">##  highr           0.10       2022-12-22 [1] CRAN (R 4.3.0)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">##  htmltools       0.5.7      2023-11-03 [1] CRAN (R 4.3.1)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">##  httr            1.4.7      2023-08-15 [1] CRAN (R 4.3.0)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">##  jquerylib       0.1.4      2021-04-26 [1] CRAN (R 4.3.0)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">##  jsonlite        1.8.8      2023-12-04 [1] CRAN (R 4.3.1)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">##  knitcitations * 1.0.12     2021-01-10 [1] CRAN (R 4.3.0)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">##  knitr           1.45       2023-10-30 [1] CRAN (R 4.3.1)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">##  lifecycle       1.0.4      2023-11-07 [1] CRAN (R 4.3.1)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">##  lubridate       1.9.3      2023-09-27 [1] CRAN (R 4.3.1)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">##  magrittr        2.0.3      2022-03-30 [1] CRAN (R 4.3.0)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">##  plyr            1.8.9      2023-10-02 [1] CRAN (R 4.3.1)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">##  R6              2.5.1      2021-08-19 [1] CRAN (R 4.3.0)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">##  Rcpp            1.0.12     2024-01-09 [1] CRAN (R 4.3.1)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">##  RefManageR      1.4.0      2022-09-30 [1] CRAN (R 4.3.0)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">##  rlang           1.1.3      2024-01-10 [1] CRAN (R 4.3.1)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">##  rmarkdown       2.25       2023-09-18 [1] CRAN (R 4.3.1)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">##  rstudioapi      0.15.0     2023-07-07 [1] CRAN (R 4.3.0)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">##  sass            0.4.8.9000 2024-02-27 [1] Github (rstudio/sass@ae93a9a)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">##  sessioninfo   * 1.2.2      2021-12-06 [1] CRAN (R 4.3.0)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">##  stringi         1.8.3      2023-12-11 [1] CRAN (R 4.3.1)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">##  stringr         1.5.1      2023-11-14 [1] CRAN (R 4.3.1)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">##  timechange      0.3.0      2024-01-18 [1] CRAN (R 4.3.1)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">##  xfun            0.42       2024-02-08 [1] CRAN (R 4.3.1)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">##  xml2            1.3.6      2023-12-04 [1] CRAN (R 4.3.1)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">##  yaml            2.3.8      2023-12-11 [1] CRAN (R 4.3.1)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">## </span>
+</span></span><span class="line"><span class="cl"><span class="c1">##  [1] /Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/library</span>
+</span></span><span class="line"><span class="cl"><span class="c1">## </span>
+</span></span><span class="line"><span class="cl"><span class="c1">## ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────</span>
+</span></span></code></pre></div>
+    </div>
+
+    
+
+
+
+
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/tag/git/">Git</a>
+  
+  <a class="badge badge-light" href="/tag/github/">github</a>
+  
+  <a class="badge badge-light" href="/tag/unix/">UNIX</a>
+  
+  <a class="badge badge-light" href="/tag/rstats/">rstats</a>
+  
+</div>
+
+
+
+<div class="share-box">
+  <ul class="share">
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Flcolladotor.github.io%2F2024%2F04%2F11%2Fhow-to-reduce-the-size-of-a-large-github-repo%2F&amp;text=How&#43;to&#43;reduce&#43;the&#43;size&#43;of&#43;a&#43;large&#43;GitHub&#43;repo" target="_blank" rel="noopener" class="share-btn-twitter" aria-label="twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Flcolladotor.github.io%2F2024%2F04%2F11%2Fhow-to-reduce-the-size-of-a-large-github-repo%2F&amp;t=How&#43;to&#43;reduce&#43;the&#43;size&#43;of&#43;a&#43;large&#43;GitHub&#43;repo" target="_blank" rel="noopener" class="share-btn-facebook" aria-label="facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+        
+      
+      <li>
+        <a href="mailto:?subject=How%20to%20reduce%20the%20size%20of%20a%20large%20GitHub%20repo&amp;body=https%3A%2F%2Flcolladotor.github.io%2F2024%2F04%2F11%2Fhow-to-reduce-the-size-of-a-large-github-repo%2F" target="_blank" rel="noopener" class="share-btn-email" aria-label="envelope">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=https%3A%2F%2Flcolladotor.github.io%2F2024%2F04%2F11%2Fhow-to-reduce-the-size-of-a-large-github-repo%2F&amp;title=How&#43;to&#43;reduce&#43;the&#43;size&#43;of&#43;a&#43;large&#43;GitHub&#43;repo" target="_blank" rel="noopener" class="share-btn-linkedin" aria-label="linkedin-in">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="whatsapp://send?text=How&#43;to&#43;reduce&#43;the&#43;size&#43;of&#43;a&#43;large&#43;GitHub&#43;repo%20https%3A%2F%2Flcolladotor.github.io%2F2024%2F04%2F11%2Fhow-to-reduce-the-size-of-a-large-github-repo%2F" target="_blank" rel="noopener" class="share-btn-whatsapp" aria-label="whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=https%3A%2F%2Flcolladotor.github.io%2F2024%2F04%2F11%2Fhow-to-reduce-the-size-of-a-large-github-repo%2F&amp;title=How&#43;to&#43;reduce&#43;the&#43;size&#43;of&#43;a&#43;large&#43;GitHub&#43;repo" target="_blank" rel="noopener" class="share-btn-weibo" aria-label="weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+  
+  
+    
+  
+  
+  
+  <div class="media author-card content-widget-hr">
+    
+      
+      <a href="https://lcolladotor.github.io/"><img class="avatar mr-3 avatar-circle" src="/authors/admin/avatar_hub730ffb954e879fe0ab174cacb839b41_1326712_270x270_fill_lanczos_center_3.png" alt="Leonardo Collado-Torres"></a>
+    
+
+    <div class="media-body">
+      <h5 class="card-title"><a href="https://lcolladotor.github.io/">Leonardo Collado-Torres</a></h5>
+      <h6 class="card-subtitle">Investigator @ LIBD, Assistant Professor, Department of Biostatistics @ JHBSPH</h6>
+      <p class="card-text"><a href="https://twitter.com/search?q=%23rstats&amp;src=hashtag_click" target="_blank" rel="noopener">#rstats</a> <a href="https://twitter.com/Bioconductor" target="_blank" rel="noopener">@Bioconductor</a>/🧠 genomics <a href="https://twitter.com/LieberInstitute" target="_blank" rel="noopener">@LieberInstitute</a>/<a href="https://twitter.com/lcgunam" target="_blank" rel="noopener">@lcgunam</a> <a href="https://twitter.com/jhubiostat" target="_blank" rel="noopener">@jhubiostat</a> <a href="https://twitter.com/jtleek" target="_blank" rel="noopener">@jtleek</a> <a href="https://twitter.com/andrewejaffe" target="_blank" rel="noopener">@andrewejaffe</a> alumni/<a href="https://twitter.com/LIBDrstats" target="_blank" rel="noopener">@LIBDrstats</a> <a href="https://twitter.com/CDSBMexico" target="_blank" rel="noopener">@CDSBMexico</a> co-founder</p>
+      <ul class="network-icon" aria-hidden="true">
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+    <li>
+      <a href="mailto:lcolladotor@gmail.com" >
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="http://lcolladotor.github.io" target="_blank" rel="noopener">
+        <i class="fas fa-home"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://twitter.com/lcolladotor" target="_blank" rel="noopener">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://www.youtube.com/@lcolladotor/playlists" target="_blank" rel="noopener">
+        <i class="fab fa-youtube"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://scholar.google.com/citations?user=h57-MykAAAAJ" target="_blank" rel="noopener">
+        <i class="ai ai-google-scholar"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://github.com/lcolladotor" target="_blank" rel="noopener">
+        <i class="fab fa-github"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="http://orcid.org/0000-0003-2140-308X" target="_blank" rel="noopener">
+        <i class="ai ai-orcid"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://www.ncbi.nlm.nih.gov/myncbi/leonardo.collado%20torres.1/bibliography/public/" target="_blank" rel="noopener">
+        <i class="ai ai-pubmed"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://impactstory.org/u/0000-0003-2140-308X" target="_blank" rel="noopener">
+        <i class="ai ai-impactstory"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://www.linkedin.com/in/lcollado/" target="_blank" rel="noopener">
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://publons.com/a/1262671" target="_blank" rel="noopener">
+        <i class="ai ai-publons"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="http://lcolladotor.github.io/cv/en_CV_lcollado.pdf" target="_blank" rel="noopener">
+        <i class="ai ai-cv"></i>
+      </a>
+    </li>
+  
+</ul>
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+
+  
+  <section id="comments">
+    
+<div id="disqus_thread"></div>
+<script>
+  var disqus_config = function () {
+    
+    
+    
+  };
+  (function() {
+    if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+      document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+      return;
+    }
+    var d = document, s = d.createElement('script'); s.async = true;
+    s.src = 'https://' + "fellgernonbit" + '.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+  </section>
+  
+
+
+
+
+
+
+
+
+
+
+  </div>
+</article>
+  </div>
+
+  <div class="page-footer">
+    
+    
+    <div class="container">
+      <footer class="site-footer">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+    
+  
+  
+    
+  
+
+  
+
+  
+  <p class="powered-by copyright-license-text">
+    All thoughts and opinions here are my own (Leonardo Collado Torres). The icon was designed by <a href="https://www.linkedin.com/in/mauricio-guzman-6529b551/" target="_blank" rel="noopener">Mauricio Guzmán</a> and is inspired by <a href="https://en.wikipedia.org/wiki/Huichol" target="_blank" rel="noopener">Huichol culture</a>; it represents my community building interests. © 2011-2024 LCT. This work is licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0" rel="noopener noreferrer" target="_blank">CC BY NC SA 4.0</a>
+  </p>
+  
+
+  <p class="powered-by footer-license-icons">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0" rel="noopener noreferrer" target="_blank" aria-label="Creative Commons">
+      <i class="fab fa-creative-commons fa-2x" aria-hidden="true"></i>
+      <i class="fab fa-creative-commons-by fa-2x" aria-hidden="true"></i>
+      
+        <i class="fab fa-creative-commons-nc fa-2x" aria-hidden="true"></i>
+      
+      
+        <i class="fab fa-creative-commons-sa fa-2x" aria-hidden="true"></i>
+      
+    </a>
+  </p>
+
+
+
+
+  
+  <p>
+      
+      
+      <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4ef23e545d41b87c"></script>
+      
+      
+
+      <script type="text/javascript">
+      var addthis_config = {
+      	data_ga_property: 'UA-45299226-1',
+      	data_ga_social : true,
+      	data_track_addressbar: true,
+        data_track_addressbar_paths: ['/201*/*/*/*/*']
+      };
+      var addthis_share = {
+      	
+      	url_transforms : {
+      		shorten: {
+      			twitter: 'bitly'
+      		}
+      	}, 
+      	shorteners : {
+      		bitly : {}
+      	}
+      }
+      </script>
+      
+      <center>	 
+      <div id="clustrmaps-widget"></div><script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=300&t=m&d=Zo-deincaJGsqhqjIWsujtdoNOMJsnnZLefKmxDKVv8&co=124b73&cmo=dd53ff&cmn=4ec724'></script>
+      </center>
+  </p>
+  
+
+  <p class="powered-by">
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      Published with <a href="https://wowchemy.com/?utm_campaign=poweredby" target="_blank" rel="noopener">Wowchemy</a> — the free, <a href="https://github.com/wowchemy/wowchemy-hugo-themes" target="_blank" rel="noopener">open source</a> website builder that empowers creators.
+    
+  </p>
+</footer>
+
+    </div>
+    
+  </div>
+
+  
+
+
+<script src="/js/vendor-bundle.min.938a3a7554cd9f6602290411f64d2617.js"></script>
+
+
+
+
+  
+
+  
+  
+
+  
+
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.min.js" integrity="" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+  
+  <script id="search-hit-fuse-template" type="text/x-template">
+    <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+    </div>
+  </script>
+  
+    <script src="https://cdn.jsdelivr.net/gh/krisk/Fuse@v3.2.1/dist/fuse.min.js" integrity="sha512-o38bmzBGX+hD3JHWUFCDA09btWaqrNmoJ3RXLlrysA7PP01Kgs4UlE4MhelE1v5dJR3+cxlR4qQlotsW7jKsnw==" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/gh/julmot/mark.js@8.11.1/dist/jquery.mark.min.js" integrity="sha512-mhbv5DqBMgrWL+32MmsDOt/OAvqr/cHimk6B8y/bx/xS88MVkYGPiVv2ixKVrkywF2qHplNRUvFsAHUdxZ3Krg==" crossorigin="anonymous"></script>
+  
+
+
+
+
+
+
+
+
+
+  <script id="dsq-count-scr" src="https://fellgernonbit.disqus.com/count.js" async></script>
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+<script id="page-data" type="application/json">{"use_headroom":true}</script>
+
+
+
+  <script src="/js/wowchemy-headroom.db4755770454eb63685f8de785c0a172.js" type="module"></script>
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+<script src="/en/js/wowchemy.min.2945731fa88332cb0ec33cf47d29879f.js"></script>
+
+
+
+  <script src="/js/wowchemy-map.a26e9d2f7238ba5b868384f1c5bc6477.js" type="module"></script>
+
+
+
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        
+        <pre><code></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <script src="/js/wowchemy-publication.af9327db0521d4a01354bfc8b77a4324.js" type="module"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

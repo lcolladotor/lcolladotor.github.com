@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- This site was created with Wowchemy. https://www.wowchemy.com -->
-<!-- Last Published: February 26, 2024 --><html lang="en-us" >
+<!-- Last Published: April 11, 2024 --><html lang="en-us" >
 
 
 <head>
@@ -1046,15 +1046,15 @@
 <p>I was watching him and I started to think if I could help him with some code. Turns out that it was straightforward to write some code to find which options are valid. Once I wrote a test case, it took us like half an hour to fill out the data. I know that tomorrow is when he and his classmates start registering for classes, so this information might help his classmates.</p>
 <p>First, I define some helper functions. These are rather straightforward but I&rsquo;ll be using them later on. For example, <code>dias()</code> is just there for typing less.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="c1">## Helper functions</span>
-</span></span><span class="line"><span class="cl"><span class="n">dias</span> <span class="o">&lt;-</span> <span class="nf">function</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl"><span class="n">dias</span> <span class="o">&lt;-</span> <span class="kr">function</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="nf">paste0</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="n">extract</span> <span class="o">&lt;-</span> <span class="nf">function</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">p</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl"><span class="n">extract</span> <span class="o">&lt;-</span> <span class="kr">function</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">p</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="n">m[[p]]</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="n">extract_names</span> <span class="o">&lt;-</span> <span class="nf">function</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">p</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl"><span class="n">extract_names</span> <span class="o">&lt;-</span> <span class="kr">function</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">p</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="nf">names</span><span class="p">(</span><span class="n">m</span><span class="p">)</span><span class="n">[p]</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></div><p>Next comes the input information. I organized it in a set of nested <code>list</code> objects. The schedule is stored as a character vector. For example, Lucia Eliana&rsquo;s class meets on Wednesdays (__M__iercoles in Spanish) from 9 to 11 am. I only keep the starting hours (9 and 10 am) because otherwise the code won&rsquo;t detect valid opitons that include another class that starts at 11 am. For classes that are 1 hour away from the university, we included 1 hour before and 1 hour after the class.</p>
@@ -1122,17 +1122,17 @@
 </span></span><span class="line"><span class="cl"><span class="p">)</span>
 </span></span></code></pre></div><p>Now that the input information is complete, I use <code>expand.grid()</code> to find out all the different possible options.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="c1">## Get all the options</span>
-</span></span><span class="line"><span class="cl"><span class="n">options</span> <span class="o">&lt;-</span> <span class="nf">expand.grid</span><span class="p">(</span><span class="nf">lapply</span><span class="p">(</span><span class="n">materias</span><span class="p">,</span> <span class="nf">function</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="p">{</span> <span class="nf">seq_len</span><span class="p">(</span><span class="nf">length</span><span class="p">(</span><span class="n">x</span><span class="p">))}))</span>
+</span></span><span class="line"><span class="cl"><span class="n">options</span> <span class="o">&lt;-</span> <span class="nf">expand.grid</span><span class="p">(</span><span class="nf">lapply</span><span class="p">(</span><span class="n">materias</span><span class="p">,</span> <span class="kr">function</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="p">{</span> <span class="nf">seq_len</span><span class="p">(</span><span class="nf">length</span><span class="p">(</span><span class="n">x</span><span class="p">))}))</span>
 </span></span><span class="line"><span class="cl"><span class="nf">dim</span><span class="p">(</span><span class="n">options</span><span class="p">)</span>
 </span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">## [1] 81000     5
 </span></span></code></pre></div><p>There&rsquo;s 81,00 of them including the classes that meet on Saturday. You can see why it&rsquo;s a frustrating process to find which combination of classes work when doing this manually.</p>
 <p>Next, I explore all these options to find those that are valid, meaning that none of the classes overlap. I do this by finding which options have no duplicated hours from the character vectors defined earlier. Nothing fancy.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">valid</span> <span class="o">&lt;-</span> <span class="nf">apply</span><span class="p">(</span><span class="n">options</span><span class="p">,</span> <span class="m">1</span><span class="p">,</span> <span class="nf">function</span><span class="p">(</span><span class="n">input</span><span class="p">)</span> <span class="p">{</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">valid</span> <span class="o">&lt;-</span> <span class="nf">apply</span><span class="p">(</span><span class="n">options</span><span class="p">,</span> <span class="m">1</span><span class="p">,</span> <span class="kr">function</span><span class="p">(</span><span class="n">input</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="n">info</span> <span class="o">&lt;-</span> <span class="nf">mapply</span><span class="p">(</span><span class="n">extract</span><span class="p">,</span> <span class="n">materias</span><span class="p">,</span> <span class="n">input</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">    <span class="o">!</span><span class="nf">any</span><span class="p">(</span><span class="nf">duplicated</span><span class="p">(</span><span class="nf">unlist</span><span class="p">(</span><span class="n">info</span><span class="p">)))</span>
 </span></span><span class="line"><span class="cl"><span class="p">})</span>
 </span></span></code></pre></div><p>Now that I have the valid options, I can find the names of the instructors for them. There&rsquo;s 2,847 valid schedules in the end, out of the 81,000. That&rsquo;s 3.5 percent!</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">valid_prof</span> <span class="o">&lt;-</span> <span class="nf">apply</span><span class="p">(</span><span class="n">options[valid</span><span class="p">,</span> <span class="n">]</span><span class="p">,</span> <span class="m">1</span><span class="p">,</span> <span class="nf">function</span><span class="p">(</span><span class="n">input</span><span class="p">)</span> <span class="p">{</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">valid_prof</span> <span class="o">&lt;-</span> <span class="nf">apply</span><span class="p">(</span><span class="n">options[valid</span><span class="p">,</span> <span class="n">]</span><span class="p">,</span> <span class="m">1</span><span class="p">,</span> <span class="kr">function</span><span class="p">(</span><span class="n">input</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="nf">mapply</span><span class="p">(</span><span class="n">extract_names</span><span class="p">,</span> <span class="n">materias</span><span class="p">,</span> <span class="n">input</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="p">})</span>
 </span></span><span class="line"><span class="cl"><span class="nf">ncol</span><span class="p">(</span><span class="n">valid_prof</span><span class="p">)</span>
@@ -1413,19 +1413,19 @@
 </span></span><span class="line"><span class="cl">##  tz       America/Mexico_City         
 </span></span><span class="line"><span class="cl">##  date     2016-08-02
 </span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">## Packages ------------------------------------------------------------------
-</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="err">##</span>  <span class="kn">package</span>   <span class="o">*</span> <span class="nx">version</span> <span class="nx">date</span>       <span class="nx">source</span>        
-</span></span><span class="line"><span class="cl"><span class="err">##</span>  <span class="nx">devtools</span>  <span class="o">*</span> <span class="mf">1.12.0</span>  <span class="mi">2016</span><span class="o">-</span><span class="mo">06</span><span class="o">-</span><span class="mi">24</span> <span class="nf">CRAN</span> <span class="p">(</span><span class="nx">R</span> <span class="mf">3.3.1</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="err">##</span>  <span class="nx">digest</span>      <span class="mf">0.6.9</span>   <span class="mi">2016</span><span class="o">-</span><span class="mo">01</span><span class="o">-</span><span class="mi">08</span> <span class="nf">CRAN</span> <span class="p">(</span><span class="nx">R</span> <span class="mf">3.3.0</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="err">##</span>  <span class="nx">evaluate</span>    <span class="mf">0.9</span>     <span class="mi">2016</span><span class="o">-</span><span class="mo">04</span><span class="o">-</span><span class="mi">29</span> <span class="nf">CRAN</span> <span class="p">(</span><span class="nx">R</span> <span class="mf">3.3.0</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="err">##</span>  <span class="nx">formatR</span>     <span class="mf">1.4</span>     <span class="mi">2016</span><span class="o">-</span><span class="mo">05</span><span class="o">-</span><span class="mi">09</span> <span class="nf">CRAN</span> <span class="p">(</span><span class="nx">R</span> <span class="mf">3.3.0</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="err">##</span>  <span class="nx">highr</span>       <span class="mf">0.6</span>     <span class="mi">2016</span><span class="o">-</span><span class="mo">05</span><span class="o">-</span><span class="mi">09</span> <span class="nf">CRAN</span> <span class="p">(</span><span class="nx">R</span> <span class="mf">3.3.0</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="err">##</span>  <span class="nx">knitr</span>     <span class="o">*</span> <span class="mf">1.13</span>    <span class="mi">2016</span><span class="o">-</span><span class="mo">05</span><span class="o">-</span><span class="mi">09</span> <span class="nf">CRAN</span> <span class="p">(</span><span class="nx">R</span> <span class="mf">3.3.0</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="err">##</span>  <span class="nx">magrittr</span>    <span class="mf">1.5</span>     <span class="mi">2014</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">22</span> <span class="nf">CRAN</span> <span class="p">(</span><span class="nx">R</span> <span class="mf">3.3.0</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="err">##</span>  <span class="nx">memoise</span>     <span class="mf">1.0.0</span>   <span class="mi">2016</span><span class="o">-</span><span class="mo">01</span><span class="o">-</span><span class="mi">29</span> <span class="nf">CRAN</span> <span class="p">(</span><span class="nx">R</span> <span class="mf">3.3.0</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="err">##</span>  <span class="nx">rsconnect</span>   <span class="mf">0.4.3</span>   <span class="mi">2016</span><span class="o">-</span><span class="mo">05</span><span class="o">-</span><span class="mo">02</span> <span class="nf">CRAN</span> <span class="p">(</span><span class="nx">R</span> <span class="mf">3.3.0</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="err">##</span>  <span class="nx">stringi</span>     <span class="mf">1.1.1</span>   <span class="mi">2016</span><span class="o">-</span><span class="mo">05</span><span class="o">-</span><span class="mi">27</span> <span class="nf">CRAN</span> <span class="p">(</span><span class="nx">R</span> <span class="mf">3.3.0</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="err">##</span>  <span class="nx">stringr</span>     <span class="mf">1.0.0</span>   <span class="mi">2015</span><span class="o">-</span><span class="mo">04</span><span class="o">-</span><span class="mi">30</span> <span class="nf">CRAN</span> <span class="p">(</span><span class="nx">R</span> <span class="mf">3.3.0</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="err">##</span>  <span class="nx">withr</span>       <span class="mf">1.0.2</span>   <span class="mi">2016</span><span class="o">-</span><span class="mo">06</span><span class="o">-</span><span class="mi">20</span> <span class="nf">CRAN</span> <span class="p">(</span><span class="nx">R</span> <span class="mf">3.3.1</span><span class="p">)</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="c1">##  package   * version date       source        </span>
+</span></span><span class="line"><span class="cl"><span class="c1">##  devtools  * 1.12.0  2016-06-24 CRAN (R 3.3.1)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">##  digest      0.6.9   2016-01-08 CRAN (R 3.3.0)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">##  evaluate    0.9     2016-04-29 CRAN (R 3.3.0)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">##  formatR     1.4     2016-05-09 CRAN (R 3.3.0)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">##  highr       0.6     2016-05-09 CRAN (R 3.3.0)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">##  knitr     * 1.13    2016-05-09 CRAN (R 3.3.0)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">##  magrittr    1.5     2014-11-22 CRAN (R 3.3.0)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">##  memoise     1.0.0   2016-01-29 CRAN (R 3.3.0)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">##  rsconnect   0.4.3   2016-05-02 CRAN (R 3.3.0)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">##  stringi     1.1.1   2016-05-27 CRAN (R 3.3.0)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">##  stringr     1.0.0   2015-04-30 CRAN (R 3.3.0)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">##  withr       1.0.2   2016-06-20 CRAN (R 3.3.1)</span>
 </span></span></code></pre></div><h3 id="want-more">Want more?</h3>
 <p>Check other <a href="https://twitter.com/jhubiostat" target="_blank" rel="noopener">@jhubiostat</a> student blogs at <a href="http://bmorebiostat.com/" target="_blank" rel="noopener">Bmore Biostats</a> as well as topics on <a href="https://twitter.com/search?q=%23rstats" target="_blank" rel="noopener">#rstats</a>.</p>
 
@@ -1968,7 +1968,7 @@
   
 
 
-<script src="/js/vendor-bundle.min.f64289d8217e08e3afcd597d60836062.js"></script>
+<script src="/js/vendor-bundle.min.938a3a7554cd9f6602290411f64d2617.js"></script>
 
 
 
@@ -2056,7 +2056,7 @@
   
 
 
-<script src="/en/js/wowchemy.min.ead4a376bcf2c4714888c770ea9b0040.js"></script>
+<script src="/en/js/wowchemy.min.2945731fa88332cb0ec33cf47d29879f.js"></script>
 
 
 
@@ -2093,7 +2093,7 @@
 </div>
 
 
-  <script src="/js/wowchemy-publication.68f8d7090562ca65fc6d3cb3f8f2d2cb.js" type="module"></script>
+  <script src="/js/wowchemy-publication.af9327db0521d4a01354bfc8b77a4324.js" type="module"></script>
 
 
 

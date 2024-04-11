@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- This site was created with Wowchemy. https://www.wowchemy.com -->
-<!-- Last Published: February 26, 2024 --><html lang="en-us" >
+<!-- Last Published: April 11, 2024 --><html lang="en-us" >
 
 
 <head>
@@ -1066,7 +1066,7 @@
 </span></span><span class="line"><span class="cl"><span class="n">all</span> <span class="o">&lt;-</span> <span class="nf">list</span><span class="p">()</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1">## Construct prediction function</span>
-</span></span><span class="line"><span class="cl"><span class="nf">for</span><span class="p">(</span><span class="n">i</span> <span class="n">in</span> <span class="m">1</span><span class="o">:</span><span class="m">2</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl"><span class="kr">for</span><span class="p">(</span><span class="n">i</span> <span class="kr">in</span> <span class="m">1</span><span class="o">:</span><span class="m">2</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">	<span class="c1">## Predict on the original data</span>
 </span></span><span class="line"><span class="cl">	<span class="n">pred</span> <span class="o">&lt;-</span> <span class="nf">predict</span><span class="p">(</span><span class="n">fits[[i]]</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">	
@@ -1124,7 +1124,7 @@
 </span></span></code></pre></div><p>The steps in the curve are more visible since it is using less data. It also seems to be a little less good than the other two, as expected. This is clear when comparing the AUC values.</p>
 <p>Finally, I plot all curves in the same picture to visually compare them.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">names</span><span class="p">(</span><span class="n">all</span><span class="p">)</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="s">&#34;train2011&#34;</span><span class="p">,</span> <span class="s">&#34;train2012&#34;</span><span class="p">,</span> <span class="s">&#34;pred2012&#34;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="nf">for</span><span class="p">(</span><span class="n">i</span> <span class="n">in</span> <span class="m">1</span><span class="o">:</span><span class="m">3</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl"><span class="kr">for</span><span class="p">(</span><span class="n">i</span> <span class="kr">in</span> <span class="m">1</span><span class="o">:</span><span class="m">3</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">	<span class="n">all[[i]]</span> <span class="o">&lt;-</span> <span class="nf">cbind</span><span class="p">(</span><span class="n">all[[i]]</span><span class="p">,</span> <span class="nf">rep</span><span class="p">(</span><span class="nf">names</span><span class="p">(</span><span class="n">all</span><span class="p">)</span><span class="n">[i]</span><span class="p">,</span> <span class="nf">nrow</span><span class="p">(</span><span class="n">all[[i]]</span><span class="p">)))</span>
 </span></span><span class="line"><span class="cl">	<span class="nf">colnames</span><span class="p">(</span><span class="n">all[[i]]</span><span class="p">)</span><span class="n">[3]</span> <span class="o">&lt;-</span> <span class="s">&#34;set&#34;</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
@@ -1687,7 +1687,7 @@
   
 
 
-<script src="/js/vendor-bundle.min.f64289d8217e08e3afcd597d60836062.js"></script>
+<script src="/js/vendor-bundle.min.938a3a7554cd9f6602290411f64d2617.js"></script>
 
 
 
@@ -1775,7 +1775,7 @@
   
 
 
-<script src="/en/js/wowchemy.min.ead4a376bcf2c4714888c770ea9b0040.js"></script>
+<script src="/en/js/wowchemy.min.2945731fa88332cb0ec33cf47d29879f.js"></script>
 
 
 
@@ -1812,7 +1812,7 @@
 </div>
 
 
-  <script src="/js/wowchemy-publication.68f8d7090562ca65fc6d3cb3f8f2d2cb.js" type="module"></script>
+  <script src="/js/wowchemy-publication.af9327db0521d4a01354bfc8b77a4324.js" type="module"></script>
 
 
 

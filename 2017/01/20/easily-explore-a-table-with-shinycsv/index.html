@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- This site was created with Wowchemy. https://www.wowchemy.com -->
-<!-- Last Published: February 26, 2024 --><html lang="en-us" >
+<!-- Last Published: April 11, 2024 --><html lang="en-us" >
 
 
 <head>
@@ -1042,8 +1042,8 @@
 
     <div class="article-style">
       <p>Have you ever had to explore a table with data? I believe the answer is <em>yes</em> for most people that work at a computer or even just use it for communicating with their friends and family. Tables of data pop up everywhere, for example in personal finance. Websites like <a href="https://www.mint.com/" target="_blank" rel="noopener">Mint.com</a> allow you to download your transactions in a <a href="https://en.wikipedia.org/wiki/Comma-separated_values" target="_blank" rel="noopener">CSV</a> file called <code>transactions.csv</code>. CSV is one of the many formats for storing tables and most likely when you try to open the <code>transactions.csv</code> file, it will open with Excel. Now, can you make a quick figure of one of your columns in your table?</p>
-<p>Some will answer yes, others no. The basic issue is that it&rsquo;s not <em>super</em> easy to explore your data in Excel or similar programs. Wait, shouldn&rsquo;t it be easy? 😕</p>
-<p>What if you want to subset your data and want to re-make the plot? How about getting some simple statistics like the mean or frequency of some categories for a given variable? 😨 These are some of the immediate tasks that are helpful when exploring data. Visually, making figures with two variables is also very common.</p>
+<p>Some will answer yes, others no. The basic issue is that it&rsquo;s not <em>super</em> easy to explore your data in Excel or similar programs. Wait, shouldn&rsquo;t it be easy? &#x1f615;</p>
+<p>What if you want to subset your data and want to re-make the plot? How about getting some simple statistics like the mean or frequency of some categories for a given variable? &#x1f628; These are some of the immediate tasks that are helpful when exploring data. Visually, making figures with two variables is also very common.</p>
 <p>Programmers and experts in Excel, Stata, <code>R</code> among other options can perform these data explorations. It might take them a little bit of time to write the code or remember it or use the user interface menu of their program of choice. But what about everyone else?</p>
 <p>At the <a href="http://www.libd.org/" target="_blank" rel="noopener">Lieber Institute for Brain Development</a> where I work, it&rsquo;s common for us to exchange data in tables, and thus explore data. That&rsquo;s why we created <code>shinycsv</code> <a id='cite-shinycsv'></a>(<a href='https://github.com/LieberInstitute/shinycsv'>Collado-Torres, Semick, and Jaffe, 2016</a>). It&rsquo;s an R package <a id='cite-cran'></a>(<a href='https://www.R-project.org/'>R Core Team, 2016</a>) that contains a <code>shiny</code> <a id='cite-shiny'></a>(<a href='https://CRAN.R-project.org/package=shiny'>Chang, Cheng, Allaire, Xie, et al., 2017</a>) application that allows users to interactively explore a table.</p>
 <p>Installing <code>R</code> is a pretty high bar, that&rsquo;s why we are hosting this application at <a href="https://jhubiostatistics.shinyapps.io/shinycsv/" target="_blank" rel="noopener">https://jhubiostatistics.shinyapps.io/shinycsv/</a>. Try it out!</p>
@@ -1053,8 +1053,8 @@
 <h2 id="shinycsv-application">shinycsv application</h2>
 <p>The application includes data about cars to demonstrate what it can do. It&rsquo;s a small data set that is commonly used for demonstration purposes. Anyhow, in the application you&rsquo;ll notice a few tabs.</p>
 <p>The application shows the <em><strong>raw data</strong></em> in an interactive table that allows you to subset the observations by some criteria, search in the table, and sort in different ways. The <em><strong>raw summary</strong></em> tab shows quick statistical summaries which depend on the variable type (numerical, categorical, etc). If you interacted with the table in <em>raw data</em> then the summaries at <em>raw summary</em> will be based on the subset you selected.</p>
-<p>The <em><strong>one variable</strong></em> and <em><strong>two variables</strong></em> tabs are for making figures based on one or two variables at a time. The code in <code>shinycsv</code> tries to guess what&rsquo;s the best figure for a given type of variable and in case that you are interested in learning R, it also shows the exact code you can use to reproduce the figure in your computer. We added this feature to excite users about learning R. And it&rsquo;s useful for advanced users too that might want to customize the resulting figures. Hm&hellip;, you don&rsquo;t like the colors we chose for the figure? Well go to <em><strong>plot colors</strong></em>, choose another color, and come back to see your new figure with the color of your choosing. 😄</p>
-<p>Hm&hellip; but what if you don&rsquo;t have a CSV file? Well, <code>shinycsv</code> can handle many different tables thanks to <code>rio</code> <a id='cite-rio'></a>(<a href='#bib-rio'>Chan, Chan, Leeper, and Becker, 2016</a>). Even Excel sheets! 😉</p>
+<p>The <em><strong>one variable</strong></em> and <em><strong>two variables</strong></em> tabs are for making figures based on one or two variables at a time. The code in <code>shinycsv</code> tries to guess what&rsquo;s the best figure for a given type of variable and in case that you are interested in learning R, it also shows the exact code you can use to reproduce the figure in your computer. We added this feature to excite users about learning R. And it&rsquo;s useful for advanced users too that might want to customize the resulting figures. Hm&hellip;, you don&rsquo;t like the colors we chose for the figure? Well go to <em><strong>plot colors</strong></em>, choose another color, and come back to see your new figure with the color of your choosing. &#x1f604;</p>
+<p>Hm&hellip; but what if you don&rsquo;t have a CSV file? Well, <code>shinycsv</code> can handle many different tables thanks to <code>rio</code> <a id='cite-rio'></a>(<a href='#bib-rio'>Chan, Chan, Leeper, and Becker, 2016</a>). Even Excel sheets! &#x1f609;</p>
 <p>So, go ahead and test it out! We&rsquo;ll be glad to hear your feedback at <a href="https://github.com/LieberInstitute/shinycsv/issues" target="_blank" rel="noopener">LieberInstitute/shinycsv</a>.</p>
 <h3 id="notes">Notes</h3>
 <ul>
@@ -1680,7 +1680,7 @@ URL: <a href="https://www.R-project.org/">https://www.R-project.org/</a>.</cite>
   
 
 
-<script src="/js/vendor-bundle.min.f64289d8217e08e3afcd597d60836062.js"></script>
+<script src="/js/vendor-bundle.min.938a3a7554cd9f6602290411f64d2617.js"></script>
 
 
 
@@ -1768,7 +1768,7 @@ URL: <a href="https://www.R-project.org/">https://www.R-project.org/</a>.</cite>
   
 
 
-<script src="/en/js/wowchemy.min.ead4a376bcf2c4714888c770ea9b0040.js"></script>
+<script src="/en/js/wowchemy.min.2945731fa88332cb0ec33cf47d29879f.js"></script>
 
 
 
@@ -1805,7 +1805,7 @@ URL: <a href="https://www.R-project.org/">https://www.R-project.org/</a>.</cite>
 </div>
 
 
-  <script src="/js/wowchemy-publication.68f8d7090562ca65fc6d3cb3f8f2d2cb.js" type="module"></script>
+  <script src="/js/wowchemy-publication.af9327db0521d4a01354bfc8b77a4324.js" type="module"></script>
 
 
 
