@@ -25,7 +25,7 @@
 &lt;/div&gt;
 &lt;iframe src=&#34;https://giphy.com/embed/0vTOscboHgOyBSuK4r&#34; width=&#34;480&#34; height=&#34;480&#34; frameBorder=&#34;0&#34; class=&#34;giphy-embed&#34; allowFullScreen&gt;&lt;/iframe&gt;&lt;p&gt;&lt;a href=&#34;https://giphy.com/stickers/GitHub-transparent-0vTOscboHgOyBSuK4r&#34;&gt;via GIPHY&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;our-story&#34;&gt;Our story&lt;/h2&gt;
-&lt;p&gt;That&amp;rsquo;s how things start. In our case, we had a repository that would download over 22.6 GB of data and use 55.9 GB of disk space.&lt;/p&gt;
+&lt;p&gt;That&amp;rsquo;s how things start. In our case, we had a repository that would download over 22.6 GB of data and use 55.9 GB of disk space. &lt;em&gt;Note: This repository is currently (April 15 2024) private, but will be made public soon.&lt;/em&gt;&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;% git clone git@github.com:LieberInstitute/spatial_hpc.git
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Cloning into &lt;span class=&#34;s1&#34;&gt;&amp;#39;spatial_hpc&amp;#39;&lt;/span&gt;...
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;remote: Enumerating objects: 18189, &lt;span class=&#34;k&#34;&gt;done&lt;/span&gt;.
@@ -744,7 +744,7 @@ URL: &lt;a href=&#34;https://bookdown.org/yihui/blogdown/&#34;&gt;https://bookdo
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;##  collate  en_US.UTF-8&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;##  ctype    en_US.UTF-8&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;##  tz       America/New_York&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;##  date     2024-04-11&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;##  date     2024-04-15&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;##  pandoc   3.1.12.1 @ /opt/homebrew/bin/ (via rmarkdown)&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## &lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## ─ Packages ───────────────────────────────────────────────────────────────────────────────────────────────────────────&lt;/span&gt;
