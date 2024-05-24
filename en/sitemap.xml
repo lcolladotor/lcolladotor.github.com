@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://lcolladotor.github.io/authors/</loc>
+    <lastmod>2024-05-23T21:17:35-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-mx"
+                href="https://lcolladotor.github.io/es/authors/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://lcolladotor.github.io/authors/"
+                />
+  </url><url>
     <loc>https://lcolladotor.github.io/categories/</loc>
     <lastmod>2024-05-23T21:17:35-04:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -102,20 +116,6 @@
                 href="https://lcolladotor.github.io/tags/"
                 />
   </url><url>
-    <loc>https://lcolladotor.github.io/tag/vistoseg/</loc>
-    <lastmod>2024-05-23T21:17:35-04:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es-mx"
-                href="https://lcolladotor.github.io/es/tag/vistoseg/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-us"
-                href="https://lcolladotor.github.io/tag/vistoseg/"
-                />
-  </url><url>
     <loc>https://lcolladotor.github.io/category/computing/</loc>
     <lastmod>2024-04-15T09:19:21-04:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -143,20 +143,6 @@
     <loc>https://lcolladotor.github.io/talk/currentbiostats2024/</loc>
     <lastmod>2024-02-26T15:22:16-05:00</lastmod>
     <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>https://lcolladotor.github.io/authors/</loc>
-    <lastmod>2024-02-26T15:22:16-05:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es-mx"
-                href="https://lcolladotor.github.io/es/authors/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-us"
-                href="https://lcolladotor.github.io/authors/"
-                />
   </url><url>
     <loc>https://lcolladotor.github.io/tag/deconvolution/</loc>
     <lastmod>2024-02-26T15:22:16-05:00</lastmod>
@@ -188,6 +174,20 @@
                 rel="alternate"
                 hreflang="en-us"
                 href="https://lcolladotor.github.io/tag/visium_spg_ad/"
+                />
+  </url><url>
+    <loc>https://lcolladotor.github.io/tag/vistoseg/</loc>
+    <lastmod>2024-02-26T15:22:16-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-mx"
+                href="https://lcolladotor.github.io/es/tag/vistoseg/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://lcolladotor.github.io/tag/vistoseg/"
                 />
   </url><url>
     <loc>https://lcolladotor.github.io/tag/derfinder/</loc>

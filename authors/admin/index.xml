@@ -13,6 +13,962 @@
     </image>
     
     <item>
+      <title>HumanPilot: first spatially-resolved transcriptomics study using Visium</title>
+      <link>https://lcolladotor.github.io/2024/05/23/humanpilot-first-spatially-resolved-transcriptomics-study-using-visium/</link>
+      <pubDate>Thu, 23 May 2024 00:00:00 +0000</pubDate>
+      <guid>https://lcolladotor.github.io/2024/05/23/humanpilot-first-spatially-resolved-transcriptomics-study-using-visium/</guid>
+      <description>&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    &lt;p&gt;Would you prefer a video walkthrough over reading this blog post? Check out this explainer video 🎥&lt;/p&gt;
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/HGioWKuI3ek?si=X-tqtZtcPSV-3uMt&#34; title=&#34;YouTube video player&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; allowfullscreen data-external=&#34;1&#34;&gt;
+&lt;/iframe&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;A few years ago now (2021) we published a study we refer to with a very generic name: &lt;code&gt;HumanPilot&lt;/code&gt; &lt;a id=&#39;cite-Maynard_2021&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://www.nature.com/articles/s41593-020-00787-0&#39;&gt;Maynard, Collado-Torres, Weber, Uytingco et al., 2021&lt;/a&gt;). In this peer-reviewed study, we were the first ones to use a commercially available technology for generating spatially-resolved transcriptomics data. It’s called &lt;a href=&#34;https://www.10xgenomics.com/products/spatial-gene-expression&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;em&gt;Visium&lt;/em&gt; and it’s sold by 10x Genomics&lt;/a&gt;. Note ⚠️ that members of that company were co-authors of our study. As we work in the &lt;a href=&#34;https://www.libd.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Lieber Institute for Brain Development&lt;/a&gt;, we tested &lt;em&gt;Visium&lt;/em&gt; with postmortem human brain data. I explained the initial pre-print (before peer-review) version of our work in a &lt;a href=&#34;https://lcolladotor.github.io/2020/02/29/diving-together-into-the-unknown-world-of-spatial-transcriptomics/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;blog post back from Feb 29, 2020&lt;/a&gt;.&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;🔥off the press! 👀 our &lt;a href=&#34;https://twitter.com/biorxivpreprint?ref_src=twsrc%5Etfw&#34;&gt;@biorxivpreprint&lt;/a&gt; on human 🧠brain &lt;a href=&#34;https://twitter.com/LieberInstitute?ref_src=twsrc%5Etfw&#34;&gt;@LieberInstitute&lt;/a&gt; spatial 🌌🔬transcriptomics data 🧬using Visium &lt;a href=&#34;https://twitter.com/10xGenomics?ref_src=twsrc%5Etfw&#34;&gt;@10xGenomics&lt;/a&gt;🎉&lt;a href=&#34;https://twitter.com/hashtag/spatialLIBD?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#spatialLIBD&lt;/a&gt;&lt;br&gt;&lt;br&gt;🔍&lt;a href=&#34;https://t.co/RTW0VscUKR&#34;&gt;https://t.co/RTW0VscUKR&lt;/a&gt; &lt;br&gt;👩🏾‍💻&lt;a href=&#34;https://t.co/bsg04XKONr&#34;&gt;https://t.co/bsg04XKONr&lt;/a&gt;&lt;br&gt;📚&lt;a href=&#34;https://t.co/FJDOOzrAJ6&#34;&gt;https://t.co/FJDOOzrAJ6&lt;/a&gt;&lt;br&gt;📦&lt;a href=&#34;https://t.co/Au5jwADGhY&#34;&gt;https://t.co/Au5jwADGhY&lt;/a&gt;&lt;a href=&#34;https://t.co/PiWEDN9q2N&#34;&gt;https://t.co/PiWEDN9q2N&lt;/a&gt; &lt;a href=&#34;https://t.co/aWy0yLlR50&#34;&gt;pic.twitter.com/aWy0yLlR50&lt;/a&gt;&lt;/p&gt;&amp;mdash; 🇲🇽 Leonardo Collado-Torres (@lcolladotor) &lt;a href=&#34;https://twitter.com/lcolladotor/status/1233661576433061888?ref_src=twsrc%5Etfw&#34;&gt;February 29, 2020&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;p&gt;But enough with the fancy specific words. Here I explain the main points of why this study was so important and why it is still frequently cited several years later.&lt;/p&gt;
+&lt;h2 id=&#34;what-is-a-fruit-banana-orange&#34;&gt;What is a fruit? Banana, orange?&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/File:Oranges_-_whole-halved-segment.jpg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;img src=&#34;https://lcolladotor.github.io/2024/05/23/humanpilot-first-spatially-resolved-transcriptomics-study-using-visium/images/orange.jpg&#34; width=&#34;400&#34; alt=&#34;Orange (full round)&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/File:Bananas.jpg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;img src=&#34;https://lcolladotor.github.io/2024/05/23/humanpilot-first-spatially-resolved-transcriptomics-study-using-visium/images/Bananas.jpg&#34; width=&#34;400&#34; alt=&#34;Bananas in the supermarket&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;When we are growing up, we don’t know what is an orange or a banana. What makes them both fruits, and why they are different.&lt;/p&gt;
+&lt;p&gt;If you look at them, touch them, smell them, you start to notice differences between them. In science, we end up trying to come up with systematic and specific ways of describing things that surround us in nature. In this case, two fruits. When you look at an orange and a banana and try to explain how they are different, you might end up slicing them.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/File:Oranges_-_whole-halved-segment.jpg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;img src=&#34;https://lcolladotor.github.io/2024/05/23/humanpilot-first-spatially-resolved-transcriptomics-study-using-visium/images/orange_sliced.jpg&#34; width=&#34;400&#34; alt=&#34;Orange (sliced with a knife)&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://similarpng.com/banana-slice-isolated-on-transparent-background-png/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;img src=&#34;https://lcolladotor.github.io/2024/05/23/humanpilot-first-spatially-resolved-transcriptomics-study-using-visium/images/Banana-slice-isolated-on-transparent-background-PNG.png&#34; width=&#34;400&#34; alt=&#34;Banana sliced&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Once you slice them, you are actively zooming in and looking at finer differences. You might end up using a microscope to notice even smaller differences.&lt;/p&gt;
+&lt;h2 id=&#34;measuring-gene-activity&#34;&gt;Measuring gene activity&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://doi.org/10.1038/s41592-020-01042-x&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;img src=&#34;https://lcolladotor.github.io/2024/05/23/humanpilot-first-spatially-resolved-transcriptomics-study-using-visium/images/nat_methods_spatial.png&#34; width=&#34;400&#34; alt=&#34;Nature Methods 2020 cover&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Now imagine that you want to measure gene 🧬 activity levels. Some previous technologies could measure gene activity levels by taking a chunk of tissue to have enough material for the technology to work. In the 2010s the technology was developed to measure single cells or nuclei, but you lost the spatial context. Then in 2020 the ability to measure gene activity while retaining the spatial awareness was crowned the new method of the year. The specific term is &lt;em&gt;spatially-resolved transcriptomics&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.mathworks.com/help/matlab/creating_plots/color-3-d-bars-by-height-1.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;img src=&#34;https://lcolladotor.github.io/2024/05/23/humanpilot-first-spatially-resolved-transcriptomics-study-using-visium/images/Color3DBarsByHeightExample_02.png&#34; width=&#34;400&#34; alt=&#34;3D barplots&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Visium&lt;/em&gt; in particular works by having about 5,000 circles (called “spots”) arranged in a honeycomb pattern where we can measure gene activity levels. 10x Genomics has some videos explaining how to it works, but it basically comes down to having an X and Y map for which you can make multiple 3D barplots like this one. Say that this is the one for gene 1 where we have a flat map and the height of the bars is how much that gene 1 was active in each square.&lt;/p&gt;
+&lt;p&gt;With &lt;em&gt;Visium&lt;/em&gt; we have 5,000 spots, or specific (&lt;em&gt;X&lt;/em&gt;, &lt;em&gt;Y&lt;/em&gt;) pairs and for each of them we can have about 2,000 genes measured. So imagine having 2,000 of these 3D barplots. That’s quite a bit of data and it’s exciting to think what this technology can be used for.&lt;/p&gt;
+&lt;h2 id=&#34;human-brain&#34;&gt;Human brain&lt;/h2&gt;
+&lt;p&gt;Just like we were talking about bananas and oranges being two types of fruits, well, the brain has different regions. Each of them carries out specific functions and can be quite different despite them all clearly remaining a part of the brain. Just like bananas and oranges look very different but still remain fruits.&lt;/p&gt;
+&lt;p&gt;Now, scientists by training are skeptical. So with a new exciting but expensive technology, the first thing we wanted to do is to test it with a small study. That is, run a pilot study. We work studying gene activity levels from human brain samples, particularly postmortem human brain samples that were donated to our institution for research purposes. One particular region we are interested in is called the &lt;em&gt;DLPFC&lt;/em&gt; and its important because differences between individuals that do not have schizophrenia (which we refer to as the neurotypical control group) and those that do schizophrenia have been linked to this brain region, among other reasons.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/File:Bananavarieties.jpg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://lcolladotor.github.io/2024/05/23/humanpilot-first-spatially-resolved-transcriptomics-study-using-visium/images/Bananavarieties.jpg&#34; alt=&#34;Banana varieties&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;But before we can distinguish the two groups of donors at the molecular level, with the ultimate goal of helping those affected by disorders such as schizophrenia, we first needed to understand what is typically different neurotypical control (NTC) donors. Just like we can look at different healthy bananas and notice how they are different.&lt;/p&gt;
+&lt;p&gt;And so we got started with our &lt;code&gt;HumanPilot&lt;/code&gt; study. We generated data from 3 NTC donors as you need to look at more than one donor to have an idea of biological variability.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://doi.org/10.1038/s41593-020-00787-0&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;img src=&#34;https://lcolladotor.github.io/2024/05/23/humanpilot-first-spatially-resolved-transcriptomics-study-using-visium/images/fig1ab.png&#34; width=&#34;800&#34; alt=&#34;Figure 1 A and B from the HumanPilot study&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;But because &lt;em&gt;Visium&lt;/em&gt; was a new technology then, we also generated spatially-adjacent replicates (two pairs per donor). These are technical replicates in the sense that we took contiguous slices of tissue. Think of it as two paired slices of bread 10 microns apart: we generated a pair early in the loaf and one more 300 microns apart in that same loaf. Yes, things do change even when you look at things 10 microns apart, but hopefully they don’t change too much then, but should once you look at them 300 microns apart. That’s what we wanted to see.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://doi.org/10.1038/s41593-020-00787-0&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;img src=&#34;https://lcolladotor.github.io/2024/05/23/humanpilot-first-spatially-resolved-transcriptomics-study-using-visium/images/fig1def.png&#34; width=&#34;800&#34; alt=&#34;Figure 1 D, E, and F from the HumanPilot study&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;The DLPFC has been quite well studied and it was well known that gene &lt;em&gt;SNAP25&lt;/em&gt; is more active in neurons while &lt;em&gt;MOBP&lt;/em&gt; is much less active in neurons. When we looked at the activity levels of these genes and could see basically how they complemented each other like a Yin and Yang symbol ☯, we were very excited.&lt;/p&gt;
+&lt;figure&gt;
+&lt;img src=&#34;https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Yin_and_Yang_symbol.svg/2560px-Yin_and_Yang_symbol.svg.png&#34; width=&#34;200&#34; alt=&#34;Yin and Yang&#34; /&gt;
+&lt;figcaption aria-hidden=&#34;true&#34;&gt;Yin and Yang&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;script defer class=&#34;speakerdeck-embed&#34; data-slide=&#34;9&#34; data-id=&#34;dde92cd6dfc04f9589770e074915658f&#34; data-ratio=&#34;1.3333333333333333&#34; src=&#34;//speakerdeck.com/assets/embed.js&#34;&gt;&lt;/script&gt;
+&lt;p&gt;We could also see more specific gene patterns, such as &lt;em&gt;PCP4&lt;/em&gt; which marks a specific subsection of DLPFC called Layer 5. And very importantly, this pattern was consistent among the 6 pairs of spatially-adjacent replicates we generated data for. That is, look for consistent patterns in each row from the above figure.&lt;/p&gt;
+&lt;h2 id=&#34;tons-of-manual-work-to-reproduce-what-we-knew&#34;&gt;Tons of manual work to reproduce what we knew!&lt;/h2&gt;
+&lt;p&gt;Now that trusted the technology, we could get to work. We started visualizing gene activity patterns for genes that other scientists had previously identified as marker genes for the DLPFC layers. Some have identified in other organisms such as mouse. Some, due to the nature of &lt;em&gt;Visium&lt;/em&gt;, we can only measure 2,000 genes instead of 20,000-30,000 ones that you can detect with other non-spatially-aware technologies.&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Our paper describing our package &lt;a href=&#34;https://twitter.com/hashtag/spatialLIBD?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#spatialLIBD&lt;/a&gt; is finally out! 🎉🎉🎉&lt;br&gt;&lt;br&gt;spatialLIBD is an &lt;a href=&#34;https://twitter.com/hashtag/rstats?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#rstats&lt;/a&gt; / &lt;a href=&#34;https://twitter.com/Bioconductor?ref_src=twsrc%5Etfw&#34;&gt;@Bioconductor&lt;/a&gt; package to visualize spatial transcriptomics data.&lt;br&gt;⁰&lt;br&gt;This is especially exciting for me as it is my first paper as a first author 🦑.&lt;a href=&#34;https://t.co/COW013x4GA&#34;&gt;https://t.co/COW013x4GA&lt;/a&gt;&lt;br&gt;&lt;br&gt;1/9 &lt;a href=&#34;https://t.co/xevIUg3IsA&#34;&gt;pic.twitter.com/xevIUg3IsA&lt;/a&gt;&lt;/p&gt;&amp;mdash; Brenda Pardo (@PardoBree) &lt;a href=&#34;https://twitter.com/PardoBree/status/1388253938391175173?ref_src=twsrc%5Etfw&#34;&gt;April 30, 2021&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;p&gt;Data visualization, particularly with any new technology, is always a challenge. So we developed a new software that we called &lt;code&gt;spatialLIBD&lt;/code&gt; to visualize the data &lt;a id=&#39;cite-Pardo_2022&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://doi.org/10.1186/s12864-022-08601-w&#39;&gt;Pardo, Spangler, Weber, Hicks et al., 2022&lt;/a&gt;). In particular, we built &lt;code&gt;spatialLIBD&lt;/code&gt; in a way that enabled members of our team to assign each &lt;em&gt;Visium&lt;/em&gt; spot from our 12 tissue slices to one of seven categories: gray matter layers 1 to 6, and white matter. That was a lot of work! Many other people now refer to it as the “ground truth” although we know it is not. In total, we had 47,681 spots or an average of 3,973 spots per tissue slice. Imagine having to label that many fruits, you are bound to make some mistakes!&lt;/p&gt;
+&lt;script defer class=&#34;speakerdeck-embed&#34; data-slide=&#34;10&#34; data-id=&#34;dde92cd6dfc04f9589770e074915658f&#34; data-ratio=&#34;1.3333333333333333&#34; src=&#34;//speakerdeck.com/assets/embed.js&#34;&gt;&lt;/script&gt;
+&lt;p&gt;This was a terrific amount of work, and it is has a fundamental reason why our study has been so well cited so far. Before I get ahead of myself, now that we have labeled all these spots, we can collapse the data and perform several types of analyses. Of them is looking at the different layers and white matter (WM) from the 12 tissue slices using principal component analysis (PCA). For a lot more on the mathematical theory of PCA check &lt;a href=&#34;https://en.wikipedia.org/wiki/Principal_component_analysis&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Wikipedia&lt;/a&gt;. What matters here is that PC1 explain the most differences, and we can see the WM points in black on the left side, clearly separated from the other points. Then PC2 is associated with L1 in pink at bottom of the Y-axis, to then L2 in blue, L3 in green, L4 in purple, L5 in yellow, and L6 in orange.&lt;/p&gt;
+&lt;p&gt;That was awesome! Yes, white matter is very different from gray matter (as shown in PC1), but then also the gray matter layers are different from each other in a sequential way (as shown in PC2). All of this was known before our study, but it always feels great when you can use a different technology to reproduce previous findings.&lt;/p&gt;
+&lt;h2 id=&#34;finding-and-validating-new-dlpfc-layer-marker-genes&#34;&gt;Finding and validating new DLPFC layer marker genes&lt;/h2&gt;
+&lt;p&gt;Is that it? Of course not. Other technologies and laborious experiments were needed to find some marker genes for the DLPFC layers. But now we could identify other ones. So that’s what we did. Not only did we find genes that can help us separate these layers from each other, but we then proceeded to verify a few of them using other experiments.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://doi.org/10.1038/s41593-020-00787-0&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;img src=&#34;https://lcolladotor.github.io/2024/05/23/humanpilot-first-spatially-resolved-transcriptomics-study-using-visium/images/fig4.png&#34; width=&#34;800&#34; alt=&#34;Figure 4 from the HumanPilot study&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;The above figure showcases some of these new marker genes that have higher activity levels in the layer they mark. It doesn’t mean that they are not active elsewhere. Though if you are interested in finding on/off marker genes, we have computational methods for that too nowadays implemented in our &lt;a href=&#34;https://research.libd.org/DeconvoBuddies/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;DeconvoBuddies&lt;/code&gt;&lt;/a&gt; software.&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;We also propose and evaluate a new method for selecting cell type specific &lt;a href=&#34;https://twitter.com/hashtag/markergenes?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#markergenes&lt;/a&gt; for deconvolution: &lt;a href=&#34;https://twitter.com/hashtag/MeanRatio?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#MeanRatio&lt;/a&gt; implemented in &lt;a href=&#34;https://twitter.com/hashtag/DeconvoBuddies?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#DeconvoBuddies&lt;/a&gt; (soon to be submited to &lt;a href=&#34;https://twitter.com/Bioconductor?ref_src=twsrc%5Etfw&#34;&gt;@Bioconductor&lt;/a&gt;) &lt;a href=&#34;https://twitter.com/hashtag/rstats?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#rstats&lt;/a&gt;&lt;br&gt;🛠️&lt;a href=&#34;https://t.co/del9EjmBwQ&#34;&gt;https://t.co/del9EjmBwQ&lt;/a&gt; &lt;a href=&#34;https://t.co/5PQk18yDrt&#34;&gt;pic.twitter.com/5PQk18yDrt&lt;/a&gt;&lt;/p&gt;&amp;mdash; Louise Huuki-Myers (@lahuuki) &lt;a href=&#34;https://twitter.com/lahuuki/status/1779902247305949495?ref_src=twsrc%5Etfw&#34;&gt;April 15, 2024&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;h2 id=&#34;what-about-disorders-how-does-your-humanpilot-study-help-us-understand-them&#34;&gt;What about disorders? How does your &lt;code&gt;HumanPilot&lt;/code&gt; study help us understand them?&lt;/h2&gt;
+&lt;p&gt;As you have followed the story so far, our data is from 3 neurotypical control donors. It’s not like we can use their data to find what is different between them and individuals affected by other disorders. But what we can do is ask, is there a significant overlap between the DLPFC layer marker genes and genes that have been associated with specific disorders?&lt;/p&gt;
+&lt;script defer class=&#34;speakerdeck-embed&#34; data-slide=&#34;21&#34; data-id=&#34;dde92cd6dfc04f9589770e074915658f&#34; data-ratio=&#34;1.3333333333333333&#34; src=&#34;//speakerdeck.com/assets/embed.js&#34;&gt;&lt;/script&gt;
+&lt;p&gt;So we obtained several gene lists from previous studies with much larger sample sizes that compared NTC donors against those affected by certain disorders. Some of these studies are based on gene activity levels, some of them are based on DNA variants which they then link to genes by proximity. One set of studies we looked at were those investigating autism spectrum disorder (ASD). What was fascinating to us is that two studies (SFARI and ASC102) had similar enrichment between ASD-associated genes and L2 and L5 marker genes. But the ASC102 study can be broken apart into two sets, ASD53 and DDID49, and each is associated with just one layer (L5 and L2, respectively).&lt;/p&gt;
+&lt;p&gt;So spatially-resolved transcriptomics could be used to further locate to specific tissue architectural elements the genes that have been implicated in different diseases, disorders, or biologically-relevant groups. Even small pilot studies like ours have the potential of helping us understand how some of these genes are distinctly spatially active.&lt;/p&gt;
+&lt;h2 id=&#34;fueling-the-development-of-methods-and-benefiting-from-it&#34;&gt;Fueling the development of methods, and benefiting from it&lt;/h2&gt;
+&lt;p&gt;We knew that this wasn’t going to be the end. Our &lt;code&gt;HumanPilot&lt;/code&gt; was just the beginning and for our research groups, it effectively started a whole new wave of studies. We are now using &lt;em&gt;Visium&lt;/em&gt; and other technologies to dive into other brain regions which aren’t necessarily as well studied as the DLPFC, or to look at differences between specific sets of groups of donors. Yet, this isn’t our first time witnessing the emergence of a brand new technology. We are well aware that each new technology has its imperfections, biases, and sources of measurement noise. One particular challenge we wanted help with was the process of manually annotating thousands of spots.&lt;/p&gt;
+&lt;script defer class=&#34;speakerdeck-embed&#34; data-slide=&#34;23&#34; data-id=&#34;dde92cd6dfc04f9589770e074915658f&#34; data-ratio=&#34;1.3333333333333333&#34; src=&#34;//speakerdeck.com/assets/embed.js&#34;&gt;&lt;/script&gt;
+&lt;p&gt;In our dataset, we had manual annotations. So we went ahead and tested a few different ways of grouping spots, known as clustering.&lt;/p&gt;
+&lt;script defer class=&#34;speakerdeck-embed&#34; data-slide=&#34;26&#34; data-id=&#34;dde92cd6dfc04f9589770e074915658f&#34; data-ratio=&#34;1.3333333333333333&#34; src=&#34;//speakerdeck.com/assets/embed.js&#34;&gt;&lt;/script&gt;
+&lt;p&gt;Any computational clustering method will produce results and pretty pictures. By eye, sometimes you can tell quite easily what is a widely inaccurate result from one that seems decent enough. But comparing decent results from two methods by eye is very challenging.&lt;/p&gt;
+&lt;script defer class=&#34;speakerdeck-embed&#34; data-slide=&#34;27&#34; data-id=&#34;dde92cd6dfc04f9589770e074915658f&#34; data-ratio=&#34;1.3333333333333333&#34; src=&#34;//speakerdeck.com/assets/embed.js&#34;&gt;&lt;/script&gt;
+&lt;p&gt;We used a measure called adjusted rand index to do this, where higher values are better. Here we did a few key things:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;We made our data public as soon as we pre-printed our study in Feb 29, 2020.
+&lt;ul&gt;
+&lt;li&gt;That is, we didn’t wait for a full peer-review process (our paper was published in Feb 8th 2021, nearly a year later). Openly sharing data early can help accelerate science.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;We made our data easy to access in a easy to use computational format.
+&lt;ul&gt;
+&lt;li&gt;specifically, &lt;code&gt;SingleCellExperiment&lt;/code&gt; R/Bioconductor objects downloadable through &lt;a href=&#34;https://research.libd.org/spatialLIBD/reference/fetch_data.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;spatialLIBD::fetch_data()&lt;/code&gt;&lt;/a&gt;. Nowadays, we provide the data in the more specialized &lt;code&gt;SpatialExperiment&lt;/code&gt; format.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;We showed how you can compare results from clustering methods to the manual annotation using the adjusted rand index metric.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;script defer class=&#34;speakerdeck-embed&#34; data-slide=&#34;28&#34; data-id=&#34;dde92cd6dfc04f9589770e074915658f&#34; data-ratio=&#34;1.3333333333333333&#34; src=&#34;//speakerdeck.com/assets/embed.js&#34;&gt;&lt;/script&gt;
+&lt;p&gt;Within months, others such as the authors of &lt;em&gt;BayesSpace&lt;/em&gt; in September 5th 2020, started to use our &lt;code&gt;HumanPilot&lt;/code&gt; data to evaluate the performance of their sophisticated spatially-aware clustering methods.&lt;/p&gt;
+&lt;script defer class=&#34;speakerdeck-embed&#34; data-slide=&#34;18&#34; data-id=&#34;63b3cfba8f404d52b6a6f472056024bd&#34; data-ratio=&#34;1.3333333333333333&#34; src=&#34;//speakerdeck.com/assets/embed.js&#34;&gt;&lt;/script&gt;
+&lt;p&gt;This rapid pace of development has been great to witness. We now have been able to see how others have used our data to improve their methods, and we can now benefit from them by applying them to new &lt;em&gt;Visium&lt;/em&gt; datasets without necessarily having to perform manual annotations.&lt;/p&gt;
+&lt;h2 id=&#34;what-followed&#34;&gt;What followed&lt;/h2&gt;
+&lt;p&gt;Naturally we heard questions about what could happen if we had a larger pilot study. If we looked at different sections of DLPFC (anterior, middle, posterior). Today, our follow up peer-reviewed study was published involving data from 10 NTC donors across the anterior-posterior axis for a total of 30 &lt;em&gt;Visium&lt;/em&gt; tissue slices. I’ll soon explain this follow up study, which we called &lt;code&gt;spatialDLPFC&lt;/code&gt;, in its own blog post. Louise A. Huuki-Myers already wrote an &lt;a href=&#34;https://lahuuki.github.io/posts/2024-05-23-spatialDLPFC/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;excellent &lt;code&gt;spatialDLPFC&lt;/code&gt; overview blog post which I encourage you to read&lt;/a&gt;.&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;New in &lt;a href=&#34;https://twitter.com/ScienceMagazine?ref_src=twsrc%5Etfw&#34;&gt;@sciencemagazine&lt;/a&gt;: our work from &lt;a href=&#34;https://twitter.com/LieberInstitute?ref_src=twsrc%5Etfw&#34;&gt;@LieberInstitute&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/spatialDLPFC?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#spatialDLPFC&lt;/a&gt; applies &lt;a href=&#34;https://twitter.com/hashtag/snRNAseq?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#snRNAseq&lt;/a&gt; and &lt;a href=&#34;https://twitter.com/hashtag/Visium?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#Visium&lt;/a&gt; spatial transcriptomic in the DLPFC to better understand anatomical structure and cellular populations in the human brain &lt;a href=&#34;https://twitter.com/hashtag/PsychENCODE?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#PsychENCODE&lt;/a&gt; &lt;a href=&#34;https://t.co/DKZqmG4YDi&#34;&gt;https://t.co/DKZqmG4YDi&lt;/a&gt; &lt;a href=&#34;https://t.co/Tjp2OjTo63&#34;&gt;https://t.co/Tjp2OjTo63&lt;/a&gt; &lt;a href=&#34;https://t.co/vQbjts2JtQ&#34;&gt;pic.twitter.com/vQbjts2JtQ&lt;/a&gt;&lt;/p&gt;&amp;mdash; Louise Huuki-Myers (@lahuuki) &lt;a href=&#34;https://twitter.com/lahuuki/status/1793714294334648638?ref_src=twsrc%5Etfw&#34;&gt;May 23, 2024&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;p&gt;Something I want to highlight is that my colleague Kristen R. Maynard and I were co-first authors of &lt;code&gt;HumanPilot&lt;/code&gt;, and are now co-corresponding authors of &lt;code&gt;spatialDLPFC&lt;/code&gt;. &lt;code&gt;HumanPilot&lt;/code&gt; started in 2019 and was published in 2021, &lt;code&gt;spatialDLPFC&lt;/code&gt; started in 2020 and was published in 2024. These projects have large cycles and it takes a whole village, or a federation of villages, to get them completed and published. So I want to shout out all past colleagues. We couldn’t have gotten to where we are without their work! And thank you for everyone who has been interested in our work and has been using it to learn new things. We also learn through you. Thank you!!!&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Self-assessment can be repetitive - or maybe not? 🤔 This caught my attention in recent spatial omics literature (but apparently not the authors&amp;#39;?)... &amp;quot;More of a comment than a question&amp;quot; that we need benchmarks. &lt;a href=&#34;https://t.co/KPRTf0vUxv&#34;&gt;pic.twitter.com/KPRTf0vUxv&lt;/a&gt;&lt;/p&gt;&amp;mdash; Helena Lucia Crowell (@helucro) &lt;a href=&#34;https://twitter.com/helucro/status/1597579271945715717?ref_src=twsrc%5Etfw&#34;&gt;November 29, 2022&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;p&gt;Hopefully you have a better understanding of our &lt;code&gt;HumanPilot&lt;/code&gt; study now and can recognize the origin of all the figures like the ones above. If you want more, check out this journal club presentation by Cynthia Soto and Daianna Gonzalez-Padilla. They are members of my lab, but were not involved in this study at all. So their presentation has a fresh perspective.&lt;/p&gt;
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/qloLbG5-IPM?si=u5uXT3x4ShfF25mi&#34; title=&#34;YouTube video player&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; allowfullscreen&gt;
+&lt;/iframe&gt;
+&lt;p&gt;Finally, feel free to checkout our code and more details at &lt;a href=&#34;https://github.com/LieberInstitute/HumanPilot&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://github.com/LieberInstitute/HumanPilot&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;See you around! 😊&lt;/p&gt;
+&lt;h2 id=&#34;acknowledgments&#34;&gt;Acknowledgments&lt;/h2&gt;
+&lt;p&gt;This blog post was made possible thanks to:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;&lt;a href=&#34;https://bioconductor.org/packages/3.19/BiocStyle&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;BiocStyle&lt;/a&gt;&lt;/em&gt; &lt;a id=&#39;cite-Oles_2024&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://github.com/Bioconductor/BiocStyle&#39;&gt;Oleś, 2024&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;a href=&#34;https://CRAN.R-project.org/package=blogdown&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;blogdown&lt;/a&gt;&lt;/em&gt; &lt;a id=&#39;cite-Xie_2017&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://bookdown.org/yihui/blogdown/&#39;&gt;Xie, Hill, and Thomas, 2017&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;a href=&#34;https://CRAN.R-project.org/package=knitcitations&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;knitcitations&lt;/a&gt;&lt;/em&gt; &lt;a id=&#39;cite-Boettiger_2021&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://CRAN.R-project.org/package=knitcitations&#39;&gt;Boettiger, 2021&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;references&#34;&gt;References&lt;/h2&gt;
+&lt;p&gt;
+&lt;a id=&#39;bib-Boettiger_2021&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-Boettiger_2021&#34;&gt;\[1\]&lt;/a&gt;&lt;cite&gt;
+C. Boettiger.
+&lt;em&gt;knitcitations: Citations for ‘Knitr’ Markdown Files&lt;/em&gt;.
+R package version 1.0.12.
+2021.
+URL: &lt;a href=&#34;https://CRAN.R-project.org/package=knitcitations&#34;&gt;https://CRAN.R-project.org/package=knitcitations&lt;/a&gt;.&lt;/cite&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;a id=&#39;bib-Maynard_2021&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-Maynard_2021&#34;&gt;\[2\]&lt;/a&gt;&lt;cite&gt;
+K. R. Maynard, L. Collado-Torres, L. M. Weber, C. Uytingco, et al.
+“Transcriptome-scale spatial gene expression in the human dorsolateral prefrontal cortex”.
+In: &lt;em&gt;Nature Neuroscience&lt;/em&gt; (2021).
+DOI: &lt;a href=&#34;https://doi.org/10.1038/s41593-020-00787-0&#34;&gt;10.1038/s41593-020-00787-0&lt;/a&gt;.
+URL: &lt;a href=&#34;https://www.nature.com/articles/s41593-020-00787-0&#34;&gt;https://www.nature.com/articles/s41593-020-00787-0&lt;/a&gt;.&lt;/cite&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;a id=&#39;bib-Oles_2024&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-Oles_2024&#34;&gt;\[3\]&lt;/a&gt;&lt;cite&gt;
+A. Oleś.
+&lt;em&gt;BiocStyle: Standard styles for vignettes and other Bioconductor documents&lt;/em&gt;.
+R package version 2.32.0.
+2024.
+URL: &lt;a href=&#34;https://github.com/Bioconductor/BiocStyle&#34;&gt;https://github.com/Bioconductor/BiocStyle&lt;/a&gt;.&lt;/cite&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;a id=&#39;bib-Pardo_2022&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-Pardo_2022&#34;&gt;\[4\]&lt;/a&gt;&lt;cite&gt;
+B. Pardo, A. Spangler, L. M. Weber, S. C. Hicks, et al.
+“spatialLIBD: an R/Bioconductor package to visualize spatially-resolved transcriptomics data”.
+In: &lt;em&gt;BMC Genomics&lt;/em&gt; (2022).
+DOI: &lt;a href=&#34;https://doi.org/10.1186/s12864-022-08601-w&#34;&gt;10.1186/s12864-022-08601-w&lt;/a&gt;.
+URL: &lt;a href=&#34;https://doi.org/10.1186/s12864-022-08601-w&#34;&gt;https://doi.org/10.1186/s12864-022-08601-w&lt;/a&gt;.&lt;/cite&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;a id=&#39;bib-Xie_2017&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-Xie_2017&#34;&gt;\[5\]&lt;/a&gt;&lt;cite&gt;
+Y. Xie, A. P. Hill, and A. Thomas.
+&lt;em&gt;blogdown: Creating Websites with R Markdown&lt;/em&gt;.
+Boca Raton, Florida: Chapman and Hall/CRC, 2017.
+ISBN: 978-0815363729.
+URL: &lt;a href=&#34;https://bookdown.org/yihui/blogdown/&#34;&gt;https://bookdown.org/yihui/blogdown/&lt;/a&gt;.&lt;/cite&gt;
+&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>How to reduce the size of a large GitHub repo</title>
+      <link>https://lcolladotor.github.io/2024/04/11/how-to-reduce-the-size-of-a-large-github-repo/</link>
+      <pubDate>Thu, 11 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>https://lcolladotor.github.io/2024/04/11/how-to-reduce-the-size-of-a-large-github-repo/</guid>
+      <description>&lt;p&gt;&lt;em&gt;This work was done by Leo with &lt;a href=&#34;https://github.com/Erik-D-Nelson&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Erik Nelson&lt;/a&gt; and &lt;a href=&#34;https://github.com/RyAMiller&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Ryan Miller&lt;/a&gt;. Thank you for your time and input!&lt;/em&gt;&lt;/p&gt;
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Oh ohh! My &lt;code&gt;GitHub&lt;/code&gt; repository is huge! 😱 What do I do now?
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;iframe src=&#34;https://giphy.com/embed/0vTOscboHgOyBSuK4r&#34; width=&#34;480&#34; height=&#34;480&#34; frameBorder=&#34;0&#34; class=&#34;giphy-embed&#34; allowFullScreen&gt;&lt;/iframe&gt;&lt;p&gt;&lt;a href=&#34;https://giphy.com/stickers/GitHub-transparent-0vTOscboHgOyBSuK4r&#34;&gt;via GIPHY&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;our-story&#34;&gt;Our story&lt;/h2&gt;
+&lt;p&gt;That&amp;rsquo;s how things start. In our case, we had a repository that would download over 22.6 GB of data and use 55.9 GB of disk space. &lt;em&gt;Note: This repository is currently (April 15 2024) private, but will be made public soon.&lt;/em&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;% git clone git@github.com:LieberInstitute/spatial_hpc.git
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Cloning into &lt;span class=&#34;s1&#34;&gt;&amp;#39;spatial_hpc&amp;#39;&lt;/span&gt;...
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;remote: Enumerating objects: 18189, &lt;span class=&#34;k&#34;&gt;done&lt;/span&gt;.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;remote: Counting objects: 100% &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;1999/1999&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;, &lt;span class=&#34;k&#34;&gt;done&lt;/span&gt;.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;remote: Compressing objects: 100% &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;1026/1026&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;, &lt;span class=&#34;k&#34;&gt;done&lt;/span&gt;.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;remote: Total &lt;span class=&#34;m&#34;&gt;18189&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;delta 963&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;, reused &lt;span class=&#34;m&#34;&gt;1981&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;delta 950&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;, pack-reused &lt;span class=&#34;m&#34;&gt;16190&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Receiving objects: 100% &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;18189/18189&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;, 22.64 GiB &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; 12.90 MiB/s, &lt;span class=&#34;k&#34;&gt;done&lt;/span&gt;.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Resolving deltas: 100% &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;9734/9734&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;, &lt;span class=&#34;k&#34;&gt;done&lt;/span&gt;.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Updating files: 100% &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;6667/6667&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;, &lt;span class=&#34;k&#34;&gt;done&lt;/span&gt;.
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://lcolladotor.github.io/2024/04/11/how-to-reduce-the-size-of-a-large-github-repo/images/Screenshot_2024-04-11_at_2.13.10_PM.png&#34; alt=&#34;Originally the repository used 55.9 GB of disk space&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;We were able to reduce it such that it now downloads only 5.1 GB of data and takes 12.8 GB of disk space. While this could still be considered large by others, it&amp;rsquo;s much easier to download and tries to balance publicly providing some plots versus none.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;% git clone git@github.com:LieberInstitute/spatial_hpc.git
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Cloning into &lt;span class=&#34;s1&#34;&gt;&amp;#39;spatial_hpc&amp;#39;&lt;/span&gt;...
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;remote: Enumerating objects: 18451, &lt;span class=&#34;k&#34;&gt;done&lt;/span&gt;.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;remote: Counting objects: 100% &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;8112/8112&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;, &lt;span class=&#34;k&#34;&gt;done&lt;/span&gt;.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;remote: Compressing objects: 100% &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;2851/2851&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;, &lt;span class=&#34;k&#34;&gt;done&lt;/span&gt;.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;remote: Total &lt;span class=&#34;m&#34;&gt;18451&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;delta 4129&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;, reused &lt;span class=&#34;m&#34;&gt;7963&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;delta 4006&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;, pack-reused &lt;span class=&#34;m&#34;&gt;10339&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Receiving objects: 100% &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;18451/18451&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;, 5.13 GiB &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; 11.41 MiB/s, &lt;span class=&#34;k&#34;&gt;done&lt;/span&gt;.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Resolving deltas: 100% &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;9433/9433&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;, &lt;span class=&#34;k&#34;&gt;done&lt;/span&gt;.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Updating files: 100% &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;5784/5784&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;, &lt;span class=&#34;k&#34;&gt;done&lt;/span&gt;.
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://lcolladotor.github.io/2024/04/11/how-to-reduce-the-size-of-a-large-github-repo/images/Screenshot_2024-04-11_at_2.13.21_PM.png&#34; alt=&#34;Now the repository uses 12.8 GB of disk space&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    How were we able to achieve this? We used &lt;a href=&#34;https://rtyley.github.io/bfg-repo-cleaner/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;BFG Repo-Cleaner&lt;/code&gt;&lt;/a&gt; and removed all files over 10 MB except for two files that we wanted to keep.
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;h2 id=&#34;steps-by-steps&#34;&gt;Steps by steps&lt;/h2&gt;
+&lt;h3 id=&#34;get-your-workspace-ready&#34;&gt;Get your workspace ready&lt;/h3&gt;
+&lt;p&gt;We mostly work on a high performance computing (HPC) environment, aka a compute cluster, called &lt;a href=&#34;https://jhpce.jhu.edu/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;JHPCE&lt;/a&gt;. In general for our projects, we have very large files that we do not version control. That is, we ignore them thanks to one or multiple &lt;code&gt;.gitignore&lt;/code&gt; files. Given the complexity of differentiating version controlled files from ignored files, my recommendation is to work on your work computer (in my case, a laptop).&lt;/p&gt;
+&lt;p&gt;With this in mind, we did a fresh clone of the repository as shown previously.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;% git clone git@github.com:LieberInstitute/spatial_hpc.git
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Cloning into &lt;span class=&#34;s1&#34;&gt;&amp;#39;spatial_hpc&amp;#39;&lt;/span&gt;...
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;remote: Enumerating objects: 18189, &lt;span class=&#34;k&#34;&gt;done&lt;/span&gt;.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;remote: Counting objects: 100% &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;1999/1999&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;, &lt;span class=&#34;k&#34;&gt;done&lt;/span&gt;.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;remote: Compressing objects: 100% &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;1026/1026&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;, &lt;span class=&#34;k&#34;&gt;done&lt;/span&gt;.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;remote: Total &lt;span class=&#34;m&#34;&gt;18189&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;delta 963&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;, reused &lt;span class=&#34;m&#34;&gt;1981&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;delta 950&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;, pack-reused &lt;span class=&#34;m&#34;&gt;16190&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Receiving objects: 100% &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;18189/18189&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;, 22.64 GiB &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; 12.90 MiB/s, &lt;span class=&#34;k&#34;&gt;done&lt;/span&gt;.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Resolving deltas: 100% &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;9734/9734&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;, &lt;span class=&#34;k&#34;&gt;done&lt;/span&gt;.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Updating files: 100% &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;6667/6667&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;, &lt;span class=&#34;k&#34;&gt;done&lt;/span&gt;.
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This is also the first step that &lt;code&gt;BFG&lt;/code&gt; recommends that you do. In general, you want to make sure that you have a pristine copy that you can use as a fallback option in case anything goes wrong, and a working copy.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://rtyley.github.io/bfg-repo-cleaner/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://lcolladotor.github.io/2024/04/11/how-to-reduce-the-size-of-a-large-github-repo/images/Screenshot_2024-04-11_at_2.27.41_PM.png&#34; alt=&#34;Make a fresh git clone&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Note that we missed the &lt;code&gt;--mirror&lt;/code&gt; option, although as you&amp;rsquo;ll see later, we did need to have a full copy of our files in our computer. So I actually recommend that you &lt;strong&gt;do not use &lt;code&gt;--mirror&lt;/code&gt;&lt;/strong&gt;.
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;We also downloaded &lt;code&gt;BFG&lt;/code&gt;&amp;rsquo;s latest version: currently that is &lt;a href=&#34;https://repo1.maven.org/maven2/com/madgag/bfg/1.14.0/bfg-1.14.0.jar&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;v1.14.0&lt;/a&gt;. This downloads the &lt;code&gt;bfg-1.14.0.jar&lt;/code&gt; file. On a macOS computer, you also need to install &lt;code&gt;Java&lt;/code&gt; from &lt;a href=&#34;https://www.java.com/en/download/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.java.com/en/download/&lt;/a&gt;. As my macOS computer is from the &lt;em&gt;M series system (ARM64)&lt;/em&gt;, I did have to download the right version for it instead of the one from the big green button that downloads &lt;code&gt;Java&lt;/code&gt; for macOS Intel (incompatible with my computer!).&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://lcolladotor.github.io/2024/04/11/how-to-reduce-the-size-of-a-large-github-repo/images/Screenshot_2024-04-11_at_2.24.43_PM.png&#34; alt=&#34;Download the right version of Java for your macOS computer&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;You can then test that it&amp;rsquo;s all working as intended with this command:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;% java -jar ~/Desktop/bfg-1.14.0.jar
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;bfg 1.14.0
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Usage: bfg [options] [&amp;lt;repo&amp;gt;]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  -b, --strip-blobs-bigger-than &amp;lt;size&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                           strip blobs bigger than X (eg &amp;#39;128K&amp;#39;, &amp;#39;1M&amp;#39;, etc)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  -B, --strip-biggest-blobs NUM
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                           strip the top NUM biggest blobs
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  -bi, --strip-blobs-with-ids &amp;lt;blob-ids-file&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                           strip blobs with the specified Git object ids
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  -D, --delete-files &amp;lt;glob&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                           delete files with the specified names (eg &amp;#39;*.class&amp;#39;, &amp;#39;*.{txt,log}&amp;#39; - matches on file name, not path within repo)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  --delete-folders &amp;lt;glob&amp;gt;  delete folders with the specified names (eg &amp;#39;.svn&amp;#39;, &amp;#39;*-tmp&amp;#39; - matches on folder name, not path within repo)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  --convert-to-git-lfs &amp;lt;value&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                           extract files with the specified names (eg &amp;#39;*.zip&amp;#39; or &amp;#39;*.mp4&amp;#39;) into Git LFS
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  -rt, --replace-text &amp;lt;expressions-file&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                           filter content of files, replacing matched text. Match expressions should be listed in the file, one expression per line - by default, each expression is treated as a literal, but &amp;#39;regex:&amp;#39; &amp;amp; &amp;#39;glob:&amp;#39; prefixes are supported, with &amp;#39;==&amp;gt;&amp;#39; to specify a replacement string other than the default of &amp;#39;***REMOVED***&amp;#39;.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  -fi, --filter-content-including &amp;lt;glob&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                           do file-content filtering on files that match the specified expression (eg &amp;#39;*.{txt,properties}&amp;#39;)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  -fe, --filter-content-excluding &amp;lt;glob&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                           don&amp;#39;t do file-content filtering on files that match the specified expression (eg &amp;#39;*.{xml,pdf}&amp;#39;)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  -fs, --filter-content-size-threshold &amp;lt;size&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                           only do file-content filtering on files smaller than &amp;lt;size&amp;gt; (default is 1048576 bytes)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  -p, --protect-blobs-from &amp;lt;refs&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                           protect blobs that appear in the most recent versions of the specified refs (default is &amp;#39;HEAD&amp;#39;)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  --no-blob-protection     allow the BFG to modify even your *latest* commit. Not recommended: you should have already ensured your latest commit is clean.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  --private                treat this repo-rewrite as removing private data (for example: omit old commit ids from commit messages)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  --massive-non-file-objects-sized-up-to &amp;lt;size&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                           increase memory usage to handle over-size Commits, Tags, and Trees that are up to X in size (eg &amp;#39;10M&amp;#39;)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &amp;lt;repo&amp;gt;                   file path for Git repository to clean
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;diagnose&#34;&gt;Diagnose&lt;/h3&gt;
+&lt;p&gt;Once you have &lt;code&gt;BFG&lt;/code&gt; installed as well as a working clone (copy) of your &lt;code&gt;GitHub&lt;/code&gt; repository, you can proceed to identify large files. Say files larger than 100 MB. That is the strategy that you typically use when you version controlled large files and made other smaller commits, and now cannot &lt;code&gt;git push&lt;/code&gt; (upload files) to &lt;code&gt;GitHub&lt;/code&gt;. In our case, we had no files over 100 MB.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;% &lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; ~/Desktop/spatial_hpc
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;% java -jar ~/Desktop/bfg-1.14.0.jar --strip-blobs-bigger-than &lt;span class=&#34;s1&#34;&gt;&amp;#39;100M&amp;#39;&lt;/span&gt; .git
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Using repo : /Users/leocollado/Dropbox/Mac/Desktop/spatial_hpc/.git
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Scanning packfile &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; large blobs: &lt;span class=&#34;m&#34;&gt;18215&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Scanning packfile &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; large blobs completed in &lt;span class=&#34;m&#34;&gt;89&lt;/span&gt; ms.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Warning : no large blobs matching criteria found in packfiles - does the repo need to be packed?
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;So we then proceeded to check files over 10 MB (we also checked files over 50 MB but we won&amp;rsquo;t talk about that analysis in this blog post). &lt;code&gt;BFG&lt;/code&gt; provides a lot of output as shown below. &lt;code&gt;BFG&lt;/code&gt; told us that we had 885 &amp;ldquo;dirty files&amp;rdquo;. These are files over 10 MB (the threshold value we specified) that are present in our latest version on &lt;code&gt;GitHub&lt;/code&gt;. It also found &amp;ldquo;clean files&amp;rdquo; over 10 MB, which are files that at some point we had version controlled but then deleted them. So they only exist in the &lt;code&gt;git&lt;/code&gt; history in case we need to go back in time, but are not visible from the landing page on &lt;code&gt;GitHub&lt;/code&gt; (though you can use &lt;code&gt;GitHub&lt;/code&gt; to navigate the &lt;code&gt;git&lt;/code&gt; history if you want to).&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;% java -jar ~/Desktop/bfg-1.14.0.jar --strip-blobs-bigger-than &lt;span class=&#34;s1&#34;&gt;&amp;#39;10M&amp;#39;&lt;/span&gt; .git
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Using repo : /Users/leocollado/Dropbox/Mac/Desktop/spatial_hpc/.git
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Scanning packfile &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; large blobs: &lt;span class=&#34;m&#34;&gt;18215&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Scanning packfile &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; large blobs completed in &lt;span class=&#34;m&#34;&gt;91&lt;/span&gt; ms.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Found &lt;span class=&#34;m&#34;&gt;1130&lt;/span&gt; blob ids &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; large blobs - &lt;span class=&#34;nv&#34;&gt;biggest&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;97378037&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;smallest&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;10491618&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Total size &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;unpacked&lt;span class=&#34;o&#34;&gt;)=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;29298335089&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Found &lt;span class=&#34;m&#34;&gt;6108&lt;/span&gt; objects to protect
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Found &lt;span class=&#34;m&#34;&gt;4&lt;/span&gt; commit-pointing refs : HEAD, refs/heads/main, refs/remotes/origin/HEAD, refs/remotes/origin/main
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Protected commits
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-----------------
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;These are your protected commits, and so their contents will NOT be altered:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; * commit f5f9a19e &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;protected by &lt;span class=&#34;s1&#34;&gt;&amp;#39;HEAD&amp;#39;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; - contains &lt;span class=&#34;m&#34;&gt;885&lt;/span&gt; dirty files :
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	- code/enrichment_analysis/project_all/score/snRNAseq_aggregated_cpm.tsv &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;16.4 MB&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	- code/spot_deconvo/cell2location/02_registration_HE_broad_class.log &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;16.3 MB&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	- ...
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;WARNING: The dirty content above may be removed from other commits, but as
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;the *protected* commits still use it, it will STILL exist in your repository.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Details of protected dirty content have been recorded here :
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/Users/leocollado/Dropbox/Mac/Desktop/spatial_hpc/.git.bfg-report/2024-04-11/09-51-45/protected-dirt/
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;If you *really* want this content gone, make a manual commit that removes it,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;and &lt;span class=&#34;k&#34;&gt;then&lt;/span&gt; run the BFG on a fresh copy of your repo.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Cleaning
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;--------
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Found &lt;span class=&#34;m&#34;&gt;1561&lt;/span&gt; commits
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Cleaning commits:       100% &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;1561/1561&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Cleaning commits completed in 1,197 ms.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Updating &lt;span class=&#34;m&#34;&gt;2&lt;/span&gt; Refs
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;---------------
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	Ref                        Before     After
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	----------------------------------------------
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	refs/heads/main          &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; f5f9a19e &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; ba48bc2c
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	refs/remotes/origin/main &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; f5f9a19e &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; ba48bc2c
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Updating references:    100% &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;2/2&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;...Ref update completed in &lt;span class=&#34;m&#34;&gt;12&lt;/span&gt; ms.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Commit Tree-Dirt History
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;------------------------
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	Earliest                                              Latest
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;                                                          &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	..DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;nv&#34;&gt;D&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; dirty commits &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;file tree fixed&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;nv&#34;&gt;m&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; modified commits &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;commit message or parents changed&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	. &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; clean commits &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;no changes to file tree&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	                        Before     After
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	-------------------------------------------
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	First modified commit &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; 545cd363 &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; fcc2538e
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	Last dirty commit     &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; ead4cbed &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; 600580dd
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Deleted files
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-------------
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	Filename                                                          Git id
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	----------------------------------------------------------------------------------------------------------------------------
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	02_registration_HE_broad_class.log                              &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; de11acf2 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;12.9 MB&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;, 33ae1f4d &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;16.3 MB&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	02_registration_HE_layer.log                                    &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; ba6d1c7e &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;19.6 MB&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;, 279e5354 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;19.6 MB&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	2743.png                                                        &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; c734cb7d &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;11.3 MB&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	335.png                                                         &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; 602fc07e &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;18.8 MB&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	6423.png                                                        &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; 7071add9 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;15.4 MB&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	6432.png                                                        &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; 9b9d7fa6 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;13.2 MB&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	6471.png                                                        &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; 0f61bfd7 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;17.5 MB&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	6522.png                                                        &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; 573fab2b &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;19.8 MB&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	8325.png                                                        &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; 9cf4ff3e &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;22.0 MB&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	8492.png                                                        &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; 0a128ff1 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;10.2 MB&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	8667.png                                                        &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; 014ee77a &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;15.4 MB&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	AC005837.4.pdf                                                  &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; 0b12e443 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;32.4 MB&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	AC106795.2.pdf                                                  &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; 60dba623 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;32.4 MB&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;, ba037e7f &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;32.5 MB&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	AC108863.2.pdf                                                  &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; 56eb980a &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;32.4 MB&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	ACAP1_DOWN.pdf                                                  &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; 584afb1f &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;32.5 MB&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	...
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;In total, &lt;span class=&#34;m&#34;&gt;5160&lt;/span&gt; object ids were changed. Full details are logged here:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	/Users/leocollado/Dropbox/Mac/Desktop/spatial_hpc/.git.bfg-report/2024-04-11/09-51-45
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;BFG run is complete! When ready, run: git reflog expire --expire&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;now --all &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; git gc --prune&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;now --aggressive
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Among the output of &lt;code&gt;BFG&lt;/code&gt; was a CSV file which listed the 885 &amp;ldquo;dirty files&amp;rdquo;.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;% ls -lh /Users/leocollado/Dropbox/Mac/Desktop/spatial_hpc/.git.bfg-report/2024-04-11/09-51-45/protected-dirt/
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;total 132K
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-rw-r--r-- &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; leocollado staff 132K Apr &lt;span class=&#34;m&#34;&gt;11&lt;/span&gt; 09:51 f5f9a19e-HEAD.csv
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;With &lt;a href=&#34;https://cran.r-project.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;R&lt;/a&gt;, we can read that CSV file and help us diagnose our situation. We recommend that you inspect &lt;a href=&#34;https://github.com/lcolladotor/lcolladotor.github.com/blob/master/2024/04/11/how-to-reduce-the-size-of-a-large-github-repo/f5f9a19e-HEAD.csv&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;this CSV file&lt;/a&gt;, which will be ordered by file path.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## Read in the CSV file with R&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;ten&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;read.csv&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;f5f9a19e-HEAD.csv&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;header&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;FALSE&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## How many &amp;#34;dirty files&amp;#34; do we have?&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nf&#34;&gt;nrow&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ten&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## [1] 885
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## What&amp;#39;s the format of this CSV file?&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nf&#34;&gt;head&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ten&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;##                                         V1     V2           V3
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## 1 e00fd6349fcabdd740b396b230a74f9f0d136f2e DELETE   executable
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## 2 33ae1f4da994efaad1538c6d740ac22fb6f0aab4 DELETE regular-file
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## 3 279e53549e75b881fb7b063f05211fde529c17fb DELETE regular-file
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## 4 8e1c82f0c40758394abfc807a3fcc6094fef329d DELETE regular-file
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## 5 f41fa6e0e3e6a25b390aa33a4d4fa3c3b493d97a DELETE regular-file
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## 6 89f9bb0104d49d7584d712a8cde2e9a580356291 DELETE regular-file
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;##                                                                       V4
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## 1 code/enrichment_analysis/project_all/score/snRNAseq_aggregated_cpm.tsv
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## 2     code/spot_deconvo/cell2location/02_registration_HE_broad_class.log
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## 3           code/spot_deconvo/cell2location/02_registration_HE_layer.log
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## 4                                plots/02_build_spe/ReferenceMapping.pdf
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## 5                           plots/02_build_spe/ReferenceMapping_erik.pdf
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## 6                           plots/02_build_spe/prearrangedAllSamples.pdf
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;##         V5 V6
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## 1 17229010 NA
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## 2 17115444 NA
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## 3 20518064 NA
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## 4 54308266 NA
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## 5 54308266 NA
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## 6 25909369 NA
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The fourth column specifies the &lt;code&gt;file path&lt;/code&gt; and the fifth column specifies the &lt;code&gt;file size&lt;/code&gt; in bytes. Given that this project was organized according to our &lt;a href=&#34;https://github.com/LieberInstitute/template_project&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;template_project&lt;/code&gt;&lt;/a&gt;, Erik (who has been heavily involved in this project) could easily diagnose whether some of the listed files were important to share or whether they were older exploration results.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## Sort them by file size if you want to&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# ten &amp;lt;- ten[order(ten$V5, decreasing = TRUE), ]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## Check file size distribution in MB (1 MB = 1024^2 bytes)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nf&#34;&gt;summary&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ten&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;V5&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;/&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;1024&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;^2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;##   10.01   19.08   26.12   26.31   32.50   92.87
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nf&#34;&gt;boxplot&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ten&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;V5&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;/&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;1024&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;^2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;img src=&#34;https://lcolladotor.github.io/2024/04/11/how-to-reduce-the-size-of-a-large-github-repo/index.en_files/figure-html/unnamed-chunk-2-1.png&#34; width=&#34;672&#34; /&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## Explore frequency of file sizes rounded to 1 digit&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nf&#34;&gt;barplot&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;table&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;round&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ten&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;V5&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;/&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;1024&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;^2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)))&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;img src=&#34;https://lcolladotor.github.io/2024/04/11/how-to-reduce-the-size-of-a-large-github-repo/index.en_files/figure-html/unnamed-chunk-2-2.png&#34; width=&#34;672&#34; /&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## How much total space do these &amp;#34;dirty files&amp;#34; use?&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nf&#34;&gt;sum&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ten&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;V5&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;/&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;1024&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;^2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;## In MB&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## [1] 23285.45
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nf&#34;&gt;sum&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ten&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;V5&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;/&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;1024&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;^3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;## In GB&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## [1] 22.73969
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;A question Erik posed was: is it mostly plots? In general, you could use file extensions if you wanted. But in our case, thanks to &lt;a href=&#34;https://github.com/LieberInstitute/template_project&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;template_project&lt;/code&gt;&lt;/a&gt;, we can check what is the main directory for each file.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## Extract main directory from the file paths&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;dirname&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ten&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;V4&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;gsub&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;/.*&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## Explore how many files we have&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nf&#34;&gt;table&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## x
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;##           code          plots processed-data       raw-data   snRNAseq_hpc 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;##              3            505            368              2              7
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;We could then explore some of the odd cases.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## Visual inspection determined that we were OK deleting these files&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;ten[x&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;snRNAseq_hpc&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;##                                           V1     V2           V3
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## 879 f0d8bb12bbadda84ae3e98f431083e61620869b2 DELETE   executable
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## 880 68b61e75d861f5d960a96cbdcad7bb5c79a3e747 DELETE regular-file
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## 881 f7588d013685ebe907c972afd0aaf0935816df28 DELETE regular-file
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## 882 771e792004afef8ed2cc986eb9766b01bad4db4a DELETE regular-file
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## 883 204d559465dba1489955d5988a879c6cbb91a5b7 DELETE regular-file
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## 884 f5bb06176473e8112d00a1d355ccd048f4dc46c1 DELETE regular-file
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## 885 605957a9d3a9b2f2ed8d021dcf2c1482048f4f9a DELETE regular-file
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;##                                                               V4       V5 V6
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## 879                        snRNAseq_hpc/plots/02_qc/qc_plots.pdf 20223555 NA
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## 880                               snRNAseq_hpc/plots/QC_auto.pdf 41669358 NA
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## 881                           snRNAseq_hpc/plots/QC_semiauto.pdf 16580972 NA
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## 882                          snRNAseq_hpc/plots/QC_semiauto2.pdf 33358656 NA
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## 883    snRNAseq_hpc/plots/build_sce/UMAP_corrected_by_sample.pdf 18167086 NA
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## 884          snRNAseq_hpc/plots/build_sce/UMAPs_unccorrected.pdf 18047630 NA
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## 885 snRNAseq_hpc/plots/build_sce/UMAPs_unccorrected_filtered.pdf 16767377 NA
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## Same thing for these large &amp;#34;code&amp;#34; files (2 logs and one file that is not&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## needed to run the actual code and thus reproduce results)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;ten[x&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;code&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;##                                         V1     V2           V3
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## 1 e00fd6349fcabdd740b396b230a74f9f0d136f2e DELETE   executable
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## 2 33ae1f4da994efaad1538c6d740ac22fb6f0aab4 DELETE regular-file
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## 3 279e53549e75b881fb7b063f05211fde529c17fb DELETE regular-file
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;##                                                                       V4
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## 1 code/enrichment_analysis/project_all/score/snRNAseq_aggregated_cpm.tsv
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## 2     code/spot_deconvo/cell2location/02_registration_HE_broad_class.log
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## 3           code/spot_deconvo/cell2location/02_registration_HE_layer.log
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;##         V5 V6
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## 1 17229010 NA
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## 2 17115444 NA
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## 3 20518064 NA
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## These are important sample information files we do want to keep.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;ten[x&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;raw-data&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;##                                           V1     V2           V3
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## 877 f44d0d43bd507c0e33e9267ae1ba00fda71acf66 DELETE regular-file
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## 878 a3dd0e6f6056de3c11b4f3804b5ee40b39eabef4 DELETE regular-file
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;##                                                                                        V4
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## 877 raw-data/FASTQ/2022-12-07_NovaSeq_33v_scp/Visium_HPC_Round1-10_092622_Master_SCP.xlsx
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## 878                              raw-data/sample_info/Visium_HPC_Round3-8_033022_SCP.xlsx
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;##           V5 V6
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## 877 37226953 NA
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## 878 34649463 NA
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;remove-dirty-files&#34;&gt;Remove dirty files&lt;/h3&gt;
+&lt;p&gt;Once we have identified which files we no longer want to distribute through &lt;code&gt;GitHub&lt;/code&gt;, we can proceed to eliminate them from the &lt;code&gt;git&lt;/code&gt; history in our local working copy. Before we can use &lt;code&gt;BFG&lt;/code&gt;, we first have to &lt;em&gt;clean&lt;/em&gt; these &amp;ldquo;dirty files&amp;rdquo;. The first step is to remove them from the list of version controlled files using the &lt;code&gt;git rm&lt;/code&gt; command. However, &lt;strong&gt;we do want to keep a copy of these files&lt;/strong&gt;. So we use the &lt;code&gt;--cached&lt;/code&gt; option to do so.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## Change directory to the location of your local copy&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nf&#34;&gt;setwd&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;~/Desktop/spatial_hpc/&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## Create a list of commands&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;cmds&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;paste0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;git rm --cached &amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ten[x&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;!=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;raw-data&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;V4&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## Loop over and execute the commands with system()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kr&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;i&lt;/span&gt; &lt;span class=&#34;kr&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;seq_along&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cmds&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nf&#34;&gt;message&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;: &amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;Sys.time&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(),&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34; &amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;cmds[i]&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nf&#34;&gt;system&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cmds[i]&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Here&amp;rsquo;s how one of these commands would look like. We used &lt;code&gt;system()&lt;/code&gt; to actually run these commands on my macOS computer.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;cmds[1]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## [1] &amp;#34;git rm --cached code/enrichment_analysis/project_all/score/snRNAseq_aggregated_cpm.tsv&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;At this point, with &lt;code&gt;git rm&lt;/code&gt; we have told &lt;code&gt;git&lt;/code&gt; to no longer version control these 880+ files. To avoid the mistake of version controlling them again, we then added them to the main &lt;code&gt;.gitignore&lt;/code&gt; file using &lt;code&gt;readLines()&lt;/code&gt; and &lt;code&gt;writeLines()&lt;/code&gt;.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## Update our main .gitignore file with the list of files&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## we no longer want to version control.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;gitignore&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;readLines&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;.gitignore&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;gitignore&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;gitignore&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ten[x&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;!=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;raw-data&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;V4&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nf&#34;&gt;writeLines&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;gitignore&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;.gitignore&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;At this point, if you use &lt;code&gt;git status&lt;/code&gt;, you&amp;rsquo;ll see the long list of files marked for removal from version control.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;% git status
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;On branch main
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Your branch is ahead of &lt;span class=&#34;s1&#34;&gt;&amp;#39;origin/main&amp;#39;&lt;/span&gt; by &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; commit.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;use &lt;span class=&#34;s2&#34;&gt;&amp;#34;git push&amp;#34;&lt;/span&gt; to publish your &lt;span class=&#34;nb&#34;&gt;local&lt;/span&gt; commits&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Changes to be committed:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;use &lt;span class=&#34;s2&#34;&gt;&amp;#34;git restore --staged &amp;lt;file&amp;gt;...&amp;#34;&lt;/span&gt; to unstage&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	deleted:    plots/02_build_spe/ReferenceMapping.pdf
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	deleted:    plots/02_build_spe/ReferenceMapping_erik.pdf
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	deleted:    plots/02_build_spe/prearrangedAllSamples.pdf
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## and many more lines&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## Note that you should not see any untracked files listed at this step.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Next, you have to make a &lt;code&gt;git commit&lt;/code&gt; to finally unprotect these &amp;ldquo;dirty files&amp;rdquo;.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git commit -am &lt;span class=&#34;s2&#34;&gt;&amp;#34;Unprotecting files over 10 Mb so we can remove them from git history with BFG&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;editing-the-git-history&#34;&gt;Editing the &lt;code&gt;git&lt;/code&gt; history&lt;/h3&gt;
+&lt;p&gt;Now that we no longer have &amp;ldquo;dirty files&amp;rdquo; over 10 MB (except for the 2 Excel files we decided to keep), we can now run &lt;code&gt;BFG&lt;/code&gt; again. At this point, out of precaution, I did make a full copy of my local clone (copy) of the repository. Though in retrospect, you likely want to do this before you even run &lt;code&gt;BFG&lt;/code&gt; the very first time. That&amp;rsquo;s because &lt;code&gt;BFG&lt;/code&gt; will detect that it has been used before on a given &lt;code&gt;git&lt;/code&gt; repository and &lt;em&gt;will prune repo before proceeding&lt;/em&gt; which took about 6 minutes for us.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;% date
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Thu Apr &lt;span class=&#34;m&#34;&gt;11&lt;/span&gt; 11:27:06 EDT &lt;span class=&#34;m&#34;&gt;2024&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;% java -jar ~/Desktop/bfg-1.14.0.jar --strip-blobs-bigger-than &lt;span class=&#34;s1&#34;&gt;&amp;#39;10M&amp;#39;&lt;/span&gt; .git
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Using repo : /Users/leocollado/Dropbox/Mac/Desktop/spatial_hpc/.git
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;This repo has been processed by The BFG before! Will prune repo before proceeding - to avoid unnecessary cleaning work on unused objects...
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;date
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Completed prune of old objects - will now proceed with the main job!
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Scanning packfile &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; large blobs: &lt;span class=&#34;m&#34;&gt;42927&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Scanning packfile &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; large blobs completed in &lt;span class=&#34;m&#34;&gt;672&lt;/span&gt; ms.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Found &lt;span class=&#34;m&#34;&gt;1130&lt;/span&gt; blob ids &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; large blobs - &lt;span class=&#34;nv&#34;&gt;biggest&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;97378037&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;smallest&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;10491618&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Total size &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;unpacked&lt;span class=&#34;o&#34;&gt;)=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;29298335089&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Found &lt;span class=&#34;m&#34;&gt;5225&lt;/span&gt; objects to protect
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Found &lt;span class=&#34;m&#34;&gt;4&lt;/span&gt; commit-pointing refs : HEAD, refs/heads/main, refs/remotes/origin/HEAD, refs/remotes/origin/main
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Protected commits
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-----------------
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;These are your protected commits, and so their contents will NOT be altered:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; * commit 3d58fd38 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;protected by &lt;span class=&#34;s1&#34;&gt;&amp;#39;HEAD&amp;#39;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; - contains &lt;span class=&#34;m&#34;&gt;2&lt;/span&gt; dirty files :
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	- raw-data/FASTQ/2022-12-07_NovaSeq_33v_scp/Visium_HPC_Round1-10_092622_Master_SCP.xlsx &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;35.5 MB&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	- raw-data/sample_info/Visium_HPC_Round3-8_033022_SCP.xlsx &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;33.0 MB&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;WARNING: The dirty content above may be removed from other commits, but as
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;the *protected* commits still use it, it will STILL exist in your repository.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Details of protected dirty content have been recorded here :
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/Users/leocollado/Dropbox/Mac/Desktop/spatial_hpc/.git.bfg-report/2024-04-11/11-33-47/protected-dirt/
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;If you *really* want this content gone, make a manual commit that removes it,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;and &lt;span class=&#34;k&#34;&gt;then&lt;/span&gt; run the BFG on a fresh copy of your repo.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Cleaning
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;--------
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Found &lt;span class=&#34;m&#34;&gt;1563&lt;/span&gt; commits
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Cleaning commits:       100% &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;1563/1563&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Cleaning commits completed in 1,390 ms.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Updating &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; Ref
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;--------------
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	Ref               Before     After
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	-------------------------------------
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	refs/heads/main &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; 3d58fd38 &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; d598aefb
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Updating references:    100% &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;1/1&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;...Ref update completed in &lt;span class=&#34;m&#34;&gt;12&lt;/span&gt; ms.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Commit Tree-Dirt History
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;------------------------
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	Earliest                                              Latest
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;                                                          &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	...........................................................D
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;nv&#34;&gt;D&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; dirty commits &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;file tree fixed&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;nv&#34;&gt;m&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; modified commits &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;commit message or parents changed&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	. &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; clean commits &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;no changes to file tree&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	                        Before     After
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	-------------------------------------------
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	First modified commit &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; 0255622c &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; 35eacffa
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	Last dirty commit     &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; 0255622c &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; 35eacffa
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Deleted files
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-------------
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	Filename                                                          Git id
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	----------------------------------------------------------------------------------------------------------------------------
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	02_registration_HE_broad_class.log                              &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; de11acf2 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;12.9 MB&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;, 33ae1f4d &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;16.3 MB&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	02_registration_HE_layer.log                                    &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; ba6d1c7e &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;19.6 MB&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;, 279e5354 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;19.6 MB&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	2743.png                                                        &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; c734cb7d &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;11.3 MB&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	335.png                                                         &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; 602fc07e &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;18.8 MB&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	6423.png                                                        &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; 7071add9 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;15.4 MB&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	6432.png                                                        &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; 9b9d7fa6 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;13.2 MB&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	6471.png                                                        &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; 0f61bfd7 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;17.5 MB&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	6522.png                                                        &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; 573fab2b &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;19.8 MB&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	8325.png                                                        &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; 9cf4ff3e &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;22.0 MB&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	8492.png                                                        &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; 0a128ff1 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;10.2 MB&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	8667.png                                                        &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; 014ee77a &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;15.4 MB&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	AC005837.4.pdf                                                  &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; 0b12e443 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;32.4 MB&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	AC106795.2.pdf                                                  &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; 60dba623 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;32.4 MB&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;, ba037e7f &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;32.5 MB&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	AC108863.2.pdf                                                  &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; 56eb980a &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;32.4 MB&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	ACAP1_DOWN.pdf                                                  &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; 584afb1f &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;32.5 MB&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	...
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;In total, &lt;span class=&#34;m&#34;&gt;5168&lt;/span&gt; object ids were changed. Full details are logged here:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	/Users/leocollado/Dropbox/Mac/Desktop/spatial_hpc/.git.bfg-report/2024-04-11/11-33-47
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;BFG run is complete! When ready, run: git reflog expire --expire&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;now --all &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; git gc --prune&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;now --aggressive
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;% date
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Thu Apr &lt;span class=&#34;m&#34;&gt;11&lt;/span&gt; 11:33:49 EDT &lt;span class=&#34;m&#34;&gt;2024&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;As we can see on the output above, we do have 2 &amp;ldquo;dirty files&amp;rdquo;, but we knew about them. We can now proceed to run the commands &lt;code&gt;BFG&lt;/code&gt; tells us to use to actually edit the &lt;code&gt;git&lt;/code&gt; history.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git reflog expire --expire&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;now --all &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; git gc --prune&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;now --aggressive
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;We went to get lunch while this was happening, as my recollection was that this step can take a while to run. Though I forgot to time it this time around.&lt;/p&gt;
+&lt;h3 id=&#34;update-github&#34;&gt;Update &lt;code&gt;GitHub&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;We now have what we want: a much smaller &lt;code&gt;git&lt;/code&gt; repository with only the files we want version controlled. However, it&amp;rsquo;s not on &lt;code&gt;GitHub&lt;/code&gt; and also not in our HPC computers (JHPCE for us). So we need to proceed to update &lt;code&gt;GitHub&lt;/code&gt; first using &lt;code&gt;git push&lt;/code&gt; (upload command). As we are altering the &lt;code&gt;git&lt;/code&gt; history, we need to use a &lt;code&gt;git push --force&lt;/code&gt; command otherwise &lt;code&gt;GitHub&lt;/code&gt; would not let us do alter the history.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;% git push --force
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Enumerating objects: 18451, &lt;span class=&#34;k&#34;&gt;done&lt;/span&gt;.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Counting objects: 100% &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;18451/18451&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;, &lt;span class=&#34;k&#34;&gt;done&lt;/span&gt;.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Delta compression using up to &lt;span class=&#34;m&#34;&gt;10&lt;/span&gt; threads
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Compressing objects: 100% &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;6684/6684&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;, &lt;span class=&#34;k&#34;&gt;done&lt;/span&gt;.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;remote: fatal: pack exceeds maximum allowed size &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;2.00 GiB&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;error: remote unpack failed: index-pack failed 14.02 MiB/s
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;To github.com:LieberInstitute/spatial_hpc.git
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; ! &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;remote rejected&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;   main -&amp;gt; main &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;failed&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;error: failed to push some refs to &lt;span class=&#34;s1&#34;&gt;&amp;#39;github.com:LieberInstitute/spatial_hpc.git&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;However, as you can see, we ran into the 2 GB limit &lt;code&gt;GitHub&lt;/code&gt; has for &lt;code&gt;git push&lt;/code&gt; commands.&lt;/p&gt;
+&lt;p&gt;Google searching the error, we easily found &lt;a href=&#34;https://docs.github.com/en/get-started/using-git/troubleshooting-the-2-gb-push-limit&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;this excellent documentation page&lt;/a&gt;. It didn&amp;rsquo;t exist (or I didn&amp;rsquo;t find it) a few years ago and it was quite straightforward to understand in contrast to previous Stack Overflow answers I remember struggling with back then.&lt;/p&gt;
+&lt;p&gt;Looking at &lt;a href=&#34;https://github.com/LieberInstitute/spatial_hpc&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;our repository on GitHub&lt;/a&gt;, we saw that we have a bit over 1,500 commits. So searching every 1,000 commits most likely wasn&amp;rsquo;t going to work for us as the &lt;code&gt;GitHub&lt;/code&gt; documentation suggested given that we would most likely run again into the 2 GB upload limit. We decided to roll with 200 commits at a time hoping that this would give us a small enough set of commit IDs to make incremental &lt;code&gt;git push&lt;/code&gt;es, but without exceeding the 2 GB upload limit &lt;code&gt;GitHub&lt;/code&gt; enforces.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;% git log --oneline --reverse refs/heads/main &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; awk &lt;span class=&#34;s1&#34;&gt;&amp;#39;NR % 200 == 0&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;d983b009 marker gene plots
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;df46ec6e log file &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; BayesSpace rerun k15, long array
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;066777d0 Added a README.md file and softlinks &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; round9 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;samples 33v-36v&lt;span class=&#34;o&#34;&gt;)[&lt;/span&gt;33v sample &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;10ul&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; library MiSeq and NovaSeq,samples 34v-26v NovaSeq&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;51ec749f rerun VNS &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; sample &lt;span class=&#34;m&#34;&gt;36&lt;/span&gt; with more memory
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;fd032a96 tangram logs 4,5,6
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;e9e6526f run updated code on sample &lt;span class=&#34;m&#34;&gt;24&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;9572195c updated samui image stitching script to remove banding from center of the image and average pixel intensity of the image overlaps
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Thanks to the commit messages, Erik and Ryan could easily detect that the commit IDs were ordered by time such that the last commit was one of the most recent ones. We thus proceeded to run each of the &lt;code&gt;git push&lt;/code&gt; commands. Note that we used &lt;code&gt;git push --force&lt;/code&gt; on our first commit. After this, our repository on &lt;code&gt;GitHub&lt;/code&gt; &lt;a href=&#34;https://github.com/LieberInstitute/spatial_hpc/tree/d983b009&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;listed only 200 commits&lt;/a&gt;: what we wanted to do.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;% git push --force origin d983b009:refs/heads/main
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Enumerating objects: 2253, &lt;span class=&#34;k&#34;&gt;done&lt;/span&gt;.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Counting objects: 100% &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;2253/2253&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;, &lt;span class=&#34;k&#34;&gt;done&lt;/span&gt;.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Delta compression using up to &lt;span class=&#34;m&#34;&gt;10&lt;/span&gt; threads
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Compressing objects: 100% &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;1009/1009&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;, &lt;span class=&#34;k&#34;&gt;done&lt;/span&gt;.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Writing objects: 100% &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;2253/2253&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;, 633.78 MiB &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; 36.74 MiB/s, &lt;span class=&#34;k&#34;&gt;done&lt;/span&gt;.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Total &lt;span class=&#34;m&#34;&gt;2253&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;delta 1176&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;, reused &lt;span class=&#34;m&#34;&gt;1987&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;delta 1085&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;, pack-reused &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;from 0&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;remote: Resolving deltas: 100% &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;1176/1176&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;, &lt;span class=&#34;k&#34;&gt;done&lt;/span&gt;.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;To github.com:LieberInstitute/spatial_hpc.git
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; + f5f9a19e...d983b009 d983b009 -&amp;gt; main &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;forced update&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Some of them got close to the 2 GB limit (like 1.5 GB), but they were all fine.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## Commands shown with no output&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;% git push origin df46ec6e:refs/heads/main
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;% git push origin 066777d0:refs/heads/main
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;% git push origin 51ec749f:refs/heads/main
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;% git push origin fd032a96:refs/heads/main
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;% git push origin e9e6526f:refs/heads/main
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;% git push origin 9572195c:refs/heads/main
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;% git push
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Note the last &lt;code&gt;git push&lt;/code&gt; we did at the end, which was needed to upload the last left over commits. Also note that this step was fairly simple for us as we only have 1 development branch called &lt;code&gt;main&lt;/code&gt; for this project, instead of working across multiple &lt;code&gt;git&lt;/code&gt; branches. If you are working with multiple branches, you might have to do quite a bit of extra work.&lt;/p&gt;
+&lt;h3 id=&#34;updating-hpc-files&#34;&gt;Updating HPC files&lt;/h3&gt;
+&lt;p&gt;Are we done yet? Close! We have what we want in our local git clone (copy) on my laptop as well as at &lt;code&gt;GitHub&lt;/code&gt;, but not in our HPC computers (JHPCE for us). We followed this &lt;a href=&#34;https://stackoverflow.com/a/9813888&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Stack Overflow solution&lt;/a&gt; to update files at JHPCE:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## Log in to your HPC system (JHPCE for us)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## Navigate to the directory where the data lives at JHPCE&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; /dcs04/lieber/lcolladotor/spatialHPC_LIBD4035/spatial_hpc
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## Download all files from GitHub to our HPC (JHPCE)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git fetch
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## Force update the &amp;#34;main&amp;#34; branch&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git reset origin/main --hard
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;At this point, we did run into a warning because I didn&amp;rsquo;t have the permissions to delete one file.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;warning: unable to unlink &lt;span class=&#34;s1&#34;&gt;&amp;#39;code/enrichment_analysis/project_all/score/snRNAseq_aggregated_cpm.tsv&amp;#39;&lt;/span&gt;: Permission denied
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;As you might already be wondering, &lt;code&gt;git reset origin/main --hard&lt;/code&gt; did erase all 880+ files (except the one I didn&amp;rsquo;t have permissions for) over 10 Mb that we deleted from &lt;code&gt;git&lt;/code&gt; and &lt;code&gt;GitHub&lt;/code&gt;. But we wanted to have them at JHPCE. This is where having a local copy in our laptop becomes handy. We then used &lt;code&gt;rsync&lt;/code&gt; to upload back these files to our HPC computers from my laptop.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## From your computer (my laptop in this case), upload the local files you have&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## that were deleted from git / GitHub that you want to have in your HPC system&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;rsync -avhP . lcollado@jhpce-transfer01.jhsph.edu:/dcs04/lieber/lcolladotor/spatialHPC_LIBD4035/spatial_hpc
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;However, this process broke some file permissions. As we already have a &lt;a href=&#34;https://lcolladotor.github.io/bioc_team_ds/organizing-your-work.html#dcs04-scripts&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;script for updating permissions&lt;/a&gt;, I simply re-ran it at JHPCE with:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## Log in to your HPC system (JHPCE for us)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## Navigate to the directory where the data lives at JHPCE&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ &lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; /dcs04/lieber/lcolladotor/spatialHPC_LIBD4035/spatial_hpc
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## Run script for updating permissions&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ sh /dcs04/lieber/lcolladotor/_jhpce_org_LIBD001/update_permissions_spatialteam.sh .
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;**** Updating permissions &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; . ****
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Thu Apr &lt;span class=&#34;m&#34;&gt;11&lt;/span&gt; 01:49:01 PM EDT &lt;span class=&#34;m&#34;&gt;2024&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;**** Note that warning/error messages are expected &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; files and directories that you are not the owner of.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;The expected warning/error messages are:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;s1&#34;&gt;&amp;#39;chgrp: changing group of ‘some_JHPCE_file_path’: Operation not permitted&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; or &lt;span class=&#34;s1&#34;&gt;&amp;#39;chmod: changing permissions of ‘some_JHPCE_file_path’: Operation not permitted&amp;#39;&lt;/span&gt;.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;If &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; many files you are not the owner &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;creator of&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;, you will get lots of these warning/error messages, this is expected!
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Error or warnings with another syntax are likely real. ****
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;You will need to re-run this script anytime you upload files to JHPCE through Cyberduck / WinSCP as they &lt;span class=&#34;nb&#34;&gt;break&lt;/span&gt; the ACLs.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Every new team member on a given project will likely also need to run this script once.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;For more details about setting permissions at JHPCE using ACLs, please check https://lcolladotor.github.io/bioc_team_ds/organizing-your-work.html#setting-jhpce-file-permissions.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;This message will be displayed &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;90&lt;/span&gt; seconds before the script proceeds.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;That way you will have &lt;span class=&#34;nb&#34;&gt;time&lt;/span&gt; enough to &lt;span class=&#34;nb&#34;&gt;read&lt;/span&gt; it and/or copy it.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;**** Setting &lt;span class=&#34;nb&#34;&gt;read&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;R&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;, write &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;W&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;, and execute &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;X&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; permissions &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; hickslab ****
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Thu Apr &lt;span class=&#34;m&#34;&gt;11&lt;/span&gt; 01:50:36 PM EDT &lt;span class=&#34;m&#34;&gt;2024&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## truncated output&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;**** Setting the group sticky bit ****
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Thu Apr &lt;span class=&#34;m&#34;&gt;11&lt;/span&gt; 03:05:53 PM EDT &lt;span class=&#34;m&#34;&gt;2024&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;**** Checking the nfs4 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;ACLs&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; settings ****
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Thu Apr &lt;span class=&#34;m&#34;&gt;11&lt;/span&gt; 03:07:11 PM EDT &lt;span class=&#34;m&#34;&gt;2024&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# file: .&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;A::OWNER@:rwaDxtTcCy
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;A::GROUP@:rxtcy
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;A:g:lieber_lcolladotor@cm.cluster:rwaDxtcy
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;A:g:lieber_marmaypag@cm.cluster:rwaDxtcy
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;A:g:hickslab@cm.cluster:rxtcy
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;A::EVERYONE@:rxtcy
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;A:fdi:OWNER@:rwaDxtTcCy
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;A:fdi:GROUP@:rwaDxtcy
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;A:fdig:lieber_lcolladotor@cm.cluster:rwaDxtcy
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;A:fdig:lieber_marmaypag@cm.cluster:rwaDxtcy
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;A:fdig:hickslab@cm.cluster:rwaDxtcy
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;A:fdi:EVERYONE@:tcy
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Now everyone else involved in this team project can keep working with the files at JHPCE and &lt;code&gt;GitHub&lt;/code&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;finishing-step&#34;&gt;Finishing step&lt;/h3&gt;
+&lt;p&gt;Erik will check if any of the 880+ files over 10 MB that we deleted from the &lt;code&gt;git&lt;/code&gt; history (and currently have at JHPCE but are &lt;a href=&#34;https://github.com/LieberInstitute/spatial_hpc&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;not on &lt;code&gt;GitHub&lt;/code&gt;&lt;/a&gt; ) are actually files we should have on &lt;code&gt;GitHub&lt;/code&gt;. If so, he&amp;rsquo;ll edit the &lt;a href=&#34;https://github.com/LieberInstitute/spatial_hpc/blob/cc25a36304a6ba0db1c709362e984361cb0cbe6f/.gitignore#L5-L887&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;main &lt;code&gt;.gitignore&lt;/code&gt;&lt;/a&gt; accordingly (remove them from the main &lt;code&gt;.gitignore&lt;/code&gt; ) + then &lt;code&gt;git add&lt;/code&gt; them again.&lt;/p&gt;
+&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;
+&lt;p&gt;This whole process took about three and a half hours. I hadn&amp;rsquo;t done something like this in a while so my memory wasn&amp;rsquo;t fresh. That&amp;rsquo;s why I&amp;rsquo;m writing this blog post, so we can have a good guide for the next time we have to do this.&lt;/p&gt;
+&lt;p&gt;Here are some main notes:&lt;/p&gt;
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    &lt;ul&gt;
+&lt;li&gt;Announce about a week in advance that no one should be working on the files at your HPC system (JHPCE for us): &amp;ldquo;closed for maintenance ⚠️&amp;rdquo;
+&lt;ul&gt;
+&lt;li&gt;This will give people enough time to plan ahead.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Ask people to run the update permissions script in advance.
+&lt;ul&gt;
+&lt;li&gt;We got lucky this time with encountering only 1 restricted file!&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Work on a fresh &lt;code&gt;git clone&lt;/code&gt; in your laptop&lt;/li&gt;
+&lt;li&gt;Feel free to make a copy on your laptop before you use &lt;code&gt;BFG&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Work with people who are very familiar with the contents of the repository.
+&lt;ul&gt;
+&lt;li&gt;They will make crucial decisions on which files to keep or not!!&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Allocate plenty of time.
+&lt;ul&gt;
+&lt;li&gt;We spent about 4 hours, but you might want to plan for 4-6 hours.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Don&amp;rsquo;t copy paste more than 1 command into the terminal at a time.
+&lt;ul&gt;
+&lt;li&gt;You might encounter errors not previously documented!&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Enjoy! Best of luck with navigating similar situations.&lt;/p&gt;
+&lt;iframe src=&#34;https://giphy.com/embed/YrYcfEyBUZaOBagLJP&#34; width=&#34;414&#34; height=&#34;480&#34; frameBorder=&#34;0&#34; class=&#34;giphy-embed&#34; allowFullScreen&gt;&lt;/iframe&gt;&lt;p&gt;&lt;a href=&#34;https://giphy.com/gifs/cleaner-fabuloso-fabulosobottle-YrYcfEyBUZaOBagLJP&#34;&gt;via GIPHY&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;acknowledgments&#34;&gt;Acknowledgments&lt;/h2&gt;
+&lt;p&gt;This blog post was made possible thanks to:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;&lt;a href=&#34;https://bioconductor.org/packages/3.19/BiocStyle&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;BiocStyle&lt;/a&gt;&lt;/em&gt; &lt;a id=&#39;cite-Oles_2024&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://github.com/Bioconductor/BiocStyle&#39;&gt;Oleś, 2024&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;a href=&#34;https://CRAN.R-project.org/package=blogdown&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;blogdown&lt;/a&gt;&lt;/em&gt; &lt;a id=&#39;cite-Xie_2017&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://bookdown.org/yihui/blogdown/&#39;&gt;Xie, Hill, and Thomas, 2017&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;a href=&#34;https://CRAN.R-project.org/package=knitcitations&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;knitcitations&lt;/a&gt;&lt;/em&gt; &lt;a id=&#39;cite-Boettiger_2021&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://CRAN.R-project.org/package=knitcitations&#39;&gt;Boettiger, 2021&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;a href=&#34;https://CRAN.R-project.org/package=sessioninfo&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;sessioninfo&lt;/a&gt;&lt;/em&gt; &lt;a id=&#39;cite-Wickham_2021&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://CRAN.R-project.org/package=sessioninfo&#39;&gt;Wickham, Chang, Flight, Müller et al., 2021&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;references&#34;&gt;References&lt;/h2&gt;
+&lt;p&gt;&lt;a id=&#39;bib-Boettiger_2021&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-Boettiger_2021&#34;&gt;[1]&lt;/a&gt;&lt;cite&gt;
+C. Boettiger.
+&lt;em&gt;knitcitations: Citations for &#39;Knitr&#39; Markdown Files&lt;/em&gt;.
+R package version 1.0.12.
+2021.
+URL: &lt;a href=&#34;https://CRAN.R-project.org/package=knitcitations&#34;&gt;https://CRAN.R-project.org/package=knitcitations&lt;/a&gt;.&lt;/cite&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a id=&#39;bib-Oles_2024&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-Oles_2024&#34;&gt;[2]&lt;/a&gt;&lt;cite&gt;
+A. Oleś.
+&lt;em&gt;BiocStyle: Standard styles for vignettes and other Bioconductor documents&lt;/em&gt;.
+R package version 2.32.0.
+2024.
+URL: &lt;a href=&#34;https://github.com/Bioconductor/BiocStyle&#34;&gt;https://github.com/Bioconductor/BiocStyle&lt;/a&gt;.&lt;/cite&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a id=&#39;bib-Wickham_2021&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-Wickham_2021&#34;&gt;[3]&lt;/a&gt;&lt;cite&gt;
+H. Wickham, W. Chang, R. Flight, K. Müller, et al.
+&lt;em&gt;sessioninfo: R Session Information&lt;/em&gt;.
+R package version 1.2.2.
+2021.
+URL: &lt;a href=&#34;https://CRAN.R-project.org/package=sessioninfo&#34;&gt;https://CRAN.R-project.org/package=sessioninfo&lt;/a&gt;.&lt;/cite&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a id=&#39;bib-Xie_2017&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-Xie_2017&#34;&gt;[4]&lt;/a&gt;&lt;cite&gt;
+Y. Xie, A. P. Hill, and A. Thomas.
+&lt;em&gt;blogdown: Creating Websites with R Markdown&lt;/em&gt;.
+Boca Raton, Florida: Chapman and Hall/CRC, 2017.
+ISBN: 978-0815363729.
+URL: &lt;a href=&#34;https://bookdown.org/yihui/blogdown/&#34;&gt;https://bookdown.org/yihui/blogdown/&lt;/a&gt;.&lt;/cite&gt;&lt;/p&gt;
+&lt;h2 id=&#34;reproducibility&#34;&gt;Reproducibility&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-gdscript3&#34; data-lang=&#34;gdscript3&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## ─ Session info ───────────────────────────────────────────────────────────────────────────────────────────────────────&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;##  setting  value&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;##  version  R version 4.4.0 (2024-04-24)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;##  os       macOS Sonoma 14.5&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;##  system   aarch64, darwin20&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;##  ui       X11&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;##  language (EN)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;##  collate  en_US.UTF-8&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;##  ctype    en_US.UTF-8&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;##  tz       America/New_York&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;##  date     2024-05-23&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;##  pandoc   3.2 @ /opt/homebrew/bin/ (via rmarkdown)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## &lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## ─ Packages ───────────────────────────────────────────────────────────────────────────────────────────────────────────&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;##  package       * version    date (UTC) lib source&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;##  backports       1.4.1      2021-12-13 [1] CRAN (R 4.4.0)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;##  bibtex          0.5.1      2023-01-26 [1] CRAN (R 4.4.0)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;##  BiocManager     1.30.23    2024-05-04 [1] CRAN (R 4.4.0)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;##  BiocStyle     * 2.32.0     2024-04-30 [1] Bioconductor 3.19 (R 4.4.0)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;##  blogdown        1.19       2024-02-01 [1] CRAN (R 4.4.0)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;##  bookdown        0.39       2024-04-15 [1] CRAN (R 4.4.0)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;##  bslib           0.7.0      2024-03-29 [1] CRAN (R 4.4.0)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;##  cachem          1.1.0      2024-05-16 [1] CRAN (R 4.4.0)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;##  cli             3.6.2      2023-12-11 [1] CRAN (R 4.4.0)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;##  colorout      * 1.3-0.2    2024-05-03 [1] Github (jalvesaq/colorout@c6113a2)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;##  digest          0.6.35     2024-03-11 [1] CRAN (R 4.4.0)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;##  evaluate        0.23       2023-11-01 [1] CRAN (R 4.4.0)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;##  fastmap         1.2.0      2024-05-15 [1] CRAN (R 4.4.0)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;##  generics        0.1.3      2022-07-05 [1] CRAN (R 4.4.0)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;##  glue            1.7.0      2024-01-09 [1] CRAN (R 4.4.0)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;##  highr           0.10       2022-12-22 [1] CRAN (R 4.4.0)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;##  htmltools       0.5.8.1    2024-04-04 [1] CRAN (R 4.4.0)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;##  httr            1.4.7      2023-08-15 [1] CRAN (R 4.4.0)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;##  jquerylib       0.1.4      2021-04-26 [1] CRAN (R 4.4.0)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;##  jsonlite        1.8.8      2023-12-04 [1] CRAN (R 4.4.0)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;##  knitcitations * 1.0.12     2021-01-10 [1] CRAN (R 4.4.0)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;##  knitr           1.46       2024-04-06 [1] CRAN (R 4.4.0)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;##  lifecycle       1.0.4      2023-11-07 [1] CRAN (R 4.4.0)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;##  lubridate       1.9.3      2023-09-27 [1] CRAN (R 4.4.0)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;##  magrittr        2.0.3      2022-03-30 [1] CRAN (R 4.4.0)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;##  plyr            1.8.9      2023-10-02 [1] CRAN (R 4.4.0)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;##  R6              2.5.1      2021-08-19 [1] CRAN (R 4.4.0)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;##  Rcpp            1.0.12     2024-01-09 [1] CRAN (R 4.4.0)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;##  RefManageR      1.4.0      2022-09-30 [1] CRAN (R 4.4.0)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;##  rlang           1.1.3      2024-01-10 [1] CRAN (R 4.4.0)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;##  rmarkdown       2.27       2024-05-17 [1] CRAN (R 4.4.0)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;##  rstudioapi      0.16.0     2024-03-24 [1] CRAN (R 4.4.0)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;##  sass            0.4.9.9000 2024-05-03 [1] Github (rstudio/sass@9228fcf)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;##  sessioninfo   * 1.2.2      2021-12-06 [1] CRAN (R 4.4.0)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;##  stringi         1.8.4      2024-05-06 [1] CRAN (R 4.4.0)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;##  stringr         1.5.1      2023-11-14 [1] CRAN (R 4.4.0)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;##  timechange      0.3.0      2024-01-18 [1] CRAN (R 4.4.0)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;##  xfun            0.44       2024-05-15 [1] CRAN (R 4.4.0)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;##  xml2            1.3.6      2023-12-04 [1] CRAN (R 4.4.0)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;##  yaml            2.3.8      2023-12-11 [1] CRAN (R 4.4.0)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## &lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;##  [1] /Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/library&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## &lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+    
+    <item>
       <title>2024 Current Topics in Biostatistics guest seminar</title>
       <link>https://lcolladotor.github.io/talk/currentbiostats2024/</link>
       <pubDate>Thu, 22 Feb 2024 00:00:00 +0000</pubDate>
