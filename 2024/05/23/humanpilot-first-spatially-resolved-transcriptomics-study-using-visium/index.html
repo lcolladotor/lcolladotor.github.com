@@ -1,0 +1,1899 @@
+<!DOCTYPE html>
+<!-- This site was created with Wowchemy. https://www.wowchemy.com -->
+<!-- Last Published: May 23, 2024 --><html lang="en-us" >
+
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  
+  
+    <meta name="generator" content="Wowchemy 5.7.0 for Hugo" />
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  
+
+  
+  
+  
+    
+      
+      <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&family=Karma&family=Mina&display=swap">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&family=Karma&family=Mina&display=swap" media="print" onload="this.media='all'">
+    
+  
+
+  
+  
+
+  
+  
+    
+    <script src="/js/mathjax-config.js"></script>
+  
+
+  
+
+  <link rel="stylesheet" href="/css/vendor-bundle.min.047268c6dd09ad74ba54a0ba71837064.css" media="print" onload="this.media='all'">
+
+  
+  
+  
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.2/css/academicons.min.css" integrity="sha512-KlJCpRsLf+KKu2VQa5vmRuClRFjxc5lXO03ixZt82HZUk41+1I0bD8KBSA0fY290ayMfWYI9udIqeOWSu1/uZg==" crossorigin="anonymous" media="print" onload="this.media='all'">
+    
+
+    
+    
+    
+    
+      
+      
+    
+    
+    
+
+    
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.min.css" integrity="" crossorigin="anonymous" media="print" onload="this.media='all'">
+    
+
+    
+
+    
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+  
+
+  
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/wowchemy.cfa383012e109fa07dd80bafcdf476df.css" />
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+    
+    
+    <link rel="stylesheet" href="/css/libs/chroma/github-light.min.css" title="hl-light" media="print" onload="this.media='all'" >
+    <link rel="stylesheet" href="/css/libs/chroma/dracula.min.css" title="hl-dark" media="print" onload="this.media='all'" disabled>
+  
+
+  
+  
+
+
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3CBVR6GQ07"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+      dataLayer.push(arguments);
+  }
+
+  function trackOutboundLink(url, target) {
+    gtag('event', 'click', {
+         'event_category': 'outbound',
+         'event_label': url,
+         'transport_type': 'beacon',
+         'event_callback': function () {
+           if (target !== '_blank') {
+             document.location = url;
+           }
+         }
+    });
+    console.debug("Outbound link clicked: " + url);
+  }
+
+  function onClickCallback(event) {
+    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
+      return;
+    }
+    trackOutboundLink(event.target, event.target.getAttribute('target'));  
+  }
+
+  gtag('js', new Date());
+  gtag('config', 'G-3CBVR6GQ07', {});
+  gtag('set', {'cookie_flags': 'SameSite=None;Secure'});
+
+  
+  document.addEventListener('click', onClickCallback, false);
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+
+
+
+
+
+  <meta name="author" content="Leonardo Collado-Torres" />
+
+
+
+
+
+  
+
+<meta name="description" content="A few years ago now (2021) we published a study we refer to with a very generic name: HumanPilot (Maynard, Collado-Torres, Weber, Uytingco et al., 2021). In this peer-reviewed study, we were the first ones to use a commercially available technology for generating spatially-resolved transcriptomics data." />
+
+
+
+<link rel="alternate" hreflang="en-us" href="https://lcolladotor.github.io/2024/05/23/humanpilot-first-spatially-resolved-transcriptomics-study-using-visium/" />
+<link rel="canonical" href="https://lcolladotor.github.io/2024/05/23/humanpilot-first-spatially-resolved-transcriptomics-study-using-visium/" />
+
+
+
+  <link rel="manifest" href="/manifest.webmanifest" />
+
+
+
+<link rel="icon" type="image/png" href="/media/icon_hu2b32c4ab415f12f472f73c7b0301b0d1_19400_32x32_fill_lanczos_center_3.png" />
+<link rel="apple-touch-icon" type="image/png" href="/media/icon_hu2b32c4ab415f12f472f73c7b0301b0d1_19400_180x180_fill_lanczos_center_3.png" />
+
+<meta name="theme-color" content="#FF6771" />
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+<meta property="twitter:card" content="summary" />
+
+  <meta property="twitter:site" content="@lcolladotor" />
+  <meta property="twitter:creator" content="@lcolladotor" />
+<meta property="twitter:image" content="https://lcolladotor.github.io/media/icon_hu2b32c4ab415f12f472f73c7b0301b0d1_19400_512x512_fill_lanczos_center_3.png" />
+<meta property="og:site_name" content="L. Collado-Torres" />
+<meta property="og:url" content="https://lcolladotor.github.io/2024/05/23/humanpilot-first-spatially-resolved-transcriptomics-study-using-visium/" />
+<meta property="og:title" content="HumanPilot: first spatially-resolved transcriptomics study using Visium | L. Collado-Torres" />
+<meta property="og:description" content="A few years ago now (2021) we published a study we refer to with a very generic name: HumanPilot (Maynard, Collado-Torres, Weber, Uytingco et al., 2021). In this peer-reviewed study, we were the first ones to use a commercially available technology for generating spatially-resolved transcriptomics data." /><meta property="og:image" content="https://lcolladotor.github.io/media/icon_hu2b32c4ab415f12f472f73c7b0301b0d1_19400_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
+
+  
+    <meta
+      property="article:published_time"
+      content="2024-05-23T00:00:00&#43;00:00"
+    />
+  
+  
+    <meta property="article:modified_time" content="2024-05-23T18:27:35-04:00">
+  
+
+
+
+
+
+
+    
+
+
+
+
+
+
+  
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://lcolladotor.github.io/2024/05/23/humanpilot-first-spatially-resolved-transcriptomics-study-using-visium/"
+  },
+  "headline": "HumanPilot: first spatially-resolved transcriptomics study using Visium",
+  
+  "datePublished": "2024-05-23T00:00:00Z",
+  "dateModified": "2024-05-23T18:27:35-04:00",
+  
+  "author": {
+    "@type": "Person",
+    "name": "Leonardo Collado-Torres"
+  },
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "L. Collado-Torres",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://lcolladotor.github.io/media/icon_hu2b32c4ab415f12f472f73c7b0301b0d1_19400_192x192_fill_lanczos_center_3.png"
+    }
+  },
+  "description": "A few years ago now (2021) we published a study we refer to with a very generic name: HumanPilot (Maynard, Collado-Torres, Weber, Uytingco et al., 2021). In this peer-reviewed study, we were the first ones to use a commercially available technology for generating spatially-resolved transcriptomics data."
+}
+</script>
+
+  
+
+  
+
+
+
+
+  
+  
+  
+
+  
+  
+
+  
+
+
+  
+  <title>HumanPilot: first spatially-resolved transcriptomics study using Visium | L. Collado-Torres</title>
+
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="61077506034f0bd43e8fd0ca6996f70a" >
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <script src="/js/wowchemy-init.min.028535d572102c468e4bcd43201c3601.js"></script>
+
+  
+
+
+<aside class="search-modal" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#" aria-label="Close"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search" class="form-control"
+        aria-label="Search...">
+        
+      </div>
+
+      
+      
+
+      
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+
+  <div class="page-header header--fixed">
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+    <div class="container-xl">
+
+      
+      <div class="d-none d-lg-inline-flex">
+        <a class="navbar-brand" href="/">L. Collado-Torres</a>
+      </div>
+      
+
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+      <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+      
+      <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+        <a class="navbar-brand" href="/">L. Collado-Torres</a>
+      </div>
+      
+
+      
+      
+      <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+        
+        <ul class="navbar-nav d-md-inline-flex">
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#about"><span>Home</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#team"><span>Team</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#projects"><span>Projects</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#talks_favorite"><span>Talks</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#publications"><span>Publications</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#blog"><span>Blog</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#teaching"><span>Teaching</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#cv"><span>CV</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#contact"><span>Contact</span></a>
+          </li>
+
+          
+          
+
+        
+
+          
+        </ul>
+      </div>
+
+      <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+
+        
+        
+          
+        
+
+        
+        
+        
+        <li class="nav-item">
+          <a class="nav-link js-search" href="#" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></a>
+        </li>
+        
+
+        
+        
+        
+        <li class="nav-item dropdown theme-dropdown">
+          <a href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-label="Display preferences">
+            <i class="fas fa-moon" aria-hidden="true"></i>
+          </a>
+          <div class="dropdown-menu">
+            <a href="#" class="dropdown-item js-set-theme-light">
+              <span>Light</span>
+            </a>
+            <a href="#" class="dropdown-item js-set-theme-dark">
+              <span>Dark</span>
+            </a>
+            <a href="#" class="dropdown-item js-set-theme-auto">
+              <span>Automatic</span>
+            </a>
+          </div>
+        </li>
+        
+
+        
+        
+
+      </ul>
+
+    </div>
+  </nav>
+</header>
+
+
+  </div>
+
+  <div class="page-body">
+    
+    
+    
+
+    <article class="article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+<div class="article-container pt-3">
+  <h1>HumanPilot: first spatially-resolved transcriptomics study using Visium</h1>
+
+  
+
+  
+    
+
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+          Last updated on
+      
+    
+    Thu, May 23, 2024
+  </span>
+  
+
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    13 min read
+  </span>
+  
+
+  
+  
+  
+  
+    <span class="middot-divider"></span>
+    <a href="/2024/05/23/humanpilot-first-spatially-resolved-transcriptomics-study-using-visium/#disqus_thread"></a>
+  
+
+  
+  
+  <span class="middot-divider"></span>
+  <span class="article-categories">
+    <i class="fas fa-folder mr-1"></i><a href="/category/science/">Science</a>, <a href="/category/libd/">LIBD</a></span>
+  
+
+</div>
+
+    
+
+
+
+
+
+  
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style">
+      <p>A few years ago now (2021) we published a study we refer to with a very generic name: <code>HumanPilot</code> <a id='cite-Maynard_2021'></a>(<a href='https://www.nature.com/articles/s41593-020-00787-0'>Maynard, Collado-Torres, Weber, Uytingco et al., 2021</a>). In this peer-reviewed study, we were the first ones to use a commercially available technology for generating spatially-resolved transcriptomics data. It’s called <a href="https://www.10xgenomics.com/products/spatial-gene-expression" target="_blank" rel="noopener"><em>Visium</em> and it’s sold by 10x Genomics</a>. Note ⚠️ that members of that company were co-authors of our study. As we work in the <a href="https://www.libd.org/" target="_blank" rel="noopener">Lieber Institute for Brain Development</a>, we tested <em>Visium</em> with postmortem human brain data. I explained the initial pre-print (before peer-review) version of our work in a <a href="https://lcolladotor.github.io/2020/02/29/diving-together-into-the-unknown-world-of-spatial-transcriptomics/" target="_blank" rel="noopener">blog post back in Feb 20, 2019</a>.</p>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">🔥off the press! 👀 our <a href="https://twitter.com/biorxivpreprint?ref_src=twsrc%5Etfw">@biorxivpreprint</a> on human 🧠brain <a href="https://twitter.com/LieberInstitute?ref_src=twsrc%5Etfw">@LieberInstitute</a> spatial 🌌🔬transcriptomics data 🧬using Visium <a href="https://twitter.com/10xGenomics?ref_src=twsrc%5Etfw">@10xGenomics</a>🎉<a href="https://twitter.com/hashtag/spatialLIBD?src=hash&amp;ref_src=twsrc%5Etfw">#spatialLIBD</a><br><br>🔍<a href="https://t.co/RTW0VscUKR">https://t.co/RTW0VscUKR</a> <br>👩🏾‍💻<a href="https://t.co/bsg04XKONr">https://t.co/bsg04XKONr</a><br>📚<a href="https://t.co/FJDOOzrAJ6">https://t.co/FJDOOzrAJ6</a><br>📦<a href="https://t.co/Au5jwADGhY">https://t.co/Au5jwADGhY</a><a href="https://t.co/PiWEDN9q2N">https://t.co/PiWEDN9q2N</a> <a href="https://t.co/aWy0yLlR50">pic.twitter.com/aWy0yLlR50</a></p>&mdash; 🇲🇽 Leonardo Collado-Torres (@lcolladotor) <a href="https://twitter.com/lcolladotor/status/1233661576433061888?ref_src=twsrc%5Etfw">February 29, 2020</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<p>But enough with the fancy specific words. Here I explain the main points of why this study was so important and why it is still frequently cited several years later.</p>
+<h2 id="what-is-a-fruit-banana-orange">What is a fruit? Banana, orange?</h2>
+<p><a href="https://en.wikipedia.org/wiki/File:Oranges_-_whole-halved-segment.jpg" target="_blank" rel="noopener"><img src="images/orange.jpg" width="400" alt="Orange (full round)" /></a></p>
+<p><a href="https://en.wikipedia.org/wiki/File:Bananas.jpg" target="_blank" rel="noopener"><img src="images/Bananas.jpg" width="400" alt="Bananas in the supermarket" /></a></p>
+<p>When we are growing up, we don’t know what is an orange or a banana. What makes them both fruits, and why they are different.</p>
+<p>If you look at them, touch them, smell them, you start to notice differences between them. In science, we end up trying to come up with systematic and specific ways of describing things that surround us in nature. In this case, two fruits. When you look at an orange and a banana and try to explain how they are different, you might end up slicing them.</p>
+<p><a href="https://en.wikipedia.org/wiki/File:Oranges_-_whole-halved-segment.jpg" target="_blank" rel="noopener"><img src="images/orange_sliced.jpg" width="400" alt="Orange (sliced with a knife)" /></a></p>
+<p><a href="https://similarpng.com/banana-slice-isolated-on-transparent-background-png/" target="_blank" rel="noopener"><img src="images/Banana-slice-isolated-on-transparent-background-PNG.png" width="400" alt="Banana sliced" /></a></p>
+<p>Once you slice them, you are actively zooming in and looking at finer differences. You might end up using a microscope to notice even smaller differences.</p>
+<h2 id="measuring-gene-activity">Measuring gene activity</h2>
+<p><a href="https://doi.org/10.1038/s41592-020-01042-x" target="_blank" rel="noopener"><img src="images/nat_methods_spatial.png" width="400" alt="Nature Methods 2020 cover" /></a></p>
+<p>Now imagine that you want to measure gene 🧬 activity levels. Some previous technologies could measure gene activity levels by taking a chunk of tissue to have enough material for the technology to work. In the 2010s the technology was developed to measure single cells or nuclei, but you lost the spatial context. Then in 2020 the ability to measure gene activity while retaining the spatial awareness was crowned the new method of the year. The specific term is <em>spatially-resolved transcriptomics</em>.</p>
+<p><a href="https://www.mathworks.com/help/matlab/creating_plots/color-3-d-bars-by-height-1.html" target="_blank" rel="noopener"><img src="images/Color3DBarsByHeightExample_02.png" width="400" alt="3D barplots" /></a></p>
+<p><em>Visium</em> in particular works by having about 5,000 circles (called “spots”) arranged in a honeycomb pattern where we can measure gene activity levels. 10x Genomics has some videos explaining how to it works, but it basically comes down to having an X and Y map for which you can make multiple 3D barplots like this one. Say that this is the one for gene 1 where we have a flat map and the height of the bars is how much that gene 1 was active in each square.</p>
+<p>With <em>Visium</em> we have 5,000 spots, or specific (<em>X</em>, <em>Y</em>) pairs and for each of them we can have about 2,000 genes measured. So imagine having 2,000 of these 3D barplots. That’s quite a bit of data and it’s exciting to think what this technology can be used for.</p>
+<h2 id="human-brain">Human brain</h2>
+<p>Just like we were talking about bananas and oranges being two types of fruits, well, the brain has different regions. Each of them carries out specific functions and can be quite different despite them all clearly remaining a part of the brain. Just like bananas and oranges look very different but still remain fruits.</p>
+<p>Now, scientists by training are skeptical. So with a new exciting but expensive technology, the first thing we wanted to do is to test it with a small study. That is, run a pilot study. We work studying gene activity levels from human brain samples, particularly postmortem human brain samples that were donated to our institution for research purposes. One particular region we are interested in is called the <em>DLPFC</em> and its important because differences between individuals that do not have schizophrenia (which we refer to as the neurotypical congrol group) and those that do schizophrenia have been linked to this brain region, among other reasons.</p>
+<p><a href="https://en.wikipedia.org/wiki/File:Bananavarieties.jpg" target="_blank" rel="noopener">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img alt="Banana varieties" srcset="
+               /2024/05/23/humanpilot-first-spatially-resolved-transcriptomics-study-using-visium/images/Bananavarieties_hu25d089f14ae440a3ee259346b7151fb5_60155_2179c5b12417c2e2e18c976f97311c28.webp 400w,
+               /2024/05/23/humanpilot-first-spatially-resolved-transcriptomics-study-using-visium/images/Bananavarieties_hu25d089f14ae440a3ee259346b7151fb5_60155_97ab55dd4e0234d4ab6bf405c8fd672c.webp 760w,
+               /2024/05/23/humanpilot-first-spatially-resolved-transcriptomics-study-using-visium/images/Bananavarieties_hu25d089f14ae440a3ee259346b7151fb5_60155_1200x1200_fit_q75_h2_lanczos.webp 1200w"
+               src="/2024/05/23/humanpilot-first-spatially-resolved-transcriptomics-study-using-visium/images/Bananavarieties_hu25d089f14ae440a3ee259346b7151fb5_60155_2179c5b12417c2e2e18c976f97311c28.webp"
+               width="387"
+               height="221"
+               loading="lazy" data-zoomable /></div>
+  </div></figure>
+</a></p>
+<p>But before we can distinguish the two groups of donors at the molecular level, with the ultimate goal of helping those affected by disorders such as schizophrenia, we first needed to understand what is typically different neurotypical control (NTC) donors. Just like we can look at different healthy bananas and notice how they are different.</p>
+<p>And so we got started with our <code>HumanPilot</code> study. We generated data from 3 NTC donors as you need to look at more than one donor to have an idea of biological variability.</p>
+<p><a href="https://doi.org/10.1038/s41593-020-00787-0" target="_blank" rel="noopener"><img src="images/fig1ab.png" width="800" alt="Figure 1 A and B from the HumanPilot study" /></a></p>
+<p>But because <em>Visium</em> was a new technology then, we also generated spatially-adjacent replicates (two pairs per donor). These are technical replicates in the sense that we took contiguous slices of tissue. Think of it as two paired slices of bread 10 microns apart: we generated a pair early in the loaf and one more 300 microns apart in that same loaf. Yes, things do change even when you look at things 10 microns apart, but hopefully they don’t change too much then, but should once you look at them 300 microns apart. That’s what we wanted to see.</p>
+<p><a href="https://doi.org/10.1038/s41593-020-00787-0" target="_blank" rel="noopener"><img src="images/fig1def.png" width="800" alt="Figure 1 D, E, and F from the HumanPilot study" /></a></p>
+<p>The DLPFC has been quite well studied and it was well known that gene <em>SNAP25</em> is more active in neurons while <em>MOBP</em> is much less active in neurons. When we looked at the activity levels of these genes and could see basically how they complemented each other like a Yin and Yang symbol ☯, we were very excited.</p>
+<figure>
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Yin_and_Yang_symbol.svg/2560px-Yin_and_Yang_symbol.svg.png" width="200" alt="Yin and Yang" />
+<figcaption aria-hidden="true">Yin and Yang</figcaption>
+</figure>
+<script defer class="speakerdeck-embed" data-slide="9" data-id="dde92cd6dfc04f9589770e074915658f" data-ratio="1.3333333333333333" src="//speakerdeck.com/assets/embed.js"></script>
+<p>We could also see more specific gene patterns, such as <em>PCP4</em> which marks a specific subsection of DLPFC called Layer 5. And very importantly, this pattern was consistent among the 6 pairs of spatially-adjacent replicates we generated data for. That is, look for consistent patterns in each row from the above figure.</p>
+<h2 id="tons-of-manual-work-to-reproduce-what-we-knew">Tons of manual work to reproduce what we knew!</h2>
+<p>Now that trusted the technology, we could get to work. We started visualizing gene activity patterns for genes that other scientists had previously identified as marker genes for the DLPFC layers. Some have identified in other organisms such as mouse. Some, due to the nature of <em>Visium</em>, we can only measure 2,000 genes instead of 20,000-30,000 ones that you can detect with other non-spatially-aware technologies.</p>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Our paper describing our package <a href="https://twitter.com/hashtag/spatialLIBD?src=hash&amp;ref_src=twsrc%5Etfw">#spatialLIBD</a> is finally out! 🎉🎉🎉<br><br>spatialLIBD is an <a href="https://twitter.com/hashtag/rstats?src=hash&amp;ref_src=twsrc%5Etfw">#rstats</a> / <a href="https://twitter.com/Bioconductor?ref_src=twsrc%5Etfw">@Bioconductor</a> package to visualize spatial transcriptomics data.<br>⁰<br>This is especially exciting for me as it is my first paper as a first author 🦑.<a href="https://t.co/COW013x4GA">https://t.co/COW013x4GA</a><br><br>1/9 <a href="https://t.co/xevIUg3IsA">pic.twitter.com/xevIUg3IsA</a></p>&mdash; Brenda Pardo (@PardoBree) <a href="https://twitter.com/PardoBree/status/1388253938391175173?ref_src=twsrc%5Etfw">April 30, 2021</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<p>Data visualization, particularly with any new technology, is always a challenge. So we developed a new software that we called <code>spatialLIBD</code> to visualize the data <a id='cite-Pardo_2022'></a>(<a href='https://doi.org/10.1186/s12864-022-08601-w'>Pardo, Spangler, Weber, Hicks et al., 2022</a>). In particular, we built <code>spatialLIBD</code> in a way that enabled members of our team to assign each <em>Visium</em> spot from our 12 tissue slices to one of seven categories: gray matter layers 1 to 6, and white matter. That was a lot of work! Many other people now refer to it as the “ground truth” although we know it is not. In total, we had 47,681 spots or an average of 3,973 spots per tissue slice. Imagine having to label that many fruits, you are bound to make some mistakes!</p>
+<script defer class="speakerdeck-embed" data-slide="10" data-id="dde92cd6dfc04f9589770e074915658f" data-ratio="1.3333333333333333" src="//speakerdeck.com/assets/embed.js"></script>
+<p>This was a terrific amount of work, and it is has a fundamental reason why our study has been so well cited so far. Before I get ahead of myself, now that we have labeled all these spots, we can collapse the data and perform several types of analyses. Of them is looking at the different layers and white matter (WM) from the 12 tissue slices using principal component analysis (PCA). For a lot more on the mathematical theory of PCA check <a href="https://en.wikipedia.org/wiki/Principal_component_analysis" target="_blank" rel="noopener">Wikipedia</a>. What matters here is that PC1 explain the most differences, and we can see the WM points in black on the left side, clearly separated from the other points. Then PC2 is associated with L1 in pink at bottom of the Y-axis, to then L2 in blue, L3 in green, L4 in purple, L5 in yellow, and L6 in orange.</p>
+<p>That was awesome! Yes, white matter is very different from gray matter (as shown in PC1), but then also the gray matter layers are different from each other in a sequential way (as shown in PC2). All of this was known before our study, but it always feels great when you can use a different technology to reproduce previous findings.</p>
+<h2 id="finding-and-validating-new-dlpfc-layer-marker-genes">Finding and validating new DLPFC layer marker genes</h2>
+<p>Is that it? Of course not. Other technologies and laborious experiments were needed to find some marker genes for the DLPFC layers. But now we could identify other ones. So that’s what we did. Not only did we find genes that can help us separate these layers from each other, but we then proceeded to verify a few of them using other experiments.</p>
+<p><a href="https://doi.org/10.1038/s41593-020-00787-0" target="_blank" rel="noopener"><img src="images/fig4.png" width="800" alt="Figure 4 from the HumanPilot study" /></a></p>
+<p>The above figure showcases some of these new marker genes that have higher activity levels in the layer they mark. It doesn’t mean that they are not active elsewhere. Though if you are interested in finding on/off marker genes, we have computational methods for that too nowadays implemented in our <a href="https://research.libd.org/DeconvoBuddies/" target="_blank" rel="noopener"><code>DeconvoBuddies</code></a> software.</p>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">We also propose and evaluate a new method for selecting cell type specific <a href="https://twitter.com/hashtag/markergenes?src=hash&amp;ref_src=twsrc%5Etfw">#markergenes</a> for deconvolution: <a href="https://twitter.com/hashtag/MeanRatio?src=hash&amp;ref_src=twsrc%5Etfw">#MeanRatio</a> implemented in <a href="https://twitter.com/hashtag/DeconvoBuddies?src=hash&amp;ref_src=twsrc%5Etfw">#DeconvoBuddies</a> (soon to be submited to <a href="https://twitter.com/Bioconductor?ref_src=twsrc%5Etfw">@Bioconductor</a>) <a href="https://twitter.com/hashtag/rstats?src=hash&amp;ref_src=twsrc%5Etfw">#rstats</a><br>🛠️<a href="https://t.co/del9EjmBwQ">https://t.co/del9EjmBwQ</a> <a href="https://t.co/5PQk18yDrt">pic.twitter.com/5PQk18yDrt</a></p>&mdash; Louise Huuki-Myers (@lahuuki) <a href="https://twitter.com/lahuuki/status/1779902247305949495?ref_src=twsrc%5Etfw">April 15, 2024</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<h2 id="what-about-disorders-how-does-your-humanpilot-study-help-us-understand-them">What about disorders? How does your <code>HumanPilot</code> study help us understand them?</h2>
+<p>As you have followed the story so far, our data is from 3 neurotypical control donors. It’s not like we can use their data to find what is different between them and individuals affected by other disorders. But what we can do is ask, is there a significant overlap between the DLPFC layer marker genes and genes that have been associated with specific disorders?</p>
+<script defer class="speakerdeck-embed" data-slide="21" data-id="dde92cd6dfc04f9589770e074915658f" data-ratio="1.3333333333333333" src="//speakerdeck.com/assets/embed.js"></script>
+<p>So we obtained several gene lists from previous studies with much larger sample sizes that compared NTC donors against those affected by certain disorders. Some of these studies are based on gene activity levels, some of them are based on DNA variants which they then link to genes by proximity. One set of studies we looked at were those investigating autism spectrum disorder (ASD). What was fascinating to us is that two studies (SFARI and ASC102) had similar enrichment between ASD-associated genes and L2 and L5 marker genes. But the ASC102 study can be broken apart into two sets, ASD53 and DDID49, and each is associated with just one layer (L5 and L2, respectively).</p>
+<p>So spatially-resolved transcriptomics could be used to further locate to specific tissue architectural elements the genes that have been implicated in different diseases, disorders, or biologically-relevant groups. Even small pilot studies like ours have the potential of helping us understand how some of these genes are distinctly spatially active.</p>
+<h2 id="fueling-the-development-of-methods-and-benefiting-from-it">Fueling the development of methods, and benefiting from it</h2>
+<p>We knew that this wasn’t going to be the end. Our <code>HumanPilot</code> was just the beginning and for our research groups, it effectively started a whole new wave of studies. We are now using <em>Visium</em> and other technologies to dive into other brain regions which aren’t necessarily as well studied as the DLPFC, or to look at differences between specific sets of groups of donors. Yet, this isn’t our first time witnessing the emergence of a brand new technology. We are well aware that each new technology has its imperfections, biases, and sources of measurement noise. One particular challenge we wanted help with was the process of manually annotating thousands of spots.</p>
+<script defer class="speakerdeck-embed" data-slide="23" data-id="dde92cd6dfc04f9589770e074915658f" data-ratio="1.3333333333333333" src="//speakerdeck.com/assets/embed.js"></script>
+<p>In our dataset, we had manual annotations. So we went ahead and tested a few different ways of grouping spots, known as clustering.</p>
+<script defer class="speakerdeck-embed" data-slide="26" data-id="dde92cd6dfc04f9589770e074915658f" data-ratio="1.3333333333333333" src="//speakerdeck.com/assets/embed.js"></script>
+<p>Any computational clustering method will produce results and pretty pictures. By eye, sometimes you can tell quite easily what is a widely inaccurate result from one that seems decent enough. But comparing decent results from two methods by eye is very challenging.</p>
+<script defer class="speakerdeck-embed" data-slide="27" data-id="dde92cd6dfc04f9589770e074915658f" data-ratio="1.3333333333333333" src="//speakerdeck.com/assets/embed.js"></script>
+<p>We used a measure called adjusted rand index to do this, where higher values are better. Here we did a few key things:</p>
+<ul>
+<li>We made our data public as soon as we pre-printed our study in Feb 29, 2020.
+<ul>
+<li>That is, we didn’t wait for a full peer-review process (our paper was published in Feb 8th 2021, nearly a year later). Openly sharing data early can help accelerate science.</li>
+</ul>
+</li>
+<li>We made our data easy to access in a easy to use computational format.
+– pecifically, <code>SingleCellExperiment</code> R/Bioconductor objects downloadable through <a href="https://research.libd.org/spatialLIBD/reference/fetch_data.html" target="_blank" rel="noopener"><code>spatialLIBD::fetch_data()</code></a>. Nowadays, we provide the data in the more specialized <code>SpatialExperiment</code> format.</li>
+<li>We showed how you can compare results from clustering methods to the manual annotation using the adjusted rand index metric.</li>
+</ul>
+<script defer class="speakerdeck-embed" data-slide="28" data-id="dde92cd6dfc04f9589770e074915658f" data-ratio="1.3333333333333333" src="//speakerdeck.com/assets/embed.js"></script>
+<p>Within months, others such as the authors of <em>BayesSpace</em> in September 5th 2020, started to use our <code>HumanPilot</code> data to evaluate the performance of their sophisticated spatially-aware clustering methods.</p>
+<script defer class="speakerdeck-embed" data-slide="18" data-id="63b3cfba8f404d52b6a6f472056024bd" data-ratio="1.3333333333333333" src="//speakerdeck.com/assets/embed.js"></script>
+<p>This rapid pace of development has been great to witness. We now have been able to see how others have used our data to improve their methods, and we can now benefit from them by applying them to new <em>Visium</em> datasets without necessarily having to perform manual annotations.</p>
+<h2 id="what-followed">What followed</h2>
+<p>Naturally we heard questions about what could happen if we had a larger pilot study. If we looked at different sections of DLPFC (anterior, middle, posterior). Today, our follow up peer-reviewed study was published involving data from 10 NTC donors across the anterior-posterior axis for a total of 30 <em>Visium</em> tissue slices. I’ll soon explain this follow up study, which we called <code>spatialDLPFC</code>, in its own blog post. Louise A. Huuki-Myers already wrote an <a href="https://lahuuki.github.io/posts/2024-05-23-spatialDLPFC/" target="_blank" rel="noopener">excellent <code>spatialDLPFC</code> overview blog post which I encourage you to read</a>.</p>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">New in <a href="https://twitter.com/ScienceMagazine?ref_src=twsrc%5Etfw">@sciencemagazine</a>: our work from <a href="https://twitter.com/LieberInstitute?ref_src=twsrc%5Etfw">@LieberInstitute</a> <a href="https://twitter.com/hashtag/spatialDLPFC?src=hash&amp;ref_src=twsrc%5Etfw">#spatialDLPFC</a> applies <a href="https://twitter.com/hashtag/snRNAseq?src=hash&amp;ref_src=twsrc%5Etfw">#snRNAseq</a> and <a href="https://twitter.com/hashtag/Visium?src=hash&amp;ref_src=twsrc%5Etfw">#Visium</a> spatial transcriptomic in the DLPFC to better understand anatomical structure and cellular populations in the human brain <a href="https://twitter.com/hashtag/PsychENCODE?src=hash&amp;ref_src=twsrc%5Etfw">#PsychENCODE</a> <a href="https://t.co/DKZqmG4YDi">https://t.co/DKZqmG4YDi</a> <a href="https://t.co/Tjp2OjTo63">https://t.co/Tjp2OjTo63</a> <a href="https://t.co/vQbjts2JtQ">pic.twitter.com/vQbjts2JtQ</a></p>&mdash; Louise Huuki-Myers (@lahuuki) <a href="https://twitter.com/lahuuki/status/1793714294334648638?ref_src=twsrc%5Etfw">May 23, 2024</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<p>Something I want to highlight is that my colleague Kristen R. Maynard and I were co-first authors of <code>HumanPilot</code>, and are now co-corresponding authors of <code>spatialDLPFC</code>. <code>HumanPilot</code> started in 2019 and was published in 2021, <code>spatialDLPFC</code> started in 2020 and was published in 2024. These projects have large cycles and it takes a whole village, or a federation of villages, to get them completed and published. So I want to shoutout all past colleagues. We couldn’t have gotten to where we are without their work! And thank you for everyone who has been interested in our work and has been using it to learn new things. We also learn through you. Thank you!!!</p>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Self-assessment can be repetitive - or maybe not? 🤔 This caught my attention in recent spatial omics literature (but apparently not the authors&#39;?)... &quot;More of a comment than a question&quot; that we need benchmarks. <a href="https://t.co/KPRTf0vUxv">pic.twitter.com/KPRTf0vUxv</a></p>&mdash; Helena Lucia Crowell (@helucro) <a href="https://twitter.com/helucro/status/1597579271945715717?ref_src=twsrc%5Etfw">November 29, 2022</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<p>Hopefully you have a better understanding of our <code>HumanPilot</code> study now and can recognize the origin of all the figures like the ones above. If you want more, check out this journal club presentation by Cynthia Soto and Daianna Gonzalez-Padilla. They are members of my lab, but were not involved in this study at all. So their presentation has a fresh perspective.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/qloLbG5-IPM?si=u5uXT3x4ShfF25mi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+</iframe>
+<p>Finally, feel free to checkout our code and more details at <a href="https://github.com/LieberInstitute/HumanPilot" target="_blank" rel="noopener">https://github.com/LieberInstitute/HumanPilot</a>.</p>
+<p>See you around! 😊</p>
+<h2 id="acknowledgments">Acknowledgments</h2>
+<p>This blog post was made possible thanks to:</p>
+<ul>
+<li><em><a href="https://bioconductor.org/packages/3.19/BiocStyle" target="_blank" rel="noopener">BiocStyle</a></em> <a id='cite-Oles_2024'></a>(<a href='https://github.com/Bioconductor/BiocStyle'>Oleś, 2024</a>)</li>
+<li><em><a href="https://CRAN.R-project.org/package=blogdown" target="_blank" rel="noopener">blogdown</a></em> <a id='cite-Xie_2017'></a>(<a href='https://bookdown.org/yihui/blogdown/'>Xie, Hill, and Thomas, 2017</a>)</li>
+<li><em><a href="https://CRAN.R-project.org/package=knitcitations" target="_blank" rel="noopener">knitcitations</a></em> <a id='cite-Boettiger_2021'></a>(<a href='https://CRAN.R-project.org/package=knitcitations'>Boettiger, 2021</a>)</li>
+</ul>
+<h2 id="references">References</h2>
+<p>
+<a id='bib-Boettiger_2021'></a><a href="#cite-Boettiger_2021">\[1\]</a><cite>
+C. Boettiger.
+<em>knitcitations: Citations for ‘Knitr’ Markdown Files</em>.
+R package version 1.0.12.
+2021.
+URL: <a href="https://CRAN.R-project.org/package=knitcitations">https://CRAN.R-project.org/package=knitcitations</a>.</cite>
+</p>
+<p>
+<a id='bib-Maynard_2021'></a><a href="#cite-Maynard_2021">\[2\]</a><cite>
+K. R. Maynard, L. Collado-Torres, L. M. Weber, C. Uytingco, et al.
+“Transcriptome-scale spatial gene expression in the human dorsolateral prefrontal cortex”.
+In: <em>Nature Neuroscience</em> (2021).
+DOI: <a href="https://doi.org/10.1038/s41593-020-00787-0">10.1038/s41593-020-00787-0</a>.
+URL: <a href="https://www.nature.com/articles/s41593-020-00787-0">https://www.nature.com/articles/s41593-020-00787-0</a>.</cite>
+</p>
+<p>
+<a id='bib-Oles_2024'></a><a href="#cite-Oles_2024">\[3\]</a><cite>
+A. Oleś.
+<em>BiocStyle: Standard styles for vignettes and other Bioconductor documents</em>.
+R package version 2.32.0.
+2024.
+URL: <a href="https://github.com/Bioconductor/BiocStyle">https://github.com/Bioconductor/BiocStyle</a>.</cite>
+</p>
+<p>
+<a id='bib-Pardo_2022'></a><a href="#cite-Pardo_2022">\[4\]</a><cite>
+B. Pardo, A. Spangler, L. M. Weber, S. C. Hicks, et al.
+“spatialLIBD: an R/Bioconductor package to visualize spatially-resolved transcriptomics data”.
+In: <em>BMC Genomics</em> (2022).
+DOI: <a href="https://doi.org/10.1186/s12864-022-08601-w">10.1186/s12864-022-08601-w</a>.
+URL: <a href="https://doi.org/10.1186/s12864-022-08601-w">https://doi.org/10.1186/s12864-022-08601-w</a>.</cite>
+</p>
+<p>
+<a id='bib-Xie_2017'></a><a href="#cite-Xie_2017">\[5\]</a><cite>
+Y. Xie, A. P. Hill, and A. Thomas.
+<em>blogdown: Creating Websites with R Markdown</em>.
+Boca Raton, Florida: Chapman and Hall/CRC, 2017.
+ISBN: 978-0815363729.
+URL: <a href="https://bookdown.org/yihui/blogdown/">https://bookdown.org/yihui/blogdown/</a>.</cite>
+</p>
+
+    </div>
+
+    
+
+
+
+
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/tag/spatiallibd/">spatialLIBD</a>
+  
+  <a class="badge badge-light" href="/tag/vistoseg/">VistoSeg</a>
+  
+  <a class="badge badge-light" href="/tag/spatial/">spatial</a>
+  
+  <a class="badge badge-light" href="/tag/rstats/">rstats</a>
+  
+  <a class="badge badge-light" href="/tag/rna-sequencing/">RNA Sequencing</a>
+  
+</div>
+
+
+
+<div class="share-box">
+  <ul class="share">
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Flcolladotor.github.io%2F2024%2F05%2F23%2Fhumanpilot-first-spatially-resolved-transcriptomics-study-using-visium%2F&amp;text=HumanPilot%3A&#43;first&#43;spatially-resolved&#43;transcriptomics&#43;study&#43;using&#43;Visium" target="_blank" rel="noopener" class="share-btn-twitter" aria-label="twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Flcolladotor.github.io%2F2024%2F05%2F23%2Fhumanpilot-first-spatially-resolved-transcriptomics-study-using-visium%2F&amp;t=HumanPilot%3A&#43;first&#43;spatially-resolved&#43;transcriptomics&#43;study&#43;using&#43;Visium" target="_blank" rel="noopener" class="share-btn-facebook" aria-label="facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+        
+      
+      <li>
+        <a href="mailto:?subject=HumanPilot%3A%20first%20spatially-resolved%20transcriptomics%20study%20using%20Visium&amp;body=https%3A%2F%2Flcolladotor.github.io%2F2024%2F05%2F23%2Fhumanpilot-first-spatially-resolved-transcriptomics-study-using-visium%2F" target="_blank" rel="noopener" class="share-btn-email" aria-label="envelope">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=https%3A%2F%2Flcolladotor.github.io%2F2024%2F05%2F23%2Fhumanpilot-first-spatially-resolved-transcriptomics-study-using-visium%2F&amp;title=HumanPilot%3A&#43;first&#43;spatially-resolved&#43;transcriptomics&#43;study&#43;using&#43;Visium" target="_blank" rel="noopener" class="share-btn-linkedin" aria-label="linkedin-in">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="whatsapp://send?text=HumanPilot%3A&#43;first&#43;spatially-resolved&#43;transcriptomics&#43;study&#43;using&#43;Visium%20https%3A%2F%2Flcolladotor.github.io%2F2024%2F05%2F23%2Fhumanpilot-first-spatially-resolved-transcriptomics-study-using-visium%2F" target="_blank" rel="noopener" class="share-btn-whatsapp" aria-label="whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=https%3A%2F%2Flcolladotor.github.io%2F2024%2F05%2F23%2Fhumanpilot-first-spatially-resolved-transcriptomics-study-using-visium%2F&amp;title=HumanPilot%3A&#43;first&#43;spatially-resolved&#43;transcriptomics&#43;study&#43;using&#43;Visium" target="_blank" rel="noopener" class="share-btn-weibo" aria-label="weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+  
+  
+    
+  
+  
+  
+  <div class="media author-card content-widget-hr">
+    
+      
+      <a href="https://lcolladotor.github.io/"><img class="avatar mr-3 avatar-circle" src="/authors/admin/avatar_hu61670ae1305c5c407abf5eedc95c7971_127149_270x270_fill_q75_lanczos_center.JPG" alt="Leonardo Collado-Torres"></a>
+    
+
+    <div class="media-body">
+      <h5 class="card-title"><a href="https://lcolladotor.github.io/">Leonardo Collado-Torres</a></h5>
+      <h6 class="card-subtitle">Investigator @ LIBD, Assistant Professor, Department of Biostatistics @ JHBSPH</h6>
+      <p class="card-text"><a href="https://twitter.com/search?q=%23rstats&amp;src=hashtag_click" target="_blank" rel="noopener">#rstats</a> <a href="https://twitter.com/Bioconductor" target="_blank" rel="noopener">@Bioconductor</a>/🧠 genomics <a href="https://twitter.com/LieberInstitute" target="_blank" rel="noopener">@LieberInstitute</a>/<a href="https://twitter.com/lcgunam" target="_blank" rel="noopener">@lcgunam</a> <a href="https://twitter.com/jhubiostat" target="_blank" rel="noopener">@jhubiostat</a> <a href="https://twitter.com/jtleek" target="_blank" rel="noopener">@jtleek</a> <a href="https://twitter.com/andrewejaffe" target="_blank" rel="noopener">@andrewejaffe</a> alumni/<a href="https://twitter.com/LIBDrstats" target="_blank" rel="noopener">@LIBDrstats</a> <a href="https://twitter.com/CDSBMexico" target="_blank" rel="noopener">@CDSBMexico</a> co-founder</p>
+      <ul class="network-icon" aria-hidden="true">
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+    <li>
+      <a href="mailto:lcolladotor@gmail.com" >
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="http://lcolladotor.github.io" target="_blank" rel="noopener">
+        <i class="fas fa-home"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://twitter.com/lcolladotor" target="_blank" rel="noopener">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://www.youtube.com/@lcolladotor/playlists" target="_blank" rel="noopener">
+        <i class="fab fa-youtube"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://scholar.google.com/citations?user=h57-MykAAAAJ" target="_blank" rel="noopener">
+        <i class="ai ai-google-scholar"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://github.com/lcolladotor" target="_blank" rel="noopener">
+        <i class="fab fa-github"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="http://orcid.org/0000-0003-2140-308X" target="_blank" rel="noopener">
+        <i class="ai ai-orcid"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://www.ncbi.nlm.nih.gov/myncbi/leonardo.collado%20torres.1/bibliography/public/" target="_blank" rel="noopener">
+        <i class="ai ai-pubmed"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://impactstory.org/u/0000-0003-2140-308X" target="_blank" rel="noopener">
+        <i class="ai ai-impactstory"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://www.linkedin.com/in/lcollado/" target="_blank" rel="noopener">
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://publons.com/a/1262671" target="_blank" rel="noopener">
+        <i class="ai ai-publons"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="http://lcolladotor.github.io/cv/en_CV_lcollado.pdf" target="_blank" rel="noopener">
+        <i class="ai ai-cv"></i>
+      </a>
+    </li>
+  
+</ul>
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+
+  
+  <section id="comments">
+    
+<div id="disqus_thread"></div>
+<script>
+  var disqus_config = function () {
+    
+    
+    
+  };
+  (function() {
+    if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+      document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+      return;
+    }
+    var d = document, s = d.createElement('script'); s.async = true;
+    s.src = 'https://' + "fellgernonbit" + '.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+  </section>
+  
+
+
+
+
+
+
+
+
+
+
+  </div>
+</article>
+  </div>
+
+  <div class="page-footer">
+    
+    
+    <div class="container">
+      <footer class="site-footer">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+    
+  
+  
+    
+  
+
+  
+
+  
+  <p class="powered-by copyright-license-text">
+    All thoughts and opinions here are my own (Leonardo Collado Torres). The icon was designed by <a href="https://www.linkedin.com/in/mauricio-guzman-6529b551/" target="_blank" rel="noopener">Mauricio Guzmán</a> and is inspired by <a href="https://en.wikipedia.org/wiki/Huichol" target="_blank" rel="noopener">Huichol culture</a>; it represents my community building interests. © 2011-2024 LCT. This work is licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0" rel="noopener noreferrer" target="_blank">CC BY NC SA 4.0</a>
+  </p>
+  
+
+  <p class="powered-by footer-license-icons">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0" rel="noopener noreferrer" target="_blank" aria-label="Creative Commons">
+      <i class="fab fa-creative-commons fa-2x" aria-hidden="true"></i>
+      <i class="fab fa-creative-commons-by fa-2x" aria-hidden="true"></i>
+      
+        <i class="fab fa-creative-commons-nc fa-2x" aria-hidden="true"></i>
+      
+      
+        <i class="fab fa-creative-commons-sa fa-2x" aria-hidden="true"></i>
+      
+    </a>
+  </p>
+
+
+
+
+  
+  <p>
+      
+      
+      <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4ef23e545d41b87c"></script>
+      
+      
+
+      <script type="text/javascript">
+      var addthis_config = {
+      	data_ga_property: 'UA-45299226-1',
+      	data_ga_social : true,
+      	data_track_addressbar: true,
+        data_track_addressbar_paths: ['/201*/*/*/*/*']
+      };
+      var addthis_share = {
+      	
+      	url_transforms : {
+      		shorten: {
+      			twitter: 'bitly'
+      		}
+      	}, 
+      	shorteners : {
+      		bitly : {}
+      	}
+      }
+      </script>
+      
+      <center>	 
+      <div id="clustrmaps-widget"></div><script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=300&t=m&d=Zo-deincaJGsqhqjIWsujtdoNOMJsnnZLefKmxDKVv8&co=124b73&cmo=dd53ff&cmn=4ec724'></script>
+      </center>
+  </p>
+  
+
+  <p class="powered-by">
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      Published with <a href="https://wowchemy.com/?utm_campaign=poweredby" target="_blank" rel="noopener">Wowchemy</a> — the free, <a href="https://github.com/wowchemy/wowchemy-hugo-themes" target="_blank" rel="noopener">open source</a> website builder that empowers creators.
+    
+  </p>
+</footer>
+
+    </div>
+    
+  </div>
+
+  
+
+
+<script src="/js/vendor-bundle.min.938a3a7554cd9f6602290411f64d2617.js"></script>
+
+
+
+
+  
+
+  
+  
+
+  
+
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.min.js" integrity="" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+  
+  <script id="search-hit-fuse-template" type="text/x-template">
+    <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+    </div>
+  </script>
+  
+    <script src="https://cdn.jsdelivr.net/gh/krisk/Fuse@v3.2.1/dist/fuse.min.js" integrity="sha512-o38bmzBGX+hD3JHWUFCDA09btWaqrNmoJ3RXLlrysA7PP01Kgs4UlE4MhelE1v5dJR3+cxlR4qQlotsW7jKsnw==" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/gh/julmot/mark.js@8.11.1/dist/jquery.mark.min.js" integrity="sha512-mhbv5DqBMgrWL+32MmsDOt/OAvqr/cHimk6B8y/bx/xS88MVkYGPiVv2ixKVrkywF2qHplNRUvFsAHUdxZ3Krg==" crossorigin="anonymous"></script>
+  
+
+
+
+
+
+
+
+
+
+  <script id="dsq-count-scr" src="https://fellgernonbit.disqus.com/count.js" async></script>
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+<script id="page-data" type="application/json">{"use_headroom":true}</script>
+
+
+
+  <script src="/js/wowchemy-headroom.db4755770454eb63685f8de785c0a172.js" type="module"></script>
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+<script src="/en/js/wowchemy.min.2945731fa88332cb0ec33cf47d29879f.js"></script>
+
+
+
+  <script src="/js/wowchemy-map.a26e9d2f7238ba5b868384f1c5bc6477.js" type="module"></script>
+
+
+
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        
+        <pre><code></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <script src="/js/wowchemy-publication.af9327db0521d4a01354bfc8b77a4324.js" type="module"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

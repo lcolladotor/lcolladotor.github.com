@@ -13,6 +13,176 @@
     </image>
     
     <item>
+      <title>HumanPilot: first spatially-resolved transcriptomics study using Visium</title>
+      <link>https://lcolladotor.github.io/2024/05/23/humanpilot-first-spatially-resolved-transcriptomics-study-using-visium/</link>
+      <pubDate>Thu, 23 May 2024 00:00:00 +0000</pubDate>
+      <guid>https://lcolladotor.github.io/2024/05/23/humanpilot-first-spatially-resolved-transcriptomics-study-using-visium/</guid>
+      <description>&lt;p&gt;A few years ago now (2021) we published a study we refer to with a very generic name: &lt;code&gt;HumanPilot&lt;/code&gt; &lt;a id=&#39;cite-Maynard_2021&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://www.nature.com/articles/s41593-020-00787-0&#39;&gt;Maynard, Collado-Torres, Weber, Uytingco et al., 2021&lt;/a&gt;). In this peer-reviewed study, we were the first ones to use a commercially available technology for generating spatially-resolved transcriptomics data. It’s called &lt;a href=&#34;https://www.10xgenomics.com/products/spatial-gene-expression&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;em&gt;Visium&lt;/em&gt; and it’s sold by 10x Genomics&lt;/a&gt;. Note ⚠️ that members of that company were co-authors of our study. As we work in the &lt;a href=&#34;https://www.libd.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Lieber Institute for Brain Development&lt;/a&gt;, we tested &lt;em&gt;Visium&lt;/em&gt; with postmortem human brain data. I explained the initial pre-print (before peer-review) version of our work in a &lt;a href=&#34;https://lcolladotor.github.io/2020/02/29/diving-together-into-the-unknown-world-of-spatial-transcriptomics/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;blog post back in Feb 20, 2019&lt;/a&gt;.&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;🔥off the press! 👀 our &lt;a href=&#34;https://twitter.com/biorxivpreprint?ref_src=twsrc%5Etfw&#34;&gt;@biorxivpreprint&lt;/a&gt; on human 🧠brain &lt;a href=&#34;https://twitter.com/LieberInstitute?ref_src=twsrc%5Etfw&#34;&gt;@LieberInstitute&lt;/a&gt; spatial 🌌🔬transcriptomics data 🧬using Visium &lt;a href=&#34;https://twitter.com/10xGenomics?ref_src=twsrc%5Etfw&#34;&gt;@10xGenomics&lt;/a&gt;🎉&lt;a href=&#34;https://twitter.com/hashtag/spatialLIBD?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#spatialLIBD&lt;/a&gt;&lt;br&gt;&lt;br&gt;🔍&lt;a href=&#34;https://t.co/RTW0VscUKR&#34;&gt;https://t.co/RTW0VscUKR&lt;/a&gt; &lt;br&gt;👩🏾‍💻&lt;a href=&#34;https://t.co/bsg04XKONr&#34;&gt;https://t.co/bsg04XKONr&lt;/a&gt;&lt;br&gt;📚&lt;a href=&#34;https://t.co/FJDOOzrAJ6&#34;&gt;https://t.co/FJDOOzrAJ6&lt;/a&gt;&lt;br&gt;📦&lt;a href=&#34;https://t.co/Au5jwADGhY&#34;&gt;https://t.co/Au5jwADGhY&lt;/a&gt;&lt;a href=&#34;https://t.co/PiWEDN9q2N&#34;&gt;https://t.co/PiWEDN9q2N&lt;/a&gt; &lt;a href=&#34;https://t.co/aWy0yLlR50&#34;&gt;pic.twitter.com/aWy0yLlR50&lt;/a&gt;&lt;/p&gt;&amp;mdash; 🇲🇽 Leonardo Collado-Torres (@lcolladotor) &lt;a href=&#34;https://twitter.com/lcolladotor/status/1233661576433061888?ref_src=twsrc%5Etfw&#34;&gt;February 29, 2020&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;p&gt;But enough with the fancy specific words. Here I explain the main points of why this study was so important and why it is still frequently cited several years later.&lt;/p&gt;
+&lt;h2 id=&#34;what-is-a-fruit-banana-orange&#34;&gt;What is a fruit? Banana, orange?&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/File:Oranges_-_whole-halved-segment.jpg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;img src=&#34;images/orange.jpg&#34; width=&#34;400&#34; alt=&#34;Orange (full round)&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/File:Bananas.jpg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;img src=&#34;images/Bananas.jpg&#34; width=&#34;400&#34; alt=&#34;Bananas in the supermarket&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;When we are growing up, we don’t know what is an orange or a banana. What makes them both fruits, and why they are different.&lt;/p&gt;
+&lt;p&gt;If you look at them, touch them, smell them, you start to notice differences between them. In science, we end up trying to come up with systematic and specific ways of describing things that surround us in nature. In this case, two fruits. When you look at an orange and a banana and try to explain how they are different, you might end up slicing them.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/File:Oranges_-_whole-halved-segment.jpg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;img src=&#34;images/orange_sliced.jpg&#34; width=&#34;400&#34; alt=&#34;Orange (sliced with a knife)&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://similarpng.com/banana-slice-isolated-on-transparent-background-png/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;img src=&#34;images/Banana-slice-isolated-on-transparent-background-PNG.png&#34; width=&#34;400&#34; alt=&#34;Banana sliced&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Once you slice them, you are actively zooming in and looking at finer differences. You might end up using a microscope to notice even smaller differences.&lt;/p&gt;
+&lt;h2 id=&#34;measuring-gene-activity&#34;&gt;Measuring gene activity&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://doi.org/10.1038/s41592-020-01042-x&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;img src=&#34;images/nat_methods_spatial.png&#34; width=&#34;400&#34; alt=&#34;Nature Methods 2020 cover&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Now imagine that you want to measure gene 🧬 activity levels. Some previous technologies could measure gene activity levels by taking a chunk of tissue to have enough material for the technology to work. In the 2010s the technology was developed to measure single cells or nuclei, but you lost the spatial context. Then in 2020 the ability to measure gene activity while retaining the spatial awareness was crowned the new method of the year. The specific term is &lt;em&gt;spatially-resolved transcriptomics&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.mathworks.com/help/matlab/creating_plots/color-3-d-bars-by-height-1.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;img src=&#34;images/Color3DBarsByHeightExample_02.png&#34; width=&#34;400&#34; alt=&#34;3D barplots&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Visium&lt;/em&gt; in particular works by having about 5,000 circles (called “spots”) arranged in a honeycomb pattern where we can measure gene activity levels. 10x Genomics has some videos explaining how to it works, but it basically comes down to having an X and Y map for which you can make multiple 3D barplots like this one. Say that this is the one for gene 1 where we have a flat map and the height of the bars is how much that gene 1 was active in each square.&lt;/p&gt;
+&lt;p&gt;With &lt;em&gt;Visium&lt;/em&gt; we have 5,000 spots, or specific (&lt;em&gt;X&lt;/em&gt;, &lt;em&gt;Y&lt;/em&gt;) pairs and for each of them we can have about 2,000 genes measured. So imagine having 2,000 of these 3D barplots. That’s quite a bit of data and it’s exciting to think what this technology can be used for.&lt;/p&gt;
+&lt;h2 id=&#34;human-brain&#34;&gt;Human brain&lt;/h2&gt;
+&lt;p&gt;Just like we were talking about bananas and oranges being two types of fruits, well, the brain has different regions. Each of them carries out specific functions and can be quite different despite them all clearly remaining a part of the brain. Just like bananas and oranges look very different but still remain fruits.&lt;/p&gt;
+&lt;p&gt;Now, scientists by training are skeptical. So with a new exciting but expensive technology, the first thing we wanted to do is to test it with a small study. That is, run a pilot study. We work studying gene activity levels from human brain samples, particularly postmortem human brain samples that were donated to our institution for research purposes. One particular region we are interested in is called the &lt;em&gt;DLPFC&lt;/em&gt; and its important because differences between individuals that do not have schizophrenia (which we refer to as the neurotypical congrol group) and those that do schizophrenia have been linked to this brain region, among other reasons.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/File:Bananavarieties.jpg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Banana varieties&#34; srcset=&#34;
+               /2024/05/23/humanpilot-first-spatially-resolved-transcriptomics-study-using-visium/images/Bananavarieties_hu25d089f14ae440a3ee259346b7151fb5_60155_2179c5b12417c2e2e18c976f97311c28.webp 400w,
+               /2024/05/23/humanpilot-first-spatially-resolved-transcriptomics-study-using-visium/images/Bananavarieties_hu25d089f14ae440a3ee259346b7151fb5_60155_97ab55dd4e0234d4ab6bf405c8fd672c.webp 760w,
+               /2024/05/23/humanpilot-first-spatially-resolved-transcriptomics-study-using-visium/images/Bananavarieties_hu25d089f14ae440a3ee259346b7151fb5_60155_1200x1200_fit_q75_h2_lanczos.webp 1200w&#34;
+               src=&#34;https://lcolladotor.github.io/2024/05/23/humanpilot-first-spatially-resolved-transcriptomics-study-using-visium/images/Bananavarieties_hu25d089f14ae440a3ee259346b7151fb5_60155_2179c5b12417c2e2e18c976f97311c28.webp&#34;
+               width=&#34;387&#34;
+               height=&#34;221&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;But before we can distinguish the two groups of donors at the molecular level, with the ultimate goal of helping those affected by disorders such as schizophrenia, we first needed to understand what is typically different neurotypical control (NTC) donors. Just like we can look at different healthy bananas and notice how they are different.&lt;/p&gt;
+&lt;p&gt;And so we got started with our &lt;code&gt;HumanPilot&lt;/code&gt; study. We generated data from 3 NTC donors as you need to look at more than one donor to have an idea of biological variability.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://doi.org/10.1038/s41593-020-00787-0&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;img src=&#34;images/fig1ab.png&#34; width=&#34;800&#34; alt=&#34;Figure 1 A and B from the HumanPilot study&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;But because &lt;em&gt;Visium&lt;/em&gt; was a new technology then, we also generated spatially-adjacent replicates (two pairs per donor). These are technical replicates in the sense that we took contiguous slices of tissue. Think of it as two paired slices of bread 10 microns apart: we generated a pair early in the loaf and one more 300 microns apart in that same loaf. Yes, things do change even when you look at things 10 microns apart, but hopefully they don’t change too much then, but should once you look at them 300 microns apart. That’s what we wanted to see.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://doi.org/10.1038/s41593-020-00787-0&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;img src=&#34;images/fig1def.png&#34; width=&#34;800&#34; alt=&#34;Figure 1 D, E, and F from the HumanPilot study&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;The DLPFC has been quite well studied and it was well known that gene &lt;em&gt;SNAP25&lt;/em&gt; is more active in neurons while &lt;em&gt;MOBP&lt;/em&gt; is much less active in neurons. When we looked at the activity levels of these genes and could see basically how they complemented each other like a Yin and Yang symbol ☯, we were very excited.&lt;/p&gt;
+&lt;figure&gt;
+&lt;img src=&#34;https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Yin_and_Yang_symbol.svg/2560px-Yin_and_Yang_symbol.svg.png&#34; width=&#34;200&#34; alt=&#34;Yin and Yang&#34; /&gt;
+&lt;figcaption aria-hidden=&#34;true&#34;&gt;Yin and Yang&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;script defer class=&#34;speakerdeck-embed&#34; data-slide=&#34;9&#34; data-id=&#34;dde92cd6dfc04f9589770e074915658f&#34; data-ratio=&#34;1.3333333333333333&#34; src=&#34;//speakerdeck.com/assets/embed.js&#34;&gt;&lt;/script&gt;
+&lt;p&gt;We could also see more specific gene patterns, such as &lt;em&gt;PCP4&lt;/em&gt; which marks a specific subsection of DLPFC called Layer 5. And very importantly, this pattern was consistent among the 6 pairs of spatially-adjacent replicates we generated data for. That is, look for consistent patterns in each row from the above figure.&lt;/p&gt;
+&lt;h2 id=&#34;tons-of-manual-work-to-reproduce-what-we-knew&#34;&gt;Tons of manual work to reproduce what we knew!&lt;/h2&gt;
+&lt;p&gt;Now that trusted the technology, we could get to work. We started visualizing gene activity patterns for genes that other scientists had previously identified as marker genes for the DLPFC layers. Some have identified in other organisms such as mouse. Some, due to the nature of &lt;em&gt;Visium&lt;/em&gt;, we can only measure 2,000 genes instead of 20,000-30,000 ones that you can detect with other non-spatially-aware technologies.&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Our paper describing our package &lt;a href=&#34;https://twitter.com/hashtag/spatialLIBD?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#spatialLIBD&lt;/a&gt; is finally out! 🎉🎉🎉&lt;br&gt;&lt;br&gt;spatialLIBD is an &lt;a href=&#34;https://twitter.com/hashtag/rstats?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#rstats&lt;/a&gt; / &lt;a href=&#34;https://twitter.com/Bioconductor?ref_src=twsrc%5Etfw&#34;&gt;@Bioconductor&lt;/a&gt; package to visualize spatial transcriptomics data.&lt;br&gt;⁰&lt;br&gt;This is especially exciting for me as it is my first paper as a first author 🦑.&lt;a href=&#34;https://t.co/COW013x4GA&#34;&gt;https://t.co/COW013x4GA&lt;/a&gt;&lt;br&gt;&lt;br&gt;1/9 &lt;a href=&#34;https://t.co/xevIUg3IsA&#34;&gt;pic.twitter.com/xevIUg3IsA&lt;/a&gt;&lt;/p&gt;&amp;mdash; Brenda Pardo (@PardoBree) &lt;a href=&#34;https://twitter.com/PardoBree/status/1388253938391175173?ref_src=twsrc%5Etfw&#34;&gt;April 30, 2021&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;p&gt;Data visualization, particularly with any new technology, is always a challenge. So we developed a new software that we called &lt;code&gt;spatialLIBD&lt;/code&gt; to visualize the data &lt;a id=&#39;cite-Pardo_2022&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://doi.org/10.1186/s12864-022-08601-w&#39;&gt;Pardo, Spangler, Weber, Hicks et al., 2022&lt;/a&gt;). In particular, we built &lt;code&gt;spatialLIBD&lt;/code&gt; in a way that enabled members of our team to assign each &lt;em&gt;Visium&lt;/em&gt; spot from our 12 tissue slices to one of seven categories: gray matter layers 1 to 6, and white matter. That was a lot of work! Many other people now refer to it as the “ground truth” although we know it is not. In total, we had 47,681 spots or an average of 3,973 spots per tissue slice. Imagine having to label that many fruits, you are bound to make some mistakes!&lt;/p&gt;
+&lt;script defer class=&#34;speakerdeck-embed&#34; data-slide=&#34;10&#34; data-id=&#34;dde92cd6dfc04f9589770e074915658f&#34; data-ratio=&#34;1.3333333333333333&#34; src=&#34;//speakerdeck.com/assets/embed.js&#34;&gt;&lt;/script&gt;
+&lt;p&gt;This was a terrific amount of work, and it is has a fundamental reason why our study has been so well cited so far. Before I get ahead of myself, now that we have labeled all these spots, we can collapse the data and perform several types of analyses. Of them is looking at the different layers and white matter (WM) from the 12 tissue slices using principal component analysis (PCA). For a lot more on the mathematical theory of PCA check &lt;a href=&#34;https://en.wikipedia.org/wiki/Principal_component_analysis&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Wikipedia&lt;/a&gt;. What matters here is that PC1 explain the most differences, and we can see the WM points in black on the left side, clearly separated from the other points. Then PC2 is associated with L1 in pink at bottom of the Y-axis, to then L2 in blue, L3 in green, L4 in purple, L5 in yellow, and L6 in orange.&lt;/p&gt;
+&lt;p&gt;That was awesome! Yes, white matter is very different from gray matter (as shown in PC1), but then also the gray matter layers are different from each other in a sequential way (as shown in PC2). All of this was known before our study, but it always feels great when you can use a different technology to reproduce previous findings.&lt;/p&gt;
+&lt;h2 id=&#34;finding-and-validating-new-dlpfc-layer-marker-genes&#34;&gt;Finding and validating new DLPFC layer marker genes&lt;/h2&gt;
+&lt;p&gt;Is that it? Of course not. Other technologies and laborious experiments were needed to find some marker genes for the DLPFC layers. But now we could identify other ones. So that’s what we did. Not only did we find genes that can help us separate these layers from each other, but we then proceeded to verify a few of them using other experiments.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://doi.org/10.1038/s41593-020-00787-0&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;img src=&#34;images/fig4.png&#34; width=&#34;800&#34; alt=&#34;Figure 4 from the HumanPilot study&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;The above figure showcases some of these new marker genes that have higher activity levels in the layer they mark. It doesn’t mean that they are not active elsewhere. Though if you are interested in finding on/off marker genes, we have computational methods for that too nowadays implemented in our &lt;a href=&#34;https://research.libd.org/DeconvoBuddies/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;DeconvoBuddies&lt;/code&gt;&lt;/a&gt; software.&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;We also propose and evaluate a new method for selecting cell type specific &lt;a href=&#34;https://twitter.com/hashtag/markergenes?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#markergenes&lt;/a&gt; for deconvolution: &lt;a href=&#34;https://twitter.com/hashtag/MeanRatio?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#MeanRatio&lt;/a&gt; implemented in &lt;a href=&#34;https://twitter.com/hashtag/DeconvoBuddies?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#DeconvoBuddies&lt;/a&gt; (soon to be submited to &lt;a href=&#34;https://twitter.com/Bioconductor?ref_src=twsrc%5Etfw&#34;&gt;@Bioconductor&lt;/a&gt;) &lt;a href=&#34;https://twitter.com/hashtag/rstats?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#rstats&lt;/a&gt;&lt;br&gt;🛠️&lt;a href=&#34;https://t.co/del9EjmBwQ&#34;&gt;https://t.co/del9EjmBwQ&lt;/a&gt; &lt;a href=&#34;https://t.co/5PQk18yDrt&#34;&gt;pic.twitter.com/5PQk18yDrt&lt;/a&gt;&lt;/p&gt;&amp;mdash; Louise Huuki-Myers (@lahuuki) &lt;a href=&#34;https://twitter.com/lahuuki/status/1779902247305949495?ref_src=twsrc%5Etfw&#34;&gt;April 15, 2024&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;h2 id=&#34;what-about-disorders-how-does-your-humanpilot-study-help-us-understand-them&#34;&gt;What about disorders? How does your &lt;code&gt;HumanPilot&lt;/code&gt; study help us understand them?&lt;/h2&gt;
+&lt;p&gt;As you have followed the story so far, our data is from 3 neurotypical control donors. It’s not like we can use their data to find what is different between them and individuals affected by other disorders. But what we can do is ask, is there a significant overlap between the DLPFC layer marker genes and genes that have been associated with specific disorders?&lt;/p&gt;
+&lt;script defer class=&#34;speakerdeck-embed&#34; data-slide=&#34;21&#34; data-id=&#34;dde92cd6dfc04f9589770e074915658f&#34; data-ratio=&#34;1.3333333333333333&#34; src=&#34;//speakerdeck.com/assets/embed.js&#34;&gt;&lt;/script&gt;
+&lt;p&gt;So we obtained several gene lists from previous studies with much larger sample sizes that compared NTC donors against those affected by certain disorders. Some of these studies are based on gene activity levels, some of them are based on DNA variants which they then link to genes by proximity. One set of studies we looked at were those investigating autism spectrum disorder (ASD). What was fascinating to us is that two studies (SFARI and ASC102) had similar enrichment between ASD-associated genes and L2 and L5 marker genes. But the ASC102 study can be broken apart into two sets, ASD53 and DDID49, and each is associated with just one layer (L5 and L2, respectively).&lt;/p&gt;
+&lt;p&gt;So spatially-resolved transcriptomics could be used to further locate to specific tissue architectural elements the genes that have been implicated in different diseases, disorders, or biologically-relevant groups. Even small pilot studies like ours have the potential of helping us understand how some of these genes are distinctly spatially active.&lt;/p&gt;
+&lt;h2 id=&#34;fueling-the-development-of-methods-and-benefiting-from-it&#34;&gt;Fueling the development of methods, and benefiting from it&lt;/h2&gt;
+&lt;p&gt;We knew that this wasn’t going to be the end. Our &lt;code&gt;HumanPilot&lt;/code&gt; was just the beginning and for our research groups, it effectively started a whole new wave of studies. We are now using &lt;em&gt;Visium&lt;/em&gt; and other technologies to dive into other brain regions which aren’t necessarily as well studied as the DLPFC, or to look at differences between specific sets of groups of donors. Yet, this isn’t our first time witnessing the emergence of a brand new technology. We are well aware that each new technology has its imperfections, biases, and sources of measurement noise. One particular challenge we wanted help with was the process of manually annotating thousands of spots.&lt;/p&gt;
+&lt;script defer class=&#34;speakerdeck-embed&#34; data-slide=&#34;23&#34; data-id=&#34;dde92cd6dfc04f9589770e074915658f&#34; data-ratio=&#34;1.3333333333333333&#34; src=&#34;//speakerdeck.com/assets/embed.js&#34;&gt;&lt;/script&gt;
+&lt;p&gt;In our dataset, we had manual annotations. So we went ahead and tested a few different ways of grouping spots, known as clustering.&lt;/p&gt;
+&lt;script defer class=&#34;speakerdeck-embed&#34; data-slide=&#34;26&#34; data-id=&#34;dde92cd6dfc04f9589770e074915658f&#34; data-ratio=&#34;1.3333333333333333&#34; src=&#34;//speakerdeck.com/assets/embed.js&#34;&gt;&lt;/script&gt;
+&lt;p&gt;Any computational clustering method will produce results and pretty pictures. By eye, sometimes you can tell quite easily what is a widely inaccurate result from one that seems decent enough. But comparing decent results from two methods by eye is very challenging.&lt;/p&gt;
+&lt;script defer class=&#34;speakerdeck-embed&#34; data-slide=&#34;27&#34; data-id=&#34;dde92cd6dfc04f9589770e074915658f&#34; data-ratio=&#34;1.3333333333333333&#34; src=&#34;//speakerdeck.com/assets/embed.js&#34;&gt;&lt;/script&gt;
+&lt;p&gt;We used a measure called adjusted rand index to do this, where higher values are better. Here we did a few key things:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;We made our data public as soon as we pre-printed our study in Feb 29, 2020.
+&lt;ul&gt;
+&lt;li&gt;That is, we didn’t wait for a full peer-review process (our paper was published in Feb 8th 2021, nearly a year later). Openly sharing data early can help accelerate science.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;We made our data easy to access in a easy to use computational format.
+– pecifically, &lt;code&gt;SingleCellExperiment&lt;/code&gt; R/Bioconductor objects downloadable through &lt;a href=&#34;https://research.libd.org/spatialLIBD/reference/fetch_data.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;spatialLIBD::fetch_data()&lt;/code&gt;&lt;/a&gt;. Nowadays, we provide the data in the more specialized &lt;code&gt;SpatialExperiment&lt;/code&gt; format.&lt;/li&gt;
+&lt;li&gt;We showed how you can compare results from clustering methods to the manual annotation using the adjusted rand index metric.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;script defer class=&#34;speakerdeck-embed&#34; data-slide=&#34;28&#34; data-id=&#34;dde92cd6dfc04f9589770e074915658f&#34; data-ratio=&#34;1.3333333333333333&#34; src=&#34;//speakerdeck.com/assets/embed.js&#34;&gt;&lt;/script&gt;
+&lt;p&gt;Within months, others such as the authors of &lt;em&gt;BayesSpace&lt;/em&gt; in September 5th 2020, started to use our &lt;code&gt;HumanPilot&lt;/code&gt; data to evaluate the performance of their sophisticated spatially-aware clustering methods.&lt;/p&gt;
+&lt;script defer class=&#34;speakerdeck-embed&#34; data-slide=&#34;18&#34; data-id=&#34;63b3cfba8f404d52b6a6f472056024bd&#34; data-ratio=&#34;1.3333333333333333&#34; src=&#34;//speakerdeck.com/assets/embed.js&#34;&gt;&lt;/script&gt;
+&lt;p&gt;This rapid pace of development has been great to witness. We now have been able to see how others have used our data to improve their methods, and we can now benefit from them by applying them to new &lt;em&gt;Visium&lt;/em&gt; datasets without necessarily having to perform manual annotations.&lt;/p&gt;
+&lt;h2 id=&#34;what-followed&#34;&gt;What followed&lt;/h2&gt;
+&lt;p&gt;Naturally we heard questions about what could happen if we had a larger pilot study. If we looked at different sections of DLPFC (anterior, middle, posterior). Today, our follow up peer-reviewed study was published involving data from 10 NTC donors across the anterior-posterior axis for a total of 30 &lt;em&gt;Visium&lt;/em&gt; tissue slices. I’ll soon explain this follow up study, which we called &lt;code&gt;spatialDLPFC&lt;/code&gt;, in its own blog post. Louise A. Huuki-Myers already wrote an &lt;a href=&#34;https://lahuuki.github.io/posts/2024-05-23-spatialDLPFC/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;excellent &lt;code&gt;spatialDLPFC&lt;/code&gt; overview blog post which I encourage you to read&lt;/a&gt;.&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;New in &lt;a href=&#34;https://twitter.com/ScienceMagazine?ref_src=twsrc%5Etfw&#34;&gt;@sciencemagazine&lt;/a&gt;: our work from &lt;a href=&#34;https://twitter.com/LieberInstitute?ref_src=twsrc%5Etfw&#34;&gt;@LieberInstitute&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/spatialDLPFC?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#spatialDLPFC&lt;/a&gt; applies &lt;a href=&#34;https://twitter.com/hashtag/snRNAseq?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#snRNAseq&lt;/a&gt; and &lt;a href=&#34;https://twitter.com/hashtag/Visium?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#Visium&lt;/a&gt; spatial transcriptomic in the DLPFC to better understand anatomical structure and cellular populations in the human brain &lt;a href=&#34;https://twitter.com/hashtag/PsychENCODE?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#PsychENCODE&lt;/a&gt; &lt;a href=&#34;https://t.co/DKZqmG4YDi&#34;&gt;https://t.co/DKZqmG4YDi&lt;/a&gt; &lt;a href=&#34;https://t.co/Tjp2OjTo63&#34;&gt;https://t.co/Tjp2OjTo63&lt;/a&gt; &lt;a href=&#34;https://t.co/vQbjts2JtQ&#34;&gt;pic.twitter.com/vQbjts2JtQ&lt;/a&gt;&lt;/p&gt;&amp;mdash; Louise Huuki-Myers (@lahuuki) &lt;a href=&#34;https://twitter.com/lahuuki/status/1793714294334648638?ref_src=twsrc%5Etfw&#34;&gt;May 23, 2024&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;p&gt;Something I want to highlight is that my colleague Kristen R. Maynard and I were co-first authors of &lt;code&gt;HumanPilot&lt;/code&gt;, and are now co-corresponding authors of &lt;code&gt;spatialDLPFC&lt;/code&gt;. &lt;code&gt;HumanPilot&lt;/code&gt; started in 2019 and was published in 2021, &lt;code&gt;spatialDLPFC&lt;/code&gt; started in 2020 and was published in 2024. These projects have large cycles and it takes a whole village, or a federation of villages, to get them completed and published. So I want to shoutout all past colleagues. We couldn’t have gotten to where we are without their work! And thank you for everyone who has been interested in our work and has been using it to learn new things. We also learn through you. Thank you!!!&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Self-assessment can be repetitive - or maybe not? 🤔 This caught my attention in recent spatial omics literature (but apparently not the authors&amp;#39;?)... &amp;quot;More of a comment than a question&amp;quot; that we need benchmarks. &lt;a href=&#34;https://t.co/KPRTf0vUxv&#34;&gt;pic.twitter.com/KPRTf0vUxv&lt;/a&gt;&lt;/p&gt;&amp;mdash; Helena Lucia Crowell (@helucro) &lt;a href=&#34;https://twitter.com/helucro/status/1597579271945715717?ref_src=twsrc%5Etfw&#34;&gt;November 29, 2022&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;p&gt;Hopefully you have a better understanding of our &lt;code&gt;HumanPilot&lt;/code&gt; study now and can recognize the origin of all the figures like the ones above. If you want more, check out this journal club presentation by Cynthia Soto and Daianna Gonzalez-Padilla. They are members of my lab, but were not involved in this study at all. So their presentation has a fresh perspective.&lt;/p&gt;
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/qloLbG5-IPM?si=u5uXT3x4ShfF25mi&#34; title=&#34;YouTube video player&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; allowfullscreen&gt;
+&lt;/iframe&gt;
+&lt;p&gt;Finally, feel free to checkout our code and more details at &lt;a href=&#34;https://github.com/LieberInstitute/HumanPilot&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://github.com/LieberInstitute/HumanPilot&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;See you around! 😊&lt;/p&gt;
+&lt;h2 id=&#34;acknowledgments&#34;&gt;Acknowledgments&lt;/h2&gt;
+&lt;p&gt;This blog post was made possible thanks to:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;&lt;a href=&#34;https://bioconductor.org/packages/3.19/BiocStyle&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;BiocStyle&lt;/a&gt;&lt;/em&gt; &lt;a id=&#39;cite-Oles_2024&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://github.com/Bioconductor/BiocStyle&#39;&gt;Oleś, 2024&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;a href=&#34;https://CRAN.R-project.org/package=blogdown&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;blogdown&lt;/a&gt;&lt;/em&gt; &lt;a id=&#39;cite-Xie_2017&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://bookdown.org/yihui/blogdown/&#39;&gt;Xie, Hill, and Thomas, 2017&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;a href=&#34;https://CRAN.R-project.org/package=knitcitations&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;knitcitations&lt;/a&gt;&lt;/em&gt; &lt;a id=&#39;cite-Boettiger_2021&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://CRAN.R-project.org/package=knitcitations&#39;&gt;Boettiger, 2021&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;references&#34;&gt;References&lt;/h2&gt;
+&lt;p&gt;
+&lt;a id=&#39;bib-Boettiger_2021&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-Boettiger_2021&#34;&gt;\[1\]&lt;/a&gt;&lt;cite&gt;
+C. Boettiger.
+&lt;em&gt;knitcitations: Citations for ‘Knitr’ Markdown Files&lt;/em&gt;.
+R package version 1.0.12.
+2021.
+URL: &lt;a href=&#34;https://CRAN.R-project.org/package=knitcitations&#34;&gt;https://CRAN.R-project.org/package=knitcitations&lt;/a&gt;.&lt;/cite&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;a id=&#39;bib-Maynard_2021&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-Maynard_2021&#34;&gt;\[2\]&lt;/a&gt;&lt;cite&gt;
+K. R. Maynard, L. Collado-Torres, L. M. Weber, C. Uytingco, et al.
+“Transcriptome-scale spatial gene expression in the human dorsolateral prefrontal cortex”.
+In: &lt;em&gt;Nature Neuroscience&lt;/em&gt; (2021).
+DOI: &lt;a href=&#34;https://doi.org/10.1038/s41593-020-00787-0&#34;&gt;10.1038/s41593-020-00787-0&lt;/a&gt;.
+URL: &lt;a href=&#34;https://www.nature.com/articles/s41593-020-00787-0&#34;&gt;https://www.nature.com/articles/s41593-020-00787-0&lt;/a&gt;.&lt;/cite&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;a id=&#39;bib-Oles_2024&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-Oles_2024&#34;&gt;\[3\]&lt;/a&gt;&lt;cite&gt;
+A. Oleś.
+&lt;em&gt;BiocStyle: Standard styles for vignettes and other Bioconductor documents&lt;/em&gt;.
+R package version 2.32.0.
+2024.
+URL: &lt;a href=&#34;https://github.com/Bioconductor/BiocStyle&#34;&gt;https://github.com/Bioconductor/BiocStyle&lt;/a&gt;.&lt;/cite&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;a id=&#39;bib-Pardo_2022&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-Pardo_2022&#34;&gt;\[4\]&lt;/a&gt;&lt;cite&gt;
+B. Pardo, A. Spangler, L. M. Weber, S. C. Hicks, et al.
+“spatialLIBD: an R/Bioconductor package to visualize spatially-resolved transcriptomics data”.
+In: &lt;em&gt;BMC Genomics&lt;/em&gt; (2022).
+DOI: &lt;a href=&#34;https://doi.org/10.1186/s12864-022-08601-w&#34;&gt;10.1186/s12864-022-08601-w&lt;/a&gt;.
+URL: &lt;a href=&#34;https://doi.org/10.1186/s12864-022-08601-w&#34;&gt;https://doi.org/10.1186/s12864-022-08601-w&lt;/a&gt;.&lt;/cite&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;a id=&#39;bib-Xie_2017&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-Xie_2017&#34;&gt;\[5\]&lt;/a&gt;&lt;cite&gt;
+Y. Xie, A. P. Hill, and A. Thomas.
+&lt;em&gt;blogdown: Creating Websites with R Markdown&lt;/em&gt;.
+Boca Raton, Florida: Chapman and Hall/CRC, 2017.
+ISBN: 978-0815363729.
+URL: &lt;a href=&#34;https://bookdown.org/yihui/blogdown/&#34;&gt;https://bookdown.org/yihui/blogdown/&lt;/a&gt;.&lt;/cite&gt;
+&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>How to reduce the size of a large GitHub repo</title>
       <link>https://lcolladotor.github.io/2024/04/11/how-to-reduce-the-size-of-a-large-github-repo/</link>
       <pubDate>Thu, 11 Apr 2024 00:00:00 +0000</pubDate>
