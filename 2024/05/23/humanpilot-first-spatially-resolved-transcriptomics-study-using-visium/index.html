@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- This site was created with Wowchemy. https://www.wowchemy.com -->
-<!-- Last Published: May 24, 2024 --><html lang="en-us" >
+<!-- Last Published: May 25, 2024 --><html lang="en-us" >
 
 
 <head>
@@ -325,6 +325,8 @@ A few years ago now (2021) we published a study we refer to with a very generic 
 
 
 
+  <link rel="alternate" hreflang="es" href="https://lcolladotor.github.io/es/2024/05/23/humanpilot-first-spatially-resolved-transcriptomics-study-using-visium/" />
+
 <link rel="alternate" hreflang="en-us" href="https://lcolladotor.github.io/2024/05/23/humanpilot-first-spatially-resolved-transcriptomics-study-using-visium/" />
 <link rel="canonical" href="https://lcolladotor.github.io/2024/05/23/humanpilot-first-spatially-resolved-transcriptomics-study-using-visium/" />
 
@@ -374,7 +376,7 @@ A few years ago now (2021) we published a study we refer to with a very generic 
     />
   
   
-    <meta property="article:modified_time" content="2024-05-23T21:17:35-04:00">
+    <meta property="article:modified_time" content="2024-05-25T17:58:04-04:00">
   
 
 
@@ -405,7 +407,7 @@ A few years ago now (2021) we published a study we refer to with a very generic 
   "headline": "HumanPilot: first spatially-resolved transcriptomics study using Visium",
   
   "datePublished": "2024-05-23T00:00:00Z",
-  "dateModified": "2024-05-23T21:17:35-04:00",
+  "dateModified": "2024-05-25T17:58:04-04:00",
   
   "author": {
     "@type": "Person",
@@ -941,6 +943,22 @@ A few years ago now (2021) we published a study we refer to with a very generic 
 
         
         
+        <li class="nav-item dropdown i18n-dropdown">
+          <a href="#" class="nav-link " data-toggle="dropdown"
+             aria-haspopup="true" aria-label="Languages">
+            <i class="fas fa-globe mr-1" aria-hidden="true"></i></a>
+          <div class="dropdown-menu">
+            <div class="dropdown-item dropdown-item-active">
+              <span>English</span>
+            </div>
+            
+            <a class="dropdown-item" href="https://lcolladotor.github.io/es/2024/05/23/humanpilot-first-spatially-resolved-transcriptomics-study-using-visium/">
+              <span>Español</span>
+            </a>
+            
+          </div>
+        </li>
+        
 
       </ul>
 
@@ -1009,7 +1027,7 @@ A few years ago now (2021) we published a study we refer to with a very generic 
           Last updated on
       
     
-    Thu, May 23, 2024
+    Sat, May 25, 2024
   </span>
   
 
@@ -1115,7 +1133,7 @@ A few years ago now (2021) we published a study we refer to with a very generic 
 <p><a href="https://doi.org/10.1038/s41592-020-01042-x" target="_blank" rel="noopener"><img src="https://lcolladotor.github.io/2024/05/23/humanpilot-first-spatially-resolved-transcriptomics-study-using-visium/images/nat_methods_spatial.png" width="400" alt="Nature Methods 2020 cover" /></a></p>
 <p>Now imagine that you want to measure gene 🧬 activity levels. Some previous technologies could measure gene activity levels by taking a chunk of tissue to have enough material for the technology to work. In the 2010s the technology was developed to measure single cells or nuclei, but you lost the spatial context. Then in 2020 the ability to measure gene activity while retaining the spatial awareness was crowned the new method of the year. The specific term is <em>spatially-resolved transcriptomics</em>.</p>
 <p><a href="https://www.mathworks.com/help/matlab/creating_plots/color-3-d-bars-by-height-1.html" target="_blank" rel="noopener"><img src="https://lcolladotor.github.io/2024/05/23/humanpilot-first-spatially-resolved-transcriptomics-study-using-visium/images/Color3DBarsByHeightExample_02.png" width="400" alt="3D barplots" /></a></p>
-<p><em>Visium</em> in particular works by having about 5,000 circles (called “spots”) arranged in a honeycomb pattern where we can measure gene activity levels. 10x Genomics has some videos explaining how to it works, but it basically comes down to having an X and Y map for which you can make multiple 3D barplots like this one. Say that this is the one for gene 1 where we have a flat map and the height of the bars is how much that gene 1 was active in each square.</p>
+<p><em>Visium</em> in particular works by having about 5,000 circles (called “spots”) arranged in a honeycomb pattern 🐝 where we can measure gene activity levels. 10x Genomics has some videos explaining how to it works, but it basically comes down to having an X and Y map for which you can make multiple 3D barplots like this one. Say that this is the one for gene 1 where we have a flat map and the height of the bars is how much that gene 1 was active in each square.</p>
 <p>With <em>Visium</em> we have 5,000 spots, or specific (<em>X</em>, <em>Y</em>) pairs and for each of them we can have about 2,000 genes measured. So imagine having 2,000 of these 3D barplots. That’s quite a bit of data and it’s exciting to think what this technology can be used for.</p>
 <h2 id="human-brain">Human brain</h2>
 <p>Just like we were talking about bananas and oranges being two types of fruits, well, the brain has different regions. Each of them carries out specific functions and can be quite different despite them all clearly remaining a part of the brain. Just like bananas and oranges look very different but still remain fruits.</p>
@@ -1154,12 +1172,12 @@ A few years ago now (2021) we published a study we refer to with a very generic 
 <script defer class="speakerdeck-embed" data-slide="9" data-id="dde92cd6dfc04f9589770e074915658f" data-ratio="1.3333333333333333" src="//speakerdeck.com/assets/embed.js"></script>
 <p>We could also see more specific gene patterns, such as <em>PCP4</em> which marks a specific subsection of DLPFC called Layer 5. And very importantly, this pattern was consistent among the 6 pairs of spatially-adjacent replicates we generated data for. That is, look for consistent patterns in each row from the above figure.</p>
 <h2 id="tons-of-manual-work-to-reproduce-what-we-knew">Tons of manual work to reproduce what we knew!</h2>
-<p>Now that trusted the technology, we could get to work. We started visualizing gene activity patterns for genes that other scientists had previously identified as marker genes for the DLPFC layers. Some have identified in other organisms such as mouse. Some, due to the nature of <em>Visium</em>, we can only measure 2,000 genes instead of 20,000-30,000 ones that you can detect with other non-spatially-aware technologies.</p>
+<p>Now that trusted the technology, we could get to work. We started visualizing gene activity patterns for genes that other scientists had previously identified as marker genes for the DLPFC layers. Some have identified in other organisms such as mouse 🐁. Some, due to the nature of <em>Visium</em>, we could not observe them. <em>Visium</em> can only measure 2,000 genes instead of the 20,000-30,000 genes that you can detect with other non-spatially-aware technologies.</p>
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Our paper describing our package <a href="https://twitter.com/hashtag/spatialLIBD?src=hash&amp;ref_src=twsrc%5Etfw">#spatialLIBD</a> is finally out! 🎉🎉🎉<br><br>spatialLIBD is an <a href="https://twitter.com/hashtag/rstats?src=hash&amp;ref_src=twsrc%5Etfw">#rstats</a> / <a href="https://twitter.com/Bioconductor?ref_src=twsrc%5Etfw">@Bioconductor</a> package to visualize spatial transcriptomics data.<br>⁰<br>This is especially exciting for me as it is my first paper as a first author 🦑.<a href="https://t.co/COW013x4GA">https://t.co/COW013x4GA</a><br><br>1/9 <a href="https://t.co/xevIUg3IsA">pic.twitter.com/xevIUg3IsA</a></p>&mdash; Brenda Pardo (@PardoBree) <a href="https://twitter.com/PardoBree/status/1388253938391175173?ref_src=twsrc%5Etfw">April 30, 2021</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 <p>Data visualization, particularly with any new technology, is always a challenge. So we developed a new software that we called <code>spatialLIBD</code> to visualize the data <a id='cite-Pardo_2022'></a>(<a href='https://doi.org/10.1186/s12864-022-08601-w'>Pardo, Spangler, Weber, Hicks et al., 2022</a>). In particular, we built <code>spatialLIBD</code> in a way that enabled members of our team to assign each <em>Visium</em> spot from our 12 tissue slices to one of seven categories: gray matter layers 1 to 6, and white matter. That was a lot of work! Many other people now refer to it as the “ground truth” although we know it is not. In total, we had 47,681 spots or an average of 3,973 spots per tissue slice. Imagine having to label that many fruits, you are bound to make some mistakes!</p>
 <script defer class="speakerdeck-embed" data-slide="10" data-id="dde92cd6dfc04f9589770e074915658f" data-ratio="1.3333333333333333" src="//speakerdeck.com/assets/embed.js"></script>
-<p>This was a terrific amount of work, and it is has a fundamental reason why our study has been so well cited so far. Before I get ahead of myself, now that we have labeled all these spots, we can collapse the data and perform several types of analyses. Of them is looking at the different layers and white matter (WM) from the 12 tissue slices using principal component analysis (PCA). For a lot more on the mathematical theory of PCA check <a href="https://en.wikipedia.org/wiki/Principal_component_analysis" target="_blank" rel="noopener">Wikipedia</a>. What matters here is that PC1 explain the most differences, and we can see the WM points in black on the left side, clearly separated from the other points. Then PC2 is associated with L1 in pink at bottom of the Y-axis, to then L2 in blue, L3 in green, L4 in purple, L5 in yellow, and L6 in orange.</p>
+<p>This was a terrific amount of work, and it is has been a fundamental reason why our study has been so well cited so far. Before I get ahead of myself, now that we have labeled all these spots, we can collapse the data and perform several types of analyses. Of them is looking at the different layers and white matter (WM) from the 12 tissue slices using principal component analysis (PCA). For a lot more on the mathematical theory of PCA check <a href="https://en.wikipedia.org/wiki/Principal_component_analysis" target="_blank" rel="noopener">Wikipedia</a>. What matters here is that PC1 explain the most differences, and we can see the WM points in black on the left side, clearly separated from the other points. Then PC2 is associated with L1 in pink at bottom of the Y-axis, to then L2 in blue, L3 in green, L4 in purple, L5 in yellow, and L6 in orange.</p>
 <p>That was awesome! Yes, white matter is very different from gray matter (as shown in PC1), but then also the gray matter layers are different from each other in a sequential way (as shown in PC2). All of this was known before our study, but it always feels great when you can use a different technology to reproduce previous findings.</p>
 <h2 id="finding-and-validating-new-dlpfc-layer-marker-genes">Finding and validating new DLPFC layer marker genes</h2>
 <p>Is that it? Of course not. Other technologies and laborious experiments were needed to find some marker genes for the DLPFC layers. But now we could identify other ones. So that’s what we did. Not only did we find genes that can help us separate these layers from each other, but we then proceeded to verify a few of them using other experiments.</p>
@@ -1168,12 +1186,12 @@ A few years ago now (2021) we published a study we refer to with a very generic 
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">We also propose and evaluate a new method for selecting cell type specific <a href="https://twitter.com/hashtag/markergenes?src=hash&amp;ref_src=twsrc%5Etfw">#markergenes</a> for deconvolution: <a href="https://twitter.com/hashtag/MeanRatio?src=hash&amp;ref_src=twsrc%5Etfw">#MeanRatio</a> implemented in <a href="https://twitter.com/hashtag/DeconvoBuddies?src=hash&amp;ref_src=twsrc%5Etfw">#DeconvoBuddies</a> (soon to be submited to <a href="https://twitter.com/Bioconductor?ref_src=twsrc%5Etfw">@Bioconductor</a>) <a href="https://twitter.com/hashtag/rstats?src=hash&amp;ref_src=twsrc%5Etfw">#rstats</a><br>🛠️<a href="https://t.co/del9EjmBwQ">https://t.co/del9EjmBwQ</a> <a href="https://t.co/5PQk18yDrt">pic.twitter.com/5PQk18yDrt</a></p>&mdash; Louise Huuki-Myers (@lahuuki) <a href="https://twitter.com/lahuuki/status/1779902247305949495?ref_src=twsrc%5Etfw">April 15, 2024</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 <h2 id="what-about-disorders-how-does-your-humanpilot-study-help-us-understand-them">What about disorders? How does your <code>HumanPilot</code> study help us understand them?</h2>
-<p>As you have followed the story so far, our data is from 3 neurotypical control donors. It’s not like we can use their data to find what is different between them and individuals affected by other disorders. But what we can do is ask, is there a significant overlap between the DLPFC layer marker genes and genes that have been associated with specific disorders?</p>
+<p>As you have followed the story so far, our data is from 3 neurotypical control donors. It’s not like we can use their data (<em>n</em> = 3) to find what is overall different between neurotypical control donors and individuals affected by other brain disorders. But what we can do is ask, is there a significant overlap between the DLPFC layer marker genes and genes that have been associated with specific brain disorders?</p>
 <script defer class="speakerdeck-embed" data-slide="21" data-id="dde92cd6dfc04f9589770e074915658f" data-ratio="1.3333333333333333" src="//speakerdeck.com/assets/embed.js"></script>
-<p>So we obtained several gene lists from previous studies with much larger sample sizes that compared NTC donors against those affected by certain disorders. Some of these studies are based on gene activity levels, some of them are based on DNA variants which they then link to genes by proximity. One set of studies we looked at were those investigating autism spectrum disorder (ASD). What was fascinating to us is that two studies (SFARI and ASC102) had similar enrichment between ASD-associated genes and L2 and L5 marker genes. But the ASC102 study can be broken apart into two sets, ASD53 and DDID49, and each is associated with just one layer (L5 and L2, respectively).</p>
+<p>So we obtained several gene lists from previous studies with much larger sample sizes that compared NTC donors against those affected by certain brain disorders. Some of these studies are based on gene activity levels, some of them are based on DNA variants which they then link to genes by proximity. One set of studies we looked at were those investigating autism spectrum disorder (ASD). What was fascinating to us is that two studies (SFARI and ASC102) had similar enrichment between ASD-associated genes and L2 and L5 marker genes. But the ASC102 study can be broken apart into two sets, ASD53 and DDID49, and each is associated with just one layer (L5 and L2, respectively).</p>
 <p>So spatially-resolved transcriptomics could be used to further locate to specific tissue architectural elements the genes that have been implicated in different diseases, disorders, or biologically-relevant groups. Even small pilot studies like ours have the potential of helping us understand how some of these genes are distinctly spatially active.</p>
 <h2 id="fueling-the-development-of-methods-and-benefiting-from-it">Fueling the development of methods, and benefiting from it</h2>
-<p>We knew that this wasn’t going to be the end. Our <code>HumanPilot</code> was just the beginning and for our research groups, it effectively started a whole new wave of studies. We are now using <em>Visium</em> and other technologies to dive into other brain regions which aren’t necessarily as well studied as the DLPFC, or to look at differences between specific sets of groups of donors. Yet, this isn’t our first time witnessing the emergence of a brand new technology. We are well aware that each new technology has its imperfections, biases, and sources of measurement noise. One particular challenge we wanted help with was the process of manually annotating thousands of spots.</p>
+<p>We knew that this wasn’t going to be the end. Our <code>HumanPilot</code> was just the beginning and for our research groups, it effectively started a whole new wave of studies. We are now using <em>Visium</em> and other technologies to dive into other brain regions which aren’t necessarily as well studied as the DLPFC, or to look at differences between specific sets of groups of donors. Yet, this isn’t our first time witnessing the emergence of a brand new technology. We are well aware that each new technology has its imperfections, biases, and sources of measurement noise. One particular challenge we wanted help with was the process of manually annotating thousands of <em>Visium</em> spots.</p>
 <script defer class="speakerdeck-embed" data-slide="23" data-id="dde92cd6dfc04f9589770e074915658f" data-ratio="1.3333333333333333" src="//speakerdeck.com/assets/embed.js"></script>
 <p>In our dataset, we had manual annotations. So we went ahead and tested a few different ways of grouping spots, known as clustering.</p>
 <script defer class="speakerdeck-embed" data-slide="26" data-id="dde92cd6dfc04f9589770e074915658f" data-ratio="1.3333333333333333" src="//speakerdeck.com/assets/embed.js"></script>
