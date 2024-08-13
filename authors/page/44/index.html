@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <!-- This site was created with Wowchemy. https://www.wowchemy.com -->
-<!-- Last Published: April 11, 2024 --><html lang="en-us" >
+<!-- Last Published: August 13, 2024 --><html lang="en-us" >
 
 
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -73,7 +73,7 @@
 
   
 
-  <link rel="stylesheet" href="/css/vendor-bundle.min.css" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="/css/vendor-bundle.min.047268c6dd09ad74ba54a0ba71837064.css" media="print" onload="this.media='all'">
 
   
   
@@ -217,7 +217,7 @@
   
   
   
-  <link rel="stylesheet" href="/css/wowchemy.css" />
+  <link rel="stylesheet" href="/css/wowchemy.cfa383012e109fa07dd80bafcdf476df.css" />
 
   
   
@@ -241,6 +241,45 @@
 
 
 
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3CBVR6GQ07"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+      dataLayer.push(arguments);
+  }
+
+  function trackOutboundLink(url, target) {
+    gtag('event', 'click', {
+         'event_category': 'outbound',
+         'event_label': url,
+         'transport_type': 'beacon',
+         'event_callback': function () {
+           if (target !== '_blank') {
+             document.location = url;
+           }
+         }
+    });
+    console.debug("Outbound link clicked: " + url);
+  }
+
+  function onClickCallback(event) {
+    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
+      return;
+    }
+    trackOutboundLink(event.target, event.target.getAttribute('target'));  
+  }
+
+  gtag('js', new Date());
+  gtag('config', 'G-3CBVR6GQ07', {});
+  gtag('set', {'cookie_flags': 'SameSite=None;Secure'});
+
+  
+  document.addEventListener('click', onClickCallback, false);
+</script>
 
 
 
@@ -285,10 +324,10 @@
 
 
 
-  <link rel="alternate" hreflang="es" href="http://localhost:1313/es/authors/" />
+  <link rel="alternate" hreflang="es" href="https://lcolladotor.github.io/es/authors/" />
 
-<link rel="alternate" hreflang="en-us" href="http://localhost:1313/authors/" />
-<link rel="canonical" href="http://localhost:1313/authors/" />
+<link rel="alternate" hreflang="en-us" href="https://lcolladotor.github.io/authors/" />
+<link rel="canonical" href="https://lcolladotor.github.io/authors/" />
 
 
 
@@ -322,14 +361,14 @@
 
   <meta property="twitter:site" content="@lcolladotor" />
   <meta property="twitter:creator" content="@lcolladotor" />
-<meta property="twitter:image" content="http://localhost:1313/media/icon_hu2b32c4ab415f12f472f73c7b0301b0d1_19400_512x512_fill_lanczos_center_3.png" />
+<meta property="twitter:image" content="https://lcolladotor.github.io/media/icon_hu2b32c4ab415f12f472f73c7b0301b0d1_19400_512x512_fill_lanczos_center_3.png" />
 <meta property="og:site_name" content="L. Collado-Torres" />
-<meta property="og:url" content="http://localhost:1313/authors/" />
+<meta property="og:url" content="https://lcolladotor.github.io/authors/" />
 <meta property="og:title" content="Authors | L. Collado-Torres" />
-<meta property="og:description" content="R/Bioconductor-powered Team Data Science" /><meta property="og:image" content="http://localhost:1313/media/icon_hu2b32c4ab415f12f472f73c7b0301b0d1_19400_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
+<meta property="og:description" content="R/Bioconductor-powered Team Data Science" /><meta property="og:image" content="https://lcolladotor.github.io/media/icon_hu2b32c4ab415f12f472f73c7b0301b0d1_19400_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
 
   
-    <meta property="og:updated_time" content="2024-02-22T00:00:00&#43;00:00" />
+    <meta property="og:updated_time" content="2024-08-08T00:00:00&#43;00:00" />
   
 
 
@@ -385,7 +424,7 @@
   
   
   
-  <script src="/js/wowchemy-init.min.js"></script>
+  <script src="/js/wowchemy-init.min.028535d572102c468e4bcd43201c3601.js"></script>
 
   
 
@@ -862,7 +901,7 @@
               <span>English</span>
             </div>
             
-            <a class="dropdown-item" href="http://localhost:1313/es/authors/">
+            <a class="dropdown-item" href="https://lcolladotor.github.io/es/authors/">
               <span>Español</span>
             </a>
             
@@ -924,7 +963,34 @@
     
     
       
-      <li><a href="http://localhost:1313/authors/rgarcia/">Rgarcia</a></li>
+      <li><a href="https://lcolladotor.github.io/authors/santos-zavaleta-a/">Santos-Zavaleta A</a></li>
+    
+      
+      <li><a href="https://lcolladotor.github.io/authors/solano-lira-h/">Solano-Lira H</a></li>
+    
+      
+      <li><a href="https://lcolladotor.github.io/authors/taboada-b/">Taboada B</a></li>
+    
+      
+      <li><a href="https://lcolladotor.github.io/authors/vega-alvarado-l/">Vega-Alvarado L</a></li>
+    
+      
+      <li><a href="https://lcolladotor.github.io/authors/weiss-v/">Weiss V</a></li>
+    
+      
+      <li><a href="https://lcolladotor.github.io/authors/__l-collado-torres__/authors/admin/">[__L Collado-Torres__](/authors/admin)</a></li>
+    
+      
+      <li><a href="https://lcolladotor.github.io/authors/__l-collado-torres__/authors/admin-____/">[__L Collado-Torres__](/authors/admin) __*__</a></li>
+    
+      
+      <li><a href="https://lcolladotor.github.io/authors/__l-collado-torres__/authors/admin-dagger/">[__L Collado-Torres__](/authors/admin) &amp;dagger;</a></li>
+    
+      
+      <li><a href="https://lcolladotor.github.io/authors/__leonardo-collado-torres__/authors/admin-____/">[__Leonardo Collado-Torres__](/authors/admin) __*__</a></li>
+    
+      
+      <li><a href="https://lcolladotor.github.io/authors/__leonardo-collado-torres__/authors/admin-dagger/">[__Leonardo Collado-Torres__](/authors/admin) &amp;dagger;</a></li>
     
   </ul>
 
@@ -934,6 +1000,8 @@
     
     <li class="page-item"><a class="page-link" href="/authors/page/43/">&laquo;</a></li>
     
+    
+    <li class="page-item"><a class="page-link" href="/authors/page/45/">&raquo;</a></li>
     
   </ul>
 </nav>
@@ -1071,7 +1139,7 @@
   
 
 
-<script src="/js/vendor-bundle.min.js"></script>
+<script src="/js/vendor-bundle.min.938a3a7554cd9f6602290411f64d2617.js"></script>
 
 
 
@@ -1145,7 +1213,7 @@
 
 
 
-  <script src="/js/wowchemy-headroom.js" type="module"></script>
+  <script src="/js/wowchemy-headroom.db4755770454eb63685f8de785c0a172.js" type="module"></script>
 
 
 
@@ -1159,11 +1227,11 @@
   
 
 
-<script src="/en/js/wowchemy.min.js"></script>
+<script src="/en/js/wowchemy.min.2945731fa88332cb0ec33cf47d29879f.js"></script>
 
 
 
-  <script src="/js/wowchemy-map.js" type="module"></script>
+  <script src="/js/wowchemy-map.a26e9d2f7238ba5b868384f1c5bc6477.js" type="module"></script>
 
 
 
@@ -1196,7 +1264,7 @@
 </div>
 
 
-  <script src="/js/wowchemy-publication.js" type="module"></script>
+  <script src="/js/wowchemy-publication.af9327db0521d4a01354bfc8b77a4324.js" type="module"></script>
 
 
 
