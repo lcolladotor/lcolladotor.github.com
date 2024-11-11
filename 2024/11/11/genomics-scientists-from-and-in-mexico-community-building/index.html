@@ -1,0 +1,1805 @@
+<!DOCTYPE html>
+<!-- This site was created with Wowchemy. https://www.wowchemy.com -->
+<!-- Last Published: November 11, 2024 --><html lang="en-us" >
+
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  
+  
+    <meta name="generator" content="Wowchemy 5.7.0 for Hugo" />
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  
+
+  
+  
+  
+    
+      
+      <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&family=Karma&family=Mina&display=swap">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&family=Karma&family=Mina&display=swap" media="print" onload="this.media='all'">
+    
+  
+
+  
+  
+
+  
+  
+    
+    <script src="/js/mathjax-config.js"></script>
+  
+
+  
+
+  <link rel="stylesheet" href="/css/vendor-bundle.min.047268c6dd09ad74ba54a0ba71837064.css" media="print" onload="this.media='all'">
+
+  
+  
+  
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.2/css/academicons.min.css" integrity="sha512-KlJCpRsLf+KKu2VQa5vmRuClRFjxc5lXO03ixZt82HZUk41+1I0bD8KBSA0fY290ayMfWYI9udIqeOWSu1/uZg==" crossorigin="anonymous" media="print" onload="this.media='all'">
+    
+
+    
+    
+    
+    
+      
+      
+    
+    
+    
+
+    
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.min.css" integrity="" crossorigin="anonymous" media="print" onload="this.media='all'">
+    
+
+    
+
+    
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+  
+
+  
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/wowchemy.cfa383012e109fa07dd80bafcdf476df.css" />
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+    
+    
+    <link rel="stylesheet" href="/css/libs/chroma/github-light.min.css" title="hl-light" media="print" onload="this.media='all'" >
+    <link rel="stylesheet" href="/css/libs/chroma/dracula.min.css" title="hl-dark" media="print" onload="this.media='all'" disabled>
+  
+
+  
+  
+
+
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3CBVR6GQ07"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+      dataLayer.push(arguments);
+  }
+
+  function trackOutboundLink(url, target) {
+    gtag('event', 'click', {
+         'event_category': 'outbound',
+         'event_label': url,
+         'transport_type': 'beacon',
+         'event_callback': function () {
+           if (target !== '_blank') {
+             document.location = url;
+           }
+         }
+    });
+    console.debug("Outbound link clicked: " + url);
+  }
+
+  function onClickCallback(event) {
+    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
+      return;
+    }
+    trackOutboundLink(event.target, event.target.getAttribute('target'));  
+  }
+
+  gtag('js', new Date());
+  gtag('config', 'G-3CBVR6GQ07', {});
+  gtag('set', {'cookie_flags': 'SameSite=None;Secure'});
+
+  
+  document.addEventListener('click', onClickCallback, false);
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+
+
+
+
+
+  <meta name="author" content="Leonardo Collado-Torres" />
+
+
+
+
+
+  
+
+<meta name="description" content="I recently gave a remote seminar presentation for the Applications of Genomics 2024-2025 course organized by Esperanza Martínez Romero and Alejandra Zayas Del Moral. The idea was to talk about my career and showcase some recent research work from my team." />
+
+
+
+  <link rel="alternate" hreflang="es" href="https://lcolladotor.github.io/es/2024/11/11/genomics-scientists-from-and-in-mexico-community-building/" />
+
+<link rel="alternate" hreflang="en-us" href="https://lcolladotor.github.io/2024/11/11/genomics-scientists-from-and-in-mexico-community-building/" />
+<link rel="canonical" href="https://lcolladotor.github.io/2024/11/11/genomics-scientists-from-and-in-mexico-community-building/" />
+
+
+
+  <link rel="manifest" href="/manifest.webmanifest" />
+
+
+
+<link rel="icon" type="image/png" href="/media/icon_hu2b32c4ab415f12f472f73c7b0301b0d1_19400_32x32_fill_lanczos_center_3.png" />
+<link rel="apple-touch-icon" type="image/png" href="/media/icon_hu2b32c4ab415f12f472f73c7b0301b0d1_19400_180x180_fill_lanczos_center_3.png" />
+
+<meta name="theme-color" content="#FF6771" />
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+<meta property="twitter:card" content="summary" />
+
+  <meta property="twitter:site" content="@lcolladotor" />
+  <meta property="twitter:creator" content="@lcolladotor" />
+<meta property="twitter:image" content="https://lcolladotor.github.io/media/icon_hu2b32c4ab415f12f472f73c7b0301b0d1_19400_512x512_fill_lanczos_center_3.png" />
+<meta property="og:site_name" content="L. Collado-Torres" />
+<meta property="og:url" content="https://lcolladotor.github.io/2024/11/11/genomics-scientists-from-and-in-mexico-community-building/" />
+<meta property="og:title" content="Genomics scientists from and in Mexico community building | L. Collado-Torres" />
+<meta property="og:description" content="I recently gave a remote seminar presentation for the Applications of Genomics 2024-2025 course organized by Esperanza Martínez Romero and Alejandra Zayas Del Moral. The idea was to talk about my career and showcase some recent research work from my team." /><meta property="og:image" content="https://lcolladotor.github.io/media/icon_hu2b32c4ab415f12f472f73c7b0301b0d1_19400_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
+
+  
+    <meta
+      property="article:published_time"
+      content="2024-11-11T00:00:00&#43;00:00"
+    />
+  
+  
+    <meta property="article:modified_time" content="2024-11-11T12:33:00-05:00">
+  
+
+
+
+
+
+
+    
+
+
+
+
+
+
+  
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://lcolladotor.github.io/2024/11/11/genomics-scientists-from-and-in-mexico-community-building/"
+  },
+  "headline": "Genomics scientists from and in Mexico community building",
+  
+  "datePublished": "2024-11-11T00:00:00Z",
+  "dateModified": "2024-11-11T12:33:00-05:00",
+  
+  "author": {
+    "@type": "Person",
+    "name": "Leonardo Collado-Torres"
+  },
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "L. Collado-Torres",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://lcolladotor.github.io/media/icon_hu2b32c4ab415f12f472f73c7b0301b0d1_19400_192x192_fill_lanczos_center_3.png"
+    }
+  },
+  "description": "I recently gave a remote seminar presentation for the Applications of Genomics 2024-2025 course organized by Esperanza Martínez Romero and Alejandra Zayas Del Moral. The idea was to talk about my career and showcase some recent research work from my team."
+}
+</script>
+
+  
+
+  
+
+
+
+
+  
+  
+  
+
+  
+  
+
+  
+
+
+  
+  <title>Genomics scientists from and in Mexico community building | L. Collado-Torres</title>
+
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="48a2b204b9b08349661a53fe04da8c80" >
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <script src="/js/wowchemy-init.min.028535d572102c468e4bcd43201c3601.js"></script>
+
+  
+
+
+<aside class="search-modal" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#" aria-label="Close"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search" class="form-control"
+        aria-label="Search...">
+        
+      </div>
+
+      
+      
+
+      
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+
+  <div class="page-header header--fixed">
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+    <div class="container-xl">
+
+      
+      <div class="d-none d-lg-inline-flex">
+        <a class="navbar-brand" href="/">L. Collado-Torres</a>
+      </div>
+      
+
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+      <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+      
+      <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+        <a class="navbar-brand" href="/">L. Collado-Torres</a>
+      </div>
+      
+
+      
+      
+      <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+        
+        <ul class="navbar-nav d-md-inline-flex">
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#about"><span>Home</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#team"><span>Team</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#projects"><span>Projects</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#talks_favorite"><span>Talks</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#publications"><span>Publications</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#blog"><span>Blog</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#teaching"><span>Teaching</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#cv"><span>CV</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#contact"><span>Contact</span></a>
+          </li>
+
+          
+          
+
+        
+
+          
+        </ul>
+      </div>
+
+      <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+
+        
+        
+          
+        
+
+        
+        
+        
+        <li class="nav-item">
+          <a class="nav-link js-search" href="#" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></a>
+        </li>
+        
+
+        
+        
+        
+        <li class="nav-item dropdown theme-dropdown">
+          <a href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-label="Display preferences">
+            <i class="fas fa-moon" aria-hidden="true"></i>
+          </a>
+          <div class="dropdown-menu">
+            <a href="#" class="dropdown-item js-set-theme-light">
+              <span>Light</span>
+            </a>
+            <a href="#" class="dropdown-item js-set-theme-dark">
+              <span>Dark</span>
+            </a>
+            <a href="#" class="dropdown-item js-set-theme-auto">
+              <span>Automatic</span>
+            </a>
+          </div>
+        </li>
+        
+
+        
+        
+        <li class="nav-item dropdown i18n-dropdown">
+          <a href="#" class="nav-link " data-toggle="dropdown"
+             aria-haspopup="true" aria-label="Languages">
+            <i class="fas fa-globe mr-1" aria-hidden="true"></i></a>
+          <div class="dropdown-menu">
+            <div class="dropdown-item dropdown-item-active">
+              <span>English</span>
+            </div>
+            
+            <a class="dropdown-item" href="https://lcolladotor.github.io/es/2024/11/11/genomics-scientists-from-and-in-mexico-community-building/">
+              <span>Español</span>
+            </a>
+            
+          </div>
+        </li>
+        
+
+      </ul>
+
+    </div>
+  </nav>
+</header>
+
+
+  </div>
+
+  <div class="page-body">
+    
+    
+    
+
+    <article class="article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+<div class="article-container pt-3">
+  <h1>Genomics scientists from and in Mexico community building</h1>
+
+  
+
+  
+    
+
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+          Last updated on
+      
+    
+    Mon, Nov 11, 2024
+  </span>
+  
+
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    7 min read
+  </span>
+  
+
+  
+  
+  
+  
+    <span class="middot-divider"></span>
+    <a href="/2024/11/11/genomics-scientists-from-and-in-mexico-community-building/#disqus_thread"></a>
+  
+
+  
+  
+  <span class="middot-divider"></span>
+  <span class="article-categories">
+    <i class="fas fa-folder mr-1"></i><a href="/category/unam/">UNAM</a></span>
+  
+
+</div>
+
+    
+
+
+
+
+
+  
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style">
+      <p>I recently gave a remote seminar presentation for the <em>Applications of Genomics 2024-2025</em> course organized by <a href="https://www.ccg.unam.mx/maria-esperanza-martinez-romero/" target="_blank" rel="noopener">Esperanza Martínez Romero</a> and <a href="https://bsky.app/profile/alezayas.bsky.social" target="_blank" rel="noopener">Alejandra Zayas Del Moral</a>. The idea was to talk about my career and showcase some recent research work from my team.</p>
+<blockquote class="bluesky-embed" data-bluesky-uri="at://did:plc:h7p2smbyfobkpcs7dbgvhmeh/app.bsky.feed.post/3laendxnqny22" data-bluesky-cid="bafyreih4kzmmr5v5bg2d2jg57rwqg67krxl3yg6kahgp5ndrvhhazoi6iu"><p lang="en">A week ago I had the privilege to present to #LCG-UNAM students as part of the Aplicaciones de la Genómica course by Esperanza Martínez and @alezayas.bsky.social
+<p><a href="https://www.youtube.com/watch?v=a_Ip" target="_blank" rel="noopener">www.youtube.com/watch?v=a_Ip</a>&hellip; (in Spanish 🇲🇽)
+🛝 speakerdeck.com/lcolladotor/&hellip;</p>
+<p>#DeconvoBuddies @bioconductor.bsky.social #RStats<br><br><a href="https://bsky.app/profile/did:plc:h7p2smbyfobkpcs7dbgvhmeh/post/3laendxnqny22?ref_src=embed">[image or embed]</a></p>— 🇲🇽 Leonardo Collado-Torres (<a href="https://bsky.app/profile/did:plc:h7p2smbyfobkpcs7dbgvhmeh?ref_src=embed">@lcolladotor.bsky.social</a>) <a href="https://bsky.app/profile/did:plc:h7p2smbyfobkpcs7dbgvhmeh/post/3laendxnqny22?ref_src=embed">November 7, 2024 at 11:07 AM</a></blockquote><script async src="https://embed.bsky.app/static/embed.js" charset="utf-8"></script></p>
+<p>But I also wanted to take the opportunity to talk about the importance of community building and relying on the support from your communities as you advance in your career. I&rsquo;m from the third class of LCG-UNAM undergraduate program on Genomic Sciences from the National Autonomous University of Mexico (UNAM) and graduated in 2009 (see <a href="https://lcolladotor.github.io/2018/11/06/a-knot-of-threads-from-cshl-to-lcg-unam-to-aldo-barrientos-to-diversity-scholarship-opportunities/" target="_blank" rel="noopener">my timeline blog post</a> for more details). That means that we didn&rsquo;t have as many people to look up to as you do now. Here&rsquo;s a short extract of how I relayed some of this to the students at the end of my seminar.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/OVMw0k6AydA?si=-km8P5ei3SfBSeyC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<p>Note that if you don&rsquo;t speak Spanish, YouTube can auto-translate the captions to your language of choice ^^.</p>
+<h2 id="lcgej-unam-network">LCG(EJ)-UNAM network</h2>
+<p>Let&rsquo;s say that you are a current student and want to tap into the LCG(EJ)-UNAM network. Well, the <a href="https://www.lcg.unam.mx/" target="_blank" rel="noopener">LCG-UNAM</a> and <a href="https://lcgej.unam.mx/" target="_blank" rel="noopener">LCG-EJ-UNAM</a> network is actually not that easy to find 😔.</p>
+<p>Note that the two sibling undergrad programs are actually run by different people, both from UNAM. I personally consider them to be part of the same group (particularly from an international lens) as I think that diving them is not helpful. Though I understand that each program has specific areas they want to emphasize, different funding issues, and different challenges they face.</p>
+<h3 id="emails">Emails</h3>
+<p>Ok, so maybe one way to get in touch with others is via email. For LCG-UNAM there&rsquo;s a mailing list for everyone, but that only includes <code>@lcg.unam.mx</code> emails which many alumni don&rsquo;t check/use anymore. For LCG-EJ-UNAM I&rsquo;ve been told that there&rsquo;s no mailing list.</p>
+<p>For each class in LCG-UNAM there&rsquo;s also another mailing list, but well, they have the same issue of only including <code>@lcg.unam.mx</code> emails.</p>
+<p>During the lead to <a href="https://www.lcg.unam.mx/international-symposium-for-the-20th-anniversary-of-the-bachelors-program-in-genomic-sciences-lcg-unam/" target="_blank" rel="noopener">LCG20 celebrations</a> (20 year anniversary of LCG-UNAM), a Google Sheet was spread around where people wrote down their name, class, and email. So I&rsquo;ve also used that email list (many of which are <code>@gmail.com</code> accounts) too. There are 130 emails listed here (some with typos!).</p>
+<h3 id="facebook">Facebook</h3>
+<p>LCG-UNAM alumni have set up a <a href="https://www.facebook.com/groups/21720863576" target="_blank" rel="noopener">private Facebook group</a>. It currently has 355 members. I see that some members are LCG-EJ-UNAM alumni, so I believe that both programs are welcome there. This is probably the one resource most people use when trying to ask for help or share opportunities. However, many don&rsquo;t use Facebook anymore, so I wonder how many of the members are actually active. It does have the benefit of being a private group, unlike other social media platforms. So I think that this Facebook group will continue to be one of the main ways to get in touch with LCG(EJ)-UNAM alumni.</p>
+<h3 id="slack">Slack</h3>
+<p>As you might know, <a href="https://lcolladotor.github.io/2018/06/19/using-slack-for-academic-departmental-communication/" target="_blank" rel="noopener">I&rsquo;m a big fan of Slack for communicating for work</a>. Yet, as far as I know, there&rsquo;s no LCG(EJ)-UNAM Slack workspace. However, as co-founder of the <a href="https://comunidadbioinfo.github.io/" target="_blank" rel="noopener">Community of Bioinformatics Software Developers</a>, I&rsquo;ve been encouraging people to join us at the <a href="https://join.slack.com/t/comunidadbioinfo/shared_invite/zt-8lsvpm84-Fne1W0hadk6cpjgJS17Tnw" target="_blank" rel="noopener">CDSB Slack workspace</a>.</p>
+<p>One way I do so is by asking students from the LCG and LCG-EJ courses I have taught to join the CDSB Slack where I set up a channel for the course and communicate with them through it. Then once the course is over, they are part of the CDSB Slack and can network with others there. This Slack workspace isn&rsquo;t as active as I would like it to be, but well, it&rsquo;s a start. It currently has 396 members on the <code>#general</code> channel.</p>
+<h3 id="xtwitter-and-now-bluesky">X/Twitter and now Bluesky</h3>
+<p>During my courses I have also encouraged students to create a Twitter account to be able to network with other scientists at large, get their name out there, and meet people who can help them along the way. Maybe indirectly, just by sharing interesting resources. Maybe directly, by asking each other questions and then possibly meeting up in person later on. Some LCG-UNAM alumni historically were very active on Twitter.</p>
+<h2 id="bluesky-has-taken-off">Bluesky has taken off</h2>
+<p>However, X/Twitter isn&rsquo;t what it used to be. In recent weeks, the open-source alternative <a href="https://bsky.app/" target="_blank" rel="noopener">Bluesky</a> has taken off. In 2023 you had to get a code to join, which made it really unfeasible to get students to join or the community at large. But things are different now at the end of 2024 and Bluesky has really taken off lately. One of the reasons is starter packs, which allow anyone to recommend up to 150 accounts that others might want to follow.</p>
+<p>One personal reason why I had still being using X/Twitter was because I felt that my community of genomics scientists trained in Mexico, working in Mexico, or helping train Mexicans wasn&rsquo;t represented in Bluesky. I appreciate that I was included in the <a href="https://bsky.app/profile/jeremy-data.bsky.social/post/3l6x3gmsxqe2z" target="_blank" rel="noopener">&ldquo;RStats Starter Pack&rdquo;</a> by <a href="https://bsky.app/profile/jeremy-data.bsky.social" target="_blank" rel="noopener">Jeremy Allen</a>, which has really helped with my visibility. As I&rsquo;d like to make the full switch to Bluesky, I&rsquo;m using my new found visibility to try to encourage others to make the switch as well.</p>
+<h2 id="genomics-scientists-trainedworking-in-mexico-">Genomics scientists trained/working in Mexico 🇲🇽</h2>
+<p>To try to implement my wishes, I created <a href="https://go.bsky.app/5bWBN5V" target="_blank" rel="noopener">a Bluesky starter pack</a>. The name is limited to 50 characters, but well, I wanted to make it broad in a sense: anyone who has been trained in Mexico, works in Mexico (don&rsquo;t need to be a Mexican citizen), or has helped train Mexicans within the genomics scientific domain.</p>
+<img src="images/Genomics_scientists_trained_working_in_Mexico_Share_Card.png" alt="QR code for the starter pack" width="300px"/>
+<p>This definition definitely includes LCG-UNAM and LCG-EJ-UNAM members, but also CDSB, <a href="https://www.redmexicanadebioinformatica.org/" target="_blank" rel="noopener">RMB</a>, and <a href="https://www.nnb.unam.mx/" target="_blank" rel="noopener">NNB-UNAM</a> workshops alumni. Plus scientists working or involved with <a href="https://www.ccg.unam.mx/en/" target="_blank" rel="noopener">CCG-UNAM</a>, <a href="https://www.ibt.unam.mx/" target="_blank" rel="noopener">IBt-UNAM</a>, <a href="https://bsky.app/profile/liigh-unam.bsky.social" target="_blank" rel="noopener">LIIGH-UNAM</a>, among other institutions. Yes, UNAM is highly prevalent right now for many reasons, but one of them being that I was trained at LCG-UNAM and thus know more about that network right now.</p>
+<h2 id="getting-people-to-join-bluesky">Getting people to join Bluesky</h2>
+<p>At first I found close to 30 Bluesky accounts for the starter pack. Most of them I knew of already since we had been sharing Bluesky codes via WhatsApp and other media in 2023 to try to get people to join Bluesky. To get more, I wrote about the starter pack to the <code>@lcg.unam.mx</code> mailing list, the list of 130 LCG alumni emails, as well as posted about it on Facebook, X/Twitter, CDSB Slack, and LinkedIn. And of course, Bluesky itself.</p>
+<p>But I know that a mass message like that is only going to get so much attention. So I applied a thing I learned from <a href="https://bsky.app/profile/areyesq.bsky.social" target="_blank" rel="noopener">Alejandro Reyes</a> while working together in the first years of CDSB&rsquo;s existence. That is, contact people directly.</p>
+<p>I contacted 147 X accounts via DM and 9 via public posts from people I follow on X/Twitter. I also emailed all the organizers of <a href="https://rladiesmx.netlify.app/en/" target="_blank" rel="noopener">RLadiesMX</a> since I think that it would be great for them to also join Bluesky. I also need to contact the communities listed at on my <a href="https://lcolladotor.github.io/jhustatcomputing/posts/25-python-for-r-users/#community" target="_blank" rel="noopener">JHU Statistical Computing course website</a>. I also texted some via WhatsApp since they have Bluesky accounts that are inactive, and thus I cannot add them to the starter pack.</p>
+<img src="images/Screenshot 2024-11-11 at 1.31.16 PM.png" alt="JHU stat computing community building screenshot" width="500px"/>
+<p>I&rsquo;d say that between a third to a half of them have replied so far. Many ask: <em>What&rsquo;s Bluesky?</em>. Others had heard about it about but had no invitation code to join in 2023 and didn&rsquo;t know that you no longer need a code. Others are hesitant to start an account in a new social media platform. But most are eager to join and soon after have created their Bluesky account (some even had one that I missed!).</p>
+<p>Currently we have 77 accounts listed on the starter pack out of the max 150. I&rsquo;ll probably have to make a part 2, or maybe even a part 3 starter pack later down the road. But well, I&rsquo;m excited to see more of us join Bluesky. After all, I want our voices to be heard and it&rsquo;s hard to do so if we are not in the conversation to begin with.</p>
+<p>Just one weekend of time can make a huge different in community building. But well, once you get the ball moving a bit, it&rsquo;s up to the community to take it from there. I&rsquo;m excited to see where this goes and how we can help each other out in the future 🙌🏽 🇲🇽 🧬 ^_^.</p>
+
+    </div>
+
+    
+
+
+
+
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/tag/diversity/">Diversity</a>
+  
+  <a class="badge badge-light" href="/tag/lcg/">LCG</a>
+  
+  <a class="badge badge-light" href="/tag/sponsorship/">Sponsorship</a>
+  
+  <a class="badge badge-light" href="/tag/genomics/">Genomics</a>
+  
+</div>
+
+
+
+<div class="share-box">
+  <ul class="share">
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Flcolladotor.github.io%2F2024%2F11%2F11%2Fgenomics-scientists-from-and-in-mexico-community-building%2F&amp;text=Genomics&#43;scientists&#43;from&#43;and&#43;in&#43;Mexico&#43;community&#43;building" target="_blank" rel="noopener" class="share-btn-twitter" aria-label="twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Flcolladotor.github.io%2F2024%2F11%2F11%2Fgenomics-scientists-from-and-in-mexico-community-building%2F&amp;t=Genomics&#43;scientists&#43;from&#43;and&#43;in&#43;Mexico&#43;community&#43;building" target="_blank" rel="noopener" class="share-btn-facebook" aria-label="facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+        
+      
+      <li>
+        <a href="mailto:?subject=Genomics%20scientists%20from%20and%20in%20Mexico%20community%20building&amp;body=https%3A%2F%2Flcolladotor.github.io%2F2024%2F11%2F11%2Fgenomics-scientists-from-and-in-mexico-community-building%2F" target="_blank" rel="noopener" class="share-btn-email" aria-label="envelope">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=https%3A%2F%2Flcolladotor.github.io%2F2024%2F11%2F11%2Fgenomics-scientists-from-and-in-mexico-community-building%2F&amp;title=Genomics&#43;scientists&#43;from&#43;and&#43;in&#43;Mexico&#43;community&#43;building" target="_blank" rel="noopener" class="share-btn-linkedin" aria-label="linkedin-in">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="whatsapp://send?text=Genomics&#43;scientists&#43;from&#43;and&#43;in&#43;Mexico&#43;community&#43;building%20https%3A%2F%2Flcolladotor.github.io%2F2024%2F11%2F11%2Fgenomics-scientists-from-and-in-mexico-community-building%2F" target="_blank" rel="noopener" class="share-btn-whatsapp" aria-label="whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=https%3A%2F%2Flcolladotor.github.io%2F2024%2F11%2F11%2Fgenomics-scientists-from-and-in-mexico-community-building%2F&amp;title=Genomics&#43;scientists&#43;from&#43;and&#43;in&#43;Mexico&#43;community&#43;building" target="_blank" rel="noopener" class="share-btn-weibo" aria-label="weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+  
+  
+    
+  
+  
+  
+  <div class="media author-card content-widget-hr">
+    
+      
+      <a href="https://lcolladotor.github.io/"><img class="avatar mr-3 avatar-circle" src="/authors/admin/avatar_hu61670ae1305c5c407abf5eedc95c7971_127149_270x270_fill_q75_lanczos_center.JPG" alt="Leonardo Collado-Torres"></a>
+    
+
+    <div class="media-body">
+      <h5 class="card-title"><a href="https://lcolladotor.github.io/">Leonardo Collado-Torres</a></h5>
+      <h6 class="card-subtitle">Investigator @ LIBD, Assistant Professor, Department of Biostatistics @ JHBSPH</h6>
+      <p class="card-text"><a href="https://twitter.com/search?q=%23rstats&amp;src=hashtag_click" target="_blank" rel="noopener">#rstats</a> <a href="https://twitter.com/Bioconductor" target="_blank" rel="noopener">@Bioconductor</a>/🧠 genomics <a href="https://twitter.com/LieberInstitute" target="_blank" rel="noopener">@LieberInstitute</a>/<a href="https://twitter.com/lcgunam" target="_blank" rel="noopener">@lcgunam</a> <a href="https://twitter.com/jhubiostat" target="_blank" rel="noopener">@jhubiostat</a> <a href="https://twitter.com/jtleek" target="_blank" rel="noopener">@jtleek</a> <a href="https://twitter.com/andrewejaffe" target="_blank" rel="noopener">@andrewejaffe</a> alumni/<a href="https://twitter.com/LIBDrstats" target="_blank" rel="noopener">@LIBDrstats</a> <a href="https://twitter.com/CDSBMexico" target="_blank" rel="noopener">@CDSBMexico</a> co-founder</p>
+      <ul class="network-icon" aria-hidden="true">
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+    <li>
+      <a href="mailto:lcolladotor@gmail.com" >
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="http://lcolladotor.github.io" target="_blank" rel="noopener">
+        <i class="fas fa-home"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://twitter.com/lcolladotor" target="_blank" rel="noopener">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://www.youtube.com/@lcolladotor" target="_blank" rel="noopener">
+        <i class="fab fa-youtube"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://bsky.app/profile/lcolladotor.bsky.social" target="_blank" rel="noopener">
+        <i class="brands brands-blueksy"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://scholar.google.com/citations?user=h57-MykAAAAJ" target="_blank" rel="noopener">
+        <i class="ai ai-google-scholar"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://github.com/lcolladotor" target="_blank" rel="noopener">
+        <i class="fab fa-github"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="http://orcid.org/0000-0003-2140-308X" target="_blank" rel="noopener">
+        <i class="ai ai-orcid"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://www.ncbi.nlm.nih.gov/myncbi/leonardo.collado%20torres.1/bibliography/public/" target="_blank" rel="noopener">
+        <i class="ai ai-pubmed"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://impactstory.org/u/0000-0003-2140-308X" target="_blank" rel="noopener">
+        <i class="ai ai-impactstory"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://www.linkedin.com/in/lcollado/" target="_blank" rel="noopener">
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://publons.com/a/1262671" target="_blank" rel="noopener">
+        <i class="ai ai-publons"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="http://lcolladotor.github.io/cv/en_CV_lcollado.pdf" target="_blank" rel="noopener">
+        <i class="ai ai-cv"></i>
+      </a>
+    </li>
+  
+</ul>
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+
+  
+  <section id="comments">
+    
+<div id="disqus_thread"></div>
+<script>
+  var disqus_config = function () {
+    
+    
+    
+  };
+  (function() {
+    if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+      document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+      return;
+    }
+    var d = document, s = d.createElement('script'); s.async = true;
+    s.src = 'https://' + "fellgernonbit" + '.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+  </section>
+  
+
+
+
+
+
+
+
+
+
+
+  </div>
+</article>
+  </div>
+
+  <div class="page-footer">
+    
+    
+    <div class="container">
+      <footer class="site-footer">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+    
+  
+  
+    
+  
+
+  
+
+  
+  <p class="powered-by copyright-license-text">
+    All thoughts and opinions here are my own (Leonardo Collado Torres). The icon was designed by <a href="https://www.linkedin.com/in/mauricio-guzman-6529b551/" target="_blank" rel="noopener">Mauricio Guzmán</a> and is inspired by <a href="https://en.wikipedia.org/wiki/Huichol" target="_blank" rel="noopener">Huichol culture</a>; it represents my community building interests. © 2011-2024 LCT. This work is licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0" rel="noopener noreferrer" target="_blank">CC BY NC SA 4.0</a>
+  </p>
+  
+
+  <p class="powered-by footer-license-icons">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0" rel="noopener noreferrer" target="_blank" aria-label="Creative Commons">
+      <i class="fab fa-creative-commons fa-2x" aria-hidden="true"></i>
+      <i class="fab fa-creative-commons-by fa-2x" aria-hidden="true"></i>
+      
+        <i class="fab fa-creative-commons-nc fa-2x" aria-hidden="true"></i>
+      
+      
+        <i class="fab fa-creative-commons-sa fa-2x" aria-hidden="true"></i>
+      
+    </a>
+  </p>
+
+
+
+
+  
+  <p>
+      
+      
+      <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4ef23e545d41b87c"></script>
+      
+      
+
+      <script type="text/javascript">
+      var addthis_config = {
+      	data_ga_property: 'UA-45299226-1',
+      	data_ga_social : true,
+      	data_track_addressbar: true,
+        data_track_addressbar_paths: ['/201*/*/*/*/*']
+      };
+      var addthis_share = {
+      	
+      	url_transforms : {
+      		shorten: {
+      			twitter: 'bitly'
+      		}
+      	}, 
+      	shorteners : {
+      		bitly : {}
+      	}
+      }
+      </script>
+      
+      <center>	 
+      <div id="clustrmaps-widget"></div><script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=300&t=m&d=Zo-deincaJGsqhqjIWsujtdoNOMJsnnZLefKmxDKVv8&co=124b73&cmo=dd53ff&cmn=4ec724'></script>
+      </center>
+  </p>
+  
+
+  <p class="powered-by">
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      Published with <a href="https://wowchemy.com/?utm_campaign=poweredby" target="_blank" rel="noopener">Wowchemy</a> — the free, <a href="https://github.com/wowchemy/wowchemy-hugo-themes" target="_blank" rel="noopener">open source</a> website builder that empowers creators.
+    
+  </p>
+</footer>
+
+    </div>
+    
+  </div>
+
+  
+
+
+<script src="/js/vendor-bundle.min.938a3a7554cd9f6602290411f64d2617.js"></script>
+
+
+
+
+  
+
+  
+  
+
+  
+
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.min.js" integrity="" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+  
+  <script id="search-hit-fuse-template" type="text/x-template">
+    <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+    </div>
+  </script>
+  
+    <script src="https://cdn.jsdelivr.net/gh/krisk/Fuse@v3.2.1/dist/fuse.min.js" integrity="sha512-o38bmzBGX+hD3JHWUFCDA09btWaqrNmoJ3RXLlrysA7PP01Kgs4UlE4MhelE1v5dJR3+cxlR4qQlotsW7jKsnw==" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/gh/julmot/mark.js@8.11.1/dist/jquery.mark.min.js" integrity="sha512-mhbv5DqBMgrWL+32MmsDOt/OAvqr/cHimk6B8y/bx/xS88MVkYGPiVv2ixKVrkywF2qHplNRUvFsAHUdxZ3Krg==" crossorigin="anonymous"></script>
+  
+
+
+
+
+
+
+
+
+
+  <script id="dsq-count-scr" src="https://fellgernonbit.disqus.com/count.js" async></script>
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+<script id="page-data" type="application/json">{"use_headroom":true}</script>
+
+
+
+  <script src="/js/wowchemy-headroom.db4755770454eb63685f8de785c0a172.js" type="module"></script>
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+<script src="/en/js/wowchemy.min.2945731fa88332cb0ec33cf47d29879f.js"></script>
+
+
+
+  <script src="/js/wowchemy-map.a26e9d2f7238ba5b868384f1c5bc6477.js" type="module"></script>
+
+
+
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        
+        <pre><code></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <script src="/js/wowchemy-publication.af9327db0521d4a01354bfc8b77a4324.js" type="module"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
