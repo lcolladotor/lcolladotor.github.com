@@ -5,12 +5,173 @@
     <link>https://lcolladotor.github.io/es/category/unam/</link>
       <atom:link href="https://lcolladotor.github.io/es/category/unam/index.xml" rel="self" type="application/rss+xml" />
     <description>UNAM</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>es-mx</language><lastBuildDate>Mon, 11 Nov 2024 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>es-mx</language><lastBuildDate>Fri, 07 Mar 2025 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://lcolladotor.github.io/media/icon_hu2b32c4ab415f12f472f73c7b0301b0d1_19400_512x512_fill_lanczos_center_3.png</url>
       <title>UNAM</title>
       <link>https://lcolladotor.github.io/es/category/unam/</link>
     </image>
+    
+    <item>
+      <title>Clase sobre métodos ómicos para estudiantes de la LCG UNAM</title>
+      <link>https://lcolladotor.github.io/es/2025/03/07/teaching-omics-methods-to-lcg-unam-students/</link>
+      <pubDate>Fri, 07 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>https://lcolladotor.github.io/es/2025/03/07/teaching-omics-methods-to-lcg-unam-students/</guid>
+      <description>&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Notas de una clase de un curso introductorio a las técnicas de investigación ómicas en la LCG-UNAM. Es decir, donde estudié mi licenciatura. ¡Gracias por la invitación!
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;a href=&#34;https://bsky.app/profile/vaalarias.bsky.social&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Valentina Arias Ojeda&lt;/a&gt; ayudante en la materia &amp;ldquo;Técnicas de Investigación Ómicas&amp;rdquo;, impartida por la &lt;a href=&#34;https://www.ibt.unam.mx/perfil/1596/dra-constance-genevieve-jeanne-henriette-auvynet&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Dra. Constance Auvynet&lt;/a&gt; en la &lt;a href=&#34;https://www.lcg.unam.mx/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;LCG-UNAM&lt;/a&gt;. Me invitaron a dar una clase sobre métodos ómicos, en particular sobre secuenciación de células únicas y sobre secuenciación a resolución espacial. Valentina me presentó y luego mencioné un poco de &lt;a href=&#34;https://lcolladotor.github.io/es/#teaching&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;mi historia de enseñanza&lt;/a&gt;, comenzando desde mi primera experiencia de enseñanza donde hice &lt;a href=&#34;https://lcolladotor.github.io/courses/Courses/B/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;un sitio web disponible en inglés y español&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Decidí enseñar la clase de hoy como una sesión colectiva de &lt;a href=&#34;https://lcolladotor.github.io/bioc_team_ds/data-science-guidance-sessions.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&amp;ldquo;guía para ciencia de datos&amp;rdquo;&lt;/a&gt; (DSgs en inglés). Sin embargo, a diferencia de una DSgs regular, primero necesitábamos hacer una lista de preguntas o conceptos que querían aprender más. Aquí usé una técnica que aprendí como asistente para la serie de cursos 140.620 sobre &lt;em&gt;Métodos Estadísticos en Salud Pública&lt;/em&gt; en JHU. Es decir, escribir en el pizarrón las preguntas, luego tratar de agruparlas en diferentes categorías. Nuestra lista completa de preguntas fue:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;ARN-seq
+&lt;ul&gt;
+&lt;li&gt;¿Cuál es la diferencia entre microarreglos y RNA-seq?&lt;/li&gt;
+&lt;li&gt;¿Qué es ARN-seq?&lt;/li&gt;
+&lt;li&gt;¿Cómo tratamos con ARN ribosomal en ARN-seq?&lt;/li&gt;
+&lt;li&gt;¿Cómo tratamos con ruido en ARN-seq?
+&lt;ul&gt;
+&lt;li&gt;¿Cómo definimos ruido?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;¿Cómo lidea ARN-seq con estructuras secundarias de ARN?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;ARN-seq de células únicas
+&lt;ul&gt;
+&lt;li&gt;¿Qué es ARN-seq de células únicas?&lt;/li&gt;
+&lt;li&gt;¿Para qué es útil el ARN-seq de células únicas?&lt;/li&gt;
+&lt;li&gt;¿Cuáles son las principales tecnologías de secuenciación?&lt;/li&gt;
+&lt;li&gt;¿Qué es ATAC-seq?&lt;/li&gt;
+&lt;li&gt;¿Qué es insitu seq?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Transcriptómica resuelta espacialmente
+&lt;ul&gt;
+&lt;li&gt;¿Qué es la transcriptómica resuelta espacialmente?&lt;/li&gt;
+&lt;li&gt;¿Cuál es la diferencia entre la transcriptómica resuelta espacialmente y el ARN-seq de células únicas?&lt;/li&gt;
+&lt;li&gt;¿Cómo podemos integrar ARN-seq y transcriptómica resuelta espacialmente?&lt;/li&gt;
+&lt;li&gt;¿Cuáles son las físicas detrás de la transcriptómica resuelta espacialmente?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Análisis de datos
+&lt;ul&gt;
+&lt;li&gt;¿Por qué usamos R para el análisis de datos ómicos?
+&lt;ul&gt;
+&lt;li&gt;¿Cómo analizamos datos de ARN-seq?&lt;/li&gt;
+&lt;li&gt;¿Cómo analizamos datos de ARN-seq de células únicas?&lt;/li&gt;
+&lt;li&gt;¿Cómo analizamos datos de transcriptómica resuelta espacialmente?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;¿Cuánto poder computacional necesitamos para el análisis de datos ómicos espaciales?&lt;/li&gt;
+&lt;li&gt;¿Cómo integramos datos de ARN-seq y transcriptómica resuelta espacialmente?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /es/2025/03/07/teaching-omics-methods-to-lcg-unam-students/images/IMG_0190_hu71111ddc9714c6f77551feb7a7f87dc4_453617_5dd53fe7bf5d6993889bbee26f9eb21a.webp 400w,
+               /es/2025/03/07/teaching-omics-methods-to-lcg-unam-students/images/IMG_0190_hu71111ddc9714c6f77551feb7a7f87dc4_453617_d5e974d7b9fbe5203a435264519ef2a2.webp 760w,
+               /es/2025/03/07/teaching-omics-methods-to-lcg-unam-students/images/IMG_0190_hu71111ddc9714c6f77551feb7a7f87dc4_453617_1200x1200_fit_q75_h2_lanczos.webp 1200w&#34;
+               src=&#34;https://lcolladotor.github.io/es/2025/03/07/teaching-omics-methods-to-lcg-unam-students/images/IMG_0190_hu71111ddc9714c6f77551feb7a7f87dc4_453617_5dd53fe7bf5d6993889bbee26f9eb21a.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;570&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;arn-seq&#34;&gt;ARN-seq&lt;/h2&gt;
+&lt;script defer class=&#34;speakerdeck-embed&#34; data-slide=&#34;2&#34; data-id=&#34;2c3377401c934bb9abd859b644bb9455&#34; data-ratio=&#34;1.7772511848341233&#34; src=&#34;//speakerdeck.com/assets/embed.js&#34;&gt;&lt;/script&gt;
+&lt;p&gt;Usé esta diapositiva con una imagen de &lt;a href=&#34;https://x.com/mikejg84&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Gandal&lt;/a&gt; et al DOI &lt;a href=&#34;https://doi.org/10.1016/j.biopsych.2020.06.005&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;10.1016/j.biopsych.2020.06.005&lt;/a&gt; que muestra muchos tipos de moléculas de ARN. Muchos están principalmente interesados en el ARNm: &lt;a href=&#34;https://es.wikipedia.org/wiki/ARN_mensajero&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ARN mensajero&lt;/a&gt;. Aunque otras moléculas de ARN pueden ser de interés, como los &lt;a href=&#34;https://es.wikipedia.org/wiki/MicroARN&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;microARNs&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Sobre microarreglos, expliqué cómo son ensayos basados en sondas donde una compañía diseña las sondas, las imprimen en una placa de vidrio, y cómo los datos se generan a través de imágenes de alta resolución (fotos) de la placa de vidrio. Para hacer esto, tienes que conocer la anotación de genes (dónde se encuentran los genes en el genoma) para diseñar las sondas. Los microarreglos son más baratos que el ARN-seq y se han utilizado mucho para el genotipado de ADN, donde estamos interesados en un conjunto de aproximadamente 2.5 millones de ubicaciones en el genoma que varían comúnmente entre individuos.&lt;/p&gt;
+&lt;p&gt;ARN-seq realmente se popularizó o bueno, fue posible, con la llegada de la secuenciación de nueva generación. La idea es que puedes secuenciar las moléculas de ARN en una muestra y luego alinear las secuencias al genoma para saber de dónde provienen. Esto es más caro que los microarreglos pero tiene la ventaja de que no necesitas conocer la anotación de genes de antemano. Esto se debe a que puedes alinear las secuencias al genoma y luego contar cuántas secuencias se alinean a cada gen. También puedes estudiar isoformas (transcritos), en lugar de genes. Una búsqueda rápida en Google me llevó &lt;a href=&#34;https://biology.stackexchange.com/questions/37002/please-explain-what-a-gene-isoform-is-in-lay-terms&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;aquí&lt;/a&gt; ya que quería mostrarles una ilustración de un gen con múltiples transcritos, algunos de ellos con diferencias muy pequeñas entre ellos. También vimos el &lt;a href=&#34;https://www.gencodegenes.org/human/releases.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;historial de lanzamientos de Gencode&lt;/a&gt; para resaltar que la anotación de genes no es estática y se actualiza con frecuencia.&lt;/p&gt;
+&lt;p&gt;Para una breve introducción a la secuenciación de nueva generación o secuenciación de alto rendimiento (estos eran sinónimos en 2006 a 2011 o así), volví a un curso que enseñé a estudiantes de doctorado de la UNAM poco después de terminar mi licenciatura. De &lt;a href=&#34;https://lcolladotor.github.io/courses/PDCB-HTS.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://lcolladotor.github.io/courses/PDCB-HTS.html&lt;/a&gt;, vimos la &lt;a href=&#34;https://lcolladotor.github.io/courses/Courses/PDCB-HTS/lectures/02_HTStech01/02_Understanding_the_Tech_01.pptx&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;presentación de diapositivas para &amp;ldquo;2. Entendiendo la tecnología&amp;rdquo;&lt;/a&gt;. Particularmente las diapositivas 39 a 42 donde expliqué brevemente la secuenciación de lecturas cortas de Illumina.&lt;/p&gt;
+&lt;p&gt;En relación con los ARN ribosomales, expliqué los dos protocolos de ARN-seq más comunes: poliA+ y depleción de ribosomas (RiboZeroGold). Usé un &lt;a href=&#34;https://doi.org/10.1101/2024.02.09.579665&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;preprint que escribimos en 2024 donde la Figura 1B&lt;/a&gt; muestra los dos tipos de bibliotecas de ARN-seq, pero también los diferentes protocolos de extracción de ARN (a menudo algo que la gente ignora).&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://doi.org/10.1101/2024.02.09.579665&#34;&gt;&lt;img src=&#34;https://www.biorxiv.org/content/biorxiv/early/2024/04/07/2024.02.09.579665/F1.large.jpg?width=800&amp;height=600&amp;carousel=1&#34; width=&#34;600px&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;La Figura 1D destaca cuán diferentes son los datos usando componentes principales (PC1 separa el tipo de biblioteca, PC2 separa las extracciones de ARN), y la Figura 1E muestra dentro de una extracción de ARN dada, cómo se cuantifican diferencialmente los genes por los dos tipos de bibliotecas.&lt;/p&gt;
+&lt;p&gt;Para el ruido en ARN-seq, vimos mi artículo de doctorado &lt;a href=&#34;https://doi.org/10.1093/biostatistics/kxt053&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;derfinder&lt;/code&gt;&lt;/a&gt;. La Figura 1 es en realidad un recordatorio de cómo los transcritos pueden tener diferencias muy pequeñas entre ellos. La Figura 2 tiene curvas de cobertura para datos de ARN-seq. Usamos &lt;code&gt;derfinder&lt;/code&gt; cuando estudiamos cambios de expresión en el cerebro humano a través de grupos de edad incluyendo muestras prenatales DOI &lt;a href=&#34;https://doi.org/10.1038/nn.3898&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;10.1038/nn.3898&lt;/a&gt;. A través de ese trabajo concluimos que el transcriptoma del cerebro humano estaba incompleto. Mencioné también cómo los datos de poliA y RiboZeroGold tendrán perfiles de cobertura diferentes (RiboZeroGold mostrará cobertura para intrones ya que algunos pre-ARNm se secuenciarán). También describí la métrica &lt;code&gt;totalAssignedGene&lt;/code&gt; que &lt;a href=&#34;https://research.libd.org/SPEAQeasy/outputs.html#coldata-of-rse-objects&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;SPEAQeasy&lt;/code&gt;&lt;/a&gt; genera: la fracción de lecturas asignadas a genes del número total de lecturas que se alinearon al genoma. Hemos usado &lt;code&gt;totalAssignedGene&lt;/code&gt; para identificar muestras de baja calidad en algunos estudios.&lt;/p&gt;
+&lt;p&gt;También mencioné brevemente que una ventaja de ARN-seq es la posibilidad de ensamblar transcritos usando herramientas como &lt;a href=&#34;https://ccb.jhu.edu/software/stringtie/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;StringTie&lt;/code&gt;&lt;/a&gt; desarrollado por algunos de mis colaboradores. Corrieron &lt;code&gt;StringTie&lt;/code&gt; en ~10,000 muestras de ARN-seq de GTEx para construir &lt;a href=&#34;https://ccb.jhu.edu/chess/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CHESS&lt;/a&gt;. Eventualmente de ~26 millones de transcritos filtraron la lista y encontraron ~160,000 transcritos DOI &lt;a href=&#34;https://doi.org/10.1186/s13059-023-03088-4&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;10.1186/s13059-023-03088-4&lt;/a&gt;. Hay muchos desafíos sobre cómo decides qué es un transcripción &lt;em&gt;real&lt;/em&gt; versus ruido. ¿Confías más en un transcrito con 100 lecturas pero solo en una muestra o un transcrito con 5 lecturas por muestra que está presente en 10% de tus muestras?&lt;/p&gt;
+&lt;p&gt;Sobre las estructuras secundarias en ARN, expliqué cómo los protocolos de ARN-seq involucran un paso donde el ARN se corta en fragmentos de aproximadamente 300 a 500 pares de bases. Esa es una forma de lidiar con las estructuras secundarias del ARN. Aunque no recuerdo si hay otros pasos que ayudan a evitar problemas con el plegado del ARN. Y podría ser algo que olvidamos: algunos ARN que son más propensos a plegarse pueden no estar tan bien representados en los datos de ARN-seq.&lt;/p&gt;
+&lt;h2 id=&#34;scrna-seq&#34;&gt;scRNA-seq&lt;/h2&gt;
+&lt;p&gt;Para scRNA-seq, usé partes de este video explicativo de 10x Genomics. Lo pausé algunas veces para resaltar los GEMs, la fluidica para meter células en gotas, y cómo cada gota tiene un código de barras celular (una secuencia de ADN única), y hay alrededor de 750,000 de ellos en un experimento dado.&lt;/p&gt;
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/4NAS1qTJmYA?si=pf-iNv02m9T0BLn0&#34; title=&#34;YouTube video player&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;p&gt;Al final generas ADN que puedes secuenciar con secuenciadores de Illumina. De hecho, muchos otros protocolos son todos sobre generar ADN para las moléculas de interés, luego secuenciar esas moléculas de ADN con Illumina. Por ejemplo, ChIP-seq, ATAC-seq, etcétera.&lt;/p&gt;
+&lt;h2 id=&#34;transcriptómica-resuelta-espacialmente&#34;&gt;Transcriptómica resuelta espacialmente&lt;/h2&gt;
+&lt;p&gt;Para explicar la transcriptómica resuelta espacialmente, mostré a los estudiantes &lt;a href=&#34;https://lcolladotor.github.io/2024/05/23/humanpilot-first-spatially-resolved-transcriptomics-study-using-visium/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;mi publicación de blog&lt;/a&gt; (con videos en inglés y español) explicando el primer artículo de 10x Genomics Visium que escribimos DOI &lt;a href=&#34;https://doi.org/10.1038/s41593-020-00787-0&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;10.1038/s41593-020-00787-0&lt;/a&gt;. Destaqué cómo Visium usa &amp;ldquo;códigos de barras espaciales&amp;rdquo;, similares a los códigos de barras de scRNA-seq que vimos anteriormente. Estas secuencias de ADN etiquetan los casi 5,000 puntos presentes en una diapositiva de Visium. Aquí hay un breve video de introducción de 10x Genomics a Visium.&lt;/p&gt;
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/VwNk4d-0RJc?si=poZAaCY3VmjHQIZA&#34; title=&#34;YouTube video player&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;p&gt;Para el tejido que estabamos estudiando (DLPFC de cerebro humano), encontramos que cada punto de Visium contenía en promedio 3 células. Con la omica espacial encuentras cómo las células están agrupadas espacialmente, lo que puede ser informativo a diferencia de lo que obtenemos con scRNA-seq (perfiles de expresión de células individuales sin información espacial) o bulk RNA-seq (como licuar un montón de células y obtener el perfil de expresión general). La deconvolución de puntos, que probamos un poco en DOI &lt;a href=&#34;https://doi.org/10.1126/science.adh1938&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;10.1126/science.adh1938&lt;/a&gt;, y la deconvolución de bulk RNA-seq que también probamos en DOI &lt;a href=&#34;https://doi.org/10.1101/2024.02.09.579665&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;10.1101/2024.02.09.579665&lt;/a&gt;, son algunos métodos computacionales que permiten integrar múltiples sabores de RNA-seq juntos. Dai et al también escribieron un artículo de referencia muy bueno para los métodos de deconvolución de bulk RNA-seq de segunda generación utilizando datos de scRNA-seq como referencia: DOI &lt;a href=&#34;https://doi.org/10.1126/sciadv.adh2588&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;10.1126/sciadv.adh2588&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;También resalté cómo con bulk RNA-seq algunos conjuntos de datos de LIBD tienen 80 millones de lecturas pareadas de 100 pares de bases cada una (como alrededor de $1,000 USD por muestra). En última instancia, la longitud de lectura (en pares de bases) multiplicada por el número de lecturas determina cuánto dinero vas a gastar en secuenciación. 10x Genomics recomienda 50,000 lecturas por célula para scRNA-seq o por punto para Visium. Un área de captura de Visium tiene 5,000 puntos, es decir, son 250 millones de lecturas por área de captura de Visium. Gastas alrededor de 2,000 a 2,500 USD por área de captura de Visium solo para la secuenciación de Illumina sin incluir otros reactivos de 10x Genomics. Además, las opciones que tienes por célula o por punto están limitadas ya que pasaste de 80 millones de lecturas a 50 mil (¡una reducción de 1,600 veces!). Entonces, scRNA-seq y Visium son mucho más dispersos que el ARN-seq a granel. Algunos protocolos de scRNA-seq también están sesgados hacia el 3&amp;rsquo;, lo que significa que solo secuencias el extremo 3&amp;rsquo; de las moléculas de ARN. Algunos han desarrollado formas de cuantificar los transcritos a pesar de estos sesgos, pero sigue siendo un área de investigación activa. Sin embargo, los costos de generación de datos para cada ensayo a veces determinan qué ensayos se pueden usar. Sin embargo, si otros han compartido datos relevantes, entonces puedes reutilizar esos datos y no tienes que generarlos todos tú mismo.&lt;/p&gt;
+&lt;p&gt;En términos de los mejores métodos para la secuenciación de ARN y los ensayos asociados, mencioné que una forma de verificar esto es mirando la valoración de estas empresas y sus precios de las acciones. Estas empresas adquieren con frecuencia empresas más pequeñas, se demandan entre sí, etc. Algunos de ellas se han visto afectados por recientes guerras comerciales, por ejemplo &lt;a href=&#34;https://www.reuters.com/business/healthcare-pharmaceuticals/china-bans-imports-illuminas-gene-sequencers-2025-03-04/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;em&gt;China prohíbe la importación de secuenciadores de genes de Illumina justo después de la acción arancelaria de Trump&lt;/em&gt;&lt;/a&gt;. Esto se hizo parcialmente porque dos empresas chinas de genómica fueron acusadas por los EE. UU. por motivos de seguridad nacional. En general, Illumina y 10x Genomics están entre los jugadores más grandes en el campo. Hay otras empresas grandes y muchas pequeñas (20 o más empleados), algunas de las cuales buscan ser adquiridas por las grandes.&lt;/p&gt;
+&lt;h2 id=&#34;análisis-de-datos&#34;&gt;Análisis de datos&lt;/h2&gt;
+&lt;p&gt;Veré a estos estudiantes de segundo semestre dentro de un año cuando tomen la clase de cuarto semestre de introducción a análisis de datos de ARN-seq con R y &lt;a href=&#34;https://bioconductor.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Bioconductor&lt;/a&gt; que &lt;a href=&#34;https://lcolladotor.github.io/rnaseq_LCG-UNAM_2025/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;he enseñado los últimos cinco años&lt;/a&gt;. Como un adelanto rápido, mencioné que Bioconductor es un gran repositorio de software de código abierto para el análisis de datos biológicos de alto rendimiento: microarreglos hace 23 años y hoy en día scRNA-seq y omicas espaciales. También es obligatorio escribir guías de usuario (documentos de viñetas) sobre todo el software de Bioconductor. Esto facilita mucho el aprendizaje de cómo usar el software y es un factor distintivo que separa a Bioconductor de otros repositorios de software.&lt;/p&gt;
+&lt;p&gt;Les mostré unas diapositivas de la presentación reciente de mi equipo de TL DR (muy largo, no lo leí).&lt;/p&gt;
+&lt;blockquote class=&#34;bluesky-embed&#34; data-bluesky-uri=&#34;at://did:plc:h7p2smbyfobkpcs7dbgvhmeh/app.bsky.feed.post/3lhz4wurwpc2n&#34; data-bluesky-cid=&#34;bafyreiarms7jqajwka2ebetelb5pz2f5waen6rxqsdndezhoqezxvrciwq&#34;&gt;&lt;p lang=&#34;en&#34;&gt;Check our recent video &amp;quot;[2025-01-29] R/Bioconductor-powered Team Data Science: TLDR version 2025&amp;quot;
+youtu.be/alL-g2roXxM
+&lt;p&gt;We go over what analyses our @lieberinstitute.bsky.social has expertise on 💻&lt;/p&gt;
+&lt;p&gt;Slides orchestrated by @lahuuki.bsky.social at speakerdeck.com/lahuuki/2025&amp;hellip;&lt;/p&gt;
+&lt;p&gt;👥 go.bsky.app/53gy4UP&lt;br&gt;&lt;br&gt;&lt;a href=&#34;https://bsky.app/profile/did:plc:h7p2smbyfobkpcs7dbgvhmeh/post/3lhz4wurwpc2n?ref_src=embed&#34;&gt;[image or embed]&lt;/a&gt;&lt;/p&gt;— 🇲🇽 Leonardo Collado-Torres (&lt;a href=&#34;https://bsky.app/profile/did:plc:h7p2smbyfobkpcs7dbgvhmeh?ref_src=embed&#34;&gt;@lcolladotor.bsky.social&lt;/a&gt;) &lt;a href=&#34;https://bsky.app/profile/did:plc:h7p2smbyfobkpcs7dbgvhmeh/post/3lhz4wurwpc2n?ref_src=embed&#34;&gt;February 12, 2025 at 3:35 PM&lt;/a&gt;&lt;/blockquote&gt;&lt;script async src=&#34;https://embed.bsky.app/static/embed.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/alL-g2roXxM?si=Q1bemiqdhljcfXAG&#34; title=&#34;YouTube video player&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;p&gt;Primero les mostré cómo Visium HD es una nueva tecnología de 10x Genomics que es basada en sondas. Así que piensa en ello como un microarreglo moderno que está resuelto espacialmente. También es lo suficientemente potente como para generar datos de resolución subcelular: empezando desde cuadrados de 2 micrones.&lt;/p&gt;
+&lt;script defer class=&#34;speakerdeck-embed&#34; data-slide=&#34;12&#34; data-id=&#34;21f0f91a68b14806a2f489a371f29e94&#34; data-ratio=&#34;1.7772511848341233&#34; src=&#34;//speakerdeck.com/assets/embed.js&#34;&gt;&lt;/script&gt;
+&lt;p&gt;Analizar estos datos puede ser exigente computacionalmente en términos de requerir GPUs y/o nodos de cómputo de alta memoria.&lt;/p&gt;
+&lt;script defer class=&#34;speakerdeck-embed&#34; data-slide=&#34;18&#34; data-id=&#34;21f0f91a68b14806a2f489a371f29e94&#34; data-ratio=&#34;1.7772511848341233&#34; src=&#34;//speakerdeck.com/assets/embed.js&#34;&gt;&lt;/script&gt;
+&lt;p&gt;Al final, puede haber una necesidad de procesar uniformemente datos de ARN-seq disponibles públicamente para democratizar el acceso a estos datos de modo que los investigadores sin acceso a entornos informáticos de alto rendimiento. Trabajé en esto a través de los proyectos &lt;code&gt;recount2&lt;/code&gt; y &lt;code&gt;recount3&lt;/code&gt; DOI &lt;a href=&#34;https://doi.org/10.1186/s13059-021-02533-6&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;10.1186/s13059-021-02533-6&lt;/a&gt;. Les enseñaré más sobre esto el próximo año.&lt;/p&gt;
+&lt;h2 id=&#34;temas-adicionales&#34;&gt;Temas adicionales&lt;/h2&gt;
+&lt;p&gt;Terminé resaltando recursos de la &lt;a href=&#34;https://comunidadbioinfo.github.io/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Comunidad de Desarrolladores de Software de Bioinformática (CDSB)&lt;/a&gt; y el &lt;a href=&#34;https://research.libd.org/rstatsclub/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Club RStats LIBD&lt;/a&gt;. Ahí los estudiantes pueden encontrar videos de talleres completos de una semana como el &lt;a href=&#34;https://www.youtube.com/playlist?list=PLwa0ZAE6DJg6j0QEgtgzQwi5xsz6po22E&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;curso de análisis de scRNA-seq de 2021&lt;/a&gt; y muchos otros videos del &lt;a href=&#34;https://docs.google.com/spreadsheets/d/1is8dZSd0FZ9Qi1Zvq1uRhm-P1McnJRd_zxdAfCRoMfA/edit?usp=sharing&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;calendario del Club RStats LIBD&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;También resalté cómo uno tiene que pasar horas de trabajo tratando de aprender nuevos métodos en lugar de confiar en hacerlo en su tiempo libre. Finalmente, resalté cómo me gusta aprender en público. Cómo compartir lo que sabes puede ser útil no solo para otros, sino también para ti mismo.&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /es/2025/03/07/teaching-omics-methods-to-lcg-unam-students/images/IMG_0191_huea4d5e1bf37601b02eaf78149c4e05e8_681547_2c7abc2441dc53d652026159ddfb81d7.webp 400w,
+               /es/2025/03/07/teaching-omics-methods-to-lcg-unam-students/images/IMG_0191_huea4d5e1bf37601b02eaf78149c4e05e8_681547_380ee9b7747031b755568ab8e3eb9e04.webp 760w,
+               /es/2025/03/07/teaching-omics-methods-to-lcg-unam-students/images/IMG_0191_huea4d5e1bf37601b02eaf78149c4e05e8_681547_1200x1200_fit_q75_h2_lanczos.webp 1200w&#34;
+               src=&#34;https://lcolladotor.github.io/es/2025/03/07/teaching-omics-methods-to-lcg-unam-students/images/IMG_0191_huea4d5e1bf37601b02eaf78149c4e05e8_681547_2c7abc2441dc53d652026159ddfb81d7.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;570&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;Siempre da gusto volver a la LCG-UNAM, mi alma mater de licenciatura. También disfruto interactuar con los estudiantes actuales. Aquí estoy con Valentina y &lt;a href=&#34;https://bsky.app/profile/bernardochombo.bsky.social&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Bernardo&lt;/a&gt;, ambos trabajan como ayudantes y están terminando su tercer año. A continuación empezarán su último año que es un año de investigación. Ya nos darán noticias sobre lo que eligen trabajar y me dará gusto ver cómo florecen sus carreras.&lt;/p&gt;
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    &lt;a href=&#34;https://www.one-tab.com/page/qrgMQDQbQ9-BGSsmPIyvrA&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Acá están todas las ligas que les mostré hoy en clase&lt;/a&gt;.
+  &lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
     
     <item>
       <title>Construyendo la comunidad de Genómicxs de y en México</title>

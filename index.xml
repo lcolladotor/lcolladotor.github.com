@@ -5,12 +5,173 @@
     <link>https://lcolladotor.github.io/</link>
       <atom:link href="https://lcolladotor.github.io/index.xml" rel="self" type="application/rss+xml" />
     <description>L. Collado-Torres</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Mon, 27 Jan 2025 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Fri, 07 Mar 2025 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://lcolladotor.github.io/media/icon_hu2b32c4ab415f12f472f73c7b0301b0d1_19400_512x512_fill_lanczos_center_3.png</url>
       <title>L. Collado-Torres</title>
       <link>https://lcolladotor.github.io/</link>
     </image>
+    
+    <item>
+      <title>Teaching omics methods to LCG-UNAM students</title>
+      <link>https://lcolladotor.github.io/2025/03/07/teaching-omics-methods-to-lcg-unam-students/</link>
+      <pubDate>Fri, 07 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>https://lcolladotor.github.io/2025/03/07/teaching-omics-methods-to-lcg-unam-students/</guid>
+      <description>&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Notes from a second semester introductory class to the world of omics research techniques at LCG-UNAM. That is, my undergrad alma mater. Thank you for the invitation!
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;a href=&#34;https://bsky.app/profile/vaalarias.bsky.social&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Valentina Arias Ojeda&lt;/a&gt; is as teaching assistant for the class &amp;ldquo;Omics Research Techniques&amp;rdquo;, taught by &lt;a href=&#34;https://www.ibt.unam.mx/perfil/1596/dra-constance-genevieve-jeanne-henriette-auvynet&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Dr. Constance Auvynet&lt;/a&gt; at &lt;a href=&#34;https://www.lcg.unam.mx/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;LCG-UNAM&lt;/a&gt;. They invited me to teach a class on single cell RNA-seq and spatially-resolved transcriptomics. Valentina introduced me and then I mentioned a bit of &lt;a href=&#34;https://lcolladotor.github.io/#teaching&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;my teaching history&lt;/a&gt;, starting from my first teaching experience where I made &lt;a href=&#34;https://lcolladotor.github.io/courses/Courses/B/index_en.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;a website available in both English and Spanish&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I decided to teach today&amp;rsquo;s class as a collective &lt;a href=&#34;https://lcolladotor.github.io/bioc_team_ds/data-science-guidance-sessions.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&amp;ldquo;Data Science guidance session&amp;rdquo;&lt;/a&gt;. However, unlike a regular DSgs, we first needed to come up with a list of questions or concepts that they wanted to learn more about. Here I used a technique I learned as a teaching assistant for the 140.620 series on &lt;em&gt;Statistical Methods in Public Health&lt;/em&gt; at JHU. That is, write on the board the questions, then try to group them up into different categories. Our full list of questions was:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;RNA-seq
+&lt;ul&gt;
+&lt;li&gt;What is the difference between microarrays and RNA-seq?&lt;/li&gt;
+&lt;li&gt;What is RNA-seq?&lt;/li&gt;
+&lt;li&gt;How do we deal with ribosomal RNAs in RNA-seq?&lt;/li&gt;
+&lt;li&gt;How do we deal with noise in RNA-seq?
+&lt;ul&gt;
+&lt;li&gt;How do we define noise?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;How does RNA-seq deal with RNA secondary structures?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Single cell RNA-seq
+&lt;ul&gt;
+&lt;li&gt;What is scRNA-seq?&lt;/li&gt;
+&lt;li&gt;What is scRNA-seq useful for?&lt;/li&gt;
+&lt;li&gt;Which are the main sequencing technologies?&lt;/li&gt;
+&lt;li&gt;What is ATAC-seq?&lt;/li&gt;
+&lt;li&gt;What is insitu seq?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Spatially resolved transcriptomics
+&lt;ul&gt;
+&lt;li&gt;What is spatially resolved transcriptomics?&lt;/li&gt;
+&lt;li&gt;What is the difference between spatially resolved transcriptomics and scRNA-seq?&lt;/li&gt;
+&lt;li&gt;How can we integrate RNA-seq and spatially resolved transcriptomics?&lt;/li&gt;
+&lt;li&gt;What are the physics behind spatially resolved transcriptomics?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Data analysis
+&lt;ul&gt;
+&lt;li&gt;Why do we use R for omics data analysis?
+&lt;ul&gt;
+&lt;li&gt;How do we analyze RNA-seq data?&lt;/li&gt;
+&lt;li&gt;How do we analyze scRNA-seq data?&lt;/li&gt;
+&lt;li&gt;How do we analyze spatially resolved transcriptomics data?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;How much computational power do we need for spatial omics data analysis?&lt;/li&gt;
+&lt;li&gt;How do we integrate RNA-seq and spatially resolved transcriptomics data?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /2025/03/07/teaching-omics-methods-to-lcg-unam-students/images/IMG_0190_hu71111ddc9714c6f77551feb7a7f87dc4_453617_5dd53fe7bf5d6993889bbee26f9eb21a.webp 400w,
+               /2025/03/07/teaching-omics-methods-to-lcg-unam-students/images/IMG_0190_hu71111ddc9714c6f77551feb7a7f87dc4_453617_d5e974d7b9fbe5203a435264519ef2a2.webp 760w,
+               /2025/03/07/teaching-omics-methods-to-lcg-unam-students/images/IMG_0190_hu71111ddc9714c6f77551feb7a7f87dc4_453617_1200x1200_fit_q75_h2_lanczos.webp 1200w&#34;
+               src=&#34;https://lcolladotor.github.io/2025/03/07/teaching-omics-methods-to-lcg-unam-students/images/IMG_0190_hu71111ddc9714c6f77551feb7a7f87dc4_453617_5dd53fe7bf5d6993889bbee26f9eb21a.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;570&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;rna-seq&#34;&gt;RNA-seq&lt;/h2&gt;
+&lt;script defer class=&#34;speakerdeck-embed&#34; data-slide=&#34;2&#34; data-id=&#34;2c3377401c934bb9abd859b644bb9455&#34; data-ratio=&#34;1.7772511848341233&#34; src=&#34;//speakerdeck.com/assets/embed.js&#34;&gt;&lt;/script&gt;
+&lt;p&gt;I used this slide with an image from &lt;a href=&#34;https://x.com/mikejg84&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Gandal&lt;/a&gt; et al DOI &lt;a href=&#34;https://doi.org/10.1016/j.biopsych.2020.06.005&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;10.1016/j.biopsych.2020.06.005&lt;/a&gt; that shows many types of RNA molecules. Many are mostly interested in mRNA: &lt;a href=&#34;https://en.wikipedia.org/wiki/Messenger_RNA&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;messenger RNA&lt;/a&gt;. Though other RNA molecules can be of interest, such as &lt;a href=&#34;https://en.wikipedia.org/wiki/MicroRNA&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;microRNAs&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;For microarrays, I explained how they are probe-based assays where a company designs the probes, prints them on a glass screen, and how the data is generated through high resolution images (photos) of the glass screen. To do this, you have to know the gene annotation (where genes are located in the genome) in order to design the probes. Microarrays are cheaper than RNA-seq and have been used a lot for DNA genotyping, where we are interested in a set of 2.5 million or so locations in the genome that commonly vary between individuals.&lt;/p&gt;
+&lt;p&gt;RNA-seq really came to be popular or well, possible, with the advent of next generation sequencing. The idea is that you can sequence the RNA molecules in a sample and then align the sequences to the genome to know where they came from. This is more expensive than microarrays but it has the advantage that you don&amp;rsquo;t need to know the gene annotation beforehand. This is because you can align the sequences to the genome and then count how many sequences align to each gene. You can also study isoforms (transcripts), instead of genes. A quick Google search led me &lt;a href=&#34;https://biology.stackexchange.com/questions/37002/please-explain-what-a-gene-isoform-is-in-lay-terms&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt; as I wanted to show them an illustration of a gene with multiple transcripts, some of them with very small differences between them. We also looked at &lt;a href=&#34;https://www.gencodegenes.org/human/releases.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Gencode&amp;rsquo;s release history&lt;/a&gt; to highlight that the gene annotation is not static and frequently updated.&lt;/p&gt;
+&lt;p&gt;For a quick intro to next generation sequencing or high-throughput sequencing (these were synonyms in 2006 to 2011 or so), I went back to a course I taught for UNAM PhD students shortly after finishing my undergrad. From &lt;a href=&#34;https://lcolladotor.github.io/courses/PDCB-HTS.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://lcolladotor.github.io/courses/PDCB-HTS.html&lt;/a&gt;, we looked at the &lt;a href=&#34;https://lcolladotor.github.io/courses/Courses/PDCB-HTS/lectures/02_HTStech01/02_Understanding_the_Tech_01.pptx&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;slide deck for &amp;ldquo;2. Understanding the technology&amp;rdquo;&lt;/a&gt;. Particularly slides 39 to 42 where I briefly explained Illumina short read sequencing.&lt;/p&gt;
+&lt;p&gt;In relation to ribosomal RNAs, I explained the two most common RNA-seq protocols: polyA+ and ribo-depletion (RiboZeroGold). I used a &lt;a href=&#34;https://doi.org/10.1101/2024.02.09.579665&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;preprint we wrote in 2024 where Figure 1B&lt;/a&gt; shows the two RNA-seq library types but also the different RNA extraction protocols (often something people ignore).&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://doi.org/10.1101/2024.02.09.579665&#34;&gt;&lt;img src=&#34;https://www.biorxiv.org/content/biorxiv/early/2024/04/07/2024.02.09.579665/F1.large.jpg?width=800&amp;height=600&amp;carousel=1&#34; width=&#34;600px&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Figure 1D highlights how different the data using principal components (PC1 separates library type, PC2 separates RNA extractions), and Figure 1E shows within a given RNA extraction, how genes are differentially quantified by the two library types.&lt;/p&gt;
+&lt;p&gt;For noise in RNA-seq, we looked at my &lt;a href=&#34;https://doi.org/10.1093/biostatistics/kxt053&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;derfinder&lt;/code&gt;&lt;/a&gt; PhD paper. Figure 1 actually is a reminder of how transcripts can have very small differences between them. Figure 2 has coverage curves for RNA-seq data. We used &lt;code&gt;derfinder&lt;/code&gt; when we studied human brain expression changes across age groups including prenatal samples DOI &lt;a href=&#34;https://doi.org/10.1038/nn.3898&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;10.1038/nn.3898&lt;/a&gt;. Through that work we concluded that the human brain transcriptome was incomplete. I mentioned also how polyA and RiboZeroGold data will have different coverage profiles (RiboZeroGold will show coverage for introns as some pre-mRNAs are going to be sequenced). I also described the &lt;code&gt;totalAssignedGene&lt;/code&gt; metric that &lt;a href=&#34;https://research.libd.org/SPEAQeasy/outputs.html#coldata-of-rse-objects&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;SPEAQeasy&lt;/code&gt;&lt;/a&gt; generates: the fraction of reads assigned to genes from the total number of reads that were aligned to the genome. We&amp;rsquo;ve used &lt;code&gt;totalAssignedGene&lt;/code&gt; to identify poor quality samples in some studies.&lt;/p&gt;
+&lt;p&gt;I also briefly mentioned that an advantage of RNA-seq is the possibility of assembling transcripts using tools like &lt;a href=&#34;https://ccb.jhu.edu/software/stringtie/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;StringTie&lt;/code&gt;&lt;/a&gt; developed by some of my collaborators. They ran &lt;code&gt;StringTie&lt;/code&gt; on the ~10,000 GTEx RNA-seq samples to build &lt;a href=&#34;https://ccb.jhu.edu/chess/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CHESS&lt;/a&gt;. Eventually from ~26 million transcripts they filtered the list and found ~160,000 transcripts DOI &lt;a href=&#34;https://doi.org/10.1186/s13059-023-03088-4&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;10.1186/s13059-023-03088-4&lt;/a&gt;. There are many challenges on how you decide what is a &lt;em&gt;real&lt;/em&gt; transcript versus noise. Do you trust more a transcript with 100 reads but only in one sample or a transcript with 5 reads per sample that is present in 10% of your samples?&lt;/p&gt;
+&lt;p&gt;As for secondary structures in RNA, I explained how RNA-seq protocols involve a step where RNA is cut into fragments of about 300 to 500 base pairs. That&amp;rsquo;s one way to deal with RNA secondary structures. Though I don&amp;rsquo;t remember if there are other steps that help avoid issues with RNA tangling. And it might be something that we forget about: some RNAs that are more likely to fold might not be as well represented in RNA-seq data.&lt;/p&gt;
+&lt;h2 id=&#34;scrna-seq&#34;&gt;scRNA-seq&lt;/h2&gt;
+&lt;p&gt;For scRNA-seq, I used parts of this explanatory video from 10x Genomics. I paused it a few times to highlight the GEMs, the fluidics for getting cells into droplets, and how each droplet has a cell barcode (a unique DNA sequence), and there&amp;rsquo;s about 750,000 of them on a given experiment.&lt;/p&gt;
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/4NAS1qTJmYA?si=pf-iNv02m9T0BLn0&#34; title=&#34;YouTube video player&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;p&gt;In the end you generate DNA that you can sequence with Illumina sequencers. Actually, many other protocols are all about generating DNA for the molecules of interest, then sequencing those DNA molecules with Illumina. For example, ChIP-seq, ATAC-seq, etc.&lt;/p&gt;
+&lt;h2 id=&#34;spatially-resolved-transcriptomics&#34;&gt;Spatially resolved transcriptomics&lt;/h2&gt;
+&lt;p&gt;To explain spatially-resolved transcriptomics, I showed the students &lt;a href=&#34;https://lcolladotor.github.io/2024/05/23/humanpilot-first-spatially-resolved-transcriptomics-study-using-visium/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;my blog post&lt;/a&gt; (with English and Spanish videos) explaining the first 10x Genomics Visium paper which we wrote DOI &lt;a href=&#34;https://doi.org/10.1038/s41593-020-00787-0&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;10.1038/s41593-020-00787-0&lt;/a&gt;. I highlighted how Visium uses &amp;ldquo;spatial barcodes&amp;rdquo;, akin to the scRNA-seq barcodes we saw previously. These DNA sequences label the nearly 5,000 spots present on a Visium slide. Here&amp;rsquo;s a short 10x Genomics intro to Visium video.&lt;/p&gt;
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/VwNk4d-0RJc?si=poZAaCY3VmjHQIZA&#34; title=&#34;YouTube video player&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;p&gt;For the tissue we were studying (human brain DLPFC), we found that each Visium spot contained on average 3 cells. With spatial omics you find how cells are grouped spatially, which can be informative unlike what we obtain with scRNA-seq (individual cell expression profiles with no spatial information) or bulk RNA-seq (like blending together a bunch of cells and getting the overall mean expression profile). Spot deconvolution, which we benchmarked a bit at DOI &lt;a href=&#34;https://doi.org/10.1126/science.adh1938&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;10.1126/science.adh1938&lt;/a&gt;, and bulk RNA-seq deconvolution which we&amp;rsquo;ve also benchmarked at DOI &lt;a href=&#34;https://doi.org/10.1101/2024.02.09.579665&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;10.1101/2024.02.09.579665&lt;/a&gt;, are some computational methods that allow integrating multiple flavors of RNA-seq together. Dai et al also wrote a really nice benchmark paper for second generation bulk RNA-seq deconvolution methods using scRNA-seq data as the reference: DOI &lt;a href=&#34;https://doi.org/10.1126/sciadv.adh2588&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;10.1126/sciadv.adh2588&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I also highlighted how with bulk RNA-seq some LIBD datasets have 80 million paired-end reads of 100 base-pairs each (as about $1,000 USD per sample). Ultimately, the read length (in base pairs) multiplied by the number of reads determines how much money you are doing to spend sequencing. 10x Genomics recommends 50,000 reads per cell for scRNA-seq or per spot for Visium. A Visium capture area has 5,000 spots, aka, that&amp;rsquo;s 250 million reads per Visium capture area. You do spend about 2,000 to 2,500 USD per Visium capture area just for Illumina sequencing without including other 10x Genomics reagents. Also, the options you have per cell or per spot are limited as you went from 80 million reads to 50 thousand (a 1,600x reduction!). So scRNA-seq and Visium are much more sparse than bulk RNA-seq. Some scRNA-seq protocols are also 3&amp;rsquo; biased, meaning that you only sequence the 3&amp;rsquo; end of the RNA molecules. Some have developed ways of quantifying transcripts despited these biases, but it&amp;rsquo;s still an active area of research. Overall though, the data generation costs for each assay sometimes determines what assays one can use. However, if others have shared relevant data, then you can re-use that data and don&amp;rsquo;t have to generate all yourself.&lt;/p&gt;
+&lt;p&gt;In terms of the best methods for RNA-seq sequencing and associated assays, I mentioned that one way to check this is by looking at the valuation of these companies and their stock prices. These companies frequently acquire smaller companies, sue each other, etc. Some of them have been impacted by recent trade wars, for example &lt;a href=&#34;https://www.reuters.com/business/healthcare-pharmaceuticals/china-bans-imports-illuminas-gene-sequencers-2025-03-04/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;em&gt;China bans imports of Illumina&amp;rsquo;s gene sequencers right after Trump tariff action&lt;/em&gt;&lt;/a&gt;. This was partially done because two genomics Chinese companies were accused by the US on grounds of national security. Overall, Illumina and 10x Genomics are among the biggest players in the field. There are other large companies, and many small ones (20 or so employees), some of which aim to be acquired by the big ones.&lt;/p&gt;
+&lt;h2 id=&#34;data-analysis&#34;&gt;Data Analysis&lt;/h2&gt;
+&lt;p&gt;I&amp;rsquo;ll see these same second semester students a year from now when they take the fourth semester class on introduction to RNA-seq data analysis with R and &lt;a href=&#34;https://bioconductor.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Bioconductor&lt;/a&gt; that &lt;a href=&#34;https://lcolladotor.github.io/rnaseq_LCG-UNAM_2025/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;I&amp;rsquo;ve taught the last five years&lt;/a&gt;. As a quick teaser, I mentioned that Bioconductor is a great repository of open source software for the analysis of high throughput biological data: microrrays 23 or so years ago and nowdays scRNA-seq and spatial omics. It&amp;rsquo;s also mandatory to write user guides (vignette documents) on all Bioconductor software. This makes it much easier to learn how to use the software and it&amp;rsquo;s a distinctive factor that separates Bioconductor from other software repositories.&lt;/p&gt;
+&lt;p&gt;From my team&amp;rsquo;s recent TL DR (too long, did not read) presentation I showed a few slides.&lt;/p&gt;
+&lt;blockquote class=&#34;bluesky-embed&#34; data-bluesky-uri=&#34;at://did:plc:h7p2smbyfobkpcs7dbgvhmeh/app.bsky.feed.post/3lhz4wurwpc2n&#34; data-bluesky-cid=&#34;bafyreiarms7jqajwka2ebetelb5pz2f5waen6rxqsdndezhoqezxvrciwq&#34;&gt;&lt;p lang=&#34;en&#34;&gt;Check our recent video &amp;quot;[2025-01-29] R/Bioconductor-powered Team Data Science: TLDR version 2025&amp;quot;
+youtu.be/alL-g2roXxM
+&lt;p&gt;We go over what analyses our @lieberinstitute.bsky.social has expertise on 💻&lt;/p&gt;
+&lt;p&gt;Slides orchestrated by @lahuuki.bsky.social at speakerdeck.com/lahuuki/2025&amp;hellip;&lt;/p&gt;
+&lt;p&gt;👥 go.bsky.app/53gy4UP&lt;br&gt;&lt;br&gt;&lt;a href=&#34;https://bsky.app/profile/did:plc:h7p2smbyfobkpcs7dbgvhmeh/post/3lhz4wurwpc2n?ref_src=embed&#34;&gt;[image or embed]&lt;/a&gt;&lt;/p&gt;— 🇲🇽 Leonardo Collado-Torres (&lt;a href=&#34;https://bsky.app/profile/did:plc:h7p2smbyfobkpcs7dbgvhmeh?ref_src=embed&#34;&gt;@lcolladotor.bsky.social&lt;/a&gt;) &lt;a href=&#34;https://bsky.app/profile/did:plc:h7p2smbyfobkpcs7dbgvhmeh/post/3lhz4wurwpc2n?ref_src=embed&#34;&gt;February 12, 2025 at 3:35 PM&lt;/a&gt;&lt;/blockquote&gt;&lt;script async src=&#34;https://embed.bsky.app/static/embed.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/alL-g2roXxM?si=Q1bemiqdhljcfXAG&#34; title=&#34;YouTube video player&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;p&gt;First I showed how Visium HD is a new technlogy from 10x Genomics that is probe based. So think about it as a modern microarray that is spatially-resolved. It&amp;rsquo;s also powered enough to generate sub-cellular resolution data: starting at 2 micron squares.&lt;/p&gt;
+&lt;script defer class=&#34;speakerdeck-embed&#34; data-slide=&#34;12&#34; data-id=&#34;21f0f91a68b14806a2f489a371f29e94&#34; data-ratio=&#34;1.7772511848341233&#34; src=&#34;//speakerdeck.com/assets/embed.js&#34;&gt;&lt;/script&gt;
+&lt;p&gt;Analyzing that data can be computationally demanding in terms of requiring GPUs and/or high-memory compute nodes.&lt;/p&gt;
+&lt;script defer class=&#34;speakerdeck-embed&#34; data-slide=&#34;18&#34; data-id=&#34;21f0f91a68b14806a2f489a371f29e94&#34; data-ratio=&#34;1.7772511848341233&#34; src=&#34;//speakerdeck.com/assets/embed.js&#34;&gt;&lt;/script&gt;
+&lt;p&gt;Ultimately, there can be a need to uniformly process publicly available RNA-seq data to democratize access to this data such that researchers without access to high performant compute environments are also able to analyze these valuable datasets. I worked on this through the &lt;code&gt;recount2&lt;/code&gt; and &lt;code&gt;recount3&lt;/code&gt; DOI &lt;a href=&#34;https://doi.org/10.1186/s13059-021-02533-6&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;10.1186/s13059-021-02533-6&lt;/a&gt; projects. I&amp;rsquo;ll teach them more about this next year.&lt;/p&gt;
+&lt;h2 id=&#34;miscellaneous&#34;&gt;Miscellaneous&lt;/h2&gt;
+&lt;p&gt;I ended with highlighting the resources from the &lt;a href=&#34;https://comunidadbioinfo.github.io/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Community of Bioinformatics Software Developers (CDSB in Spanish)&lt;/a&gt; and the &lt;a href=&#34;https://research.libd.org/rstatsclub/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;LIBD RStats Club&lt;/a&gt;. There students can find videos from full week-long workshops such as the &lt;a href=&#34;https://www.youtube.com/playlist?list=PLwa0ZAE6DJg6j0QEgtgzQwi5xsz6po22E&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;2021 scRNA-seq analysis course&lt;/a&gt; and many other videos from &lt;a href=&#34;https://docs.google.com/spreadsheets/d/1is8dZSd0FZ9Qi1Zvq1uRhm-P1McnJRd_zxdAfCRoMfA/edit?usp=sharing&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;LIBD RStats Club schedule&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I also highlighted how one has to spend work hours trying to learn new methods instead of relying on doing so on your free time. Finally, I highlighted how I like to learn in public. How sharing what you know can be helpful not just to others, but yourself.&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /2025/03/07/teaching-omics-methods-to-lcg-unam-students/images/IMG_0191_huea4d5e1bf37601b02eaf78149c4e05e8_681547_2c7abc2441dc53d652026159ddfb81d7.webp 400w,
+               /2025/03/07/teaching-omics-methods-to-lcg-unam-students/images/IMG_0191_huea4d5e1bf37601b02eaf78149c4e05e8_681547_380ee9b7747031b755568ab8e3eb9e04.webp 760w,
+               /2025/03/07/teaching-omics-methods-to-lcg-unam-students/images/IMG_0191_huea4d5e1bf37601b02eaf78149c4e05e8_681547_1200x1200_fit_q75_h2_lanczos.webp 1200w&#34;
+               src=&#34;https://lcolladotor.github.io/2025/03/07/teaching-omics-methods-to-lcg-unam-students/images/IMG_0191_huea4d5e1bf37601b02eaf78149c4e05e8_681547_2c7abc2441dc53d652026159ddfb81d7.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;570&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;It&amp;rsquo;s always great to be back at LCG-UNAM, my undergrad alma mater. I also enjoy interacting with current students. Here I&amp;rsquo;m with Valentina and &lt;a href=&#34;https://bsky.app/profile/bernardochombo.bsky.social&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Bernardo&lt;/a&gt;, both of whom are working as teaching assistants and finishing their third year. Next up is their final year which is a research year. I&amp;rsquo;m looking forward to learning about that they end up choosing to work on and to witness their careers flourish.&lt;/p&gt;
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    &lt;a href=&#34;https://www.one-tab.com/page/qrgMQDQbQ9-BGSsmPIyvrA&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Here are all the links that I showed in class today&lt;/a&gt;.
+  &lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
     
     <item>
       <title>Splicing accuracy varies across human introns, tissues, age and disease</title>
