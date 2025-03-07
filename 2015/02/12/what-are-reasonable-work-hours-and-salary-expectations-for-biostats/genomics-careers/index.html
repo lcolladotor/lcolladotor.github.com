@@ -1,0 +1,2084 @@
+<!DOCTYPE html>
+<!-- This site was created with Wowchemy. https://www.wowchemy.com -->
+<!-- Last Published: March 7, 2025 --><html lang="en-us" >
+
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  
+  
+    <meta name="generator" content="Wowchemy 5.7.0 for Hugo" />
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  
+
+  
+  
+  
+    
+      
+      <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&family=Karma&family=Mina&display=swap">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&family=Karma&family=Mina&display=swap" media="print" onload="this.media='all'">
+    
+  
+
+  
+  
+
+  
+  
+    
+    <script src="/js/mathjax-config.js"></script>
+  
+
+  
+
+  <link rel="stylesheet" href="/css/vendor-bundle.min.047268c6dd09ad74ba54a0ba71837064.css" media="print" onload="this.media='all'">
+
+  
+  
+  
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.2/css/academicons.min.css" integrity="sha512-KlJCpRsLf+KKu2VQa5vmRuClRFjxc5lXO03ixZt82HZUk41+1I0bD8KBSA0fY290ayMfWYI9udIqeOWSu1/uZg==" crossorigin="anonymous" media="print" onload="this.media='all'">
+    
+
+    
+    
+    
+    
+      
+      
+    
+    
+    
+
+    
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.min.css" integrity="" crossorigin="anonymous" media="print" onload="this.media='all'">
+    
+
+    
+
+    
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+  
+
+  
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/wowchemy.cfa383012e109fa07dd80bafcdf476df.css" />
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+    
+    
+    <link rel="stylesheet" href="/css/libs/chroma/github-light.min.css" title="hl-light" media="print" onload="this.media='all'" >
+    <link rel="stylesheet" href="/css/libs/chroma/dracula.min.css" title="hl-dark" media="print" onload="this.media='all'" disabled>
+  
+
+  
+  
+
+
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3CBVR6GQ07"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+      dataLayer.push(arguments);
+  }
+
+  function trackOutboundLink(url, target) {
+    gtag('event', 'click', {
+         'event_category': 'outbound',
+         'event_label': url,
+         'transport_type': 'beacon',
+         'event_callback': function () {
+           if (target !== '_blank') {
+             document.location = url;
+           }
+         }
+    });
+    console.debug("Outbound link clicked: " + url);
+  }
+
+  function onClickCallback(event) {
+    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
+      return;
+    }
+    trackOutboundLink(event.target, event.target.getAttribute('target'));  
+  }
+
+  gtag('js', new Date());
+  gtag('config', 'G-3CBVR6GQ07', {});
+  gtag('set', {'cookie_flags': 'SameSite=None;Secure'});
+
+  
+  document.addEventListener('click', onClickCallback, false);
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+
+
+
+
+
+  <meta name="author" content="Leonardo Collado-Torres" />
+
+
+
+
+
+  
+
+<meta name="description" content="My advisor recently asked me to fill a career planning document (he&rsquo;ll blog about it at some point) that has lots of questions and is being very useful. Trying to fill answer all these questions has gotten me thinking about other important things for the future." />
+
+
+
+<link rel="alternate" hreflang="en-us" href="https://lcolladotor.github.io/2015/02/12/what-are-reasonable-work-hours-and-salary-expectations-for-biostats/genomics-careers/" />
+<link rel="canonical" href="https://lcolladotor.github.io/2015/02/12/what-are-reasonable-work-hours-and-salary-expectations-for-biostats/genomics-careers/" />
+
+
+
+  <link rel="manifest" href="/manifest.webmanifest" />
+
+
+
+<link rel="icon" type="image/png" href="/media/icon_hu2b32c4ab415f12f472f73c7b0301b0d1_19400_32x32_fill_lanczos_center_3.png" />
+<link rel="apple-touch-icon" type="image/png" href="/media/icon_hu2b32c4ab415f12f472f73c7b0301b0d1_19400_180x180_fill_lanczos_center_3.png" />
+
+<meta name="theme-color" content="#FF6771" />
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+<meta property="twitter:card" content="summary" />
+
+  <meta property="twitter:site" content="@lcolladotor" />
+  <meta property="twitter:creator" content="@lcolladotor" />
+<meta property="twitter:image" content="https://lcolladotor.github.io/media/icon_hu2b32c4ab415f12f472f73c7b0301b0d1_19400_512x512_fill_lanczos_center_3.png" />
+<meta property="og:site_name" content="L. Collado-Torres" />
+<meta property="og:url" content="https://lcolladotor.github.io/2015/02/12/what-are-reasonable-work-hours-and-salary-expectations-for-biostats/genomics-careers/" />
+<meta property="og:title" content="What are reasonable work hours and salary expectations for biostats/genomics careers? | L. Collado-Torres" />
+<meta property="og:description" content="My advisor recently asked me to fill a career planning document (he&rsquo;ll blog about it at some point) that has lots of questions and is being very useful. Trying to fill answer all these questions has gotten me thinking about other important things for the future." /><meta property="og:image" content="https://lcolladotor.github.io/media/icon_hu2b32c4ab415f12f472f73c7b0301b0d1_19400_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
+
+  
+    <meta
+      property="article:published_time"
+      content="2015-02-12T00:00:00&#43;00:00"
+    />
+  
+  
+    <meta property="article:modified_time" content="2019-11-05T13:44:31-05:00">
+  
+
+
+
+
+
+
+    
+
+
+
+
+
+
+  
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://lcolladotor.github.io/2015/02/12/what-are-reasonable-work-hours-and-salary-expectations-for-biostats/genomics-careers/"
+  },
+  "headline": "What are reasonable work hours and salary expectations for biostats/genomics careers?",
+  
+  "datePublished": "2015-02-12T00:00:00Z",
+  "dateModified": "2019-11-05T13:44:31-05:00",
+  
+  "author": {
+    "@type": "Person",
+    "name": "Leonardo Collado-Torres"
+  },
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "L. Collado-Torres",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://lcolladotor.github.io/media/icon_hu2b32c4ab415f12f472f73c7b0301b0d1_19400_192x192_fill_lanczos_center_3.png"
+    }
+  },
+  "description": "My advisor recently asked me to fill a career planning document (he\u0026rsquo;ll blog about it at some point) that has lots of questions and is being very useful. Trying to fill answer all these questions has gotten me thinking about other important things for the future."
+}
+</script>
+
+  
+
+  
+
+
+
+
+  
+  
+  
+
+  
+  
+
+  
+
+
+  
+  <title>What are reasonable work hours and salary expectations for biostats/genomics careers? | L. Collado-Torres</title>
+
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="92834a585e694d962024efa85938651b" >
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <script src="/js/wowchemy-init.min.028535d572102c468e4bcd43201c3601.js"></script>
+
+  
+
+
+<aside class="search-modal" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#" aria-label="Close"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search" class="form-control"
+        aria-label="Search...">
+        
+      </div>
+
+      
+      
+
+      
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+
+  <div class="page-header header--fixed">
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+    <div class="container-xl">
+
+      
+      <div class="d-none d-lg-inline-flex">
+        <a class="navbar-brand" href="/">L. Collado-Torres</a>
+      </div>
+      
+
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+      <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+      
+      <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+        <a class="navbar-brand" href="/">L. Collado-Torres</a>
+      </div>
+      
+
+      
+      
+      <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+        
+        <ul class="navbar-nav d-md-inline-flex">
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#about"><span>Home</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#team"><span>Team</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#projects"><span>Projects</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#talks_favorite"><span>Talks</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#publications"><span>Publications</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#blog"><span>Blog</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#teaching"><span>Teaching</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#cv"><span>CV</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#contact"><span>Contact</span></a>
+          </li>
+
+          
+          
+
+        
+
+          
+        </ul>
+      </div>
+
+      <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+
+        
+        
+          
+        
+
+        
+        
+        
+        <li class="nav-item">
+          <a class="nav-link js-search" href="#" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></a>
+        </li>
+        
+
+        
+        
+        
+        <li class="nav-item dropdown theme-dropdown">
+          <a href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-label="Display preferences">
+            <i class="fas fa-moon" aria-hidden="true"></i>
+          </a>
+          <div class="dropdown-menu">
+            <a href="#" class="dropdown-item js-set-theme-light">
+              <span>Light</span>
+            </a>
+            <a href="#" class="dropdown-item js-set-theme-dark">
+              <span>Dark</span>
+            </a>
+            <a href="#" class="dropdown-item js-set-theme-auto">
+              <span>Automatic</span>
+            </a>
+          </div>
+        </li>
+        
+
+        
+        
+
+      </ul>
+
+    </div>
+  </nav>
+</header>
+
+
+  </div>
+
+  <div class="page-body">
+    
+    
+    
+
+    <article class="article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+<div class="article-container pt-3">
+  <h1>What are reasonable work hours and salary expectations for biostats/genomics careers?</h1>
+
+  
+
+  
+    
+
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+          Last updated on
+      
+    
+    Tue, Nov 5, 2019
+  </span>
+  
+
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    16 min read
+  </span>
+  
+
+  
+  
+  
+  
+    <span class="middot-divider"></span>
+    <a href="/2015/02/12/what-are-reasonable-work-hours-and-salary-expectations-for-biostats/genomics-careers/#disqus_thread"></a>
+  
+
+  
+  
+  <span class="middot-divider"></span>
+  <span class="article-categories">
+    <i class="fas fa-folder mr-1"></i><a href="/category/ideas/">Ideas</a></span>
+  
+
+</div>
+
+    
+
+
+
+
+
+  
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style">
+      <p>My advisor recently asked me to fill a career planning document (he&rsquo;ll blog about it at some point) that has lots of questions and is being very useful. Trying to fill answer all these questions has gotten me thinking about other important things for the future. Two of them being reasonable expectations for work hours and salary in a biostats/genomics academic career.</p>
+<p>I find these questions hard to answer and even hard to talk about, and if you know me, I&rsquo;m a person that asks lots of questions. I have also been advised against talking about these subjects during a first interview because it&rsquo;s important to focus on the research environment. I agree that you should find a place to work that you like with problems that will keep you motivated, and with colleagues that make your daily life enjoyable <a id='cite-greycite27218'></a>(<a href='http://www.huffingtonpost.com/2015/02/04/happiness-at-work_n_6613358.html?ncid=fcbklnkushpmg00000063'>Hall, 2015</a>).</p>
+<p>However, I still want to have a reasonable idea about what to expect. Given that it&rsquo;s hard to ask these questions, it&rsquo;s also hard to blog about it. These questions are not really what others encourage you to talk about <a id='cite-greycite27219'></a><a id='cite-greycite27220'></a>(<a href='http://blogs.nature.com/naturejobs/2015/01/30/scientific-blogging-why-it-might-just-be-good-for-your-cv'>Gould, 2015</a>; <a href='http://blogs.nature.com/naturejobs/2014/09/18/science-blogging'>Gould, 2014</a>) but I think that I&rsquo;m not the only one with these questions in mind and that others might benefit from this post. Well, I hope they will.</p>
+<p>I didn&rsquo;t ask myself these questions before doing a PhD. It felt natural that doing a PhD would open the door for more opportunities in academia than going to work after undergrad or a masters. Even for a career outside science which a bit more than half (53%) of UK science PhD students choose to follow <a id='cite-greycite27232'></a>(<a href='http://blogs.nature.com/naturejobs/2014/10/03/the-postdoc-decision'>Gould, 2014</a>), getting a PhD likely gives a strong boost to your career options. But when you start considering a postdoc, there is an opportunity cost <a id='cite-greycite27233'></a>(<a href='http://en.wikipedia.org/wiki/Opportunity_cost'>, 2015</a>) associated to it because you could be earning more at a non-academic job. But how much are we talking about?</p>
+<center>
+<a href="http://blogs.nature.com/naturejobs/files/2014/09/Scientific-century.jpg"><img src="http://blogs.nature.com/naturejobs/files/2014/09/Scientific-century.jpg" alt="Careers" style="width: 771px;"/></a>
+</center>
+<p>Picture from &ldquo;The postdoc decision&rdquo; (<a href='http://blogs.nature.com/naturejobs/2014/10/03/the-postdoc-decision'>Gould, 2014</a>).</p>
+<p>Regardless of the opportunity cost of doing a postdoc, for a career in academia you will likely want to do a postdoc to get a chance at a tenure-track job, specially in fields like biology. For a career outside academia but still research related, I think that doing a postdoc could increase your chances at getting a better job. In any case, you have to consider all career options when doing a postdoc <a id='cite-greycite27223'></a>(<a href='http://www.nature.com/news/there-is-life-after-academia-1.15808'>, 2014</a>).</p>
+<h1 id="salary-what-to-expect">Salary: what to expect</h1>
+<p>For a postdoc, the NIH sets training stipends which sets a baseline <a id='cite-greycite27234'></a>(<a href='http://www.nationalpostdoc.org/policy/briefing-room/191-nih-stipend-freeze'>, 2015</a>). For example, 42k per year in 2014.</p>
+<p>For later, <a href="http://www.amstat.org/careers/salaryinformation.cfm" target="_blank" rel="noopener">ASA: Career Resources for Statisticians</a> has information for biostatistics departments. For example, the median year 0 assistant professor in a biostatistics department made 102k <a id='cite-greycite27228'></a>(<a href='http://magazine.amstat.org/blog/2014/01/01/academic-salary-survey-2/'>megan, 2014</a>). From this survey data you can get an idea of the salary progression through your academic career.</p>
+<p>Similarly, I find the Life Sciences Salary Survey (<a href="http://www.the-scientist.com/?articles.view/articleNo/38033/title/2013-Life-Sciences-Salary-Survey/" target="_blank" rel="noopener">2013</a>, <a href="http://www.the-scientist.com/?articles.view/articleNo/41316/title/2014-Life-Sciences-Salary-Survey/" target="_blank" rel="noopener">2014</a>) informative. In the <a href="http://www.the-scientist.com/Nov2014/11_14_SalarySurveyforWeb.pdf" target="_blank" rel="noopener">2014 detailed pdf</a> you can see that a male postdoc average pay was $46,372, $79,616 for an assistant professor, $107,868 for associate professors, and $158,059 for professors. That last figure is smaller than $169,900 which is the median salary for year 0 professors in biostatistics (<a href='http://magazine.amstat.org/blog/2014/01/01/academic-salary-survey-2/'>megan, 2014</a>). The 2014 Life Sciences survey also has average salaries by age. So you can make three different progressions of your career salary.</p>
+<h2 id="why-should-you-care">Why should you care?</h2>
+<p>There are probably many reasons why you should care about your salary given two or more equally good work opportunities. In my case, I wanted to get a rough idea if an academic career would be able to pay for my desired lifestyle and life goals. Let me explain this in more detail.</p>
+<p>From looking at the retirement for doctoral scientists report <a id='cite-greycite27230'></a>(<a href='http://www.nsf.gov/statistics/infbrief/nsf11302/'>Foundation, 2015</a>) retiring between 66 and 70 years old seems like a common scenario. Then from the life expectancy calculator <a id='cite-greycite27235'></a>(<a href='http://www.socialsecurity.gov/cgi-bin/longevity.cgi'>OACT, 2015</a>), it seems that for someone like me the average life expectancy is 87 years and retiring from work at 67 years. That is, about 37 years of work and 20 years of retirement. Then, the average cost of a house is about 320k <a id='cite-greycite27236'></a>(<a href='http://www.calculatedriskblog.com/2014/01/new-home-prices-new-record-for-average.html'>McBride, 2014</a>). If you get a house loan for 270k at 4% interest rate for 30 years and 1.25% property tax you would pay 190k in interest and 120k in tax <a id='cite-Unknown_2015'></a>(<a href='http://www.mortgagecalculator.org/'>Unknown, 2015</a>). Federal income tax is about 28% <a id='cite-greycite27237'></a>(<a href='http://www.bankrate.com/calculators/tax-planning/quick-tax-rate-calculator.aspx'>, 2015</a>) (I know it&rsquo;s more complicated) with about 5% for state tax <a id='cite-greycite27238'></a>(<a href='http://www.bankrate.com/finance/taxes/state-taxes-massachusetts.aspx'>, 2015</a>). So about 33% of your income goes to paying taxes. The cost for having a car is about 10k a year <a id='cite-greycite27239'></a>(<a href='http://www.usatoday.com/story/news/nation/2013/04/16/aaa-car-ownership-costs/2070397/'>Larry Copeland, 2013</a>) although you could probably save some money by getting a smaller car.</p>
+<p>I think that I want to have children in the future, and if I do, I would like to afford their education. It seems that the cost of raising a child to age 18 is about 575k if you spend about 120k in private college <a id='cite-greycite27240'></a>(<a href='http://www.babycenter.com/cost-of-raising-child-calculator'>, 2015</a>). Those numbers include the cost of adapting your house (but not interests in mortgage).</p>
+<p>I also want to be able to travel quite a bit, and given that these are all US numbers, I would also like to go to Mexico frequently. Anyhow, setting about 5k a year for traveling is an ambitious goal. Alternatively, the 5k could help mitigate any unforeseen emergency, like a surgery.</p>
+<p>I can use the numbers from all three academic career salary progressions to get an idea of how my life goals fit in and the impact they would have on my lifestyle. For the average salary for life sciences by age I&rsquo;m using the numbers from 30 to 67 years old. For average salary for life sciences by career stage I&rsquo;ll use 2 years for postdoc, 7 years for assistant professor, 8 for associate professor and the remaining 20 as a professor. For the progression for biostatistics departments in research universities I simply adapted the above numbers to the greater data resolution available.</p>
+<p>Looking at my mint.com budget I see that I spend about 1370 a month on everything except rent. I like my current lifestyle and would like to keep it throughout my life, obviously adapting it to my needs.</p>
+<center>
+<table>
+<caption>Monthly difference between costs for idealized life and current life style (1370 a month) using different salary progression data. That is, how much you can save per month for other misc expenses.</caption>
+ <thead>
+  <tr>
+   <th style="text-align:left;">   </th>
+   <th style="text-align:right;"> NoChild </th>
+   <th style="text-align:right;"> OneChild </th>
+   <th style="text-align:right;"> TwoChild </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> average </td>
+   <td style="text-align:right;"> 316 </td>
+   <td style="text-align:right;"> -525 </td>
+   <td style="text-align:right;"> -1366 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> tenure </td>
+   <td style="text-align:right;"> 1037 </td>
+   <td style="text-align:right;"> 197 </td>
+   <td style="text-align:right;"> -644 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> biostats </td>
+   <td style="text-align:right;"> 2263 </td>
+   <td style="text-align:right;"> 1422 </td>
+   <td style="text-align:right;"> 581 </td>
+  </tr>
+</tbody>
+</table>
+</center>
+<p>Now, in the previous table only the life sciences tenure and biostats progressions can handle my life goals without sacrificing my life style if I had one child. Two children only seems feasible in the biostats salary progression. These numbers give a general idea, but it&rsquo;s way more information than I had before.</p>
+<p>Note that I&rsquo;m assuming that your savings can keep up with inflation. Plus, I don&rsquo;t have student loans thanks to receiving my education at UNAM-Mexico, but I know that this isn&rsquo;t true for many US citizens. You could probably do a bit better than I projected if you invested and got a higher return than inflation, got promoted faster, moved to a country with a lower cost of living after saving some money, or had to borrow less money for buying the house. This last point could certainly be feasible if you managed to earn more money early in your career.</p>
+<h1 id="work-hours-what-to-expect">Work hours: what to expect</h1>
+<p>Answering this question has been much harder than the salary question. First, lets look outside of science. A recent news article <a id='cite-greycite27243'></a>(<a href='http://hosted.ap.org/dynamic/stories/A/AS_WORKAHOLIC_JAPAN'>, 2015</a>) says: &ldquo;About 22 percent of Japanese work more than 49 hours a week, compared with 16 percent of Americans, 11 percent of the French and Germans, according to data compiled by the Japanese government.&rdquo;</p>
+<p>A different survey shows that 39 percent of full time employed US workers work beyond 49 hours per week with the average being 47 hours <a id='cite-greycite27247'></a>(<a href='http://www.washingtonpost.com/blogs/on-leadership/wp/2014/09/02/the-average-work-week-is-now-47-hours/'>@jenamcgregor, 2014</a>). Broadly summarized government data shows lower averages <a id='cite-greycite27248'></a>(<a href='http://www.bls.gov/news.release/empsit.t18.htm'>, 2015</a>). Anyhow, I think that it&rsquo;s likely that work hours for researchers are in the upper half. I&rsquo;m also under the impression that most scientists work beyond the official working time (check <a href="http://en.wikipedia.org/wiki/Working_time" target="_blank" rel="noopener">wiki</a>).</p>
+<p>I also agree with the idea that work hours fluctuate, for example with weeks when grants are due reaching high peaks. Also, probably a lot of people haven&rsquo;t tracked their hours <a id='cite-greycite27249'></a>(<a href='https://dynamicecology.wordpress.com/2014/02/04/you-do-not-need-to-work-80-hours-a-week-to-succeed-in-academia/'>@DynamicEcology, 2014</a>). In my case, using <a href="https://www.rescuetime.com" target="_blank" rel="noopener">RescueTime</a> I know that I have spent about 45-50 hours per week on my work computer recently (I only have the free version, so I can&rsquo;t go back too far in time). Though I do get distracted at times and my &ldquo;productivity pulse&rdquo; is around 60 to 70.</p>
+<p>I certainly don&rsquo;t think that scientists should be expected to routinely work 60+ hours a week. There&rsquo;s even a 1943 (wartime) paper arguing that &ldquo;For men a working week in excess of 60 hours usually leads to no increase in production, and for women the hours should never exceed 54&rdquo; (see the <a href="http://www.nature.com/nature/journal/v151/n3841/pdf/151651a0.pdf" target="_blank" rel="noopener">pdf</a>). But teaching loads can certainly push to higher work loads as this particular story shows <a id='cite-greycite27250'></a>(<a href='https://www.insidehighered.com:80/advice/2013/04/22/essay-hours-faculty-members-work-each-day'>, 2013</a>).</p>
+<p>At this point I&rsquo;m thinking that 45-50 hours per week should be reasonable with a good work-life balance.</p>
+<p>But then, &ldquo;postdocs should expect to work longer-than-average hours&rdquo; and &ldquo;We put in the hours we do because it is highly competitive out there&rdquo; <a id='cite-greycite27253'></a>(<a href='http://blogs.nature.com/naturejobs/2011/04/01/are-long-working-hours-inevitable-for-postdocs'>Gould, 2011</a>).</p>
+<p>On the positive side, it seems that research could be a 9-5 job and achieving it &ldquo;requires good planning, effective teamwork and a supportive environment&rdquo; <a id='cite-greycite27252'></a>(<a href='http://blogs.nature.com/naturejobs/2014/12/18/ask-the-expert-can-research-ever-be-a-9-5-job'>Gould, 2014</a>). This ties in with some of my thoughts: I feel like it&rsquo;s all about being efficient as you can be and indeed having a great work team. So yes, when looking for a job it is very important to find a job with the right research and support environment.</p>
+<h2 id="why-should-you-care-1">Why should you care?</h2>
+<p>I think that it&rsquo;s important to know this information so you can have realistic expectations of your stress level and work-life balance. If you underestimate the work load, you&rsquo;ll probably be uncomfortable to say the least.</p>
+<p>I also think that it&rsquo;s dangerous to ignore this question even when you are highly motivated by your work and easily lose track of time spent working. That is, I assume that many scientists are motivated by their work but I argue that they should still think about their life outside work.</p>
+<h2 id="alternative-way-to-count">Alternative way to count</h2>
+<center>
+<a href="https://mk0sleepreportn6oj0i.kinstacdn.com/wp-content/uploads/2019/10/sleep-duration-and-health-impact.jpg"><img src="https://mk0sleepreportn6oj0i.kinstacdn.com/wp-content/uploads/2019/10/sleep-duration-and-health-impact.jpg" alt="Sleep" style="width: 771px;"/></a>
+</center>
+<p>Picture from the Sleep Report <a id='cite-greycite27251'></a>(<a href='https://sleep.report/sleep-duration-infographic/'>, 2019 update</a>).</p>
+<p>Another way to take a look at this question is to see how would you like to spend your time outside work. Seems like a good recommendation is to sleep 8 hours per day. Spending about 4 hours per day with your family seems like a good goal <a id='cite-greycite27254'></a>(<a href='http://www.circleofmoms.com/question/how-much-time-do-you-spend-your-child-day-1701015'>, 2015</a>) although many people can&rsquo;t <a id='cite-greycite27255'></a>(<a href='http://www.babycenter.com/viewPollResults.htm?pollId=1527797'>, 2015</a>) despite &ldquo;spending quality family time together is very important&rdquo; <a id='cite-greycite27256'></a>(<a href='http://msue.anr.msu.edu/news/spending_quality_family_time_together_is_very_important'>, 2015</a>). If you exercise about 1 hour a day, take about 1 hour to get ready in the morning, spend 1 hour commuting, and 1 hour cooking/having dinner that leaves you with 8 hours per day for work. With school taking about 6 hours, this seems doable if your work allows you to work from home for 2 hours or so. Such a schedule would look something like this:</p>
+<ul>
+<li>Wake up at 6:30, exercise 1 hour</li>
+<li>Get ready: 1 hour</li>
+<li>Commute: 30 min. You get to work at 9 am.</li>
+<li>Work 6 hours until 3pm.</li>
+<li>Commute: 30 min</li>
+<li>Family time 2 hrs</li>
+<li>Dinner 1 hour</li>
+<li>Family time 2 hrs</li>
+<li>Work 2 more hours: 8:30 to 10:30pm</li>
+<li>Sleep 8 hours</li>
+</ul>
+<p>Now that I think about it, it seems like my advisor is doing something along these lines. Well, he is likely sleeping much less.</p>
+<p>Following this type of workday, you would have to work 5-10 hours on the weekend to get to 45-50 work hours per week. Seems doable and reasonable to me. Working beyond 50 hours a week would most likely mean that you&rsquo;d have to sacrifice family and exercise time. That doesn&rsquo;t seem healthy but I understand that it might be needed at times.</p>
+<p>This is when ideas that at first might seem unreasonable start to make some sense. For example, James W. Vaupel suggested working 25 hours a week and retiring later in life so young people get more time with their kids <a id='cite-greycite27257'></a>(<a href='http://sciencenordic.com/we-should-only-work-25-hours-week-argues-professor'>, 2015</a>).</p>
+<h1 id="conclusions">Conclusions</h1>
+<p>Learning what to expect in terms of salary and work hours for a biostats/genomics career in academia is challenging and time consuming. At best you depend on surveys which may be biased, information from commercial sites and blog posts. However, with salary progression tables you can get a broad idea of how realistic your life goals and lifestyle expectations are. Although it would be great to have more data and data from other countries. For example, I don&rsquo;t have and haven&rsquo;t looked for the salary progression data in Mexico: maybe salaries are lower but due to lower costs of living you might be better off there than in the US assuming that the research environment is as good or better. That is a question for another time.</p>
+<p>I have found some answers which I hope will be useful later on. From the salary perspective, I find it motivating that this career could fund my goals and lifestyle, specially in a Biostatistics department from a research university. From the work hours perspective, at least I have some information to support my previously vague idea that 45-50 hours a week is reasonable. Whether that&rsquo;s enough is yet to be seen. Specially with how competitive it can be to get an academic position and complete the progression to becoming a professor.</p>
+<p>But even if tools like the PI predictor <a id='cite-greycite27259'></a>(<a href='http://www.pipredictor.com/'>, 2015</a>) say that I have a 10% chance of becoming a PI (data up to nov 2014), I have encountered that all my life: 10% of LCG applicants who passed UNAM&rsquo;s exam got into my undergrad, 10% of applicants got into my PhD program. So it&rsquo;s old news and I just have to keep working to beat the odds.</p>
+<h3 id="reproducibility">Reproducibility</h3>
+<p>Code for making the table:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">life_style</span> <span class="o">&lt;-</span> <span class="kr">function</span><span class="p">(</span><span class="n">progression</span> <span class="o">=</span> <span class="s">&#39;average&#39;</span><span class="p">,</span> <span class="n">child</span> <span class="o">=</span> <span class="m">1</span><span class="p">,</span> <span class="n">tax</span> <span class="o">=</span> <span class="m">.33</span><span class="p">,</span> <span class="n">retiredyrs</span> <span class="o">=</span> <span class="m">20</span><span class="p">,</span> <span class="n">childcost</span> <span class="o">=</span> <span class="m">575e3</span><span class="p">,</span> <span class="n">house</span> <span class="o">=</span> <span class="m">32e4</span><span class="p">,</span> <span class="n">interest</span> <span class="o">=</span> <span class="m">19e4</span><span class="p">,</span> <span class="n">proptax</span> <span class="o">=</span> <span class="m">12e4</span><span class="p">,</span> <span class="n">car</span> <span class="o">=</span> <span class="m">1e4</span><span class="p">,</span> <span class="n">travel</span> <span class="o">=</span> <span class="m">5e3</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kr">if</span><span class="p">(</span><span class="n">progression</span> <span class="o">==</span> <span class="s">&#39;average&#39;</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">## Using http://www.the-scientist.com/Nov2014/11_14_SalarySurveyforWeb.pdf</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">## 2014 average compensation in the US for life scientists by age</span>
+</span></span><span class="line"><span class="cl">        <span class="n">sal</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="m">58688</span><span class="p">,</span> <span class="m">73577</span><span class="p">,</span> <span class="m">93946</span><span class="p">,</span> <span class="m">108241</span><span class="p">,</span> <span class="m">122558</span><span class="p">,</span> <span class="m">130551</span><span class="p">,</span> <span class="m">139525</span><span class="p">,</span> <span class="m">150995</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">yrs</span> <span class="o">&lt;-</span> <span class="nf">rep</span><span class="p">(</span><span class="nf">c</span><span class="p">(</span><span class="m">5</span><span class="p">,</span> <span class="m">2</span><span class="p">),</span> <span class="nf">c</span><span class="p">(</span><span class="m">7</span><span class="p">,</span> <span class="m">1</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span> <span class="kr">else</span> <span class="kr">if</span> <span class="p">(</span><span class="n">progression</span> <span class="o">==</span> <span class="s">&#39;tenure&#39;</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">## Using http://www.the-scientist.com/Nov2014/11_14_SalarySurveyforWeb.pdf</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">## 2014 average male compensation by career stage in academia</span>
+</span></span><span class="line"><span class="cl">        <span class="n">sal</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="m">46372</span><span class="p">,</span> <span class="m">79616</span><span class="p">,</span> <span class="m">107868</span><span class="p">,</span> <span class="m">158059</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">yrs</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="m">2</span><span class="p">,</span> <span class="m">7</span><span class="p">,</span> <span class="m">8</span><span class="p">,</span> <span class="m">20</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span> <span class="kr">else</span> <span class="kr">if</span> <span class="p">(</span><span class="n">progression</span> <span class="o">==</span> <span class="s">&#39;biostats&#39;</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">## Using http://magazine.amstat.org/blog/2014/01/01/academic-salary-survey-2/</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">## Work in biostatistics deparments at a research institution</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">## Using life sciences male postdoc average salary as this data is </span>
+</span></span><span class="line"><span class="cl">        <span class="c1">## missing in this survey.</span>
+</span></span><span class="line"><span class="cl">        <span class="n">sal</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="m">46372</span><span class="p">,</span> <span class="m">102200</span><span class="p">,</span> <span class="m">104000</span><span class="p">,</span> <span class="m">105100</span><span class="p">,</span> <span class="m">108300</span><span class="p">,</span> <span class="m">124700</span><span class="p">,</span> <span class="m">129400</span><span class="p">,</span> <span class="m">131000</span><span class="p">,</span> <span class="m">129700</span><span class="p">,</span> <span class="m">169900</span><span class="p">,</span> <span class="m">175300</span><span class="p">,</span> <span class="m">193400</span><span class="p">,</span> <span class="m">235100</span><span class="p">,</span> <span class="m">207700</span><span class="p">,</span> <span class="m">207900</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">yrs</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="m">2</span><span class="p">,</span> <span class="m">1</span><span class="p">,</span> <span class="m">2</span><span class="p">,</span> <span class="m">2</span><span class="p">,</span> <span class="m">2</span><span class="p">,</span> <span class="m">1</span><span class="p">,</span> <span class="m">2</span><span class="p">,</span> <span class="m">3</span><span class="p">,</span> <span class="m">2</span><span class="p">,</span> <span class="m">1</span><span class="p">,</span> <span class="m">3</span><span class="p">,</span> <span class="m">3</span><span class="p">,</span> <span class="m">3</span><span class="p">,</span> <span class="m">5</span><span class="p">,</span> <span class="m">5</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span> <span class="kr">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">stop</span><span class="p">(</span><span class="s">&#34;Invalid &#39;progression&#39; argument&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">((</span><span class="nf">sum</span><span class="p">(</span><span class="n">sal</span> <span class="o">*</span> <span class="n">yrs</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="m">1</span> <span class="o">-</span> <span class="n">tax</span><span class="p">)</span> <span class="o">-</span> <span class="n">child</span> <span class="o">*</span> <span class="n">childcost</span> <span class="o">-</span> <span class="n">house</span> <span class="o">-</span> <span class="n">interest</span> <span class="o">-</span> <span class="n">proptax</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="nf">sum</span><span class="p">(</span><span class="n">yrs</span><span class="p">)</span> <span class="o">+</span> <span class="n">retiredyrs</span><span class="p">)</span> <span class="o">-</span> <span class="n">travel</span> <span class="o">-</span> <span class="n">car</span><span class="p">)</span> <span class="o">/</span> <span class="m">12</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="n">progressions</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="s">&#39;average&#39;</span><span class="p">,</span> <span class="s">&#39;tenure&#39;</span><span class="p">,</span> <span class="s">&#39;biostats&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">life</span> <span class="o">&lt;-</span> <span class="nf">round</span><span class="p">(</span><span class="nf">data.frame</span><span class="p">(</span><span class="n">Progressions</span> <span class="o">=</span> <span class="n">progressions</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">NoChild</span> <span class="o">=</span> <span class="nf">sapply</span><span class="p">(</span><span class="n">progressions</span><span class="p">,</span> <span class="n">life_style</span><span class="p">,</span> <span class="n">child</span> <span class="o">=</span> <span class="m">0</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">    <span class="n">OneChild</span> <span class="o">=</span> <span class="nf">sapply</span><span class="p">(</span><span class="n">progressions</span><span class="p">,</span> <span class="n">life_style</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">    <span class="n">TwoChild</span> <span class="o">=</span> <span class="nf">sapply</span><span class="p">(</span><span class="n">progressions</span><span class="p">,</span> <span class="n">life_style</span><span class="p">,</span> <span class="n">child</span> <span class="o">=</span> <span class="m">2</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">    <span class="n">row.names</span> <span class="o">=</span> <span class="m">1</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span> <span class="o">-</span> <span class="m">1370</span><span class="p">,</span> <span class="m">0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">knitr</span><span class="o">::</span><span class="nf">kable</span><span class="p">(</span><span class="n">life</span><span class="p">,</span> <span class="n">format</span> <span class="o">=</span> <span class="s">&#39;html&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">caption</span> <span class="o">=</span> <span class="s">&#39;Monthly difference between costs for idealized life and current life style (1370 a month) using different salary progression data. That is, how much you can save per month for other misc expenses.&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span>
+</span></span></code></pre></div><p>Feel free to play around with <code>life_style()</code> with numbers you think are appropriate for you.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="c1">## Reproducibility info</span>
+</span></span><span class="line"><span class="cl"><span class="nf">library</span><span class="p">(</span><span class="s">&#39;devtools&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nf">options</span><span class="p">(</span><span class="n">width</span> <span class="o">=</span> <span class="m">120</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nf">session_info</span><span class="p">()</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">## Session info-----------------------------------------------------------------------------------------------------------
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">##  setting  value                                             
+</span></span><span class="line"><span class="cl">##  version  R Under development (unstable) (2014-11-01 r66923)
+</span></span><span class="line"><span class="cl">##  system   x86_64, darwin10.8.0                              
+</span></span><span class="line"><span class="cl">##  ui       X11                                               
+</span></span><span class="line"><span class="cl">##  language (EN)                                              
+</span></span><span class="line"><span class="cl">##  collate  en_US.UTF-8                                       
+</span></span><span class="line"><span class="cl">##  tz       America/New_York
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">## Packages---------------------------------------------------------------------------------------------------------------
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="c1">##  package       * version  date       source                                 </span>
+</span></span><span class="line"><span class="cl"><span class="c1">##  bibtex          0.3.6    2013-07-29 CRAN (R 3.2.0)                         </span>
+</span></span><span class="line"><span class="cl"><span class="c1">##  devtools      * 1.6.1    2014-10-07 CRAN (R 3.2.0)                         </span>
+</span></span><span class="line"><span class="cl"><span class="c1">##  digest          0.6.4    2013-12-03 CRAN (R 3.2.0)                         </span>
+</span></span><span class="line"><span class="cl"><span class="c1">##  evaluate        0.5.5    2014-04-29 CRAN (R 3.2.0)                         </span>
+</span></span><span class="line"><span class="cl"><span class="c1">##  formatR         1.0      2014-08-25 CRAN (R 3.2.0)                         </span>
+</span></span><span class="line"><span class="cl"><span class="c1">##  httr            0.5      2014-09-02 CRAN (R 3.2.0)                         </span>
+</span></span><span class="line"><span class="cl"><span class="c1">##  knitcitations * 1.0.4    2014-11-03 Github (cboettig/knitcitations@508de74)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">##  knitr         * 1.7      2014-10-13 CRAN (R 3.2.0)                         </span>
+</span></span><span class="line"><span class="cl"><span class="c1">##  lubridate       1.3.3    2013-12-31 CRAN (R 3.2.0)                         </span>
+</span></span><span class="line"><span class="cl"><span class="c1">##  memoise         0.2.1    2014-04-22 CRAN (R 3.2.0)                         </span>
+</span></span><span class="line"><span class="cl"><span class="c1">##  plyr            1.8.1    2014-02-26 CRAN (R 3.2.0)                         </span>
+</span></span><span class="line"><span class="cl"><span class="c1">##  Rcpp            0.11.3   2014-09-29 CRAN (R 3.2.0)                         </span>
+</span></span><span class="line"><span class="cl"><span class="c1">##  RCurl           1.95.4.3 2014-07-29 CRAN (R 3.2.0)                         </span>
+</span></span><span class="line"><span class="cl"><span class="c1">##  RefManageR      0.8.40   2014-10-29 CRAN (R 3.2.0)                         </span>
+</span></span><span class="line"><span class="cl"><span class="c1">##  RJSONIO         1.3.0    2014-07-28 CRAN (R 3.2.0)                         </span>
+</span></span><span class="line"><span class="cl"><span class="c1">##  rstudioapi      0.1      2014-03-27 CRAN (R 3.2.0)                         </span>
+</span></span><span class="line"><span class="cl"><span class="c1">##  stringr         0.6.2    2012-12-06 CRAN (R 3.2.0)                         </span>
+</span></span><span class="line"><span class="cl"><span class="c1">##  XML             3.98.1.1 2013-06-20 CRAN (R 3.2.0)</span>
+</span></span></code></pre></div><h3 id="references">References</h3>
+<p>Citations made with <code>knitcitations</code> <a id='cite-knitcitations'></a>(<a href='https://github.com/cboettig/knitcitations'>Boettiger, 2015</a>).</p>
+<p><a id='bib-greycite27248'></a><a href="#cite-greycite27248">[1]</a><cite>
+<em> Table B-2.  Average weekly hours and overtime of all employees on private nonfarm payrolls by industry sector, seasonally adjusted </em>.
+<a href="http://www.bls.gov/news.release/empsit.t18.htm">http://www.bls.gov/news.release/empsit.t18.htm</a>.
+2015.
+URL: <a href="http://www.bls.gov/news.release/empsit.t18.htm">http://www.bls.gov/news.release/empsit.t18.htm</a>.</cite></p>
+<p><a id='bib-greycite27240'></a><a href="#cite-greycite27240">[2]</a><cite>
+<em>Cost of Raising a Child Calculator</em>.
+<a href="http://www.babycenter.com/cost-of-raising-child-calculator">http://www.babycenter.com/cost-of-raising-child-calculator</a>.
+2015.
+URL: <a href="http://www.babycenter.com/cost-of-raising-child-calculator">http://www.babycenter.com/cost-of-raising-child-calculator</a>.</cite></p>
+<p><a id='bib-greycite27250'></a><a href="#cite-greycite27250">[3]</a><cite>
+<em>Essay on the hours faculty members work each day @insidehighered</em>.
+<a href="https://www.insidehighered.com:80/advice/2013/04/22/essay-hours-faculty-members-work-each-day">https://www.insidehighered.com:80/advice/2013/04/22/essay-hours-faculty-members-work-each-day</a>.
+2013.
+URL: <a href="https://www.insidehighered.com:80/advice/2013/04/22/essay-hours-faculty-members-work-each-day">https://www.insidehighered.com:80/advice/2013/04/22/essay-hours-faculty-members-work-each-day</a>.</cite></p>
+<p><a id='bib-greycite27237'></a><a href="#cite-greycite27237">[4]</a><cite>
+<em>Gross Pay Calculator</em>.
+<a href="http://www.bankrate.com/calculators/tax-planning/quick-tax-rate-calculator.aspx">http://www.bankrate.com/calculators/tax-planning/quick-tax-rate-calculator.aspx</a>.
+2015.
+URL: <a href="http://www.bankrate.com/calculators/tax-planning/quick-tax-rate-calculator.aspx">http://www.bankrate.com/calculators/tax-planning/quick-tax-rate-calculator.aspx</a>.</cite></p>
+<p><a id='bib-greycite27251'></a><a href="#cite-greycite27251">[5]</a><cite>
+<em>Sleep Duration and Its Health Impacts: The Infographic</em>
+<a href="https://sleep.report/sleep-duration-infographic/">https://sleep.report/sleep-duration-infographic/</a>.
+2015.
+URL: <a href="https://sleep.report/sleep-duration-infographic/">https://sleep.report/sleep-duration-infographic/</a>.</cite></p>
+<p><a id='bib-greycite27243'></a><a href="#cite-greycite27243">[6]</a><cite>
+<em>News from The Associated Press</em>.
+<a href="http://hosted.ap.org/dynamic/stories/A/AS_WORKAHOLIC_JAPAN">http://hosted.ap.org/dynamic/stories/A/AS_WORKAHOLIC_JAPAN</a>.
+2015.
+URL: <a href="http://hosted.ap.org/dynamic/stories/A/AS_WORKAHOLIC_JAPAN">http://hosted.ap.org/dynamic/stories/A/AS_WORKAHOLIC_JAPAN</a>.</cite></p>
+<p><a id='bib-greycite27234'></a><a href="#cite-greycite27234">[7]</a><cite>
+<em>NIH Postdoc Training Stipends</em>.
+<a href="http://www.nationalpostdoc.org/policy/briefing-room/191-nih-stipend-freeze">http://www.nationalpostdoc.org/policy/briefing-room/191-nih-stipend-freeze</a>.
+2015.
+URL: <a href="http://www.nationalpostdoc.org/policy/briefing-room/191-nih-stipend-freeze">http://www.nationalpostdoc.org/policy/briefing-room/191-nih-stipend-freeze</a>.</cite></p>
+<p><a id='bib-greycite27233'></a><a href="#cite-greycite27233">[8]</a><cite>
+<em>Opportunity cost - Wikipedia, the free encyclopedia</em>.
+<a href="http://en.wikipedia.org/wiki/Opportunity_cost">http://en.wikipedia.org/wiki/Opportunity_cost</a>.
+2015.
+URL: <a href="http://en.wikipedia.org/wiki/Opportunity_cost">http://en.wikipedia.org/wiki/Opportunity_cost</a>.</cite></p>
+<p><a id='bib-greycite27259'></a><a href="#cite-greycite27259">[9]</a><cite>
+<em>pipredictor.com</em>.
+<a href="http://www.pipredictor.com/">http://www.pipredictor.com/</a>.
+2015.
+URL: <a href="http://www.pipredictor.com/">http://www.pipredictor.com/</a>.</cite></p>
+<p><a id='bib-greycite27256'></a><a href="#cite-greycite27256">[10]</a><cite>
+<em>Spending quality family time together is very important</em>.
+<a href="http://msue.anr.msu.edu/news/spending_quality_family_time_together_is_very_important">http://msue.anr.msu.edu/news/spending_quality_family_time_together_is_very_important</a>.
+2015.
+URL: <a href="http://msue.anr.msu.edu/news/spending_quality_family_time_together_is_very_important">http://msue.anr.msu.edu/news/spending_quality_family_time_together_is_very_important</a>.</cite></p>
+<p><a id='bib-greycite27238'></a><a href="#cite-greycite27238">[11]</a><cite>
+<em>State taxes: Massachusetts | Bankrate.com </em>.
+<a href="http://www.bankrate.com/finance/taxes/state-taxes-massachusetts.aspx">http://www.bankrate.com/finance/taxes/state-taxes-massachusetts.aspx</a>.
+2015.
+URL: <a href="http://www.bankrate.com/finance/taxes/state-taxes-massachusetts.aspx">http://www.bankrate.com/finance/taxes/state-taxes-massachusetts.aspx</a>.</cite></p>
+<p><a id='bib-greycite27223'></a><a href="#cite-greycite27223">[12]</a><cite>
+<em>There is life after academia</em>.
+<a href="http://www.nature.com/news/there-is-life-after-academia-1.15808">http://www.nature.com/news/there-is-life-after-academia-1.15808</a>.
+2014.
+URL: <a href="http://www.nature.com/news/there-is-life-after-academia-1.15808">http://www.nature.com/news/there-is-life-after-academia-1.15808</a>.</cite></p>
+<p><a id='bib-greycite27255'></a><a href="#cite-greycite27255">[13]</a><cite>
+<em>View Poll</em>.
+<a href="http://www.babycenter.com/4_how-much-time-do-you-spend-with-your-kids_1527797.bc">http://www.babycenter.com/4_how-much-time-do-you-spend-with-your-kids_1527797.bc</a>.
+2015.
+URL: <a href="http://www.babycenter.com/viewPollResults.htm?pollId=1527797">http://www.babycenter.com/viewPollResults.htm?pollId=1527797</a>.</cite></p>
+<p><a id='bib-greycite27257'></a><a href="#cite-greycite27257">[14]</a><cite>
+<em>We should only work 25 hours a week, argues professor</em>.
+<a href="http://sciencenordic.com/we-should-only-work-25-hours-week-argues-professor">http://sciencenordic.com/we-should-only-work-25-hours-week-argues-professor</a>.
+2015.
+URL: <a href="http://sciencenordic.com/we-should-only-work-25-hours-week-argues-professor">http://sciencenordic.com/we-should-only-work-25-hours-week-argues-professor</a>.</cite></p>
+<p><a id='bib-greycite27254'></a><a href="#cite-greycite27254">[15]</a><cite>
+<em>Whether you're a working mom, stay at home mom, or if your child is a baby or in school - how much time do you typically spend with your child in a day?</em>
+<a href="http://www.circleofmoms.com/question/how-much-time-do-you-spend-your-child-day-1701015">http://www.circleofmoms.com/question/how-much-time-do-you-spend-your-child-day-1701015</a>.
+2015.
+URL: <a href="http://www.circleofmoms.com/question/how-much-time-do-you-spend-your-child-day-1701015">http://www.circleofmoms.com/question/how-much-time-do-you-spend-your-child-day-1701015</a>.</cite></p>
+<p><a id='bib-greycite27249'></a><a href="#cite-greycite27249">[16]</a><cite>
+@DynamicEcology.
+<em>You do not need to work 80 hours a week to succeed in academia</em>.
+<a href="https://dynamicecology.wordpress.com/2014/02/04/you-do-not-need-to-work-80-hours-a-week-to-succeed-in-academia/">https://dynamicecology.wordpress.com/2014/02/04/you-do-not-need-to-work-80-hours-a-week-to-succeed-in-academia/</a>.
+2014.
+URL: <a href="https://dynamicecology.wordpress.com/2014/02/04/you-do-not-need-to-work-80-hours-a-week-to-succeed-in-academia/">https://dynamicecology.wordpress.com/2014/02/04/you-do-not-need-to-work-80-hours-a-week-to-succeed-in-academia/</a>.</cite></p>
+<p><a id='bib-greycite27247'></a><a href="#cite-greycite27247">[17]</a><cite>
+@jenamcgregor.
+<em>The average work week is now 47 hours</em>.
+<a href="http://www.washingtonpost.com/blogs/on-leadership/wp/2014/09/02/the-average-work-week-is-now-47-hours/">http://www.washingtonpost.com/blogs/on-leadership/wp/2014/09/02/the-average-work-week-is-now-47-hours/</a>.
+2014.
+URL: <a href="http://www.washingtonpost.com/blogs/on-leadership/wp/2014/09/02/the-average-work-week-is-now-47-hours/">http://www.washingtonpost.com/blogs/on-leadership/wp/2014/09/02/the-average-work-week-is-now-47-hours/</a>.</cite></p>
+<p><a id='bib-knitcitations'></a><a href="#cite-knitcitations">[18]</a><cite>
+C. Boettiger.
+<em>knitcitations: Citations for knitr markdown files</em>.
+R package version 1.0.4.
+2015.
+URL: <a href="https://github.com/cboettig/knitcitations">https://github.com/cboettig/knitcitations</a>.</cite></p>
+<p><a id='bib-greycite27230'></a><a href="#cite-greycite27230">[19]</a><cite>
+N. S. Foundation.
+<em>nsf.gov - NCSES The End of Mandatory Retirement for Doctoral Scientists and Engineers in Postsecondary Institutions: Retirement Patterns 10 Years Later - US National Science Foundation (NSF)</em>.
+<a href="http://www.nsf.gov/statistics/infbrief/nsf11302/">http://www.nsf.gov/statistics/infbrief/nsf11302/</a>.
+2015.
+URL: <a href="http://www.nsf.gov/statistics/infbrief/nsf11302/">http://www.nsf.gov/statistics/infbrief/nsf11302/</a>.</cite></p>
+<p><a id='bib-greycite27253'></a><a href="#cite-greycite27253">[20]</a><cite>
+J. Gould.
+<em>Are long working hours inevitable for postdocs? : Naturejobs Blog</em>.
+<a href="http://blogs.nature.com/naturejobs/2011/04/01/are-long-working-hours-inevitable-for-postdocs">http://blogs.nature.com/naturejobs/2011/04/01/are-long-working-hours-inevitable-for-postdocs</a>.
+2011.
+URL: <a href="http://blogs.nature.com/naturejobs/2011/04/01/are-long-working-hours-inevitable-for-postdocs">http://blogs.nature.com/naturejobs/2011/04/01/are-long-working-hours-inevitable-for-postdocs</a>.</cite></p>
+<p><a id='bib-greycite27252'></a><a href="#cite-greycite27252">[21]</a><cite>
+J. Gould.
+<em>Ask the expert: Can research ever be a 9-5 job? : Naturejobs Blog</em>.
+<a href="http://blogs.nature.com/naturejobs/2014/12/18/ask-the-expert-can-research-ever-be-a-9-5-job">http://blogs.nature.com/naturejobs/2014/12/18/ask-the-expert-can-research-ever-be-a-9-5-job</a>.
+2014.
+URL: <a href="http://blogs.nature.com/naturejobs/2014/12/18/ask-the-expert-can-research-ever-be-a-9-5-job">http://blogs.nature.com/naturejobs/2014/12/18/ask-the-expert-can-research-ever-be-a-9-5-job</a>.</cite></p>
+<p><a id='bib-greycite27220'></a><a href="#cite-greycite27220">[22]</a><cite>
+J. Gould.
+<em>Science blogging : Naturejobs Blog</em>.
+<a href="http://blogs.nature.com/naturejobs/2014/09/18/science-blogging">http://blogs.nature.com/naturejobs/2014/09/18/science-blogging</a>.
+2014.
+URL: <a href="http://blogs.nature.com/naturejobs/2014/09/18/science-blogging">http://blogs.nature.com/naturejobs/2014/09/18/science-blogging</a>.</cite></p>
+<p><a id='bib-greycite27219'></a><a href="#cite-greycite27219">[23]</a><cite>
+J. Gould.
+<em>Scientific blogging: Why it might just be good for your CV</em>.
+<a href="http://blogs.nature.com/naturejobs/2015/01/30/scientific-blogging-why-it-might-just-be-good-for-your-cv">http://blogs.nature.com/naturejobs/2015/01/30/scientific-blogging-why-it-might-just-be-good-for-your-cv</a>.
+2015.
+URL: <a href="http://blogs.nature.com/naturejobs/2015/01/30/scientific-blogging-why-it-might-just-be-good-for-your-cv">http://blogs.nature.com/naturejobs/2015/01/30/scientific-blogging-why-it-might-just-be-good-for-your-cv</a>.</cite></p>
+<p><a id='bib-greycite27232'></a><a href="#cite-greycite27232">[24]</a><cite>
+J. Gould.
+<em>The postdoc decision : Naturejobs Blog</em>.
+<a href="http://blogs.nature.com/naturejobs/2014/10/03/the-postdoc-decision">http://blogs.nature.com/naturejobs/2014/10/03/the-postdoc-decision</a>.
+2014.
+URL: <a href="http://blogs.nature.com/naturejobs/2014/10/03/the-postdoc-decision">http://blogs.nature.com/naturejobs/2014/10/03/the-postdoc-decision</a>.</cite></p>
+<p><a id='bib-greycite27218'></a><a href="#cite-greycite27218">[25]</a><cite>
+A. Hall.
+<em>The Key To Happiness At Work That Has Nothing To Do With Your Actual Job</em>.
+<a href="http://www.huffingtonpost.com/2015/02/04/happiness-at-work_n_6613358.html">http://www.huffingtonpost.com/2015/02/04/happiness-at-work_n_6613358.html</a>.
+2015.
+URL: <a href="http://www.huffingtonpost.com/2015/02/04/happiness-at-work_n_6613358.html?ncid=fcbklnkushpmg00000063">http://www.huffingtonpost.com/2015/02/04/happiness-at-work_n_6613358.html?ncid=fcbklnkushpmg00000063</a>.</cite></p>
+<p><a id='bib-greycite27239'></a><a href="#cite-greycite27239">[26]</a><cite>
+U. T. Larry Copeland.
+<em>The cost of owning your car? \$\\textasciitilde9,000 a year</em>.
+<a href="http://www.usatoday.com/story/news/nation/2013/04/16/aaa-car-ownership-costs/2070397/">http://www.usatoday.com/story/news/nation/2013/04/16/aaa-car-ownership-costs/2070397/</a>.
+2013.
+URL: <a href="http://www.usatoday.com/story/news/nation/2013/04/16/aaa-car-ownership-costs/2070397/">http://www.usatoday.com/story/news/nation/2013/04/16/aaa-car-ownership-costs/2070397/</a>.</cite></p>
+<p><a id='bib-greycite27236'></a><a href="#cite-greycite27236">[27]</a><cite>
+B. McBride.
+<em>Calculated Risk: New Home Prices: New Record for Average and Median in 2013</em>.
+<a href="http://www.calculatedriskblog.com/2014/01/new-home-prices-new-record-for-average.html">http://www.calculatedriskblog.com/2014/01/new-home-prices-new-record-for-average.html</a>.
+2014.
+URL: <a href="http://www.calculatedriskblog.com/2014/01/new-home-prices-new-record-for-average.html">http://www.calculatedriskblog.com/2014/01/new-home-prices-new-record-for-average.html</a>.</cite></p>
+<p><a id='bib-greycite27228'></a><a href="#cite-greycite27228">[28]</a><cite>
+megan.
+<em>Academic Salary Survey | Amstat News</em>.
+<a href="http://magazine.amstat.org/blog/2014/01/01/academic-salary-survey-2/">http://magazine.amstat.org/blog/2014/01/01/academic-salary-survey-2/</a>.
+2014.
+URL: <a href="http://magazine.amstat.org/blog/2014/01/01/academic-salary-survey-2/">http://magazine.amstat.org/blog/2014/01/01/academic-salary-survey-2/</a>.</cite></p>
+<p><a id='bib-greycite27235'></a><a href="#cite-greycite27235">[29]</a><cite>
+OACT.
+<em>Retirement \&amp; Survivors Benefits: Life Expectancy Calculator</em>.
+<a href="http://www.socialsecurity.gov/cgi-bin/longevity.cgi">http://www.socialsecurity.gov/cgi-bin/longevity.cgi</a>.
+2015.
+URL: <a href="http://www.socialsecurity.gov/cgi-bin/longevity.cgi">http://www.socialsecurity.gov/cgi-bin/longevity.cgi</a>.</cite></p>
+<p><a id='bib-Unknown_2015'></a><a href="#cite-Unknown_2015">[30]</a><cite>
+Unknown.
+<em>Unknown</em>.
+<a href="http://www.mortgagecalculator.org/">http://www.mortgagecalculator.org/</a>.
+Accessed 2015-02-12.
+2015.
+URL: <a href="http://www.mortgagecalculator.org/">http://www.mortgagecalculator.org/</a>.</cite></p>
+<h3 id="want-more">Want more?</h3>
+<p>Check other <a href="https://twitter.com/jhubiostat" target="_blank" rel="noopener">@jhubiostat</a> student blogs at <a href="http://bmorebiostat.com/" target="_blank" rel="noopener">Bmore Biostats</a> as well as topics on <a href="https://twitter.com/search?q=%23rstats" target="_blank" rel="noopener">#rstats</a>.</p>
+
+    </div>
+
+    
+
+
+
+
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/tag/work-life/">work-life</a>
+  
+</div>
+
+
+
+<div class="share-box">
+  <ul class="share">
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Flcolladotor.github.io%2F2015%2F02%2F12%2Fwhat-are-reasonable-work-hours-and-salary-expectations-for-biostats%2Fgenomics-careers%2F&amp;text=What&#43;are&#43;reasonable&#43;work&#43;hours&#43;and&#43;salary&#43;expectations&#43;for&#43;biostats%2Fgenomics&#43;careers%3F" target="_blank" rel="noopener" class="share-btn-twitter" aria-label="twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Flcolladotor.github.io%2F2015%2F02%2F12%2Fwhat-are-reasonable-work-hours-and-salary-expectations-for-biostats%2Fgenomics-careers%2F&amp;t=What&#43;are&#43;reasonable&#43;work&#43;hours&#43;and&#43;salary&#43;expectations&#43;for&#43;biostats%2Fgenomics&#43;careers%3F" target="_blank" rel="noopener" class="share-btn-facebook" aria-label="facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+        
+      
+      <li>
+        <a href="mailto:?subject=What%20are%20reasonable%20work%20hours%20and%20salary%20expectations%20for%20biostats%2Fgenomics%20careers%3F&amp;body=https%3A%2F%2Flcolladotor.github.io%2F2015%2F02%2F12%2Fwhat-are-reasonable-work-hours-and-salary-expectations-for-biostats%2Fgenomics-careers%2F" target="_blank" rel="noopener" class="share-btn-email" aria-label="envelope">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=https%3A%2F%2Flcolladotor.github.io%2F2015%2F02%2F12%2Fwhat-are-reasonable-work-hours-and-salary-expectations-for-biostats%2Fgenomics-careers%2F&amp;title=What&#43;are&#43;reasonable&#43;work&#43;hours&#43;and&#43;salary&#43;expectations&#43;for&#43;biostats%2Fgenomics&#43;careers%3F" target="_blank" rel="noopener" class="share-btn-linkedin" aria-label="linkedin-in">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="whatsapp://send?text=What&#43;are&#43;reasonable&#43;work&#43;hours&#43;and&#43;salary&#43;expectations&#43;for&#43;biostats%2Fgenomics&#43;careers%3F%20https%3A%2F%2Flcolladotor.github.io%2F2015%2F02%2F12%2Fwhat-are-reasonable-work-hours-and-salary-expectations-for-biostats%2Fgenomics-careers%2F" target="_blank" rel="noopener" class="share-btn-whatsapp" aria-label="whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=https%3A%2F%2Flcolladotor.github.io%2F2015%2F02%2F12%2Fwhat-are-reasonable-work-hours-and-salary-expectations-for-biostats%2Fgenomics-careers%2F&amp;title=What&#43;are&#43;reasonable&#43;work&#43;hours&#43;and&#43;salary&#43;expectations&#43;for&#43;biostats%2Fgenomics&#43;careers%3F" target="_blank" rel="noopener" class="share-btn-weibo" aria-label="weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+  
+  
+    
+  
+  
+  
+  <div class="media author-card content-widget-hr">
+    
+      
+      <a href="https://lcolladotor.github.io/"><img class="avatar mr-3 avatar-circle" src="/authors/admin/avatar_hu61670ae1305c5c407abf5eedc95c7971_127149_270x270_fill_q75_lanczos_center.JPG" alt="Leonardo Collado-Torres"></a>
+    
+
+    <div class="media-body">
+      <h5 class="card-title"><a href="https://lcolladotor.github.io/">Leonardo Collado-Torres</a></h5>
+      <h6 class="card-subtitle">Investigator @ LIBD, Assistant Professor, Department of Biostatistics @ JHBSPH</h6>
+      <p class="card-text"><a href="https://bsky.app/search?q=%23RStats" target="_blank" rel="noopener">#rstats</a> <a href="https://bsky.app/profile/bioconductor.bsky.social" target="_blank" rel="noopener">@Bioconductor</a>/🧠 genomics <a href="https://bsky.app/profile/lieberinstitute.bsky.social" target="_blank" rel="noopener">@LieberInstitute</a>/<a href="https://twitter.com/lcgunam" target="_blank" rel="noopener">@lcgunam</a> <a href="https://bsky.app/profile/jhubiostat.bsky.social" target="_blank" rel="noopener">@jhubiostat</a> <a href="https://bsky.app/profile/jtleek.bsky.social" target="_blank" rel="noopener">@jtleek</a> <a href="https://bsky.app/profile/aejaffe.bsky.social" target="_blank" rel="noopener">@andrewejaffe</a> alumni/<a href="https://bsky.app/profile/libdrstats.bsky.social" target="_blank" rel="noopener">@LIBDrstats</a> <a href="https://bsky.app/profile/cdsbmexico.bsky.social" target="_blank" rel="noopener">@CDSBMexico</a> co-founder</p>
+      <ul class="network-icon" aria-hidden="true">
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+    <li>
+      <a href="mailto:lcolladotor@gmail.com" >
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="http://lcolladotor.github.io" target="_blank" rel="noopener">
+        <i class="fas fa-home"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://bsky.app/profile/lcolladotor.bsky.social" target="_blank" rel="noopener">
+        <i class="fab fa-bluesky"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://twitter.com/lcolladotor" target="_blank" rel="noopener">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://www.youtube.com/@lcolladotor" target="_blank" rel="noopener">
+        <i class="fab fa-youtube"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://scholar.google.com/citations?user=h57-MykAAAAJ" target="_blank" rel="noopener">
+        <i class="ai ai-google-scholar"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://github.com/lcolladotor" target="_blank" rel="noopener">
+        <i class="fab fa-github"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="http://orcid.org/0000-0003-2140-308X" target="_blank" rel="noopener">
+        <i class="ai ai-orcid"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://www.ncbi.nlm.nih.gov/myncbi/leonardo.collado%20torres.1/bibliography/public/" target="_blank" rel="noopener">
+        <i class="ai ai-pubmed"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://impactstory.org/u/0000-0003-2140-308X" target="_blank" rel="noopener">
+        <i class="ai ai-impactstory"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://www.linkedin.com/in/lcollado/" target="_blank" rel="noopener">
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://publons.com/a/1262671" target="_blank" rel="noopener">
+        <i class="ai ai-publons"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="http://lcolladotor.github.io/cv/en_CV_lcollado.pdf" target="_blank" rel="noopener">
+        <i class="ai ai-cv"></i>
+      </a>
+    </li>
+  
+</ul>
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+
+  
+  <section id="comments">
+    
+<div id="disqus_thread"></div>
+<script>
+  var disqus_config = function () {
+    
+    
+    
+  };
+  (function() {
+    if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+      document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+      return;
+    }
+    var d = document, s = d.createElement('script'); s.async = true;
+    s.src = 'https://' + "fellgernonbit" + '.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+  </section>
+  
+
+
+
+
+
+
+
+
+
+
+  </div>
+</article>
+  </div>
+
+  <div class="page-footer">
+    
+    
+    <div class="container">
+      <footer class="site-footer">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+    
+  
+  
+    
+  
+
+  
+
+  
+  <p class="powered-by copyright-license-text">
+    All thoughts and opinions here are my own (Leonardo Collado Torres). The icon was designed by <a href="https://www.linkedin.com/in/mauricio-guzman-6529b551/" target="_blank" rel="noopener">Mauricio Guzmán</a> and is inspired by <a href="https://en.wikipedia.org/wiki/Huichol" target="_blank" rel="noopener">Huichol culture</a>; it represents my community building interests. © 2011-2025 LCT. This work is licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0" rel="noopener noreferrer" target="_blank">CC BY NC SA 4.0</a>
+  </p>
+  
+
+  <p class="powered-by footer-license-icons">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0" rel="noopener noreferrer" target="_blank" aria-label="Creative Commons">
+      <i class="fab fa-creative-commons fa-2x" aria-hidden="true"></i>
+      <i class="fab fa-creative-commons-by fa-2x" aria-hidden="true"></i>
+      
+        <i class="fab fa-creative-commons-nc fa-2x" aria-hidden="true"></i>
+      
+      
+        <i class="fab fa-creative-commons-sa fa-2x" aria-hidden="true"></i>
+      
+    </a>
+  </p>
+
+
+
+
+
+  <p>
+      
+      
+      <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4ef23e545d41b87c"></script>
+      
+      
+
+      <script type="text/javascript">
+      var addthis_config = {
+      	data_ga_property: 'UA-45299226-1',
+      	data_ga_social : true,
+      	data_track_addressbar: true,
+        data_track_addressbar_paths: ['/201*/*/*/*/*']
+      };
+      var addthis_share = {
+      	
+      	url_transforms : {
+      		shorten: {
+      			twitter: 'bitly'
+      		}
+      	},
+      	shorteners : {
+      		bitly : {}
+      	}
+      }
+      </script>
+
+      <center>
+      <div id="clustrmaps-widget"></div><script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=300&t=m&d=Zo-deincaJGsqhqjIWsujtdoNOMJsnnZLefKmxDKVv8&co=124b73&cmo=dd53ff&cmn=4ec724'></script>
+      </center>
+  </p>
+
+
+  <p class="powered-by">
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      Published with <a href="https://wowchemy.com/?utm_campaign=poweredby" target="_blank" rel="noopener">Wowchemy</a> — the free, <a href="https://github.com/wowchemy/wowchemy-hugo-themes" target="_blank" rel="noopener">open source</a> website builder that empowers creators.
+    
+  </p>
+</footer>
+
+    </div>
+    
+  </div>
+
+  
+
+
+<script src="/js/vendor-bundle.min.938a3a7554cd9f6602290411f64d2617.js"></script>
+
+
+
+
+  
+
+  
+  
+
+  
+
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.min.js" integrity="" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+  
+  <script id="search-hit-fuse-template" type="text/x-template">
+    <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+    </div>
+  </script>
+  
+    <script src="https://cdn.jsdelivr.net/gh/krisk/Fuse@v3.2.1/dist/fuse.min.js" integrity="sha512-o38bmzBGX+hD3JHWUFCDA09btWaqrNmoJ3RXLlrysA7PP01Kgs4UlE4MhelE1v5dJR3+cxlR4qQlotsW7jKsnw==" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/gh/julmot/mark.js@8.11.1/dist/jquery.mark.min.js" integrity="sha512-mhbv5DqBMgrWL+32MmsDOt/OAvqr/cHimk6B8y/bx/xS88MVkYGPiVv2ixKVrkywF2qHplNRUvFsAHUdxZ3Krg==" crossorigin="anonymous"></script>
+  
+
+
+
+
+
+
+
+
+
+  <script id="dsq-count-scr" src="https://fellgernonbit.disqus.com/count.js" async></script>
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+<script id="page-data" type="application/json">{"use_headroom":true}</script>
+
+
+
+  <script src="/js/wowchemy-headroom.db4755770454eb63685f8de785c0a172.js" type="module"></script>
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+<script src="/en/js/wowchemy.min.2945731fa88332cb0ec33cf47d29879f.js"></script>
+
+
+
+  <script src="/js/wowchemy-map.a26e9d2f7238ba5b868384f1c5bc6477.js" type="module"></script>
+
+
+
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        
+        <pre><code></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <script src="/js/wowchemy-publication.af9327db0521d4a01354bfc8b77a4324.js" type="module"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+      
+      <script src="https://kit.fontawesome.com/61d1e02f7e.js" crossorigin="anonymous"></script>
+
+      
+    
+  
+
+
+
+
+
+
+</body>
+</html>

@@ -521,9 +521,9 @@ URL: &lt;a href=&#34;https://www.R-project.org/&#34;&gt;https://www.R-project.or
     
     <item>
       <title>Finding possible class schedules</title>
-      <link>https://lcolladotor.github.io/2016/08/02/materias/</link>
+      <link>https://lcolladotor.github.io/2016/08/02/finding-possible-class-schedules/</link>
       <pubDate>Tue, 02 Aug 2016 00:00:00 +0000</pubDate>
-      <guid>https://lcolladotor.github.io/2016/08/02/materias/</guid>
+      <guid>https://lcolladotor.github.io/2016/08/02/finding-possible-class-schedules/</guid>
       <description>&lt;p&gt;Over the weekend my brother wanted to figure out his class schedule for the next semester. He is a veterinary medicine and zootechnology student at UNAM. For this upcoming semester there is a set of classes he has to take and each has 8 or so instructor options. The website where he finds the class times lists about 8 pre-constructed class schedules. So he normally finds one he likes quite a bit, and then manually starts checking if he can change X instructor for Y for a given class. He does this based on the referalls and information he has gathered about the instructors, plus he factors in whether it&amp;rsquo;d be an overall better schedule. For example, he might prefer to have a packed Tuesday if that means that he can leave early on Friday and avoid classes on Saturday.&lt;/p&gt;
 &lt;p&gt;The problem is that it&amp;rsquo;s very easy to make a mistake. You (well he) gets all excited thinking that he&amp;rsquo;s found the perfect schedule. Only to then realize that there is a conflict between two classes. Or that the practical portion of a class is in a location one hour away from the university, meaning that the schedule he has selected won&amp;rsquo;t work. This process is very frustrating.&lt;/p&gt;
 &lt;p&gt;I was watching him and I started to think if I could help him with some code. Turns out that it was straightforward to write some code to find which options are valid. Once I wrote a test case, it took us like half an hour to fill out the data. I know that tomorrow is when he and his classmates start registering for classes, so this information might help his classmates.&lt;/p&gt;
@@ -916,9 +916,9 @@ URL: &lt;a href=&#34;https://www.R-project.org/&#34;&gt;https://www.R-project.or
     
     <item>
       <title>Concerns that can deter potential orders for developing Shiny apps</title>
-      <link>https://lcolladotor.github.io/2014/06/10/shiny-orders/</link>
+      <link>https://lcolladotor.github.io/2014/06/10/concerns-that-can-deter-potential-orders-for-developing-shiny-apps/</link>
       <pubDate>Tue, 10 Jun 2014 00:00:00 +0000</pubDate>
-      <guid>https://lcolladotor.github.io/2014/06/10/shiny-orders/</guid>
+      <guid>https://lcolladotor.github.io/2014/06/10/concerns-that-can-deter-potential-orders-for-developing-shiny-apps/</guid>
       <description>&lt;p&gt;A few weeks ago I was invited to a meeting where a group was interested in exploring options for replacing their contract with a propriety software. They invited me because they saw some resemblances between a &lt;a href=&#34;http://shiny.rstudio.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Shiny&lt;/a&gt; application I made and the features they need. It is a relatively small project and it seemed feasible to implement, but well, some details could have been tricky to code. During the meeting I explained what &lt;a href=&#34;http://shiny.rstudio.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Shiny&lt;/a&gt; is, showcased some of the &lt;a href=&#34;http://shiny.rstudio.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Shiny&lt;/a&gt; apps I&amp;rsquo;ve made, and proposed some options including a simple site password.&lt;/p&gt;
 &lt;p&gt;A few days after the meeting, they raised three concerns.&lt;/p&gt;
 &lt;ol&gt;
@@ -972,9 +972,9 @@ URL: &lt;a href=&#34;https://www.R-project.org/&#34;&gt;https://www.R-project.or
     
     <item>
       <title>Simple mortgage calculator</title>
-      <link>https://lcolladotor.github.io/2014/04/22/mortgage-calculator-flexible-payments/</link>
+      <link>https://lcolladotor.github.io/2014/04/22/simple-mortgage-calculator/</link>
       <pubDate>Tue, 22 Apr 2014 00:00:00 +0000</pubDate>
-      <guid>https://lcolladotor.github.io/2014/04/22/mortgage-calculator-flexible-payments/</guid>
+      <guid>https://lcolladotor.github.io/2014/04/22/simple-mortgage-calculator/</guid>
       <description>&lt;p&gt;Have you ever thought of borrowing some money? A common case is when you have to borrow money for buying a house, which is called a mortgage. Wikipedia (&lt;span class=&#34;showtooltip&#34; title=&#34;(2014). &#39;Mortgage loan - Wikipedia, the free encyclopedia.&#39; .&#34;&gt;&lt;a href=&#34;http://en.wikipedia.org/wiki/Mortgage_loan&#34;&gt;&amp;lsquo;Mortgage loan&amp;rsquo; entry&lt;/a&gt;&lt;/span&gt;) goes into much more detail about the definition than what I&amp;rsquo;ll cover.&lt;/p&gt;
 &lt;p&gt;One of the aspects you have to evaluate when considering a loan such as a mortgage is how much interest you will be charged and how long the loan will be. Those two determine your monthly payment.&lt;/p&gt;
 &lt;h2 id=&#34;comparing-loans&#34;&gt;Comparing loans&lt;/h2&gt;

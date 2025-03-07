@@ -8659,9 +8659,9 @@ URL: &lt;a href=&#34;https://www.R-project.org/&#34;&gt;https://www.R-project.or
     
     <item>
       <title>Finding possible class schedules</title>
-      <link>https://lcolladotor.github.io/2016/08/02/materias/</link>
+      <link>https://lcolladotor.github.io/2016/08/02/finding-possible-class-schedules/</link>
       <pubDate>Tue, 02 Aug 2016 00:00:00 +0000</pubDate>
-      <guid>https://lcolladotor.github.io/2016/08/02/materias/</guid>
+      <guid>https://lcolladotor.github.io/2016/08/02/finding-possible-class-schedules/</guid>
       <description>&lt;p&gt;Over the weekend my brother wanted to figure out his class schedule for the next semester. He is a veterinary medicine and zootechnology student at UNAM. For this upcoming semester there is a set of classes he has to take and each has 8 or so instructor options. The website where he finds the class times lists about 8 pre-constructed class schedules. So he normally finds one he likes quite a bit, and then manually starts checking if he can change X instructor for Y for a given class. He does this based on the referalls and information he has gathered about the instructors, plus he factors in whether it&amp;rsquo;d be an overall better schedule. For example, he might prefer to have a packed Tuesday if that means that he can leave early on Friday and avoid classes on Saturday.&lt;/p&gt;
 &lt;p&gt;The problem is that it&amp;rsquo;s very easy to make a mistake. You (well he) gets all excited thinking that he&amp;rsquo;s found the perfect schedule. Only to then realize that there is a conflict between two classes. Or that the practical portion of a class is in a location one hour away from the university, meaning that the schedule he has selected won&amp;rsquo;t work. This process is very frustrating.&lt;/p&gt;
 &lt;p&gt;I was watching him and I started to think if I could help him with some code. Turns out that it was straightforward to write some code to find which options are valid. Once I wrote a test case, it took us like half an hour to fill out the data. I know that tomorrow is when he and his classmates start registering for classes, so this information might help his classmates.&lt;/p&gt;
@@ -9054,9 +9054,9 @@ URL: &lt;a href=&#34;https://www.R-project.org/&#34;&gt;https://www.R-project.or
     
     <item>
       <title>Federico Sánchez Rodríguez 1950-2016</title>
-      <link>https://lcolladotor.github.io/2016/04/04/FedericoSanchez/</link>
+      <link>https://lcolladotor.github.io/2016/04/04/federico-sanchez-rodriguez-1950-2016/</link>
       <pubDate>Mon, 04 Apr 2016 00:00:00 +0000</pubDate>
-      <guid>https://lcolladotor.github.io/2016/04/04/FedericoSanchez/</guid>
+      <guid>https://lcolladotor.github.io/2016/04/04/federico-sanchez-rodriguez-1950-2016/</guid>
       <description>&lt;center&gt;
 &lt;a href=&#39;http://www.imagechef.com/ic/ribbon/&#39;&gt;&lt;img alt = &#39;Federico Sanchez Ribbon&#39; height=&#39;300&#39; src=&#39;http://lcolladotor.github.io/figs/2016-04-04-FedericoSanchez/Fede-Ribbon.jpg&#39; /&gt;&lt;/a&gt;
 &lt;/center&gt;
@@ -9076,9 +9076,9 @@ Leonardo&lt;/p&gt;
     
     <item>
       <title>LCG-UNAM 11 years ago</title>
-      <link>https://lcolladotor.github.io/2016/03/10/LCGUNAM/</link>
+      <link>https://lcolladotor.github.io/2016/03/10/lcg-unam-11-years-ago/</link>
       <pubDate>Thu, 10 Mar 2016 00:00:00 +0000</pubDate>
-      <guid>https://lcolladotor.github.io/2016/03/10/LCGUNAM/</guid>
+      <guid>https://lcolladotor.github.io/2016/03/10/lcg-unam-11-years-ago/</guid>
       <description>&lt;p&gt;This has been a busy week. I just flew in last night from &lt;a href=&#34;https://twitter.com/hashtag/enar2016&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;#ENAR2016&lt;/a&gt; and I&amp;rsquo;m getting ready for a postdoc interview tomorrow, which means that I&amp;rsquo;m also flying today. On the flight back from &lt;a href=&#34;https://twitter.com/hashtag/enar2016&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;#ENAR2016&lt;/a&gt; I started reading a book my friend &lt;a href=&#34;https://twitter.com/StrictlyStat&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;John Muschelli&lt;/a&gt; bought for me. It&amp;rsquo;s called &lt;strong&gt;The Happiness Advantage&lt;/strong&gt; by Shawn Anchor and so far I&amp;rsquo;m loving it. There are several things that it talks about that I&amp;rsquo;ve done in the past, but maybe not in the past year. Anyhow, I&amp;rsquo;ll probably talk about it in a separate blog post.&lt;/p&gt;
 &lt;center&gt;
 &lt;a href=&#39;http://www.amazon.com/Happiness-Advantage-Principles-Performance-Paperback/dp/B00BR9RW4U/ref=sr_1_2?ie=UTF8&amp;qid=1457631904&amp;sr=8-2&amp;keywords=the+happiness+advantage&#39;&gt;&lt;img alt = &#39;Happiness Advantage&#39; height=&#39;346&#39; src=&#39;http://ecx.images-amazon.com/images/I/41g4uexkAfL._SY344_BO1,204,203,200_.jpg&#39; /&gt;&lt;/a&gt;
@@ -9093,9 +9093,9 @@ Leonardo&lt;/p&gt;
     
     <item>
       <title>Are you doing parallel computations in R? Then use BiocParallel</title>
-      <link>https://lcolladotor.github.io/2016/03/07/BiocParallel/</link>
+      <link>https://lcolladotor.github.io/2016/03/07/are-you-doing-parallel-computations-in-r-then-use-biocparallel/</link>
       <pubDate>Mon, 07 Mar 2016 00:00:00 +0000</pubDate>
-      <guid>https://lcolladotor.github.io/2016/03/07/BiocParallel/</guid>
+      <guid>https://lcolladotor.github.io/2016/03/07/are-you-doing-parallel-computations-in-r-then-use-biocparallel/</guid>
       <description>&lt;p&gt;It&amp;rsquo;s the morning of the first day of oral conferences at &lt;a href=&#34;https://twitter.com/search?q=%23ENAR2016&amp;amp;src=tyah&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;#ENAR2016&lt;/a&gt;. I feel like I have a &lt;a href=&#34;https://en.wiktionary.org/wiki/Spidey-sense&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;spidey sense&lt;/a&gt; since I woke up 3 min after an email from Jeff Leek; just a funny coincidence. Anyhow, I promised Valerie Obenchain at &lt;a href=&#34;https://twitter.com/hashtag/bioc2014&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;#Bioc2014&lt;/a&gt; that I would write a post about one of my favorite Bioconductor packages: &lt;a href=&#34;http://www.bioconductor.org/packages/release/bioc/html/BiocParallel.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;BiocParallel&lt;/a&gt; &lt;a id=&#39;cite-biocparallel&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;#bib-biocparallel&#39;&gt;Morgan, Obenchain, Lang, and Thompson, 2016&lt;/a&gt;). By now it&amp;rsquo;s on the top 5% of downloaded Bioconductor packages, so many people know about it or are unaware that their favorite package uses it behind the scenes.&lt;/p&gt;
 &lt;center&gt;
 &lt;a href=&#34;http://www.bioconductor.org&#34;&gt;&lt;img src=&#34;http://www.bioconductor.org/images/logo_bioconductor.gif&#34; alt=&#34;BioconductorLogo&#34; style=&#34;width: 260px;&#34;/&gt;&lt;/a&gt;
@@ -9336,9 +9336,9 @@ R package version 1.4.3.
     
     <item>
       <title>Teaching a short topic to beginner R users</title>
-      <link>https://lcolladotor.github.io/2015/07/07/rmarkdown/</link>
+      <link>https://lcolladotor.github.io/2015/07/07/teaching-a-short-topic-to-beginner-r-users/</link>
       <pubDate>Tue, 07 Jul 2015 00:00:00 +0000</pubDate>
-      <guid>https://lcolladotor.github.io/2015/07/07/rmarkdown/</guid>
+      <guid>https://lcolladotor.github.io/2015/07/07/teaching-a-short-topic-to-beginner-r-users/</guid>
       <description>&lt;p&gt;A couple weeks ago I was given the opportunity to teach a 1 hr 30 min slot of an introduction to &lt;code&gt;R&lt;/code&gt; course. In the past, I&amp;rsquo;ve taught lectures for similar courses, and I ended up asking myself what would be the best short topic to teach and how to teach it.&lt;/p&gt;
 &lt;h2 id=&#34;best-short-topic&#34;&gt;Best short topic&lt;/h2&gt;
 &lt;p&gt;There are two ways to answer the first question, one boring and one more interesting. The boring answer is that the course instructor selected the topic. The interesting one goes like this. I have taken short &lt;code&gt;R&lt;/code&gt; courses before and taught others, and it&amp;rsquo;s always overwhelming for the students. You get to cover many concepts, get familiarized with &lt;code&gt;R&lt;/code&gt;&amp;rsquo;s syntax, and in the end without lots of practice it&amp;rsquo;s very challenging to retain much of the information. I think that students love it when they learn how to do something simple that could be the first building block for many of their projects. In parallel, I think that one of the coolest &lt;code&gt;R&lt;/code&gt; topics you can learn in an hour is how to create reproducible documents with &lt;code&gt;rmarkdown&lt;/code&gt; &lt;a id=&#39;cite-rmarkdown&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;http://CRAN.R-project.org/package=rmarkdown&#39;&gt;Allaire, Cheng, Xie, McPherson, et al., 2015&lt;/a&gt;).&lt;/p&gt;
@@ -9442,9 +9442,9 @@ URL: &lt;a href=&#34;http://CRAN.R-project.org/package=knitcitations&#34;&gt;htt
     
     <item>
       <title>What are reasonable work hours and salary expectations for biostats/genomics careers?</title>
-      <link>https://lcolladotor.github.io/2015/02/12/salary-work-hours-expectations/</link>
+      <link>https://lcolladotor.github.io/2015/02/12/what-are-reasonable-work-hours-and-salary-expectations-for-biostats/genomics-careers/</link>
       <pubDate>Thu, 12 Feb 2015 00:00:00 +0000</pubDate>
-      <guid>https://lcolladotor.github.io/2015/02/12/salary-work-hours-expectations/</guid>
+      <guid>https://lcolladotor.github.io/2015/02/12/what-are-reasonable-work-hours-and-salary-expectations-for-biostats/genomics-careers/</guid>
       <description>&lt;p&gt;My advisor recently asked me to fill a career planning document (he&amp;rsquo;ll blog about it at some point) that has lots of questions and is being very useful. Trying to fill answer all these questions has gotten me thinking about other important things for the future. Two of them being reasonable expectations for work hours and salary in a biostats/genomics academic career.&lt;/p&gt;
 &lt;p&gt;I find these questions hard to answer and even hard to talk about, and if you know me, I&amp;rsquo;m a person that asks lots of questions. I have also been advised against talking about these subjects during a first interview because it&amp;rsquo;s important to focus on the research environment. I agree that you should find a place to work that you like with problems that will keep you motivated, and with colleagues that make your daily life enjoyable &lt;a id=&#39;cite-greycite27218&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;http://www.huffingtonpost.com/2015/02/04/happiness-at-work_n_6613358.html?ncid=fcbklnkushpmg00000063&#39;&gt;Hall, 2015&lt;/a&gt;).&lt;/p&gt;
 &lt;p&gt;However, I still want to have a reasonable idea about what to expect. Given that it&amp;rsquo;s hard to ask these questions, it&amp;rsquo;s also hard to blog about it. These questions are not really what others encourage you to talk about &lt;a id=&#39;cite-greycite27219&#39;&gt;&lt;/a&gt;&lt;a id=&#39;cite-greycite27220&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;http://blogs.nature.com/naturejobs/2015/01/30/scientific-blogging-why-it-might-just-be-good-for-your-cv&#39;&gt;Gould, 2015&lt;/a&gt;; &lt;a href=&#39;http://blogs.nature.com/naturejobs/2014/09/18/science-blogging&#39;&gt;Gould, 2014&lt;/a&gt;) but I think that I&amp;rsquo;m not the only one with these questions in mind and that others might benefit from this post. Well, I hope they will.&lt;/p&gt;
@@ -9779,9 +9779,9 @@ URL: &lt;a href=&#34;http://www.mortgagecalculator.org/&#34;&gt;http://www.mortg
     
     <item>
       <title>Use hidden advanced arguments for user-friendly functions</title>
-      <link>https://lcolladotor.github.io/2014/12/11/dots/</link>
+      <link>https://lcolladotor.github.io/2014/12/11/use-hidden-advanced-arguments-for-user-friendly-functions/</link>
       <pubDate>Thu, 11 Dec 2014 00:00:00 +0000</pubDate>
-      <guid>https://lcolladotor.github.io/2014/12/11/dots/</guid>
+      <guid>https://lcolladotor.github.io/2014/12/11/use-hidden-advanced-arguments-for-user-friendly-functions/</guid>
       <description>&lt;h2 id=&#34;as-a-user&#34;&gt;As a user&lt;/h2&gt;
 &lt;p&gt;Imagine that you are starting to learn how to use a specific &lt;code&gt;R&lt;/code&gt; package, lets call it &lt;code&gt;foo&lt;/code&gt;. You will look at the vignette (if there is one), use &lt;code&gt;help(package = foo)&lt;/code&gt;, or look at the reference manual (for example, &lt;a href=&#34;http://cran.r-project.org/web/packages/devtools/devtools.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;devtools&amp;rsquo; ref man&lt;/a&gt;). Eventually, you will open the help page for the function(s) you are interested in using.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;?&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;function_I_want_to_use&lt;/span&gt;
@@ -9946,9 +9946,9 @@ URL: &lt;a href=&#34;https://github.com/lcolladotor/dots&#34;&gt;https://github.
     
     <item>
       <title>An xpd-tion into R plot margins</title>
-      <link>https://lcolladotor.github.io/2014/11/21/add-logo-in-R/</link>
+      <link>https://lcolladotor.github.io/2014/11/21/an-xpd-tion-into-r-plot-margins/</link>
       <pubDate>Fri, 21 Nov 2014 00:00:00 +0000</pubDate>
-      <guid>https://lcolladotor.github.io/2014/11/21/add-logo-in-R/</guid>
+      <guid>https://lcolladotor.github.io/2014/11/21/an-xpd-tion-into-r-plot-margins/</guid>
       <description>&lt;p&gt;&lt;em&gt;This is a guest post by &lt;a href=&#34;http://www.biostat.jhsph.edu/~prpatil/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Prasad Patil&lt;/a&gt; that answers the question: how to put a shape in the margin of an R plot?&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;The help page for &lt;strong&gt;R&lt;/strong&gt;&amp;rsquo;s &lt;code&gt;par()&lt;/code&gt; function is a somewhat impenetrable list
 of abbreviations that allow you to manipulate anything and everything
@@ -10048,9 +10048,9 @@ of your &lt;strong&gt;R&lt;/strong&gt; plot device, and it will not stay consist
     
     <item>
       <title>Where do I start using Bioconductor?</title>
-      <link>https://lcolladotor.github.io/2014/10/16/startBioC/</link>
+      <link>https://lcolladotor.github.io/2014/10/16/where-do-i-start-using-bioconductor/</link>
       <pubDate>Thu, 16 Oct 2014 00:00:00 +0000</pubDate>
-      <guid>https://lcolladotor.github.io/2014/10/16/startBioC/</guid>
+      <guid>https://lcolladotor.github.io/2014/10/16/where-do-i-start-using-bioconductor/</guid>
       <description>&lt;p&gt;I was recently asked &lt;em&gt;where do I get started with Bioconductor?&lt;/em&gt; and thought this would be a good short post.&lt;/p&gt;
 &lt;h2 id=&#34;what-is-bioc&#34;&gt;What is BioC?&lt;/h2&gt;
 &lt;p&gt;Briefly, Bioconductor &lt;a id=&#39;cite-bioc&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;http://genomebiology.com/2004/5/10/R80&#39;&gt;Gentleman, Carey, Bates, and others, 2004&lt;/a&gt;) is an open source project that hosts a wide range of tools for analyzing biological data with &lt;code&gt;R&lt;/code&gt; &lt;a id=&#39;cite-R&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;http://www.R-project.org/&#39;&gt;R Core Team, 2014&lt;/a&gt;). These analysis tools are bundled into packages which are designed to answer specific questions or to provide key infrastructure. If this sounds like something you are interested in, visit &lt;a href=&#34;http://www.bioconductor.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;bioconductor.org&lt;/a&gt;.&lt;/p&gt;
@@ -10105,9 +10105,9 @@ URL: &lt;a href=&#34;http://www.R-project.org/&#34;&gt;http://www.R-project.org/
     
     <item>
       <title>End of the summer blogger challenge</title>
-      <link>https://lcolladotor.github.io/2014/10/03/kiva/</link>
+      <link>https://lcolladotor.github.io/2014/10/03/end-of-the-summer-blogger-challenge/</link>
       <pubDate>Fri, 03 Oct 2014 00:00:00 +0000</pubDate>
-      <guid>https://lcolladotor.github.io/2014/10/03/kiva/</guid>
+      <guid>https://lcolladotor.github.io/2014/10/03/end-of-the-summer-blogger-challenge/</guid>
       <description>&lt;p&gt;This summer a few of us at &lt;a href=&#34;http://bmorebiostat.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Bmore Biostats&lt;/a&gt; agreed to a summer iron blogger challenge. We either had to blog every week or every two weeks. The penalty of not publishing a post in our chosen timeframe was to donate 5 or 10 USD (respectively) to our charity of choice.&lt;/p&gt;
 &lt;p&gt;I liked the idea of the blogging challenge and thought it would help me keep motivated to keep my blog active during the summer. However, I totally failed and only posted twice during the 16 week summer. That is, I have to donate 14 * 5 = 70 USD. I think that most of us blogged a lot less than what we were hoping to and potentially owe a charity some money. But well, there is no real obligation to donate and I don&amp;rsquo;t expect others to do so. However, I want to do it. Doing so will help me take a iron blogger challenge more seriously next time.&lt;/p&gt;
 &lt;h2 id=&#34;kiva&#34;&gt;Kiva&lt;/h2&gt;
@@ -10135,9 +10135,9 @@ URL: &lt;a href=&#34;http://www.R-project.org/&#34;&gt;http://www.R-project.org/
     
     <item>
       <title>Concerns that can deter potential orders for developing Shiny apps</title>
-      <link>https://lcolladotor.github.io/2014/06/10/shiny-orders/</link>
+      <link>https://lcolladotor.github.io/2014/06/10/concerns-that-can-deter-potential-orders-for-developing-shiny-apps/</link>
       <pubDate>Tue, 10 Jun 2014 00:00:00 +0000</pubDate>
-      <guid>https://lcolladotor.github.io/2014/06/10/shiny-orders/</guid>
+      <guid>https://lcolladotor.github.io/2014/06/10/concerns-that-can-deter-potential-orders-for-developing-shiny-apps/</guid>
       <description>&lt;p&gt;A few weeks ago I was invited to a meeting where a group was interested in exploring options for replacing their contract with a propriety software. They invited me because they saw some resemblances between a &lt;a href=&#34;http://shiny.rstudio.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Shiny&lt;/a&gt; application I made and the features they need. It is a relatively small project and it seemed feasible to implement, but well, some details could have been tricky to code. During the meeting I explained what &lt;a href=&#34;http://shiny.rstudio.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Shiny&lt;/a&gt; is, showcased some of the &lt;a href=&#34;http://shiny.rstudio.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Shiny&lt;/a&gt; apps I&amp;rsquo;ve made, and proposed some options including a simple site password.&lt;/p&gt;
 &lt;p&gt;A few days after the meeting, they raised three concerns.&lt;/p&gt;
 &lt;ol&gt;
@@ -10191,9 +10191,9 @@ URL: &lt;a href=&#34;http://www.R-project.org/&#34;&gt;http://www.R-project.org/
     
     <item>
       <title>Simple mortgage calculator</title>
-      <link>https://lcolladotor.github.io/2014/04/22/mortgage-calculator-flexible-payments/</link>
+      <link>https://lcolladotor.github.io/2014/04/22/simple-mortgage-calculator/</link>
       <pubDate>Tue, 22 Apr 2014 00:00:00 +0000</pubDate>
-      <guid>https://lcolladotor.github.io/2014/04/22/mortgage-calculator-flexible-payments/</guid>
+      <guid>https://lcolladotor.github.io/2014/04/22/simple-mortgage-calculator/</guid>
       <description>&lt;p&gt;Have you ever thought of borrowing some money? A common case is when you have to borrow money for buying a house, which is called a mortgage. Wikipedia (&lt;span class=&#34;showtooltip&#34; title=&#34;(2014). &#39;Mortgage loan - Wikipedia, the free encyclopedia.&#39; .&#34;&gt;&lt;a href=&#34;http://en.wikipedia.org/wiki/Mortgage_loan&#34;&gt;&amp;lsquo;Mortgage loan&amp;rsquo; entry&lt;/a&gt;&lt;/span&gt;) goes into much more detail about the definition than what I&amp;rsquo;ll cover.&lt;/p&gt;
 &lt;p&gt;One of the aspects you have to evaluate when considering a loan such as a mortgage is how much interest you will be charged and how long the loan will be. Those two determine your monthly payment.&lt;/p&gt;
 &lt;h2 id=&#34;comparing-loans&#34;&gt;Comparing loans&lt;/h2&gt;
@@ -10265,9 +10265,9 @@ URL: &lt;a href=&#34;http://www.R-project.org/&#34;&gt;http://www.R-project.org/
     
     <item>
       <title>rMaps Mexico map</title>
-      <link>https://lcolladotor.github.io/2014/02/26/excited-by-willingness-to-help-get-things-done/</link>
+      <link>https://lcolladotor.github.io/2014/02/26/rmaps-mexico-map/</link>
       <pubDate>Wed, 26 Feb 2014 00:00:00 +0000</pubDate>
-      <guid>https://lcolladotor.github.io/2014/02/26/excited-by-willingness-to-help-get-things-done/</guid>
+      <guid>https://lcolladotor.github.io/2014/02/26/rmaps-mexico-map/</guid>
       <description>&lt;h2 id=&#34;its-exciting-when-great-people-help-each-other-get-things-done&#34;&gt;It&amp;rsquo;s exciting when great people help each other get things done&lt;/h2&gt;
 &lt;p&gt;This is a simple networking story, which might not be surprising to some but I was happily surprised by it. This is how the story goes:&lt;/p&gt;
 &lt;p&gt;Two weeks ago &lt;code&gt;rMaps&lt;/code&gt; (&lt;span class=&#34;showtooltip&#34; title=&#34;Vaidyanathan R (2014). rMaps: Interactive Maps from R. R package version 0.1.&#34;&gt;&lt;a href=&#34;&#34;&gt;Vaidyanathan, 2014&lt;/a&gt;&lt;/span&gt;) was released. After making a &lt;a href=&#34;http://lcolladotor.github.io/2014/02/10/rMaps-released/#.Uwz64kJdV18&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;blog post&lt;/a&gt; about it I thought about using it to make a map of the homicide rate in Mexico over the recent years. First, I had the question of how to make custom maps with &lt;code&gt;rMaps&lt;/code&gt;. &lt;a href=&#34;https://github.com/tyokota&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;@tyokota&lt;/a&gt; had the same question and started asking &lt;a href=&#34;https://github.com/ramnathv&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Ramnath&lt;/a&gt; about it in &lt;a href=&#34;https://github.com/ramnathv/rMaps/issues/6&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;rMaps issue 6&lt;/a&gt;. Then I realized I needed a specific file with the map information. Google lead me to &lt;a href=&#34;https://github.com/diegovalle&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;@diegovalle&lt;/a&gt; who has created the map from official Mexican sources, downloaded the homicide data, cleaned it, and made several maps and analyses: all his work is very impressive! I thought that it&amp;rsquo;d be very cool if &lt;a href=&#34;https://github.com/diegovalle&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;@diegovalle&lt;/a&gt; and &lt;a href=&#34;https://github.com/ramnathv&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Ramnath&lt;/a&gt; connected, and they did! I saw them interacting via Twitter (&lt;a href=&#34;https://twitter.com/diegovalle/status/433619946434596864&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt; and &lt;a href=&#34;https://twitter.com/ramnath_vaidya/status/433813747593801728&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;) and via &lt;a href=&#34;https://github.com/ramnathv/rMaps/issues/6&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;GitHub&lt;/a&gt;. After sharing &lt;a href=&#34;https://github.com/diegovalle&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;@diegovalle&lt;/a&gt;&amp;rsquo;s work with my friends, it turned out that some old friends already knew him (&lt;a href=&#34;https://twitter.com/unRob/status/433675310542749696&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt; and high school friends). Another friend was interested in additional features and I suggested her to contact &lt;a href=&#34;https://github.com/diegovalle&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;@diegovalle&lt;/a&gt; via Twitter: he quickly replied as you can see &lt;a href=&#34;https://twitter.com/diegovalle/status/434444498341347328&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
@@ -10427,9 +10427,9 @@ dBase, &amp;hellip;.  &lt;a href=&#34;http://CRAN.R-project.org/package=foreign&
     
     <item>
       <title>Automatically coloring your R output in the terminal using colorout</title>
-      <link>https://lcolladotor.github.io/2014/02/17/colorout/</link>
+      <link>https://lcolladotor.github.io/2014/02/17/automatically-coloring-your-r-output-in-the-terminal-using-colorout/</link>
       <pubDate>Mon, 17 Feb 2014 00:00:00 +0000</pubDate>
-      <guid>https://lcolladotor.github.io/2014/02/17/colorout/</guid>
+      <guid>https://lcolladotor.github.io/2014/02/17/automatically-coloring-your-r-output-in-the-terminal-using-colorout/</guid>
       <description>&lt;p&gt;Thanks to Alyssa Frazee I just learned about the &lt;code&gt;colorout&lt;/code&gt; package (&lt;span class=&#34;showtooltip&#34; title=&#34;Aquino J (2013). colorout: Colorize R output on terminal emulators. R package version 1.0-2.&#34;&gt;&lt;a href=&#34;http://www.lepem.ufc.br/jaa/colorout.html&#34;&gt;Aquino, 2013&lt;/a&gt;&lt;/span&gt;). It modifies &lt;code&gt;R&lt;/code&gt; so that the output is in different colors, making it much more pleasant to use &lt;code&gt;R&lt;/code&gt; in the terminal.&lt;/p&gt;
 &lt;p&gt;Do note that &lt;code&gt;colorout&lt;/code&gt; is not available from CRAN, but you can easily install by following the instructions on the &lt;code&gt;colorout&lt;/code&gt; site (&lt;span class=&#34;showtooltip&#34; title=&#34;(2014). &#39;colorout.&#39; .&#34;&gt;&lt;a href=&#34;http://www.lepem.ufc.br/jaa/colorout.html&#34;&gt;Official site&lt;/a&gt;&lt;/span&gt;) reproduced below:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nf&#34;&gt;download.file&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;http://www.lepem.ufc.br/jaa/colorout_1.0-2.tar.gz&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;destfile&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;colorout_1.0-2.tar.gz&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
@@ -10473,9 +10473,9 @@ dBase, &amp;hellip;.  &lt;a href=&#34;http://CRAN.R-project.org/package=foreign&
     
     <item>
       <title>rMaps released</title>
-      <link>https://lcolladotor.github.io/2014/02/10/rMaps-released/</link>
+      <link>https://lcolladotor.github.io/2014/02/10/rmaps-released/</link>
       <pubDate>Mon, 10 Feb 2014 00:00:00 +0000</pubDate>
-      <guid>https://lcolladotor.github.io/2014/02/10/rMaps-released/</guid>
+      <guid>https://lcolladotor.github.io/2014/02/10/rmaps-released/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://github.com/ramnathv&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Ramnath Vaidyanathan&lt;/a&gt; just released his new &lt;code&gt;R&lt;/code&gt; interactive package, &lt;code&gt;rMaps&lt;/code&gt; (&lt;span class=&#34;showtooltip&#34; title=&#34;Vaidyanathan R (2014). rMaps: Interactive Maps from R. R package version 0.1.&#34;&gt;&lt;a href=&#34;&#34;&gt;Vaidyanathan, 2014&lt;/a&gt;&lt;/span&gt;). The packages relies on the development version of his widely known &lt;code&gt;rCharts&lt;/code&gt; package (&lt;span class=&#34;showtooltip&#34; title=&#34;Vaidyanathan R (2013). rCharts: Interactive Charts using Polycharts.js. R package version 0.4.2.&#34;&gt;&lt;a href=&#34;&#34;&gt;Vaidyanathan, 2013&lt;/a&gt;&lt;/span&gt;) as well as javascript libraries that specialize in maps. If you don&amp;rsquo;t know Ramnath, he is one of the most active &lt;code&gt;R&lt;/code&gt; developers out there!! You can see that from his &lt;a href=&#34;https://github.com/ramnathv&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;GitHub profile&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;The package is very new and still under development, but I bet that Ramnath released it to get us users excited and maybe find some helpful hands to document it and further develop it.&lt;/p&gt;
 &lt;p&gt;I don&amp;rsquo;t know about you, but I surely got excited about the package from his intro video:&lt;/p&gt;
@@ -10529,9 +10529,9 @@ dBase, &amp;hellip;.  &lt;a href=&#34;http://CRAN.R-project.org/package=foreign&
     
     <item>
       <title>How to upload files to Dropbox and Google Docs from R</title>
-      <link>https://lcolladotor.github.io/2014/02/05/DropboxAndGoogleDocsFromR/</link>
+      <link>https://lcolladotor.github.io/2014/02/05/how-to-upload-files-to-dropbox-and-google-docs-from-r/</link>
       <pubDate>Wed, 05 Feb 2014 00:00:00 +0000</pubDate>
-      <guid>https://lcolladotor.github.io/2014/02/05/DropboxAndGoogleDocsFromR/</guid>
+      <guid>https://lcolladotor.github.io/2014/02/05/how-to-upload-files-to-dropbox-and-google-docs-from-r/</guid>
       <description>&lt;p&gt;Have you ever wondered whether you can upload files from &lt;code&gt;R&lt;/code&gt; to &lt;a href=&#34;https://www.dropbox.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Dropbox&lt;/a&gt; and/or &lt;a href=&#34;docs.google.com&#34;&gt;Google Docs&lt;/a&gt;? I recently asked myself this question while making my most recent &lt;a href=&#34;http://www.rstudio.com/shiny/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Shiny&lt;/a&gt; app (more later).&lt;/p&gt;
 &lt;p&gt;The answer is yes, you can upload files from &lt;code&gt;R&lt;/code&gt; to these cloud services!&lt;/p&gt;
 &lt;h2 id=&#34;dropbox&#34;&gt;Dropbox&lt;/h2&gt;
@@ -10668,9 +10668,9 @@ dBase, &amp;hellip;.  &lt;a href=&#34;http://CRAN.R-project.org/package=foreign&
     
     <item>
       <title>Login to the cluster, request a node and change to your project directory in a single command</title>
-      <link>https://lcolladotor.github.io/2013/12/11/quick-cluster-login-to-interactive-session/</link>
+      <link>https://lcolladotor.github.io/2013/12/11/login-to-the-cluster-request-a-node-and-change-to-your-project-directory-in-a-single-command/</link>
       <pubDate>Wed, 11 Dec 2013 00:00:00 +0000</pubDate>
-      <guid>https://lcolladotor.github.io/2013/12/11/quick-cluster-login-to-interactive-session/</guid>
+      <guid>https://lcolladotor.github.io/2013/12/11/login-to-the-cluster-request-a-node-and-change-to-your-project-directory-in-a-single-command/</guid>
       <description>&lt;p&gt;To be able to do RNA-seq research work in large multi-sample studies you have to be able to analyze large files and thus frequently use a powerful computing environment. In my case, this means that I have to login to a &lt;a href=&#34;http://en.wikipedia.org/wiki/Computer_cluster&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;computing cluster&lt;/a&gt; frequently. This is a common task for other biostatisticians (like those that do brain imagining studies) and many other people. When I am working on a project, I generally have to login to the cluster and then change the directory to the location where I have my project files.&lt;/p&gt;
 &lt;p&gt;A local cluster is normally composed of a login machine (enigma2 in my case) from where you can request to work on a node. There are several options for controlling this process of requesting a node, and in our institution we use a &lt;a href=&#34;http://en.wikipedia.org/wiki/Oracle_Grid_Engine&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Sun/Oracle Grid Engine&lt;/a&gt;. When a cluster has a lot of users, you want to dedicate the login machine as much as possible to handling login requests and assigning nodes for people to use. This means that you want to minimize doing any other kind of operations on the login machine, such as input/output operations.&lt;/p&gt;
 &lt;h2 id=&#34;basic-workflow&#34;&gt;Basic workflow&lt;/h2&gt;
@@ -10823,9 +10823,9 @@ it is all the same on both locations.&lt;/p&gt;
     
     <item>
       <title>Creating awesome reports for multiple audiences using knitrBootstrap</title>
-      <link>https://lcolladotor.github.io/2013/12/10/knitrBootstrap/</link>
+      <link>https://lcolladotor.github.io/2013/12/10/creating-awesome-reports-for-multiple-audiences-using-knitrbootstrap/</link>
       <pubDate>Tue, 10 Dec 2013 00:00:00 +0000</pubDate>
-      <guid>https://lcolladotor.github.io/2013/12/10/knitrBootstrap/</guid>
+      <guid>https://lcolladotor.github.io/2013/12/10/creating-awesome-reports-for-multiple-audiences-using-knitrbootstrap/</guid>
       <description>&lt;p&gt;As a biostatistics student, I use &lt;code&gt;R&lt;/code&gt; very frequently when analyzing data. At the same time, I interact with other researchers, some who know how to use &lt;code&gt;R&lt;/code&gt; (R crowd) and some who don&amp;rsquo;t (yet!): no-R crowd. This means that I have to be able to communicate my results to two crowds. It is important that I can quickly provide the code in case that the &lt;code&gt;R&lt;/code&gt; savvy want to look at it: maybe they find a bug and report it ^^. Ideally I want to avoid having to write (organize, share, etc) two crowd-specific reports.&lt;/p&gt;
 &lt;p&gt;A solution to this problem is to create reproducible reports that contain the R code, the results, and interpretation. For the specific scenario I am talking about, reproducibility is a plus, however I believe that it is important for research; albeit not the topic of this post. One of the strongest packages out there to create such reports is &lt;code&gt;knitr&lt;/code&gt; (&lt;span class=&#34;showtooltip&#34; title=&#34;Xie Y (2013). Dynamic Documents with R and knitr. Chapman and Hall/CRC. ISBN 978-1482203530.&#34;&gt;&lt;a href=&#34;http://yihui.name/knitr/&#34;&gt;Xie, 2013&lt;/a&gt;&lt;/span&gt;). It is specially easy to create &lt;code&gt;Rmd&lt;/code&gt; files from which you can generate HTML reports. Then using &lt;a href=&#34;http://www.rstudio.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;RStudio&lt;/a&gt; you can share them via &lt;a href=&#34;http://rpubs.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;RPubs&lt;/a&gt;, a private folder on Dropbox, etc. From example, &lt;a href=&#34;http://rpubs.com/lcollado/2618&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;this is a presentation&lt;/a&gt; without the slide formatting I shared more than a year ago.&lt;/p&gt;
 &lt;p&gt;Using &lt;code&gt;knitr&lt;/code&gt; (&lt;span class=&#34;showtooltip&#34; title=&#34;Xie Y (2013). Dynamic Documents with R and knitr. Chapman and Hall/CRC. ISBN 978-1482203530.&#34;&gt;&lt;a href=&#34;http://yihui.name/knitr/&#34;&gt;Xie, 2013&lt;/a&gt;&lt;/span&gt;) is definitely a step in the right direction. However, you soon find yourself desiring a better template. This is where &lt;code&gt;knitrBootstrap&lt;/code&gt; (&lt;span class=&#34;showtooltip&#34; title=&#34;Hester J (2013). knitrBootstrap: Knitr Bootstrap framework.. R package version 0.9.0.&#34;&gt;&lt;a href=&#34;http://CRAN.R-project.org/package=knitrBootstrap&#34;&gt;Hester, 2013&lt;/a&gt;&lt;/span&gt;) comes in. This package was initialized in March 20th, 2013 by &lt;a href=&#34;http://jimhester.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Jim Hester&lt;/a&gt; and hosted on it&amp;rsquo;s &lt;a href=&#34;https://github.com/jimhester/knitrBootstrap&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;GitHub repository&lt;/a&gt;. I was sold on the idea early on and I am now making this post in part as a tribute to celebrate that it has been available via &lt;a href=&#34;http://cran.at.r-project.org/web/packages/knitrBootstrap/index.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CRAN&lt;/a&gt; for nearly 5 months now.&lt;/p&gt;
@@ -10889,9 +10889,9 @@ it is all the same on both locations.&lt;/p&gt;
     
     <item>
       <title>Third Student Cultural Mixer</title>
-      <link>https://lcolladotor.github.io/2013/11/20/StudentMixer3/</link>
+      <link>https://lcolladotor.github.io/2013/11/20/third-student-cultural-mixer/</link>
       <pubDate>Wed, 20 Nov 2013 00:00:00 +0000</pubDate>
-      <guid>https://lcolladotor.github.io/2013/11/20/StudentMixer3/</guid>
+      <guid>https://lcolladotor.github.io/2013/11/20/third-student-cultural-mixer/</guid>
       <description>&lt;center&gt;
 &lt;a href=&#34;http://lcolladotor.github.io/figs/2013-11-20-StudentMixer3/ad-03_v1.png&#34;&gt;&lt;img src=&#34;http://lcolladotor.github.io/figs/2013-11-20-StudentMixer3/ad-03_v1.png&#34; alt=&#34;Workflow&#34; style=&#34;width: 612px;&#34;/&gt;&lt;/a&gt;
 &lt;/center&gt;
@@ -10901,9 +10901,9 @@ it is all the same on both locations.&lt;/p&gt;
     
     <item>
       <title>Trying to reduce the memory overhead when using mclapply</title>
-      <link>https://lcolladotor.github.io/2013/11/14/Reducing-memory-overhead-when-using-mclapply/</link>
+      <link>https://lcolladotor.github.io/2013/11/14/trying-to-reduce-the-memory-overhead-when-using-mclapply/</link>
       <pubDate>Thu, 14 Nov 2013 00:00:00 +0000</pubDate>
-      <guid>https://lcolladotor.github.io/2013/11/14/Reducing-memory-overhead-when-using-mclapply/</guid>
+      <guid>https://lcolladotor.github.io/2013/11/14/trying-to-reduce-the-memory-overhead-when-using-mclapply/</guid>
       <description>&lt;p&gt;I am currently trying to understand how to reduce the memory used by &lt;code&gt;mclapply&lt;/code&gt;. This function is rather complicated and others have explained the differences versus &lt;code&gt;parLapply&lt;/code&gt; (&lt;span class=&#34;showtooltip&#34; title=&#34;A\_Skelton73 (2013). &#39;understanding the differences between mclapply and parLapply in R.&#39; .&#34;&gt;&lt;a href=&#34;http://stackoverflow.com/questions/17196261/understanding-the-differences-between-mclapply-and-parlapply-in-r&#34;&gt;A_Skelton73, 2013&lt;/a&gt;&lt;/span&gt;; &lt;span class=&#34;showtooltip&#34; title=&#34;lockedoff (2012). &#39;Using mclapply, foreach, or something else in [r] to operate on an object in parallel?&#39; .&#34;&gt;&lt;a href=&#34;http://stackoverflow.com/questions/11036702/using-mclapply-foreach-or-something-else-in-r-to-operate-on-an-object-in-par&#34;&gt;lockedoff, 2012&lt;/a&gt;&lt;/span&gt; ) and also made it clear that in &lt;code&gt;mclapply&lt;/code&gt;  each job does not know if the others are running out of memory and thus cannot trigger &lt;code&gt;gc&lt;/code&gt; (&lt;span class=&#34;showtooltip&#34; title=&#34;(2013). &#39; [R-sig-hpc] mclapply: rm intermediate objects and returning	memory .&#39; .&#34;&gt;&lt;a href=&#34;https://mailman.stat.ethz.ch/pipermail/r-sig-hpc/2012-October/001534.html&#34;&gt;Urbanek, 2012&lt;/a&gt;&lt;/span&gt;).&lt;/p&gt;
 &lt;p&gt;While I still struggle to understand all the details of &lt;code&gt;mclapply&lt;/code&gt;, I can successfully use it to reduce computation time at the expense of a very high memory load. I am still looking for tips on how to reduce this memory load.&lt;/p&gt;
 &lt;p&gt;Here is what I have done.&lt;/p&gt;
@@ -11070,9 +11070,9 @@ it is all the same on both locations.&lt;/p&gt;
     
     <item>
       <title>Creating your Jekyll-Bootstrap powered blog for R blogging</title>
-      <link>https://lcolladotor.github.io/2013/11/09/new-Fellgernon-Bit-setup-in-Github/</link>
+      <link>https://lcolladotor.github.io/2013/11/09/creating-your-jekyll-bootstrap-powered-blog-for-r-blogging/</link>
       <pubDate>Sat, 09 Nov 2013 00:00:00 +0000</pubDate>
-      <guid>https://lcolladotor.github.io/2013/11/09/new-Fellgernon-Bit-setup-in-Github/</guid>
+      <guid>https://lcolladotor.github.io/2013/11/09/creating-your-jekyll-bootstrap-powered-blog-for-r-blogging/</guid>
       <description>&lt;p&gt;As you might have noticed, I recently decided to move &lt;code&gt;Fellgernon Bit&lt;/code&gt; from &lt;a href=&#34;http://bit.ly/FellgernonBit&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Tumblr&lt;/a&gt; to &lt;a href=&#34;http://bit.ly/FellBit&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;GitHub&lt;/a&gt;. There are a couple of reasons why I made this change.&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;I wanted a more professional-looking blog.
@@ -11301,9 +11301,9 @@ it is all the same on both locations.&lt;/p&gt;
     
     <item>
       <title>My strategy for quickly grading homeworks</title>
-      <link>https://lcolladotor.github.io/2013/11/08/fast-grading/</link>
+      <link>https://lcolladotor.github.io/2013/11/08/my-strategy-for-quickly-grading-homeworks/</link>
       <pubDate>Fri, 08 Nov 2013 00:00:00 +0000</pubDate>
-      <guid>https://lcolladotor.github.io/2013/11/08/fast-grading/</guid>
+      <guid>https://lcolladotor.github.io/2013/11/08/my-strategy-for-quickly-grading-homeworks/</guid>
       <description>&lt;p&gt;For the past year and a half &lt;a href=&#34;http://www.biostat.jhsph.edu/~lcollado/teaching.html#.Un2BnJTF2Ql&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;I have been a teaching assistant&lt;/a&gt; (TA) for the Statistical Methods in Public Health I to IV (140.621 to 140.624) courses. As part of being a TA for these courses, we have to grade between 30 and 50 homeworks every two weeks or so: four problem sets per eight week terms. For example, I now have to grade 37 homeworks:&lt;/p&gt;
 &lt;center&gt;
 &lt;a href=&#34;http://lcolladotor.github.io/figs/2013-11-08-fast-grading/list-to-grade.png&#34;&gt;&lt;img src=&#34;http://lcolladotor.github.io/figs/2013-11-08-fast-grading/list-to-grade.png&#34; alt=&#34;HWs to grade&#34; style=&#34;width: 400px;&#34;/&gt;&lt;/a&gt;
@@ -11384,9 +11384,9 @@ it is all the same on both locations.&lt;/p&gt;
     
     <item>
       <title>Bmore Biostats is born!</title>
-      <link>https://lcolladotor.github.io/2013/11/07/bmorebiostats/</link>
+      <link>https://lcolladotor.github.io/2013/11/07/bmore-biostats-is-born/</link>
       <pubDate>Thu, 07 Nov 2013 00:00:00 +0000</pubDate>
-      <guid>https://lcolladotor.github.io/2013/11/07/bmorebiostats/</guid>
+      <guid>https://lcolladotor.github.io/2013/11/07/bmore-biostats-is-born/</guid>
       <description>&lt;p&gt;In recent weeks, I have met with a group of students &lt;a href=&#34;https://twitter.com/jhubiostat&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;@jhubiostat&lt;/a&gt; interested in blogging about their research, tutorials, pieces of R code, among plenty of other subjects. Within this group we had the idea to aggregate our blogs so it would be easier for others to follow us and to easily promote our own blogs to a much larger audience. Basically, do what &lt;a href=&#34;http://www.r-bloggers.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;R-bloggers&lt;/a&gt; does but focused on blogs from students at Johns Hopkins Biostatistics. Ideally, once a student publishes a new post, our site would pick it up and promote it.&lt;/p&gt;
 &lt;p&gt;A quick search revealed that making such a site was technically possible via several &lt;a href=&#34;http://wordpress.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;WordPress&lt;/a&gt; plugins available. We initally tried doing so via a wordpress.com account and quickly noticed that we needed a self-hosted wordpress account.&lt;/p&gt;
 &lt;h3 id=&#34;paperli&#34;&gt;paper.li&lt;/h3&gt;
@@ -11430,9 +11430,9 @@ it is all the same on both locations.&lt;/p&gt;
     
     <item>
       <title>Quickly making posters with PosterGenius</title>
-      <link>https://lcolladotor.github.io/2013/10/29/Quickly-making-posters-with-PosterGenius/</link>
+      <link>https://lcolladotor.github.io/2013/10/29/quickly-making-posters-with-postergenius/</link>
       <pubDate>Tue, 29 Oct 2013 00:00:00 +0000</pubDate>
-      <guid>https://lcolladotor.github.io/2013/10/29/Quickly-making-posters-with-PosterGenius/</guid>
+      <guid>https://lcolladotor.github.io/2013/10/29/quickly-making-posters-with-postergenius/</guid>
       <description>&lt;p&gt;It is time to revive &lt;a href=&#34;http://bit.ly/FellgernonBit&#34;&gt;Fellgernon Bit&lt;/a&gt; from it&amp;#8217;s deep hibernation period. A couple of very motivated Ph.D. students from my department (John, Alyssa, Amanda, Jean-Philippe, Elizabeth, etc) are organizing a blogging group. The idea is to review ideas, give suggestions, learn blogging technicalities, write blog posts, review them, and post them. It&amp;#8217;s a great idea! Plus it should us keep our blogs active.&lt;/p&gt;
 &lt;p&gt;So for my first post I am going to talk about &lt;a href=&#34;http://www.postergenius.com/cms/index.php&#34;&gt;PosterGenius&lt;/a&gt;. It&amp;#8217;s a simple to use piece of software for making posters. In my case, I presented a poster at the &lt;a href=&#34;http://genomics.jhu.edu/symposium.html&#34;&gt;7th Annual Young Investigators Symposium and Poster Session on Genomics and Bioinformatics&lt;/a&gt;. It was a relatively small event and I had a limited amount of time to make the poster. The idea behind &lt;a href=&#34;http://www.postergenius.com/cms/index.php&#34;&gt;PosterGenius&lt;/a&gt; is that you separate your poster into several sections (intro, methods, results, references), have some material for each (text and or figures), and just have to put it together with a simple background.&lt;/p&gt;
 &lt;p&gt;Of course, there are plenty of other tools for doing this. But in my case, I was able to make a poster in lunch hour by using slides from a presentation on the same subject and just organizing the content. The basic steps are:&lt;/p&gt;
@@ -11452,18 +11452,18 @@ it is all the same on both locations.&lt;/p&gt;
     
     <item>
       <title>LIBD video</title>
-      <link>https://lcolladotor.github.io/2013/07/17/starting-this-week-ill-be-doing-my-research-with/</link>
+      <link>https://lcolladotor.github.io/2013/07/17/libd-video/</link>
       <pubDate>Wed, 17 Jul 2013 00:00:00 +0000</pubDate>
-      <guid>https://lcolladotor.github.io/2013/07/17/starting-this-week-ill-be-doing-my-research-with/</guid>
+      <guid>https://lcolladotor.github.io/2013/07/17/libd-video/</guid>
       <description>&lt;iframe src=&#34;http://player.vimeo.com/video/47201742&#34; width=&#34;400&#34; height=&#34;300&#34; frameborder=&#34;0&#34;&gt;&lt;/iframe&gt;&lt;br/&gt;&lt;p&gt;Starting this week, I&amp;#8217;ll be doing my research with the Lieber Institute for Brain Development (&lt;a href=&#34;http://www.libd.org/&#34;&gt;LIBD&lt;/a&gt;) as &lt;a href=&#34;http://www.libd.org/contact/staff-directory?query=jaffe&#34;&gt;Andrew Jaffe&lt;/a&gt;&#39;s first Ph.D. student there. My main advisor will continue to be &lt;a href=&#34;http://www.biostat.jhsph.edu/~jleek/&#34;&gt;Jeff Leek&lt;/a&gt; which is great for me. I&amp;#8217;ll have access to massive data sets at Lieber and will face the challenge of integrative genomics. That will be fun, exciting and challenging!&lt;br/&gt;&lt;br/&gt;Here&amp;#8217;s a short video explaining what the LIBD is about and why Baltimore is a growing city.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>ggplot Tutorial</title>
-      <link>https://lcolladotor.github.io/2013/06/21/ggplot-Tutorial/</link>
+      <link>https://lcolladotor.github.io/2013/06/21/ggplot-tutorial/</link>
       <pubDate>Fri, 21 Jun 2013 00:00:00 +0000</pubDate>
-      <guid>https://lcolladotor.github.io/2013/06/21/ggplot-Tutorial/</guid>
+      <guid>https://lcolladotor.github.io/2013/06/21/ggplot-tutorial/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;http://www.ceb-institute.org/bbs/wp-content/uploads/2011/09/handout_ggplot2.pdf&#34;&gt;ggplot Tutorial&lt;/a&gt;&lt;br/&gt;&lt;p&gt;I liked the &lt;a href=&#34;http://www.ceb-institute.org/bbs/wp-content/uploads/2011/09/handout_ggplot2.pdf&#34;&gt;following ggplot2 tutorial&lt;/a&gt; which is featured in Gabriela de Queiroz’s blog called &lt;a href=&#34;http://unbiasedestimator.tumblr.com/&#34;&gt;unbiasedestimator&lt;/a&gt;. The tutorial looks very neatly presented and I’m sure that it will be very helpful to anyone just getting started with ggplot2 before they jump into &lt;a href=&#34;http://ggplot2.org/book/&#34;&gt;ggplot2: Elegant Graphics for Data Analysis&lt;/a&gt; by Hadley Wickham or &lt;a href=&#34;http://shop.oreilly.com/product/0636920023135.do&#34;&gt;R Graphics Cookbook&lt;/a&gt; by Winston Chang.&lt;/p&gt;&lt;/p&gt;
 &lt;p&gt;&lt;span&gt;The tutorial is very nicely formatted with code in bold highlighting  parts that change something in the plot. Overall, the tutorial explains how to use qplot() although it does have a longer example using ggplot() to make survival curves.&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;Check it out!&lt;/p&gt;
@@ -11480,9 +11480,9 @@ it is all the same on both locations.&lt;/p&gt;
     
     <item>
       <title>Keeping in touch (ENAR2014?) and philosophical questions regarding México&#39;s future in genomics</title>
-      <link>https://lcolladotor.github.io/2013/06/12/keeping-in-touch-enar2014-and-philosophical/</link>
+      <link>https://lcolladotor.github.io/2013/06/12/keeping-in-touch-enar2014-and-philosophical-questions-regarding-mexicos-future-in-genomics/</link>
       <pubDate>Wed, 12 Jun 2013 00:00:00 +0000</pubDate>
-      <guid>https://lcolladotor.github.io/2013/06/12/keeping-in-touch-enar2014-and-philosophical/</guid>
+      <guid>https://lcolladotor.github.io/2013/06/12/keeping-in-touch-enar2014-and-philosophical-questions-regarding-mexicos-future-in-genomics/</guid>
       <description>&lt;p&gt;The following text is an email I sent to several of my friends from the &lt;a href=&#34;http://www.lcg.unam.mx/about&#34;&gt;LCG undergraduate program &lt;/a&gt;I studied. There I talk about keeping in touch, I invite them to &lt;a href=&#34;http://www.enar.org/meetings.cfm&#34;&gt;ENAR 2014&lt;/a&gt;, and also talk about some philosophical questions regarding our future. &lt;/p&gt;
 &lt;p&gt;I&amp;#8217;m posting it here because I don&amp;#8217;t mind sharing these thoughts and because I don&amp;#8217;t have the current email addresses of many former LCG students.&lt;br/&gt;&lt;br/&gt;Enjoy&lt;/p&gt;
 &lt;p&gt;
@@ -11525,9 +11525,9 @@ it is all the same on both locations.&lt;/p&gt;
     
     <item>
       <title>userR2013 data analysis contest: data exploration</title>
-      <link>https://lcolladotor.github.io/2013/06/12/userR2013-data-analysis-contest-data-exploration/</link>
+      <link>https://lcolladotor.github.io/2013/06/12/userr2013-data-analysis-contest-data-exploration/</link>
       <pubDate>Wed, 12 Jun 2013 00:00:00 +0000</pubDate>
-      <guid>https://lcolladotor.github.io/2013/06/12/userR2013-data-analysis-contest-data-exploration/</guid>
+      <guid>https://lcolladotor.github.io/2013/06/12/userr2013-data-analysis-contest-data-exploration/</guid>
       <description>&lt;h1&gt;Description&lt;/h1&gt;
 &lt;p&gt;The useR2013 conference is organizing a data analysis contest, check the &lt;a href=&#34;http://www.edii.uclm.es/%7EuseR-2013/docs/announce.pdf&#34;&gt;rules here&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;They have a package called &lt;strong&gt;useR2013DAC&lt;/strong&gt; with two data sets: one from La Liga and the other one from the Formula 1. Once you download and install the package (&lt;a href=&#34;http://www.edii.uclm.es/%7EuseR-2013/#contest&#34;&gt;available here&lt;/a&gt;), you can quickly explore the data using the following R commands:&lt;/p&gt;
@@ -11687,9 +11687,9 @@ sessionInfo()
     
     <item>
       <title>What does it take to be a good leader?</title>
-      <link>https://lcolladotor.github.io/2013/06/12/What-does-it-take-to-be-a-good-leader/</link>
+      <link>https://lcolladotor.github.io/2013/06/12/what-does-it-take-to-be-a-good-leader/</link>
       <pubDate>Wed, 12 Jun 2013 00:00:00 +0000</pubDate>
-      <guid>https://lcolladotor.github.io/2013/06/12/What-does-it-take-to-be-a-good-leader/</guid>
+      <guid>https://lcolladotor.github.io/2013/06/12/what-does-it-take-to-be-a-good-leader/</guid>
       <description>&lt;h2&gt;Leader: scientific or project&lt;/h2&gt;
 &lt;p&gt;In my mind before trying to answer this question I have to define &lt;strong&gt;leader&lt;/strong&gt;. Right now I have two —possibly conflicting— leaders in mind. One is a scientific leader in the sense of a leader in a specific scientific discipline. The other is a leader who can organize and lead projects, either scientific ones (across labs for example) or what I want to call revolutionary projects. With such a grandiose name I am trying to cover the type of projects that can help change a country. However, in reality this second type of leader is closer to administrative roles in leading academic institutions, like the chair of a department.&lt;/p&gt;
 &lt;h2&gt;Good leader&lt;/h2&gt;
@@ -11716,9 +11716,9 @@ sessionInfo()
     
     <item>
       <title>Reading an R file from GitHub</title>
-      <link>https://lcolladotor.github.io/2013/05/09/Reading-an-R-file-from-GitHub/</link>
+      <link>https://lcolladotor.github.io/2013/05/09/reading-an-r-file-from-github/</link>
       <pubDate>Thu, 09 May 2013 00:00:00 +0000</pubDate>
-      <guid>https://lcolladotor.github.io/2013/05/09/Reading-an-R-file-from-GitHub/</guid>
+      <guid>https://lcolladotor.github.io/2013/05/09/reading-an-r-file-from-github/</guid>
       <description>&lt;p&gt;Lets say that I want to read in &lt;a href=&#34;https://github.com/lcolladotor/ballgownR-devel/blob/master/ballgownR/R/infoGene.R&#34;&gt;this R file&lt;/a&gt; from GitHub into R.&lt;/p&gt;
 &lt;p&gt;The first thing you have to do is locate the raw file. You can do so by clicking on the &lt;strong&gt;Raw&lt;/strong&gt; button in GitHub. In this case it&amp;#8217;s &lt;a href=&#34;https://raw.github.com/lcolladotor/ballgownR-devel/master/ballgownR/R/infoGene.R&#34;&gt;&lt;a href=&#34;https://raw.github.com/lcolladotor/ballgownR-devel/master/ballgownR/R/infoGene.R&#34;&gt;https://raw.github.com/lcolladotor/ballgownR-devel/master/ballgownR/R/infoGene.R&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;One would think that using &lt;code&gt;source()&lt;/code&gt; would work, but it doesn&amp;#8217;t as shown below:&lt;/p&gt;
@@ -11786,9 +11786,9 @@ sessionInfo()
     
     <item>
       <title>Using plyr and doMC for quick and easy apply-family functions</title>
-      <link>https://lcolladotor.github.io/2013/04/26/using-plyr-and-domc-for-quick-and-easy-apply-family/</link>
+      <link>https://lcolladotor.github.io/2013/04/26/using-plyr-and-domc-for-quick-and-easy-apply-family-functions/</link>
       <pubDate>Fri, 26 Apr 2013 00:00:00 +0000</pubDate>
-      <guid>https://lcolladotor.github.io/2013/04/26/using-plyr-and-domc-for-quick-and-easy-apply-family/</guid>
+      <guid>https://lcolladotor.github.io/2013/04/26/using-plyr-and-domc-for-quick-and-easy-apply-family-functions/</guid>
       <description>&lt;p&gt;A few weeks back I dedicated a short amount of time to actually read what &lt;code&gt;plyr&lt;/code&gt; (&lt;span class=&#34;showtooltip&#34; title=&#34;Wickham H (2011). The Split-Apply-Combine Strategy for Data
 Analysis. _Journal of Statistical Software_, *40*(1), pp. 1-29.
  http://www.jstatsoft.org/v40/i01/.&#34;&gt;&lt;a href=&#34;http://www.jstatsoft.org/v40/i01/&#34;&gt;Wickham, 2011&lt;/a&gt;&lt;/span&gt;) is about and I was surprised. The whole idea behind &lt;code&gt;plyr&lt;/code&gt; is very simple: expand the &lt;code&gt;apply()&lt;/code&gt; family to do things easy. &lt;code&gt;plyr&lt;/code&gt; has many functions whose name ends with &lt;code&gt;ply&lt;/code&gt; which is short of apply. Then, the functions are identified by two letters before &lt;code&gt;ply&lt;/code&gt; which are abbreviations for the input (first letter) and output (second one). For instance, &lt;code&gt;ddply&lt;/code&gt; takes an input a &lt;code&gt;data.frame&lt;/code&gt; and returns a &lt;code&gt;data.frame&lt;/code&gt; while &lt;code&gt;ldply&lt;/code&gt; takes as input a &lt;code&gt;list&lt;/code&gt; and returns a &lt;code&gt;data.frame&lt;/code&gt;.&lt;/p&gt;
@@ -11916,9 +11916,9 @@ https://github.com/cboettig/knitcitations.&#34;&gt;&lt;a href=&#34;https://githu
     
     <item>
       <title>Epi vs Biostat Kickball match Spring 2013</title>
-      <link>https://lcolladotor.github.io/2013/04/24/Epi-vs-Biostat-Kickball-match-Spring-2013/</link>
+      <link>https://lcolladotor.github.io/2013/04/24/epi-vs-biostat-kickball-match-spring-2013/</link>
       <pubDate>Wed, 24 Apr 2013 00:00:00 +0000</pubDate>
-      <guid>https://lcolladotor.github.io/2013/04/24/Epi-vs-Biostat-Kickball-match-Spring-2013/</guid>
+      <guid>https://lcolladotor.github.io/2013/04/24/epi-vs-biostat-kickball-match-spring-2013/</guid>
       <description>&lt;p&gt;This past Saturday the Epi and Biostat troops met for another fun kickball match. Obviously Biostat beat Epi, yup I know: again! This time the score was 15-8 (according to our bookkeeper and captain John) or 12-8 (according to some in Epi).&lt;/p&gt;
 &lt;p&gt;There was a hint of a surprise at the beginning when Epi scored two runs in the top of the first inning. However, the tide changed back with a homerun by Rumen. Sadly, one of the Epi players got injured and carried out of the court in that play. Rumen also pulled his quad with the big hit and was limited for the rest of the match.&lt;/p&gt;
 &lt;p&gt;From that inning on forth we saw both teams having fun kicking the ball as far as we could or aim for in between the defensive lines. There were plenty of sacrifice hits, some occasional errors, but overall we had a lot of fun!&lt;/p&gt;
@@ -11932,9 +11932,9 @@ https://github.com/cboettig/knitcitations.&#34;&gt;&lt;a href=&#34;https://githu
     
     <item>
       <title>&#34;Do analytics really tell the whole story?&#34;</title>
-      <link>https://lcolladotor.github.io/2013/03/31/Do-analytics-really-tell-the-whole-story/</link>
+      <link>https://lcolladotor.github.io/2013/03/31/do-analytics-really-tell-the-whole-story/</link>
       <pubDate>Sun, 31 Mar 2013 00:00:00 +0000</pubDate>
-      <guid>https://lcolladotor.github.io/2013/03/31/Do-analytics-really-tell-the-whole-story/</guid>
+      <guid>https://lcolladotor.github.io/2013/03/31/do-analytics-really-tell-the-whole-story/</guid>
       <description>&lt;p&gt;&amp;#8220;&lt;a href=&#34;http://www.packers.com/news-and-events/article-1/Do-analytics-really-tell-the-whole-story/86248baa-e8ec-4772-a0df-7693676812be?campaign=FB130330&#34;&gt;Do analytics really tell the whole story?&lt;/a&gt;&#34; by Vic Ketchman explores how analytics is used nowadays in the NFL draft. The entry point is the &#34;Moneyball&#34; movie and Ketchman&amp;#8217;s piece is mainly a digested interview to Tony Villiotti from draftmetrics.com&lt;/p&gt;
 &lt;p&gt;According to him:&lt;/p&gt;
 &lt;blockquote&gt;
@@ -11953,9 +11953,9 @@ https://github.com/cboettig/knitcitations.&#34;&gt;&lt;a href=&#34;https://githu
     
     <item>
       <title>Have you been &#39;relative stupid&#39;?</title>
-      <link>https://lcolladotor.github.io/2013/03/31/Have-you-been-relative-stupid/</link>
+      <link>https://lcolladotor.github.io/2013/03/31/have-you-been-relative-stupid/</link>
       <pubDate>Sun, 31 Mar 2013 00:00:00 +0000</pubDate>
-      <guid>https://lcolladotor.github.io/2013/03/31/Have-you-been-relative-stupid/</guid>
+      <guid>https://lcolladotor.github.io/2013/03/31/have-you-been-relative-stupid/</guid>
       <description>&lt;p&gt;I enjoyed reading &amp;#8220;&lt;a href=&#34;http://jcs.biologists.org/content/121/11/1771.full&#34;&gt;The importance of stupidity in scientific research&lt;/a&gt;&#34; by Martin A. Schwartz which I learned existed through &lt;a href=&#34;https://twitter.com/hmason&#34;&gt;@hmason&lt;/a&gt; and &lt;a href=&#34;https://twitter.com/simplystats&#34;&gt;@simplystats&lt;/a&gt;. &lt;/p&gt;
 &lt;p&gt;I found the point of how it&amp;#8217;s normal to feel stupid in academia and specially in Ph.D. programs to be illuminating. But Schwartz clarifies that there are other kinds of stupid:&lt;/p&gt;
 &lt;blockquote&gt;
@@ -11969,9 +11969,9 @@ https://github.com/cboettig/knitcitations.&#34;&gt;&lt;a href=&#34;https://githu
     
     <item>
       <title>Great commentary on sequestration&#39;s impact on research! National media should talk about this and YOU should read it!!!</title>
-      <link>https://lcolladotor.github.io/2013/03/28/great-commentary-on-sequestrations-impact-on-research/</link>
+      <link>https://lcolladotor.github.io/2013/03/28/great-commentary-on-sequestrations-impact-on-research-national-media-should-talk-about-this-and-you-should-read-it/</link>
       <pubDate>Thu, 28 Mar 2013 00:00:00 +0000</pubDate>
-      <guid>https://lcolladotor.github.io/2013/03/28/great-commentary-on-sequestrations-impact-on-research/</guid>
+      <guid>https://lcolladotor.github.io/2013/03/28/great-commentary-on-sequestrations-impact-on-research-national-media-should-talk-about-this-and-you-should-read-it/</guid>
       <description>&lt;p&gt;Today &lt;a href=&#34;http://www.biostat.jhsph.edu/%7Ejleek/&#34;&gt;Jeffrey T. Leek&lt;/a&gt; and &lt;a href=&#34;http://en.wikipedia.org/wiki/Steven_Salzberg&#34;&gt;Steven L. Salzberg&lt;/a&gt; published a paper commentary in Genome Biology today titled “&lt;a href=&#34;http://genomebiology.com/2013/14/3/109&#34;&gt;Sequestration: inadvertently killing biomedical research to score political points&lt;/a&gt;” (&lt;span class=&#34;showtooltip&#34; title=&#34;Leek J and Salzberg S (2013). Sequestration: Inadvertently  Killing Biomedical Research to Score Political Points. _Genome  Biology_, *14*. ISSN 1465-6906,   http://dx.doi.org/10.1186/gb-2013-14-3-109.&#34;&gt;&lt;a href=&#34;http://dx.doi.org/10.1186/gb-2013-14-3-109&#34;&gt;Leek &amp;amp; Salzberg, 2013&lt;/a&gt;&lt;/span&gt;) which I think is a &lt;strong&gt;must read for anyone&lt;/strong&gt;. Seriously!&lt;/p&gt;
 &lt;p&gt;I do not mean &lt;em&gt;anyone involved in research&lt;/em&gt;, or all scientists. I mean, this commentary should be in the &lt;strong&gt;national media&lt;/strong&gt;. &lt;strong&gt;Why&lt;/strong&gt;?&lt;/p&gt;
 &lt;p&gt;Well, let me approach the technical side first. You might think that anything that appears in a scientific journal—despite any efforts to make it accessible to the general public—will rely on words whose meaning is mostly only understood by scientists. That is not the case in this commentary: it is a dual letter meant to be read by those in Congress, but it is also an educational commentary for the general public.&lt;/p&gt;
@@ -12005,9 +12005,9 @@ https://github.com/cboettig/knitcitations.&#34;&gt;&lt;a href=&#34;https://githu
     
     <item>
       <title>New Citi ThankYou ballon TV commercial looks like a ripoff of Hello Kitty in Space</title>
-      <link>https://lcolladotor.github.io/2013/03/27/new-citi-thankyou-ballon-tv-commercial-looks-like-a/</link>
+      <link>https://lcolladotor.github.io/2013/03/27/new-citi-thankyou-ballon-tv-commercial-looks-like-a-ripoff-of-hello-kitty-in-space/</link>
       <pubDate>Wed, 27 Mar 2013 00:00:00 +0000</pubDate>
-      <guid>https://lcolladotor.github.io/2013/03/27/new-citi-thankyou-ballon-tv-commercial-looks-like-a/</guid>
+      <guid>https://lcolladotor.github.io/2013/03/27/new-citi-thankyou-ballon-tv-commercial-looks-like-a-ripoff-of-hello-kitty-in-space/</guid>
       <description>&lt;p&gt;I don&amp;#8217;t know about you, but I think that this new &amp;#8220;Citi ThankYou Cards&amp;#8221; TV commercial is trying to ride the popularity train from the &amp;#8220;HELLO KITTY IN SPACE&amp;#8221; video.&lt;/p&gt;
 &lt;p&gt;&lt;iframe frameborder=&#34;0&#34; height=&#34;315&#34; src=&#34;http://www.youtube.com/embed/5qZQ0POmpkM?rel=0&#34; width=&#34;560&#34;&gt;&lt;/iframe&gt;&lt;/p&gt;
 &lt;p&gt;&lt;iframe frameborder=&#34;0&#34; height=&#34;315&#34; src=&#34;http://www.youtube.com/embed/5REsCTG4-Gg?rel=0&#34; width=&#34;560&#34;&gt;&lt;/iframe&gt;&lt;/p&gt;
@@ -12018,9 +12018,9 @@ https://github.com/cboettig/knitcitations.&#34;&gt;&lt;a href=&#34;https://githu
     
     <item>
       <title>Predicting who will win a NFL match at half time</title>
-      <link>https://lcolladotor.github.io/2013/03/23/Predicting-who-will-win-a-NFL-match-at-half-time/</link>
+      <link>https://lcolladotor.github.io/2013/03/23/predicting-who-will-win-a-nfl-match-at-half-time/</link>
       <pubDate>Sat, 23 Mar 2013 00:00:00 +0000</pubDate>
-      <guid>https://lcolladotor.github.io/2013/03/23/Predicting-who-will-win-a-NFL-match-at-half-time/</guid>
+      <guid>https://lcolladotor.github.io/2013/03/23/predicting-who-will-win-a-nfl-match-at-half-time/</guid>
       <description>&lt;p&gt;It was great to have a little break, &lt;em&gt;Spring break&lt;/em&gt;, although the weather didn&amp;#8217;t feel like spring at all! During the early part of the break I worked on my final project for Jeff Leek&amp;#8217;s data analysis class, which we call 140.753 here. Continuing &lt;a href=&#34;http://fellgernon.tumblr.com/tagged/jhsph753#.UU44Y1vF2c4&#34;&gt;my previous posts on the topic&lt;/a&gt;, this time I&amp;#8217;ll share the results of my final project.&lt;/p&gt;
 &lt;p&gt;At the beginning of the course, we had to submit a project plan (more like a proposal) and &lt;a href=&#34;https://github.com/lcolladotor/lcollado753/blob/master/hw/projectplan/lcollado_projectplan.pdf&#34;&gt;in mine&lt;/a&gt; I announced my interest to look into some sports data. At the time I included a few links to Brian Burke&amp;#8217;s Advanced NFL Stats site (&lt;span class=&#34;showtooltip&#34; title=&#34;(2013). Advanced NFL Stats.   http://www.advancednflstats.com/ [Online. last-accessed:  2013-03-23 23:28:38].  http://www.advancednflstats.com/.&#34;&gt;&lt;a href=&#34;http://www.advancednflstats.com/&#34;&gt;Burke&lt;/a&gt;&lt;/span&gt;). At the time I didn&amp;#8217;t know that Burke&amp;#8217;s site described in detail a lot of the information I would end up using.&lt;/p&gt;
 &lt;p&gt;My final project had to do with splitting NFL games by half and then use only the play-by-play data from the first half to predict if team A or B would win the game. My overall goal was to have some fun with sports data which I had never looked at, but then also try to come up with something I would personally use in the future. So, why split games by half? I personally would like to know if I should keep watching a game or not at half time. Having a tool to help me decide would be great, and well, if the team I&amp;#8217;m rooting for has high chances of losing or winning, ideally I would switch to doing something else. A related question that I didn&amp;#8217;t try to answer is which half is worth watching? This would be a meaningful question if you only have time to watch one of them.&lt;/p&gt;
@@ -12130,9 +12130,9 @@ https://github.com/cboettig/knitcitations.&#34;&gt;&lt;a href=&#34;https://githu
     
     <item>
       <title>&#34;I am a writer&#34; exercise</title>
-      <link>https://lcolladotor.github.io/2013/03/21/I-am-a-writer-exercise/</link>
+      <link>https://lcolladotor.github.io/2013/03/21/i-am-a-writer-exercise/</link>
       <pubDate>Thu, 21 Mar 2013 00:00:00 +0000</pubDate>
-      <guid>https://lcolladotor.github.io/2013/03/21/I-am-a-writer-exercise/</guid>
+      <guid>https://lcolladotor.github.io/2013/03/21/i-am-a-writer-exercise/</guid>
       <description>&lt;p&gt;I do not have a clear memory of when I started to write or in which language it was. My first written words might have been in English since I lived in Boston (USA) three years during my early childhood. By age five I was back in Mexico and that is where I am sure I wrote my first full homeworks. During elementary school, I changed languages once more—this time to French. By middle school, I started to be interested in two new types of languages. One was mathematics which I liked, but which I didn&amp;#8217;t consider till much later. The other was related to computers as I learnt the very basics of HTML—that&amp;#8217;s all I know so far. In college—having reverted back to Spanish and English—and in my current stage in graduate school, I am a writer because I write—I mainly typeset using &lt;code&gt;LaTeX&lt;/code&gt;—my homeworks, code in &lt;code&gt;R&lt;/code&gt;, and summarize findings in reports. For the past year, I have been using &lt;a href=&#34;http://fellgernon.tumblr.com/&#34;&gt;Fellgernon Bit&lt;/a&gt; to practice writing and hopefully improve my skills. Furthermore, for me the process of writing helps me clarify my thoughts and organize them before attempting to communicate them. Sometimes it works, others it doesn&amp;#8217;t. Finally, I am a writer because it is crucial in the academic environment to be able to communicate through the printed word. This is tricky because sometimes you want to be very short, direct but not leave anything important out, like when emailing a professor. Other times, you have to be very precise and clear yet tell an interesting story such as when writing a scientific report.&lt;/p&gt;
 &lt;p&gt;Overall, I consider myself a writer in training and would like to improve. But as with everything, practice is key. That&amp;#8217;s a big part of why I blog and why I&amp;#8217;m enrolled in this course.&lt;/p&gt;
 </description>
@@ -12140,9 +12140,9 @@ https://github.com/cboettig/knitcitations.&#34;&gt;&lt;a href=&#34;https://githu
     
     <item>
       <title>And so begins English Composition I</title>
-      <link>https://lcolladotor.github.io/2013/03/21/And-so-begins-English-Composition-I/</link>
+      <link>https://lcolladotor.github.io/2013/03/21/and-so-begins-english-composition-i/</link>
       <pubDate>Thu, 21 Mar 2013 00:00:00 +0000</pubDate>
-      <guid>https://lcolladotor.github.io/2013/03/21/And-so-begins-English-Composition-I/</guid>
+      <guid>https://lcolladotor.github.io/2013/03/21/and-so-begins-english-composition-i/</guid>
       <description>&lt;p&gt;This week started the English Composition I: Achieving Expertise course (&lt;span class=&#34;showtooltip&#34; title=&#34;(2013). Coursera.  https://www.coursera.org/ [Online.  last-accessed: 2013-03-21 03:47:13].   https://www.coursera.org/course/composition.&#34;&gt;&lt;a href=&#34;https://www.coursera.org/course/composition&#34;&gt;Comer, 2013&lt;/a&gt;&lt;/span&gt;) that I have been looking forward to.&lt;/p&gt;
 &lt;p&gt;I am not sure yet how long I will last, but I hope to enjoy it as much as I can. Plus, it should help me with my posting and other writing areas. While I last in the course, I plan to publish my writings in the blog too. So you will hopefully see me be more active here.&lt;/p&gt;
 &lt;p&gt;As it is important to cite when writing, I have also figured out how to do so automatically in Rmd files. For that I learnt how to use &lt;strong&gt;knitcitations&lt;/strong&gt; from the GitHub instructions (&lt;span class=&#34;showtooltip&#34; title=&#34;cboettig (2013). knitcitations.   https://github.com/cboettig/knitcitations [Online. last-accessed:  2013-03-21 03:19:44].   https://github.com/cboettig/knitcitations.&#34;&gt;&lt;a href=&#34;https://github.com/cboettig/knitcitations&#34;&gt;knitcitations&lt;/a&gt;&lt;/span&gt;) and a explanatory post (&lt;span class=&#34;showtooltip&#34; title=&#34;Boettiger C (2013). knitcitations.   http://www.carlboettiger.info/2012/05/30/knitcitations.html  [Online. last-accessed: 2013-03-21 02:15:41].   http://www.carlboettiger.info/2012/05/30/knitcitations.html.&#34;&gt;&lt;a href=&#34;http://www.carlboettiger.info/2012/05/30/knitcitations.html&#34;&gt;Boettiger, 2013&lt;/a&gt;&lt;/span&gt;).&lt;/p&gt;
@@ -12168,9 +12168,9 @@ https://github.com/cboettig/knitcitations.&#34;&gt;&lt;a href=&#34;https://githu
     
     <item>
       <title>Commenting scientific papers</title>
-      <link>https://lcolladotor.github.io/2013/03/11/Commenting-scientific-papers/</link>
+      <link>https://lcolladotor.github.io/2013/03/11/commenting-scientific-papers/</link>
       <pubDate>Mon, 11 Mar 2013 00:00:00 +0000</pubDate>
-      <guid>https://lcolladotor.github.io/2013/03/11/Commenting-scientific-papers/</guid>
+      <guid>https://lcolladotor.github.io/2013/03/11/commenting-scientific-papers/</guid>
       <description>&lt;p&gt;I&amp;#8217;ve been thinking about commenting papers in blog posts. I did a &lt;a href=&#34;http://fellgernon.tumblr.com/tagged/Paper%20comments#.UT534NHF0W8&#34;&gt;few some long time ago&lt;/a&gt;, but now I&amp;#8217;m thinking of doing this activity more systematically. There are several reasons why I&amp;#8217;m thinking of doing this, say for 1 paper a week. It has the obvious advantage of forcing me to read a paper in depth per week. At the same time, I want to learn more from others. See what I like in other papers and maybe avoid some mistakes. There are two main lines of papers that I would be posting about. Anything that is somewhat close to my research (genomics, RNA-seq, biostatistics, bioconductor, visualization) and anything done by my undergrad peers from &lt;a href=&#34;http://www.lcg.unam.mx/&#34;&gt;LCG-UNAM&lt;/a&gt;. I don&amp;#8217;t think that there is a compilation of papers from LCG students despite many of us doing research all over the globe —Mexico, US, Canada, Denmark, France, England, Germany, Switzerland, Austria, Australia to name a few countries. Maybe compiling a list of papers with contributions from LCG students is a task for &lt;a href=&#34;http://masciencia.org/&#34;&gt;Más Ciencia por México&lt;/a&gt; which seeks to promote science in Mexico. But I would be happy to learn what others are doing and in a way keep in touch academically. &lt;/p&gt;
 &lt;p&gt;Another reason in favor is that blogging helps me practice my English. And writing helps me organize my ideas.&lt;/p&gt;
 &lt;p&gt;But, the question remains, if you systematically comment papers, what would you comment on?&lt;/p&gt;
@@ -12185,9 +12185,9 @@ https://github.com/cboettig/knitcitations.&#34;&gt;&lt;a href=&#34;https://githu
     
     <item>
       <title>Analyzing SimplyStatistics visits info</title>
-      <link>https://lcolladotor.github.io/2013/03/09/Analyzing-SimplyStatistics-visits-info/</link>
+      <link>https://lcolladotor.github.io/2013/03/09/analyzing-simplystatistics-visits-info/</link>
       <pubDate>Sat, 09 Mar 2013 00:00:00 +0000</pubDate>
-      <guid>https://lcolladotor.github.io/2013/03/09/Analyzing-SimplyStatistics-visits-info/</guid>
+      <guid>https://lcolladotor.github.io/2013/03/09/analyzing-simplystatistics-visits-info/</guid>
       <description>&lt;p&gt;Recently we had to analyze the data of the number of visits per day to &lt;a href=&#34;http://simplystatistics.org/&#34;&gt;SimplyStatistics.org&lt;/a&gt;. There were two goals:&lt;/p&gt;
 &lt;ol&gt;&lt;li&gt;Estimate the fraction of visitors retained after a spike in the number of visitors&lt;/li&gt;
 &lt;li&gt;Identify (if any) any factors that influence the fraction estimated in 1.&lt;/li&gt;
@@ -12202,9 +12202,9 @@ https://github.com/cboettig/knitcitations.&#34;&gt;&lt;a href=&#34;https://githu
     
     <item>
       <title>Alfred: a must for any Mac user</title>
-      <link>https://lcolladotor.github.io/2013/02/15/Alfred-a-must-for-any-Mac-user/</link>
+      <link>https://lcolladotor.github.io/2013/02/15/alfred-a-must-for-any-mac-user/</link>
       <pubDate>Fri, 15 Feb 2013 00:00:00 +0000</pubDate>
-      <guid>https://lcolladotor.github.io/2013/02/15/Alfred-a-must-for-any-Mac-user/</guid>
+      <guid>https://lcolladotor.github.io/2013/02/15/alfred-a-must-for-any-mac-user/</guid>
       <description>&lt;p&gt;At the beginning of the semester, I decided to go hunting for Mac apps that would help me be more organizing and/or enjoy my Mac even more. After all, I was using the basics –with multiple spaces– and had only customized my favorite editors. &lt;/p&gt;
 &lt;p&gt;It turns out that &lt;a href=&#34;http://bit.ly/12w0M6m&#34;&gt;Alfred&lt;/a&gt; is an excellent app. The free version can get you a lot of mileage and save you lots of time by typing alt + space, then entering  the keyword you want to search in Google. Or alt + space, image, then the  query for Google Images. Or alt + space, find, the parts of the name of a file you want. Or alt + space, in, something you want to find inside a file. I love the alt + space, define, something I want to find in the dictionary. I know that dictionaries are just around the corner [a bookmark away!] but still, thanks to Alfred I now look up words WAY more frequently than what I did before. I mean, just not having to move my hands away from my keyboard and doing a ton of stuff is just great =)&lt;/p&gt;
 &lt;p&gt;There are plenty of other default searches that come with Alfred&amp;#8217;s free version. Another thing that I love is using it to do system commands like lock the screen, or send my computer to sleep.&lt;/p&gt;
@@ -12214,18 +12214,18 @@ https://github.com/cboettig/knitcitations.&#34;&gt;&lt;a href=&#34;https://githu
     
     <item>
       <title>Second cultural mixer today!</title>
-      <link>https://lcolladotor.github.io/2013/02/15/Second-cultural-mixer-today/</link>
+      <link>https://lcolladotor.github.io/2013/02/15/second-cultural-mixer-today/</link>
       <pubDate>Fri, 15 Feb 2013 00:00:00 +0000</pubDate>
-      <guid>https://lcolladotor.github.io/2013/02/15/Second-cultural-mixer-today/</guid>
+      <guid>https://lcolladotor.github.io/2013/02/15/second-cultural-mixer-today/</guid>
       <description>&lt;img src=&#34;http://24.media.tumblr.com/f55efedc3ca5189bcc1600941f7ef56c/tumblr_mi58wrDjuB1qgn8kjo1_500.png&#34;&gt;
 </description>
     </item>
     
     <item>
       <title>Liking &#34;Inbox Zero for Life&#34;</title>
-      <link>https://lcolladotor.github.io/2013/02/14/Liking-Inbox-Zero-for-Life/</link>
+      <link>https://lcolladotor.github.io/2013/02/14/liking-inbox-zero-for-life/</link>
       <pubDate>Thu, 14 Feb 2013 00:00:00 +0000</pubDate>
-      <guid>https://lcolladotor.github.io/2013/02/14/Liking-Inbox-Zero-for-Life/</guid>
+      <guid>https://lcolladotor.github.io/2013/02/14/liking-inbox-zero-for-life/</guid>
       <description>&lt;p&gt;I&amp;#8217;ve been using the &amp;#8220;&lt;a href=&#34;http://bit.ly/12vYvIh&#34;&gt;Inbox Zero for Life&lt;/a&gt;&#34; strategy for a few weeks, and I think that it&amp;#8217;s been payed off for me in this short span.&lt;/p&gt;
 &lt;p&gt;As it&amp;#8217;s stated in that long guide, one of the major concerns you might have is that it could end up as just changing a current problem for another one. I think that so far, that hasn&amp;#8217;t been the case for me. Sure, my starred emails is not 0, but it stays at a steady number and doesn&amp;#8217;t increase as my inbox (even with priority inbox) did. &lt;/p&gt;
 &lt;p&gt;I also have a few filters in place that pick up the emails that I will most likely never read. For example, advertising emails and school wide announcements.&lt;/p&gt;
@@ -12236,9 +12236,9 @@ https://github.com/cboettig/knitcitations.&#34;&gt;&lt;a href=&#34;https://githu
     
     <item>
       <title>Sharing my work for &#34;Advanced Methods III&#34;</title>
-      <link>https://lcolladotor.github.io/2013/02/13/Sharing-my-work-for-Advanced-Methods-III/</link>
+      <link>https://lcolladotor.github.io/2013/02/13/sharing-my-work-for-advanced-methods-iii/</link>
       <pubDate>Wed, 13 Feb 2013 00:00:00 +0000</pubDate>
-      <guid>https://lcolladotor.github.io/2013/02/13/Sharing-my-work-for-Advanced-Methods-III/</guid>
+      <guid>https://lcolladotor.github.io/2013/02/13/sharing-my-work-for-advanced-methods-iii/</guid>
       <description>&lt;p&gt;This semester I&amp;#8217;m taking the live version of the Data Analysis class by Jeff Leek. His more &lt;a href=&#34;https://class.coursera.org/dataanalysis-001/class/index&#34;&gt;popular version of the course is available through Coursera&lt;/a&gt;. &lt;/p&gt;
 &lt;p&gt;One of the things that Jeff promotes is reproducibility and sharing code. I share that tendency and thus created a Git repository for my homework and code for the class: &lt;a href=&#34;http://bit.ly/12vSk7d&#34;&gt;lcollado753&lt;/a&gt;. I&amp;#8217;m hosting it with GitHub to try it out since I started with Mercurial via Bitbucket. &lt;/p&gt;
 &lt;p&gt;Part of me would love it if everyone in the class had their own Git repositories. I mean, this class involves lots of practice exercises and there are plenty of R packages and functions that others use that I would like to learn. As I don&amp;#8217;t see this happening, I think that it would be great to list the packages/functions you think could be interesting to others at the end of the write-ups. However, this involves sharing the reports and I don&amp;#8217;t know if that will happen.&lt;/p&gt;
@@ -12252,9 +12252,9 @@ https://github.com/cboettig/knitcitations.&#34;&gt;&lt;a href=&#34;https://githu
     
     <item>
       <title>Adding youtube videos in pdfs, html reports and html presentations</title>
-      <link>https://lcolladotor.github.io/2012/12/05/adding-youtube-videos-in-pdfs-html-reports/</link>
+      <link>https://lcolladotor.github.io/2012/12/05/adding-youtube-videos-in-pdfs-html-reports-and-html-presentations/</link>
       <pubDate>Wed, 05 Dec 2012 00:00:00 +0000</pubDate>
-      <guid>https://lcolladotor.github.io/2012/12/05/adding-youtube-videos-in-pdfs-html-reports/</guid>
+      <guid>https://lcolladotor.github.io/2012/12/05/adding-youtube-videos-in-pdfs-html-reports-and-html-presentations/</guid>
       <description>&lt;p&gt;I got a question today on how to add a video to a beamer pdf presentation. Well, I had never done it, but I got curious enough to google around for a bit and here is the end product.&lt;/p&gt;
 &lt;p&gt;One way of doing it is using the &lt;a href=&#34;http://www.ctan.org/pkg/media9&#34;&gt;media9&lt;/a&gt; tex package. For this to work you need to have the latest version of texlive (or miktex). Then, it&amp;#8217;s quite straight forward to include the video. The issue is that you have to open the pdf with Acrobat Reader 10+ (9 something works. I think that it&amp;#8217;s 9.4.1+ but well, the point is that you need an updated version). You will also need a live web connection to actually show the video. An alternative (if you have the video file) is to convert it to swf and embed it. &lt;/p&gt;
 &lt;p&gt;Here is my &lt;a href=&#34;http://www.biostat.jhsph.edu/~lcollado/misc/video_in_beamer/video.tex&#34;&gt;tex&lt;/a&gt; example file with the corresponding &lt;a href=&#34;http://www.biostat.jhsph.edu/~lcollado/misc/video_in_beamer/video.pdf&#34;&gt;pdf&lt;/a&gt; output compiled using pdflatex. Remember that you need Acrobat Reader to actually see the video in the pdf.&lt;/p&gt;
@@ -12270,9 +12270,9 @@ https://github.com/cboettig/knitcitations.&#34;&gt;&lt;a href=&#34;https://githu
     
     <item>
       <title>Introduction to R and Biostatistics (2012 version): presentation</title>
-      <link>https://lcolladotor.github.io/2012/11/12/Introduction-to-R-and-Biostatistics-2012-version/</link>
+      <link>https://lcolladotor.github.io/2012/11/12/introduction-to-r-and-biostatistics-2012-version-presentation/</link>
       <pubDate>Mon, 12 Nov 2012 00:00:00 +0000</pubDate>
-      <guid>https://lcolladotor.github.io/2012/11/12/Introduction-to-R-and-Biostatistics-2012-version/</guid>
+      <guid>https://lcolladotor.github.io/2012/11/12/introduction-to-r-and-biostatistics-2012-version-presentation/</guid>
       <description>&lt;p&gt;To follow my &lt;a href=&#34;http://fellgernon.tumblr.com/post/34677935591/introducing-r-and-biostatistics-to-first-year-lcg#.UKFlW-Oe918&#34;&gt;Introducing R and Biostatistics to first year LCG students (2012 version)&lt;/a&gt; post,  you can now find the presentation online from my site either in &lt;a href=&#34;http://www.biostat.jhsph.edu/~lcollado/lcg/introR2012/intro_R_Biostat_LCG_2012_slides.html&#34;&gt;presentation format&lt;/a&gt;, in a &lt;a href=&#34;http://www.biostat.jhsph.edu/~lcollado/lcg/introR2012/intro_R_Biostat_LCG_2012.html&#34;&gt;single webpage format&lt;/a&gt;, or the &lt;a href=&#34;http://www.biostat.jhsph.edu/~lcollado/lcg/introR2012/intro_R_Biostat_LCG_2012.Rmd&#34;&gt;raw Rmd file&lt;/a&gt;. To prove the point that publishing to &lt;a href=&#34;http://rpubs.com/&#34;&gt;RPubs&lt;/a&gt; is super easy, you can also find the &lt;a href=&#34;http://rpubs.com/lcollado/2618&#34;&gt;single webpage format over there&lt;/a&gt;. I also like how you can comment and share in RPubs.&lt;/p&gt;
 &lt;p&gt;One of the challenges of giving a presentation to first year students is finding the balance between introducing them to cool things you are doing in your work and actually giving a talk that they can follow. I thought about this and ended dropping anything related to my work.&lt;/p&gt;
 &lt;p&gt;My presentation was split pretty much in two parts. First, I wanted to promote some philosophical discussion about what is statistics. Second, I gave a brief overview of what you can do with R. Or more exactly, what they should be able to learn to do even if they become &lt;em&gt;wet &lt;/em&gt;biologists.&lt;/p&gt;
@@ -12289,9 +12289,9 @@ https://github.com/cboettig/knitcitations.&#34;&gt;&lt;a href=&#34;https://githu
     
     <item>
       <title>me: Bad rm, don&#39;t delete stuff I didn&#39;t want to delete! (rm: well, I do what you tell me to do!)</title>
-      <link>https://lcolladotor.github.io/2012/11/07/me-bad-rm-dont-delete-stuff-i-didnt-want-to-delete/</link>
+      <link>https://lcolladotor.github.io/2012/11/07/me-bad-rm-dont-delete-stuff-i-didnt-want-to-delete-rm-well-i-do-what-you-tell-me-to-do/</link>
       <pubDate>Wed, 07 Nov 2012 00:00:00 +0000</pubDate>
-      <guid>https://lcolladotor.github.io/2012/11/07/me-bad-rm-dont-delete-stuff-i-didnt-want-to-delete/</guid>
+      <guid>https://lcolladotor.github.io/2012/11/07/me-bad-rm-dont-delete-stuff-i-didnt-want-to-delete-rm-well-i-do-what-you-tell-me-to-do/</guid>
       <description>&lt;p&gt;When Sandy was in town at some point I started doing some of my research work, but I shouldn&amp;#8217;t have. I basically did a silly mistake and erased files that take a long time to compute.&lt;/p&gt;
 &lt;p&gt;Prior to being here, I had an alias in my bash profile like this:&lt;/p&gt;
 &lt;p&gt;alias rm=&amp;#8217;rm -i&amp;#8217;&lt;/p&gt;
@@ -12306,9 +12306,9 @@ https://github.com/cboettig/knitcitations.&#34;&gt;&lt;a href=&#34;https://githu
     
     <item>
       <title>Got acknowledged in a paper ^^</title>
-      <link>https://lcolladotor.github.io/2012/10/31/got-acknowledged-in-a-paper-s4/</link>
+      <link>https://lcolladotor.github.io/2012/10/31/got-acknowledged-in-a-paper/</link>
       <pubDate>Wed, 31 Oct 2012 00:00:00 +0000</pubDate>
-      <guid>https://lcolladotor.github.io/2012/10/31/got-acknowledged-in-a-paper-s4/</guid>
+      <guid>https://lcolladotor.github.io/2012/10/31/got-acknowledged-in-a-paper/</guid>
       <description>&lt;p&gt;During the weekend while I was talking with a friend and former colleague, I realized that my name was mentioned in the acknowledgments section of a paper :) I haven&amp;#8217;t been much in touch with what&amp;#8217;s been happening back home, so this was a nice surprise.&lt;/p&gt;
 &lt;p&gt;The paper is: &lt;a href=&#34;http://www.biomedcentral.com/1471-2164/13/385&#34;&gt;Genetic changes during a laboratory adaptive evolution process that allowed fast growth in glucose to an &lt;em&gt;Escherichia coli&lt;/em&gt; strain lacking the major glucose transport system&lt;/a&gt; by Aguilar&lt;em&gt; et al&lt;/em&gt;. It was published in BMC Genomics in 2012.&lt;/p&gt;
 </description>
@@ -12316,9 +12316,9 @@ https://github.com/cboettig/knitcitations.&#34;&gt;&lt;a href=&#34;https://githu
     
     <item>
       <title>Introducing R and Biostatistics to first year LCG students (2012 version)</title>
-      <link>https://lcolladotor.github.io/2012/10/30/introducing-r-and-biostatistics-to-first-year-lcg/</link>
+      <link>https://lcolladotor.github.io/2012/10/30/introducing-r-and-biostatistics-to-first-year-lcg-students-2012-version/</link>
       <pubDate>Tue, 30 Oct 2012 00:00:00 +0000</pubDate>
-      <guid>https://lcolladotor.github.io/2012/10/30/introducing-r-and-biostatistics-to-first-year-lcg/</guid>
+      <guid>https://lcolladotor.github.io/2012/10/30/introducing-r-and-biostatistics-to-first-year-lcg-students-2012-version/</guid>
       <description>&lt;p&gt;On Friday November 9th I&amp;#8217;ll be giving a talk to the first year students from the Undergraduate Program on Genomic Sciences (LCG in Spanish) during their &amp;#8220;Seminar 1: Introduction to Bioinformatics&amp;#8221; course. It&amp;#8217;s just like I did a year ago as I documented in my post &lt;a href=&#34;http://fellgernon.tumblr.com/post/13739343319/introducing-biostatistics-to-first-year-lcg-students#.UJBq6Wl25FQ&#34;&gt;Introducing Biostatistics to first year LCG students&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Well, this time I&amp;#8217;ll change things a bit. I&amp;#8217;m allowed to require the students to read 2-3 papers before my talk to introduce them to my field. I&amp;#8217;ll do so, but in a more peculiar way by requiring them to listen in to a few videos I selected. So, without further ado here are the three required &amp;#8220;papers&amp;#8221;:&lt;/p&gt;
 &lt;p&gt;Here is &amp;#8220;&lt;strong&gt;paper 1&lt;/strong&gt;&#34; (~30 minutes). The goal is to introduce you to the basic workings of R and also to great sources of R videos.&lt;/p&gt;
@@ -12371,9 +12371,9 @@ https://github.com/cboettig/knitcitations.&#34;&gt;&lt;a href=&#34;https://githu
     
     <item>
       <title>Super basic Illustrator: event invitation</title>
-      <link>https://lcolladotor.github.io/2012/10/24/Super-basic-Illustrator-event-invitation/</link>
+      <link>https://lcolladotor.github.io/2012/10/24/super-basic-illustrator-event-invitation/</link>
       <pubDate>Wed, 24 Oct 2012 00:00:00 +0000</pubDate>
-      <guid>https://lcolladotor.github.io/2012/10/24/Super-basic-Illustrator-event-invitation/</guid>
+      <guid>https://lcolladotor.github.io/2012/10/24/super-basic-illustrator-event-invitation/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;http://www.biostat.jhsph.edu/people/student/mejia.shtml&#34;&gt;Amanda&lt;/a&gt; and I are organizing a cultural student mixer for students in our department. One of the things we needed to do was invite everyone to attend. I like using computers, but graphic design is not something that I&amp;#8217;m too excited about, but I still wanted to try something out.&lt;/p&gt;
 &lt;p&gt;My goal was to show an image of a bowling lane where the Earth (as the ball) knocks down &amp;#8220;statistical pins&amp;#8221;. We recently covered least squares in our class, so I felt that the analogy of &amp;#8220;minimizing our cultural differences&amp;#8221; fit perfectly. &lt;/p&gt;
 &lt;p&gt;I&amp;#8217;ve used Photoshop in the past, but after reading (or parts of) &lt;a href=&#34;http://www.dreaminfinity.com/nocturne/2010/10/photoshop-illustrator-or-indesign/&#34;&gt;Photoshop, Illustrator, or Indesign?&lt;/a&gt; by Chris Takakura I decided to use Illustrator. The first thing I tried to do was to crop the Earth from the following image which I found using Google Images with the &amp;#8220;large&amp;#8221; option (I didn&amp;#8217;t want small pics that would look bad if enlarged).&lt;/p&gt;
@@ -12395,9 +12395,9 @@ https://github.com/cboettig/knitcitations.&#34;&gt;&lt;a href=&#34;https://githu
     
     <item>
       <title>Visualizing colors()</title>
-      <link>https://lcolladotor.github.io/2012/10/19/Visualizing-colors/</link>
+      <link>https://lcolladotor.github.io/2012/10/19/visualizing-colors/</link>
       <pubDate>Fri, 19 Oct 2012 00:00:00 +0000</pubDate>
-      <guid>https://lcolladotor.github.io/2012/10/19/Visualizing-colors/</guid>
+      <guid>https://lcolladotor.github.io/2012/10/19/visualizing-colors/</guid>
       <description>&lt;p&gt;The other day I learnt about the existance of the colors() vector in R which specifies all the character-based colors like &amp;#8220;light blue&amp;#8221;, &amp;#8220;black&amp;#8221;, etc. So I made a simple plot to visualize them all. Here&amp;#8217;s the code:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;mat&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;matrix&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;length&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;colors&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()),&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ncol&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;9&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;byrow&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;TRUE&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;df&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;data.frame&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;col&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;colors&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(),&lt;/span&gt; 
@@ -12415,9 +12415,9 @@ https://github.com/cboettig/knitcitations.&#34;&gt;&lt;a href=&#34;https://githu
     
     <item>
       <title>Bitbucket revamped</title>
-      <link>https://lcolladotor.github.io/2012/10/09/Bitbucket-revamped/</link>
+      <link>https://lcolladotor.github.io/2012/10/09/bitbucket-revamped/</link>
       <pubDate>Tue, 09 Oct 2012 00:00:00 +0000</pubDate>
-      <guid>https://lcolladotor.github.io/2012/10/09/Bitbucket-revamped/</guid>
+      <guid>https://lcolladotor.github.io/2012/10/09/bitbucket-revamped/</guid>
       <description>&lt;p&gt;Bitbucket announced their new &amp;#8220;look&amp;#8221; today. The goal is to make it more team friendly but I guess that they also wanted to make it look fresh.&lt;/p&gt;
 &lt;p&gt;For example, the overview page now has a quick summary:&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;http://media.tumblr.com/tumblr_mbn7ffEV281qfs0hy.png&#34;/&gt;&lt;/p&gt;
@@ -12437,9 +12437,9 @@ https://github.com/cboettig/knitcitations.&#34;&gt;&lt;a href=&#34;https://githu
     
     <item>
       <title>Why aren&#39;t all of our graphs interactive?</title>
-      <link>https://lcolladotor.github.io/2012/10/08/Why-arent-all-of-our-graphs-interactive/</link>
+      <link>https://lcolladotor.github.io/2012/10/08/why-arent-all-of-our-graphs-interactive/</link>
       <pubDate>Mon, 08 Oct 2012 00:00:00 +0000</pubDate>
-      <guid>https://lcolladotor.github.io/2012/10/08/Why-arent-all-of-our-graphs-interactive/</guid>
+      <guid>https://lcolladotor.github.io/2012/10/08/why-arent-all-of-our-graphs-interactive/</guid>
       <description>&lt;p&gt;During the last pre-happy hour seminar, &lt;a href=&#34;http://www.biostat.wisc.edu/~kbroman/&#34;&gt;Karl Broman&lt;/a&gt; talked about &lt;a href=&#34;http://www.biostat.wisc.edu/~kbroman/presentations/DynamicGraphs/&#34;&gt;Why aren&amp;#8217;t all of our graphs interactive?&lt;/a&gt; I didn&amp;#8217;t know, but a few years ago Karl worked in the department and clearly promoted beer-drinking and is &lt;em&gt;the heart of the department. &lt;/em&gt;I&amp;#8217;m a fan of our pre-happy hour seminars since you have a get to listen to good/fun talks over a beer or two.&lt;/p&gt;
 &lt;p&gt;But I&amp;#8217;m also a fan of reproducible research and useful graphics. I do most of this by using &lt;a href=&#34;http://www.statistik.lmu.de/~leisch/Sweave/&#34;&gt;Sweave&lt;/a&gt; (for reproducibility) in LaTeX documents and with the R packages &lt;a href=&#34;http://cran.r-project.org/web/packages/lattice/index.html&#34;&gt;lattice&lt;/a&gt;, &lt;a href=&#34;http://cran.r-project.org/web/packages/car/index.html&#34;&gt;car&lt;/a&gt;, and &lt;a href=&#34;http://cran.r-project.org/web/packages/plotrix/index.html&#34;&gt;plotrix&lt;/a&gt;, and some &lt;a href=&#34;http://ggplot2.org/&#34;&gt;ggplot2&lt;/a&gt; (I should use it more). &lt;/p&gt;
 &lt;p&gt;Karl made &lt;a href=&#34;http://www.biostat.wisc.edu/~kbroman/presentations/DynamicGraphs/&#34;&gt;his presentation&lt;/a&gt; using html (definitely check it out!) and inserted pretty interactive graphics. His talk got me really interested and I definitely need to pick up a few tools. For example, asciidoc or R Markdown can be useful for making html documents with R code. Specially if you want to write a report and you don&amp;#8217;t want to deal with Sweave/Latex when making plots (can be a pain to know where they&amp;#8217;ll show up). &lt;/p&gt;
@@ -12463,9 +12463,9 @@ https://github.com/cboettig/knitcitations.&#34;&gt;&lt;a href=&#34;https://githu
     
     <item>
       <title>02/27/12 PHD comic: &#39;Inspired by true events&#39;</title>
-      <link>https://lcolladotor.github.io/2012/10/03/02-27-12-phd-comic-inspired-by-true-events/</link>
+      <link>https://lcolladotor.github.io/2012/10/03/02/27/12-phd-comic-inspired-by-true-events/</link>
       <pubDate>Wed, 03 Oct 2012 00:00:00 +0000</pubDate>
-      <guid>https://lcolladotor.github.io/2012/10/03/02-27-12-phd-comic-inspired-by-true-events/</guid>
+      <guid>https://lcolladotor.github.io/2012/10/03/02/27/12-phd-comic-inspired-by-true-events/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;http://www.phdcomics.com/comics.php?f=1474&#34;&gt;02/27/12 PHD comic: &amp;lsquo;Inspired by true events&amp;rsquo;&lt;/a&gt;&lt;br/&gt;&lt;p&gt;&lt;img height=&#34;217&#34; src=&#34;http://www.phdcomics.com/comics/archive/phd022712s.gif&#34; width=&#34;500&#34;/&gt;&lt;/p&gt;
 Totally what happened to me on Monday night! (whenever I saved this post as a draft :P, but it’s happening again now)&lt;/p&gt;
 </description>
@@ -12473,9 +12473,9 @@ Totally what happened to me on Monday night! (whenever I saved this post as a dr
     
     <item>
       <title>Check all your accounts for emails at once in Gmail</title>
-      <link>https://lcolladotor.github.io/2012/10/02/Check-all-your-accounts-for-emails-at-once-in-Gmail/</link>
+      <link>https://lcolladotor.github.io/2012/10/02/check-all-your-accounts-for-emails-at-once-in-gmail/</link>
       <pubDate>Tue, 02 Oct 2012 00:00:00 +0000</pubDate>
-      <guid>https://lcolladotor.github.io/2012/10/02/Check-all-your-accounts-for-emails-at-once-in-Gmail/</guid>
+      <guid>https://lcolladotor.github.io/2012/10/02/check-all-your-accounts-for-emails-at-once-in-gmail/</guid>
       <description>&lt;p&gt;Do you use Gmail as your primary email account? Primary, what? Well, I&amp;#8217;m sure that you have your personal account somewhere and your work or university account too. You can either log into each email interface or you can integrate them to a single one.&lt;/p&gt;
 &lt;p&gt;Gmail makes this easy as you can go to the &amp;#8220;Settings -&amp;gt; Accounts and Import&amp;#8221; to set up Gmail to pull all of your email into it. In that same page you can configure Gmail to send email through your work/university accounts or at least camouflage it. &lt;/p&gt;
 &lt;p&gt;That is all great, but as you will soon learn, Gmail pulls the emails from your other accounts at random intervals. It tries to do so in an intelligent way by pulling more frequently during the times of the day that you get more emails from those accounts. But you&amp;#8217;ll soon realize that some emails get pulled an hour later.&lt;/p&gt;
@@ -12494,9 +12494,9 @@ Totally what happened to me on Monday night! (whenever I saved this post as a dr
     
     <item>
       <title>JHSPH-Biostat through Coursera</title>
-      <link>https://lcolladotor.github.io/2012/10/01/JHSPH-Biostat-through-Coursera/</link>
+      <link>https://lcolladotor.github.io/2012/10/01/jhsph-biostat-through-coursera/</link>
       <pubDate>Mon, 01 Oct 2012 00:00:00 +0000</pubDate>
-      <guid>https://lcolladotor.github.io/2012/10/01/JHSPH-Biostat-through-Coursera/</guid>
+      <guid>https://lcolladotor.github.io/2012/10/01/jhsph-biostat-through-coursera/</guid>
       <description>&lt;p&gt;Have you heard of online education? If you are in the US or Mexico I&amp;#8217;m sure that you have seen some ads about online universities. Well, that&amp;#8217;s not the type of education I&amp;#8217;m talking about. I&amp;#8217;m talking about free high-quality education. &lt;/p&gt;
 &lt;p&gt;For some years, the top option has been the &lt;strong&gt;O&lt;/strong&gt;pen &lt;strong&gt;C&lt;/strong&gt;ourse&lt;strong&gt;w&lt;/strong&gt;are (OCW) organized under the &lt;a href=&#34;http://www.ocwconsortium.org/&#34;&gt;Open Courseware Consortium&lt;/a&gt; (OCWC). Back in 2009 I was pushed my undergrad (LCG-UNAM) to design and teach OCW-compliant courses. I even taught a &lt;a href=&#34;http://www.lcg.unam.mx/~lcollado/B/index_en.html&#34;&gt;course on R/Bioconductor&lt;/a&gt; and thought of it as a pilot OCW course. The first seven classes were video recorded. But that project hit a wall because many of the biology professors used slides that heavily relied on copyrighted material. For OCW courses you have to own the copyright of the material that you use (or get permission), so just the idea of having to re-do all the diagrams and figures was overwhelming. This hasn&amp;#8217;t stopped some big universities like &lt;a href=&#34;http://ocw.mit.edu/index.htm&#34;&gt;MIT from publishing OCW-compliant courses&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Recently there&amp;#8217;s been talk of the new horse in the race: &lt;a href=&#34;https://www.coursera.org/&#34;&gt;Coursera&lt;/a&gt;. What is it? Well, &lt;a href=&#34;https://www.coursera.org/about&#34;&gt;according to themselves&lt;/a&gt;:&lt;/p&gt;
@@ -12527,9 +12527,9 @@ Totally what happened to me on Monday night! (whenever I saved this post as a dr
     
     <item>
       <title>Learning about social networks through an interactive presentation</title>
-      <link>https://lcolladotor.github.io/2012/09/28/learning-about-social-networks-through-an-interactive/</link>
+      <link>https://lcolladotor.github.io/2012/09/28/learning-about-social-networks-through-an-interactive-presentation/</link>
       <pubDate>Fri, 28 Sep 2012 00:00:00 +0000</pubDate>
-      <guid>https://lcolladotor.github.io/2012/09/28/learning-about-social-networks-through-an-interactive/</guid>
+      <guid>https://lcolladotor.github.io/2012/09/28/learning-about-social-networks-through-an-interactive-presentation/</guid>
       <description>&lt;p&gt;During this week&amp;#8217;s &lt;a href=&#34;http://www.biostat.jhsph.edu/~zhwu/2012journal.html&#34;&gt;journal club meeting&lt;/a&gt; Hilary Parker (&lt;a href=&#34;http://www.biostat.jhsph.edu/~hiparker/&#34;&gt;homepage&lt;/a&gt;, &lt;a href=&#34;http://hilaryparker.com/&#34;&gt;blog&lt;/a&gt;) led the session on &amp;#8220;Identifying influential and susceptible members of social networks&amp;#8221;. Were there some speakers or why did she &amp;#8220;lead the session&amp;#8221;? By this I mean that Hilary tried a very different (and interesting) format this time. Instead of giving a talk, not a formal one like at seminars, she prepared a short presentation (publicly available &lt;a href=&#34;https://docs.google.com/presentation/d/1wlZvL8z_8bOau2ZQkvxLtOuFwEVoTeOrJeQ9dO7vATs/edit#slide=id.p&#34;&gt;here&lt;/a&gt;) that begins showing a 20 minute video. This video is by the author of the paper where he presents the key points of his research at another conference. The goal of this format was to get us to speed and hopefully provoke enough discussion to make the meeting highly interactive. Plus the author does a great job in his presentation.&lt;/p&gt;
 &lt;p&gt;Now, given that it&amp;#8217;s a biostat journal club, Hilary included some slides to explain the general Cox Proportional Hazard model before showing some of details used in the paper in question. &lt;/p&gt;
 &lt;p&gt;I think that the change of format was a step in the right direction. Hopefully others will follow.&lt;/p&gt;
@@ -12546,9 +12546,9 @@ Totally what happened to me on Monday night! (whenever I saved this post as a dr
     
     <item>
       <title>Quid @Biostat-JHSPH</title>
-      <link>https://lcolladotor.github.io/2012/09/28/Quid-Biostat-JHSPH/</link>
+      <link>https://lcolladotor.github.io/2012/09/28/quid-@biostat-jhsph/</link>
       <pubDate>Fri, 28 Sep 2012 00:00:00 +0000</pubDate>
-      <guid>https://lcolladotor.github.io/2012/09/28/Quid-Biostat-JHSPH/</guid>
+      <guid>https://lcolladotor.github.io/2012/09/28/quid-@biostat-jhsph/</guid>
       <description>&lt;p&gt;Just like most scientific departments, we have a seminar (weekly over here) where very bright people come to us to talk about their work. Being a Biostatistics department, we mostly get faculty from other Biostatistics departments from universities to talk to us. This week was quite different. Amy Heineike from &lt;strong&gt;&lt;a href=&#34;http://quid.com/&#34;&gt;Quid&lt;/a&gt;&lt;/strong&gt; gave us a talk describing their product, which fits perfectly in what is now called &amp;#8220;data science&amp;#8221;. You can see Amy at the end of the table in the picture below.&lt;/p&gt;
 &lt;p&gt;&lt;img alt=&#34;Amy is the one at the end of the table.&#34; height=&#34;168&#34; src=&#34;http://quid.com/img/life/team.jpg&#34; width=&#34;299&#34;/&gt;&lt;/p&gt;
 &lt;p&gt;So what is Quid? It&amp;#8217;s a start up tech company that provides either their software or reports derived from it that help big companies (a) analyze a field, (b) look at what the competition is doing, (c) take informed decisions (helpful for marketing). The short video below describes Quid in a more general way, check it out!&lt;/p&gt;
@@ -12574,9 +12574,9 @@ Totally what happened to me on Monday night! (whenever I saved this post as a dr
     
     <item>
       <title>Introducing Git while making your academic webpage</title>
-      <link>https://lcolladotor.github.io/2012/09/24/Introducing-Git-while-making-your-academic-webpage/</link>
+      <link>https://lcolladotor.github.io/2012/09/24/introducing-git-while-making-your-academic-webpage/</link>
       <pubDate>Mon, 24 Sep 2012 00:00:00 +0000</pubDate>
-      <guid>https://lcolladotor.github.io/2012/09/24/Introducing-Git-while-making-your-academic-webpage/</guid>
+      <guid>https://lcolladotor.github.io/2012/09/24/introducing-git-while-making-your-academic-webpage/</guid>
       <description>&lt;p&gt;Last week I gave a presentation during our computing club on how to use git (a version control system). I used as a motivating example the first steps of creating your own academic webpage. The goal was to make it interesting to both new students (who might have been more interested on the webpage part) and older students (for whom version control should be a must). The slides and all the material is publicly available through the following Bitbucket repository: &lt;a href=&#34;https://bitbucket.org/lcolladotor/html_git_intro/overview&#34;&gt;&lt;a href=&#34;https://bitbucket.org/lcolladotor/html_git_intro/overview&#34;&gt;https://bitbucket.org/lcolladotor/html_git_intro/overview&lt;/a&gt;&lt;/a&gt;. You can access the slides by clicking on &amp;#8220;Source&amp;#8221;, &amp;#8220;slides&amp;#8221; and then &amp;#8220;html_git.pdf&amp;#8221;.&lt;/p&gt;
 &lt;p&gt;For the talk, I tried to make it more interactive but at the same time I wanted to make sure that the material could work for reference in the future. For example, I added a &lt;em&gt;commands.txt&lt;/em&gt; file so anyone following me could easily copy-paste the commands. By the way, for Git Bash in Windows, you paste stuff by using the insert key instead of the usual &amp;#8220;ctrl + v&amp;#8221; shortcut.&lt;/p&gt;
 &lt;p&gt;I&amp;#8217;m posting about it as it could be useful to other people, so feel free to share it.&lt;/p&gt;
@@ -12586,9 +12586,9 @@ Totally what happened to me on Monday night! (whenever I saved this post as a dr
     
     <item>
       <title>Version control: need to learn Git</title>
-      <link>https://lcolladotor.github.io/2012/09/05/i-consider-myself-a-fan-of-using-version-control/</link>
+      <link>https://lcolladotor.github.io/2012/09/05/version-control-need-to-learn-git/</link>
       <pubDate>Wed, 05 Sep 2012 00:00:00 +0000</pubDate>
-      <guid>https://lcolladotor.github.io/2012/09/05/i-consider-myself-a-fan-of-using-version-control/</guid>
+      <guid>https://lcolladotor.github.io/2012/09/05/version-control-need-to-learn-git/</guid>
       <description>&lt;iframe width=&#34;400&#34; height=&#34;225&#34; src=&#34;http://www.youtube.com/embed/4fsSyLkBdB4?rel0&#34; frameborder=&#34;0&#34; &gt;&lt;/iframe&gt;&lt;br/&gt;&lt;p&gt;I consider myself a fan of using version control for bioinformatics/biostatistics (or any text based, like code) project. Yet my knowledge of version control systems is quite limited. I&amp;#8217;ve used Mercurial for some time, but I haven&amp;#8217;t ventured much beyond the basic commands and some GUIs for merging.&lt;/p&gt;
 &lt;p&gt;I don&amp;#8217;t recall how it all went, but I remember reading that &lt;a href=&#34;http://subversion.apache.org/&#34;&gt;Subversion&lt;/a&gt; (SVN) was much better than &lt;a href=&#34;http://www.nongnu.org/cvs/&#34;&gt;CVS&lt;/a&gt;. Also, the &lt;a href=&#34;http://www.bioconductor.org/&#34;&gt;Bioconductor project&lt;/a&gt; uses SVN. Before that I really learnt how to use SVN, someone from the Bioconductor devel list pointed me to &lt;a href=&#34;http://git-scm.com/&#34;&gt;Git&lt;/a&gt;/&lt;a href=&#34;http://mercurial.selenic.com/&#34;&gt;Mercurial&lt;/a&gt;. Around the same time I read &amp;#8220;&lt;a href=&#34;http://www.ncbi.nlm.nih.gov/pubmed/19649301&#34;&gt;A quick guide to organizing computational biology projects&lt;/a&gt;&#34; by William Noble, which further convinced me to start using a version control system. I &#34;educated&#34; (a tiny bit) myself on the topic with Wikipedia&amp;#8217;s entries on &lt;a href=&#34;http://en.wikipedia.org/wiki/Revision_control&#34;&gt;revision control&lt;/a&gt; and &lt;a href=&#34;http://en.wikipedia.org/wiki/Distributed_revision_control&#34;&gt;distributed revision control&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;I wasn&amp;#8217;t sure whether to use Mercurial or Git, but at the time &lt;a href=&#34;https://bitbucket.org/&#34;&gt;Bitbucket&lt;/a&gt; only supported Mercurial repositories. It felt pretty easy to use, specially after reading the &lt;a href=&#34;http://mercurial.selenic.com/guide/&#34;&gt;guide&lt;/a&gt; whose examples covered pretty much all I needed. By the way, I highly recommend using Bitbucket now (whether for Mercurial or Git repositories) as they offer unlimited private repositories to anyone with an academic email account.&lt;/p&gt;
@@ -12607,20 +12607,21 @@ Totally what happened to me on Monday night! (whenever I saved this post as a dr
     
     <item>
       <title>Homepage photos: which cheek you show says something?</title>
-      <link>https://lcolladotor.github.io/2012/08/30/Homepage-photos-which-cheek-you-show-says-something/</link>
+      <link>https://lcolladotor.github.io/2012/08/30/homepage-photos-which-cheek-you-show-says-something/</link>
       <pubDate>Thu, 30 Aug 2012 00:00:00 +0000</pubDate>
-      <guid>https://lcolladotor.github.io/2012/08/30/Homepage-photos-which-cheek-you-show-says-something/</guid>
+      <guid>https://lcolladotor.github.io/2012/08/30/homepage-photos-which-cheek-you-show-says-something/</guid>
       <description>&lt;p&gt;John Bohannon wrote &lt;a href=&#34;http://news.sciencemag.org/sciencenow/2012/08/scientists-photos-reveal-their.html&#34;&gt;Scientists&amp;#8217; Photos Reveal Their Inner Mr. Spock&lt;/a&gt; which I found funny in a science-curious kind of way. I hadn&amp;#8217;t thought about the message you could be sending depending on which cheek you show. I had only noticed that people like to show more serious-looking photos of themselves and sometimes make it an obviously funny one. I have to say too that some of the pages from my co-workers don&amp;#8217;t even show a picture. I guess that&amp;#8217;s a more recent trend to make it more &amp;#8220;professional&amp;#8221; looking. Dunno.&lt;/p&gt;
 &lt;p&gt;I have to guess that dead center-looking pictures are rare. At least when you look at &lt;a href=&#34;http://www.psy.gla.ac.uk/staff/index.php?id=RJ002&#34;&gt;Rachael Jack&amp;#8217;s one&lt;/a&gt; it stands out. It reminds me of passport pictures. For my &lt;a href=&#34;http://www.biostat.jhsph.edu/~lcollado/index.html#.UD-xBmie5us&#34;&gt;new academic site&lt;/a&gt; I choose one that doesn&amp;#8217;t look serious, I wanted a fun one! Plus I make it obvious which country I&amp;#8217;m from ^^.&lt;/p&gt;
 &lt;p&gt;For some reason this doesn&amp;#8217;t surprise me:&lt;/p&gt;
-&gt; &lt;p&gt;&lt;span&gt;while English language and literature scholars showed the left cheek and engineers showed the right, psychologists were more difficult to categorize. &lt;/span&gt;&lt;/p&gt;</description>
+&gt; &lt;p&gt;&lt;span&gt;while English language and literature scholars showed the left cheek and engineers showed the right, psychologists were more difficult to categorize. &lt;/span&gt;&lt;/p&gt;
+</description>
     </item>
     
     <item>
       <title>Is science cool?</title>
-      <link>https://lcolladotor.github.io/2012/08/27/Is-science-cool/</link>
+      <link>https://lcolladotor.github.io/2012/08/27/is-science-cool/</link>
       <pubDate>Mon, 27 Aug 2012 00:00:00 +0000</pubDate>
-      <guid>https://lcolladotor.github.io/2012/08/27/Is-science-cool/</guid>
+      <guid>https://lcolladotor.github.io/2012/08/27/is-science-cool/</guid>
       <description>&lt;p&gt;Adam Ruben shares his answer to whether science is cool or not. Since &amp;#8220;cool&amp;#8221; depends on the current trends, this question is set on the recent landing of Curiosity. It&amp;#8217;s the landrover that recently landed on Mars and has been sending some pictures back. &lt;/p&gt;
 &lt;p&gt;Anyhow, check his answer &lt;a href=&#34;http://sciencecareers.sciencemag.org/career_magazine/previous_issues/articles/2012_08_24/caredit.a1200095&#34;&gt;here&lt;/a&gt;. I liked this part:&lt;/p&gt;
 &gt; &lt;p&gt;&lt;span&gt;If the Mars landing draws students to science, it won’t be because they witnessed science doing something cool. It’ll be because they witnessed science doing something human, something genuine, something legitimately appealing on its own merits. Something scientific.&lt;/span&gt;&lt;/p&gt;
@@ -12631,9 +12632,9 @@ Totally what happened to me on Monday night! (whenever I saved this post as a dr
     
     <item>
       <title>Setting up your computer for bioinformatics/biostatistics and a compedium of resources</title>
-      <link>https://lcolladotor.github.io/2012/08/23/setting-up-your-computer-for/</link>
+      <link>https://lcolladotor.github.io/2012/08/23/setting-up-your-computer-for-bioinformatics/biostatistics-and-a-compedium-of-resources/</link>
       <pubDate>Thu, 23 Aug 2012 00:00:00 +0000</pubDate>
-      <guid>https://lcolladotor.github.io/2012/08/23/setting-up-your-computer-for/</guid>
+      <guid>https://lcolladotor.github.io/2012/08/23/setting-up-your-computer-for-bioinformatics/biostatistics-and-a-compedium-of-resources/</guid>
       <description>&lt;p&gt;Jumping on the train set by &lt;a href=&#34;http://www.biostat.jhsph.edu/~hiparker/&#34;&gt;Hilary Parker&lt;/a&gt; &amp;#8220;&lt;a href=&#34;http://hilaryparker.com/2012/08/16/the-setup-part-1/&#34;&gt;The Setup (Part 1)&lt;/a&gt;&#34; and &lt;a href=&#34;http://biostat.jhsph.edu/~afrazee/&#34;&gt;Alyssa Frazee&lt;/a&gt; &amp;#8220;&lt;a href=&#34;http://alyssafrazee.wordpress.com/&#34;&gt;my software/hardware setup&lt;/a&gt;&amp;#8221;, I&amp;#8217;m going to share my setup and hopefully add something new. They both did a great job already, so make sure you read their posts!&lt;/p&gt;
 &lt;p&gt;I have some experience with all three main OS: Windows, Linux and Mac. That being said, I know some of the basic stuff for each but I surely use Google very frequently to get help. I used to have a dual Windows / Linux (Ubuntu) set up but now I have a Windows laptop/desktop (it&amp;#8217;s a monster :P) at home and I&amp;#8217;m happy working with my Mac. &lt;/p&gt;
 &lt;p&gt;I&amp;#8217;m going to start by mentioning the software I use(d) in each OS and then add some other tools that I really like.&lt;/p&gt;
@@ -12733,9 +12734,9 @@ Totally what happened to me on Monday night! (whenever I saved this post as a dr
     
     <item>
       <title>International Year of Statistics: coming up soon!</title>
-      <link>https://lcolladotor.github.io/2012/08/16/International-Year-of-Statistics-coming-up-soon/</link>
+      <link>https://lcolladotor.github.io/2012/08/16/international-year-of-statistics-coming-up-soon/</link>
       <pubDate>Thu, 16 Aug 2012 00:00:00 +0000</pubDate>
-      <guid>https://lcolladotor.github.io/2012/08/16/International-Year-of-Statistics-coming-up-soon/</guid>
+      <guid>https://lcolladotor.github.io/2012/08/16/international-year-of-statistics-coming-up-soon/</guid>
       <description>&lt;p&gt;Did you know that next year will be the International Year of Statistics? Well, you probably didn&amp;#8217;t! There is a &lt;a href=&#34;http://statistics2013.org/index.cfm&#34;&gt;site&lt;/a&gt; organizing the activities and listing the institutions that morally support the celebration. I&amp;#8217;m happy to see my current work place listed there but at the same time concerned that the National Autonomous University of Mexico is not in it.&lt;/p&gt;
 &lt;p&gt;Maybe it&amp;#8217;s not that surprising since there is no big Statistics department at UNAM. Googling I found a &lt;a href=&#34;http://www.dpye.iimas.unam.mx/&#34;&gt;Department of Probability and Statistics&lt;/a&gt; listing 14 faculty members and it seems that it was last updated in 2007. Not looking good! There is a more &lt;a href=&#34;http://www.dcb.unam.mx/CoordinacionesAcademicas/CienciasAplicadas/ProbabilidadEstadistica/index_eng.html&#34;&gt;recent site&lt;/a&gt; listing 3 staff members and it seems to be geared towards helping students. I did find a graduate program on &lt;a href=&#34;http://www.iimas.unam.mx/iimas/pagina/es/110/posgrado-en-ciencias-matematicas-y-de-la-especializacion-en-estadistica-aplicadaes&#34;&gt;Mathematical Sciences specializing in Applied Statistics&lt;/a&gt; and a short diploma course on &lt;a href=&#34;http://www.educontinua.fciencias.unam.mx/SiteNuevo/Cursos/DiplEstadProb/2012/Intro.php&#34;&gt;Probability and Statistics&lt;/a&gt;. I think that most statisticians at UNAM work in institutes without Statistics in the name. I hope that there are plenty more out there!&lt;/p&gt;
 &lt;p&gt;There are several other Mexican institutions listed (just look at the &lt;a href=&#34;http://statistics2013.org/participants.cfm&#34;&gt;participants list&lt;/a&gt; and search &amp;#8220;Mexico&amp;#8221; in your browser). Looking at the list highlights how vastly spread is the field. By that I mean that there are plenty of organizations across the world that teach it, and use it. I&amp;#8217;m also happy to see that most of the activities (which are almost exclusively conferences) are not in the US. I&amp;#8217;m sure that by 2013 there will be plenty more activities listed and hopefully some public outreach events.&lt;/p&gt;
@@ -12744,18 +12745,18 @@ Totally what happened to me on Monday night! (whenever I saved this post as a dr
     
     <item>
       <title>05/9/12 PHD comic: &#39;Grad Stereogram&#39;</title>
-      <link>https://lcolladotor.github.io/2012/05/10/05-9-12-phd-comic-grad-stereogram/</link>
+      <link>https://lcolladotor.github.io/2012/05/10/05/9/12-phd-comic-grad-stereogram/</link>
       <pubDate>Thu, 10 May 2012 00:00:00 +0000</pubDate>
-      <guid>https://lcolladotor.github.io/2012/05/10/05-9-12-phd-comic-grad-stereogram/</guid>
+      <guid>https://lcolladotor.github.io/2012/05/10/05/9/12-phd-comic-grad-stereogram/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;http://www.phdcomics.com/comics.php?f=1493&#34;&gt;05/9/12 PHD comic: &amp;lsquo;Grad Stereogram&amp;rsquo;&lt;/a&gt;&lt;br/&gt;&lt;p&gt;Is there really something hidden in the pic? I couldn’t see it :P I guessed that there shouldn’t be anything from the text, but just in case I checked. &lt;/p&gt;&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Pi</title>
-      <link>https://lcolladotor.github.io/2012/04/28/Pi/</link>
+      <link>https://lcolladotor.github.io/2012/04/28/pi/</link>
       <pubDate>Sat, 28 Apr 2012 00:00:00 +0000</pubDate>
-      <guid>https://lcolladotor.github.io/2012/04/28/Pi/</guid>
+      <guid>https://lcolladotor.github.io/2012/04/28/pi/</guid>
       <description>&lt;p&gt;&lt;img height=&#34;500&#34; src=&#34;http://www.fastcodesign.com/multisite_files/codesign/imagecache/inline-zoom/post-inline/4million2.jpg&#34; width=&#34;500&#34;/&gt;&lt;/p&gt;
 &lt;p&gt;More &lt;a href=&#34;http://www.fastcodesign.com/1669614/what-pi-looks-like-to-4-million-decimal-places-as-pixel-art&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;(Saw it from a fb friend).&lt;/p&gt;
@@ -12764,9 +12765,9 @@ Totally what happened to me on Monday night! (whenever I saved this post as a dr
     
     <item>
       <title>PhD Comics about beers!</title>
-      <link>https://lcolladotor.github.io/2012/03/08/i-love-the-i-went-to-have-a-few-beers-with-my/</link>
+      <link>https://lcolladotor.github.io/2012/03/08/phd-comics-about-beers/</link>
       <pubDate>Thu, 08 Mar 2012 00:00:00 +0000</pubDate>
-      <guid>https://lcolladotor.github.io/2012/03/08/i-love-the-i-went-to-have-a-few-beers-with-my/</guid>
+      <guid>https://lcolladotor.github.io/2012/03/08/phd-comics-about-beers/</guid>
       <description>&lt;p&gt;&lt;img height=&#34;989&#34; src=&#34;http://www.phdcomics.com/comics/archive/phd030712s.gif&#34; width=&#34;700&#34;/&gt;&lt;/p&gt;
 &lt;p&gt;I love the &amp;#8220;I went to have a few beers with my friends&amp;#8221;!&lt;/p&gt;
 </description>
@@ -12774,9 +12775,9 @@ Totally what happened to me on Monday night! (whenever I saved this post as a dr
     
     <item>
       <title>Pollination video</title>
-      <link>https://lcolladotor.github.io/2012/03/01/great-video-thank-you-aunt-for-sending-it-to-me/</link>
+      <link>https://lcolladotor.github.io/2012/03/01/pollination-video/</link>
       <pubDate>Thu, 01 Mar 2012 00:00:00 +0000</pubDate>
-      <guid>https://lcolladotor.github.io/2012/03/01/great-video-thank-you-aunt-for-sending-it-to-me/</guid>
+      <guid>https://lcolladotor.github.io/2012/03/01/pollination-video/</guid>
       <description>&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;//www.youtube.com/embed/xHkq1edcbk4&#34; frameborder=&#34;0&#34;&gt;&lt;/iframe&gt;
 &lt;p&gt;Great video! Thank you aunt for sending it to me =)&lt;/p&gt;
 </description>
@@ -12784,9 +12785,9 @@ Totally what happened to me on Monday night! (whenever I saved this post as a dr
     
     <item>
       <title>P-values and Statistics phylosophy</title>
-      <link>https://lcolladotor.github.io/2012/01/30/P-values-and-Statistics-phylosophy/</link>
+      <link>https://lcolladotor.github.io/2012/01/30/p-values-and-statistics-phylosophy/</link>
       <pubDate>Mon, 30 Jan 2012 00:00:00 +0000</pubDate>
-      <guid>https://lcolladotor.github.io/2012/01/30/P-values-and-Statistics-phylosophy/</guid>
+      <guid>https://lcolladotor.github.io/2012/01/30/p-values-and-statistics-phylosophy/</guid>
       <description>&lt;p&gt;I&amp;#8217;m in the process of catching up with all the posts from &lt;a href=&#34;http://simplystatistics.tumblr.com&#34;&gt;SimplyStatistics&lt;/a&gt; that I didn&amp;#8217;t read during the break. Doing so I found a very interesting post on p-values (more below)&lt;/p&gt;
 &lt;p&gt;&lt;a class=&#34;tumblr_blog&#34; href=&#34;http://simplystatistics.tumblr.com/post/15402808730/p-values-and-hypothesis-testing-get-a-bad-rap-but-we&#34;&gt;simplystatistics&lt;/a&gt;:&lt;/p&gt;
 &gt; &lt;p&gt;&lt;em&gt;This post written by Jeff Leek and Rafa Irizarry.&lt;/em&gt;&lt;/p&gt;
@@ -12809,9 +12810,9 @@ Totally what happened to me on Monday night! (whenever I saved this post as a dr
     
     <item>
       <title>Correctly synching AddThis and Google Analytics social stats</title>
-      <link>https://lcolladotor.github.io/2012/01/27/correctly-synching-addthis-and-google-analytics-social/</link>
+      <link>https://lcolladotor.github.io/2012/01/27/correctly-synching-addthis-and-google-analytics-social-stats/</link>
       <pubDate>Fri, 27 Jan 2012 00:00:00 +0000</pubDate>
-      <guid>https://lcolladotor.github.io/2012/01/27/correctly-synching-addthis-and-google-analytics-social/</guid>
+      <guid>https://lcolladotor.github.io/2012/01/27/correctly-synching-addthis-and-google-analytics-social-stats/</guid>
       <description>&lt;p&gt;As a minor addition to my previous posts about setting up a blog, I want to detail a bit more how to synchronize your &lt;a href=&#34;http://www.addthis.com/analytics&#34;&gt;AddThis social sharing statistics&lt;/a&gt; (AddThis Analytics) with &lt;a href=&#34;http://www.google.com/analytics/&#34;&gt;Google Analytics&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;The &lt;a href=&#34;http://www.addthis.com/help/google-analytics-integration#social&#34;&gt;main help file explaining how to do&lt;/a&gt; so has been a bit confusing for me. Though, in part that&amp;#8217;s because I didn&amp;#8217;t read it completely. Plus there were a few things I didn&amp;#8217;t know.&lt;/p&gt;
 &lt;p&gt;First, Google Analytics (GA) has two ways in which you can add it to your site: synchronous and asynchronous. There are a few posts around, &lt;a href=&#34;http://blog.httpwatch.com/2010/07/29/asynchronous-google-analytics-is-better-but-not-faster/&#34;&gt;like this one&lt;/a&gt;, explaining the difference. Basically, the asynchronous mode is supposed to give your site faster load times (negligible normally) and most importantly more complete data in cases where people close your site before it finishes loading.&lt;/p&gt;
@@ -12830,9 +12831,9 @@ Totally what happened to me on Monday night! (whenever I saved this post as a dr
     
     <item>
       <title>Beware of mis-assembled genomes: still valid today!</title>
-      <link>https://lcolladotor.github.io/2012/01/26/Beware-of-mis-assembled-genomes-still-valid-today/</link>
+      <link>https://lcolladotor.github.io/2012/01/26/beware-of-mis-assembled-genomes-still-valid-today/</link>
       <pubDate>Thu, 26 Jan 2012 00:00:00 +0000</pubDate>
-      <guid>https://lcolladotor.github.io/2012/01/26/Beware-of-mis-assembled-genomes-still-valid-today/</guid>
+      <guid>https://lcolladotor.github.io/2012/01/26/beware-of-mis-assembled-genomes-still-valid-today/</guid>
       <description>&lt;p&gt;I&amp;#8217;ve been recently impressed by Steven Salzberg talk as &lt;a href=&#34;http://fellgernon.tumblr.com/post/16468048496/extensive-comments-and-review-about-the-recent-bake-off#.TyAz0OPOzIw&#34;&gt;you might have noticed&lt;/a&gt;, and browing &lt;a href=&#34;http://bioinformatics.igm.jhmi.edu/salzberg/&#34;&gt;his home page&lt;/a&gt; I stumbled upon his opinion piece (also by James Yorke): &lt;a href=&#34;http://cbcb.umd.edu/papers/Mis-assembledGenomesReprint.pdf&#34;&gt;Beware of mis-assembled genomes&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;It&amp;#8217;s a short note published in 2005, but damn, can anyone deny that it fits perfectly for today&amp;#8217;s state of the art in the de &lt;em&gt;novo&lt;/em&gt; genome assembly field? I bet no one will. For instance, it&amp;#8217;s a solid statement to say:&lt;/p&gt;
 &gt; The source of most mis-assemblies is, as it has always been, repeats.
@@ -12846,9 +12847,9 @@ Totally what happened to me on Monday night! (whenever I saved this post as a dr
     
     <item>
       <title>Extensive comments and review about the recent bake-off of de novo genome assemblers &#34;GAGE&#34;</title>
-      <link>https://lcolladotor.github.io/2012/01/25/extensive-comments-and-review-about-the-recent-bake-off/</link>
+      <link>https://lcolladotor.github.io/2012/01/25/extensive-comments-and-review-about-the-recent-bake-off-of-de-novo-genome-assemblers-gage/</link>
       <pubDate>Wed, 25 Jan 2012 00:00:00 +0000</pubDate>
-      <guid>https://lcolladotor.github.io/2012/01/25/extensive-comments-and-review-about-the-recent-bake-off/</guid>
+      <guid>https://lcolladotor.github.io/2012/01/25/extensive-comments-and-review-about-the-recent-bake-off-of-de-novo-genome-assemblers-gage/</guid>
       <description>&lt;p&gt;During this week&amp;#8217;s Genomics seminar at the Genome Cafe in the Biostats department, &lt;a href=&#34;http://scholar.google.com/citations?user=sUVeH-4AAAAJ&amp;amp;hl=en&#34;&gt;Steven Salzberg&lt;/a&gt; gave a talk on his team new published paper: &lt;a href=&#34;http://www.ncbi.nlm.nih.gov/pubmed/22147368&#34;&gt;GAGE: A critical evaluation of genome assemblies and assembly algorithms.&lt;/a&gt; I worked on a few assembly projects during my time at &lt;a href=&#34;http://www.wintergenomics.com/&#34;&gt;Winter Genomics&lt;/a&gt;, but that was not the main reason why I was immediately submerged into his talk. I think that it was due to his bold comments since comparing genome assemblers is a, hmm&amp;#8230;, delicate issue. I really like the confidence he has on his work and the way he projects it when he talks. It might be too preachy for some, but I like it. Plus it helps that I completely agreed on two key points that differentiate GAGE from it&amp;#8217;s competitors: &lt;a href=&#34;http://cnag.bsc.es/&#34;&gt;dnGASP&lt;/a&gt; and &lt;a href=&#34;http://assemblathon.org/&#34;&gt;Assemblathon&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;First, GAGE uses real data sets instead of simulated ones. I know that some might argue that a given data set can have specific properties that are not general or that it&amp;#8217;s biased to a certain assembler. It also feels a bit funny, because I started out assembling simulated data too. It certainly had its uses as I learnt a lot. But once you encounter a real data set you learn how complicated things can be, and it can be quite messy as no one gives you perfectly clean data. I haven&amp;#8217;t read much about GAGE&amp;#8217;s competitors, but regardless of how they simulate their data, I completely agree with Steven that GAGE has the advantage by using four real data sets. Plus, they were quite sensible when choosing the four data sets as they are Illumina data (the most common) with frequently used read sizes and library types. Note that even the bacterial genome have more than one replicon. &lt;/p&gt;
 &lt;p&gt;The second key point is that the GAGE team made public all the data and assembly &lt;em&gt;recipes&lt;/em&gt; available through their &lt;a href=&#34;http://gage.cbcb.umd.edu/&#34;&gt;official site&lt;/a&gt; (which has a great summary in from of a FAQ explaining the project and key differences). They have certainly made an effort to guarantee the reproducibility of their results, which is hard to do and hasn&amp;#8217;t been done before. It&amp;#8217;s a sad feeling that it took so long for someone to focus on reproducibility. So it feels wrong that they have to stress out how unique this feature is on their paper, but they definitely had to. Hm&amp;#8230; can anyone reproduce the human genome assembly? I&amp;#8217;m not talking about someone reading the paper and doing it on their institution computers, but someone from the author team. I hope the changelog is saved at least in some kind of repository.&lt;/p&gt;
@@ -12886,9 +12887,9 @@ Totally what happened to me on Monday night! (whenever I saved this post as a dr
     
     <item>
       <title>Simply Statistics: Why statisticians should join and launch startups</title>
-      <link>https://lcolladotor.github.io/2012/01/24/simply-statistics-why-statisticians-should-join-and/</link>
+      <link>https://lcolladotor.github.io/2012/01/24/simply-statistics-why-statisticians-should-join-and-launch-startups/</link>
       <pubDate>Tue, 24 Jan 2012 00:00:00 +0000</pubDate>
-      <guid>https://lcolladotor.github.io/2012/01/24/simply-statistics-why-statisticians-should-join-and/</guid>
+      <guid>https://lcolladotor.github.io/2012/01/24/simply-statistics-why-statisticians-should-join-and-launch-startups/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;http://simplystatistics.tumblr.com/post/16347982080/why-statisticians-should-join-and-launch-startups&#34;&gt;Simply Statistics: Why statisticians should join and launch startups&lt;/a&gt;&lt;br/&gt;&lt;p&gt;I really like this post in &lt;a href=&#34;http://simplystatistics.tumblr.com&#34;&gt;SimplyStatistics&lt;/a&gt; by &lt;a href=&#34;http://leekgroup.tumblr.com/&#34;&gt;leekgroup&lt;/a&gt;. The topic is worth considering, but what got me hooked was the list of links to startups, which were all new to me. 100plus looks promising, though I don’t have a clue as to what they are going to offer. Sure, I know the general topic, but not much beyond that. As I just flew back to town, Flightcaster and Hipmunk caught my attention. While Flightcaster works faster and has a great FAQ, I don’t find it super useful since it’s limited to US domestic flights, which are not the kind I usually jump into. Plus, without automatic updates it seems kind of a pain to use. After all, I don’t want to become a panic-driven person who has to refresh the status of his flight every hour or maybe even every few minutes. Hipmunk on the other hand is slow, but I like their “agony” ranking :) It also looks easy to find cheap days to fly though I’ll mostly cross-check with Expedia when I need it.&lt;/p&gt;&lt;/p&gt;
 &lt;p&gt;Anyhow, to read more on the title subject check the original post at &lt;a class=&#34;tumblr_blog&#34; href=&#34;http://simplystatistics.tumblr.com/post/16347982080/why-statisticians-should-join-and-launch-startups&#34;&gt;simplystatistics&lt;/a&gt;:&lt;/p&gt;
 &gt; The tough economic times we live in, and the potential for big paydays, have made &lt;a href=&#34;http://en.wikipedia.org/wiki/The_Social_Network&#34; target=&#34;_blank&#34;&gt;entrepreneurship cool&lt;/a&gt;. From the &lt;a href=&#34;http://www.whitehouse.gov/issues/startup-america&#34; target=&#34;_blank&#34;&gt;venture capitalist-in-chief&lt;/a&gt;, to the javascript &lt;a href=&#34;http://chats-blog.com/2012/01/08/michael-bloomberg-learning-to-code/&#34; target=&#34;_blank&#34;&gt;coding mayor of New York&lt;/a&gt;, everyone is on board. No surprise there, successful startups lead to job creation which can have a&amp;#8230;
@@ -12897,9 +12898,9 @@ Totally what happened to me on Monday night! (whenever I saved this post as a dr
     
     <item>
       <title>Commenting: Genomics in 2011</title>
-      <link>https://lcolladotor.github.io/2012/01/23/Commenting-Genomics-in-2011/</link>
+      <link>https://lcolladotor.github.io/2012/01/23/commenting-genomics-in-2011/</link>
       <pubDate>Mon, 23 Jan 2012 00:00:00 +0000</pubDate>
-      <guid>https://lcolladotor.github.io/2012/01/23/Commenting-Genomics-in-2011/</guid>
+      <guid>https://lcolladotor.github.io/2012/01/23/commenting-genomics-in-2011/</guid>
       <description>&lt;p&gt;Today is my first day of classes and &lt;a href=&#34;http://scholar.google.com/citations?hl=en&amp;amp;user=8XOPyM4AAAAJ&amp;amp;oi=sra&#34;&gt;Kasper&lt;/a&gt; couldn&amp;#8217;t have had a better timing to share the link to &lt;a href=&#34;http://genomebiology.com/2011/12/12/137&#34;&gt;Genomics in 2011: challenges and opportunities&lt;/a&gt;. There, the Editorial Board members of Genome Biology gave their opinion on: important 2011 papers, influential people for their careers, advice to young scientists, top challenges in their field, and unlimited money projects. I felt identified several times and as:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;I think one of the most important skills in research is the ability to communicate ideas. [&amp;#8230;] practicing both writing skills and oral presentation skills.&lt;/p&gt;
@@ -12949,18 +12950,18 @@ Totally what happened to me on Monday night! (whenever I saved this post as a dr
     
     <item>
       <title>Are you good at programming? You probably practice a lot!</title>
-      <link>https://lcolladotor.github.io/2011/12/10/are-you-good-at-programming-you-probably-practice-a/</link>
+      <link>https://lcolladotor.github.io/2011/12/10/are-you-good-at-programming-you-probably-practice-a-lot/</link>
       <pubDate>Sat, 10 Dec 2011 00:00:00 +0000</pubDate>
-      <guid>https://lcolladotor.github.io/2011/12/10/are-you-good-at-programming-you-probably-practice-a/</guid>
+      <guid>https://lcolladotor.github.io/2011/12/10/are-you-good-at-programming-you-probably-practice-a-lot/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;http://bps-occupational-digest.blogspot.com/2011/11/how-to-get-to-great-programming-skills.html?utm_source=feedburner&amp;amp;utm_medium=feed&amp;amp;utm_campaign=Feed%3A+ResearchBloggingAllEnglish+%28Research+Blogging+-+English+-+All+Topics%29&amp;amp;utm_content=Google+Reader&#34;&gt;What makes a great programmer?&lt;/a&gt; I would have said training, motivation, a good and efficient framework for continuous learning from others such as reading blogs like &lt;a href=&#34;http://www.r-bloggers.com/&#34;&gt;R-bloggers&lt;/a&gt; (if you are an R programmer). Well, on the Occupational Digest blog they commented a paper where they found that the best predictor is programming knowledge. This is acquired through years of practice and makes sense. After all, even if you are a gifted person for something, if you don&amp;#8217;t practice and learn from others you won&amp;#8217;t get anywhere. So, welcome to school for life! :P&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>The new visualization package for genome data in Bioconductor: ggbio</title>
-      <link>https://lcolladotor.github.io/2011/12/06/the-new-visualization-package-for-genome-data-in/</link>
+      <link>https://lcolladotor.github.io/2011/12/06/the-new-visualization-package-for-genome-data-in-bioconductor-ggbio/</link>
       <pubDate>Tue, 06 Dec 2011 00:00:00 +0000</pubDate>
-      <guid>https://lcolladotor.github.io/2011/12/06/the-new-visualization-package-for-genome-data-in/</guid>
+      <guid>https://lcolladotor.github.io/2011/12/06/the-new-visualization-package-for-genome-data-in-bioconductor-ggbio/</guid>
       <description>&lt;p&gt;It&amp;#8217;s been a while since I&amp;#8217;ve been waiting for the release of a visualization package in Bioconductor. Back in 2008 I was really impressed by the power of&lt;a href=&#34;http://www.bioconductor.org/packages/release/bioc/html/GenomeGraphs.html&#34;&gt; GenomeGraphs&lt;/a&gt; and I have used it in multiple occasions. Yet from both the &lt;a href=&#34;http://www-huber.embl.de/biocdeveleurope2010/&#34;&gt;Bioconductor Developer Meeting in Heidelberg 2010&lt;/a&gt; and &lt;a href=&#34;https://secure.bioconductor.org/BioC2011/&#34;&gt;BioC2011&lt;/a&gt; I&amp;#8217;ve been waiting for the release of the visualization tools developed by Michael Lawrence and Tengfei Yin at Genentech. &lt;/p&gt;
 &lt;p&gt;So, after a long hiatus where I didn&amp;#8217;t browse the &lt;a href=&#34;http://www.bioconductor.org/packages/release/BiocViews.html&#34;&gt;biocviews&lt;/a&gt; in Bioconductor, I found out that Lawrence and Yin released &lt;a href=&#34;http://www.bioconductor.org/packages/release/bioc/html/ggbio.html&#34;&gt;ggbio&lt;/a&gt; and &lt;a href=&#34;http://www.bioconductor.org/packages/release/bioc/html/biovizBase.html&#34;&gt;biovizBase&lt;/a&gt; (it&amp;#8217;s more of an infrastructure package for ggbio) . I haven&amp;#8217;t really had the time to play around with them, but it&amp;#8217;s definitely worth exploring both of their vignette files: &lt;a href=&#34;http://www.bioconductor.org/packages/release/bioc/vignettes/ggbio/inst/doc/intro.pdf&#34;&gt;ggbio&lt;/a&gt;, &lt;a href=&#34;http://www.bioconductor.org/packages/release/bioc/vignettes/biovizBase/inst/doc/intro.pdf&#34;&gt;biovizBase&lt;/a&gt;. I also think that they&amp;#8217;ll fit very well in Bioconductor because quite a few of their examples involved the gamma of objects the BioC team has released for high-throughput sequencing (HTS) data. Meaning that they work well with objects from IRanges and GenomicRanges. Also, some of the examples use BAM files which are common nowadays in any HTS analysis pipeline. As a plus, ggbio uses&lt;a href=&#34;http://cran.r-project.org/web/packages/ggplot2/index.html&#34;&gt; ggplot2&lt;/a&gt;, which definitely makes clear nice plots.&lt;/p&gt;
 &lt;p&gt;I expect ggbio to replace GenomeGraphs soon (although I love using it), but I&amp;#8217;m also kind of disappointed that I didn&amp;#8217;t see any of the cool examples from BioC2011 in ggbio&amp;#8217;s vignette file. After all, &lt;a href=&#34;https://github.com/tengfei/visnab&#34;&gt;visnab&lt;/a&gt; looked pretty impressive as &lt;a href=&#34;http://www.stat.iastate.edu/centers/CCGS/slides/slides-visnab.pdf&#34;&gt;you can see in this presentation&lt;/a&gt;. I don&amp;#8217;t know if they decided to rename visnab into ggbio, or maybe they haven&amp;#8217;t released visnab yet. Anyhow, give ggbio and biovizBase vignette files a look :)&lt;/p&gt;
@@ -12969,9 +12970,9 @@ Totally what happened to me on Monday night! (whenever I saved this post as a dr
     
     <item>
       <title>Introducing Biostatistics to first year LCG students</title>
-      <link>https://lcolladotor.github.io/2011/12/04/Introducing-Biostatistics-to-first-year-LCG-students/</link>
+      <link>https://lcolladotor.github.io/2011/12/04/introducing-biostatistics-to-first-year-lcg-students/</link>
       <pubDate>Sun, 04 Dec 2011 00:00:00 +0000</pubDate>
-      <guid>https://lcolladotor.github.io/2011/12/04/Introducing-Biostatistics-to-first-year-LCG-students/</guid>
+      <guid>https://lcolladotor.github.io/2011/12/04/introducing-biostatistics-to-first-year-lcg-students/</guid>
       <description>&lt;p&gt;Around two weeks ago I gave a talk via skype to the first year students from the &lt;a href=&#34;http://www.lcg.unam.mx/about&#34;&gt;Undergraduate Program on Genomic Sciences&lt;/a&gt; (LCG in Spanish) from the National Autonomous University of Mexico (UNAM in Spanish). The talk was under the context of the &lt;em&gt;Introduction to Bioinformatics Seminar Series&lt;/em&gt; whose goal is to familiarize the new students with the bioinformatics world. It used to be a course heavy on exploring database websites, some basic theory, and lots of new concepts and algorithm names. Like, what is BLAST? This year, the course involved several talks from former students (like myself) on their experience and current job (most of us are in graduate school).&lt;/p&gt;
 &lt;p&gt;In my case, I was invited to talk about Biostatistics and R as I was one of the first LCG students to learn and teach R to other students (including PhD students ^^): &lt;a href=&#34;http://www.lcg.unam.mx/~lcollado/R/&#34;&gt;12 hour intro to R and Bioconductor&lt;/a&gt;, &lt;a href=&#34;http://www.lcg.unam.mx/~lcollado/E/&#34;&gt;R in an intro to statistics course&lt;/a&gt;, a &lt;a href=&#34;http://www.lcg.unam.mx/~lcollado/B/&#34;&gt;full course on Bioconductor&lt;/a&gt;. &lt;/p&gt;
 &lt;p&gt;I had a lot of fun preparing my talk as I tried to portray the three main currents in Biostatistics in a way that would be understandable, basic concepts such as a P-value, some basic R code (the students knew the super basics only), and doing so in a way that I would also pass how I see things. A key part for any bioinformatician, as I see it, is to have a good basic toolset. That&amp;#8217;s why I tried to pass on many tips to these young students. Also, I do like to go back to the philosophy of science and whether we need hypothesis nowadays or just models based on the data. I definitely had to cover the topic of communication as I strongly believe that any researcher has to be able to communicate with a biostastician if they want their help in analyzing their data. Also, a biostatistician is not a stastistician, meaning that they have to understand the underlying biological question. I tried emphasizing this point with the students and I attempted to motivate them to take a basic stastistics and probability course (2 preferably). After all, biostatistics is key nowadays in science since biology has gone high-throughput.&lt;/p&gt;
@@ -12991,9 +12992,9 @@ Totally what happened to me on Monday night! (whenever I saved this post as a dr
     
     <item>
       <title>Make it easy for your visitors to suscribe with a burnt RSS feed</title>
-      <link>https://lcolladotor.github.io/2011/11/30/make-it-easy-for-your-visitors-to-suscribe-with-a-burnt/</link>
+      <link>https://lcolladotor.github.io/2011/11/30/make-it-easy-for-your-visitors-to-suscribe-with-a-burnt-rss-feed/</link>
       <pubDate>Wed, 30 Nov 2011 00:00:00 +0000</pubDate>
-      <guid>https://lcolladotor.github.io/2011/11/30/make-it-easy-for-your-visitors-to-suscribe-with-a-burnt/</guid>
+      <guid>https://lcolladotor.github.io/2011/11/30/make-it-easy-for-your-visitors-to-suscribe-with-a-burnt-rss-feed/</guid>
       <description>&lt;p&gt;Recently I talked about &lt;a href=&#34;http://fellgernon.tumblr.com/post/13070638939/setting-up-your-blog&#34;&gt;how to set up your own blog&lt;/a&gt; and now I&amp;#8217;m going to continue by emphasizing the importance of an &lt;a href=&#34;http://en.wikipedia.org/wiki/RSS&#34;&gt;RSS feed&lt;/a&gt;. What is it? Basically it is a unique format in which content from frequently updated sites (like a blog) is &lt;a href=&#34;http://en.wikipedia.org/wiki/Web_syndication&#34;&gt;syndicated&lt;/a&gt;. Web syndication allows you to share the content of your site (blog) to many different sites automatically. This is specially useful for people who are interested in following your blog. Sure, you can let them type your blog&amp;#8217;s site each time or simply allow them to receive updates on their email, feed reader (I recommend &lt;a href=&#34;http://www.google.com/reader&#34;&gt;Google Reader&lt;/a&gt;), etc. After all, you don&amp;#8217;t want your followers to have to remember to visit your site every time if there is an easier option out there. Sure, you already made your blog social but that was meant to facilitate comments and sharing of your blog&amp;#8217;s content by it&amp;#8217;s visitors. While publishing your blog to Twitter will get initial visitors into the blog, an RSS feed will complete the job when they suscribe to it.&lt;/p&gt;
 &lt;p&gt;Blogging platforms will normally create an RSS feed for your blog. Yet, this is a plain XML file which is just a pain to read. However, the good news is that you can &lt;em&gt;burn&lt;/em&gt; your feed which makes it pretty. That&amp;#8217;s where &lt;a href=&#34;http://feedburner.google.com&#34;&gt;FeedBurner&lt;/a&gt; comes into play. &lt;/p&gt;
 &lt;p&gt;To use it, you simply have to give it your RSS feed XML url and choose a name. For example, the RSS feed XML url for Fellgernon Bit is &lt;a href=&#34;http://fellgernon.tumblr.com/rss&#34;&gt;&lt;a href=&#34;http://fellgernon.tumblr.com/rss&#34;&gt;http://fellgernon.tumblr.com/rss&lt;/a&gt;&lt;/a&gt; which is rather ugly, but looks much better with FeedBurner at &lt;a href=&#34;http://feeds.feedburner.com/FellgernonBit&#34;&gt;&lt;a href=&#34;http://feeds.feedburner.com/FellgernonBit&#34;&gt;http://feeds.feedburner.com/FellgernonBit&lt;/a&gt;&lt;/a&gt; The content is readable and FeedBurner allows your visitors to suscribe using a wide variety of tools with a few clicks.&lt;/p&gt;

@@ -1,0 +1,1886 @@
+<!DOCTYPE html>
+<!-- This site was created with Wowchemy. https://www.wowchemy.com -->
+<!-- Last Published: March 7, 2025 --><html lang="en-us" >
+
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  
+  
+    <meta name="generator" content="Wowchemy 5.7.0 for Hugo" />
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  
+
+  
+  
+  
+    
+      
+      <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&family=Karma&family=Mina&display=swap">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&family=Karma&family=Mina&display=swap" media="print" onload="this.media='all'">
+    
+  
+
+  
+  
+
+  
+  
+    
+    <script src="/js/mathjax-config.js"></script>
+  
+
+  
+
+  <link rel="stylesheet" href="/css/vendor-bundle.min.047268c6dd09ad74ba54a0ba71837064.css" media="print" onload="this.media='all'">
+
+  
+  
+  
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.2/css/academicons.min.css" integrity="sha512-KlJCpRsLf+KKu2VQa5vmRuClRFjxc5lXO03ixZt82HZUk41+1I0bD8KBSA0fY290ayMfWYI9udIqeOWSu1/uZg==" crossorigin="anonymous" media="print" onload="this.media='all'">
+    
+
+    
+    
+    
+    
+      
+      
+    
+    
+    
+
+    
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.min.css" integrity="" crossorigin="anonymous" media="print" onload="this.media='all'">
+    
+
+    
+
+    
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+  
+
+  
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/wowchemy.cfa383012e109fa07dd80bafcdf476df.css" />
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+    
+    
+    <link rel="stylesheet" href="/css/libs/chroma/github-light.min.css" title="hl-light" media="print" onload="this.media='all'" >
+    <link rel="stylesheet" href="/css/libs/chroma/dracula.min.css" title="hl-dark" media="print" onload="this.media='all'" disabled>
+  
+
+  
+  
+
+
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3CBVR6GQ07"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+      dataLayer.push(arguments);
+  }
+
+  function trackOutboundLink(url, target) {
+    gtag('event', 'click', {
+         'event_category': 'outbound',
+         'event_label': url,
+         'transport_type': 'beacon',
+         'event_callback': function () {
+           if (target !== '_blank') {
+             document.location = url;
+           }
+         }
+    });
+    console.debug("Outbound link clicked: " + url);
+  }
+
+  function onClickCallback(event) {
+    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
+      return;
+    }
+    trackOutboundLink(event.target, event.target.getAttribute('target'));  
+  }
+
+  gtag('js', new Date());
+  gtag('config', 'G-3CBVR6GQ07', {});
+  gtag('set', {'cookie_flags': 'SameSite=None;Secure'});
+
+  
+  document.addEventListener('click', onClickCallback, false);
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+
+
+
+
+
+  <meta name="author" content="Leonardo Collado-Torres" />
+
+
+
+
+
+  
+
+<meta name="description" content="Have you ever wondered whether you can upload files from R to Dropbox and/or Google Docs? I recently asked myself this question while making my most recent Shiny app (more later)." />
+
+
+
+<link rel="alternate" hreflang="en-us" href="https://lcolladotor.github.io/2014/02/05/how-to-upload-files-to-dropbox-and-google-docs-from-r/" />
+<link rel="canonical" href="https://lcolladotor.github.io/2014/02/05/how-to-upload-files-to-dropbox-and-google-docs-from-r/" />
+
+
+
+  <link rel="manifest" href="/manifest.webmanifest" />
+
+
+
+<link rel="icon" type="image/png" href="/media/icon_hu2b32c4ab415f12f472f73c7b0301b0d1_19400_32x32_fill_lanczos_center_3.png" />
+<link rel="apple-touch-icon" type="image/png" href="/media/icon_hu2b32c4ab415f12f472f73c7b0301b0d1_19400_180x180_fill_lanczos_center_3.png" />
+
+<meta name="theme-color" content="#FF6771" />
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+<meta property="twitter:card" content="summary" />
+
+  <meta property="twitter:site" content="@lcolladotor" />
+  <meta property="twitter:creator" content="@lcolladotor" />
+<meta property="twitter:image" content="https://lcolladotor.github.io/media/icon_hu2b32c4ab415f12f472f73c7b0301b0d1_19400_512x512_fill_lanczos_center_3.png" />
+<meta property="og:site_name" content="L. Collado-Torres" />
+<meta property="og:url" content="https://lcolladotor.github.io/2014/02/05/how-to-upload-files-to-dropbox-and-google-docs-from-r/" />
+<meta property="og:title" content="How to upload files to Dropbox and Google Docs from R | L. Collado-Torres" />
+<meta property="og:description" content="Have you ever wondered whether you can upload files from R to Dropbox and/or Google Docs? I recently asked myself this question while making my most recent Shiny app (more later)." /><meta property="og:image" content="https://lcolladotor.github.io/media/icon_hu2b32c4ab415f12f472f73c7b0301b0d1_19400_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
+
+  
+    <meta
+      property="article:published_time"
+      content="2014-02-05T00:00:00&#43;00:00"
+    />
+  
+  
+    <meta property="article:modified_time" content="2014-02-05T00:00:00&#43;00:00">
+  
+
+
+
+
+
+
+    
+
+
+
+
+
+
+  
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://lcolladotor.github.io/2014/02/05/how-to-upload-files-to-dropbox-and-google-docs-from-r/"
+  },
+  "headline": "How to upload files to Dropbox and Google Docs from R",
+  
+  "datePublished": "2014-02-05T00:00:00Z",
+  "dateModified": "2014-02-05T00:00:00Z",
+  
+  "author": {
+    "@type": "Person",
+    "name": "Leonardo Collado-Torres"
+  },
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "L. Collado-Torres",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://lcolladotor.github.io/media/icon_hu2b32c4ab415f12f472f73c7b0301b0d1_19400_192x192_fill_lanczos_center_3.png"
+    }
+  },
+  "description": "Have you ever wondered whether you can upload files from R to Dropbox and/or Google Docs? I recently asked myself this question while making my most recent Shiny app (more later)."
+}
+</script>
+
+  
+
+  
+
+
+
+
+  
+  
+  
+
+  
+  
+
+  
+
+
+  
+  <title>How to upload files to Dropbox and Google Docs from R | L. Collado-Torres</title>
+
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="25468bcea588dca2e85b8f350c51c80a" >
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <script src="/js/wowchemy-init.min.028535d572102c468e4bcd43201c3601.js"></script>
+
+  
+
+
+<aside class="search-modal" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#" aria-label="Close"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search" class="form-control"
+        aria-label="Search...">
+        
+      </div>
+
+      
+      
+
+      
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+
+  <div class="page-header header--fixed">
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+    <div class="container-xl">
+
+      
+      <div class="d-none d-lg-inline-flex">
+        <a class="navbar-brand" href="/">L. Collado-Torres</a>
+      </div>
+      
+
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+      <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+      
+      <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+        <a class="navbar-brand" href="/">L. Collado-Torres</a>
+      </div>
+      
+
+      
+      
+      <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+        
+        <ul class="navbar-nav d-md-inline-flex">
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#about"><span>Home</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#team"><span>Team</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#projects"><span>Projects</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#talks_favorite"><span>Talks</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#publications"><span>Publications</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#blog"><span>Blog</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#teaching"><span>Teaching</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#cv"><span>CV</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#contact"><span>Contact</span></a>
+          </li>
+
+          
+          
+
+        
+
+          
+        </ul>
+      </div>
+
+      <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+
+        
+        
+          
+        
+
+        
+        
+        
+        <li class="nav-item">
+          <a class="nav-link js-search" href="#" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></a>
+        </li>
+        
+
+        
+        
+        
+        <li class="nav-item dropdown theme-dropdown">
+          <a href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-label="Display preferences">
+            <i class="fas fa-moon" aria-hidden="true"></i>
+          </a>
+          <div class="dropdown-menu">
+            <a href="#" class="dropdown-item js-set-theme-light">
+              <span>Light</span>
+            </a>
+            <a href="#" class="dropdown-item js-set-theme-dark">
+              <span>Dark</span>
+            </a>
+            <a href="#" class="dropdown-item js-set-theme-auto">
+              <span>Automatic</span>
+            </a>
+          </div>
+        </li>
+        
+
+        
+        
+
+      </ul>
+
+    </div>
+  </nav>
+</header>
+
+
+  </div>
+
+  <div class="page-body">
+    
+    
+    
+
+    <article class="article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+<div class="article-container pt-3">
+  <h1>How to upload files to Dropbox and Google Docs from R</h1>
+
+  
+
+  
+    
+
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    Wed, Feb 5, 2014
+  </span>
+  
+
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    4 min read
+  </span>
+  
+
+  
+  
+  
+  
+    <span class="middot-divider"></span>
+    <a href="/2014/02/05/how-to-upload-files-to-dropbox-and-google-docs-from-r/#disqus_thread"></a>
+  
+
+  
+  
+  <span class="middot-divider"></span>
+  <span class="article-categories">
+    <i class="fas fa-folder mr-1"></i><a href="/category/rstats/">rstats</a></span>
+  
+
+</div>
+
+    
+
+
+
+
+
+  
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style">
+      <p>Have you ever wondered whether you can upload files from <code>R</code> to <a href="https://www.dropbox.com/" target="_blank" rel="noopener">Dropbox</a> and/or <a href="docs.google.com">Google Docs</a>? I recently asked myself this question while making my most recent <a href="http://www.rstudio.com/shiny/" target="_blank" rel="noopener">Shiny</a> app (more later).</p>
+<p>The answer is yes, you can upload files from <code>R</code> to these cloud services!</p>
+<h2 id="dropbox">Dropbox</h2>
+<p>As far as I know, the best <code>R</code> package for uploading files to Dropbox is <code>rDrop</code> (<span class="showtooltip" title="Ram K and Temple Lang D (2012). rDrop: Dropbox R interface.. R package version 0.3-0."><a href="http://github.com/karthikram/rDrop">Ram &amp; Temple Lang, 2012</a></span>). The whole setup is very well explained in it&rsquo;s GitHub repository (<span class="showtooltip" title="karthik (2014). 'karthik/rDrop.' ."><a href="https://github.com/karthik/rDrop">Karthik</a></span>). Basically you have to:</p>
+<ul>
+<li>Install the package and it&rsquo;s dependencies (some are only on GitHub).</li>
+<li>Create a Dropbox app in your account.</li>
+<li>Get the credentials info.</li>
+<li>Authorize your access to the Dropbox app from <code>R</code>.</li>
+<li>Save that info for later use.</li>
+</ul>
+<h3 id="dropbox_save">dropbox_save()</h3>
+<p>Then uploading any type of <code>R</code> object to Dropbox becomes as easy as using the <code>dropbox_save()</code> function.</p>
+<p>For example, lets save a simple vector with random data.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">suppressMessages</span><span class="p">(</span><span class="nf">library</span><span class="p">(</span><span class="s">&#34;rDrop&#34;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">## Define credentials or load them if you defined them already</span>
+</span></span><span class="line"><span class="cl"><span class="c1">## dropbox_credentials &lt;- dropbox_auth(&#39;Your app key&#39;, &#39;Your app secret&#39;)</span>
+</span></span><span class="line"><span class="cl"><span class="nf">load</span><span class="p">(</span><span class="s">&#34;dropbox_credentials.Rdata&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">## Lets create some random data</span>
+</span></span><span class="line"><span class="cl"><span class="nf">set.seed</span><span class="p">(</span><span class="m">20140205</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">x</span> <span class="o">&lt;-</span> <span class="nf">rnorm</span><span class="p">(</span><span class="m">1000</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">## Lets check the args of the uploading function</span>
+</span></span><span class="line"><span class="cl"><span class="nf">args</span><span class="p">(</span><span class="n">dropbox_save</span><span class="p">)</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">## function (cred, ..., list = character(), file = stop(&#34;&#39;file&#39; must be specified&#34;), 
+</span></span><span class="line"><span class="cl">##     envir = parent.frame(), precheck = TRUE, verbose = FALSE, 
+</span></span><span class="line"><span class="cl">##     curl = getCurlHandle(), ext = &#34;.rda&#34;, .opts = list()) 
+</span></span><span class="line"><span class="cl">## NULL
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">## Then lets upload it to dropbox on the public folder</span>
+</span></span><span class="line"><span class="cl"><span class="n">done</span> <span class="o">&lt;-</span> <span class="nf">dropbox_save</span><span class="p">(</span><span class="n">dropbox_credentials</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">file</span> <span class="o">=</span> <span class="s">&#34;public/x&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">## The result has some information, like the path of where you upload the</span>
+</span></span><span class="line"><span class="cl"><span class="c1">## file</span>
+</span></span><span class="line"><span class="cl"><span class="nf">names</span><span class="p">(</span><span class="n">done</span><span class="p">)</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">##  [1] &#34;revision&#34;     &#34;rev&#34;          &#34;thumb_exists&#34; &#34;bytes&#34;       
+</span></span><span class="line"><span class="cl">##  [5] &#34;modified&#34;     &#34;client_mtime&#34; &#34;path&#34;         &#34;is_dir&#34;      
+</span></span><span class="line"><span class="cl">##  [9] &#34;icon&#34;         &#34;root&#34;         &#34;mime_type&#34;    &#34;size&#34;
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">done</span><span class="o">$</span><span class="n">path</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">## [1] &#34;/public/x.rda&#34;
+</span></span></code></pre></div><p>You can now actually download the &ldquo;x.rda&rdquo; file from <a href="https://dl.dropboxusercontent.com/u/261002456/x.rda" target="_blank" rel="noopener">here</a>. That&rsquo;s in case that you also wanted to share the file, and is obviously optional.</p>
+<p>Note that you can get the link from withing <code>R</code> and don&rsquo;t even need to use the Dropbox site.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">dropbox_share</span><span class="p">(</span><span class="n">dropbox_credentials</span><span class="p">,</span> <span class="n">file</span> <span class="o">=</span> <span class="s">&#34;public/x.rda&#34;</span><span class="p">)</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">## $url
+</span></span><span class="line"><span class="cl">## [1] &#34;https://db.tt/xzf3huXf&#34;
+</span></span><span class="line"><span class="cl">## 
+</span></span><span class="line"><span class="cl">## $expires
+</span></span><span class="line"><span class="cl">## [1] &#34;Tue, 01 Jan 2030 00:00:00 +0000&#34;
+</span></span></code></pre></div><h3 id="dropbox_put">dropbox_put()</h3>
+<p>What if you want to upload an actual file and not only <code>R</code> objects? That&rsquo;s where <code>dropbox_put()</code> shines. Below is an example where we create an image, save it as a pdf file, and upload it to Dropbox.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="c1">## Lets create a sample file, in this case a pdf file</span>
+</span></span><span class="line"><span class="cl"><span class="nf">pdf</span><span class="p">(</span><span class="s">&#34;dropboxFig.pdf&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nf">hist</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">freq</span> <span class="o">=</span> <span class="kc">FALSE</span><span class="p">,</span> <span class="n">col</span> <span class="o">=</span> <span class="s">&#34;light blue&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">tmp</span> <span class="o">&lt;-</span> <span class="nf">dev.off</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">## Lets check the args for the uploading function</span>
+</span></span><span class="line"><span class="cl"><span class="nf">args</span><span class="p">(</span><span class="n">dropbox_put</span><span class="p">)</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">## function (cred, what, filename = what, curl = getCurlHandle(), 
+</span></span><span class="line"><span class="cl">##     ..., verbose = FALSE, contentType = &#34;application/octet-stream&#34;) 
+</span></span><span class="line"><span class="cl">## NULL
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">## Now, lets upload the file</span>
+</span></span><span class="line"><span class="cl"><span class="n">done</span> <span class="o">&lt;-</span> <span class="nf">dropbox_put</span><span class="p">(</span><span class="n">dropbox_credentials</span><span class="p">,</span> <span class="n">what</span> <span class="o">=</span> <span class="s">&#34;dropboxFig.pdf&#34;</span><span class="p">,</span> <span class="n">filename</span> <span class="o">=</span> <span class="s">&#34;public/dropboxFig.pdf&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">## Again, the result contains some information about the file</span>
+</span></span><span class="line"><span class="cl"><span class="nf">names</span><span class="p">(</span><span class="n">done</span><span class="p">)</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">##  [1] &#34;revision&#34;     &#34;rev&#34;          &#34;thumb_exists&#34; &#34;bytes&#34;       
+</span></span><span class="line"><span class="cl">##  [5] &#34;modified&#34;     &#34;client_mtime&#34; &#34;path&#34;         &#34;is_dir&#34;      
+</span></span><span class="line"><span class="cl">##  [9] &#34;icon&#34;         &#34;root&#34;         &#34;mime_type&#34;    &#34;size&#34;
+</span></span></code></pre></div><p>You can view the result <a href="https://dl.dropboxusercontent.com/u/261002456/dropboxFig.pdf" target="_blank" rel="noopener">here</a>.</p>
+<h2 id="google-docs">Google Docs</h2>
+<p>From what I found, it seems to me that <code>RGoogleDocs</code> (<span class="showtooltip" title="Lang DT (2014). RGoogleDocs: Primitive interface to Google Documents from R. R package version 0.7-0."><a href="">Temple Lang</a></span>) is the package you&rsquo;ll want to use for interacting with Google Docs from R. The manual (<span class="showtooltip" title="(2014). 'An simple R interface to Google Documents.' ."><a href="http://www.omegahat.org/RGoogleDocs/run.html">Temple Lang</a></span>) explains all what you pretty much need to know. You should know though that you can only upload certain types of files.</p>
+<p>For example, you can upload a text file as shown below.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">suppressMessages</span><span class="p">(</span><span class="nf">library</span><span class="p">(</span><span class="s">&#34;RGoogleDocs&#34;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">## Load password</span>
+</span></span><span class="line"><span class="cl"><span class="nf">load</span><span class="p">(</span><span class="s">&#34;gpasswd.Rdata&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">## Something to write</span>
+</span></span><span class="line"><span class="cl"><span class="n">text</span> <span class="o">&lt;-</span> <span class="s">&#34;Hello world!\n&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">## Authentificate</span>
+</span></span><span class="line"><span class="cl"><span class="n">auth</span> <span class="o">&lt;-</span> <span class="nf">getGoogleAuth</span><span class="p">(</span><span class="s">&#34;lcolladotor@gmail.com&#34;</span><span class="p">,</span> <span class="n">gpasswd</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">## Connect to Google</span>
+</span></span><span class="line"><span class="cl"><span class="n">con</span> <span class="o">&lt;-</span> <span class="nf">getGoogleDocsConnection</span><span class="p">(</span><span class="n">auth</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">## Check the args for the uploading function</span>
+</span></span><span class="line"><span class="cl"><span class="nf">args</span><span class="p">(</span><span class="n">uploadDoc</span><span class="p">)</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">## function (content, con, name, type = as.character(findType(content)), 
+</span></span><span class="line"><span class="cl">##     binary = FALSE, asText = FALSE, folder = NULL, replace = TRUE, 
+</span></span><span class="line"><span class="cl">##     ...) 
+</span></span><span class="line"><span class="cl">## NULL
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">## Upload the file</span>
+</span></span><span class="line"><span class="cl"><span class="n">done</span> <span class="o">&lt;-</span> <span class="nf">uploadDoc</span><span class="p">(</span><span class="n">content</span> <span class="o">=</span> <span class="n">text</span><span class="p">,</span> <span class="n">con</span> <span class="o">=</span> <span class="n">con</span><span class="p">,</span> <span class="n">name</span> <span class="o">=</span> <span class="s">&#34;testFile.txt&#34;</span><span class="p">,</span> <span class="n">type</span> <span class="o">=</span> <span class="s">&#34;txt&#34;</span><span class="p">)</span>
+</span></span></code></pre></div><p>You can view the file <a href="https://docs.google.com/document/d/1QCInrPitTJrmXiyA6TlNuQIEhi344MQl1C3zqqoqAVY/edit?usp=sharing" target="_blank" rel="noopener">here</a>.</p>
+<h2 id="conclusions">Conclusions</h2>
+<p><code>rDrop</code> (<span class="showtooltip" title="Ram K and Temple Lang D (2012). rDrop: Dropbox R interface.. R package version 0.3-0."><a href="http://github.com/karthikram/rDrop">Ram &amp; Temple Lang, 2012</a></span>) is very cool and easy to use. Compared to Google Docs, you have much greater flexibility on the type of files you can upload. I guess that will change in the future if there is a Google Drive from <code>R</code> package.</p>
+<h3 id="references">References</h3>
+<p>Citations made with <code>knitcitations</code> (<span class="showtooltip" title="Boettiger C (2014). knitcitations: Citations for knitr markdown files. R package version 0.5-0."><a href="http://CRAN.R-project.org/package=knitcitations">Boettiger, 2014</a></span>).</p>
+<ul>
+<li>karthik,  karthik/rDrop.  <em>GitHub</em>  <a href="https://github.com/karthik/rDrop" target="_blank" rel="noopener">https://github.com/karthik/rDrop</a></li>
+<li>An simple R interface to Google Documents.  <a href="http://www.omegahat.org/RGoogleDocs/run.html" target="_blank" rel="noopener">http://www.omegahat.org/RGoogleDocs/run.html</a></li>
+<li>Carl Boettiger,   (2014) knitcitations: Citations for knitr markdown files.  <a href="http://CRAN.R-project.org/package=knitcitations" target="_blank" rel="noopener">http://CRAN.R-project.org/package=knitcitations</a></li>
+<li>Karthik Ram, Duncan  Temple Lang,   (2012) rDrop: Dropbox R interface..  <a href="http://github.com/karthikram/rDrop" target="_blank" rel="noopener">http://github.com/karthikram/rDrop</a></li>
+<li>Duncan Lang,  RGoogleDocs: Primitive interface to Google Documents from R.</li>
+</ul>
+<h3 id="reproducibility">Reproducibility</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">sessionInfo</span><span class="p">()</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="c1">## R version 3.0.2 (2013-09-25)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">## Platform: x86_64-apple-darwin10.8.0 (64-bit)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">## </span>
+</span></span><span class="line"><span class="cl"><span class="c1">## locale:</span>
+</span></span><span class="line"><span class="cl"><span class="c1">## [1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8</span>
+</span></span><span class="line"><span class="cl"><span class="c1">## </span>
+</span></span><span class="line"><span class="cl"><span class="c1">## attached base packages:</span>
+</span></span><span class="line"><span class="cl"><span class="c1">## [1] stats     graphics  grDevices utils     datasets  methods   base     </span>
+</span></span><span class="line"><span class="cl"><span class="c1">## </span>
+</span></span><span class="line"><span class="cl"><span class="c1">## other attached packages:</span>
+</span></span><span class="line"><span class="cl"><span class="c1">##  [1] RGoogleDocs_0.7-0   rDrop_0.3-0         stringr_0.6.2      </span>
+</span></span><span class="line"><span class="cl"><span class="c1">##  [4] plyr_1.8            ROAuth_0.92.0       digest_0.6.4       </span>
+</span></span><span class="line"><span class="cl"><span class="c1">##  [7] RCurl_1.95-4.1      bitops_1.0-6        RJSONIO_1.0-3      </span>
+</span></span><span class="line"><span class="cl"><span class="c1">## [10] knitcitations_0.5-0 bibtex_0.3-6        knitr_1.5          </span>
+</span></span><span class="line"><span class="cl"><span class="c1">## </span>
+</span></span><span class="line"><span class="cl"><span class="c1">## loaded via a namespace (and not attached):</span>
+</span></span><span class="line"><span class="cl"><span class="c1">## [1] evaluate_0.5.1 formatR_0.10   httr_0.2       tools_3.0.2   </span>
+</span></span><span class="line"><span class="cl"><span class="c1">## [5] XML_3.95-0.2   xtable_1.7-1</span>
+</span></span></code></pre></div><p>Check other topics on <a href="https://twitter.com/search?q=%23rstats" target="_blank" rel="noopener">#rstats</a>.</p>
+
+    </div>
+
+    
+
+
+
+
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/tag/google/">Google</a>
+  
+  <a class="badge badge-light" href="/tag/dropbox/">Dropbox</a>
+  
+</div>
+
+
+
+<div class="share-box">
+  <ul class="share">
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Flcolladotor.github.io%2F2014%2F02%2F05%2Fhow-to-upload-files-to-dropbox-and-google-docs-from-r%2F&amp;text=How&#43;to&#43;upload&#43;files&#43;to&#43;Dropbox&#43;and&#43;Google&#43;Docs&#43;from&#43;R" target="_blank" rel="noopener" class="share-btn-twitter" aria-label="twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Flcolladotor.github.io%2F2014%2F02%2F05%2Fhow-to-upload-files-to-dropbox-and-google-docs-from-r%2F&amp;t=How&#43;to&#43;upload&#43;files&#43;to&#43;Dropbox&#43;and&#43;Google&#43;Docs&#43;from&#43;R" target="_blank" rel="noopener" class="share-btn-facebook" aria-label="facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+        
+      
+      <li>
+        <a href="mailto:?subject=How%20to%20upload%20files%20to%20Dropbox%20and%20Google%20Docs%20from%20R&amp;body=https%3A%2F%2Flcolladotor.github.io%2F2014%2F02%2F05%2Fhow-to-upload-files-to-dropbox-and-google-docs-from-r%2F" target="_blank" rel="noopener" class="share-btn-email" aria-label="envelope">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=https%3A%2F%2Flcolladotor.github.io%2F2014%2F02%2F05%2Fhow-to-upload-files-to-dropbox-and-google-docs-from-r%2F&amp;title=How&#43;to&#43;upload&#43;files&#43;to&#43;Dropbox&#43;and&#43;Google&#43;Docs&#43;from&#43;R" target="_blank" rel="noopener" class="share-btn-linkedin" aria-label="linkedin-in">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="whatsapp://send?text=How&#43;to&#43;upload&#43;files&#43;to&#43;Dropbox&#43;and&#43;Google&#43;Docs&#43;from&#43;R%20https%3A%2F%2Flcolladotor.github.io%2F2014%2F02%2F05%2Fhow-to-upload-files-to-dropbox-and-google-docs-from-r%2F" target="_blank" rel="noopener" class="share-btn-whatsapp" aria-label="whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=https%3A%2F%2Flcolladotor.github.io%2F2014%2F02%2F05%2Fhow-to-upload-files-to-dropbox-and-google-docs-from-r%2F&amp;title=How&#43;to&#43;upload&#43;files&#43;to&#43;Dropbox&#43;and&#43;Google&#43;Docs&#43;from&#43;R" target="_blank" rel="noopener" class="share-btn-weibo" aria-label="weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+  
+  
+    
+  
+  
+  
+  <div class="media author-card content-widget-hr">
+    
+      
+      <a href="https://lcolladotor.github.io/"><img class="avatar mr-3 avatar-circle" src="/authors/admin/avatar_hu61670ae1305c5c407abf5eedc95c7971_127149_270x270_fill_q75_lanczos_center.JPG" alt="Leonardo Collado-Torres"></a>
+    
+
+    <div class="media-body">
+      <h5 class="card-title"><a href="https://lcolladotor.github.io/">Leonardo Collado-Torres</a></h5>
+      <h6 class="card-subtitle">Investigator @ LIBD, Assistant Professor, Department of Biostatistics @ JHBSPH</h6>
+      <p class="card-text"><a href="https://bsky.app/search?q=%23RStats" target="_blank" rel="noopener">#rstats</a> <a href="https://bsky.app/profile/bioconductor.bsky.social" target="_blank" rel="noopener">@Bioconductor</a>/🧠 genomics <a href="https://bsky.app/profile/lieberinstitute.bsky.social" target="_blank" rel="noopener">@LieberInstitute</a>/<a href="https://twitter.com/lcgunam" target="_blank" rel="noopener">@lcgunam</a> <a href="https://bsky.app/profile/jhubiostat.bsky.social" target="_blank" rel="noopener">@jhubiostat</a> <a href="https://bsky.app/profile/jtleek.bsky.social" target="_blank" rel="noopener">@jtleek</a> <a href="https://bsky.app/profile/aejaffe.bsky.social" target="_blank" rel="noopener">@andrewejaffe</a> alumni/<a href="https://bsky.app/profile/libdrstats.bsky.social" target="_blank" rel="noopener">@LIBDrstats</a> <a href="https://bsky.app/profile/cdsbmexico.bsky.social" target="_blank" rel="noopener">@CDSBMexico</a> co-founder</p>
+      <ul class="network-icon" aria-hidden="true">
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+    <li>
+      <a href="mailto:lcolladotor@gmail.com" >
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="http://lcolladotor.github.io" target="_blank" rel="noopener">
+        <i class="fas fa-home"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://bsky.app/profile/lcolladotor.bsky.social" target="_blank" rel="noopener">
+        <i class="fab fa-bluesky"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://twitter.com/lcolladotor" target="_blank" rel="noopener">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://www.youtube.com/@lcolladotor" target="_blank" rel="noopener">
+        <i class="fab fa-youtube"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://scholar.google.com/citations?user=h57-MykAAAAJ" target="_blank" rel="noopener">
+        <i class="ai ai-google-scholar"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://github.com/lcolladotor" target="_blank" rel="noopener">
+        <i class="fab fa-github"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="http://orcid.org/0000-0003-2140-308X" target="_blank" rel="noopener">
+        <i class="ai ai-orcid"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://www.ncbi.nlm.nih.gov/myncbi/leonardo.collado%20torres.1/bibliography/public/" target="_blank" rel="noopener">
+        <i class="ai ai-pubmed"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://impactstory.org/u/0000-0003-2140-308X" target="_blank" rel="noopener">
+        <i class="ai ai-impactstory"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://www.linkedin.com/in/lcollado/" target="_blank" rel="noopener">
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://publons.com/a/1262671" target="_blank" rel="noopener">
+        <i class="ai ai-publons"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="http://lcolladotor.github.io/cv/en_CV_lcollado.pdf" target="_blank" rel="noopener">
+        <i class="ai ai-cv"></i>
+      </a>
+    </li>
+  
+</ul>
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+
+  
+  <section id="comments">
+    
+<div id="disqus_thread"></div>
+<script>
+  var disqus_config = function () {
+    
+    
+    
+  };
+  (function() {
+    if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+      document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+      return;
+    }
+    var d = document, s = d.createElement('script'); s.async = true;
+    s.src = 'https://' + "fellgernonbit" + '.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+  </section>
+  
+
+
+
+
+
+
+
+
+
+
+  </div>
+</article>
+  </div>
+
+  <div class="page-footer">
+    
+    
+    <div class="container">
+      <footer class="site-footer">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+    
+  
+  
+    
+  
+
+  
+
+  
+  <p class="powered-by copyright-license-text">
+    All thoughts and opinions here are my own (Leonardo Collado Torres). The icon was designed by <a href="https://www.linkedin.com/in/mauricio-guzman-6529b551/" target="_blank" rel="noopener">Mauricio Guzmán</a> and is inspired by <a href="https://en.wikipedia.org/wiki/Huichol" target="_blank" rel="noopener">Huichol culture</a>; it represents my community building interests. © 2011-2025 LCT. This work is licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0" rel="noopener noreferrer" target="_blank">CC BY NC SA 4.0</a>
+  </p>
+  
+
+  <p class="powered-by footer-license-icons">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0" rel="noopener noreferrer" target="_blank" aria-label="Creative Commons">
+      <i class="fab fa-creative-commons fa-2x" aria-hidden="true"></i>
+      <i class="fab fa-creative-commons-by fa-2x" aria-hidden="true"></i>
+      
+        <i class="fab fa-creative-commons-nc fa-2x" aria-hidden="true"></i>
+      
+      
+        <i class="fab fa-creative-commons-sa fa-2x" aria-hidden="true"></i>
+      
+    </a>
+  </p>
+
+
+
+
+
+  <p>
+      
+      
+      <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4ef23e545d41b87c"></script>
+      
+      
+
+      <script type="text/javascript">
+      var addthis_config = {
+      	data_ga_property: 'UA-45299226-1',
+      	data_ga_social : true,
+      	data_track_addressbar: true,
+        data_track_addressbar_paths: ['/201*/*/*/*/*']
+      };
+      var addthis_share = {
+      	
+      	url_transforms : {
+      		shorten: {
+      			twitter: 'bitly'
+      		}
+      	},
+      	shorteners : {
+      		bitly : {}
+      	}
+      }
+      </script>
+
+      <center>
+      <div id="clustrmaps-widget"></div><script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=300&t=m&d=Zo-deincaJGsqhqjIWsujtdoNOMJsnnZLefKmxDKVv8&co=124b73&cmo=dd53ff&cmn=4ec724'></script>
+      </center>
+  </p>
+
+
+  <p class="powered-by">
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      Published with <a href="https://wowchemy.com/?utm_campaign=poweredby" target="_blank" rel="noopener">Wowchemy</a> — the free, <a href="https://github.com/wowchemy/wowchemy-hugo-themes" target="_blank" rel="noopener">open source</a> website builder that empowers creators.
+    
+  </p>
+</footer>
+
+    </div>
+    
+  </div>
+
+  
+
+
+<script src="/js/vendor-bundle.min.938a3a7554cd9f6602290411f64d2617.js"></script>
+
+
+
+
+  
+
+  
+  
+
+  
+
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.min.js" integrity="" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+  
+  <script id="search-hit-fuse-template" type="text/x-template">
+    <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+    </div>
+  </script>
+  
+    <script src="https://cdn.jsdelivr.net/gh/krisk/Fuse@v3.2.1/dist/fuse.min.js" integrity="sha512-o38bmzBGX+hD3JHWUFCDA09btWaqrNmoJ3RXLlrysA7PP01Kgs4UlE4MhelE1v5dJR3+cxlR4qQlotsW7jKsnw==" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/gh/julmot/mark.js@8.11.1/dist/jquery.mark.min.js" integrity="sha512-mhbv5DqBMgrWL+32MmsDOt/OAvqr/cHimk6B8y/bx/xS88MVkYGPiVv2ixKVrkywF2qHplNRUvFsAHUdxZ3Krg==" crossorigin="anonymous"></script>
+  
+
+
+
+
+
+
+
+
+
+  <script id="dsq-count-scr" src="https://fellgernonbit.disqus.com/count.js" async></script>
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+<script id="page-data" type="application/json">{"use_headroom":true}</script>
+
+
+
+  <script src="/js/wowchemy-headroom.db4755770454eb63685f8de785c0a172.js" type="module"></script>
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+<script src="/en/js/wowchemy.min.2945731fa88332cb0ec33cf47d29879f.js"></script>
+
+
+
+  <script src="/js/wowchemy-map.a26e9d2f7238ba5b868384f1c5bc6477.js" type="module"></script>
+
+
+
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        
+        <pre><code></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <script src="/js/wowchemy-publication.af9327db0521d4a01354bfc8b77a4324.js" type="module"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+      
+      <script src="https://kit.fontawesome.com/61d1e02f7e.js" crossorigin="anonymous"></script>
+
+      
+    
+  
+
+
+
+
+
+
+</body>
+</html>

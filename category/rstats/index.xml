@@ -5032,9 +5032,9 @@ URL: &lt;a href=&#34;https://www.R-project.org/&#34;&gt;https://www.R-project.or
     
     <item>
       <title>Finding possible class schedules</title>
-      <link>https://lcolladotor.github.io/2016/08/02/materias/</link>
+      <link>https://lcolladotor.github.io/2016/08/02/finding-possible-class-schedules/</link>
       <pubDate>Tue, 02 Aug 2016 00:00:00 +0000</pubDate>
-      <guid>https://lcolladotor.github.io/2016/08/02/materias/</guid>
+      <guid>https://lcolladotor.github.io/2016/08/02/finding-possible-class-schedules/</guid>
       <description>&lt;p&gt;Over the weekend my brother wanted to figure out his class schedule for the next semester. He is a veterinary medicine and zootechnology student at UNAM. For this upcoming semester there is a set of classes he has to take and each has 8 or so instructor options. The website where he finds the class times lists about 8 pre-constructed class schedules. So he normally finds one he likes quite a bit, and then manually starts checking if he can change X instructor for Y for a given class. He does this based on the referalls and information he has gathered about the instructors, plus he factors in whether it&amp;rsquo;d be an overall better schedule. For example, he might prefer to have a packed Tuesday if that means that he can leave early on Friday and avoid classes on Saturday.&lt;/p&gt;
 &lt;p&gt;The problem is that it&amp;rsquo;s very easy to make a mistake. You (well he) gets all excited thinking that he&amp;rsquo;s found the perfect schedule. Only to then realize that there is a conflict between two classes. Or that the practical portion of a class is in a location one hour away from the university, meaning that the schedule he has selected won&amp;rsquo;t work. This process is very frustrating.&lt;/p&gt;
 &lt;p&gt;I was watching him and I started to think if I could help him with some code. Turns out that it was straightforward to write some code to find which options are valid. Once I wrote a test case, it took us like half an hour to fill out the data. I know that tomorrow is when he and his classmates start registering for classes, so this information might help his classmates.&lt;/p&gt;
@@ -5427,9 +5427,9 @@ URL: &lt;a href=&#34;https://www.R-project.org/&#34;&gt;https://www.R-project.or
     
     <item>
       <title>Are you doing parallel computations in R? Then use BiocParallel</title>
-      <link>https://lcolladotor.github.io/2016/03/07/BiocParallel/</link>
+      <link>https://lcolladotor.github.io/2016/03/07/are-you-doing-parallel-computations-in-r-then-use-biocparallel/</link>
       <pubDate>Mon, 07 Mar 2016 00:00:00 +0000</pubDate>
-      <guid>https://lcolladotor.github.io/2016/03/07/BiocParallel/</guid>
+      <guid>https://lcolladotor.github.io/2016/03/07/are-you-doing-parallel-computations-in-r-then-use-biocparallel/</guid>
       <description>&lt;p&gt;It&amp;rsquo;s the morning of the first day of oral conferences at &lt;a href=&#34;https://twitter.com/search?q=%23ENAR2016&amp;amp;src=tyah&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;#ENAR2016&lt;/a&gt;. I feel like I have a &lt;a href=&#34;https://en.wiktionary.org/wiki/Spidey-sense&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;spidey sense&lt;/a&gt; since I woke up 3 min after an email from Jeff Leek; just a funny coincidence. Anyhow, I promised Valerie Obenchain at &lt;a href=&#34;https://twitter.com/hashtag/bioc2014&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;#Bioc2014&lt;/a&gt; that I would write a post about one of my favorite Bioconductor packages: &lt;a href=&#34;http://www.bioconductor.org/packages/release/bioc/html/BiocParallel.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;BiocParallel&lt;/a&gt; &lt;a id=&#39;cite-biocparallel&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;#bib-biocparallel&#39;&gt;Morgan, Obenchain, Lang, and Thompson, 2016&lt;/a&gt;). By now it&amp;rsquo;s on the top 5% of downloaded Bioconductor packages, so many people know about it or are unaware that their favorite package uses it behind the scenes.&lt;/p&gt;
 &lt;center&gt;
 &lt;a href=&#34;http://www.bioconductor.org&#34;&gt;&lt;img src=&#34;http://www.bioconductor.org/images/logo_bioconductor.gif&#34; alt=&#34;BioconductorLogo&#34; style=&#34;width: 260px;&#34;/&gt;&lt;/a&gt;
@@ -5670,9 +5670,9 @@ R package version 1.4.3.
     
     <item>
       <title>Teaching a short topic to beginner R users</title>
-      <link>https://lcolladotor.github.io/2015/07/07/rmarkdown/</link>
+      <link>https://lcolladotor.github.io/2015/07/07/teaching-a-short-topic-to-beginner-r-users/</link>
       <pubDate>Tue, 07 Jul 2015 00:00:00 +0000</pubDate>
-      <guid>https://lcolladotor.github.io/2015/07/07/rmarkdown/</guid>
+      <guid>https://lcolladotor.github.io/2015/07/07/teaching-a-short-topic-to-beginner-r-users/</guid>
       <description>&lt;p&gt;A couple weeks ago I was given the opportunity to teach a 1 hr 30 min slot of an introduction to &lt;code&gt;R&lt;/code&gt; course. In the past, I&amp;rsquo;ve taught lectures for similar courses, and I ended up asking myself what would be the best short topic to teach and how to teach it.&lt;/p&gt;
 &lt;h2 id=&#34;best-short-topic&#34;&gt;Best short topic&lt;/h2&gt;
 &lt;p&gt;There are two ways to answer the first question, one boring and one more interesting. The boring answer is that the course instructor selected the topic. The interesting one goes like this. I have taken short &lt;code&gt;R&lt;/code&gt; courses before and taught others, and it&amp;rsquo;s always overwhelming for the students. You get to cover many concepts, get familiarized with &lt;code&gt;R&lt;/code&gt;&amp;rsquo;s syntax, and in the end without lots of practice it&amp;rsquo;s very challenging to retain much of the information. I think that students love it when they learn how to do something simple that could be the first building block for many of their projects. In parallel, I think that one of the coolest &lt;code&gt;R&lt;/code&gt; topics you can learn in an hour is how to create reproducible documents with &lt;code&gt;rmarkdown&lt;/code&gt; &lt;a id=&#39;cite-rmarkdown&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;http://CRAN.R-project.org/package=rmarkdown&#39;&gt;Allaire, Cheng, Xie, McPherson, et al., 2015&lt;/a&gt;).&lt;/p&gt;
@@ -5776,9 +5776,9 @@ URL: &lt;a href=&#34;http://CRAN.R-project.org/package=knitcitations&#34;&gt;htt
     
     <item>
       <title>Use hidden advanced arguments for user-friendly functions</title>
-      <link>https://lcolladotor.github.io/2014/12/11/dots/</link>
+      <link>https://lcolladotor.github.io/2014/12/11/use-hidden-advanced-arguments-for-user-friendly-functions/</link>
       <pubDate>Thu, 11 Dec 2014 00:00:00 +0000</pubDate>
-      <guid>https://lcolladotor.github.io/2014/12/11/dots/</guid>
+      <guid>https://lcolladotor.github.io/2014/12/11/use-hidden-advanced-arguments-for-user-friendly-functions/</guid>
       <description>&lt;h2 id=&#34;as-a-user&#34;&gt;As a user&lt;/h2&gt;
 &lt;p&gt;Imagine that you are starting to learn how to use a specific &lt;code&gt;R&lt;/code&gt; package, lets call it &lt;code&gt;foo&lt;/code&gt;. You will look at the vignette (if there is one), use &lt;code&gt;help(package = foo)&lt;/code&gt;, or look at the reference manual (for example, &lt;a href=&#34;http://cran.r-project.org/web/packages/devtools/devtools.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;devtools&amp;rsquo; ref man&lt;/a&gt;). Eventually, you will open the help page for the function(s) you are interested in using.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;?&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;function_I_want_to_use&lt;/span&gt;
@@ -5943,9 +5943,9 @@ URL: &lt;a href=&#34;https://github.com/lcolladotor/dots&#34;&gt;https://github.
     
     <item>
       <title>An xpd-tion into R plot margins</title>
-      <link>https://lcolladotor.github.io/2014/11/21/add-logo-in-R/</link>
+      <link>https://lcolladotor.github.io/2014/11/21/an-xpd-tion-into-r-plot-margins/</link>
       <pubDate>Fri, 21 Nov 2014 00:00:00 +0000</pubDate>
-      <guid>https://lcolladotor.github.io/2014/11/21/add-logo-in-R/</guid>
+      <guid>https://lcolladotor.github.io/2014/11/21/an-xpd-tion-into-r-plot-margins/</guid>
       <description>&lt;p&gt;&lt;em&gt;This is a guest post by &lt;a href=&#34;http://www.biostat.jhsph.edu/~prpatil/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Prasad Patil&lt;/a&gt; that answers the question: how to put a shape in the margin of an R plot?&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;The help page for &lt;strong&gt;R&lt;/strong&gt;&amp;rsquo;s &lt;code&gt;par()&lt;/code&gt; function is a somewhat impenetrable list
 of abbreviations that allow you to manipulate anything and everything
@@ -6045,9 +6045,9 @@ of your &lt;strong&gt;R&lt;/strong&gt; plot device, and it will not stay consist
     
     <item>
       <title>Where do I start using Bioconductor?</title>
-      <link>https://lcolladotor.github.io/2014/10/16/startBioC/</link>
+      <link>https://lcolladotor.github.io/2014/10/16/where-do-i-start-using-bioconductor/</link>
       <pubDate>Thu, 16 Oct 2014 00:00:00 +0000</pubDate>
-      <guid>https://lcolladotor.github.io/2014/10/16/startBioC/</guid>
+      <guid>https://lcolladotor.github.io/2014/10/16/where-do-i-start-using-bioconductor/</guid>
       <description>&lt;p&gt;I was recently asked &lt;em&gt;where do I get started with Bioconductor?&lt;/em&gt; and thought this would be a good short post.&lt;/p&gt;
 &lt;h2 id=&#34;what-is-bioc&#34;&gt;What is BioC?&lt;/h2&gt;
 &lt;p&gt;Briefly, Bioconductor &lt;a id=&#39;cite-bioc&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;http://genomebiology.com/2004/5/10/R80&#39;&gt;Gentleman, Carey, Bates, and others, 2004&lt;/a&gt;) is an open source project that hosts a wide range of tools for analyzing biological data with &lt;code&gt;R&lt;/code&gt; &lt;a id=&#39;cite-R&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;http://www.R-project.org/&#39;&gt;R Core Team, 2014&lt;/a&gt;). These analysis tools are bundled into packages which are designed to answer specific questions or to provide key infrastructure. If this sounds like something you are interested in, visit &lt;a href=&#34;http://www.bioconductor.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;bioconductor.org&lt;/a&gt;.&lt;/p&gt;
@@ -6102,9 +6102,9 @@ URL: &lt;a href=&#34;http://www.R-project.org/&#34;&gt;http://www.R-project.org/
     
     <item>
       <title>Concerns that can deter potential orders for developing Shiny apps</title>
-      <link>https://lcolladotor.github.io/2014/06/10/shiny-orders/</link>
+      <link>https://lcolladotor.github.io/2014/06/10/concerns-that-can-deter-potential-orders-for-developing-shiny-apps/</link>
       <pubDate>Tue, 10 Jun 2014 00:00:00 +0000</pubDate>
-      <guid>https://lcolladotor.github.io/2014/06/10/shiny-orders/</guid>
+      <guid>https://lcolladotor.github.io/2014/06/10/concerns-that-can-deter-potential-orders-for-developing-shiny-apps/</guid>
       <description>&lt;p&gt;A few weeks ago I was invited to a meeting where a group was interested in exploring options for replacing their contract with a propriety software. They invited me because they saw some resemblances between a &lt;a href=&#34;http://shiny.rstudio.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Shiny&lt;/a&gt; application I made and the features they need. It is a relatively small project and it seemed feasible to implement, but well, some details could have been tricky to code. During the meeting I explained what &lt;a href=&#34;http://shiny.rstudio.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Shiny&lt;/a&gt; is, showcased some of the &lt;a href=&#34;http://shiny.rstudio.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Shiny&lt;/a&gt; apps I&amp;rsquo;ve made, and proposed some options including a simple site password.&lt;/p&gt;
 &lt;p&gt;A few days after the meeting, they raised three concerns.&lt;/p&gt;
 &lt;ol&gt;
@@ -6158,9 +6158,9 @@ URL: &lt;a href=&#34;http://www.R-project.org/&#34;&gt;http://www.R-project.org/
     
     <item>
       <title>Simple mortgage calculator</title>
-      <link>https://lcolladotor.github.io/2014/04/22/mortgage-calculator-flexible-payments/</link>
+      <link>https://lcolladotor.github.io/2014/04/22/simple-mortgage-calculator/</link>
       <pubDate>Tue, 22 Apr 2014 00:00:00 +0000</pubDate>
-      <guid>https://lcolladotor.github.io/2014/04/22/mortgage-calculator-flexible-payments/</guid>
+      <guid>https://lcolladotor.github.io/2014/04/22/simple-mortgage-calculator/</guid>
       <description>&lt;p&gt;Have you ever thought of borrowing some money? A common case is when you have to borrow money for buying a house, which is called a mortgage. Wikipedia (&lt;span class=&#34;showtooltip&#34; title=&#34;(2014). &#39;Mortgage loan - Wikipedia, the free encyclopedia.&#39; .&#34;&gt;&lt;a href=&#34;http://en.wikipedia.org/wiki/Mortgage_loan&#34;&gt;&amp;lsquo;Mortgage loan&amp;rsquo; entry&lt;/a&gt;&lt;/span&gt;) goes into much more detail about the definition than what I&amp;rsquo;ll cover.&lt;/p&gt;
 &lt;p&gt;One of the aspects you have to evaluate when considering a loan such as a mortgage is how much interest you will be charged and how long the loan will be. Those two determine your monthly payment.&lt;/p&gt;
 &lt;h2 id=&#34;comparing-loans&#34;&gt;Comparing loans&lt;/h2&gt;
@@ -6232,9 +6232,9 @@ URL: &lt;a href=&#34;http://www.R-project.org/&#34;&gt;http://www.R-project.org/
     
     <item>
       <title>rMaps Mexico map</title>
-      <link>https://lcolladotor.github.io/2014/02/26/excited-by-willingness-to-help-get-things-done/</link>
+      <link>https://lcolladotor.github.io/2014/02/26/rmaps-mexico-map/</link>
       <pubDate>Wed, 26 Feb 2014 00:00:00 +0000</pubDate>
-      <guid>https://lcolladotor.github.io/2014/02/26/excited-by-willingness-to-help-get-things-done/</guid>
+      <guid>https://lcolladotor.github.io/2014/02/26/rmaps-mexico-map/</guid>
       <description>&lt;h2 id=&#34;its-exciting-when-great-people-help-each-other-get-things-done&#34;&gt;It&amp;rsquo;s exciting when great people help each other get things done&lt;/h2&gt;
 &lt;p&gt;This is a simple networking story, which might not be surprising to some but I was happily surprised by it. This is how the story goes:&lt;/p&gt;
 &lt;p&gt;Two weeks ago &lt;code&gt;rMaps&lt;/code&gt; (&lt;span class=&#34;showtooltip&#34; title=&#34;Vaidyanathan R (2014). rMaps: Interactive Maps from R. R package version 0.1.&#34;&gt;&lt;a href=&#34;&#34;&gt;Vaidyanathan, 2014&lt;/a&gt;&lt;/span&gt;) was released. After making a &lt;a href=&#34;http://lcolladotor.github.io/2014/02/10/rMaps-released/#.Uwz64kJdV18&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;blog post&lt;/a&gt; about it I thought about using it to make a map of the homicide rate in Mexico over the recent years. First, I had the question of how to make custom maps with &lt;code&gt;rMaps&lt;/code&gt;. &lt;a href=&#34;https://github.com/tyokota&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;@tyokota&lt;/a&gt; had the same question and started asking &lt;a href=&#34;https://github.com/ramnathv&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Ramnath&lt;/a&gt; about it in &lt;a href=&#34;https://github.com/ramnathv/rMaps/issues/6&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;rMaps issue 6&lt;/a&gt;. Then I realized I needed a specific file with the map information. Google lead me to &lt;a href=&#34;https://github.com/diegovalle&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;@diegovalle&lt;/a&gt; who has created the map from official Mexican sources, downloaded the homicide data, cleaned it, and made several maps and analyses: all his work is very impressive! I thought that it&amp;rsquo;d be very cool if &lt;a href=&#34;https://github.com/diegovalle&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;@diegovalle&lt;/a&gt; and &lt;a href=&#34;https://github.com/ramnathv&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Ramnath&lt;/a&gt; connected, and they did! I saw them interacting via Twitter (&lt;a href=&#34;https://twitter.com/diegovalle/status/433619946434596864&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt; and &lt;a href=&#34;https://twitter.com/ramnath_vaidya/status/433813747593801728&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;) and via &lt;a href=&#34;https://github.com/ramnathv/rMaps/issues/6&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;GitHub&lt;/a&gt;. After sharing &lt;a href=&#34;https://github.com/diegovalle&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;@diegovalle&lt;/a&gt;&amp;rsquo;s work with my friends, it turned out that some old friends already knew him (&lt;a href=&#34;https://twitter.com/unRob/status/433675310542749696&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt; and high school friends). Another friend was interested in additional features and I suggested her to contact &lt;a href=&#34;https://github.com/diegovalle&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;@diegovalle&lt;/a&gt; via Twitter: he quickly replied as you can see &lt;a href=&#34;https://twitter.com/diegovalle/status/434444498341347328&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
@@ -6394,9 +6394,9 @@ dBase, &amp;hellip;.  &lt;a href=&#34;http://CRAN.R-project.org/package=foreign&
     
     <item>
       <title>Automatically coloring your R output in the terminal using colorout</title>
-      <link>https://lcolladotor.github.io/2014/02/17/colorout/</link>
+      <link>https://lcolladotor.github.io/2014/02/17/automatically-coloring-your-r-output-in-the-terminal-using-colorout/</link>
       <pubDate>Mon, 17 Feb 2014 00:00:00 +0000</pubDate>
-      <guid>https://lcolladotor.github.io/2014/02/17/colorout/</guid>
+      <guid>https://lcolladotor.github.io/2014/02/17/automatically-coloring-your-r-output-in-the-terminal-using-colorout/</guid>
       <description>&lt;p&gt;Thanks to Alyssa Frazee I just learned about the &lt;code&gt;colorout&lt;/code&gt; package (&lt;span class=&#34;showtooltip&#34; title=&#34;Aquino J (2013). colorout: Colorize R output on terminal emulators. R package version 1.0-2.&#34;&gt;&lt;a href=&#34;http://www.lepem.ufc.br/jaa/colorout.html&#34;&gt;Aquino, 2013&lt;/a&gt;&lt;/span&gt;). It modifies &lt;code&gt;R&lt;/code&gt; so that the output is in different colors, making it much more pleasant to use &lt;code&gt;R&lt;/code&gt; in the terminal.&lt;/p&gt;
 &lt;p&gt;Do note that &lt;code&gt;colorout&lt;/code&gt; is not available from CRAN, but you can easily install by following the instructions on the &lt;code&gt;colorout&lt;/code&gt; site (&lt;span class=&#34;showtooltip&#34; title=&#34;(2014). &#39;colorout.&#39; .&#34;&gt;&lt;a href=&#34;http://www.lepem.ufc.br/jaa/colorout.html&#34;&gt;Official site&lt;/a&gt;&lt;/span&gt;) reproduced below:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nf&#34;&gt;download.file&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;http://www.lepem.ufc.br/jaa/colorout_1.0-2.tar.gz&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;destfile&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;colorout_1.0-2.tar.gz&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
@@ -6440,9 +6440,9 @@ dBase, &amp;hellip;.  &lt;a href=&#34;http://CRAN.R-project.org/package=foreign&
     
     <item>
       <title>rMaps released</title>
-      <link>https://lcolladotor.github.io/2014/02/10/rMaps-released/</link>
+      <link>https://lcolladotor.github.io/2014/02/10/rmaps-released/</link>
       <pubDate>Mon, 10 Feb 2014 00:00:00 +0000</pubDate>
-      <guid>https://lcolladotor.github.io/2014/02/10/rMaps-released/</guid>
+      <guid>https://lcolladotor.github.io/2014/02/10/rmaps-released/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://github.com/ramnathv&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Ramnath Vaidyanathan&lt;/a&gt; just released his new &lt;code&gt;R&lt;/code&gt; interactive package, &lt;code&gt;rMaps&lt;/code&gt; (&lt;span class=&#34;showtooltip&#34; title=&#34;Vaidyanathan R (2014). rMaps: Interactive Maps from R. R package version 0.1.&#34;&gt;&lt;a href=&#34;&#34;&gt;Vaidyanathan, 2014&lt;/a&gt;&lt;/span&gt;). The packages relies on the development version of his widely known &lt;code&gt;rCharts&lt;/code&gt; package (&lt;span class=&#34;showtooltip&#34; title=&#34;Vaidyanathan R (2013). rCharts: Interactive Charts using Polycharts.js. R package version 0.4.2.&#34;&gt;&lt;a href=&#34;&#34;&gt;Vaidyanathan, 2013&lt;/a&gt;&lt;/span&gt;) as well as javascript libraries that specialize in maps. If you don&amp;rsquo;t know Ramnath, he is one of the most active &lt;code&gt;R&lt;/code&gt; developers out there!! You can see that from his &lt;a href=&#34;https://github.com/ramnathv&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;GitHub profile&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;The package is very new and still under development, but I bet that Ramnath released it to get us users excited and maybe find some helpful hands to document it and further develop it.&lt;/p&gt;
 &lt;p&gt;I don&amp;rsquo;t know about you, but I surely got excited about the package from his intro video:&lt;/p&gt;
@@ -6496,9 +6496,9 @@ dBase, &amp;hellip;.  &lt;a href=&#34;http://CRAN.R-project.org/package=foreign&
     
     <item>
       <title>How to upload files to Dropbox and Google Docs from R</title>
-      <link>https://lcolladotor.github.io/2014/02/05/DropboxAndGoogleDocsFromR/</link>
+      <link>https://lcolladotor.github.io/2014/02/05/how-to-upload-files-to-dropbox-and-google-docs-from-r/</link>
       <pubDate>Wed, 05 Feb 2014 00:00:00 +0000</pubDate>
-      <guid>https://lcolladotor.github.io/2014/02/05/DropboxAndGoogleDocsFromR/</guid>
+      <guid>https://lcolladotor.github.io/2014/02/05/how-to-upload-files-to-dropbox-and-google-docs-from-r/</guid>
       <description>&lt;p&gt;Have you ever wondered whether you can upload files from &lt;code&gt;R&lt;/code&gt; to &lt;a href=&#34;https://www.dropbox.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Dropbox&lt;/a&gt; and/or &lt;a href=&#34;docs.google.com&#34;&gt;Google Docs&lt;/a&gt;? I recently asked myself this question while making my most recent &lt;a href=&#34;http://www.rstudio.com/shiny/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Shiny&lt;/a&gt; app (more later).&lt;/p&gt;
 &lt;p&gt;The answer is yes, you can upload files from &lt;code&gt;R&lt;/code&gt; to these cloud services!&lt;/p&gt;
 &lt;h2 id=&#34;dropbox&#34;&gt;Dropbox&lt;/h2&gt;
@@ -6635,9 +6635,9 @@ dBase, &amp;hellip;.  &lt;a href=&#34;http://CRAN.R-project.org/package=foreign&
     
     <item>
       <title>Creating awesome reports for multiple audiences using knitrBootstrap</title>
-      <link>https://lcolladotor.github.io/2013/12/10/knitrBootstrap/</link>
+      <link>https://lcolladotor.github.io/2013/12/10/creating-awesome-reports-for-multiple-audiences-using-knitrbootstrap/</link>
       <pubDate>Tue, 10 Dec 2013 00:00:00 +0000</pubDate>
-      <guid>https://lcolladotor.github.io/2013/12/10/knitrBootstrap/</guid>
+      <guid>https://lcolladotor.github.io/2013/12/10/creating-awesome-reports-for-multiple-audiences-using-knitrbootstrap/</guid>
       <description>&lt;p&gt;As a biostatistics student, I use &lt;code&gt;R&lt;/code&gt; very frequently when analyzing data. At the same time, I interact with other researchers, some who know how to use &lt;code&gt;R&lt;/code&gt; (R crowd) and some who don&amp;rsquo;t (yet!): no-R crowd. This means that I have to be able to communicate my results to two crowds. It is important that I can quickly provide the code in case that the &lt;code&gt;R&lt;/code&gt; savvy want to look at it: maybe they find a bug and report it ^^. Ideally I want to avoid having to write (organize, share, etc) two crowd-specific reports.&lt;/p&gt;
 &lt;p&gt;A solution to this problem is to create reproducible reports that contain the R code, the results, and interpretation. For the specific scenario I am talking about, reproducibility is a plus, however I believe that it is important for research; albeit not the topic of this post. One of the strongest packages out there to create such reports is &lt;code&gt;knitr&lt;/code&gt; (&lt;span class=&#34;showtooltip&#34; title=&#34;Xie Y (2013). Dynamic Documents with R and knitr. Chapman and Hall/CRC. ISBN 978-1482203530.&#34;&gt;&lt;a href=&#34;http://yihui.name/knitr/&#34;&gt;Xie, 2013&lt;/a&gt;&lt;/span&gt;). It is specially easy to create &lt;code&gt;Rmd&lt;/code&gt; files from which you can generate HTML reports. Then using &lt;a href=&#34;http://www.rstudio.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;RStudio&lt;/a&gt; you can share them via &lt;a href=&#34;http://rpubs.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;RPubs&lt;/a&gt;, a private folder on Dropbox, etc. From example, &lt;a href=&#34;http://rpubs.com/lcollado/2618&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;this is a presentation&lt;/a&gt; without the slide formatting I shared more than a year ago.&lt;/p&gt;
 &lt;p&gt;Using &lt;code&gt;knitr&lt;/code&gt; (&lt;span class=&#34;showtooltip&#34; title=&#34;Xie Y (2013). Dynamic Documents with R and knitr. Chapman and Hall/CRC. ISBN 978-1482203530.&#34;&gt;&lt;a href=&#34;http://yihui.name/knitr/&#34;&gt;Xie, 2013&lt;/a&gt;&lt;/span&gt;) is definitely a step in the right direction. However, you soon find yourself desiring a better template. This is where &lt;code&gt;knitrBootstrap&lt;/code&gt; (&lt;span class=&#34;showtooltip&#34; title=&#34;Hester J (2013). knitrBootstrap: Knitr Bootstrap framework.. R package version 0.9.0.&#34;&gt;&lt;a href=&#34;http://CRAN.R-project.org/package=knitrBootstrap&#34;&gt;Hester, 2013&lt;/a&gt;&lt;/span&gt;) comes in. This package was initialized in March 20th, 2013 by &lt;a href=&#34;http://jimhester.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Jim Hester&lt;/a&gt; and hosted on it&amp;rsquo;s &lt;a href=&#34;https://github.com/jimhester/knitrBootstrap&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;GitHub repository&lt;/a&gt;. I was sold on the idea early on and I am now making this post in part as a tribute to celebrate that it has been available via &lt;a href=&#34;http://cran.at.r-project.org/web/packages/knitrBootstrap/index.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CRAN&lt;/a&gt; for nearly 5 months now.&lt;/p&gt;
@@ -6701,9 +6701,9 @@ dBase, &amp;hellip;.  &lt;a href=&#34;http://CRAN.R-project.org/package=foreign&
     
     <item>
       <title>Trying to reduce the memory overhead when using mclapply</title>
-      <link>https://lcolladotor.github.io/2013/11/14/Reducing-memory-overhead-when-using-mclapply/</link>
+      <link>https://lcolladotor.github.io/2013/11/14/trying-to-reduce-the-memory-overhead-when-using-mclapply/</link>
       <pubDate>Thu, 14 Nov 2013 00:00:00 +0000</pubDate>
-      <guid>https://lcolladotor.github.io/2013/11/14/Reducing-memory-overhead-when-using-mclapply/</guid>
+      <guid>https://lcolladotor.github.io/2013/11/14/trying-to-reduce-the-memory-overhead-when-using-mclapply/</guid>
       <description>&lt;p&gt;I am currently trying to understand how to reduce the memory used by &lt;code&gt;mclapply&lt;/code&gt;. This function is rather complicated and others have explained the differences versus &lt;code&gt;parLapply&lt;/code&gt; (&lt;span class=&#34;showtooltip&#34; title=&#34;A\_Skelton73 (2013). &#39;understanding the differences between mclapply and parLapply in R.&#39; .&#34;&gt;&lt;a href=&#34;http://stackoverflow.com/questions/17196261/understanding-the-differences-between-mclapply-and-parlapply-in-r&#34;&gt;A_Skelton73, 2013&lt;/a&gt;&lt;/span&gt;; &lt;span class=&#34;showtooltip&#34; title=&#34;lockedoff (2012). &#39;Using mclapply, foreach, or something else in [r] to operate on an object in parallel?&#39; .&#34;&gt;&lt;a href=&#34;http://stackoverflow.com/questions/11036702/using-mclapply-foreach-or-something-else-in-r-to-operate-on-an-object-in-par&#34;&gt;lockedoff, 2012&lt;/a&gt;&lt;/span&gt; ) and also made it clear that in &lt;code&gt;mclapply&lt;/code&gt;  each job does not know if the others are running out of memory and thus cannot trigger &lt;code&gt;gc&lt;/code&gt; (&lt;span class=&#34;showtooltip&#34; title=&#34;(2013). &#39; [R-sig-hpc] mclapply: rm intermediate objects and returning	memory .&#39; .&#34;&gt;&lt;a href=&#34;https://mailman.stat.ethz.ch/pipermail/r-sig-hpc/2012-October/001534.html&#34;&gt;Urbanek, 2012&lt;/a&gt;&lt;/span&gt;).&lt;/p&gt;
 &lt;p&gt;While I still struggle to understand all the details of &lt;code&gt;mclapply&lt;/code&gt;, I can successfully use it to reduce computation time at the expense of a very high memory load. I am still looking for tips on how to reduce this memory load.&lt;/p&gt;
 &lt;p&gt;Here is what I have done.&lt;/p&gt;
@@ -6870,9 +6870,9 @@ dBase, &amp;hellip;.  &lt;a href=&#34;http://CRAN.R-project.org/package=foreign&
     
     <item>
       <title>Creating your Jekyll-Bootstrap powered blog for R blogging</title>
-      <link>https://lcolladotor.github.io/2013/11/09/new-Fellgernon-Bit-setup-in-Github/</link>
+      <link>https://lcolladotor.github.io/2013/11/09/creating-your-jekyll-bootstrap-powered-blog-for-r-blogging/</link>
       <pubDate>Sat, 09 Nov 2013 00:00:00 +0000</pubDate>
-      <guid>https://lcolladotor.github.io/2013/11/09/new-Fellgernon-Bit-setup-in-Github/</guid>
+      <guid>https://lcolladotor.github.io/2013/11/09/creating-your-jekyll-bootstrap-powered-blog-for-r-blogging/</guid>
       <description>&lt;p&gt;As you might have noticed, I recently decided to move &lt;code&gt;Fellgernon Bit&lt;/code&gt; from &lt;a href=&#34;http://bit.ly/FellgernonBit&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Tumblr&lt;/a&gt; to &lt;a href=&#34;http://bit.ly/FellBit&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;GitHub&lt;/a&gt;. There are a couple of reasons why I made this change.&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;I wanted a more professional-looking blog.
@@ -7101,9 +7101,9 @@ dBase, &amp;hellip;.  &lt;a href=&#34;http://CRAN.R-project.org/package=foreign&
     
     <item>
       <title>ggplot Tutorial</title>
-      <link>https://lcolladotor.github.io/2013/06/21/ggplot-Tutorial/</link>
+      <link>https://lcolladotor.github.io/2013/06/21/ggplot-tutorial/</link>
       <pubDate>Fri, 21 Jun 2013 00:00:00 +0000</pubDate>
-      <guid>https://lcolladotor.github.io/2013/06/21/ggplot-Tutorial/</guid>
+      <guid>https://lcolladotor.github.io/2013/06/21/ggplot-tutorial/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;http://www.ceb-institute.org/bbs/wp-content/uploads/2011/09/handout_ggplot2.pdf&#34;&gt;ggplot Tutorial&lt;/a&gt;&lt;br/&gt;&lt;p&gt;I liked the &lt;a href=&#34;http://www.ceb-institute.org/bbs/wp-content/uploads/2011/09/handout_ggplot2.pdf&#34;&gt;following ggplot2 tutorial&lt;/a&gt; which is featured in Gabriela de Queiroz’s blog called &lt;a href=&#34;http://unbiasedestimator.tumblr.com/&#34;&gt;unbiasedestimator&lt;/a&gt;. The tutorial looks very neatly presented and I’m sure that it will be very helpful to anyone just getting started with ggplot2 before they jump into &lt;a href=&#34;http://ggplot2.org/book/&#34;&gt;ggplot2: Elegant Graphics for Data Analysis&lt;/a&gt; by Hadley Wickham or &lt;a href=&#34;http://shop.oreilly.com/product/0636920023135.do&#34;&gt;R Graphics Cookbook&lt;/a&gt; by Winston Chang.&lt;/p&gt;&lt;/p&gt;
 &lt;p&gt;&lt;span&gt;The tutorial is very nicely formatted with code in bold highlighting  parts that change something in the plot. Overall, the tutorial explains how to use qplot() although it does have a longer example using ggplot() to make survival curves.&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;Check it out!&lt;/p&gt;
@@ -7120,9 +7120,9 @@ dBase, &amp;hellip;.  &lt;a href=&#34;http://CRAN.R-project.org/package=foreign&
     
     <item>
       <title>userR2013 data analysis contest: data exploration</title>
-      <link>https://lcolladotor.github.io/2013/06/12/userR2013-data-analysis-contest-data-exploration/</link>
+      <link>https://lcolladotor.github.io/2013/06/12/userr2013-data-analysis-contest-data-exploration/</link>
       <pubDate>Wed, 12 Jun 2013 00:00:00 +0000</pubDate>
-      <guid>https://lcolladotor.github.io/2013/06/12/userR2013-data-analysis-contest-data-exploration/</guid>
+      <guid>https://lcolladotor.github.io/2013/06/12/userr2013-data-analysis-contest-data-exploration/</guid>
       <description>&lt;h1&gt;Description&lt;/h1&gt;
 &lt;p&gt;The useR2013 conference is organizing a data analysis contest, check the &lt;a href=&#34;http://www.edii.uclm.es/%7EuseR-2013/docs/announce.pdf&#34;&gt;rules here&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;They have a package called &lt;strong&gt;useR2013DAC&lt;/strong&gt; with two data sets: one from La Liga and the other one from the Formula 1. Once you download and install the package (&lt;a href=&#34;http://www.edii.uclm.es/%7EuseR-2013/#contest&#34;&gt;available here&lt;/a&gt;), you can quickly explore the data using the following R commands:&lt;/p&gt;
@@ -7282,9 +7282,9 @@ sessionInfo()
     
     <item>
       <title>Reading an R file from GitHub</title>
-      <link>https://lcolladotor.github.io/2013/05/09/Reading-an-R-file-from-GitHub/</link>
+      <link>https://lcolladotor.github.io/2013/05/09/reading-an-r-file-from-github/</link>
       <pubDate>Thu, 09 May 2013 00:00:00 +0000</pubDate>
-      <guid>https://lcolladotor.github.io/2013/05/09/Reading-an-R-file-from-GitHub/</guid>
+      <guid>https://lcolladotor.github.io/2013/05/09/reading-an-r-file-from-github/</guid>
       <description>&lt;p&gt;Lets say that I want to read in &lt;a href=&#34;https://github.com/lcolladotor/ballgownR-devel/blob/master/ballgownR/R/infoGene.R&#34;&gt;this R file&lt;/a&gt; from GitHub into R.&lt;/p&gt;
 &lt;p&gt;The first thing you have to do is locate the raw file. You can do so by clicking on the &lt;strong&gt;Raw&lt;/strong&gt; button in GitHub. In this case it&amp;#8217;s &lt;a href=&#34;https://raw.github.com/lcolladotor/ballgownR-devel/master/ballgownR/R/infoGene.R&#34;&gt;&lt;a href=&#34;https://raw.github.com/lcolladotor/ballgownR-devel/master/ballgownR/R/infoGene.R&#34;&gt;https://raw.github.com/lcolladotor/ballgownR-devel/master/ballgownR/R/infoGene.R&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;One would think that using &lt;code&gt;source()&lt;/code&gt; would work, but it doesn&amp;#8217;t as shown below:&lt;/p&gt;
@@ -7352,9 +7352,9 @@ sessionInfo()
     
     <item>
       <title>Using plyr and doMC for quick and easy apply-family functions</title>
-      <link>https://lcolladotor.github.io/2013/04/26/using-plyr-and-domc-for-quick-and-easy-apply-family/</link>
+      <link>https://lcolladotor.github.io/2013/04/26/using-plyr-and-domc-for-quick-and-easy-apply-family-functions/</link>
       <pubDate>Fri, 26 Apr 2013 00:00:00 +0000</pubDate>
-      <guid>https://lcolladotor.github.io/2013/04/26/using-plyr-and-domc-for-quick-and-easy-apply-family/</guid>
+      <guid>https://lcolladotor.github.io/2013/04/26/using-plyr-and-domc-for-quick-and-easy-apply-family-functions/</guid>
       <description>&lt;p&gt;A few weeks back I dedicated a short amount of time to actually read what &lt;code&gt;plyr&lt;/code&gt; (&lt;span class=&#34;showtooltip&#34; title=&#34;Wickham H (2011). The Split-Apply-Combine Strategy for Data
 Analysis. _Journal of Statistical Software_, *40*(1), pp. 1-29.
  http://www.jstatsoft.org/v40/i01/.&#34;&gt;&lt;a href=&#34;http://www.jstatsoft.org/v40/i01/&#34;&gt;Wickham, 2011&lt;/a&gt;&lt;/span&gt;) is about and I was surprised. The whole idea behind &lt;code&gt;plyr&lt;/code&gt; is very simple: expand the &lt;code&gt;apply()&lt;/code&gt; family to do things easy. &lt;code&gt;plyr&lt;/code&gt; has many functions whose name ends with &lt;code&gt;ply&lt;/code&gt; which is short of apply. Then, the functions are identified by two letters before &lt;code&gt;ply&lt;/code&gt; which are abbreviations for the input (first letter) and output (second one). For instance, &lt;code&gt;ddply&lt;/code&gt; takes an input a &lt;code&gt;data.frame&lt;/code&gt; and returns a &lt;code&gt;data.frame&lt;/code&gt; while &lt;code&gt;ldply&lt;/code&gt; takes as input a &lt;code&gt;list&lt;/code&gt; and returns a &lt;code&gt;data.frame&lt;/code&gt;.&lt;/p&gt;
@@ -7482,9 +7482,9 @@ https://github.com/cboettig/knitcitations.&#34;&gt;&lt;a href=&#34;https://githu
     
     <item>
       <title>Predicting who will win a NFL match at half time</title>
-      <link>https://lcolladotor.github.io/2013/03/23/Predicting-who-will-win-a-NFL-match-at-half-time/</link>
+      <link>https://lcolladotor.github.io/2013/03/23/predicting-who-will-win-a-nfl-match-at-half-time/</link>
       <pubDate>Sat, 23 Mar 2013 00:00:00 +0000</pubDate>
-      <guid>https://lcolladotor.github.io/2013/03/23/Predicting-who-will-win-a-NFL-match-at-half-time/</guid>
+      <guid>https://lcolladotor.github.io/2013/03/23/predicting-who-will-win-a-nfl-match-at-half-time/</guid>
       <description>&lt;p&gt;It was great to have a little break, &lt;em&gt;Spring break&lt;/em&gt;, although the weather didn&amp;#8217;t feel like spring at all! During the early part of the break I worked on my final project for Jeff Leek&amp;#8217;s data analysis class, which we call 140.753 here. Continuing &lt;a href=&#34;http://fellgernon.tumblr.com/tagged/jhsph753#.UU44Y1vF2c4&#34;&gt;my previous posts on the topic&lt;/a&gt;, this time I&amp;#8217;ll share the results of my final project.&lt;/p&gt;
 &lt;p&gt;At the beginning of the course, we had to submit a project plan (more like a proposal) and &lt;a href=&#34;https://github.com/lcolladotor/lcollado753/blob/master/hw/projectplan/lcollado_projectplan.pdf&#34;&gt;in mine&lt;/a&gt; I announced my interest to look into some sports data. At the time I included a few links to Brian Burke&amp;#8217;s Advanced NFL Stats site (&lt;span class=&#34;showtooltip&#34; title=&#34;(2013). Advanced NFL Stats.   http://www.advancednflstats.com/ [Online. last-accessed:  2013-03-23 23:28:38].  http://www.advancednflstats.com/.&#34;&gt;&lt;a href=&#34;http://www.advancednflstats.com/&#34;&gt;Burke&lt;/a&gt;&lt;/span&gt;). At the time I didn&amp;#8217;t know that Burke&amp;#8217;s site described in detail a lot of the information I would end up using.&lt;/p&gt;
 &lt;p&gt;My final project had to do with splitting NFL games by half and then use only the play-by-play data from the first half to predict if team A or B would win the game. My overall goal was to have some fun with sports data which I had never looked at, but then also try to come up with something I would personally use in the future. So, why split games by half? I personally would like to know if I should keep watching a game or not at half time. Having a tool to help me decide would be great, and well, if the team I&amp;#8217;m rooting for has high chances of losing or winning, ideally I would switch to doing something else. A related question that I didn&amp;#8217;t try to answer is which half is worth watching? This would be a meaningful question if you only have time to watch one of them.&lt;/p&gt;
@@ -7594,9 +7594,9 @@ https://github.com/cboettig/knitcitations.&#34;&gt;&lt;a href=&#34;https://githu
     
     <item>
       <title>And so begins English Composition I</title>
-      <link>https://lcolladotor.github.io/2013/03/21/And-so-begins-English-Composition-I/</link>
+      <link>https://lcolladotor.github.io/2013/03/21/and-so-begins-english-composition-i/</link>
       <pubDate>Thu, 21 Mar 2013 00:00:00 +0000</pubDate>
-      <guid>https://lcolladotor.github.io/2013/03/21/And-so-begins-English-Composition-I/</guid>
+      <guid>https://lcolladotor.github.io/2013/03/21/and-so-begins-english-composition-i/</guid>
       <description>&lt;p&gt;This week started the English Composition I: Achieving Expertise course (&lt;span class=&#34;showtooltip&#34; title=&#34;(2013). Coursera.  https://www.coursera.org/ [Online.  last-accessed: 2013-03-21 03:47:13].   https://www.coursera.org/course/composition.&#34;&gt;&lt;a href=&#34;https://www.coursera.org/course/composition&#34;&gt;Comer, 2013&lt;/a&gt;&lt;/span&gt;) that I have been looking forward to.&lt;/p&gt;
 &lt;p&gt;I am not sure yet how long I will last, but I hope to enjoy it as much as I can. Plus, it should help me with my posting and other writing areas. While I last in the course, I plan to publish my writings in the blog too. So you will hopefully see me be more active here.&lt;/p&gt;
 &lt;p&gt;As it is important to cite when writing, I have also figured out how to do so automatically in Rmd files. For that I learnt how to use &lt;strong&gt;knitcitations&lt;/strong&gt; from the GitHub instructions (&lt;span class=&#34;showtooltip&#34; title=&#34;cboettig (2013). knitcitations.   https://github.com/cboettig/knitcitations [Online. last-accessed:  2013-03-21 03:19:44].   https://github.com/cboettig/knitcitations.&#34;&gt;&lt;a href=&#34;https://github.com/cboettig/knitcitations&#34;&gt;knitcitations&lt;/a&gt;&lt;/span&gt;) and a explanatory post (&lt;span class=&#34;showtooltip&#34; title=&#34;Boettiger C (2013). knitcitations.   http://www.carlboettiger.info/2012/05/30/knitcitations.html  [Online. last-accessed: 2013-03-21 02:15:41].   http://www.carlboettiger.info/2012/05/30/knitcitations.html.&#34;&gt;&lt;a href=&#34;http://www.carlboettiger.info/2012/05/30/knitcitations.html&#34;&gt;Boettiger, 2013&lt;/a&gt;&lt;/span&gt;).&lt;/p&gt;
@@ -7622,9 +7622,9 @@ https://github.com/cboettig/knitcitations.&#34;&gt;&lt;a href=&#34;https://githu
     
     <item>
       <title>Analyzing SimplyStatistics visits info</title>
-      <link>https://lcolladotor.github.io/2013/03/09/Analyzing-SimplyStatistics-visits-info/</link>
+      <link>https://lcolladotor.github.io/2013/03/09/analyzing-simplystatistics-visits-info/</link>
       <pubDate>Sat, 09 Mar 2013 00:00:00 +0000</pubDate>
-      <guid>https://lcolladotor.github.io/2013/03/09/Analyzing-SimplyStatistics-visits-info/</guid>
+      <guid>https://lcolladotor.github.io/2013/03/09/analyzing-simplystatistics-visits-info/</guid>
       <description>&lt;p&gt;Recently we had to analyze the data of the number of visits per day to &lt;a href=&#34;http://simplystatistics.org/&#34;&gt;SimplyStatistics.org&lt;/a&gt;. There were two goals:&lt;/p&gt;
 &lt;ol&gt;&lt;li&gt;Estimate the fraction of visitors retained after a spike in the number of visitors&lt;/li&gt;
 &lt;li&gt;Identify (if any) any factors that influence the fraction estimated in 1.&lt;/li&gt;
@@ -7639,9 +7639,9 @@ https://github.com/cboettig/knitcitations.&#34;&gt;&lt;a href=&#34;https://githu
     
     <item>
       <title>Sharing my work for &#34;Advanced Methods III&#34;</title>
-      <link>https://lcolladotor.github.io/2013/02/13/Sharing-my-work-for-Advanced-Methods-III/</link>
+      <link>https://lcolladotor.github.io/2013/02/13/sharing-my-work-for-advanced-methods-iii/</link>
       <pubDate>Wed, 13 Feb 2013 00:00:00 +0000</pubDate>
-      <guid>https://lcolladotor.github.io/2013/02/13/Sharing-my-work-for-Advanced-Methods-III/</guid>
+      <guid>https://lcolladotor.github.io/2013/02/13/sharing-my-work-for-advanced-methods-iii/</guid>
       <description>&lt;p&gt;This semester I&amp;#8217;m taking the live version of the Data Analysis class by Jeff Leek. His more &lt;a href=&#34;https://class.coursera.org/dataanalysis-001/class/index&#34;&gt;popular version of the course is available through Coursera&lt;/a&gt;. &lt;/p&gt;
 &lt;p&gt;One of the things that Jeff promotes is reproducibility and sharing code. I share that tendency and thus created a Git repository for my homework and code for the class: &lt;a href=&#34;http://bit.ly/12vSk7d&#34;&gt;lcollado753&lt;/a&gt;. I&amp;#8217;m hosting it with GitHub to try it out since I started with Mercurial via Bitbucket. &lt;/p&gt;
 &lt;p&gt;Part of me would love it if everyone in the class had their own Git repositories. I mean, this class involves lots of practice exercises and there are plenty of R packages and functions that others use that I would like to learn. As I don&amp;#8217;t see this happening, I think that it would be great to list the packages/functions you think could be interesting to others at the end of the write-ups. However, this involves sharing the reports and I don&amp;#8217;t know if that will happen.&lt;/p&gt;
@@ -7655,9 +7655,9 @@ https://github.com/cboettig/knitcitations.&#34;&gt;&lt;a href=&#34;https://githu
     
     <item>
       <title>Introduction to R and Biostatistics (2012 version): presentation</title>
-      <link>https://lcolladotor.github.io/2012/11/12/Introduction-to-R-and-Biostatistics-2012-version/</link>
+      <link>https://lcolladotor.github.io/2012/11/12/introduction-to-r-and-biostatistics-2012-version-presentation/</link>
       <pubDate>Mon, 12 Nov 2012 00:00:00 +0000</pubDate>
-      <guid>https://lcolladotor.github.io/2012/11/12/Introduction-to-R-and-Biostatistics-2012-version/</guid>
+      <guid>https://lcolladotor.github.io/2012/11/12/introduction-to-r-and-biostatistics-2012-version-presentation/</guid>
       <description>&lt;p&gt;To follow my &lt;a href=&#34;http://fellgernon.tumblr.com/post/34677935591/introducing-r-and-biostatistics-to-first-year-lcg#.UKFlW-Oe918&#34;&gt;Introducing R and Biostatistics to first year LCG students (2012 version)&lt;/a&gt; post,  you can now find the presentation online from my site either in &lt;a href=&#34;http://www.biostat.jhsph.edu/~lcollado/lcg/introR2012/intro_R_Biostat_LCG_2012_slides.html&#34;&gt;presentation format&lt;/a&gt;, in a &lt;a href=&#34;http://www.biostat.jhsph.edu/~lcollado/lcg/introR2012/intro_R_Biostat_LCG_2012.html&#34;&gt;single webpage format&lt;/a&gt;, or the &lt;a href=&#34;http://www.biostat.jhsph.edu/~lcollado/lcg/introR2012/intro_R_Biostat_LCG_2012.Rmd&#34;&gt;raw Rmd file&lt;/a&gt;. To prove the point that publishing to &lt;a href=&#34;http://rpubs.com/&#34;&gt;RPubs&lt;/a&gt; is super easy, you can also find the &lt;a href=&#34;http://rpubs.com/lcollado/2618&#34;&gt;single webpage format over there&lt;/a&gt;. I also like how you can comment and share in RPubs.&lt;/p&gt;
 &lt;p&gt;One of the challenges of giving a presentation to first year students is finding the balance between introducing them to cool things you are doing in your work and actually giving a talk that they can follow. I thought about this and ended dropping anything related to my work.&lt;/p&gt;
 &lt;p&gt;My presentation was split pretty much in two parts. First, I wanted to promote some philosophical discussion about what is statistics. Second, I gave a brief overview of what you can do with R. Or more exactly, what they should be able to learn to do even if they become &lt;em&gt;wet &lt;/em&gt;biologists.&lt;/p&gt;
@@ -7674,9 +7674,9 @@ https://github.com/cboettig/knitcitations.&#34;&gt;&lt;a href=&#34;https://githu
     
     <item>
       <title>Introducing R and Biostatistics to first year LCG students (2012 version)</title>
-      <link>https://lcolladotor.github.io/2012/10/30/introducing-r-and-biostatistics-to-first-year-lcg/</link>
+      <link>https://lcolladotor.github.io/2012/10/30/introducing-r-and-biostatistics-to-first-year-lcg-students-2012-version/</link>
       <pubDate>Tue, 30 Oct 2012 00:00:00 +0000</pubDate>
-      <guid>https://lcolladotor.github.io/2012/10/30/introducing-r-and-biostatistics-to-first-year-lcg/</guid>
+      <guid>https://lcolladotor.github.io/2012/10/30/introducing-r-and-biostatistics-to-first-year-lcg-students-2012-version/</guid>
       <description>&lt;p&gt;On Friday November 9th I&amp;#8217;ll be giving a talk to the first year students from the Undergraduate Program on Genomic Sciences (LCG in Spanish) during their &amp;#8220;Seminar 1: Introduction to Bioinformatics&amp;#8221; course. It&amp;#8217;s just like I did a year ago as I documented in my post &lt;a href=&#34;http://fellgernon.tumblr.com/post/13739343319/introducing-biostatistics-to-first-year-lcg-students#.UJBq6Wl25FQ&#34;&gt;Introducing Biostatistics to first year LCG students&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Well, this time I&amp;#8217;ll change things a bit. I&amp;#8217;m allowed to require the students to read 2-3 papers before my talk to introduce them to my field. I&amp;#8217;ll do so, but in a more peculiar way by requiring them to listen in to a few videos I selected. So, without further ado here are the three required &amp;#8220;papers&amp;#8221;:&lt;/p&gt;
 &lt;p&gt;Here is &amp;#8220;&lt;strong&gt;paper 1&lt;/strong&gt;&#34; (~30 minutes). The goal is to introduce you to the basic workings of R and also to great sources of R videos.&lt;/p&gt;
@@ -7729,9 +7729,9 @@ https://github.com/cboettig/knitcitations.&#34;&gt;&lt;a href=&#34;https://githu
     
     <item>
       <title>Visualizing colors()</title>
-      <link>https://lcolladotor.github.io/2012/10/19/Visualizing-colors/</link>
+      <link>https://lcolladotor.github.io/2012/10/19/visualizing-colors/</link>
       <pubDate>Fri, 19 Oct 2012 00:00:00 +0000</pubDate>
-      <guid>https://lcolladotor.github.io/2012/10/19/Visualizing-colors/</guid>
+      <guid>https://lcolladotor.github.io/2012/10/19/visualizing-colors/</guid>
       <description>&lt;p&gt;The other day I learnt about the existance of the colors() vector in R which specifies all the character-based colors like &amp;#8220;light blue&amp;#8221;, &amp;#8220;black&amp;#8221;, etc. So I made a simple plot to visualize them all. Here&amp;#8217;s the code:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;mat&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;matrix&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;length&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;colors&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()),&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ncol&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;9&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;byrow&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;TRUE&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;df&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;data.frame&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;col&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;colors&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(),&lt;/span&gt; 
@@ -7749,9 +7749,9 @@ https://github.com/cboettig/knitcitations.&#34;&gt;&lt;a href=&#34;https://githu
     
     <item>
       <title>Setting up your computer for bioinformatics/biostatistics and a compedium of resources</title>
-      <link>https://lcolladotor.github.io/2012/08/23/setting-up-your-computer-for/</link>
+      <link>https://lcolladotor.github.io/2012/08/23/setting-up-your-computer-for-bioinformatics/biostatistics-and-a-compedium-of-resources/</link>
       <pubDate>Thu, 23 Aug 2012 00:00:00 +0000</pubDate>
-      <guid>https://lcolladotor.github.io/2012/08/23/setting-up-your-computer-for/</guid>
+      <guid>https://lcolladotor.github.io/2012/08/23/setting-up-your-computer-for-bioinformatics/biostatistics-and-a-compedium-of-resources/</guid>
       <description>&lt;p&gt;Jumping on the train set by &lt;a href=&#34;http://www.biostat.jhsph.edu/~hiparker/&#34;&gt;Hilary Parker&lt;/a&gt; &amp;#8220;&lt;a href=&#34;http://hilaryparker.com/2012/08/16/the-setup-part-1/&#34;&gt;The Setup (Part 1)&lt;/a&gt;&#34; and &lt;a href=&#34;http://biostat.jhsph.edu/~afrazee/&#34;&gt;Alyssa Frazee&lt;/a&gt; &amp;#8220;&lt;a href=&#34;http://alyssafrazee.wordpress.com/&#34;&gt;my software/hardware setup&lt;/a&gt;&amp;#8221;, I&amp;#8217;m going to share my setup and hopefully add something new. They both did a great job already, so make sure you read their posts!&lt;/p&gt;
 &lt;p&gt;I have some experience with all three main OS: Windows, Linux and Mac. That being said, I know some of the basic stuff for each but I surely use Google very frequently to get help. I used to have a dual Windows / Linux (Ubuntu) set up but now I have a Windows laptop/desktop (it&amp;#8217;s a monster :P) at home and I&amp;#8217;m happy working with my Mac. &lt;/p&gt;
 &lt;p&gt;I&amp;#8217;m going to start by mentioning the software I use(d) in each OS and then add some other tools that I really like.&lt;/p&gt;
@@ -7851,9 +7851,9 @@ https://github.com/cboettig/knitcitations.&#34;&gt;&lt;a href=&#34;https://githu
     
     <item>
       <title>The new visualization package for genome data in Bioconductor: ggbio</title>
-      <link>https://lcolladotor.github.io/2011/12/06/the-new-visualization-package-for-genome-data-in/</link>
+      <link>https://lcolladotor.github.io/2011/12/06/the-new-visualization-package-for-genome-data-in-bioconductor-ggbio/</link>
       <pubDate>Tue, 06 Dec 2011 00:00:00 +0000</pubDate>
-      <guid>https://lcolladotor.github.io/2011/12/06/the-new-visualization-package-for-genome-data-in/</guid>
+      <guid>https://lcolladotor.github.io/2011/12/06/the-new-visualization-package-for-genome-data-in-bioconductor-ggbio/</guid>
       <description>&lt;p&gt;It&amp;#8217;s been a while since I&amp;#8217;ve been waiting for the release of a visualization package in Bioconductor. Back in 2008 I was really impressed by the power of&lt;a href=&#34;http://www.bioconductor.org/packages/release/bioc/html/GenomeGraphs.html&#34;&gt; GenomeGraphs&lt;/a&gt; and I have used it in multiple occasions. Yet from both the &lt;a href=&#34;http://www-huber.embl.de/biocdeveleurope2010/&#34;&gt;Bioconductor Developer Meeting in Heidelberg 2010&lt;/a&gt; and &lt;a href=&#34;https://secure.bioconductor.org/BioC2011/&#34;&gt;BioC2011&lt;/a&gt; I&amp;#8217;ve been waiting for the release of the visualization tools developed by Michael Lawrence and Tengfei Yin at Genentech. &lt;/p&gt;
 &lt;p&gt;So, after a long hiatus where I didn&amp;#8217;t browse the &lt;a href=&#34;http://www.bioconductor.org/packages/release/BiocViews.html&#34;&gt;biocviews&lt;/a&gt; in Bioconductor, I found out that Lawrence and Yin released &lt;a href=&#34;http://www.bioconductor.org/packages/release/bioc/html/ggbio.html&#34;&gt;ggbio&lt;/a&gt; and &lt;a href=&#34;http://www.bioconductor.org/packages/release/bioc/html/biovizBase.html&#34;&gt;biovizBase&lt;/a&gt; (it&amp;#8217;s more of an infrastructure package for ggbio) . I haven&amp;#8217;t really had the time to play around with them, but it&amp;#8217;s definitely worth exploring both of their vignette files: &lt;a href=&#34;http://www.bioconductor.org/packages/release/bioc/vignettes/ggbio/inst/doc/intro.pdf&#34;&gt;ggbio&lt;/a&gt;, &lt;a href=&#34;http://www.bioconductor.org/packages/release/bioc/vignettes/biovizBase/inst/doc/intro.pdf&#34;&gt;biovizBase&lt;/a&gt;. I also think that they&amp;#8217;ll fit very well in Bioconductor because quite a few of their examples involved the gamma of objects the BioC team has released for high-throughput sequencing (HTS) data. Meaning that they work well with objects from IRanges and GenomicRanges. Also, some of the examples use BAM files which are common nowadays in any HTS analysis pipeline. As a plus, ggbio uses&lt;a href=&#34;http://cran.r-project.org/web/packages/ggplot2/index.html&#34;&gt; ggplot2&lt;/a&gt;, which definitely makes clear nice plots.&lt;/p&gt;
 &lt;p&gt;I expect ggbio to replace GenomeGraphs soon (although I love using it), but I&amp;#8217;m also kind of disappointed that I didn&amp;#8217;t see any of the cool examples from BioC2011 in ggbio&amp;#8217;s vignette file. After all, &lt;a href=&#34;https://github.com/tengfei/visnab&#34;&gt;visnab&lt;/a&gt; looked pretty impressive as &lt;a href=&#34;http://www.stat.iastate.edu/centers/CCGS/slides/slides-visnab.pdf&#34;&gt;you can see in this presentation&lt;/a&gt;. I don&amp;#8217;t know if they decided to rename visnab into ggbio, or maybe they haven&amp;#8217;t released visnab yet. Anyhow, give ggbio and biovizBase vignette files a look :)&lt;/p&gt;
@@ -7862,9 +7862,9 @@ https://github.com/cboettig/knitcitations.&#34;&gt;&lt;a href=&#34;https://githu
     
     <item>
       <title>Introducing Biostatistics to first year LCG students</title>
-      <link>https://lcolladotor.github.io/2011/12/04/Introducing-Biostatistics-to-first-year-LCG-students/</link>
+      <link>https://lcolladotor.github.io/2011/12/04/introducing-biostatistics-to-first-year-lcg-students/</link>
       <pubDate>Sun, 04 Dec 2011 00:00:00 +0000</pubDate>
-      <guid>https://lcolladotor.github.io/2011/12/04/Introducing-Biostatistics-to-first-year-LCG-students/</guid>
+      <guid>https://lcolladotor.github.io/2011/12/04/introducing-biostatistics-to-first-year-lcg-students/</guid>
       <description>&lt;p&gt;Around two weeks ago I gave a talk via skype to the first year students from the &lt;a href=&#34;http://www.lcg.unam.mx/about&#34;&gt;Undergraduate Program on Genomic Sciences&lt;/a&gt; (LCG in Spanish) from the National Autonomous University of Mexico (UNAM in Spanish). The talk was under the context of the &lt;em&gt;Introduction to Bioinformatics Seminar Series&lt;/em&gt; whose goal is to familiarize the new students with the bioinformatics world. It used to be a course heavy on exploring database websites, some basic theory, and lots of new concepts and algorithm names. Like, what is BLAST? This year, the course involved several talks from former students (like myself) on their experience and current job (most of us are in graduate school).&lt;/p&gt;
 &lt;p&gt;In my case, I was invited to talk about Biostatistics and R as I was one of the first LCG students to learn and teach R to other students (including PhD students ^^): &lt;a href=&#34;http://www.lcg.unam.mx/~lcollado/R/&#34;&gt;12 hour intro to R and Bioconductor&lt;/a&gt;, &lt;a href=&#34;http://www.lcg.unam.mx/~lcollado/E/&#34;&gt;R in an intro to statistics course&lt;/a&gt;, a &lt;a href=&#34;http://www.lcg.unam.mx/~lcollado/B/&#34;&gt;full course on Bioconductor&lt;/a&gt;. &lt;/p&gt;
 &lt;p&gt;I had a lot of fun preparing my talk as I tried to portray the three main currents in Biostatistics in a way that would be understandable, basic concepts such as a P-value, some basic R code (the students knew the super basics only), and doing so in a way that I would also pass how I see things. A key part for any bioinformatician, as I see it, is to have a good basic toolset. That&amp;#8217;s why I tried to pass on many tips to these young students. Also, I do like to go back to the philosophy of science and whether we need hypothesis nowadays or just models based on the data. I definitely had to cover the topic of communication as I strongly believe that any researcher has to be able to communicate with a biostastician if they want their help in analyzing their data. Also, a biostatistician is not a stastistician, meaning that they have to understand the underlying biological question. I tried emphasizing this point with the students and I attempted to motivate them to take a basic stastistics and probability course (2 preferably). After all, biostatistics is key nowadays in science since biology has gone high-throughput.&lt;/p&gt;

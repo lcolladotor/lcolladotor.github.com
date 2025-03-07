@@ -14,9 +14,9 @@
     
     <item>
       <title>Login to the cluster, request a node and change to your project directory in a single command</title>
-      <link>https://lcolladotor.github.io/2013/12/11/quick-cluster-login-to-interactive-session/</link>
+      <link>https://lcolladotor.github.io/2013/12/11/login-to-the-cluster-request-a-node-and-change-to-your-project-directory-in-a-single-command/</link>
       <pubDate>Wed, 11 Dec 2013 00:00:00 +0000</pubDate>
-      <guid>https://lcolladotor.github.io/2013/12/11/quick-cluster-login-to-interactive-session/</guid>
+      <guid>https://lcolladotor.github.io/2013/12/11/login-to-the-cluster-request-a-node-and-change-to-your-project-directory-in-a-single-command/</guid>
       <description>&lt;p&gt;To be able to do RNA-seq research work in large multi-sample studies you have to be able to analyze large files and thus frequently use a powerful computing environment. In my case, this means that I have to login to a &lt;a href=&#34;http://en.wikipedia.org/wiki/Computer_cluster&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;computing cluster&lt;/a&gt; frequently. This is a common task for other biostatisticians (like those that do brain imagining studies) and many other people. When I am working on a project, I generally have to login to the cluster and then change the directory to the location where I have my project files.&lt;/p&gt;
 &lt;p&gt;A local cluster is normally composed of a login machine (enigma2 in my case) from where you can request to work on a node. There are several options for controlling this process of requesting a node, and in our institution we use a &lt;a href=&#34;http://en.wikipedia.org/wiki/Oracle_Grid_Engine&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Sun/Oracle Grid Engine&lt;/a&gt;. When a cluster has a lot of users, you want to dedicate the login machine as much as possible to handling login requests and assigning nodes for people to use. This means that you want to minimize doing any other kind of operations on the login machine, such as input/output operations.&lt;/p&gt;
 &lt;h2 id=&#34;basic-workflow&#34;&gt;Basic workflow&lt;/h2&gt;
@@ -169,9 +169,9 @@ it is all the same on both locations.&lt;/p&gt;
     
     <item>
       <title>Using plyr and doMC for quick and easy apply-family functions</title>
-      <link>https://lcolladotor.github.io/2013/04/26/using-plyr-and-domc-for-quick-and-easy-apply-family/</link>
+      <link>https://lcolladotor.github.io/2013/04/26/using-plyr-and-domc-for-quick-and-easy-apply-family-functions/</link>
       <pubDate>Fri, 26 Apr 2013 00:00:00 +0000</pubDate>
-      <guid>https://lcolladotor.github.io/2013/04/26/using-plyr-and-domc-for-quick-and-easy-apply-family/</guid>
+      <guid>https://lcolladotor.github.io/2013/04/26/using-plyr-and-domc-for-quick-and-easy-apply-family-functions/</guid>
       <description>&lt;p&gt;A few weeks back I dedicated a short amount of time to actually read what &lt;code&gt;plyr&lt;/code&gt; (&lt;span class=&#34;showtooltip&#34; title=&#34;Wickham H (2011). The Split-Apply-Combine Strategy for Data
 Analysis. _Journal of Statistical Software_, *40*(1), pp. 1-29.
  http://www.jstatsoft.org/v40/i01/.&#34;&gt;&lt;a href=&#34;http://www.jstatsoft.org/v40/i01/&#34;&gt;Wickham, 2011&lt;/a&gt;&lt;/span&gt;) is about and I was surprised. The whole idea behind &lt;code&gt;plyr&lt;/code&gt; is very simple: expand the &lt;code&gt;apply()&lt;/code&gt; family to do things easy. &lt;code&gt;plyr&lt;/code&gt; has many functions whose name ends with &lt;code&gt;ply&lt;/code&gt; which is short of apply. Then, the functions are identified by two letters before &lt;code&gt;ply&lt;/code&gt; which are abbreviations for the input (first letter) and output (second one). For instance, &lt;code&gt;ddply&lt;/code&gt; takes an input a &lt;code&gt;data.frame&lt;/code&gt; and returns a &lt;code&gt;data.frame&lt;/code&gt; while &lt;code&gt;ldply&lt;/code&gt; takes as input a &lt;code&gt;list&lt;/code&gt; and returns a &lt;code&gt;data.frame&lt;/code&gt;.&lt;/p&gt;
