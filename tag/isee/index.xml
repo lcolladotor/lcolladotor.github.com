@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>iSEE | L. Collado-Torres</title>
+    <link>https://lcolladotor.github.io/tag/isee/</link>
+      <atom:link href="https://lcolladotor.github.io/tag/isee/index.xml" rel="self" type="application/rss+xml" />
+    <description>iSEE</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Fri, 14 Mar 2025 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://lcolladotor.github.io/media/icon_hu2b32c4ab415f12f472f73c7b0301b0d1_19400_512x512_fill_lanczos_center_3.png</url>
+      <title>iSEE</title>
+      <link>https://lcolladotor.github.io/tag/isee/</link>
+    </image>
+    
+    <item>
+      <title>Initial impressions from testing Posit Connect</title>
+      <link>https://lcolladotor.github.io/2025/03/14/initial-impressions-from-testing-posit-connect/</link>
+      <pubDate>Fri, 14 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>https://lcolladotor.github.io/2025/03/14/initial-impressions-from-testing-posit-connect/</guid>
+      <description>&lt;p&gt;Two weeks ago I finished testing &lt;a href=&#34;https://posit.co/products/enterprise/connect/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Posit Connect&lt;/a&gt; as a replacement to &lt;a href=&#34;https://www.shinyapps.io/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;shinyapps.io&lt;/a&gt;. At the end of the trial period, I presented my conclusions during a &lt;a href=&#34;https://research.libd.org/rstatsclub/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;LIBD rstats club&lt;/a&gt; session. Here you can read the &lt;a href=&#34;https://docs.google.com/document/d/1CcPwSJiM2aElsQKFXzd1R2jih-Cc6NR5E1MQ_9mYAqA/edit?usp=sharing&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;detailed notes&lt;/a&gt; and watch the resulting video:&lt;/p&gt;
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/OoVBiO_Oc2k?si=fWbVdcPkx4ilXAA-&#34; title=&#34;YouTube video player&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;p&gt;The video and notes dive more into the technical details and I also performed some live tests. Below I summarize the main points from our use case and solutions we have experience with.&lt;/p&gt;
+&lt;h2 id=&#34;our-use-case&#34;&gt;Our use case&lt;/h2&gt;
+&lt;p&gt;Overall, my team and colleagues at LIBD are in a position where we have:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Over 75 &lt;a href=&#34;https://bioconductor.org/packages/iSEE/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;iSEE&lt;/code&gt;&lt;/a&gt; and &lt;a href=&#34;https://bioconductor.org/packages/spatialLIBD&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;spatialLIBD&lt;/code&gt;&lt;/a&gt; web apps powered by &lt;a href=&#34;https://shiny.rstudio.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;shiny&lt;/code&gt;&lt;/a&gt; and hosted on &lt;a href=&#34;https://www.shinyapps.io/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;shinyapps.io&lt;/code&gt;&lt;/a&gt;.
+&lt;ul&gt;
+&lt;li&gt;These apps have been deployed by 14 different people so far. That is, we have been able to teach new members or students how to deploy apps: anyone can do so with a bit of training.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Our apps are typically shared publicly, so we don&amp;rsquo;t really need password-controlled access.
+&lt;ul&gt;
+&lt;li&gt;We don&amp;rsquo;t share URLs for studies under development assuming that no one will correctly guess the URLs.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Our data is stored in &lt;a href=&#34;https://bioconductor.org/packages/SummarizedExperiment/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;SummarizedExperiment&lt;/code&gt;&lt;/a&gt;, &lt;a href=&#34;https://bioconductor.org/packages/SingleCellExperiment/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;SingleCellExperiment&lt;/code&gt;&lt;/a&gt;, or &lt;a href=&#34;https://bioconductor.org/packages/SpatialExperiment&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;SpatialExperiment&lt;/code&gt;&lt;/a&gt; objects. The single cell and spatially-resolved transcriptomics data typically involves over 50,000 cells or Visium spots across 20,000 or so genes. Some larger studies are over 100,000 or 200,000 cells/spots. The cells/spots are the columns and the genes are the rows in these large matrices of expression data. Many cells/spots don&amp;rsquo;t have expression data, so the matrices are sparse. For more on these types of objects check the video below.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/lqxtgpD-heM?si=hnmDYRjdf-MgryNC&#34; title=&#34;YouTube video player&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;ul&gt;
+&lt;li&gt;For spatially-resolved transcriptomics data, &lt;code&gt;SpatialExperiment&lt;/code&gt; objects also contain images per sample (defined as a Visium capture area). These are typically &lt;code&gt;lowres&lt;/code&gt; images that are maximum 600 x 600 pixels. One of our largest studies has 120 samples.
+&lt;ul&gt;
+&lt;li&gt;There are other images that we typically remove from the objects, such as &lt;a href=&#34;https://github.com/LieberInstitute/Posit_Connect_shiny_apps/blob/5bbae3e4386cd28222aa29818f2c22e1d60a180d/spatial_hpc/code/01_download_SPE_from_ExperimentHub.R#L26-L35&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;this case&lt;/a&gt; which saved 3.29 GB of memory by dropping non-essential images in a study with 36 samples. The initial &lt;code&gt;SpatialExperiment&lt;/code&gt; object used 8.81 GB in memory for &lt;a href=&#34;https://github.com/LieberInstitute/Posit_Connect_shiny_apps/blob/5bbae3e4386cd28222aa29818f2c22e1d60a180d/spatial_hpc/code/01_download_SPE_from_ExperimentHub.R#L27&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;this study&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;The expression matrices are typically saved as &lt;code&gt;dgCMatrix&lt;/code&gt; objects from the &lt;a href=&#34;https://cran.r-project.org/package=Matrix&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;Matrix&lt;/code&gt;&lt;/a&gt; package. These are great for storing sparse data if you want it all in memory. However, for our larger studies, we typically just keep one matrix that has the library-size normalized counts (called &lt;code&gt;logcounts&lt;/code&gt;) and drop the un-normalized &lt;code&gt;counts&lt;/code&gt;.
+&lt;ul&gt;
+&lt;li&gt;In the same dataset with 36 samples, this meant another 2.6 GB saved in memory as &lt;a href=&#34;https://github.com/LieberInstitute/Posit_Connect_shiny_apps/blob/5bbae3e4386cd28222aa29818f2c22e1d60a180d/spatial_hpc/code/01_download_SPE_from_ExperimentHub.R#L35-L41&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;shown here&lt;/a&gt;. This resulted in a reduced &lt;code&gt;SpatialExperiment&lt;/code&gt; object of 2.92 GB in memory for &lt;a href=&#34;https://github.com/LieberInstitute/Posit_Connect_shiny_apps/blob/5bbae3e4386cd28222aa29818f2c22e1d60a180d/spatial_hpc/code/01_download_SPE_from_ExperimentHub.R#L41&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;this study&lt;/a&gt; containing only the &lt;code&gt;logcounts&lt;/code&gt; normalized gene expression data and the &lt;code&gt;lowres&lt;/code&gt; images.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;For larger studies, we can use &lt;a href=&#34;https://bioconductor.org/packages/HD5Array/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;HD5Array&lt;/code&gt;&lt;/a&gt; objects to store the expression data on disk and only load the data in memory when needed.
+&lt;ul&gt;
+&lt;li&gt;For a dataset with 120 samples, this results in a 505.20 Mb &lt;code&gt;SpatialExperiment&lt;/code&gt; object in memory that has the &lt;code&gt;counts&lt;/code&gt;, &lt;code&gt;lowres&lt;/code&gt; images, 36,601 genes, and 599,034 spots as &lt;a href=&#34;https://github.com/LieberInstitute/Posit_Connect_shiny_apps/blob/1f6f4d56c76d476f928ce606c23f2b51923d5a0d/spatialDLPFC_mdd_bpd/code/app.R#L74-L91&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;shown here&lt;/a&gt;. The files on disk use about 1.5 GB of space: 1.4 GB for the &lt;code&gt;.h5&lt;/code&gt; file as &lt;a href=&#34;https://github.com/LieberInstitute/Posit_Connect_shiny_apps/blob/1f6f4d56c76d476f928ce606c23f2b51923d5a0d/spatialDLPFC_mdd_bpd/code/app.R#L93-L95&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;noted here&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Actually, for this study, we have another &lt;code&gt;SpatialExperiment&lt;/code&gt; object with &lt;code&gt;logcounts&lt;/code&gt; and &lt;code&gt;counts&lt;/code&gt;, no images, 28,965 genes, and 535,248 spots that uses 154.04 Mb in memory as &lt;a href=&#34;https://github.com/LieberInstitute/Posit_Connect_shiny_apps/blob/1f6f4d56c76d476f928ce606c23f2b51923d5a0d/spatialDLPFC_mdd_bpd/code/app.R#L32-L49&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;noted here&lt;/a&gt;. However, the files on disk grow to use 13 GB of disk space for the &lt;code&gt;.h5&lt;/code&gt; file as &lt;a href=&#34;https://github.com/LieberInstitute/Posit_Connect_shiny_apps/blob/1f6f4d56c76d476f928ce606c23f2b51923d5a0d/spatialDLPFC_mdd_bpd/code/app.R#L51-L53&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;shown here&lt;/a&gt;. I believe that&amp;rsquo;s because the &lt;code&gt;logcounts&lt;/code&gt; which have decimal numbers take much more disk space to store them. This same object as a sparse memory object and with the &lt;code&gt;lowres&lt;/code&gt; images added used 10.69 GB of memory as &lt;a href=&#34;https://github.com/LieberInstitute/Posit_Connect_shiny_apps/blob/1f6f4d56c76d476f928ce606c23f2b51923d5a0d/spatialDLPFC_mdd_bpd/code/02_sparseMatrix_in_memory_version/app.R#L26-L43&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;noted here&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;HDF5Array&lt;/code&gt; is awesome for saving memory, but it can take up a lot of disk space. It&amp;rsquo;s a great resource developed by Hervé Pagès from Bioconductor&amp;rsquo;s core team.&lt;/li&gt;
+&lt;li&gt;For more on &lt;code&gt;HDF5Array&lt;/code&gt; and compressed data, check this video:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/YoBW7IiNzQA?si=jDE9zph2oIurDGx6&#34; title=&#34;YouTube video player&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;ul&gt;
+&lt;li&gt;We have observed that &lt;code&gt;iSEE&lt;/code&gt; and &lt;code&gt;spatialLIBD&lt;/code&gt; need more memory than just the one needed for loading the object as reported on the memory usage graphs provided by &lt;a href=&#34;https://www.shinyapps.io/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;shinyapps.io&lt;/code&gt;&lt;/a&gt;. That&amp;rsquo;s because of some internal operations, and while both packages try to minimize memory duplication, it&amp;rsquo;s best to have more memory than twice the object size to prevent the apps from crashing: if they are unreliable, people won&amp;rsquo;t use them.
+&lt;ul&gt;
+&lt;li&gt;In practice, we try to deploy objects that use up to 3 GB of memory when using the 8 GB memory instances on &lt;a href=&#34;https://www.shinyapps.io/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;shinyapps.io&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;use-case-summary&#34;&gt;Use case summary&lt;/h2&gt;
+&lt;p&gt;Overall we have been able to use &lt;a href=&#34;https://www.shinyapps.io/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;shinyapps.io&lt;/code&gt;&lt;/a&gt; for studies with R objects that use up to 3 GB of memory with sparse memory &lt;code&gt;dgCMatrix&lt;/code&gt; objects for storing the &lt;code&gt;logcounts&lt;/code&gt; normalized expression data. In the case of spatially-resolved transcriptomics projects, we only include the &lt;code&gt;lowres&lt;/code&gt; images. These objects can also be uploaded within the 3 to 5 GB file size limit as &lt;a href=&#34;https://docs.posit.co/shinyapps.io/guide/applications/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;noted in the official shinyapps documentation&lt;/a&gt;. However, we have datasets where this is no longer possible. You either need more memory or the ability to save data in files larger than 5 GB.&lt;/p&gt;
+&lt;h2 id=&#34;deployment-options&#34;&gt;Deployment options&lt;/h2&gt;
+&lt;p&gt;We have considered the following options for deploying our apps:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;AWS-hosted &lt;a href=&#34;https://posit.co/products/open-source/shiny-server/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;shiny-server&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;You choose how much disk space and memory you need on a given AWS instance&lt;/li&gt;
+&lt;li&gt;You have to install R yourself and the open source &lt;code&gt;shiny-server&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;You can only have 1 app deployed by AWS instance&lt;/li&gt;
+&lt;li&gt;You upload the data and R code for the app yourself&lt;/li&gt;
+&lt;li&gt;For us, a LIBD system admin has dealt with the AWS and &lt;code&gt;shiny-server&lt;/code&gt; setup, plus the R updates. Then a second person (myself so far) has had to upload the data and keep the R code up to date. In practice, we rarely update this app.&lt;/li&gt;
+&lt;li&gt;Example: &lt;a href=&#34;http://spatial.libd.org/spatialLIBD/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;http://spatial.libd.org/spatialLIBD/&lt;/a&gt; which at some point was deployed on an AWS instance with 128 GB of RAM. We wanted to make sure that this app could handle several dozen users.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.shinyapps.io/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;shinyapps.io&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;If you have the best account (&lt;code&gt;Professional&lt;/code&gt;; check their &lt;a href=&#34;https://www.shinyapps.io/#pricing-anchor&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;pricing information&lt;/a&gt;) you can have apps deployed with up to 8 GB of memory and max 3-5 GB disk space.&lt;/li&gt;
+&lt;li&gt;For our apps, we typically configure them to have 1 R process per instance, with 2 max connections per instance. Aka, up to 2 users per instance.&lt;/li&gt;
+&lt;li&gt;Each app can run in up to 10 instances, so you can have up to 20 users per app.
+&lt;ul&gt;
+&lt;li&gt;You can deploy the same R code and data under two apps (aka two URLs) or more if you want to have even more capacity.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Deployment is done via &lt;code&gt;rsconnect::deployApp()&lt;/code&gt; which has to upload your data every time and install packages too. While compiled R packages have increased the speed of this process, it can easily take 15-30 minutes per app.&lt;/li&gt;
+&lt;li&gt;Example: &lt;a href=&#34;https://libd.shinyapps.io/spatialDLPFC_Visium_Sp09&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;libd.shinyapps.io/spatialDLPFC_Visium_Sp09&lt;/a&gt; from the &lt;a href=&#34;https://research.libd.org/spatialDLPFC/#interactive-websites&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;spatialDLPFC&lt;/a&gt; project.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://posit.co/products/enterprise/connect/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Posit Connect&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;You can upload data to the server separate from the R code for the apps.
+&lt;ul&gt;
+&lt;li&gt;This requires &lt;code&gt;ssh&lt;/code&gt; access, but that&amp;rsquo;s fairly easy to implement.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;It can auto-sync the R code from GitHub repositories every 15 minutes.&lt;/li&gt;
+&lt;li&gt;It can auto-sync changes to the list of R packages also through GitHub repositories. This involves &lt;code&gt;manifest.json&lt;/code&gt; files made with &lt;code&gt;rsconnect::writeManifest()&lt;/code&gt;.
+&lt;ul&gt;
+&lt;li&gt;It makes it incredibly easy to update many applications at once by just updating the &lt;code&gt;manifest.json&lt;/code&gt; files.&lt;/li&gt;
+&lt;li&gt;Enables a much faster update process than &lt;code&gt;shinyapps.io&lt;/code&gt; as we make updates to &lt;code&gt;spatialLIBD&lt;/code&gt; to add new features or fix bugs.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Your server can have 200 GB of disk space and 31 GB of RAM (as the one I tested) or more resources.
+&lt;ul&gt;
+&lt;li&gt;This unlocks the ability to upload &lt;code&gt;HDF5Array&lt;/code&gt;-compressed data that has less memory requirements but larger disk space requirements.&lt;/li&gt;
+&lt;li&gt;Note that the server resources are shared among all apps on the server!
+&lt;ul&gt;
+&lt;li&gt;My understanding is that &lt;code&gt;Posit Connect&lt;/code&gt; has ways to deal with resources running out on a server, but I haven&amp;rsquo;t tested this feature.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;conclusions&#34;&gt;Conclusions&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://posit.co/products/enterprise/connect/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://docs.posit.co/helm/rstudio-connect/kubernetes-howto/images/logoPositConnect.svg&#34; alt=&#34;&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Overall, I&amp;rsquo;m hopeful that we&amp;rsquo;ll get long term access to a &lt;code&gt;Posit Connect&lt;/code&gt; server. It will allow us to deploy our apps with larger datasets and more memory. It will also make it easier to update our apps and keep them in sync with our GitHub repositories. This will be especially useful as we continue to develop new features and fix bugs in our apps. For example, I typically test new &lt;code&gt;spatialLIBD&lt;/code&gt; features on one dataset. But we now have many datasets each with different properties, and it&amp;rsquo;s hard to test them all. Instead, with &lt;code&gt;Posit Connect&lt;/code&gt;, I could modify &lt;code&gt;spatialLIBD&lt;/code&gt;, then easily update several apps on &lt;code&gt;Posit Connect&lt;/code&gt;, and check them to see if the new features work as expected. This will make it much easier to maintain our apps and keep them up to date.&lt;/p&gt;
+&lt;p&gt;If I were to start today, I would use the organization that I tested at &lt;a href=&#34;https://github.com/LieberInstitute/Posit_Connect_shiny_apps&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;github.com/LieberInstitute/Posit_Connect_shiny_apps&lt;/a&gt; using only &lt;code&gt;HDF5Array&lt;/code&gt; objects to take advantage of the memory savings and faster app load times you get with those objects compared to &lt;code&gt;dgCMatrix&lt;/code&gt; objects (it takes several dozen seconds more to load a ~10 GB object compared to a 500 MB one). With just these changes, I think that our users will be happier with the apps. Simply being able to visualize our largest datasets would be a great win for us.&lt;/p&gt;
+&lt;p&gt;Of course, I don&amp;rsquo;t have pricing information for &lt;code&gt;Posit Connect&lt;/code&gt; yet. But we have reached the limits of what the best &lt;a href=&#34;https://www.shinyapps.io/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;shinyapps.io&lt;/code&gt;&lt;/a&gt; accounts offer. I believe that other options exist, but I haven&amp;rsquo;t tested them yet. Though from what I&amp;rsquo;ve seen, &lt;code&gt;Posit Connect&lt;/code&gt; works and I&amp;rsquo;m very confident that we could teach our team members and collaborators on how to use it effectively.&lt;/p&gt;
+&lt;p&gt;Regardless of where our apps are deployed, we also need to work on a way to document them all and make it easier for others to find them. I&amp;rsquo;m aware of &lt;a href=&#34;https://bioconductor.org/packages/iSEEhub/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;iSEEhub&lt;/code&gt;&lt;/a&gt;&amp;rsquo;s existence which makes an app that launches &lt;a href=&#34;https://bioconductor.org/packages/iSEE/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;iSEE&lt;/code&gt;&lt;/a&gt; apps from data hosted by &lt;a href=&#34;https://bioconductor.org/packages/ExperimentHub/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;ExperimentHub&lt;/code&gt;&lt;/a&gt;. We might need to make something like an &lt;code&gt;spatialLIBDhub&lt;/code&gt; for our datasets.&lt;/p&gt;
+&lt;p&gt;PS. The two members from Posit with whom I interacted with for this test were very friendly and helpful. Thanks again!&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
